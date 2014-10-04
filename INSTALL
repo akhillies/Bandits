@@ -1,8 +1,8 @@
 HOW TO INSTALL/SETUP:
 
-1)	Start by creating an account on https://bitbucket.org/
+1)	Start by creating an account on https://github.com/
 
-2)	Email / text / somehow communicate to Akhil your username and email associated with the account and he will add you to the repository
+2)	Email / text / somehow communicate to Akhil your username associated with the account and he will add you to the repository
 
 3)	Go to http://git-scm.com/downloads and install git according to whatever OS you have (these are all the tools you will need to get the files on your computer)
 
@@ -42,17 +42,17 @@ FOR WINDOWS:
 CHECKPOINT - At this point, you should have this long sequence of random characters in your clipboard (you should be able to do ctrl+V or cmd+V to see it)
 	If you don't, something went wrong and either repeat the steps starting from #4 or ask a friend
 
-11)	On the upper right hand corner, press your icon for a dropdown list and click "Manage account"
+11)	Go to the GitHub home page, log in, and press the "Settings" button (looks like a gear) on the top right of the page
 
-12)	Go to "SSH keys" (on the left-sidebar) and press the button "Add key"
+12)	Go to "SSH keys" (on the left-sidebar) and press the button "Add SSH key"
 
-13)	Fill in Label to be anything you want (this key will be referring to your laptop, or whatever computer you are on right now)
+13)	Fill in Title to be anything you want (this key will be referring to your laptop, or whatever computer you are on right now)
 
-14)	In Key, paste that text you had copied before (do ctrl+V or cmd+V). It should look ugly and incomprehensible so don't worry if you have no idea what it means
+14)	In Key area, paste that text you had copied before (do ctrl+V or cmd+V). It should look ugly and incomprehensible so don't worry if you have no idea what it means
 
 15)	Press "Add key"
 
-CHECKPOINT - you should see your key in the list on this page (https://bitbucket.org/qwertyrit/bandits/admin/deploy-keys)
+CHECKPOINT - you should see your key in the list on this page (https://github.com/settings/ssh)
 	If you don't, try again from #11 or ask a friend
 
 16)	In the command line tool (Git Bash for Windows and Terminal for Mac), navigate to where you want the folder of everything related to this animation to be saved
@@ -62,7 +62,7 @@ CHECKPOINT - you should see your key in the list on this page (https://bitbucket
 	And press "enter"
 
 17)	Type:
-		git clone git@bitbucket.org:qwertyrit/bandits.git
+		git clone git@github.com:akhillies/Bandits.git
 	If some error comes up, PLEASE ask before doing anything (even if you find a solution online). This involves a decent amount of security and is known to be a pain to deal with if something went wrong
 
 CHECKPOINT - You should now have the folder and everything in it :D

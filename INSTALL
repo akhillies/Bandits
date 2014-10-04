@@ -1,0 +1,86 @@
+HOW TO INSTALL/SETUP:
+
+1)	Start by creating an account on https://bitbucket.org/
+
+2)	Email / text / somehow communicate to Akhil your username and email associated with the account and he will add you to the repository
+
+3)	Go to http://git-scm.com/downloads and install git according to whatever OS you have (these are all the tools you will need to get the files on your computer)
+
+FOR MAC:
+4)	Open Terminal (or whatever command line program you like to use)
+FOR WINDOWS:
+4)	Open "Git Bash" (should have been installed with the tools)
+
+CHECKPOINT - there should be a program "Git Bash" or in Terminal you type "git" and a long list comes up (basically does not say something about there being no command "git")
+	If the above is not the case, then redo step #3 or ask a friend for help
+
+5)	In the command line, type (press "enter" after each line):
+		git config --global user.name "YOUR NAME"
+		git config --global user.email "YOUR EMAIL ADDRESS"
+
+6)	Type:
+		ls -al ~/.ssh
+	If you see any file named id_rsa.pub or id_dsa.pub skip the next step and go to #9, otherwise continue to #7
+
+7)	Type:
+		ssh-keygen -t rsa -C "your_email@example.com"
+	Ignore everything that prints out (it will ask for you to create a passphrase, you can if you want to but it does not really matter - easier to not create one)
+
+FOR MAC:
+8)	Type:
+		eval "$(ssh-agent -s)"
+		ssh-add ~/.ssh/id_rsa
+
+9)	pbcopy < ~/.ssh/id_rsa.pub
+FOR WINDOWS:
+8)	Type:
+		ssh-agent -s
+		ssh-add ~/.ssh/id_rsa
+
+9)	clip < ~/.ssh/id_rsa.pub
+
+CHECKPOINT - At this point, you should have this long sequence of random characters in your clipboard (you should be able to do ctrl+V or cmd+V to see it)
+	If you don't, something went wrong and either repeat the steps starting from #4 or ask a friend
+
+11)	On the upper right hand corner, press your icon for a dropdown list and click "Manage account"
+
+12)	Go to "SSH keys" (on the left-sidebar) and press the button "Add key"
+
+13)	Fill in Label to be anything you want (this key will be referring to your laptop, or whatever computer you are on right now)
+
+14)	In Key, paste that text you had copied before (do ctrl+V or cmd+V). It should look ugly and incomprehensible so don't worry if you have no idea what it means
+
+15)	Press "Add key"
+
+CHECKPOINT - you should see your key in the list on this page (https://bitbucket.org/qwertyrit/bandits/admin/deploy-keys)
+	If you don't, try again from #11 or ask a friend
+
+16)	In the command line tool (Git Bash for Windows and Terminal for Mac), navigate to where you want the folder of everything related to this animation to be saved
+		use <cd "FOLDER NAME"> to enter that folder
+		use <ls> to see what folders and files there are in your current directory
+		Another way to do this is find the folder in the exploror (or Finder) and type <cd > and drag the folder from the window into the command line tool. You should see the full path to that directory appear
+	And press "enter"
+
+17)	Type:
+		git clone git@bitbucket.org:qwertyrit/bandits.git
+	If some error comes up, PLEASE ask before doing anything (even if you find a solution online). This involves a decent amount of security and is known to be a pain to deal with if something went wrong
+
+CHECKPOINT - You should now have the folder and everything in it :D
+
+
+
+Things to remember after setting up:
+
+	BEFORE you start your work on any day, open the command line, navigate to the folder and type:
+		git pull
+	This way, you will always start with the most up-to-date work. if you type "git status" it should only say that you are up-todate
+
+	EVERYTIME you make some major change (or a set of minor changes), type:
+		git add -A
+		git commit -a -m "SOME SHORT DESCRIPTIVE MESSAGE SAYING WHAT YOU DID"
+	
+	AFTER you finish your work on any day, open the command line, navigate to the main folder that has everything (after adding and committing all changes) and type:
+		git pull
+		git push
+
+	If multiple people are working on the same file at once and you do not push your changes before they access, all hell will break loose and both of you will be very frustrated so PLEASE constantly push/pull files and be wary of what other people are working

@@ -4,8 +4,8 @@ Bandits
 Director: Stephanie Cai
 Project Manager: Ali Yassin
 Technical Directors:
-		Akhil Batra
-		Brian Graham
+	Akhil Batra
+	Brian Graham
 Team Members:
 		Adelyn Chan
 		Amy Wong
@@ -17,4 +17,4 @@ Team Members:
 		Saurabh Mitra
 
 
-CNM 190 / CS 194-2 Advanced 3D Animation
+UC Berkeley CNM 190 / CS 194-2 Advanced 3D Animation

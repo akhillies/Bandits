@@ -1,12 +1,12 @@
 Bandits
 =======
 
-Director: Stephanie Cai
-Project Manager: Ali Yassin
-Technical Directors:
+> Director: Stephanie Cai
+> Project Manager: Ali Yassin
+> Technical Directors:
 	Akhil Batra
 	Brian Graham
-Team Members:
+> Team Members:
 		Adelyn Chan
 		Amy Wong
 		Ashley Collins

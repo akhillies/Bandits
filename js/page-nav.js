@@ -1,4 +1,7 @@
-$('#pagediv').load('html/home.html');
+$(document).ready(function()
+{
+    $('#home').click();
+});
 
 $('#home').click(function()
 {

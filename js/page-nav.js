@@ -1,43 +1,73 @@
 $('#home').click(function()
 {
-    $('#pagediv').slideUp();
-    $('#pagediv').html('');
+    $('#pagediv').slideUp(function()
+    {
+        $('#pagediv').html('');
+    });
 });
 
 $('#pitch').click(function()
 {
-    $('#pagediv').load('html/pitch.html', function()
+    $('#pagediv').slideUp(function()
     {
-        $('#pagediv').slideDown(1000);
+        $('#pagediv').load('html/pitch.html', function()
+        {
+            $('#pagediv').slideDown();
+        });
     });
 });
 
 $('#storyboard').click(function()
 {
-    $('#pagediv').load('html/storyboard.html');
-    $('#pagediv').slideDown();
+    $('#pagediv').slideUp(function()
+    {
+        $('#pagediv').load('html/storyboard.html', function()
+        {
+            $('#pagediv').slideDown();
+        });
+    });
 });
 
 $('#animatic').click(function()
 {
-    $('#pagediv').load('html/animatic.html');
-    $('#pagediv').slideDown();
+    $('#pagediv').slideUp(function()
+    {
+        $('#pagediv').load('html/animatic.html', function()
+        {
+            $('#pagediv').slideDown();
+        });
+    });
 });
 
 $('#conceptart').click(function()
 {
-    $('#pagediv').load('html/conceptart.html');
-    $('#pagediv').slideDown();
+    $('#pagediv').slideUp(function()
+    {
+        $('#pagediv').load('html/conceptart.html', function()
+        {
+            $('#pagediv').slideDown();
+        });
+    });
 });
 
 $('#characterdesign').click(function()
 {
-    $('#pagediv').load('html/characterdesign.html');
-    $('#pagediv').slideDown();
+    $('#pagediv').slideUp(function()
+    {
+        $('#pagediv').load('html/characterdesign.html', function()
+        {
+            $('#pagediv').slideDown();
+        });
+    });
 });
 
 $('#model').click(function()
 {
-    $('#pagediv').load('html/model.html');
-    $('#pagediv').slideDown();
+    $('#pagediv').slideUp(function()
+    {
+        $('#pagediv').load('html/model.html', function()
+        {
+            $('#pagediv').slideDown();
+        });
+    });
 });

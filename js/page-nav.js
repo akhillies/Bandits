@@ -1,13 +1,15 @@
 $('#home').click(function()
 {
+    $('#pagediv').slideUp();
     $('#pagediv').html('');
-    $('#pagediv').slideUp(1000);
 });
 
 $('#pitch').click(function()
 {
-    $('#pagediv').load('html/pitch.html');
-    $('#pagediv').slideDown(1000);
+    $('#pagediv').load('html/pitch.html', function()
+    {
+        $('#pagediv').slideDown(1000);
+    });
 });
 
 $('#storyboard').click(function()

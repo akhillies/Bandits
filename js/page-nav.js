@@ -1,11 +1,13 @@
 $('#home').click(function()
 {
     $('#pagediv').html('');
+    $('#pagediv').slideUp();
 });
 
 $('#pitch').click(function()
 {
     $('#pagediv').load('html/pitch.html');
+    $('#pagediv').slideDown();
 });
 
 $('#storyboard').click(function()

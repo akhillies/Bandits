@@ -1,8 +1,13 @@
+$('#pagediv').load('html/home.html');
+
 $('#home').click(function()
 {
     $('#pagediv').slideUp(function()
     {
-        $('#pagediv').html('');
+        $('#pagediv').load('html/home.html', function()
+        {
+            $('#pagediv').slideDown();
+        });
     });
 });
 

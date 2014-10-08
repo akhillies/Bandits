@@ -5,9 +5,30 @@ $('#home').click(function()
 
 $('#pitch').click(function()
 {
-    // $('#viewpage').attr('src', 'html/pitch.html');
-    $('#pagediv').load('html/pitch.html', function()
-    {
-        console.log("Asdf");
-    });
+    $('#pagediv').load('html/pitch.html');
+});
+
+$('#storyboard').click(function()
+{
+    $('#pagediv').load('html/storyboard.html');
+});
+
+$('#animatic').click(function()
+{
+    $('#pagediv').load('html/animatic.html');
+});
+
+$('#conceptart').click(function()
+{
+    $('#pagediv').load('html/conceptart.html');
+});
+
+$('#characterdesign').click(function()
+{
+    $('#pagediv').load('html/characterdesign.html');
+});
+
+$('#model').click(function()
+{
+    $('#pagediv').load('html/model.html');
 });

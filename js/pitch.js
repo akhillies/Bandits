@@ -1,0 +1,1 @@
+$('#pitchtext').load("https://raw.githubusercontent.com/akhillies/Bandits/master/pitch/pitch.txt?token=6821280__eyJzY29wZSI6IlJhd0Jsb2I6YWtoaWxsaWVzL0JhbmRpdHMvbWFzdGVyL3BpdGNoL3BpdGNoLnR4dCIsImV4cGlyZXMiOjE0MTM0MTcyMjl9--aa63914da2b796d595e8541fd015dc20a3f0b385");

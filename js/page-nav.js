@@ -1,6 +1,6 @@
 $('#home').click(function()
 {
-    $('#viewpage').attr('src', '');
+    $('#pagediv').html('');
 });
 
 $('#pitch').click(function()

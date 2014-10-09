@@ -16,8 +16,15 @@
 .subtitle
 {
 	text-align:center;
-	color: #0f90a0;
+	color: #0f8090;
 	font-size: 200%;
+}
+
+.minititle
+{
+	text-align:center;
+	color: #0f90a0;
+	font-size: 150%;
 }
 
 .text

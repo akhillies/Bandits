@@ -1,3 +1,14 @@
+function loadPage(fname)
+{
+    $('#pagediv').slideUp(function()
+    {
+        $('#pagediv').load('html/' + fname + '.html', function()
+        {
+            $('#pagediv').slideDown();
+        });
+    });
+}
+
 $(document).ready(function()
 {
     $('#home').click();
@@ -5,77 +16,35 @@ $(document).ready(function()
 
 $('#home').click(function()
 {
-    $('#pagediv').slideUp(function()
-    {
-        $('#pagediv').load('html/home.html', function()
-        {
-            $('#pagediv').slideDown();
-        });
-    });
+    loadPage('home');
 });
 
 $('#pitch').click(function()
 {
-    $('#pagediv').slideUp(function()
-    {
-        $('#pagediv').load('html/pitch.html', function()
-        {
-            $('#pagediv').slideDown();
-        });
-    });
+    loadPage('pitch');
 });
 
 $('#storyboard').click(function()
 {
-    $('#pagediv').slideUp(function()
-    {
-        $('#pagediv').load('html/storyboard.html', function()
-        {
-            $('#pagediv').slideDown();
-        });
-    });
+    loadPage('storyboard');
 });
 
 $('#animatic').click(function()
 {
-    $('#pagediv').slideUp(function()
-    {
-        $('#pagediv').load('html/animatic.html', function()
-        {
-            $('#pagediv').slideDown();
-        });
-    });
+    loadPage('animatic');
 });
 
 $('#conceptart').click(function()
 {
-    $('#pagediv').slideUp(function()
-    {
-        $('#pagediv').load('html/conceptart.html', function()
-        {
-            $('#pagediv').slideDown();
-        });
-    });
+    loadPage('conceptart');
 });
 
 $('#characterdesign').click(function()
 {
-    $('#pagediv').slideUp(function()
-    {
-        $('#pagediv').load('html/characterdesign.html', function()
-        {
-            $('#pagediv').slideDown();
-        });
-    });
+    loadPage('characterdesign');
 });
 
 $('#model').click(function()
 {
-    $('#pagediv').slideUp(function()
-    {
-        $('#pagediv').load('html/model.html', function()
-        {
-            $('#pagediv').slideDown();
-        });
-    });
+    loadPage('model');
 });

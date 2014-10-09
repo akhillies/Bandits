@@ -13,14 +13,14 @@
 	text-shadow: 0px 1px 5px #002233;
 }
 
-.pitch #pitchtitle
+.pitch #title
 {
 	text-align:center;
 	color: #0f90c0;
 	font-size: 200%;
 }
 
-.pitch #pitchtext
+.pitch #text
 {
 	text-indent: 2em;
 	color: #0090d0;

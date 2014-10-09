@@ -12,3 +12,15 @@
 	-webkit-text-stroke: 1px #0088cc;
 	text-shadow: 0px 1px 5px #002233;
 }
+
+.pitch #pitchtitle
+{
+	text-align:center;
+	color: #0f90c0;
+}
+
+.pitch #pitchtext
+{
+	text-indent: 1em;
+	color: #0090d0;
+}

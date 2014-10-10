@@ -1,6 +1,6 @@
 function loadPage(fname)
 {
-    $('#pagediv').slideUp(function()
+    $('#pagediv').slideUp('slow', function()
     {
         $('#pagediv').load('html/' + fname + '.html', function()
         {
@@ -47,4 +47,9 @@ $('#characterdesign').click(function()
 $('#model').click(function()
 {
     loadPage('model');
+});
+
+$('#animation').click(function()
+{
+    loadPage('animation');
 });

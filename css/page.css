@@ -1,7 +1,7 @@
 .title
 {
 	text-align: center;
-	font-size: 750%;
+	font-size: 100%;
   	color: #004455;
    	text-shadow:
        3px 3px 0 #2233ff,
@@ -17,7 +17,7 @@
 {
 	text-align:center;
 	color: #0f8090;
-	font-size: 300%;
+	font-size: 100%;
 }
 
 .minititle
@@ -31,6 +31,6 @@
 {
 	text-indent: 2em;
 	color: #0090d0;
-	font-size: 150%;
+	font-size: 100%;
 	padding: 0 2.5em 0 2.5em;
 }

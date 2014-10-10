@@ -4,7 +4,7 @@ function loadPage(fname)
     {
         $('#pagediv').load('html/' + fname + '.html', function()
         {
-            $('#pagediv').slideDown();
+            $('#pagediv').slideDown(slow);
         });
     });
 }

@@ -9,47 +9,13 @@ function loadPage(fname)
     });
 }
 
+$('.page-nav').click(function()
+{
+    loadPage(this.id);
+});
+
 $(document).ready(function()
 {
+    $('.wrapper').fadeIn('slow');
     $('#home').click();
-});
-
-$('#home').click(function()
-{
-    loadPage('home');
-});
-
-$('#pitch').click(function()
-{
-    loadPage('pitch');
-});
-
-$('#storyboard').click(function()
-{
-    loadPage('storyboard');
-});
-
-$('#animatic').click(function()
-{
-    loadPage('animatic');
-});
-
-$('#conceptart').click(function()
-{
-    loadPage('conceptart');
-});
-
-$('#characterdesign').click(function()
-{
-    loadPage('characterdesign');
-});
-
-$('#model').click(function()
-{
-    loadPage('model');
-});
-
-$('#animation').click(function()
-{
-    loadPage('animation');
 });

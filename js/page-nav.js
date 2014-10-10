@@ -16,6 +16,8 @@ $('.page-nav').click(function()
 
 $(document).ready(function()
 {
-    $('.wrapper').fadeIn('slow');
-    // $('#home').click();
+    $('.wrapper').fadeIn('slow', function()
+    {
+        $('#home').click();
+    });
 });

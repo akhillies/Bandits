@@ -1,6 +1,6 @@
 //Maya ASCII 2015 scene
 //Name: bathroom.ma
-//Last modified: Fri, Oct 24, 2014 06:36:02 PM
+//Last modified: Sat, Oct 25, 2014 01:19:24 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "bathtub" -rfn "bathtubRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/bathtub.ma";
 file -rdi 1 -ns "window" -rfn "windowRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/window.ma";
@@ -26,18 +26,18 @@ fileInfo "osv" "Mac OS X 10.9";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.56338025242818091 9.3125456703406506 49.294794522372491 ;
-	setAttr ".r" -type "double3" -0.89893940678747386 0.22520897466411946 5.8238145470086216e-18 ;
-	setAttr ".rp" -type "double3" 0 8.8817841970012523e-16 7.1054273576010019e-15 ;
-	setAttr ".rpt" -type "double3" 2.4980259435554588e-15 -2.0406288759697514e-14 -1.346093035521367e-14 ;
+	setAttr ".t" -type "double3" 2.9207694912849136 10.415040873512858 46.94817935034586 ;
+	setAttr ".r" -type "double3" -0.89893940678796125 0.22520897466222853 -1.2074078457777974e-10 ;
+	setAttr ".rp" -type "double3" -4.4408920985006262e-16 0 -7.1054273576010019e-15 ;
+	setAttr ".rpt" -type "double3" 2.4422334367580034e-15 -2.0629130827210272e-14 -1.3443391658985508e-14 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 32.869230579744233;
+	setAttr ".coi" 30.55391239454049;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -2.8645536047071789 5.4112884680553606 18.217149949376839 ;
+	setAttr ".tp" -type "double3" 2.8006882090293201 9.9356863854155506 16.398263435999244 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	setAttr ".v" no;

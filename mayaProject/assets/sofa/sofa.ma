@@ -1,6 +1,6 @@
 //Maya ASCII 2014 scene
 //Name: sofa.ma
-//Last modified: Sat, Oct 25, 2014 02:43:30 PM
+//Last modified: Sat, Oct 25, 2014 02:45:53 PM
 //Codeset: UTF-8
 requires maya "2014";
 currentUnit -l centimeter -a degree -t film;
@@ -12,12 +12,12 @@ fileInfo "osv" "Mac OS X 10.9.5";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -10.35672716897208 6.3714198396512369 5.9892613706048667 ;
-	setAttr ".r" -type "double3" -21.338352727607564 -1498.1999999999118 -3.0178571984940707e-15 ;
+	setAttr ".t" -type "double3" 4.3706481718116379 6.2714301566293713 7.6609704029449386 ;
+	setAttr ".r" -type "double3" -16.53835272760476 -1429.7999999998485 -2.0197678792910924e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 15.398548274378452;
+	setAttr ".coi" 11.123611208247629;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -74,7 +74,8 @@ createNode mesh -n "pCubeShape1" -p "pCube1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".dr" 1;
+	setAttr ".dr" 3;
+	setAttr ".dsm" 2;
 createNode lightLinker -s -n "lightLinker1";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
@@ -1895,6 +1896,14 @@ createNode polyTweak -n "polyTweak31";
 	setAttr ".tk[1014]" -type "float3" 0 0 0.043231428 ;
 	setAttr ".tk[1015]" -type "float3" 0 0 0.043231428 ;
 	setAttr ".tk[1016]" -type "float3" 5.9604645e-08 0 0.043231428 ;
+createNode deleteComponent -n "deleteComponent20";
+	setAttr ".dc" -type "componentList" 1 "f[990]";
+createNode deleteComponent -n "deleteComponent21";
+	setAttr ".dc" -type "componentList" 1 "f[988]";
+createNode deleteComponent -n "deleteComponent22";
+	setAttr ".dc" -type "componentList" 1 "f[989]";
+createNode deleteComponent -n "deleteComponent23";
+	setAttr ".dc" -type "componentList" 1 "f[988]";
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -1922,7 +1931,7 @@ select -ne :hardwareRenderingGlobals;
 select -ne :defaultHardwareRenderGlobals;
 	setAttr ".fn" -type "string" "im";
 	setAttr ".res" -type "string" "ntsc_4d 646 485 1.333";
-connectAttr "polyExtrudeEdge1.out" "pCubeShape1.i";
+connectAttr "deleteComponent23.og" "pCubeShape1.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -2155,6 +2164,10 @@ connectAttr "polySplitRing51.out" "polyTweak30.ip";
 connectAttr "polyTweak31.out" "polyExtrudeEdge1.ip";
 connectAttr "pCubeShape1.wm" "polyExtrudeEdge1.mp";
 connectAttr "polySplitRing52.out" "polyTweak31.ip";
+connectAttr "polyExtrudeEdge1.out" "deleteComponent20.ig";
+connectAttr "deleteComponent20.og" "deleteComponent21.ig";
+connectAttr "deleteComponent21.og" "deleteComponent22.ig";
+connectAttr "deleteComponent22.og" "deleteComponent23.ig";
 connectAttr "pCubeShape1.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 // End of sofa.ma

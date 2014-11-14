@@ -1,13 +1,12 @@
 //Maya ASCII 2015 scene
 //Name: bathroom.ma
-//Last modified: Sat, Nov 08, 2014 07:20:04 PM
+//Last modified: Wed, Nov 12, 2014 02:47:08 PM
 //Codeset: UTF-8
-file -rdi 1 -ns "bathtub" -rfn "bathtubRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/bathtub.ma";
 file -rdi 1 -ns "window" -rfn "windowRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/multi_pane_window.ma";
 file -rdi 1 -ns "barsoap" -rfn "barsoapRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/barsoap.ma";
 file -rdi 1 -ns "toiletpaper" -rfn "toiletpaperRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/toiletpaper.ma";
 file -rdi 1 -ns "toothbrush" -rfn "toothbrushRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/toothbrush.ma";
-file -rdi 1 -ns "curtains" -rfn "curtainsRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/curtains.ma";
+file -rdi 1 -ns "curtains" -dr 1 -rfn "curtainsRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/curtains.ma";
 file -rdi 1 -ns "towel" -rfn "towelRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/towel.ma";
 file -rdi 1 -ns "toilet" -rfn "toiletRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/toilet.ma";
 file -rdi 1 -ns "showerhead" -rfn "showerheadRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/showerhead.ma";
@@ -15,9 +14,9 @@ file -rdi 1 -ns "diamond_handle" -rfn "diamond_handleRN" -op "v=0;" "/Users/Akhi
 file -rdi 1 -ns "diamond_handle1" -rfn "diamond_handleRN1" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/diamond_handle.ma";
 file -rdi 1 -ns "bathmat" -rfn "bathmatRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/bathmat.ma";
 file -rdi 1 -ns "bottlesoap" -rfn "bottlesoapRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/bottlesoap.ma";
-file -rdi 1 -ns "faucetsmoothed" -rfn "faucetsmoothedRN1" -op "VERS|2015|UVER|undef|MADE|undef|CHNG|Fri, Oct 24, 2014 05:50:30 PM|ICON|undef|INFO|undef|OBJN|56|INCL|undef(|LUNI|cm|TUNI|film|AUNI|deg|"
+file -rdi 1 -ns "faucetsmoothed" -rfn "faucetsmoothedRN1" -op "VERS|2015|UVER|undef|MADE|undef|CHNG|Wed, Nov 12, 2014 01:58:31 PM|ICON|undef|INFO|undef|OBJN|18|INCL|undef(|LUNI|cm|TUNI|film|AUNI|deg|"
 		 "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/faucetsmoothed.mb";
-file -r -ns "bathtub" -dr 1 -rfn "bathtubRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/bathtub.ma";
+file -rdi 1 -ns "bathtub" -rfn "bathtubRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/bathtub.ma";
 file -r -ns "window" -dr 1 -rfn "windowRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/multi_pane_window.ma";
 file -r -ns "barsoap" -dr 1 -rfn "barsoapRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/barsoap.ma";
 file -r -ns "toiletpaper" -dr 1 -rfn "toiletpaperRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/toiletpaper.ma";
@@ -30,8 +29,9 @@ file -r -ns "diamond_handle" -dr 1 -rfn "diamond_handleRN" -op "v=0;" "/Users/Ak
 file -r -ns "diamond_handle1" -dr 1 -rfn "diamond_handleRN1" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/diamond_handle.ma";
 file -r -ns "bathmat" -dr 1 -rfn "bathmatRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/bathmat.ma";
 file -r -ns "bottlesoap" -dr 1 -rfn "bottlesoapRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/bottlesoap.ma";
-file -r -ns "faucetsmoothed" -dr 1 -rfn "faucetsmoothedRN1" -op "VERS|2015|UVER|undef|MADE|undef|CHNG|Fri, Oct 24, 2014 05:50:30 PM|ICON|undef|INFO|undef|OBJN|56|INCL|undef(|LUNI|cm|TUNI|film|AUNI|deg|"
+file -r -ns "faucetsmoothed" -dr 1 -rfn "faucetsmoothedRN1" -op "VERS|2015|UVER|undef|MADE|undef|CHNG|Wed, Nov 12, 2014 01:58:31 PM|ICON|undef|INFO|undef|OBJN|18|INCL|undef(|LUNI|cm|TUNI|film|AUNI|deg|"
 		 "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/faucetsmoothed.mb";
+file -r -ns "bathtub" -dr 1 -rfn "bathtubRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/bathtub.ma";
 requires maya "2015";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOptions" -nodeType "mentalrayGlobals"
 		 -nodeType "mentalrayItemsList" -dataType "byteArray" "Mayatomr" "2015.0 - 3.12.1.16 ";
@@ -44,18 +44,18 @@ fileInfo "osv" "Mac OS X 10.9";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.52137589336090806 20.791471567533311 64.015577778106731 ;
-	setAttr ".r" -type "double3" -12.298939407232218 -1.7747910249998935 1.0982157664269294e-12 ;
-	setAttr ".rp" -type "double3" 0 1.7763568394002505e-15 0 ;
-	setAttr ".rpt" -type "double3" 2.2387277734283205e-15 -1.9156355647404987e-14 -1.3974245459293823e-14 ;
+	setAttr ".t" -type "double3" -11.600195705896185 42.846968344822884 114.43911471632241 ;
+	setAttr ".r" -type "double3" -20.09893940724788 -8.574791024884469 -1.4474288537098997e-14 ;
+	setAttr ".rp" -type "double3" -8.8817841970012523e-16 -1.7763568394002505e-15 -1.4210854715202004e-14 ;
+	setAttr ".rpt" -type "double3" 5.9673288342923201e-15 -2.1335623352965591e-14 -1.0863447164318804e-14 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 72.771318395051992;
+	setAttr ".coi" 122.59745122437479;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 2.2605274744523585 4.9742413706578406 -6.9645931241158081 ;
+	setAttr ".tp" -type "double3" 5.56592144975615 0.71729687019271005 0.59470224934572569 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	setAttr ".v" no;
@@ -132,21 +132,6 @@ createNode transform -n "window1:transform2" -p "windowRNfosterParent1";
 createNode transform -n "window1:transform3" -p "windowRNfosterParent1";
 	setAttr ".v" no;
 createNode transform -n "window1:transform4" -p "windowRNfosterParent1";
-	setAttr ".v" no;
-createNode fosterParent -n "bathtubRNfosterParent1";
-createNode transform -n "bathtub:transform1" -p "bathtubRNfosterParent1";
-	setAttr ".v" no;
-createNode fosterParent -n "fosterParent1" -p "bathtubRNfosterParent1";
-createNode transform -n "bathtub:transform1" -p "fosterParent1";
-	setAttr ".v" no;
-createNode fosterParent -n "fosterParent2" -p "bathtubRNfosterParent1";
-createNode transform -n "bathtub:transform1" -p "fosterParent2";
-	setAttr ".v" no;
-createNode fosterParent -n "fosterParent3" -p "bathtubRNfosterParent1";
-createNode transform -n "bathtub:transform1" -p "fosterParent3";
-	setAttr ".v" no;
-createNode fosterParent -n "fosterParent4" -p "bathtubRNfosterParent1";
-createNode transform -n "bathtub:transform1" -p "fosterParent4";
 	setAttr ".v" no;
 createNode mentalrayItemsList -s -n "mentalrayItemsList";
 createNode mentalrayGlobals -s -n "mentalrayGlobals";
@@ -303,8 +288,8 @@ createNode mentalrayOptions -s -n "miDefaultOptions";
 	setAttr ".stringOptions[47].type" -type "string" "color";
 createNode mentalrayFramebuffer -s -n "miDefaultFramebuffer";
 createNode lightLinker -s -n "lightLinker1";
-	setAttr -s 16 ".lnk";
-	setAttr -s 16 ".slnk";
+	setAttr -s 15 ".lnk";
+	setAttr -s 15 ".slnk";
 createNode displayLayerManager -n "layerManager";
 createNode displayLayer -n "defaultLayer";
 createNode renderLayerManager -n "renderLayerManager";
@@ -384,53 +369,6 @@ createNode deleteComponent -n "deleteComponent2";
 createNode polyNormal -n "polyNormal1";
 	setAttr ".ics" -type "componentList" 1 "f[*]";
 	setAttr ".unm" no;
-createNode reference -n "bathtubRN";
-	setAttr -s 4 ".fs";
-	setAttr ".ed" -type "dataReferenceEdits" 
-		"bathtubRN"
-		"bathtubRN" 2
-		2 "|bathtub:bathtub2" "translate" " -type \"double3\" 0 -3.74836836587734812 2.09517511187426209"
-		
-		2 "|bathtub:bathtub2" "scale" " -type \"double3\" 1.69497561595652702 1.69497561595652702 1.69497561595652702"
-		
-		"bathtubRN" 19
-		0 "|bathtub:tubShape" "|bathtubRNfosterParent1|fosterParent4|bathtub:transform1" 
-		"-s -r "
-		0 "|bathtub:leg2Shape" "|bathtubRNfosterParent1|fosterParent3|bathtub:transform1" 
-		"-s -r "
-		0 "|bathtub:leg3Shape" "|bathtubRNfosterParent1|fosterParent2|bathtub:transform1" 
-		"-s -r "
-		0 "|bathtub:leg4Shape" "|bathtubRNfosterParent1|fosterParent1|bathtub:transform1" 
-		"-s -r "
-		0 "|bathtub:leg5Shape" "|bathtubRNfosterParent1|bathtub:transform1" "-s -r "
-		
-		0 "|bathtubRNfosterParent1|fosterParent4|bathtub:transform1" "|bathtub:bathtub|bathtub:tub" 
-		"-s -r "
-		0 "|bathtubRNfosterParent1|fosterParent3|bathtub:transform1" "|bathtub:bathtub|bathtub:legs|bathtub:leg2" 
-		"-s -r "
-		0 "|bathtubRNfosterParent1|fosterParent2|bathtub:transform1" "|bathtub:bathtub|bathtub:legs|bathtub:leg3" 
-		"-s -r "
-		0 "|bathtubRNfosterParent1|fosterParent1|bathtub:transform1" "|bathtub:bathtub|bathtub:legs|bathtub:leg4" 
-		"-s -r "
-		0 "|bathtubRNfosterParent1|bathtub:transform1" "|bathtub:bathtub|bathtub:legs|bathtub:leg5" 
-		"-s -r "
-		2 "|bathtub:bathtub" "translate" " -type \"double3\" 0 0 0"
-		2 "|bathtub:bathtub" "rotate" " -type \"double3\" 0 90 0"
-		2 "|bathtubRNfosterParent1|fosterParent4|bathtub:transform1|bathtub:tubShape" 
-		"intermediateObject" " 1"
-		2 "|bathtubRNfosterParent1|fosterParent3|bathtub:transform1|bathtub:leg2Shape" 
-		"intermediateObject" " 1"
-		2 "|bathtubRNfosterParent1|fosterParent2|bathtub:transform1|bathtub:leg3Shape" 
-		"intermediateObject" " 1"
-		2 "|bathtubRNfosterParent1|fosterParent1|bathtub:transform1|bathtub:leg4Shape" 
-		"intermediateObject" " 1"
-		2 "|bathtubRNfosterParent1|bathtub:transform1|bathtub:leg5Shape" "intermediateObject" 
-		" 1"
-		2 "|bathtub:bathtub1" "translate" " -type \"double3\" 0 -3.71077696871730911 2.07094631303403043"
-		
-		2 "|bathtub:bathtub1" "scale" " -type \"double3\" 1.7 1.7 1.7";
-	setAttr ".ptag" -type "string" "";
-lockNode -l 1 ;
 createNode reference -n "windowRN";
 	setAttr -s 2 ".fn";
 	setAttr ".fn[0]" -type "string" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/multi_pane_window.ma";
@@ -440,7 +378,7 @@ createNode reference -n "windowRN";
 	setAttr ".phl[8]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"windowRN"
-		"windowRN" 17
+		"windowRN" 18
 		0 "|window:right_doorShape" "|windowRNfosterParent1|window1:transform4" "-s -r "
 		
 		0 "|window:windowShape" "|windowRNfosterParent1|window1:transform3" "-s -r "
@@ -471,13 +409,13 @@ createNode reference -n "windowRN";
 		
 		2 "|window:windows|window:windowsShape" "uvPivot" " -type \"double2\" 0 0"
 		
+		2 "|window:group7|window:group4" "translate" " -type \"double3\" -8.82573196615285127 0.073529411764705177 0"
+		
 		5 3 "windowRN" "|windowRNfosterParent1|window1:transform4|window:right_doorShape.worldMatrix" 
 		"windowRN.placeHolderList[7]" ""
 		5 3 "windowRN" "|windowRNfosterParent1|window1:transform4|window:right_doorShape.outMesh" 
 		"windowRN.placeHolderList[8]" ""
-		"windowRN" 5
-		2 "|window:group7|window:group4" "translate" " -type \"double3\" -8.82573196615285127 0.073529411764705177 0"
-		
+		"windowRN" 4
 		2 "|window:group8" "translate" " -type \"double3\" 0 14.94675577615872797 -9.39066331588665726"
 		
 		2 "|window:group8" "scale" " -type \"double3\" 0.69038782159648104 0.69038782159648104 0.69038782159648104"
@@ -526,7 +464,7 @@ createNode reference -n "barsoapRN";
 		"barsoapRN"
 		"barsoapRN" 0
 		"barsoapRN" 2
-		2 "|barsoap:soap_bar" "translate" " -type \"double3\" 4.37260415985980089 4.63555151487709693 -7.73855082871579469"
+		2 "|barsoap:soap_bar" "translate" " -type \"double3\" 4.3726041598598 4.24498107233313515 -8.38647737476284938"
 		
 		2 "|barsoap:soap_bar" "scale" " -type \"double3\" 0.022961073485853696 0.022961073485853696 0.022961073485853696";
 	setAttr ".ptag" -type "string" "";
@@ -557,9 +495,9 @@ createNode reference -n "toothbrushRN";
 		"toothbrushRN"
 		"toothbrushRN" 0
 		"toothbrushRN" 3
-		2 "|toothbrush:toothbrush" "translate" " -type \"double3\" -1.38399127889304485 4.57683844026838305 -7.38303120092589005"
+		2 "|toothbrush:toothbrush" "translate" " -type \"double3\" -1.38399127889304463 4.75361534978550182 -7.65920907455727829"
 		
-		2 "|toothbrush:toothbrush" "rotate" " -type \"double3\" 0 75.17578457253998181 0"
+		2 "|toothbrush:toothbrush" "rotate" " -type \"double3\" 174.22231435504900787 58.01645918369751342 161.63629893147819416"
 		
 		2 "|toothbrush:toothbrush" "scale" " -type \"double3\" 0.02904236080940106 0.02904236080940106 0.02904236080940106";
 	setAttr ".ptag" -type "string" "";
@@ -567,7 +505,6 @@ lockNode -l 1 ;
 createNode reference -n "curtainsRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"curtainsRN"
-		"curtainsRN" 0
 		"curtainsRN" 5
 		2 "|curtains:curtains2" "translate" " -type \"double3\" -0.4044880739544876 -4.09077911026038699 15.89134023470336743"
 		
@@ -805,7 +742,7 @@ createNode reference -n "diamond_handleRN";
 		"diamond_handleRN"
 		"diamond_handleRN" 0
 		"diamond_handleRN" 3
-		2 "|diamond_handle:pCylinder2" "translate" " -type \"double3\" 17.95813256097353516 8.96296982696841837 -3.13132731522176666"
+		2 "|diamond_handle:pCylinder2" "translate" " -type \"double3\" 18.17107544845271505 8.96296982696841837 -3.13132731522176666"
 		
 		2 "|diamond_handle:pCylinder2" "rotate" " -type \"double3\" 0 0 90"
 		2 "|diamond_handle:pCylinder2" "scale" " -type \"double3\" 0.66494844844089951 0.95618167115103392 0.66494844844089951";
@@ -837,7 +774,7 @@ createNode reference -n "bathmatRN";
 		"bathmatRN"
 		"bathmatRN" 0
 		"bathmatRN" 2
-		2 "|bathmat:mat" "translate" " -type \"double3\" -2.25312310919064984 -3.72576063700314331 19.59362221950972938"
+		2 "|bathmat:mat" "translate" " -type \"double3\" -2.25312310919064984 -3.72576063700314331 17.67582561193851021"
 		
 		2 "|bathmat:mat" "scale" " -type \"double3\" 0.38007297940741075 0.38007297940741075 0.38007297940741075";
 	setAttr ".ptag" -type "string" "";
@@ -847,7 +784,7 @@ createNode reference -n "bottlesoapRN";
 		"bottlesoapRN"
 		"bottlesoapRN" 0
 		"bottlesoapRN" 2
-		2 "|bottlesoap:soap_bottle" "translate" " -type \"double3\" -14.39107434509486794 3.8379858030682259 -8.25129254750579655"
+		2 "|bottlesoap:soap_bottle" "translate" " -type \"double3\" -14.39107434509486794 3.8379858030682259 -8.98513487679694833"
 		
 		2 "|bottlesoap:soap_bottle" "scale" " -type \"double3\" 0.12374890311796301 0.21756333452072993 0.21756333452072993";
 	setAttr ".ptag" -type "string" "";
@@ -857,7 +794,7 @@ createNode reference -n "faucetsmoothedRN1";
 		"faucetsmoothedRN1"
 		"faucetsmoothedRN1" 0
 		"faucetsmoothedRN1" 4
-		2 "|faucetsmoothed:polySurface1" "translate" " -type \"double3\" 15.06943116353230394 4.5091988125190241 0"
+		2 "|faucetsmoothed:polySurface1" "translate" " -type \"double3\" 14.67632250246549219 4.27700879278577517 0"
 		
 		2 "|faucetsmoothed:polySurface1" "rotate" " -type \"double3\" 0 180 0"
 		2 "|faucetsmoothed:polySurface1" "rotatePivot" " -type \"double3\" 1.53318977355957031 0.90886282920837402 0"
@@ -865,24 +802,35 @@ createNode reference -n "faucetsmoothedRN1";
 		2 "|faucetsmoothed:polySurface1" "scalePivot" " -type \"double3\" 1.53318977355957031 0.90886282920837402 0";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
+createNode reference -n "bathtubRN";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"bathtubRN"
+		"bathtubRN" 0
+		"bathtubRN" 3
+		2 "|bathtub:tub" "translate" " -type \"double3\" 0.50914421097028484 -3.76748060295975495 0"
+		
+		2 "|bathtub:tub" "rotate" " -type \"double3\" 0 90 0"
+		2 "|bathtub:tub" "scale" " -type \"double3\" 1.64975636033525275 1.64975636033525275 1.64975636033525275";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
 select -ne :renderPartition;
-	setAttr -s 16 ".st";
+	setAttr -s 15 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 16 ".s";
+	setAttr -s 15 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
 select -ne :defaultRenderingList1;
-	setAttr -s 15 ".r";
+	setAttr -s 14 ".r";
 select -ne :defaultTextureList1;
 select -ne :initialShadingGroup;
-	setAttr -s 177 ".dsm";
+	setAttr -s 10 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 170 ".gn";
+	setAttr -s 4 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :defaultResolution;
@@ -912,11 +860,6 @@ connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr "polyCube1.out" "deleteComponent1.ig";
 connectAttr "deleteComponent1.og" "deleteComponent2.ig";
 connectAttr "deleteComponent2.og" "polyNormal1.ip";
-connectAttr "bathtubRNfosterParent1.msg" "bathtubRN.fp";
-connectAttr "fosterParent1.msg" "bathtubRN.fs" -na;
-connectAttr "fosterParent2.msg" "bathtubRN.fs" -na;
-connectAttr "fosterParent3.msg" "bathtubRN.fs" -na;
-connectAttr "fosterParent4.msg" "bathtubRN.fs" -na;
 connectAttr "windowRNfosterParent1.msg" "windowRN.fp";
 connectAttr "sharedReferenceNode.sr" "windowRN.sr";
 connectAttr "polyNormal1.out" "polySubdFace1.ip";
@@ -927,6 +870,7 @@ connectAttr "polyTweak2.out" "polySplitRing2.ip";
 connectAttr "wallsShape.wm" "polySplitRing2.mp";
 connectAttr "polySplitRing1.out" "polyTweak2.ip";
 connectAttr "polySplitRing2.out" "deleteComponent3.ig";
+connectAttr "sharedReferenceNode.sr" "curtainsRN.sr";
 connectAttr "polyTweak3.out" "polySubdEdge1.ip";
 connectAttr "wallsShape.wm" "polySubdEdge1.mp";
 connectAttr "deleteComponent3.og" "polyTweak3.ip";
@@ -964,6 +908,6 @@ connectAttr "wallsShape.wm" "polySplitRing6.mp";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "wallsShape.iog" ":initialShadingGroup.dsm" -na;
 dataStructure -fmt "raw" -as "name=externalContentTable:string=node:string=key:string=upath:uint32=upathcrc:string=rpath:string=roles";
-applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"bathtubRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/bathtub.ma\" 2142259327 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject/assets/bathroom/bathtub.ma\" \"FileRef\"\n1\n\"windowRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/multi_pane_window.ma\" 3299992384 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject/assets/bathroom/multi_pane_window.ma\" \"FileRef\"\n2\n\"barsoapRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/barsoap.ma\" 3664238018 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject/assets/bathroom/barsoap.ma\" \"FileRef\"\n3\n\"toiletpaperRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/toiletpaper.ma\" 236431438 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject/assets/bathroom/toiletpaper.ma\" \"FileRef\"\n4\n\"toothbrushRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/toothbrush.ma\" 1498131579 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject/assets/bathroom/toothbrush.ma\" \"FileRef\"\n5\n\"curtainsRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/curtains.ma\" 4240176760 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject/assets/bathroom/curtains.ma\" \"FileRef\"\n6\n\"towelRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/towel.ma\" 1087345768 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject/assets/bathroom/towel.ma\" \"FileRef\"\n7\n\"toiletRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/toilet.ma\" 3434733508 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject/assets/bathroom/toilet.ma\" \"FileRef\"\n8\n\"showerheadRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/showerhead.ma\" 2800587922 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject/assets/bathroom/showerhead.ma\" \"FileRef\"\n9\n\"diamond_handleRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/diamond_handle.ma\" 900977131 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject/assets/bathroom/diamond_handle.ma\" \"FileRef\"\n10\n\"diamond_handleRN1\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/diamond_handle.ma\" 900977131 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject/assets/bathroom/diamond_handle.ma\" \"FileRef\"\n11\n\"bathmatRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/bathmat.ma\" 3145409069 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject/assets/bathroom/bathmat.ma\" \"FileRef\"\n12\n\"bottlesoapRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/bottlesoap.ma\" 484466493 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject/assets/bathroom/bottlesoap.ma\" \"FileRef\"\n13\n\"faucetsmoothedRN1\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/faucetsmoothed.mb\" 1233172887 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject/assets/bathroom/faucetsmoothed.mb\" \"FileRef\"\nendStream\nendChannel\nendAssociations\n" 
+applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"windowRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/multi_pane_window.ma\" 3299992384 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject/assets/bathroom/multi_pane_window.ma\" \"FileRef\"\n1\n\"barsoapRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/barsoap.ma\" 3664238018 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject/assets/bathroom/barsoap.ma\" \"FileRef\"\n2\n\"toiletpaperRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/toiletpaper.ma\" 236431438 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject/assets/bathroom/toiletpaper.ma\" \"FileRef\"\n3\n\"toothbrushRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/toothbrush.ma\" 1498131579 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject/assets/bathroom/toothbrush.ma\" \"FileRef\"\n4\n\"curtainsRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/curtains.ma\" 4240176760 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject/assets/bathroom/curtains.ma\" \"FileRef\"\n5\n\"towelRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/towel.ma\" 1087345768 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject/assets/bathroom/towel.ma\" \"FileRef\"\n6\n\"toiletRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/toilet.ma\" 3434733508 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject/assets/bathroom/toilet.ma\" \"FileRef\"\n7\n\"showerheadRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/showerhead.ma\" 2800587922 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject/assets/bathroom/showerhead.ma\" \"FileRef\"\n8\n\"diamond_handleRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/diamond_handle.ma\" 900977131 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject/assets/bathroom/diamond_handle.ma\" \"FileRef\"\n9\n\"diamond_handleRN1\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/diamond_handle.ma\" 900977131 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject/assets/bathroom/diamond_handle.ma\" \"FileRef\"\n10\n\"bathmatRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/bathmat.ma\" 3145409069 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject/assets/bathroom/bathmat.ma\" \"FileRef\"\n11\n\"bottlesoapRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/bottlesoap.ma\" 484466493 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject/assets/bathroom/bottlesoap.ma\" \"FileRef\"\n12\n\"faucetsmoothedRN1\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/faucetsmoothed.mb\" 1233172887 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject/assets/bathroom/faucetsmoothed.mb\" \"FileRef\"\n13\n\"bathtubRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/bathtub.ma\" 2142259327 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject/assets/bathroom/bathtub.ma\" \"FileRef\"\nendStream\nendChannel\nendAssociations\n" 
 		-scn;
 // End of bathroom.ma

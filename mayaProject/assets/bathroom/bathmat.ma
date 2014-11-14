@@ -1,6 +1,6 @@
 //Maya ASCII 2015 scene
 //Name: bathmat.ma
-//Last modified: Tue, Oct 28, 2014 04:23:17 PM
+//Last modified: Wed, Nov 12, 2014 01:40:33 PM
 //Codeset: UTF-8
 requires maya "2015";
 currentUnit -l centimeter -a degree -t film;

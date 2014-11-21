@@ -1,6 +1,6 @@
 //Maya ASCII 2013 scene
 //Name: RaccoonSneaks-uv.ma
-//Last modified: Fri, Nov 14, 2014 12:23:21 PM
+//Last modified: Fri, Nov 14, 2014 12:25:20 PM
 //Codeset: 1252
 file -rdi 1 -ns "RaccoonSneaks_Sealed_Edits" -rfn "RaccoonSneaks_Sealed_EditsRN"
 		 "C:/Users/Saurabh/Documents/GitHub/Bandits/mayaProject//assets/sneaks/RaccoonSneaks_Sealed_Edits.ma";

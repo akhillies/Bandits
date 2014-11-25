@@ -1,6 +1,6 @@
 //Maya ASCII 2013 scene
 //Name: tuffsRig.ma
-//Last modified: Tue, Nov 25, 2014 03:12:25 PM
+//Last modified: Tue, Nov 25, 2014 03:26:03 PM
 //Codeset: 1252
 requires maya "2013";
 requires "Mayatomr" "2013.0 - 3.10.1.4 ";
@@ -46,8 +46,8 @@ createNode camera -s -n "topShape" -p "top";
 	setAttr ".hc" -type "string" "viewSet -t %camera";
 createNode transform -s -n "front";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 37.732533778661946 33.552021602954063 23.22821455004615 ;
-	setAttr ".r" -type "double3" -35.235859817642989 413.39999999980733 8.0017326054180619e-015 ;
+	setAttr ".t" -type "double3" 63.832930775885956 28.069333919699922 31.305073622956925 ;
+	setAttr ".r" -type "double3" -20.835859817601705 418.99999999974841 0 ;
 	setAttr ".rp" -type "double3" -1.4210854715202004e-014 0 1.4210854715202004e-014 ;
 	setAttr ".rpt" -type "double3" 1.3814100614115934e-014 -1.6868619710330668e-014 
 		-4.8240844708909655e-014 ;
@@ -55,7 +55,7 @@ createNode camera -s -n "frontShape" -p "front";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 51.432301409857516;
+	setAttr ".coi" 81.311029727315201;
 	setAttr ".ow" 35.338069378712696;
 	setAttr ".imn" -type "string" "front";
 	setAttr ".den" -type "string" "front_depth";
@@ -93,11 +93,11 @@ createNode camera -n "topShape2" -p "top1";
 	setAttr ".man" -type "string" "top1_mask";
 	setAttr ".hc" -type "string" "viewSet -t %camera";
 	setAttr ".o" yes;
-createNode joint -n "Sneaks_010:spine";
+createNode joint -n "spine";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".radi" 0.97542634274464546;
-createNode joint -n "Sneaks_010:tail_joints" -p "Sneaks_010:spine";
+createNode joint -n "Sneaks_010:tail_joints" -p "spine";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -1.9878466759146975e-016 -1.987846675914698e-016 1.3821746418469386e-016 ;
@@ -269,7 +269,7 @@ createNode joint -n "Sneaks_010:RightButt" -p "Sneaks_010:tail_joints";
 	setAttr ".radi" 0.53393996744948247;
 createNode joint -n "Sneaks_010:RightHip" -p "Sneaks_010:RightButt";
 	setAttr ".t" -type "double3" -1.1386176297743655 -0.96826297994498012 0.69911601168326287 ;
-	setAttr ".r" -type "double3" 9.0919674688435421 1.1527884257070837 -2.577017893219232 ;
+	setAttr ".r" -type "double3" 9.0919674688435421 1.1527884257068806 -2.5770178932192134 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -6.1307811420928804 2.4826004676475377 0.63712081278209487 ;
@@ -321,7 +321,7 @@ createNode parentConstraint -n "tail_joints_parentConstraint1" -p "Sneaks_010:ta
 	setAttr ".rst" -type "double3" -0.12601049109101536 -0.18265107993261509 -2.6079652274418033 ;
 	setAttr ".rsrr" -type "double3" 3.610582609743989 -2.3960616083063964 -0.74031071981190433 ;
 	setAttr -k on ".w0";
-createNode joint -n "Sneaks_010:Spine2" -p "Sneaks_010:spine";
+createNode joint -n "Sneaks_010:Spine2" -p "spine";
 	setAttr ".jo" -type "double3" -2.6806240682380449 -0.013950103898094712 0.066209948546778363 ;
 	setAttr ".radi" 0.55834133830437993;
 createNode joint -n "Sneaks_010:Spine3" -p "Sneaks_010:Spine2";
@@ -366,7 +366,7 @@ createNode parentConstraint -n "Neck_parentConstraint1" -p "Sneaks_010:Neck";
 	setAttr -k on ".w0";
 createNode joint -n "Sneaks_010:rightArm" -p "Sneaks_010:Shoulder";
 	setAttr ".t" -type "double3" 3.7935605457664385 -5.5924047724528716 2.1434795811076892 ;
-	setAttr ".r" -type "double3" 4.1109423567179286 1.4989127569488914 0.29904059790824256 ;
+	setAttr ".r" -type "double3" 4.1109423567179277 1.4989127569488934 0.29904059790823617 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".radi" 0.58135369523566827;
@@ -393,13 +393,13 @@ createNode joint -n "Sneaks_010:rightFingerJunction" -p "Sneaks_010:rightpalm";
 	setAttr ".radi" 0.25;
 createNode joint -n "Sneaks_010:joint10" -p "Sneaks_010:rightFingerJunction";
 	setAttr ".t" -type "double3" 0.91822018173744979 -0.1330392629421942 0.77624133221112013 ;
-	setAttr ".r" -type "double3" -7.3119525767811435 6.8616166795211786 5.2801840685759833 ;
+	setAttr ".r" -type "double3" -7.3119525767809508 6.861616679521358 5.2801840685760428 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".radi" 0.2;
 createNode joint -n "Sneaks_010:joint11" -p "Sneaks_010:joint10";
 	setAttr ".t" -type "double3" -0.095819450052386873 0.17113441969500445 0.76036617010692509 ;
-	setAttr ".r" -type "double3" -29.199818779356722 -5.8241126479186773 -2.4382647191677838 ;
+	setAttr ".r" -type "double3" -29.19981877935723 -5.8241126479187786 -2.4382647191678259 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".radi" 0.2;
@@ -414,13 +414,13 @@ createNode ikEffector -n "Sneaks_010:effector30" -p "Sneaks_010:joint11";
 	setAttr ".hd" yes;
 createNode joint -n "Sneaks_010:joint13" -p "Sneaks_010:rightFingerJunction";
 	setAttr ".t" -type "double3" 0.36482836499079585 0.10995465425310361 0.79069706056185141 ;
-	setAttr ".r" -type "double3" 16.801267700737689 -1.1080708955337264 -5.0089510279774032 ;
+	setAttr ".r" -type "double3" 16.801267700738659 -1.1080708955335632 -5.0089510279776537 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".radi" 0.2;
 createNode joint -n "Sneaks_010:joint14" -p "Sneaks_010:joint13";
 	setAttr ".t" -type "double3" 0.10797248394964626 0.23567962969795328 0.69865979703634273 ;
-	setAttr ".r" -type "double3" -59.313773269473792 5.1657030926210137 9.0359546932951069 ;
+	setAttr ".r" -type "double3" -59.313773269475583 5.1657030926211709 9.0359546932953823 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".radi" 0.2;
@@ -434,7 +434,7 @@ createNode ikEffector -n "Sneaks_010:effector31" -p "Sneaks_010:joint14";
 	setAttr ".hd" yes;
 createNode joint -n "Sneaks_010:joint16" -p "Sneaks_010:rightFingerJunction";
 	setAttr ".t" -type "double3" -0.077330937977793307 0.13611814536035102 0.7313951841937989 ;
-	setAttr ".r" -type "double3" 16.238592801556329 3.9744950314792895 4.8304916034866556 ;
+	setAttr ".r" -type "double3" 16.238592801556329 3.9744950314792886 4.8304916034866556 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".radi" 0.2;
@@ -454,13 +454,13 @@ createNode ikEffector -n "Sneaks_010:effector32" -p "Sneaks_010:joint17";
 	setAttr ".hd" yes;
 createNode joint -n "Sneaks_010:joint19" -p "Sneaks_010:rightFingerJunction";
 	setAttr ".t" -type "double3" -0.5096417743055135 0.14440036211204688 0.27189079615246442 ;
-	setAttr ".r" -type "double3" 10.984083546448201 3.805978256311088 7.5173500685890531 ;
+	setAttr ".r" -type "double3" 10.98408354644755 3.8059782563110609 7.5173500685888524 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".radi" 0.2;
 createNode joint -n "Sneaks_010:joint20" -p "Sneaks_010:joint19";
 	setAttr ".t" -type "double3" -0.12902869613788195 0.15077570630212689 0.876146502862307 ;
-	setAttr ".r" -type "double3" -39.523715023159731 -6.3608088702259442 -4.8687025747829642 ;
+	setAttr ".r" -type "double3" -39.523715023158339 -6.3608088702257204 -4.8687025747827928 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".radi" 0.2;
@@ -508,8 +508,7 @@ createNode parentConstraint -n "rightFingerJunction_parentConstraint1" -p "Sneak
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 0.01382434176149161 -0.086188702420235408 -0.020982477414579037 ;
 	setAttr ".tg[0].tor" -type "double3" 4.3169191598931471 -4.6886189695018654 0.090359993072114717 ;
-	setAttr ".lr" -type "double3" -4.3235363257546239e-009 -9.8552276349680538e-007 
-		1.8734060091958848e-007 ;
+	setAttr ".lr" -type "double3" -4.323529964645348e-009 -9.8552277939957876e-007 1.8734060807583649e-007 ;
 	setAttr ".rst" -type "double3" 0.33502577224431196 0.11401050828489724 0.33516392301605175 ;
 	setAttr ".rsrr" -type "double3" -4.7708320221952752e-015 7.5538173684758519e-015 
 		7.951386703658788e-016 ;
@@ -519,13 +518,13 @@ createNode ikEffector -n "effector43" -p "Sneaks_010:rightElbow";
 	setAttr ".hd" yes;
 createNode joint -n "rightArm" -p "Sneaks_010:Shoulder";
 	setAttr ".t" -type "double3" -4.188221718840806 -5.3464323641082157 2.3342855773511921 ;
-	setAttr ".r" -type "double3" 3.9782552269230345 -3.3914872582266318 -1.450439692186521 ;
+	setAttr ".r" -type "double3" 4.3112145070034229 -3.3734491176211381 -1.4531398315734352 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".radi" 0.58135369523566827;
 createNode joint -n "rightElbow" -p "rightArm";
 	setAttr ".t" -type "double3" -0.70976102684207332 -4.4233301562563394 -3.5152368266120435 ;
-	setAttr ".r" -type "double3" -0.0053775429971103491 0.00024765493145625038 0.00077414724728040317 ;
+	setAttr ".r" -type "double3" 0.50257700331834265 -0.0024300836677672495 -0.085852011255104388 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".radi" 0.64410908743764705;
@@ -546,13 +545,13 @@ createNode joint -n "rightFingerJunction" -p "rightpalm";
 	setAttr ".radi" 0.25;
 createNode joint -n "joint10" -p "rightFingerJunction";
 	setAttr ".t" -type "double3" -0.66436816451154324 -0.041413656030770317 0.99969314359740036 ;
-	setAttr ".r" -type "double3" -9.0536494549020397 1.8437550555399913 0.76961131396324589 ;
+	setAttr ".r" -type "double3" -9.0536494549016755 1.8437550555400291 0.76961131396317717 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".radi" 0.2;
 createNode joint -n "joint11" -p "joint10";
 	setAttr ".t" -type "double3" 0.079378681825801087 0.096595150323655954 0.67300140177846013 ;
-	setAttr ".r" -type "double3" -26.878242774090722 2.5556295763085992 2.9121294012473218 ;
+	setAttr ".r" -type "double3" -26.878242774091479 2.5556295763086712 2.9121294012474035 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".radi" 0.2;
@@ -570,13 +569,13 @@ createNode ikEffector -n "effector42" -p "joint11";
 	setAttr ".hd" yes;
 createNode joint -n "joint13" -p "rightFingerJunction";
 	setAttr ".t" -type "double3" -0.20376481366619387 0.16083653597410519 0.90313030496939106 ;
-	setAttr ".r" -type "double3" 16.759351478689815 -3.2325096003094007 -1.7691482399807996 ;
+	setAttr ".r" -type "double3" 16.75935147869032 -3.2325096003094047 -1.7691482399809737 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".radi" 0.2;
 createNode joint -n "joint14" -p "joint13";
 	setAttr ".t" -type "double3" 0.089969006959456629 0.25163380146302666 0.73686075146682684 ;
-	setAttr ".r" -type "double3" -58.51014077974525 8.3454073542213365 4.808968707141986 ;
+	setAttr ".r" -type "double3" -58.51014077974623 8.3454073542214751 4.8089687071420659 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".radi" 0.2;
@@ -594,13 +593,13 @@ createNode ikEffector -n "effector41" -p "joint14";
 	setAttr ".hd" yes;
 createNode joint -n "joint16" -p "rightFingerJunction";
 	setAttr ".t" -type "double3" 0.23049730576180263 0.15415697328390218 0.7477031812819096 ;
-	setAttr ".r" -type "double3" 11.138573234896871 -4.5638983174273768 -5.3355467989176155 ;
+	setAttr ".r" -type "double3" 11.138573234896144 -4.5638983174272933 -5.3355467989172842 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".radi" 0.2;
 createNode joint -n "joint17" -p "joint16";
 	setAttr ".t" -type "double3" 0.12089113635854518 0.15113511420784553 0.53917174127507173 ;
-	setAttr ".r" -type "double3" -39.940179040574172 9.8861279552450192 6.866517992479471 ;
+	setAttr ".r" -type "double3" -39.940179040572986 9.8861279552447225 6.866517992479265 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".radi" 0.2;
@@ -618,13 +617,13 @@ createNode ikEffector -n "effector40" -p "joint17";
 	setAttr ".hd" yes;
 createNode joint -n "joint19" -p "rightFingerJunction";
 	setAttr ".t" -type "double3" 0.73603312269368515 0.023912614661641383 0.59945738786945724 ;
-	setAttr ".r" -type "double3" 9.3399480892083488 -1.5602581824699879 -7.4033072519558161 ;
+	setAttr ".r" -type "double3" 9.339948089208379 -1.56025818246996 -7.4033072519558498 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".radi" 0.2;
 createNode joint -n "joint20" -p "joint19";
 	setAttr ".t" -type "double3" 0.12648568916200054 0.2061228361442568 0.57973896837074257 ;
-	setAttr ".r" -type "double3" -39.476772033879975 5.0375023407309731 8.3586119107393131 ;
+	setAttr ".r" -type "double3" -39.47677203388006 5.0375023407309838 8.3586119107393326 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".radi" 0.2;
@@ -642,13 +641,13 @@ createNode ikEffector -n "effector39" -p "joint20";
 	setAttr ".hd" yes;
 createNode joint -n "joint22" -p "rightFingerJunction";
 	setAttr ".t" -type "double3" 1.0582706685016321 -0.23634811800363903 -0.2196155264845947 ;
-	setAttr ".r" -type "double3" -12.952410848680364 1.8536196491358863 -0.42715988027639795 ;
+	setAttr ".r" -type "double3" -12.952410848680323 1.8536196491358747 -0.42715988027644508 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".radi" 0.2;
 createNode joint -n "joint23" -p "joint22";
 	setAttr ".t" -type "double3" 0.19651783818942301 -0.19660266864074652 0.32742703028858305 ;
-	setAttr ".r" -type "double3" -1.0613876972599228 5.0553527312079716 3.6996898828704237 ;
+	setAttr ".r" -type "double3" -1.061387697259941 5.0553527312080577 3.6996898828704863 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".radi" 0.2;
@@ -681,7 +680,7 @@ createNode parentConstraint -n "rightFingerJunction_parentConstraint2" -p "right
 	setAttr ".tg[0].tot" -type "double3" 0.0096632236850426878 -0.091661136791741482 
 		-0.019873161299220676 ;
 	setAttr ".tg[0].tor" -type "double3" 4.3169023703585259 -4.6886423309612857 0.090825992208557527 ;
-	setAttr ".lr" -type "double3" 0.26210032255643978 3.192600636148152 0.68565569275993343 ;
+	setAttr ".lr" -type "double3" -0.57346178348887877 3.1762579580583079 0.77713569721120546 ;
 	setAttr ".rst" -type "double3" 0.37467772215024731 0.13188713685354814 0.28058984331503822 ;
 	setAttr ".rsrr" -type "double3" -6.3611093629270335e-015 -1.2324649390671127e-014 
 		-1.5902773407317576e-015 ;
@@ -775,7 +774,7 @@ createNode parentConstraint -n "Spine2_parentConstraint1" -p "Sneaks_010:Spine2"
 	setAttr ".rst" -type "double3" 0.097839999109361434 0.17475593242163256 2.2810169459509302 ;
 	setAttr ".rsrr" -type "double3" -0.28081911599831993 -0.013386880556517232 0.0026854281951351677 ;
 	setAttr -k on ".w0";
-createNode parentConstraint -n "spine_parentConstraint1" -p "Sneaks_010:spine";
+createNode parentConstraint -n "spine_parentConstraint1" -p "spine";
 	addAttr -ci true -k true -sn "w0" -ln "nurbsCircle1W0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -795,12 +794,12 @@ createNode parentConstraint -n "spine_parentConstraint1" -p "Sneaks_010:spine";
 	setAttr ".rst" -type "double3" -0.24241715316161644 13.188972024083569 -5.2636077299894106 ;
 	setAttr ".rsrr" -type "double3" -0.49424610920820089 -1.1600329029060346 1.7872178139793713 ;
 	setAttr -k on ".w0";
-createNode ikHandle -n "Sneaks_010:left_pinkie";
+createNode ikHandle -n "left_pinkie";
 	setAttr ".rp" -type "double3" 0.046663032926311417 -0.00044078395262356584 -0.0048733204690737178 ;
 	setAttr ".rpt" -type "double3" 0.00025585649755724573 0.00044078395262335925 0.0048733204690737308 ;
 	setAttr ".sp" -type "double3" 0.046663032926311417 -0.00044078395262356584 -0.0048733204690737178 ;
 	setAttr ".roc" yes;
-createNode parentConstraint -n "left_pinkie_parentConstraint1" -p "Sneaks_010:left_pinkie";
+createNode parentConstraint -n "left_pinkie_parentConstraint1" -p "left_pinkie";
 	addAttr -ci true -k true -sn "w0" -ln "controller_leftPinkyW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -821,9 +820,9 @@ createNode parentConstraint -n "left_pinkie_parentConstraint1" -p "Sneaks_010:le
 	setAttr ".rst" -type "double3" 5.1153733771194547 0.32872421509328154 8.4526921501387875 ;
 	setAttr ".rsrr" -type "double3" -32.738602833822952 -4.1796923138251048 3.7621458539343999 ;
 	setAttr -k on ".w0";
-createNode ikHandle -n "Sneaks_010:left_ring";
+createNode ikHandle -n "left_ring";
 	setAttr ".roc" yes;
-createNode parentConstraint -n "left_ring_parentConstraint1" -p "Sneaks_010:left_ring";
+createNode parentConstraint -n "left_ring_parentConstraint1" -p "left_ring";
 	addAttr -ci true -k true -sn "w0" -ln "controller_leftRingW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -844,9 +843,9 @@ createNode parentConstraint -n "left_ring_parentConstraint1" -p "Sneaks_010:left
 	setAttr ".rst" -type "double3" 4.7987182114771034 0.26739779278100972 8.7075338997650888 ;
 	setAttr ".rsrr" -type "double3" -39.032113752821047 -3.780025481131601 5.2999127707825808 ;
 	setAttr -k on ".w0";
-createNode ikHandle -n "Sneaks_010:left_middle";
+createNode ikHandle -n "left_middle";
 	setAttr ".roc" yes;
-createNode parentConstraint -n "left_middle_parentConstraint1" -p "Sneaks_010:left_middle";
+createNode parentConstraint -n "left_middle_parentConstraint1" -p "left_middle";
 	addAttr -ci true -k true -sn "w0" -ln "controller_leftMiddleW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -867,9 +866,9 @@ createNode parentConstraint -n "left_middle_parentConstraint1" -p "Sneaks_010:le
 	setAttr ".rst" -type "double3" 4.2074837706533099 0.25716506549200713 8.6935197909851265 ;
 	setAttr ".rsrr" -type "double3" -28.020769153993545 -4.2296502992263942 3.3748948581302076 ;
 	setAttr -k on ".w0";
-createNode ikHandle -n "Sneaks_010:left_index";
+createNode ikHandle -n "left_index";
 	setAttr ".roc" yes;
-createNode parentConstraint -n "left_index_parentConstraint1" -p "Sneaks_010:left_index";
+createNode parentConstraint -n "left_index_parentConstraint1" -p "left_index";
 	addAttr -ci true -k true -sn "w0" -ln "controller_leftIndexW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -890,17 +889,17 @@ createNode parentConstraint -n "left_index_parentConstraint1" -p "Sneaks_010:lef
 	setAttr ".rst" -type "double3" 3.6448784466618926 0.25154053789870934 8.1249115851596816 ;
 	setAttr ".rsrr" -type "double3" -26.409844858025657 -3.831247162222255 1.8120166217388707 ;
 	setAttr -k on ".w0";
-createNode ikHandle -n "Sneaks_010:left_thumb";
-	setAttr ".t" -type "double3" 3.1819644342821651 -0.12333818829148732 6.6678852194317626 ;
-	setAttr ".r" -type "double3" -9.1908155931920099 2.5951459341740142 3.0997281739115063 ;
+createNode ikHandle -n "left_thumb";
+	setAttr ".t" -type "double3" 3.1819644342821651 -0.1233381882914871 6.6678852194317626 ;
+	setAttr ".r" -type "double3" -9.1908155931920152 2.5951459341740208 3.099728173911501 ;
 	setAttr ".roc" yes;
-createNode ikHandle -n "Sneaks_010:RightLegHandle";
+createNode ikHandle -n "RightLegHandle";
 	setAttr ".rp" -type "double3" -0.00064379118402454116 1.2171838654952436 -0.4180136384401309 ;
 	setAttr ".rpt" -type "double3" 0.00064379118402430643 0.0078664299737806545 0.023648132364485389 ;
 	setAttr ".sp" -type "double3" -0.00064379118402454116 1.2171838654952436 -0.4180136384401309 ;
 	setAttr ".roc" yes;
 createNode poleVectorConstraint -n "Sneaks_010:RightLegHandle_poleVectorConstraint1" 
-		-p "Sneaks_010:RightLegHandle";
+		-p "RightLegHandle";
 	addAttr -ci true -k true -sn "w0" -ln "locator4W0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -916,7 +915,7 @@ createNode poleVectorConstraint -n "Sneaks_010:RightLegHandle_poleVectorConstrai
 	setAttr ".erp" yes;
 	setAttr ".rst" -type "double3" -0.26972257900371233 -4.9223888026363767 -2.5580561664920909 ;
 	setAttr -k on ".w0";
-createNode parentConstraint -n "RightLegHandle_parentConstraint1" -p "Sneaks_010:RightLegHandle";
+createNode parentConstraint -n "RightLegHandle_parentConstraint1" -p "RightLegHandle";
 	addAttr -ci true -k true -sn "w0" -ln "controller_rightLegW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -936,35 +935,98 @@ createNode parentConstraint -n "RightLegHandle_parentConstraint1" -p "Sneaks_010
 	setAttr ".rst" -type "double3" -3.7069693455592394 -0.59273517869937142 -4.3672146326290893 ;
 	setAttr ".rsrr" -type "double3" 1.10465753683415 1.2299238733510485 -0.42611629778004662 ;
 	setAttr -k on ".w0";
-createNode transform -n "Sneaks_010:LeftArm";
+createNode transform -n "LeftArm";
 	setAttr ".rp" -type "double3" 4.4627890452661969 3.8781706965667455 1.9817603859444679 ;
 	setAttr ".sp" -type "double3" 4.4627890452661969 3.8781706965667455 1.9817603859444679 ;
-createNode locator -n "Sneaks_010:LeftArmShape" -p "Sneaks_010:LeftArm";
+createNode locator -n "LeftArmShape" -p "LeftArm";
 	setAttr -k off ".v";
 	setAttr ".lp" -type "double3" 4.4627890452661969 3.8781706965667455 1.9817603859444679 ;
-createNode transform -n "Sneaks_010:RightArm";
+createNode parentConstraint -n "LeftArm_parentConstraint1" -p "LeftArm";
+	addAttr -ci true -k true -sn "w0" -ln "nurbsCircle2W0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 4.4627890452661969 3.8781706965667455 1.9817603859444681 ;
+	setAttr ".rst" -type "double3" 0 0 2.2204460492503131e-016 ;
+	setAttr -k on ".w0";
+createNode transform -n "RightArm";
 	setAttr ".rp" -type "double3" -4.62112932212505 3.8435750017198287 2.0278048305395462 ;
 	setAttr ".sp" -type "double3" -4.62112932212505 3.8435750017198287 2.0278048305395462 ;
-createNode locator -n "Sneaks_010:RightArmShape" -p "Sneaks_010:RightArm";
+createNode locator -n "RightArmShape" -p "RightArm";
 	setAttr -k off ".v";
 	setAttr ".lp" -type "double3" -4.62112932212505 3.8435750017198287 2.0278048305395462 ;
-createNode transform -n "Sneaks_010:LeftLeg";
+createNode parentConstraint -n "RightArm_parentConstraint1" -p "RightArm";
+	addAttr -ci true -k true -sn "w0" -ln "nurbsCircle2W0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" -4.62112932212505 3.8435750017198291 2.0278048305395462 ;
+	setAttr ".rst" -type "double3" 0 4.4408920985006262e-016 0 ;
+	setAttr -k on ".w0";
+createNode transform -n "LeftLeg";
 	setAttr ".rp" -type "double3" 3.7011179238158287 4.1165518236684244 -10.471362110880072 ;
 	setAttr ".sp" -type "double3" 3.7011179238158287 4.1165518236684244 -10.471362110880072 ;
-createNode locator -n "Sneaks_010:LeftLegShape" -p "Sneaks_010:LeftLeg";
+createNode locator -n "LeftLegShape" -p "LeftLeg";
 	setAttr -k off ".v";
 	setAttr ".lp" -type "double3" 3.7011179238158287 4.1165518236684244 -10.471362110880072 ;
-createNode transform -n "Sneaks_010:RightLeg";
+createNode parentConstraint -n "LeftLeg_parentConstraint1" -p "LeftLeg";
+	addAttr -ci true -k true -sn "w0" -ln "nurbsCircle2W0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 3.7011179238158287 4.1165518236684244 -10.471362110880072 ;
+	setAttr -k on ".w0";
+createNode transform -n "RightLeg";
 	setAttr ".rp" -type "double3" -3.8764733082357328 4.1478670637519324 -10.452266951822343 ;
 	setAttr ".sp" -type "double3" -3.8764733082357328 4.1478670637519324 -10.452266951822343 ;
-createNode locator -n "Sneaks_010:RightLegShape" -p "Sneaks_010:RightLeg";
+createNode locator -n "RightLegShape" -p "RightLeg";
 	setAttr -k off ".v";
 	setAttr ".lp" -type "double3" -3.8764733082357328 4.1478670637519324 -10.452266951822343 ;
+createNode parentConstraint -n "RightLeg_parentConstraint1" -p "RightLeg";
+	addAttr -ci true -k true -sn "w0" -ln "nurbsCircle2W0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" -3.8764733082357328 4.1478670637519315 -10.452266951822342 ;
+	setAttr ".rst" -type "double3" 0 -8.8817841970012523e-016 1.7763568394002505e-015 ;
+	setAttr -k on ".w0";
 createNode transform -n "Tuffs002:TuffsMesh";
-	setAttr ".t" -type "double3" 0.024060607602979456 0.92613919555952862 -0.0024210999999999998 ;
-	setAttr -av ".tx";
-	setAttr -av ".tz";
-	setAttr -av ".ty";
 	setAttr ".rp" -type "double3" 0.051470344565669013 0 0 ;
 	setAttr ".sp" -type "double3" 0.051470344565669013 0 0 ;
 createNode transform -n "Tuffs002:transform2" -p "Tuffs002:TuffsMesh";
@@ -25012,9 +25074,9 @@ createNode mesh -n "Tuffs002:polySurfaceShape1" -p "Tuffs002:Tuffs_RightEye";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
-createNode ikHandle -n "ikHandle1";
+createNode ikHandle -n "LeftLegHandle";
 	setAttr ".roc" yes;
-createNode parentConstraint -n "ikHandle1_parentConstraint1" -p "ikHandle1";
+createNode parentConstraint -n "ikHandle1_parentConstraint1" -p "LeftLegHandle";
 	addAttr -ci true -k true -sn "w0" -ln "controller_leftLegW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -25034,7 +25096,7 @@ createNode parentConstraint -n "ikHandle1_parentConstraint1" -p "ikHandle1";
 	setAttr ".rst" -type "double3" 3.6830874098705553 0.64108681798330092 -4.7586306495554815 ;
 	setAttr ".rsrr" -type "double3" 4.4998693152657792 18.315845088952862 -2.560299488518893 ;
 	setAttr -k on ".w0";
-createNode poleVectorConstraint -n "ikHandle1_poleVectorConstraint1" -p "ikHandle1";
+createNode poleVectorConstraint -n "ikHandle1_poleVectorConstraint1" -p "LeftLegHandle";
 	addAttr -ci true -k true -sn "w0" -ln "LeftLegW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -25050,9 +25112,9 @@ createNode poleVectorConstraint -n "ikHandle1_poleVectorConstraint1" -p "ikHandl
 	setAttr ".erp" yes;
 	setAttr ".rst" -type "double3" 0.8227557040689919 -6.6903425656776578 -4.2165981395245282 ;
 	setAttr -k on ".w0";
-createNode ikHandle -n "ikHandle2";
+createNode ikHandle -n "right_thumb";
 	setAttr ".roc" yes;
-createNode parentConstraint -n "ikHandle2_parentConstraint1" -p "ikHandle2";
+createNode parentConstraint -n "ikHandle2_parentConstraint1" -p "right_thumb";
 	addAttr -ci true -k true -sn "w0" -ln "controller_rightThumbW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -25072,9 +25134,9 @@ createNode parentConstraint -n "ikHandle2_parentConstraint1" -p "ikHandle2";
 	setAttr ".rst" -type "double3" -3.0898024699387414 -0.12560020130575886 6.8226617475212628 ;
 	setAttr ".rsrr" -type "double3" -9.9480432153414036 2.7085140164742092 2.7210475345663272 ;
 	setAttr -k on ".w0";
-createNode ikHandle -n "ikHandle3";
+createNode ikHandle -n "right_index";
 	setAttr ".roc" yes;
-createNode parentConstraint -n "ikHandle3_parentConstraint1" -p "ikHandle3";
+createNode parentConstraint -n "ikHandle3_parentConstraint1" -p "right_index";
 	addAttr -ci true -k true -sn "w0" -ln "controller_rightIndexW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -25095,9 +25157,9 @@ createNode parentConstraint -n "ikHandle3_parentConstraint1" -p "ikHandle3";
 	setAttr ".rst" -type "double3" -3.6716632348034985 0.26838609892762 8.0849828879441787 ;
 	setAttr ".rsrr" -type "double3" -26.293428155062745 -2.736532019776035 1.887197811099925 ;
 	setAttr -k on ".w0";
-createNode ikHandle -n "ikHandle4";
+createNode ikHandle -n "right_middle";
 	setAttr ".roc" yes;
-createNode parentConstraint -n "ikHandle4_parentConstraint1" -p "ikHandle4";
+createNode parentConstraint -n "ikHandle4_parentConstraint1" -p "right_middle";
 	addAttr -ci true -k true -sn "w0" -ln "controller_rightMiddleW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -25118,9 +25180,9 @@ createNode parentConstraint -n "ikHandle4_parentConstraint1" -p "ikHandle4";
 	setAttr ".rst" -type "double3" -4.2573855860337417 0.27610175734297854 8.5498311060162795 ;
 	setAttr ".rsrr" -type "double3" -25.417611435563153 -1.0688602790195572 3.6035968977787434 ;
 	setAttr -k on ".w0";
-createNode ikHandle -n "ikHandle5";
+createNode ikHandle -n "right_ring";
 	setAttr ".roc" yes;
-createNode parentConstraint -n "ikHandle5_parentConstraint1" -p "ikHandle5";
+createNode parentConstraint -n "ikHandle5_parentConstraint1" -p "right_ring";
 	addAttr -ci true -k true -sn "w0" -ln "controller_rightRingW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -25140,9 +25202,9 @@ createNode parentConstraint -n "ikHandle5_parentConstraint1" -p "ikHandle5";
 	setAttr ".rst" -type "double3" -4.8032345360917397 0.29298361362088632 8.7004964229484951 ;
 	setAttr ".rsrr" -type "double3" -38.2321875745954 -1.6700697665263684 5.5347882209548169 ;
 	setAttr -k on ".w0";
-createNode ikHandle -n "ikHandle6";
+createNode ikHandle -n "right_pinky";
 	setAttr ".roc" yes;
-createNode parentConstraint -n "ikHandle6_parentConstraint1" -p "ikHandle6";
+createNode parentConstraint -n "ikHandle6_parentConstraint1" -p "right_pinky";
 	addAttr -ci true -k true -sn "w0" -ln "controller_rightPinkyW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -25162,11 +25224,9 @@ createNode parentConstraint -n "ikHandle6_parentConstraint1" -p "ikHandle6";
 	setAttr ".rst" -type "double3" -5.156065016964642 0.26895631096103323 8.4569935799075751 ;
 	setAttr ".rsrr" -type "double3" -31.82323156456177 -0.11357751904858648 3.6823417467232922 ;
 	setAttr -k on ".w0";
-createNode ikHandle -n "ikHandle7";
-	setAttr ".t" -type "double3" 4.5316343620086528 0.71047165047906535 5.3610177890927764 ;
-	setAttr ".r" -type "double3" 0.9860565874067444 -1.6042919963359461 1.5021208045925505 ;
+createNode ikHandle -n "LeftArmHandle";
 	setAttr ".roc" yes;
-createNode poleVectorConstraint -n "ikHandle7_poleVectorConstraint1" -p "ikHandle7";
+createNode poleVectorConstraint -n "ikHandle7_poleVectorConstraint1" -p "LeftArmHandle";
 	addAttr -ci true -k true -sn "w0" -ln "LeftArmW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -25182,9 +25242,29 @@ createNode poleVectorConstraint -n "ikHandle7_poleVectorConstraint1" -p "ikHandl
 	setAttr ".erp" yes;
 	setAttr ".rst" -type "double3" 0.61852791201419333 -4.1667509304099939 -5.5628873336058371 ;
 	setAttr -k on ".w0";
-createNode ikHandle -n "ikHandle8";
+createNode parentConstraint -n "ikHandle7_parentConstraint1" -p "LeftArmHandle";
+	addAttr -ci true -k true -sn "w0" -ln "controller_leftArmW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 0.12685165575807833 1.2149135962019975 -0.70942693768685228 ;
+	setAttr ".tg[0].tor" -type "double3" 0.9860565874067444 -1.6042919963359461 1.5021208045925503 ;
+	setAttr ".lr" -type "double3" 0.9860565874067444 -1.6042919963359461 1.5021208045925503 ;
+	setAttr ".rst" -type "double3" 4.5316343620086519 0.71047165047906535 5.3610177890927764 ;
+	setAttr ".rsrr" -type "double3" 0.9860565874067444 -1.6042919963359461 1.5021208045925503 ;
+	setAttr -k on ".w0";
+createNode ikHandle -n "RightArmHandle";
 	setAttr ".roc" yes;
-createNode poleVectorConstraint -n "ikHandle8_poleVectorConstraint1" -p "ikHandle8";
+createNode poleVectorConstraint -n "ikHandle8_poleVectorConstraint1" -p "RightArmHandle";
 	addAttr -ci true -k true -sn "w0" -ln "RightArmW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -25200,7 +25280,7 @@ createNode poleVectorConstraint -n "ikHandle8_poleVectorConstraint1" -p "ikHandl
 	setAttr ".erp" yes;
 	setAttr ".rst" -type "double3" -0.47753983880982714 -4.2013171626135151 -5.5168403129148142 ;
 	setAttr -k on ".w0";
-createNode parentConstraint -n "ikHandle8_parentConstraint1" -p "ikHandle8";
+createNode parentConstraint -n "ikHandle8_parentConstraint1" -p "RightArmHandle";
 	addAttr -ci true -k true -sn "w0" -ln "controller_rightArmW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -25219,6 +25299,28 @@ createNode parentConstraint -n "ikHandle8_parentConstraint1" -p "ikHandle8";
 	setAttr ".lr" -type "double3" 0.98603935505500273 -1.6043157243903166 1.5025856821227257 ;
 	setAttr ".rst" -type "double3" -4.5231650148844755 0.71082792271680839 5.3603642523461064 ;
 	setAttr ".rsrr" -type "double3" 0.98603935505500273 -1.6043157243903166 1.5025856821227257 ;
+	setAttr -k on ".w0";
+createNode transform -n "controller_head";
+	setAttr ".rp" -type "double3" 0 14.38031994651223 8.0593118738204179 ;
+	setAttr ".sp" -type "double3" 0 14.38031994651223 8.0593118738204179 ;
+createNode nurbsCurve -n "controller_headShape" -p "controller_head";
+	setAttr -k off ".v";
+	setAttr ".tw" yes;
+createNode parentConstraint -n "controller_head_parentConstraint1" -p "controller_head";
+	addAttr -ci true -k true -sn "w0" -ln "nurbsCircle1W0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 0 5.7642206151107285 8.1755800855217373 ;
 	setAttr -k on ".w0";
 createNode transform -n "controller_leftArm";
 	setAttr ".rp" -type "double3" 4.4047827062505736 -0.50444194572293211 6.0704447267796287 ;
@@ -25352,7 +25454,140 @@ createNode transform -n "controller_leftPinky" -p "controller_leftWrist";
 createNode nurbsCurve -n "controller_leftPinkyShape" -p "controller_leftPinky";
 	setAttr -k off ".v";
 	setAttr ".tw" yes;
-createNode transform -n "controller_rightThumb";
+createNode parentConstraint -n "controller_leftArm_parentConstraint1" -p "controller_leftArm";
+	addAttr -ci true -k true -sn "w0" -ln "nurbsCircle2W0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 4.4047827062505736 -0.50444194572293211 6.0704447267796287 ;
+	setAttr -k on ".w0";
+createNode transform -n "controller_rightArm";
+	setAttr ".t" -type "double3" 0 0 -0.068900749227580604 ;
+	setAttr -av ".tx";
+	setAttr -av ".ty";
+	setAttr -av ".tz";
+	setAttr ".rp" -type "double3" -4.6280219427562619 -0.50444194572293211 6.0704447267796287 ;
+	setAttr ".sp" -type "double3" -4.6280219427562619 -0.50444194572293211 6.0704447267796287 ;
+createNode nurbsCurve -n "controller_rightArmShape" -p "controller_rightArm";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		-2.9301593209924657 -0.50444194572293199 4.3725821050158356
+		-4.6280219427562619 -0.50444194572293199 3.6693043800349296
+		-6.3258845645200559 -0.50444194572293199 4.3725821050158338
+		-7.0291622895009613 -0.50444194572293211 6.0704447267796278
+		-6.3258845645200568 -0.50444194572293222 7.7683073485434226
+		-4.6280219427562628 -0.50444194572293222 8.4715850735243272
+		-2.9301593209924683 -0.50444194572293222 7.7683073485434244
+		-2.2268815960115629 -0.50444194572293211 6.0704447267796295
+		-2.9301593209924657 -0.50444194572293199 4.3725821050158356
+		-4.6280219427562619 -0.50444194572293199 3.6693043800349296
+		-6.3258845645200559 -0.50444194572293199 4.3725821050158338
+		;
+createNode parentConstraint -n "controller_rightArm_parentConstraint1" -p "controller_rightArm";
+	addAttr -ci true -k true -sn "w0" -ln "nurbsCircle2W0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" -4.6280219427562619 -0.50444194572293211 6.0704447267796287 ;
+	setAttr -k on ".w0";
+createNode transform -n "controller_rightWrist" -p "controller_rightArm";
+	setAttr ".rp" -type "double3" -4.4996542994499844 0.47645271598074546 6.2820126830333507 ;
+	setAttr ".sp" -type "double3" -4.4996542994499844 0.47645271598074546 6.2820126830333507 ;
+createNode nurbsCurve -n "controller_rightWristShape" -p "controller_rightWrist";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		-3.3887924478023086 1.5873145676284195 6.2820126830333507
+		-4.4996542994499844 2.0474486125037767 6.2820126830333507
+		-5.6105161510976593 1.5873145676284204 6.2820126830333507
+		-6.0706501959730161 0.4764527159807459 6.2820126830333507
+		-5.6105161510976593 -0.63440913566692902 6.2820126830333507
+		-4.4996542994499853 -1.0945431805422861 6.2820126830333507
+		-3.3887924478023104 -0.63440913566692947 6.2820126830333507
+		-2.9286584029269531 0.47645271598074462 6.2820126830333507
+		-3.3887924478023086 1.5873145676284195 6.2820126830333507
+		-4.4996542994499844 2.0474486125037767 6.2820126830333507
+		-5.6105161510976593 1.5873145676284204 6.2820126830333507
+		;
+createNode parentConstraint -n "controller_rightWrist_parentConstraint1" -p "controller_rightWrist";
+	addAttr -ci true -k true -sn "w0" -ln "controller_rightArmW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 0.12836764330627926 0.98089466170367756 0.21156795625372116 ;
+	setAttr ".rst" -type "double3" 1.7763568394002505e-015 0 -8.8817841970012523e-016 ;
+	setAttr -k on ".w0";
+createNode transform -n "controller_rightMiddle" -p "controller_rightWrist";
+	setAttr ".rp" -type "double3" -4.2198007757618923 0.28695795426822696 8.872927110886712 ;
+	setAttr ".sp" -type "double3" -4.2198007757618923 0.28695795426822696 8.872927110886712 ;
+createNode nurbsCurve -n "controller_rightMiddleShape" -p "controller_rightMiddle";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		-4.0694977483906616 0.43726098163945737 8.872927110886712
+		-4.2198007757618923 0.49951853404235569 8.872927110886712
+		-4.370103803133123 0.43726098163945742 8.872927110886712
+		-4.4323613555360213 0.28695795426822701 8.872927110886712
+		-4.370103803133123 0.13665492689699649 8.872927110886712
+		-4.2198007757618923 0.07439737449409814 8.872927110886712
+		-4.0694977483906616 0.13665492689699643 8.872927110886712
+		-4.0072401959877633 0.28695795426822684 8.872927110886712
+		-4.0694977483906616 0.43726098163945737 8.872927110886712
+		-4.2198007757618923 0.49951853404235569 8.872927110886712
+		-4.370103803133123 0.43726098163945742 8.872927110886712
+		;
+createNode parentConstraint -n "controller_rightMiddle_parentConstraint1" -p "controller_rightMiddle";
+	addAttr -ci true -k true -sn "w0" -ln "controller_rightWristW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 0.27985352368809124 -0.1894947617125185 2.5909144278533605 ;
+	setAttr ".rst" -type "double3" -8.8817841970012523e-016 0 -1.7763568394002505e-015 ;
+	setAttr -k on ".w0";
+createNode transform -n "controller_rightThumb" -p "controller_rightWrist";
 	setAttr ".rp" -type "double3" -3.1054244343276847 -0.16006407479509405 7.0423671798135921 ;
 	setAttr ".sp" -type "double3" -3.1054244343276847 -0.16006407479509405 7.0423671798135921 ;
 createNode nurbsCurve -n "controller_rightThumbShape" -p "controller_rightThumb";
@@ -25391,7 +25626,7 @@ createNode parentConstraint -n "controller_rightThumb_parentConstraint1" -p "con
 	setAttr ".rst" -type "double3" -8.8817841970012523e-016 -5.5511151231257827e-017 
 		0 ;
 	setAttr -k on ".w0";
-createNode transform -n "controller_rightIndex";
+createNode transform -n "controller_rightIndex" -p "controller_rightWrist";
 	setAttr ".rp" -type "double3" -3.6407933629537705 0.25860282369693327 8.3705801996454685 ;
 	setAttr ".sp" -type "double3" -3.6407933629537705 0.25860282369693327 8.3705801996454685 ;
 createNode nurbsCurve -n "controller_rightIndexShape" -p "controller_rightIndex";
@@ -25430,45 +25665,7 @@ createNode parentConstraint -n "controller_rightIndex_parentConstraint1" -p "con
 	setAttr ".rst" -type "double3" -8.8817841970012523e-016 -5.5511151231257827e-017 
 		1.7763568394002505e-015 ;
 	setAttr -k on ".w0";
-createNode transform -n "controller_rightMiddle";
-	setAttr ".rp" -type "double3" -4.2198007757618923 0.28695795426822696 8.872927110886712 ;
-	setAttr ".sp" -type "double3" -4.2198007757618923 0.28695795426822696 8.872927110886712 ;
-createNode nurbsCurve -n "controller_rightMiddleShape" -p "controller_rightMiddle";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		-4.0694977483906616 0.43726098163945737 8.872927110886712
-		-4.2198007757618923 0.49951853404235569 8.872927110886712
-		-4.370103803133123 0.43726098163945742 8.872927110886712
-		-4.4323613555360213 0.28695795426822701 8.872927110886712
-		-4.370103803133123 0.13665492689699649 8.872927110886712
-		-4.2198007757618923 0.07439737449409814 8.872927110886712
-		-4.0694977483906616 0.13665492689699643 8.872927110886712
-		-4.0072401959877633 0.28695795426822684 8.872927110886712
-		-4.0694977483906616 0.43726098163945737 8.872927110886712
-		-4.2198007757618923 0.49951853404235569 8.872927110886712
-		-4.370103803133123 0.43726098163945742 8.872927110886712
-		;
-createNode parentConstraint -n "controller_rightMiddle_parentConstraint1" -p "controller_rightMiddle";
-	addAttr -ci true -k true -sn "w0" -ln "controller_rightWristW0" -dv 1 -min 0 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr ".tg[0].tot" -type "double3" 0.27985352368809124 -0.1894947617125185 2.5909144278533605 ;
-	setAttr ".rst" -type "double3" -8.8817841970012523e-016 0 -1.7763568394002505e-015 ;
-	setAttr -k on ".w0";
-createNode transform -n "controller_rightRing";
+createNode transform -n "controller_rightRing" -p "controller_rightWrist";
 	setAttr ".rp" -type "double3" -4.8193332321317062 0.25295538401621992 8.9137554501457643 ;
 	setAttr ".sp" -type "double3" -4.8193332321317062 0.25295538401621992 8.9137554501457643 ;
 createNode nurbsCurve -n "controller_rightRingShape" -p "controller_rightRing";
@@ -25507,7 +25704,7 @@ createNode parentConstraint -n "controller_rightRing_parentConstraint1" -p "cont
 	setAttr ".rst" -type "double3" -8.8817841970012523e-016 -5.5511151231257827e-017 
 		0 ;
 	setAttr -k on ".w0";
-createNode transform -n "controller_rightPinky";
+createNode transform -n "controller_rightPinky" -p "controller_rightWrist";
 	setAttr ".rp" -type "double3" -5.1650516102599884 0.25295538401621992 8.6547190575548374 ;
 	setAttr ".sp" -type "double3" -5.1650516102599884 0.25295538401621992 8.6547190575548374 ;
 createNode nurbsCurve -n "controller_rightPinkyShape" -p "controller_rightPinky";
@@ -25545,50 +25742,14 @@ createNode parentConstraint -n "controller_rightPinky_parentConstraint1" -p "con
 	setAttr ".tg[0].tot" -type "double3" -0.66539731081000575 -0.22349733196452551 2.3727063745214876 ;
 	setAttr ".rst" -type "double3" -1.7763568394002505e-015 0 1.7763568394002505e-015 ;
 	setAttr -k on ".w0";
-createNode transform -n "controller_rightArm";
-	setAttr ".rp" -type "double3" -4.6280219427562619 -0.50444194572293211 6.0704447267796287 ;
-	setAttr ".sp" -type "double3" -4.6280219427562619 -0.50444194572293211 6.0704447267796287 ;
-createNode nurbsCurve -n "controller_rightArmShape" -p "controller_rightArm";
+createNode transform -n "controller_leftLeg";
+	setAttr ".rp" -type "double3" 3.5767053513954972 -0.60217687938071274 -6.112899156915355 ;
+	setAttr ".sp" -type "double3" 3.5767053513954972 -0.60217687938071274 -6.112899156915355 ;
+createNode nurbsCurve -n "controller_leftLegShape" -p "controller_leftLeg";
 	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		-2.9301593209924657 -0.50444194572293199 4.3725821050158356
-		-4.6280219427562619 -0.50444194572293199 3.6693043800349296
-		-6.3258845645200559 -0.50444194572293199 4.3725821050158338
-		-7.0291622895009613 -0.50444194572293211 6.0704447267796278
-		-6.3258845645200568 -0.50444194572293222 7.7683073485434226
-		-4.6280219427562628 -0.50444194572293222 8.4715850735243272
-		-2.9301593209924683 -0.50444194572293222 7.7683073485434244
-		-2.2268815960115629 -0.50444194572293211 6.0704447267796295
-		-2.9301593209924657 -0.50444194572293199 4.3725821050158356
-		-4.6280219427562619 -0.50444194572293199 3.6693043800349296
-		-6.3258845645200559 -0.50444194572293199 4.3725821050158338
-		;
-createNode transform -n "controller_rightWrist";
-	setAttr ".rp" -type "double3" -4.4996542994499844 0.47645271598074546 6.2820126830333507 ;
-	setAttr ".sp" -type "double3" -4.4996542994499844 0.47645271598074546 6.2820126830333507 ;
-createNode nurbsCurve -n "controller_rightWristShape" -p "controller_rightWrist";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		-3.3887924478023086 1.5873145676284195 6.2820126830333507
-		-4.4996542994499844 2.0474486125037767 6.2820126830333507
-		-5.6105161510976593 1.5873145676284204 6.2820126830333507
-		-6.0706501959730161 0.4764527159807459 6.2820126830333507
-		-5.6105161510976593 -0.63440913566692902 6.2820126830333507
-		-4.4996542994499853 -1.0945431805422861 6.2820126830333507
-		-3.3887924478023104 -0.63440913566692947 6.2820126830333507
-		-2.9286584029269531 0.47645271598074462 6.2820126830333507
-		-3.3887924478023086 1.5873145676284195 6.2820126830333507
-		-4.4996542994499844 2.0474486125037767 6.2820126830333507
-		-5.6105161510976593 1.5873145676284204 6.2820126830333507
-		;
-createNode parentConstraint -n "controller_rightWrist_parentConstraint1" -p "controller_rightWrist";
-	addAttr -ci true -k true -sn "w0" -ln "controller_rightArmW0" -dv 1 -min 0 -at "double";
+	setAttr ".tw" yes;
+createNode parentConstraint -n "controller_leftLeg_parentConstraint1" -p "controller_leftLeg";
+	addAttr -ci true -k true -sn "w0" -ln "nurbsCircle2W0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
 	setAttr -k off ".tx";
@@ -25601,15 +25762,8 @@ createNode parentConstraint -n "controller_rightWrist_parentConstraint1" -p "con
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".tg[0].tot" -type "double3" 0.12836764330627926 0.98089466170367756 0.21156795625372116 ;
-	setAttr ".rst" -type "double3" 1.7763568394002505e-015 0 -8.8817841970012523e-016 ;
+	setAttr ".tg[0].tot" -type "double3" 3.5767053513954972 -0.60217687938071274 -6.112899156915355 ;
 	setAttr -k on ".w0";
-createNode transform -n "controller_leftLeg";
-	setAttr ".rp" -type "double3" 3.5767053513954972 -0.60217687938071274 -6.112899156915355 ;
-	setAttr ".sp" -type "double3" 3.5767053513954972 -0.60217687938071274 -6.112899156915355 ;
-createNode nurbsCurve -n "controller_leftLegShape" -p "controller_leftLeg";
-	setAttr -k off ".v";
-	setAttr ".tw" yes;
 createNode transform -n "controller_rightLeg";
 	setAttr ".rp" -type "double3" -3.6539423276364018 -0.60217687938071307 -6.1128991569153577 ;
 	setAttr ".sp" -type "double3" -3.6539423276364018 -0.60217687938071307 -6.1128991569153577 ;
@@ -25631,14 +25785,8 @@ createNode nurbsCurve -n "controller_rightLegShape" -p "controller_rightLeg";
 		-3.6539423276364018 -0.60217687938071296 -8.4933775093631247
 		-5.337194713119997 -0.60217687938071296 -7.7961515423989534
 		;
-createNode transform -n "controller_head";
-	setAttr ".rp" -type "double3" 0 14.38031994651223 8.0593118738204179 ;
-	setAttr ".sp" -type "double3" 0 14.38031994651223 8.0593118738204179 ;
-createNode nurbsCurve -n "controller_headShape" -p "controller_head";
-	setAttr -k off ".v";
-	setAttr ".tw" yes;
-createNode parentConstraint -n "controller_head_parentConstraint1" -p "controller_head";
-	addAttr -ci true -k true -sn "w0" -ln "nurbsCircle1W0" -dv 1 -min 0 -at "double";
+createNode parentConstraint -n "controller_rightLeg_parentConstraint1" -p "controller_rightLeg";
+	addAttr -ci true -k true -sn "w0" -ln "nurbsCircle2W0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
 	setAttr -k off ".tx";
@@ -25651,7 +25799,7 @@ createNode parentConstraint -n "controller_head_parentConstraint1" -p "controlle
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".tg[0].tot" -type "double3" 0 5.7642206151107285 8.1755800855217373 ;
+	setAttr ".tg[0].tot" -type "double3" -3.6539423276364018 -0.60217687938071307 -6.1128991569153577 ;
 	setAttr -k on ".w0";
 createNode transform -n "controller_shoulder";
 	setAttr ".rp" -type "double3" 0 13.393147801860524 4.9985193902752565 ;
@@ -26027,10 +26175,34 @@ createNode parentConstraint -n "controller_tailtip_parentConstraint1" -p "contro
 	setAttr ".tg[0].tot" -type "double3" -0.028031073824306141 0.60148262505866334 -3.217454676901113 ;
 	setAttr ".rst" -type "double3" 0 0 -3.5527136788005009e-015 ;
 	setAttr -k on ".w0";
-createNode transform -n "nurbsCircle1";
+createNode transform -n "controller_COG";
+	setAttr ".t" -type "double3" 0 0 1.3877787807814457e-017 ;
+	setAttr -av ".ty";
+	setAttr -av ".tz";
 	setAttr ".rp" -type "double3" 0 8.616099331401502 -0.11626821170131936 ;
 	setAttr ".sp" -type "double3" 0 8.616099331401502 -0.11626821170131936 ;
-createNode nurbsCurve -n "nurbsCircleShape1" -p "nurbsCircle1";
+createNode nurbsCurve -n "controller_COGShape" -p "controller_COG";
+	setAttr -k off ".v";
+	setAttr ".tw" yes;
+createNode parentConstraint -n "nurbsCircle1_parentConstraint1" -p "controller_COG";
+	addAttr -ci true -k true -sn "w0" -ln "nurbsCircle2W0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 0 8.616099331401502 -0.11626821170131935 ;
+	setAttr ".rst" -type "double3" 0 0 1.3877787807814457e-017 ;
+	setAttr -k on ".w0";
+createNode transform -n "controller_root";
+createNode nurbsCurve -n "controller_rootShape" -p "controller_root";
 	setAttr -k off ".v";
 	setAttr ".tw" yes;
 createNode lightLinker -s -n "lightLinker1";
@@ -26988,9 +27160,15 @@ createNode makeNurbCircle -n "makeNurbCircle4";
 createNode transformGeometry -n "transformGeometry4";
 	setAttr ".txf" -type "matrix" 0.89225397502756643 0 0 0 0 1.1554063489228816 0 0
 		 0 0 1.1554063489228816 0 0 8.616099331401502 -0.11626821170131936 1;
+createNode makeNurbCircle -n "makeNurbCircle5";
+	setAttr ".nr" -type "double3" 0 1 0 ;
+	setAttr ".r" 8.9411320036323048;
+createNode transformGeometry -n "transformGeometry5";
+	setAttr ".txf" -type "matrix" 1.041714008601786 0 0 0 0 1 0 0 0 0 1.6638793882680727 0
+		 0 0 0 1;
 select -ne :time1;
-	setAttr ".o" 14;
-	setAttr ".unw" 14;
+	setAttr ".o" 15;
+	setAttr ".unw" 15;
 select -ne :renderPartition;
 	setAttr -s 42 ".st";
 select -ne :initialShadingGroup;
@@ -27015,16 +27193,16 @@ select -ne :defaultHardwareRenderGlobals;
 	setAttr ".fn" -type "string" "im";
 	setAttr ".res" -type "string" "ntsc_4d 646 485 1.333";
 select -ne :ikSystem;
-	setAttr -s 2 ".sol";
+	setAttr -s 4 ".sol";
 connectAttr "quadtuff:Tuffs:Frames_I_Cant_Erase.di" ":front.do";
 connectAttr "quadtuff:Tuffs:Frames_I_Cant_Erase.di" ":side.do";
-connectAttr "spine_parentConstraint1.ctx" "Sneaks_010:spine.tx";
-connectAttr "spine_parentConstraint1.cty" "Sneaks_010:spine.ty";
-connectAttr "spine_parentConstraint1.ctz" "Sneaks_010:spine.tz";
-connectAttr "spine_parentConstraint1.crx" "Sneaks_010:spine.rx";
-connectAttr "spine_parentConstraint1.cry" "Sneaks_010:spine.ry";
-connectAttr "spine_parentConstraint1.crz" "Sneaks_010:spine.rz";
-connectAttr "Sneaks_010:spine.s" "Sneaks_010:tail_joints.is";
+connectAttr "spine_parentConstraint1.ctx" "spine.tx";
+connectAttr "spine_parentConstraint1.cty" "spine.ty";
+connectAttr "spine_parentConstraint1.ctz" "spine.tz";
+connectAttr "spine_parentConstraint1.crx" "spine.rx";
+connectAttr "spine_parentConstraint1.cry" "spine.ry";
+connectAttr "spine_parentConstraint1.crz" "spine.rz";
+connectAttr "spine.s" "Sneaks_010:tail_joints.is";
 connectAttr "tail_joints_parentConstraint1.ctx" "Sneaks_010:tail_joints.tx";
 connectAttr "tail_joints_parentConstraint1.cty" "Sneaks_010:tail_joints.ty";
 connectAttr "tail_joints_parentConstraint1.ctz" "Sneaks_010:tail_joints.tz";
@@ -27163,7 +27341,7 @@ connectAttr "controller_hip.s" "tail_joints_parentConstraint1.tg[0].ts";
 connectAttr "controller_hip.pm" "tail_joints_parentConstraint1.tg[0].tpm";
 connectAttr "tail_joints_parentConstraint1.w0" "tail_joints_parentConstraint1.tg[0].tw"
 		;
-connectAttr "Sneaks_010:spine.s" "Sneaks_010:Spine2.is";
+connectAttr "spine.s" "Sneaks_010:Spine2.is";
 connectAttr "Spine2_parentConstraint1.ctx" "Sneaks_010:Spine2.tx";
 connectAttr "Spine2_parentConstraint1.cty" "Sneaks_010:Spine2.ty";
 connectAttr "Spine2_parentConstraint1.ctz" "Sneaks_010:Spine2.tz";
@@ -27417,32 +27595,32 @@ connectAttr "controller_spine3.ro" "Spine2_parentConstraint1.tg[0].tro";
 connectAttr "controller_spine3.s" "Spine2_parentConstraint1.tg[0].ts";
 connectAttr "controller_spine3.pm" "Spine2_parentConstraint1.tg[0].tpm";
 connectAttr "Spine2_parentConstraint1.w0" "Spine2_parentConstraint1.tg[0].tw";
-connectAttr "Sneaks_010:spine.ro" "spine_parentConstraint1.cro";
-connectAttr "Sneaks_010:spine.pim" "spine_parentConstraint1.cpim";
-connectAttr "Sneaks_010:spine.rp" "spine_parentConstraint1.crp";
-connectAttr "Sneaks_010:spine.rpt" "spine_parentConstraint1.crt";
-connectAttr "Sneaks_010:spine.jo" "spine_parentConstraint1.cjo";
-connectAttr "nurbsCircle1.t" "spine_parentConstraint1.tg[0].tt";
-connectAttr "nurbsCircle1.rp" "spine_parentConstraint1.tg[0].trp";
-connectAttr "nurbsCircle1.rpt" "spine_parentConstraint1.tg[0].trt";
-connectAttr "nurbsCircle1.r" "spine_parentConstraint1.tg[0].tr";
-connectAttr "nurbsCircle1.ro" "spine_parentConstraint1.tg[0].tro";
-connectAttr "nurbsCircle1.s" "spine_parentConstraint1.tg[0].ts";
-connectAttr "nurbsCircle1.pm" "spine_parentConstraint1.tg[0].tpm";
+connectAttr "spine.ro" "spine_parentConstraint1.cro";
+connectAttr "spine.pim" "spine_parentConstraint1.cpim";
+connectAttr "spine.rp" "spine_parentConstraint1.crp";
+connectAttr "spine.rpt" "spine_parentConstraint1.crt";
+connectAttr "spine.jo" "spine_parentConstraint1.cjo";
+connectAttr "controller_COG.t" "spine_parentConstraint1.tg[0].tt";
+connectAttr "controller_COG.rp" "spine_parentConstraint1.tg[0].trp";
+connectAttr "controller_COG.rpt" "spine_parentConstraint1.tg[0].trt";
+connectAttr "controller_COG.r" "spine_parentConstraint1.tg[0].tr";
+connectAttr "controller_COG.ro" "spine_parentConstraint1.tg[0].tro";
+connectAttr "controller_COG.s" "spine_parentConstraint1.tg[0].ts";
+connectAttr "controller_COG.pm" "spine_parentConstraint1.tg[0].tpm";
 connectAttr "spine_parentConstraint1.w0" "spine_parentConstraint1.tg[0].tw";
-connectAttr "Sneaks_010:joint10.msg" "Sneaks_010:left_pinkie.hsj";
-connectAttr "Sneaks_010:effector30.hp" "Sneaks_010:left_pinkie.hee";
-connectAttr "Sneaks_010:ikSCsolver.msg" "Sneaks_010:left_pinkie.hsv";
-connectAttr "left_pinkie_parentConstraint1.ctx" "Sneaks_010:left_pinkie.tx";
-connectAttr "left_pinkie_parentConstraint1.cty" "Sneaks_010:left_pinkie.ty";
-connectAttr "left_pinkie_parentConstraint1.ctz" "Sneaks_010:left_pinkie.tz";
-connectAttr "left_pinkie_parentConstraint1.crx" "Sneaks_010:left_pinkie.rx";
-connectAttr "left_pinkie_parentConstraint1.cry" "Sneaks_010:left_pinkie.ry";
-connectAttr "left_pinkie_parentConstraint1.crz" "Sneaks_010:left_pinkie.rz";
-connectAttr "Sneaks_010:left_pinkie.ro" "left_pinkie_parentConstraint1.cro";
-connectAttr "Sneaks_010:left_pinkie.pim" "left_pinkie_parentConstraint1.cpim";
-connectAttr "Sneaks_010:left_pinkie.rp" "left_pinkie_parentConstraint1.crp";
-connectAttr "Sneaks_010:left_pinkie.rpt" "left_pinkie_parentConstraint1.crt";
+connectAttr "Sneaks_010:joint10.msg" "left_pinkie.hsj";
+connectAttr "Sneaks_010:effector30.hp" "left_pinkie.hee";
+connectAttr "Sneaks_010:ikSCsolver.msg" "left_pinkie.hsv";
+connectAttr "left_pinkie_parentConstraint1.ctx" "left_pinkie.tx";
+connectAttr "left_pinkie_parentConstraint1.cty" "left_pinkie.ty";
+connectAttr "left_pinkie_parentConstraint1.ctz" "left_pinkie.tz";
+connectAttr "left_pinkie_parentConstraint1.crx" "left_pinkie.rx";
+connectAttr "left_pinkie_parentConstraint1.cry" "left_pinkie.ry";
+connectAttr "left_pinkie_parentConstraint1.crz" "left_pinkie.rz";
+connectAttr "left_pinkie.ro" "left_pinkie_parentConstraint1.cro";
+connectAttr "left_pinkie.pim" "left_pinkie_parentConstraint1.cpim";
+connectAttr "left_pinkie.rp" "left_pinkie_parentConstraint1.crp";
+connectAttr "left_pinkie.rpt" "left_pinkie_parentConstraint1.crt";
 connectAttr "controller_leftPinky.t" "left_pinkie_parentConstraint1.tg[0].tt";
 connectAttr "controller_leftPinky.rp" "left_pinkie_parentConstraint1.tg[0].trp";
 connectAttr "controller_leftPinky.rpt" "left_pinkie_parentConstraint1.tg[0].trt"
@@ -27453,19 +27631,19 @@ connectAttr "controller_leftPinky.s" "left_pinkie_parentConstraint1.tg[0].ts";
 connectAttr "controller_leftPinky.pm" "left_pinkie_parentConstraint1.tg[0].tpm";
 connectAttr "left_pinkie_parentConstraint1.w0" "left_pinkie_parentConstraint1.tg[0].tw"
 		;
-connectAttr "Sneaks_010:joint13.msg" "Sneaks_010:left_ring.hsj";
-connectAttr "Sneaks_010:effector31.hp" "Sneaks_010:left_ring.hee";
-connectAttr "Sneaks_010:ikSCsolver.msg" "Sneaks_010:left_ring.hsv";
-connectAttr "left_ring_parentConstraint1.ctx" "Sneaks_010:left_ring.tx";
-connectAttr "left_ring_parentConstraint1.cty" "Sneaks_010:left_ring.ty";
-connectAttr "left_ring_parentConstraint1.ctz" "Sneaks_010:left_ring.tz";
-connectAttr "left_ring_parentConstraint1.crx" "Sneaks_010:left_ring.rx";
-connectAttr "left_ring_parentConstraint1.cry" "Sneaks_010:left_ring.ry";
-connectAttr "left_ring_parentConstraint1.crz" "Sneaks_010:left_ring.rz";
-connectAttr "Sneaks_010:left_ring.ro" "left_ring_parentConstraint1.cro";
-connectAttr "Sneaks_010:left_ring.pim" "left_ring_parentConstraint1.cpim";
-connectAttr "Sneaks_010:left_ring.rp" "left_ring_parentConstraint1.crp";
-connectAttr "Sneaks_010:left_ring.rpt" "left_ring_parentConstraint1.crt";
+connectAttr "Sneaks_010:joint13.msg" "left_ring.hsj";
+connectAttr "Sneaks_010:effector31.hp" "left_ring.hee";
+connectAttr "Sneaks_010:ikSCsolver.msg" "left_ring.hsv";
+connectAttr "left_ring_parentConstraint1.ctx" "left_ring.tx";
+connectAttr "left_ring_parentConstraint1.cty" "left_ring.ty";
+connectAttr "left_ring_parentConstraint1.ctz" "left_ring.tz";
+connectAttr "left_ring_parentConstraint1.crx" "left_ring.rx";
+connectAttr "left_ring_parentConstraint1.cry" "left_ring.ry";
+connectAttr "left_ring_parentConstraint1.crz" "left_ring.rz";
+connectAttr "left_ring.ro" "left_ring_parentConstraint1.cro";
+connectAttr "left_ring.pim" "left_ring_parentConstraint1.cpim";
+connectAttr "left_ring.rp" "left_ring_parentConstraint1.crp";
+connectAttr "left_ring.rpt" "left_ring_parentConstraint1.crt";
 connectAttr "controller_leftRing.t" "left_ring_parentConstraint1.tg[0].tt";
 connectAttr "controller_leftRing.rp" "left_ring_parentConstraint1.tg[0].trp";
 connectAttr "controller_leftRing.rpt" "left_ring_parentConstraint1.tg[0].trt";
@@ -27475,19 +27653,19 @@ connectAttr "controller_leftRing.s" "left_ring_parentConstraint1.tg[0].ts";
 connectAttr "controller_leftRing.pm" "left_ring_parentConstraint1.tg[0].tpm";
 connectAttr "left_ring_parentConstraint1.w0" "left_ring_parentConstraint1.tg[0].tw"
 		;
-connectAttr "Sneaks_010:joint16.msg" "Sneaks_010:left_middle.hsj";
-connectAttr "Sneaks_010:effector32.hp" "Sneaks_010:left_middle.hee";
-connectAttr "Sneaks_010:ikSCsolver.msg" "Sneaks_010:left_middle.hsv";
-connectAttr "left_middle_parentConstraint1.ctx" "Sneaks_010:left_middle.tx";
-connectAttr "left_middle_parentConstraint1.cty" "Sneaks_010:left_middle.ty";
-connectAttr "left_middle_parentConstraint1.ctz" "Sneaks_010:left_middle.tz";
-connectAttr "left_middle_parentConstraint1.crx" "Sneaks_010:left_middle.rx";
-connectAttr "left_middle_parentConstraint1.cry" "Sneaks_010:left_middle.ry";
-connectAttr "left_middle_parentConstraint1.crz" "Sneaks_010:left_middle.rz";
-connectAttr "Sneaks_010:left_middle.ro" "left_middle_parentConstraint1.cro";
-connectAttr "Sneaks_010:left_middle.pim" "left_middle_parentConstraint1.cpim";
-connectAttr "Sneaks_010:left_middle.rp" "left_middle_parentConstraint1.crp";
-connectAttr "Sneaks_010:left_middle.rpt" "left_middle_parentConstraint1.crt";
+connectAttr "Sneaks_010:joint16.msg" "left_middle.hsj";
+connectAttr "Sneaks_010:effector32.hp" "left_middle.hee";
+connectAttr "Sneaks_010:ikSCsolver.msg" "left_middle.hsv";
+connectAttr "left_middle_parentConstraint1.ctx" "left_middle.tx";
+connectAttr "left_middle_parentConstraint1.cty" "left_middle.ty";
+connectAttr "left_middle_parentConstraint1.ctz" "left_middle.tz";
+connectAttr "left_middle_parentConstraint1.crx" "left_middle.rx";
+connectAttr "left_middle_parentConstraint1.cry" "left_middle.ry";
+connectAttr "left_middle_parentConstraint1.crz" "left_middle.rz";
+connectAttr "left_middle.ro" "left_middle_parentConstraint1.cro";
+connectAttr "left_middle.pim" "left_middle_parentConstraint1.cpim";
+connectAttr "left_middle.rp" "left_middle_parentConstraint1.crp";
+connectAttr "left_middle.rpt" "left_middle_parentConstraint1.crt";
 connectAttr "controller_leftMiddle.t" "left_middle_parentConstraint1.tg[0].tt";
 connectAttr "controller_leftMiddle.rp" "left_middle_parentConstraint1.tg[0].trp"
 		;
@@ -27501,19 +27679,19 @@ connectAttr "controller_leftMiddle.pm" "left_middle_parentConstraint1.tg[0].tpm"
 		;
 connectAttr "left_middle_parentConstraint1.w0" "left_middle_parentConstraint1.tg[0].tw"
 		;
-connectAttr "Sneaks_010:joint19.msg" "Sneaks_010:left_index.hsj";
-connectAttr "Sneaks_010:effector33.hp" "Sneaks_010:left_index.hee";
-connectAttr "Sneaks_010:ikSCsolver.msg" "Sneaks_010:left_index.hsv";
-connectAttr "left_index_parentConstraint1.ctx" "Sneaks_010:left_index.tx";
-connectAttr "left_index_parentConstraint1.cty" "Sneaks_010:left_index.ty";
-connectAttr "left_index_parentConstraint1.ctz" "Sneaks_010:left_index.tz";
-connectAttr "left_index_parentConstraint1.crx" "Sneaks_010:left_index.rx";
-connectAttr "left_index_parentConstraint1.cry" "Sneaks_010:left_index.ry";
-connectAttr "left_index_parentConstraint1.crz" "Sneaks_010:left_index.rz";
-connectAttr "Sneaks_010:left_index.ro" "left_index_parentConstraint1.cro";
-connectAttr "Sneaks_010:left_index.pim" "left_index_parentConstraint1.cpim";
-connectAttr "Sneaks_010:left_index.rp" "left_index_parentConstraint1.crp";
-connectAttr "Sneaks_010:left_index.rpt" "left_index_parentConstraint1.crt";
+connectAttr "Sneaks_010:joint19.msg" "left_index.hsj";
+connectAttr "Sneaks_010:effector33.hp" "left_index.hee";
+connectAttr "Sneaks_010:ikSCsolver.msg" "left_index.hsv";
+connectAttr "left_index_parentConstraint1.ctx" "left_index.tx";
+connectAttr "left_index_parentConstraint1.cty" "left_index.ty";
+connectAttr "left_index_parentConstraint1.ctz" "left_index.tz";
+connectAttr "left_index_parentConstraint1.crx" "left_index.rx";
+connectAttr "left_index_parentConstraint1.cry" "left_index.ry";
+connectAttr "left_index_parentConstraint1.crz" "left_index.rz";
+connectAttr "left_index.ro" "left_index_parentConstraint1.cro";
+connectAttr "left_index.pim" "left_index_parentConstraint1.cpim";
+connectAttr "left_index.rp" "left_index_parentConstraint1.crp";
+connectAttr "left_index.rpt" "left_index_parentConstraint1.crt";
 connectAttr "controller_leftIndex.t" "left_index_parentConstraint1.tg[0].tt";
 connectAttr "controller_leftIndex.rp" "left_index_parentConstraint1.tg[0].trp";
 connectAttr "controller_leftIndex.rpt" "left_index_parentConstraint1.tg[0].trt";
@@ -27523,54 +27701,44 @@ connectAttr "controller_leftIndex.s" "left_index_parentConstraint1.tg[0].ts";
 connectAttr "controller_leftIndex.pm" "left_index_parentConstraint1.tg[0].tpm";
 connectAttr "left_index_parentConstraint1.w0" "left_index_parentConstraint1.tg[0].tw"
 		;
-connectAttr "Sneaks_010:joint22.msg" "Sneaks_010:left_thumb.hsj";
-connectAttr "Sneaks_010:effector34.hp" "Sneaks_010:left_thumb.hee";
-connectAttr "Sneaks_010:ikSCsolver.msg" "Sneaks_010:left_thumb.hsv";
-connectAttr "Sneaks_010:RightHip.msg" "Sneaks_010:RightLegHandle.hsj";
-connectAttr "Sneaks_010:effector54.hp" "Sneaks_010:RightLegHandle.hee";
-connectAttr "Sneaks_010:ikRPsolver.msg" "Sneaks_010:RightLegHandle.hsv";
-connectAttr "Sneaks_010:RightLegHandle_poleVectorConstraint1.ctx" "Sneaks_010:RightLegHandle.pvx"
+connectAttr "Sneaks_010:joint22.msg" "left_thumb.hsj";
+connectAttr "Sneaks_010:effector34.hp" "left_thumb.hee";
+connectAttr "Sneaks_010:ikSCsolver.msg" "left_thumb.hsv";
+connectAttr "Sneaks_010:RightHip.msg" "RightLegHandle.hsj";
+connectAttr "Sneaks_010:effector54.hp" "RightLegHandle.hee";
+connectAttr "Sneaks_010:ikRPsolver.msg" "RightLegHandle.hsv";
+connectAttr "Sneaks_010:RightLegHandle_poleVectorConstraint1.ctx" "RightLegHandle.pvx"
 		;
-connectAttr "Sneaks_010:RightLegHandle_poleVectorConstraint1.cty" "Sneaks_010:RightLegHandle.pvy"
+connectAttr "Sneaks_010:RightLegHandle_poleVectorConstraint1.cty" "RightLegHandle.pvy"
 		;
-connectAttr "Sneaks_010:RightLegHandle_poleVectorConstraint1.ctz" "Sneaks_010:RightLegHandle.pvz"
+connectAttr "Sneaks_010:RightLegHandle_poleVectorConstraint1.ctz" "RightLegHandle.pvz"
 		;
-connectAttr "RightLegHandle_parentConstraint1.ctx" "Sneaks_010:RightLegHandle.tx"
-		;
-connectAttr "RightLegHandle_parentConstraint1.cty" "Sneaks_010:RightLegHandle.ty"
-		;
-connectAttr "RightLegHandle_parentConstraint1.ctz" "Sneaks_010:RightLegHandle.tz"
-		;
-connectAttr "RightLegHandle_parentConstraint1.crx" "Sneaks_010:RightLegHandle.rx"
-		;
-connectAttr "RightLegHandle_parentConstraint1.cry" "Sneaks_010:RightLegHandle.ry"
-		;
-connectAttr "RightLegHandle_parentConstraint1.crz" "Sneaks_010:RightLegHandle.rz"
-		;
-connectAttr "Sneaks_010:RightLegHandle.pim" "Sneaks_010:RightLegHandle_poleVectorConstraint1.cpim"
+connectAttr "RightLegHandle_parentConstraint1.ctx" "RightLegHandle.tx";
+connectAttr "RightLegHandle_parentConstraint1.cty" "RightLegHandle.ty";
+connectAttr "RightLegHandle_parentConstraint1.ctz" "RightLegHandle.tz";
+connectAttr "RightLegHandle_parentConstraint1.crx" "RightLegHandle.rx";
+connectAttr "RightLegHandle_parentConstraint1.cry" "RightLegHandle.ry";
+connectAttr "RightLegHandle_parentConstraint1.crz" "RightLegHandle.rz";
+connectAttr "RightLegHandle.pim" "Sneaks_010:RightLegHandle_poleVectorConstraint1.cpim"
 		;
 connectAttr "Sneaks_010:RightHip.pm" "Sneaks_010:RightLegHandle_poleVectorConstraint1.ps"
 		;
 connectAttr "Sneaks_010:RightHip.t" "Sneaks_010:RightLegHandle_poleVectorConstraint1.crp"
 		;
-connectAttr "Sneaks_010:RightLeg.t" "Sneaks_010:RightLegHandle_poleVectorConstraint1.tg[0].tt"
+connectAttr "RightLeg.t" "Sneaks_010:RightLegHandle_poleVectorConstraint1.tg[0].tt"
 		;
-connectAttr "Sneaks_010:RightLeg.rp" "Sneaks_010:RightLegHandle_poleVectorConstraint1.tg[0].trp"
+connectAttr "RightLeg.rp" "Sneaks_010:RightLegHandle_poleVectorConstraint1.tg[0].trp"
 		;
-connectAttr "Sneaks_010:RightLeg.rpt" "Sneaks_010:RightLegHandle_poleVectorConstraint1.tg[0].trt"
+connectAttr "RightLeg.rpt" "Sneaks_010:RightLegHandle_poleVectorConstraint1.tg[0].trt"
 		;
-connectAttr "Sneaks_010:RightLeg.pm" "Sneaks_010:RightLegHandle_poleVectorConstraint1.tg[0].tpm"
+connectAttr "RightLeg.pm" "Sneaks_010:RightLegHandle_poleVectorConstraint1.tg[0].tpm"
 		;
 connectAttr "Sneaks_010:RightLegHandle_poleVectorConstraint1.w0" "Sneaks_010:RightLegHandle_poleVectorConstraint1.tg[0].tw"
 		;
-connectAttr "Sneaks_010:RightLegHandle.ro" "RightLegHandle_parentConstraint1.cro"
-		;
-connectAttr "Sneaks_010:RightLegHandle.pim" "RightLegHandle_parentConstraint1.cpim"
-		;
-connectAttr "Sneaks_010:RightLegHandle.rp" "RightLegHandle_parentConstraint1.crp"
-		;
-connectAttr "Sneaks_010:RightLegHandle.rpt" "RightLegHandle_parentConstraint1.crt"
-		;
+connectAttr "RightLegHandle.ro" "RightLegHandle_parentConstraint1.cro";
+connectAttr "RightLegHandle.pim" "RightLegHandle_parentConstraint1.cpim";
+connectAttr "RightLegHandle.rp" "RightLegHandle_parentConstraint1.crp";
+connectAttr "RightLegHandle.rpt" "RightLegHandle_parentConstraint1.crt";
 connectAttr "controller_rightLeg.t" "RightLegHandle_parentConstraint1.tg[0].tt";
 connectAttr "controller_rightLeg.rp" "RightLegHandle_parentConstraint1.tg[0].trp"
 		;
@@ -27583,6 +27751,80 @@ connectAttr "controller_rightLeg.s" "RightLegHandle_parentConstraint1.tg[0].ts";
 connectAttr "controller_rightLeg.pm" "RightLegHandle_parentConstraint1.tg[0].tpm"
 		;
 connectAttr "RightLegHandle_parentConstraint1.w0" "RightLegHandle_parentConstraint1.tg[0].tw"
+		;
+connectAttr "LeftArm_parentConstraint1.ctx" "LeftArm.tx";
+connectAttr "LeftArm_parentConstraint1.cty" "LeftArm.ty";
+connectAttr "LeftArm_parentConstraint1.ctz" "LeftArm.tz";
+connectAttr "LeftArm_parentConstraint1.crx" "LeftArm.rx";
+connectAttr "LeftArm_parentConstraint1.cry" "LeftArm.ry";
+connectAttr "LeftArm_parentConstraint1.crz" "LeftArm.rz";
+connectAttr "LeftArm.ro" "LeftArm_parentConstraint1.cro";
+connectAttr "LeftArm.pim" "LeftArm_parentConstraint1.cpim";
+connectAttr "LeftArm.rp" "LeftArm_parentConstraint1.crp";
+connectAttr "LeftArm.rpt" "LeftArm_parentConstraint1.crt";
+connectAttr "controller_root.t" "LeftArm_parentConstraint1.tg[0].tt";
+connectAttr "controller_root.rp" "LeftArm_parentConstraint1.tg[0].trp";
+connectAttr "controller_root.rpt" "LeftArm_parentConstraint1.tg[0].trt";
+connectAttr "controller_root.r" "LeftArm_parentConstraint1.tg[0].tr";
+connectAttr "controller_root.ro" "LeftArm_parentConstraint1.tg[0].tro";
+connectAttr "controller_root.s" "LeftArm_parentConstraint1.tg[0].ts";
+connectAttr "controller_root.pm" "LeftArm_parentConstraint1.tg[0].tpm";
+connectAttr "LeftArm_parentConstraint1.w0" "LeftArm_parentConstraint1.tg[0].tw";
+connectAttr "RightArm_parentConstraint1.ctx" "RightArm.tx";
+connectAttr "RightArm_parentConstraint1.cty" "RightArm.ty";
+connectAttr "RightArm_parentConstraint1.ctz" "RightArm.tz";
+connectAttr "RightArm_parentConstraint1.crx" "RightArm.rx";
+connectAttr "RightArm_parentConstraint1.cry" "RightArm.ry";
+connectAttr "RightArm_parentConstraint1.crz" "RightArm.rz";
+connectAttr "RightArm.ro" "RightArm_parentConstraint1.cro";
+connectAttr "RightArm.pim" "RightArm_parentConstraint1.cpim";
+connectAttr "RightArm.rp" "RightArm_parentConstraint1.crp";
+connectAttr "RightArm.rpt" "RightArm_parentConstraint1.crt";
+connectAttr "controller_root.t" "RightArm_parentConstraint1.tg[0].tt";
+connectAttr "controller_root.rp" "RightArm_parentConstraint1.tg[0].trp";
+connectAttr "controller_root.rpt" "RightArm_parentConstraint1.tg[0].trt";
+connectAttr "controller_root.r" "RightArm_parentConstraint1.tg[0].tr";
+connectAttr "controller_root.ro" "RightArm_parentConstraint1.tg[0].tro";
+connectAttr "controller_root.s" "RightArm_parentConstraint1.tg[0].ts";
+connectAttr "controller_root.pm" "RightArm_parentConstraint1.tg[0].tpm";
+connectAttr "RightArm_parentConstraint1.w0" "RightArm_parentConstraint1.tg[0].tw"
+		;
+connectAttr "LeftLeg_parentConstraint1.ctx" "LeftLeg.tx";
+connectAttr "LeftLeg_parentConstraint1.cty" "LeftLeg.ty";
+connectAttr "LeftLeg_parentConstraint1.ctz" "LeftLeg.tz";
+connectAttr "LeftLeg_parentConstraint1.crx" "LeftLeg.rx";
+connectAttr "LeftLeg_parentConstraint1.cry" "LeftLeg.ry";
+connectAttr "LeftLeg_parentConstraint1.crz" "LeftLeg.rz";
+connectAttr "LeftLeg.ro" "LeftLeg_parentConstraint1.cro";
+connectAttr "LeftLeg.pim" "LeftLeg_parentConstraint1.cpim";
+connectAttr "LeftLeg.rp" "LeftLeg_parentConstraint1.crp";
+connectAttr "LeftLeg.rpt" "LeftLeg_parentConstraint1.crt";
+connectAttr "controller_root.t" "LeftLeg_parentConstraint1.tg[0].tt";
+connectAttr "controller_root.rp" "LeftLeg_parentConstraint1.tg[0].trp";
+connectAttr "controller_root.rpt" "LeftLeg_parentConstraint1.tg[0].trt";
+connectAttr "controller_root.r" "LeftLeg_parentConstraint1.tg[0].tr";
+connectAttr "controller_root.ro" "LeftLeg_parentConstraint1.tg[0].tro";
+connectAttr "controller_root.s" "LeftLeg_parentConstraint1.tg[0].ts";
+connectAttr "controller_root.pm" "LeftLeg_parentConstraint1.tg[0].tpm";
+connectAttr "LeftLeg_parentConstraint1.w0" "LeftLeg_parentConstraint1.tg[0].tw";
+connectAttr "RightLeg_parentConstraint1.ctx" "RightLeg.tx";
+connectAttr "RightLeg_parentConstraint1.cty" "RightLeg.ty";
+connectAttr "RightLeg_parentConstraint1.ctz" "RightLeg.tz";
+connectAttr "RightLeg_parentConstraint1.crx" "RightLeg.rx";
+connectAttr "RightLeg_parentConstraint1.cry" "RightLeg.ry";
+connectAttr "RightLeg_parentConstraint1.crz" "RightLeg.rz";
+connectAttr "RightLeg.ro" "RightLeg_parentConstraint1.cro";
+connectAttr "RightLeg.pim" "RightLeg_parentConstraint1.cpim";
+connectAttr "RightLeg.rp" "RightLeg_parentConstraint1.crp";
+connectAttr "RightLeg.rpt" "RightLeg_parentConstraint1.crt";
+connectAttr "controller_root.t" "RightLeg_parentConstraint1.tg[0].tt";
+connectAttr "controller_root.rp" "RightLeg_parentConstraint1.tg[0].trp";
+connectAttr "controller_root.rpt" "RightLeg_parentConstraint1.tg[0].trt";
+connectAttr "controller_root.r" "RightLeg_parentConstraint1.tg[0].tr";
+connectAttr "controller_root.ro" "RightLeg_parentConstraint1.tg[0].tro";
+connectAttr "controller_root.s" "RightLeg_parentConstraint1.tg[0].ts";
+connectAttr "controller_root.pm" "RightLeg_parentConstraint1.tg[0].tpm";
+connectAttr "RightLeg_parentConstraint1.w0" "RightLeg_parentConstraint1.tg[0].tw"
 		;
 connectAttr "Tuffs002:TuffsMesh_translateX.o" "Tuffs002:TuffsMesh.tx";
 connectAttr "Tuffs002:TuffsMesh_translateZ.o" "Tuffs002:TuffsMesh.tz";
@@ -27604,22 +27846,22 @@ connectAttr "Tuffs002:Tuffs:eyeballs_ojos.di" "Tuffs002:Tuffs_RightEye.do";
 connectAttr "Tuffs002:polyTweakUV1.out" "Tuffs002:Tuffs_RightEyeShape.i";
 connectAttr "Tuffs002:polyTweakUV1.uvtk[0]" "Tuffs002:Tuffs_RightEyeShape.uvst[0].uvtw"
 		;
-connectAttr "Sneaks_010:leftHip.msg" "ikHandle1.hsj";
-connectAttr "effector37.hp" "ikHandle1.hee";
-connectAttr "Sneaks_010:ikRPsolver.msg" "ikHandle1.hsv";
-connectAttr "ikHandle1_parentConstraint1.ctx" "ikHandle1.tx";
-connectAttr "ikHandle1_parentConstraint1.cty" "ikHandle1.ty";
-connectAttr "ikHandle1_parentConstraint1.ctz" "ikHandle1.tz";
-connectAttr "ikHandle1_parentConstraint1.crx" "ikHandle1.rx";
-connectAttr "ikHandle1_parentConstraint1.cry" "ikHandle1.ry";
-connectAttr "ikHandle1_parentConstraint1.crz" "ikHandle1.rz";
-connectAttr "ikHandle1_poleVectorConstraint1.ctx" "ikHandle1.pvx";
-connectAttr "ikHandle1_poleVectorConstraint1.cty" "ikHandle1.pvy";
-connectAttr "ikHandle1_poleVectorConstraint1.ctz" "ikHandle1.pvz";
-connectAttr "ikHandle1.ro" "ikHandle1_parentConstraint1.cro";
-connectAttr "ikHandle1.pim" "ikHandle1_parentConstraint1.cpim";
-connectAttr "ikHandle1.rp" "ikHandle1_parentConstraint1.crp";
-connectAttr "ikHandle1.rpt" "ikHandle1_parentConstraint1.crt";
+connectAttr "Sneaks_010:leftHip.msg" "LeftLegHandle.hsj";
+connectAttr "effector37.hp" "LeftLegHandle.hee";
+connectAttr "Sneaks_010:ikRPsolver.msg" "LeftLegHandle.hsv";
+connectAttr "ikHandle1_parentConstraint1.ctx" "LeftLegHandle.tx";
+connectAttr "ikHandle1_parentConstraint1.cty" "LeftLegHandle.ty";
+connectAttr "ikHandle1_parentConstraint1.ctz" "LeftLegHandle.tz";
+connectAttr "ikHandle1_parentConstraint1.crx" "LeftLegHandle.rx";
+connectAttr "ikHandle1_parentConstraint1.cry" "LeftLegHandle.ry";
+connectAttr "ikHandle1_parentConstraint1.crz" "LeftLegHandle.rz";
+connectAttr "ikHandle1_poleVectorConstraint1.ctx" "LeftLegHandle.pvx";
+connectAttr "ikHandle1_poleVectorConstraint1.cty" "LeftLegHandle.pvy";
+connectAttr "ikHandle1_poleVectorConstraint1.ctz" "LeftLegHandle.pvz";
+connectAttr "LeftLegHandle.ro" "ikHandle1_parentConstraint1.cro";
+connectAttr "LeftLegHandle.pim" "ikHandle1_parentConstraint1.cpim";
+connectAttr "LeftLegHandle.rp" "ikHandle1_parentConstraint1.crp";
+connectAttr "LeftLegHandle.rpt" "ikHandle1_parentConstraint1.crt";
 connectAttr "controller_leftLeg.t" "ikHandle1_parentConstraint1.tg[0].tt";
 connectAttr "controller_leftLeg.rp" "ikHandle1_parentConstraint1.tg[0].trp";
 connectAttr "controller_leftLeg.rpt" "ikHandle1_parentConstraint1.tg[0].trt";
@@ -27629,29 +27871,28 @@ connectAttr "controller_leftLeg.s" "ikHandle1_parentConstraint1.tg[0].ts";
 connectAttr "controller_leftLeg.pm" "ikHandle1_parentConstraint1.tg[0].tpm";
 connectAttr "ikHandle1_parentConstraint1.w0" "ikHandle1_parentConstraint1.tg[0].tw"
 		;
-connectAttr "ikHandle1.pim" "ikHandle1_poleVectorConstraint1.cpim";
+connectAttr "LeftLegHandle.pim" "ikHandle1_poleVectorConstraint1.cpim";
 connectAttr "Sneaks_010:leftHip.pm" "ikHandle1_poleVectorConstraint1.ps";
 connectAttr "Sneaks_010:leftHip.t" "ikHandle1_poleVectorConstraint1.crp";
-connectAttr "Sneaks_010:LeftLeg.t" "ikHandle1_poleVectorConstraint1.tg[0].tt";
-connectAttr "Sneaks_010:LeftLeg.rp" "ikHandle1_poleVectorConstraint1.tg[0].trp";
-connectAttr "Sneaks_010:LeftLeg.rpt" "ikHandle1_poleVectorConstraint1.tg[0].trt"
-		;
-connectAttr "Sneaks_010:LeftLeg.pm" "ikHandle1_poleVectorConstraint1.tg[0].tpm";
+connectAttr "LeftLeg.t" "ikHandle1_poleVectorConstraint1.tg[0].tt";
+connectAttr "LeftLeg.rp" "ikHandle1_poleVectorConstraint1.tg[0].trp";
+connectAttr "LeftLeg.rpt" "ikHandle1_poleVectorConstraint1.tg[0].trt";
+connectAttr "LeftLeg.pm" "ikHandle1_poleVectorConstraint1.tg[0].tpm";
 connectAttr "ikHandle1_poleVectorConstraint1.w0" "ikHandle1_poleVectorConstraint1.tg[0].tw"
 		;
-connectAttr "joint22.msg" "ikHandle2.hsj";
-connectAttr "effector38.hp" "ikHandle2.hee";
-connectAttr "Sneaks_010:ikSCsolver.msg" "ikHandle2.hsv";
-connectAttr "ikHandle2_parentConstraint1.ctx" "ikHandle2.tx";
-connectAttr "ikHandle2_parentConstraint1.cty" "ikHandle2.ty";
-connectAttr "ikHandle2_parentConstraint1.ctz" "ikHandle2.tz";
-connectAttr "ikHandle2_parentConstraint1.crx" "ikHandle2.rx";
-connectAttr "ikHandle2_parentConstraint1.cry" "ikHandle2.ry";
-connectAttr "ikHandle2_parentConstraint1.crz" "ikHandle2.rz";
-connectAttr "ikHandle2.ro" "ikHandle2_parentConstraint1.cro";
-connectAttr "ikHandle2.pim" "ikHandle2_parentConstraint1.cpim";
-connectAttr "ikHandle2.rp" "ikHandle2_parentConstraint1.crp";
-connectAttr "ikHandle2.rpt" "ikHandle2_parentConstraint1.crt";
+connectAttr "joint22.msg" "right_thumb.hsj";
+connectAttr "effector38.hp" "right_thumb.hee";
+connectAttr "Sneaks_010:ikSCsolver.msg" "right_thumb.hsv";
+connectAttr "ikHandle2_parentConstraint1.ctx" "right_thumb.tx";
+connectAttr "ikHandle2_parentConstraint1.cty" "right_thumb.ty";
+connectAttr "ikHandle2_parentConstraint1.ctz" "right_thumb.tz";
+connectAttr "ikHandle2_parentConstraint1.crx" "right_thumb.rx";
+connectAttr "ikHandle2_parentConstraint1.cry" "right_thumb.ry";
+connectAttr "ikHandle2_parentConstraint1.crz" "right_thumb.rz";
+connectAttr "right_thumb.ro" "ikHandle2_parentConstraint1.cro";
+connectAttr "right_thumb.pim" "ikHandle2_parentConstraint1.cpim";
+connectAttr "right_thumb.rp" "ikHandle2_parentConstraint1.crp";
+connectAttr "right_thumb.rpt" "ikHandle2_parentConstraint1.crt";
 connectAttr "controller_rightThumb.t" "ikHandle2_parentConstraint1.tg[0].tt";
 connectAttr "controller_rightThumb.rp" "ikHandle2_parentConstraint1.tg[0].trp";
 connectAttr "controller_rightThumb.rpt" "ikHandle2_parentConstraint1.tg[0].trt";
@@ -27661,19 +27902,19 @@ connectAttr "controller_rightThumb.s" "ikHandle2_parentConstraint1.tg[0].ts";
 connectAttr "controller_rightThumb.pm" "ikHandle2_parentConstraint1.tg[0].tpm";
 connectAttr "ikHandle2_parentConstraint1.w0" "ikHandle2_parentConstraint1.tg[0].tw"
 		;
-connectAttr "joint19.msg" "ikHandle3.hsj";
-connectAttr "effector39.hp" "ikHandle3.hee";
-connectAttr "Sneaks_010:ikSCsolver.msg" "ikHandle3.hsv";
-connectAttr "ikHandle3_parentConstraint1.ctx" "ikHandle3.tx";
-connectAttr "ikHandle3_parentConstraint1.cty" "ikHandle3.ty";
-connectAttr "ikHandle3_parentConstraint1.ctz" "ikHandle3.tz";
-connectAttr "ikHandle3_parentConstraint1.crx" "ikHandle3.rx";
-connectAttr "ikHandle3_parentConstraint1.cry" "ikHandle3.ry";
-connectAttr "ikHandle3_parentConstraint1.crz" "ikHandle3.rz";
-connectAttr "ikHandle3.ro" "ikHandle3_parentConstraint1.cro";
-connectAttr "ikHandle3.pim" "ikHandle3_parentConstraint1.cpim";
-connectAttr "ikHandle3.rp" "ikHandle3_parentConstraint1.crp";
-connectAttr "ikHandle3.rpt" "ikHandle3_parentConstraint1.crt";
+connectAttr "joint19.msg" "right_index.hsj";
+connectAttr "effector39.hp" "right_index.hee";
+connectAttr "Sneaks_010:ikSCsolver.msg" "right_index.hsv";
+connectAttr "ikHandle3_parentConstraint1.ctx" "right_index.tx";
+connectAttr "ikHandle3_parentConstraint1.cty" "right_index.ty";
+connectAttr "ikHandle3_parentConstraint1.ctz" "right_index.tz";
+connectAttr "ikHandle3_parentConstraint1.crx" "right_index.rx";
+connectAttr "ikHandle3_parentConstraint1.cry" "right_index.ry";
+connectAttr "ikHandle3_parentConstraint1.crz" "right_index.rz";
+connectAttr "right_index.ro" "ikHandle3_parentConstraint1.cro";
+connectAttr "right_index.pim" "ikHandle3_parentConstraint1.cpim";
+connectAttr "right_index.rp" "ikHandle3_parentConstraint1.crp";
+connectAttr "right_index.rpt" "ikHandle3_parentConstraint1.crt";
 connectAttr "controller_rightIndex.t" "ikHandle3_parentConstraint1.tg[0].tt";
 connectAttr "controller_rightIndex.rp" "ikHandle3_parentConstraint1.tg[0].trp";
 connectAttr "controller_rightIndex.rpt" "ikHandle3_parentConstraint1.tg[0].trt";
@@ -27683,19 +27924,19 @@ connectAttr "controller_rightIndex.s" "ikHandle3_parentConstraint1.tg[0].ts";
 connectAttr "controller_rightIndex.pm" "ikHandle3_parentConstraint1.tg[0].tpm";
 connectAttr "ikHandle3_parentConstraint1.w0" "ikHandle3_parentConstraint1.tg[0].tw"
 		;
-connectAttr "joint16.msg" "ikHandle4.hsj";
-connectAttr "effector40.hp" "ikHandle4.hee";
-connectAttr "Sneaks_010:ikSCsolver.msg" "ikHandle4.hsv";
-connectAttr "ikHandle4_parentConstraint1.ctx" "ikHandle4.tx";
-connectAttr "ikHandle4_parentConstraint1.cty" "ikHandle4.ty";
-connectAttr "ikHandle4_parentConstraint1.ctz" "ikHandle4.tz";
-connectAttr "ikHandle4_parentConstraint1.crx" "ikHandle4.rx";
-connectAttr "ikHandle4_parentConstraint1.cry" "ikHandle4.ry";
-connectAttr "ikHandle4_parentConstraint1.crz" "ikHandle4.rz";
-connectAttr "ikHandle4.ro" "ikHandle4_parentConstraint1.cro";
-connectAttr "ikHandle4.pim" "ikHandle4_parentConstraint1.cpim";
-connectAttr "ikHandle4.rp" "ikHandle4_parentConstraint1.crp";
-connectAttr "ikHandle4.rpt" "ikHandle4_parentConstraint1.crt";
+connectAttr "joint16.msg" "right_middle.hsj";
+connectAttr "effector40.hp" "right_middle.hee";
+connectAttr "Sneaks_010:ikSCsolver.msg" "right_middle.hsv";
+connectAttr "ikHandle4_parentConstraint1.ctx" "right_middle.tx";
+connectAttr "ikHandle4_parentConstraint1.cty" "right_middle.ty";
+connectAttr "ikHandle4_parentConstraint1.ctz" "right_middle.tz";
+connectAttr "ikHandle4_parentConstraint1.crx" "right_middle.rx";
+connectAttr "ikHandle4_parentConstraint1.cry" "right_middle.ry";
+connectAttr "ikHandle4_parentConstraint1.crz" "right_middle.rz";
+connectAttr "right_middle.ro" "ikHandle4_parentConstraint1.cro";
+connectAttr "right_middle.pim" "ikHandle4_parentConstraint1.cpim";
+connectAttr "right_middle.rp" "ikHandle4_parentConstraint1.crp";
+connectAttr "right_middle.rpt" "ikHandle4_parentConstraint1.crt";
 connectAttr "controller_rightMiddle.t" "ikHandle4_parentConstraint1.tg[0].tt";
 connectAttr "controller_rightMiddle.rp" "ikHandle4_parentConstraint1.tg[0].trp";
 connectAttr "controller_rightMiddle.rpt" "ikHandle4_parentConstraint1.tg[0].trt"
@@ -27706,19 +27947,19 @@ connectAttr "controller_rightMiddle.s" "ikHandle4_parentConstraint1.tg[0].ts";
 connectAttr "controller_rightMiddle.pm" "ikHandle4_parentConstraint1.tg[0].tpm";
 connectAttr "ikHandle4_parentConstraint1.w0" "ikHandle4_parentConstraint1.tg[0].tw"
 		;
-connectAttr "joint13.msg" "ikHandle5.hsj";
-connectAttr "effector41.hp" "ikHandle5.hee";
-connectAttr "Sneaks_010:ikSCsolver.msg" "ikHandle5.hsv";
-connectAttr "ikHandle5_parentConstraint1.ctx" "ikHandle5.tx";
-connectAttr "ikHandle5_parentConstraint1.cty" "ikHandle5.ty";
-connectAttr "ikHandle5_parentConstraint1.ctz" "ikHandle5.tz";
-connectAttr "ikHandle5_parentConstraint1.crx" "ikHandle5.rx";
-connectAttr "ikHandle5_parentConstraint1.cry" "ikHandle5.ry";
-connectAttr "ikHandle5_parentConstraint1.crz" "ikHandle5.rz";
-connectAttr "ikHandle5.ro" "ikHandle5_parentConstraint1.cro";
-connectAttr "ikHandle5.pim" "ikHandle5_parentConstraint1.cpim";
-connectAttr "ikHandle5.rp" "ikHandle5_parentConstraint1.crp";
-connectAttr "ikHandle5.rpt" "ikHandle5_parentConstraint1.crt";
+connectAttr "joint13.msg" "right_ring.hsj";
+connectAttr "effector41.hp" "right_ring.hee";
+connectAttr "Sneaks_010:ikSCsolver.msg" "right_ring.hsv";
+connectAttr "ikHandle5_parentConstraint1.ctx" "right_ring.tx";
+connectAttr "ikHandle5_parentConstraint1.cty" "right_ring.ty";
+connectAttr "ikHandle5_parentConstraint1.ctz" "right_ring.tz";
+connectAttr "ikHandle5_parentConstraint1.crx" "right_ring.rx";
+connectAttr "ikHandle5_parentConstraint1.cry" "right_ring.ry";
+connectAttr "ikHandle5_parentConstraint1.crz" "right_ring.rz";
+connectAttr "right_ring.ro" "ikHandle5_parentConstraint1.cro";
+connectAttr "right_ring.pim" "ikHandle5_parentConstraint1.cpim";
+connectAttr "right_ring.rp" "ikHandle5_parentConstraint1.crp";
+connectAttr "right_ring.rpt" "ikHandle5_parentConstraint1.crt";
 connectAttr "controller_rightRing.t" "ikHandle5_parentConstraint1.tg[0].tt";
 connectAttr "controller_rightRing.rp" "ikHandle5_parentConstraint1.tg[0].trp";
 connectAttr "controller_rightRing.rpt" "ikHandle5_parentConstraint1.tg[0].trt";
@@ -27728,19 +27969,19 @@ connectAttr "controller_rightRing.s" "ikHandle5_parentConstraint1.tg[0].ts";
 connectAttr "controller_rightRing.pm" "ikHandle5_parentConstraint1.tg[0].tpm";
 connectAttr "ikHandle5_parentConstraint1.w0" "ikHandle5_parentConstraint1.tg[0].tw"
 		;
-connectAttr "joint10.msg" "ikHandle6.hsj";
-connectAttr "effector42.hp" "ikHandle6.hee";
-connectAttr "Sneaks_010:ikSCsolver.msg" "ikHandle6.hsv";
-connectAttr "ikHandle6_parentConstraint1.ctx" "ikHandle6.tx";
-connectAttr "ikHandle6_parentConstraint1.cty" "ikHandle6.ty";
-connectAttr "ikHandle6_parentConstraint1.ctz" "ikHandle6.tz";
-connectAttr "ikHandle6_parentConstraint1.crx" "ikHandle6.rx";
-connectAttr "ikHandle6_parentConstraint1.cry" "ikHandle6.ry";
-connectAttr "ikHandle6_parentConstraint1.crz" "ikHandle6.rz";
-connectAttr "ikHandle6.ro" "ikHandle6_parentConstraint1.cro";
-connectAttr "ikHandle6.pim" "ikHandle6_parentConstraint1.cpim";
-connectAttr "ikHandle6.rp" "ikHandle6_parentConstraint1.crp";
-connectAttr "ikHandle6.rpt" "ikHandle6_parentConstraint1.crt";
+connectAttr "joint10.msg" "right_pinky.hsj";
+connectAttr "effector42.hp" "right_pinky.hee";
+connectAttr "Sneaks_010:ikSCsolver.msg" "right_pinky.hsv";
+connectAttr "ikHandle6_parentConstraint1.ctx" "right_pinky.tx";
+connectAttr "ikHandle6_parentConstraint1.cty" "right_pinky.ty";
+connectAttr "ikHandle6_parentConstraint1.ctz" "right_pinky.tz";
+connectAttr "ikHandle6_parentConstraint1.crx" "right_pinky.rx";
+connectAttr "ikHandle6_parentConstraint1.cry" "right_pinky.ry";
+connectAttr "ikHandle6_parentConstraint1.crz" "right_pinky.rz";
+connectAttr "right_pinky.ro" "ikHandle6_parentConstraint1.cro";
+connectAttr "right_pinky.pim" "ikHandle6_parentConstraint1.cpim";
+connectAttr "right_pinky.rp" "ikHandle6_parentConstraint1.crp";
+connectAttr "right_pinky.rpt" "ikHandle6_parentConstraint1.crt";
 connectAttr "controller_rightPinky.t" "ikHandle6_parentConstraint1.tg[0].tt";
 connectAttr "controller_rightPinky.rp" "ikHandle6_parentConstraint1.tg[0].trp";
 connectAttr "controller_rightPinky.rpt" "ikHandle6_parentConstraint1.tg[0].trt";
@@ -27750,50 +27991,65 @@ connectAttr "controller_rightPinky.s" "ikHandle6_parentConstraint1.tg[0].ts";
 connectAttr "controller_rightPinky.pm" "ikHandle6_parentConstraint1.tg[0].tpm";
 connectAttr "ikHandle6_parentConstraint1.w0" "ikHandle6_parentConstraint1.tg[0].tw"
 		;
-connectAttr "Sneaks_010:rightArm.msg" "ikHandle7.hsj";
-connectAttr "effector43.hp" "ikHandle7.hee";
-connectAttr "Sneaks_010:ikRPsolver.msg" "ikHandle7.hsv";
-connectAttr "ikHandle7_poleVectorConstraint1.ctx" "ikHandle7.pvx";
-connectAttr "ikHandle7_poleVectorConstraint1.cty" "ikHandle7.pvy";
-connectAttr "ikHandle7_poleVectorConstraint1.ctz" "ikHandle7.pvz";
-connectAttr "ikHandle7.pim" "ikHandle7_poleVectorConstraint1.cpim";
+connectAttr "Sneaks_010:rightArm.msg" "LeftArmHandle.hsj";
+connectAttr "effector43.hp" "LeftArmHandle.hee";
+connectAttr "Sneaks_010:ikRPsolver.msg" "LeftArmHandle.hsv";
+connectAttr "ikHandle7_poleVectorConstraint1.ctx" "LeftArmHandle.pvx";
+connectAttr "ikHandle7_poleVectorConstraint1.cty" "LeftArmHandle.pvy";
+connectAttr "ikHandle7_poleVectorConstraint1.ctz" "LeftArmHandle.pvz";
+connectAttr "ikHandle7_parentConstraint1.ctx" "LeftArmHandle.tx";
+connectAttr "ikHandle7_parentConstraint1.cty" "LeftArmHandle.ty";
+connectAttr "ikHandle7_parentConstraint1.ctz" "LeftArmHandle.tz";
+connectAttr "ikHandle7_parentConstraint1.crx" "LeftArmHandle.rx";
+connectAttr "ikHandle7_parentConstraint1.cry" "LeftArmHandle.ry";
+connectAttr "ikHandle7_parentConstraint1.crz" "LeftArmHandle.rz";
+connectAttr "LeftArmHandle.pim" "ikHandle7_poleVectorConstraint1.cpim";
 connectAttr "Sneaks_010:rightArm.pm" "ikHandle7_poleVectorConstraint1.ps";
 connectAttr "Sneaks_010:rightArm.t" "ikHandle7_poleVectorConstraint1.crp";
-connectAttr "Sneaks_010:LeftArm.t" "ikHandle7_poleVectorConstraint1.tg[0].tt";
-connectAttr "Sneaks_010:LeftArm.rp" "ikHandle7_poleVectorConstraint1.tg[0].trp";
-connectAttr "Sneaks_010:LeftArm.rpt" "ikHandle7_poleVectorConstraint1.tg[0].trt"
-		;
-connectAttr "Sneaks_010:LeftArm.pm" "ikHandle7_poleVectorConstraint1.tg[0].tpm";
+connectAttr "LeftArm.t" "ikHandle7_poleVectorConstraint1.tg[0].tt";
+connectAttr "LeftArm.rp" "ikHandle7_poleVectorConstraint1.tg[0].trp";
+connectAttr "LeftArm.rpt" "ikHandle7_poleVectorConstraint1.tg[0].trt";
+connectAttr "LeftArm.pm" "ikHandle7_poleVectorConstraint1.tg[0].tpm";
 connectAttr "ikHandle7_poleVectorConstraint1.w0" "ikHandle7_poleVectorConstraint1.tg[0].tw"
 		;
-connectAttr "rightArm.msg" "ikHandle8.hsj";
-connectAttr "effector44.hp" "ikHandle8.hee";
-connectAttr "Sneaks_010:ikRPsolver.msg" "ikHandle8.hsv";
-connectAttr "ikHandle8_poleVectorConstraint1.ctx" "ikHandle8.pvx";
-connectAttr "ikHandle8_poleVectorConstraint1.cty" "ikHandle8.pvy";
-connectAttr "ikHandle8_poleVectorConstraint1.ctz" "ikHandle8.pvz";
-connectAttr "ikHandle8_parentConstraint1.ctx" "ikHandle8.tx";
-connectAttr "ikHandle8_parentConstraint1.cty" "ikHandle8.ty";
-connectAttr "ikHandle8_parentConstraint1.ctz" "ikHandle8.tz";
-connectAttr "ikHandle8_parentConstraint1.crx" "ikHandle8.rx";
-connectAttr "ikHandle8_parentConstraint1.cry" "ikHandle8.ry";
-connectAttr "ikHandle8_parentConstraint1.crz" "ikHandle8.rz";
-connectAttr "ikHandle8.pim" "ikHandle8_poleVectorConstraint1.cpim";
+connectAttr "LeftArmHandle.ro" "ikHandle7_parentConstraint1.cro";
+connectAttr "LeftArmHandle.pim" "ikHandle7_parentConstraint1.cpim";
+connectAttr "LeftArmHandle.rp" "ikHandle7_parentConstraint1.crp";
+connectAttr "LeftArmHandle.rpt" "ikHandle7_parentConstraint1.crt";
+connectAttr "controller_leftArm.t" "ikHandle7_parentConstraint1.tg[0].tt";
+connectAttr "controller_leftArm.rp" "ikHandle7_parentConstraint1.tg[0].trp";
+connectAttr "controller_leftArm.rpt" "ikHandle7_parentConstraint1.tg[0].trt";
+connectAttr "controller_leftArm.r" "ikHandle7_parentConstraint1.tg[0].tr";
+connectAttr "controller_leftArm.ro" "ikHandle7_parentConstraint1.tg[0].tro";
+connectAttr "controller_leftArm.s" "ikHandle7_parentConstraint1.tg[0].ts";
+connectAttr "controller_leftArm.pm" "ikHandle7_parentConstraint1.tg[0].tpm";
+connectAttr "ikHandle7_parentConstraint1.w0" "ikHandle7_parentConstraint1.tg[0].tw"
+		;
+connectAttr "rightArm.msg" "RightArmHandle.hsj";
+connectAttr "effector44.hp" "RightArmHandle.hee";
+connectAttr "Sneaks_010:ikRPsolver.msg" "RightArmHandle.hsv";
+connectAttr "ikHandle8_poleVectorConstraint1.ctx" "RightArmHandle.pvx";
+connectAttr "ikHandle8_poleVectorConstraint1.cty" "RightArmHandle.pvy";
+connectAttr "ikHandle8_poleVectorConstraint1.ctz" "RightArmHandle.pvz";
+connectAttr "ikHandle8_parentConstraint1.ctx" "RightArmHandle.tx";
+connectAttr "ikHandle8_parentConstraint1.cty" "RightArmHandle.ty";
+connectAttr "ikHandle8_parentConstraint1.ctz" "RightArmHandle.tz";
+connectAttr "ikHandle8_parentConstraint1.crx" "RightArmHandle.rx";
+connectAttr "ikHandle8_parentConstraint1.cry" "RightArmHandle.ry";
+connectAttr "ikHandle8_parentConstraint1.crz" "RightArmHandle.rz";
+connectAttr "RightArmHandle.pim" "ikHandle8_poleVectorConstraint1.cpim";
 connectAttr "rightArm.pm" "ikHandle8_poleVectorConstraint1.ps";
 connectAttr "rightArm.t" "ikHandle8_poleVectorConstraint1.crp";
-connectAttr "Sneaks_010:RightArm.t" "ikHandle8_poleVectorConstraint1.tg[0].tt";
-connectAttr "Sneaks_010:RightArm.rp" "ikHandle8_poleVectorConstraint1.tg[0].trp"
-		;
-connectAttr "Sneaks_010:RightArm.rpt" "ikHandle8_poleVectorConstraint1.tg[0].trt"
-		;
-connectAttr "Sneaks_010:RightArm.pm" "ikHandle8_poleVectorConstraint1.tg[0].tpm"
-		;
+connectAttr "RightArm.t" "ikHandle8_poleVectorConstraint1.tg[0].tt";
+connectAttr "RightArm.rp" "ikHandle8_poleVectorConstraint1.tg[0].trp";
+connectAttr "RightArm.rpt" "ikHandle8_poleVectorConstraint1.tg[0].trt";
+connectAttr "RightArm.pm" "ikHandle8_poleVectorConstraint1.tg[0].tpm";
 connectAttr "ikHandle8_poleVectorConstraint1.w0" "ikHandle8_poleVectorConstraint1.tg[0].tw"
 		;
-connectAttr "ikHandle8.ro" "ikHandle8_parentConstraint1.cro";
-connectAttr "ikHandle8.pim" "ikHandle8_parentConstraint1.cpim";
-connectAttr "ikHandle8.rp" "ikHandle8_parentConstraint1.crp";
-connectAttr "ikHandle8.rpt" "ikHandle8_parentConstraint1.crt";
+connectAttr "RightArmHandle.ro" "ikHandle8_parentConstraint1.cro";
+connectAttr "RightArmHandle.pim" "ikHandle8_parentConstraint1.cpim";
+connectAttr "RightArmHandle.rp" "ikHandle8_parentConstraint1.crp";
+connectAttr "RightArmHandle.rpt" "ikHandle8_parentConstraint1.crt";
 connectAttr "controller_rightArm.t" "ikHandle8_parentConstraint1.tg[0].tt";
 connectAttr "controller_rightArm.rp" "ikHandle8_parentConstraint1.tg[0].trp";
 connectAttr "controller_rightArm.rpt" "ikHandle8_parentConstraint1.tg[0].trt";
@@ -27803,7 +28059,159 @@ connectAttr "controller_rightArm.s" "ikHandle8_parentConstraint1.tg[0].ts";
 connectAttr "controller_rightArm.pm" "ikHandle8_parentConstraint1.tg[0].tpm";
 connectAttr "ikHandle8_parentConstraint1.w0" "ikHandle8_parentConstraint1.tg[0].tw"
 		;
+connectAttr "controller_head_parentConstraint1.ctx" "controller_head.tx";
+connectAttr "controller_head_parentConstraint1.cty" "controller_head.ty";
+connectAttr "controller_head_parentConstraint1.ctz" "controller_head.tz";
+connectAttr "controller_head_parentConstraint1.crx" "controller_head.rx";
+connectAttr "controller_head_parentConstraint1.cry" "controller_head.ry";
+connectAttr "controller_head_parentConstraint1.crz" "controller_head.rz";
+connectAttr "transformGeometry3.og" "controller_headShape.cr";
+connectAttr "controller_head.ro" "controller_head_parentConstraint1.cro";
+connectAttr "controller_head.pim" "controller_head_parentConstraint1.cpim";
+connectAttr "controller_head.rp" "controller_head_parentConstraint1.crp";
+connectAttr "controller_head.rpt" "controller_head_parentConstraint1.crt";
+connectAttr "controller_COG.t" "controller_head_parentConstraint1.tg[0].tt";
+connectAttr "controller_COG.rp" "controller_head_parentConstraint1.tg[0].trp";
+connectAttr "controller_COG.rpt" "controller_head_parentConstraint1.tg[0].trt";
+connectAttr "controller_COG.r" "controller_head_parentConstraint1.tg[0].tr";
+connectAttr "controller_COG.ro" "controller_head_parentConstraint1.tg[0].tro";
+connectAttr "controller_COG.s" "controller_head_parentConstraint1.tg[0].ts";
+connectAttr "controller_COG.pm" "controller_head_parentConstraint1.tg[0].tpm";
+connectAttr "controller_head_parentConstraint1.w0" "controller_head_parentConstraint1.tg[0].tw"
+		;
+connectAttr "controller_leftArm_parentConstraint1.ctx" "controller_leftArm.tx";
+connectAttr "controller_leftArm_parentConstraint1.cty" "controller_leftArm.ty";
+connectAttr "controller_leftArm_parentConstraint1.ctz" "controller_leftArm.tz";
+connectAttr "controller_leftArm_parentConstraint1.crx" "controller_leftArm.rx";
+connectAttr "controller_leftArm_parentConstraint1.cry" "controller_leftArm.ry";
+connectAttr "controller_leftArm_parentConstraint1.crz" "controller_leftArm.rz";
 connectAttr "transformGeometry1.og" "controller_leftPinkyShape.cr";
+connectAttr "controller_leftArm.ro" "controller_leftArm_parentConstraint1.cro";
+connectAttr "controller_leftArm.pim" "controller_leftArm_parentConstraint1.cpim"
+		;
+connectAttr "controller_leftArm.rp" "controller_leftArm_parentConstraint1.crp";
+connectAttr "controller_leftArm.rpt" "controller_leftArm_parentConstraint1.crt";
+connectAttr "controller_root.t" "controller_leftArm_parentConstraint1.tg[0].tt";
+connectAttr "controller_root.rp" "controller_leftArm_parentConstraint1.tg[0].trp"
+		;
+connectAttr "controller_root.rpt" "controller_leftArm_parentConstraint1.tg[0].trt"
+		;
+connectAttr "controller_root.r" "controller_leftArm_parentConstraint1.tg[0].tr";
+connectAttr "controller_root.ro" "controller_leftArm_parentConstraint1.tg[0].tro"
+		;
+connectAttr "controller_root.s" "controller_leftArm_parentConstraint1.tg[0].ts";
+connectAttr "controller_root.pm" "controller_leftArm_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "controller_leftArm_parentConstraint1.w0" "controller_leftArm_parentConstraint1.tg[0].tw"
+		;
+connectAttr "controller_rightArm_parentConstraint1.ctx" "controller_rightArm.tx"
+		;
+connectAttr "controller_rightArm_parentConstraint1.cty" "controller_rightArm.ty"
+		;
+connectAttr "controller_rightArm_parentConstraint1.ctz" "controller_rightArm.tz"
+		;
+connectAttr "controller_rightArm_parentConstraint1.crx" "controller_rightArm.rx"
+		;
+connectAttr "controller_rightArm_parentConstraint1.cry" "controller_rightArm.ry"
+		;
+connectAttr "controller_rightArm_parentConstraint1.crz" "controller_rightArm.rz"
+		;
+connectAttr "controller_rightArm.ro" "controller_rightArm_parentConstraint1.cro"
+		;
+connectAttr "controller_rightArm.pim" "controller_rightArm_parentConstraint1.cpim"
+		;
+connectAttr "controller_rightArm.rp" "controller_rightArm_parentConstraint1.crp"
+		;
+connectAttr "controller_rightArm.rpt" "controller_rightArm_parentConstraint1.crt"
+		;
+connectAttr "controller_root.t" "controller_rightArm_parentConstraint1.tg[0].tt"
+		;
+connectAttr "controller_root.rp" "controller_rightArm_parentConstraint1.tg[0].trp"
+		;
+connectAttr "controller_root.rpt" "controller_rightArm_parentConstraint1.tg[0].trt"
+		;
+connectAttr "controller_root.r" "controller_rightArm_parentConstraint1.tg[0].tr"
+		;
+connectAttr "controller_root.ro" "controller_rightArm_parentConstraint1.tg[0].tro"
+		;
+connectAttr "controller_root.s" "controller_rightArm_parentConstraint1.tg[0].ts"
+		;
+connectAttr "controller_root.pm" "controller_rightArm_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "controller_rightArm_parentConstraint1.w0" "controller_rightArm_parentConstraint1.tg[0].tw"
+		;
+connectAttr "controller_rightWrist_parentConstraint1.ctx" "controller_rightWrist.tx"
+		;
+connectAttr "controller_rightWrist_parentConstraint1.cty" "controller_rightWrist.ty"
+		;
+connectAttr "controller_rightWrist_parentConstraint1.ctz" "controller_rightWrist.tz"
+		;
+connectAttr "controller_rightWrist_parentConstraint1.crx" "controller_rightWrist.rx"
+		;
+connectAttr "controller_rightWrist_parentConstraint1.cry" "controller_rightWrist.ry"
+		;
+connectAttr "controller_rightWrist_parentConstraint1.crz" "controller_rightWrist.rz"
+		;
+connectAttr "controller_rightWrist.ro" "controller_rightWrist_parentConstraint1.cro"
+		;
+connectAttr "controller_rightWrist.pim" "controller_rightWrist_parentConstraint1.cpim"
+		;
+connectAttr "controller_rightWrist.rp" "controller_rightWrist_parentConstraint1.crp"
+		;
+connectAttr "controller_rightWrist.rpt" "controller_rightWrist_parentConstraint1.crt"
+		;
+connectAttr "controller_rightArm.t" "controller_rightWrist_parentConstraint1.tg[0].tt"
+		;
+connectAttr "controller_rightArm.rp" "controller_rightWrist_parentConstraint1.tg[0].trp"
+		;
+connectAttr "controller_rightArm.rpt" "controller_rightWrist_parentConstraint1.tg[0].trt"
+		;
+connectAttr "controller_rightArm.r" "controller_rightWrist_parentConstraint1.tg[0].tr"
+		;
+connectAttr "controller_rightArm.ro" "controller_rightWrist_parentConstraint1.tg[0].tro"
+		;
+connectAttr "controller_rightArm.s" "controller_rightWrist_parentConstraint1.tg[0].ts"
+		;
+connectAttr "controller_rightArm.pm" "controller_rightWrist_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "controller_rightWrist_parentConstraint1.w0" "controller_rightWrist_parentConstraint1.tg[0].tw"
+		;
+connectAttr "controller_rightMiddle_parentConstraint1.ctx" "controller_rightMiddle.tx"
+		;
+connectAttr "controller_rightMiddle_parentConstraint1.cty" "controller_rightMiddle.ty"
+		;
+connectAttr "controller_rightMiddle_parentConstraint1.ctz" "controller_rightMiddle.tz"
+		;
+connectAttr "controller_rightMiddle_parentConstraint1.crx" "controller_rightMiddle.rx"
+		;
+connectAttr "controller_rightMiddle_parentConstraint1.cry" "controller_rightMiddle.ry"
+		;
+connectAttr "controller_rightMiddle_parentConstraint1.crz" "controller_rightMiddle.rz"
+		;
+connectAttr "controller_rightMiddle.ro" "controller_rightMiddle_parentConstraint1.cro"
+		;
+connectAttr "controller_rightMiddle.pim" "controller_rightMiddle_parentConstraint1.cpim"
+		;
+connectAttr "controller_rightMiddle.rp" "controller_rightMiddle_parentConstraint1.crp"
+		;
+connectAttr "controller_rightMiddle.rpt" "controller_rightMiddle_parentConstraint1.crt"
+		;
+connectAttr "controller_rightWrist.t" "controller_rightMiddle_parentConstraint1.tg[0].tt"
+		;
+connectAttr "controller_rightWrist.rp" "controller_rightMiddle_parentConstraint1.tg[0].trp"
+		;
+connectAttr "controller_rightWrist.rpt" "controller_rightMiddle_parentConstraint1.tg[0].trt"
+		;
+connectAttr "controller_rightWrist.r" "controller_rightMiddle_parentConstraint1.tg[0].tr"
+		;
+connectAttr "controller_rightWrist.ro" "controller_rightMiddle_parentConstraint1.tg[0].tro"
+		;
+connectAttr "controller_rightWrist.s" "controller_rightMiddle_parentConstraint1.tg[0].ts"
+		;
+connectAttr "controller_rightWrist.pm" "controller_rightMiddle_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "controller_rightMiddle_parentConstraint1.w0" "controller_rightMiddle_parentConstraint1.tg[0].tw"
+		;
 connectAttr "controller_rightThumb_parentConstraint1.ctx" "controller_rightThumb.tx"
 		;
 connectAttr "controller_rightThumb_parentConstraint1.cty" "controller_rightThumb.ty"
@@ -27875,42 +28283,6 @@ connectAttr "controller_rightWrist.s" "controller_rightIndex_parentConstraint1.t
 connectAttr "controller_rightWrist.pm" "controller_rightIndex_parentConstraint1.tg[0].tpm"
 		;
 connectAttr "controller_rightIndex_parentConstraint1.w0" "controller_rightIndex_parentConstraint1.tg[0].tw"
-		;
-connectAttr "controller_rightMiddle_parentConstraint1.ctx" "controller_rightMiddle.tx"
-		;
-connectAttr "controller_rightMiddle_parentConstraint1.cty" "controller_rightMiddle.ty"
-		;
-connectAttr "controller_rightMiddle_parentConstraint1.ctz" "controller_rightMiddle.tz"
-		;
-connectAttr "controller_rightMiddle_parentConstraint1.crx" "controller_rightMiddle.rx"
-		;
-connectAttr "controller_rightMiddle_parentConstraint1.cry" "controller_rightMiddle.ry"
-		;
-connectAttr "controller_rightMiddle_parentConstraint1.crz" "controller_rightMiddle.rz"
-		;
-connectAttr "controller_rightMiddle.ro" "controller_rightMiddle_parentConstraint1.cro"
-		;
-connectAttr "controller_rightMiddle.pim" "controller_rightMiddle_parentConstraint1.cpim"
-		;
-connectAttr "controller_rightMiddle.rp" "controller_rightMiddle_parentConstraint1.crp"
-		;
-connectAttr "controller_rightMiddle.rpt" "controller_rightMiddle_parentConstraint1.crt"
-		;
-connectAttr "controller_rightWrist.t" "controller_rightMiddle_parentConstraint1.tg[0].tt"
-		;
-connectAttr "controller_rightWrist.rp" "controller_rightMiddle_parentConstraint1.tg[0].trp"
-		;
-connectAttr "controller_rightWrist.rpt" "controller_rightMiddle_parentConstraint1.tg[0].trt"
-		;
-connectAttr "controller_rightWrist.r" "controller_rightMiddle_parentConstraint1.tg[0].tr"
-		;
-connectAttr "controller_rightWrist.ro" "controller_rightMiddle_parentConstraint1.tg[0].tro"
-		;
-connectAttr "controller_rightWrist.s" "controller_rightMiddle_parentConstraint1.tg[0].ts"
-		;
-connectAttr "controller_rightWrist.pm" "controller_rightMiddle_parentConstraint1.tg[0].tpm"
-		;
-connectAttr "controller_rightMiddle_parentConstraint1.w0" "controller_rightMiddle_parentConstraint1.tg[0].tw"
 		;
 connectAttr "controller_rightRing_parentConstraint1.ctx" "controller_rightRing.tx"
 		;
@@ -27984,62 +28356,66 @@ connectAttr "controller_rightWrist.pm" "controller_rightPinky_parentConstraint1.
 		;
 connectAttr "controller_rightPinky_parentConstraint1.w0" "controller_rightPinky_parentConstraint1.tg[0].tw"
 		;
-connectAttr "controller_rightWrist_parentConstraint1.ctx" "controller_rightWrist.tx"
-		;
-connectAttr "controller_rightWrist_parentConstraint1.cty" "controller_rightWrist.ty"
-		;
-connectAttr "controller_rightWrist_parentConstraint1.ctz" "controller_rightWrist.tz"
-		;
-connectAttr "controller_rightWrist_parentConstraint1.crx" "controller_rightWrist.rx"
-		;
-connectAttr "controller_rightWrist_parentConstraint1.cry" "controller_rightWrist.ry"
-		;
-connectAttr "controller_rightWrist_parentConstraint1.crz" "controller_rightWrist.rz"
-		;
-connectAttr "controller_rightWrist.ro" "controller_rightWrist_parentConstraint1.cro"
-		;
-connectAttr "controller_rightWrist.pim" "controller_rightWrist_parentConstraint1.cpim"
-		;
-connectAttr "controller_rightWrist.rp" "controller_rightWrist_parentConstraint1.crp"
-		;
-connectAttr "controller_rightWrist.rpt" "controller_rightWrist_parentConstraint1.crt"
-		;
-connectAttr "controller_rightArm.t" "controller_rightWrist_parentConstraint1.tg[0].tt"
-		;
-connectAttr "controller_rightArm.rp" "controller_rightWrist_parentConstraint1.tg[0].trp"
-		;
-connectAttr "controller_rightArm.rpt" "controller_rightWrist_parentConstraint1.tg[0].trt"
-		;
-connectAttr "controller_rightArm.r" "controller_rightWrist_parentConstraint1.tg[0].tr"
-		;
-connectAttr "controller_rightArm.ro" "controller_rightWrist_parentConstraint1.tg[0].tro"
-		;
-connectAttr "controller_rightArm.s" "controller_rightWrist_parentConstraint1.tg[0].ts"
-		;
-connectAttr "controller_rightArm.pm" "controller_rightWrist_parentConstraint1.tg[0].tpm"
-		;
-connectAttr "controller_rightWrist_parentConstraint1.w0" "controller_rightWrist_parentConstraint1.tg[0].tw"
-		;
+connectAttr "controller_leftLeg_parentConstraint1.ctx" "controller_leftLeg.tx";
+connectAttr "controller_leftLeg_parentConstraint1.cty" "controller_leftLeg.ty";
+connectAttr "controller_leftLeg_parentConstraint1.ctz" "controller_leftLeg.tz";
+connectAttr "controller_leftLeg_parentConstraint1.crx" "controller_leftLeg.rx";
+connectAttr "controller_leftLeg_parentConstraint1.cry" "controller_leftLeg.ry";
+connectAttr "controller_leftLeg_parentConstraint1.crz" "controller_leftLeg.rz";
 connectAttr "transformGeometry2.og" "controller_leftLegShape.cr";
-connectAttr "controller_head_parentConstraint1.ctx" "controller_head.tx";
-connectAttr "controller_head_parentConstraint1.cty" "controller_head.ty";
-connectAttr "controller_head_parentConstraint1.ctz" "controller_head.tz";
-connectAttr "controller_head_parentConstraint1.crx" "controller_head.rx";
-connectAttr "controller_head_parentConstraint1.cry" "controller_head.ry";
-connectAttr "controller_head_parentConstraint1.crz" "controller_head.rz";
-connectAttr "transformGeometry3.og" "controller_headShape.cr";
-connectAttr "controller_head.ro" "controller_head_parentConstraint1.cro";
-connectAttr "controller_head.pim" "controller_head_parentConstraint1.cpim";
-connectAttr "controller_head.rp" "controller_head_parentConstraint1.crp";
-connectAttr "controller_head.rpt" "controller_head_parentConstraint1.crt";
-connectAttr "nurbsCircle1.t" "controller_head_parentConstraint1.tg[0].tt";
-connectAttr "nurbsCircle1.rp" "controller_head_parentConstraint1.tg[0].trp";
-connectAttr "nurbsCircle1.rpt" "controller_head_parentConstraint1.tg[0].trt";
-connectAttr "nurbsCircle1.r" "controller_head_parentConstraint1.tg[0].tr";
-connectAttr "nurbsCircle1.ro" "controller_head_parentConstraint1.tg[0].tro";
-connectAttr "nurbsCircle1.s" "controller_head_parentConstraint1.tg[0].ts";
-connectAttr "nurbsCircle1.pm" "controller_head_parentConstraint1.tg[0].tpm";
-connectAttr "controller_head_parentConstraint1.w0" "controller_head_parentConstraint1.tg[0].tw"
+connectAttr "controller_leftLeg.ro" "controller_leftLeg_parentConstraint1.cro";
+connectAttr "controller_leftLeg.pim" "controller_leftLeg_parentConstraint1.cpim"
+		;
+connectAttr "controller_leftLeg.rp" "controller_leftLeg_parentConstraint1.crp";
+connectAttr "controller_leftLeg.rpt" "controller_leftLeg_parentConstraint1.crt";
+connectAttr "controller_root.t" "controller_leftLeg_parentConstraint1.tg[0].tt";
+connectAttr "controller_root.rp" "controller_leftLeg_parentConstraint1.tg[0].trp"
+		;
+connectAttr "controller_root.rpt" "controller_leftLeg_parentConstraint1.tg[0].trt"
+		;
+connectAttr "controller_root.r" "controller_leftLeg_parentConstraint1.tg[0].tr";
+connectAttr "controller_root.ro" "controller_leftLeg_parentConstraint1.tg[0].tro"
+		;
+connectAttr "controller_root.s" "controller_leftLeg_parentConstraint1.tg[0].ts";
+connectAttr "controller_root.pm" "controller_leftLeg_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "controller_leftLeg_parentConstraint1.w0" "controller_leftLeg_parentConstraint1.tg[0].tw"
+		;
+connectAttr "controller_rightLeg_parentConstraint1.ctx" "controller_rightLeg.tx"
+		;
+connectAttr "controller_rightLeg_parentConstraint1.cty" "controller_rightLeg.ty"
+		;
+connectAttr "controller_rightLeg_parentConstraint1.ctz" "controller_rightLeg.tz"
+		;
+connectAttr "controller_rightLeg_parentConstraint1.crx" "controller_rightLeg.rx"
+		;
+connectAttr "controller_rightLeg_parentConstraint1.cry" "controller_rightLeg.ry"
+		;
+connectAttr "controller_rightLeg_parentConstraint1.crz" "controller_rightLeg.rz"
+		;
+connectAttr "controller_rightLeg.ro" "controller_rightLeg_parentConstraint1.cro"
+		;
+connectAttr "controller_rightLeg.pim" "controller_rightLeg_parentConstraint1.cpim"
+		;
+connectAttr "controller_rightLeg.rp" "controller_rightLeg_parentConstraint1.crp"
+		;
+connectAttr "controller_rightLeg.rpt" "controller_rightLeg_parentConstraint1.crt"
+		;
+connectAttr "controller_root.t" "controller_rightLeg_parentConstraint1.tg[0].tt"
+		;
+connectAttr "controller_root.rp" "controller_rightLeg_parentConstraint1.tg[0].trp"
+		;
+connectAttr "controller_root.rpt" "controller_rightLeg_parentConstraint1.tg[0].trt"
+		;
+connectAttr "controller_root.r" "controller_rightLeg_parentConstraint1.tg[0].tr"
+		;
+connectAttr "controller_root.ro" "controller_rightLeg_parentConstraint1.tg[0].tro"
+		;
+connectAttr "controller_root.s" "controller_rightLeg_parentConstraint1.tg[0].ts"
+		;
+connectAttr "controller_root.pm" "controller_rightLeg_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "controller_rightLeg_parentConstraint1.w0" "controller_rightLeg_parentConstraint1.tg[0].tw"
 		;
 connectAttr "controller_shoulder_parentConstraint1.ctx" "controller_shoulder.tx"
 		;
@@ -28061,14 +28437,17 @@ connectAttr "controller_shoulder.rp" "controller_shoulder_parentConstraint1.crp"
 		;
 connectAttr "controller_shoulder.rpt" "controller_shoulder_parentConstraint1.crt"
 		;
-connectAttr "nurbsCircle1.t" "controller_shoulder_parentConstraint1.tg[0].tt";
-connectAttr "nurbsCircle1.rp" "controller_shoulder_parentConstraint1.tg[0].trp";
-connectAttr "nurbsCircle1.rpt" "controller_shoulder_parentConstraint1.tg[0].trt"
+connectAttr "controller_COG.t" "controller_shoulder_parentConstraint1.tg[0].tt";
+connectAttr "controller_COG.rp" "controller_shoulder_parentConstraint1.tg[0].trp"
 		;
-connectAttr "nurbsCircle1.r" "controller_shoulder_parentConstraint1.tg[0].tr";
-connectAttr "nurbsCircle1.ro" "controller_shoulder_parentConstraint1.tg[0].tro";
-connectAttr "nurbsCircle1.s" "controller_shoulder_parentConstraint1.tg[0].ts";
-connectAttr "nurbsCircle1.pm" "controller_shoulder_parentConstraint1.tg[0].tpm";
+connectAttr "controller_COG.rpt" "controller_shoulder_parentConstraint1.tg[0].trt"
+		;
+connectAttr "controller_COG.r" "controller_shoulder_parentConstraint1.tg[0].tr";
+connectAttr "controller_COG.ro" "controller_shoulder_parentConstraint1.tg[0].tro"
+		;
+connectAttr "controller_COG.s" "controller_shoulder_parentConstraint1.tg[0].ts";
+connectAttr "controller_COG.pm" "controller_shoulder_parentConstraint1.tg[0].tpm"
+		;
 connectAttr "controller_shoulder_parentConstraint1.w0" "controller_shoulder_parentConstraint1.tg[0].tw"
 		;
 connectAttr "controller_spine1_parentConstraint1.ctx" "controller_spine1.tx";
@@ -28081,13 +28460,14 @@ connectAttr "controller_spine1.ro" "controller_spine1_parentConstraint1.cro";
 connectAttr "controller_spine1.pim" "controller_spine1_parentConstraint1.cpim";
 connectAttr "controller_spine1.rp" "controller_spine1_parentConstraint1.crp";
 connectAttr "controller_spine1.rpt" "controller_spine1_parentConstraint1.crt";
-connectAttr "nurbsCircle1.t" "controller_spine1_parentConstraint1.tg[0].tt";
-connectAttr "nurbsCircle1.rp" "controller_spine1_parentConstraint1.tg[0].trp";
-connectAttr "nurbsCircle1.rpt" "controller_spine1_parentConstraint1.tg[0].trt";
-connectAttr "nurbsCircle1.r" "controller_spine1_parentConstraint1.tg[0].tr";
-connectAttr "nurbsCircle1.ro" "controller_spine1_parentConstraint1.tg[0].tro";
-connectAttr "nurbsCircle1.s" "controller_spine1_parentConstraint1.tg[0].ts";
-connectAttr "nurbsCircle1.pm" "controller_spine1_parentConstraint1.tg[0].tpm";
+connectAttr "controller_COG.t" "controller_spine1_parentConstraint1.tg[0].tt";
+connectAttr "controller_COG.rp" "controller_spine1_parentConstraint1.tg[0].trp";
+connectAttr "controller_COG.rpt" "controller_spine1_parentConstraint1.tg[0].trt"
+		;
+connectAttr "controller_COG.r" "controller_spine1_parentConstraint1.tg[0].tr";
+connectAttr "controller_COG.ro" "controller_spine1_parentConstraint1.tg[0].tro";
+connectAttr "controller_COG.s" "controller_spine1_parentConstraint1.tg[0].ts";
+connectAttr "controller_COG.pm" "controller_spine1_parentConstraint1.tg[0].tpm";
 connectAttr "controller_spine1_parentConstraint1.w0" "controller_spine1_parentConstraint1.tg[0].tw"
 		;
 connectAttr "controller_spine2_parentConstraint1.ctx" "controller_spine2.tx";
@@ -28100,13 +28480,14 @@ connectAttr "controller_spine2.ro" "controller_spine2_parentConstraint1.cro";
 connectAttr "controller_spine2.pim" "controller_spine2_parentConstraint1.cpim";
 connectAttr "controller_spine2.rp" "controller_spine2_parentConstraint1.crp";
 connectAttr "controller_spine2.rpt" "controller_spine2_parentConstraint1.crt";
-connectAttr "nurbsCircle1.t" "controller_spine2_parentConstraint1.tg[0].tt";
-connectAttr "nurbsCircle1.rp" "controller_spine2_parentConstraint1.tg[0].trp";
-connectAttr "nurbsCircle1.rpt" "controller_spine2_parentConstraint1.tg[0].trt";
-connectAttr "nurbsCircle1.r" "controller_spine2_parentConstraint1.tg[0].tr";
-connectAttr "nurbsCircle1.ro" "controller_spine2_parentConstraint1.tg[0].tro";
-connectAttr "nurbsCircle1.s" "controller_spine2_parentConstraint1.tg[0].ts";
-connectAttr "nurbsCircle1.pm" "controller_spine2_parentConstraint1.tg[0].tpm";
+connectAttr "controller_COG.t" "controller_spine2_parentConstraint1.tg[0].tt";
+connectAttr "controller_COG.rp" "controller_spine2_parentConstraint1.tg[0].trp";
+connectAttr "controller_COG.rpt" "controller_spine2_parentConstraint1.tg[0].trt"
+		;
+connectAttr "controller_COG.r" "controller_spine2_parentConstraint1.tg[0].tr";
+connectAttr "controller_COG.ro" "controller_spine2_parentConstraint1.tg[0].tro";
+connectAttr "controller_COG.s" "controller_spine2_parentConstraint1.tg[0].ts";
+connectAttr "controller_COG.pm" "controller_spine2_parentConstraint1.tg[0].tpm";
 connectAttr "controller_spine2_parentConstraint1.w0" "controller_spine2_parentConstraint1.tg[0].tw"
 		;
 connectAttr "controller_spine3_parentConstraint1.ctx" "controller_spine3.tx";
@@ -28119,13 +28500,14 @@ connectAttr "controller_spine3.ro" "controller_spine3_parentConstraint1.cro";
 connectAttr "controller_spine3.pim" "controller_spine3_parentConstraint1.cpim";
 connectAttr "controller_spine3.rp" "controller_spine3_parentConstraint1.crp";
 connectAttr "controller_spine3.rpt" "controller_spine3_parentConstraint1.crt";
-connectAttr "nurbsCircle1.t" "controller_spine3_parentConstraint1.tg[0].tt";
-connectAttr "nurbsCircle1.rp" "controller_spine3_parentConstraint1.tg[0].trp";
-connectAttr "nurbsCircle1.rpt" "controller_spine3_parentConstraint1.tg[0].trt";
-connectAttr "nurbsCircle1.r" "controller_spine3_parentConstraint1.tg[0].tr";
-connectAttr "nurbsCircle1.ro" "controller_spine3_parentConstraint1.tg[0].tro";
-connectAttr "nurbsCircle1.s" "controller_spine3_parentConstraint1.tg[0].ts";
-connectAttr "nurbsCircle1.pm" "controller_spine3_parentConstraint1.tg[0].tpm";
+connectAttr "controller_COG.t" "controller_spine3_parentConstraint1.tg[0].tt";
+connectAttr "controller_COG.rp" "controller_spine3_parentConstraint1.tg[0].trp";
+connectAttr "controller_COG.rpt" "controller_spine3_parentConstraint1.tg[0].trt"
+		;
+connectAttr "controller_COG.r" "controller_spine3_parentConstraint1.tg[0].tr";
+connectAttr "controller_COG.ro" "controller_spine3_parentConstraint1.tg[0].tro";
+connectAttr "controller_COG.s" "controller_spine3_parentConstraint1.tg[0].ts";
+connectAttr "controller_COG.pm" "controller_spine3_parentConstraint1.tg[0].tpm";
 connectAttr "controller_spine3_parentConstraint1.w0" "controller_spine3_parentConstraint1.tg[0].tw"
 		;
 connectAttr "controller_hip_parentConstraint1.ctx" "controller_hip.tx";
@@ -28138,13 +28520,13 @@ connectAttr "controller_hip.ro" "controller_hip_parentConstraint1.cro";
 connectAttr "controller_hip.pim" "controller_hip_parentConstraint1.cpim";
 connectAttr "controller_hip.rp" "controller_hip_parentConstraint1.crp";
 connectAttr "controller_hip.rpt" "controller_hip_parentConstraint1.crt";
-connectAttr "nurbsCircle1.t" "controller_hip_parentConstraint1.tg[0].tt";
-connectAttr "nurbsCircle1.rp" "controller_hip_parentConstraint1.tg[0].trp";
-connectAttr "nurbsCircle1.rpt" "controller_hip_parentConstraint1.tg[0].trt";
-connectAttr "nurbsCircle1.r" "controller_hip_parentConstraint1.tg[0].tr";
-connectAttr "nurbsCircle1.ro" "controller_hip_parentConstraint1.tg[0].tro";
-connectAttr "nurbsCircle1.s" "controller_hip_parentConstraint1.tg[0].ts";
-connectAttr "nurbsCircle1.pm" "controller_hip_parentConstraint1.tg[0].tpm";
+connectAttr "controller_COG.t" "controller_hip_parentConstraint1.tg[0].tt";
+connectAttr "controller_COG.rp" "controller_hip_parentConstraint1.tg[0].trp";
+connectAttr "controller_COG.rpt" "controller_hip_parentConstraint1.tg[0].trt";
+connectAttr "controller_COG.r" "controller_hip_parentConstraint1.tg[0].tr";
+connectAttr "controller_COG.ro" "controller_hip_parentConstraint1.tg[0].tro";
+connectAttr "controller_COG.s" "controller_hip_parentConstraint1.tg[0].ts";
+connectAttr "controller_COG.pm" "controller_hip_parentConstraint1.tg[0].tpm";
 connectAttr "controller_hip_parentConstraint1.w0" "controller_hip_parentConstraint1.tg[0].tw"
 		;
 connectAttr "controller_tailbase_parentConstraint1.ctx" "controller_tailbase.tx"
@@ -28167,14 +28549,17 @@ connectAttr "controller_tailbase.rp" "controller_tailbase_parentConstraint1.crp"
 		;
 connectAttr "controller_tailbase.rpt" "controller_tailbase_parentConstraint1.crt"
 		;
-connectAttr "nurbsCircle1.t" "controller_tailbase_parentConstraint1.tg[0].tt";
-connectAttr "nurbsCircle1.rp" "controller_tailbase_parentConstraint1.tg[0].trp";
-connectAttr "nurbsCircle1.rpt" "controller_tailbase_parentConstraint1.tg[0].trt"
+connectAttr "controller_COG.t" "controller_tailbase_parentConstraint1.tg[0].tt";
+connectAttr "controller_COG.rp" "controller_tailbase_parentConstraint1.tg[0].trp"
 		;
-connectAttr "nurbsCircle1.r" "controller_tailbase_parentConstraint1.tg[0].tr";
-connectAttr "nurbsCircle1.ro" "controller_tailbase_parentConstraint1.tg[0].tro";
-connectAttr "nurbsCircle1.s" "controller_tailbase_parentConstraint1.tg[0].ts";
-connectAttr "nurbsCircle1.pm" "controller_tailbase_parentConstraint1.tg[0].tpm";
+connectAttr "controller_COG.rpt" "controller_tailbase_parentConstraint1.tg[0].trt"
+		;
+connectAttr "controller_COG.r" "controller_tailbase_parentConstraint1.tg[0].tr";
+connectAttr "controller_COG.ro" "controller_tailbase_parentConstraint1.tg[0].tro"
+		;
+connectAttr "controller_COG.s" "controller_tailbase_parentConstraint1.tg[0].ts";
+connectAttr "controller_COG.pm" "controller_tailbase_parentConstraint1.tg[0].tpm"
+		;
 connectAttr "controller_tailbase_parentConstraint1.w0" "controller_tailbase_parentConstraint1.tg[0].tw"
 		;
 connectAttr "controller_tail1_parentConstraint1.ctx" "controller_tail1.tx";
@@ -28276,7 +28661,27 @@ connectAttr "controller_tail3.pm" "controller_tailtip_parentConstraint1.tg[0].tp
 		;
 connectAttr "controller_tailtip_parentConstraint1.w0" "controller_tailtip_parentConstraint1.tg[0].tw"
 		;
-connectAttr "transformGeometry4.og" "nurbsCircleShape1.cr";
+connectAttr "nurbsCircle1_parentConstraint1.ctx" "controller_COG.tx";
+connectAttr "nurbsCircle1_parentConstraint1.cty" "controller_COG.ty";
+connectAttr "nurbsCircle1_parentConstraint1.ctz" "controller_COG.tz";
+connectAttr "nurbsCircle1_parentConstraint1.crx" "controller_COG.rx";
+connectAttr "nurbsCircle1_parentConstraint1.cry" "controller_COG.ry";
+connectAttr "nurbsCircle1_parentConstraint1.crz" "controller_COG.rz";
+connectAttr "transformGeometry4.og" "controller_COGShape.cr";
+connectAttr "controller_COG.ro" "nurbsCircle1_parentConstraint1.cro";
+connectAttr "controller_COG.pim" "nurbsCircle1_parentConstraint1.cpim";
+connectAttr "controller_COG.rp" "nurbsCircle1_parentConstraint1.crp";
+connectAttr "controller_COG.rpt" "nurbsCircle1_parentConstraint1.crt";
+connectAttr "controller_root.t" "nurbsCircle1_parentConstraint1.tg[0].tt";
+connectAttr "controller_root.rp" "nurbsCircle1_parentConstraint1.tg[0].trp";
+connectAttr "controller_root.rpt" "nurbsCircle1_parentConstraint1.tg[0].trt";
+connectAttr "controller_root.r" "nurbsCircle1_parentConstraint1.tg[0].tr";
+connectAttr "controller_root.ro" "nurbsCircle1_parentConstraint1.tg[0].tro";
+connectAttr "controller_root.s" "nurbsCircle1_parentConstraint1.tg[0].ts";
+connectAttr "controller_root.pm" "nurbsCircle1_parentConstraint1.tg[0].tpm";
+connectAttr "nurbsCircle1_parentConstraint1.w0" "nurbsCircle1_parentConstraint1.tg[0].tw"
+		;
+connectAttr "transformGeometry5.og" "controller_rootShape.cr";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
@@ -29284,6 +29689,7 @@ connectAttr "makeNurbCircle1.oc" "transformGeometry1.ig";
 connectAttr "makeNurbCircle2.oc" "transformGeometry2.ig";
 connectAttr "makeNurbCircle3.oc" "transformGeometry3.ig";
 connectAttr "makeNurbCircle4.oc" "transformGeometry4.ig";
+connectAttr "makeNurbCircle5.oc" "transformGeometry5.ig";
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "quadtuff:lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "quadtuff:lambert3SG.pa" ":renderPartition.st" -na;

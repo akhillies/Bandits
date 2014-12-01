@@ -4,3 +4,5 @@ PigRig003	skeleton w/ controllers (need to fix)
 
 rig_flexi001	rotation is failing
 rig_flexi002	rotation is fixed!
+
+Bacon is the most recent mapped (model edited) Pig.

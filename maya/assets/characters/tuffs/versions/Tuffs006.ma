@@ -1,6 +1,6 @@
 //Maya ASCII 2013 scene
-//Name: tuffs_latest.ma
-//Last modified: Tue, Dec 02, 2014 09:01:43 PM
+//Name: Tuffs006.ma
+//Last modified: Tue, Dec 02, 2014 08:59:54 PM
 //Codeset: UTF-8
 requires maya "2013";
 requires "Mayatomr" "2013.0 - 3.10.1.9 ";
@@ -14,10 +14,10 @@ fileInfo "osv" "Mac OS X 10.9.5";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 37.41240507877793 16.469959747260532 40.825130780603821 ;
+	setAttr ".t" -type "double3" 37.41240507877793 16.469959747260532 40.825130780603828 ;
 	setAttr ".r" -type "double3" -10.63585981772458 43.799999999999947 -1.1016659541643744e-15 ;
 	setAttr ".rp" -type "double3" -1.7763568394002505e-14 -7.1054273576010019e-15 1.4210854715202004e-14 ;
-	setAttr ".rpt" -type "double3" 4.2910192415556085e-14 7.4309430489864323e-16 3.2555750420464545e-14 ;
+	setAttr ".rpt" -type "double3" 4.2910192415556091e-14 7.4309430489864323e-16 3.2555750420464539e-14 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
@@ -45,7 +45,7 @@ createNode camera -s -n "topShape" -p "top";
 	setAttr ".hc" -type "string" "viewSet -t %camera";
 createNode transform -s -n "front";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1.205294070606227 7.6335291138395265 100.10000000000004 ;
+	setAttr ".t" -type "double3" 1.205294070606227 7.6335291138395256 100.10000000000005 ;
 	setAttr ".rp" -type "double3" -1.4210854715202004e-14 0 0 ;
 	setAttr ".rpt" -type "double3" 1.7423986833203416e-14 -2.5626248755301879e-14 -4.2002410575137085e-14 ;
 createNode camera -s -n "frontShape" -p "front";
@@ -44538,4 +44538,4 @@ connectAttr "Tuffs002:Tuffs:place2dTexture1.msg" ":defaultRenderUtilityList1.u"
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "Sneaks_010:ikSCsolver.msg" ":ikSystem.sol" -na;
 connectAttr "Sneaks_010:ikRPsolver.msg" ":ikSystem.sol" -na;
-// End of tuffs_latest.ma
+// End of Tuffs006.ma

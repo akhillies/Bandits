@@ -1,6 +1,6 @@
 //Maya ASCII 2013 scene
-//Name: living_room_latest.ma
-//Last modified: Thu, Dec 04, 2014 12:00:07 AM
+//Name: living_room_004.ma
+//Last modified: Wed, Dec 03, 2014 11:52:20 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "armchair_latest" -rfn "armchair_latestRN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/livingroom/additions/sofa/armchair_latest.ma";
 file -rdi 1 -ns "table_latest" -rfn "table_latestRN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/livingroom/additions/table/table_latest.ma";
@@ -60,18 +60,18 @@ fileInfo "osv" "Mac OS X 10.9.5";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -16.320815306948287 17.131494512738357 77.25140353923986 ;
-	setAttr ".r" -type "double3" -9.6000000000228862 337.20000000002165 4.312671945915272e-16 ;
+	setAttr ".t" -type "double3" -22.356882827047986 13.674821856484231 -12.782493748860112 ;
+	setAttr ".r" -type "double3" -10.8000000000235 208.80000000002278 0 ;
 	setAttr ".rp" -type "double3" 0 -3.5527136788005009e-15 0 ;
 	setAttr ".rpt" -type "double3" 1.2958228882185857e-13 -1.1004253073599082e-13 -8.3844571220071218e-14 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 60.719088251528831;
+	setAttr ".coi" 36.378753347311914;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -10.614863301015555 2.3639000171629188 20.562345790450756 ;
+	setAttr ".tp" -type "double3" -10.614863301015557 2.3639000171629188 20.562345790450756 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 	setAttr ".dgm" no;
 createNode transform -s -n "top";
@@ -14721,4 +14721,4 @@ connectAttr "pasted__place2dTexture4.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "pasted__place2dTexture5.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "pasted__place2dTexture9.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-// End of living_room_latest.ma
+// End of living_room_004.ma

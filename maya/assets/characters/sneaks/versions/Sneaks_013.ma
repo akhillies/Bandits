@@ -1,6 +1,6 @@
 //Maya ASCII 2013 scene
-//Name: sneaks_latest.ma
-//Last modified: Thu, Dec 04, 2014 12:17:26 AM
+//Name: Sneaks_013.ma
+//Last modified: Thu, Dec 04, 2014 12:17:14 AM
 //Codeset: UTF-8
 requires maya "2013";
 requires "Mayatomr" "2013.0 - 3.10.1.9 ";
@@ -32199,4 +32199,4 @@ connectAttr "Sneakio002:place2dTexture1.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "ikSCsolver.msg" ":ikSystem.sol" -na;
 connectAttr "ikRPsolver.msg" ":ikSystem.sol" -na;
-// End of sneaks_latest.ma
+// End of Sneaks_013.ma

@@ -1,6 +1,6 @@
 //Maya ASCII 2014 scene
 //Name: fridge.ma
-//Last modified: Fri, Dec 05, 2014 02:02:03 PM
+//Last modified: Fri, Dec 05, 2014 02:07:53 PM
 //Codeset: UTF-8
 requires maya "2014";
 currentUnit -l centimeter -a degree -t film;
@@ -12,14 +12,14 @@ fileInfo "osv" "Mac OS X 10.9.1";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -2.15397001856266 15.530145951197412 41.331945331988948 ;
-	setAttr ".r" -type "double3" -14.459952429879676 0.42470917958016702 358.4359643680105 ;
+	setAttr ".t" -type "double3" 11.097663167147523 22.625477614631347 -4.9516651381229755 ;
+	setAttr ".r" -type "double3" -49.344038643369089 110.88091231277525 364.39173194156103 ;
 	setAttr ".rp" -type "double3" -6.6613381477509392e-15 8.8817841970012523e-16 0 ;
 	setAttr ".rpt" -type "double3" 4.1987919577756712e-15 -1.0173744953739244e-14 -9.7026649677148834e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 41.332418412036162;
+	setAttr ".coi" 23.325273846796382;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -10359,6 +10359,17 @@ createNode groupId -n "groupId44";
 createNode groupParts -n "groupParts14";
 	setAttr ".ihi" 0;
 	setAttr ".ic" -type "componentList" 1 "f[0:179]";
+createNode polySplitRing -n "polySplitRing12";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 9 "e[10:13]" "e[26]" "e[30]" "e[40]" "e[43]" "e[48]" "e[56]" "e[68]" "e[76]";
+	setAttr ".ix" -type "matrix" 1.5471832446612308 0 0 0 0 0.91787550412180863 0 0 0 0 0.99999999999999978 0
+		 0.013111407305445688 5.1570713770951482 -0.16141857404309068 1;
+	setAttr ".wt" 0.98667383193969727;
+	setAttr ".dr" no;
+	setAttr ".re" 12;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -10663,7 +10674,7 @@ connectAttr "Cylinder10_rotateY.o" "Cylinder10.ry";
 connectAttr "Cylinder10_rotateZ.o" "Cylinder10.rz";
 connectAttr "groupId19.id" "Cylinder10Shape.iog.og[0].gid";
 connectAttr "Cylinder07SG.mwc" "Cylinder10Shape.iog.og[0].gco";
-connectAttr "polySplitRing11.out" "pCubeShape1.i";
+connectAttr "polySplitRing12.out" "pCubeShape1.i";
 connectAttr "polySplitRing9.out" "pCubeShape2.i";
 connectAttr "polyCylinder1.out" "pCylinderShape1.i";
 connectAttr "polyCube2.out" "pCubeShape4.i";
@@ -10851,6 +10862,8 @@ connectAttr "polySurfaceShape4.wm" "polyUnite5.im[1]";
 connectAttr "polySurfaceShape5.wm" "polyUnite5.im[2]";
 connectAttr "polyUnite5.out" "groupParts14.ig";
 connectAttr "groupId44.id" "groupParts14.gi";
+connectAttr "polySplitRing11.out" "polySplitRing12.ip";
+connectAttr "pCubeShape1.wm" "polySplitRing12.mp";
 connectAttr "Plane01SG.pa" ":renderPartition.st" -na;
 connectAttr "Cylinder07SG.pa" ":renderPartition.st" -na;
 connectAttr "Line03SG.pa" ":renderPartition.st" -na;

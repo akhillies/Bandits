@@ -1,6 +1,6 @@
 //Maya ASCII 2015 scene
 //Name: pre-title_running_through_bush_001.ma
-//Last modified: Thu, Dec 04, 2014 11:08:12 PM
+//Last modified: Thu, Dec 04, 2014 11:46:01 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "outside_house" -rfn "outside_houseRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//scenes/outside_house.ma";
 file -rdi 2 -ns "outside_house_latest" -rfn "outside_house:outside_house_latestRN"
@@ -34,7 +34,7 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" 44.610578609574439 221.86691270017184 618.34787238502565 ;
-	setAttr ".r" -type "double3" -204.45691749878762 -188.2688226888512 -179.99999999998764 ;
+	setAttr ".r" -type "double3" -204.45691749878762 -188.26882268885123 -179.99999999998764 ;
 	setAttr ".rp" -type "double3" 0 1.4210854715202004e-14 0 ;
 	setAttr ".rpt" -type "double3" 2.3037429731245368e-14 2.1752668312137917e-14 -1.0388226790616486e-13 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -257,8 +257,8 @@ createNode mentalrayOptions -s -n "miDefaultOptions";
 createNode mentalrayFramebuffer -s -n "miDefaultFramebuffer";
 	setAttr ".dat" 2;
 createNode lightLinker -s -n "lightLinker1";
-	setAttr -s 94 ".lnk";
-	setAttr -s 94 ".slnk";
+	setAttr -s 88 ".lnk";
+	setAttr -s 88 ".slnk";
 createNode displayLayerManager -n "layerManager";
 createNode displayLayer -n "defaultLayer";
 createNode renderLayerManager -n "renderLayerManager";
@@ -573,7 +573,7 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        setFocus `paneLayout -q -p1 $gMainPane`;\n        sceneUIReplacement -deleteRemaining;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
-	setAttr ".b" -type "string" "playbackOptions -min 1 -max 75 -ast 1 -aet 75 ";
+	setAttr ".b" -type "string" "playbackOptions -min 1 -max 60 -ast 1 -aet 60 ";
 	setAttr ".st" 6;
 createNode vectorRenderGlobals -s -n "vectorRenderGlobals26";
 createNode vectorRenderGlobals -s -n "vectorRenderGlobals27";
@@ -733,7 +733,7 @@ createNode reference -n "outside_houseRN";
 		""
 		"outside_houseRN" 32
 		2 "|outside_house:camera_binoculars" "visibility" " -av 1"
-		2 "|outside_house:camera_binoculars" "translate" " -type \"double3\" -8.52489931875311768 55.2958160453339076 457.39052332399955958"
+		2 "|outside_house:camera_binoculars" "translate" " -type \"double3\" -2.20374250373381964 58.24587797620792173 329.31982750779098978"
 		
 		2 "|outside_house:camera_binoculars" "translateX" " -av"
 		2 "|outside_house:camera_binoculars" "translateY" " -av"
@@ -814,7 +814,7 @@ createNode reference -n "outside_houseRN";
 		"outside_houseRN.placeHolderList[30]" ""
 		"outside_house:Tuffs005RN" 15
 		2 "|outside_house:tuffs_latest:Tuffs002:TuffsMesh" "visibility" " -av 1"
-		2 "|outside_house:tuffs_latest:controller_root" "translate" " -type \"double3\" -19.21126925571455146 256.9072316697701126 582.26988541394825916"
+		2 "|outside_house:tuffs_latest:controller_root" "translate" " -type \"double3\" -19.21126925571454791 59.92341821667164936 370.50719860366740477"
 		
 		2 "|outside_house:tuffs_latest:controller_root" "translateX" " -av"
 		2 "|outside_house:tuffs_latest:controller_root" "translateY" " -av"
@@ -841,7 +841,7 @@ createNode reference -n "outside_houseRN";
 		"outside_houseRN.placeHolderList[10]" ""
 		"outside_house:Smarty003RN" 14
 		2 "|outside_house:smarty_latest:SmartyRig|outside_house:smarty_latest:global_ctrl" 
-		"translate" " -type \"double3\" 10.96263830384056348 263.2897154636644359 578.62428084569774001"
+		"translate" " -type \"double3\" 10.96263830384056703 87.30589398412297442 389.43712775749906996"
 		
 		2 "|outside_house:smarty_latest:SmartyRig|outside_house:smarty_latest:global_ctrl" 
 		"translateX" " -av"
@@ -876,7 +876,7 @@ createNode reference -n "outside_houseRN";
 		2 "|outside_house:leaves1:SH20_3_br1_NL_INV" "translateY" " -av"
 		2 "|outside_house:leaves1:SH20_3_br1_NL_INV" "translateZ" " -av"
 		"outside_house:binocularsRN" 14
-		2 "|outside_house:binoculars:polySurface3" "translate" " -type \"double3\" -4.19300714260487428 268.7987197722699193 553.96500306128803004"
+		2 "|outside_house:binoculars:polySurface3" "translate" " -type \"double3\" -4.19300714260487073 71.81490631917148448 342.20231625100717565"
 		
 		2 "|outside_house:binoculars:polySurface3" "translateX" " -av"
 		2 "|outside_house:binoculars:polySurface3" "translateY" " -av"
@@ -910,18 +910,18 @@ createNode reference -n "outside_houseRN";
 		2 "|outside_house:leaves2:SH20_3_br1_NL_INV" "scale" " -type \"double3\" -5.96 2.567 4.044"
 		
 		"outside_house:Sneaks_012RN" 18
-		2 "|outside_house:sneaks_latest:controller_root" "translate" " -type \"double3\" -2.87051351976255997 260.39561903610581339 567.41958454971495485"
+		2 "|outside_house:sneaks_latest:controller_root" "translate" " -type \"double3\" -2.87051351976255642 63.41180558300732173 355.65689773943404361"
 		
 		2 "|outside_house:sneaks_latest:controller_root" "translateX" " -av"
 		2 "|outside_house:sneaks_latest:controller_root" "translateY" " -av"
 		2 "|outside_house:sneaks_latest:controller_root" "translateZ" " -av"
-		2 "|outside_house:sneaks_latest:left_wrist" "translate" " -type \"double3\" -6.18119151956775337 259.86891878401308986 562.14799017088830624"
+		2 "|outside_house:sneaks_latest:left_wrist" "translate" " -type \"double3\" -6.18119151956777202 62.88510533091462662 350.38530336060750869"
 		
-		2 "|outside_house:sneaks_latest:left_wrist" "rotate" " -type \"double3\" 3.28123364844450638 184.96091196581213012 1.84117576506059977"
+		2 "|outside_house:sneaks_latest:left_wrist" "rotate" " -type \"double3\" 3.28123364844572762 184.96091196581326699 1.84117576506009084"
 		
-		2 "|outside_house:sneaks_latest:RightHandHandle" "translate" " -type \"double3\" -0.55580164127989795 259.80144959490547762 561.60932282663577553"
+		2 "|outside_house:sneaks_latest:RightHandHandle" "translate" " -type \"double3\" -0.55580164127989062 62.81763614180700017 349.84663601635497798"
 		
-		2 "|outside_house:sneaks_latest:RightHandHandle" "rotate" " -type \"double3\" 0.58551979371170104 179.45252740056588436 0.45196687072196751"
+		2 "|outside_house:sneaks_latest:RightHandHandle" "rotate" " -type \"double3\" 0.58551979371294782 179.45252740056491803 0.4519668707219166"
 		
 		5 4 "outside_houseRN" "|outside_house:sneaks_latest:controller_root.translateX" 
 		"outside_houseRN.placeHolderList[11]" ""
@@ -1110,46 +1110,65 @@ createNode animCurveTU -n "controller_root_scaleZ1";
 	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  1 1 60 1;
 createNode animCurveTU -n "camera_binoculars_visibility";
-	setAttr ".tan" 9;
+	setAttr ".tan" 2;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 60 1;
-	setAttr -s 2 ".kot[0:1]"  5 5;
+	setAttr -s 2 ".ktv[0:1]"  1 1 45 1;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[1]"  5;
 createNode animCurveTL -n "camera_binoculars_translateX";
-	setAttr ".tan" 18;
+	setAttr ".tan" 2;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 -8.5248993187531177 60 -2.2037425037338196;
+	setAttr -s 2 ".ktv[0:1]"  1 -8.5248993187531177 45 -2.2037425037338196;
+	setAttr -s 2 ".kit[1]"  18;
+	setAttr -s 2 ".kot[1]"  18;
 createNode animCurveTL -n "camera_binoculars_translateY";
-	setAttr ".tan" 18;
+	setAttr ".tan" 2;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 55.295816045333908 60 58.245877976207922;
+	setAttr -s 2 ".ktv[0:1]"  1 55.295816045333908 45 58.245877976207922;
+	setAttr -s 2 ".kit[1]"  18;
+	setAttr -s 2 ".kot[1]"  18;
 createNode animCurveTL -n "camera_binoculars_translateZ";
-	setAttr ".tan" 18;
+	setAttr ".tan" 2;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 457.39052332399956 60 329.31982750779099;
+	setAttr -s 2 ".ktv[0:1]"  1 457.39052332399956 45 329.31982750779099;
+	setAttr -s 2 ".kit[1]"  18;
+	setAttr -s 2 ".kot[1]"  18;
 createNode animCurveTA -n "camera_binoculars_rotateX";
-	setAttr ".tan" 18;
+	setAttr ".tan" 2;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 3.4015370917169014 60 3.4015370917169014;
+	setAttr -s 2 ".ktv[0:1]"  1 3.4015370917169014 45 3.4015370917169014;
+	setAttr -s 2 ".kit[1]"  18;
+	setAttr -s 2 ".kot[1]"  18;
 createNode animCurveTA -n "camera_binoculars_rotateY";
-	setAttr ".tan" 18;
+	setAttr ".tan" 2;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 60 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 45 0;
+	setAttr -s 2 ".kit[1]"  18;
+	setAttr -s 2 ".kot[1]"  18;
 createNode animCurveTA -n "camera_binoculars_rotateZ";
-	setAttr ".tan" 18;
+	setAttr ".tan" 2;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 60 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 45 0;
+	setAttr -s 2 ".kit[1]"  18;
+	setAttr -s 2 ".kot[1]"  18;
 createNode animCurveTU -n "camera_binoculars_scaleX";
-	setAttr ".tan" 18;
+	setAttr ".tan" 2;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 8.8009943096695338 60 8.8009943096695338;
+	setAttr -s 2 ".ktv[0:1]"  1 8.8009943096695338 45 8.8009943096695338;
+	setAttr -s 2 ".kit[1]"  18;
+	setAttr -s 2 ".kot[1]"  18;
 createNode animCurveTU -n "camera_binoculars_scaleY";
-	setAttr ".tan" 18;
+	setAttr ".tan" 2;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 8.8009943096695338 60 8.8009943096695338;
+	setAttr -s 2 ".ktv[0:1]"  1 8.8009943096695338 45 8.8009943096695338;
+	setAttr -s 2 ".kit[1]"  18;
+	setAttr -s 2 ".kot[1]"  18;
 createNode animCurveTU -n "camera_binoculars_scaleZ";
-	setAttr ".tan" 18;
+	setAttr ".tan" 2;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 8.8009943096695338 60 8.8009943096695338;
+	setAttr -s 2 ".ktv[0:1]"  1 8.8009943096695338 45 8.8009943096695338;
+	setAttr -s 2 ".kit[1]"  18;
+	setAttr -s 2 ".kot[1]"  18;
 createNode animCurveTL -n "Obj_000003_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
@@ -1236,8 +1255,8 @@ createNode reference -n "sharedReferenceNode";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"sharedReferenceNode";
 select -ne :time1;
-	setAttr ".o" 1;
-	setAttr ".unw" 1;
+	setAttr ".o" 60;
+	setAttr ".unw" 60;
 select -ne :renderPartition;
 	setAttr -s 88 ".st";
 select -ne :renderGlobalsList1;

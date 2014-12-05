@@ -1,8 +1,12 @@
 //Maya ASCII 2015 scene
 //Name: outside_house.ma
-//Last modified: Thu, Dec 04, 2014 07:27:16 PM
+//Last modified: Thu, Dec 04, 2014 10:50:15 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "outside_house_latest" -rfn "outside_house_latestRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/outside_house_latest.ma";
+file -rdi 2 -ns "photo_frame" -rfn "outside_house_latest:photo_frameRN" -op
+		 "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/photo_frame.ma";
+file -rdi 2 -ns "ripped_up_toy" -rfn "outside_house_latest:ripped_up_toyRN"
+		 -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/ripped_up_toy.ma";
 file -rdi 1 -ns "leaves" -rfn "leavesRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/bush/leaves.ma";
 file -rdi 1 -ns "tuffs_latest" -rfn "Tuffs005RN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/tuffs/tuffs_latest.ma";
 file -rdi 1 -ns "sneaks_latest" -rfn "Sneaks_012RN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/sneaks/sneaks_latest.ma";
@@ -10,6 +14,8 @@ file -rdi 1 -ns "key_latest" -rfn "fancy_old_key_3RN" "/Users/AkhilBatra/Documen
 file -rdi 1 -ns "smarty_latest" -rfn "Smarty003RN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/smarty/smarty_latest.ma";
 file -rdi 1 -ns "binoculars" -rfn "binocularsRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/props/binoculars.ma";
 file -rdi 1 -ns "pig_latest" -rfn "pig_latestRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/pig/pig_latest.ma";
+file -rdi 1 -ns "leaves1" -rfn "leavesRN1" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/bush/leaves.ma";
+file -rdi 1 -ns "leaves2" -rfn "leavesRN2" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/bush/leaves.ma";
 file -r -ns "outside_house_latest" -dr 1 -rfn "outside_house_latestRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/outside_house_latest.ma";
 file -r -ns "leaves" -dr 1 -rfn "leavesRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/bush/leaves.ma";
 file -r -ns "tuffs_latest" -dr 1 -rfn "Tuffs005RN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/tuffs/tuffs_latest.ma";
@@ -18,6 +24,8 @@ file -r -ns "key_latest" -dr 1 -rfn "fancy_old_key_3RN" "/Users/AkhilBatra/Docum
 file -r -ns "smarty_latest" -dr 1 -rfn "Smarty003RN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/smarty/smarty_latest.ma";
 file -r -ns "binoculars" -dr 1 -rfn "binocularsRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/props/binoculars.ma";
 file -r -ns "pig_latest" -dr 1 -rfn "pig_latestRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/pig/pig_latest.ma";
+file -r -ns "leaves1" -dr 1 -rfn "leavesRN1" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/bush/leaves.ma";
+file -r -ns "leaves2" -dr 1 -rfn "leavesRN2" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/bush/leaves.ma";
 requires maya "2015";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOptions" -nodeType "mentalrayGlobals"
 		 -nodeType "mentalrayItemsList" -dataType "byteArray" "Mayatomr" "2015.0 - 3.12.1.18 ";
@@ -31,12 +39,12 @@ fileInfo "cutIdentifier" "201410051530-933320";
 fileInfo "osv" "Mac OS X 10.9.1";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
-	setAttr ".t" -type "double3" 36.649563918489854 15.052691751966861 187.61329141369279 ;
-	setAttr ".r" -type "double3" 6.8616472706988398 -0.19999999999955251 -1.8636176124662729e-16 ;
+	setAttr ".t" -type "double3" 15.768332260073116 264.03246844546413 346.94387724527127 ;
+	setAttr ".r" -type "double3" 281.06164727070239 498.19999999997185 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v";
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 181.82863610711047;
+	setAttr ".coi" 267.22913141064504;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -84,8 +92,10 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
 createNode transform -n "camera_binoculars";
-	setAttr ".t" -type "double3" -4.036050111476909 11.279075684469257 323.85978090178429 ;
-	setAttr ".r" -type "double3" 10.216272645623466 0 0 ;
+	setAttr ".t" -type "double3" 2.0009814060137829 56.982980442509088 324.27001057964674 ;
+	setAttr -av ".tx";
+	setAttr -av ".ty";
+	setAttr ".r" -type "double3" 3.4015370917169014 0 0 ;
 	setAttr ".s" -type "double3" 8.8009943096695338 8.8009943096695338 8.8009943096695338 ;
 createNode camera -n "camera_binocularsShape" -p "camera_binoculars";
 	setAttr -k off ".v";
@@ -93,7 +103,7 @@ createNode camera -n "camera_binocularsShape" -p "camera_binoculars";
 	setAttr ".cap" -type "double2" 1.41732 0.94488 ;
 	setAttr ".ff" 0;
 	setAttr ".ovr" 1.3;
-	setAttr ".coi" 222.17324727179499;
+	setAttr ".coi" 222.1732472717629;
 	setAttr ".ow" 30;
 	setAttr ".imn" -type "string" "camera1";
 	setAttr ".den" -type "string" "camera1_depth";
@@ -114,16 +124,19 @@ createNode camera -n "camera_raccoonsShape" -p "camera_raccoons";
 	setAttr ".den" -type "string" "camera1_depth";
 	setAttr ".man" -type "string" "camera1_mask";
 createNode lightLinker -s -n "lightLinker1";
-	setAttr -s 78 ".lnk";
-	setAttr -s 78 ".slnk";
+	setAttr -s 87 ".lnk";
+	setAttr -s 87 ".slnk";
 createNode displayLayerManager -n "layerManager";
 createNode displayLayer -n "defaultLayer";
 createNode renderLayerManager -n "renderLayerManager";
 createNode renderLayer -n "defaultRenderLayer";
 	setAttr ".g" yes;
 createNode reference -n "outside_house_latestRN";
+	setAttr ".fn[0]" -type "string" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/outside_house_latest.ma";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"outside_house_latestRN"
+		"outside_house_latest:ripped_up_toyRN" 0
+		"outside_house_latest:photo_frameRN" 0
 		"outside_house_latestRN" 0
 		"outside_house_latestRN" 3
 		2 "|outside_house_latest:pCube1" "translate" " -type \"double3\" -1.91680632198104206 41 0"
@@ -398,13 +411,16 @@ createNode reference -n "leavesRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"leavesRN"
 		"leavesRN" 0
-		"leavesRN" 4
+		"leavesRN" 7
 		2 "|leaves:SH20_3_br1_NL_INV" "visibility" " 1"
-		2 "|leaves:SH20_3_br1_NL_INV" "translate" " -type \"double3\" 6.952367 -24.112851 380.249747"
+		2 "|leaves:SH20_3_br1_NL_INV" "translate" " -type \"double3\" -10.71413459130013734 37.38511130543248129 385.76715733785988505"
 		
+		2 "|leaves:SH20_3_br1_NL_INV" "translateX" " -av"
+		2 "|leaves:SH20_3_br1_NL_INV" "translateY" " -av"
+		2 "|leaves:SH20_3_br1_NL_INV" "translateZ" " -av"
 		2 "|leaves:SH20_3_br1_NL_INV" "rotate" " -type \"double3\" 0 89.758527 0"
 		
-		2 "|leaves:SH20_3_br1_NL_INV" "scale" " -type \"double3\" 5.959685 2.56748 4.044161";
+		2 "|leaves:SH20_3_br1_NL_INV" "scale" " -type \"double3\" 6.67183654992838981 2.76247263969077972 -4.044";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "Tuffs005RN";
@@ -556,17 +572,17 @@ createNode reference -n "Sneaks_012RN";
 		2 "|sneaks_latest:left_thumb" "visibility" " 1"
 		2 "|sneaks_latest:left_arm" "visibility" " 1"
 		2 "|sneaks_latest:left_wrist" "visibility" " 1"
-		2 "|sneaks_latest:left_wrist" "translate" " -type \"double3\" -6.70834399980525919 -2.52227725209280118 359.81785162117364507"
+		2 "|sneaks_latest:left_wrist" "translate" " -type \"double3\" -6.70834399980519702 -2.52227725209267017 359.81785162117353138"
 		
-		2 "|sneaks_latest:left_wrist" "rotate" " -type \"double3\" 3.28123364845962007 184.96091196581787131 1.84117576505609604"
+		2 "|sneaks_latest:left_wrist" "rotate" " -type \"double3\" 3.28123364844516763 184.96091196581264171 1.84117576506062508"
 		
 		2 "|sneaks_latest:leg_right" "visibility" " 1"
 		2 "|sneaks_latest:Sneakio002:Sneakio_Main_Mesh" "visibility" " 1"
 		2 "|sneaks_latest:RightArmHandle" "visibility" " 1"
 		2 "|sneaks_latest:RightHandHandle" "visibility" " 1"
-		2 "|sneaks_latest:RightHandHandle" "translate" " -type \"double3\" -1.08295412151730708 -2.58974644120033703 359.27918427692088699"
+		2 "|sneaks_latest:RightHandHandle" "translate" " -type \"double3\" -1.08295412151731707 -2.58974644120030995 359.27918427692088699"
 		
-		2 "|sneaks_latest:RightHandHandle" "rotate" " -type \"double3\" 0.58551979371582308 179.4525274005631843 0.4519668707229853"
+		2 "|sneaks_latest:RightHandHandle" "rotate" " -type \"double3\" 0.5855197937129224 179.45252740056386642 0.4519668707223492"
 		
 		2 "|sneaks_latest:RightLegHandle" "visibility" " 1"
 		2 "|sneaks_latest:RightPinky" "visibility" " 1"
@@ -617,7 +633,7 @@ lockNode -l 1 ;
 createNode reference -n "Smarty003RN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"Smarty003RN"
-		"Smarty003RN" 15
+		"Smarty003RN" 18
 		2 "|Smarty003:Smarty|Smarty003:Glasses|Smarty003:Glasses|Smarty003:GlassesL|Smarty003:transform42" 
 		"visibility" " 1"
 		2 "|Smarty003:Smarty|Smarty003:Glasses|Smarty003:Glasses|Smarty003:GlassesR|Smarty003:transform41" 
@@ -644,15 +660,16 @@ createNode reference -n "Smarty003RN";
 		2 "|Smarty003:SmartyRig|Smarty003:global_ctrl|Smarty003:cog_ctrl" "visibility" 
 		" 1"
 		2 "|Smarty003:SmartyRig|Smarty003:global_ctrl" "visibility" " 1"
-		"Smarty003RN" 15
-		2 "|smarty_latest:_UNKNOWN_REF_NODE_fosterParent1" "visibility" " 1"
-		2 "|smarty_latest:turntable" "visibility" " 1"
 		2 "|smarty_latest:turntable|smarty_latest:turnTableCamera1" "visibility" 
 		" 1"
 		2 "|smarty_latest:turntable|smarty_latest:turnTableCamera1|smarty_latest:turnTableCamera1Shape" 
 		"depth" " 0"
 		2 "|smarty_latest:turntable|smarty_latest:turnTableCamera1|smarty_latest:turnTableCamera1Shape" 
 		"mask" " 1"
+		"Smarty003RN" 12
+		2 "|smarty_latest:_UNKNOWN_REF_NODE_fosterParent1" "visibility" " 1"
+		2 "|smarty_latest:turntable" "visibility" " 1"
+		2 "|smarty_latest:SmartyRig|smarty_latest:Smarty" "visibility" " 1"
 		2 "|smarty_latest:SmartyRig|smarty_latest:global_ctrl" "translate" " -type \"double3\" 11.00121186977606058 0.017040793894327777 358.77375765861233958"
 		
 		2 "|smarty_latest:SmartyRig|smarty_latest:global_ctrl" "rotate" " -type \"double3\" 0 -170.74542718866092628 0"
@@ -667,11 +684,10 @@ createNode reference -n "Smarty003RN";
 		"visibility" " 1"
 		2 "|smarty_latest:SmartyRig|smarty_latest:global_ctrl|smarty_latest:cog_ctrl|smarty_latest:back_ctrl|smarty_latest:chest_ctrl|smarty_latest:BowTie|smarty_latest:bowTie" 
 		"visibility" " 1"
-		2 "|smarty_latest:SmartyRig|smarty_latest:global_ctrl|smarty_latest:leftArm_ik" 
+		2 "|smarty_latest:SmartyRig|smarty_latest:global_ctrl|smarty_latest:leftLeg_ik|smarty_latest:leftArm_ik" 
 		"visibility" " 1"
 		2 "|smarty_latest:SmartyRig|smarty_latest:global_ctrl|smarty_latest:rightArm_ik" 
-		"visibility" " 1"
-		2 "|smarty_latest:SmartyRig|smarty_latest:Smarty" "visibility" " 1";
+		"visibility" " 1";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode mentalrayOptions -s -n "miContourPreset";
@@ -914,26 +930,57 @@ createNode reference -n "pig_latestRN";
 		"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
+createNode reference -n "sharedReferenceNode";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"sharedReferenceNode";
+createNode reference -n "leavesRN1";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"leavesRN1"
+		"leavesRN1" 0
+		"leavesRN1" 7
+		2 "|leaves1:SH20_3_br1_NL_INV" "visibility" " 1"
+		2 "|leaves1:SH20_3_br1_NL_INV" "translate" " -type \"double3\" -12.89378485525575968 37.38496230543250931 458.62430440129094222"
+		
+		2 "|leaves1:SH20_3_br1_NL_INV" "translateX" " -av"
+		2 "|leaves1:SH20_3_br1_NL_INV" "translateY" " -av"
+		2 "|leaves1:SH20_3_br1_NL_INV" "translateZ" " -av"
+		2 "|leaves1:SH20_3_br1_NL_INV" "rotate" " -type \"double3\" 0 90 0"
+		2 "|leaves1:SH20_3_br1_NL_INV" "scale" " -type \"double3\" -5.96 2.91372355380305637 5.15239701874430889";
+lockNode -l 1 ;
+createNode reference -n "leavesRN2";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"leavesRN2"
+		"leavesRN2" 0
+		"leavesRN2" 7
+		2 "|leaves2:SH20_3_br1_NL_INV" "visibility" " 1"
+		2 "|leaves2:SH20_3_br1_NL_INV" "translate" " -type \"double3\" -35.50982832688870872 36.99578785592603936 385.29186438473021781"
+		
+		2 "|leaves2:SH20_3_br1_NL_INV" "translateX" " -av"
+		2 "|leaves2:SH20_3_br1_NL_INV" "translateY" " -av"
+		2 "|leaves2:SH20_3_br1_NL_INV" "translateZ" " -av"
+		2 "|leaves2:SH20_3_br1_NL_INV" "rotate" " -type \"double3\" 0 89.759 0"
+		2 "|leaves2:SH20_3_br1_NL_INV" "scale" " -type \"double3\" -5.96 2.567 -4.044";
+lockNode -l 1 ;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
 select -ne :renderPartition;
-	setAttr -s 78 ".st";
+	setAttr -s 87 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 77 ".s";
+	setAttr -s 84 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
 	setAttr -s 30 ".u";
 select -ne :defaultRenderingList1;
-	setAttr -s 9 ".r";
+	setAttr -s 13 ".r";
 select -ne :defaultTextureList1;
 	setAttr -s 26 ".tx";
 select -ne :initialShadingGroup;
-	setAttr -s 14 ".dsm";
+	setAttr -s 16 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 4 ".gn";
+	setAttr -s 6 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :defaultRenderGlobals;
@@ -959,6 +1006,7 @@ relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defau
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
+connectAttr "sharedReferenceNode.sr" "outside_house_latestRN.sr";
 connectAttr ":miContourPreset.msg" ":mentalrayItemsList.opt" -na;
 connectAttr ":Draft.msg" ":mentalrayItemsList.opt" -na;
 connectAttr ":DraftMotionBlur.msg" ":mentalrayItemsList.opt" -na;
@@ -975,9 +1023,16 @@ connectAttr ":ProductionRapidMotion.msg" ":mentalrayItemsList.opt" -na;
 connectAttr ":ProductionFineTrace.msg" ":mentalrayItemsList.opt" -na;
 connectAttr ":ProductionRapidFur.msg" ":mentalrayItemsList.opt" -na;
 connectAttr ":ProductionRapidHair.msg" ":mentalrayItemsList.opt" -na;
+connectAttr "sharedReferenceNode.sr" "leavesRN.sr";
+connectAttr "sharedReferenceNode.sr" "Tuffs005RN.sr";
+connectAttr "sharedReferenceNode.sr" "Sneaks_012RN.sr";
 connectAttr ":defaultRenderGlobals.rcb" "defaultFurGlobals.cb";
+connectAttr "sharedReferenceNode.sr" "fancy_old_key_3RN.sr";
+connectAttr "sharedReferenceNode.sr" "Smarty003RN.sr";
+connectAttr "sharedReferenceNode.sr" "binocularsRN.sr";
+connectAttr "sharedReferenceNode.sr" "pig_latestRN.sr";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 dataStructure -fmt "raw" -as "name=externalContentTable:string=node:string=key:string=upath:uint32=upathcrc:string=rpath:string=roles";
-applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"outside_house_latestRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/outside_house_latest.ma\" 48534192 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/sets/house/outside_house_latest.ma\" \"FileRef\"\n1\n\"leavesRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/bush/leaves.ma\" 1815318665 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/sets/house/bush/leaves.ma\" \"FileRef\"\n2\n\"Tuffs005RN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/tuffs/tuffs_latest.ma\" 2068874992 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/tuffs/tuffs_latest.ma\" \"FileRef\"\n3\n\"Sneaks_012RN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/sneaks/sneaks_latest.ma\" 1942800631 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/sneaks/sneaks_latest.ma\" \"FileRef\"\n4\n\"fancy_old_key_3RN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/props/keys/key_latest.ma\" 2495964179 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/props/keys/key_latest.ma\" \"FileRef\"\n5\n\"Smarty003RN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/smarty/smarty_latest.ma\" 3360025303 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/smarty/smarty_latest.ma\" \"FileRef\"\n6\n\"binocularsRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/props/binoculars.ma\" 1300799967 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/props/binoculars.ma\" \"FileRef\"\n7\n\"pig_latestRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/pig/pig_latest.ma\" 4255569589 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/pig/pig_latest.ma\" \"FileRef\"\nendStream\nendChannel\nendAssociations\n" 
+applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"outside_house_latestRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/outside_house_latest.ma\" 48534192 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/sets/house/outside_house_latest.ma\" \"FileRef\"\n1\n\"leavesRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/bush/leaves.ma\" 1815318665 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/sets/house/bush/leaves.ma\" \"FileRef\"\n2\n\"Tuffs005RN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/tuffs/tuffs_latest.ma\" 2068874992 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/tuffs/tuffs_latest.ma\" \"FileRef\"\n3\n\"Sneaks_012RN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/sneaks/sneaks_latest.ma\" 1942800631 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/sneaks/sneaks_latest.ma\" \"FileRef\"\n4\n\"fancy_old_key_3RN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/props/keys/key_latest.ma\" 2607318336 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/props/keys/key_latest.ma\" \"FileRef\"\n5\n\"Smarty003RN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/smarty/smarty_latest.ma\" 3360025303 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/smarty/smarty_latest.ma\" \"FileRef\"\n6\n\"binocularsRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/props/binoculars.ma\" 1300799967 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/props/binoculars.ma\" \"FileRef\"\n7\n\"pig_latestRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/pig/pig_latest.ma\" 4255569589 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/pig/pig_latest.ma\" \"FileRef\"\n8\n\"leavesRN1\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/bush/leaves.ma\" 1815318665 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/sets/house/bush/leaves.ma\" \"FileRef\"\n9\n\"leavesRN2\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/bush/leaves.ma\" 1815318665 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/sets/house/bush/leaves.ma\" \"FileRef\"\nendStream\nendChannel\nendAssociations\n" 
 		-scn;
 // End of outside_house.ma

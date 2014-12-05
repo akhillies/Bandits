@@ -34,7 +34,7 @@ SCENES:
 	each scene file:
 		FILE_DESCRIPTIONS.TXT -
 
-ANIMATIONS:
+SHOTS:
 	reference to scenes, these files have the actual keys for for animation
 
 ALL FILE NAMES SHOULD BE DESCRIPTIVE AND CONCISE. IF MORE INFORMATION IS NEEDED THEN ADD IT TO THE FILE_DESCRIPTIONS.TXT FILE

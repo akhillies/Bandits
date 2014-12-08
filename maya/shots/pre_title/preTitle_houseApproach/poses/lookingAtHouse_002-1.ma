@@ -1,6 +1,6 @@
 //Maya ASCII 2015 scene
-//Name: running_through_bush_001.ma
-//Last modified: Mon, Dec 08, 2014 12:11:32 AM
+//Name: lookingAtHouse_002-1.ma
+//Last modified: Sun, Dec 07, 2014 11:43:17 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "outside_house" -rfn "outside_houseRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//scenes/outside_house.ma";
 file -rdi 2 -ns "outside_house_latest" -rfn "outside_house:outside_house_latestRN"
@@ -34,15 +34,15 @@ fileInfo "osv" "Mac OS X 10.9.1";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 169.10501251951615 292.5627985746865 427.4576836073939 ;
-	setAttr ".r" -type "double3" -233.25691749837605 -268.26882268885078 -179.99999999958592 ;
+	setAttr ".t" -type "double3" 49.658737307209869 7.9853100126290082 13.775070992909853 ;
+	setAttr ".r" -type "double3" -184.6569174987815 -148.66882268883913 -179.99999999996774 ;
 	setAttr ".rp" -type "double3" 0 1.4210854715202004e-14 0 ;
 	setAttr ".rpt" -type "double3" 2.3037429731245368e-14 2.1752668312137917e-14 -1.0388226790616486e-13 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 236.07202468401624;
+	setAttr ".coi" 36.895828822055108;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -110,6 +110,8 @@ createNode mentalrayOptions -s -n "miDefaultOptions";
 	setAttr ".rfrr" 10;
 	setAttr ".maxr" 20;
 	setAttr ".shrd" 2;
+	setAttr ".mb" 2;
+	setAttr ".miSamplesQualityR" 0.25287356972694397;
 	setAttr -s 48 ".stringOptions";
 	setAttr ".stringOptions[0].name" -type "string" "rast motion factor";
 	setAttr ".stringOptions[0].value" -type "string" "1.0";
@@ -505,10 +507,10 @@ createNode script -n "uiConfigurationScriptNode";
 	setAttr ".b" -type "string" (
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"outside_house:camera_binoculars\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n"
 		+ "                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"base_OpenGL_Renderer\" \n"
-		+ "                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 0\n                -nurbsCurves 0\n                -nurbsSurfaces 0\n                -polymeshes 1\n                -subdivSurfaces 0\n                -planes 0\n                -lights 0\n                -cameras 0\n                -controlVertices 1\n                -hulls 1\n                -grid 0\n"
+		+ "                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 0\n                -nurbsCurves 0\n                -nurbsSurfaces 0\n                -polymeshes 1\n                -subdivSurfaces 0\n                -planes 0\n                -lights 0\n                -cameras 0\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n"
 		+ "                -imagePlane 0\n                -joints 0\n                -ikHandles 0\n                -deformers 0\n                -dynamics 0\n                -particleInstancers 1\n                -fluids 0\n                -hairSystems 0\n                -follicles 0\n                -nCloths 0\n                -nParticles 0\n                -nRigids 0\n                -dynamicConstraints 0\n                -locators 0\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 0\n                -handles 0\n                -pivots 0\n                -textures 0\n                -strokes 1\n                -motionTrails 0\n                -clipGhosts 0\n                -greasePencils 1\n                -shadows 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"outside_house:camera_binoculars\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
-		+ "            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 0\n            -nurbsCurves 0\n            -nurbsSurfaces 0\n            -polymeshes 1\n            -subdivSurfaces 0\n            -planes 0\n            -lights 0\n            -cameras 0\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 0\n"
+		+ "            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 0\n            -nurbsCurves 0\n            -nurbsSurfaces 0\n            -polymeshes 1\n            -subdivSurfaces 0\n            -planes 0\n            -lights 0\n            -cameras 0\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 0\n"
 		+ "            -joints 0\n            -ikHandles 0\n            -deformers 0\n            -dynamics 0\n            -particleInstancers 1\n            -fluids 0\n            -hairSystems 0\n            -follicles 0\n            -nCloths 0\n            -nParticles 0\n            -nRigids 0\n            -dynamicConstraints 0\n            -locators 0\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 0\n            -handles 0\n            -pivots 0\n            -textures 0\n            -strokes 1\n            -motionTrails 0\n            -clipGhosts 0\n            -greasePencils 1\n            -shadows 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels `;\n"
 		+ "\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"side\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n"
 		+ "                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"base_OpenGL_Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 0\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n"
@@ -566,12 +568,12 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 0\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n"
 		+ "                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n"
 		+ "        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Top View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"outside_house:camera_binoculars\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 0\\n    -nurbsCurves 0\\n    -nurbsSurfaces 0\\n    -polymeshes 1\\n    -subdivSurfaces 0\\n    -planes 0\\n    -lights 0\\n    -cameras 0\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 0\\n    -dynamics 0\\n    -particleInstancers 1\\n    -fluids 0\\n    -hairSystems 0\\n    -follicles 0\\n    -nCloths 0\\n    -nParticles 0\\n    -nRigids 0\\n    -dynamicConstraints 0\\n    -locators 0\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 0\\n    -handles 0\\n    -pivots 0\\n    -textures 0\\n    -strokes 1\\n    -motionTrails 0\\n    -clipGhosts 0\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"outside_house:camera_binoculars\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 0\\n    -nurbsCurves 0\\n    -nurbsSurfaces 0\\n    -polymeshes 1\\n    -subdivSurfaces 0\\n    -planes 0\\n    -lights 0\\n    -cameras 0\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 0\\n    -dynamics 0\\n    -particleInstancers 1\\n    -fluids 0\\n    -hairSystems 0\\n    -follicles 0\\n    -nCloths 0\\n    -nParticles 0\\n    -nRigids 0\\n    -dynamicConstraints 0\\n    -locators 0\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 0\\n    -handles 0\\n    -pivots 0\\n    -textures 0\\n    -strokes 1\\n    -motionTrails 0\\n    -clipGhosts 0\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"outside_house:camera_binoculars\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 0\\n    -nurbsCurves 0\\n    -nurbsSurfaces 0\\n    -polymeshes 1\\n    -subdivSurfaces 0\\n    -planes 0\\n    -lights 0\\n    -cameras 0\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 0\\n    -dynamics 0\\n    -particleInstancers 1\\n    -fluids 0\\n    -hairSystems 0\\n    -follicles 0\\n    -nCloths 0\\n    -nParticles 0\\n    -nRigids 0\\n    -dynamicConstraints 0\\n    -locators 0\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 0\\n    -handles 0\\n    -pivots 0\\n    -textures 0\\n    -strokes 1\\n    -motionTrails 0\\n    -clipGhosts 0\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"outside_house:camera_binoculars\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 0\\n    -nurbsCurves 0\\n    -nurbsSurfaces 0\\n    -polymeshes 1\\n    -subdivSurfaces 0\\n    -planes 0\\n    -lights 0\\n    -cameras 0\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 0\\n    -dynamics 0\\n    -particleInstancers 1\\n    -fluids 0\\n    -hairSystems 0\\n    -follicles 0\\n    -nCloths 0\\n    -nParticles 0\\n    -nRigids 0\\n    -dynamicConstraints 0\\n    -locators 0\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 0\\n    -handles 0\\n    -pivots 0\\n    -textures 0\\n    -strokes 1\\n    -motionTrails 0\\n    -clipGhosts 0\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        setFocus `paneLayout -q -p1 $gMainPane`;\n        sceneUIReplacement -deleteRemaining;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
-	setAttr ".b" -type "string" "playbackOptions -min 1 -max 45 -ast 1 -aet 45 ";
+	setAttr ".b" -type "string" "playbackOptions -min 0 -max 105 -ast 0 -aet 105 ";
 	setAttr ".st" 6;
 createNode vectorRenderGlobals -s -n "vectorRenderGlobals26";
 createNode vectorRenderGlobals -s -n "vectorRenderGlobals27";
@@ -622,7 +624,7 @@ createNode shadingEngine -n "lambert2SG";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo1";
 createNode reference -n "outside_houseRN";
-	setAttr -s 70 ".phl";
+	setAttr -s 80 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -693,6 +695,16 @@ createNode reference -n "outside_houseRN";
 	setAttr ".phl[68]" 0;
 	setAttr ".phl[69]" 0;
 	setAttr ".phl[70]" 0;
+	setAttr ".phl[71]" 0;
+	setAttr ".phl[72]" 0;
+	setAttr ".phl[73]" 0;
+	setAttr ".phl[74]" 0;
+	setAttr ".phl[75]" 0;
+	setAttr ".phl[76]" 0;
+	setAttr ".phl[77]" 0;
+	setAttr ".phl[78]" 0;
+	setAttr ".phl[79]" 0;
+	setAttr ".phl[80]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"outside_houseRN"
 		"outside_house:outside_house_latestRN" 0
@@ -708,35 +720,118 @@ createNode reference -n "outside_houseRN";
 		"outside_house:Smarty003RN" 0
 		"outside_house:Sneaks_012RN" 0
 		"outside_house:leavesRN2" 0
-		"outside_house:pig_latestRN" 10
-		5 4 "outside_houseRN" "|outside_house:pig_latest:Pig.visibility" "outside_houseRN.placeHolderList[51]" 
+		"outside_house:outside_house_latestRN" 1
+		2 "|outside_house:outside_house_latest:pCube1|outside_house:outside_house_latest:pCubeShape1" 
+		"motionBlur" " 1"
+		"outside_house:outside_house_latest:ripped_up_toyRN" 1
+		2 "|outside_house:outside_house_latest:ripped_up_toy:torn_up_toy" "translate" 
+		" -type \"double3\" -31.33359692898556048 0.98689285312178954 -47.50496271283257954"
+		
+		"outside_house:leavesRN1" 4
+		2 "|outside_house:leaves1:SH20_3_br1_NL_INV" "translate" " -type \"double3\" -10.21709396326788521 35.5526048759712836 458.62430440129105591"
+		
+		2 "|outside_house:leaves1:SH20_3_br1_NL_INV" "translateX" " -av"
+		2 "|outside_house:leaves1:SH20_3_br1_NL_INV" "translateY" " -av"
+		2 "|outside_house:leaves1:SH20_3_br1_NL_INV" "translateZ" " -av"
+		"outside_house:outside_house_latest:photo_frameRN" 14
+		2 "|outside_house:outside_house_latest:photo_frame:frame" "translate" " -type \"double3\" 15.40580142497200455 24.97318414192542946 -59.84378439863210275"
+		
+		2 "|outside_house:outside_house_latest:photo_frame:frame" "translateX" " -av"
+		
+		2 "|outside_house:outside_house_latest:photo_frame:frame" "translateY" " -av"
+		
+		2 "|outside_house:outside_house_latest:photo_frame:frame" "translateZ" " -av"
+		
+		5 4 "outside_houseRN" "|outside_house:outside_house_latest:photo_frame:frame.translateX" 
+		"outside_houseRN.placeHolderList[1]" ""
+		5 4 "outside_houseRN" "|outside_house:outside_house_latest:photo_frame:frame.translateY" 
+		"outside_houseRN.placeHolderList[2]" ""
+		5 4 "outside_houseRN" "|outside_house:outside_house_latest:photo_frame:frame.translateZ" 
+		"outside_houseRN.placeHolderList[3]" ""
+		5 4 "outside_houseRN" "|outside_house:outside_house_latest:photo_frame:frame.rotateY" 
+		"outside_houseRN.placeHolderList[4]" ""
+		5 4 "outside_houseRN" "|outside_house:outside_house_latest:photo_frame:frame.rotateX" 
+		"outside_houseRN.placeHolderList[5]" ""
+		5 4 "outside_houseRN" "|outside_house:outside_house_latest:photo_frame:frame.rotateZ" 
+		"outside_houseRN.placeHolderList[6]" ""
+		5 4 "outside_houseRN" "|outside_house:outside_house_latest:photo_frame:frame.visibility" 
+		"outside_houseRN.placeHolderList[7]" ""
+		5 4 "outside_houseRN" "|outside_house:outside_house_latest:photo_frame:frame.scaleX" 
+		"outside_houseRN.placeHolderList[8]" ""
+		5 4 "outside_houseRN" "|outside_house:outside_house_latest:photo_frame:frame.scaleY" 
+		"outside_houseRN.placeHolderList[9]" ""
+		5 4 "outside_houseRN" "|outside_house:outside_house_latest:photo_frame:frame.scaleZ" 
+		"outside_houseRN.placeHolderList[10]" ""
+		"outside_house:binocularsRN" 14
+		2 "|outside_house:binoculars:polySurface3" "translate" " -type \"double3\" -4.19300714260487073 71.81490631917148448 342.20231625100717565"
+		
+		2 "|outside_house:binoculars:polySurface3" "translateX" " -av"
+		2 "|outside_house:binoculars:polySurface3" "translateY" " -av"
+		2 "|outside_house:binoculars:polySurface3" "translateZ" " -av"
+		5 4 "outside_houseRN" "|outside_house:binoculars:polySurface3.translateX" 
+		"outside_houseRN.placeHolderList[41]" ""
+		5 4 "outside_houseRN" "|outside_house:binoculars:polySurface3.translateY" 
+		"outside_houseRN.placeHolderList[42]" ""
+		5 4 "outside_houseRN" "|outside_house:binoculars:polySurface3.translateZ" 
+		"outside_houseRN.placeHolderList[43]" ""
+		5 4 "outside_houseRN" "|outside_house:binoculars:polySurface3.visibility" 
+		"outside_houseRN.placeHolderList[44]" ""
+		5 4 "outside_houseRN" "|outside_house:binoculars:polySurface3.rotateX" 
+		"outside_houseRN.placeHolderList[45]" ""
+		5 4 "outside_houseRN" "|outside_house:binoculars:polySurface3.rotateY" 
+		"outside_houseRN.placeHolderList[46]" ""
+		5 4 "outside_houseRN" "|outside_house:binoculars:polySurface3.rotateZ" 
+		"outside_houseRN.placeHolderList[47]" ""
+		5 4 "outside_houseRN" "|outside_house:binoculars:polySurface3.scaleX" 
+		"outside_houseRN.placeHolderList[48]" ""
+		5 4 "outside_houseRN" "|outside_house:binoculars:polySurface3.scaleY" 
+		"outside_houseRN.placeHolderList[49]" ""
+		5 4 "outside_houseRN" "|outside_house:binoculars:polySurface3.scaleZ" 
+		"outside_houseRN.placeHolderList[50]" ""
+		"outside_house:pig_latestRN" 22
+		2 "|outside_house:pig_latest:Pig" "translate" " -type \"double3\" 57.15064850497829241 3.62155230437699238 0"
+		
+		2 "|outside_house:pig_latest:Pig" "translateX" " -av"
+		2 "|outside_house:pig_latest:Pig" "translateY" " -av"
+		2 "|outside_house:pig_latest:Pig" "translateZ" " -av"
+		2 "|outside_house:pig_latest:Pig" "rotate" " -type \"double3\" 0 -37.99067415503203904 0"
+		
+		2 "|outside_house:pig_latest:Pig" "rotateX" " -av"
+		2 "|outside_house:pig_latest:Pig" "rotateY" " -av"
+		2 "|outside_house:pig_latest:Pig" "rotateZ" " -av"
+		2 "|outside_house:pig_latest:Pig" "scale" " -type \"double3\" 1.5 1.5 1.5"
+		
+		2 "|outside_house:pig_latest:Pig" "scaleX" " -av"
+		2 "|outside_house:pig_latest:Pig" "scaleY" " -av"
+		2 "|outside_house:pig_latest:Pig" "scaleZ" " -av"
+		5 4 "outside_houseRN" "|outside_house:pig_latest:Pig.translateX" "outside_houseRN.placeHolderList[51]" 
 		""
-		5 4 "outside_houseRN" "|outside_house:pig_latest:Pig.translateX" "outside_houseRN.placeHolderList[52]" 
+		5 4 "outside_houseRN" "|outside_house:pig_latest:Pig.translateY" "outside_houseRN.placeHolderList[52]" 
 		""
-		5 4 "outside_houseRN" "|outside_house:pig_latest:Pig.translateY" "outside_houseRN.placeHolderList[53]" 
+		5 4 "outside_houseRN" "|outside_house:pig_latest:Pig.translateZ" "outside_houseRN.placeHolderList[53]" 
 		""
-		5 4 "outside_houseRN" "|outside_house:pig_latest:Pig.translateZ" "outside_houseRN.placeHolderList[54]" 
+		5 4 "outside_houseRN" "|outside_house:pig_latest:Pig.rotateX" "outside_houseRN.placeHolderList[54]" 
 		""
-		5 4 "outside_houseRN" "|outside_house:pig_latest:Pig.rotateX" "outside_houseRN.placeHolderList[55]" 
+		5 4 "outside_houseRN" "|outside_house:pig_latest:Pig.rotateY" "outside_houseRN.placeHolderList[55]" 
 		""
-		5 4 "outside_houseRN" "|outside_house:pig_latest:Pig.rotateY" "outside_houseRN.placeHolderList[56]" 
+		5 4 "outside_houseRN" "|outside_house:pig_latest:Pig.rotateZ" "outside_houseRN.placeHolderList[56]" 
 		""
-		5 4 "outside_houseRN" "|outside_house:pig_latest:Pig.rotateZ" "outside_houseRN.placeHolderList[57]" 
+		5 4 "outside_houseRN" "|outside_house:pig_latest:Pig.scaleX" "outside_houseRN.placeHolderList[57]" 
 		""
-		5 4 "outside_houseRN" "|outside_house:pig_latest:Pig.scaleX" "outside_houseRN.placeHolderList[58]" 
+		5 4 "outside_houseRN" "|outside_house:pig_latest:Pig.scaleY" "outside_houseRN.placeHolderList[58]" 
 		""
-		5 4 "outside_houseRN" "|outside_house:pig_latest:Pig.scaleY" "outside_houseRN.placeHolderList[59]" 
+		5 4 "outside_houseRN" "|outside_house:pig_latest:Pig.scaleZ" "outside_houseRN.placeHolderList[59]" 
 		""
-		5 4 "outside_houseRN" "|outside_house:pig_latest:Pig.scaleZ" "outside_houseRN.placeHolderList[60]" 
+		5 4 "outside_houseRN" "|outside_house:pig_latest:Pig.visibility" "outside_houseRN.placeHolderList[60]" 
 		""
-		"outside_houseRN" 40
+		"outside_houseRN" 43
 		2 "|outside_house:camera_binoculars" "visibility" " -av 1"
-		2 "|outside_house:camera_binoculars" "translate" " -type \"double3\" -2.20374250373381964 58.24587797620792173 329.31982750779098978"
+		2 "|outside_house:camera_binoculars" "translate" " -type \"double3\" -37.37778879373850316 10.90478406496510466 -35.2502155424664565"
 		
 		2 "|outside_house:camera_binoculars" "translateX" " -av"
 		2 "|outside_house:camera_binoculars" "translateY" " -av"
 		2 "|outside_house:camera_binoculars" "translateZ" " -av"
-		2 "|outside_house:camera_binoculars" "rotate" " -type \"double3\" 3.40153709171690144 0 0"
+		2 "|outside_house:camera_binoculars" "rotate" " -type \"double3\" -37.99846290828320861 -10.400000000000027 0"
 		
 		2 "|outside_house:camera_binoculars" "rotateX" " -av"
 		2 "|outside_house:camera_binoculars" "rotateY" " -av"
@@ -751,28 +846,14 @@ createNode reference -n "outside_houseRN";
 		2 "|outside_house:camera_binoculars" "rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		
 		2 "|outside_house:camera_binoculars|outside_house:camera_binocularsShape" 
-		"overscan" " 1"
+		"renderable" " 1"
 		2 "|outside_house:camera_binoculars|outside_house:camera_binocularsShape" 
-		"focalLength" " 35"
-		2 "|outside_house:camera_binoculars|outside_house:camera_binocularsShape" 
-		"centerOfInterest" " 216.12221759258687825"
-		2 "|outside_house:camera_binoculars|outside_house:camera_binocularsShape" 
-		"tumblePivot" " -type \"double3\" -12.09078383523770839 70.73480945886579718 126.579226008001541"
-		
-		2 "|outside_house:camera_binoculars|outside_house:camera_binocularsShape" 
-		"displayGateMask" " 0"
-		2 "|outside_house:camera_binoculars|outside_house:camera_binocularsShape" 
-		"displayFilmGate" " 0"
-		2 "|outside_house:camera_binoculars|outside_house:camera_binocularsShape" 
-		"displayResolution" " 0"
-		2 "|outside_house:camera_raccoons" "visibility" " 1"
-		2 "|outside_house:camera_raccoons" "translate" " -type \"double3\" 29.43537561410918713 18.84282185928531206 302.74038639587791977"
-		
-		2 "|outside_house:camera_raccoons" "rotate" " -type \"double3\" -11.99999999999808331 151.19999999999834017 0"
-		
-		2 "|outside_house:camera_raccoons" "scale" " -type \"double3\" 13.52588123122472297 13.52588123122472297 13.52588123122472297"
-		
+		"centerOfInterest" " 141.09292026623222682"
+		2 "|outside_house:camera_raccoons|outside_house:camera_raccoonsShape" "renderable" 
+		" 0"
 		2 "outside_house:leavesRN" "fileNames[0]" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/bush/leaves.ma\""
+		
+		2 "outside_house:pig_latestRN" "fileNames[0]" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/pig/pig_latest.ma\""
 		
 		2 "outside_house:leavesRN1" "fileNames[0]" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/bush/leaves.ma{1}\""
 		
@@ -800,63 +881,83 @@ createNode reference -n "outside_houseRN";
 		""
 		5 4 "outside_houseRN" "|outside_house:camera_binoculars.scaleZ" "outside_houseRN.placeHolderList[70]" 
 		""
+		5 4 "outside_houseRN" "|outside_house:camera_raccoons.visibility" "outside_houseRN.placeHolderList[71]" 
+		""
+		5 4 "outside_houseRN" "|outside_house:camera_raccoons.translateX" "outside_houseRN.placeHolderList[72]" 
+		""
+		5 4 "outside_houseRN" "|outside_house:camera_raccoons.translateY" "outside_houseRN.placeHolderList[73]" 
+		""
+		5 4 "outside_houseRN" "|outside_house:camera_raccoons.translateZ" "outside_houseRN.placeHolderList[74]" 
+		""
+		5 4 "outside_houseRN" "|outside_house:camera_raccoons.rotateX" "outside_houseRN.placeHolderList[75]" 
+		""
+		5 4 "outside_houseRN" "|outside_house:camera_raccoons.rotateY" "outside_houseRN.placeHolderList[76]" 
+		""
+		5 4 "outside_houseRN" "|outside_house:camera_raccoons.rotateZ" "outside_houseRN.placeHolderList[77]" 
+		""
+		5 4 "outside_houseRN" "|outside_house:camera_raccoons.scaleX" "outside_houseRN.placeHolderList[78]" 
+		""
+		5 4 "outside_houseRN" "|outside_house:camera_raccoons.scaleY" "outside_houseRN.placeHolderList[79]" 
+		""
+		5 4 "outside_houseRN" "|outside_house:camera_raccoons.scaleZ" "outside_houseRN.placeHolderList[80]" 
+		""
 		"outside_house:leavesRN" 4
 		2 "|outside_house:leaves:SH20_3_br1_NL_INV" "translate" " -type \"double3\" -6.57611538391982009 38.16731269157145334 396.17288646244367101"
 		
 		2 "|outside_house:leaves:SH20_3_br1_NL_INV" "translateX" " -av"
 		2 "|outside_house:leaves:SH20_3_br1_NL_INV" "translateY" " -av"
 		2 "|outside_house:leaves:SH20_3_br1_NL_INV" "translateZ" " -av"
-		"outside_house:fancy_old_key_3RN" 10
-		5 4 "outside_houseRN" "|outside_house:key_latest:Obj_000003.translateX" 
-		"outside_houseRN.placeHolderList[21]" ""
-		5 4 "outside_houseRN" "|outside_house:key_latest:Obj_000003.translateY" 
-		"outside_houseRN.placeHolderList[22]" ""
-		5 4 "outside_houseRN" "|outside_house:key_latest:Obj_000003.translateZ" 
-		"outside_houseRN.placeHolderList[23]" ""
-		5 4 "outside_houseRN" "|outside_house:key_latest:Obj_000003.visibility" 
-		"outside_houseRN.placeHolderList[24]" ""
-		5 4 "outside_houseRN" "|outside_house:key_latest:Obj_000003.rotateX" 
-		"outside_houseRN.placeHolderList[25]" ""
-		5 4 "outside_houseRN" "|outside_house:key_latest:Obj_000003.rotateY" 
-		"outside_houseRN.placeHolderList[26]" ""
-		5 4 "outside_houseRN" "|outside_house:key_latest:Obj_000003.rotateZ" 
-		"outside_houseRN.placeHolderList[27]" ""
-		5 4 "outside_houseRN" "|outside_house:key_latest:Obj_000003.scaleX" 
-		"outside_houseRN.placeHolderList[28]" ""
-		5 4 "outside_houseRN" "|outside_house:key_latest:Obj_000003.scaleY" 
-		"outside_houseRN.placeHolderList[29]" ""
-		5 4 "outside_houseRN" "|outside_house:key_latest:Obj_000003.scaleZ" 
-		"outside_houseRN.placeHolderList[30]" ""
-		"outside_house:Tuffs005RN" 15
+		"outside_house:fancy_old_key_3RN" 12
+		2 "|outside_house:key_latest:Obj_000003" "visibility" " 1"
+		2 "|outside_house:key_latest:Obj_000003" "translate" " -type \"double3\" 51.42653840576161173 5.97532190996343182 7.74948600257905262"
+		
+		2 "|outside_house:key_latest:Obj_000003" "translateX" " -av"
+		2 "|outside_house:key_latest:Obj_000003" "translateY" " -av"
+		2 "|outside_house:key_latest:Obj_000003" "translateZ" " -av"
+		2 "|outside_house:key_latest:Obj_000003" "rotate" " -type \"double3\" -8.73461978808153994 -36.00405774984375995 20.72701075403564985"
+		
+		2 "|outside_house:key_latest:Obj_000003" "rotateX" " -av"
+		2 "|outside_house:key_latest:Obj_000003" "rotateY" " -av"
+		2 "|outside_house:key_latest:Obj_000003" "rotateZ" " -av"
+		2 "|outside_house:key_latest:Obj_000003" "scale" " -type \"double3\" 0.03 0.03 0.03"
+		
+		2 "|outside_house:key_latest:Obj_000003" "scaleX" " -av"
+		2 "|outside_house:key_latest:Obj_000003|outside_house:key_latest:Obj_000003Shape" 
+		"motionBlur" " 1"
+		"outside_house:Tuffs005RN" 17
+		2 "|outside_house:tuffs_latest:top1|outside_house:tuffs_latest:topShape2" 
+		"renderable" " 0"
 		2 "|outside_house:tuffs_latest:Tuffs002:TuffsMesh" "visibility" " -av 1"
-		2 "|outside_house:tuffs_latest:controller_root" "translate" " -type \"double3\" -19.21126925571454791 91.64642609903359016 404.61025136273167391"
+		2 "|outside_house:tuffs_latest:Tuffs002:top1|outside_house:tuffs_latest:Tuffs002:topShape2" 
+		"renderable" " 0"
+		2 "|outside_house:tuffs_latest:controller_root" "translate" " -type \"double3\" -19.21126925571454791 59.92341821667164936 370.50719860366740477"
 		
 		2 "|outside_house:tuffs_latest:controller_root" "translateX" " -av"
 		2 "|outside_house:tuffs_latest:controller_root" "translateY" " -av"
 		2 "|outside_house:tuffs_latest:controller_root" "translateZ" " -av"
 		5 4 "outside_houseRN" "|outside_house:tuffs_latest:controller_root.translateX" 
-		"outside_houseRN.placeHolderList[1]" ""
+		"outside_houseRN.placeHolderList[11]" ""
 		5 4 "outside_houseRN" "|outside_house:tuffs_latest:controller_root.translateY" 
-		"outside_houseRN.placeHolderList[2]" ""
+		"outside_houseRN.placeHolderList[12]" ""
 		5 4 "outside_houseRN" "|outside_house:tuffs_latest:controller_root.translateZ" 
-		"outside_houseRN.placeHolderList[3]" ""
+		"outside_houseRN.placeHolderList[13]" ""
 		5 4 "outside_houseRN" "|outside_house:tuffs_latest:controller_root.rotateX" 
-		"outside_houseRN.placeHolderList[4]" ""
+		"outside_houseRN.placeHolderList[14]" ""
 		5 4 "outside_houseRN" "|outside_house:tuffs_latest:controller_root.rotateY" 
-		"outside_houseRN.placeHolderList[5]" ""
+		"outside_houseRN.placeHolderList[15]" ""
 		5 4 "outside_houseRN" "|outside_house:tuffs_latest:controller_root.rotateZ" 
-		"outside_houseRN.placeHolderList[6]" ""
+		"outside_houseRN.placeHolderList[16]" ""
 		5 4 "outside_houseRN" "|outside_house:tuffs_latest:controller_root.scaleX" 
-		"outside_houseRN.placeHolderList[7]" ""
+		"outside_houseRN.placeHolderList[17]" ""
 		5 4 "outside_houseRN" "|outside_house:tuffs_latest:controller_root.scaleY" 
-		"outside_houseRN.placeHolderList[8]" ""
+		"outside_houseRN.placeHolderList[18]" ""
 		5 4 "outside_houseRN" "|outside_house:tuffs_latest:controller_root.scaleZ" 
-		"outside_houseRN.placeHolderList[9]" ""
+		"outside_houseRN.placeHolderList[19]" ""
 		5 4 "outside_houseRN" "|outside_house:tuffs_latest:controller_root.visibility" 
-		"outside_houseRN.placeHolderList[10]" ""
+		"outside_houseRN.placeHolderList[20]" ""
 		"outside_house:Smarty003RN" 14
 		2 "|outside_house:smarty_latest:SmartyRig|outside_house:smarty_latest:global_ctrl" 
-		"translate" " -type \"double3\" 10.96263830384056526 137.1808749152089888 443.05402034087376251"
+		"translate" " -type \"double3\" 10.96263830384056526 180.70725091756912661 489.84599866537161006"
 		
 		2 "|outside_house:smarty_latest:SmartyRig|outside_house:smarty_latest:global_ctrl" 
 		"translateX" " -av"
@@ -884,94 +985,49 @@ createNode reference -n "outside_houseRN";
 		"outside_houseRN.placeHolderList[39]" ""
 		5 4 "outside_houseRN" "|outside_house:smarty_latest:SmartyRig|outside_house:smarty_latest:global_ctrl.scaleZ" 
 		"outside_houseRN.placeHolderList[40]" ""
-		"outside_house:leavesRN1" 4
-		2 "|outside_house:leaves1:SH20_3_br1_NL_INV" "translate" " -type \"double3\" -10.21709396326788521 35.5526048759712836 458.62430440129105591"
+		"outside_house:Sneaks_012RN" 18
+		2 "|outside_house:sneaks_latest:controller_root" "translate" " -type \"double3\" -2.87051351976255642 63.41180558300732173 355.65689773943404361"
 		
-		2 "|outside_house:leaves1:SH20_3_br1_NL_INV" "translateX" " -av"
-		2 "|outside_house:leaves1:SH20_3_br1_NL_INV" "translateY" " -av"
-		2 "|outside_house:leaves1:SH20_3_br1_NL_INV" "translateZ" " -av"
-		"outside_house:binocularsRN" 14
-		2 "|outside_house:binoculars:polySurface3" "translate" " -type \"double3\" -4.19300714260487162 103.53791420153342528 376.30536901007144479"
+		2 "|outside_house:sneaks_latest:controller_root" "translateX" " -av"
+		2 "|outside_house:sneaks_latest:controller_root" "translateY" " -av"
+		2 "|outside_house:sneaks_latest:controller_root" "translateZ" " -av"
+		2 "|outside_house:sneaks_latest:left_wrist" "translate" " -type \"double3\" -6.18119151956776758 62.88510533091448451 350.38530336060762238"
 		
-		2 "|outside_house:binoculars:polySurface3" "translateX" " -av"
-		2 "|outside_house:binoculars:polySurface3" "translateY" " -av"
-		2 "|outside_house:binoculars:polySurface3" "translateZ" " -av"
-		5 4 "outside_houseRN" "|outside_house:binoculars:polySurface3.translateX" 
-		"outside_houseRN.placeHolderList[41]" ""
-		5 4 "outside_houseRN" "|outside_house:binoculars:polySurface3.translateY" 
-		"outside_houseRN.placeHolderList[42]" ""
-		5 4 "outside_houseRN" "|outside_house:binoculars:polySurface3.translateZ" 
-		"outside_houseRN.placeHolderList[43]" ""
-		5 4 "outside_houseRN" "|outside_house:binoculars:polySurface3.visibility" 
-		"outside_houseRN.placeHolderList[44]" ""
-		5 4 "outside_houseRN" "|outside_house:binoculars:polySurface3.rotateX" 
-		"outside_houseRN.placeHolderList[45]" ""
-		5 4 "outside_houseRN" "|outside_house:binoculars:polySurface3.rotateY" 
-		"outside_houseRN.placeHolderList[46]" ""
-		5 4 "outside_houseRN" "|outside_house:binoculars:polySurface3.rotateZ" 
-		"outside_houseRN.placeHolderList[47]" ""
-		5 4 "outside_houseRN" "|outside_house:binoculars:polySurface3.scaleX" 
-		"outside_houseRN.placeHolderList[48]" ""
-		5 4 "outside_houseRN" "|outside_house:binoculars:polySurface3.scaleY" 
-		"outside_houseRN.placeHolderList[49]" ""
-		5 4 "outside_houseRN" "|outside_house:binoculars:polySurface3.scaleZ" 
-		"outside_houseRN.placeHolderList[50]" ""
+		2 "|outside_house:sneaks_latest:left_wrist" "rotate" " -type \"double3\" 3.28123364846127386 184.96091196581332383 1.84117576505884406"
+		
+		2 "|outside_house:sneaks_latest:RightHandHandle" "translate" " -type \"double3\" -0.55580164127987441 62.81763614180709965 349.84663601635492114"
+		
+		2 "|outside_house:sneaks_latest:RightHandHandle" "rotate" " -type \"double3\" 0.585519793702592 179.45252740056275798 0.45196687072135683"
+		
+		5 4 "outside_houseRN" "|outside_house:sneaks_latest:controller_root.translateX" 
+		"outside_houseRN.placeHolderList[21]" ""
+		5 4 "outside_houseRN" "|outside_house:sneaks_latest:controller_root.translateY" 
+		"outside_houseRN.placeHolderList[22]" ""
+		5 4 "outside_houseRN" "|outside_house:sneaks_latest:controller_root.translateZ" 
+		"outside_houseRN.placeHolderList[23]" ""
+		5 4 "outside_houseRN" "|outside_house:sneaks_latest:controller_root.visibility" 
+		"outside_houseRN.placeHolderList[24]" ""
+		5 4 "outside_houseRN" "|outside_house:sneaks_latest:controller_root.rotateX" 
+		"outside_houseRN.placeHolderList[25]" ""
+		5 4 "outside_houseRN" "|outside_house:sneaks_latest:controller_root.rotateY" 
+		"outside_houseRN.placeHolderList[26]" ""
+		5 4 "outside_houseRN" "|outside_house:sneaks_latest:controller_root.rotateZ" 
+		"outside_houseRN.placeHolderList[27]" ""
+		5 4 "outside_houseRN" "|outside_house:sneaks_latest:controller_root.scaleX" 
+		"outside_houseRN.placeHolderList[28]" ""
+		5 4 "outside_houseRN" "|outside_house:sneaks_latest:controller_root.scaleY" 
+		"outside_houseRN.placeHolderList[29]" ""
+		5 4 "outside_houseRN" "|outside_house:sneaks_latest:controller_root.scaleZ" 
+		"outside_houseRN.placeHolderList[30]" ""
 		"outside_house:leavesRN2" 5
 		2 "|outside_house:leaves2:SH20_3_br1_NL_INV" "translate" " -type \"double3\" -20.98024642983886068 43.9121403470387861 387.85511624309378931"
 		
 		2 "|outside_house:leaves2:SH20_3_br1_NL_INV" "translateX" " -av"
 		2 "|outside_house:leaves2:SH20_3_br1_NL_INV" "translateY" " -av"
 		2 "|outside_house:leaves2:SH20_3_br1_NL_INV" "translateZ" " -av"
-		2 "|outside_house:leaves2:SH20_3_br1_NL_INV" "scale" " -type \"double3\" -5.96 2.567 4.044"
-		
-		"outside_house:Sneaks_012RN" 18
-		2 "|outside_house:sneaks_latest:controller_root" "translate" " -type \"double3\" -2.87051351976255686 95.13481346536923411 389.75995049849831275"
-		
-		2 "|outside_house:sneaks_latest:controller_root" "translateX" " -av"
-		2 "|outside_house:sneaks_latest:controller_root" "translateY" " -av"
-		2 "|outside_house:sneaks_latest:controller_root" "translateZ" " -av"
-		2 "|outside_house:sneaks_latest:left_wrist" "translate" " -type \"double3\" -6.18119151956775958 94.60811321327649637 384.48835611967189152"
-		
-		2 "|outside_house:sneaks_latest:left_wrist" "rotate" " -type \"double3\" 3.281233648452063 184.96091196581372174 1.84117576505912384"
-		
-		2 "|outside_house:sneaks_latest:RightHandHandle" "translate" " -type \"double3\" -0.5558016412798733 94.54064402416891255 383.94968877541919028"
-		
-		2 "|outside_house:sneaks_latest:RightHandHandle" "rotate" " -type \"double3\" 0.58551979371086138 179.452527400563838 0.45196687072204383"
-		
-		5 4 "outside_houseRN" "|outside_house:sneaks_latest:controller_root.translateX" 
-		"outside_houseRN.placeHolderList[11]" ""
-		5 4 "outside_houseRN" "|outside_house:sneaks_latest:controller_root.translateY" 
-		"outside_houseRN.placeHolderList[12]" ""
-		5 4 "outside_houseRN" "|outside_house:sneaks_latest:controller_root.translateZ" 
-		"outside_houseRN.placeHolderList[13]" ""
-		5 4 "outside_houseRN" "|outside_house:sneaks_latest:controller_root.visibility" 
-		"outside_houseRN.placeHolderList[14]" ""
-		5 4 "outside_houseRN" "|outside_house:sneaks_latest:controller_root.rotateX" 
-		"outside_houseRN.placeHolderList[15]" ""
-		5 4 "outside_houseRN" "|outside_house:sneaks_latest:controller_root.rotateY" 
-		"outside_houseRN.placeHolderList[16]" ""
-		5 4 "outside_houseRN" "|outside_house:sneaks_latest:controller_root.rotateZ" 
-		"outside_houseRN.placeHolderList[17]" ""
-		5 4 "outside_houseRN" "|outside_house:sneaks_latest:controller_root.scaleX" 
-		"outside_houseRN.placeHolderList[18]" ""
-		5 4 "outside_houseRN" "|outside_house:sneaks_latest:controller_root.scaleY" 
-		"outside_houseRN.placeHolderList[19]" ""
-		5 4 "outside_houseRN" "|outside_house:sneaks_latest:controller_root.scaleZ" 
-		"outside_houseRN.placeHolderList[20]" "";
+		2 "|outside_house:leaves2:SH20_3_br1_NL_INV" "scale" " -type \"double3\" -5.96 2.567 4.044";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode animCurveTL -n "polySurface3_translateX";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 -4.1930071426048743 60 -4.1930071426048707;
-createNode animCurveTL -n "polySurface3_translateY";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 268.79871977226992 60 71.814906319171484;
-createNode animCurveTL -n "polySurface3_translateZ";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 553.96500306128803 60 342.20231625100718;
 createNode animCurveTL -n "global_ctrl_translateX1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
@@ -984,30 +1040,6 @@ createNode animCurveTL -n "global_ctrl_translateZ1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  1 578.62428084569774 75 366.86159403541694;
-createNode animCurveTL -n "controller_root_translateX";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 -2.87051351976256 60 -2.8705135197625564;
-createNode animCurveTL -n "controller_root_translateY";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 260.39561903610581 60 63.411805583007322;
-createNode animCurveTL -n "controller_root_translateZ";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 567.41958454971495 60 355.65689773943404;
-createNode animCurveTL -n "controller_root_translateX1";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 -19.211269255714551 60 -19.211269255714548;
-createNode animCurveTL -n "controller_root_translateY1";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 256.90723166977011 60 59.923418216671649;
-createNode animCurveTL -n "controller_root_translateZ1";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 582.26988541394826 60 370.5071986036674;
 createNode animCurveTA -n "global_ctrl_rotateX1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
@@ -1032,246 +1064,340 @@ createNode animCurveTU -n "global_ctrl_scaleZ1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  1 0.75 75 0.75;
-createNode animCurveTU -n "SmartyRig_visibility";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 60 1;
-	setAttr -s 2 ".kot[0:1]"  5 5;
-createNode animCurveTU -n "polySurface3_visibility";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 60 1;
-	setAttr -s 2 ".kot[0:1]"  5 5;
-createNode animCurveTA -n "polySurface3_rotateX";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 60 0;
-createNode animCurveTA -n "polySurface3_rotateY";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 -90 60 -90;
-createNode animCurveTA -n "polySurface3_rotateZ";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 60 0;
-createNode animCurveTU -n "polySurface3_scaleX";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0.11252421143208653 60 0.11252421143208653;
-createNode animCurveTU -n "polySurface3_scaleY";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0.11252421143208653 60 0.11252421143208653;
-createNode animCurveTU -n "polySurface3_scaleZ";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0.11252421143208653 60 0.11252421143208653;
-createNode animCurveTU -n "controller_root_visibility";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 60 1;
-	setAttr -s 2 ".kot[0:1]"  5 5;
-createNode animCurveTA -n "controller_root_rotateX";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 60 0;
-createNode animCurveTA -n "controller_root_rotateY";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 545.335989 60 545.335989;
-createNode animCurveTA -n "controller_root_rotateZ";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 60 0;
-createNode animCurveTU -n "controller_root_scaleX";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 60 1;
-createNode animCurveTU -n "controller_root_scaleY";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 60 1;
-createNode animCurveTU -n "controller_root_scaleZ";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 60 1;
-createNode animCurveTU -n "controller_root_visibility1";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 60 1;
-	setAttr -s 2 ".kot[0:1]"  5 5;
-createNode animCurveTA -n "controller_root_rotateX1";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 60 0;
-createNode animCurveTA -n "controller_root_rotateY1";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 182.350703 60 182.350703;
-createNode animCurveTA -n "controller_root_rotateZ1";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 60 0;
-createNode animCurveTU -n "controller_root_scaleX1";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 60 1;
-createNode animCurveTU -n "controller_root_scaleY1";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 60 1;
-createNode animCurveTU -n "controller_root_scaleZ1";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 60 1;
-createNode animCurveTU -n "camera_binoculars_visibility";
-	setAttr ".tan" 2;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 35 1;
-	setAttr -s 2 ".kit[1]"  9;
-	setAttr -s 2 ".kot[1]"  5;
-createNode animCurveTL -n "camera_binoculars_translateX";
-	setAttr ".tan" 2;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 -8.5248993187531177 35 -2.2037425037338196;
-	setAttr -s 2 ".kit[1]"  18;
-	setAttr -s 2 ".kot[1]"  18;
-createNode animCurveTL -n "camera_binoculars_translateY";
-	setAttr ".tan" 2;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 55.295816045333908 35 58.245877976207922;
-	setAttr -s 2 ".kit[1]"  18;
-	setAttr -s 2 ".kot[1]"  18;
-createNode animCurveTL -n "camera_binoculars_translateZ";
-	setAttr ".tan" 2;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 457.39052332399956 35 329.31982750779099;
-	setAttr -s 2 ".kit[1]"  18;
-	setAttr -s 2 ".kot[1]"  18;
-createNode animCurveTA -n "camera_binoculars_rotateX";
-	setAttr ".tan" 2;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 3.4015370917169014 35 3.4015370917169014;
-	setAttr -s 2 ".kit[1]"  18;
-	setAttr -s 2 ".kot[1]"  18;
-createNode animCurveTA -n "camera_binoculars_rotateY";
-	setAttr ".tan" 2;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 35 0;
-	setAttr -s 2 ".kit[1]"  18;
-	setAttr -s 2 ".kot[1]"  18;
-createNode animCurveTA -n "camera_binoculars_rotateZ";
-	setAttr ".tan" 2;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 35 0;
-	setAttr -s 2 ".kit[1]"  18;
-	setAttr -s 2 ".kot[1]"  18;
-createNode animCurveTU -n "camera_binoculars_scaleX";
-	setAttr ".tan" 2;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 8.8009943096695338 35 8.8009943096695338;
-	setAttr -s 2 ".kit[1]"  18;
-	setAttr -s 2 ".kot[1]"  18;
-createNode animCurveTU -n "camera_binoculars_scaleY";
-	setAttr ".tan" 2;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 8.8009943096695338 35 8.8009943096695338;
-	setAttr -s 2 ".kit[1]"  18;
-	setAttr -s 2 ".kot[1]"  18;
-createNode animCurveTU -n "camera_binoculars_scaleZ";
-	setAttr ".tan" 2;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 8.8009943096695338 35 8.8009943096695338;
-	setAttr -s 2 ".kit[1]"  18;
-	setAttr -s 2 ".kot[1]"  18;
-createNode animCurveTL -n "Obj_000003_translateX";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 51.593296622464976 75 51.593296622464976;
-createNode animCurveTL -n "Obj_000003_translateY";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 -2.071844537763404 75 -2.071844537763404;
-createNode animCurveTL -n "Obj_000003_translateZ";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 7.7494860025790526 75 7.7494860025790526;
-createNode animCurveTL -n "Pig_translateX";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 57.150648504978292 75 57.150648504978292;
-createNode animCurveTL -n "Pig_translateY";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 -5.4261634435633894 75 -5.4261634435633894;
-createNode animCurveTL -n "Pig_translateZ";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 75 0;
-createNode animCurveTU -n "Obj_000003_visibility";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 75 1;
-	setAttr -s 2 ".kot[0:1]"  5 5;
-createNode animCurveTA -n "Obj_000003_rotateX";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 -5.8208980968373174 75 -5.8208980968373174;
-createNode animCurveTA -n "Obj_000003_rotateY";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 -37.990674155032039 75 -37.990674155032039;
-createNode animCurveTA -n "Obj_000003_rotateZ";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0.66720758956000625 75 0.66720758956000625;
-createNode animCurveTU -n "Obj_000003_scaleX";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0.03 75 0.03;
-createNode animCurveTU -n "Obj_000003_scaleY";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0.03 75 0.03;
-createNode animCurveTU -n "Obj_000003_scaleZ";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0.03 75 0.03;
-createNode animCurveTU -n "Pig_visibility";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 75 1;
-	setAttr -s 2 ".kot[0:1]"  5 5;
-createNode animCurveTA -n "Pig_rotateX";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 -5.8208980968373174 75 -5.8208980968373174;
-createNode animCurveTA -n "Pig_rotateY";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 -37.990674155032039 75 -37.990674155032039;
-createNode animCurveTA -n "Pig_rotateZ";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0.66720758956000625 75 0.66720758956000625;
-createNode animCurveTU -n "Pig_scaleX";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1.5 75 1.5;
-createNode animCurveTU -n "Pig_scaleY";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1.5 75 1.5;
-createNode animCurveTU -n "Pig_scaleZ";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1.5 75 1.5;
 createNode reference -n "sharedReferenceNode";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"sharedReferenceNode";
+createNode animCurveTU -n "camera_binoculars_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 9 ".ktv[0:8]"  0 1 4 1 27 1 31 1 51 1 55 1 77 1 80 1 105 1;
+	setAttr -s 9 ".kit[5:8]"  2 9 9 9;
+	setAttr -s 9 ".kot[0:8]"  5 5 5 5 5 2 5 5 
+		5;
+createNode animCurveTL -n "camera_binoculars_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 9 ".ktv[0:8]"  0 -2.2037425037338196 4 18.343453241102772
+		 27 18.343453241102772 31 -37.377788793738503 51 -37.377788793738503 55 47.9843912825445
+		 77 47.9843912825445 80 50.727270768046544 105 50.727270768046544;
+	setAttr -s 9 ".kit[5:8]"  2 18 18 18;
+	setAttr -s 9 ".kot[5:8]"  2 18 18 18;
+createNode animCurveTL -n "camera_binoculars_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 9 ".ktv[0:8]"  0 58.245877976207922 4 24.075601691349927
+		 27 24.075601691349927 31 10.904784064965105 51 10.904784064965105 55 9.7517290826811536
+		 77 9.7517290826811536 80 6.1077103779118085 105 6.1077103779118085;
+	setAttr -s 9 ".kit[5:8]"  2 18 18 18;
+	setAttr -s 9 ".kot[5:8]"  2 18 18 18;
+createNode animCurveTL -n "camera_binoculars_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 9 ".ktv[0:8]"  0 329.31982750779099 4 -42.52835965812924
+		 27 -42.52835965812924 31 -35.250215542466456 51 -35.250215542466456 55 38.31917195222097
+		 77 38.31917195222097 80 12.372341440292566 105 12.372341440292566;
+	setAttr -s 9 ".kit[5:8]"  2 18 18 18;
+	setAttr -s 9 ".kot[5:8]"  2 18 18 18;
+createNode animCurveTA -n "camera_binoculars_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 9 ".ktv[0:8]"  0 3.4015370917169014 4 3.4015370917169014
+		 27 3.4015370917169014 31 -37.998462908283209 51 -37.998462908283209 55 -1.1999999999999997
+		 77 -1.1999999999999997 80 -1.5312096346187953 105 -1.5312096346187953;
+	setAttr -s 9 ".kit[5:8]"  2 18 18 18;
+	setAttr -s 9 ".kot[5:8]"  2 18 18 18;
+createNode animCurveTA -n "camera_binoculars_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 9 ".ktv[0:8]"  0 0 4 0 27 0 31 -10.400000000000027 51 -10.400000000000027
+		 55 -3.2 77 -3.2 80 -3.2 105 -3.2;
+	setAttr -s 9 ".kit[5:8]"  2 18 18 18;
+	setAttr -s 9 ".kot[5:8]"  2 18 18 18;
+createNode animCurveTA -n "camera_binoculars_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 9 ".ktv[0:8]"  0 0 4 0 27 0 31 0 51 0 55 0 77 0 80 0.88653640626991648
+		 105 0.88653640626991648;
+	setAttr -s 9 ".kit[5:8]"  2 18 18 18;
+	setAttr -s 9 ".kot[5:8]"  2 18 18 18;
+createNode animCurveTU -n "camera_binoculars_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 9 ".ktv[0:8]"  0 8.8009943096695338 4 8.8009943096695338
+		 27 8.8009943096695338 31 8.8009943096695338 51 8.8009943096695338 55 8.8009943096695338
+		 77 8.8009943096695338 80 8.8009943096695338 105 8.8009943096695338;
+	setAttr -s 9 ".kit[5:8]"  2 18 18 18;
+	setAttr -s 9 ".kot[5:8]"  2 18 18 18;
+createNode animCurveTU -n "camera_binoculars_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 9 ".ktv[0:8]"  0 8.8009943096695338 4 8.8009943096695338
+		 27 8.8009943096695338 31 8.8009943096695338 51 8.8009943096695338 55 8.8009943096695338
+		 77 8.8009943096695338 80 8.8009943096695338 105 8.8009943096695338;
+	setAttr -s 9 ".kit[5:8]"  2 18 18 18;
+	setAttr -s 9 ".kot[5:8]"  2 18 18 18;
+createNode animCurveTU -n "camera_binoculars_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 9 ".ktv[0:8]"  0 8.8009943096695338 4 8.8009943096695338
+		 27 8.8009943096695338 31 8.8009943096695338 51 8.8009943096695338 55 8.8009943096695338
+		 77 8.8009943096695338 80 8.8009943096695338 105 8.8009943096695338;
+	setAttr -s 9 ".kit[5:8]"  2 18 18 18;
+	setAttr -s 9 ".kot[5:8]"  2 18 18 18;
+createNode animCurveTU -n "controller_root_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "controller_root_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 -19.211269255714548;
+createNode animCurveTL -n "controller_root_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 59.923418216671649;
+createNode animCurveTL -n "controller_root_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 370.5071986036674;
+createNode animCurveTA -n "controller_root_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTA -n "controller_root_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 182.350703;
+createNode animCurveTA -n "controller_root_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTU -n "controller_root_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 1;
+createNode animCurveTU -n "controller_root_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 1;
+createNode animCurveTU -n "controller_root_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 1;
+createNode animCurveTU -n "controller_root_visibility1";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "controller_root_translateX1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 -2.8705135197625564;
+createNode animCurveTL -n "controller_root_translateY1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 63.411805583007322;
+createNode animCurveTL -n "controller_root_translateZ1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 355.65689773943404;
+createNode animCurveTA -n "controller_root_rotateX1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTA -n "controller_root_rotateY1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 545.335989;
+createNode animCurveTA -n "controller_root_rotateZ1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTU -n "controller_root_scaleX1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 1;
+createNode animCurveTU -n "controller_root_scaleY1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 1;
+createNode animCurveTU -n "controller_root_scaleZ1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 1;
+createNode animCurveTU -n "SmartyRig_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTU -n "polySurface3_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "polySurface3_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 -4.1930071426048707;
+createNode animCurveTL -n "polySurface3_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 71.814906319171484;
+createNode animCurveTL -n "polySurface3_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 342.20231625100718;
+createNode animCurveTA -n "polySurface3_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTA -n "polySurface3_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 -90;
+createNode animCurveTA -n "polySurface3_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTU -n "polySurface3_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0.11252421143208653;
+createNode animCurveTU -n "polySurface3_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0.11252421143208653;
+createNode animCurveTU -n "polySurface3_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0.11252421143208653;
+createNode animCurveTU -n "Pig_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "Pig_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 57.150648504978292;
+createNode animCurveTL -n "Pig_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 3.6215523043769924;
+createNode animCurveTL -n "Pig_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTA -n "Pig_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTA -n "Pig_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 -37.990674155032039;
+createNode animCurveTA -n "Pig_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTU -n "Pig_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 1.5;
+createNode animCurveTU -n "Pig_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 1.5;
+createNode animCurveTU -n "Pig_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 1.5;
+createNode animCurveTU -n "camera_raccoons_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "camera_raccoons_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 29.435375614109187;
+createNode animCurveTL -n "camera_raccoons_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 18.842821859285312;
+createNode animCurveTL -n "camera_raccoons_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 302.74038639587792;
+createNode animCurveTA -n "camera_raccoons_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 -11.999999999998083;
+createNode animCurveTA -n "camera_raccoons_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 151.19999999999834;
+createNode animCurveTA -n "camera_raccoons_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTU -n "camera_raccoons_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 13.525881231224723;
+createNode animCurveTU -n "camera_raccoons_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 13.525881231224723;
+createNode animCurveTU -n "camera_raccoons_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 13.525881231224723;
+createNode animCurveTL -n "frame_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  40 15.405801424972005 60 11.443308123178557;
+createNode animCurveTL -n "frame_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  40 24.973184141925429 60 46.794130367733196;
+createNode animCurveTL -n "frame_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  40 -59.843784398632103 60 -59.843784398632103;
+createNode animCurveTU -n "frame_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  40 1 60 1;
+	setAttr -s 2 ".kot[0:1]"  5 5;
+createNode animCurveTA -n "frame_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  40 0 60 0;
+createNode animCurveTA -n "frame_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  40 25.315 60 25.315;
+createNode animCurveTA -n "frame_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  40 0 60 0;
+createNode animCurveTU -n "frame_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  40 2.296710609459057 60 2.296710609459057;
+createNode animCurveTU -n "frame_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  40 2.296710609459057 60 2.296710609459057;
+createNode animCurveTU -n "frame_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  40 2.296710609459057 60 2.296710609459057;
 select -ne :time1;
-	setAttr ".o" 45;
-	setAttr ".unw" 45;
+	setAttr ".o" 34;
+	setAttr ".unw" 34;
 select -ne :renderPartition;
 	setAttr -s 88 ".st";
 select -ne :renderGlobalsList1;
@@ -1292,11 +1418,12 @@ select -ne :initialShadingGroup;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :defaultRenderGlobals;
+	setAttr ".mcfr" 30;
 	setAttr ".ren" -type "string" "mentalRay";
 	setAttr ".outf" 3;
 	setAttr ".imfkey" -type "string" "tif";
 	setAttr ".an" yes;
-	setAttr ".ef" 45;
+	setAttr ".ef" 105;
 	setAttr ".ep" 1;
 	setAttr ".oft" -type "string" "";
 	setAttr ".pff" yes;
@@ -1317,60 +1444,21 @@ select -ne :defaultResolution;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
+	setAttr ".hwfr" 30;
 select -ne :defaultHardwareRenderGlobals;
 	setAttr ".res" -type "string" "ntsc_4d 646 485 1.333";
 select -ne :ikSystem;
-	setAttr -s 5 ".sol";
-connectAttr "Pig_visibility.o" "outside_houseRN.phl[51]";
-connectAttr "Pig_translateX.o" "outside_houseRN.phl[52]";
-connectAttr "Pig_translateY.o" "outside_houseRN.phl[53]";
-connectAttr "Pig_translateZ.o" "outside_houseRN.phl[54]";
-connectAttr "Pig_rotateX.o" "outside_houseRN.phl[55]";
-connectAttr "Pig_rotateY.o" "outside_houseRN.phl[56]";
-connectAttr "Pig_rotateZ.o" "outside_houseRN.phl[57]";
-connectAttr "Pig_scaleX.o" "outside_houseRN.phl[58]";
-connectAttr "Pig_scaleY.o" "outside_houseRN.phl[59]";
-connectAttr "Pig_scaleZ.o" "outside_houseRN.phl[60]";
-connectAttr "camera_binoculars_translateX.o" "outside_houseRN.phl[61]";
-connectAttr "camera_binoculars_translateY.o" "outside_houseRN.phl[62]";
-connectAttr "camera_binoculars_translateZ.o" "outside_houseRN.phl[63]";
-connectAttr "camera_binoculars_visibility.o" "outside_houseRN.phl[64]";
-connectAttr "camera_binoculars_rotateX.o" "outside_houseRN.phl[65]";
-connectAttr "camera_binoculars_rotateY.o" "outside_houseRN.phl[66]";
-connectAttr "camera_binoculars_rotateZ.o" "outside_houseRN.phl[67]";
-connectAttr "camera_binoculars_scaleX.o" "outside_houseRN.phl[68]";
-connectAttr "camera_binoculars_scaleY.o" "outside_houseRN.phl[69]";
-connectAttr "camera_binoculars_scaleZ.o" "outside_houseRN.phl[70]";
-connectAttr "Obj_000003_translateX.o" "outside_houseRN.phl[21]";
-connectAttr "Obj_000003_translateY.o" "outside_houseRN.phl[22]";
-connectAttr "Obj_000003_translateZ.o" "outside_houseRN.phl[23]";
-connectAttr "Obj_000003_visibility.o" "outside_houseRN.phl[24]";
-connectAttr "Obj_000003_rotateX.o" "outside_houseRN.phl[25]";
-connectAttr "Obj_000003_rotateY.o" "outside_houseRN.phl[26]";
-connectAttr "Obj_000003_rotateZ.o" "outside_houseRN.phl[27]";
-connectAttr "Obj_000003_scaleX.o" "outside_houseRN.phl[28]";
-connectAttr "Obj_000003_scaleY.o" "outside_houseRN.phl[29]";
-connectAttr "Obj_000003_scaleZ.o" "outside_houseRN.phl[30]";
-connectAttr "controller_root_translateX1.o" "outside_houseRN.phl[1]";
-connectAttr "controller_root_translateY1.o" "outside_houseRN.phl[2]";
-connectAttr "controller_root_translateZ1.o" "outside_houseRN.phl[3]";
-connectAttr "controller_root_rotateX1.o" "outside_houseRN.phl[4]";
-connectAttr "controller_root_rotateY1.o" "outside_houseRN.phl[5]";
-connectAttr "controller_root_rotateZ1.o" "outside_houseRN.phl[6]";
-connectAttr "controller_root_scaleX1.o" "outside_houseRN.phl[7]";
-connectAttr "controller_root_scaleY1.o" "outside_houseRN.phl[8]";
-connectAttr "controller_root_scaleZ1.o" "outside_houseRN.phl[9]";
-connectAttr "controller_root_visibility1.o" "outside_houseRN.phl[10]";
-connectAttr "SmartyRig_visibility.o" "outside_houseRN.phl[31]";
-connectAttr "global_ctrl_translateX1.o" "outside_houseRN.phl[32]";
-connectAttr "global_ctrl_translateY1.o" "outside_houseRN.phl[33]";
-connectAttr "global_ctrl_translateZ1.o" "outside_houseRN.phl[34]";
-connectAttr "global_ctrl_rotateX1.o" "outside_houseRN.phl[35]";
-connectAttr "global_ctrl_rotateY1.o" "outside_houseRN.phl[36]";
-connectAttr "global_ctrl_rotateZ1.o" "outside_houseRN.phl[37]";
-connectAttr "global_ctrl_scaleX1.o" "outside_houseRN.phl[38]";
-connectAttr "global_ctrl_scaleY1.o" "outside_houseRN.phl[39]";
-connectAttr "global_ctrl_scaleZ1.o" "outside_houseRN.phl[40]";
+	setAttr -s 7 ".sol";
+connectAttr "frame_translateX.o" "outside_houseRN.phl[1]";
+connectAttr "frame_translateY.o" "outside_houseRN.phl[2]";
+connectAttr "frame_translateZ.o" "outside_houseRN.phl[3]";
+connectAttr "frame_rotateY.o" "outside_houseRN.phl[4]";
+connectAttr "frame_rotateX.o" "outside_houseRN.phl[5]";
+connectAttr "frame_rotateZ.o" "outside_houseRN.phl[6]";
+connectAttr "frame_visibility.o" "outside_houseRN.phl[7]";
+connectAttr "frame_scaleX.o" "outside_houseRN.phl[8]";
+connectAttr "frame_scaleY.o" "outside_houseRN.phl[9]";
+connectAttr "frame_scaleZ.o" "outside_houseRN.phl[10]";
 connectAttr "polySurface3_translateX.o" "outside_houseRN.phl[41]";
 connectAttr "polySurface3_translateY.o" "outside_houseRN.phl[42]";
 connectAttr "polySurface3_translateZ.o" "outside_houseRN.phl[43]";
@@ -1381,16 +1469,66 @@ connectAttr "polySurface3_rotateZ.o" "outside_houseRN.phl[47]";
 connectAttr "polySurface3_scaleX.o" "outside_houseRN.phl[48]";
 connectAttr "polySurface3_scaleY.o" "outside_houseRN.phl[49]";
 connectAttr "polySurface3_scaleZ.o" "outside_houseRN.phl[50]";
+connectAttr "Pig_translateX.o" "outside_houseRN.phl[51]";
+connectAttr "Pig_translateY.o" "outside_houseRN.phl[52]";
+connectAttr "Pig_translateZ.o" "outside_houseRN.phl[53]";
+connectAttr "Pig_rotateX.o" "outside_houseRN.phl[54]";
+connectAttr "Pig_rotateY.o" "outside_houseRN.phl[55]";
+connectAttr "Pig_rotateZ.o" "outside_houseRN.phl[56]";
+connectAttr "Pig_scaleX.o" "outside_houseRN.phl[57]";
+connectAttr "Pig_scaleY.o" "outside_houseRN.phl[58]";
+connectAttr "Pig_scaleZ.o" "outside_houseRN.phl[59]";
+connectAttr "Pig_visibility.o" "outside_houseRN.phl[60]";
+connectAttr "camera_binoculars_translateX.o" "outside_houseRN.phl[61]";
+connectAttr "camera_binoculars_translateY.o" "outside_houseRN.phl[62]";
+connectAttr "camera_binoculars_translateZ.o" "outside_houseRN.phl[63]";
+connectAttr "camera_binoculars_visibility.o" "outside_houseRN.phl[64]";
+connectAttr "camera_binoculars_rotateX.o" "outside_houseRN.phl[65]";
+connectAttr "camera_binoculars_rotateY.o" "outside_houseRN.phl[66]";
+connectAttr "camera_binoculars_rotateZ.o" "outside_houseRN.phl[67]";
+connectAttr "camera_binoculars_scaleX.o" "outside_houseRN.phl[68]";
+connectAttr "camera_binoculars_scaleY.o" "outside_houseRN.phl[69]";
+connectAttr "camera_binoculars_scaleZ.o" "outside_houseRN.phl[70]";
+connectAttr "camera_raccoons_visibility.o" "outside_houseRN.phl[71]";
+connectAttr "camera_raccoons_translateX.o" "outside_houseRN.phl[72]";
+connectAttr "camera_raccoons_translateY.o" "outside_houseRN.phl[73]";
+connectAttr "camera_raccoons_translateZ.o" "outside_houseRN.phl[74]";
+connectAttr "camera_raccoons_rotateX.o" "outside_houseRN.phl[75]";
+connectAttr "camera_raccoons_rotateY.o" "outside_houseRN.phl[76]";
+connectAttr "camera_raccoons_rotateZ.o" "outside_houseRN.phl[77]";
+connectAttr "camera_raccoons_scaleX.o" "outside_houseRN.phl[78]";
+connectAttr "camera_raccoons_scaleY.o" "outside_houseRN.phl[79]";
+connectAttr "camera_raccoons_scaleZ.o" "outside_houseRN.phl[80]";
 connectAttr "controller_root_translateX.o" "outside_houseRN.phl[11]";
 connectAttr "controller_root_translateY.o" "outside_houseRN.phl[12]";
 connectAttr "controller_root_translateZ.o" "outside_houseRN.phl[13]";
-connectAttr "controller_root_visibility.o" "outside_houseRN.phl[14]";
-connectAttr "controller_root_rotateX.o" "outside_houseRN.phl[15]";
-connectAttr "controller_root_rotateY.o" "outside_houseRN.phl[16]";
-connectAttr "controller_root_rotateZ.o" "outside_houseRN.phl[17]";
-connectAttr "controller_root_scaleX.o" "outside_houseRN.phl[18]";
-connectAttr "controller_root_scaleY.o" "outside_houseRN.phl[19]";
-connectAttr "controller_root_scaleZ.o" "outside_houseRN.phl[20]";
+connectAttr "controller_root_rotateX.o" "outside_houseRN.phl[14]";
+connectAttr "controller_root_rotateY.o" "outside_houseRN.phl[15]";
+connectAttr "controller_root_rotateZ.o" "outside_houseRN.phl[16]";
+connectAttr "controller_root_scaleX.o" "outside_houseRN.phl[17]";
+connectAttr "controller_root_scaleY.o" "outside_houseRN.phl[18]";
+connectAttr "controller_root_scaleZ.o" "outside_houseRN.phl[19]";
+connectAttr "controller_root_visibility.o" "outside_houseRN.phl[20]";
+connectAttr "SmartyRig_visibility.o" "outside_houseRN.phl[31]";
+connectAttr "global_ctrl_translateX1.o" "outside_houseRN.phl[32]";
+connectAttr "global_ctrl_translateY1.o" "outside_houseRN.phl[33]";
+connectAttr "global_ctrl_translateZ1.o" "outside_houseRN.phl[34]";
+connectAttr "global_ctrl_rotateX1.o" "outside_houseRN.phl[35]";
+connectAttr "global_ctrl_rotateY1.o" "outside_houseRN.phl[36]";
+connectAttr "global_ctrl_rotateZ1.o" "outside_houseRN.phl[37]";
+connectAttr "global_ctrl_scaleX1.o" "outside_houseRN.phl[38]";
+connectAttr "global_ctrl_scaleY1.o" "outside_houseRN.phl[39]";
+connectAttr "global_ctrl_scaleZ1.o" "outside_houseRN.phl[40]";
+connectAttr "controller_root_translateX1.o" "outside_houseRN.phl[21]";
+connectAttr "controller_root_translateY1.o" "outside_houseRN.phl[22]";
+connectAttr "controller_root_translateZ1.o" "outside_houseRN.phl[23]";
+connectAttr "controller_root_visibility1.o" "outside_houseRN.phl[24]";
+connectAttr "controller_root_rotateX1.o" "outside_houseRN.phl[25]";
+connectAttr "controller_root_rotateY1.o" "outside_houseRN.phl[26]";
+connectAttr "controller_root_rotateZ1.o" "outside_houseRN.phl[27]";
+connectAttr "controller_root_scaleX1.o" "outside_houseRN.phl[28]";
+connectAttr "controller_root_scaleY1.o" "outside_houseRN.phl[29]";
+connectAttr "controller_root_scaleZ1.o" "outside_houseRN.phl[30]";
 connectAttr ":mentalrayGlobals.msg" ":mentalrayItemsList.glb";
 connectAttr ":miDefaultOptions.msg" ":mentalrayItemsList.opt" -na;
 connectAttr ":miDefaultFramebuffer.msg" ":mentalrayItemsList.fb" -na;
@@ -1412,4 +1550,4 @@ connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 dataStructure -fmt "raw" -as "name=externalContentTable:string=node:string=key:string=upath:uint32=upathcrc:string=rpath:string=roles";
 applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"outside_houseRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//scenes/outside_house.ma\" 2165670544 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/scenes/outside_house.ma\" \"FileRef\"\nendStream\nendChannel\nendAssociations\n" 
 		-scn;
-// End of running_through_bush_001.ma
+// End of lookingAtHouse_002-1.ma

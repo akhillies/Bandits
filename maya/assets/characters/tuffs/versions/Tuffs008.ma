@@ -1,6 +1,6 @@
 //Maya ASCII 2013 scene
-//Name: tuffs_latest.ma
-//Last modified: Mon, Dec 08, 2014 01:15:52 AM
+//Name: Tuffs008.ma
+//Last modified: Mon, Dec 08, 2014 01:15:35 AM
 //Codeset: UTF-8
 requires maya "2013";
 requires "Mayatomr" "2013.0 - 3.10.1.9 ";
@@ -14,7 +14,7 @@ fileInfo "osv" "Mac OS X 10.9.5";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 32.27688772079108 18.434404844713672 26.648512471256385 ;
+	setAttr ".t" -type "double3" 49.805426805285769 25.537941087895074 31.645922048691052 ;
 	setAttr ".r" -type "double3" -14.83585981772563 52.199999999911995 1.2973234124574239e-15 ;
 	setAttr ".rp" -type "double3" 2.8421709430404007e-14 7.1054273576010019e-15 0 ;
 	setAttr ".rpt" -type "double3" -2.2343269437999935e-14 -5.8209498229808151e-15 7.7848365997595169e-16 ;
@@ -22,7 +22,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 44.08735877897233;
+	setAttr ".coi" 62.255605384018949;
 	setAttr ".ow" 62.650130247823704;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
@@ -34983,7 +34983,7 @@ createNode skinCluster -n "skinCluster1";
 	setAttr ".wl[2659].w[53]" 0.08375915859315565;
 	setAttr ".wl[2659].w[56]" 0.056247491867932341;
 	setAttr -s 6 ".wl[2660].w";
-	setAttr ".wl[2660].w[47]" 6.5558338630703009e-06;
+	setAttr ".wl[2660].w[47]" 6.5558338630703e-06;
 	setAttr ".wl[2660].w[48]" 0.055227243896666049;
 	setAttr ".wl[2660].w[49]" 0.82561613282014557;
 	setAttr ".wl[2660].w[50]" 0.05590104189531836;
@@ -35190,7 +35190,7 @@ createNode skinCluster -n "skinCluster1";
 	setAttr ".wl[2716].w[48]" 0.080653572789143591;
 	setAttr ".wl[2716].w[49]" 0.33512850675916278;
 	setAttr ".wl[2716].w[50]" 0.19415411804346688;
-	setAttr ".wl[2716].w[51]" 2.3063956375633491e-06;
+	setAttr ".wl[2716].w[51]" 2.3063956375633496e-06;
 	setAttr ".wl[2716].w[53]" 0.27072497360777042;
 	setAttr ".wl[2716].w[56]" 0.11933652240481886;
 	setAttr ".wl[2717].w[51]"  1;
@@ -37091,7 +37091,7 @@ createNode skinCluster -n "skinCluster1";
 	setAttr ".wl[3401].w[45]" 0.82130118086458848;
 	setAttr ".wl[3401].w[46]" 0.14601643417092988;
 	setAttr -s 3 ".wl[3402].w";
-	setAttr ".wl[3402].w[22]" 6.3376893018082138e-06;
+	setAttr ".wl[3402].w[22]" 6.337689301808213e-06;
 	setAttr ".wl[3402].w[45]" 0.92731764650591508;
 	setAttr ".wl[3402].w[46]" 0.072676015804783334;
 	setAttr -s 2 ".wl[3403].w[45:46]"  0.94026396955711611 0.059736030442883697;
@@ -37178,7 +37178,7 @@ createNode skinCluster -n "skinCluster1";
 	setAttr ".wl[3436].w[60]"  1;
 	setAttr -s 5 ".wl[3437].w";
 	setAttr ".wl[3437].w[49]" 0.25106205922230529;
-	setAttr ".wl[3437].w[50]" 4.5678667562533652e-05;
+	setAttr ".wl[3437].w[50]" 4.5678667562533645e-05;
 	setAttr ".wl[3437].w[53]" 8.1961136396199806e-05;
 	setAttr ".wl[3437].w[56]" 0.00021020323255425508;
 	setAttr ".wl[3437].w[59]" 0.74860009774118175;
@@ -38402,7 +38402,7 @@ createNode skinCluster -n "skinCluster1";
 	setAttr -s 3 ".wl[3775].w";
 	setAttr ".wl[3775].w[22]" 0.34509030222954129;
 	setAttr ".wl[3775].w[23]" 0.65490056643930394;
-	setAttr ".wl[3775].w[45]" 9.1313311547457772e-06;
+	setAttr ".wl[3775].w[45]" 9.1313311547457789e-06;
 	setAttr -s 3 ".wl[3776].w";
 	setAttr ".wl[3776].w[22]" 0.7818591855587389;
 	setAttr ".wl[3776].w[23]" 0.16367018598126096;
@@ -38526,7 +38526,7 @@ createNode skinCluster -n "skinCluster1";
 	setAttr ".wl[3815].w[15]" 0.22359307498969688;
 	setAttr ".wl[3815].w[16]" 0.18307065130267383;
 	setAttr -s 4 ".wl[3816].w";
-	setAttr ".wl[3816].w[0]" 2.0767109803260119e-06;
+	setAttr ".wl[3816].w[0]" 2.0767109803260124e-06;
 	setAttr ".wl[3816].w[1]" 0.27605502897363421;
 	setAttr ".wl[3816].w[14]" 0.072725694933453364;
 	setAttr ".wl[3816].w[15]" 0.65121719938193212;
@@ -38619,7 +38619,7 @@ createNode skinCluster -n "skinCluster1";
 	setAttr -s 2 ".wl[3842].w[45:46]"  0.6205140830591851 0.3794859169408149;
 	setAttr -s 2 ".wl[3843].w[45:46]"  0.40422657043746824 0.59577342956253165;
 	setAttr -s 4 ".wl[3844].w";
-	setAttr ".wl[3844].w[0]" 2.1020010319796715e-06;
+	setAttr ".wl[3844].w[0]" 2.1020010319796719e-06;
 	setAttr ".wl[3844].w[14]" 2.9541273665861758e-06;
 	setAttr ".wl[3844].w[45]" 0.0061697732690694325;
 	setAttr ".wl[3844].w[46]" 0.99382517060253195;
@@ -39269,7 +39269,7 @@ createNode skinCluster -n "skinCluster1";
 	setAttr ".wl[4022].w[23]" 0.0026538538655568331;
 	setAttr ".wl[4022].w[45]" 0.62720212280410992;
 	setAttr -s 2 ".wl[4023].w[45:46]"  0.00014159843361943696 0.99985840156638062;
-	setAttr -s 3 ".wl[4024].w[45:47]"  9.579407913373829e-06 0.99901729709604725 
+	setAttr -s 3 ".wl[4024].w[45:47]"  9.5794079133738273e-06 0.99901729709604725 
 		0.00097312349603946905;
 	setAttr -s 3 ".wl[4025].w";
 	setAttr ".wl[4025].w[22]" 0.0008655263707155708;
@@ -44833,4 +44833,4 @@ connectAttr "Tuffs002:Tuffs:place2dTexture1.msg" ":defaultRenderUtilityList1.u"
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "Sneaks_010:ikSCsolver.msg" ":ikSystem.sol" -na;
 connectAttr "Sneaks_010:ikRPsolver.msg" ":ikSystem.sol" -na;
-// End of tuffs_latest.ma
+// End of Tuffs008.ma

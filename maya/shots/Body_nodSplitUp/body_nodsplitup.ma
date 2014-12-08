@@ -1,6 +1,6 @@
 //Maya ASCII 2013 scene
 //Name: body_nodsplitup.ma
-//Last modified: Thu, Dec 04, 2014 01:01:28 AM
+//Last modified: Mon, Dec 08, 2014 01:44:01 AM
 //Codeset: UTF-8
 file -rdi 1 -ns "armchair_latest" -rfn "armchair_latestRN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/livingroom/additions/sofa/armchair_latest.ma";
 file -rdi 1 -ns "table_latest" -rfn "table_latestRN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/livingroom/additions/table/table_latest.ma";
@@ -66,7 +66,7 @@ fileInfo "osv" "Mac OS X 10.9.5";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 7.9285837187652888 9.1121940771952765 3.8421212109079956 ;
+	setAttr ".t" -type "double3" 7.9285837187652897 9.1121940771952765 3.8421212109079952 ;
 	setAttr ".r" -type "double3" -10.199999999997736 240.79999999999663 0 ;
 	setAttr ".rp" -type "double3" 0 -3.5527136788005009e-15 0 ;
 	setAttr ".rpt" -type "double3" 1.2958228882185857e-13 -1.1004253073599082e-13 -8.3844571220071218e-14 ;
@@ -10112,10 +10112,10 @@ createNode camera -n "cameraShape1" -p "camera1";
 	setAttr ".imn" -type "string" "camera1";
 	setAttr ".den" -type "string" "camera1_depth";
 	setAttr ".man" -type "string" "camera1_mask";
-	setAttr ".tp" -type "double3" 35.54638593511725 0.43758747632361894 25.978380499527358 ;
+	setAttr ".tp" -type "double3" 35.54638593511725 0.43758747632361894 25.978380499527361 ;
 createNode lightLinker -s -n "lightLinker1";
-	setAttr -s 93 ".lnk";
-	setAttr -s 93 ".slnk";
+	setAttr -s 97 ".lnk";
+	setAttr -s 97 ".slnk";
 createNode displayLayerManager -n "layerManager";
 createNode displayLayer -n "defaultLayer";
 createNode renderLayerManager -n "renderLayerManager";
@@ -13888,11 +13888,11 @@ createNode reference -n "tuffs_latestRN";
 		"tuffs_latestRN"
 		"tuffs_latestRN" 0
 		"tuffs_latestRN" 15
-		2 "|tuffs_latest:controller_root" "translate" " -type \"double3\" 34.568905 0 7.019646"
+		2 "|tuffs_latest:controller_root" "translate" " -type \"double3\" 27.829012 0 56.449601"
 		
 		2 "|tuffs_latest:controller_root" "translateX" " -av"
 		2 "|tuffs_latest:controller_root" "translateZ" " -av"
-		2 "|tuffs_latest:controller_root" "rotate" " -type \"double3\" 0 18.143411 0"
+		2 "|tuffs_latest:controller_root" "rotate" " -type \"double3\" 0 -7.764534 0"
 		
 		2 "|tuffs_latest:controller_root" "rotateY" " -av"
 		5 4 "tuffs_latestRN" "|tuffs_latest:controller_root.translateX" "tuffs_latestRN.placeHolderList[1]" 
@@ -14249,23 +14249,23 @@ createNode reference -n "sneaks_latestRN";
 		"blendParent1" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
 		1 |sneaks_latest:controller_root|sneaks_latest:controller_rightArm "blendParent1" 
 		"blendParent1" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
-		2 "|sneaks_latest:controller_root" "translate" " -type \"double3\" 47.562182 6.667917 20.633892"
+		2 "|sneaks_latest:controller_root" "translate" " -type \"double3\" 43.778586 -0.5517 20.633892"
 		
 		2 "|sneaks_latest:controller_root" "translateX" " -av"
 		2 "|sneaks_latest:controller_root" "translateY" " -av"
 		2 "|sneaks_latest:controller_root" "translateZ" " -av"
-		2 "|sneaks_latest:controller_root" "rotate" " -type \"double3\" 27.159192 -90 0"
+		2 "|sneaks_latest:controller_root" "rotate" " -type \"double3\" 0.0180998 -90 0"
 		
-		2 "|sneaks_latest:controller_root" "rotateY" " -av"
 		2 "|sneaks_latest:controller_root" "rotateX" " -av"
+		2 "|sneaks_latest:controller_root" "rotateY" " -av"
 		2 "|sneaks_latest:controller_root|sneaks_latest:controller_COG" "translate" 
-		" -type \"double3\" 0 0 0"
+		" -type \"double3\" 0 0.343264 0.000506093"
 		2 "|sneaks_latest:controller_root|sneaks_latest:controller_COG" "translateY" 
 		" -av"
 		2 "|sneaks_latest:controller_root|sneaks_latest:controller_COG" "translateZ" 
 		" -av"
 		2 "|sneaks_latest:controller_root|sneaks_latest:controller_COG" "rotate" 
-		" -type \"double3\" 0.887378 0 0"
+		" -type \"double3\" 0.0844743 -0.117238 -0.000172851"
 		2 "|sneaks_latest:controller_root|sneaks_latest:controller_COG" "rotateX" 
 		" -av"
 		2 "|sneaks_latest:controller_root|sneaks_latest:controller_COG" "rotateY" 
@@ -14273,7 +14273,7 @@ createNode reference -n "sneaks_latestRN";
 		2 "|sneaks_latest:controller_root|sneaks_latest:controller_COG" "rotateZ" 
 		" -av"
 		2 "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_head" 
-		"rotate" " -type \"double3\" 11.023187 0 0"
+		"rotate" " -type \"double3\" -2.363704 8.831224 2.226173"
 		2 "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_head" 
 		"rotateX" " -av"
 		2 "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_head" 
@@ -14281,7 +14281,7 @@ createNode reference -n "sneaks_latestRN";
 		2 "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_head" 
 		"rotateZ" " -av"
 		2 "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_tailbase" 
-		"rotate" " -type \"double3\" 18.61202 0.773033 0.430525"
+		"rotate" " -type \"double3\" 69.213682 0.773033 0.430525"
 		2 "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_tailbase" 
 		"rotateX" " -av"
 		2 "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_tailbase" 
@@ -14289,7 +14289,7 @@ createNode reference -n "sneaks_latestRN";
 		2 "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_tailbase" 
 		"rotateZ" " -av"
 		2 "|sneaks_latest:controller_root|sneaks_latest:controller_leftLeg" "translate" 
-		" -type \"double3\" 0 1.208832 0"
+		" -type \"double3\" 0 0.524039 -0.000341236"
 		2 "|sneaks_latest:controller_root|sneaks_latest:controller_leftLeg" "translateX" 
 		" -av"
 		2 "|sneaks_latest:controller_root|sneaks_latest:controller_leftLeg" "translateY" 
@@ -14299,7 +14299,7 @@ createNode reference -n "sneaks_latestRN";
 		2 "|sneaks_latest:controller_root|sneaks_latest:controller_leftLeg" "blendParent1" 
 		" -k 1"
 		2 "|sneaks_latest:controller_root|sneaks_latest:controller_rightLeg" "translate" 
-		" -type \"double3\" 0 1.208832 0"
+		" -type \"double3\" 0 0.524039 -0.000341236"
 		2 "|sneaks_latest:controller_root|sneaks_latest:controller_rightLeg" "translateX" 
 		" -av"
 		2 "|sneaks_latest:controller_root|sneaks_latest:controller_rightLeg" "translateY" 
@@ -14313,7 +14313,7 @@ createNode reference -n "sneaks_latestRN";
 		2 "|sneaks_latest:controller_root|sneaks_latest:controller_rightLeg" "blendParent1" 
 		" -k 1"
 		2 "|sneaks_latest:controller_root|sneaks_latest:controller_leftArm" "translate" 
-		" -type \"double3\" 0 0.136635 2.914248"
+		" -type \"double3\" 0 0.426156 1.189992"
 		2 "|sneaks_latest:controller_root|sneaks_latest:controller_leftArm" "translateX" 
 		" -av"
 		2 "|sneaks_latest:controller_root|sneaks_latest:controller_leftArm" "translateY" 
@@ -14321,7 +14321,7 @@ createNode reference -n "sneaks_latestRN";
 		2 "|sneaks_latest:controller_root|sneaks_latest:controller_leftArm" "translateZ" 
 		" -av"
 		2 "|sneaks_latest:controller_root|sneaks_latest:controller_leftArm" "rotate" 
-		" -type \"double3\" 35.292195 0 0"
+		" -type \"double3\" -2.431692 0 0"
 		2 "|sneaks_latest:controller_root|sneaks_latest:controller_leftArm" "rotateX" 
 		" -av"
 		2 "|sneaks_latest:controller_root|sneaks_latest:controller_leftArm" "rotateY" 
@@ -14333,7 +14333,7 @@ createNode reference -n "sneaks_latestRN";
 		2 "|sneaks_latest:controller_root|sneaks_latest:controller_leftArm|sneaks_latest:controller_leftWrist" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|sneaks_latest:controller_root|sneaks_latest:controller_rightArm" "translate" 
-		" -type \"double3\" 0 0.136635 2.914248"
+		" -type \"double3\" 0 0.673289 0"
 		2 "|sneaks_latest:controller_root|sneaks_latest:controller_rightArm" "translateX" 
 		" -av"
 		2 "|sneaks_latest:controller_root|sneaks_latest:controller_rightArm" "translateY" 
@@ -14341,7 +14341,7 @@ createNode reference -n "sneaks_latestRN";
 		2 "|sneaks_latest:controller_root|sneaks_latest:controller_rightArm" "translateZ" 
 		" -av"
 		2 "|sneaks_latest:controller_root|sneaks_latest:controller_rightArm" "rotate" 
-		" -type \"double3\" 35.292195 0 0"
+		" -type \"double3\" 0 0 0"
 		2 "|sneaks_latest:controller_root|sneaks_latest:controller_rightArm" "rotateX" 
 		" -av"
 		2 "|sneaks_latest:controller_root|sneaks_latest:controller_rightArm" "rotateY" 
@@ -14350,13 +14350,13 @@ createNode reference -n "sneaks_latestRN";
 		" -av"
 		2 "|sneaks_latest:controller_root|sneaks_latest:controller_rightArm" "blendParent1" 
 		" -k 1"
-		2 "|sneaks_latest:left_wrist" "translate" " -type \"double3\" 42.924382 4.173746 21.918057"
+		2 "|sneaks_latest:left_wrist" "translate" " -type \"double3\" 39.614467 -0.552813 21.923461"
 		
-		2 "|sneaks_latest:left_wrist" "rotate" " -type \"double3\" 136.449223 -87.313069 -121.337132"
+		2 "|sneaks_latest:left_wrist" "rotate" " -type \"double3\" 126.531428 -88.012241 -133.76452"
 		
-		2 "|sneaks_latest:RightHandHandle" "translate" " -type \"double3\" 42.863995 4.387604 18.280008"
+		2 "|sneaks_latest:RightHandHandle" "translate" " -type \"double3\" 40.397009 -0.457271 18.274133"
 		
-		2 "|sneaks_latest:RightHandHandle" "rotate" " -type \"double3\" 171.238039 -84.390988 -163.145406"
+		2 "|sneaks_latest:RightHandHandle" "rotate" " -type \"double3\" -178.215605 -82.829234 171.321325"
 		
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root.translateX" "sneaks_latestRN.placeHolderList[193]" 
 		""
@@ -14364,9 +14364,9 @@ createNode reference -n "sneaks_latestRN";
 		""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root.translateZ" "sneaks_latestRN.placeHolderList[195]" 
 		""
-		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root.rotateY" "sneaks_latestRN.placeHolderList[196]" 
+		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root.rotateX" "sneaks_latestRN.placeHolderList[196]" 
 		""
-		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root.rotateX" "sneaks_latestRN.placeHolderList[197]" 
+		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root.rotateY" "sneaks_latestRN.placeHolderList[197]" 
 		""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root.rotateZ" "sneaks_latestRN.placeHolderList[198]" 
 		""
@@ -14769,23 +14769,31 @@ createNode reference -n "smarty_latestRN";
 	setAttr ".phl[9]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"smarty_latestRN"
-		"smarty_latestRN" 0
-		"smarty_latestRN" 17
+		"smarty_latestRN" 3
 		2 "|smarty_latest:turntable|smarty_latest:turnTableCamera1|smarty_latest:turnTableCamera1Shape" 
 		"renderable" " 0"
 		2 "|smarty_latest:turntable|smarty_latest:turnTableCamera1|smarty_latest:turnTableCamera1Shape" 
 		"depth" " 0"
 		2 "|smarty_latest:turntable|smarty_latest:turnTableCamera1|smarty_latest:turnTableCamera1Shape" 
 		"mask" " 1"
-		2 "|smarty_latest:SmartyRig|smarty_latest:global_ctrl" "translate" " -type \"double3\" 31.786401 9.352131 34.056347"
+		"smarty_latestRN" 18
+		2 "|smarty_latest:SmartyRig|smarty_latest:Smarty|smarty_latest:SMARTY|smarty_latest:SMARTYShape" 
+		"dispResolution" " 3"
+		2 "|smarty_latest:SmartyRig|smarty_latest:Smarty|smarty_latest:SMARTY|smarty_latest:SMARTYShape" 
+		"displaySmoothMesh" " 2"
+		2 "|smarty_latest:SmartyRig|smarty_latest:global_ctrl" "translate" " -type \"double3\" 22.38163 9.352131 -2.093351"
 		
 		2 "|smarty_latest:SmartyRig|smarty_latest:global_ctrl" "translateX" " -av"
 		
 		2 "|smarty_latest:SmartyRig|smarty_latest:global_ctrl" "translateZ" " -av"
 		
-		2 "|smarty_latest:SmartyRig|smarty_latest:global_ctrl" "rotate" " -type \"double3\" 0 180 0"
+		2 "|smarty_latest:SmartyRig|smarty_latest:global_ctrl" "rotate" " -type \"double3\" 0 202.034919 0"
 		
 		2 "|smarty_latest:SmartyRig|smarty_latest:global_ctrl" "rotateY" " -av"
+		2 "|smarty_latest:EyeR33" "scale" " -type \"double3\" 0.360084 0.360084 0.360084"
+		
+		2 "|smarty_latest:EyeL2" "scale" " -type \"double3\" 0.360084 0.360084 0.360084"
+		
 		5 4 "smarty_latestRN" "|smarty_latest:SmartyRig|smarty_latest:global_ctrl.translateX" 
 		"smarty_latestRN.placeHolderList[1]" ""
 		5 4 "smarty_latestRN" "|smarty_latest:SmartyRig|smarty_latest:global_ctrl.translateY" 
@@ -14809,7 +14817,7 @@ lockNode -l 1 ;
 createNode animCurveTL -n "sneaks_latest:controller_root_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 47.562181541796292 10 45.285659459937193
+	setAttr -s 3 ".ktv[0:2]"  1 47.562181541796285 10 45.285659459937193
 		 16 43.778586369645289;
 createNode animCurveTL -n "sneaks_latest:controller_root_translateY";
 	setAttr ".tan" 18;
@@ -14834,7 +14842,7 @@ createNode animCurveTA -n "sneaks_latest:controller_root_rotateX";
 createNode animCurveTA -n "sneaks_latest:controller_root_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 -89.999999999999957 10 -89.999999999999943
+	setAttr -s 3 ".ktv[0:2]"  1 -89.999999999999957 10 -89.999999999999929
 		 16 -89.999999999999872;
 createNode animCurveTA -n "sneaks_latest:controller_root_rotateZ";
 	setAttr ".tan" 18;
@@ -14880,7 +14888,7 @@ createNode animCurveTA -n "pairBlend1_inRotateX1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 5 ".ktv[0:4]"  1 35.292194981454301 10 -27.650859558543317
-		 11 -25.782771379527702 16 -2.4316916895299485 23 -2.4316916895299485;
+		 11 -25.782771379527706 16 -2.4316916895299485 23 -2.4316916895299485;
 createNode animCurveTA -n "pairBlend1_inRotateY1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
@@ -14923,7 +14931,7 @@ createNode animCurveTL -n "pairBlend2_inTranslateZ1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 12 ".ktv[0:11]"  1 2.9142477030645644 10 3.2828224540720545
-		 11 2.5748446982920536 16 1.1758261381955457 23 1.1758261381955457 27 4.6153997376703391
+		 11 2.5748446982920536 16 1.1758261381955455 23 1.1758261381955455 27 4.6153997376703391
 		 28 4.6153997376703391 34 4.9142830072705976 40 4.0044429537248591 44 4.767900132701242
 		 50 5.607355627600815 54 0;
 createNode animCurveTU -n "sneaks_latest:controller_rightArm_visibility";
@@ -14944,13 +14952,13 @@ createNode animCurveTA -n "pairBlend2_inRotateY1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 12 ".ktv[0:11]"  1 0 10 0 11 0 16 0 23 0 27 75.353839531210369
-		 28 75.353839531210369 34 -40.79736979082675 40 -40.797369790826735 44 -40.797369790826743
+		 28 75.353839531210369 34 -40.79736979082675 40 -40.797369790826743 44 -40.797369790826743
 		 50 60.570858914721327 54 0;
 createNode animCurveTA -n "pairBlend2_inRotateZ1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 12 ".ktv[0:11]"  1 0 10 0 11 0 16 0 23 0 27 -23.044170863265595
-		 28 -23.044170863265595 34 5.0654900610376972 40 5.0654900610377052 44 5.0654900610377265
+		 28 -23.044170863265595 34 5.0654900610376981 40 5.0654900610377052 44 5.0654900610377265
 		 50 6.8577846177098936 54 0;
 createNode animCurveTU -n "sneaks_latest:controller_rightArm_scaleX";
 	setAttr ".tan" 18;
@@ -15021,7 +15029,7 @@ createNode animCurveTL -n "pairBlend3_inTranslateX1";
 createNode animCurveTL -n "pairBlend3_inTranslateY1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1.2088316215362263 5 2.6848013383537288
+	setAttr -s 5 ".ktv[0:4]"  1 1.2088316215362265 5 2.6848013383537288
 		 10 -0.55615862121972637 16 0.52403911481681731 25 0.52403911481681731;
 createNode animCurveTL -n "pairBlend3_inTranslateZ1";
 	setAttr ".tan" 18;
@@ -15069,7 +15077,7 @@ createNode animCurveTL -n "pairBlend4_inTranslateX1";
 createNode animCurveTL -n "pairBlend4_inTranslateY1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1.2088316215362263 5 2.6848013383537288
+	setAttr -s 5 ".ktv[0:4]"  1 1.2088316215362265 5 2.6848013383537288
 		 10 -0.55615862121972637 16 0.52403911481681731 25 0.52403911481681731;
 createNode animCurveTL -n "pairBlend4_inTranslateZ1";
 	setAttr ".tan" 18;
@@ -15140,7 +15148,7 @@ createNode animCurveTA -n "sneaks_latest:controller_COG_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 12 ".ktv[0:11]"  1 0.887377733112378 10 11.466380397421062
 		 16 0.084474109365168484 20 0.084474109365168484 25 0.084474109365168484 28 0.084478499606516738
-		 32 0.084474109365168484 34 0.084490494535128025 38 0.084474109365168484 42 0.084474109365168484
+		 32 0.084474109365168484 34 0.084490494535128038 38 0.084474109365168484 42 0.084474109365168484
 		 51 0.084475117023068397 60 0.084474286208176139;
 createNode animCurveTA -n "sneaks_latest:controller_COG_rotateY";
 	setAttr ".tan" 18;
@@ -15192,21 +15200,21 @@ createNode animCurveTU -n "sneaks_latest:controller_head_visibility";
 createNode animCurveTA -n "sneaks_latest:controller_head_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 11.023187110748589 10 11.023187110748589
+	setAttr -s 11 ".ktv[0:10]"  1 11.023187110748587 10 11.023187110748587
 		 16 -2.4561249366454132 25 -3.7152121035946126 27 -3.7152121035946126 32 -2.9343010398409768
-		 33 -2.9343010398409768 40 -14.852470223444653 42 -14.852470223444653 48 0.21871515085778451
+		 33 -2.9343010398409768 40 -14.85247022344465 42 -14.85247022344465 48 0.21871515085778451
 		 54 -2.3637043273603964;
 createNode animCurveTA -n "sneaks_latest:controller_head_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  1 0 10 0 16 0 25 48.596290969513149 27 48.596290969513149
 		 32 -33.159752824197632 33 -33.159752824197632 40 -54.015925500202293 42 -54.015925500202293
-		 48 36.908867715802572 54 8.8312235452368153;
+		 48 36.908867715802586 54 8.8312235452368153;
 createNode animCurveTA -n "sneaks_latest:controller_head_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  1 0 10 0 16 0 25 -2.7883714086817437 27 -2.7883714086817437
-		 32 1.6059741587094727 33 1.6059741587094727 40 1.7763097281172959 42 1.7763097281172959
+		 32 1.6059741587094729 33 1.6059741587094729 40 1.7763097281172959 42 1.7763097281172959
 		 48 18.493727231931899 54 2.2261730829839879;
 createNode animCurveTU -n "sneaks_latest:controller_head_scaleX";
 	setAttr ".tan" 18;
@@ -15458,7 +15466,7 @@ createNode animCurveTA -n "sneaks_latest:controller_tailbase_rotateY";
 createNode animCurveTA -n "sneaks_latest:controller_tailbase_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0.43052540007779749 12 0.43052540007779733
+	setAttr -s 3 ".ktv[0:2]"  1 0.43052540007779749 12 0.43052540007779738
 		 18 0.43052540007779821;
 createNode animCurveTU -n "sneaks_latest:controller_tailbase_scaleX";
 	setAttr ".tan" 18;
@@ -15763,7 +15771,7 @@ createNode animCurveTU -n "tuffs_latest:controller_root_scaleZ";
 createNode animCurveTL -n "camera1_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 14.985101893935997;
+	setAttr ".ktv[0]"  1 14.985101893935996;
 createNode animCurveTL -n "camera1_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
@@ -15958,14 +15966,14 @@ select -ne :time1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr ".o" 1;
-	setAttr ".unw" 1;
+	setAttr ".o" 60;
+	setAttr ".unw" 60;
 select -ne :renderPartition;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 93 ".st";
+	setAttr -s 97 ".st";
 	setAttr -cb on ".an";
 	setAttr -cb on ".pt";
 select -ne :initialShadingGroup;
@@ -16019,7 +16027,7 @@ select -ne :defaultShaderList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 93 ".s";
+	setAttr -s 97 ".s";
 select -ne :defaultTextureList1;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -16171,9 +16179,9 @@ connectAttr "sneaks_latest:controller_root_translateY.o" "sneaks_latestRN.phl[19
 		;
 connectAttr "sneaks_latest:controller_root_translateZ.o" "sneaks_latestRN.phl[195]"
 		;
-connectAttr "sneaks_latest:controller_root_rotateY.o" "sneaks_latestRN.phl[196]"
+connectAttr "sneaks_latest:controller_root_rotateX.o" "sneaks_latestRN.phl[196]"
 		;
-connectAttr "sneaks_latest:controller_root_rotateX.o" "sneaks_latestRN.phl[197]"
+connectAttr "sneaks_latest:controller_root_rotateY.o" "sneaks_latestRN.phl[197]"
 		;
 connectAttr "sneaks_latest:controller_root_rotateZ.o" "sneaks_latestRN.phl[198]"
 		;

@@ -1,6 +1,6 @@
 //Maya ASCII 2013 scene
 //Name: room_with_undies.ma
-//Last modified: Thu, Dec 04, 2014 08:20:17 PM
+//Last modified: Fri, Dec 05, 2014 01:15:06 PM
 //Codeset: 1252
 file -rdi 1 -ns "Dresser_with_openable_drawers" -rfn "Dresser_with_openable_drawersRN"
 		 "C:/Users/Ashley/AppData/Local/VirtualStore/Program Files (x86)/Git/Bandits/Bandits/maya/assets/sets/bedroom/additions/Dresser_with_openable_drawers.ma";
@@ -20,16 +20,16 @@ fileInfo "osv" "Microsoft Windows 7 Home Premium Edition, 64-bit Windows 7 Servi
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 26.863721260977581 12.177551186008506 3.6681218307236505 ;
-	setAttr ".r" -type "double3" -8.1383527460733269 24.199999999996702 4.3587388122886219e-016 ;
+	setAttr ".t" -type "double3" 79.19790663939321 85.413458756226461 142.13820265074455 ;
+	setAttr ".r" -type "double3" -24.938352746073722 20.999999999997108 1.7034176120191976e-015 ;
 	setAttr ".rp" -type "double3" 1.7763568394002505e-015 -1.7763568394002505e-015 -6.6613381477509392e-016 ;
-	setAttr ".rpt" -type "double3" -2.0937269846284871e-015 -1.7192055524927628e-015 
-		6.1452861077984999e-015 ;
+	setAttr ".rpt" -type "double3" -2.0937269846284875e-015 -1.7192055524927628e-015 
+		6.1452861077985007e-015 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 13.845042738992632;
+	setAttr ".coi" 178.34017804348218;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -115,68 +115,68 @@ createNode renderLayer -n "defaultRenderLayer";
 	setAttr ".g" yes;
 createNode script -n "uiConfigurationScriptNode";
 	setAttr ".b" -type "string" (
-		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"Stereo\" -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels `;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -editorChanged \"updateModelPanelBar\" \n                -camera \"persp\" \n                -useInteractiveMode 0\n"
-		+ "                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n"
-		+ "                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n"
-		+ "                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                $editorName;\nstereoCameraView -e -viewSelected 0 $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -editorChanged \"updateModelPanelBar\" \n"
-		+ "                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n"
-		+ "                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n"
-		+ "                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                $editorName;\nstereoCameraView -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n"
-		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"CloseUpInDrawe\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n"
-		+ "                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"base_OpenGL_Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n"
-		+ "                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 0\n                -nurbsSurfaces 0\n                -polymeshes 1\n                -subdivSurfaces 0\n                -planes 0\n                -lights 0\n                -cameras 0\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 0\n                -joints 0\n                -ikHandles 0\n                -deformers 0\n                -dynamics 0\n                -fluids 0\n                -hairSystems 0\n                -follicles 0\n                -nCloths 0\n                -nParticles 0\n                -nRigids 0\n                -dynamicConstraints 0\n                -locators 0\n                -manipulators 1\n                -dimensions 0\n                -handles 0\n                -pivots 0\n                -textures 0\n                -strokes 0\n                -motionTrails 0\n                -clipGhosts 0\n                -shadows 0\n                $editorName;\n"
-		+ "modelEditor -e -viewSelected 0 $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"CloseUpInDrawe\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n"
-		+ "            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 0\n            -nurbsSurfaces 0\n            -polymeshes 1\n"
-		+ "            -subdivSurfaces 0\n            -planes 0\n            -lights 0\n            -cameras 0\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 0\n            -joints 0\n            -ikHandles 0\n            -deformers 0\n            -dynamics 0\n            -fluids 0\n            -hairSystems 0\n            -follicles 0\n            -nCloths 0\n            -nParticles 0\n            -nRigids 0\n            -dynamicConstraints 0\n            -locators 0\n            -manipulators 1\n            -dimensions 0\n            -handles 0\n            -pivots 0\n            -textures 0\n            -strokes 0\n            -motionTrails 0\n            -clipGhosts 0\n            -shadows 0\n            $editorName;\nmodelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels `;\n"
-		+ "\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"side\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n"
-		+ "                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"base_OpenGL_Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n"
-		+ "                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -shadows 0\n                $editorName;\nmodelEditor -e -viewSelected 0 $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n"
-		+ "            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 0\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n"
-		+ "            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -shadows 0\n            $editorName;\nmodelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"front\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n"
-		+ "                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n"
-		+ "                -rendererName \"base_OpenGL_Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n"
-		+ "                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -shadows 0\n                $editorName;\nmodelEditor -e -viewSelected 0 $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n"
-		+ "            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n"
-		+ "            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 0\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n"
-		+ "            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -shadows 0\n            $editorName;\nmodelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n"
-		+ "                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"base_OpenGL_Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n"
-		+ "                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 0\n                -polymeshes 1\n                -subdivSurfaces 0\n                -planes 0\n                -lights 0\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 0\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n"
-		+ "                -dynamics 0\n                -fluids 0\n                -hairSystems 0\n                -follicles 0\n                -nCloths 0\n                -nParticles 0\n                -nRigids 0\n                -dynamicConstraints 0\n                -locators 1\n                -manipulators 1\n                -dimensions 0\n                -handles 1\n                -pivots 0\n                -textures 0\n                -strokes 0\n                -motionTrails 1\n                -clipGhosts 0\n                -shadows 0\n                $editorName;\nmodelEditor -e -viewSelected 0 $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n"
-		+ "            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n"
-		+ "            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 0\n            -polymeshes 1\n            -subdivSurfaces 0\n            -planes 0\n            -lights 0\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 0\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 0\n            -fluids 0\n            -hairSystems 0\n            -follicles 0\n            -nCloths 0\n            -nParticles 0\n            -nRigids 0\n            -dynamicConstraints 0\n            -locators 1\n"
-		+ "            -manipulators 1\n            -dimensions 0\n            -handles 1\n            -pivots 0\n            -textures 0\n            -strokes 0\n            -motionTrails 1\n            -clipGhosts 0\n            -shadows 0\n            $editorName;\nmodelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `outlinerPanel -unParent -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            outlinerEditor -e \n                -docTag \"isolOutln_fromSeln\" \n                -showShapes 0\n                -showReferenceNodes 1\n                -showReferenceMembers 1\n                -showAttributes 0\n                -showConnected 0\n                -showAnimCurvesOnly 0\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n"
-		+ "                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 1\n                -showAssets 1\n                -showContainedOnly 1\n                -showPublishedAsConnected 0\n                -showContainerContents 1\n                -ignoreDagHierarchy 0\n                -expandConnections 0\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 0\n                -highlightActive 1\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"defaultSetFilter\" \n                -showSetMembers 1\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n"
-		+ "                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n"
-		+ "            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n"
-		+ "            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"graphEditor\" -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n"
-		+ "                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n"
-		+ "                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n"
-		+ "                -showUpstreamCurves 1\n                -clipTime \"on\" \n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n"
-		+ "                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n"
-		+ "                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -clipTime \"on\" \n                -stackedCurves 0\n"
-		+ "                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\tif ($useSceneConfig) {\n\t\tscriptedPanel -e -to $panelName;\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dopeSheetPanel\" -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n"
-		+ "                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n"
-		+ "                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n"
-		+ "                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n"
-		+ "                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n"
-		+ "                -mapMotionTrails 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"clipEditorPanel\" -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels `;\n"
-		+ "\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n"
-		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"sequenceEditorPanel\" -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n"
-		+ "                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperGraphPanel\" -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n"
-		+ "                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n"
-		+ "                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n"
-		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperShadePanel\" -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"visorPanel\" -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" == $panelName) {\n"
-		+ "\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -island 0\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -island 0\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"createNodePanel\" -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels `;\n"
-		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Texture Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"polyTexturePlacementPanel\" -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"renderWindowPanel\" -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels `;\n"
-		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"blendShapePanel\" (localizedPanelLabel(\"Blend Shape\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\tblendShapePanel -unParent -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels ;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tblendShapePanel -edit -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynRelEdPanel\" -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n"
-		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"relationshipPanel\" -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"referenceEditorPanel\" -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels `;\n"
-		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"componentEditorPanel\" -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynPaintScriptedPanelType\" -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels `;\n"
-		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"scriptEditorPanel\" -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n"
-		+ "\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Top View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"CloseUpInDrawe\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 0\\n    -polymeshes 1\\n    -subdivSurfaces 0\\n    -planes 0\\n    -lights 0\\n    -cameras 0\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 0\\n    -dynamics 0\\n    -fluids 0\\n    -hairSystems 0\\n    -follicles 0\\n    -nCloths 0\\n    -nParticles 0\\n    -nRigids 0\\n    -dynamicConstraints 0\\n    -locators 0\\n    -manipulators 1\\n    -dimensions 0\\n    -handles 0\\n    -pivots 0\\n    -textures 0\\n    -strokes 0\\n    -motionTrails 0\\n    -clipGhosts 0\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"CloseUpInDrawe\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 0\\n    -polymeshes 1\\n    -subdivSurfaces 0\\n    -planes 0\\n    -lights 0\\n    -cameras 0\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 0\\n    -dynamics 0\\n    -fluids 0\\n    -hairSystems 0\\n    -follicles 0\\n    -nCloths 0\\n    -nParticles 0\\n    -nRigids 0\\n    -dynamicConstraints 0\\n    -locators 0\\n    -manipulators 1\\n    -dimensions 0\\n    -handles 0\\n    -pivots 0\\n    -textures 0\\n    -strokes 0\\n    -motionTrails 0\\n    -clipGhosts 0\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
+		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"renderWindowPanel\" -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"Stereo\" -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels `;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -editorChanged \"updateModelPanelBar\" \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n"
+		+ "                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n"
+		+ "                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n"
+		+ "                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                $editorName;\nstereoCameraView -e -viewSelected 0 $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -editorChanged \"updateModelPanelBar\" \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n"
+		+ "                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n"
+		+ "                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n"
+		+ "                -locators 1\n                -manipulators 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                $editorName;\nstereoCameraView -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n"
+		+ "                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"base_OpenGL_Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n"
+		+ "                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n"
+		+ "                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -shadows 0\n                $editorName;\nmodelEditor -e -viewSelected 0 $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n"
+		+ "            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n"
+		+ "            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n"
+		+ "            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -shadows 0\n            $editorName;\nmodelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"side\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n"
+		+ "                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"base_OpenGL_Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n"
+		+ "                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n"
+		+ "                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -shadows 0\n                $editorName;\nmodelEditor -e -viewSelected 0 $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n"
+		+ "            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n"
+		+ "            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -dimensions 1\n"
+		+ "            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -shadows 0\n            $editorName;\nmodelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"front\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n"
+		+ "                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"base_OpenGL_Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n"
+		+ "                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n"
+		+ "                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -shadows 0\n                $editorName;\nmodelEditor -e -viewSelected 0 $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n"
+		+ "            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n"
+		+ "            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n"
+		+ "            -motionTrails 1\n            -clipGhosts 1\n            -shadows 0\n            $editorName;\nmodelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"CloseUpInDrawe\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n"
+		+ "                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"base_OpenGL_Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n"
+		+ "                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 0\n                -polymeshes 1\n                -subdivSurfaces 0\n                -planes 0\n                -lights 0\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 0\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 0\n                -fluids 0\n                -hairSystems 0\n                -follicles 0\n                -nCloths 0\n                -nParticles 0\n                -nRigids 0\n                -dynamicConstraints 0\n"
+		+ "                -locators 1\n                -manipulators 1\n                -dimensions 0\n                -handles 1\n                -pivots 0\n                -textures 0\n                -strokes 0\n                -motionTrails 1\n                -clipGhosts 0\n                -shadows 0\n                $editorName;\nmodelEditor -e -viewSelected 0 $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"CloseUpInDrawe\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n"
+		+ "            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n"
+		+ "            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 0\n            -polymeshes 1\n            -subdivSurfaces 0\n            -planes 0\n            -lights 0\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 0\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 0\n            -fluids 0\n            -hairSystems 0\n            -follicles 0\n            -nCloths 0\n            -nParticles 0\n            -nRigids 0\n            -dynamicConstraints 0\n            -locators 1\n            -manipulators 1\n            -dimensions 0\n            -handles 1\n            -pivots 0\n            -textures 0\n            -strokes 0\n            -motionTrails 1\n            -clipGhosts 0\n"
+		+ "            -shadows 0\n            $editorName;\nmodelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `outlinerPanel -unParent -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            outlinerEditor -e \n                -docTag \"isolOutln_fromSeln\" \n                -showShapes 0\n                -showReferenceNodes 1\n                -showReferenceMembers 1\n                -showAttributes 0\n                -showConnected 0\n                -showAnimCurvesOnly 0\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 1\n                -showAssets 1\n                -showContainedOnly 1\n                -showPublishedAsConnected 0\n"
+		+ "                -showContainerContents 1\n                -ignoreDagHierarchy 0\n                -expandConnections 0\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 0\n                -highlightActive 1\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"defaultSetFilter\" \n                -showSetMembers 1\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n"
+		+ "                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n"
+		+ "            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n"
+		+ "            -showPinIcons 0\n            -mapMotionTrails 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"graphEditor\" -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n"
+		+ "                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n"
+		+ "                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -clipTime \"on\" \n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n"
+		+ "                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n"
+		+ "                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n"
+		+ "                -showPinIcons 1\n                -mapMotionTrails 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -clipTime \"on\" \n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n"
+		+ "                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\tif ($useSceneConfig) {\n\t\tscriptedPanel -e -to $panelName;\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dopeSheetPanel\" -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n"
+		+ "                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n"
+		+ "                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n"
+		+ "            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n"
+		+ "                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n"
+		+ "                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"clipEditorPanel\" -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n"
+		+ "                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"sequenceEditorPanel\" -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels `;\n"
+		+ "\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperGraphPanel\" -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n"
+		+ "                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showUnderworld 0\n                -showInvisible 0\n"
+		+ "                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperShadePanel\" -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"visorPanel\" -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n"
+		+ "                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -island 0\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -ignoreAssets 1\n                -additiveGraphingMode 0\n"
+		+ "                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -island 0\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"createNodePanel\" -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n"
+		+ "\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Texture Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"polyTexturePlacementPanel\" -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"blendShapePanel\" (localizedPanelLabel(\"Blend Shape\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\tblendShapePanel -unParent -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels ;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tblendShapePanel -edit -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynRelEdPanel\" -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"relationshipPanel\" -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"referenceEditorPanel\" -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"componentEditorPanel\" -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynPaintScriptedPanelType\" -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"scriptEditorPanel\" -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Top View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"persp\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"persp\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        setFocus `paneLayout -q -p1 $gMainPane`;\n        sceneUIReplacement -deleteRemaining;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -361,162 +361,24 @@ createNode reference -n "Dresser_with_openable_drawersRN";
 lockNode -l 1 ;
 createNode reference -n "Sneaks_012RN";
 	setAttr -s 196 ".phl";
-	setAttr ".phl[1]" 0;
-	setAttr ".phl[2]" 0;
-	setAttr ".phl[3]" 0;
-	setAttr ".phl[4]" 0;
-	setAttr ".phl[5]" 0;
-	setAttr ".phl[6]" 0;
-	setAttr ".phl[7]" 0;
-	setAttr ".phl[8]" 0;
-	setAttr ".phl[9]" 0;
-	setAttr ".phl[10]" 0;
-	setAttr ".phl[11]" 0;
-	setAttr ".phl[12]" 0;
-	setAttr ".phl[13]" 0;
-	setAttr ".phl[14]" 0;
-	setAttr ".phl[15]" 0;
-	setAttr ".phl[16]" 0;
-	setAttr ".phl[17]" 0;
-	setAttr ".phl[18]" 0;
-	setAttr ".phl[19]" 0;
-	setAttr ".phl[20]" 0;
-	setAttr ".phl[21]" 0;
-	setAttr ".phl[22]" 0;
-	setAttr ".phl[23]" 0;
-	setAttr ".phl[24]" 0;
-	setAttr ".phl[25]" 0;
-	setAttr ".phl[26]" 0;
-	setAttr ".phl[27]" 0;
-	setAttr ".phl[28]" 0;
-	setAttr ".phl[29]" 0;
-	setAttr ".phl[30]" 0;
-	setAttr ".phl[31]" 0;
-	setAttr ".phl[32]" 0;
-	setAttr ".phl[33]" 0;
-	setAttr ".phl[34]" 0;
-	setAttr ".phl[35]" 0;
-	setAttr ".phl[36]" 0;
-	setAttr ".phl[37]" 0;
-	setAttr ".phl[38]" 0;
-	setAttr ".phl[39]" 0;
-	setAttr ".phl[40]" 0;
-	setAttr ".phl[41]" 0;
-	setAttr ".phl[42]" 0;
-	setAttr ".phl[43]" 0;
-	setAttr ".phl[44]" 0;
-	setAttr ".phl[45]" 0;
-	setAttr ".phl[46]" 0;
-	setAttr ".phl[47]" 0;
-	setAttr ".phl[48]" 0;
-	setAttr ".phl[49]" 0;
-	setAttr ".phl[50]" 0;
-	setAttr ".phl[51]" 0;
-	setAttr ".phl[52]" 0;
-	setAttr ".phl[53]" 0;
-	setAttr ".phl[54]" 0;
-	setAttr ".phl[55]" 0;
-	setAttr ".phl[56]" 0;
-	setAttr ".phl[57]" 0;
-	setAttr ".phl[58]" 0;
-	setAttr ".phl[59]" 0;
-	setAttr ".phl[60]" 0;
-	setAttr ".phl[61]" 0;
-	setAttr ".phl[62]" 0;
-	setAttr ".phl[63]" 0;
-	setAttr ".phl[64]" 0;
-	setAttr ".phl[65]" 0;
-	setAttr ".phl[66]" 0;
-	setAttr ".phl[67]" 0;
-	setAttr ".phl[68]" 0;
-	setAttr ".phl[69]" 0;
-	setAttr ".phl[70]" 0;
-	setAttr ".phl[71]" 0;
-	setAttr ".phl[72]" 0;
-	setAttr ".phl[73]" 0;
-	setAttr ".phl[74]" 0;
-	setAttr ".phl[75]" 0;
-	setAttr ".phl[76]" 0;
-	setAttr ".phl[77]" 0;
-	setAttr ".phl[78]" 0;
-	setAttr ".phl[79]" 0;
-	setAttr ".phl[80]" 0;
-	setAttr ".phl[81]" 0;
-	setAttr ".phl[82]" 0;
-	setAttr ".phl[83]" 0;
-	setAttr ".phl[84]" 0;
-	setAttr ".phl[85]" 0;
-	setAttr ".phl[86]" 0;
-	setAttr ".phl[87]" 0;
-	setAttr ".phl[88]" 0;
-	setAttr ".phl[89]" 0;
-	setAttr ".phl[90]" 0;
-	setAttr ".phl[91]" 0;
-	setAttr ".phl[92]" 0;
 	setAttr ".phl[93]" 0;
 	setAttr ".phl[94]" 0;
 	setAttr ".phl[95]" 0;
 	setAttr ".phl[96]" 0;
 	setAttr ".phl[97]" 0;
 	setAttr ".phl[98]" 0;
-	setAttr ".phl[99]" 0;
-	setAttr ".phl[100]" 0;
-	setAttr ".phl[101]" 0;
-	setAttr ".phl[102]" 0;
-	setAttr ".phl[103]" 0;
-	setAttr ".phl[104]" 0;
-	setAttr ".phl[105]" 0;
-	setAttr ".phl[106]" 0;
-	setAttr ".phl[107]" 0;
-	setAttr ".phl[108]" 0;
-	setAttr ".phl[109]" 0;
-	setAttr ".phl[110]" 0;
 	setAttr ".phl[111]" 0;
 	setAttr ".phl[112]" 0;
 	setAttr ".phl[113]" 0;
 	setAttr ".phl[114]" 0;
 	setAttr ".phl[115]" 0;
 	setAttr ".phl[116]" 0;
-	setAttr ".phl[117]" 0;
-	setAttr ".phl[118]" 0;
-	setAttr ".phl[119]" 0;
-	setAttr ".phl[120]" 0;
-	setAttr ".phl[121]" 0;
-	setAttr ".phl[122]" 0;
-	setAttr ".phl[123]" 0;
-	setAttr ".phl[124]" 0;
-	setAttr ".phl[125]" 0;
-	setAttr ".phl[126]" 0;
-	setAttr ".phl[127]" 0;
-	setAttr ".phl[128]" 0;
 	setAttr ".phl[129]" 0;
 	setAttr ".phl[130]" 0;
 	setAttr ".phl[131]" 0;
 	setAttr ".phl[132]" 0;
 	setAttr ".phl[133]" 0;
 	setAttr ".phl[134]" 0;
-	setAttr ".phl[135]" 0;
-	setAttr ".phl[136]" 0;
-	setAttr ".phl[137]" 0;
-	setAttr ".phl[138]" 0;
-	setAttr ".phl[139]" 0;
-	setAttr ".phl[140]" 0;
-	setAttr ".phl[141]" 0;
-	setAttr ".phl[142]" 0;
-	setAttr ".phl[143]" 0;
-	setAttr ".phl[144]" 0;
-	setAttr ".phl[145]" 0;
-	setAttr ".phl[146]" 0;
-	setAttr ".phl[147]" 0;
-	setAttr ".phl[148]" 0;
-	setAttr ".phl[149]" 0;
-	setAttr ".phl[150]" 0;
-	setAttr ".phl[151]" 0;
-	setAttr ".phl[152]" 0;
-	setAttr ".phl[153]" 0;
-	setAttr ".phl[154]" 0;
-	setAttr ".phl[155]" 0;
-	setAttr ".phl[156]" 0;
 	setAttr ".phl[157]" 0;
 	setAttr ".phl[158]" 0;
 	setAttr ".phl[159]" 0;
@@ -557,10 +419,244 @@ createNode reference -n "Sneaks_012RN";
 	setAttr ".phl[194]" 0;
 	setAttr ".phl[195]" 0;
 	setAttr ".phl[196]" 0;
+	setAttr ".phl[197]" 0;
+	setAttr ".phl[198]" 0;
+	setAttr ".phl[199]" 0;
+	setAttr ".phl[200]" 0;
+	setAttr ".phl[201]" 0;
+	setAttr ".phl[202]" 0;
+	setAttr ".phl[203]" 0;
+	setAttr ".phl[204]" 0;
+	setAttr ".phl[205]" 0;
+	setAttr ".phl[206]" 0;
+	setAttr ".phl[207]" 0;
+	setAttr ".phl[208]" 0;
+	setAttr ".phl[209]" 0;
+	setAttr ".phl[210]" 0;
+	setAttr ".phl[211]" 0;
+	setAttr ".phl[212]" 0;
+	setAttr ".phl[213]" 0;
+	setAttr ".phl[214]" 0;
+	setAttr ".phl[215]" 0;
+	setAttr ".phl[216]" 0;
+	setAttr ".phl[217]" 0;
+	setAttr ".phl[218]" 0;
+	setAttr ".phl[219]" 0;
+	setAttr ".phl[220]" 0;
+	setAttr ".phl[221]" 0;
+	setAttr ".phl[222]" 0;
+	setAttr ".phl[223]" 0;
+	setAttr ".phl[224]" 0;
+	setAttr ".phl[225]" 0;
+	setAttr ".phl[226]" 0;
+	setAttr ".phl[227]" 0;
+	setAttr ".phl[228]" 0;
+	setAttr ".phl[229]" 0;
+	setAttr ".phl[230]" 0;
+	setAttr ".phl[231]" 0;
+	setAttr ".phl[232]" 0;
+	setAttr ".phl[233]" 0;
+	setAttr ".phl[234]" 0;
+	setAttr ".phl[235]" 0;
+	setAttr ".phl[236]" 0;
+	setAttr ".phl[237]" 0;
+	setAttr ".phl[238]" 0;
+	setAttr ".phl[239]" 0;
+	setAttr ".phl[240]" 0;
+	setAttr ".phl[241]" 0;
+	setAttr ".phl[242]" 0;
+	setAttr ".phl[243]" 0;
+	setAttr ".phl[244]" 0;
+	setAttr ".phl[245]" 0;
+	setAttr ".phl[246]" 0;
+	setAttr ".phl[247]" 0;
+	setAttr ".phl[248]" 0;
+	setAttr ".phl[249]" 0;
+	setAttr ".phl[250]" 0;
+	setAttr ".phl[251]" 0;
+	setAttr ".phl[252]" 0;
+	setAttr ".phl[253]" 0;
+	setAttr ".phl[254]" 0;
+	setAttr ".phl[255]" 0;
+	setAttr ".phl[256]" 0;
+	setAttr ".phl[257]" 0;
+	setAttr ".phl[258]" 0;
+	setAttr ".phl[259]" 0;
+	setAttr ".phl[260]" 0;
+	setAttr ".phl[261]" 0;
+	setAttr ".phl[262]" 0;
+	setAttr ".phl[263]" 0;
+	setAttr ".phl[264]" 0;
+	setAttr ".phl[265]" 0;
+	setAttr ".phl[266]" 0;
+	setAttr ".phl[267]" 0;
+	setAttr ".phl[268]" 0;
+	setAttr ".phl[269]" 0;
+	setAttr ".phl[270]" 0;
+	setAttr ".phl[271]" 0;
+	setAttr ".phl[272]" 0;
+	setAttr ".phl[273]" 0;
+	setAttr ".phl[274]" 0;
+	setAttr ".phl[275]" 0;
+	setAttr ".phl[276]" 0;
+	setAttr ".phl[277]" 0;
+	setAttr ".phl[278]" 0;
+	setAttr ".phl[279]" 0;
+	setAttr ".phl[280]" 0;
+	setAttr ".phl[281]" 0;
+	setAttr ".phl[282]" 0;
+	setAttr ".phl[283]" 0;
+	setAttr ".phl[284]" 0;
+	setAttr ".phl[285]" 0;
+	setAttr ".phl[286]" 0;
+	setAttr ".phl[287]" 0;
+	setAttr ".phl[288]" 0;
+	setAttr ".phl[289]" 0;
+	setAttr ".phl[290]" 0;
+	setAttr ".phl[291]" 0;
+	setAttr ".phl[292]" 0;
+	setAttr ".phl[293]" 0;
+	setAttr ".phl[294]" 0;
+	setAttr ".phl[295]" 0;
+	setAttr ".phl[296]" 0;
+	setAttr ".phl[297]" 0;
+	setAttr ".phl[298]" 0;
+	setAttr ".phl[299]" 0;
+	setAttr ".phl[300]" 0;
+	setAttr ".phl[301]" 0;
+	setAttr ".phl[302]" 0;
+	setAttr ".phl[303]" 0;
+	setAttr ".phl[304]" 0;
+	setAttr ".phl[305]" 0;
+	setAttr ".phl[306]" 0;
+	setAttr ".phl[307]" 0;
+	setAttr ".phl[308]" 0;
+	setAttr ".phl[309]" 0;
+	setAttr ".phl[310]" 0;
+	setAttr ".phl[311]" 0;
+	setAttr ".phl[312]" 0;
+	setAttr ".phl[313]" 0;
+	setAttr ".phl[314]" 0;
+	setAttr ".phl[315]" 0;
+	setAttr ".phl[316]" 0;
+	setAttr ".phl[317]" 0;
+	setAttr ".phl[318]" 0;
+	setAttr ".phl[319]" 0;
+	setAttr ".phl[320]" 0;
+	setAttr ".phl[321]" 0;
+	setAttr ".phl[322]" 0;
+	setAttr ".phl[323]" 0;
+	setAttr ".phl[324]" 0;
+	setAttr ".phl[325]" 0;
+	setAttr ".phl[326]" 0;
+	setAttr ".phl[327]" 0;
+	setAttr ".phl[328]" 0;
+	setAttr ".phl[329]" 0;
+	setAttr ".phl[330]" 0;
+	setAttr ".phl[331]" 0;
+	setAttr ".phl[332]" 0;
+	setAttr ".phl[333]" 0;
+	setAttr ".phl[334]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"Sneaks_012RN"
-		"Sneaks_012RN" 0
-		"Sneaks_012RN" 442
+		"Sneaks_012RN" 48
+		3 "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightArm_parentConstraint1.constraintTranslateX" 
+		"|Sneaks_012:controller_root|Sneaks_012:controller_rightArm.translateX" ""
+		3 "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightArm_parentConstraint1.constraintTranslateY" 
+		"|Sneaks_012:controller_root|Sneaks_012:controller_rightArm.translateY" ""
+		3 "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightArm_parentConstraint1.constraintTranslateZ" 
+		"|Sneaks_012:controller_root|Sneaks_012:controller_rightArm.translateZ" ""
+		3 "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightArm_parentConstraint1.constraintRotateX" 
+		"|Sneaks_012:controller_root|Sneaks_012:controller_rightArm.rotateX" ""
+		3 "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightArm_parentConstraint1.constraintRotateY" 
+		"|Sneaks_012:controller_root|Sneaks_012:controller_rightArm.rotateY" ""
+		3 "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightArm_parentConstraint1.constraintRotateZ" 
+		"|Sneaks_012:controller_root|Sneaks_012:controller_rightArm.rotateZ" ""
+		3 "|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg|Sneaks_012:controller_leftLeg_parentConstraint1.constraintTranslateX" 
+		"|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg.translateX" ""
+		3 "|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg|Sneaks_012:controller_leftLeg_parentConstraint1.constraintTranslateY" 
+		"|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg.translateY" ""
+		3 "|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg|Sneaks_012:controller_leftLeg_parentConstraint1.constraintTranslateZ" 
+		"|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg.translateZ" ""
+		3 "|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg|Sneaks_012:controller_leftLeg_parentConstraint1.constraintRotateX" 
+		"|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg.rotateX" ""
+		3 "|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg|Sneaks_012:controller_leftLeg_parentConstraint1.constraintRotateY" 
+		"|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg.rotateY" ""
+		3 "|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg|Sneaks_012:controller_leftLeg_parentConstraint1.constraintRotateZ" 
+		"|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg.rotateZ" ""
+		3 "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm|Sneaks_012:controller_leftArm_parentConstraint1.constraintTranslateX" 
+		"|Sneaks_012:controller_root|Sneaks_012:controller_leftArm.translateX" ""
+		3 "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm|Sneaks_012:controller_leftArm_parentConstraint1.constraintTranslateY" 
+		"|Sneaks_012:controller_root|Sneaks_012:controller_leftArm.translateY" ""
+		3 "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm|Sneaks_012:controller_leftArm_parentConstraint1.constraintTranslateZ" 
+		"|Sneaks_012:controller_root|Sneaks_012:controller_leftArm.translateZ" ""
+		3 "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm|Sneaks_012:controller_leftArm_parentConstraint1.constraintRotateX" 
+		"|Sneaks_012:controller_root|Sneaks_012:controller_leftArm.rotateX" ""
+		3 "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm|Sneaks_012:controller_leftArm_parentConstraint1.constraintRotateY" 
+		"|Sneaks_012:controller_root|Sneaks_012:controller_leftArm.rotateY" ""
+		3 "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm|Sneaks_012:controller_leftArm_parentConstraint1.constraintRotateZ" 
+		"|Sneaks_012:controller_root|Sneaks_012:controller_leftArm.rotateZ" ""
+		3 "|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg|Sneaks_012:controller_rightLeg_parentConstraint1.constraintTranslateX" 
+		"|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg.translateX" ""
+		3 "|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg|Sneaks_012:controller_rightLeg_parentConstraint1.constraintTranslateY" 
+		"|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg.translateY" ""
+		3 "|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg|Sneaks_012:controller_rightLeg_parentConstraint1.constraintTranslateZ" 
+		"|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg.translateZ" ""
+		3 "|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg|Sneaks_012:controller_rightLeg_parentConstraint1.constraintRotateX" 
+		"|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg.rotateX" ""
+		3 "|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg|Sneaks_012:controller_rightLeg_parentConstraint1.constraintRotateY" 
+		"|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg.rotateY" ""
+		3 "|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg|Sneaks_012:controller_rightLeg_parentConstraint1.constraintRotateZ" 
+		"|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg.rotateZ" ""
+		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg|Sneaks_012:controller_leftLeg_parentConstraint1.constraintTranslateX" 
+		"Sneaks_012RN.placeHolderList[93]" "Sneaks_012:controller_leftLeg.tx"
+		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg|Sneaks_012:controller_leftLeg_parentConstraint1.constraintTranslateY" 
+		"Sneaks_012RN.placeHolderList[94]" "Sneaks_012:controller_leftLeg.ty"
+		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg|Sneaks_012:controller_leftLeg_parentConstraint1.constraintTranslateZ" 
+		"Sneaks_012RN.placeHolderList[95]" "Sneaks_012:controller_leftLeg.tz"
+		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg|Sneaks_012:controller_leftLeg_parentConstraint1.constraintRotateX" 
+		"Sneaks_012RN.placeHolderList[96]" "Sneaks_012:controller_leftLeg.rx"
+		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg|Sneaks_012:controller_leftLeg_parentConstraint1.constraintRotateY" 
+		"Sneaks_012RN.placeHolderList[97]" "Sneaks_012:controller_leftLeg.ry"
+		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg|Sneaks_012:controller_leftLeg_parentConstraint1.constraintRotateZ" 
+		"Sneaks_012RN.placeHolderList[98]" "Sneaks_012:controller_leftLeg.rz"
+		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg|Sneaks_012:controller_rightLeg_parentConstraint1.constraintTranslateX" 
+		"Sneaks_012RN.placeHolderList[111]" "Sneaks_012:controller_rightLeg.tx"
+		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg|Sneaks_012:controller_rightLeg_parentConstraint1.constraintTranslateY" 
+		"Sneaks_012RN.placeHolderList[112]" "Sneaks_012:controller_rightLeg.ty"
+		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg|Sneaks_012:controller_rightLeg_parentConstraint1.constraintTranslateZ" 
+		"Sneaks_012RN.placeHolderList[113]" "Sneaks_012:controller_rightLeg.tz"
+		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg|Sneaks_012:controller_rightLeg_parentConstraint1.constraintRotateX" 
+		"Sneaks_012RN.placeHolderList[114]" "Sneaks_012:controller_rightLeg.rx"
+		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg|Sneaks_012:controller_rightLeg_parentConstraint1.constraintRotateY" 
+		"Sneaks_012RN.placeHolderList[115]" "Sneaks_012:controller_rightLeg.ry"
+		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg|Sneaks_012:controller_rightLeg_parentConstraint1.constraintRotateZ" 
+		"Sneaks_012RN.placeHolderList[116]" "Sneaks_012:controller_rightLeg.rz"
+		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm|Sneaks_012:controller_leftArm_parentConstraint1.constraintRotateX" 
+		"Sneaks_012RN.placeHolderList[129]" "Sneaks_012:controller_leftArm.rx"
+		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm|Sneaks_012:controller_leftArm_parentConstraint1.constraintRotateY" 
+		"Sneaks_012RN.placeHolderList[130]" "Sneaks_012:controller_leftArm.ry"
+		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm|Sneaks_012:controller_leftArm_parentConstraint1.constraintRotateZ" 
+		"Sneaks_012RN.placeHolderList[131]" "Sneaks_012:controller_leftArm.rz"
+		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm|Sneaks_012:controller_leftArm_parentConstraint1.constraintTranslateX" 
+		"Sneaks_012RN.placeHolderList[132]" "Sneaks_012:controller_leftArm.tx"
+		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm|Sneaks_012:controller_leftArm_parentConstraint1.constraintTranslateY" 
+		"Sneaks_012RN.placeHolderList[133]" "Sneaks_012:controller_leftArm.ty"
+		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm|Sneaks_012:controller_leftArm_parentConstraint1.constraintTranslateZ" 
+		"Sneaks_012RN.placeHolderList[134]" "Sneaks_012:controller_leftArm.tz"
+		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightArm_parentConstraint1.constraintTranslateX" 
+		"Sneaks_012RN.placeHolderList[157]" "Sneaks_012:controller_rightArm.tx"
+		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightArm_parentConstraint1.constraintTranslateY" 
+		"Sneaks_012RN.placeHolderList[158]" "Sneaks_012:controller_rightArm.ty"
+		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightArm_parentConstraint1.constraintTranslateZ" 
+		"Sneaks_012RN.placeHolderList[159]" "Sneaks_012:controller_rightArm.tz"
+		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightArm_parentConstraint1.constraintRotateX" 
+		"Sneaks_012RN.placeHolderList[160]" "Sneaks_012:controller_rightArm.rx"
+		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightArm_parentConstraint1.constraintRotateY" 
+		"Sneaks_012RN.placeHolderList[161]" "Sneaks_012:controller_rightArm.ry"
+		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightArm_parentConstraint1.constraintRotateZ" 
+		"Sneaks_012RN.placeHolderList[162]" "Sneaks_012:controller_rightArm.rz"
+		"Sneaks_012RN" 394
 		1 |Sneaks_012:controller_root|Sneaks_012:controller_leftLeg "blendParent1" 
 		"blendParent1" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
 		1 |Sneaks_012:controller_root|Sneaks_012:controller_rightLeg "blendParent1" 
@@ -837,7 +933,7 @@ createNode reference -n "Sneaks_012RN";
 		
 		2 "|Sneaks_012:left_wrist" "translate" " -type \"double3\" 21.458607 10.773662 -13.105235"
 		
-		2 "|Sneaks_012:left_wrist" "rotate" " -type \"double3\" -0.224402 75.045787 44.165884"
+		2 "|Sneaks_012:left_wrist" "rotate" " -type \"double3\" -0.224403 75.045787 44.165883"
 		
 		2 "|Sneaks_012:leg_right" "translate" " -type \"double3\" 20.011653 5.408774 -15.566462"
 		
@@ -924,446 +1020,350 @@ createNode reference -n "Sneaks_012RN";
 		2 "|Sneaks_012:RightThumb" "rotateY" " -av"
 		2 "|Sneaks_012:RightThumb" "rotateZ" " -av"
 		2 "Sneaks_012:bandana" "visibility" " 0"
-		3 "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightArm_parentConstraint1.constraintTranslateX" 
-		"|Sneaks_012:controller_root|Sneaks_012:controller_rightArm.translateX" ""
-		3 "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightArm_parentConstraint1.constraintTranslateY" 
-		"|Sneaks_012:controller_root|Sneaks_012:controller_rightArm.translateY" ""
-		3 "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightArm_parentConstraint1.constraintTranslateZ" 
-		"|Sneaks_012:controller_root|Sneaks_012:controller_rightArm.translateZ" ""
-		3 "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightArm_parentConstraint1.constraintRotateX" 
-		"|Sneaks_012:controller_root|Sneaks_012:controller_rightArm.rotateX" ""
-		3 "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightArm_parentConstraint1.constraintRotateY" 
-		"|Sneaks_012:controller_root|Sneaks_012:controller_rightArm.rotateY" ""
-		3 "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightArm_parentConstraint1.constraintRotateZ" 
-		"|Sneaks_012:controller_root|Sneaks_012:controller_rightArm.rotateZ" ""
-		3 "|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg|Sneaks_012:controller_leftLeg_parentConstraint1.constraintTranslateX" 
-		"|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg.translateX" ""
-		3 "|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg|Sneaks_012:controller_leftLeg_parentConstraint1.constraintTranslateY" 
-		"|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg.translateY" ""
-		3 "|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg|Sneaks_012:controller_leftLeg_parentConstraint1.constraintTranslateZ" 
-		"|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg.translateZ" ""
-		3 "|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg|Sneaks_012:controller_leftLeg_parentConstraint1.constraintRotateX" 
-		"|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg.rotateX" ""
-		3 "|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg|Sneaks_012:controller_leftLeg_parentConstraint1.constraintRotateY" 
-		"|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg.rotateY" ""
-		3 "|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg|Sneaks_012:controller_leftLeg_parentConstraint1.constraintRotateZ" 
-		"|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg.rotateZ" ""
-		3 "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm|Sneaks_012:controller_leftArm_parentConstraint1.constraintTranslateX" 
-		"|Sneaks_012:controller_root|Sneaks_012:controller_leftArm.translateX" ""
-		3 "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm|Sneaks_012:controller_leftArm_parentConstraint1.constraintTranslateY" 
-		"|Sneaks_012:controller_root|Sneaks_012:controller_leftArm.translateY" ""
-		3 "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm|Sneaks_012:controller_leftArm_parentConstraint1.constraintTranslateZ" 
-		"|Sneaks_012:controller_root|Sneaks_012:controller_leftArm.translateZ" ""
-		3 "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm|Sneaks_012:controller_leftArm_parentConstraint1.constraintRotateX" 
-		"|Sneaks_012:controller_root|Sneaks_012:controller_leftArm.rotateX" ""
-		3 "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm|Sneaks_012:controller_leftArm_parentConstraint1.constraintRotateY" 
-		"|Sneaks_012:controller_root|Sneaks_012:controller_leftArm.rotateY" ""
-		3 "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm|Sneaks_012:controller_leftArm_parentConstraint1.constraintRotateZ" 
-		"|Sneaks_012:controller_root|Sneaks_012:controller_leftArm.rotateZ" ""
-		3 "|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg|Sneaks_012:controller_rightLeg_parentConstraint1.constraintTranslateX" 
-		"|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg.translateX" ""
-		3 "|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg|Sneaks_012:controller_rightLeg_parentConstraint1.constraintTranslateY" 
-		"|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg.translateY" ""
-		3 "|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg|Sneaks_012:controller_rightLeg_parentConstraint1.constraintTranslateZ" 
-		"|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg.translateZ" ""
-		3 "|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg|Sneaks_012:controller_rightLeg_parentConstraint1.constraintRotateX" 
-		"|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg.rotateX" ""
-		3 "|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg|Sneaks_012:controller_rightLeg_parentConstraint1.constraintRotateY" 
-		"|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg.rotateY" ""
-		3 "|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg|Sneaks_012:controller_rightLeg_parentConstraint1.constraintRotateZ" 
-		"|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg.rotateZ" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root.translateX" "Sneaks_012RN.placeHolderList[1]" 
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root.translateX" "Sneaks_012RN.placeHolderList[163]" 
 		""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root.translateY" "Sneaks_012RN.placeHolderList[2]" 
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root.translateY" "Sneaks_012RN.placeHolderList[164]" 
 		""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root.translateZ" "Sneaks_012RN.placeHolderList[3]" 
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root.translateZ" "Sneaks_012RN.placeHolderList[165]" 
 		""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root.rotateX" "Sneaks_012RN.placeHolderList[4]" 
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root.rotateX" "Sneaks_012RN.placeHolderList[166]" 
 		""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root.rotateY" "Sneaks_012RN.placeHolderList[5]" 
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root.rotateY" "Sneaks_012RN.placeHolderList[167]" 
 		""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root.rotateZ" "Sneaks_012RN.placeHolderList[6]" 
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root.rotateZ" "Sneaks_012RN.placeHolderList[168]" 
 		""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root.scaleX" "Sneaks_012RN.placeHolderList[7]" 
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root.scaleX" "Sneaks_012RN.placeHolderList[169]" 
 		""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root.scaleY" "Sneaks_012RN.placeHolderList[8]" 
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root.scaleY" "Sneaks_012RN.placeHolderList[170]" 
 		""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root.scaleZ" "Sneaks_012RN.placeHolderList[9]" 
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root.scaleZ" "Sneaks_012RN.placeHolderList[171]" 
 		""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root.visibility" "Sneaks_012RN.placeHolderList[10]" 
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root.visibility" "Sneaks_012RN.placeHolderList[172]" 
 		""
 		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine3.translateX" 
-		"Sneaks_012RN.placeHolderList[11]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine3.translateY" 
-		"Sneaks_012RN.placeHolderList[12]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine3.translateZ" 
-		"Sneaks_012RN.placeHolderList[13]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine3.rotateX" 
-		"Sneaks_012RN.placeHolderList[14]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine3.rotateY" 
-		"Sneaks_012RN.placeHolderList[15]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine3.rotateZ" 
-		"Sneaks_012RN.placeHolderList[16]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine3.scaleX" 
-		"Sneaks_012RN.placeHolderList[17]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine3.scaleY" 
-		"Sneaks_012RN.placeHolderList[18]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine3.scaleZ" 
-		"Sneaks_012RN.placeHolderList[19]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine3.visibility" 
-		"Sneaks_012RN.placeHolderList[20]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine2.translateX" 
-		"Sneaks_012RN.placeHolderList[21]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine2.translateY" 
-		"Sneaks_012RN.placeHolderList[22]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine2.translateZ" 
-		"Sneaks_012RN.placeHolderList[23]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine2.rotateX" 
-		"Sneaks_012RN.placeHolderList[24]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine2.rotateY" 
-		"Sneaks_012RN.placeHolderList[25]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine2.rotateZ" 
-		"Sneaks_012RN.placeHolderList[26]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine2.scaleX" 
-		"Sneaks_012RN.placeHolderList[27]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine2.scaleY" 
-		"Sneaks_012RN.placeHolderList[28]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine2.scaleZ" 
-		"Sneaks_012RN.placeHolderList[29]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine2.visibility" 
-		"Sneaks_012RN.placeHolderList[30]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine1.translateX" 
-		"Sneaks_012RN.placeHolderList[31]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine1.translateY" 
-		"Sneaks_012RN.placeHolderList[32]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine1.translateZ" 
-		"Sneaks_012RN.placeHolderList[33]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine1.rotateX" 
-		"Sneaks_012RN.placeHolderList[34]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine1.rotateY" 
-		"Sneaks_012RN.placeHolderList[35]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine1.rotateZ" 
-		"Sneaks_012RN.placeHolderList[36]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine1.scaleX" 
-		"Sneaks_012RN.placeHolderList[37]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine1.scaleY" 
-		"Sneaks_012RN.placeHolderList[38]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine1.scaleZ" 
-		"Sneaks_012RN.placeHolderList[39]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine1.visibility" 
-		"Sneaks_012RN.placeHolderList[40]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_shoulder.translateX" 
-		"Sneaks_012RN.placeHolderList[41]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_shoulder.translateY" 
-		"Sneaks_012RN.placeHolderList[42]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_shoulder.translateZ" 
-		"Sneaks_012RN.placeHolderList[43]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_shoulder.rotateX" 
-		"Sneaks_012RN.placeHolderList[44]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_shoulder.rotateY" 
-		"Sneaks_012RN.placeHolderList[45]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_shoulder.rotateZ" 
-		"Sneaks_012RN.placeHolderList[46]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_shoulder.scaleX" 
-		"Sneaks_012RN.placeHolderList[47]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_shoulder.scaleY" 
-		"Sneaks_012RN.placeHolderList[48]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_shoulder.scaleZ" 
-		"Sneaks_012RN.placeHolderList[49]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_shoulder.visibility" 
-		"Sneaks_012RN.placeHolderList[50]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_head.translateX" 
-		"Sneaks_012RN.placeHolderList[51]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_head.translateY" 
-		"Sneaks_012RN.placeHolderList[52]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_head.translateZ" 
-		"Sneaks_012RN.placeHolderList[53]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_head.rotateX" 
-		"Sneaks_012RN.placeHolderList[54]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_head.rotateY" 
-		"Sneaks_012RN.placeHolderList[55]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_head.rotateZ" 
-		"Sneaks_012RN.placeHolderList[56]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_head.scaleX" 
-		"Sneaks_012RN.placeHolderList[57]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_head.scaleY" 
-		"Sneaks_012RN.placeHolderList[58]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_head.scaleZ" 
-		"Sneaks_012RN.placeHolderList[59]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_head.visibility" 
-		"Sneaks_012RN.placeHolderList[60]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_hip.translateY" 
-		"Sneaks_012RN.placeHolderList[61]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_hip.translateZ" 
-		"Sneaks_012RN.placeHolderList[62]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_hip.translateX" 
-		"Sneaks_012RN.placeHolderList[63]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_hip.rotateX" 
-		"Sneaks_012RN.placeHolderList[64]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_hip.rotateY" 
-		"Sneaks_012RN.placeHolderList[65]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_hip.rotateZ" 
-		"Sneaks_012RN.placeHolderList[66]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_hip.scaleX" 
-		"Sneaks_012RN.placeHolderList[67]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_hip.scaleY" 
-		"Sneaks_012RN.placeHolderList[68]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_hip.scaleZ" 
-		"Sneaks_012RN.placeHolderList[69]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_hip.visibility" 
-		"Sneaks_012RN.placeHolderList[70]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:RightArm.translateX" 
-		"Sneaks_012RN.placeHolderList[71]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:RightArm.translateY" 
-		"Sneaks_012RN.placeHolderList[72]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:RightArm.translateZ" 
-		"Sneaks_012RN.placeHolderList[73]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:RightArm.visibility" 
-		"Sneaks_012RN.placeHolderList[74]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:RightArm.rotateX" 
-		"Sneaks_012RN.placeHolderList[75]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:RightArm.rotateY" 
-		"Sneaks_012RN.placeHolderList[76]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:RightArm.rotateZ" 
-		"Sneaks_012RN.placeHolderList[77]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:RightArm.scaleX" 
-		"Sneaks_012RN.placeHolderList[78]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:RightArm.scaleY" 
-		"Sneaks_012RN.placeHolderList[79]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:RightArm.scaleZ" 
-		"Sneaks_012RN.placeHolderList[80]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg.translateX" 
-		"Sneaks_012RN.placeHolderList[81]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg.translateY" 
-		"Sneaks_012RN.placeHolderList[82]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg.translateZ" 
-		"Sneaks_012RN.placeHolderList[83]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg.rotateX" 
-		"Sneaks_012RN.placeHolderList[84]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg.rotateY" 
-		"Sneaks_012RN.placeHolderList[85]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg.rotateZ" 
-		"Sneaks_012RN.placeHolderList[86]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg.blendParent1" 
-		"Sneaks_012RN.placeHolderList[87]" ""
-		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg.blendParent1" 
-		"Sneaks_012RN.placeHolderList[88]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg.visibility" 
-		"Sneaks_012RN.placeHolderList[89]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg.scaleX" 
-		"Sneaks_012RN.placeHolderList[90]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg.scaleY" 
-		"Sneaks_012RN.placeHolderList[91]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg.scaleZ" 
-		"Sneaks_012RN.placeHolderList[92]" ""
-		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg|Sneaks_012:controller_leftLeg_parentConstraint1.constraintTranslateX" 
-		"Sneaks_012RN.placeHolderList[93]" "Sneaks_012:controller_leftLeg.tx"
-		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg|Sneaks_012:controller_leftLeg_parentConstraint1.constraintTranslateY" 
-		"Sneaks_012RN.placeHolderList[94]" "Sneaks_012:controller_leftLeg.ty"
-		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg|Sneaks_012:controller_leftLeg_parentConstraint1.constraintTranslateZ" 
-		"Sneaks_012RN.placeHolderList[95]" "Sneaks_012:controller_leftLeg.tz"
-		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg|Sneaks_012:controller_leftLeg_parentConstraint1.constraintRotateX" 
-		"Sneaks_012RN.placeHolderList[96]" "Sneaks_012:controller_leftLeg.rx"
-		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg|Sneaks_012:controller_leftLeg_parentConstraint1.constraintRotateY" 
-		"Sneaks_012RN.placeHolderList[97]" "Sneaks_012:controller_leftLeg.ry"
-		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg|Sneaks_012:controller_leftLeg_parentConstraint1.constraintRotateZ" 
-		"Sneaks_012RN.placeHolderList[98]" "Sneaks_012:controller_leftLeg.rz"
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg.translateX" 
-		"Sneaks_012RN.placeHolderList[99]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg.translateY" 
-		"Sneaks_012RN.placeHolderList[100]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg.translateZ" 
-		"Sneaks_012RN.placeHolderList[101]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg.rotateX" 
-		"Sneaks_012RN.placeHolderList[102]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg.rotateY" 
-		"Sneaks_012RN.placeHolderList[103]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg.rotateZ" 
-		"Sneaks_012RN.placeHolderList[104]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg.scaleX" 
-		"Sneaks_012RN.placeHolderList[105]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg.scaleY" 
-		"Sneaks_012RN.placeHolderList[106]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg.scaleZ" 
-		"Sneaks_012RN.placeHolderList[107]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg.blendParent1" 
-		"Sneaks_012RN.placeHolderList[108]" ""
-		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg.blendParent1" 
-		"Sneaks_012RN.placeHolderList[109]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg.visibility" 
-		"Sneaks_012RN.placeHolderList[110]" ""
-		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg|Sneaks_012:controller_rightLeg_parentConstraint1.constraintTranslateX" 
-		"Sneaks_012RN.placeHolderList[111]" "Sneaks_012:controller_rightLeg.tx"
-		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg|Sneaks_012:controller_rightLeg_parentConstraint1.constraintTranslateY" 
-		"Sneaks_012RN.placeHolderList[112]" "Sneaks_012:controller_rightLeg.ty"
-		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg|Sneaks_012:controller_rightLeg_parentConstraint1.constraintTranslateZ" 
-		"Sneaks_012RN.placeHolderList[113]" "Sneaks_012:controller_rightLeg.tz"
-		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg|Sneaks_012:controller_rightLeg_parentConstraint1.constraintRotateX" 
-		"Sneaks_012RN.placeHolderList[114]" "Sneaks_012:controller_rightLeg.rx"
-		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg|Sneaks_012:controller_rightLeg_parentConstraint1.constraintRotateY" 
-		"Sneaks_012RN.placeHolderList[115]" "Sneaks_012:controller_rightLeg.ry"
-		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg|Sneaks_012:controller_rightLeg_parentConstraint1.constraintRotateZ" 
-		"Sneaks_012RN.placeHolderList[116]" "Sneaks_012:controller_rightLeg.rz"
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm.rotateX" 
-		"Sneaks_012RN.placeHolderList[117]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm.rotateY" 
-		"Sneaks_012RN.placeHolderList[118]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm.rotateZ" 
-		"Sneaks_012RN.placeHolderList[119]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm.translateX" 
-		"Sneaks_012RN.placeHolderList[120]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm.translateY" 
-		"Sneaks_012RN.placeHolderList[121]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm.translateZ" 
-		"Sneaks_012RN.placeHolderList[122]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm.blendParent1" 
-		"Sneaks_012RN.placeHolderList[123]" ""
-		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm.blendParent1" 
-		"Sneaks_012RN.placeHolderList[124]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm.visibility" 
-		"Sneaks_012RN.placeHolderList[125]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm.scaleX" 
-		"Sneaks_012RN.placeHolderList[126]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm.scaleY" 
-		"Sneaks_012RN.placeHolderList[127]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm.scaleZ" 
-		"Sneaks_012RN.placeHolderList[128]" ""
-		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm|Sneaks_012:controller_leftArm_parentConstraint1.constraintRotateX" 
-		"Sneaks_012RN.placeHolderList[129]" "Sneaks_012:controller_leftArm.rx"
-		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm|Sneaks_012:controller_leftArm_parentConstraint1.constraintRotateY" 
-		"Sneaks_012RN.placeHolderList[130]" "Sneaks_012:controller_leftArm.ry"
-		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm|Sneaks_012:controller_leftArm_parentConstraint1.constraintRotateZ" 
-		"Sneaks_012RN.placeHolderList[131]" "Sneaks_012:controller_leftArm.rz"
-		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm|Sneaks_012:controller_leftArm_parentConstraint1.constraintTranslateX" 
-		"Sneaks_012RN.placeHolderList[132]" "Sneaks_012:controller_leftArm.tx"
-		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm|Sneaks_012:controller_leftArm_parentConstraint1.constraintTranslateY" 
-		"Sneaks_012RN.placeHolderList[133]" "Sneaks_012:controller_leftArm.ty"
-		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm|Sneaks_012:controller_leftArm_parentConstraint1.constraintTranslateZ" 
-		"Sneaks_012RN.placeHolderList[134]" "Sneaks_012:controller_leftArm.tz"
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm|Sneaks_012:controller_leftWrist.translateX" 
-		"Sneaks_012RN.placeHolderList[135]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm|Sneaks_012:controller_leftWrist.translateY" 
-		"Sneaks_012RN.placeHolderList[136]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm|Sneaks_012:controller_leftWrist.translateZ" 
-		"Sneaks_012RN.placeHolderList[137]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm|Sneaks_012:controller_leftWrist.rotateX" 
-		"Sneaks_012RN.placeHolderList[138]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm|Sneaks_012:controller_leftWrist.rotateY" 
-		"Sneaks_012RN.placeHolderList[139]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm|Sneaks_012:controller_leftWrist.rotateZ" 
-		"Sneaks_012RN.placeHolderList[140]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm|Sneaks_012:controller_leftWrist.scaleX" 
-		"Sneaks_012RN.placeHolderList[141]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm|Sneaks_012:controller_leftWrist.scaleY" 
-		"Sneaks_012RN.placeHolderList[142]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm|Sneaks_012:controller_leftWrist.scaleZ" 
-		"Sneaks_012RN.placeHolderList[143]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm|Sneaks_012:controller_leftWrist.visibility" 
-		"Sneaks_012RN.placeHolderList[144]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm.translateX" 
-		"Sneaks_012RN.placeHolderList[145]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm.translateY" 
-		"Sneaks_012RN.placeHolderList[146]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm.translateZ" 
-		"Sneaks_012RN.placeHolderList[147]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm.rotateX" 
-		"Sneaks_012RN.placeHolderList[148]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm.rotateY" 
-		"Sneaks_012RN.placeHolderList[149]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm.rotateZ" 
-		"Sneaks_012RN.placeHolderList[150]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm.scaleX" 
-		"Sneaks_012RN.placeHolderList[151]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm.scaleY" 
-		"Sneaks_012RN.placeHolderList[152]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm.scaleZ" 
-		"Sneaks_012RN.placeHolderList[153]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm.blendParent1" 
-		"Sneaks_012RN.placeHolderList[154]" ""
-		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm.blendParent1" 
-		"Sneaks_012RN.placeHolderList[155]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm.visibility" 
-		"Sneaks_012RN.placeHolderList[156]" ""
-		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightArm_parentConstraint1.constraintTranslateX" 
-		"Sneaks_012RN.placeHolderList[157]" "Sneaks_012:controller_rightArm.tx"
-		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightArm_parentConstraint1.constraintTranslateY" 
-		"Sneaks_012RN.placeHolderList[158]" "Sneaks_012:controller_rightArm.ty"
-		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightArm_parentConstraint1.constraintTranslateZ" 
-		"Sneaks_012RN.placeHolderList[159]" "Sneaks_012:controller_rightArm.tz"
-		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightArm_parentConstraint1.constraintRotateX" 
-		"Sneaks_012RN.placeHolderList[160]" "Sneaks_012:controller_rightArm.rx"
-		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightArm_parentConstraint1.constraintRotateY" 
-		"Sneaks_012RN.placeHolderList[161]" "Sneaks_012:controller_rightArm.ry"
-		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightArm_parentConstraint1.constraintRotateZ" 
-		"Sneaks_012RN.placeHolderList[162]" "Sneaks_012:controller_rightArm.rz"
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist.translateX" 
-		"Sneaks_012RN.placeHolderList[163]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist.translateY" 
-		"Sneaks_012RN.placeHolderList[164]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist.translateZ" 
-		"Sneaks_012RN.placeHolderList[165]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist.rotateX" 
-		"Sneaks_012RN.placeHolderList[166]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist.rotateY" 
-		"Sneaks_012RN.placeHolderList[167]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist.rotateZ" 
-		"Sneaks_012RN.placeHolderList[168]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist.scaleX" 
-		"Sneaks_012RN.placeHolderList[169]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist.scaleY" 
-		"Sneaks_012RN.placeHolderList[170]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist.scaleZ" 
-		"Sneaks_012RN.placeHolderList[171]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist.visibility" 
-		"Sneaks_012RN.placeHolderList[172]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist|Sneaks_012:controller_rightPinky.translateY" 
 		"Sneaks_012RN.placeHolderList[173]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist|Sneaks_012:controller_rightPinky.translateZ" 
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine3.translateY" 
 		"Sneaks_012RN.placeHolderList[174]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist|Sneaks_012:controller_rightPinky.scaleX" 
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine3.translateZ" 
 		"Sneaks_012RN.placeHolderList[175]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist|Sneaks_012:controller_rightPinky.scaleY" 
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine3.rotateX" 
 		"Sneaks_012RN.placeHolderList[176]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist|Sneaks_012:controller_rightPinky.scaleZ" 
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine3.rotateY" 
 		"Sneaks_012RN.placeHolderList[177]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist|Sneaks_012:controller_rightPinky.visibility" 
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine3.rotateZ" 
 		"Sneaks_012RN.placeHolderList[178]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist|Sneaks_012:controller_rightRing.translateY" 
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine3.scaleX" 
 		"Sneaks_012RN.placeHolderList[179]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist|Sneaks_012:controller_rightRing.translateZ" 
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine3.scaleY" 
 		"Sneaks_012RN.placeHolderList[180]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist|Sneaks_012:controller_rightRing.scaleX" 
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine3.scaleZ" 
 		"Sneaks_012RN.placeHolderList[181]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist|Sneaks_012:controller_rightRing.scaleY" 
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine3.visibility" 
 		"Sneaks_012RN.placeHolderList[182]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist|Sneaks_012:controller_rightRing.scaleZ" 
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine2.translateX" 
 		"Sneaks_012RN.placeHolderList[183]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist|Sneaks_012:controller_rightRing.visibility" 
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine2.translateY" 
 		"Sneaks_012RN.placeHolderList[184]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist|Sneaks_012:controller_rightMiddle.translateY" 
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine2.translateZ" 
 		"Sneaks_012RN.placeHolderList[185]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist|Sneaks_012:controller_rightMiddle.translateZ" 
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine2.rotateX" 
 		"Sneaks_012RN.placeHolderList[186]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist|Sneaks_012:controller_rightMiddle.scaleX" 
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine2.rotateY" 
 		"Sneaks_012RN.placeHolderList[187]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist|Sneaks_012:controller_rightMiddle.scaleY" 
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine2.rotateZ" 
 		"Sneaks_012RN.placeHolderList[188]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist|Sneaks_012:controller_rightMiddle.scaleZ" 
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine2.scaleX" 
 		"Sneaks_012RN.placeHolderList[189]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist|Sneaks_012:controller_rightMiddle.visibility" 
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine2.scaleY" 
 		"Sneaks_012RN.placeHolderList[190]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist|Sneaks_012:controller_rightIndex.translateY" 
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine2.scaleZ" 
 		"Sneaks_012RN.placeHolderList[191]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist|Sneaks_012:controller_rightIndex.translateZ" 
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine2.visibility" 
 		"Sneaks_012RN.placeHolderList[192]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist|Sneaks_012:controller_rightIndex.scaleX" 
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine1.translateX" 
 		"Sneaks_012RN.placeHolderList[193]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist|Sneaks_012:controller_rightIndex.scaleY" 
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine1.translateY" 
 		"Sneaks_012RN.placeHolderList[194]" ""
-		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist|Sneaks_012:controller_rightIndex.scaleZ" 
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine1.translateZ" 
 		"Sneaks_012RN.placeHolderList[195]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine1.rotateX" 
+		"Sneaks_012RN.placeHolderList[196]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine1.rotateY" 
+		"Sneaks_012RN.placeHolderList[197]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine1.rotateZ" 
+		"Sneaks_012RN.placeHolderList[198]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine1.scaleX" 
+		"Sneaks_012RN.placeHolderList[199]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine1.scaleY" 
+		"Sneaks_012RN.placeHolderList[200]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine1.scaleZ" 
+		"Sneaks_012RN.placeHolderList[201]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_spine1.visibility" 
+		"Sneaks_012RN.placeHolderList[202]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_shoulder.translateX" 
+		"Sneaks_012RN.placeHolderList[203]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_shoulder.translateY" 
+		"Sneaks_012RN.placeHolderList[204]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_shoulder.translateZ" 
+		"Sneaks_012RN.placeHolderList[205]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_shoulder.rotateX" 
+		"Sneaks_012RN.placeHolderList[206]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_shoulder.rotateY" 
+		"Sneaks_012RN.placeHolderList[207]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_shoulder.rotateZ" 
+		"Sneaks_012RN.placeHolderList[208]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_shoulder.scaleX" 
+		"Sneaks_012RN.placeHolderList[209]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_shoulder.scaleY" 
+		"Sneaks_012RN.placeHolderList[210]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_shoulder.scaleZ" 
+		"Sneaks_012RN.placeHolderList[211]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_shoulder.visibility" 
+		"Sneaks_012RN.placeHolderList[212]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_head.translateX" 
+		"Sneaks_012RN.placeHolderList[213]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_head.translateY" 
+		"Sneaks_012RN.placeHolderList[214]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_head.translateZ" 
+		"Sneaks_012RN.placeHolderList[215]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_head.rotateX" 
+		"Sneaks_012RN.placeHolderList[216]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_head.rotateY" 
+		"Sneaks_012RN.placeHolderList[217]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_head.rotateZ" 
+		"Sneaks_012RN.placeHolderList[218]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_head.scaleX" 
+		"Sneaks_012RN.placeHolderList[219]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_head.scaleY" 
+		"Sneaks_012RN.placeHolderList[220]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_head.scaleZ" 
+		"Sneaks_012RN.placeHolderList[221]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_head.visibility" 
+		"Sneaks_012RN.placeHolderList[222]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_hip.translateY" 
+		"Sneaks_012RN.placeHolderList[223]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_hip.translateZ" 
+		"Sneaks_012RN.placeHolderList[224]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_hip.translateX" 
+		"Sneaks_012RN.placeHolderList[225]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_hip.rotateX" 
+		"Sneaks_012RN.placeHolderList[226]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_hip.rotateY" 
+		"Sneaks_012RN.placeHolderList[227]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_hip.rotateZ" 
+		"Sneaks_012RN.placeHolderList[228]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_hip.scaleX" 
+		"Sneaks_012RN.placeHolderList[229]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_hip.scaleY" 
+		"Sneaks_012RN.placeHolderList[230]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_hip.scaleZ" 
+		"Sneaks_012RN.placeHolderList[231]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_COG|Sneaks_012:controller_hip.visibility" 
+		"Sneaks_012RN.placeHolderList[232]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:RightArm.translateX" 
+		"Sneaks_012RN.placeHolderList[233]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:RightArm.translateY" 
+		"Sneaks_012RN.placeHolderList[234]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:RightArm.translateZ" 
+		"Sneaks_012RN.placeHolderList[235]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:RightArm.visibility" 
+		"Sneaks_012RN.placeHolderList[236]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:RightArm.rotateX" 
+		"Sneaks_012RN.placeHolderList[237]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:RightArm.rotateY" 
+		"Sneaks_012RN.placeHolderList[238]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:RightArm.rotateZ" 
+		"Sneaks_012RN.placeHolderList[239]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:RightArm.scaleX" 
+		"Sneaks_012RN.placeHolderList[240]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:RightArm.scaleY" 
+		"Sneaks_012RN.placeHolderList[241]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:RightArm.scaleZ" 
+		"Sneaks_012RN.placeHolderList[242]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg.translateX" 
+		"Sneaks_012RN.placeHolderList[243]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg.translateY" 
+		"Sneaks_012RN.placeHolderList[244]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg.translateZ" 
+		"Sneaks_012RN.placeHolderList[245]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg.blendParent1" 
+		"Sneaks_012RN.placeHolderList[246]" ""
+		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg.blendParent1" 
+		"Sneaks_012RN.placeHolderList[247]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg.rotateX" 
+		"Sneaks_012RN.placeHolderList[248]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg.rotateY" 
+		"Sneaks_012RN.placeHolderList[249]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg.rotateZ" 
+		"Sneaks_012RN.placeHolderList[250]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg.visibility" 
+		"Sneaks_012RN.placeHolderList[251]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg.scaleX" 
+		"Sneaks_012RN.placeHolderList[252]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg.scaleY" 
+		"Sneaks_012RN.placeHolderList[253]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftLeg.scaleZ" 
+		"Sneaks_012RN.placeHolderList[254]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg.translateX" 
+		"Sneaks_012RN.placeHolderList[255]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg.translateY" 
+		"Sneaks_012RN.placeHolderList[256]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg.translateZ" 
+		"Sneaks_012RN.placeHolderList[257]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg.rotateX" 
+		"Sneaks_012RN.placeHolderList[258]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg.rotateY" 
+		"Sneaks_012RN.placeHolderList[259]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg.rotateZ" 
+		"Sneaks_012RN.placeHolderList[260]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg.scaleX" 
+		"Sneaks_012RN.placeHolderList[261]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg.scaleY" 
+		"Sneaks_012RN.placeHolderList[262]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg.scaleZ" 
+		"Sneaks_012RN.placeHolderList[263]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg.blendParent1" 
+		"Sneaks_012RN.placeHolderList[264]" ""
+		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg.blendParent1" 
+		"Sneaks_012RN.placeHolderList[265]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightLeg.visibility" 
+		"Sneaks_012RN.placeHolderList[266]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm.translateX" 
+		"Sneaks_012RN.placeHolderList[267]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm.translateY" 
+		"Sneaks_012RN.placeHolderList[268]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm.translateZ" 
+		"Sneaks_012RN.placeHolderList[269]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm.blendParent1" 
+		"Sneaks_012RN.placeHolderList[270]" ""
+		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm.blendParent1" 
+		"Sneaks_012RN.placeHolderList[271]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm.rotateX" 
+		"Sneaks_012RN.placeHolderList[272]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm.rotateY" 
+		"Sneaks_012RN.placeHolderList[273]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm.rotateZ" 
+		"Sneaks_012RN.placeHolderList[274]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm.visibility" 
+		"Sneaks_012RN.placeHolderList[275]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm.scaleX" 
+		"Sneaks_012RN.placeHolderList[276]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm.scaleY" 
+		"Sneaks_012RN.placeHolderList[277]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm.scaleZ" 
+		"Sneaks_012RN.placeHolderList[278]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm|Sneaks_012:controller_leftWrist.translateX" 
+		"Sneaks_012RN.placeHolderList[279]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm|Sneaks_012:controller_leftWrist.translateY" 
+		"Sneaks_012RN.placeHolderList[280]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm|Sneaks_012:controller_leftWrist.translateZ" 
+		"Sneaks_012RN.placeHolderList[281]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm|Sneaks_012:controller_leftWrist.rotateX" 
+		"Sneaks_012RN.placeHolderList[282]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm|Sneaks_012:controller_leftWrist.rotateY" 
+		"Sneaks_012RN.placeHolderList[283]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm|Sneaks_012:controller_leftWrist.rotateZ" 
+		"Sneaks_012RN.placeHolderList[284]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm|Sneaks_012:controller_leftWrist.scaleX" 
+		"Sneaks_012RN.placeHolderList[285]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm|Sneaks_012:controller_leftWrist.scaleY" 
+		"Sneaks_012RN.placeHolderList[286]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm|Sneaks_012:controller_leftWrist.scaleZ" 
+		"Sneaks_012RN.placeHolderList[287]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_leftArm|Sneaks_012:controller_leftWrist.visibility" 
+		"Sneaks_012RN.placeHolderList[288]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm.translateX" 
+		"Sneaks_012RN.placeHolderList[289]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm.translateY" 
+		"Sneaks_012RN.placeHolderList[290]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm.translateZ" 
+		"Sneaks_012RN.placeHolderList[291]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm.rotateX" 
+		"Sneaks_012RN.placeHolderList[292]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm.rotateY" 
+		"Sneaks_012RN.placeHolderList[293]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm.rotateZ" 
+		"Sneaks_012RN.placeHolderList[294]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm.scaleX" 
+		"Sneaks_012RN.placeHolderList[295]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm.scaleY" 
+		"Sneaks_012RN.placeHolderList[296]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm.scaleZ" 
+		"Sneaks_012RN.placeHolderList[297]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm.blendParent1" 
+		"Sneaks_012RN.placeHolderList[298]" ""
+		5 3 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm.blendParent1" 
+		"Sneaks_012RN.placeHolderList[299]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm.visibility" 
+		"Sneaks_012RN.placeHolderList[300]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist.translateX" 
+		"Sneaks_012RN.placeHolderList[301]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist.translateY" 
+		"Sneaks_012RN.placeHolderList[302]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist.translateZ" 
+		"Sneaks_012RN.placeHolderList[303]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist.rotateX" 
+		"Sneaks_012RN.placeHolderList[304]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist.rotateY" 
+		"Sneaks_012RN.placeHolderList[305]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist.rotateZ" 
+		"Sneaks_012RN.placeHolderList[306]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist.scaleX" 
+		"Sneaks_012RN.placeHolderList[307]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist.scaleY" 
+		"Sneaks_012RN.placeHolderList[308]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist.scaleZ" 
+		"Sneaks_012RN.placeHolderList[309]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist.visibility" 
+		"Sneaks_012RN.placeHolderList[310]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist|Sneaks_012:controller_rightPinky.translateY" 
+		"Sneaks_012RN.placeHolderList[311]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist|Sneaks_012:controller_rightPinky.translateZ" 
+		"Sneaks_012RN.placeHolderList[312]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist|Sneaks_012:controller_rightPinky.scaleX" 
+		"Sneaks_012RN.placeHolderList[313]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist|Sneaks_012:controller_rightPinky.scaleY" 
+		"Sneaks_012RN.placeHolderList[314]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist|Sneaks_012:controller_rightPinky.scaleZ" 
+		"Sneaks_012RN.placeHolderList[315]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist|Sneaks_012:controller_rightPinky.visibility" 
+		"Sneaks_012RN.placeHolderList[316]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist|Sneaks_012:controller_rightRing.translateY" 
+		"Sneaks_012RN.placeHolderList[317]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist|Sneaks_012:controller_rightRing.translateZ" 
+		"Sneaks_012RN.placeHolderList[318]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist|Sneaks_012:controller_rightRing.scaleX" 
+		"Sneaks_012RN.placeHolderList[319]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist|Sneaks_012:controller_rightRing.scaleY" 
+		"Sneaks_012RN.placeHolderList[320]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist|Sneaks_012:controller_rightRing.scaleZ" 
+		"Sneaks_012RN.placeHolderList[321]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist|Sneaks_012:controller_rightRing.visibility" 
+		"Sneaks_012RN.placeHolderList[322]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist|Sneaks_012:controller_rightMiddle.translateY" 
+		"Sneaks_012RN.placeHolderList[323]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist|Sneaks_012:controller_rightMiddle.translateZ" 
+		"Sneaks_012RN.placeHolderList[324]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist|Sneaks_012:controller_rightMiddle.scaleX" 
+		"Sneaks_012RN.placeHolderList[325]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist|Sneaks_012:controller_rightMiddle.scaleY" 
+		"Sneaks_012RN.placeHolderList[326]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist|Sneaks_012:controller_rightMiddle.scaleZ" 
+		"Sneaks_012RN.placeHolderList[327]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist|Sneaks_012:controller_rightMiddle.visibility" 
+		"Sneaks_012RN.placeHolderList[328]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist|Sneaks_012:controller_rightIndex.translateY" 
+		"Sneaks_012RN.placeHolderList[329]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist|Sneaks_012:controller_rightIndex.translateZ" 
+		"Sneaks_012RN.placeHolderList[330]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist|Sneaks_012:controller_rightIndex.scaleX" 
+		"Sneaks_012RN.placeHolderList[331]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist|Sneaks_012:controller_rightIndex.scaleY" 
+		"Sneaks_012RN.placeHolderList[332]" ""
+		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist|Sneaks_012:controller_rightIndex.scaleZ" 
+		"Sneaks_012RN.placeHolderList[333]" ""
 		5 4 "Sneaks_012RN" "|Sneaks_012:controller_root|Sneaks_012:controller_rightArm|Sneaks_012:controller_rightWrist|Sneaks_012:controller_rightIndex.visibility" 
-		"Sneaks_012RN.placeHolderList[196]" "";
+		"Sneaks_012RN.placeHolderList[334]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode animCurveTL -n "CloseUpInDrawe_translateX";
@@ -2295,8 +2295,8 @@ createNode mentalrayOptions -s -n "ProductionRapidHair";
 	setAttr ".mbsm" no;
 	setAttr ".bism" 0.019999999552965164;
 select -ne :time1;
-	setAttr ".o" 60;
-	setAttr ".unw" 60;
+	setAttr ".o" 57;
+	setAttr ".unw" 57;
 select -ne :renderPartition;
 	setAttr -s 6 ".st";
 select -ne :initialShadingGroup;
@@ -2336,238 +2336,215 @@ select -ne :ikSystem;
 	setAttr -s 2 ".sol";
 connectAttr "TopDrawers.di" "Dresser_with_openable_drawersRN.phl[1]";
 connectAttr "TopDrawers.di" "Dresser_with_openable_drawersRN.phl[2]";
-connectAttr "Sneaks_012:controller_root_translateX.o" "Sneaks_012RN.phl[1]";
-connectAttr "Sneaks_012:controller_root_translateY.o" "Sneaks_012RN.phl[2]";
-connectAttr "Sneaks_012:controller_root_translateZ.o" "Sneaks_012RN.phl[3]";
-connectAttr "Sneaks_012:controller_root_rotateX.o" "Sneaks_012RN.phl[4]";
-connectAttr "Sneaks_012:controller_root_rotateY.o" "Sneaks_012RN.phl[5]";
-connectAttr "Sneaks_012:controller_root_rotateZ.o" "Sneaks_012RN.phl[6]";
-connectAttr "Sneaks_012:controller_root_scaleX.o" "Sneaks_012RN.phl[7]";
-connectAttr "Sneaks_012:controller_root_scaleY.o" "Sneaks_012RN.phl[8]";
-connectAttr "Sneaks_012:controller_root_scaleZ.o" "Sneaks_012RN.phl[9]";
-connectAttr "Sneaks_012:controller_root_visibility.o" "Sneaks_012RN.phl[10]";
-connectAttr "Sneaks_012:controller_spine3_translateX.o" "Sneaks_012RN.phl[11]";
-connectAttr "Sneaks_012:controller_spine3_translateY.o" "Sneaks_012RN.phl[12]";
-connectAttr "Sneaks_012:controller_spine3_translateZ.o" "Sneaks_012RN.phl[13]";
-connectAttr "Sneaks_012:controller_spine3_rotateX.o" "Sneaks_012RN.phl[14]";
-connectAttr "Sneaks_012:controller_spine3_rotateY.o" "Sneaks_012RN.phl[15]";
-connectAttr "Sneaks_012:controller_spine3_rotateZ.o" "Sneaks_012RN.phl[16]";
-connectAttr "Sneaks_012:controller_spine3_scaleX.o" "Sneaks_012RN.phl[17]";
-connectAttr "Sneaks_012:controller_spine3_scaleY.o" "Sneaks_012RN.phl[18]";
-connectAttr "Sneaks_012:controller_spine3_scaleZ.o" "Sneaks_012RN.phl[19]";
-connectAttr "Sneaks_012:controller_spine3_visibility.o" "Sneaks_012RN.phl[20]";
-connectAttr "Sneaks_012:controller_spine2_translateX.o" "Sneaks_012RN.phl[21]";
-connectAttr "Sneaks_012:controller_spine2_translateY.o" "Sneaks_012RN.phl[22]";
-connectAttr "Sneaks_012:controller_spine2_translateZ.o" "Sneaks_012RN.phl[23]";
-connectAttr "Sneaks_012:controller_spine2_rotateX.o" "Sneaks_012RN.phl[24]";
-connectAttr "Sneaks_012:controller_spine2_rotateY.o" "Sneaks_012RN.phl[25]";
-connectAttr "Sneaks_012:controller_spine2_rotateZ.o" "Sneaks_012RN.phl[26]";
-connectAttr "Sneaks_012:controller_spine2_scaleX.o" "Sneaks_012RN.phl[27]";
-connectAttr "Sneaks_012:controller_spine2_scaleY.o" "Sneaks_012RN.phl[28]";
-connectAttr "Sneaks_012:controller_spine2_scaleZ.o" "Sneaks_012RN.phl[29]";
-connectAttr "Sneaks_012:controller_spine2_visibility.o" "Sneaks_012RN.phl[30]";
-connectAttr "Sneaks_012:controller_spine1_translateX.o" "Sneaks_012RN.phl[31]";
-connectAttr "Sneaks_012:controller_spine1_translateY.o" "Sneaks_012RN.phl[32]";
-connectAttr "Sneaks_012:controller_spine1_translateZ.o" "Sneaks_012RN.phl[33]";
-connectAttr "Sneaks_012:controller_spine1_rotateX.o" "Sneaks_012RN.phl[34]";
-connectAttr "Sneaks_012:controller_spine1_rotateY.o" "Sneaks_012RN.phl[35]";
-connectAttr "Sneaks_012:controller_spine1_rotateZ.o" "Sneaks_012RN.phl[36]";
-connectAttr "Sneaks_012:controller_spine1_scaleX.o" "Sneaks_012RN.phl[37]";
-connectAttr "Sneaks_012:controller_spine1_scaleY.o" "Sneaks_012RN.phl[38]";
-connectAttr "Sneaks_012:controller_spine1_scaleZ.o" "Sneaks_012RN.phl[39]";
-connectAttr "Sneaks_012:controller_spine1_visibility.o" "Sneaks_012RN.phl[40]";
-connectAttr "Sneaks_012:controller_shoulder_translateX.o" "Sneaks_012RN.phl[41]"
+connectAttr "Sneaks_012:controller_root_translateX.o" "Sneaks_012RN.phl[163]";
+connectAttr "Sneaks_012:controller_root_translateY.o" "Sneaks_012RN.phl[164]";
+connectAttr "Sneaks_012:controller_root_translateZ.o" "Sneaks_012RN.phl[165]";
+connectAttr "Sneaks_012:controller_root_rotateX.o" "Sneaks_012RN.phl[166]";
+connectAttr "Sneaks_012:controller_root_rotateY.o" "Sneaks_012RN.phl[167]";
+connectAttr "Sneaks_012:controller_root_rotateZ.o" "Sneaks_012RN.phl[168]";
+connectAttr "Sneaks_012:controller_root_scaleX.o" "Sneaks_012RN.phl[169]";
+connectAttr "Sneaks_012:controller_root_scaleY.o" "Sneaks_012RN.phl[170]";
+connectAttr "Sneaks_012:controller_root_scaleZ.o" "Sneaks_012RN.phl[171]";
+connectAttr "Sneaks_012:controller_root_visibility.o" "Sneaks_012RN.phl[172]";
+connectAttr "Sneaks_012:controller_spine3_translateX.o" "Sneaks_012RN.phl[173]";
+connectAttr "Sneaks_012:controller_spine3_translateY.o" "Sneaks_012RN.phl[174]";
+connectAttr "Sneaks_012:controller_spine3_translateZ.o" "Sneaks_012RN.phl[175]";
+connectAttr "Sneaks_012:controller_spine3_rotateX.o" "Sneaks_012RN.phl[176]";
+connectAttr "Sneaks_012:controller_spine3_rotateY.o" "Sneaks_012RN.phl[177]";
+connectAttr "Sneaks_012:controller_spine3_rotateZ.o" "Sneaks_012RN.phl[178]";
+connectAttr "Sneaks_012:controller_spine3_scaleX.o" "Sneaks_012RN.phl[179]";
+connectAttr "Sneaks_012:controller_spine3_scaleY.o" "Sneaks_012RN.phl[180]";
+connectAttr "Sneaks_012:controller_spine3_scaleZ.o" "Sneaks_012RN.phl[181]";
+connectAttr "Sneaks_012:controller_spine3_visibility.o" "Sneaks_012RN.phl[182]";
+connectAttr "Sneaks_012:controller_spine2_translateX.o" "Sneaks_012RN.phl[183]";
+connectAttr "Sneaks_012:controller_spine2_translateY.o" "Sneaks_012RN.phl[184]";
+connectAttr "Sneaks_012:controller_spine2_translateZ.o" "Sneaks_012RN.phl[185]";
+connectAttr "Sneaks_012:controller_spine2_rotateX.o" "Sneaks_012RN.phl[186]";
+connectAttr "Sneaks_012:controller_spine2_rotateY.o" "Sneaks_012RN.phl[187]";
+connectAttr "Sneaks_012:controller_spine2_rotateZ.o" "Sneaks_012RN.phl[188]";
+connectAttr "Sneaks_012:controller_spine2_scaleX.o" "Sneaks_012RN.phl[189]";
+connectAttr "Sneaks_012:controller_spine2_scaleY.o" "Sneaks_012RN.phl[190]";
+connectAttr "Sneaks_012:controller_spine2_scaleZ.o" "Sneaks_012RN.phl[191]";
+connectAttr "Sneaks_012:controller_spine2_visibility.o" "Sneaks_012RN.phl[192]";
+connectAttr "Sneaks_012:controller_spine1_translateX.o" "Sneaks_012RN.phl[193]";
+connectAttr "Sneaks_012:controller_spine1_translateY.o" "Sneaks_012RN.phl[194]";
+connectAttr "Sneaks_012:controller_spine1_translateZ.o" "Sneaks_012RN.phl[195]";
+connectAttr "Sneaks_012:controller_spine1_rotateX.o" "Sneaks_012RN.phl[196]";
+connectAttr "Sneaks_012:controller_spine1_rotateY.o" "Sneaks_012RN.phl[197]";
+connectAttr "Sneaks_012:controller_spine1_rotateZ.o" "Sneaks_012RN.phl[198]";
+connectAttr "Sneaks_012:controller_spine1_scaleX.o" "Sneaks_012RN.phl[199]";
+connectAttr "Sneaks_012:controller_spine1_scaleY.o" "Sneaks_012RN.phl[200]";
+connectAttr "Sneaks_012:controller_spine1_scaleZ.o" "Sneaks_012RN.phl[201]";
+connectAttr "Sneaks_012:controller_spine1_visibility.o" "Sneaks_012RN.phl[202]";
+connectAttr "Sneaks_012:controller_shoulder_translateX.o" "Sneaks_012RN.phl[203]"
 		;
-connectAttr "Sneaks_012:controller_shoulder_translateY.o" "Sneaks_012RN.phl[42]"
+connectAttr "Sneaks_012:controller_shoulder_translateY.o" "Sneaks_012RN.phl[204]"
 		;
-connectAttr "Sneaks_012:controller_shoulder_translateZ.o" "Sneaks_012RN.phl[43]"
+connectAttr "Sneaks_012:controller_shoulder_translateZ.o" "Sneaks_012RN.phl[205]"
 		;
-connectAttr "Sneaks_012:controller_shoulder_rotateX.o" "Sneaks_012RN.phl[44]";
-connectAttr "Sneaks_012:controller_shoulder_rotateY.o" "Sneaks_012RN.phl[45]";
-connectAttr "Sneaks_012:controller_shoulder_rotateZ.o" "Sneaks_012RN.phl[46]";
-connectAttr "Sneaks_012:controller_shoulder_scaleX.o" "Sneaks_012RN.phl[47]";
-connectAttr "Sneaks_012:controller_shoulder_scaleY.o" "Sneaks_012RN.phl[48]";
-connectAttr "Sneaks_012:controller_shoulder_scaleZ.o" "Sneaks_012RN.phl[49]";
-connectAttr "Sneaks_012:controller_shoulder_visibility.o" "Sneaks_012RN.phl[50]"
+connectAttr "Sneaks_012:controller_shoulder_rotateX.o" "Sneaks_012RN.phl[206]";
+connectAttr "Sneaks_012:controller_shoulder_rotateY.o" "Sneaks_012RN.phl[207]";
+connectAttr "Sneaks_012:controller_shoulder_rotateZ.o" "Sneaks_012RN.phl[208]";
+connectAttr "Sneaks_012:controller_shoulder_scaleX.o" "Sneaks_012RN.phl[209]";
+connectAttr "Sneaks_012:controller_shoulder_scaleY.o" "Sneaks_012RN.phl[210]";
+connectAttr "Sneaks_012:controller_shoulder_scaleZ.o" "Sneaks_012RN.phl[211]";
+connectAttr "Sneaks_012:controller_shoulder_visibility.o" "Sneaks_012RN.phl[212]"
 		;
-connectAttr "Sneaks_012:controller_head_translateX.o" "Sneaks_012RN.phl[51]";
-connectAttr "Sneaks_012:controller_head_translateY.o" "Sneaks_012RN.phl[52]";
-connectAttr "Sneaks_012:controller_head_translateZ.o" "Sneaks_012RN.phl[53]";
-connectAttr "Sneaks_012:controller_head_rotateX.o" "Sneaks_012RN.phl[54]";
-connectAttr "Sneaks_012:controller_head_rotateY.o" "Sneaks_012RN.phl[55]";
-connectAttr "Sneaks_012:controller_head_rotateZ.o" "Sneaks_012RN.phl[56]";
-connectAttr "Sneaks_012:controller_head_scaleX.o" "Sneaks_012RN.phl[57]";
-connectAttr "Sneaks_012:controller_head_scaleY.o" "Sneaks_012RN.phl[58]";
-connectAttr "Sneaks_012:controller_head_scaleZ.o" "Sneaks_012RN.phl[59]";
-connectAttr "Sneaks_012:controller_head_visibility.o" "Sneaks_012RN.phl[60]";
-connectAttr "Sneaks_012:controller_hip_translateY.o" "Sneaks_012RN.phl[61]";
-connectAttr "Sneaks_012:controller_hip_translateZ.o" "Sneaks_012RN.phl[62]";
-connectAttr "Sneaks_012:controller_hip_translateX.o" "Sneaks_012RN.phl[63]";
-connectAttr "Sneaks_012:controller_hip_rotateX.o" "Sneaks_012RN.phl[64]";
-connectAttr "Sneaks_012:controller_hip_rotateY.o" "Sneaks_012RN.phl[65]";
-connectAttr "Sneaks_012:controller_hip_rotateZ.o" "Sneaks_012RN.phl[66]";
-connectAttr "Sneaks_012:controller_hip_scaleX.o" "Sneaks_012RN.phl[67]";
-connectAttr "Sneaks_012:controller_hip_scaleY.o" "Sneaks_012RN.phl[68]";
-connectAttr "Sneaks_012:controller_hip_scaleZ.o" "Sneaks_012RN.phl[69]";
-connectAttr "Sneaks_012:controller_hip_visibility.o" "Sneaks_012RN.phl[70]";
-connectAttr "Sneaks_012:RightArm_translateX.o" "Sneaks_012RN.phl[71]";
-connectAttr "Sneaks_012:RightArm_translateY.o" "Sneaks_012RN.phl[72]";
-connectAttr "Sneaks_012:RightArm_translateZ.o" "Sneaks_012RN.phl[73]";
-connectAttr "Sneaks_012:RightArm_visibility.o" "Sneaks_012RN.phl[74]";
-connectAttr "Sneaks_012:RightArm_rotateX.o" "Sneaks_012RN.phl[75]";
-connectAttr "Sneaks_012:RightArm_rotateY.o" "Sneaks_012RN.phl[76]";
-connectAttr "Sneaks_012:RightArm_rotateZ.o" "Sneaks_012RN.phl[77]";
-connectAttr "Sneaks_012:RightArm_scaleX.o" "Sneaks_012RN.phl[78]";
-connectAttr "Sneaks_012:RightArm_scaleY.o" "Sneaks_012RN.phl[79]";
-connectAttr "Sneaks_012:RightArm_scaleZ.o" "Sneaks_012RN.phl[80]";
-connectAttr "pairBlend2.otx" "Sneaks_012RN.phl[81]";
-connectAttr "pairBlend2.oty" "Sneaks_012RN.phl[82]";
-connectAttr "pairBlend2.otz" "Sneaks_012RN.phl[83]";
-connectAttr "pairBlend2.orx" "Sneaks_012RN.phl[84]";
-connectAttr "pairBlend2.ory" "Sneaks_012RN.phl[85]";
-connectAttr "pairBlend2.orz" "Sneaks_012RN.phl[86]";
-connectAttr "Sneaks_012:controller_leftLeg_blendParent1.o" "Sneaks_012RN.phl[87]"
+connectAttr "Sneaks_012:controller_head_translateX.o" "Sneaks_012RN.phl[213]";
+connectAttr "Sneaks_012:controller_head_translateY.o" "Sneaks_012RN.phl[214]";
+connectAttr "Sneaks_012:controller_head_translateZ.o" "Sneaks_012RN.phl[215]";
+connectAttr "Sneaks_012:controller_head_rotateX.o" "Sneaks_012RN.phl[216]";
+connectAttr "Sneaks_012:controller_head_rotateY.o" "Sneaks_012RN.phl[217]";
+connectAttr "Sneaks_012:controller_head_rotateZ.o" "Sneaks_012RN.phl[218]";
+connectAttr "Sneaks_012:controller_head_scaleX.o" "Sneaks_012RN.phl[219]";
+connectAttr "Sneaks_012:controller_head_scaleY.o" "Sneaks_012RN.phl[220]";
+connectAttr "Sneaks_012:controller_head_scaleZ.o" "Sneaks_012RN.phl[221]";
+connectAttr "Sneaks_012:controller_head_visibility.o" "Sneaks_012RN.phl[222]";
+connectAttr "Sneaks_012:controller_hip_translateY.o" "Sneaks_012RN.phl[223]";
+connectAttr "Sneaks_012:controller_hip_translateZ.o" "Sneaks_012RN.phl[224]";
+connectAttr "Sneaks_012:controller_hip_translateX.o" "Sneaks_012RN.phl[225]";
+connectAttr "Sneaks_012:controller_hip_rotateX.o" "Sneaks_012RN.phl[226]";
+connectAttr "Sneaks_012:controller_hip_rotateY.o" "Sneaks_012RN.phl[227]";
+connectAttr "Sneaks_012:controller_hip_rotateZ.o" "Sneaks_012RN.phl[228]";
+connectAttr "Sneaks_012:controller_hip_scaleX.o" "Sneaks_012RN.phl[229]";
+connectAttr "Sneaks_012:controller_hip_scaleY.o" "Sneaks_012RN.phl[230]";
+connectAttr "Sneaks_012:controller_hip_scaleZ.o" "Sneaks_012RN.phl[231]";
+connectAttr "Sneaks_012:controller_hip_visibility.o" "Sneaks_012RN.phl[232]";
+connectAttr "Sneaks_012:RightArm_translateX.o" "Sneaks_012RN.phl[233]";
+connectAttr "Sneaks_012:RightArm_translateY.o" "Sneaks_012RN.phl[234]";
+connectAttr "Sneaks_012:RightArm_translateZ.o" "Sneaks_012RN.phl[235]";
+connectAttr "Sneaks_012:RightArm_visibility.o" "Sneaks_012RN.phl[236]";
+connectAttr "Sneaks_012:RightArm_rotateX.o" "Sneaks_012RN.phl[237]";
+connectAttr "Sneaks_012:RightArm_rotateY.o" "Sneaks_012RN.phl[238]";
+connectAttr "Sneaks_012:RightArm_rotateZ.o" "Sneaks_012RN.phl[239]";
+connectAttr "Sneaks_012:RightArm_scaleX.o" "Sneaks_012RN.phl[240]";
+connectAttr "Sneaks_012:RightArm_scaleY.o" "Sneaks_012RN.phl[241]";
+connectAttr "Sneaks_012:RightArm_scaleZ.o" "Sneaks_012RN.phl[242]";
+connectAttr "pairBlend2.otx" "Sneaks_012RN.phl[243]";
+connectAttr "pairBlend2.oty" "Sneaks_012RN.phl[244]";
+connectAttr "pairBlend2.otz" "Sneaks_012RN.phl[245]";
+connectAttr "Sneaks_012:controller_leftLeg_blendParent1.o" "Sneaks_012RN.phl[246]"
 		;
-connectAttr "Sneaks_012RN.phl[88]" "pairBlend2.w";
-connectAttr "Sneaks_012:controller_leftLeg_visibility.o" "Sneaks_012RN.phl[89]";
-connectAttr "Sneaks_012:controller_leftLeg_scaleX.o" "Sneaks_012RN.phl[90]";
-connectAttr "Sneaks_012:controller_leftLeg_scaleY.o" "Sneaks_012RN.phl[91]";
-connectAttr "Sneaks_012:controller_leftLeg_scaleZ.o" "Sneaks_012RN.phl[92]";
-connectAttr "Sneaks_012RN.phl[93]" "pairBlend2.itx2";
-connectAttr "Sneaks_012RN.phl[94]" "pairBlend2.ity2";
-connectAttr "Sneaks_012RN.phl[95]" "pairBlend2.itz2";
-connectAttr "Sneaks_012RN.phl[96]" "pairBlend2.irx2";
-connectAttr "Sneaks_012RN.phl[97]" "pairBlend2.iry2";
-connectAttr "Sneaks_012RN.phl[98]" "pairBlend2.irz2";
-connectAttr "pairBlend1.otx" "Sneaks_012RN.phl[99]";
-connectAttr "pairBlend1.oty" "Sneaks_012RN.phl[100]";
-connectAttr "pairBlend1.otz" "Sneaks_012RN.phl[101]";
-connectAttr "pairBlend1.orx" "Sneaks_012RN.phl[102]";
-connectAttr "pairBlend1.ory" "Sneaks_012RN.phl[103]";
-connectAttr "pairBlend1.orz" "Sneaks_012RN.phl[104]";
-connectAttr "Sneaks_012:controller_rightLeg_scaleX.o" "Sneaks_012RN.phl[105]";
-connectAttr "Sneaks_012:controller_rightLeg_scaleY.o" "Sneaks_012RN.phl[106]";
-connectAttr "Sneaks_012:controller_rightLeg_scaleZ.o" "Sneaks_012RN.phl[107]";
-connectAttr "Sneaks_012:controller_rightLeg_blendParent1.o" "Sneaks_012RN.phl[108]"
+connectAttr "Sneaks_012RN.phl[247]" "pairBlend2.w";
+connectAttr "pairBlend2.orx" "Sneaks_012RN.phl[248]";
+connectAttr "pairBlend2.ory" "Sneaks_012RN.phl[249]";
+connectAttr "pairBlend2.orz" "Sneaks_012RN.phl[250]";
+connectAttr "Sneaks_012:controller_leftLeg_visibility.o" "Sneaks_012RN.phl[251]"
 		;
-connectAttr "Sneaks_012RN.phl[109]" "pairBlend1.w";
-connectAttr "Sneaks_012:controller_rightLeg_visibility.o" "Sneaks_012RN.phl[110]"
+connectAttr "Sneaks_012:controller_leftLeg_scaleX.o" "Sneaks_012RN.phl[252]";
+connectAttr "Sneaks_012:controller_leftLeg_scaleY.o" "Sneaks_012RN.phl[253]";
+connectAttr "Sneaks_012:controller_leftLeg_scaleZ.o" "Sneaks_012RN.phl[254]";
+connectAttr "pairBlend1.otx" "Sneaks_012RN.phl[255]";
+connectAttr "pairBlend1.oty" "Sneaks_012RN.phl[256]";
+connectAttr "pairBlend1.otz" "Sneaks_012RN.phl[257]";
+connectAttr "pairBlend1.orx" "Sneaks_012RN.phl[258]";
+connectAttr "pairBlend1.ory" "Sneaks_012RN.phl[259]";
+connectAttr "pairBlend1.orz" "Sneaks_012RN.phl[260]";
+connectAttr "Sneaks_012:controller_rightLeg_scaleX.o" "Sneaks_012RN.phl[261]";
+connectAttr "Sneaks_012:controller_rightLeg_scaleY.o" "Sneaks_012RN.phl[262]";
+connectAttr "Sneaks_012:controller_rightLeg_scaleZ.o" "Sneaks_012RN.phl[263]";
+connectAttr "Sneaks_012:controller_rightLeg_blendParent1.o" "Sneaks_012RN.phl[264]"
 		;
-connectAttr "Sneaks_012RN.phl[111]" "pairBlend1.itx2";
-connectAttr "Sneaks_012RN.phl[112]" "pairBlend1.ity2";
-connectAttr "Sneaks_012RN.phl[113]" "pairBlend1.itz2";
-connectAttr "Sneaks_012RN.phl[114]" "pairBlend1.irx2";
-connectAttr "Sneaks_012RN.phl[115]" "pairBlend1.iry2";
-connectAttr "Sneaks_012RN.phl[116]" "pairBlend1.irz2";
-connectAttr "pairBlend3.orx" "Sneaks_012RN.phl[117]";
-connectAttr "pairBlend3.ory" "Sneaks_012RN.phl[118]";
-connectAttr "pairBlend3.orz" "Sneaks_012RN.phl[119]";
-connectAttr "pairBlend3.otx" "Sneaks_012RN.phl[120]";
-connectAttr "pairBlend3.oty" "Sneaks_012RN.phl[121]";
-connectAttr "pairBlend3.otz" "Sneaks_012RN.phl[122]";
-connectAttr "Sneaks_012:controller_leftArm_blendParent1.o" "Sneaks_012RN.phl[123]"
+connectAttr "Sneaks_012RN.phl[265]" "pairBlend1.w";
+connectAttr "Sneaks_012:controller_rightLeg_visibility.o" "Sneaks_012RN.phl[266]"
 		;
-connectAttr "Sneaks_012RN.phl[124]" "pairBlend3.w";
-connectAttr "Sneaks_012:controller_leftArm_visibility.o" "Sneaks_012RN.phl[125]"
+connectAttr "pairBlend3.otx" "Sneaks_012RN.phl[267]";
+connectAttr "pairBlend3.oty" "Sneaks_012RN.phl[268]";
+connectAttr "pairBlend3.otz" "Sneaks_012RN.phl[269]";
+connectAttr "Sneaks_012:controller_leftArm_blendParent1.o" "Sneaks_012RN.phl[270]"
 		;
-connectAttr "Sneaks_012:controller_leftArm_scaleX.o" "Sneaks_012RN.phl[126]";
-connectAttr "Sneaks_012:controller_leftArm_scaleY.o" "Sneaks_012RN.phl[127]";
-connectAttr "Sneaks_012:controller_leftArm_scaleZ.o" "Sneaks_012RN.phl[128]";
-connectAttr "Sneaks_012RN.phl[129]" "pairBlend3.irx2";
-connectAttr "Sneaks_012RN.phl[130]" "pairBlend3.iry2";
-connectAttr "Sneaks_012RN.phl[131]" "pairBlend3.irz2";
-connectAttr "Sneaks_012RN.phl[132]" "pairBlend3.itx2";
-connectAttr "Sneaks_012RN.phl[133]" "pairBlend3.ity2";
-connectAttr "Sneaks_012RN.phl[134]" "pairBlend3.itz2";
-connectAttr "Sneaks_012:controller_leftWrist_translateX.o" "Sneaks_012RN.phl[135]"
+connectAttr "Sneaks_012RN.phl[271]" "pairBlend3.w";
+connectAttr "pairBlend3.orx" "Sneaks_012RN.phl[272]";
+connectAttr "pairBlend3.ory" "Sneaks_012RN.phl[273]";
+connectAttr "pairBlend3.orz" "Sneaks_012RN.phl[274]";
+connectAttr "Sneaks_012:controller_leftArm_visibility.o" "Sneaks_012RN.phl[275]"
 		;
-connectAttr "Sneaks_012:controller_leftWrist_translateY.o" "Sneaks_012RN.phl[136]"
+connectAttr "Sneaks_012:controller_leftArm_scaleX.o" "Sneaks_012RN.phl[276]";
+connectAttr "Sneaks_012:controller_leftArm_scaleY.o" "Sneaks_012RN.phl[277]";
+connectAttr "Sneaks_012:controller_leftArm_scaleZ.o" "Sneaks_012RN.phl[278]";
+connectAttr "Sneaks_012:controller_leftWrist_translateX.o" "Sneaks_012RN.phl[279]"
 		;
-connectAttr "Sneaks_012:controller_leftWrist_translateZ.o" "Sneaks_012RN.phl[137]"
+connectAttr "Sneaks_012:controller_leftWrist_translateY.o" "Sneaks_012RN.phl[280]"
 		;
-connectAttr "Sneaks_012:controller_leftWrist_rotateX.o" "Sneaks_012RN.phl[138]";
-connectAttr "Sneaks_012:controller_leftWrist_rotateY.o" "Sneaks_012RN.phl[139]";
-connectAttr "Sneaks_012:controller_leftWrist_rotateZ.o" "Sneaks_012RN.phl[140]";
-connectAttr "Sneaks_012:controller_leftWrist_scaleX.o" "Sneaks_012RN.phl[141]";
-connectAttr "Sneaks_012:controller_leftWrist_scaleY.o" "Sneaks_012RN.phl[142]";
-connectAttr "Sneaks_012:controller_leftWrist_scaleZ.o" "Sneaks_012RN.phl[143]";
-connectAttr "Sneaks_012:controller_leftWrist_visibility.o" "Sneaks_012RN.phl[144]"
+connectAttr "Sneaks_012:controller_leftWrist_translateZ.o" "Sneaks_012RN.phl[281]"
 		;
-connectAttr "pairBlend4.otx" "Sneaks_012RN.phl[145]";
-connectAttr "pairBlend4.oty" "Sneaks_012RN.phl[146]";
-connectAttr "pairBlend4.otz" "Sneaks_012RN.phl[147]";
-connectAttr "pairBlend4.orx" "Sneaks_012RN.phl[148]";
-connectAttr "pairBlend4.ory" "Sneaks_012RN.phl[149]";
-connectAttr "pairBlend4.orz" "Sneaks_012RN.phl[150]";
-connectAttr "Sneaks_012:controller_rightArm_scaleX.o" "Sneaks_012RN.phl[151]";
-connectAttr "Sneaks_012:controller_rightArm_scaleY.o" "Sneaks_012RN.phl[152]";
-connectAttr "Sneaks_012:controller_rightArm_scaleZ.o" "Sneaks_012RN.phl[153]";
-connectAttr "Sneaks_012:controller_rightArm_blendParent1.o" "Sneaks_012RN.phl[154]"
+connectAttr "Sneaks_012:controller_leftWrist_rotateX.o" "Sneaks_012RN.phl[282]";
+connectAttr "Sneaks_012:controller_leftWrist_rotateY.o" "Sneaks_012RN.phl[283]";
+connectAttr "Sneaks_012:controller_leftWrist_rotateZ.o" "Sneaks_012RN.phl[284]";
+connectAttr "Sneaks_012:controller_leftWrist_scaleX.o" "Sneaks_012RN.phl[285]";
+connectAttr "Sneaks_012:controller_leftWrist_scaleY.o" "Sneaks_012RN.phl[286]";
+connectAttr "Sneaks_012:controller_leftWrist_scaleZ.o" "Sneaks_012RN.phl[287]";
+connectAttr "Sneaks_012:controller_leftWrist_visibility.o" "Sneaks_012RN.phl[288]"
 		;
-connectAttr "Sneaks_012RN.phl[155]" "pairBlend4.w";
-connectAttr "Sneaks_012:controller_rightArm_visibility.o" "Sneaks_012RN.phl[156]"
+connectAttr "pairBlend4.otx" "Sneaks_012RN.phl[289]";
+connectAttr "pairBlend4.oty" "Sneaks_012RN.phl[290]";
+connectAttr "pairBlend4.otz" "Sneaks_012RN.phl[291]";
+connectAttr "pairBlend4.orx" "Sneaks_012RN.phl[292]";
+connectAttr "pairBlend4.ory" "Sneaks_012RN.phl[293]";
+connectAttr "pairBlend4.orz" "Sneaks_012RN.phl[294]";
+connectAttr "Sneaks_012:controller_rightArm_scaleX.o" "Sneaks_012RN.phl[295]";
+connectAttr "Sneaks_012:controller_rightArm_scaleY.o" "Sneaks_012RN.phl[296]";
+connectAttr "Sneaks_012:controller_rightArm_scaleZ.o" "Sneaks_012RN.phl[297]";
+connectAttr "Sneaks_012:controller_rightArm_blendParent1.o" "Sneaks_012RN.phl[298]"
 		;
-connectAttr "Sneaks_012RN.phl[157]" "pairBlend4.itx2";
-connectAttr "Sneaks_012RN.phl[158]" "pairBlend4.ity2";
-connectAttr "Sneaks_012RN.phl[159]" "pairBlend4.itz2";
-connectAttr "Sneaks_012RN.phl[160]" "pairBlend4.irx2";
-connectAttr "Sneaks_012RN.phl[161]" "pairBlend4.iry2";
-connectAttr "Sneaks_012RN.phl[162]" "pairBlend4.irz2";
-connectAttr "Sneaks_012:controller_rightWrist_translateX.o" "Sneaks_012RN.phl[163]"
+connectAttr "Sneaks_012RN.phl[299]" "pairBlend4.w";
+connectAttr "Sneaks_012:controller_rightArm_visibility.o" "Sneaks_012RN.phl[300]"
 		;
-connectAttr "Sneaks_012:controller_rightWrist_translateY.o" "Sneaks_012RN.phl[164]"
+connectAttr "Sneaks_012:controller_rightWrist_translateX.o" "Sneaks_012RN.phl[301]"
 		;
-connectAttr "Sneaks_012:controller_rightWrist_translateZ.o" "Sneaks_012RN.phl[165]"
+connectAttr "Sneaks_012:controller_rightWrist_translateY.o" "Sneaks_012RN.phl[302]"
 		;
-connectAttr "Sneaks_012:controller_rightWrist_rotateX.o" "Sneaks_012RN.phl[166]"
+connectAttr "Sneaks_012:controller_rightWrist_translateZ.o" "Sneaks_012RN.phl[303]"
 		;
-connectAttr "Sneaks_012:controller_rightWrist_rotateY.o" "Sneaks_012RN.phl[167]"
+connectAttr "Sneaks_012:controller_rightWrist_rotateX.o" "Sneaks_012RN.phl[304]"
 		;
-connectAttr "Sneaks_012:controller_rightWrist_rotateZ.o" "Sneaks_012RN.phl[168]"
+connectAttr "Sneaks_012:controller_rightWrist_rotateY.o" "Sneaks_012RN.phl[305]"
 		;
-connectAttr "Sneaks_012:controller_rightWrist_scaleX.o" "Sneaks_012RN.phl[169]";
-connectAttr "Sneaks_012:controller_rightWrist_scaleY.o" "Sneaks_012RN.phl[170]";
-connectAttr "Sneaks_012:controller_rightWrist_scaleZ.o" "Sneaks_012RN.phl[171]";
-connectAttr "Sneaks_012:controller_rightWrist_visibility.o" "Sneaks_012RN.phl[172]"
+connectAttr "Sneaks_012:controller_rightWrist_rotateZ.o" "Sneaks_012RN.phl[306]"
 		;
-connectAttr "Sneaks_012:controller_rightPinky_translateY.o" "Sneaks_012RN.phl[173]"
+connectAttr "Sneaks_012:controller_rightWrist_scaleX.o" "Sneaks_012RN.phl[307]";
+connectAttr "Sneaks_012:controller_rightWrist_scaleY.o" "Sneaks_012RN.phl[308]";
+connectAttr "Sneaks_012:controller_rightWrist_scaleZ.o" "Sneaks_012RN.phl[309]";
+connectAttr "Sneaks_012:controller_rightWrist_visibility.o" "Sneaks_012RN.phl[310]"
 		;
-connectAttr "Sneaks_012:controller_rightPinky_translateZ.o" "Sneaks_012RN.phl[174]"
+connectAttr "Sneaks_012:controller_rightPinky_translateY.o" "Sneaks_012RN.phl[311]"
 		;
-connectAttr "Sneaks_012:controller_rightPinky_scaleX.o" "Sneaks_012RN.phl[175]";
-connectAttr "Sneaks_012:controller_rightPinky_scaleY.o" "Sneaks_012RN.phl[176]";
-connectAttr "Sneaks_012:controller_rightPinky_scaleZ.o" "Sneaks_012RN.phl[177]";
-connectAttr "Sneaks_012:controller_rightPinky_visibility.o" "Sneaks_012RN.phl[178]"
+connectAttr "Sneaks_012:controller_rightPinky_translateZ.o" "Sneaks_012RN.phl[312]"
 		;
-connectAttr "Sneaks_012:controller_rightRing_translateY.o" "Sneaks_012RN.phl[179]"
+connectAttr "Sneaks_012:controller_rightPinky_scaleX.o" "Sneaks_012RN.phl[313]";
+connectAttr "Sneaks_012:controller_rightPinky_scaleY.o" "Sneaks_012RN.phl[314]";
+connectAttr "Sneaks_012:controller_rightPinky_scaleZ.o" "Sneaks_012RN.phl[315]";
+connectAttr "Sneaks_012:controller_rightPinky_visibility.o" "Sneaks_012RN.phl[316]"
 		;
-connectAttr "Sneaks_012:controller_rightRing_translateZ.o" "Sneaks_012RN.phl[180]"
+connectAttr "Sneaks_012:controller_rightRing_translateY.o" "Sneaks_012RN.phl[317]"
 		;
-connectAttr "Sneaks_012:controller_rightRing_scaleX.o" "Sneaks_012RN.phl[181]";
-connectAttr "Sneaks_012:controller_rightRing_scaleY.o" "Sneaks_012RN.phl[182]";
-connectAttr "Sneaks_012:controller_rightRing_scaleZ.o" "Sneaks_012RN.phl[183]";
-connectAttr "Sneaks_012:controller_rightRing_visibility.o" "Sneaks_012RN.phl[184]"
+connectAttr "Sneaks_012:controller_rightRing_translateZ.o" "Sneaks_012RN.phl[318]"
 		;
-connectAttr "Sneaks_012:controller_rightMiddle_translateY.o" "Sneaks_012RN.phl[185]"
+connectAttr "Sneaks_012:controller_rightRing_scaleX.o" "Sneaks_012RN.phl[319]";
+connectAttr "Sneaks_012:controller_rightRing_scaleY.o" "Sneaks_012RN.phl[320]";
+connectAttr "Sneaks_012:controller_rightRing_scaleZ.o" "Sneaks_012RN.phl[321]";
+connectAttr "Sneaks_012:controller_rightRing_visibility.o" "Sneaks_012RN.phl[322]"
 		;
-connectAttr "Sneaks_012:controller_rightMiddle_translateZ.o" "Sneaks_012RN.phl[186]"
+connectAttr "Sneaks_012:controller_rightMiddle_translateY.o" "Sneaks_012RN.phl[323]"
 		;
-connectAttr "Sneaks_012:controller_rightMiddle_scaleX.o" "Sneaks_012RN.phl[187]"
+connectAttr "Sneaks_012:controller_rightMiddle_translateZ.o" "Sneaks_012RN.phl[324]"
 		;
-connectAttr "Sneaks_012:controller_rightMiddle_scaleY.o" "Sneaks_012RN.phl[188]"
+connectAttr "Sneaks_012:controller_rightMiddle_scaleX.o" "Sneaks_012RN.phl[325]"
 		;
-connectAttr "Sneaks_012:controller_rightMiddle_scaleZ.o" "Sneaks_012RN.phl[189]"
+connectAttr "Sneaks_012:controller_rightMiddle_scaleY.o" "Sneaks_012RN.phl[326]"
 		;
-connectAttr "Sneaks_012:controller_rightMiddle_visibility.o" "Sneaks_012RN.phl[190]"
+connectAttr "Sneaks_012:controller_rightMiddle_scaleZ.o" "Sneaks_012RN.phl[327]"
 		;
-connectAttr "Sneaks_012:controller_rightIndex_translateY.o" "Sneaks_012RN.phl[191]"
+connectAttr "Sneaks_012:controller_rightMiddle_visibility.o" "Sneaks_012RN.phl[328]"
 		;
-connectAttr "Sneaks_012:controller_rightIndex_translateZ.o" "Sneaks_012RN.phl[192]"
+connectAttr "Sneaks_012:controller_rightIndex_translateY.o" "Sneaks_012RN.phl[329]"
 		;
-connectAttr "Sneaks_012:controller_rightIndex_scaleX.o" "Sneaks_012RN.phl[193]";
-connectAttr "Sneaks_012:controller_rightIndex_scaleY.o" "Sneaks_012RN.phl[194]";
-connectAttr "Sneaks_012:controller_rightIndex_scaleZ.o" "Sneaks_012RN.phl[195]";
-connectAttr "Sneaks_012:controller_rightIndex_visibility.o" "Sneaks_012RN.phl[196]"
+connectAttr "Sneaks_012:controller_rightIndex_translateZ.o" "Sneaks_012RN.phl[330]"
+		;
+connectAttr "Sneaks_012:controller_rightIndex_scaleX.o" "Sneaks_012RN.phl[331]";
+connectAttr "Sneaks_012:controller_rightIndex_scaleY.o" "Sneaks_012RN.phl[332]";
+connectAttr "Sneaks_012:controller_rightIndex_scaleZ.o" "Sneaks_012RN.phl[333]";
+connectAttr "Sneaks_012:controller_rightIndex_visibility.o" "Sneaks_012RN.phl[334]"
 		;
 connectAttr "deleteComponent1.og" "RoomShape.i";
 connectAttr "CloseUpInDrawe_translateX.o" "CloseUpInDrawe.tx";
@@ -2604,24 +2581,48 @@ connectAttr ":ProductionRapidFur.msg" ":mentalrayItemsList.opt" -na;
 connectAttr ":ProductionRapidHair.msg" ":mentalrayItemsList.opt" -na;
 connectAttr "polyCube1.out" "deleteComponent1.ig";
 connectAttr "layerManager.dli[1]" "TopDrawers.id";
+connectAttr "Sneaks_012RN.phl[111]" "pairBlend1.itx2";
+connectAttr "Sneaks_012RN.phl[112]" "pairBlend1.ity2";
+connectAttr "Sneaks_012RN.phl[113]" "pairBlend1.itz2";
+connectAttr "Sneaks_012RN.phl[114]" "pairBlend1.irx2";
+connectAttr "Sneaks_012RN.phl[115]" "pairBlend1.iry2";
+connectAttr "Sneaks_012RN.phl[116]" "pairBlend1.irz2";
 connectAttr "pairBlend1_inTranslateX1.o" "pairBlend1.itx1";
 connectAttr "pairBlend1_inTranslateY1.o" "pairBlend1.ity1";
 connectAttr "pairBlend1_inTranslateZ1.o" "pairBlend1.itz1";
 connectAttr "pairBlend1_inRotateX1.o" "pairBlend1.irx1";
 connectAttr "pairBlend1_inRotateY1.o" "pairBlend1.iry1";
 connectAttr "pairBlend1_inRotateZ1.o" "pairBlend1.irz1";
+connectAttr "Sneaks_012RN.phl[93]" "pairBlend2.itx2";
+connectAttr "Sneaks_012RN.phl[94]" "pairBlend2.ity2";
+connectAttr "Sneaks_012RN.phl[95]" "pairBlend2.itz2";
+connectAttr "Sneaks_012RN.phl[96]" "pairBlend2.irx2";
+connectAttr "Sneaks_012RN.phl[97]" "pairBlend2.iry2";
+connectAttr "Sneaks_012RN.phl[98]" "pairBlend2.irz2";
 connectAttr "pairBlend2_inTranslateX1.o" "pairBlend2.itx1";
 connectAttr "pairBlend2_inTranslateY1.o" "pairBlend2.ity1";
 connectAttr "pairBlend2_inTranslateZ1.o" "pairBlend2.itz1";
 connectAttr "pairBlend2_inRotateX1.o" "pairBlend2.irx1";
 connectAttr "pairBlend2_inRotateY1.o" "pairBlend2.iry1";
 connectAttr "pairBlend2_inRotateZ1.o" "pairBlend2.irz1";
+connectAttr "Sneaks_012RN.phl[129]" "pairBlend3.irx2";
+connectAttr "Sneaks_012RN.phl[130]" "pairBlend3.iry2";
+connectAttr "Sneaks_012RN.phl[131]" "pairBlend3.irz2";
+connectAttr "Sneaks_012RN.phl[132]" "pairBlend3.itx2";
+connectAttr "Sneaks_012RN.phl[133]" "pairBlend3.ity2";
+connectAttr "Sneaks_012RN.phl[134]" "pairBlend3.itz2";
 connectAttr "pairBlend3_inTranslateX1.o" "pairBlend3.itx1";
 connectAttr "pairBlend3_inTranslateY1.o" "pairBlend3.ity1";
 connectAttr "pairBlend3_inTranslateZ1.o" "pairBlend3.itz1";
 connectAttr "pairBlend3_inRotateX1.o" "pairBlend3.irx1";
 connectAttr "pairBlend3_inRotateY1.o" "pairBlend3.iry1";
 connectAttr "pairBlend3_inRotateZ1.o" "pairBlend3.irz1";
+connectAttr "Sneaks_012RN.phl[157]" "pairBlend4.itx2";
+connectAttr "Sneaks_012RN.phl[158]" "pairBlend4.ity2";
+connectAttr "Sneaks_012RN.phl[159]" "pairBlend4.itz2";
+connectAttr "Sneaks_012RN.phl[160]" "pairBlend4.irx2";
+connectAttr "Sneaks_012RN.phl[161]" "pairBlend4.iry2";
+connectAttr "Sneaks_012RN.phl[162]" "pairBlend4.irz2";
 connectAttr "pairBlend4_inTranslateX1.o" "pairBlend4.itx1";
 connectAttr "pairBlend4_inTranslateY1.o" "pairBlend4.ity1";
 connectAttr "pairBlend4_inTranslateZ1.o" "pairBlend4.itz1";

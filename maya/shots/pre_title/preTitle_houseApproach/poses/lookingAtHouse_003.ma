@@ -1,11 +1,11 @@
 //Maya ASCII 2015 scene
 //Name: lookingAtHouse_003.ma
-//Last modified: Thu, Dec 11, 2014 11:10:44 PM
+//Last modified: Fri, Dec 12, 2014 12:19:05 AM
 //Codeset: UTF-8
 file -rdi 1 -ns "outside_living_room" -rfn "outside_living_roomRN" -op "v=0;"
 		 "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//scenes/outside_living_room.ma";
 file -rdi 2 -ns "living_room_latest" -rfn "outside_living_room:living_room_latestRN"
-		 -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/livingroom/living_room_latest.ma";
+		 "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/livingroom/living_room_latest.ma";
 file -rdi 3 -ns "armchair_latest" -rfn "outside_living_room:living_room_latest:armchair_latestRN"
 		 "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/livingroom/additions/sofa/armchair_latest.ma";
 file -rdi 3 -ns "table_latest" -rfn "outside_living_room:living_room_latest:table_latestRN"
@@ -52,19 +52,21 @@ file -rdi 3 -ns "fridge_latest" -dr 1 -rfn "outside_living_room:living_room_late
 		 "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/kitchen/fridge_latest.ma";
 file -rdi 3 -ns "countersink" -dr 1 -rfn "outside_living_room:living_room_latest:countersinkRN"
 		 "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/kitchen/countersink.ma";
-file -rdi 2 -ns "smarty_latest" -rfn "outside_living_room:smarty_latestRN" 
-		-op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/smarty/smarty_latest.ma";
-file -rdi 2 -ns "sneaks_latest" -rfn "outside_living_room:sneaks_latestRN" 
-		-op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/sneaks/sneaks_latest.ma";
-file -rdi 2 -ns "tuffs_latest" -rfn "outside_living_room:tuffs_latestRN" -op
-		 "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/tuffs/tuffs_latest.ma";
-file -rdi 2 -ns "pig_latest" -rfn "outside_living_room:pig_latestRN" -op "v=0;"
+file -rdi 2 -ns "smarty_latest" -rfn "outside_living_room:smarty_latestRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/smarty/smarty_latest.ma";
+file -rdi 2 -ns "sneaks_latest" -rfn "outside_living_room:sneaks_latestRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/sneaks/sneaks_latest.ma";
+file -rdi 2 -ns "tuffs_latest" -rfn "outside_living_room:tuffs_latestRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/tuffs/tuffs_latest.ma";
+file -rdi 2 -ns "pig_latest" -rfn "outside_living_room:pig_latestRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/pig/rig/PigRig007.ma";
+file -rdi 3 -ns "PigSkin002" -rfn "outside_living_room:pig_latest:PigSkin002RN"
+		 "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/pig/rig/PigSkin002.ma";
+file -rdi 4 -ns "Tyrion_Cattister" -rfn "outside_living_room:pig_latest:PigSkin002:Tyrion_Cattister_uv:Tyrion_CattisterRN"
 		 "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/pig/mesh/Bacon_latest.ma";
-file -rdi 2 -ns "leaves" -rfn "outside_living_room:leavesRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/bush/leaves.ma";
+file -rdi 3 -ns "cat_collar" -rfn "outside_living_room:pig_latest:cat_collarRN"
+		 "/Users/scai/Bandits/maya//assets/props/cat_collar.ma";
+file -rdi 2 -ns "leaves" -rfn "outside_living_room:leavesRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/bush/leaves.ma";
 file -rdi 2 -ns "leaves1" -rfn "outside_living_room:leavesRN1" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/bush/leaves.ma";
 file -rdi 2 -ns "leaves2" -rfn "outside_living_room:leavesRN2" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/bush/leaves.ma";
-file -rdi 2 -ns "binoculars" -rfn "outside_living_room:binocularsRN" -op "v=0;"
-		 "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/props/binoculars.ma";
+file -rdi 2 -ns "binoculars" -rfn "outside_living_room:binocularsRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/props/binoculars.ma";
+file -rdi 2 -ns "key_latest" -rfn "outside_living_room:key_latestRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/props/keys/key_latest.ma";
 file -r -ns "outside_living_room" -dr 1 -rfn "outside_living_roomRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//scenes/outside_living_room.ma";
 requires maya "2015";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOptions" -nodeType "mentalrayGlobals"
@@ -80,13 +82,13 @@ fileInfo "osv" "Mac OS X 10.9.1";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -2.5857919243436989 16.165377111469439 23.565247604137195 ;
-	setAttr ".r" -type "double3" -6.3383527295960578 -84.600000000007242 4.2245931434120771e-15 ;
+	setAttr ".t" -type "double3" 184.60257941521951 57.275348940753673 -44.421484326841586 ;
+	setAttr ".r" -type "double3" -27.338352729584972 116.5999999999856 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 6.8178507789840772;
+	setAttr ".coi" 87.596038691667616;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -134,9 +136,22 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr -s 2 ".ip";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
+createNode transform -n "pPlane1";
+	setAttr ".t" -type "double3" 94.644372380277517 -7.8886090522101181e-31 13.277114560816397 ;
+	setAttr ".r" -type "double3" -90 0 0 ;
+	setAttr ".s" -type "double3" 9.55557259544209 23.025459015887719 10.455113019436281 ;
+createNode mesh -n "pPlaneShape1" -p "pPlane1";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
 createNode lightLinker -s -n "lightLinker1";
-	setAttr -s 103 ".lnk";
-	setAttr -s 103 ".slnk";
+	setAttr -s 114 ".lnk";
+	setAttr -s 113 ".slnk";
 createNode displayLayerManager -n "layerManager";
 createNode displayLayer -n "defaultLayer";
 createNode renderLayerManager -n "renderLayerManager";
@@ -979,28 +994,37 @@ createNode reference -n "outside_living_roomRN";
 		"outside_living_room:smarty_latestRN" 0
 		"outside_living_room:living_room_latest:ripped_up_toyRN" 0
 		"outside_living_room:sneaks_latestRN" 0
+		"outside_living_room:key_latestRN" 0
 		"outside_living_room:leavesRN2" 0
 		"outside_living_room:living_room_latestRN" 0
 		"outside_living_room:living_room_latest:taller_window_latestRN" 0
-		"outside_living_room:living_room_latest:taller_window_latest1RN" 0
 		"outside_living_room:living_room_latest:rectangular_window_latestRN1" 0
+		"outside_living_room:living_room_latest:taller_window_latest1RN" 0
 		"outside_living_room:leavesRN" 0
 		"outside_living_room:living_room_latest:sofa_latestRN" 0
 		"outside_living_room:living_room_latest:rectangular_window_latest2RN" 0
 		"outside_living_room:living_room_latest:taller_window_latest7RN" 0
 		"outside_living_roomRN" 0
+		"outside_living_room:pig_latest:PigSkin002:Tyrion_Cattister_uv:Tyrion_CattisterRN" 
+		0
 		"outside_living_room:living_room_latest:armchair_latestRN3" 0
 		"outside_living_room:living_room_latest:armchair_latestRN2" 0
+		"outside_living_room:pig_latest:cat_collarRN" 0
 		"outside_living_room:tuffs_latestRN" 0
 		"outside_living_room:living_room_latest:taller_window_latest3RN" 0
 		"outside_living_room:living_room_latest:rectangular_window_latestRN" 0
-		"outside_living_room:pig_latestRN" 0
+		"outside_living_room:pig_latestRN" 2
+		2 "|outside_living_room:pig_latest:Pig" "translate" " -type \"double3\" 1.30070839477762412 -0.36785800496045518 0.012657643769795612"
+		
+		2 "|outside_living_room:pig_latest:Pig" "scale" " -type \"double3\" 0.69621847789434455 0.69621847789434455 0.69621847789434455"
+		
 		"outside_living_room:living_room_latest:armchair_latestRN1" 0
 		"outside_living_room:living_room_latest:taller_window_latest4RN" 0
 		"outside_living_room:living_room_latest:photo_frameRN" 0
 		"outside_living_room:binocularsRN" 0
 		"outside_living_room:living_room_latest:taller_window_latest6RN" 0
 		"outside_living_room:living_room_latest:table_latestRN" 0
+		"outside_living_room:pig_latest:PigSkin002RN" 0
 		"outside_living_room:leavesRN1" 0
 		"outside_living_room:living_room_latest:taller_window_latestRN1" 0
 		"outside_living_room:living_room_latest:armchair_latestRN" 0
@@ -1545,91 +1569,14 @@ createNode reference -n "outside_living_roomRN";
 		"outside_living_roomRN.placeHolderList[268]" ""
 		5 4 "outside_living_roomRN" "|outside_living_room:smarty_latest:SmartyRig|outside_living_room:smarty_latest:global_ctrl|outside_living_room:smarty_latest:leftElbow_ctrl1.translateZ" 
 		"outside_living_roomRN.placeHolderList[269]" ""
-		"outside_living_room:pig_latestRN" 4
-		2 "|outside_living_room:pig_latest:Pig" "translate" " -type \"double3\" 1.30070839477762412 -0.36785800496045518 0.012657643769795612"
-		
-		2 "|outside_living_room:pig_latest:Pig" "scale" " -type \"double3\" 0.69621847789434455 0.69621847789434455 0.69621847789434455"
-		
-		2 "|outside_living_room:pig_latest:Pig|outside_living_room:pig_latest:Tyrion_Cattister_uv:Tyrion_Cattister:pigShapeDeformed" 
-		"dispResolution" " 3"
-		2 "|outside_living_room:pig_latest:Pig|outside_living_room:pig_latest:Tyrion_Cattister_uv:Tyrion_Cattister:pigShapeDeformed" 
-		"displaySmoothMesh" " 2"
-		"outside_living_roomRN" 36
-		2 "|outside_living_room:atHouse" "translate" " -type \"double3\" -8.44392954364111326 10.25210355111896021 27.90737107940215722"
-		
-		2 "|outside_living_room:atHouse" "translateX" " -av"
-		2 "|outside_living_room:atHouse" "translateY" " -av"
-		2 "|outside_living_room:atHouse" "translateZ" " -av"
-		2 "|outside_living_room:atHouse" "rotate" " -type \"double3\" -14.52201799055782239 77.99271620569371066 -17.05279885101268533"
-		
-		2 "|outside_living_room:atHouse" "rotateX" " -av"
-		2 "|outside_living_room:atHouse" "rotateY" " -av"
-		2 "|outside_living_room:atHouse" "rotateZ" " -av"
-		2 "|outside_living_room:atHouse" "rotatePivot" " -type \"double3\" 0 0 0"
-		
-		2 "|outside_living_room:atHouse" "rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		
-		2 "|outside_living_room:atHouse|outside_living_room:atHouseShape" "renderable" 
-		" 1"
-		2 "|outside_living_room:atHouse|outside_living_room:atHouseShape" "focalLength" 
-		" 35"
-		2 "|outside_living_room:atHouse|outside_living_room:atHouseShape" "centerOfInterest" 
-		" 21.47994270776094083"
-		2 "|outside_living_room:atHouse|outside_living_room:atHouseShape" "tumblePivot" 
-		" -type \"double3\" 125.32270299471348096 19.24250559072963895 8.64998745462911423"
-		
-		2 "|outside_living_room:atRaccoons|outside_living_room:atRaccoonsShape" "renderable" 
-		" 0"
-		3 ":defaultRenderGlobals.rendercallback" "outside_living_room:defaultFurGlobals.callback" 
-		""
-		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.translateX" 
-		"outside_living_roomRN.placeHolderList[810]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.translateY" 
-		"outside_living_roomRN.placeHolderList[811]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.translateZ" 
-		"outside_living_roomRN.placeHolderList[812]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.rotateX" "outside_living_roomRN.placeHolderList[813]" 
-		""
-		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.rotateY" "outside_living_roomRN.placeHolderList[814]" 
-		""
-		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.rotateZ" "outside_living_roomRN.placeHolderList[815]" 
-		""
-		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.visibility" 
-		"outside_living_roomRN.placeHolderList[816]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.scaleX" "outside_living_roomRN.placeHolderList[817]" 
-		""
-		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.scaleY" "outside_living_roomRN.placeHolderList[818]" 
-		""
-		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.scaleZ" "outside_living_roomRN.placeHolderList[819]" 
-		""
-		5 4 "outside_living_roomRN" "|outside_living_room:atRaccoons.visibility" 
-		"outside_living_roomRN.placeHolderList[820]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:atRaccoons.translateX" 
-		"outside_living_roomRN.placeHolderList[821]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:atRaccoons.translateY" 
-		"outside_living_roomRN.placeHolderList[822]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:atRaccoons.translateZ" 
-		"outside_living_roomRN.placeHolderList[823]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:atRaccoons.rotateX" 
-		"outside_living_roomRN.placeHolderList[824]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:atRaccoons.rotateY" 
-		"outside_living_roomRN.placeHolderList[825]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:atRaccoons.rotateZ" 
-		"outside_living_roomRN.placeHolderList[826]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:atRaccoons.scaleX" 
-		"outside_living_roomRN.placeHolderList[827]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:atRaccoons.scaleY" 
-		"outside_living_roomRN.placeHolderList[828]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:atRaccoons.scaleZ" 
-		"outside_living_roomRN.placeHolderList[829]" ""
 		"outside_living_room:sneaks_latestRN" 262
-		2 "|outside_living_room:sneaks_latest:left_wrist" "translate" " -type \"double3\" 155.92906137324268911 1.39859755679713582 31.45523274966936356"
+		2 "|outside_living_room:sneaks_latest:left_wrist" "translate" " -type \"double3\" 155.92906137324268911 1.39859755679713915 31.45523274966935645"
 		
-		2 "|outside_living_room:sneaks_latest:left_wrist" "rotate" " -type \"double3\" 177.57367829250546265 -73.66270645465971256 -173.89910937941039037"
+		2 "|outside_living_room:sneaks_latest:left_wrist" "rotate" " -type \"double3\" 177.70930969369990748 -73.64112328192516088 -174.04307591735985739"
 		
-		2 "|outside_living_room:sneaks_latest:RightHandHandle" "translate" " -type \"double3\" 156.92453207060694353 1.35391368987209781 27.94406593215868284"
+		2 "|outside_living_room:sneaks_latest:RightHandHandle" "translate" " -type \"double3\" 156.92453207060694353 1.35391368987209515 27.94406593215867929"
 		
-		2 "|outside_living_room:sneaks_latest:RightHandHandle" "rotate" " -type \"double3\" 179.88239327006698431 -68.2204347166883025 -179.21642397490546728"
+		2 "|outside_living_room:sneaks_latest:RightHandHandle" "rotate" " -type \"double3\" 0.019447605794296594 248.19004522060330942 0.64595881006692935"
 		
 		2 "|outside_living_room:sneaks_latest:RightIndex" "translate" " -type \"double3\" 155.63592407081375768 1.37769469180984805 28.09288393463407729"
 		
@@ -2141,6 +2088,24 @@ createNode reference -n "outside_living_roomRN";
 		"outside_living_roomRN.placeHolderList[518]" ""
 		5 4 "outside_living_roomRN" "|outside_living_room:sneaks_latest:controller_root|outside_living_room:sneaks_latest:controller_rightArm|outside_living_room:sneaks_latest:controller_rightWrist|outside_living_room:sneaks_latest:controller_rightThumb.visibility" 
 		"outside_living_roomRN.placeHolderList[519]" ""
+		"outside_living_room:pig_latest:cat_collarRN" 8
+		2 "|outside_living_room:pig_latest:PIGRIGGED|outside_living_room:pig_latest:collar|outside_living_room:pig_latest:cat_collar:pTorus4" 
+		"translate" " -type \"double3\" 2.1618972176340456e-07 3.0788752036770006e-07 -4.318223076893446e-07"
+		
+		2 "|outside_living_room:pig_latest:PIGRIGGED|outside_living_room:pig_latest:collar|outside_living_room:pig_latest:cat_collar:pTorus4" 
+		"translateX" " -av"
+		2 "|outside_living_room:pig_latest:PIGRIGGED|outside_living_room:pig_latest:collar|outside_living_room:pig_latest:cat_collar:pTorus4" 
+		"translateY" " -av"
+		2 "|outside_living_room:pig_latest:PIGRIGGED|outside_living_room:pig_latest:collar|outside_living_room:pig_latest:cat_collar:pTorus4" 
+		"translateZ" " -av"
+		2 "|outside_living_room:pig_latest:PIGRIGGED|outside_living_room:pig_latest:collar|outside_living_room:pig_latest:cat_collar:pTorus4" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|outside_living_room:pig_latest:PIGRIGGED|outside_living_room:pig_latest:collar|outside_living_room:pig_latest:cat_collar:pTorus4" 
+		"rotateX" " -av"
+		2 "|outside_living_room:pig_latest:PIGRIGGED|outside_living_room:pig_latest:collar|outside_living_room:pig_latest:cat_collar:pTorus4" 
+		"rotateY" " -av"
+		2 "|outside_living_room:pig_latest:PIGRIGGED|outside_living_room:pig_latest:collar|outside_living_room:pig_latest:cat_collar:pTorus4" 
+		"rotateZ" " -av"
 		"outside_living_room:tuffs_latestRN" 294
 		2 "|outside_living_room:tuffs_latest:top1" "visibility" " 0"
 		2 "|outside_living_room:tuffs_latest:top1|outside_living_room:tuffs_latest:topShape2" 
@@ -2727,10 +2692,171 @@ createNode reference -n "outside_living_roomRN";
 		5 4 "outside_living_roomRN" "|outside_living_room:tuffs_latest:controller_root|outside_living_room:tuffs_latest:controller_leftArm|outside_living_room:tuffs_latest:controller_leftWrist|outside_living_room:tuffs_latest:controller_leftPinky.scaleZ" 
 		"outside_living_roomRN.placeHolderList[808]" ""
 		5 4 "outside_living_roomRN" "|outside_living_room:tuffs_latest:controller_root|outside_living_room:tuffs_latest:controller_leftArm|outside_living_room:tuffs_latest:controller_leftWrist|outside_living_room:tuffs_latest:controller_leftPinky.visibility" 
-		"outside_living_roomRN.placeHolderList[809]" "";
+		"outside_living_roomRN.placeHolderList[809]" ""
+		"outside_living_room:pig_latest:PigSkin002RN" 16
+		2 "|outside_living_room:pig_latest:PIGRIGGED|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:PigSkin002:PIG01|outside_living_room:pig_latest:PigSkin002:global01|outside_living_room:pig_latest:PigSkin002:skeleton01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01" 
+		"translate" " -type \"double3\" 0.020256546248226925 -4.2391968335664387e-07 1.2111641616741053e-05"
+		
+		2 "|outside_living_room:pig_latest:PIGRIGGED|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:PigSkin002:PIG01|outside_living_room:pig_latest:PigSkin002:global01|outside_living_room:pig_latest:PigSkin002:skeleton01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01" 
+		"translateX" " -av"
+		2 "|outside_living_room:pig_latest:PIGRIGGED|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:PigSkin002:PIG01|outside_living_room:pig_latest:PigSkin002:global01|outside_living_room:pig_latest:PigSkin002:skeleton01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01" 
+		"translateY" " -av"
+		2 "|outside_living_room:pig_latest:PIGRIGGED|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:PigSkin002:PIG01|outside_living_room:pig_latest:PigSkin002:global01|outside_living_room:pig_latest:PigSkin002:skeleton01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01" 
+		"translateZ" " -av"
+		2 "|outside_living_room:pig_latest:PIGRIGGED|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:PigSkin002:PIG01|outside_living_room:pig_latest:PigSkin002:global01|outside_living_room:pig_latest:PigSkin002:skeleton01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01" 
+		"rotate" " -type \"double3\" 0 -0.098343103534231271 0"
+		2 "|outside_living_room:pig_latest:PIGRIGGED|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:PigSkin002:PIG01|outside_living_room:pig_latest:PigSkin002:global01|outside_living_room:pig_latest:PigSkin002:skeleton01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01" 
+		"rotateX" " -av"
+		2 "|outside_living_room:pig_latest:PIGRIGGED|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:PigSkin002:PIG01|outside_living_room:pig_latest:PigSkin002:global01|outside_living_room:pig_latest:PigSkin002:skeleton01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01" 
+		"rotateY" " -av"
+		2 "|outside_living_room:pig_latest:PIGRIGGED|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:PigSkin002:PIG01|outside_living_room:pig_latest:PigSkin002:global01|outside_living_room:pig_latest:PigSkin002:skeleton01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01" 
+		"rotateZ" " -av"
+		2 "|outside_living_room:pig_latest:PIGRIGGED|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:PigSkin002:PIG01|outside_living_room:pig_latest:PigSkin002:global01|outside_living_room:pig_latest:PigSkin002:skeleton01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_head01" 
+		"translate" " -type \"double3\" 0.00065590809926874272 0.42640837704837153 9.81534536528354806"
+		
+		2 "|outside_living_room:pig_latest:PIGRIGGED|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:PigSkin002:PIG01|outside_living_room:pig_latest:PigSkin002:global01|outside_living_room:pig_latest:PigSkin002:skeleton01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_head01" 
+		"translateX" " -av"
+		2 "|outside_living_room:pig_latest:PIGRIGGED|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:PigSkin002:PIG01|outside_living_room:pig_latest:PigSkin002:global01|outside_living_room:pig_latest:PigSkin002:skeleton01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_head01" 
+		"translateY" " -av"
+		2 "|outside_living_room:pig_latest:PIGRIGGED|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:PigSkin002:PIG01|outside_living_room:pig_latest:PigSkin002:global01|outside_living_room:pig_latest:PigSkin002:skeleton01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_head01" 
+		"translateZ" " -av"
+		2 "|outside_living_room:pig_latest:PIGRIGGED|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:PigSkin002:PIG01|outside_living_room:pig_latest:PigSkin002:global01|outside_living_room:pig_latest:PigSkin002:skeleton01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_head01" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|outside_living_room:pig_latest:PIGRIGGED|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:PigSkin002:PIG01|outside_living_room:pig_latest:PigSkin002:global01|outside_living_room:pig_latest:PigSkin002:skeleton01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_head01" 
+		"rotateX" " -av"
+		2 "|outside_living_room:pig_latest:PIGRIGGED|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:PigSkin002:PIG01|outside_living_room:pig_latest:PigSkin002:global01|outside_living_room:pig_latest:PigSkin002:skeleton01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_head01" 
+		"rotateY" " -av"
+		2 "|outside_living_room:pig_latest:PIGRIGGED|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:PigSkin002:PIG01|outside_living_room:pig_latest:PigSkin002:global01|outside_living_room:pig_latest:PigSkin002:skeleton01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_head01" 
+		"rotateZ" " -av"
+		"outside_living_room:pig_latestRN" 26
+		2 "|outside_living_room:pig_latest:Tyrion_Cattister_uv:Tyrion_CattisterRNfosterParent1|outside_living_room:pig_latest:Tyrion_Cattister_uv:Tyrion_Cattister:pigShapeDeformed" 
+		"dispResolution" " 3"
+		2 "|outside_living_room:pig_latest:Tyrion_Cattister_uv:Tyrion_CattisterRNfosterParent1|outside_living_room:pig_latest:Tyrion_Cattister_uv:Tyrion_Cattister:pigShapeDeformed" 
+		"displaySmoothMesh" " 2"
+		2 "|outside_living_room:pig_latest:PIGRIGGED|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_frontfoot01" 
+		"translate" " -type \"double3\" -7.1688709524231342e-07 -0.00017026867979907934 0.00042890982375620723"
+		
+		2 "|outside_living_room:pig_latest:PIGRIGGED|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_frontfoot01" 
+		"translateX" " -av"
+		2 "|outside_living_room:pig_latest:PIGRIGGED|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_frontfoot01" 
+		"translateY" " -av"
+		2 "|outside_living_room:pig_latest:PIGRIGGED|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_frontfoot01" 
+		"translateZ" " -av"
+		2 "|outside_living_room:pig_latest:PIGRIGGED|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_frontfoot01" 
+		"rotate" " -type \"double3\" 0 -4.3714398365801387e-08 0"
+		2 "|outside_living_room:pig_latest:PIGRIGGED|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_frontfoot01" 
+		"rotateX" " -av"
+		2 "|outside_living_room:pig_latest:PIGRIGGED|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_frontfoot01" 
+		"rotateY" " -av"
+		2 "|outside_living_room:pig_latest:PIGRIGGED|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_frontfoot01" 
+		"rotateZ" " -av"
+		2 "|outside_living_room:pig_latest:PIGRIGGED|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_frontfoot01" 
+		"translate" " -type \"double3\" -7.1688676661629813e-07 -4.2391967980393019e-07 5.4148060169012524e-07"
+		
+		2 "|outside_living_room:pig_latest:PIGRIGGED|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_frontfoot01" 
+		"translateX" " -av"
+		2 "|outside_living_room:pig_latest:PIGRIGGED|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_frontfoot01" 
+		"translateY" " -av"
+		2 "|outside_living_room:pig_latest:PIGRIGGED|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_frontfoot01" 
+		"translateZ" " -av"
+		2 "|outside_living_room:pig_latest:PIGRIGGED|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_frontfoot01" 
+		"rotate" " -type \"double3\" 0 -4.3714398365801387e-08 0"
+		2 "|outside_living_room:pig_latest:PIGRIGGED|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_frontfoot01" 
+		"rotateX" " -av"
+		2 "|outside_living_room:pig_latest:PIGRIGGED|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_frontfoot01" 
+		"rotateY" " -av"
+		2 "|outside_living_room:pig_latest:PIGRIGGED|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_frontfoot01" 
+		"rotateZ" " -av"
+		2 "|outside_living_room:pig_latest:PIGRIGGED|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_backfoot01" 
+		"translate" " -type \"double3\" 0.020730605094313681 -4.2391968690935755e-07 0.0047542097176878073"
+		
+		2 "|outside_living_room:pig_latest:PIGRIGGED|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_backfoot01" 
+		"translateX" " -av"
+		2 "|outside_living_room:pig_latest:PIGRIGGED|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_backfoot01" 
+		"translateY" " -av"
+		2 "|outside_living_room:pig_latest:PIGRIGGED|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_backfoot01" 
+		"translateZ" " -av"
+		2 "|outside_living_room:pig_latest:PIGRIGGED|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_backfoot01" 
+		"translate" " -type \"double3\" 0.020738595903188717 -4.2391968690935755e-07 -0.0043296895333080343"
+		
+		2 "|outside_living_room:pig_latest:PIGRIGGED|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_backfoot01" 
+		"translateX" " -av"
+		2 "|outside_living_room:pig_latest:PIGRIGGED|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_backfoot01" 
+		"translateY" " -av"
+		2 "|outside_living_room:pig_latest:PIGRIGGED|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_backfoot01" 
+		"translateZ" " -av"
+		"outside_living_roomRN" 36
+		2 "|outside_living_room:atHouse" "translate" " -type \"double3\" 148.36836441941491671 20.33423462838235451 10.07226527639050495"
+		
+		2 "|outside_living_room:atHouse" "translateX" " -av"
+		2 "|outside_living_room:atHouse" "translateY" " -av"
+		2 "|outside_living_room:atHouse" "translateZ" " -av"
+		2 "|outside_living_room:atHouse" "rotate" " -type \"double3\" 167.677325957771302 71.0950090698945445 -186.30561267498489997"
+		
+		2 "|outside_living_room:atHouse" "rotateX" " -av"
+		2 "|outside_living_room:atHouse" "rotateY" " -av"
+		2 "|outside_living_room:atHouse" "rotateZ" " -av"
+		2 "|outside_living_room:atHouse" "rotatePivot" " -type \"double3\" 0 0 0"
+		
+		2 "|outside_living_room:atHouse" "rotatePivotTranslate" " -type \"double3\" 0 0 0"
+		
+		2 "|outside_living_room:atHouse|outside_living_room:atHouseShape" "renderable" 
+		" 1"
+		2 "|outside_living_room:atHouse|outside_living_room:atHouseShape" "focalLength" 
+		" 35"
+		2 "|outside_living_room:atHouse|outside_living_room:atHouseShape" "centerOfInterest" 
+		" 44.11689368221710339"
+		2 "|outside_living_room:atHouse|outside_living_room:atHouseShape" "tumblePivot" 
+		" -type \"double3\" 125.32270299471348096 19.24250559072963895 8.64998745462911423"
+		
+		2 "|outside_living_room:atRaccoons|outside_living_room:atRaccoonsShape" "renderable" 
+		" 0"
+		3 ":defaultRenderGlobals.rendercallback" "outside_living_room:defaultFurGlobals.callback" 
+		""
+		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.translateX" 
+		"outside_living_roomRN.placeHolderList[810]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.translateY" 
+		"outside_living_roomRN.placeHolderList[811]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.translateZ" 
+		"outside_living_roomRN.placeHolderList[812]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.rotateX" "outside_living_roomRN.placeHolderList[813]" 
+		""
+		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.rotateY" "outside_living_roomRN.placeHolderList[814]" 
+		""
+		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.rotateZ" "outside_living_roomRN.placeHolderList[815]" 
+		""
+		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.visibility" 
+		"outside_living_roomRN.placeHolderList[816]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.scaleX" "outside_living_roomRN.placeHolderList[817]" 
+		""
+		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.scaleY" "outside_living_roomRN.placeHolderList[818]" 
+		""
+		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.scaleZ" "outside_living_roomRN.placeHolderList[819]" 
+		""
+		5 4 "outside_living_roomRN" "|outside_living_room:atRaccoons.visibility" 
+		"outside_living_roomRN.placeHolderList[820]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:atRaccoons.translateX" 
+		"outside_living_roomRN.placeHolderList[821]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:atRaccoons.translateY" 
+		"outside_living_roomRN.placeHolderList[822]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:atRaccoons.translateZ" 
+		"outside_living_roomRN.placeHolderList[823]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:atRaccoons.rotateX" 
+		"outside_living_roomRN.placeHolderList[824]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:atRaccoons.rotateY" 
+		"outside_living_roomRN.placeHolderList[825]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:atRaccoons.rotateZ" 
+		"outside_living_roomRN.placeHolderList[826]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:atRaccoons.scaleX" 
+		"outside_living_roomRN.placeHolderList[827]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:atRaccoons.scaleY" 
+		"outside_living_roomRN.placeHolderList[828]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:atRaccoons.scaleZ" 
+		"outside_living_roomRN.placeHolderList[829]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode mentalrayItemsList -s -n "mentalrayItemsList";
+	setAttr -s 18 ".opt";
 createNode mentalrayGlobals -s -n "mentalrayGlobals";
 	addAttr -s false -ci true -h true -sn "sunAndSkyShader" -ln "sunAndSkyShader" -at "message";
 	setAttr ".rvb" 3;
@@ -6211,12 +6337,14 @@ createNode animCurveTU -n "controller_leftPinky_scaleZ";
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  1 1;
 createNode animCurveTU -n "atHouse_visibility";
-	setAttr ".tan" 5;
+	setAttr ".tan" 2;
 	setAttr ".wgt" no;
 	setAttr -s 10 ".ktv[0:9]"  0 1 45 1 48 1 70 1 73 1 95 1 98 1 120 1
 		 123 1 150 1;
-	setAttr -s 10 ".kit[0:9]"  9 1 9 9 9 9 9 9 
-		9 1;
+	setAttr -s 10 ".kit[0:9]"  9 1 9 9 9 9 2 2 
+		2 2;
+	setAttr -s 10 ".kot[0:9]"  5 5 5 5 5 5 2 2 
+		2 2;
 	setAttr -s 10 ".kix[1:9]"  1 1 1 1 1 1 1 1 1;
 	setAttr -s 10 ".kiy[1:9]"  0 0 0 0 0 0 0 0 0;
 createNode animCurveTL -n "atHouse_translateX";
@@ -6224,95 +6352,107 @@ createNode animCurveTL -n "atHouse_translateX";
 	setAttr ".wgt" no;
 	setAttr -s 10 ".ktv[0:9]"  0 148.36836441941492 45 148.36836441941492
 		 48 -3.7798433717227793 70 -3.7798433717227793 73 -29.182641218163432 95 -29.182641218163432
-		 98 2.789 120 2.789 123 -8.4439295436411133 150 -8.4439295436411133;
-	setAttr -s 10 ".kit[1:9]"  1 18 18 18 18 18 18 18 
+		 98 -1.4328472448213472 120 -1.4328472448213472 123 -9.8198343955129648 150 -9.8198343955129648;
+	setAttr -s 10 ".kit[1:9]"  1 18 18 18 18 2 2 2 
+		2;
+	setAttr -s 10 ".kot[1:9]"  1 18 18 18 18 2 2 2 
+		2;
+	setAttr -s 10 ".kix[1:9]"  1 1 1 1 1 0.0045045008882880211 1 0.014902385883033276 
 		1;
-	setAttr -s 10 ".kot[1:9]"  1 18 18 18 18 18 18 18 
-		1;
-	setAttr -s 10 ".kix[1:9]"  1 1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[1:9]"  0 0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[1:9]"  1 1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[1:9]"  0 0 0 0 0 0 0 0 0;
+	setAttr -s 10 ".kiy[1:9]"  0 0 0 0 0 0.99998980760574341 0 -0.99988889694213867 
+		0;
+	setAttr -s 10 ".kox[1:9]"  1 1 1 1 1 1 0.014902385883033276 1 1;
+	setAttr -s 10 ".koy[1:9]"  0 0 0 0 0 0 -0.99988889694213867 0 0;
 createNode animCurveTL -n "atHouse_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 10 ".ktv[0:9]"  0 20.334234628382355 45 20.334234628382355
 		 48 10.36663855357534 70 10.36663855357534 73 1.825677308589259 95 1.825677308589259
-		 98 13.994 120 13.994 123 10.25210355111896 150 10.25210355111896;
-	setAttr -s 10 ".kit[1:9]"  1 18 18 18 18 18 18 18 
+		 98 9.4643318886330245 120 9.4643318886330245 123 8.4180896403361647 150 8.4180896403361647;
+	setAttr -s 10 ".kit[1:9]"  1 18 18 18 18 2 2 2 
+		2;
+	setAttr -s 10 ".kot[1:9]"  1 18 18 18 18 2 2 2 
+		2;
+	setAttr -s 10 ".kix[1:9]"  1 1 1 1 1 0.016361977905035019 1 0.11863149702548981 
 		1;
-	setAttr -s 10 ".kot[1:9]"  1 18 18 18 18 18 18 18 
-		1;
-	setAttr -s 10 ".kix[1:9]"  1 1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[1:9]"  0 0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[1:9]"  1 1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[1:9]"  0 0 0 0 0 0 0 0 0;
+	setAttr -s 10 ".kiy[1:9]"  0 0 0 0 0 0.99986612796783447 0 -0.99293828010559082 
+		0;
+	setAttr -s 10 ".kox[1:9]"  1 1 1 1 1 1 0.11863149702548981 1 1;
+	setAttr -s 10 ".koy[1:9]"  0 0 0 0 0 0 -0.99293828010559082 0 0;
 createNode animCurveTL -n "atHouse_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 10 ".ktv[0:9]"  0 10.072265276390505 45 10.072265276390505
 		 48 21.925485928998519 70 21.925485928998519 73 68.147598094755537 95 68.147598094755537
-		 98 35.604 120 35.604 123 27.907371079402157 150 27.907371079402157;
-	setAttr -s 10 ".kit[1:9]"  1 18 18 18 18 18 18 18 
+		 98 29.700849286167372 120 29.700849286167372 123 27.183379651681193 150 27.183379651681193;
+	setAttr -s 10 ".kit[1:9]"  1 18 18 18 18 2 2 2 
+		2;
+	setAttr -s 10 ".kot[1:9]"  1 18 18 18 18 2 2 2 
+		2;
+	setAttr -s 10 ".kix[1:9]"  1 1 1 1 1 0.0032512391917407513 1 0.04959193617105484 
 		1;
-	setAttr -s 10 ".kot[1:9]"  1 18 18 18 18 18 18 18 
-		1;
-	setAttr -s 10 ".kix[1:9]"  1 1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[1:9]"  0 0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[1:9]"  1 1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[1:9]"  0 0 0 0 0 0 0 0 0;
+	setAttr -s 10 ".kiy[1:9]"  0 0 0 0 0 -0.99999475479125977 0 -0.99876958131790161 
+		0;
+	setAttr -s 10 ".kox[1:9]"  1 1 1 1 1 1 0.04959193617105484 1 1;
+	setAttr -s 10 ".koy[1:9]"  0 0 0 0 0 0 -0.99876958131790161 0 0;
 createNode animCurveTA -n "atHouse_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  0 178.14479859805365 45 178.14479859805365
+	setAttr -s 10 ".ktv[0:9]"  0 178.14479859805368 45 178.14479859805368
 		 48 169.11057590271167 70 169.11057590271167 73 -26.795648678508144 95 -26.795648678508144
-		 98 -15.919999999999998 120 -15.919999999999998 123 -14.522017990557822 150 -14.522017990557822;
-	setAttr -s 10 ".kit[1:9]"  1 18 18 18 18 18 18 18 
+		 98 -18.731072614377069 120 -18.731072614377069 123 -13.389005595611915 150 -13.389005595611915;
+	setAttr -s 10 ".kit[1:9]"  1 18 18 18 18 2 2 2 
+		2;
+	setAttr -s 10 ".kot[1:9]"  1 18 18 18 18 2 2 2 
+		2;
+	setAttr -s 10 ".kix[1:9]"  1 1 1 1 1 0.66402578353881836 1 0.80157732963562012 
 		1;
-	setAttr -s 10 ".kot[1:9]"  1 18 18 18 18 18 18 18 
-		1;
-	setAttr -s 10 ".kix[1:9]"  1 1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[1:9]"  0 0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[1:9]"  1 1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[1:9]"  0 0 0 0 0 0 0 0 0;
+	setAttr -s 10 ".kiy[1:9]"  0 0 0 0 0 0.74770969152450562 0 0.59789115190505981 
+		0;
+	setAttr -s 10 ".kox[1:9]"  1 1 1 1 1 1 0.80157732963562012 1 1;
+	setAttr -s 10 ".koy[1:9]"  0 0 0 0 0 0 0.59789115190505981 0 0;
 createNode animCurveTA -n "atHouse_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 10 ".ktv[0:9]"  0 71.53645188494545 45 71.53645188494545
 		 48 102.26068853928732 70 102.26068853928732 73 100.31106457184303 95 100.31106457184303
-		 98 72.954 120 72.954 123 77.992716205693711 150 77.992716205693711;
-	setAttr -s 10 ".kit[1:9]"  1 18 18 18 18 18 18 18 
+		 98 81.003671779026291 120 81.003671779026291 123 79.134341736943711 150 79.134341736943711;
+	setAttr -s 10 ".kit[1:9]"  1 18 18 18 18 2 2 2 
+		2;
+	setAttr -s 10 ".kot[1:9]"  1 18 18 18 18 2 2 2 
+		2;
+	setAttr -s 10 ".kix[1:9]"  1 1 1 1 1 0.34778830409049988 1 0.96758455038070679 
 		1;
-	setAttr -s 10 ".kot[1:9]"  1 18 18 18 18 18 18 18 
-		1;
-	setAttr -s 10 ".kix[1:9]"  1 1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[1:9]"  0 0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[1:9]"  1 1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[1:9]"  0 0 0 0 0 0 0 0 0;
+	setAttr -s 10 ".kiy[1:9]"  0 0 0 0 0 -0.93757307529449463 0 -0.25254705548286438 
+		0;
+	setAttr -s 10 ".kox[1:9]"  1 1 1 1 1 1 0.96758455038070679 1 1;
+	setAttr -s 10 ".koy[1:9]"  0 0 0 0 0 0 -0.25254705548286438 0 0;
 createNode animCurveTA -n "atHouse_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 10 ".ktv[0:9]"  0 -175.25938386705241 45 -175.25938386705241
-		 48 177.779 70 177.779 73 19.928000000000004 95 19.928000000000004 98 -12.012 120 -12.012
-		 123 -17.052798851012685 150 -17.052798851012685;
-	setAttr -s 10 ".kit[1:9]"  1 18 18 18 18 18 18 18 
+		 48 177.779 70 177.779 73 19.928000000000004 95 19.928000000000004 98 -22.96341323055006
+		 120 -22.96341323055006 123 -18.882814880883604 150 -18.882814880883604;
+	setAttr -s 10 ".kit[1:9]"  1 18 18 18 18 2 2 2 
+		2;
+	setAttr -s 10 ".kot[1:9]"  1 18 18 18 18 2 2 2 
+		2;
+	setAttr -s 10 ".kix[1:9]"  1 1 1 1 1 0.16469918191432953 1 0.86886727809906006 
 		1;
-	setAttr -s 10 ".kot[1:9]"  1 18 18 18 18 18 18 18 
-		1;
-	setAttr -s 10 ".kix[1:9]"  1 1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[1:9]"  0 0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[1:9]"  1 1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[1:9]"  0 0 0 0 0 0 0 0 0;
+	setAttr -s 10 ".kiy[1:9]"  0 0 0 0 0 -0.98634380102157593 0 0.49504497647285461 
+		0;
+	setAttr -s 10 ".kox[1:9]"  1 1 1 1 1 1 0.86886727809906006 1 1;
+	setAttr -s 10 ".koy[1:9]"  0 0 0 0 0 0 0.49504497647285461 0 0;
 createNode animCurveTU -n "atHouse_scaleX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 10 ".ktv[0:9]"  0 5.6090346886147016 45 5.6090346886147016
 		 48 5.6090346886147016 70 5.6090346886147016 73 5.6090346886147016 95 5.6090346886147016
 		 98 5.6090346886147016 120 5.6090346886147016 123 5.6090346886147016 150 5.6090346886147016;
-	setAttr -s 10 ".kit[1:9]"  1 18 18 18 18 18 18 18 
-		1;
-	setAttr -s 10 ".kot[1:9]"  1 18 18 18 18 18 18 18 
-		1;
+	setAttr -s 10 ".kit[1:9]"  1 18 18 18 18 2 2 2 
+		2;
+	setAttr -s 10 ".kot[1:9]"  1 18 18 18 18 2 2 2 
+		2;
 	setAttr -s 10 ".kix[1:9]"  1 1 1 1 1 1 1 1 1;
 	setAttr -s 10 ".kiy[1:9]"  0 0 0 0 0 0 0 0 0;
 	setAttr -s 10 ".kox[1:9]"  1 1 1 1 1 1 1 1 1;
@@ -6323,10 +6463,10 @@ createNode animCurveTU -n "atHouse_scaleY";
 	setAttr -s 10 ".ktv[0:9]"  0 5.6090346886146971 45 5.6090346886146971
 		 48 5.6090346886146971 70 5.6090346886146971 73 5.6090346886146971 95 5.6090346886146971
 		 98 5.6090346886146971 120 5.6090346886146971 123 5.6090346886146971 150 5.6090346886146971;
-	setAttr -s 10 ".kit[1:9]"  1 18 18 18 18 18 18 18 
-		1;
-	setAttr -s 10 ".kot[1:9]"  1 18 18 18 18 18 18 18 
-		1;
+	setAttr -s 10 ".kit[1:9]"  1 18 18 18 18 2 2 2 
+		2;
+	setAttr -s 10 ".kot[1:9]"  1 18 18 18 18 2 2 2 
+		2;
 	setAttr -s 10 ".kix[1:9]"  1 1 1 1 1 1 1 1 1;
 	setAttr -s 10 ".kiy[1:9]"  0 0 0 0 0 0 0 0 0;
 	setAttr -s 10 ".kox[1:9]"  1 1 1 1 1 1 1 1 1;
@@ -6337,10 +6477,10 @@ createNode animCurveTU -n "atHouse_scaleZ";
 	setAttr -s 10 ".ktv[0:9]"  0 5.6090346886147051 45 5.6090346886147051
 		 48 5.6090346886147051 70 5.6090346886147051 73 5.6090346886147051 95 5.6090346886147051
 		 98 5.6090346886147051 120 5.6090346886147051 123 5.6090346886147051 150 5.6090346886147051;
-	setAttr -s 10 ".kit[1:9]"  1 18 18 18 18 18 18 18 
-		1;
-	setAttr -s 10 ".kot[1:9]"  1 18 18 18 18 18 18 18 
-		1;
+	setAttr -s 10 ".kit[1:9]"  1 18 18 18 18 2 2 2 
+		2;
+	setAttr -s 10 ".kot[1:9]"  1 18 18 18 18 2 2 2 
+		2;
 	setAttr -s 10 ".kix[1:9]"  1 1 1 1 1 1 1 1 1;
 	setAttr -s 10 ".kiy[1:9]"  0 0 0 0 0 0 0 0 0;
 	setAttr -s 10 ".kox[1:9]"  1 1 1 1 1 1 1 1 1;
@@ -7503,19 +7643,78 @@ createNode mentalrayOptions -s -n "ProductionRapidHair";
 	setAttr ".shmap" 3;
 	setAttr ".mbsm" no;
 	setAttr ".bism" 0.019999999552965164;
+createNode vectorRenderGlobals -s -n "vectorRenderGlobals2";
+createNode vectorRenderGlobals -s -n "vectorRenderGlobals3";
+createNode vectorRenderGlobals -s -n "vectorRenderGlobals4";
+createNode vectorRenderGlobals -s -n "vectorRenderGlobals5";
+createNode vectorRenderGlobals -s -n "vectorRenderGlobals6";
+createNode vectorRenderGlobals -s -n "vectorRenderGlobals7";
+createNode vectorRenderGlobals -s -n "vectorRenderGlobals8";
+createNode vectorRenderGlobals -s -n "vectorRenderGlobals9";
+createNode vectorRenderGlobals -s -n "vectorRenderGlobals10";
+createNode vectorRenderGlobals -s -n "vectorRenderGlobals11";
+createNode vectorRenderGlobals -s -n "vectorRenderGlobals12";
+createNode vectorRenderGlobals -s -n "vectorRenderGlobals13";
+createNode vectorRenderGlobals -s -n "vectorRenderGlobals14";
+createNode vectorRenderGlobals -s -n "vectorRenderGlobals15";
+createNode vectorRenderGlobals -s -n "vectorRenderGlobals16";
+createNode vectorRenderGlobals -s -n "vectorRenderGlobals17";
+createNode vectorRenderGlobals -s -n "vectorRenderGlobals18";
+createNode vectorRenderGlobals -s -n "vectorRenderGlobals19";
+createNode vectorRenderGlobals -s -n "vectorRenderGlobals20";
+createNode vectorRenderGlobals -s -n "vectorRenderGlobals21";
+createNode vectorRenderGlobals -s -n "vectorRenderGlobals22";
+createNode mentalrayOptions -s -n "FineTrace";
+	setAttr ".conr" 0.019999999552965164;
+	setAttr ".cong" 0.019999999552965164;
+	setAttr ".conb" 0.019999999552965164;
+	setAttr ".splck" yes;
+	setAttr ".minsp" 1;
+	setAttr ".maxsp" 2;
+	setAttr ".fil" 1;
+	setAttr ".filw" 0.75;
+	setAttr ".filh" 0.75;
+	setAttr ".jit" yes;
+	setAttr ".rflr" 1;
+	setAttr ".rfrr" 1;
+	setAttr ".maxr" 1;
+	setAttr ".shrd" 2;
+createNode mentalrayOptions -s -n "PreviewImrRayTracyOff";
+	setAttr ".splck" yes;
+	setAttr ".minsp" 0;
+	setAttr ".fil" 1;
+	setAttr ".ray" no;
+	setAttr ".rflr" 1;
+	setAttr ".rfrr" 1;
+	setAttr ".maxr" 1;
+	setAttr ".shrd" 2;
+createNode mentalrayOptions -s -n "PreviewImrRayTracyOn";
+	setAttr ".splck" yes;
+	setAttr ".minsp" 0;
+	setAttr ".fil" 1;
+	setAttr ".rflr" 1;
+	setAttr ".rfrr" 2;
+	setAttr ".maxr" 3;
+	setAttr ".shrd" 1;
+createNode polyPlane -n "polyPlane1";
+	setAttr ".ax" -type "double3" 0 0 1 ;
+	setAttr ".w" 20;
+	setAttr ".h" 10;
+	setAttr ".sw" 1;
+	setAttr ".sh" 1;
+	setAttr ".cuv" 2;
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr ".o" 123;
-	setAttr ".unw" 123;
+	setAttr ".o" 0;
 select -ne :renderPartition;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 103 ".st";
+	setAttr -s 114 ".st";
 	setAttr -cb on ".an";
 	setAttr -cb on ".pt";
 select -ne :renderGlobalsList1;
@@ -7528,7 +7727,7 @@ select -ne :defaultShaderList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 100 ".s";
+	setAttr -s 111 ".s";
 select -ne :postProcessList1;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -7540,21 +7739,21 @@ select -ne :defaultRenderUtilityList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 34 ".u";
+	setAttr -s 257 ".u";
 select -ne :defaultRenderingList1;
-	setAttr -s 32 ".r";
+	setAttr -s 36 ".r";
 select -ne :defaultTextureList1;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 29 ".tx";
+	setAttr -s 41 ".tx";
 select -ne :initialShadingGroup;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 74 ".dsm";
+	setAttr -s 86 ".dsm";
 	setAttr -k on ".mwc";
 	setAttr -cb on ".an";
 	setAttr -cb on ".il";
@@ -7563,7 +7762,7 @@ select -ne :initialShadingGroup;
 	setAttr -cb on ".fo";
 	setAttr -cb on ".epo";
 	setAttr ".ro" yes;
-	setAttr -s 62 ".gn";
+	setAttr -s 67 ".gn";
 	setAttr -cb on ".mimt";
 	setAttr -cb on ".miop";
 	setAttr -cb on ".mise";
@@ -7657,6 +7856,8 @@ select -ne :hardwareRenderingGlobals;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
 		 1 1 1 0 0 0 0 0 0 0 0 0
 		 0 0 0 0 ;
+select -ne :characterPartition;
+	setAttr -s 2 ".st";
 select -ne :defaultHardwareRenderGlobals;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -7694,7 +7895,7 @@ select -ne :defaultHardwareRenderGlobals;
 	setAttr -k on ".gh";
 	setAttr -cb on ".sd";
 select -ne :ikSystem;
-	setAttr -s 5 ".sol";
+	setAttr -s 8 ".sol";
 connectAttr "SmartyRig_visibility.o" "outside_living_roomRN.phl[1]";
 connectAttr "global_ctrl_translateX.o" "outside_living_roomRN.phl[2]";
 connectAttr "global_ctrl_translateY.o" "outside_living_roomRN.phl[3]";
@@ -7964,26 +8165,6 @@ connectAttr "leftKnee_ctrl1_translateZ.o" "outside_living_roomRN.phl[266]";
 connectAttr "leftElbow_ctrl1_translateX.o" "outside_living_roomRN.phl[267]";
 connectAttr "leftElbow_ctrl1_translateY.o" "outside_living_roomRN.phl[268]";
 connectAttr "leftElbow_ctrl1_translateZ.o" "outside_living_roomRN.phl[269]";
-connectAttr "atHouse_translateX.o" "outside_living_roomRN.phl[810]";
-connectAttr "atHouse_translateY.o" "outside_living_roomRN.phl[811]";
-connectAttr "atHouse_translateZ.o" "outside_living_roomRN.phl[812]";
-connectAttr "atHouse_rotateX.o" "outside_living_roomRN.phl[813]";
-connectAttr "atHouse_rotateY.o" "outside_living_roomRN.phl[814]";
-connectAttr "atHouse_rotateZ.o" "outside_living_roomRN.phl[815]";
-connectAttr "atHouse_visibility.o" "outside_living_roomRN.phl[816]";
-connectAttr "atHouse_scaleX.o" "outside_living_roomRN.phl[817]";
-connectAttr "atHouse_scaleY.o" "outside_living_roomRN.phl[818]";
-connectAttr "atHouse_scaleZ.o" "outside_living_roomRN.phl[819]";
-connectAttr "atRaccoons_visibility.o" "outside_living_roomRN.phl[820]";
-connectAttr "atRaccoons_translateX.o" "outside_living_roomRN.phl[821]";
-connectAttr "atRaccoons_translateY.o" "outside_living_roomRN.phl[822]";
-connectAttr "atRaccoons_translateZ.o" "outside_living_roomRN.phl[823]";
-connectAttr "atRaccoons_rotateX.o" "outside_living_roomRN.phl[824]";
-connectAttr "atRaccoons_rotateY.o" "outside_living_roomRN.phl[825]";
-connectAttr "atRaccoons_rotateZ.o" "outside_living_roomRN.phl[826]";
-connectAttr "atRaccoons_scaleX.o" "outside_living_roomRN.phl[827]";
-connectAttr "atRaccoons_scaleY.o" "outside_living_roomRN.phl[828]";
-connectAttr "atRaccoons_scaleZ.o" "outside_living_roomRN.phl[829]";
 connectAttr "controller_root_visibility.o" "outside_living_roomRN.phl[270]";
 connectAttr "controller_root_translateX.o" "outside_living_roomRN.phl[271]";
 connectAttr "controller_root_translateY.o" "outside_living_roomRN.phl[272]";
@@ -8622,6 +8803,27 @@ connectAttr "controller_leftPinky_scaleY.o" "outside_living_roomRN.phl[807]";
 connectAttr "controller_leftPinky_scaleZ.o" "outside_living_roomRN.phl[808]";
 connectAttr "controller_leftPinky_visibility.o" "outside_living_roomRN.phl[809]"
 		;
+connectAttr "atHouse_translateX.o" "outside_living_roomRN.phl[810]";
+connectAttr "atHouse_translateY.o" "outside_living_roomRN.phl[811]";
+connectAttr "atHouse_translateZ.o" "outside_living_roomRN.phl[812]";
+connectAttr "atHouse_rotateX.o" "outside_living_roomRN.phl[813]";
+connectAttr "atHouse_rotateY.o" "outside_living_roomRN.phl[814]";
+connectAttr "atHouse_rotateZ.o" "outside_living_roomRN.phl[815]";
+connectAttr "atHouse_visibility.o" "outside_living_roomRN.phl[816]";
+connectAttr "atHouse_scaleX.o" "outside_living_roomRN.phl[817]";
+connectAttr "atHouse_scaleY.o" "outside_living_roomRN.phl[818]";
+connectAttr "atHouse_scaleZ.o" "outside_living_roomRN.phl[819]";
+connectAttr "atRaccoons_visibility.o" "outside_living_roomRN.phl[820]";
+connectAttr "atRaccoons_translateX.o" "outside_living_roomRN.phl[821]";
+connectAttr "atRaccoons_translateY.o" "outside_living_roomRN.phl[822]";
+connectAttr "atRaccoons_translateZ.o" "outside_living_roomRN.phl[823]";
+connectAttr "atRaccoons_rotateX.o" "outside_living_roomRN.phl[824]";
+connectAttr "atRaccoons_rotateY.o" "outside_living_roomRN.phl[825]";
+connectAttr "atRaccoons_rotateZ.o" "outside_living_roomRN.phl[826]";
+connectAttr "atRaccoons_scaleX.o" "outside_living_roomRN.phl[827]";
+connectAttr "atRaccoons_scaleY.o" "outside_living_roomRN.phl[828]";
+connectAttr "atRaccoons_scaleZ.o" "outside_living_roomRN.phl[829]";
+connectAttr "polyPlane1.out" "pPlaneShape1.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -9464,6 +9666,7 @@ connectAttr "atRaccoons_scaleZ.msg" "hyperLayout1.hyp[829].dn";
 connectAttr "uiConfigurationScriptNode.msg" "hyperLayout1.hyp[830].dn";
 connectAttr "sceneConfigurationScriptNode.msg" "hyperLayout1.hyp[831].dn";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
+connectAttr "pPlaneShape1.iog" ":initialShadingGroup.dsm" -na;
 dataStructure -fmt "raw" -as "name=externalContentTable:string=node:string=key:string=upath:uint32=upathcrc:string=rpath:string=roles";
 applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"outside_living_roomRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//scenes/outside_living_room.ma\" 2324323722 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/scenes/outside_living_room.ma\" \"FileRef\"\nendStream\nendChannel\nendAssociations\n" 
 		-scn;

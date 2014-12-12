@@ -1,6 +1,6 @@
 //Maya ASCII 2013 scene
 //Name: PigRig007.ma
-//Last modified: Thu, Dec 11, 2014 11:50:23 PM
+//Last modified: Fri, Dec 12, 2014 12:06:51 AM
 //Codeset: UTF-8
 file -rdi 1 -ns "PigSkin002" -rfn "PigSkin002RN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/characters/pig/rig/PigSkin002.ma";
 file -rdi 2 -ns "Tyrion_Cattister" -rfn "PigSkin002:Tyrion_Cattister_uv:Tyrion_CattisterRN"
@@ -21,13 +21,13 @@ fileInfo "osv" "Mac OS X 10.9.5";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 3.5350362028576181 2.9035546591272992 17.191333695194562 ;
-	setAttr ".r" -type "double3" -6.0000000000000098 18.400000000000013 2.0949488147240243e-16 ;
+	setAttr ".t" -type "double3" 38.856410967018448 11.345754217524558 11.452545472504996 ;
+	setAttr ".r" -type "double3" -13.800000000023262 82.799999999998249 0 ;
 	setAttr ".rpt" -type "double3" -6.4409897406539177e-14 -2.1855295115332486e-14 -1.4235615846016047e-14 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 11.283940645631155;
+	setAttr ".coi" 40.336867755764793;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -6017,6 +6017,24 @@ createNode orientConstraint -n "bind_R_metatarsal01_orientConstraint1" -p "PigSk
 	setAttr -k on ".w0";
 createNode transform -n "collar" -p "PIGRIGGED";
 createNode transform -n "PigSkin002RNfosterParent1";
+createNode orientConstraint -n "neck_flexi_anim_start01_orientConstraint1" -p "PigSkin002RNfosterParent1";
+	addAttr -ci true -k true -sn "w0" -ln "nurbsCircle1W0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".lr" -type "double3" 55.317009077719881 0 0 ;
+	setAttr ".o" -type "double3" -55.317048244914552 -0.055729921401099149 0.080535351475284567 ;
+	setAttr ".rsrr" -type "double3" 6.3611163326881676e-15 -0.097937556285601621 -5.4366337787488232e-18 ;
+	setAttr -k on ".w0";
 createNode parentConstraint -n "neck_flexi_anim_start01_parentConstraint1" -p "PigSkin002RNfosterParent1";
 	addAttr -ci true -k true -sn "w0" -ln "nurbsCircle1W0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -6037,24 +6055,6 @@ createNode parentConstraint -n "neck_flexi_anim_start01_parentConstraint1" -p "P
 	setAttr ".lr" -type "double3" -3.8166660831640282e-14 -0.097937556285601579 -1.0864391007992599e-17 ;
 	setAttr ".rst" -type "double3" 0.0077654492008494272 -8.8817841970012523e-16 -2.886579864025407e-14 ;
 	setAttr ".rsrr" -type "double3" -3.1805544498952112e-14 -0.097937556285601579 -1.6301024786741415e-17 ;
-	setAttr -k on ".w0";
-createNode orientConstraint -n "neck_flexi_anim_start01_orientConstraint1" -p "PigSkin002RNfosterParent1";
-	addAttr -ci true -k true -sn "w0" -ln "nurbsCircle1W0" -dv 1 -min 0 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 55.317009077719881 0 0 ;
-	setAttr ".o" -type "double3" -55.317048244914552 -0.055729921401099149 0.080535351475284567 ;
-	setAttr ".rsrr" -type "double3" 6.3611163326881676e-15 -0.097937556285601621 -5.4366337787488232e-18 ;
 	setAttr -k on ".w0";
 createNode ikEffector -n "effector3" -p "PigSkin002RNfosterParent1";
 	setAttr ".v" no;
@@ -6162,6 +6162,23 @@ createNode parentConstraint -n "pTorus4_parentConstraint1" -p "cat_collarRNfoste
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -0.37987008381027826 -2.4472516921124798 1.867144568177693 ;
 	setAttr ".rst" -type "double3" 1.3877787807814457e-17 -2.2204460492503131e-16 0 ;
+	setAttr -k on ".w0";
+createNode parentConstraint -n "pPyramid2_parentConstraint1" -p "cat_collarRNfosterParent1";
+	addAttr -ci true -k true -sn "w0" -ln "controller_main01W0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 0.32811780828994935 6.8586095635250581 4.9370805220925327 ;
+	setAttr ".rst" -type "double3" 0 -8.8817841970012523e-16 0 ;
 	setAttr -k on ".w0";
 createNode lightLinker -s -n "lightLinker1";
 	setAttr -s 13 ".lnk";
@@ -6310,8 +6327,8 @@ createNode script -n "Sneaks:uiConfigurationScriptNode";
 		+ "                -ignoreDagHierarchy 0\n                -expandConnections 0\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 0\n                -highlightActive 1\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"defaultSetFilter\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n"
 		+ "                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 1\n            -showConnected 1\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n"
 		+ "            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 0\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n"
-		+ "            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\tif ($useSceneConfig) {\n\t\toutlinerPanel -e -to $panelName;\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"graphEditor\" -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n"
-		+ "                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n"
+		+ "            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"graphEditor\" -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n"
+		+ "                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n"
 		+ "                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n"
 		+ "                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n"
 		+ "                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n"
@@ -24152,10 +24169,10 @@ createNode reference -n "PigSkin002RN";
 		"-s -r "
 		0 "|PigSkin002RNfosterParent1|effector3" "|PIGRIGGED|controller_main01|PigSkin002:PIG01|PigSkin002:global01|PigSkin002:skeleton01|PigSkin002:bind_root01|PigSkin002:bind_thorax01|PigSkin002:bind_R_humerus01|PigSkin002:bind_R_radius01" 
 		"-s -r "
-		0 "|PigSkin002RNfosterParent1|neck_flexi_anim_start01_orientConstraint1" 
+		0 "|PigSkin002RNfosterParent1|neck_flexi_anim_start01_parentConstraint1" 
 		"|PIGRIGGED|PigSkin002:extras|PigSkin002:neck_flexi_spine01|PigSkin002:neck_flexi_global01|PigSkin002:neck_flexi_grp_anim_start01|PigSkin002:neck_flexi_anim_start01" 
 		"-s -r "
-		0 "|PigSkin002RNfosterParent1|neck_flexi_anim_start01_parentConstraint1" 
+		0 "|PigSkin002RNfosterParent1|neck_flexi_anim_start01_orientConstraint1" 
 		"|PIGRIGGED|PigSkin002:extras|PigSkin002:neck_flexi_spine01|PigSkin002:neck_flexi_global01|PigSkin002:neck_flexi_grp_anim_start01|PigSkin002:neck_flexi_anim_start01" 
 		"-s -r "
 		1 |PIGRIGGED|PigSkin002:extras|PigSkin002:neck_flexi_spine01|PigSkin002:neck_flexi_global01|PigSkin002:neck_flexi_grp_anim_start01|PigSkin002:neck_flexi_anim_start01 
@@ -24464,7 +24481,7 @@ createNode pairBlend -n "pairBlend1";
 	setAttr ".tym" 2;
 	setAttr ".tzm" 2;
 createNode reference -n "cat_collarRN";
-	setAttr -s 21 ".phl";
+	setAttr -s 31 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -24486,12 +24503,24 @@ createNode reference -n "cat_collarRN";
 	setAttr ".phl[19]" 0;
 	setAttr ".phl[20]" 0;
 	setAttr ".phl[21]" 0;
+	setAttr ".phl[22]" 0;
+	setAttr ".phl[23]" 0;
+	setAttr ".phl[24]" 0;
+	setAttr ".phl[25]" 0;
+	setAttr ".phl[26]" 0;
+	setAttr ".phl[27]" 0;
+	setAttr ".phl[28]" 0;
+	setAttr ".phl[29]" 0;
+	setAttr ".phl[30]" 0;
+	setAttr ".phl[31]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"cat_collarRN"
 		"cat_collarRN" 0
-		"cat_collarRN" 5063
+		"cat_collarRN" 5072
 		0 "|cat_collar:diamond:pPyramid2" "|PIGRIGGED|collar" "-s -r "
 		0 "|cat_collar:pTorus4" "|PIGRIGGED|collar" "-s -r "
+		0 "|cat_collarRNfosterParent1|pPyramid2_parentConstraint1" "|PIGRIGGED|collar|cat_collar:diamond:pPyramid2" 
+		"-s -r "
 		0 "|cat_collarRNfosterParent1|pTorus4_parentConstraint1" "|PIGRIGGED|collar|cat_collar:pTorus4" 
 		"-s -r "
 		2 "|PIGRIGGED|collar|cat_collar:pTorus4" "translate" " -type \"double3\" 0 0 0"
@@ -26076,10 +26105,6 @@ createNode reference -n "cat_collarRN";
 		" -type \"float3\" 0.787086 1.938164 6.699291"
 		2 "|PIGRIGGED|collar|cat_collar:pTorus4|cat_collar:pTorus4Shape" "pnts[781]" 
 		" -type \"float3\" 0.808021 1.949146 6.716888"
-		2 "|PIGRIGGED|collar|cat_collar:diamond:pPyramid2" "translate" " -type \"double3\" 0 0 0"
-		
-		2 "|PIGRIGGED|collar|cat_collar:diamond:pPyramid2" "rotate" " -type \"double3\" 0 0 0"
-		
 		2 "|PIGRIGGED|collar|cat_collar:diamond:pPyramid2" "scale" " -type \"double3\" 1 1 1"
 		
 		2 "|PIGRIGGED|collar|cat_collar:diamond:pPyramid2" "rotatePivot" " -type \"double3\" 0.328118 4.435748 4.594548"
@@ -34570,45 +34595,65 @@ createNode reference -n "cat_collarRN";
 		"pnts[4239]" " -type \"float3\" -3.022192 6.271887 3.723251"
 		5 3 "cat_collarRN" "|PIGRIGGED|collar|cat_collar:diamond:pPyramid2.rotate" 
 		"cat_collarRN.placeHolderList[1]" ""
-		5 3 "cat_collarRN" "|PIGRIGGED|collar|cat_collar:diamond:pPyramid2.translate" 
+		5 4 "cat_collarRN" "|PIGRIGGED|collar|cat_collar:diamond:pPyramid2.rotateY" 
 		"cat_collarRN.placeHolderList[2]" ""
-		5 3 "cat_collarRN" "|PIGRIGGED|collar|cat_collar:diamond:pPyramid2.rotatePivot" 
+		5 4 "cat_collarRN" "|PIGRIGGED|collar|cat_collar:diamond:pPyramid2.rotateX" 
 		"cat_collarRN.placeHolderList[3]" ""
-		5 3 "cat_collarRN" "|PIGRIGGED|collar|cat_collar:diamond:pPyramid2.rotatePivotTranslate" 
+		5 4 "cat_collarRN" "|PIGRIGGED|collar|cat_collar:diamond:pPyramid2.rotateZ" 
 		"cat_collarRN.placeHolderList[4]" ""
-		5 3 "cat_collarRN" "|PIGRIGGED|collar|cat_collar:diamond:pPyramid2.rotateOrder" 
+		5 3 "cat_collarRN" "|PIGRIGGED|collar|cat_collar:diamond:pPyramid2.translate" 
 		"cat_collarRN.placeHolderList[5]" ""
-		5 3 "cat_collarRN" "|PIGRIGGED|collar|cat_collar:diamond:pPyramid2.scale" 
+		5 4 "cat_collarRN" "|PIGRIGGED|collar|cat_collar:diamond:pPyramid2.translateY" 
 		"cat_collarRN.placeHolderList[6]" ""
-		5 3 "cat_collarRN" "|PIGRIGGED|collar|cat_collar:diamond:pPyramid2.parentMatrix" 
+		5 4 "cat_collarRN" "|PIGRIGGED|collar|cat_collar:diamond:pPyramid2.translateZ" 
 		"cat_collarRN.placeHolderList[7]" ""
-		5 3 "cat_collarRN" "|PIGRIGGED|collar|cat_collar:diamond:pPyramid2.message" 
+		5 4 "cat_collarRN" "|PIGRIGGED|collar|cat_collar:diamond:pPyramid2.translateX" 
 		"cat_collarRN.placeHolderList[8]" ""
-		5 3 "cat_collarRN" "|PIGRIGGED|collar|cat_collar:diamond:pPyramid2|cat_collar:diamond:pPyramid1Shape.message" 
+		5 3 "cat_collarRN" "|PIGRIGGED|collar|cat_collar:diamond:pPyramid2.rotatePivot" 
 		"cat_collarRN.placeHolderList[9]" ""
-		5 4 "cat_collarRN" "|PIGRIGGED|collar|cat_collar:pTorus4.rotateY" "cat_collarRN.placeHolderList[10]" 
+		5 3 "cat_collarRN" "|PIGRIGGED|collar|cat_collar:diamond:pPyramid2.rotatePivot" 
+		"cat_collarRN.placeHolderList[10]" ""
+		5 3 "cat_collarRN" "|PIGRIGGED|collar|cat_collar:diamond:pPyramid2.rotatePivotTranslate" 
+		"cat_collarRN.placeHolderList[11]" ""
+		5 3 "cat_collarRN" "|PIGRIGGED|collar|cat_collar:diamond:pPyramid2.rotatePivotTranslate" 
+		"cat_collarRN.placeHolderList[12]" ""
+		5 3 "cat_collarRN" "|PIGRIGGED|collar|cat_collar:diamond:pPyramid2.rotateOrder" 
+		"cat_collarRN.placeHolderList[13]" ""
+		5 3 "cat_collarRN" "|PIGRIGGED|collar|cat_collar:diamond:pPyramid2.rotateOrder" 
+		"cat_collarRN.placeHolderList[14]" ""
+		5 3 "cat_collarRN" "|PIGRIGGED|collar|cat_collar:diamond:pPyramid2.scale" 
+		"cat_collarRN.placeHolderList[15]" ""
+		5 3 "cat_collarRN" "|PIGRIGGED|collar|cat_collar:diamond:pPyramid2.parentMatrix" 
+		"cat_collarRN.placeHolderList[16]" ""
+		5 3 "cat_collarRN" "|PIGRIGGED|collar|cat_collar:diamond:pPyramid2.message" 
+		"cat_collarRN.placeHolderList[17]" ""
+		5 3 "cat_collarRN" "|PIGRIGGED|collar|cat_collar:diamond:pPyramid2.parentInverseMatrix" 
+		"cat_collarRN.placeHolderList[18]" ""
+		5 3 "cat_collarRN" "|PIGRIGGED|collar|cat_collar:diamond:pPyramid2|cat_collar:diamond:pPyramid1Shape.message" 
+		"cat_collarRN.placeHolderList[19]" ""
+		5 4 "cat_collarRN" "|PIGRIGGED|collar|cat_collar:pTorus4.rotateY" "cat_collarRN.placeHolderList[20]" 
 		""
-		5 4 "cat_collarRN" "|PIGRIGGED|collar|cat_collar:pTorus4.rotateX" "cat_collarRN.placeHolderList[11]" 
+		5 4 "cat_collarRN" "|PIGRIGGED|collar|cat_collar:pTorus4.rotateX" "cat_collarRN.placeHolderList[21]" 
 		""
-		5 4 "cat_collarRN" "|PIGRIGGED|collar|cat_collar:pTorus4.rotateZ" "cat_collarRN.placeHolderList[12]" 
+		5 4 "cat_collarRN" "|PIGRIGGED|collar|cat_collar:pTorus4.rotateZ" "cat_collarRN.placeHolderList[22]" 
 		""
 		5 4 "cat_collarRN" "|PIGRIGGED|collar|cat_collar:pTorus4.translateX" 
-		"cat_collarRN.placeHolderList[13]" ""
+		"cat_collarRN.placeHolderList[23]" ""
 		5 4 "cat_collarRN" "|PIGRIGGED|collar|cat_collar:pTorus4.translateY" 
-		"cat_collarRN.placeHolderList[14]" ""
+		"cat_collarRN.placeHolderList[24]" ""
 		5 4 "cat_collarRN" "|PIGRIGGED|collar|cat_collar:pTorus4.translateZ" 
-		"cat_collarRN.placeHolderList[15]" ""
+		"cat_collarRN.placeHolderList[25]" ""
 		5 3 "cat_collarRN" "|PIGRIGGED|collar|cat_collar:pTorus4.rotateOrder" 
-		"cat_collarRN.placeHolderList[16]" ""
+		"cat_collarRN.placeHolderList[26]" ""
 		5 3 "cat_collarRN" "|PIGRIGGED|collar|cat_collar:pTorus4.parentInverseMatrix" 
-		"cat_collarRN.placeHolderList[17]" ""
+		"cat_collarRN.placeHolderList[27]" ""
 		5 3 "cat_collarRN" "|PIGRIGGED|collar|cat_collar:pTorus4.rotatePivot" 
-		"cat_collarRN.placeHolderList[18]" ""
+		"cat_collarRN.placeHolderList[28]" ""
 		5 3 "cat_collarRN" "|PIGRIGGED|collar|cat_collar:pTorus4.rotatePivotTranslate" 
-		"cat_collarRN.placeHolderList[19]" ""
-		5 3 "cat_collarRN" "|PIGRIGGED|collar|cat_collar:pTorus4.message" "cat_collarRN.placeHolderList[20]" 
+		"cat_collarRN.placeHolderList[29]" ""
+		5 3 "cat_collarRN" "|PIGRIGGED|collar|cat_collar:pTorus4.message" "cat_collarRN.placeHolderList[30]" 
 		""
-		5 3 "cat_collarRN" "cat_collar:diamond:anisotropic1SG.message" "cat_collarRN.placeHolderList[21]" 
+		5 3 "cat_collarRN" "cat_collar:diamond:anisotropic1SG.message" "cat_collarRN.placeHolderList[31]" 
 		"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
@@ -34926,26 +34971,36 @@ connectAttr "PigSkin002RN.phl[90]" "neck_flexi_anim_start01_orientConstraint1.cp
 connectAttr "PigSkin002RN.phl[91]" "neck_flexi_anim_start01_parentConstraint1.cpim"
 		;
 connectAttr "cat_collarRN.phl[1]" "pTorus4_parentConstraint1.tg[0].tr";
-connectAttr "cat_collarRN.phl[2]" "pTorus4_parentConstraint1.tg[0].tt";
-connectAttr "cat_collarRN.phl[3]" "pTorus4_parentConstraint1.tg[0].trp";
-connectAttr "cat_collarRN.phl[4]" "pTorus4_parentConstraint1.tg[0].trt";
-connectAttr "cat_collarRN.phl[5]" "pTorus4_parentConstraint1.tg[0].tro";
-connectAttr "cat_collarRN.phl[6]" "pTorus4_parentConstraint1.tg[0].ts";
-connectAttr "cat_collarRN.phl[7]" "pTorus4_parentConstraint1.tg[0].tpm";
-connectAttr "cat_collarRN.phl[8]" "hyperLayout2.hyp[5].dn";
-connectAttr "cat_collarRN.phl[9]" "hyperLayout2.hyp[1].dn";
-connectAttr "pTorus4_parentConstraint1.cry" "cat_collarRN.phl[10]";
-connectAttr "pTorus4_parentConstraint1.crx" "cat_collarRN.phl[11]";
-connectAttr "pTorus4_parentConstraint1.crz" "cat_collarRN.phl[12]";
-connectAttr "pTorus4_parentConstraint1.ctx" "cat_collarRN.phl[13]";
-connectAttr "pTorus4_parentConstraint1.cty" "cat_collarRN.phl[14]";
-connectAttr "pTorus4_parentConstraint1.ctz" "cat_collarRN.phl[15]";
-connectAttr "cat_collarRN.phl[16]" "pTorus4_parentConstraint1.cro";
-connectAttr "cat_collarRN.phl[17]" "pTorus4_parentConstraint1.cpim";
-connectAttr "cat_collarRN.phl[18]" "pTorus4_parentConstraint1.crp";
-connectAttr "cat_collarRN.phl[19]" "pTorus4_parentConstraint1.crt";
-connectAttr "cat_collarRN.phl[20]" "hyperLayout2.hyp[4].dn";
-connectAttr "cat_collarRN.phl[21]" "hyperLayout2.hyp[3].dn";
+connectAttr "pPyramid2_parentConstraint1.cry" "cat_collarRN.phl[2]";
+connectAttr "pPyramid2_parentConstraint1.crx" "cat_collarRN.phl[3]";
+connectAttr "pPyramid2_parentConstraint1.crz" "cat_collarRN.phl[4]";
+connectAttr "cat_collarRN.phl[5]" "pTorus4_parentConstraint1.tg[0].tt";
+connectAttr "pPyramid2_parentConstraint1.cty" "cat_collarRN.phl[6]";
+connectAttr "pPyramid2_parentConstraint1.ctz" "cat_collarRN.phl[7]";
+connectAttr "pPyramid2_parentConstraint1.ctx" "cat_collarRN.phl[8]";
+connectAttr "cat_collarRN.phl[9]" "pPyramid2_parentConstraint1.crp";
+connectAttr "cat_collarRN.phl[10]" "pTorus4_parentConstraint1.tg[0].trp";
+connectAttr "cat_collarRN.phl[11]" "pPyramid2_parentConstraint1.crt";
+connectAttr "cat_collarRN.phl[12]" "pTorus4_parentConstraint1.tg[0].trt";
+connectAttr "cat_collarRN.phl[13]" "pPyramid2_parentConstraint1.cro";
+connectAttr "cat_collarRN.phl[14]" "pTorus4_parentConstraint1.tg[0].tro";
+connectAttr "cat_collarRN.phl[15]" "pTorus4_parentConstraint1.tg[0].ts";
+connectAttr "cat_collarRN.phl[16]" "pTorus4_parentConstraint1.tg[0].tpm";
+connectAttr "cat_collarRN.phl[17]" "hyperLayout2.hyp[5].dn";
+connectAttr "cat_collarRN.phl[18]" "pPyramid2_parentConstraint1.cpim";
+connectAttr "cat_collarRN.phl[19]" "hyperLayout2.hyp[1].dn";
+connectAttr "pTorus4_parentConstraint1.cry" "cat_collarRN.phl[20]";
+connectAttr "pTorus4_parentConstraint1.crx" "cat_collarRN.phl[21]";
+connectAttr "pTorus4_parentConstraint1.crz" "cat_collarRN.phl[22]";
+connectAttr "pTorus4_parentConstraint1.ctx" "cat_collarRN.phl[23]";
+connectAttr "pTorus4_parentConstraint1.cty" "cat_collarRN.phl[24]";
+connectAttr "pTorus4_parentConstraint1.ctz" "cat_collarRN.phl[25]";
+connectAttr "cat_collarRN.phl[26]" "pTorus4_parentConstraint1.cro";
+connectAttr "cat_collarRN.phl[27]" "pTorus4_parentConstraint1.cpim";
+connectAttr "cat_collarRN.phl[28]" "pTorus4_parentConstraint1.crp";
+connectAttr "cat_collarRN.phl[29]" "pTorus4_parentConstraint1.crt";
+connectAttr "cat_collarRN.phl[30]" "hyperLayout2.hyp[4].dn";
+connectAttr "cat_collarRN.phl[31]" "hyperLayout2.hyp[3].dn";
 connectAttr "Tyrion_Cattister_uv:Tyrion_Cattister:polyTweakUV6.uvtk[0]" "Tyrion_Cattister_uv:Tyrion_Cattister:pigShapeDeformedOrig.uvst[0].uvtw"
 		;
 connectAttr "Tyrion_Cattister_uv:Tyrion_Cattister:polyTweakUV6.out" "Tyrion_Cattister_uv:Tyrion_Cattister:pigShapeDeformedOrig.i"
@@ -35230,6 +35285,15 @@ connectAttr "bind_R_metatarsal01_orientConstraint1.w0" "bind_R_metatarsal01_orie
 		;
 connectAttr "layer1.di" "collar.do";
 connectAttr "layer1.di" "PigSkin002RNfosterParent1.do";
+connectAttr "layer1.di" "neck_flexi_anim_start01_orientConstraint1.do";
+connectAttr "controller_head01.r" "neck_flexi_anim_start01_orientConstraint1.tg[0].tr"
+		;
+connectAttr "controller_head01.ro" "neck_flexi_anim_start01_orientConstraint1.tg[0].tro"
+		;
+connectAttr "controller_head01.pm" "neck_flexi_anim_start01_orientConstraint1.tg[0].tpm"
+		;
+connectAttr "neck_flexi_anim_start01_orientConstraint1.w0" "neck_flexi_anim_start01_orientConstraint1.tg[0].tw"
+		;
 connectAttr "layer1.di" "neck_flexi_anim_start01_parentConstraint1.do";
 connectAttr "controller_head01.t" "neck_flexi_anim_start01_parentConstraint1.tg[0].tt"
 		;
@@ -35246,15 +35310,6 @@ connectAttr "controller_head01.s" "neck_flexi_anim_start01_parentConstraint1.tg[
 connectAttr "controller_head01.pm" "neck_flexi_anim_start01_parentConstraint1.tg[0].tpm"
 		;
 connectAttr "neck_flexi_anim_start01_parentConstraint1.w0" "neck_flexi_anim_start01_parentConstraint1.tg[0].tw"
-		;
-connectAttr "layer1.di" "neck_flexi_anim_start01_orientConstraint1.do";
-connectAttr "controller_head01.r" "neck_flexi_anim_start01_orientConstraint1.tg[0].tr"
-		;
-connectAttr "controller_head01.ro" "neck_flexi_anim_start01_orientConstraint1.tg[0].tro"
-		;
-connectAttr "controller_head01.pm" "neck_flexi_anim_start01_orientConstraint1.tg[0].tpm"
-		;
-connectAttr "neck_flexi_anim_start01_orientConstraint1.w0" "neck_flexi_anim_start01_orientConstraint1.tg[0].tw"
 		;
 connectAttr "controller_R_frontfoot01.r" "bind_R_wrist01_orientConstraint2.tg[0].tr"
 		;
@@ -35291,6 +35346,16 @@ connectAttr "bind_R_metatarsal01_orientConstraint2.w0" "bind_R_metatarsal01_orie
 connectAttr "layer1.di" "cat_collarRNfosterParent1.do";
 connectAttr "layer1.di" "pTorus4_parentConstraint1.do";
 connectAttr "pTorus4_parentConstraint1.w0" "pTorus4_parentConstraint1.tg[0].tw";
+connectAttr "layer1.di" "pPyramid2_parentConstraint1.do";
+connectAttr "controller_main01.t" "pPyramid2_parentConstraint1.tg[0].tt";
+connectAttr "controller_main01.rp" "pPyramid2_parentConstraint1.tg[0].trp";
+connectAttr "controller_main01.rpt" "pPyramid2_parentConstraint1.tg[0].trt";
+connectAttr "controller_main01.r" "pPyramid2_parentConstraint1.tg[0].tr";
+connectAttr "controller_main01.ro" "pPyramid2_parentConstraint1.tg[0].tro";
+connectAttr "controller_main01.s" "pPyramid2_parentConstraint1.tg[0].ts";
+connectAttr "controller_main01.pm" "pPyramid2_parentConstraint1.tg[0].tpm";
+connectAttr "pPyramid2_parentConstraint1.w0" "pPyramid2_parentConstraint1.tg[0].tw"
+		;
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "Sneaks:lambert2SG.message" ":defaultLightSet.message";

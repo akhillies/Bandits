@@ -1,6 +1,6 @@
 //Maya ASCII 2013 scene
-//Name: living_room_latest.ma
-//Last modified: Thu, Dec 11, 2014 07:49:17 PM
+//Name: living_room_006.ma
+//Last modified: Thu, Dec 11, 2014 07:48:55 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "armchair_latest" -rfn "armchair_latestRN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/livingroom/additions/sofa/armchair_latest.ma";
 file -rdi 1 -ns "table_latest" -rfn "table_latestRN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/livingroom/additions/table/table_latest.ma";
@@ -14087,4 +14087,4 @@ connectAttr "pasted__place2dTexture4.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "pasted__place2dTexture5.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "pasted__place2dTexture9.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-// End of living_room_latest.ma
+// End of living_room_006.ma

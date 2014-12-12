@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Autodesk_Cache_File>
-  <cacheType Type="OneFilePerFrame" Format="mcx"/>
+  <cacheType Type="OneFile" Format="mcx"/>
   <time Range="250-26250"/>
   <cacheTimePerFrame TimePerFrame="250"/>
   <cacheVersion Version="2.0"/>
@@ -8,10 +8,11 @@
   <extra>maya 2015</extra>
   <extra>AkhilBatra</extra>
   <extra>NCloth Info for nClothShape1:</extra>
-  <extra>Passive Colliders:  wholeBike bandits:B bandits:a bandits:n bandits:d bandits:i_bar bandits:i_dot bandits:t bandits:s</extra>
+  <extra>Passive Colliders:  wholeBike NewSmarty_024:SMARTY</extra>
   <extra>Constraints: none</extra>
   <extra>nClothShape1.depthSort=0</extra>
   <extra>nClothShape1.isDynamic=1</extra>
+  <extra>nClothShape1.currentTime=1</extra>
   <extra>nClothShape1.evaluationTime=1</extra>
   <extra>nClothShape1.playFromCache=0</extra>
   <extra>nClothShape1.thickness=0.06203695014</extra>
@@ -105,6 +106,7 @@
   <extra>nClothShape1.lift=0.05000000075</extra>
   <extra>nClothShape1.drag=0.05000000075</extra>
   <extra>nClothShape1.tangentialDrag=0</extra>
+  <extra>nClothShape1.lifespan=1</extra>
   <extra>nucleus1.visibility=1</extra>
   <extra>nucleus1.translateX=0</extra>
   <extra>nucleus1.translateY=0</extra>

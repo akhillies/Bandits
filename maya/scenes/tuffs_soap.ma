@@ -1,6 +1,6 @@
 //Maya ASCII 2013 scene
 //Name: tuffs_soap.ma
-//Last modified: Wed, Dec 10, 2014 02:58:41 PM
+//Last modified: Thu, Dec 11, 2014 06:23:41 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "living_room_latest" -rfn "living_room_latestRN" "/Users/CynthiaDiaz/Desktop/Bandits/maya/assets/sets/livingroom/living_room_latest.ma";
 file -rdi 1 -ns "tuffs_latest" -rfn "tuffs_latestRN" "/Users/CynthiaDiaz/Desktop/Bandits/maya/assets/characters/tuffs/tuffs_latest.ma";
@@ -78,7 +78,7 @@ createNode transform -n "tuffs_soap_cam";
 	setAttr ".rp" -type "double3" 6.6613381477509452e-16 1.7763568394002505e-15 0 ;
 	setAttr ".rpt" -type "double3" -6.6613381477509471e-16 0 -6.6613381477509471e-16 ;
 	setAttr ".sp" -type "double3" 6.6613381477509392e-16 1.7763568394002505e-15 0 ;
-	setAttr ".spt" -type "double3" 5.9164567891575991e-31 0 0 ;
+	setAttr ".spt" -type "double3" 5.9164567891575999e-31 0 0 ;
 createNode camera -n "tuffs_soap_camShape" -p "tuffs_soap_cam";
 	setAttr -k off ".v";
 	setAttr ".cap" -type "double2" 1.41732 0.94488 ;
@@ -11300,8 +11300,8 @@ createNode reference -n "living_room_latestRN";
 		"living_room_latest:taller_window_latest6RN" 0
 		"living_room_latest:taller_window_latest1RN" 0
 		"living_room_latest:rectangular_window_latestRN" 0
-		"living_room_latest:table_latestRN" 0
 		"living_room_latest:taller_window_latestRN1" 0
+		"living_room_latest:table_latestRN" 0
 		"living_room_latest:taller_window_latest3RN" 0
 		"living_room_latest:sofa_latestRN" 0
 		"living_room_latest:taller_window_latest2RN" 0
@@ -11694,25 +11694,25 @@ createNode reference -n "tuffs_latestRN";
 		1 |tuffs_latest:controller_root|tuffs_latest:RightLeg "blendParent1" "blendParent1" 
 		" -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
 		2 "|tuffs_latest:Tuffs002:Tuffs_Mesh" "visibility" " 1"
-		2 "|tuffs_latest:controller_root" "translate" " -type \"double3\" -57.962024 2.532319 0"
+		2 "|tuffs_latest:controller_root" "translate" " -type \"double3\" -56.364299 2.037915 0"
 		
 		2 "|tuffs_latest:controller_root" "translateX" " -av"
 		2 "|tuffs_latest:controller_root" "translateY" " -av"
 		2 "|tuffs_latest:controller_root" "translateZ" " -av"
-		2 "|tuffs_latest:controller_root" "rotate" " -type \"double3\" 17.111573 -87.171656 0"
+		2 "|tuffs_latest:controller_root" "rotate" " -type \"double3\" 0 -87.171656 0"
 		
 		2 "|tuffs_latest:controller_root" "rotateX" " -av"
 		2 "|tuffs_latest:controller_root" "rotateY" " -av"
 		2 "|tuffs_latest:controller_root" "rotateZ" " -av"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_COG" "translate" 
-		" -type \"double3\" 0 0.716978 -0.22073"
+		" -type \"double3\" 0 0 0"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_COG" "translateX" 
 		" -av"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_COG" "translateY" 
 		" -av"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_COG" "translateZ" 
 		" -av"
-		2 "|tuffs_latest:controller_root|tuffs_latest:controller_COG" "rotate" " -type \"double3\" -66.153193 17.149368 -1.822446"
+		2 "|tuffs_latest:controller_root|tuffs_latest:controller_COG" "rotate" " -type \"double3\" -66.750333 4.771908 -0.504671"
 		
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_COG" "rotateX" " -av"
 		
@@ -11727,7 +11727,7 @@ createNode reference -n "tuffs_latestRN";
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_COG|tuffs_latest:controller_spine2" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_COG|tuffs_latest:controller_spine1" 
-		"translate" " -type \"double3\" 0.0116051 0.800246 1.310979"
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_COG|tuffs_latest:controller_spine1" 
 		"translateX" " -av"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_COG|tuffs_latest:controller_spine1" 
@@ -11735,7 +11735,7 @@ createNode reference -n "tuffs_latestRN";
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_COG|tuffs_latest:controller_spine1" 
 		"translateZ" " -av"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_COG|tuffs_latest:controller_shoulder" 
-		"translate" " -type \"double3\" 0.016696 1.151291 1.886069"
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_COG|tuffs_latest:controller_shoulder" 
 		"translateX" " -av"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_COG|tuffs_latest:controller_shoulder" 
@@ -11743,7 +11743,7 @@ createNode reference -n "tuffs_latestRN";
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_COG|tuffs_latest:controller_shoulder" 
 		"translateZ" " -av"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_COG|tuffs_latest:controller_head" 
-		"translate" " -type \"double3\" -0.786421 -0.0799647 3.986546"
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_COG|tuffs_latest:controller_head" 
 		"translateX" " -av"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_COG|tuffs_latest:controller_head" 
@@ -11775,7 +11775,7 @@ createNode reference -n "tuffs_latestRN";
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_COG|tuffs_latest:controller_tailbase|tuffs_latest:controller_tail1|tuffs_latest:controller_tail2|tuffs_latest:controller_tail3|tuffs_latest:controller_tailtip" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightLeg" "translate" 
-		" -type \"double3\" -0.191232 -4.883316 10.639755"
+		" -type \"double3\" -0.141653 -4.723959 9.587163"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightLeg" "translateX" 
 		" -av"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightLeg" "translateY" 
@@ -11783,7 +11783,7 @@ createNode reference -n "tuffs_latestRN";
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightLeg" "translateZ" 
 		" -av"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightLeg" "rotate" 
-		" -type \"double3\" 77.165032 0 0"
+		" -type \"double3\" 57.15928 0 0"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightLeg" "rotateX" 
 		" -av"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightLeg" "rotateY" 
@@ -11791,7 +11791,7 @@ createNode reference -n "tuffs_latestRN";
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightLeg" "rotateZ" 
 		" -av"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_leftLeg" "translate" 
-		" -type \"double3\" 0.303042 -6.172432 0.780276"
+		" -type \"double3\" 0 -4.723959 6.719927"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_leftLeg" "translateX" 
 		" -av"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_leftLeg" "translateY" 
@@ -11799,11 +11799,11 @@ createNode reference -n "tuffs_latestRN";
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_leftLeg" "translateZ" 
 		" -av"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_leftLeg" "rotate" 
-		" -type \"double3\" 107.668083 0 0"
+		" -type \"double3\" 49.183866 0 0"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_leftLeg" "rotateX" 
 		" -av"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightArm" "translate" 
-		" -type \"double3\" 2.869585 19.831056 7.38122"
+		" -type \"double3\" -0.329516 17.574073 6.571294"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightArm" "translateX" 
 		" -av"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightArm" "translateY" 
@@ -11811,7 +11811,7 @@ createNode reference -n "tuffs_latestRN";
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightArm" "translateZ" 
 		" -av"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightArm" "rotate" 
-		" -type \"double3\" -28.892785 9.267922 55.092706"
+		" -type \"double3\" -40.380986 5.03468 -7.195913"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightArm" "rotateX" 
 		" -av"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightArm" "rotateY" 
@@ -11819,7 +11819,7 @@ createNode reference -n "tuffs_latestRN";
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightArm" "rotateZ" 
 		" -av"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightArm|tuffs_latest:controller_rightWrist" 
-		"translate" " -type \"double3\" -0.024674 0.071808 0.198749"
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightArm|tuffs_latest:controller_rightWrist" 
 		"translateX" " -av"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightArm|tuffs_latest:controller_rightWrist" 
@@ -11827,7 +11827,7 @@ createNode reference -n "tuffs_latestRN";
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightArm|tuffs_latest:controller_rightWrist" 
 		"translateZ" " -av"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightArm|tuffs_latest:controller_rightWrist" 
-		"rotate" " -type \"double3\" 18.307695 26.344138 -0.439187"
+		"rotate" " -type \"double3\" 28.028434 -5.779477 1.17884"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightArm|tuffs_latest:controller_rightWrist" 
 		"rotateX" " -av"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightArm|tuffs_latest:controller_rightWrist" 
@@ -11835,7 +11835,7 @@ createNode reference -n "tuffs_latestRN";
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightArm|tuffs_latest:controller_rightWrist" 
 		"rotateZ" " -av"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightArm|tuffs_latest:controller_rightWrist|tuffs_latest:controller_rightMiddle" 
-		"translate" " -type \"double3\" 0.257237 -0.365295 -0.195346"
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightArm|tuffs_latest:controller_rightWrist|tuffs_latest:controller_rightMiddle" 
 		"translateX" " -av"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightArm|tuffs_latest:controller_rightWrist|tuffs_latest:controller_rightMiddle" 
@@ -11843,7 +11843,7 @@ createNode reference -n "tuffs_latestRN";
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightArm|tuffs_latest:controller_rightWrist|tuffs_latest:controller_rightMiddle" 
 		"translateZ" " -av"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightArm|tuffs_latest:controller_rightWrist|tuffs_latest:controller_rightMiddle" 
-		"rotate" " -type \"double3\" -0.157967 -0.204084 27.24828"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightArm|tuffs_latest:controller_rightWrist|tuffs_latest:controller_rightMiddle" 
 		"rotateX" " -av"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightArm|tuffs_latest:controller_rightWrist|tuffs_latest:controller_rightMiddle" 
@@ -11851,7 +11851,7 @@ createNode reference -n "tuffs_latestRN";
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightArm|tuffs_latest:controller_rightWrist|tuffs_latest:controller_rightMiddle" 
 		"rotateZ" " -av"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightArm|tuffs_latest:controller_rightWrist|tuffs_latest:controller_rightThumb" 
-		"translate" " -type \"double3\" 0.148521 -0.00265189 -0.0372779"
+		"translate" " -type \"double3\" -0.41018 -0.176501 0.137473"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightArm|tuffs_latest:controller_rightWrist|tuffs_latest:controller_rightThumb" 
 		"translateX" " -av"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightArm|tuffs_latest:controller_rightWrist|tuffs_latest:controller_rightThumb" 
@@ -11859,7 +11859,7 @@ createNode reference -n "tuffs_latestRN";
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightArm|tuffs_latest:controller_rightWrist|tuffs_latest:controller_rightThumb" 
 		"translateZ" " -av"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightArm|tuffs_latest:controller_rightWrist|tuffs_latest:controller_rightThumb" 
-		"rotate" " -type \"double3\" -27.030187 11.660481 -94.339576"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightArm|tuffs_latest:controller_rightWrist|tuffs_latest:controller_rightThumb" 
 		"rotateX" " -av"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightArm|tuffs_latest:controller_rightWrist|tuffs_latest:controller_rightThumb" 
@@ -11867,7 +11867,7 @@ createNode reference -n "tuffs_latestRN";
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightArm|tuffs_latest:controller_rightWrist|tuffs_latest:controller_rightThumb" 
 		"rotateZ" " -av"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightArm|tuffs_latest:controller_rightWrist|tuffs_latest:controller_rightIndex" 
-		"translate" " -type \"double3\" 0.0241549 0.298916 -0.0571471"
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightArm|tuffs_latest:controller_rightWrist|tuffs_latest:controller_rightIndex" 
 		"translateX" " -av"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightArm|tuffs_latest:controller_rightWrist|tuffs_latest:controller_rightIndex" 
@@ -11875,7 +11875,7 @@ createNode reference -n "tuffs_latestRN";
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightArm|tuffs_latest:controller_rightWrist|tuffs_latest:controller_rightIndex" 
 		"translateZ" " -av"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightArm|tuffs_latest:controller_rightWrist|tuffs_latest:controller_rightIndex" 
-		"rotate" " -type \"double3\" 0 0 27.060461"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightArm|tuffs_latest:controller_rightWrist|tuffs_latest:controller_rightIndex" 
 		"rotateX" " -av"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightArm|tuffs_latest:controller_rightWrist|tuffs_latest:controller_rightIndex" 
@@ -11883,7 +11883,7 @@ createNode reference -n "tuffs_latestRN";
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightArm|tuffs_latest:controller_rightWrist|tuffs_latest:controller_rightIndex" 
 		"rotateZ" " -av"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightArm|tuffs_latest:controller_rightWrist|tuffs_latest:controller_rightRing" 
-		"translate" " -type \"double3\" 0.413805 -0.571306 -0.151855"
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightArm|tuffs_latest:controller_rightWrist|tuffs_latest:controller_rightRing" 
 		"translateX" " -av"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightArm|tuffs_latest:controller_rightWrist|tuffs_latest:controller_rightRing" 
@@ -11891,7 +11891,7 @@ createNode reference -n "tuffs_latestRN";
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightArm|tuffs_latest:controller_rightWrist|tuffs_latest:controller_rightRing" 
 		"translateZ" " -av"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightArm|tuffs_latest:controller_rightWrist|tuffs_latest:controller_rightRing" 
-		"rotate" " -type \"double3\" 0 0 16.039564"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightArm|tuffs_latest:controller_rightWrist|tuffs_latest:controller_rightRing" 
 		"rotateZ" " -av"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightArm|tuffs_latest:controller_rightWrist|tuffs_latest:controller_rightPinky" 
@@ -11907,7 +11907,7 @@ createNode reference -n "tuffs_latestRN";
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightArm|tuffs_latest:controller_rightWrist|tuffs_latest:controller_rightPinky" 
 		"rotateZ" " -av"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_leftArm" "translate" 
-		" -type \"double3\" 4.221887 13.456916 -3.117552"
+		" -type \"double3\" 1.042394 13.512224 4.020723"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_leftArm" "translateX" 
 		" -av"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_leftArm" "translateY" 
@@ -11915,7 +11915,7 @@ createNode reference -n "tuffs_latestRN";
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_leftArm" "translateZ" 
 		" -av"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_leftArm" "rotate" 
-		" -type \"double3\" -19.530776 0 0"
+		" -type \"double3\" 0 0 0"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_leftArm" "rotateX" 
 		" -av"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_leftArm" "rotateZ" 
@@ -11937,7 +11937,7 @@ createNode reference -n "tuffs_latestRN";
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_leftArm|tuffs_latest:controller_leftWrist" 
 		"rotateZ" " -av"
 		2 "|tuffs_latest:controller_root|tuffs_latest:spine|tuffs_latest:Spine2|tuffs_latest:Spine3|tuffs_latest:Spine4|tuffs_latest:Shoulder|tuffs_latest:rightArm|tuffs_latest:rightElbow|tuffs_latest:rightwrist|tuffs_latest:rightpalm|tuffs_latest:rightFingerJunction" 
-		"rotate" " -type \"double3\" 17.048848 29.506732 -3.549637"
+		"rotate" " -type \"double3\" 28.447094 -2.13691 0.0100905"
 		2 "|tuffs_latest:controller_root|tuffs_latest:spine|tuffs_latest:Spine2|tuffs_latest:Spine3|tuffs_latest:Spine4|tuffs_latest:Shoulder|tuffs_latest:rightArm|tuffs_latest:rightElbow|tuffs_latest:rightwrist|tuffs_latest:rightpalm|tuffs_latest:rightFingerJunction" 
 		"rotateX" " -av"
 		2 "|tuffs_latest:controller_root|tuffs_latest:spine|tuffs_latest:Spine2|tuffs_latest:Spine3|tuffs_latest:Spine4|tuffs_latest:Shoulder|tuffs_latest:rightArm|tuffs_latest:rightElbow|tuffs_latest:rightwrist|tuffs_latest:rightpalm|tuffs_latest:rightFingerJunction" 
@@ -11996,18 +11996,6 @@ createNode reference -n "tuffs_latestRN";
 		
 		2 "|tuffs_latest:controller_root|tuffs_latest:RightLeg" "blendParent1" " -k 1 0"
 		
-		3 "|tuffs_latest:controller_root|tuffs_latest:RightLeg|tuffs_latest:RightLeg_parentConstraint1.constraintTranslateX" 
-		"|tuffs_latest:controller_root|tuffs_latest:RightLeg.translateX" ""
-		3 "|tuffs_latest:controller_root|tuffs_latest:RightLeg|tuffs_latest:RightLeg_parentConstraint1.constraintTranslateY" 
-		"|tuffs_latest:controller_root|tuffs_latest:RightLeg.translateY" ""
-		3 "|tuffs_latest:controller_root|tuffs_latest:RightLeg|tuffs_latest:RightLeg_parentConstraint1.constraintTranslateZ" 
-		"|tuffs_latest:controller_root|tuffs_latest:RightLeg.translateZ" ""
-		3 "|tuffs_latest:controller_root|tuffs_latest:RightLeg|tuffs_latest:RightLeg_parentConstraint1.constraintRotateX" 
-		"|tuffs_latest:controller_root|tuffs_latest:RightLeg.rotateX" ""
-		3 "|tuffs_latest:controller_root|tuffs_latest:RightLeg|tuffs_latest:RightLeg_parentConstraint1.constraintRotateY" 
-		"|tuffs_latest:controller_root|tuffs_latest:RightLeg.rotateY" ""
-		3 "|tuffs_latest:controller_root|tuffs_latest:RightLeg|tuffs_latest:RightLeg_parentConstraint1.constraintRotateZ" 
-		"|tuffs_latest:controller_root|tuffs_latest:RightLeg.rotateZ" ""
 		3 "|tuffs_latest:controller_root|tuffs_latest:LeftLeg|tuffs_latest:LeftLeg_parentConstraint1.constraintTranslateX" 
 		"|tuffs_latest:controller_root|tuffs_latest:LeftLeg.translateX" ""
 		3 "|tuffs_latest:controller_root|tuffs_latest:LeftLeg|tuffs_latest:LeftLeg_parentConstraint1.constraintTranslateY" 
@@ -12020,18 +12008,6 @@ createNode reference -n "tuffs_latestRN";
 		"|tuffs_latest:controller_root|tuffs_latest:LeftLeg.rotateY" ""
 		3 "|tuffs_latest:controller_root|tuffs_latest:LeftLeg|tuffs_latest:LeftLeg_parentConstraint1.constraintRotateZ" 
 		"|tuffs_latest:controller_root|tuffs_latest:LeftLeg.rotateZ" ""
-		3 "|tuffs_latest:controller_root|tuffs_latest:LeftArm|tuffs_latest:LeftArm_parentConstraint1.constraintTranslateX" 
-		"|tuffs_latest:controller_root|tuffs_latest:LeftArm.translateX" ""
-		3 "|tuffs_latest:controller_root|tuffs_latest:LeftArm|tuffs_latest:LeftArm_parentConstraint1.constraintTranslateY" 
-		"|tuffs_latest:controller_root|tuffs_latest:LeftArm.translateY" ""
-		3 "|tuffs_latest:controller_root|tuffs_latest:LeftArm|tuffs_latest:LeftArm_parentConstraint1.constraintTranslateZ" 
-		"|tuffs_latest:controller_root|tuffs_latest:LeftArm.translateZ" ""
-		3 "|tuffs_latest:controller_root|tuffs_latest:LeftArm|tuffs_latest:LeftArm_parentConstraint1.constraintRotateX" 
-		"|tuffs_latest:controller_root|tuffs_latest:LeftArm.rotateX" ""
-		3 "|tuffs_latest:controller_root|tuffs_latest:LeftArm|tuffs_latest:LeftArm_parentConstraint1.constraintRotateY" 
-		"|tuffs_latest:controller_root|tuffs_latest:LeftArm.rotateY" ""
-		3 "|tuffs_latest:controller_root|tuffs_latest:LeftArm|tuffs_latest:LeftArm_parentConstraint1.constraintRotateZ" 
-		"|tuffs_latest:controller_root|tuffs_latest:LeftArm.rotateZ" ""
 		3 "|tuffs_latest:controller_root|tuffs_latest:RightArm|tuffs_latest:RightArm_parentConstraint1.constraintTranslateX" 
 		"|tuffs_latest:controller_root|tuffs_latest:RightArm.translateX" ""
 		3 "|tuffs_latest:controller_root|tuffs_latest:RightArm|tuffs_latest:RightArm_parentConstraint1.constraintTranslateY" 
@@ -12044,6 +12020,30 @@ createNode reference -n "tuffs_latestRN";
 		"|tuffs_latest:controller_root|tuffs_latest:RightArm.rotateY" ""
 		3 "|tuffs_latest:controller_root|tuffs_latest:RightArm|tuffs_latest:RightArm_parentConstraint1.constraintRotateZ" 
 		"|tuffs_latest:controller_root|tuffs_latest:RightArm.rotateZ" ""
+		3 "|tuffs_latest:controller_root|tuffs_latest:RightLeg|tuffs_latest:RightLeg_parentConstraint1.constraintTranslateX" 
+		"|tuffs_latest:controller_root|tuffs_latest:RightLeg.translateX" ""
+		3 "|tuffs_latest:controller_root|tuffs_latest:RightLeg|tuffs_latest:RightLeg_parentConstraint1.constraintTranslateY" 
+		"|tuffs_latest:controller_root|tuffs_latest:RightLeg.translateY" ""
+		3 "|tuffs_latest:controller_root|tuffs_latest:RightLeg|tuffs_latest:RightLeg_parentConstraint1.constraintTranslateZ" 
+		"|tuffs_latest:controller_root|tuffs_latest:RightLeg.translateZ" ""
+		3 "|tuffs_latest:controller_root|tuffs_latest:RightLeg|tuffs_latest:RightLeg_parentConstraint1.constraintRotateX" 
+		"|tuffs_latest:controller_root|tuffs_latest:RightLeg.rotateX" ""
+		3 "|tuffs_latest:controller_root|tuffs_latest:RightLeg|tuffs_latest:RightLeg_parentConstraint1.constraintRotateY" 
+		"|tuffs_latest:controller_root|tuffs_latest:RightLeg.rotateY" ""
+		3 "|tuffs_latest:controller_root|tuffs_latest:RightLeg|tuffs_latest:RightLeg_parentConstraint1.constraintRotateZ" 
+		"|tuffs_latest:controller_root|tuffs_latest:RightLeg.rotateZ" ""
+		3 "|tuffs_latest:controller_root|tuffs_latest:LeftArm|tuffs_latest:LeftArm_parentConstraint1.constraintTranslateX" 
+		"|tuffs_latest:controller_root|tuffs_latest:LeftArm.translateX" ""
+		3 "|tuffs_latest:controller_root|tuffs_latest:LeftArm|tuffs_latest:LeftArm_parentConstraint1.constraintTranslateY" 
+		"|tuffs_latest:controller_root|tuffs_latest:LeftArm.translateY" ""
+		3 "|tuffs_latest:controller_root|tuffs_latest:LeftArm|tuffs_latest:LeftArm_parentConstraint1.constraintTranslateZ" 
+		"|tuffs_latest:controller_root|tuffs_latest:LeftArm.translateZ" ""
+		3 "|tuffs_latest:controller_root|tuffs_latest:LeftArm|tuffs_latest:LeftArm_parentConstraint1.constraintRotateX" 
+		"|tuffs_latest:controller_root|tuffs_latest:LeftArm.rotateX" ""
+		3 "|tuffs_latest:controller_root|tuffs_latest:LeftArm|tuffs_latest:LeftArm_parentConstraint1.constraintRotateY" 
+		"|tuffs_latest:controller_root|tuffs_latest:LeftArm.rotateY" ""
+		3 "|tuffs_latest:controller_root|tuffs_latest:LeftArm|tuffs_latest:LeftArm_parentConstraint1.constraintRotateZ" 
+		"|tuffs_latest:controller_root|tuffs_latest:LeftArm.rotateZ" ""
 		5 4 "tuffs_latestRN" "|tuffs_latest:controller_root.translateX" "tuffs_latestRN.placeHolderList[1]" 
 		""
 		5 4 "tuffs_latestRN" "|tuffs_latest:controller_root.translateY" "tuffs_latestRN.placeHolderList[2]" 
@@ -12593,214 +12593,257 @@ createNode animCurveTU -n "tuffs_latest:controller_root_scaleZ";
 createNode animCurveTL -n "tuffs_latest:controller_COG_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  1 0 4 0 6 0 9 -0.036841691302880279 11 1.4632564275053119e-15
-		 16 2.6808702255558243 42 2.6808702255558243 48 2.6808702255558243;
-	setAttr -s 8 ".kit[2:7]"  1 18 18 1 1 1;
-	setAttr -s 8 ".kot[2:7]"  1 18 18 1 1 1;
-	setAttr -s 8 ".kix[2:7]"  1 1 0.60203033685684204 1 1 1;
-	setAttr -s 8 ".kiy[2:7]"  0 0 0.79847323894500732 0 0 0;
-	setAttr -s 8 ".kox[2:7]"  1 1 0.60203027725219727 1 1 1;
-	setAttr -s 8 ".koy[2:7]"  0 0 0.79847323894500732 0 0 0;
+	setAttr -s 11 ".ktv[0:10]"  1 0 4 0 6 0 9 -0.036841691302880279 11 1.4632564275053119e-15
+		 16 2.6808702255558243 20 2.6808702255558243 32 2.6808702255558243 37 2.6808702255558243
+		 42 2.6808702255558243 48 2.6808702255558243;
+	setAttr -s 11 ".kit[2:10]"  1 18 18 1 18 18 1 1 
+		1;
+	setAttr -s 11 ".kot[2:10]"  1 18 18 1 18 18 1 1 
+		1;
+	setAttr -s 11 ".kix[2:10]"  1 1 0.60203033685684204 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[2:10]"  0 0 0.79847323894500732 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[2:10]"  1 1 0.60203027725219727 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[2:10]"  0 0 0.79847323894500732 0 0 0 0 0 0;
 createNode animCurveTL -n "tuffs_latest:controller_COG_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  1 -1.7763568394002505e-15 4 -1.7763568394002505e-15
-		 6 0 9 2.5484572971209394 11 0.71697761729823739 16 -0.11522817264669089 42 -0.11522817264669089
-		 48 -0.11522817264669089;
-	setAttr -s 8 ".kit[2:7]"  1 18 18 1 1 1;
-	setAttr -s 8 ".kot[2:7]"  1 18 18 1 1 1;
-	setAttr -s 8 ".kix[2:7]"  1 1 0.10884684324264526 1 1 1;
-	setAttr -s 8 ".kiy[2:7]"  0 0 -0.99405854940414429 0 0 0;
-	setAttr -s 8 ".kox[2:7]"  1 1 0.10884684324264526 1 1 1;
-	setAttr -s 8 ".koy[2:7]"  0 0 -0.99405854940414429 0 0 0;
+	setAttr -s 11 ".ktv[0:10]"  1 -1.7763568394002505e-15 4 -1.7763568394002505e-15
+		 6 0 9 2.5484572971209394 11 0.71697761729823739 16 -0.11522817264669089 20 -0.11522817264669089
+		 32 -0.11522817264669089 37 -0.11522817264669089 42 -0.11522817264669089 48 -0.11522817264669089;
+	setAttr -s 11 ".kit[2:10]"  1 18 18 1 18 18 1 1 
+		1;
+	setAttr -s 11 ".kot[2:10]"  1 18 18 1 18 18 1 1 
+		1;
+	setAttr -s 11 ".kix[2:10]"  1 1 0.10884684324264526 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[2:10]"  0 0 -0.99405854940414429 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[2:10]"  1 1 0.10884684324264526 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[2:10]"  0 0 -0.99405854940414429 0 0 0 0 0 0;
 createNode animCurveTL -n "tuffs_latest:controller_COG_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  1 0 4 0 6 0 9 0.3402598681185659 11 -0.22072965389434723
-		 16 -0.59444807517825871 42 -0.59444807517825871 48 -0.59444807517825871;
-	setAttr -s 8 ".kit[2:7]"  1 18 18 1 1 1;
-	setAttr -s 8 ".kot[2:7]"  1 18 18 1 1 1;
-	setAttr -s 8 ".kix[2:7]"  1 1 0.29787531495094299 1 1 1;
-	setAttr -s 8 ".kiy[2:7]"  0 0 -0.95460480451583862 0 0 0;
-	setAttr -s 8 ".kox[2:7]"  1 1 0.29787531495094299 1 1 1;
-	setAttr -s 8 ".koy[2:7]"  0 0 -0.95460480451583862 0 0 0;
+	setAttr -s 11 ".ktv[0:10]"  1 0 4 0 6 0 9 0.3402598681185659 11 -0.22072965389434723
+		 16 -0.59444807517825871 20 -0.59444807517825871 32 -0.59444807517825871 37 -0.59444807517825871
+		 42 -0.59444807517825871 48 -0.59444807517825871;
+	setAttr -s 11 ".kit[2:10]"  1 18 18 1 18 18 1 1 
+		1;
+	setAttr -s 11 ".kot[2:10]"  1 18 18 1 18 18 1 1 
+		1;
+	setAttr -s 11 ".kix[2:10]"  1 1 0.29787531495094299 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[2:10]"  0 0 -0.95460480451583862 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[2:10]"  1 1 0.29787531495094299 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[2:10]"  0 0 -0.95460480451583862 0 0 0 0 0 0;
 createNode animCurveTU -n "tuffs_latest:controller_COG_visibility";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  1 1 4 1 6 1 9 1 11 1 16 1 42 1 48 1;
-	setAttr -s 8 ".kit[0:7]"  9 9 1 9 9 1 1 1;
-	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
-	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 11 ".ktv[0:10]"  1 1 4 1 6 1 9 1 11 1 16 1 20 1 32 1 37 1
+		 42 1 48 1;
+	setAttr -s 11 ".kit[0:10]"  9 9 1 9 9 1 9 9 
+		1 1 1;
+	setAttr -s 11 ".kix[2:10]"  1 1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[2:10]"  0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "tuffs_latest:controller_COG_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  1 -66.750333309013115 4 -66.750333309013115
+	setAttr -s 11 ".ktv[0:10]"  1 -66.750333309013115 4 -66.750333309013115
 		 6 -66.153193292397802 9 -45.973105397011231 11 -66.153193292397802 16 -68.027972526194233
-		 42 -69.863923457553611 48 0;
-	setAttr -s 8 ".kit[2:7]"  1 18 18 1 1 1;
-	setAttr -s 8 ".kot[2:7]"  1 18 18 1 1 1;
-	setAttr -s 8 ".kix[2:7]"  1 1 0.90461122989654541 1 1 1;
-	setAttr -s 8 ".kiy[2:7]"  0 0 -0.42623776197433472 0 0 0;
-	setAttr -s 8 ".kox[2:7]"  1 1 0.90461117029190063 1 1 1;
-	setAttr -s 8 ".koy[2:7]"  0 0 -0.42623773217201233 0 0 0;
+		 20 -68.144965254332675 32 -80.364174461297367 37 -68.144965254332675 42 -69.863923457553611
+		 48 0;
+	setAttr -s 11 ".kit[2:10]"  1 18 18 1 18 18 1 1 
+		1;
+	setAttr -s 11 ".kot[2:10]"  1 18 18 1 18 18 1 1 
+		1;
+	setAttr -s 11 ".kix[2:10]"  1 1 0.90461122989654541 1 0.99932527542114258 
+		1 0.99932527542114258 1 1;
+	setAttr -s 11 ".kiy[2:10]"  0 0 -0.42623776197433472 0 -0.036729559302330017 
+		0 -0.036729559302330017 0 0;
+	setAttr -s 11 ".kox[2:10]"  1 1 0.90461117029190063 1 0.99932527542114258 
+		1 0.99932527542114258 1 1;
+	setAttr -s 11 ".koy[2:10]"  0 0 -0.42623773217201233 0 -0.036729559302330017 
+		0 -0.036729559302330017 0 0;
 createNode animCurveTA -n "tuffs_latest:controller_COG_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  1 0 4 8.5 6 17.149367830987327 9 42.56116802510634
-		 11 17.149367830987327 16 19.538764959683078 42 18.56157742715353 48 0;
-	setAttr -s 8 ".kit[2:7]"  1 18 18 1 1 1;
-	setAttr -s 8 ".kot[2:7]"  1 18 18 1 1 1;
-	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
-	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
-	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
-	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 11 ".ktv[0:10]"  1 0 4 8.5 6 17.149367830987327 9 42.56116802510634
+		 11 17.149367830987327 16 19.538764959683078 20 19.476495411308569 32 18.863643620422696
+		 37 19.476495411308569 42 18.56157742715353 48 0;
+	setAttr -s 11 ".kit[2:10]"  1 18 18 1 18 18 1 1 
+		1;
+	setAttr -s 11 ".kot[2:10]"  1 18 18 1 18 18 1 1 
+		1;
+	setAttr -s 11 ".kix[2:10]"  1 1 1 1 0.99984383583068848 1 0.99984383583068848 
+		1 1;
+	setAttr -s 11 ".kiy[2:10]"  0 0 0 0 -0.017671873793005943 0 -0.017671873793005943 
+		0 0;
+	setAttr -s 11 ".kox[2:10]"  1 1 1 1 0.99984383583068848 1 0.99984383583068848 
+		1 1;
+	setAttr -s 11 ".koy[2:10]"  0 0 0 0 -0.017671873793005943 0 -0.017671873793005943 
+		0 0;
 createNode animCurveTA -n "tuffs_latest:controller_COG_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  1 0 4 -0.9 6 -1.822446338931748 9 16.233375015733142
-		 11 -1.822446338931748 16 -7.7732542649012109 42 -8.864570621205651 48 0;
-	setAttr -s 8 ".kit[2:7]"  1 18 18 1 1 1;
-	setAttr -s 8 ".kot[2:7]"  1 18 18 1 1 1;
-	setAttr -s 8 ".kix[2:7]"  1 1 0.57131803035736084 1 1 1;
-	setAttr -s 8 ".kiy[2:7]"  0 0 -0.82072877883911133 0 0 0;
-	setAttr -s 8 ".kox[2:7]"  1 1 0.57131803035736084 1 1 1;
-	setAttr -s 8 ".koy[2:7]"  0 0 -0.82072871923446655 0 0 0;
+	setAttr -s 11 ".ktv[0:10]"  1 0 4 -0.9 6 -1.822446338931748 9 16.233375015733142
+		 11 -1.822446338931748 16 -7.7732542649012109 20 -7.8427964708531004 32 -8.5272251618567854
+		 37 -7.8427964708531004 42 -8.864570621205651 48 0;
+	setAttr -s 11 ".kit[2:10]"  1 18 18 1 18 18 1 1 
+		1;
+	setAttr -s 11 ".kot[2:10]"  1 18 18 1 18 18 1 1 
+		1;
+	setAttr -s 11 ".kix[2:10]"  1 1 0.57131803035736084 1 0.99980521202087402 
+		1 0.99980521202087402 1 1;
+	setAttr -s 11 ".kiy[2:10]"  0 0 -0.82072877883911133 0 -0.019735066220164299 
+		0 -0.019735066220164299 0 0;
+	setAttr -s 11 ".kox[2:10]"  1 1 0.57131803035736084 1 0.9998052716255188 
+		1 0.9998052716255188 1 1;
+	setAttr -s 11 ".koy[2:10]"  0 0 -0.82072871923446655 0 -0.019735068082809448 
+		0 -0.019735068082809448 0 0;
 createNode animCurveTU -n "tuffs_latest:controller_COG_scaleX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  1 1 4 1 6 1 9 1 11 1 16 1 42 1 48 1;
-	setAttr -s 8 ".kit[2:7]"  1 18 18 1 1 1;
-	setAttr -s 8 ".kot[2:7]"  1 18 18 1 1 1;
-	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
-	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
-	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
-	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 11 ".ktv[0:10]"  1 1 4 1 6 1 9 1 11 1 16 1 20 1 32 1 37 1
+		 42 1 48 1;
+	setAttr -s 11 ".kit[2:10]"  1 18 18 1 18 18 1 1 
+		1;
+	setAttr -s 11 ".kot[2:10]"  1 18 18 1 18 18 1 1 
+		1;
+	setAttr -s 11 ".kix[2:10]"  1 1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[2:10]"  0 0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[2:10]"  1 1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[2:10]"  0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "tuffs_latest:controller_COG_scaleY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  1 1 4 1 6 1 9 1 11 1 16 1 42 1 48 1;
-	setAttr -s 8 ".kit[2:7]"  1 18 18 1 1 1;
-	setAttr -s 8 ".kot[2:7]"  1 18 18 1 1 1;
-	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
-	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
-	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
-	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 11 ".ktv[0:10]"  1 1 4 1 6 1 9 1 11 1 16 1 20 1 32 1 37 1
+		 42 1 48 1;
+	setAttr -s 11 ".kit[2:10]"  1 18 18 1 18 18 1 1 
+		1;
+	setAttr -s 11 ".kot[2:10]"  1 18 18 1 18 18 1 1 
+		1;
+	setAttr -s 11 ".kix[2:10]"  1 1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[2:10]"  0 0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[2:10]"  1 1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[2:10]"  0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "tuffs_latest:controller_COG_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  1 1 4 1 6 1 9 1 11 1 16 1 42 1 48 1;
-	setAttr -s 8 ".kit[2:7]"  1 18 18 1 1 1;
-	setAttr -s 8 ".kot[2:7]"  1 18 18 1 1 1;
-	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
-	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
-	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
-	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 11 ".ktv[0:10]"  1 1 4 1 6 1 9 1 11 1 16 1 20 1 32 1 37 1
+		 42 1 48 1;
+	setAttr -s 11 ".kit[2:10]"  1 18 18 1 18 18 1 1 
+		1;
+	setAttr -s 11 ".kot[2:10]"  1 18 18 1 18 18 1 1 
+		1;
+	setAttr -s 11 ".kix[2:10]"  1 1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[2:10]"  0 0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[2:10]"  1 1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[2:10]"  0 0 0 0 0 0 0 0 0;
 createNode animCurveTL -n "tuffs_latest:controller_leftArm_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 -0.19503981058279352 4 1.7962488912189476
-		 7 3.0124920633281458 11 4.2218871415270938 16 2.9293265421368022 19 6.7506316473933277;
-	setAttr -s 6 ".kit[3:5]"  1 1 18;
-	setAttr -s 6 ".kot[3:5]"  1 1 18;
-	setAttr -s 6 ".kix[3:5]"  1 1 1;
-	setAttr -s 6 ".kiy[3:5]"  0 0 0;
-	setAttr -s 6 ".kox[3:5]"  1 1 1;
-	setAttr -s 6 ".koy[3:5]"  0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  1 -0.19503981058279352 4 1.7962488912189476
+		 7 3.0124920633281458 11 4.2218871415270938 16 2.9293265421368022 19 6.7506316473933277
+		 32 5.9138413219311436 37 5.6333047991226266;
+	setAttr -s 8 ".kit[3:7]"  1 1 18 18 18;
+	setAttr -s 8 ".kot[3:7]"  1 1 18 18 18;
+	setAttr -s 8 ".kix[3:7]"  1 1 1 0.55732905864715576 1;
+	setAttr -s 8 ".kiy[3:7]"  0 0 0 -0.83029168844223022 0;
+	setAttr -s 8 ".kox[3:7]"  1 1 1 0.55732905864715576 1;
+	setAttr -s 8 ".koy[3:7]"  0 0 0 -0.83029168844223022 0;
 createNode animCurveTL -n "tuffs_latest:controller_leftArm_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 15.132523075822656 4 12.94511881640657
-		 7 14.111039267500679 11 13.456915508063531 16 9.6897449122076083 19 9.0216529971959218;
-	setAttr -s 6 ".kit[3:5]"  1 1 18;
-	setAttr -s 6 ".kot[3:5]"  1 1 18;
-	setAttr -s 6 ".kix[3:5]"  1 1 1;
-	setAttr -s 6 ".kiy[3:5]"  0 0 0;
-	setAttr -s 6 ".kox[3:5]"  1 1 1;
-	setAttr -s 6 ".koy[3:5]"  0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  1 15.132523075822656 4 12.94511881640657
+		 7 14.111039267500679 11 13.456915508063531 16 9.6897449122076083 19 9.0216529971959218
+		 32 9.3281437402723704 37 9.0517112399934838;
+	setAttr -s 8 ".kit[3:7]"  1 1 18 18 18;
+	setAttr -s 8 ".kot[3:7]"  1 1 18 18 18;
+	setAttr -s 8 ".kix[3:7]"  1 1 1 1 1;
+	setAttr -s 8 ".kiy[3:7]"  0 0 0 0 0;
+	setAttr -s 8 ".kox[3:7]"  1 1 1 1 1;
+	setAttr -s 8 ".koy[3:7]"  0 0 0 0 0;
 createNode animCurveTL -n "tuffs_latest:controller_leftArm_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 3.9478506230463073 4 4.0462283501436183
-		 7 2.8129180914360612 11 -3.1175515007541539 16 -0.5638403120719373 19 -2.8473612797763845;
-	setAttr -s 6 ".kit[3:5]"  1 1 18;
-	setAttr -s 6 ".kot[3:5]"  1 1 18;
-	setAttr -s 6 ".kix[3:5]"  1 1 1;
-	setAttr -s 6 ".kiy[3:5]"  0 0 0;
-	setAttr -s 6 ".kox[3:5]"  1 1 1;
-	setAttr -s 6 ".koy[3:5]"  0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  1 3.9478506230463073 4 4.0462283501436183
+		 7 2.8129180914360612 11 -3.1175515007541539 16 -0.5638403120719373 19 -2.8473612797763845
+		 32 -3.3891605606550304 37 -1.104684787752557;
+	setAttr -s 8 ".kit[3:7]"  1 1 18 18 18;
+	setAttr -s 8 ".kot[3:7]"  1 1 18 18 18;
+	setAttr -s 8 ".kix[3:7]"  1 1 0.31615811586380005 1 1;
+	setAttr -s 8 ".kiy[3:7]"  0 0 -0.94870650768280029 0 0;
+	setAttr -s 8 ".kox[3:7]"  1 1 0.31615811586380005 1 1;
+	setAttr -s 8 ".koy[3:7]"  0 0 -0.94870650768280029 0 0;
 createNode animCurveTU -n "tuffs_latest:controller_leftArm_visibility";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 1 4 1 7 1 11 1 16 1 19 1;
-	setAttr -s 6 ".kit[0:5]"  9 9 9 1 1 9;
-	setAttr -s 6 ".kix[3:5]"  1 1 1;
-	setAttr -s 6 ".kiy[3:5]"  0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  1 1 4 1 7 1 11 1 16 1 19 1 32 1 37 1;
+	setAttr -s 8 ".kit[0:7]"  9 9 9 1 1 9 9 9;
+	setAttr -s 8 ".kix[3:7]"  1 1 1 1 1;
+	setAttr -s 8 ".kiy[3:7]"  0 0 0 0 0;
 createNode animCurveTA -n "tuffs_latest:controller_leftArm_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 0 4 0 7 -19.530776311731124 11 -19.530776311731124
-		 16 0 19 0;
-	setAttr -s 6 ".kit[3:5]"  1 1 18;
-	setAttr -s 6 ".kot[3:5]"  1 1 18;
-	setAttr -s 6 ".kix[3:5]"  1 1 1;
-	setAttr -s 6 ".kiy[3:5]"  0 0 0;
-	setAttr -s 6 ".kox[3:5]"  1 1 1;
-	setAttr -s 6 ".koy[3:5]"  0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  1 0 4 0 7 -19.530776311731124 11 -19.530776311731124
+		 16 0 19 0 32 0 37 0;
+	setAttr -s 8 ".kit[3:7]"  1 1 18 18 18;
+	setAttr -s 8 ".kot[3:7]"  1 1 18 18 18;
+	setAttr -s 8 ".kix[3:7]"  1 1 1 1 1;
+	setAttr -s 8 ".kiy[3:7]"  0 0 0 0 0;
+	setAttr -s 8 ".kox[3:7]"  1 1 1 1 1;
+	setAttr -s 8 ".koy[3:7]"  0 0 0 0 0;
 createNode animCurveTA -n "tuffs_latest:controller_leftArm_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 0 4 0 7 0 11 0 16 0 19 0;
-	setAttr -s 6 ".kit[3:5]"  1 1 18;
-	setAttr -s 6 ".kot[3:5]"  1 1 18;
-	setAttr -s 6 ".kix[3:5]"  1 1 1;
-	setAttr -s 6 ".kiy[3:5]"  0 0 0;
-	setAttr -s 6 ".kox[3:5]"  1 1 1;
-	setAttr -s 6 ".koy[3:5]"  0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  1 0 4 0 7 0 11 0 16 0 19 0 32 0 37 0;
+	setAttr -s 8 ".kit[3:7]"  1 1 18 18 18;
+	setAttr -s 8 ".kot[3:7]"  1 1 18 18 18;
+	setAttr -s 8 ".kix[3:7]"  1 1 1 1 1;
+	setAttr -s 8 ".kiy[3:7]"  0 0 0 0 0;
+	setAttr -s 8 ".kox[3:7]"  1 1 1 1 1;
+	setAttr -s 8 ".koy[3:7]"  0 0 0 0 0;
 createNode animCurveTA -n "tuffs_latest:controller_leftArm_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 0 4 0 7 0 11 0 16 0 19 0;
-	setAttr -s 6 ".kit[3:5]"  1 1 18;
-	setAttr -s 6 ".kot[3:5]"  1 1 18;
-	setAttr -s 6 ".kix[3:5]"  1 1 1;
-	setAttr -s 6 ".kiy[3:5]"  0 0 0;
-	setAttr -s 6 ".kox[3:5]"  1 1 1;
-	setAttr -s 6 ".koy[3:5]"  0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  1 0 4 0 7 0 11 0 16 0 19 0 32 0 37 0;
+	setAttr -s 8 ".kit[3:7]"  1 1 18 18 18;
+	setAttr -s 8 ".kot[3:7]"  1 1 18 18 18;
+	setAttr -s 8 ".kix[3:7]"  1 1 1 1 1;
+	setAttr -s 8 ".kiy[3:7]"  0 0 0 0 0;
+	setAttr -s 8 ".kox[3:7]"  1 1 1 1 1;
+	setAttr -s 8 ".koy[3:7]"  0 0 0 0 0;
 createNode animCurveTU -n "tuffs_latest:controller_leftArm_scaleX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 1 4 1 7 1 11 1 16 1 19 1;
-	setAttr -s 6 ".kit[3:5]"  1 1 18;
-	setAttr -s 6 ".kot[3:5]"  1 1 18;
-	setAttr -s 6 ".kix[3:5]"  1 1 1;
-	setAttr -s 6 ".kiy[3:5]"  0 0 0;
-	setAttr -s 6 ".kox[3:5]"  1 1 1;
-	setAttr -s 6 ".koy[3:5]"  0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  1 1 4 1 7 1 11 1 16 1 19 1 32 1 37 1;
+	setAttr -s 8 ".kit[3:7]"  1 1 18 18 18;
+	setAttr -s 8 ".kot[3:7]"  1 1 18 18 18;
+	setAttr -s 8 ".kix[3:7]"  1 1 1 1 1;
+	setAttr -s 8 ".kiy[3:7]"  0 0 0 0 0;
+	setAttr -s 8 ".kox[3:7]"  1 1 1 1 1;
+	setAttr -s 8 ".koy[3:7]"  0 0 0 0 0;
 createNode animCurveTU -n "tuffs_latest:controller_leftArm_scaleY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 1 4 1 7 1 11 1 16 1 19 1;
-	setAttr -s 6 ".kit[3:5]"  1 1 18;
-	setAttr -s 6 ".kot[3:5]"  1 1 18;
-	setAttr -s 6 ".kix[3:5]"  1 1 1;
-	setAttr -s 6 ".kiy[3:5]"  0 0 0;
-	setAttr -s 6 ".kox[3:5]"  1 1 1;
-	setAttr -s 6 ".koy[3:5]"  0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  1 1 4 1 7 1 11 1 16 1 19 1 32 1 37 1;
+	setAttr -s 8 ".kit[3:7]"  1 1 18 18 18;
+	setAttr -s 8 ".kot[3:7]"  1 1 18 18 18;
+	setAttr -s 8 ".kix[3:7]"  1 1 1 1 1;
+	setAttr -s 8 ".kiy[3:7]"  0 0 0 0 0;
+	setAttr -s 8 ".kox[3:7]"  1 1 1 1 1;
+	setAttr -s 8 ".koy[3:7]"  0 0 0 0 0;
 createNode animCurveTU -n "tuffs_latest:controller_leftArm_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 1 4 1 7 1 11 1 16 1 19 1;
-	setAttr -s 6 ".kit[3:5]"  1 1 18;
-	setAttr -s 6 ".kot[3:5]"  1 1 18;
-	setAttr -s 6 ".kix[3:5]"  1 1 1;
-	setAttr -s 6 ".kiy[3:5]"  0 0 0;
-	setAttr -s 6 ".kox[3:5]"  1 1 1;
-	setAttr -s 6 ".koy[3:5]"  0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  1 1 4 1 7 1 11 1 16 1 19 1 32 1 37 1;
+	setAttr -s 8 ".kit[3:7]"  1 1 18 18 18;
+	setAttr -s 8 ".kot[3:7]"  1 1 18 18 18;
+	setAttr -s 8 ".kix[3:7]"  1 1 1 1 1;
+	setAttr -s 8 ".kiy[3:7]"  0 0 0 0 0;
+	setAttr -s 8 ".kox[3:7]"  1 1 1 1 1;
+	setAttr -s 8 ".koy[3:7]"  0 0 0 0 0;
 createNode animCurveTL -n "tuffs_latest:controller_rightArm_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 16 ".ktv[0:15]"  1 -0.31598784022060522 4 -0.33425137519491877
-		 7 0.80705454831161549 8 1.4151622415805005 10 2.8191158800360494 11 2.8695849989481892
+		 7 0.80705454831161549 8 1.4151622415805003 10 2.8191158800360494 11 2.8695849989481892
 		 12 1.2849924698209958 14 10.688051021347215 20 6.4940375445645397 21 4.4940490401558195
 		 32 3.81592459681133 34 3.7540320665861926 35 3.392675556604392 36 2.7535997808659753
 		 37 2.1298302543356304 38 1.7755757780814907;
@@ -12826,7 +12869,7 @@ createNode animCurveTL -n "tuffs_latest:controller_rightArm_translateY";
 	setAttr -s 16 ".ktv[0:15]"  1 17.574073281751279 4 17.574073281751279
 		 7 18.895917633051749 8 18.809177355168245 10 18.124889038423177 11 19.831056143051697
 		 12 19.403814406929005 14 18.881849441468855 20 18.623989565849847 21 22.420560767539431
-		 32 24.942970600564124 34 24.673511863371861 35 21.631098371740038 36 15.74716851363174
+		 32 24.942970600564124 34 24.673511863371861 35 21.631098371740041 36 15.74716851363174
 		 37 9.9543620964524564 38 6.6571918765155393;
 	setAttr -s 16 ".kit[5:15]"  1 1 18 1 1 1 18 18 
 		18 18 1;
@@ -12848,10 +12891,10 @@ createNode animCurveTL -n "tuffs_latest:controller_rightArm_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 16 ".ktv[0:15]"  1 6.3959905834732824 4 6.7656674597577613
-		 7 7.7261602583082443 8 8.5799500581781487 10 8.9753562597672865 11 7.3812199481309815
-		 12 7.2572087800697798 14 5.8186409784877542 20 5.2021174948940576 21 3.2139374252845765
-		 32 -2.5686191904875328 34 -0.7087690194854539 35 -0.10131603800882205 36 0.38281189752015971
-		 37 0.79694554532523032 38 1.0235950311946744;
+		 7 7.7261602583082452 8 8.5799500581781487 10 8.9753562597672865 11 7.3812199481309806
+		 12 7.2572087800697789 14 5.8186409784877542 20 5.2021174948940576 21 3.2139374252845765
+		 32 -2.5686191904875328 34 -0.7087690194854539 35 -0.10131603800882204 36 0.38281189752015971
+		 37 0.79694554532523043 38 1.0235950311946744;
 	setAttr -s 16 ".kit[5:15]"  1 1 18 1 1 1 18 18 
 		18 18 1;
 	setAttr -s 16 ".kot[5:15]"  1 1 18 1 1 1 18 18 
@@ -12881,9 +12924,9 @@ createNode animCurveTA -n "tuffs_latest:controller_rightArm_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 16 ".ktv[0:15]"  1 0 4 -59.041065959306529 7 -66.585617176924927
-		 8 -74.813679431678423 10 -28.892784779293681 11 -28.892784779293681 12 -30.216887194572724
-		 14 -3.1149873584975181 20 0.53015973496863134 21 -116.2655782134165 32 -102.27868917650895
-		 34 -102.27868917650895 35 -100.41948999686721 36 -59.9239548265748 37 5.3838191063620435
+		 8 -74.813679431678409 10 -28.892784779293681 11 -28.892784779293681 12 -30.216887194572724
+		 14 -3.1149873584975181 20 0.53015973496863134 21 -116.2655782134165 32 -102.27868917650896
+		 34 -102.27868917650896 35 -100.4194899968672 36 -59.9239548265748 37 5.3838191063620435
 		 38 0;
 	setAttr -s 16 ".kit[5:15]"  1 1 18 1 1 1 18 18 
 		18 18 1;
@@ -12901,9 +12944,9 @@ createNode animCurveTA -n "tuffs_latest:controller_rightArm_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 16 ".ktv[0:15]"  1 0 4 6.7968177598807733 7 6.2957098515865653
-		 8 20.706876987680619 10 9.2679217860112715 11 9.2679217860112715 12 -0.47902375686509885
-		 14 13.687603151142891 20 18.139303232012569 21 11.032813439712896 32 -26.953075662134808
-		 34 -26.953075662134808 35 -0.75565365597926382 36 -29.169547210081781 37 -53.123331672781582
+		 8 20.706876987680619 10 9.2679217860112733 11 9.2679217860112733 12 -0.4790237568650989
+		 14 13.687603151142891 20 18.139303232012569 21 11.032813439712896 32 -26.953075662134811
+		 34 -26.953075662134811 35 -0.75565365597926382 36 -29.169547210081781 37 -53.123331672781582
 		 38 -64.521162018836932;
 	setAttr -s 16 ".kit[5:15]"  1 1 18 1 1 1 18 18 
 		18 18 1;
@@ -12921,9 +12964,9 @@ createNode animCurveTA -n "tuffs_latest:controller_rightArm_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 16 ".ktv[0:15]"  1 0 4 -9.7144836437577631 7 -8.8831913128497604
-		 8 45.717846323585874 10 55.092705802994828 11 55.092705802994828 12 38.001415689851335
+		 8 45.717846323585874 10 55.092705802994836 11 55.092705802994836 12 38.001415689851335
 		 14 101.5514995251537 20 87.736685083656283 21 -33.116938575925673 32 -38.804814136617495
-		 34 -38.804814136617495 35 -45.758362351380072 36 0.36036720488317997 37 14.684352448971849
+		 34 -38.804814136617495 35 -45.758362351380072 36 0.36036720488318003 37 14.684352448971849
 		 38 0;
 	setAttr -s 16 ".kit[5:15]"  1 1 18 1 1 1 18 18 
 		18 18 1;
@@ -13243,9 +13286,9 @@ createNode animCurveTA -n "tuffs_latest:controller_rightWrist_rotateX";
 createNode animCurveTA -n "tuffs_latest:controller_rightWrist_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  4 -5.779476587757217 7 7.2780963640966521
-		 8 -23.46073686691286 9 -1.987846675914699e-16 10 -1.5552741228170917 11 26.34413801281255
-		 12 -10.189735313067143 13 0.66623840286754588 21 0 26 0;
+	setAttr -s 10 ".ktv[0:9]"  4 -5.779476587757217 7 7.2780963640966529
+		 8 -23.46073686691286 9 -1.9878466759146992e-16 10 -1.5552741228170917 11 26.34413801281255
+		 12 -10.189735313067144 13 0.66623840286754588 21 0 26 0;
 	setAttr -s 10 ".kit[3:9]"  1 1 18 1 18 1 18;
 	setAttr -s 10 ".kot[3:9]"  1 1 18 1 18 1 18;
 	setAttr -s 10 ".kix[3:9]"  1 1 1 1 1 1 1;
@@ -13257,7 +13300,7 @@ createNode animCurveTA -n "tuffs_latest:controller_rightWrist_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 10 ".ktv[0:9]"  4 1.1788402550563035 7 9.0104671929489424
 		 8 8.3627415002311718 9 7.8416106882682062 10 -51.551456411073843 11 -0.43918655886458408
-		 12 19.161159629074593 13 -0.34836925942698299 21 -47.54087601164688 26 0;
+		 12 19.161159629074593 13 -0.34836925942698299 21 -47.540876011646887 26 0;
 	setAttr -s 10 ".kit[3:9]"  1 1 18 1 18 1 18;
 	setAttr -s 10 ".kot[3:9]"  1 1 18 1 18 1 18;
 	setAttr -s 10 ".kix[3:9]"  1 1 0.067368485033512115 1 0.30660375952720642 
@@ -13820,7 +13863,7 @@ createNode animCurveTL -n "tuffs_latest:controller_rightThumb_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  9 -0.17650078863899096 10 0.11271834124893554
-		 12 -0.11802199927408963;
+		 12 -0.11802199927408964;
 createNode animCurveTL -n "tuffs_latest:controller_rightThumb_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
@@ -14527,7 +14570,7 @@ createNode pairBlend -n "pairBlend2";
 createNode animCurveTL -n "pairBlend2_inTranslateX1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  6 -2.6645352591003757e-15 7 -6.2139452551932794e-16;
+	setAttr -s 2 ".ktv[0:1]"  6 -2.6645352591003757e-15 7 -6.2139452551932784e-16;
 createNode animCurveTL -n "pairBlend2_inTranslateY1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
@@ -14548,11 +14591,11 @@ createNode animCurveTA -n "pairBlend2_inRotateX1";
 createNode animCurveTA -n "pairBlend2_inRotateY1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  6 -8.1998675381481412e-16 7 1.108224521822444e-14;
+	setAttr -s 2 ".ktv[0:1]"  6 -8.1998675381481393e-16 7 1.108224521822444e-14;
 createNode animCurveTA -n "pairBlend2_inRotateZ1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  6 -1.7095481412866407e-14 7 -2.5444437451708134e-14;
+	setAttr -s 2 ".ktv[0:1]"  6 -1.709548141286641e-14 7 -2.544443745170814e-14;
 createNode animCurveTU -n "tuffs_latest:RightArm_scaleX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
@@ -14611,8 +14654,8 @@ createNode animCurveTU -n "tuffs_latest:controller_rightPinky_scaleZ";
 	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  11 1 12 1;
 select -ne :time1;
-	setAttr ".o" 11;
-	setAttr ".unw" 11;
+	setAttr ".o" 3;
+	setAttr ".unw" 3;
 select -ne :renderPartition;
 	setAttr -s 50 ".st";
 select -ne :initialShadingGroup;
@@ -14650,7 +14693,7 @@ select -ne :defaultHardwareRenderGlobals;
 	setAttr ".fn" -type "string" "im";
 	setAttr ".res" -type "string" "ntsc_4d 646 485 1.333";
 select -ne :ikSystem;
-	setAttr -s 4 ".sol";
+	setAttr -s 2 ".sol";
 connectAttr "tuffs_latest:controller_root_translateX.o" "tuffs_latestRN.phl[1]";
 connectAttr "tuffs_latest:controller_root_translateY.o" "tuffs_latestRN.phl[2]";
 connectAttr "tuffs_latest:controller_root_translateZ.o" "tuffs_latestRN.phl[3]";

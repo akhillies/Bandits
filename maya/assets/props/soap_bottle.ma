@@ -1,6 +1,6 @@
 //Maya ASCII 2013 scene
 //Name: soap_bottle.ma
-//Last modified: Mon, Dec 08, 2014 02:30:44 PM
+//Last modified: Mon, Dec 08, 2014 02:37:53 PM
 //Codeset: UTF-8
 requires maya "2013";
 currentUnit -l centimeter -a degree -t film;
@@ -12,12 +12,12 @@ fileInfo "osv" "Mac OS X 10.9.2";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 3.0594166216253029 13.299948384760409 50.663773536393897 ;
-	setAttr ".r" -type "double3" -11.738352731230689 3949.7999999988306 0 ;
+	setAttr ".t" -type "double3" 8.6960259517292116 13.358800683682537 -39.23206851585185 ;
+	setAttr ".r" -type "double3" -17.138352731464831 4146.1999999978043 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 55.391804601111005;
+	setAttr ".coi" 38.441394000648842;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";

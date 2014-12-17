@@ -1,6 +1,10 @@
 //Maya ASCII 2013 scene
 //Name: soap_bottle.ma
+<<<<<<< HEAD
 //Last modified: Fri, Dec 12, 2014 01:19:58 AM
+=======
+//Last modified: Mon, Dec 08, 2014 02:37:53 PM
+>>>>>>> f7d29e4b9a85709f5fbde8117c0caf15a62260c8
 //Codeset: UTF-8
 requires maya "2013";
 currentUnit -l centimeter -a degree -t film;
@@ -12,6 +16,7 @@ fileInfo "osv" "Mac OS X 10.9.5";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
+<<<<<<< HEAD
 	setAttr ".t" -type "double3" 26.101198280300522 0.18189901114247647 -0.038626213866014267 ;
 	setAttr ".r" -type "double3" 0 89.999999999999986 0 ;
 	setAttr ".rp" -type "double3" 0 2.7755575615628914e-17 -3.5527136788005009e-15 ;
@@ -20,6 +25,14 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
 	setAttr ".coi" 18.72359143189459;
+=======
+	setAttr ".t" -type "double3" 8.6960259517292116 13.358800683682537 -39.23206851585185 ;
+	setAttr ".r" -type "double3" -17.138352731464831 4146.1999999978043 0 ;
+createNode camera -s -n "perspShape" -p "persp";
+	setAttr -k off ".v" no;
+	setAttr ".fl" 34.999999999999986;
+	setAttr ".coi" 38.441394000648842;
+>>>>>>> f7d29e4b9a85709f5fbde8117c0caf15a62260c8
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";

@@ -1,6 +1,6 @@
 //Maya ASCII 2013 scene
 //Name: post_credits.ma
-//Last modified: Wed, Dec 17, 2014 11:50:06 AM
+//Last modified: Wed, Dec 17, 2014 11:58:25 AM
 //Codeset: UTF-8
 file -rdi 1 -ns "treasure_chest" -dr 1 -rfn "treasure_chestRN" "/Users/KristenCurry/Documents/_My Documents/_Fall 2015/CNM190/_Bandits_Git/Bandits/maya/assets/props/treasure_chest.ma";
 file -rdi 1 -ns "pig_latest" -dr 1 -rfn "pig_latestRN" "/Users/KristenCurry/Documents/_My Documents/_Fall 2015/CNM190/_Bandits_Git/Bandits/maya/assets/characters/pig/pig_latest.ma";
@@ -159,14 +159,14 @@ createNode mesh -n "pPlaneShape2" -p "pPlane2";
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
 createNode transform -n "camera4";
-	setAttr ".t" -type "double3" -3.3381855279100039 15.188919371886072 35.035296565425533 ;
+	setAttr ".t" -type "double3" -3.3552890364143546 15.233348594958555 35.219844495953446 ;
 	setAttr ".r" -type "double3" 346.31232344108037 715.2761675862854 362.37220028784026 ;
 createNode camera -n "cameraShape4" -p "camera4";
 	setAttr -k off ".v";
 	setAttr ".rnd" no;
 	setAttr ".cap" -type "double2" 1.4173 0.9449 ;
 	setAttr ".ff" 0;
-	setAttr ".coi" 30.875625220563329;
+	setAttr ".coi" 31.066214896380473;
 	setAttr ".ow" 30;
 	setAttr ".imn" -type "string" "camera4";
 	setAttr ".den" -type "string" "camera4_depth";

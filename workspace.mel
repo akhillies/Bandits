@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //Maya 2015 Project Definition
 
 workspace -fr "fluidCache" "";
@@ -51,3 +52,8 @@ workspace -fr "illustrator" "";
 workspace -fr "templates" "";
 workspace -fr "furAttrMap" "";
 workspace -fr "IGES_DC" "";
+=======
+//Maya 2014 Project Definition
+
+workspace -fr "particles" "particles";
+>>>>>>> b8c929f323a65e554f350bd9e7c356caf1565669

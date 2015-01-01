@@ -1,6 +1,6 @@
 //Maya ASCII 2013 scene
 //Name: PigRig007.ma
-//Last modified: Fri, Dec 12, 2014 12:06:51 AM
+//Last modified: Fri, Dec 12, 2014 10:35:52 AM
 //Codeset: UTF-8
 file -rdi 1 -ns "PigSkin002" -rfn "PigSkin002RN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/characters/pig/rig/PigSkin002.ma";
 file -rdi 2 -ns "Tyrion_Cattister" -rfn "PigSkin002:Tyrion_Cattister_uv:Tyrion_CattisterRN"
@@ -6017,24 +6017,6 @@ createNode orientConstraint -n "bind_R_metatarsal01_orientConstraint1" -p "PigSk
 	setAttr -k on ".w0";
 createNode transform -n "collar" -p "PIGRIGGED";
 createNode transform -n "PigSkin002RNfosterParent1";
-createNode orientConstraint -n "neck_flexi_anim_start01_orientConstraint1" -p "PigSkin002RNfosterParent1";
-	addAttr -ci true -k true -sn "w0" -ln "nurbsCircle1W0" -dv 1 -min 0 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 55.317009077719881 0 0 ;
-	setAttr ".o" -type "double3" -55.317048244914552 -0.055729921401099149 0.080535351475284567 ;
-	setAttr ".rsrr" -type "double3" 6.3611163326881676e-15 -0.097937556285601621 -5.4366337787488232e-18 ;
-	setAttr -k on ".w0";
 createNode parentConstraint -n "neck_flexi_anim_start01_parentConstraint1" -p "PigSkin002RNfosterParent1";
 	addAttr -ci true -k true -sn "w0" -ln "nurbsCircle1W0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -6055,6 +6037,24 @@ createNode parentConstraint -n "neck_flexi_anim_start01_parentConstraint1" -p "P
 	setAttr ".lr" -type "double3" -3.8166660831640282e-14 -0.097937556285601579 -1.0864391007992599e-17 ;
 	setAttr ".rst" -type "double3" 0.0077654492008494272 -8.8817841970012523e-16 -2.886579864025407e-14 ;
 	setAttr ".rsrr" -type "double3" -3.1805544498952112e-14 -0.097937556285601579 -1.6301024786741415e-17 ;
+	setAttr -k on ".w0";
+createNode orientConstraint -n "neck_flexi_anim_start01_orientConstraint1" -p "PigSkin002RNfosterParent1";
+	addAttr -ci true -k true -sn "w0" -ln "nurbsCircle1W0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".lr" -type "double3" 55.317009077719881 0 0 ;
+	setAttr ".o" -type "double3" -55.317048244914552 -0.055729921401099149 0.080535351475284567 ;
+	setAttr ".rsrr" -type "double3" 6.3611163326881676e-15 -0.097937556285601621 -5.4366337787488232e-18 ;
 	setAttr -k on ".w0";
 createNode ikEffector -n "effector3" -p "PigSkin002RNfosterParent1";
 	setAttr ".v" no;
@@ -24169,10 +24169,10 @@ createNode reference -n "PigSkin002RN";
 		"-s -r "
 		0 "|PigSkin002RNfosterParent1|effector3" "|PIGRIGGED|controller_main01|PigSkin002:PIG01|PigSkin002:global01|PigSkin002:skeleton01|PigSkin002:bind_root01|PigSkin002:bind_thorax01|PigSkin002:bind_R_humerus01|PigSkin002:bind_R_radius01" 
 		"-s -r "
-		0 "|PigSkin002RNfosterParent1|neck_flexi_anim_start01_parentConstraint1" 
+		0 "|PigSkin002RNfosterParent1|neck_flexi_anim_start01_orientConstraint1" 
 		"|PIGRIGGED|PigSkin002:extras|PigSkin002:neck_flexi_spine01|PigSkin002:neck_flexi_global01|PigSkin002:neck_flexi_grp_anim_start01|PigSkin002:neck_flexi_anim_start01" 
 		"-s -r "
-		0 "|PigSkin002RNfosterParent1|neck_flexi_anim_start01_orientConstraint1" 
+		0 "|PigSkin002RNfosterParent1|neck_flexi_anim_start01_parentConstraint1" 
 		"|PIGRIGGED|PigSkin002:extras|PigSkin002:neck_flexi_spine01|PigSkin002:neck_flexi_global01|PigSkin002:neck_flexi_grp_anim_start01|PigSkin002:neck_flexi_anim_start01" 
 		"-s -r "
 		1 |PIGRIGGED|PigSkin002:extras|PigSkin002:neck_flexi_spine01|PigSkin002:neck_flexi_global01|PigSkin002:neck_flexi_grp_anim_start01|PigSkin002:neck_flexi_anim_start01 
@@ -35285,15 +35285,6 @@ connectAttr "bind_R_metatarsal01_orientConstraint1.w0" "bind_R_metatarsal01_orie
 		;
 connectAttr "layer1.di" "collar.do";
 connectAttr "layer1.di" "PigSkin002RNfosterParent1.do";
-connectAttr "layer1.di" "neck_flexi_anim_start01_orientConstraint1.do";
-connectAttr "controller_head01.r" "neck_flexi_anim_start01_orientConstraint1.tg[0].tr"
-		;
-connectAttr "controller_head01.ro" "neck_flexi_anim_start01_orientConstraint1.tg[0].tro"
-		;
-connectAttr "controller_head01.pm" "neck_flexi_anim_start01_orientConstraint1.tg[0].tpm"
-		;
-connectAttr "neck_flexi_anim_start01_orientConstraint1.w0" "neck_flexi_anim_start01_orientConstraint1.tg[0].tw"
-		;
 connectAttr "layer1.di" "neck_flexi_anim_start01_parentConstraint1.do";
 connectAttr "controller_head01.t" "neck_flexi_anim_start01_parentConstraint1.tg[0].tt"
 		;
@@ -35310,6 +35301,15 @@ connectAttr "controller_head01.s" "neck_flexi_anim_start01_parentConstraint1.tg[
 connectAttr "controller_head01.pm" "neck_flexi_anim_start01_parentConstraint1.tg[0].tpm"
 		;
 connectAttr "neck_flexi_anim_start01_parentConstraint1.w0" "neck_flexi_anim_start01_parentConstraint1.tg[0].tw"
+		;
+connectAttr "layer1.di" "neck_flexi_anim_start01_orientConstraint1.do";
+connectAttr "controller_head01.r" "neck_flexi_anim_start01_orientConstraint1.tg[0].tr"
+		;
+connectAttr "controller_head01.ro" "neck_flexi_anim_start01_orientConstraint1.tg[0].tro"
+		;
+connectAttr "controller_head01.pm" "neck_flexi_anim_start01_orientConstraint1.tg[0].tpm"
+		;
+connectAttr "neck_flexi_anim_start01_orientConstraint1.w0" "neck_flexi_anim_start01_orientConstraint1.tg[0].tw"
 		;
 connectAttr "controller_R_frontfoot01.r" "bind_R_wrist01_orientConstraint2.tg[0].tr"
 		;

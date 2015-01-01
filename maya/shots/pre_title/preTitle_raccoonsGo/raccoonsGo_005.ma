@@ -1,6 +1,6 @@
 //Maya ASCII 2015 scene
-//Name: raccoonsGo_004.ma
-//Last modified: Wed, Dec 24, 2014 05:59:02 PM
+//Name: raccoonsGo_005.ma
+//Last modified: Wed, Dec 24, 2014 05:58:13 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "outside_living_room" -rfn "outside_living_roomRN" -op "v=0;"
 		 "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//scenes/outside_living_room.ma";
@@ -144,8 +144,10 @@ createNode gravityField -n "gravityField1";
 createNode fosterParent -n "outside_living_roomRNfosterParent1";
 createNode rigidBody -n "rigidBody1" -p "outside_living_roomRNfosterParent1";
 	setAttr -k off ".v";
-	setAttr ".ip" -type "double3" -2.247585152440533 -6.5055742434758237 41.876873417558308 ;
-	setAttr ".ior" -type "double3" 0.95822413499582015 15.218699261544259 2.5162354225962877 ;
+	setAttr ".ip" -type "double3" -3.5827359840474386 -6.4600168174442105 41.888382774192834 ;
+	setAttr ".ior" -type "double3" 0.95822413499581938 15.21869926154425 2.5162354225962864 ;
+	setAttr ".iv" -type "double3" -3 5 20 ;
+	setAttr ".is" -type "double3" 50 -100 150 ;
 	setAttr ".com" -type "double3" 152.50431060791016 11.707416534423828 30.167026519775391 ;
 	setAttr ".igc" 1;
 	setAttr ".kin" yes;
@@ -317,7 +319,7 @@ createNode renderLayerManager -n "renderLayerManager";
 createNode renderLayer -n "defaultRenderLayer";
 	setAttr ".g" yes;
 createNode reference -n "outside_living_roomRN";
-	setAttr -s 840 ".phl";
+	setAttr -s 836 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -1154,10 +1156,6 @@ createNode reference -n "outside_living_roomRN";
 	setAttr ".phl[834]" 0;
 	setAttr ".phl[835]" 0;
 	setAttr ".phl[836]" 0;
-	setAttr ".phl[837]" 0;
-	setAttr ".phl[838]" 0;
-	setAttr ".phl[839]" 0;
-	setAttr ".phl[840]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"outside_living_roomRN"
 		"outside_living_room:living_room_latest:rectangular_window_latest1RN" 0
@@ -1191,9 +1189,9 @@ createNode reference -n "outside_living_roomRN";
 		"outside_living_room:living_room_latest:armchair_latestRN" 0
 		"outside_living_room:living_room_latest:taller_window_latest5RN" 0
 		"outside_living_room:living_room_latest:taller_window_latest2RN" 0
-		"outside_living_room:smarty_latestRN" 310
+		"outside_living_room:smarty_latestRN" 302
 		2 "|outside_living_room:smarty_latest:SmartyRig|outside_living_room:smarty_latest:global_ctrl" 
-		"translate" " -type \"double3\" 153.85188401054000451 22.27537307906732522 31.10321197405049531"
+		"translate" " -type \"double3\" 153.85188401054000451 21.88744677391418847 31.10321197405049531"
 		
 		2 "|outside_living_room:smarty_latest:SmartyRig|outside_living_room:smarty_latest:global_ctrl" 
 		"translateX" " -av"
@@ -1209,14 +1207,6 @@ createNode reference -n "outside_living_roomRN";
 		"rotateY" " -av"
 		2 "|outside_living_room:smarty_latest:SmartyRig|outside_living_room:smarty_latest:global_ctrl" 
 		"rotateZ" " -av"
-		2 "|outside_living_room:smarty_latest:SmartyRig|outside_living_room:smarty_latest:global_ctrl" 
-		"scale" " -type \"double3\" 0.316 0.316 0.316"
-		2 "|outside_living_room:smarty_latest:SmartyRig|outside_living_room:smarty_latest:global_ctrl" 
-		"scaleX" " -av"
-		2 "|outside_living_room:smarty_latest:SmartyRig|outside_living_room:smarty_latest:global_ctrl" 
-		"scaleY" " -av"
-		2 "|outside_living_room:smarty_latest:SmartyRig|outside_living_room:smarty_latest:global_ctrl" 
-		"scaleZ" " -av"
 		2 "|outside_living_room:smarty_latest:SmartyRig|outside_living_room:smarty_latest:global_ctrl|outside_living_room:smarty_latest:cog_ctrl" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|outside_living_room:smarty_latest:SmartyRig|outside_living_room:smarty_latest:global_ctrl|outside_living_room:smarty_latest:cog_ctrl" 
@@ -1246,7 +1236,8 @@ createNode reference -n "outside_living_roomRN";
 		2 "|outside_living_room:smarty_latest:SmartyRig|outside_living_room:smarty_latest:global_ctrl|outside_living_room:smarty_latest:cog_ctrl|outside_living_room:smarty_latest:rightArm_ctrl1" 
 		"rotateZ" " -av"
 		2 "|outside_living_room:smarty_latest:SmartyRig|outside_living_room:smarty_latest:global_ctrl|outside_living_room:smarty_latest:cog_ctrl|outside_living_room:smarty_latest:leftArm_ctrl1" 
-		"translate" " -type \"double3\" 0 0 0"
+		"translate" " -type \"double3\" 0.1495940510829471 -5.20712707000435415 -3.93090731838936058"
+		
 		2 "|outside_living_room:smarty_latest:SmartyRig|outside_living_room:smarty_latest:global_ctrl|outside_living_room:smarty_latest:cog_ctrl|outside_living_room:smarty_latest:leftArm_ctrl1" 
 		"translateX" " -av"
 		2 "|outside_living_room:smarty_latest:SmartyRig|outside_living_room:smarty_latest:global_ctrl|outside_living_room:smarty_latest:cog_ctrl|outside_living_room:smarty_latest:leftArm_ctrl1" 
@@ -1261,14 +1252,6 @@ createNode reference -n "outside_living_roomRN";
 		"rotateY" " -av"
 		2 "|outside_living_room:smarty_latest:SmartyRig|outside_living_room:smarty_latest:global_ctrl|outside_living_room:smarty_latest:cog_ctrl|outside_living_room:smarty_latest:leftArm_ctrl1" 
 		"rotateZ" " -av"
-		2 "|outside_living_room:smarty_latest:SmartyRig|outside_living_room:smarty_latest:global_ctrl|outside_living_room:smarty_latest:cog_ctrl|outside_living_room:smarty_latest:leftArm_ctrl1" 
-		"scale" " -type \"double3\" 1 1 1"
-		2 "|outside_living_room:smarty_latest:SmartyRig|outside_living_room:smarty_latest:global_ctrl|outside_living_room:smarty_latest:cog_ctrl|outside_living_room:smarty_latest:leftArm_ctrl1" 
-		"scaleX" " -av"
-		2 "|outside_living_room:smarty_latest:SmartyRig|outside_living_room:smarty_latest:global_ctrl|outside_living_room:smarty_latest:cog_ctrl|outside_living_room:smarty_latest:leftArm_ctrl1" 
-		"scaleY" " -av"
-		2 "|outside_living_room:smarty_latest:SmartyRig|outside_living_room:smarty_latest:global_ctrl|outside_living_room:smarty_latest:cog_ctrl|outside_living_room:smarty_latest:leftArm_ctrl1" 
-		"scaleZ" " -av"
 		2 "|outside_living_room:smarty_latest:SmartyRig|outside_living_room:smarty_latest:global_ctrl|outside_living_room:smarty_latest:leftElbow_ctrl1" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|outside_living_room:smarty_latest:SmartyRig|outside_living_room:smarty_latest:global_ctrl|outside_living_room:smarty_latest:leftElbow_ctrl1" 
@@ -1813,25 +1796,22 @@ createNode reference -n "outside_living_roomRN";
 		"outside_living_roomRN.placeHolderList[267]" ""
 		5 4 "outside_living_roomRN" "|outside_living_room:smarty_latest:SmartyRig|outside_living_room:smarty_latest:global_ctrl|outside_living_room:smarty_latest:leftElbow_ctrl1.translateZ" 
 		"outside_living_roomRN.placeHolderList[268]" ""
-		"outside_living_room:binocularsRN" 28
+		"outside_living_room:binocularsRN" 21
 		0 "|outside_living_roomRNfosterParent1|rigidBody1" "|outside_living_room:binoculars:polySurface3" 
 		"-s -r "
-		2 "|outside_living_room:binoculars:polySurface3" "visibility" " -av 1"
-		2 "|outside_living_room:binoculars:polySurface3" "translate" " -type \"double3\" -0.22454988340451143 -14.81363117964823495 0.96476091974146527"
+		2 "|outside_living_room:binoculars:polySurface3" "visibility" " 1"
+		2 "|outside_living_room:binoculars:polySurface3" "translate" " -type \"double3\" -6.09955181620941289 -16.17569908471304529 31.55240379902946302"
 		
 		2 "|outside_living_room:binoculars:polySurface3" "translateX" " -av"
 		2 "|outside_living_room:binoculars:polySurface3" "translateY" " -av"
 		2 "|outside_living_room:binoculars:polySurface3" "translateZ" " -av"
-		2 "|outside_living_room:binoculars:polySurface3" "rotate" " -type \"double3\" 0.95822413499582004 15.21869926154425734 2.5162354225962873"
+		2 "|outside_living_room:binoculars:polySurface3" "rotate" " -type \"double3\" -178.63814783823752919 44.7566333787727757 205.551809699815351"
 		
 		2 "|outside_living_room:binoculars:polySurface3" "rotateX" " -av"
 		2 "|outside_living_room:binoculars:polySurface3" "rotateY" " -av"
 		2 "|outside_living_room:binoculars:polySurface3" "rotateZ" " -av"
 		2 "|outside_living_room:binoculars:polySurface3" "scale" " -type \"double3\" 1 1 1"
 		
-		2 "|outside_living_room:binoculars:polySurface3" "scaleX" " -av"
-		2 "|outside_living_room:binoculars:polySurface3" "scaleY" " -av"
-		2 "|outside_living_room:binoculars:polySurface3" "scaleZ" " -av"
 		2 "|outside_living_room:binoculars:polySurface3|outside_living_room:binoculars:polySurface3Shape" 
 		"dispResolution" " 3"
 		2 "|outside_living_room:binoculars:polySurface3|outside_living_room:binoculars:polySurface3Shape" 
@@ -1848,19 +1828,11 @@ createNode reference -n "outside_living_roomRN";
 		"outside_living_roomRN.placeHolderList[813]" ""
 		5 4 "outside_living_roomRN" "|outside_living_room:binoculars:polySurface3.rotateZ" 
 		"outside_living_roomRN.placeHolderList[814]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:binoculars:polySurface3.visibility" 
-		"outside_living_roomRN.placeHolderList[815]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:binoculars:polySurface3.scaleX" 
-		"outside_living_roomRN.placeHolderList[816]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:binoculars:polySurface3.scaleY" 
-		"outside_living_roomRN.placeHolderList[817]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:binoculars:polySurface3.scaleZ" 
-		"outside_living_roomRN.placeHolderList[818]" ""
 		5 3 "outside_living_roomRN" "|outside_living_room:binoculars:polySurface3.worldMatrix" 
-		"outside_living_roomRN.placeHolderList[819]" ""
+		"outside_living_roomRN.placeHolderList[815]" ""
 		5 3 "outside_living_roomRN" "|outside_living_room:binoculars:polySurface3|outside_living_room:binoculars:polySurface3Shape.message" 
-		"outside_living_roomRN.placeHolderList[820]" ""
-		"outside_living_room:sneaks_latestRN" 293
+		"outside_living_roomRN.placeHolderList[816]" ""
+		"outside_living_room:sneaks_latestRN" 289
 		2 "|outside_living_room:sneaks_latest:controller_root" "visibility" " -av 1"
 		
 		2 "|outside_living_room:sneaks_latest:controller_root" "translate" " -type \"double3\" 154.69955478896616796 5.55795361032844681 32.78385848268374048"
@@ -1876,11 +1848,6 @@ createNode reference -n "outside_living_roomRN";
 		2 "|outside_living_room:sneaks_latest:controller_root" "rotateX" " -av"
 		2 "|outside_living_room:sneaks_latest:controller_root" "rotateY" " -av"
 		2 "|outside_living_room:sneaks_latest:controller_root" "rotateZ" " -av"
-		2 "|outside_living_room:sneaks_latest:controller_root" "scale" " -type \"double3\" 0.64 0.64 0.64"
-		
-		2 "|outside_living_room:sneaks_latest:controller_root" "scaleX" " -av"
-		2 "|outside_living_room:sneaks_latest:controller_root" "scaleY" " -av"
-		2 "|outside_living_room:sneaks_latest:controller_root" "scaleZ" " -av"
 		2 "|outside_living_room:sneaks_latest:controller_root|outside_living_room:sneaks_latest:controller_COG" 
 		"translate" " -type \"double3\" -0.40570623638439218 1.98421479612708529 -0.6063617116504848"
 		
@@ -2436,13 +2403,11 @@ createNode reference -n "outside_living_roomRN";
 		"outside_living_roomRN.placeHolderList[517]" ""
 		5 4 "outside_living_roomRN" "|outside_living_room:sneaks_latest:controller_root|outside_living_room:sneaks_latest:controller_rightArm|outside_living_room:sneaks_latest:controller_rightWrist|outside_living_room:sneaks_latest:controller_rightThumb.visibility" 
 		"outside_living_roomRN.placeHolderList[518]" ""
-		"outside_living_room:tuffs_latestRN" 318
+		"outside_living_room:tuffs_latestRN" 312
 		2 "|outside_living_room:tuffs_latest:top1|outside_living_room:tuffs_latest:topShape2" 
 		"renderable" " 0"
 		2 "|outside_living_room:tuffs_latest:Tuffs002:top1|outside_living_room:tuffs_latest:Tuffs002:topShape2" 
 		"renderable" " 0"
-		2 "|outside_living_room:tuffs_latest:controller_root" "visibility" " -av 1"
-		
 		2 "|outside_living_room:tuffs_latest:controller_root" "translate" " -type \"double3\" 152.07167441562083354 5.65686659240161305 34.905595315766206"
 		
 		2 "|outside_living_room:tuffs_latest:controller_root" "translateX" " -av"
@@ -2454,13 +2419,7 @@ createNode reference -n "outside_living_roomRN";
 		2 "|outside_living_room:tuffs_latest:controller_root" "rotate" " -type \"double3\" -46.54990431884229451 -109.81548141759456882 0"
 		
 		2 "|outside_living_room:tuffs_latest:controller_root" "rotateX" " -av"
-		2 "|outside_living_room:tuffs_latest:controller_root" "rotateY" " -av"
 		2 "|outside_living_room:tuffs_latest:controller_root" "rotateZ" " -av"
-		2 "|outside_living_room:tuffs_latest:controller_root" "scale" " -type \"double3\" 0.504 0.504 0.504"
-		
-		2 "|outside_living_room:tuffs_latest:controller_root" "scaleX" " -av"
-		2 "|outside_living_room:tuffs_latest:controller_root" "scaleY" " -av"
-		2 "|outside_living_room:tuffs_latest:controller_root" "scaleZ" " -av"
 		2 "|outside_living_room:tuffs_latest:controller_root|outside_living_room:tuffs_latest:controller_COG" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|outside_living_room:tuffs_latest:controller_root|outside_living_room:tuffs_latest:controller_COG" 
@@ -3075,7 +3034,7 @@ createNode reference -n "outside_living_roomRN";
 		"outside_living_roomRN" 40
 		2 "|outside_living_room:atHouse|outside_living_room:atHouseShape" "renderable" 
 		" 0"
-		2 "|outside_living_room:atRaccoons" "translate" " -type \"double3\" 132.56123118092278901 21.45774289996062478 8.40808036803434078"
+		2 "|outside_living_room:atRaccoons" "translate" " -type \"double3\" 129.9967320532811641 22.87176762339819902 4.48911492287483149"
 		
 		2 "|outside_living_room:atRaccoons" "translateX" " -av"
 		2 "|outside_living_room:atRaccoons" "translateY" " -av"
@@ -3109,45 +3068,45 @@ createNode reference -n "outside_living_roomRN";
 		3 ":defaultRenderGlobals.rendercallback" "outside_living_room:defaultFurGlobals.callback" 
 		""
 		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.visibility" 
-		"outside_living_roomRN.placeHolderList[821]" ""
+		"outside_living_roomRN.placeHolderList[817]" ""
 		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.translateX" 
-		"outside_living_roomRN.placeHolderList[822]" ""
+		"outside_living_roomRN.placeHolderList[818]" ""
 		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.translateY" 
-		"outside_living_roomRN.placeHolderList[823]" ""
+		"outside_living_roomRN.placeHolderList[819]" ""
 		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.translateZ" 
-		"outside_living_roomRN.placeHolderList[824]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.rotateX" "outside_living_roomRN.placeHolderList[825]" 
+		"outside_living_roomRN.placeHolderList[820]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.rotateX" "outside_living_roomRN.placeHolderList[821]" 
 		""
-		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.rotateY" "outside_living_roomRN.placeHolderList[826]" 
+		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.rotateY" "outside_living_roomRN.placeHolderList[822]" 
 		""
-		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.rotateZ" "outside_living_roomRN.placeHolderList[827]" 
+		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.rotateZ" "outside_living_roomRN.placeHolderList[823]" 
 		""
-		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.scaleX" "outside_living_roomRN.placeHolderList[828]" 
+		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.scaleX" "outside_living_roomRN.placeHolderList[824]" 
 		""
-		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.scaleY" "outside_living_roomRN.placeHolderList[829]" 
+		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.scaleY" "outside_living_roomRN.placeHolderList[825]" 
 		""
-		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.scaleZ" "outside_living_roomRN.placeHolderList[830]" 
+		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.scaleZ" "outside_living_roomRN.placeHolderList[826]" 
 		""
 		5 4 "outside_living_roomRN" "|outside_living_room:atRaccoons.translateX" 
-		"outside_living_roomRN.placeHolderList[831]" ""
+		"outside_living_roomRN.placeHolderList[827]" ""
 		5 4 "outside_living_roomRN" "|outside_living_room:atRaccoons.translateY" 
-		"outside_living_roomRN.placeHolderList[832]" ""
+		"outside_living_roomRN.placeHolderList[828]" ""
 		5 4 "outside_living_roomRN" "|outside_living_room:atRaccoons.translateZ" 
-		"outside_living_roomRN.placeHolderList[833]" ""
+		"outside_living_roomRN.placeHolderList[829]" ""
 		5 4 "outside_living_roomRN" "|outside_living_room:atRaccoons.rotateX" 
-		"outside_living_roomRN.placeHolderList[834]" ""
+		"outside_living_roomRN.placeHolderList[830]" ""
 		5 4 "outside_living_roomRN" "|outside_living_room:atRaccoons.rotateY" 
-		"outside_living_roomRN.placeHolderList[835]" ""
+		"outside_living_roomRN.placeHolderList[831]" ""
 		5 4 "outside_living_roomRN" "|outside_living_room:atRaccoons.rotateZ" 
-		"outside_living_roomRN.placeHolderList[836]" ""
+		"outside_living_roomRN.placeHolderList[832]" ""
 		5 4 "outside_living_roomRN" "|outside_living_room:atRaccoons.visibility" 
-		"outside_living_roomRN.placeHolderList[837]" ""
+		"outside_living_roomRN.placeHolderList[833]" ""
 		5 4 "outside_living_roomRN" "|outside_living_room:atRaccoons.scaleX" 
-		"outside_living_roomRN.placeHolderList[838]" ""
+		"outside_living_roomRN.placeHolderList[834]" ""
 		5 4 "outside_living_roomRN" "|outside_living_room:atRaccoons.scaleY" 
-		"outside_living_roomRN.placeHolderList[839]" ""
+		"outside_living_roomRN.placeHolderList[835]" ""
 		5 4 "outside_living_roomRN" "|outside_living_room:atRaccoons.scaleZ" 
-		"outside_living_roomRN.placeHolderList[840]" "";
+		"outside_living_roomRN.placeHolderList[836]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode animLayer -s -n "BaseAnimation";
@@ -3161,44 +3120,44 @@ createNode FurGlobals -n "defaultFurGlobals";
 createNode animCurveTU -n "atRaccoons_visibility";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 30 1;
-	setAttr -s 2 ".kot[0:1]"  5 5;
+	setAttr ".ktv[0]"  30 1;
+	setAttr ".kot[0]"  5;
 createNode animCurveTL -n "atRaccoons_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 145.22756238017959 30 132.56123118092279;
+	setAttr ".ktv[0]"  30 132.56123118092279;
 createNode animCurveTL -n "atRaccoons_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 15.19106449716031 30 21.457742899960625;
+	setAttr ".ktv[0]"  30 21.457742899960625;
 createNode animCurveTL -n "atRaccoons_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 21.085933193228151 30 8.4080803680343408;
+	setAttr ".ktv[0]"  30 8.4080803680343408;
 createNode animCurveTA -n "atRaccoons_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 163.20000000000334 30 163.20000000000334;
+	setAttr ".ktv[0]"  30 163.20000000000334;
 createNode animCurveTA -n "atRaccoons_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 -33.199999999996173 30 -33.199999999996173;
+	setAttr ".ktv[0]"  30 -33.199999999996173;
 createNode animCurveTA -n "atRaccoons_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 180 30 180;
+	setAttr ".ktv[0]"  30 180;
 createNode animCurveTU -n "atRaccoons_scaleX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 4.1221507842896052 30 4.1221507842896052;
+	setAttr ".ktv[0]"  30 4.1221507842896052;
 createNode animCurveTU -n "atRaccoons_scaleY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 4.1221507842896026 30 4.1221507842896026;
+	setAttr ".ktv[0]"  30 4.1221507842896026;
 createNode animCurveTU -n "atRaccoons_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 4.1221507842896035 30 4.1221507842896035;
+	setAttr ".ktv[0]"  30 4.1221507842896035;
 createNode animCurveTU -n "atHouse_visibility";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
@@ -4396,7 +4355,7 @@ createNode animCurveTU -n "controller_root_visibility";
 createNode animCurveTL -n "controller_root_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 157.33615394503454 30 152.07167441562083;
+	setAttr -s 2 ".ktv[0:1]"  1 154.74841854376203 30 152.07167441562083;
 createNode animCurveTL -n "controller_root_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
@@ -5425,7 +5384,7 @@ createNode animCurveTU -n "controller_root_visibility1";
 createNode animCurveTL -n "controller_root_translateX1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 159.65527416181109 30 154.69955478896617;
+	setAttr -s 2 ".ktv[0:1]"  1 156.85399875368526 30 154.69955478896617;
 createNode animCurveTL -n "controller_root_translateY1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
@@ -5669,39 +5628,45 @@ createNode animCurveTU -n "LeftThumb_ctrl_endZ";
 createNode animCurveTL -n "leftArm_ctrl1_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 3 ".ktv[0:2]"  1 1.0876665203881581 5 6.2907320705935446
+		 20 0.1495940510829471;
 createNode animCurveTL -n "leftArm_ctrl1_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 3 ".ktv[0:2]"  1 3.1071394854070995 5 3.8156383252154114
+		 20 -5.2071270700043542;
 createNode animCurveTL -n "leftArm_ctrl1_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0.29197816202457832 5 -1.8749355311567775
+		 20 -3.9309073183893606;
 createNode animCurveTA -n "leftArm_ctrl1_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 3 ".ktv[0:2]"  1 7.5895416484999156 5 70.851146076027916
+		 20 0;
 createNode animCurveTA -n "leftArm_ctrl1_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 3 ".ktv[0:2]"  1 -74.117532349616852 5 38.373126835521987
+		 20 0;
 createNode animCurveTA -n "leftArm_ctrl1_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 3 ".ktv[0:2]"  1 -97.887051127230279 5 95.790099885099494
+		 20 0;
 createNode animCurveTU -n "leftArm_ctrl1_scaleX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 3 ".ktv[0:2]"  1 1 5 1 20 1;
 createNode animCurveTU -n "leftArm_ctrl1_scaleY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 3 ".ktv[0:2]"  1 1 5 1 20 1;
 createNode animCurveTU -n "leftArm_ctrl1_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 3 ".ktv[0:2]"  1 1 5 1 20 1;
 createNode animCurveTL -n "RightPinky_ctrl2_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
@@ -6509,15 +6474,15 @@ createNode animCurveTU -n "leftFoot_ctrl_Footroll";
 createNode animCurveTL -n "global_ctrl_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 155.46036494404095 30 153.85188401054;
+	setAttr -s 2 ".ktv[0:1]"  1 154.11768260049419 30 153.85188401054;
 createNode animCurveTL -n "global_ctrl_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 17.160327660649109 30 22.275373079067325;
+	setAttr -s 2 ".ktv[0:1]"  1 17.160327660649109 30 21.887446773914188;
 createNode animCurveTL -n "global_ctrl_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 31.103211974050495 30 31.103211974050495;
+	setAttr -s 2 ".ktv[0:1]"  1 31.103211974050488 30 31.103211974050495;
 createNode animCurveTA -n "global_ctrl_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
@@ -6568,33 +6533,27 @@ createNode animCurveTA -n "polySurface3_rotateZ";
 	setAttr ".ktv[0]"  1 2.5162354225962882;
 createNode rigidSolver -n "rigidSolver";
 	setAttr ".stm" 1;
-	setAttr ".t[0]" -type "double3" -0.22454988340451143 -14.813631179648235 0.96476091974146527;
-	setAttr ".r[0]" -type "double3" 0.95822413499582004 15.218699261544257 2.5162354225962873;
+	setAttr ".t[0]" -type "double3" -6.0995518162094129 -16.175699084713045 31.552403799029463;
+	setAttr ".r[0]" -type "double3" -178.63814783823753 44.756633378772776 205.55180969981535;
 	setAttr ".cur" yes;
 createNode choice -n "rigidBody_tx";
 	setAttr ".ihi" 0;
 	setAttr -s 2 ".i";
-	setAttr ".i[1]" -0.22454987908889734;
 createNode choice -n "rigidBody_ty";
 	setAttr ".ihi" 0;
 	setAttr -s 2 ".i";
-	setAttr ".i[1]" -0.21293674852601008;
 createNode choice -n "rigidBody_tz";
 	setAttr ".ihi" 0;
 	setAttr -s 2 ".i";
-	setAttr ".i[1]" 0.96476100411760513;
 createNode choice -n "rigidBody_rx";
 	setAttr ".ihi" 0;
 	setAttr -s 2 ".i";
-	setAttr ".i[1]" 0.01672416612775169;
 createNode choice -n "rigidBody_ry";
 	setAttr ".ihi" 0;
 	setAttr -s 2 ".i";
-	setAttr ".i[1]" 0.26561640998477709;
 createNode choice -n "rigidBody_rz";
 	setAttr ".ihi" 0;
 	setAttr -s 2 ".i";
-	setAttr ".i[1]" 0.043916592879616155;
 createNode script -n "uiConfigurationScriptNode";
 	setAttr ".b" -type "string" (
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"outside_living_room:atRaccoons\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n"
@@ -6929,30 +6888,13 @@ createNode mentalrayOptions -s -n "PreviewImrRayTracyOn";
 	setAttr ".rfrr" 2;
 	setAttr ".maxr" 3;
 	setAttr ".shrd" 1;
-createNode animCurveTU -n "polySurface3_scaleZ";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-createNode animCurveTU -n "polySurface3_scaleY";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-createNode animCurveTU -n "polySurface3_scaleX";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-createNode animCurveTU -n "polySurface3_visibility";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-	setAttr ".kot[0]"  5;
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr ".o" 30;
-	setAttr ".unw" 30;
+	setAttr ".o" 38;
+	setAttr ".unw" 38;
 select -ne :renderPartition;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -7033,9 +6975,11 @@ select -ne :initialParticleSE;
 select -ne :defaultRenderGlobals;
 	setAttr ".mcfr" 30;
 	setAttr ".ren" -type "string" "mentalRay";
-	setAttr ".outf" 3;
-	setAttr ".imfkey" -type "string" "tif";
+	setAttr ".outf" 32;
+	setAttr ".imfkey" -type "string" "png";
 	setAttr ".an" yes;
+	setAttr ".ef" 45;
+	setAttr ".ep" 3;
 	setAttr ".pff" yes;
 	setAttr ".peie" 2;
 select -ne :defaultResolution;
@@ -7405,12 +7349,8 @@ connectAttr "rigidBody_tz.o" "outside_living_roomRN.phl[811]";
 connectAttr "rigidBody_rx.o" "outside_living_roomRN.phl[812]";
 connectAttr "rigidBody_ry.o" "outside_living_roomRN.phl[813]";
 connectAttr "rigidBody_rz.o" "outside_living_roomRN.phl[814]";
-connectAttr "polySurface3_visibility.o" "outside_living_roomRN.phl[815]";
-connectAttr "polySurface3_scaleX.o" "outside_living_roomRN.phl[816]";
-connectAttr "polySurface3_scaleY.o" "outside_living_roomRN.phl[817]";
-connectAttr "polySurface3_scaleZ.o" "outside_living_roomRN.phl[818]";
-connectAttr "outside_living_roomRN.phl[819]" "rigidBody1.rmx";
-connectAttr "outside_living_roomRN.phl[820]" "rigidBody1.igm[0]";
+connectAttr "outside_living_roomRN.phl[815]" "rigidBody1.rmx";
+connectAttr "outside_living_roomRN.phl[816]" "rigidBody1.igm[0]";
 connectAttr "controller_root_visibility1.o" "outside_living_roomRN.phl[269]";
 connectAttr "controller_root_translateX1.o" "outside_living_roomRN.phl[270]";
 connectAttr "controller_root_translateY1.o" "outside_living_roomRN.phl[271]";
@@ -8049,26 +7989,26 @@ connectAttr "controller_leftPinky_scaleY.o" "outside_living_roomRN.phl[806]";
 connectAttr "controller_leftPinky_scaleZ.o" "outside_living_roomRN.phl[807]";
 connectAttr "controller_leftPinky_visibility.o" "outside_living_roomRN.phl[808]"
 		;
-connectAttr "atHouse_visibility.o" "outside_living_roomRN.phl[821]";
-connectAttr "atHouse_translateX.o" "outside_living_roomRN.phl[822]";
-connectAttr "atHouse_translateY.o" "outside_living_roomRN.phl[823]";
-connectAttr "atHouse_translateZ.o" "outside_living_roomRN.phl[824]";
-connectAttr "atHouse_rotateX.o" "outside_living_roomRN.phl[825]";
-connectAttr "atHouse_rotateY.o" "outside_living_roomRN.phl[826]";
-connectAttr "atHouse_rotateZ.o" "outside_living_roomRN.phl[827]";
-connectAttr "atHouse_scaleX.o" "outside_living_roomRN.phl[828]";
-connectAttr "atHouse_scaleY.o" "outside_living_roomRN.phl[829]";
-connectAttr "atHouse_scaleZ.o" "outside_living_roomRN.phl[830]";
-connectAttr "atRaccoons_translateX.o" "outside_living_roomRN.phl[831]";
-connectAttr "atRaccoons_translateY.o" "outside_living_roomRN.phl[832]";
-connectAttr "atRaccoons_translateZ.o" "outside_living_roomRN.phl[833]";
-connectAttr "atRaccoons_rotateX.o" "outside_living_roomRN.phl[834]";
-connectAttr "atRaccoons_rotateY.o" "outside_living_roomRN.phl[835]";
-connectAttr "atRaccoons_rotateZ.o" "outside_living_roomRN.phl[836]";
-connectAttr "atRaccoons_visibility.o" "outside_living_roomRN.phl[837]";
-connectAttr "atRaccoons_scaleX.o" "outside_living_roomRN.phl[838]";
-connectAttr "atRaccoons_scaleY.o" "outside_living_roomRN.phl[839]";
-connectAttr "atRaccoons_scaleZ.o" "outside_living_roomRN.phl[840]";
+connectAttr "atHouse_visibility.o" "outside_living_roomRN.phl[817]";
+connectAttr "atHouse_translateX.o" "outside_living_roomRN.phl[818]";
+connectAttr "atHouse_translateY.o" "outside_living_roomRN.phl[819]";
+connectAttr "atHouse_translateZ.o" "outside_living_roomRN.phl[820]";
+connectAttr "atHouse_rotateX.o" "outside_living_roomRN.phl[821]";
+connectAttr "atHouse_rotateY.o" "outside_living_roomRN.phl[822]";
+connectAttr "atHouse_rotateZ.o" "outside_living_roomRN.phl[823]";
+connectAttr "atHouse_scaleX.o" "outside_living_roomRN.phl[824]";
+connectAttr "atHouse_scaleY.o" "outside_living_roomRN.phl[825]";
+connectAttr "atHouse_scaleZ.o" "outside_living_roomRN.phl[826]";
+connectAttr "atRaccoons_translateX.o" "outside_living_roomRN.phl[827]";
+connectAttr "atRaccoons_translateY.o" "outside_living_roomRN.phl[828]";
+connectAttr "atRaccoons_translateZ.o" "outside_living_roomRN.phl[829]";
+connectAttr "atRaccoons_rotateX.o" "outside_living_roomRN.phl[830]";
+connectAttr "atRaccoons_rotateY.o" "outside_living_roomRN.phl[831]";
+connectAttr "atRaccoons_rotateZ.o" "outside_living_roomRN.phl[832]";
+connectAttr "atRaccoons_visibility.o" "outside_living_roomRN.phl[833]";
+connectAttr "atRaccoons_scaleX.o" "outside_living_roomRN.phl[834]";
+connectAttr "atRaccoons_scaleY.o" "outside_living_roomRN.phl[835]";
+connectAttr "atRaccoons_scaleZ.o" "outside_living_roomRN.phl[836]";
 connectAttr "rigidBody1.fld" "gravityField1.ind[0]";
 connectAttr ":time1.o" "rigidBody1.ct";
 connectAttr "gravityField1.of[0]" "rigidBody1.ifr[0]";
@@ -8111,4 +8051,4 @@ connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 dataStructure -fmt "raw" -as "name=externalContentTable:string=node:string=key:string=upath:uint32=upathcrc:string=rpath:string=roles";
 applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"outside_living_roomRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//scenes/outside_living_room.ma\" 2324323722 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/scenes/outside_living_room.ma\" \"FileRef\"\nendStream\nendChannel\nendAssociations\n" 
 		-scn;
-// End of raccoonsGo_004.ma
+// End of raccoonsGo_005.ma

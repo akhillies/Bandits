@@ -1,8 +1,0 @@
-//Maya 2013 x64 Project Definition
-
-workspace -fr "furAttrMap" "furAttrMap";
-workspace -fr "furShadowMap" "furShadowMap";
-workspace -fr "particles" "particles";
-workspace -fr "furFiles" "furFiles";
-workspace -fr "furEqualMap" "furEqualMap";
-workspace -fr "furImages" "furImages";

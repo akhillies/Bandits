@@ -1,6 +1,6 @@
 //Maya ASCII 2013 scene
 //Name: body_smarty_bedroom_with_title_time002.ma
-//Last modified: Thu, Dec 11, 2014 10:23:39 PM
+//Last modified: Thu, Dec 11, 2014 10:24:58 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "NewSmarty_024" -rfn "NewSmarty_024RN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/characters/smarty/smarty_latest.ma";
 file -rdi 1 -ns "Bacon" -rfn "BaconRN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/characters/pig/mesh/Bacon_latest.ma";
@@ -569,21 +569,6 @@ createNode parentConstraint -n "global_ctrl_parentConstraint1" -p "NewSmarty_024
 	setAttr ".rsrr" -type "double3" 0 360 0 ;
 	setAttr -k on ".w0";
 createNode transform -n "bed_latestRNfosterParent1";
-createNode transform -n "bed_latest:transform203" -p "bed_latestRNfosterParent1";
-	setAttr ".v" no;
-createNode transform -n "bed_latest:polySurface290" -p "bed_latestRNfosterParent1";
-createNode mesh -n "bed_latest:polySurfaceShape291" -p "bed_latest:polySurface290";
-	setAttr -k off ".v";
-	setAttr -s 2 ".iog[0].og";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".dr" 3;
-	setAttr ".dsm" 2;
 createNode transform -n "bed_latest:polySurface289" -p "bed_latestRNfosterParent1";
 createNode mesh -n "bed_latest:polySurfaceShape290" -p "bed_latest:polySurface289";
 	setAttr -k off ".v";
@@ -610,6 +595,21 @@ createNode mesh -n "bed_latest:outputCloth1" -p "bed_latest:polySurface289";
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
 	setAttr ".qsp" 0;
+createNode transform -n "bed_latest:polySurface290" -p "bed_latestRNfosterParent1";
+createNode mesh -n "bed_latest:polySurfaceShape291" -p "bed_latest:polySurface290";
+	setAttr -k off ".v";
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr ".dr" 3;
+	setAttr ".dsm" 2;
+createNode transform -n "bed_latest:transform203" -p "bed_latestRNfosterParent1";
+	setAttr ".v" no;
 createNode mentalrayItemsList -s -n "mentalrayItemsList";
 createNode mentalrayGlobals -s -n "mentalrayGlobals";
 createNode mentalrayOptions -s -n "miDefaultOptions";
@@ -1442,11 +1442,11 @@ createNode reference -n "bed_latestRN";
 		"bed_latestRN" 146
 		0 "|bed_latest:polySurfaceShape212" "|bed_latestRNfosterParent1|bed_latest:transform203" 
 		"-s -r "
-		0 "|bed_latestRNfosterParent1|bed_latest:polySurface289" "|bed_latest:Cube1|bed_latest:polySurface212" 
+		0 "|bed_latestRNfosterParent1|bed_latest:transform203" "|bed_latest:Cube1|bed_latest:polySurface212" 
 		"-s -r "
 		0 "|bed_latestRNfosterParent1|bed_latest:polySurface290" "|bed_latest:Cube1|bed_latest:polySurface212" 
 		"-s -r "
-		0 "|bed_latestRNfosterParent1|bed_latest:transform203" "|bed_latest:Cube1|bed_latest:polySurface212" 
+		0 "|bed_latestRNfosterParent1|bed_latest:polySurface289" "|bed_latest:Cube1|bed_latest:polySurface212" 
 		"-s -r "
 		2 "|bed_latest:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046Group10767" "translate" 
 		" -type \"double3\" 0 1193.44519 0"
@@ -4711,15 +4711,15 @@ connectAttr "bed_latest:nucleus1.stf" "bed_latest:nRigidShape6.stf";
 connectAttr ":time1.o" "bed_latest:nRigidShape6.cti";
 connectAttr "global_ctrl_parentConstraint1.w0" "global_ctrl_parentConstraint1.tg[0].tw"
 		;
-connectAttr "bed_latest:groupId396.id" "bed_latest:polySurfaceShape291.iog.og[0].gid"
-		;
-connectAttr "bed_latest:polyNormalPerVertex1.out" "bed_latest:polySurfaceShape291.i"
-		;
 connectAttr "bed_latest:groupId395.id" "bed_latest:polySurfaceShape290.iog.og[0].gid"
 		;
 connectAttr "bed_latest:polyNormalPerVertex2.out" "bed_latest:polySurfaceShape290.i"
 		;
 connectAttr "bed_latest:nClothShape1.omsh" "bed_latest:outputCloth1.i";
+connectAttr "bed_latest:groupId396.id" "bed_latest:polySurfaceShape291.iog.og[0].gid"
+		;
+connectAttr "bed_latest:polyNormalPerVertex1.out" "bed_latest:polySurfaceShape291.i"
+		;
 connectAttr ":mentalrayGlobals.msg" ":mentalrayItemsList.glb";
 connectAttr ":miDefaultOptions.msg" ":mentalrayItemsList.opt" -na;
 connectAttr ":miDefaultFramebuffer.msg" ":mentalrayItemsList.fb" -na;

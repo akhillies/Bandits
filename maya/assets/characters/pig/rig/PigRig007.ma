@@ -2,12 +2,12 @@
 //Name: PigRig007.ma
 //Last modified: Fri, Dec 12, 2014 10:35:52 AM
 //Codeset: UTF-8
-file -rdi 1 -ns "PigSkin002" -rfn "PigSkin002RN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/characters/pig/rig/PigSkin002.ma";
+file -rdi 1 -ns "PigSkin002" -rfn "PigSkin002RN" "assets/characters/pig/rig/PigSkin002.ma";
 file -rdi 2 -ns "Tyrion_Cattister" -rfn "PigSkin002:Tyrion_Cattister_uv:Tyrion_CattisterRN"
-		 "/Users/scai/Bandits/maya//assets/characters/pig/mesh/Bacon_latest.ma";
-file -rdi 1 -ns "cat_collar" -rfn "cat_collarRN" "/Users/scai/Bandits/maya//assets/props/cat_collar.ma";
-file -r -ns "PigSkin002" -dr 1 -rfn "PigSkin002RN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/characters/pig/rig/PigSkin002.ma";
-file -r -ns "cat_collar" -dr 1 -rfn "cat_collarRN" "/Users/scai/Bandits/maya//assets/props/cat_collar.ma";
+		 "assets/characters/pig/mesh/Bacon_latest.ma";
+file -rdi 1 -ns "cat_collar" -rfn "cat_collarRN" "assets/props/cat_collar.ma";
+file -r -ns "PigSkin002" -dr 1 -rfn "PigSkin002RN" "assets/characters/pig/rig/PigSkin002.ma";
+file -r -ns "cat_collar" -dr 1 -rfn "cat_collarRN" "assets/props/cat_collar.ma";
 requires maya "2013";
 requires "Fur" "2013 x64";
 requires "Mayatomr" "2013.0 - 3.10.1.9 ";

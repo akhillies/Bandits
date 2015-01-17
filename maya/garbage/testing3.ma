@@ -78,7 +78,7 @@ createNode renderLayerManager -n "renderLayerManager";
 createNode renderLayer -n "defaultRenderLayer";
 	setAttr ".g" yes;
 createNode reference -n "scphereRN";
-	setAttr ".fn[0]" -type "string" "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//garbage/scphere.ma";
+	setAttr ".fn[0]" -type "string" "garbage/scphere.ma";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"scphereRN"
 		"scphereRN" 0;
@@ -256,7 +256,7 @@ createNode mentalrayFramebuffer -s -n "miDefaultFramebuffer";
 createNode animLayer -s -n "BaseAnimation";
 	setAttr ".ovrd" yes;
 createNode reference -n "scphereRN1";
-	setAttr ".fn[0]" -type "string" "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//garbage/scphere.ma{1}";
+	setAttr ".fn[0]" -type "string" "garbage/scphere.ma{1}";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"scphereRN1"
 		"scphereRN1" 0;

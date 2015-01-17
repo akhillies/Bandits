@@ -197,7 +197,7 @@ createNode shadingEngine -n "lambert3SG";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo2";
 createNode file -n "file2";
-	setAttr ".ftn" -type "string" "C:/Users/Ashley/AppData/Local/VirtualStore/Program Files (x86)/Git/Bandits/Bandits/maya/images/UnderwearTexture.jpg";
+	setAttr ".ftn" -type "string" "images/UnderwearTexture.jpg";
 createNode place2dTexture -n "place2dTexture2";
 select -ne :time1;
 	setAttr ".o" 1;

@@ -3,88 +3,88 @@
 //Last modified: Mon, Dec 29, 2014 06:22:27 PM
 //Codeset: 1252
 file -rdi 1 -ns "armchair_latest" -rfn "living_room_latest:armchair_latestRN"
-		 "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/sets/livingroom/additions/sofa/armchair_latest.ma";
-file -rdi 1 -ns "table_latest" -rfn "living_room_latest:table_latestRN" "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/sets/livingroom/additions/table/table_latest.ma";
-file -rdi 1 -ns "sofa_latest" -rfn "living_room_latest:sofa_latestRN" "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/sets/livingroom/additions/sofa/sofa_latest.ma";
+		 "assets/sets/livingroom/additions/sofa/armchair_latest.ma";
+file -rdi 1 -ns "table_latest" -rfn "living_room_latest:table_latestRN" "assets/sets/livingroom/additions/table/table_latest.ma";
+file -rdi 1 -ns "sofa_latest" -rfn "living_room_latest:sofa_latestRN" "assets/sets/livingroom/additions/sofa/sofa_latest.ma";
 file -rdi 1 -ns "armchair_latest1" -rfn "living_room_latest:armchair_latestRN1"
-		 "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/sets/livingroom/additions/sofa/armchair_latest.ma";
+		 "assets/sets/livingroom/additions/sofa/armchair_latest.ma";
 file -rdi 1 -ns "armchair_latest2" -rfn "living_room_latest:armchair_latestRN2"
-		 "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/sets/livingroom/additions/sofa/armchair_latest.ma";
+		 "assets/sets/livingroom/additions/sofa/armchair_latest.ma";
 file -rdi 1 -ns "armchair_latest3" -rfn "living_room_latest:armchair_latestRN3"
-		 "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/sets/livingroom/additions/sofa/armchair_latest.ma";
+		 "assets/sets/livingroom/additions/sofa/armchair_latest.ma";
 file -rdi 1 -ns "rectangular_window_latest" -rfn "living_room_latest:rectangular_window_latestRN"
-		 "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/sets/livingroom/additions/windows/rectangular_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/rectangular_window_latest.ma";
 file -rdi 1 -ns "rectangular_window_latest1" -rfn "living_room_latest:rectangular_window_latestRN1"
-		 "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/sets/livingroom/additions/windows/rectangular_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/rectangular_window_latest.ma";
 file -rdi 1 -ns "rectangular_window_latest2" -rfn "living_room_latest:rectangular_window_latest1RN"
-		 "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/sets/livingroom/additions/windows/rectangular_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/rectangular_window_latest.ma";
 file -rdi 1 -ns "rectangular_window_latest3" -rfn "living_room_latest:rectangular_window_latest2RN"
-		 "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/sets/livingroom/additions/windows/rectangular_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/rectangular_window_latest.ma";
 file -rdi 1 -ns "taller_window_latest" -rfn "living_room_latest:taller_window_latestRN"
-		 "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
 file -rdi 1 -ns "taller_window_latest1" -rfn "living_room_latest:taller_window_latestRN1"
-		 "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
 file -rdi 1 -ns "taller_window_latest2" -rfn "living_room_latest:taller_window_latest1RN"
-		 "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
 file -rdi 1 -ns "taller_window_latest3" -rfn "living_room_latest:taller_window_latest2RN"
-		 "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
 file -rdi 1 -ns "taller_window_latest4" -rfn "living_room_latest:taller_window_latest3RN"
-		 "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
 file -rdi 1 -ns "taller_window_latest5" -rfn "living_room_latest:taller_window_latest4RN"
-		 "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
 file -rdi 1 -ns "taller_window_latest6" -rfn "living_room_latest:taller_window_latest5RN"
-		 "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
 file -rdi 1 -ns "taller_window_latest7" -rfn "living_room_latest:taller_window_latest6RN"
-		 "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
 file -rdi 1 -ns "taller_window_latest8" -rfn "living_room_latest:taller_window_latest7RN"
-		 "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/sets/livingroom/additions/windows/taller_window_latest.ma";
-file -rdi 1 -ns "smarty_latest" -rfn "smarty_latestRN" "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/characters/smarty/smarty_latest.ma";
-file -rdi 1 -ns "bike" -rfn "bikeRN" "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/props/bike.ma";
-file -rdi 1 -ns "run_forrest_run" -rfn "run_forrest_runRN" "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/characters/pig/run_cycle/run_forrest_run.ma";
-file -rdi 2 -ns "PigSkin002" -rfn "run_forrest_run:PigSkin002RN" "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/characters/pig/rig/PigSkin002.ma";
+		 "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+file -rdi 1 -ns "smarty_latest" -rfn "smarty_latestRN" "assets/characters/smarty/smarty_latest.ma";
+file -rdi 1 -ns "bike" -rfn "bikeRN" "assets/props/bike.ma";
+file -rdi 1 -ns "run_forrest_run" -rfn "run_forrest_runRN" "assets/characters/pig/run_cycle/run_forrest_run.ma";
+file -rdi 2 -ns "PigSkin002" -rfn "run_forrest_run:PigSkin002RN" "assets/characters/pig/rig/PigSkin002.ma";
 file -rdi 3 -ns "Tyrion_Cattister" -rfn "run_forrest_run:PigSkin002:Tyrion_Cattister_uv:Tyrion_CattisterRN"
-		 "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/characters/pig/mesh/Bacon_latest.ma";
-file -rdi 2 -ns "cat_collar" -rfn "run_forrest_run:cat_collarRN" "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/props/cat_collar.ma";
-file -rdi 1 -ns "key_latest" -rfn "key_latestRN" "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/props/keys/key_latest.ma";
-file -r -ns "armchair_latest" -dr 1 -rfn "living_room_latest:armchair_latestRN" "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/sets/livingroom/additions/sofa/armchair_latest.ma";
-file -r -ns "table_latest" -dr 1 -rfn "living_room_latest:table_latestRN" "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/sets/livingroom/additions/table/table_latest.ma";
-file -r -ns "sofa_latest" -dr 1 -rfn "living_room_latest:sofa_latestRN" "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/sets/livingroom/additions/sofa/sofa_latest.ma";
+		 "assets/characters/pig/mesh/Bacon_latest.ma";
+file -rdi 2 -ns "cat_collar" -rfn "run_forrest_run:cat_collarRN" "assets/props/cat_collar.ma";
+file -rdi 1 -ns "key_latest" -rfn "key_latestRN" "assets/props/keys/key_latest.ma";
+file -r -ns "armchair_latest" -dr 1 -rfn "living_room_latest:armchair_latestRN" "assets/sets/livingroom/additions/sofa/armchair_latest.ma";
+file -r -ns "table_latest" -dr 1 -rfn "living_room_latest:table_latestRN" "assets/sets/livingroom/additions/table/table_latest.ma";
+file -r -ns "sofa_latest" -dr 1 -rfn "living_room_latest:sofa_latestRN" "assets/sets/livingroom/additions/sofa/sofa_latest.ma";
 file -r -ns "armchair_latest1" -dr 1 -rfn "living_room_latest:armchair_latestRN1"
-		 "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/sets/livingroom/additions/sofa/armchair_latest.ma";
+		 "assets/sets/livingroom/additions/sofa/armchair_latest.ma";
 file -r -ns "armchair_latest2" -dr 1 -rfn "living_room_latest:armchair_latestRN2"
-		 "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/sets/livingroom/additions/sofa/armchair_latest.ma";
+		 "assets/sets/livingroom/additions/sofa/armchair_latest.ma";
 file -r -ns "armchair_latest3" -dr 1 -rfn "living_room_latest:armchair_latestRN3"
-		 "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/sets/livingroom/additions/sofa/armchair_latest.ma";
+		 "assets/sets/livingroom/additions/sofa/armchair_latest.ma";
 file -r -ns "rectangular_window_latest" -dr 1 -rfn "living_room_latest:rectangular_window_latestRN"
-		 "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/sets/livingroom/additions/windows/rectangular_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/rectangular_window_latest.ma";
 file -r -ns "rectangular_window_latest1" -dr 1 -rfn "living_room_latest:rectangular_window_latestRN1"
-		 "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/sets/livingroom/additions/windows/rectangular_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/rectangular_window_latest.ma";
 file -r -ns "rectangular_window_latest2" -dr 1 -rfn "living_room_latest:rectangular_window_latest1RN"
-		 "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/sets/livingroom/additions/windows/rectangular_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/rectangular_window_latest.ma";
 file -r -ns "rectangular_window_latest3" -dr 1 -rfn "living_room_latest:rectangular_window_latest2RN"
-		 "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/sets/livingroom/additions/windows/rectangular_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/rectangular_window_latest.ma";
 file -r -ns "taller_window_latest" -dr 1 -rfn "living_room_latest:taller_window_latestRN"
-		 "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
 file -r -ns "taller_window_latest1" -dr 1 -rfn "living_room_latest:taller_window_latestRN1"
-		 "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
 file -r -ns "taller_window_latest2" -dr 1 -rfn "living_room_latest:taller_window_latest1RN"
-		 "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
 file -r -ns "taller_window_latest3" -dr 1 -rfn "living_room_latest:taller_window_latest2RN"
-		 "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
 file -r -ns "taller_window_latest4" -dr 1 -rfn "living_room_latest:taller_window_latest3RN"
-		 "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
 file -r -ns "taller_window_latest5" -dr 1 -rfn "living_room_latest:taller_window_latest4RN"
-		 "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
 file -r -ns "taller_window_latest6" -dr 1 -rfn "living_room_latest:taller_window_latest5RN"
-		 "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
 file -r -ns "taller_window_latest7" -dr 1 -rfn "living_room_latest:taller_window_latest6RN"
-		 "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
 file -r -ns "taller_window_latest8" -dr 1 -rfn "living_room_latest:taller_window_latest7RN"
-		 "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/sets/livingroom/additions/windows/taller_window_latest.ma";
-file -r -ns "smarty_latest" -dr 1 -rfn "smarty_latestRN" "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/characters/smarty/smarty_latest.ma";
-file -r -ns "bike" -dr 1 -rfn "bikeRN" "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/props/bike.ma";
-file -r -ns "run_forrest_run" -dr 1 -rfn "run_forrest_runRN" "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/characters/pig/run_cycle/run_forrest_run.ma";
-file -r -ns "key_latest" -dr 1 -rfn "key_latestRN" "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/props/keys/key_latest.ma";
+		 "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+file -r -ns "smarty_latest" -dr 1 -rfn "smarty_latestRN" "assets/characters/smarty/smarty_latest.ma";
+file -r -ns "bike" -dr 1 -rfn "bikeRN" "assets/props/bike.ma";
+file -r -ns "run_forrest_run" -dr 1 -rfn "run_forrest_runRN" "assets/characters/pig/run_cycle/run_forrest_run.ma";
+file -r -ns "key_latest" -dr 1 -rfn "key_latestRN" "assets/props/keys/key_latest.ma";
 requires maya "2013";
 requires "Mayatomr" "2013.0 - 3.10.1.4 ";
 requires "stereoCamera" "10.0";
@@ -20854,7 +20854,7 @@ createNode hyperLayout -n "living_room_latest:hyperLayout1";
 	setAttr ".ihi" 0;
 	setAttr ".anf" yes;
 createNode reference -n "living_room_latest:armchair_latestRN";
-	setAttr ".fn[0]" -type "string" "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/sets/livingroom/additions/sofa/armchair_latest.ma";
+	setAttr ".fn[0]" -type "string" "assets/sets/livingroom/additions/sofa/armchair_latest.ma";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"living_room_latest:armchair_latestRN"
 		"armchair_latestRN" 0
@@ -20867,7 +20867,7 @@ createNode reference -n "living_room_latest:armchair_latestRN";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "living_room_latest:table_latestRN";
-	setAttr ".fn[0]" -type "string" "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/sets/livingroom/additions/table/table_latest.ma";
+	setAttr ".fn[0]" -type "string" "assets/sets/livingroom/additions/table/table_latest.ma";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"living_room_latest:table_latestRN"
 		"table_latestRN" 0
@@ -20879,7 +20879,7 @@ createNode reference -n "living_room_latest:table_latestRN";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "living_room_latest:sofa_latestRN";
-	setAttr ".fn[0]" -type "string" "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/sets/livingroom/additions/sofa/sofa_latest.ma";
+	setAttr ".fn[0]" -type "string" "assets/sets/livingroom/additions/sofa/sofa_latest.ma";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"living_room_latest:sofa_latestRN"
 		"sofa_latestRN" 0
@@ -20891,7 +20891,7 @@ createNode reference -n "living_room_latest:sofa_latestRN";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "living_room_latest:armchair_latestRN1";
-	setAttr ".fn[0]" -type "string" "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/sets/livingroom/additions/sofa/armchair_latest.ma{1}";
+	setAttr ".fn[0]" -type "string" "assets/sets/livingroom/additions/sofa/armchair_latest.ma{1}";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"living_room_latest:armchair_latestRN1"
 		"armchair_latestRN1" 0

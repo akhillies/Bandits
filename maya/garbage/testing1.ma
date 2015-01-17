@@ -5,9 +5,9 @@
 file -rdi 1 -ns "smarty_007" -rfn "smarty_007RN" "//maya/assets/characters/smarty/versions/smarty_007.ma";
 file -rdi 1 -ns "armchair_latest" -rfn "armchair_latestRN" "//maya/assets/sets/livingroom/additions/sofa/armchair_latest.ma";
 file -rdi 1 -ns "armchair_latest1" -rfn "armchair_latestRN1" "/Ali//maya/assets/sets/livingroom/additions/sofa/armchair_latest.ma";
-file -r -ns "smarty_007" -dr 1 -rfn "smarty_007RN" "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/characters/smarty/versions/smarty_007.ma";
-file -r -ns "armchair_latest" -dr 1 -rfn "armchair_latestRN" "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/sets/livingroom/additions/sofa/armchair_latest.ma";
-file -r -ns "armchair_latest1" -dr 1 -rfn "armchair_latestRN1" "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/sets/livingroom/additions/sofa/armchair_latest.ma";
+file -r -ns "smarty_007" -dr 1 -rfn "smarty_007RN" "assets/characters/smarty/versions/smarty_007.ma";
+file -r -ns "armchair_latest" -dr 1 -rfn "armchair_latestRN" "assets/sets/livingroom/additions/sofa/armchair_latest.ma";
+file -r -ns "armchair_latest1" -dr 1 -rfn "armchair_latestRN1" "assets/sets/livingroom/additions/sofa/armchair_latest.ma";
 requires maya "2013";
 requires "Mayatomr" "2013.0 - 3.10.1.4 ";
 requires "stereoCamera" "10.0";

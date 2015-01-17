@@ -2,22 +2,22 @@
 //Name: body_smarty_bedroom_with_title.ma
 //Last modified: Thu, Dec 11, 2014 07:22:18 PM
 //Codeset: UTF-8
-file -rdi 1 -ns "NewSmarty_024" -rfn "NewSmarty_024RN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/smarty/smarty_latest.ma";
-file -rdi 1 -ns "Bacon" -rfn "BaconRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/pig/mesh/Bacon_latest.ma";
-file -rdi 1 -ns "soccer_ball" -rfn "soccer_ballRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/bedroom/additions/soccer_ball_latest.ma";
-file -rdi 1 -ns "nightstand" -rfn "nightstandRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/bedroom/additions/nightstand_latest.ma";
-file -rdi 1 -ns "bike" -rfn "bikeRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/props/bike.ma";
-file -rdi 1 -ns "bed_latest" -rfn "bed_latestRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/bedroom/additions/bed_latest.ma";
-file -rdi 1 -ns "bear" -rfn "bearRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/bedroom/additions/bear.ma";
-file -rdi 1 -ns "desk_lastest" -rfn "desk_lastestRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/bedroom/additions/desk_lastest.ma";
-file -r -ns "NewSmarty_024" -dr 1 -rfn "NewSmarty_024RN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/smarty/smarty_latest.ma";
-file -r -ns "Bacon" -dr 1 -rfn "BaconRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/pig/mesh/Bacon_latest.ma";
-file -r -ns "soccer_ball" -dr 1 -rfn "soccer_ballRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/bedroom/additions/soccer_ball_latest.ma";
-file -r -ns "nightstand" -dr 1 -rfn "nightstandRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/bedroom/additions/nightstand_latest.ma";
-file -r -ns "bike" -dr 1 -rfn "bikeRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/props/bike.ma";
-file -r -ns "bed_latest" -dr 1 -rfn "bed_latestRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/bedroom/additions/bed_latest.ma";
-file -r -ns "bear" -dr 1 -rfn "bearRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/bedroom/additions/bear.ma";
-file -r -ns "desk_lastest" -dr 1 -rfn "desk_lastestRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/bedroom/additions/desk_lastest.ma";
+file -rdi 1 -ns "NewSmarty_024" -rfn "NewSmarty_024RN" "assets/characters/smarty/smarty_latest.ma";
+file -rdi 1 -ns "Bacon" -rfn "BaconRN" "assets/characters/pig/mesh/Bacon_latest.ma";
+file -rdi 1 -ns "soccer_ball" -rfn "soccer_ballRN" "assets/sets/bedroom/additions/soccer_ball_latest.ma";
+file -rdi 1 -ns "nightstand" -rfn "nightstandRN" "assets/sets/bedroom/additions/nightstand_latest.ma";
+file -rdi 1 -ns "bike" -rfn "bikeRN" "assets/props/bike.ma";
+file -rdi 1 -ns "bed_latest" -rfn "bed_latestRN" "assets/sets/bedroom/additions/bed_latest.ma";
+file -rdi 1 -ns "bear" -rfn "bearRN" "assets/sets/bedroom/additions/bear.ma";
+file -rdi 1 -ns "desk_lastest" -rfn "desk_lastestRN" "assets/sets/bedroom/additions/desk_lastest.ma";
+file -r -ns "NewSmarty_024" -dr 1 -rfn "NewSmarty_024RN" "assets/characters/smarty/smarty_latest.ma";
+file -r -ns "Bacon" -dr 1 -rfn "BaconRN" "assets/characters/pig/mesh/Bacon_latest.ma";
+file -r -ns "soccer_ball" -dr 1 -rfn "soccer_ballRN" "assets/sets/bedroom/additions/soccer_ball_latest.ma";
+file -r -ns "nightstand" -dr 1 -rfn "nightstandRN" "assets/sets/bedroom/additions/nightstand_latest.ma";
+file -r -ns "bike" -dr 1 -rfn "bikeRN" "assets/props/bike.ma";
+file -r -ns "bed_latest" -dr 1 -rfn "bed_latestRN" "assets/sets/bedroom/additions/bed_latest.ma";
+file -r -ns "bear" -dr 1 -rfn "bearRN" "assets/sets/bedroom/additions/bear.ma";
+file -r -ns "desk_lastest" -dr 1 -rfn "desk_lastestRN" "assets/sets/bedroom/additions/desk_lastest.ma";
 requires maya "2015";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOptions" -nodeType "mentalrayGlobals"
 		 -nodeType "mentalrayItemsList" -dataType "byteArray" "Mayatomr" "2015.0 - 3.12.1.18 ";
@@ -1013,7 +1013,7 @@ createNode reference -n "bedRN";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "soccer_ballRN";
-	setAttr ".fn[0]" -type "string" "/Users/Amy/Desktop/cnm190//Bandits/maya/assets/sets/bedroom/additions/soccer_ball_latest.ma";
+	setAttr ".fn[0]" -type "string" "assets/sets/bedroom/additions/soccer_ball_latest.ma";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"soccer_ballRN"
 		"soccer_ballRN" 0
@@ -4646,6 +4646,6 @@ connectAttr "pCubeShape2.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape3.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "bed_latest:outputCloth1.iog" ":initialShadingGroup.dsm" -na;
 dataStructure -fmt "raw" -as "name=externalContentTable:string=node:string=key:string=upath:uint32=upathcrc:string=rpath:string=roles";
-applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"NewSmarty_024RN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/smarty/smarty_latest.ma\" 3360025303 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/smarty/smarty_latest.ma\" \"FileRef\"\n1\n\"BaconRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/pig/mesh/Bacon_latest.ma\" 2136846357 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/pig/mesh/Bacon_latest.ma\" \"FileRef\"\n2\n\"soccer_ballRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/bedroom/additions/soccer_ball_latest.ma\" 3829658157 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/sets/bedroom/additions/soccer_ball_latest.ma\" \"FileRef\"\n3\n\"nightstandRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/bedroom/additions/nightstand_latest.ma\" 48498142 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/sets/bedroom/additions/nightstand_latest.ma\" \"FileRef\"\n4\n\"bikeRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/props/bike.ma\" 1199267315 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/props/bike.ma\" \"FileRef\"\n5\n\"bed_latestRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/bedroom/additions/bed_latest.ma\" 2448087158 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\" \"FileRef\"\n6\n\"bearRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/bedroom/additions/bear.ma\" 2306763742 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/sets/bedroom/additions/bear.ma\" \"FileRef\"\n7\n\"desk_lastestRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/bedroom/additions/desk_lastest.ma\" 629118385 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/sets/bedroom/additions/desk_lastest.ma\" \"FileRef\"\nendStream\nendChannel\nendAssociations\n" 
+applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"NewSmarty_024RN\" \"\" \"assets/characters/smarty/smarty_latest.ma\" 3360025303 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/smarty/smarty_latest.ma\" \"FileRef\"\n1\n\"BaconRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/pig/mesh/Bacon_latest.ma\" 2136846357 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/pig/mesh/Bacon_latest.ma\" \"FileRef\"\n2\n\"soccer_ballRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/bedroom/additions/soccer_ball_latest.ma\" 3829658157 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/sets/bedroom/additions/soccer_ball_latest.ma\" \"FileRef\"\n3\n\"nightstandRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/bedroom/additions/nightstand_latest.ma\" 48498142 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/sets/bedroom/additions/nightstand_latest.ma\" \"FileRef\"\n4\n\"bikeRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/props/bike.ma\" 1199267315 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/props/bike.ma\" \"FileRef\"\n5\n\"bed_latestRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/bedroom/additions/bed_latest.ma\" 2448087158 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\" \"FileRef\"\n6\n\"bearRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/bedroom/additions/bear.ma\" 2306763742 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/sets/bedroom/additions/bear.ma\" \"FileRef\"\n7\n\"desk_lastestRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/bedroom/additions/desk_lastest.ma\" 629118385 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/sets/bedroom/additions/desk_lastest.ma\" \"FileRef\"\nendStream\nendChannel\nendAssociations\n" 
 		-scn;
 // End of body_smarty_bedroom_with_title.ma

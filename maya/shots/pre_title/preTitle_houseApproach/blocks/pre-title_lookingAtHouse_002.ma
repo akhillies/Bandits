@@ -2,17 +2,17 @@
 //Name: pre-title_lookingAtHouse_002.ma
 //Last modified: Thu, Dec 04, 2014 07:31:14 PM
 //Codeset: UTF-8
-file -rdi 1 -ns "outside_house" -rfn "outside_houseRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//scenes/outside_house.ma";
+file -rdi 1 -ns "outside_house" -rfn "outside_houseRN" -op "v=0;" "scenes/outside_house.ma";
 file -rdi 2 -ns "outside_house_latest" -rfn "outside_house:outside_house_latestRN"
-		 "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/outside_house_latest.ma";
-file -rdi 2 -ns "leaves" -rfn "outside_house:leavesRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/bush/leaves.ma";
-file -rdi 2 -ns "tuffs_latest" -rfn "outside_house:Tuffs005RN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/tuffs/tuffs_latest.ma";
-file -rdi 2 -ns "sneaks_latest" -rfn "outside_house:Sneaks_012RN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/sneaks/sneaks_latest.ma";
-file -rdi 2 -ns "key_latest" -rfn "outside_house:fancy_old_key_3RN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/props/keys/key_latest.ma";
-file -rdi 2 -ns "smarty_latest" -rfn "outside_house:Smarty003RN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/smarty/smarty_latest.ma";
-file -rdi 2 -ns "binoculars" -rfn "outside_house:binocularsRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/props/binoculars.ma";
-file -rdi 2 -ns "pig_latest" -rfn "outside_house:pig_latestRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/pig/pig_latest.ma";
-file -r -ns "outside_house" -dr 1 -rfn "outside_houseRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//scenes/outside_house.ma";
+		 "assets/sets/house/outside_house_latest.ma";
+file -rdi 2 -ns "leaves" -rfn "outside_house:leavesRN" "assets/sets/house/bush/leaves.ma";
+file -rdi 2 -ns "tuffs_latest" -rfn "outside_house:Tuffs005RN" "assets/characters/tuffs/tuffs_latest.ma";
+file -rdi 2 -ns "sneaks_latest" -rfn "outside_house:Sneaks_012RN" "assets/characters/sneaks/sneaks_latest.ma";
+file -rdi 2 -ns "key_latest" -rfn "outside_house:fancy_old_key_3RN" "assets/props/keys/key_latest.ma";
+file -rdi 2 -ns "smarty_latest" -rfn "outside_house:Smarty003RN" "assets/characters/smarty/smarty_latest.ma";
+file -rdi 2 -ns "binoculars" -rfn "outside_house:binocularsRN" -op "v=0;" "assets/props/binoculars.ma";
+file -rdi 2 -ns "pig_latest" -rfn "outside_house:pig_latestRN" -op "v=0;" "assets/characters/pig/pig_latest.ma";
+file -r -ns "outside_house" -dr 1 -rfn "outside_houseRN" -op "v=0;" "scenes/outside_house.ma";
 requires maya "2015";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOptions" -nodeType "mentalrayGlobals"
 		 -nodeType "mentalrayItemsList" -dataType "byteArray" "Mayatomr" "2015.0 - 3.12.1.18 ";
@@ -647,14 +647,14 @@ createNode reference -n "outside_houseRN";
 		2 "|outside_house:fancy_old_key_3:Lattice_37|outside_house:fancy_old_key_3:Lattice_37Shape" 
 		"surfaceReference" " 1"
 		2 "|outside_house:fancy_old_key_3:Lattice_37|outside_house:fancy_old_key_3:Lattice_37Shape" 
-		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/props/keys/fancy_old_key_3.ma\""
+		"referenceFile" " -type \"string\" \"assets/props/keys/fancy_old_key_3.ma\""
 		
 		2 "|outside_house:fancy_old_key_3:Lattice_37|outside_house:fancy_old_key_3:Lattice_37Shape" 
 		"furNameSpace" " -type \"string\" \"fancy_old_key_3\""
 		2 "|outside_house:fancy_old_key_3:Lattice_37|outside_house:fancy_old_key_3:polySurfaceShape1" 
 		"surfaceReference" " 1"
 		2 "|outside_house:fancy_old_key_3:Lattice_37|outside_house:fancy_old_key_3:polySurfaceShape1" 
-		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/props/keys/fancy_old_key_3.ma\""
+		"referenceFile" " -type \"string\" \"assets/props/keys/fancy_old_key_3.ma\""
 		
 		2 "|outside_house:fancy_old_key_3:Lattice_37|outside_house:fancy_old_key_3:polySurfaceShape1" 
 		"furNameSpace" " -type \"string\" \"fancy_old_key_3\""
@@ -763,91 +763,91 @@ createNode reference -n "outside_houseRN";
 		2 "|outside_house:Smarty003:Smarty|outside_house:Smarty003:Glasses|outside_house:Smarty003:Glasses|outside_house:Smarty003:GlassesL|outside_house:Smarty003:transform42|outside_house:Smarty003:polySurfaceShape27" 
 		"surfaceReference" " 1"
 		2 "|outside_house:Smarty003:Smarty|outside_house:Smarty003:Glasses|outside_house:Smarty003:Glasses|outside_house:Smarty003:GlassesL|outside_house:Smarty003:transform42|outside_house:Smarty003:polySurfaceShape27" 
-		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/smarty/Smarty003.ma\""
+		"referenceFile" " -type \"string\" \"assets/characters/smarty/Smarty003.ma\""
 		
 		2 "|outside_house:Smarty003:Smarty|outside_house:Smarty003:Glasses|outside_house:Smarty003:Glasses|outside_house:Smarty003:GlassesL|outside_house:Smarty003:transform42|outside_house:Smarty003:polySurfaceShape27" 
 		"furNameSpace" " -type \"string\" \"Smarty003\""
 		2 "|outside_house:Smarty003:Smarty|outside_house:Smarty003:Glasses|outside_house:Smarty003:Glasses|outside_house:Smarty003:GlassesR|outside_house:Smarty003:transform41|outside_house:Smarty003:polySurfaceShape28" 
 		"surfaceReference" " 1"
 		2 "|outside_house:Smarty003:Smarty|outside_house:Smarty003:Glasses|outside_house:Smarty003:Glasses|outside_house:Smarty003:GlassesR|outside_house:Smarty003:transform41|outside_house:Smarty003:polySurfaceShape28" 
-		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/smarty/Smarty003.ma\""
+		"referenceFile" " -type \"string\" \"assets/characters/smarty/Smarty003.ma\""
 		
 		2 "|outside_house:Smarty003:Smarty|outside_house:Smarty003:Glasses|outside_house:Smarty003:Glasses|outside_house:Smarty003:GlassesR|outside_house:Smarty003:transform41|outside_house:Smarty003:polySurfaceShape28" 
 		"furNameSpace" " -type \"string\" \"Smarty003\""
 		2 "|outside_house:Smarty003:Smarty|outside_house:Smarty003:Glasses|outside_house:Smarty003:Glasses|outside_house:Smarty003:GlassesFrame|outside_house:Smarty003:transform43|outside_house:Smarty003:polySurfaceShape29" 
 		"surfaceReference" " 1"
 		2 "|outside_house:Smarty003:Smarty|outside_house:Smarty003:Glasses|outside_house:Smarty003:Glasses|outside_house:Smarty003:GlassesFrame|outside_house:Smarty003:transform43|outside_house:Smarty003:polySurfaceShape29" 
-		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/smarty/Smarty003.ma\""
+		"referenceFile" " -type \"string\" \"assets/characters/smarty/Smarty003.ma\""
 		
 		2 "|outside_house:Smarty003:Smarty|outside_house:Smarty003:Glasses|outside_house:Smarty003:Glasses|outside_house:Smarty003:GlassesFrame|outside_house:Smarty003:transform43|outside_house:Smarty003:polySurfaceShape29" 
 		"furNameSpace" " -type \"string\" \"Smarty003\""
 		2 "|outside_house:Smarty003:Smarty|outside_house:Smarty003:Glasses|outside_house:Smarty003:Glasses|outside_house:Smarty003:glass|outside_house:Smarty003:glassR|outside_house:Smarty003:glassRShape" 
 		"surfaceReference" " 1"
 		2 "|outside_house:Smarty003:Smarty|outside_house:Smarty003:Glasses|outside_house:Smarty003:Glasses|outside_house:Smarty003:glass|outside_house:Smarty003:glassR|outside_house:Smarty003:glassRShape" 
-		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/smarty/Smarty003.ma\""
+		"referenceFile" " -type \"string\" \"assets/characters/smarty/Smarty003.ma\""
 		
 		2 "|outside_house:Smarty003:Smarty|outside_house:Smarty003:Glasses|outside_house:Smarty003:Glasses|outside_house:Smarty003:glass|outside_house:Smarty003:glassR|outside_house:Smarty003:glassRShape" 
 		"furNameSpace" " -type \"string\" \"Smarty003\""
 		2 "|outside_house:Smarty003:Smarty|outside_house:Smarty003:Glasses|outside_house:Smarty003:Glasses|outside_house:Smarty003:glass|outside_house:Smarty003:glassL|outside_house:Smarty003:glassLShape" 
 		"surfaceReference" " 1"
 		2 "|outside_house:Smarty003:Smarty|outside_house:Smarty003:Glasses|outside_house:Smarty003:Glasses|outside_house:Smarty003:glass|outside_house:Smarty003:glassL|outside_house:Smarty003:glassLShape" 
-		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/smarty/Smarty003.ma\""
+		"referenceFile" " -type \"string\" \"assets/characters/smarty/Smarty003.ma\""
 		
 		2 "|outside_house:Smarty003:Smarty|outside_house:Smarty003:Glasses|outside_house:Smarty003:Glasses|outside_house:Smarty003:glass|outside_house:Smarty003:glassL|outside_house:Smarty003:glassLShape" 
 		"furNameSpace" " -type \"string\" \"Smarty003\""
 		2 "|outside_house:Smarty003:Smarty|outside_house:Smarty003:Glasses|outside_house:Smarty003:polySurface44|outside_house:Smarty003:polySurfaceShape34" 
 		"surfaceReference" " 1"
 		2 "|outside_house:Smarty003:Smarty|outside_house:Smarty003:Glasses|outside_house:Smarty003:polySurface44|outside_house:Smarty003:polySurfaceShape34" 
-		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/smarty/Smarty003.ma\""
+		"referenceFile" " -type \"string\" \"assets/characters/smarty/Smarty003.ma\""
 		
 		2 "|outside_house:Smarty003:Smarty|outside_house:Smarty003:Glasses|outside_house:Smarty003:polySurface44|outside_house:Smarty003:polySurfaceShape34" 
 		"furNameSpace" " -type \"string\" \"Smarty003\""
 		2 "|outside_house:Smarty003:Smarty|outside_house:Smarty003:BowTie|outside_house:Smarty003:bow_tie:transform2|outside_house:Smarty003:bow_tie:pCubeShape1" 
 		"surfaceReference" " 1"
 		2 "|outside_house:Smarty003:Smarty|outside_house:Smarty003:BowTie|outside_house:Smarty003:bow_tie:transform2|outside_house:Smarty003:bow_tie:pCubeShape1" 
-		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/smarty/Smarty003.ma\""
+		"referenceFile" " -type \"string\" \"assets/characters/smarty/Smarty003.ma\""
 		
 		2 "|outside_house:Smarty003:Smarty|outside_house:Smarty003:BowTie|outside_house:Smarty003:bow_tie:transform2|outside_house:Smarty003:bow_tie:pCubeShape1" 
 		"furNameSpace" " -type \"string\" \"Smarty003\""
 		2 "|outside_house:Smarty003:Smarty|outside_house:Smarty003:BowTie|outside_house:Smarty003:bowTie|outside_house:Smarty003:bowTieShape" 
 		"surfaceReference" " 1"
 		2 "|outside_house:Smarty003:Smarty|outside_house:Smarty003:BowTie|outside_house:Smarty003:bowTie|outside_house:Smarty003:bowTieShape" 
-		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/smarty/Smarty003.ma\""
+		"referenceFile" " -type \"string\" \"assets/characters/smarty/Smarty003.ma\""
 		
 		2 "|outside_house:Smarty003:Smarty|outside_house:Smarty003:BowTie|outside_house:Smarty003:bowTie|outside_house:Smarty003:bowTieShape" 
 		"furNameSpace" " -type \"string\" \"Smarty003\""
 		2 "|outside_house:Smarty003:Smarty|outside_house:Smarty003:Smarty1|outside_house:Smarty003:transform45|outside_house:Smarty003:SmartyShape" 
 		"surfaceReference" " 1"
 		2 "|outside_house:Smarty003:Smarty|outside_house:Smarty003:Smarty1|outside_house:Smarty003:transform45|outside_house:Smarty003:SmartyShape" 
-		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/smarty/Smarty003.ma\""
+		"referenceFile" " -type \"string\" \"assets/characters/smarty/Smarty003.ma\""
 		
 		2 "|outside_house:Smarty003:Smarty|outside_house:Smarty003:Smarty1|outside_house:Smarty003:transform45|outside_house:Smarty003:SmartyShape" 
 		"furNameSpace" " -type \"string\" \"Smarty003\""
 		2 "|outside_house:Smarty003:Smarty|outside_house:Smarty003:Smarty1|outside_house:Smarty003:SmartyShape33Orig" 
 		"surfaceReference" " 1"
 		2 "|outside_house:Smarty003:Smarty|outside_house:Smarty003:Smarty1|outside_house:Smarty003:SmartyShape33Orig" 
-		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/smarty/Smarty003.ma\""
+		"referenceFile" " -type \"string\" \"assets/characters/smarty/Smarty003.ma\""
 		
 		2 "|outside_house:Smarty003:Smarty|outside_house:Smarty003:Smarty1|outside_house:Smarty003:SmartyShape33Orig" 
 		"furNameSpace" " -type \"string\" \"Smarty003\""
 		2 "|outside_house:Smarty003:polySurface47|outside_house:Smarty003:polySurfaceShape37" 
 		"surfaceReference" " 1"
 		2 "|outside_house:Smarty003:polySurface47|outside_house:Smarty003:polySurfaceShape37" 
-		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/smarty/Smarty003.ma\""
+		"referenceFile" " -type \"string\" \"assets/characters/smarty/Smarty003.ma\""
 		
 		2 "|outside_house:Smarty003:polySurface47|outside_house:Smarty003:polySurfaceShape37" 
 		"furNameSpace" " -type \"string\" \"Smarty003\""
 		2 "|outside_house:Smarty003:polySurface47|outside_house:Smarty003:polySurfaceShape38" 
 		"surfaceReference" " 1"
 		2 "|outside_house:Smarty003:polySurface47|outside_house:Smarty003:polySurfaceShape38" 
-		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/smarty/Smarty003.ma\""
+		"referenceFile" " -type \"string\" \"assets/characters/smarty/Smarty003.ma\""
 		
 		2 "|outside_house:Smarty003:polySurface47|outside_house:Smarty003:polySurfaceShape38" 
 		"furNameSpace" " -type \"string\" \"Smarty003\""
 		2 "|outside_house:Smarty003:rootJ|outside_house:Smarty003:backj|outside_house:Smarty003:chestJ|outside_house:Smarty003:neckJ|outside_house:Smarty003:EyeL|outside_house:Smarty003:EyeR2Shape" 
 		"surfaceReference" " 1"
 		2 "|outside_house:Smarty003:rootJ|outside_house:Smarty003:backj|outside_house:Smarty003:chestJ|outside_house:Smarty003:neckJ|outside_house:Smarty003:EyeL|outside_house:Smarty003:EyeR2Shape" 
-		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/smarty/Smarty003.ma\""
+		"referenceFile" " -type \"string\" \"assets/characters/smarty/Smarty003.ma\""
 		
 		2 "|outside_house:Smarty003:rootJ|outside_house:Smarty003:backj|outside_house:Smarty003:chestJ|outside_house:Smarty003:neckJ|outside_house:Smarty003:EyeL|outside_house:Smarty003:EyeR2Shape" 
 		"furNameSpace" " -type \"string\" \"Smarty003\""
@@ -912,21 +912,21 @@ createNode reference -n "outside_houseRN";
 		2 "|outside_house:Tuffs005:Tuffs002:TuffsMesh|outside_house:Tuffs005:Tuffs002:transform2|outside_house:Tuffs005:Tuffs002:TuffsMeshShape" 
 		"surfaceReference" " 1"
 		2 "|outside_house:Tuffs005:Tuffs002:TuffsMesh|outside_house:Tuffs005:Tuffs002:transform2|outside_house:Tuffs005:Tuffs002:TuffsMeshShape" 
-		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/tuffs/Tuffs005.ma\""
+		"referenceFile" " -type \"string\" \"assets/characters/tuffs/Tuffs005.ma\""
 		
 		2 "|outside_house:Tuffs005:Tuffs002:TuffsMesh|outside_house:Tuffs005:Tuffs002:transform2|outside_house:Tuffs005:Tuffs002:TuffsMeshShape" 
 		"furNameSpace" " -type \"string\" \"Tuffs005\""
 		2 "|outside_house:Tuffs005:Tuffs002:Tuffs_Mesh|outside_house:Tuffs005:Tuffs002:Tuffs_MeshShape" 
 		"surfaceReference" " 1"
 		2 "|outside_house:Tuffs005:Tuffs002:Tuffs_Mesh|outside_house:Tuffs005:Tuffs002:Tuffs_MeshShape" 
-		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/tuffs/Tuffs005.ma\""
+		"referenceFile" " -type \"string\" \"assets/characters/tuffs/Tuffs005.ma\""
 		
 		2 "|outside_house:Tuffs005:Tuffs002:Tuffs_Mesh|outside_house:Tuffs005:Tuffs002:Tuffs_MeshShape" 
 		"furNameSpace" " -type \"string\" \"Tuffs005\""
 		2 "|outside_house:Tuffs005:Tuffs002:Tuffs_Mesh|outside_house:Tuffs005:Tuffs002:Tuffs_MeshShapeOrig" 
 		"surfaceReference" " 1"
 		2 "|outside_house:Tuffs005:Tuffs002:Tuffs_Mesh|outside_house:Tuffs005:Tuffs002:Tuffs_MeshShapeOrig" 
-		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/tuffs/Tuffs005.ma\""
+		"referenceFile" " -type \"string\" \"assets/characters/tuffs/Tuffs005.ma\""
 		
 		2 "|outside_house:Tuffs005:Tuffs002:Tuffs_Mesh|outside_house:Tuffs005:Tuffs002:Tuffs_MeshShapeOrig" 
 		"furNameSpace" " -type \"string\" \"Tuffs005\""
@@ -949,21 +949,21 @@ createNode reference -n "outside_houseRN";
 		2 "|outside_house:Tuffs005:controller_root|outside_house:Tuffs005:controller_COG|outside_house:Tuffs005:Tuffs002:Tuffs_LeftEye|outside_house:Tuffs005:Tuffs002:Tuffs_LeftEyeShape" 
 		"surfaceReference" " 1"
 		2 "|outside_house:Tuffs005:controller_root|outside_house:Tuffs005:controller_COG|outside_house:Tuffs005:Tuffs002:Tuffs_LeftEye|outside_house:Tuffs005:Tuffs002:Tuffs_LeftEyeShape" 
-		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/tuffs/Tuffs005.ma\""
+		"referenceFile" " -type \"string\" \"assets/characters/tuffs/Tuffs005.ma\""
 		
 		2 "|outside_house:Tuffs005:controller_root|outside_house:Tuffs005:controller_COG|outside_house:Tuffs005:Tuffs002:Tuffs_LeftEye|outside_house:Tuffs005:Tuffs002:Tuffs_LeftEyeShape" 
 		"furNameSpace" " -type \"string\" \"Tuffs005\""
 		2 "|outside_house:Tuffs005:controller_root|outside_house:Tuffs005:controller_COG|outside_house:Tuffs005:Tuffs002:Tuffs_RightEye|outside_house:Tuffs005:Tuffs002:Tuffs_RightEyeShape" 
 		"surfaceReference" " 1"
 		2 "|outside_house:Tuffs005:controller_root|outside_house:Tuffs005:controller_COG|outside_house:Tuffs005:Tuffs002:Tuffs_RightEye|outside_house:Tuffs005:Tuffs002:Tuffs_RightEyeShape" 
-		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/tuffs/Tuffs005.ma\""
+		"referenceFile" " -type \"string\" \"assets/characters/tuffs/Tuffs005.ma\""
 		
 		2 "|outside_house:Tuffs005:controller_root|outside_house:Tuffs005:controller_COG|outside_house:Tuffs005:Tuffs002:Tuffs_RightEye|outside_house:Tuffs005:Tuffs002:Tuffs_RightEyeShape" 
 		"furNameSpace" " -type \"string\" \"Tuffs005\""
 		2 "|outside_house:Tuffs005:controller_root|outside_house:Tuffs005:controller_COG|outside_house:Tuffs005:Tuffs002:Tuffs_RightEye|outside_house:Tuffs005:Tuffs002:polySurfaceShape1" 
 		"surfaceReference" " 1"
 		2 "|outside_house:Tuffs005:controller_root|outside_house:Tuffs005:controller_COG|outside_house:Tuffs005:Tuffs002:Tuffs_RightEye|outside_house:Tuffs005:Tuffs002:polySurfaceShape1" 
-		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/tuffs/Tuffs005.ma\""
+		"referenceFile" " -type \"string\" \"assets/characters/tuffs/Tuffs005.ma\""
 		
 		2 "|outside_house:Tuffs005:controller_root|outside_house:Tuffs005:controller_COG|outside_house:Tuffs005:Tuffs002:Tuffs_RightEye|outside_house:Tuffs005:Tuffs002:polySurfaceShape1" 
 		"furNameSpace" " -type \"string\" \"Tuffs005\""
@@ -996,21 +996,21 @@ createNode reference -n "outside_houseRN";
 		2 "|outside_house:PigRig003:PIG|outside_house:PigRig003:pig|outside_house:PigRig003:pigShape" 
 		"surfaceReference" " 1"
 		2 "|outside_house:PigRig003:PIG|outside_house:PigRig003:pig|outside_house:PigRig003:pigShape" 
-		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/pig/mesh/Pig.ma\""
+		"referenceFile" " -type \"string\" \"assets/characters/pig/mesh/Pig.ma\""
 		
 		2 "|outside_house:PigRig003:PIG|outside_house:PigRig003:pig|outside_house:PigRig003:pigShape" 
 		"furNameSpace" " -type \"string\" \"PigRig003\""
 		2 "|outside_house:PigRig003:PIG|outside_house:PigRig003:pig|outside_house:PigRig003:left_eye|outside_house:PigRig003:lefteye" 
 		"surfaceReference" " 1"
 		2 "|outside_house:PigRig003:PIG|outside_house:PigRig003:pig|outside_house:PigRig003:left_eye|outside_house:PigRig003:lefteye" 
-		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/pig/mesh/Pig.ma\""
+		"referenceFile" " -type \"string\" \"assets/characters/pig/mesh/Pig.ma\""
 		
 		2 "|outside_house:PigRig003:PIG|outside_house:PigRig003:pig|outside_house:PigRig003:left_eye|outside_house:PigRig003:lefteye" 
 		"furNameSpace" " -type \"string\" \"PigRig003\""
 		2 "|outside_house:PigRig003:PIG|outside_house:PigRig003:pig|outside_house:PigRig003:right_eye|outside_house:PigRig003:righteye" 
 		"surfaceReference" " 1"
 		2 "|outside_house:PigRig003:PIG|outside_house:PigRig003:pig|outside_house:PigRig003:right_eye|outside_house:PigRig003:righteye" 
-		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/pig/mesh/Pig.ma\""
+		"referenceFile" " -type \"string\" \"assets/characters/pig/mesh/Pig.ma\""
 		
 		2 "|outside_house:PigRig003:PIG|outside_house:PigRig003:pig|outside_house:PigRig003:right_eye|outside_house:PigRig003:righteye" 
 		"furNameSpace" " -type \"string\" \"PigRig003\""
@@ -1071,21 +1071,21 @@ createNode reference -n "outside_houseRN";
 		2 "|outside_house:Sneaks_012:controller_root|outside_house:Sneaks_012:controller_COG|outside_house:Sneaks_012:controller_head|outside_house:Sneaks_012:Sneakio002:Left_EyeBall|outside_house:Sneaks_012:Sneakio002:Left_EyeBallShape" 
 		"surfaceReference" " 1"
 		2 "|outside_house:Sneaks_012:controller_root|outside_house:Sneaks_012:controller_COG|outside_house:Sneaks_012:controller_head|outside_house:Sneaks_012:Sneakio002:Left_EyeBall|outside_house:Sneaks_012:Sneakio002:Left_EyeBallShape" 
-		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/sneaks/Sneaks_012.ma\""
+		"referenceFile" " -type \"string\" \"assets/characters/sneaks/Sneaks_012.ma\""
 		
 		2 "|outside_house:Sneaks_012:controller_root|outside_house:Sneaks_012:controller_COG|outside_house:Sneaks_012:controller_head|outside_house:Sneaks_012:Sneakio002:Left_EyeBall|outside_house:Sneaks_012:Sneakio002:Left_EyeBallShape" 
 		"furNameSpace" " -type \"string\" \"Sneaks_012\""
 		2 "|outside_house:Sneaks_012:controller_root|outside_house:Sneaks_012:controller_COG|outside_house:Sneaks_012:controller_head|outside_house:Sneaks_012:Sneakio002:Right_EyeBall|outside_house:Sneaks_012:Sneakio002:Right_EyeBallShape" 
 		"surfaceReference" " 1"
 		2 "|outside_house:Sneaks_012:controller_root|outside_house:Sneaks_012:controller_COG|outside_house:Sneaks_012:controller_head|outside_house:Sneaks_012:Sneakio002:Right_EyeBall|outside_house:Sneaks_012:Sneakio002:Right_EyeBallShape" 
-		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/sneaks/Sneaks_012.ma\""
+		"referenceFile" " -type \"string\" \"assets/characters/sneaks/Sneaks_012.ma\""
 		
 		2 "|outside_house:Sneaks_012:controller_root|outside_house:Sneaks_012:controller_COG|outside_house:Sneaks_012:controller_head|outside_house:Sneaks_012:Sneakio002:Right_EyeBall|outside_house:Sneaks_012:Sneakio002:Right_EyeBallShape" 
 		"furNameSpace" " -type \"string\" \"Sneaks_012\""
 		2 "|outside_house:Sneaks_012:controller_root|outside_house:Sneaks_012:controller_COG|outside_house:Sneaks_012:Sneakio002:Bandana|outside_house:Sneaks_012:Sneakio002:BandanaShape" 
 		"surfaceReference" " 1"
 		2 "|outside_house:Sneaks_012:controller_root|outside_house:Sneaks_012:controller_COG|outside_house:Sneaks_012:Sneakio002:Bandana|outside_house:Sneaks_012:Sneakio002:BandanaShape" 
-		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/sneaks/Sneaks_012.ma\""
+		"referenceFile" " -type \"string\" \"assets/characters/sneaks/Sneaks_012.ma\""
 		
 		2 "|outside_house:Sneaks_012:controller_root|outside_house:Sneaks_012:controller_COG|outside_house:Sneaks_012:Sneakio002:Bandana|outside_house:Sneaks_012:Sneakio002:BandanaShape" 
 		"furNameSpace" " -type \"string\" \"Sneaks_012\""
@@ -1096,14 +1096,14 @@ createNode reference -n "outside_houseRN";
 		2 "|outside_house:Sneaks_012:Sneakio002:Sneakio_Main_Mesh|outside_house:Sneaks_012:Sneakio002:Sneakio_Main_MeshShape" 
 		"surfaceReference" " 1"
 		2 "|outside_house:Sneaks_012:Sneakio002:Sneakio_Main_Mesh|outside_house:Sneaks_012:Sneakio002:Sneakio_Main_MeshShape" 
-		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/sneaks/Sneaks_012.ma\""
+		"referenceFile" " -type \"string\" \"assets/characters/sneaks/Sneaks_012.ma\""
 		
 		2 "|outside_house:Sneaks_012:Sneakio002:Sneakio_Main_Mesh|outside_house:Sneaks_012:Sneakio002:Sneakio_Main_MeshShape" 
 		"furNameSpace" " -type \"string\" \"Sneaks_012\""
 		2 "|outside_house:Sneaks_012:Sneakio002:Sneakio_Main_Mesh|outside_house:Sneaks_012:Sneakio002:Sneakio_Main_MeshShapeOrig" 
 		"surfaceReference" " 1"
 		2 "|outside_house:Sneaks_012:Sneakio002:Sneakio_Main_Mesh|outside_house:Sneaks_012:Sneakio002:Sneakio_Main_MeshShapeOrig" 
-		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/sneaks/Sneaks_012.ma\""
+		"referenceFile" " -type \"string\" \"assets/characters/sneaks/Sneaks_012.ma\""
 		
 		2 "|outside_house:Sneaks_012:Sneakio002:Sneakio_Main_Mesh|outside_house:Sneaks_012:Sneakio002:Sneakio_Main_MeshShapeOrig" 
 		"furNameSpace" " -type \"string\" \"Sneaks_012\""
@@ -1165,35 +1165,35 @@ createNode reference -n "outside_houseRN";
 		2 "|outside_house:outside_house_latest:pCube1|outside_house:outside_house_latest:pCubeShape1" 
 		"surfaceReference" " 1"
 		2 "|outside_house:outside_house_latest:pCube1|outside_house:outside_house_latest:pCubeShape1" 
-		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/sets/house/outside_house_latest.ma\""
+		"referenceFile" " -type \"string\" \"assets/sets/house/outside_house_latest.ma\""
 		
 		2 "|outside_house:outside_house_latest:pCube1|outside_house:outside_house_latest:pCubeShape1" 
 		"furNameSpace" " -type \"string\" \"outside_house_latest\""
 		2 "|outside_house:outside_house_latest:pPyramid1|outside_house:outside_house_latest:pPyramidShape1" 
 		"surfaceReference" " 1"
 		2 "|outside_house:outside_house_latest:pPyramid1|outside_house:outside_house_latest:pPyramidShape1" 
-		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/sets/house/outside_house_latest.ma\""
+		"referenceFile" " -type \"string\" \"assets/sets/house/outside_house_latest.ma\""
 		
 		2 "|outside_house:outside_house_latest:pPyramid1|outside_house:outside_house_latest:pPyramidShape1" 
 		"furNameSpace" " -type \"string\" \"outside_house_latest\""
 		2 "|outside_house:outside_house_latest:pCube2|outside_house:outside_house_latest:pCubeShape2" 
 		"surfaceReference" " 1"
 		2 "|outside_house:outside_house_latest:pCube2|outside_house:outside_house_latest:pCubeShape2" 
-		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/sets/house/outside_house_latest.ma\""
+		"referenceFile" " -type \"string\" \"assets/sets/house/outside_house_latest.ma\""
 		
 		2 "|outside_house:outside_house_latest:pCube2|outside_house:outside_house_latest:pCubeShape2" 
 		"furNameSpace" " -type \"string\" \"outside_house_latest\""
 		2 "|outside_house:outside_house_latest:pTorus1|outside_house:outside_house_latest:pTorusShape1" 
 		"surfaceReference" " 1"
 		2 "|outside_house:outside_house_latest:pTorus1|outside_house:outside_house_latest:pTorusShape1" 
-		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/sets/house/outside_house_latest.ma\""
+		"referenceFile" " -type \"string\" \"assets/sets/house/outside_house_latest.ma\""
 		
 		2 "|outside_house:outside_house_latest:pTorus1|outside_house:outside_house_latest:pTorusShape1" 
 		"furNameSpace" " -type \"string\" \"outside_house_latest\""
 		2 "|outside_house:outside_house_latest:pCube3|outside_house:outside_house_latest:pCubeShape3" 
 		"surfaceReference" " 1"
 		2 "|outside_house:outside_house_latest:pCube3|outside_house:outside_house_latest:pCubeShape3" 
-		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/sets/house/outside_house_latest.ma\""
+		"referenceFile" " -type \"string\" \"assets/sets/house/outside_house_latest.ma\""
 		
 		2 "|outside_house:outside_house_latest:pCube3|outside_house:outside_house_latest:pCubeShape3" 
 		"furNameSpace" " -type \"string\" \"outside_house_latest\""
@@ -1215,7 +1215,7 @@ createNode reference -n "outside_houseRN";
 		2 "|outside_house:leaves:SH20_3_br1_NL_INV|outside_house:leaves:SH20_3_br1_NL_INVShape" 
 		"surfaceReference" " 1"
 		2 "|outside_house:leaves:SH20_3_br1_NL_INV|outside_house:leaves:SH20_3_br1_NL_INVShape" 
-		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/sets/bush/leaves.ma\""
+		"referenceFile" " -type \"string\" \"assets/sets/bush/leaves.ma\""
 		
 		2 "|outside_house:leaves:SH20_3_br1_NL_INV|outside_house:leaves:SH20_3_br1_NL_INVShape" 
 		"furNameSpace" " -type \"string\" \"leaves\""
@@ -1691,6 +1691,6 @@ connectAttr "camera1_scaleY.o" "outside_houseRN.phl[59]";
 connectAttr "camera1_scaleZ.o" "outside_houseRN.phl[60]";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 dataStructure -fmt "raw" -as "name=externalContentTable:string=node:string=key:string=upath:uint32=upathcrc:string=rpath:string=roles";
-applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"outside_houseRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//scenes/outside_house.ma\" 2165670544 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/scenes/outside_house.ma\" \"FileRef\"\nendStream\nendChannel\nendAssociations\n" 
+applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"outside_houseRN\" \"\" \"scenes/outside_house.ma\" 2165670544 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/scenes/outside_house.ma\" \"FileRef\"\nendStream\nendChannel\nendAssociations\n" 
 		-scn;
 // End of pre-title_lookingAtHouse_002.ma

@@ -2,23 +2,23 @@
 //Name: raccoonsGo_002.ma
 //Last modified: Sun, Dec 07, 2014 10:58:35 PM
 //Codeset: UTF-8
-file -rdi 1 -ns "outside_house" -rfn "outside_houseRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//scenes/outside_house.ma";
+file -rdi 1 -ns "outside_house" -rfn "outside_houseRN" -op "v=0;" "scenes/outside_house.ma";
 file -rdi 2 -ns "outside_house_latest" -rfn "outside_house:outside_house_latestRN"
-		 "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/outside_house_latest.ma";
+		 "assets/sets/house/outside_house_latest.ma";
 file -rdi 3 -ns "photo_frame" -rfn "outside_house:outside_house_latest:photo_frameRN"
-		 -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/photo_frame.ma";
+		 -op "v=0;" "assets/sets/house/photo_frame.ma";
 file -rdi 3 -ns "ripped_up_toy" -rfn "outside_house:outside_house_latest:ripped_up_toyRN"
-		 -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/ripped_up_toy.ma";
-file -rdi 2 -ns "leaves" -rfn "outside_house:leavesRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/bush/leaves.ma";
-file -rdi 2 -ns "tuffs_latest" -rfn "outside_house:Tuffs005RN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/tuffs/tuffs_latest.ma";
-file -rdi 2 -ns "sneaks_latest" -rfn "outside_house:Sneaks_012RN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/sneaks/sneaks_latest.ma";
-file -rdi 2 -ns "key_latest" -rfn "outside_house:fancy_old_key_3RN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/props/keys/key_latest.ma";
-file -rdi 2 -ns "smarty_latest" -rfn "outside_house:Smarty003RN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/smarty/smarty_latest.ma";
-file -rdi 2 -ns "binoculars" -rfn "outside_house:binocularsRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/props/binoculars.ma";
-file -rdi 2 -ns "pig_latest" -rfn "outside_house:pig_latestRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/pig/pig_latest.ma";
-file -rdi 2 -ns "leaves1" -rfn "outside_house:leavesRN1" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/bush/leaves.ma";
-file -rdi 2 -ns "leaves2" -rfn "outside_house:leavesRN2" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/bush/leaves.ma";
-file -r -ns "outside_house" -dr 1 -rfn "outside_houseRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//scenes/outside_house.ma";
+		 -op "v=0;" "assets/sets/house/ripped_up_toy.ma";
+file -rdi 2 -ns "leaves" -rfn "outside_house:leavesRN" "assets/sets/house/bush/leaves.ma";
+file -rdi 2 -ns "tuffs_latest" -rfn "outside_house:Tuffs005RN" "assets/characters/tuffs/tuffs_latest.ma";
+file -rdi 2 -ns "sneaks_latest" -rfn "outside_house:Sneaks_012RN" "assets/characters/sneaks/sneaks_latest.ma";
+file -rdi 2 -ns "key_latest" -rfn "outside_house:fancy_old_key_3RN" "assets/props/keys/key_latest.ma";
+file -rdi 2 -ns "smarty_latest" -rfn "outside_house:Smarty003RN" "assets/characters/smarty/smarty_latest.ma";
+file -rdi 2 -ns "binoculars" -rfn "outside_house:binocularsRN" -op "v=0;" "assets/props/binoculars.ma";
+file -rdi 2 -ns "pig_latest" -rfn "outside_house:pig_latestRN" -op "v=0;" "assets/characters/pig/pig_latest.ma";
+file -rdi 2 -ns "leaves1" -rfn "outside_house:leavesRN1" "assets/sets/house/bush/leaves.ma";
+file -rdi 2 -ns "leaves2" -rfn "outside_house:leavesRN2" "assets/sets/house/bush/leaves.ma";
+file -r -ns "outside_house" -dr 1 -rfn "outside_houseRN" -op "v=0;" "scenes/outside_house.ma";
 requires maya "2015";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOptions" -nodeType "mentalrayGlobals"
 		 -nodeType "mentalrayItemsList" -dataType "byteArray" "Mayatomr" "2015.0 - 3.12.1.18 ";
@@ -13159,6 +13159,6 @@ connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "defaultLightShape.ltd" ":lightList1.l" -na;
 connectAttr "defaultLightShape.iog" ":defaultLightSet.dsm" -na;
 dataStructure -fmt "raw" -as "name=externalContentTable:string=node:string=key:string=upath:uint32=upathcrc:string=rpath:string=roles";
-applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"outside_houseRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/scenes/outside_house.ma\" 2965928849 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/scenes/outside_house.ma\" \"FileRef\"\n1\n\"|defaultLight|defaultLightShape\" \"dmapName\" \"depthmap\" 2097411553 \"\" \"sourceImages\"\nendStream\nendChannel\nendAssociations\n" 
+applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"outside_houseRN\" \"\" \"scenes/outside_house.ma\" 2965928849 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/scenes/outside_house.ma\" \"FileRef\"\n1\n\"|defaultLight|defaultLightShape\" \"dmapName\" \"depthmap\" 2097411553 \"\" \"sourceImages\"\nendStream\nendChannel\nendAssociations\n" 
 		-scn;
 // End of raccoonsGo_002.ma

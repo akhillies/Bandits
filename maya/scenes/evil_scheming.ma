@@ -2,18 +2,18 @@
 //Name: evil_scheming.ma
 //Last modified: Mon, Dec 01, 2014 09:27:32 PM
 //Codeset: 1252
-file -rdi 1 -ns "treasure_chest" -rfn "treasure_chestRN" "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/props/treasure_chest.ma";
-file -rdi 1 -ns "Tuffs005" -rfn "Tuffs005RN" "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/characters/tuffs/Tuffs005.ma";
-file -rdi 1 -ns "Sneaks_012" -rfn "Sneaks_012RN" "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/characters/sneaks/Sneaks_012.ma";
-file -rdi 1 -ns "treasure_map" -rfn "treasure_mapRN" "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/props/treasure_map.ma";
-file -rdi 1 -ns "NewSmarty_024" -rfn "NewSmarty_024RN" "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/characters/smarty/NewSmarty_024.ma";
-file -rdi 1 -ns "screwdriver" -rfn "screwdriverRN" "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/props/screwdriver.ma";
-file -r -ns "treasure_chest" -dr 1 -rfn "treasure_chestRN" "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/props/treasure_chest.ma";
-file -r -ns "Tuffs005" -dr 1 -rfn "Tuffs005RN" "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/characters/tuffs/Tuffs005.ma";
-file -r -ns "Sneaks_012" -dr 1 -rfn "Sneaks_012RN" "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/characters/sneaks/Sneaks_012.ma";
-file -r -ns "treasure_map" -dr 1 -rfn "treasure_mapRN" "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/props/treasure_map.ma";
-file -r -ns "NewSmarty_024" -dr 1 -rfn "NewSmarty_024RN" "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/characters/smarty/NewSmarty_024.ma";
-file -r -ns "screwdriver" -dr 1 -rfn "screwdriverRN" "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/props/screwdriver.ma";
+file -rdi 1 -ns "treasure_chest" -rfn "treasure_chestRN" "assets/props/treasure_chest.ma";
+file -rdi 1 -ns "Tuffs005" -rfn "Tuffs005RN" "assets/characters/tuffs/Tuffs005.ma";
+file -rdi 1 -ns "Sneaks_012" -rfn "Sneaks_012RN" "assets/characters/sneaks/Sneaks_012.ma";
+file -rdi 1 -ns "treasure_map" -rfn "treasure_mapRN" "assets/props/treasure_map.ma";
+file -rdi 1 -ns "NewSmarty_024" -rfn "NewSmarty_024RN" "assets/characters/smarty/NewSmarty_024.ma";
+file -rdi 1 -ns "screwdriver" -rfn "screwdriverRN" "assets/props/screwdriver.ma";
+file -r -ns "treasure_chest" -dr 1 -rfn "treasure_chestRN" "assets/props/treasure_chest.ma";
+file -r -ns "Tuffs005" -dr 1 -rfn "Tuffs005RN" "assets/characters/tuffs/Tuffs005.ma";
+file -r -ns "Sneaks_012" -dr 1 -rfn "Sneaks_012RN" "assets/characters/sneaks/Sneaks_012.ma";
+file -r -ns "treasure_map" -dr 1 -rfn "treasure_mapRN" "assets/props/treasure_map.ma";
+file -r -ns "NewSmarty_024" -dr 1 -rfn "NewSmarty_024RN" "assets/characters/smarty/NewSmarty_024.ma";
+file -r -ns "screwdriver" -dr 1 -rfn "screwdriverRN" "assets/props/screwdriver.ma";
 requires maya "2013";
 requires "Mayatomr" "2013.0 - 3.10.1.4 ";
 requires "stereoCamera" "10.0";

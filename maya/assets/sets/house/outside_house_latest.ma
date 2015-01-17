@@ -2,10 +2,10 @@
 //Name: outside_house_latest.ma
 //Last modified: Thu, Dec 04, 2014 08:59:19 PM
 //Codeset: UTF-8
-file -rdi 1 -ns "photo_frame" -rfn "photo_frameRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/photo_frame.ma";
-file -rdi 1 -ns "ripped_up_toy" -rfn "ripped_up_toyRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/ripped_up_toy.ma";
-file -r -ns "photo_frame" -dr 1 -rfn "photo_frameRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/photo_frame.ma";
-file -r -ns "ripped_up_toy" -dr 1 -rfn "ripped_up_toyRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/ripped_up_toy.ma";
+file -rdi 1 -ns "photo_frame" -rfn "photo_frameRN" -op "v=0;" "assets/sets/house/photo_frame.ma";
+file -rdi 1 -ns "ripped_up_toy" -rfn "ripped_up_toyRN" -op "v=0;" "assets/sets/house/ripped_up_toy.ma";
+file -r -ns "photo_frame" -dr 1 -rfn "photo_frameRN" -op "v=0;" "assets/sets/house/photo_frame.ma";
+file -r -ns "ripped_up_toy" -dr 1 -rfn "ripped_up_toyRN" -op "v=0;" "assets/sets/house/ripped_up_toy.ma";
 requires maya "2015";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOptions" -nodeType "mentalrayGlobals"
 		 -nodeType "mentalrayItemsList" -dataType "byteArray" "Mayatomr" "2015.0 - 3.12.1.18 ";
@@ -712,6 +712,6 @@ connectAttr "pCubeShape2.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pTorusShape1.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape3.iog" ":initialShadingGroup.dsm" -na;
 dataStructure -fmt "raw" -as "name=externalContentTable:string=node:string=key:string=upath:uint32=upathcrc:string=rpath:string=roles";
-applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"photo_frameRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/sets/house/photo_frame.ma\" 1295646356 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/sets/house/photo_frame.ma\" \"FileRef\"\n1\n\"ripped_up_toyRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/sets/house/ripped_up_toy.ma\" 3177273438 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/sets/house/ripped_up_toy.ma\" \"FileRef\"\nendStream\nendChannel\nendAssociations\n" 
+applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"photo_frameRN\" \"\" \"assets/sets/house/photo_frame.ma\" 1295646356 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/sets/house/photo_frame.ma\" \"FileRef\"\n1\n\"ripped_up_toyRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/sets/house/ripped_up_toy.ma\" 3177273438 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/sets/house/ripped_up_toy.ma\" \"FileRef\"\nendStream\nendChannel\nendAssociations\n" 
 		-scn;
 // End of outside_house_latest.ma

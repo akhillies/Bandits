@@ -2,22 +2,22 @@
 //Name: body_smarty_bedroom_with_title_time002.ma
 //Last modified: Thu, Dec 11, 2014 10:24:58 PM
 //Codeset: UTF-8
-file -rdi 1 -ns "NewSmarty_024" -rfn "NewSmarty_024RN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/characters/smarty/smarty_latest.ma";
-file -rdi 1 -ns "Bacon" -rfn "BaconRN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/characters/pig/mesh/Bacon_latest.ma";
-file -rdi 1 -ns "soccer_ball" -rfn "soccer_ballRN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/bedroom/additions/soccer_ball_latest.ma";
-file -rdi 1 -ns "nightstand" -rfn "nightstandRN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/bedroom/additions/nightstand_latest.ma";
-file -rdi 1 -ns "bike" -rfn "bikeRN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/props/bike.ma";
-file -rdi 1 -ns "bed_latest" -rfn "bed_latestRN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma";
-file -rdi 1 -ns "bear" -rfn "bearRN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/bedroom/additions/bear.ma";
-file -rdi 1 -ns "desk_lastest" -rfn "desk_lastestRN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/bedroom/additions/desk_lastest.ma";
-file -r -ns "NewSmarty_024" -dr 1 -rfn "NewSmarty_024RN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/characters/smarty/smarty_latest.ma";
-file -r -ns "Bacon" -dr 1 -rfn "BaconRN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/characters/pig/mesh/Bacon_latest.ma";
-file -r -ns "soccer_ball" -dr 1 -rfn "soccer_ballRN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/bedroom/additions/soccer_ball_latest.ma";
-file -r -ns "nightstand" -dr 1 -rfn "nightstandRN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/bedroom/additions/nightstand_latest.ma";
-file -r -ns "bike" -dr 1 -rfn "bikeRN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/props/bike.ma";
-file -r -ns "bed_latest" -dr 1 -rfn "bed_latestRN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma";
-file -r -ns "bear" -dr 1 -rfn "bearRN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/bedroom/additions/bear.ma";
-file -r -ns "desk_lastest" -dr 1 -rfn "desk_lastestRN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/bedroom/additions/desk_lastest.ma";
+file -rdi 1 -ns "NewSmarty_024" -rfn "NewSmarty_024RN" "assets/characters/smarty/smarty_latest.ma";
+file -rdi 1 -ns "Bacon" -rfn "BaconRN" "assets/characters/pig/mesh/Bacon_latest.ma";
+file -rdi 1 -ns "soccer_ball" -rfn "soccer_ballRN" "assets/sets/bedroom/additions/soccer_ball_latest.ma";
+file -rdi 1 -ns "nightstand" -rfn "nightstandRN" "assets/sets/bedroom/additions/nightstand_latest.ma";
+file -rdi 1 -ns "bike" -rfn "bikeRN" "assets/props/bike.ma";
+file -rdi 1 -ns "bed_latest" -rfn "bed_latestRN" "assets/sets/bedroom/additions/bed_latest.ma";
+file -rdi 1 -ns "bear" -rfn "bearRN" "assets/sets/bedroom/additions/bear.ma";
+file -rdi 1 -ns "desk_lastest" -rfn "desk_lastestRN" "assets/sets/bedroom/additions/desk_lastest.ma";
+file -r -ns "NewSmarty_024" -dr 1 -rfn "NewSmarty_024RN" "assets/characters/smarty/smarty_latest.ma";
+file -r -ns "Bacon" -dr 1 -rfn "BaconRN" "assets/characters/pig/mesh/Bacon_latest.ma";
+file -r -ns "soccer_ball" -dr 1 -rfn "soccer_ballRN" "assets/sets/bedroom/additions/soccer_ball_latest.ma";
+file -r -ns "nightstand" -dr 1 -rfn "nightstandRN" "assets/sets/bedroom/additions/nightstand_latest.ma";
+file -r -ns "bike" -dr 1 -rfn "bikeRN" "assets/props/bike.ma";
+file -r -ns "bed_latest" -dr 1 -rfn "bed_latestRN" "assets/sets/bedroom/additions/bed_latest.ma";
+file -r -ns "bear" -dr 1 -rfn "bearRN" "assets/sets/bedroom/additions/bear.ma";
+file -r -ns "desk_lastest" -dr 1 -rfn "desk_lastestRN" "assets/sets/bedroom/additions/desk_lastest.ma";
 requires maya "2013";
 requires "Fur" "2013 x64";
 requires "Mayatomr" "2013.0 - 3.10.1.9 ";
@@ -1039,7 +1039,7 @@ createNode reference -n "bedRN";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "soccer_ballRN";
-	setAttr ".fn[0]" -type "string" "/Users/Amy/Desktop/cnm190//Bandits/maya/assets/sets/bedroom/additions/soccer_ball_latest.ma";
+	setAttr ".fn[0]" -type "string" "assets/sets/bedroom/additions/soccer_ball_latest.ma";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"soccer_ballRN"
 		"soccer_ballRN" 0

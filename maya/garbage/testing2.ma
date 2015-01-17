@@ -2,8 +2,8 @@
 //Name: testing2.ma
 //Last modified: Thu, Jan 15, 2015 09:00:21 PM
 //Codeset: 1252
-file -rdi 1 -ns "scphere" -rfn "scphereRN" "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//garbage/scphere.ma";
-file -r -ns "scphere" -dr 1 -rfn "scphereRN" "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//garbage/scphere.ma";
+file -rdi 1 -ns "scphere" -rfn "scphereRN" "garbage/scphere.ma";
+file -r -ns "scphere" -dr 1 -rfn "scphereRN" "garbage/scphere.ma";
 requires maya "2013";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";

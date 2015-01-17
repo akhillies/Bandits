@@ -2,8 +2,8 @@
 //Name: bandits_title_overlay.ma
 //Last modified: Thu, Dec 11, 2014 10:39:20 PM
 //Codeset: UTF-8
-file -rdi 1 -ns "BANDITS_002" -rfn "BANDITS_002RN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/texts/titles/BANDITS_002.ma";
-file -r -ns "BANDITS_002" -dr 1 -rfn "BANDITS_002RN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/texts/titles/BANDITS_002.ma";
+file -rdi 1 -ns "BANDITS_002" -rfn "BANDITS_002RN" -op "v=0;" "assets/texts/titles/BANDITS_002.ma";
+file -r -ns "BANDITS_002" -dr 1 -rfn "BANDITS_002RN" -op "v=0;" "assets/texts/titles/BANDITS_002.ma";
 requires maya "2015";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOptions" -nodeType "mentalrayGlobals"
 		 -nodeType "mentalrayItemsList" -dataType "byteArray" "Mayatomr" "2015.0 - 3.12.1.18 ";
@@ -4225,6 +4225,6 @@ connectAttr "BANDITS_002:groupId20.msg" ":initialShadingGroup.gn" -na;
 connectAttr "BANDITS_002:groupId21.msg" ":initialShadingGroup.gn" -na;
 connectAttr "BANDITS_002:groupId22.msg" ":initialShadingGroup.gn" -na;
 dataStructure -fmt "raw" -as "name=externalContentTable:string=node:string=key:string=upath:uint32=upathcrc:string=rpath:string=roles";
-applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"BANDITS_002RN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/texts/titles/BANDITS_002.ma\" 1243742523 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/texts/titles/BANDITS_002.ma\" \"FileRef\"\nendStream\nendChannel\nendAssociations\n" 
+applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"BANDITS_002RN\" \"\" \"assets/texts/titles/BANDITS_002.ma\" 1243742523 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/texts/titles/BANDITS_002.ma\" \"FileRef\"\nendStream\nendChannel\nendAssociations\n" 
 		-scn;
 // End of bandits_title_overlay.ma

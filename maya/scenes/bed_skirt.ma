@@ -2,8 +2,8 @@
 //Name: bed_skirt.ma
 //Last modified: Mon, Dec 08, 2014 02:07:52 PM
 //Codeset: 1252
-file -rdi 1 -ns "bed_latest" -rfn "bed_latestRN" "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/sets/bedroom/additions/bed_latest.ma";
-file -r -ns "bed_latest" -dr 1 -rfn "bed_latestRN" "C:/Users/Saurabh/Documents/GitHub/Bandits//maya/assets/sets/bedroom/additions/bed_latest.ma";
+file -rdi 1 -ns "bed_latest" -rfn "bed_latestRN" "assets/sets/bedroom/additions/bed_latest.ma";
+file -r -ns "bed_latest" -dr 1 -rfn "bed_latestRN" "assets/sets/bedroom/additions/bed_latest.ma";
 requires maya "2013";
 requires "Mayatomr" "2013.0 - 3.10.1.4 ";
 currentUnit -l centimeter -a degree -t film;

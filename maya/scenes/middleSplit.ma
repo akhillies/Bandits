@@ -2,57 +2,57 @@
 //Name: middleSplit.ma
 //Last modified: Thu, Dec 11, 2014 10:57:53 PM
 //Codeset: 1252
-file -rdi 1 -ns "living_room_latest" -rfn "living_room_latestRN" "C:/Users/Brian/Documents/GitHub/BanditsCNM190/Bandits/maya//assets/sets/livingroom/living_room_latest.ma";
+file -rdi 1 -ns "living_room_latest" -rfn "living_room_latestRN" "assets/sets/livingroom/living_room_latest.ma";
 file -rdi 2 -ns "armchair_latest" -rfn "living_room_latest:armchair_latestRN"
-		 "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/livingroom/additions/sofa/armchair_latest.ma";
-file -rdi 2 -ns "table_latest" -rfn "living_room_latest:table_latestRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/livingroom/additions/table/table_latest.ma";
-file -rdi 2 -ns "sofa_latest" -rfn "living_room_latest:sofa_latestRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/livingroom/additions/sofa/sofa_latest.ma";
+		 "assets/sets/livingroom/additions/sofa/armchair_latest.ma";
+file -rdi 2 -ns "table_latest" -rfn "living_room_latest:table_latestRN" "assets/sets/livingroom/additions/table/table_latest.ma";
+file -rdi 2 -ns "sofa_latest" -rfn "living_room_latest:sofa_latestRN" "assets/sets/livingroom/additions/sofa/sofa_latest.ma";
 file -rdi 2 -ns "armchair_latest1" -rfn "living_room_latest:armchair_latestRN1"
-		 "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/livingroom/additions/sofa/armchair_latest.ma";
+		 "assets/sets/livingroom/additions/sofa/armchair_latest.ma";
 file -rdi 2 -ns "armchair_latest2" -rfn "living_room_latest:armchair_latestRN2"
-		 "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/livingroom/additions/sofa/armchair_latest.ma";
+		 "assets/sets/livingroom/additions/sofa/armchair_latest.ma";
 file -rdi 2 -ns "armchair_latest3" -rfn "living_room_latest:armchair_latestRN3"
-		 "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/livingroom/additions/sofa/armchair_latest.ma";
+		 "assets/sets/livingroom/additions/sofa/armchair_latest.ma";
 file -rdi 2 -ns "rectangular_window_latest" -rfn "living_room_latest:rectangular_window_latestRN"
-		 "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/livingroom/additions/windows/rectangular_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/rectangular_window_latest.ma";
 file -rdi 2 -ns "rectangular_window_latest1" -rfn "living_room_latest:rectangular_window_latestRN1"
-		 "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/livingroom/additions/windows/rectangular_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/rectangular_window_latest.ma";
 file -rdi 2 -ns "rectangular_window_latest2" -rfn "living_room_latest:rectangular_window_latest1RN"
-		 "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/livingroom/additions/windows/rectangular_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/rectangular_window_latest.ma";
 file -rdi 2 -ns "rectangular_window_latest3" -rfn "living_room_latest:rectangular_window_latest2RN"
-		 "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/livingroom/additions/windows/rectangular_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/rectangular_window_latest.ma";
 file -rdi 2 -ns "taller_window_latest" -rfn "living_room_latest:taller_window_latestRN"
-		 "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
 file -rdi 2 -ns "taller_window_latest1" -rfn "living_room_latest:taller_window_latestRN1"
-		 "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
 file -rdi 2 -ns "taller_window_latest2" -rfn "living_room_latest:taller_window_latest1RN"
-		 "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
 file -rdi 2 -ns "taller_window_latest3" -rfn "living_room_latest:taller_window_latest2RN"
-		 "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
 file -rdi 2 -ns "taller_window_latest4" -rfn "living_room_latest:taller_window_latest3RN"
-		 "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
 file -rdi 2 -ns "taller_window_latest5" -rfn "living_room_latest:taller_window_latest4RN"
-		 "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
 file -rdi 2 -ns "taller_window_latest6" -rfn "living_room_latest:taller_window_latest5RN"
-		 "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
 file -rdi 2 -ns "taller_window_latest7" -rfn "living_room_latest:taller_window_latest6RN"
-		 "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
 file -rdi 2 -ns "taller_window_latest8" -rfn "living_room_latest:taller_window_latest7RN"
-		 "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/livingroom/additions/windows/taller_window_latest.ma";
-file -rdi 2 -ns "photo_frame" -rfn "living_room_latest:photo_frameRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/livingroom/additions/photo_frame.ma";
-file -rdi 2 -ns "ripped_up_toy" -rfn "living_room_latest:ripped_up_toyRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/livingroom/additions/ripped_up_toy.ma";
-file -rdi 1 -ns "pig_latest1" -dr 1 -rfn "pig_latestRN" "C:/Users/Brian/Documents/GitHub/BanditsCNM190/Bandits/maya//assets/characters/pig/pig_latest.ma";
-file -rdi 1 -ns "PigRig006" -rfn "PigRig006RN" "C:/Users/Brian/Documents/GitHub/BanditsCNM190/Bandits/maya//assets/characters/pig/rig/PigRig006.ma";
-file -rdi 2 -ns "PigSkin002" -rfn "PigRig006:PigSkin002RN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/characters/pig/rig/PigSkin002.ma";
+		 "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+file -rdi 2 -ns "photo_frame" -rfn "living_room_latest:photo_frameRN" "assets/sets/livingroom/additions/photo_frame.ma";
+file -rdi 2 -ns "ripped_up_toy" -rfn "living_room_latest:ripped_up_toyRN" "assets/sets/livingroom/additions/ripped_up_toy.ma";
+file -rdi 1 -ns "pig_latest1" -dr 1 -rfn "pig_latestRN" "assets/characters/pig/pig_latest.ma";
+file -rdi 1 -ns "PigRig006" -rfn "PigRig006RN" "assets/characters/pig/rig/PigRig006.ma";
+file -rdi 2 -ns "PigSkin002" -rfn "PigRig006:PigSkin002RN" "assets/characters/pig/rig/PigSkin002.ma";
 file -rdi 3 -ns "Tyrion_Cattister" -rfn "PigRig006:PigSkin002:Tyrion_Cattister_uv:Tyrion_CattisterRN"
-		 "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/characters/pig/mesh/Bacon_latest.ma";
-file -rdi 1 -ns "smarty_latest1" -rfn "smarty_latestRN" "C:/Users/Brian/Documents/GitHub/BanditsCNM190/Bandits/maya//assets/characters/smarty/smarty_latest.ma";
-file -rdi 1 -ns "bike1" -rfn "bikeRN" "C:/Users/Brian/Documents/GitHub/BanditsCNM190/Bandits/maya//assets/props/bike.ma";
-file -r -ns "living_room_latest" -dr 1 -rfn "living_room_latestRN" "C:/Users/Brian/Documents/GitHub/BanditsCNM190/Bandits/maya//assets/sets/livingroom/living_room_latest.ma";
-file -r -ns "pig_latest1" -dr 1 -rfn "pig_latestRN" "C:/Users/Brian/Documents/GitHub/BanditsCNM190/Bandits/maya//assets/characters/pig/pig_latest.ma";
-file -r -ns "PigRig006" -dr 1 -rfn "PigRig006RN" "C:/Users/Brian/Documents/GitHub/BanditsCNM190/Bandits/maya//assets/characters/pig/rig/PigRig006.ma";
-file -r -ns "smarty_latest1" -dr 1 -rfn "smarty_latestRN" "C:/Users/Brian/Documents/GitHub/BanditsCNM190/Bandits/maya//assets/characters/smarty/smarty_latest.ma";
-file -r -ns "bike1" -dr 1 -rfn "bikeRN" "C:/Users/Brian/Documents/GitHub/BanditsCNM190/Bandits/maya//assets/props/bike.ma";
+		 "assets/characters/pig/mesh/Bacon_latest.ma";
+file -rdi 1 -ns "smarty_latest1" -rfn "smarty_latestRN" "assets/characters/smarty/smarty_latest.ma";
+file -rdi 1 -ns "bike1" -rfn "bikeRN" "assets/props/bike.ma";
+file -r -ns "living_room_latest" -dr 1 -rfn "living_room_latestRN" "assets/sets/livingroom/living_room_latest.ma";
+file -r -ns "pig_latest1" -dr 1 -rfn "pig_latestRN" "assets/characters/pig/pig_latest.ma";
+file -r -ns "PigRig006" -dr 1 -rfn "PigRig006RN" "assets/characters/pig/rig/PigRig006.ma";
+file -r -ns "smarty_latest1" -dr 1 -rfn "smarty_latestRN" "assets/characters/smarty/smarty_latest.ma";
+file -r -ns "bike1" -dr 1 -rfn "bikeRN" "assets/props/bike.ma";
 requires maya "2013";
 requires "Mayatomr" "2013.0 - 3.10.1.4 ";
 requires "stereoCamera" "10.0";

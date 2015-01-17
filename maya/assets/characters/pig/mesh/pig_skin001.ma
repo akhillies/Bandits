@@ -3,11 +3,11 @@
 //Last modified: Mon, Dec 01, 2014 06:42:13 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "Tyrion_Cattister" -rfn "Tyrion_Cattister_uv:Tyrion_CattisterRN"
-		 "/Users/scai/Bandits/maya//assets/characters/pig/mesh/TyrionCattister001.ma";
-file -rdi 1 -ns "Pig" -dr 1 -rfn "PigRN" "/Users/KristenCurry/Documents/_My Documents/_Fall 2015/CNM190/_Bandits_Git/Bandits/maya/assets/characters/pig/mesh/Pig.ma";
+		 "assets/characters/pig/mesh/TyrionCattister001.ma";
+file -rdi 1 -ns "Pig" -dr 1 -rfn "PigRN" "assets/characters/pig/mesh/Pig.ma";
 file -r -ns "Tyrion_Cattister" -dr 1 -rfn "Tyrion_Cattister_uv:Tyrion_CattisterRN"
-		 "/Users/scai/Bandits/maya//assets/characters/pig/mesh/TyrionCattister001.ma";
-file -r -ns "Pig" -dr 1 -rfn "PigRN" "/Users/KristenCurry/Documents/_My Documents/_Fall 2015/CNM190/_Bandits_Git/Bandits/maya/assets/characters/pig/mesh/Pig.ma";
+		 "assets/characters/pig/mesh/TyrionCattister001.ma";
+file -r -ns "Pig" -dr 1 -rfn "PigRN" "assets/characters/pig/mesh/Pig.ma";
 requires maya "2013";
 requires "Fur" "2013 x64";
 requires "stereoCamera" "10.0";

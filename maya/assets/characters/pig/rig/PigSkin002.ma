@@ -3,9 +3,9 @@
 //Last modified: Thu, Dec 11, 2014 03:18:27 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "Tyrion_Cattister" -rfn "Tyrion_Cattister_uv:Tyrion_CattisterRN"
-		 "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/characters/pig/mesh/Bacon_latest.ma";
+		 "assets/characters/pig/mesh/Bacon_latest.ma";
 file -r -ns "Tyrion_Cattister" -dr 1 -rfn "Tyrion_Cattister_uv:Tyrion_CattisterRN"
-		 "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/characters/pig/mesh/Bacon_latest.ma";
+		 "assets/characters/pig/mesh/Bacon_latest.ma";
 requires maya "2013";
 requires "Fur" "2013 x64";
 requires "Mayatomr" "2013.0 - 3.10.1.9 ";
@@ -9375,7 +9375,7 @@ createNode vectorRenderGlobals -s -n "vectorRenderGlobals16";
 createNode vectorRenderGlobals -s -n "vectorRenderGlobals17";
 createNode vectorRenderGlobals -s -n "vectorRenderGlobals18";
 createNode reference -n "Tyrion_Cattister_uv:Tyrion_CattisterRN";
-	setAttr ".fn[0]" -type "string" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/characters/pig/mesh/TyrionCattister001.ma";
+	setAttr ".fn[0]" -type "string" "assets/characters/pig/mesh/TyrionCattister001.ma";
 	setAttr -s 4 ".phl";
 	setAttr ".phl[9]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 

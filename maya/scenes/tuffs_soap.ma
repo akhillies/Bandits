@@ -2,40 +2,40 @@
 //Name: tuffs_soap.ma
 //Last modified: Fri, Dec 12, 2014 02:22:05 AM
 //Codeset: UTF-8
-file -rdi 1 -ns "living_room_latest" -rfn "living_room_latestRN" "/Users/CynthiaDiaz/Desktop/Bandits/maya/assets/sets/livingroom/living_room_latest.ma";
+file -rdi 1 -ns "living_room_latest" -rfn "living_room_latestRN" "assets/sets/livingroom/living_room_latest.ma";
 file -rdi 2 -ns "rectangular_window_latest" -rfn "living_room_latest:rectangular_window_latestRN"
-		 "/Users/CynthiaDiaz/Desktop/Bandits/maya/assets/sets/livingroom/additions/windows/rectangular_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/rectangular_window_latest.ma";
 file -rdi 2 -ns "rectangular_window_latest1" -rfn "living_room_latest:rectangular_window_latestRN1"
-		 "/Users/CynthiaDiaz/Desktop/Bandits/maya/assets/sets/livingroom/additions/windows/rectangular_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/rectangular_window_latest.ma";
 file -rdi 2 -ns "rectangular_window_latest2" -rfn "living_room_latest:rectangular_window_latest1RN"
-		 "/Users/CynthiaDiaz/Desktop/Bandits/maya/assets/sets/livingroom/additions/windows/rectangular_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/rectangular_window_latest.ma";
 file -rdi 2 -ns "rectangular_window_latest3" -rfn "living_room_latest:rectangular_window_latest2RN"
-		 "/Users/CynthiaDiaz/Desktop/Bandits/maya/assets/sets/livingroom/additions/windows/rectangular_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/rectangular_window_latest.ma";
 file -rdi 2 -ns "taller_window_latest" -rfn "living_room_latest:taller_window_latestRN"
-		 "/Users/CynthiaDiaz/Desktop/Bandits/maya/assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
 file -rdi 2 -ns "taller_window_latest1" -rfn "living_room_latest:taller_window_latestRN1"
-		 "/Users/CynthiaDiaz/Desktop/Bandits/maya/assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
 file -rdi 2 -ns "taller_window_latest2" -rfn "living_room_latest:taller_window_latest1RN"
-		 "/Users/CynthiaDiaz/Desktop/Bandits/maya/assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
 file -rdi 2 -ns "taller_window_latest3" -rfn "living_room_latest:taller_window_latest2RN"
-		 "/Users/CynthiaDiaz/Desktop/Bandits/maya/assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
 file -rdi 2 -ns "taller_window_latest4" -rfn "living_room_latest:taller_window_latest3RN"
-		 "/Users/CynthiaDiaz/Desktop/Bandits/maya/assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
 file -rdi 2 -ns "taller_window_latest5" -rfn "living_room_latest:taller_window_latest4RN"
-		 "/Users/CynthiaDiaz/Desktop/Bandits/maya/assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
 file -rdi 2 -ns "taller_window_latest6" -rfn "living_room_latest:taller_window_latest5RN"
-		 "/Users/CynthiaDiaz/Desktop/Bandits/maya/assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
 file -rdi 2 -ns "taller_window_latest7" -rfn "living_room_latest:taller_window_latest6RN"
-		 "/Users/CynthiaDiaz/Desktop/Bandits/maya/assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
 file -rdi 2 -ns "taller_window_latest8" -rfn "living_room_latest:taller_window_latest7RN"
-		 "/Users/CynthiaDiaz/Desktop/Bandits/maya/assets/sets/livingroom/additions/windows/taller_window_latest.ma";
-file -rdi 2 -ns "fridge_latest" -rfn "living_room_latest:fridge_latestRN" "/Users/CynthiaDiaz/Desktop/Bandits/maya/assets/sets/kitchen/fridge_latest.ma";
-file -rdi 2 -ns "countersink" -rfn "living_room_latest:countersinkRN" "/Users/CynthiaDiaz/Desktop/Bandits/maya/assets/sets/kitchen/countersink.ma";
-file -rdi 1 -ns "tuffs_latest" -rfn "tuffs_latestRN" "/Users/CynthiaDiaz/Desktop/Bandits/maya/assets/characters/tuffs/tuffs_latest.ma";
-file -rdi 1 -ns "soap_bottle2" -rfn "soap_bottleRN" "/Users/CynthiaDiaz/Desktop/Bandits/maya/assets/props/soap_bottle.ma";
-file -r -ns "living_room_latest" -dr 1 -rfn "living_room_latestRN" "/Users/CynthiaDiaz/Desktop/Bandits/maya/assets/sets/livingroom/living_room_latest.ma";
-file -r -ns "tuffs_latest" -dr 1 -rfn "tuffs_latestRN" "/Users/CynthiaDiaz/Desktop/Bandits/maya/assets/characters/tuffs/tuffs_latest.ma";
-file -r -ns "soap_bottle2" -dr 1 -rfn "soap_bottleRN" "/Users/CynthiaDiaz/Desktop/Bandits/maya/assets/props/soap_bottle.ma";
+		 "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+file -rdi 2 -ns "fridge_latest" -rfn "living_room_latest:fridge_latestRN" "assets/sets/kitchen/fridge_latest.ma";
+file -rdi 2 -ns "countersink" -rfn "living_room_latest:countersinkRN" "assets/sets/kitchen/countersink.ma";
+file -rdi 1 -ns "tuffs_latest" -rfn "tuffs_latestRN" "assets/characters/tuffs/tuffs_latest.ma";
+file -rdi 1 -ns "soap_bottle2" -rfn "soap_bottleRN" "assets/props/soap_bottle.ma";
+file -r -ns "living_room_latest" -dr 1 -rfn "living_room_latestRN" "assets/sets/livingroom/living_room_latest.ma";
+file -r -ns "tuffs_latest" -dr 1 -rfn "tuffs_latestRN" "assets/characters/tuffs/tuffs_latest.ma";
+file -r -ns "soap_bottle2" -dr 1 -rfn "soap_bottleRN" "assets/props/soap_bottle.ma";
 requires maya "2013";
 requires "Mayatomr" "2013.0 - 3.10.1.9 ";
 requires "stereoCamera" "10.0";
@@ -5468,7 +5468,7 @@ createNode mentalrayOptions -s -n "miDefaultOptions";
 	setAttr ".stringOptions[44].type" -type "string" "string";
 createNode mentalrayFramebuffer -s -n "miDefaultFramebuffer";
 createNode reference -n "tuffs_latestRN";
-	setAttr ".fn[0]" -type "string" "/Users/CynthiaDiaz/Desktop/Bandits/maya/assets/characters/tuffs/tuffs_latest.ma";
+	setAttr ".fn[0]" -type "string" "assets/characters/tuffs/tuffs_latest.ma";
 	setAttr -s 220 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;

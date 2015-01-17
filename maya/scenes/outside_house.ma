@@ -2,30 +2,30 @@
 //Name: outside_house.ma
 //Last modified: Thu, Dec 04, 2014 10:50:15 PM
 //Codeset: UTF-8
-file -rdi 1 -ns "outside_house_latest" -rfn "outside_house_latestRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/outside_house_latest.ma";
+file -rdi 1 -ns "outside_house_latest" -rfn "outside_house_latestRN" "assets/sets/house/outside_house_latest.ma";
 file -rdi 2 -ns "photo_frame" -rfn "outside_house_latest:photo_frameRN" -op
-		 "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/photo_frame.ma";
+		 "v=0;" "assets/sets/house/photo_frame.ma";
 file -rdi 2 -ns "ripped_up_toy" -rfn "outside_house_latest:ripped_up_toyRN"
-		 -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/ripped_up_toy.ma";
-file -rdi 1 -ns "leaves" -rfn "leavesRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/bush/leaves.ma";
-file -rdi 1 -ns "tuffs_latest" -rfn "Tuffs005RN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/tuffs/tuffs_latest.ma";
-file -rdi 1 -ns "sneaks_latest" -rfn "Sneaks_012RN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/sneaks/sneaks_latest.ma";
-file -rdi 1 -ns "key_latest" -rfn "fancy_old_key_3RN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/props/keys/key_latest.ma";
-file -rdi 1 -ns "smarty_latest" -rfn "Smarty003RN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/smarty/smarty_latest.ma";
-file -rdi 1 -ns "binoculars" -rfn "binocularsRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/props/binoculars.ma";
-file -rdi 1 -ns "pig_latest" -rfn "pig_latestRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/pig/pig_latest.ma";
-file -rdi 1 -ns "leaves1" -rfn "leavesRN1" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/bush/leaves.ma";
-file -rdi 1 -ns "leaves2" -rfn "leavesRN2" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/bush/leaves.ma";
-file -r -ns "outside_house_latest" -dr 1 -rfn "outside_house_latestRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/outside_house_latest.ma";
-file -r -ns "leaves" -dr 1 -rfn "leavesRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/bush/leaves.ma";
-file -r -ns "tuffs_latest" -dr 1 -rfn "Tuffs005RN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/tuffs/tuffs_latest.ma";
-file -r -ns "sneaks_latest" -dr 1 -rfn "Sneaks_012RN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/sneaks/sneaks_latest.ma";
-file -r -ns "key_latest" -dr 1 -rfn "fancy_old_key_3RN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/props/keys/key_latest.ma";
-file -r -ns "smarty_latest" -dr 1 -rfn "Smarty003RN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/smarty/smarty_latest.ma";
-file -r -ns "binoculars" -dr 1 -rfn "binocularsRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/props/binoculars.ma";
-file -r -ns "pig_latest" -dr 1 -rfn "pig_latestRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/pig/pig_latest.ma";
-file -r -ns "leaves1" -dr 1 -rfn "leavesRN1" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/bush/leaves.ma";
-file -r -ns "leaves2" -dr 1 -rfn "leavesRN2" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/bush/leaves.ma";
+		 -op "v=0;" "assets/sets/house/ripped_up_toy.ma";
+file -rdi 1 -ns "leaves" -rfn "leavesRN" "assets/sets/house/bush/leaves.ma";
+file -rdi 1 -ns "tuffs_latest" -rfn "Tuffs005RN" "assets/characters/tuffs/tuffs_latest.ma";
+file -rdi 1 -ns "sneaks_latest" -rfn "Sneaks_012RN" "assets/characters/sneaks/sneaks_latest.ma";
+file -rdi 1 -ns "key_latest" -rfn "fancy_old_key_3RN" "assets/props/keys/key_latest.ma";
+file -rdi 1 -ns "smarty_latest" -rfn "Smarty003RN" "assets/characters/smarty/smarty_latest.ma";
+file -rdi 1 -ns "binoculars" -rfn "binocularsRN" -op "v=0;" "assets/props/binoculars.ma";
+file -rdi 1 -ns "pig_latest" -rfn "pig_latestRN" -op "v=0;" "assets/characters/pig/pig_latest.ma";
+file -rdi 1 -ns "leaves1" -rfn "leavesRN1" "assets/sets/house/bush/leaves.ma";
+file -rdi 1 -ns "leaves2" -rfn "leavesRN2" "assets/sets/house/bush/leaves.ma";
+file -r -ns "outside_house_latest" -dr 1 -rfn "outside_house_latestRN" "assets/sets/house/outside_house_latest.ma";
+file -r -ns "leaves" -dr 1 -rfn "leavesRN" "assets/sets/house/bush/leaves.ma";
+file -r -ns "tuffs_latest" -dr 1 -rfn "Tuffs005RN" "assets/characters/tuffs/tuffs_latest.ma";
+file -r -ns "sneaks_latest" -dr 1 -rfn "Sneaks_012RN" "assets/characters/sneaks/sneaks_latest.ma";
+file -r -ns "key_latest" -dr 1 -rfn "fancy_old_key_3RN" "assets/props/keys/key_latest.ma";
+file -r -ns "smarty_latest" -dr 1 -rfn "Smarty003RN" "assets/characters/smarty/smarty_latest.ma";
+file -r -ns "binoculars" -dr 1 -rfn "binocularsRN" -op "v=0;" "assets/props/binoculars.ma";
+file -r -ns "pig_latest" -dr 1 -rfn "pig_latestRN" -op "v=0;" "assets/characters/pig/pig_latest.ma";
+file -r -ns "leaves1" -dr 1 -rfn "leavesRN1" "assets/sets/house/bush/leaves.ma";
+file -r -ns "leaves2" -dr 1 -rfn "leavesRN2" "assets/sets/house/bush/leaves.ma";
 requires maya "2015";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOptions" -nodeType "mentalrayGlobals"
 		 -nodeType "mentalrayItemsList" -dataType "byteArray" "Mayatomr" "2015.0 - 3.12.1.18 ";
@@ -132,7 +132,7 @@ createNode renderLayerManager -n "renderLayerManager";
 createNode renderLayer -n "defaultRenderLayer";
 	setAttr ".g" yes;
 createNode reference -n "outside_house_latestRN";
-	setAttr ".fn[0]" -type "string" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/outside_house_latest.ma";
+	setAttr ".fn[0]" -type "string" "assets/sets/house/outside_house_latest.ma";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"outside_house_latestRN"
 		"outside_house_latest:ripped_up_toyRN" 0
@@ -1033,6 +1033,6 @@ connectAttr "sharedReferenceNode.sr" "binocularsRN.sr";
 connectAttr "sharedReferenceNode.sr" "pig_latestRN.sr";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 dataStructure -fmt "raw" -as "name=externalContentTable:string=node:string=key:string=upath:uint32=upathcrc:string=rpath:string=roles";
-applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"outside_house_latestRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/outside_house_latest.ma\" 48534192 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/sets/house/outside_house_latest.ma\" \"FileRef\"\n1\n\"leavesRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/bush/leaves.ma\" 1815318665 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/sets/house/bush/leaves.ma\" \"FileRef\"\n2\n\"Tuffs005RN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/tuffs/tuffs_latest.ma\" 2068874992 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/tuffs/tuffs_latest.ma\" \"FileRef\"\n3\n\"Sneaks_012RN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/sneaks/sneaks_latest.ma\" 1942800631 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/sneaks/sneaks_latest.ma\" \"FileRef\"\n4\n\"fancy_old_key_3RN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/props/keys/key_latest.ma\" 2607318336 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/props/keys/key_latest.ma\" \"FileRef\"\n5\n\"Smarty003RN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/smarty/smarty_latest.ma\" 3360025303 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/smarty/smarty_latest.ma\" \"FileRef\"\n6\n\"binocularsRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/props/binoculars.ma\" 1300799967 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/props/binoculars.ma\" \"FileRef\"\n7\n\"pig_latestRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/pig/pig_latest.ma\" 4255569589 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/pig/pig_latest.ma\" \"FileRef\"\n8\n\"leavesRN1\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/bush/leaves.ma\" 1815318665 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/sets/house/bush/leaves.ma\" \"FileRef\"\n9\n\"leavesRN2\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/bush/leaves.ma\" 1815318665 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/sets/house/bush/leaves.ma\" \"FileRef\"\nendStream\nendChannel\nendAssociations\n" 
+applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"outside_house_latestRN\" \"\" \"assets/sets/house/outside_house_latest.ma\" 48534192 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/sets/house/outside_house_latest.ma\" \"FileRef\"\n1\n\"leavesRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/bush/leaves.ma\" 1815318665 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/sets/house/bush/leaves.ma\" \"FileRef\"\n2\n\"Tuffs005RN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/tuffs/tuffs_latest.ma\" 2068874992 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/tuffs/tuffs_latest.ma\" \"FileRef\"\n3\n\"Sneaks_012RN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/sneaks/sneaks_latest.ma\" 1942800631 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/sneaks/sneaks_latest.ma\" \"FileRef\"\n4\n\"fancy_old_key_3RN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/props/keys/key_latest.ma\" 2607318336 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/props/keys/key_latest.ma\" \"FileRef\"\n5\n\"Smarty003RN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/smarty/smarty_latest.ma\" 3360025303 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/smarty/smarty_latest.ma\" \"FileRef\"\n6\n\"binocularsRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/props/binoculars.ma\" 1300799967 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/props/binoculars.ma\" \"FileRef\"\n7\n\"pig_latestRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/pig/pig_latest.ma\" 4255569589 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/pig/pig_latest.ma\" \"FileRef\"\n8\n\"leavesRN1\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/bush/leaves.ma\" 1815318665 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/sets/house/bush/leaves.ma\" \"FileRef\"\n9\n\"leavesRN2\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/bush/leaves.ma\" 1815318665 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/sets/house/bush/leaves.ma\" \"FileRef\"\nendStream\nendChannel\nendAssociations\n" 
 		-scn;
 // End of outside_house.ma

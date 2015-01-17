@@ -3,9 +3,9 @@
 //Last modified: Tue, Dec 09, 2014 11:44:41 AM
 //Codeset: UTF-8
 file -rdi 1 -ns "Tyrion_Cattister" -rfn "Tyrion_Cattister_uv:Tyrion_CattisterRN"
-		 "/Users/scai/Bandits/maya//assets/characters/pig/mesh/TyrionCattister001.ma";
+		 "assets/characters/pig/mesh/TyrionCattister001.ma";
 file -r -ns "Tyrion_Cattister" -dr 1 -rfn "Tyrion_Cattister_uv:Tyrion_CattisterRN"
-		 "/Users/scai/Bandits/maya//assets/characters/pig/mesh/TyrionCattister001.ma";
+		 "assets/characters/pig/mesh/TyrionCattister001.ma";
 requires maya "2013";
 requires "Fur" "2013 x64";
 requires "Mayatomr" "2013.0 - 3.10.1.9 ";

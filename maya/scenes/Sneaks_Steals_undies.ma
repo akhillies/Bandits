@@ -2,14 +2,14 @@
 //Name: Sneaks_Steals_undies.ma
 //Last modified: Tue, Dec 16, 2014 09:31:16 PM
 //Codeset: 1252
-file -rdi 1 -ns "Sneaks_012" -rfn "Sneaks_012RN" "C:/Users/Ashley/AppData/Local/VirtualStore/Program Files (x86)/Git/Bandits/Bandits/maya/assets/characters/sneaks/sneaks_latest.ma";
-file -rdi 1 -ns "room_with_undies" -rfn "room_with_undiesRN" "C:/Users/Ashley/AppData/Local/VirtualStore/Program Files (x86)/Git/Bandits/Bandits/maya/assets/sets/room_with_undies.ma";
+file -rdi 1 -ns "Sneaks_012" -rfn "Sneaks_012RN" "assets/characters/sneaks/sneaks_latest.ma";
+file -rdi 1 -ns "room_with_undies" -rfn "room_with_undiesRN" "assets/sets/room_with_undies.ma";
 file -rdi 2 -ns "Dresser_with_openable_drawers" -rfn "room_with_undies:Dresser_with_openable_drawersRN"
-		 "C:/Users/Ashley/AppData/Local/VirtualStore/Program Files (x86)/Git/Bandits/Bandits/maya/assets/sets/bedroom/additions/Dresser_with_openable_drawers.ma";
-file -rdi 1 -ns "undies_latest" -rfn "undies_latestRN" "C:/Users/Ashley/AppData/Local/VirtualStore/Program Files (x86)/Git/Bandits/Bandits/maya/assets/props/undies_latest.ma";
-file -r -ns "Sneaks_012" -dr 1 -rfn "Sneaks_012RN" "C:/Users/Ashley/AppData/Local/VirtualStore/Program Files (x86)/Git/Bandits/Bandits/maya/assets/characters/sneaks/sneaks_latest.ma";
-file -r -ns "room_with_undies" -dr 1 -rfn "room_with_undiesRN" "C:/Users/Ashley/AppData/Local/VirtualStore/Program Files (x86)/Git/Bandits/Bandits/maya/assets/sets/room_with_undies.ma";
-file -r -ns "undies_latest" -dr 1 -rfn "undies_latestRN" "C:/Users/Ashley/AppData/Local/VirtualStore/Program Files (x86)/Git/Bandits/Bandits/maya/assets/props/undies_latest.ma";
+		 "assets/sets/bedroom/additions/Dresser_with_openable_drawers.ma";
+file -rdi 1 -ns "undies_latest" -rfn "undies_latestRN" "assets/props/undies_latest.ma";
+file -r -ns "Sneaks_012" -dr 1 -rfn "Sneaks_012RN" "assets/characters/sneaks/sneaks_latest.ma";
+file -r -ns "room_with_undies" -dr 1 -rfn "room_with_undiesRN" "assets/sets/room_with_undies.ma";
+file -r -ns "undies_latest" -dr 1 -rfn "undies_latestRN" "assets/props/undies_latest.ma";
 requires maya "2013";
 requires "Mayatomr" "2013.0 - 3.10.1.4 ";
 requires "stereoCamera" "10.0";

@@ -2,10 +2,10 @@
 //Name: PigRig004.ma
 //Last modified: Tue, Dec 09, 2014 11:58:01 AM
 //Codeset: UTF-8
-file -rdi 1 -ns "PigSkin001" -rfn "PigSkin001RN" "/Users/scai/Bandits/maya//assets/characters/pig/rig/PigSkin001.ma";
+file -rdi 1 -ns "PigSkin001" -rfn "PigSkin001RN" "assets/characters/pig/rig/PigSkin001.ma";
 file -rdi 2 -ns "Tyrion_Cattister" -rfn "PigSkin001:Tyrion_Cattister_uv:Tyrion_CattisterRN"
-		 "/Users/scai/Bandits/maya//assets/characters/pig/mesh/Bacon_latest.ma";
-file -r -ns "PigSkin001" -dr 1 -rfn "PigSkin001RN" "/Users/scai/Bandits/maya//assets/characters/pig/rig/PigSkin001.ma";
+		 "assets/characters/pig/mesh/Bacon_latest.ma";
+file -r -ns "PigSkin001" -dr 1 -rfn "PigSkin001RN" "assets/characters/pig/rig/PigSkin001.ma";
 requires maya "2013";
 requires "Fur" "2013 x64";
 requires "Mayatomr" "2013.0 - 3.10.1.9 ";

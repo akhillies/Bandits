@@ -3,9 +3,9 @@
 //Last modified: Thu, Dec 11, 2014 03:55:45 PM
 //Codeset: 1252
 file -rdi 1 -ns "Dresser_with_openable_drawers" -rfn "Dresser_with_openable_drawersRN"
-		 "C:/Users/Ashley/AppData/Local/VirtualStore/Program Files (x86)/Git/Bandits/Bandits/maya/assets/sets/bedroom/additions/Dresser_with_openable_drawers.ma";
+		 "assets/sets/bedroom/additions/Dresser_with_openable_drawers.ma";
 file -r -ns "Dresser_with_openable_drawers" -dr 1 -rfn "Dresser_with_openable_drawersRN"
-		 "C:/Users/Ashley/AppData/Local/VirtualStore/Program Files (x86)/Git/Bandits/Bandits/maya/assets/sets/bedroom/additions/Dresser_with_openable_drawers.ma";
+		 "assets/sets/bedroom/additions/Dresser_with_openable_drawers.ma";
 requires maya "2013";
 requires "Mayatomr" "2013.0 - 3.10.1.4 ";
 requires "stereoCamera" "10.0";

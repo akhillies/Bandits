@@ -2,32 +2,32 @@
 //Name: bathroom.ma
 //Last modified: Fri, Nov 28, 2014 10:55:17 PM
 //Codeset: UTF-8
-file -rdi 1 -ns "window" -rfn "windowRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/bathroom/additions/multi_pane_window.ma";
-file -rdi 1 -ns "barsoap" -rfn "barsoapRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/bathroom/additions/barsoap.ma";
-file -rdi 1 -ns "toiletpaper" -rfn "toiletpaperRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/bathroom/additions/toiletpaper.ma";
-file -rdi 1 -ns "toothbrush" -rfn "toothbrushRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/bathroom/additions/toothbrush.ma";
-file -rdi 1 -ns "curtains" -dr 1 -rfn "curtainsRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/bathroom/additions/curtains.ma";
-file -rdi 1 -ns "towel" -rfn "towelRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/bathroom/additions/towel.ma";
-file -rdi 1 -ns "toilet" -rfn "toiletRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/bathroom/additions/toilet.ma";
-file -rdi 1 -ns "showerhead" -rfn "showerheadRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/bathroom/additions/showerhead.ma";
-file -rdi 1 -ns "diamond_handle" -rfn "diamond_handleRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/bathroom/additions/diamond_handle.ma";
-file -rdi 1 -ns "diamond_handle1" -rfn "diamond_handleRN1" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/bathroom/additions/diamond_handle.ma";
-file -rdi 1 -ns "bathmat" -rfn "bathmatRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/bathroom/additions/bathmat.ma";
-file -rdi 1 -ns "bottlesoap" -rfn "bottlesoapRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/bathroom/additions/bottlesoap.ma";
-file -rdi 1 -ns "bathtub" -rfn "bathtubRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/bathroom/additions/bathtub.ma";
-file -r -ns "window" -dr 1 -rfn "windowRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/bathroom/additions/multi_pane_window.ma";
-file -r -ns "barsoap" -dr 1 -rfn "barsoapRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/bathroom/additions/barsoap.ma";
-file -r -ns "toiletpaper" -dr 1 -rfn "toiletpaperRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/bathroom/additions/toiletpaper.ma";
-file -r -ns "toothbrush" -dr 1 -rfn "toothbrushRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/bathroom/additions/toothbrush.ma";
-file -r -ns "curtains" -dr 1 -rfn "curtainsRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/bathroom/additions/curtains.ma";
-file -r -ns "towel" -dr 1 -rfn "towelRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/bathroom/additions/towel.ma";
-file -r -ns "toilet" -dr 1 -rfn "toiletRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/bathroom/additions/toilet.ma";
-file -r -ns "showerhead" -dr 1 -rfn "showerheadRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/bathroom/additions/showerhead.ma";
-file -r -ns "diamond_handle" -dr 1 -rfn "diamond_handleRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/bathroom/additions/diamond_handle.ma";
-file -r -ns "diamond_handle1" -dr 1 -rfn "diamond_handleRN1" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/bathroom/additions/diamond_handle.ma";
-file -r -ns "bathmat" -dr 1 -rfn "bathmatRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/bathroom/additions/bathmat.ma";
-file -r -ns "bottlesoap" -dr 1 -rfn "bottlesoapRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/bathroom/additions/bottlesoap.ma";
-file -r -ns "bathtub" -dr 1 -rfn "bathtubRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/bathroom/additions/bathtub.ma";
+file -rdi 1 -ns "window" -rfn "windowRN" "assets/sets/bathroom/additions/multi_pane_window.ma";
+file -rdi 1 -ns "barsoap" -rfn "barsoapRN" "assets/sets/bathroom/additions/barsoap.ma";
+file -rdi 1 -ns "toiletpaper" -rfn "toiletpaperRN" "assets/sets/bathroom/additions/toiletpaper.ma";
+file -rdi 1 -ns "toothbrush" -rfn "toothbrushRN" "assets/sets/bathroom/additions/toothbrush.ma";
+file -rdi 1 -ns "curtains" -dr 1 -rfn "curtainsRN" "assets/sets/bathroom/additions/curtains.ma";
+file -rdi 1 -ns "towel" -rfn "towelRN" "assets/sets/bathroom/additions/towel.ma";
+file -rdi 1 -ns "toilet" -rfn "toiletRN" "assets/sets/bathroom/additions/toilet.ma";
+file -rdi 1 -ns "showerhead" -rfn "showerheadRN" "assets/sets/bathroom/additions/showerhead.ma";
+file -rdi 1 -ns "diamond_handle" -rfn "diamond_handleRN" "assets/sets/bathroom/additions/diamond_handle.ma";
+file -rdi 1 -ns "diamond_handle1" -rfn "diamond_handleRN1" "assets/sets/bathroom/additions/diamond_handle.ma";
+file -rdi 1 -ns "bathmat" -rfn "bathmatRN" "assets/sets/bathroom/additions/bathmat.ma";
+file -rdi 1 -ns "bottlesoap" -rfn "bottlesoapRN" "assets/sets/bathroom/additions/bottlesoap.ma";
+file -rdi 1 -ns "bathtub" -rfn "bathtubRN" "assets/sets/bathroom/additions/bathtub.ma";
+file -r -ns "window" -dr 1 -rfn "windowRN" "assets/sets/bathroom/additions/multi_pane_window.ma";
+file -r -ns "barsoap" -dr 1 -rfn "barsoapRN" "assets/sets/bathroom/additions/barsoap.ma";
+file -r -ns "toiletpaper" -dr 1 -rfn "toiletpaperRN" "assets/sets/bathroom/additions/toiletpaper.ma";
+file -r -ns "toothbrush" -dr 1 -rfn "toothbrushRN" "assets/sets/bathroom/additions/toothbrush.ma";
+file -r -ns "curtains" -dr 1 -rfn "curtainsRN" "assets/sets/bathroom/additions/curtains.ma";
+file -r -ns "towel" -dr 1 -rfn "towelRN" "assets/sets/bathroom/additions/towel.ma";
+file -r -ns "toilet" -dr 1 -rfn "toiletRN" "assets/sets/bathroom/additions/toilet.ma";
+file -r -ns "showerhead" -dr 1 -rfn "showerheadRN" "assets/sets/bathroom/additions/showerhead.ma";
+file -r -ns "diamond_handle" -dr 1 -rfn "diamond_handleRN" "assets/sets/bathroom/additions/diamond_handle.ma";
+file -r -ns "diamond_handle1" -dr 1 -rfn "diamond_handleRN1" "assets/sets/bathroom/additions/diamond_handle.ma";
+file -r -ns "bathmat" -dr 1 -rfn "bathmatRN" "assets/sets/bathroom/additions/bathmat.ma";
+file -r -ns "bottlesoap" -dr 1 -rfn "bottlesoapRN" "assets/sets/bathroom/additions/bottlesoap.ma";
+file -r -ns "bathtub" -dr 1 -rfn "bathtubRN" "assets/sets/bathroom/additions/bathtub.ma";
 requires maya "2013";
 requires "Mayatomr" "2013.0 - 3.10.1.9 ";
 requires "stereoCamera" "10.0";
@@ -371,7 +371,7 @@ createNode polyNormal -n "polyNormal1";
 	setAttr ".unm" no;
 createNode reference -n "windowRN";
 	setAttr -s 2 ".fn";
-	setAttr ".fn[0]" -type "string" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/bathroom/additions/multi_pane_window.ma";
+	setAttr ".fn[0]" -type "string" "assets/sets/bathroom/additions/multi_pane_window.ma";
 	setAttr ".fn[1]" -type "string" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/mayaProject//assets/bathroom/window.ma";
 	setAttr -s 2 ".phl";
 	setAttr ".phl[7]" 0;
@@ -460,7 +460,7 @@ createNode polyTweak -n "polyTweak2";
 createNode deleteComponent -n "deleteComponent3";
 	setAttr ".dc" -type "componentList" 1 "f[10]";
 createNode reference -n "barsoapRN";
-	setAttr ".fn[0]" -type "string" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/bathroom/additions/barsoap.ma";
+	setAttr ".fn[0]" -type "string" "assets/sets/bathroom/additions/barsoap.ma";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"barsoapRN"
 		"barsoapRN" 0

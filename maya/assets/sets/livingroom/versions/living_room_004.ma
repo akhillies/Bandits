@@ -2,52 +2,52 @@
 //Name: living_room_004.ma
 //Last modified: Wed, Dec 03, 2014 11:52:20 PM
 //Codeset: UTF-8
-file -rdi 1 -ns "armchair_latest" -rfn "armchair_latestRN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/livingroom/additions/sofa/armchair_latest.ma";
-file -rdi 1 -ns "table_latest" -rfn "table_latestRN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/livingroom/additions/table/table_latest.ma";
-file -rdi 1 -ns "sofa_latest" -rfn "sofa_latestRN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/livingroom/additions/sofa/sofa_latest.ma";
-file -rdi 1 -ns "armchair_latest1" -rfn "armchair_latestRN1" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/livingroom/additions/sofa/armchair_latest.ma";
-file -rdi 1 -ns "armchair_latest2" -rfn "armchair_latestRN2" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/livingroom/additions/sofa/armchair_latest.ma";
-file -rdi 1 -ns "armchair_latest3" -rfn "armchair_latestRN3" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/livingroom/additions/sofa/armchair_latest.ma";
+file -rdi 1 -ns "armchair_latest" -rfn "armchair_latestRN" "assets/sets/livingroom/additions/sofa/armchair_latest.ma";
+file -rdi 1 -ns "table_latest" -rfn "table_latestRN" "assets/sets/livingroom/additions/table/table_latest.ma";
+file -rdi 1 -ns "sofa_latest" -rfn "sofa_latestRN" "assets/sets/livingroom/additions/sofa/sofa_latest.ma";
+file -rdi 1 -ns "armchair_latest1" -rfn "armchair_latestRN1" "assets/sets/livingroom/additions/sofa/armchair_latest.ma";
+file -rdi 1 -ns "armchair_latest2" -rfn "armchair_latestRN2" "assets/sets/livingroom/additions/sofa/armchair_latest.ma";
+file -rdi 1 -ns "armchair_latest3" -rfn "armchair_latestRN3" "assets/sets/livingroom/additions/sofa/armchair_latest.ma";
 file -rdi 1 -ns "rectangular_window_latest" -rfn "rectangular_window_latestRN"
-		 "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/livingroom/additions/windows/rectangular_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/rectangular_window_latest.ma";
 file -rdi 1 -ns "rectangular_window_latest1" -rfn "rectangular_window_latestRN1"
-		 "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/livingroom/additions/windows/rectangular_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/rectangular_window_latest.ma";
 file -rdi 1 -ns "rectangular_window_latest2" -rfn "rectangular_window_latest1RN"
-		 "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/livingroom/additions/windows/rectangular_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/rectangular_window_latest.ma";
 file -rdi 1 -ns "rectangular_window_latest3" -rfn "rectangular_window_latest2RN"
-		 "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/livingroom/additions/windows/rectangular_window_latest.ma";
-file -rdi 1 -ns "taller_window_latest" -rfn "taller_window_latestRN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/livingroom/additions/windows/taller_window_latest.ma";
-file -rdi 1 -ns "taller_window_latest1" -rfn "taller_window_latestRN1" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/livingroom/additions/windows/taller_window_latest.ma";
-file -rdi 1 -ns "taller_window_latest2" -rfn "taller_window_latest1RN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/livingroom/additions/windows/taller_window_latest.ma";
-file -rdi 1 -ns "taller_window_latest3" -rfn "taller_window_latest2RN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/livingroom/additions/windows/taller_window_latest.ma";
-file -rdi 1 -ns "taller_window_latest4" -rfn "taller_window_latest3RN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/livingroom/additions/windows/taller_window_latest.ma";
-file -rdi 1 -ns "taller_window_latest5" -rfn "taller_window_latest4RN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/livingroom/additions/windows/taller_window_latest.ma";
-file -rdi 1 -ns "taller_window_latest6" -rfn "taller_window_latest5RN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/livingroom/additions/windows/taller_window_latest.ma";
-file -rdi 1 -ns "taller_window_latest7" -rfn "taller_window_latest6RN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/livingroom/additions/windows/taller_window_latest.ma";
-file -rdi 1 -ns "taller_window_latest8" -rfn "taller_window_latest7RN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/livingroom/additions/windows/taller_window_latest.ma";
-file -r -ns "armchair_latest" -dr 1 -rfn "armchair_latestRN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/livingroom/additions/sofa/armchair_latest.ma";
-file -r -ns "table_latest" -dr 1 -rfn "table_latestRN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/livingroom/additions/table/table_latest.ma";
-file -r -ns "sofa_latest" -dr 1 -rfn "sofa_latestRN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/livingroom/additions/sofa/sofa_latest.ma";
-file -r -ns "armchair_latest1" -dr 1 -rfn "armchair_latestRN1" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/livingroom/additions/sofa/armchair_latest.ma";
-file -r -ns "armchair_latest2" -dr 1 -rfn "armchair_latestRN2" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/livingroom/additions/sofa/armchair_latest.ma";
-file -r -ns "armchair_latest3" -dr 1 -rfn "armchair_latestRN3" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/livingroom/additions/sofa/armchair_latest.ma";
+		 "assets/sets/livingroom/additions/windows/rectangular_window_latest.ma";
+file -rdi 1 -ns "taller_window_latest" -rfn "taller_window_latestRN" "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+file -rdi 1 -ns "taller_window_latest1" -rfn "taller_window_latestRN1" "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+file -rdi 1 -ns "taller_window_latest2" -rfn "taller_window_latest1RN" "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+file -rdi 1 -ns "taller_window_latest3" -rfn "taller_window_latest2RN" "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+file -rdi 1 -ns "taller_window_latest4" -rfn "taller_window_latest3RN" "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+file -rdi 1 -ns "taller_window_latest5" -rfn "taller_window_latest4RN" "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+file -rdi 1 -ns "taller_window_latest6" -rfn "taller_window_latest5RN" "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+file -rdi 1 -ns "taller_window_latest7" -rfn "taller_window_latest6RN" "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+file -rdi 1 -ns "taller_window_latest8" -rfn "taller_window_latest7RN" "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+file -r -ns "armchair_latest" -dr 1 -rfn "armchair_latestRN" "assets/sets/livingroom/additions/sofa/armchair_latest.ma";
+file -r -ns "table_latest" -dr 1 -rfn "table_latestRN" "assets/sets/livingroom/additions/table/table_latest.ma";
+file -r -ns "sofa_latest" -dr 1 -rfn "sofa_latestRN" "assets/sets/livingroom/additions/sofa/sofa_latest.ma";
+file -r -ns "armchair_latest1" -dr 1 -rfn "armchair_latestRN1" "assets/sets/livingroom/additions/sofa/armchair_latest.ma";
+file -r -ns "armchair_latest2" -dr 1 -rfn "armchair_latestRN2" "assets/sets/livingroom/additions/sofa/armchair_latest.ma";
+file -r -ns "armchair_latest3" -dr 1 -rfn "armchair_latestRN3" "assets/sets/livingroom/additions/sofa/armchair_latest.ma";
 file -r -ns "rectangular_window_latest" -dr 1 -rfn "rectangular_window_latestRN"
-		 "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/livingroom/additions/windows/rectangular_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/rectangular_window_latest.ma";
 file -r -ns "rectangular_window_latest1" -dr 1 -rfn "rectangular_window_latestRN1"
-		 "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/livingroom/additions/windows/rectangular_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/rectangular_window_latest.ma";
 file -r -ns "rectangular_window_latest2" -dr 1 -rfn "rectangular_window_latest1RN"
-		 "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/livingroom/additions/windows/rectangular_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/rectangular_window_latest.ma";
 file -r -ns "rectangular_window_latest3" -dr 1 -rfn "rectangular_window_latest2RN"
-		 "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/livingroom/additions/windows/rectangular_window_latest.ma";
-file -r -ns "taller_window_latest" -dr 1 -rfn "taller_window_latestRN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/livingroom/additions/windows/taller_window_latest.ma";
-file -r -ns "taller_window_latest1" -dr 1 -rfn "taller_window_latestRN1" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/livingroom/additions/windows/taller_window_latest.ma";
-file -r -ns "taller_window_latest2" -dr 1 -rfn "taller_window_latest1RN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/livingroom/additions/windows/taller_window_latest.ma";
-file -r -ns "taller_window_latest3" -dr 1 -rfn "taller_window_latest2RN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/livingroom/additions/windows/taller_window_latest.ma";
-file -r -ns "taller_window_latest4" -dr 1 -rfn "taller_window_latest3RN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/livingroom/additions/windows/taller_window_latest.ma";
-file -r -ns "taller_window_latest5" -dr 1 -rfn "taller_window_latest4RN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/livingroom/additions/windows/taller_window_latest.ma";
-file -r -ns "taller_window_latest6" -dr 1 -rfn "taller_window_latest5RN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/livingroom/additions/windows/taller_window_latest.ma";
-file -r -ns "taller_window_latest7" -dr 1 -rfn "taller_window_latest6RN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/livingroom/additions/windows/taller_window_latest.ma";
-file -r -ns "taller_window_latest8" -dr 1 -rfn "taller_window_latest7RN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+		 "assets/sets/livingroom/additions/windows/rectangular_window_latest.ma";
+file -r -ns "taller_window_latest" -dr 1 -rfn "taller_window_latestRN" "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+file -r -ns "taller_window_latest1" -dr 1 -rfn "taller_window_latestRN1" "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+file -r -ns "taller_window_latest2" -dr 1 -rfn "taller_window_latest1RN" "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+file -r -ns "taller_window_latest3" -dr 1 -rfn "taller_window_latest2RN" "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+file -r -ns "taller_window_latest4" -dr 1 -rfn "taller_window_latest3RN" "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+file -r -ns "taller_window_latest5" -dr 1 -rfn "taller_window_latest4RN" "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+file -r -ns "taller_window_latest6" -dr 1 -rfn "taller_window_latest5RN" "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+file -r -ns "taller_window_latest7" -dr 1 -rfn "taller_window_latest6RN" "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
+file -r -ns "taller_window_latest8" -dr 1 -rfn "taller_window_latest7RN" "assets/sets/livingroom/additions/windows/taller_window_latest.ma";
 requires maya "2013";
 requires "Mayatomr" "2013.0 - 3.10.1.9 ";
 requires "stereoCamera" "10.0";

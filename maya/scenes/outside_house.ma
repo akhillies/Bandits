@@ -1,23 +1,31 @@
 //Maya ASCII 2015 scene
 //Name: outside_house.ma
-//Last modified: Sun, Nov 30, 2014 01:21:28 PM
+//Last modified: Thu, Dec 04, 2014 10:50:15 PM
 //Codeset: UTF-8
-file -rdi 1 -ns "outside_house_latest" -rfn "outside_house_latestRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/outside_house_latest.ma";
-file -rdi 1 -ns "leaves" -rfn "leavesRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/bush/leaves.ma";
-file -rdi 1 -ns "Tuffs005" -rfn "Tuffs005RN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/tuffs/Tuffs005.ma";
-file -rdi 1 -ns "Sneaks_012" -rfn "Sneaks_012RN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/sneaks/Sneaks_012.ma";
-file -rdi 1 -ns "PigRig003" -rfn "PigRig003RN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/pig/mesh/Pig.ma";
-file -rdi 1 -ns "fancy_old_key_3" -rfn "fancy_old_key_3RN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/props/keys/fancy_old_key_3.ma";
-file -rdi 1 -ns "Smarty003" -rfn "Smarty003RN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/smarty/Smarty003.ma";
-file -rdi 1 -ns "binoculars" -rfn "binocularsRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/props/binoculars.ma";
-file -r -ns "outside_house_latest" -dr 1 -rfn "outside_house_latestRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/outside_house_latest.ma";
-file -r -ns "leaves" -dr 1 -rfn "leavesRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/bush/leaves.ma";
-file -r -ns "Tuffs005" -dr 1 -rfn "Tuffs005RN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/tuffs/Tuffs005.ma";
-file -r -ns "Sneaks_012" -dr 1 -rfn "Sneaks_012RN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/sneaks/Sneaks_012.ma";
-file -r -ns "PigRig003" -dr 1 -rfn "PigRig003RN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/pig/mesh/Pig.ma";
-file -r -ns "fancy_old_key_3" -dr 1 -rfn "fancy_old_key_3RN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/props/keys/fancy_old_key_3.ma";
-file -r -ns "Smarty003" -dr 1 -rfn "Smarty003RN" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/smarty/Smarty003.ma";
-file -r -ns "binoculars" -dr 1 -rfn "binocularsRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/props/binoculars.ma";
+file -rdi 1 -ns "outside_house_latest" -rfn "outside_house_latestRN" "assets/sets/house/outside_house_latest.ma";
+file -rdi 2 -ns "photo_frame" -rfn "outside_house_latest:photo_frameRN" -op
+		 "v=0;" "assets/sets/house/photo_frame.ma";
+file -rdi 2 -ns "ripped_up_toy" -rfn "outside_house_latest:ripped_up_toyRN"
+		 -op "v=0;" "assets/sets/house/ripped_up_toy.ma";
+file -rdi 1 -ns "leaves" -rfn "leavesRN" "assets/sets/house/bush/leaves.ma";
+file -rdi 1 -ns "tuffs_latest" -rfn "Tuffs005RN" "assets/characters/tuffs/tuffs_latest.ma";
+file -rdi 1 -ns "sneaks_latest" -rfn "Sneaks_012RN" "assets/characters/sneaks/sneaks_latest.ma";
+file -rdi 1 -ns "key_latest" -rfn "fancy_old_key_3RN" "assets/props/keys/key_latest.ma";
+file -rdi 1 -ns "smarty_latest" -rfn "Smarty003RN" "assets/characters/smarty/smarty_latest.ma";
+file -rdi 1 -ns "binoculars" -rfn "binocularsRN" -op "v=0;" "assets/props/binoculars.ma";
+file -rdi 1 -ns "pig_latest" -rfn "pig_latestRN" -op "v=0;" "assets/characters/pig/pig_latest.ma";
+file -rdi 1 -ns "leaves1" -rfn "leavesRN1" "assets/sets/house/bush/leaves.ma";
+file -rdi 1 -ns "leaves2" -rfn "leavesRN2" "assets/sets/house/bush/leaves.ma";
+file -r -ns "outside_house_latest" -dr 1 -rfn "outside_house_latestRN" "assets/sets/house/outside_house_latest.ma";
+file -r -ns "leaves" -dr 1 -rfn "leavesRN" "assets/sets/house/bush/leaves.ma";
+file -r -ns "tuffs_latest" -dr 1 -rfn "Tuffs005RN" "assets/characters/tuffs/tuffs_latest.ma";
+file -r -ns "sneaks_latest" -dr 1 -rfn "Sneaks_012RN" "assets/characters/sneaks/sneaks_latest.ma";
+file -r -ns "key_latest" -dr 1 -rfn "fancy_old_key_3RN" "assets/props/keys/key_latest.ma";
+file -r -ns "smarty_latest" -dr 1 -rfn "Smarty003RN" "assets/characters/smarty/smarty_latest.ma";
+file -r -ns "binoculars" -dr 1 -rfn "binocularsRN" -op "v=0;" "assets/props/binoculars.ma";
+file -r -ns "pig_latest" -dr 1 -rfn "pig_latestRN" -op "v=0;" "assets/characters/pig/pig_latest.ma";
+file -r -ns "leaves1" -dr 1 -rfn "leavesRN1" "assets/sets/house/bush/leaves.ma";
+file -r -ns "leaves2" -dr 1 -rfn "leavesRN2" "assets/sets/house/bush/leaves.ma";
 requires maya "2015";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOptions" -nodeType "mentalrayGlobals"
 		 -nodeType "mentalrayItemsList" -dataType "byteArray" "Mayatomr" "2015.0 - 3.12.1.18 ";
@@ -31,12 +39,12 @@ fileInfo "cutIdentifier" "201410051530-933320";
 fileInfo "osv" "Mac OS X 10.9.1";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
-	setAttr ".t" -type "double3" 61.364619345279152 2.9205426972304451 244.42186145466454 ;
-	setAttr ".r" -type "double3" 3.261647270697797 121.39999999996431 0 ;
+	setAttr ".t" -type "double3" 15.768332260073116 264.03246844546413 346.94387724527127 ;
+	setAttr ".r" -type "double3" 281.06164727070239 498.19999999997185 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v";
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 89.686892109674972;
+	setAttr ".coi" 267.22913141064504;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -66,6 +74,7 @@ createNode camera -s -n "frontShape" -p "front";
 	setAttr ".imn" -type "string" "front";
 	setAttr ".den" -type "string" "front_depth";
 	setAttr ".man" -type "string" "front_mask";
+	setAttr -s 2 ".ip";
 	setAttr ".hc" -type "string" "viewSet -f %camera";
 	setAttr ".o" yes;
 createNode transform -s -n "side";
@@ -79,11 +88,14 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".imn" -type "string" "side";
 	setAttr ".den" -type "string" "side_depth";
 	setAttr ".man" -type "string" "side_mask";
+	setAttr -s 2 ".ip";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
 createNode transform -n "camera_binoculars";
-	setAttr ".t" -type "double3" -4.036050111476909 8.5171638558813179 339.18486690495081 ;
-	setAttr ".r" -type "double3" 10.216272645623466 0 0 ;
+	setAttr ".t" -type "double3" 2.0009814060137829 56.982980442509088 324.27001057964674 ;
+	setAttr -av ".tx";
+	setAttr -av ".ty";
+	setAttr ".r" -type "double3" 3.4015370917169014 0 0 ;
 	setAttr ".s" -type "double3" 8.8009943096695338 8.8009943096695338 8.8009943096695338 ;
 createNode camera -n "camera_binocularsShape" -p "camera_binoculars";
 	setAttr -k off ".v";
@@ -91,7 +103,7 @@ createNode camera -n "camera_binocularsShape" -p "camera_binoculars";
 	setAttr ".cap" -type "double2" 1.41732 0.94488 ;
 	setAttr ".ff" 0;
 	setAttr ".ovr" 1.3;
-	setAttr ".coi" 60.387817851766016;
+	setAttr ".coi" 222.1732472717629;
 	setAttr ".ow" 30;
 	setAttr ".imn" -type "string" "camera1";
 	setAttr ".den" -type "string" "camera1_depth";
@@ -112,18 +124,24 @@ createNode camera -n "camera_raccoonsShape" -p "camera_raccoons";
 	setAttr ".den" -type "string" "camera1_depth";
 	setAttr ".man" -type "string" "camera1_mask";
 createNode lightLinker -s -n "lightLinker1";
-	setAttr -s 90 ".lnk";
-	setAttr -s 90 ".slnk";
+	setAttr -s 87 ".lnk";
+	setAttr -s 87 ".slnk";
 createNode displayLayerManager -n "layerManager";
 createNode displayLayer -n "defaultLayer";
 createNode renderLayerManager -n "renderLayerManager";
 createNode renderLayer -n "defaultRenderLayer";
 	setAttr ".g" yes;
 createNode reference -n "outside_house_latestRN";
+	setAttr ".fn[0]" -type "string" "assets/sets/house/outside_house_latest.ma";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"outside_house_latestRN"
+		"outside_house_latest:ripped_up_toyRN" 0
+		"outside_house_latest:photo_frameRN" 0
 		"outside_house_latestRN" 0
-		"outside_house_latestRN" 1
+		"outside_house_latestRN" 3
+		2 "|outside_house_latest:pCube1" "translate" " -type \"double3\" -1.91680632198104206 41 0"
+		
+		2 "|outside_house_latest:pCube1" "rotate" " -type \"double3\" 0 0 0"
 		2 "|outside_house_latest:pPyramid1" "visibility" " 1";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
@@ -316,11 +334,11 @@ createNode vectorRenderGlobals -s -n "vectorRenderGlobals21";
 createNode vectorRenderGlobals -s -n "vectorRenderGlobals22";
 createNode script -n "uiConfigurationScriptNode";
 	setAttr ".b" -type "string" (
-		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"camera_raccoons\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n"
+		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"camera_binoculars\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n"
 		+ "                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"base_OpenGL_Renderer\" \n"
 		+ "                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 0\n                -nurbsSurfaces 0\n                -polymeshes 1\n                -subdivSurfaces 0\n                -planes 0\n                -lights 0\n                -cameras 0\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n"
 		+ "                -imagePlane 0\n                -joints 0\n                -ikHandles 0\n                -deformers 0\n                -dynamics 0\n                -particleInstancers 1\n                -fluids 0\n                -hairSystems 0\n                -follicles 0\n                -nCloths 0\n                -nParticles 0\n                -nRigids 0\n                -dynamicConstraints 0\n                -locators 0\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 0\n                -handles 0\n                -pivots 0\n                -textures 0\n                -strokes 0\n                -motionTrails 0\n                -clipGhosts 0\n                -greasePencils 1\n                -shadows 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"camera_raccoons\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
+		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"camera_binoculars\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 0\n            -nurbsSurfaces 0\n            -polymeshes 1\n            -subdivSurfaces 0\n            -planes 0\n            -lights 0\n            -cameras 0\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 0\n"
 		+ "            -joints 0\n            -ikHandles 0\n            -deformers 0\n            -dynamics 0\n            -particleInstancers 1\n            -fluids 0\n            -hairSystems 0\n            -follicles 0\n            -nCloths 0\n            -nParticles 0\n            -nRigids 0\n            -dynamicConstraints 0\n            -locators 0\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 0\n            -handles 0\n            -pivots 0\n            -textures 0\n            -strokes 0\n            -motionTrails 0\n            -clipGhosts 0\n            -greasePencils 1\n            -shadows 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels `;\n"
 		+ "\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"side\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n"
@@ -379,8 +397,8 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n"
 		+ "                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n"
 		+ "        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"vertical2\\\" -ps 1 49 100 -ps 2 51 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Top View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"camera_raccoons\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 0\\n    -polymeshes 1\\n    -subdivSurfaces 0\\n    -planes 0\\n    -lights 0\\n    -cameras 0\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 0\\n    -dynamics 0\\n    -particleInstancers 1\\n    -fluids 0\\n    -hairSystems 0\\n    -follicles 0\\n    -nCloths 0\\n    -nParticles 0\\n    -nRigids 0\\n    -dynamicConstraints 0\\n    -locators 0\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 0\\n    -handles 0\\n    -pivots 0\\n    -textures 0\\n    -strokes 0\\n    -motionTrails 0\\n    -clipGhosts 0\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"camera_raccoons\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 0\\n    -polymeshes 1\\n    -subdivSurfaces 0\\n    -planes 0\\n    -lights 0\\n    -cameras 0\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 0\\n    -dynamics 0\\n    -particleInstancers 1\\n    -fluids 0\\n    -hairSystems 0\\n    -follicles 0\\n    -nCloths 0\\n    -nParticles 0\\n    -nRigids 0\\n    -dynamicConstraints 0\\n    -locators 0\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 0\\n    -handles 0\\n    -pivots 0\\n    -textures 0\\n    -strokes 0\\n    -motionTrails 0\\n    -clipGhosts 0\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"camera_binoculars\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 0\\n    -polymeshes 1\\n    -subdivSurfaces 0\\n    -planes 0\\n    -lights 0\\n    -cameras 0\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 0\\n    -dynamics 0\\n    -particleInstancers 1\\n    -fluids 0\\n    -hairSystems 0\\n    -follicles 0\\n    -nCloths 0\\n    -nParticles 0\\n    -nRigids 0\\n    -dynamicConstraints 0\\n    -locators 0\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 0\\n    -handles 0\\n    -pivots 0\\n    -textures 0\\n    -strokes 0\\n    -motionTrails 0\\n    -clipGhosts 0\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"camera_binoculars\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 0\\n    -polymeshes 1\\n    -subdivSurfaces 0\\n    -planes 0\\n    -lights 0\\n    -cameras 0\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 0\\n    -dynamics 0\\n    -particleInstancers 1\\n    -fluids 0\\n    -hairSystems 0\\n    -follicles 0\\n    -nCloths 0\\n    -nParticles 0\\n    -nRigids 0\\n    -dynamicConstraints 0\\n    -locators 0\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 0\\n    -handles 0\\n    -pivots 0\\n    -textures 0\\n    -strokes 0\\n    -motionTrails 0\\n    -clipGhosts 0\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
 		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
@@ -393,13 +411,16 @@ createNode reference -n "leavesRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"leavesRN"
 		"leavesRN" 0
-		"leavesRN" 4
+		"leavesRN" 7
 		2 "|leaves:SH20_3_br1_NL_INV" "visibility" " 1"
-		2 "|leaves:SH20_3_br1_NL_INV" "translate" " -type \"double3\" 6.952367 -24.112851 380.249747"
+		2 "|leaves:SH20_3_br1_NL_INV" "translate" " -type \"double3\" -10.71413459130013734 37.38511130543248129 385.76715733785988505"
 		
+		2 "|leaves:SH20_3_br1_NL_INV" "translateX" " -av"
+		2 "|leaves:SH20_3_br1_NL_INV" "translateY" " -av"
+		2 "|leaves:SH20_3_br1_NL_INV" "translateZ" " -av"
 		2 "|leaves:SH20_3_br1_NL_INV" "rotate" " -type \"double3\" 0 89.758527 0"
 		
-		2 "|leaves:SH20_3_br1_NL_INV" "scale" " -type \"double3\" 5.959685 2.56748 4.044161";
+		2 "|leaves:SH20_3_br1_NL_INV" "scale" " -type \"double3\" 6.67183654992838981 2.76247263969077972 -4.044";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "Tuffs005RN";
@@ -407,86 +428,89 @@ createNode reference -n "Tuffs005RN";
 		"Tuffs005RN"
 		"Tuffs005RN" 0
 		"Tuffs005RN" 53
-		2 "|Tuffs005:top1" "visibility" " 1"
-		2 "|Tuffs005:left_pinkie" "visibility" " 1"
-		2 "|Tuffs005:left_ring" "visibility" " 1"
-		2 "|Tuffs005:left_middle" "visibility" " 1"
-		2 "|Tuffs005:left_index" "visibility" " 1"
-		2 "|Tuffs005:left_thumb" "visibility" " 1"
-		2 "|Tuffs005:RightLegHandle" "visibility" " 1"
-		2 "|Tuffs005:LeftArm" "visibility" " 1"
-		2 "|Tuffs005:RightArm" "visibility" " 1"
-		2 "|Tuffs005:LeftLeg" "visibility" " 1"
-		2 "|Tuffs005:RightLeg" "visibility" " 1"
-		2 "|Tuffs005:Tuffs002:TuffsMesh" "visibility" " -av 1"
-		2 "|Tuffs005:Tuffs002:TuffsMesh|Tuffs005:Tuffs002:transform2" "visibility" 
+		2 "|tuffs_latest:top1" "visibility" " 1"
+		2 "|tuffs_latest:left_pinkie" "visibility" " 1"
+		2 "|tuffs_latest:left_ring" "visibility" " 1"
+		2 "|tuffs_latest:left_middle" "visibility" " 1"
+		2 "|tuffs_latest:left_index" "visibility" " 1"
+		2 "|tuffs_latest:left_thumb" "visibility" " 1"
+		2 "|tuffs_latest:RightLegHandle" "visibility" " 1"
+		2 "|tuffs_latest:LeftArm" "visibility" " 1"
+		2 "|tuffs_latest:RightArm" "visibility" " 1"
+		2 "|tuffs_latest:LeftLeg" "visibility" " 1"
+		2 "|tuffs_latest:RightLeg" "visibility" " 1"
+		2 "|tuffs_latest:Tuffs002:TuffsMesh" "visibility" " -av 1"
+		2 "|tuffs_latest:Tuffs002:TuffsMesh|tuffs_latest:Tuffs002:transform2" "visibility" 
 		" 1"
-		2 "|Tuffs005:Tuffs002:top1" "visibility" " 1"
-		2 "|Tuffs005:Tuffs002:Tuffs_Mesh" "visibility" " 1"
-		2 "|Tuffs005:LeftLegHandle" "visibility" " 1"
-		2 "|Tuffs005:right_thumb" "visibility" " 1"
-		2 "|Tuffs005:right_index" "visibility" " 1"
-		2 "|Tuffs005:right_middle" "visibility" " 1"
-		2 "|Tuffs005:right_ring" "visibility" " 1"
-		2 "|Tuffs005:right_pinky" "visibility" " 1"
-		2 "|Tuffs005:LeftArmHandle" "visibility" " 1"
-		2 "|Tuffs005:RightArmHandle" "visibility" " 1"
-		2 "|Tuffs005:controller_root" "translate" " -type \"double3\" -19.497105 -6.365443 375.080188"
+		2 "|tuffs_latest:Tuffs002:top1" "visibility" " 1"
+		2 "|tuffs_latest:Tuffs002:Tuffs_Mesh" "visibility" " 1"
+		2 "|tuffs_latest:LeftLegHandle" "visibility" " 1"
+		2 "|tuffs_latest:right_thumb" "visibility" " 1"
+		2 "|tuffs_latest:right_index" "visibility" " 1"
+		2 "|tuffs_latest:right_middle" "visibility" " 1"
+		2 "|tuffs_latest:right_ring" "visibility" " 1"
+		2 "|tuffs_latest:right_pinky" "visibility" " 1"
+		2 "|tuffs_latest:LeftArmHandle" "visibility" " 1"
+		2 "|tuffs_latest:RightArmHandle" "visibility" " 1"
+		2 "|tuffs_latest:controller_root" "translate" " -type \"double3\" -19.497105 -6.365443 375.080188"
 		
-		2 "|Tuffs005:controller_root" "rotate" " -type \"double3\" 0 182.350703 0"
+		2 "|tuffs_latest:controller_root" "rotate" " -type \"double3\" 0 182.350703 0"
 		
-		2 "|Tuffs005:controller_root|Tuffs005:controller_COG" "translate" " -type \"double3\" 0 0 0"
+		2 "|tuffs_latest:controller_root|tuffs_latest:controller_COG" "translate" 
+		" -type \"double3\" 0 0 0"
+		2 "|tuffs_latest:controller_root|tuffs_latest:controller_COG" "translateX" 
+		" -av"
+		2 "|tuffs_latest:controller_root|tuffs_latest:controller_COG" "translateY" 
+		" -av"
+		2 "|tuffs_latest:controller_root|tuffs_latest:controller_COG" "translateZ" 
+		" -av"
+		2 "|tuffs_latest:controller_root|tuffs_latest:controller_COG" "rotate" " -type \"double3\" 0 360 0"
 		
-		2 "|Tuffs005:controller_root|Tuffs005:controller_COG" "translateY" " -av"
+		2 "|tuffs_latest:controller_root|tuffs_latest:controller_COG" "rotateX" " -av"
 		
-		2 "|Tuffs005:controller_root|Tuffs005:controller_COG" "translateZ" " -av"
+		2 "|tuffs_latest:controller_root|tuffs_latest:controller_COG" "rotateY" " -av"
 		
-		2 "|Tuffs005:controller_root|Tuffs005:controller_COG" "translateX" " -av"
+		2 "|tuffs_latest:controller_root|tuffs_latest:controller_COG" "rotateZ" " -av"
 		
-		2 "|Tuffs005:controller_root|Tuffs005:controller_COG" "rotate" " -type \"double3\" 0 360 0"
-		
-		2 "|Tuffs005:controller_root|Tuffs005:controller_COG" "rotateZ" " -av"
-		2 "|Tuffs005:controller_root|Tuffs005:controller_COG" "rotateX" " -av"
-		2 "|Tuffs005:controller_root|Tuffs005:controller_COG" "rotateY" " -av"
-		2 "|Tuffs005:controller_root|Tuffs005:spine|Tuffs005:tail_joints|Tuffs005:leftButt|Tuffs005:leftHip|Tuffs005:leftKnee|Tuffs005:LeftCarpal|Tuffs005:LeftAnkle|Tuffs005:effector37" 
+		2 "|tuffs_latest:controller_root|tuffs_latest:spine|tuffs_latest:tail_joints|tuffs_latest:leftButt|tuffs_latest:leftHip|tuffs_latest:leftKnee|tuffs_latest:LeftCarpal|tuffs_latest:LeftAnkle|tuffs_latest:effector37" 
 		"visibility" " 1"
-		2 "|Tuffs005:controller_root|Tuffs005:spine|Tuffs005:tail_joints|Tuffs005:RightButt|Tuffs005:RightHip|Tuffs005:RightKnee|Tuffs005:RightCarpal|Tuffs005:RightAnkle|Tuffs005:Sneaks_010:effector54" 
+		2 "|tuffs_latest:controller_root|tuffs_latest:spine|tuffs_latest:tail_joints|tuffs_latest:RightButt|tuffs_latest:RightHip|tuffs_latest:RightKnee|tuffs_latest:RightCarpal|tuffs_latest:RightAnkle|tuffs_latest:Sneaks_010:effector54" 
 		"visibility" " 1"
-		2 "|Tuffs005:controller_root|Tuffs005:spine|Tuffs005:Spine2|Tuffs005:Spine3|Tuffs005:Spine4|Tuffs005:Shoulder|Tuffs005:leftArm|Tuffs005:leftElbow|Tuffs005:leftwrist|Tuffs005:leftpalm|Tuffs005:leftFingerJunction|Tuffs005:leftpinky|Tuffs005:Sneaks_010:joint11|Tuffs005:Sneaks_010:effector30" 
+		2 "|tuffs_latest:controller_root|tuffs_latest:spine|tuffs_latest:Spine2|tuffs_latest:Spine3|tuffs_latest:Spine4|tuffs_latest:Shoulder|tuffs_latest:leftArm|tuffs_latest:leftElbow|tuffs_latest:leftwrist|tuffs_latest:leftpalm|tuffs_latest:leftFingerJunction|tuffs_latest:leftpinky|tuffs_latest:Sneaks_010:joint11|tuffs_latest:Sneaks_010:effector30" 
 		"visibility" " 1"
-		2 "|Tuffs005:controller_root|Tuffs005:spine|Tuffs005:Spine2|Tuffs005:Spine3|Tuffs005:Spine4|Tuffs005:Shoulder|Tuffs005:leftArm|Tuffs005:leftElbow|Tuffs005:leftwrist|Tuffs005:leftpalm|Tuffs005:leftFingerJunction|Tuffs005:leftring|Tuffs005:Sneaks_010:joint14|Tuffs005:Sneaks_010:effector31" 
+		2 "|tuffs_latest:controller_root|tuffs_latest:spine|tuffs_latest:Spine2|tuffs_latest:Spine3|tuffs_latest:Spine4|tuffs_latest:Shoulder|tuffs_latest:leftArm|tuffs_latest:leftElbow|tuffs_latest:leftwrist|tuffs_latest:leftpalm|tuffs_latest:leftFingerJunction|tuffs_latest:leftring|tuffs_latest:Sneaks_010:joint14|tuffs_latest:Sneaks_010:effector31" 
 		"visibility" " 1"
-		2 "|Tuffs005:controller_root|Tuffs005:spine|Tuffs005:Spine2|Tuffs005:Spine3|Tuffs005:Spine4|Tuffs005:Shoulder|Tuffs005:leftArm|Tuffs005:leftElbow|Tuffs005:leftwrist|Tuffs005:leftpalm|Tuffs005:leftFingerJunction|Tuffs005:leftmiddle|Tuffs005:Sneaks_010:joint17|Tuffs005:Sneaks_010:effector32" 
+		2 "|tuffs_latest:controller_root|tuffs_latest:spine|tuffs_latest:Spine2|tuffs_latest:Spine3|tuffs_latest:Spine4|tuffs_latest:Shoulder|tuffs_latest:leftArm|tuffs_latest:leftElbow|tuffs_latest:leftwrist|tuffs_latest:leftpalm|tuffs_latest:leftFingerJunction|tuffs_latest:leftmiddle|tuffs_latest:Sneaks_010:joint17|tuffs_latest:Sneaks_010:effector32" 
 		"visibility" " 1"
-		2 "|Tuffs005:controller_root|Tuffs005:spine|Tuffs005:Spine2|Tuffs005:Spine3|Tuffs005:Spine4|Tuffs005:Shoulder|Tuffs005:leftArm|Tuffs005:leftElbow|Tuffs005:leftwrist|Tuffs005:leftpalm|Tuffs005:leftFingerJunction|Tuffs005:leftindex|Tuffs005:Sneaks_010:joint20|Tuffs005:Sneaks_010:effector33" 
+		2 "|tuffs_latest:controller_root|tuffs_latest:spine|tuffs_latest:Spine2|tuffs_latest:Spine3|tuffs_latest:Spine4|tuffs_latest:Shoulder|tuffs_latest:leftArm|tuffs_latest:leftElbow|tuffs_latest:leftwrist|tuffs_latest:leftpalm|tuffs_latest:leftFingerJunction|tuffs_latest:leftindex|tuffs_latest:Sneaks_010:joint20|tuffs_latest:Sneaks_010:effector33" 
 		"visibility" " 1"
-		2 "|Tuffs005:controller_root|Tuffs005:spine|Tuffs005:Spine2|Tuffs005:Spine3|Tuffs005:Spine4|Tuffs005:Shoulder|Tuffs005:leftArm|Tuffs005:leftElbow|Tuffs005:leftwrist|Tuffs005:leftpalm|Tuffs005:leftFingerJunction|Tuffs005:leftthumb|Tuffs005:Sneaks_010:joint23|Tuffs005:Sneaks_010:effector34" 
+		2 "|tuffs_latest:controller_root|tuffs_latest:spine|tuffs_latest:Spine2|tuffs_latest:Spine3|tuffs_latest:Spine4|tuffs_latest:Shoulder|tuffs_latest:leftArm|tuffs_latest:leftElbow|tuffs_latest:leftwrist|tuffs_latest:leftpalm|tuffs_latest:leftFingerJunction|tuffs_latest:leftthumb|tuffs_latest:Sneaks_010:joint23|tuffs_latest:Sneaks_010:effector34" 
 		"visibility" " 1"
-		2 "|Tuffs005:controller_root|Tuffs005:spine|Tuffs005:Spine2|Tuffs005:Spine3|Tuffs005:Spine4|Tuffs005:Shoulder|Tuffs005:leftArm|Tuffs005:leftElbow|Tuffs005:effector43" 
+		2 "|tuffs_latest:controller_root|tuffs_latest:spine|tuffs_latest:Spine2|tuffs_latest:Spine3|tuffs_latest:Spine4|tuffs_latest:Shoulder|tuffs_latest:leftArm|tuffs_latest:leftElbow|tuffs_latest:effector43" 
 		"visibility" " 1"
-		2 "|Tuffs005:controller_root|Tuffs005:spine|Tuffs005:Spine2|Tuffs005:Spine3|Tuffs005:Spine4|Tuffs005:Shoulder|Tuffs005:rightArm|Tuffs005:rightElbow|Tuffs005:rightwrist|Tuffs005:rightpalm|Tuffs005:rightFingerJunction|Tuffs005:rightpinky|Tuffs005:joint11|Tuffs005:effector30" 
+		2 "|tuffs_latest:controller_root|tuffs_latest:spine|tuffs_latest:Spine2|tuffs_latest:Spine3|tuffs_latest:Spine4|tuffs_latest:Shoulder|tuffs_latest:rightArm|tuffs_latest:rightElbow|tuffs_latest:rightwrist|tuffs_latest:rightpalm|tuffs_latest:rightFingerJunction|tuffs_latest:rightpinky|tuffs_latest:joint11|tuffs_latest:effector30" 
 		"visibility" " 1"
-		2 "|Tuffs005:controller_root|Tuffs005:spine|Tuffs005:Spine2|Tuffs005:Spine3|Tuffs005:Spine4|Tuffs005:Shoulder|Tuffs005:rightArm|Tuffs005:rightElbow|Tuffs005:rightwrist|Tuffs005:rightpalm|Tuffs005:rightFingerJunction|Tuffs005:rightpinky|Tuffs005:joint11|Tuffs005:effector42" 
+		2 "|tuffs_latest:controller_root|tuffs_latest:spine|tuffs_latest:Spine2|tuffs_latest:Spine3|tuffs_latest:Spine4|tuffs_latest:Shoulder|tuffs_latest:rightArm|tuffs_latest:rightElbow|tuffs_latest:rightwrist|tuffs_latest:rightpalm|tuffs_latest:rightFingerJunction|tuffs_latest:rightpinky|tuffs_latest:joint11|tuffs_latest:effector42" 
 		"visibility" " 1"
-		2 "|Tuffs005:controller_root|Tuffs005:spine|Tuffs005:Spine2|Tuffs005:Spine3|Tuffs005:Spine4|Tuffs005:Shoulder|Tuffs005:rightArm|Tuffs005:rightElbow|Tuffs005:rightwrist|Tuffs005:rightpalm|Tuffs005:rightFingerJunction|Tuffs005:rightring|Tuffs005:joint14|Tuffs005:effector31" 
+		2 "|tuffs_latest:controller_root|tuffs_latest:spine|tuffs_latest:Spine2|tuffs_latest:Spine3|tuffs_latest:Spine4|tuffs_latest:Shoulder|tuffs_latest:rightArm|tuffs_latest:rightElbow|tuffs_latest:rightwrist|tuffs_latest:rightpalm|tuffs_latest:rightFingerJunction|tuffs_latest:rightring|tuffs_latest:joint14|tuffs_latest:effector31" 
 		"visibility" " 1"
-		2 "|Tuffs005:controller_root|Tuffs005:spine|Tuffs005:Spine2|Tuffs005:Spine3|Tuffs005:Spine4|Tuffs005:Shoulder|Tuffs005:rightArm|Tuffs005:rightElbow|Tuffs005:rightwrist|Tuffs005:rightpalm|Tuffs005:rightFingerJunction|Tuffs005:rightring|Tuffs005:joint14|Tuffs005:effector41" 
+		2 "|tuffs_latest:controller_root|tuffs_latest:spine|tuffs_latest:Spine2|tuffs_latest:Spine3|tuffs_latest:Spine4|tuffs_latest:Shoulder|tuffs_latest:rightArm|tuffs_latest:rightElbow|tuffs_latest:rightwrist|tuffs_latest:rightpalm|tuffs_latest:rightFingerJunction|tuffs_latest:rightring|tuffs_latest:joint14|tuffs_latest:effector41" 
 		"visibility" " 1"
-		2 "|Tuffs005:controller_root|Tuffs005:spine|Tuffs005:Spine2|Tuffs005:Spine3|Tuffs005:Spine4|Tuffs005:Shoulder|Tuffs005:rightArm|Tuffs005:rightElbow|Tuffs005:rightwrist|Tuffs005:rightpalm|Tuffs005:rightFingerJunction|Tuffs005:rightmiddle|Tuffs005:joint17|Tuffs005:effector32" 
+		2 "|tuffs_latest:controller_root|tuffs_latest:spine|tuffs_latest:Spine2|tuffs_latest:Spine3|tuffs_latest:Spine4|tuffs_latest:Shoulder|tuffs_latest:rightArm|tuffs_latest:rightElbow|tuffs_latest:rightwrist|tuffs_latest:rightpalm|tuffs_latest:rightFingerJunction|tuffs_latest:rightmiddle|tuffs_latest:joint17|tuffs_latest:effector32" 
 		"visibility" " 1"
-		2 "|Tuffs005:controller_root|Tuffs005:spine|Tuffs005:Spine2|Tuffs005:Spine3|Tuffs005:Spine4|Tuffs005:Shoulder|Tuffs005:rightArm|Tuffs005:rightElbow|Tuffs005:rightwrist|Tuffs005:rightpalm|Tuffs005:rightFingerJunction|Tuffs005:rightmiddle|Tuffs005:joint17|Tuffs005:effector40" 
+		2 "|tuffs_latest:controller_root|tuffs_latest:spine|tuffs_latest:Spine2|tuffs_latest:Spine3|tuffs_latest:Spine4|tuffs_latest:Shoulder|tuffs_latest:rightArm|tuffs_latest:rightElbow|tuffs_latest:rightwrist|tuffs_latest:rightpalm|tuffs_latest:rightFingerJunction|tuffs_latest:rightmiddle|tuffs_latest:joint17|tuffs_latest:effector40" 
 		"visibility" " 1"
-		2 "|Tuffs005:controller_root|Tuffs005:spine|Tuffs005:Spine2|Tuffs005:Spine3|Tuffs005:Spine4|Tuffs005:Shoulder|Tuffs005:rightArm|Tuffs005:rightElbow|Tuffs005:rightwrist|Tuffs005:rightpalm|Tuffs005:rightFingerJunction|Tuffs005:rightindex|Tuffs005:joint20|Tuffs005:effector33" 
+		2 "|tuffs_latest:controller_root|tuffs_latest:spine|tuffs_latest:Spine2|tuffs_latest:Spine3|tuffs_latest:Spine4|tuffs_latest:Shoulder|tuffs_latest:rightArm|tuffs_latest:rightElbow|tuffs_latest:rightwrist|tuffs_latest:rightpalm|tuffs_latest:rightFingerJunction|tuffs_latest:rightindex|tuffs_latest:joint20|tuffs_latest:effector33" 
 		"visibility" " 1"
-		2 "|Tuffs005:controller_root|Tuffs005:spine|Tuffs005:Spine2|Tuffs005:Spine3|Tuffs005:Spine4|Tuffs005:Shoulder|Tuffs005:rightArm|Tuffs005:rightElbow|Tuffs005:rightwrist|Tuffs005:rightpalm|Tuffs005:rightFingerJunction|Tuffs005:rightindex|Tuffs005:joint20|Tuffs005:effector39" 
+		2 "|tuffs_latest:controller_root|tuffs_latest:spine|tuffs_latest:Spine2|tuffs_latest:Spine3|tuffs_latest:Spine4|tuffs_latest:Shoulder|tuffs_latest:rightArm|tuffs_latest:rightElbow|tuffs_latest:rightwrist|tuffs_latest:rightpalm|tuffs_latest:rightFingerJunction|tuffs_latest:rightindex|tuffs_latest:joint20|tuffs_latest:effector39" 
 		"visibility" " 1"
-		2 "|Tuffs005:controller_root|Tuffs005:spine|Tuffs005:Spine2|Tuffs005:Spine3|Tuffs005:Spine4|Tuffs005:Shoulder|Tuffs005:rightArm|Tuffs005:rightElbow|Tuffs005:rightwrist|Tuffs005:rightpalm|Tuffs005:rightFingerJunction|Tuffs005:rightthumb|Tuffs005:joint23|Tuffs005:effector34" 
+		2 "|tuffs_latest:controller_root|tuffs_latest:spine|tuffs_latest:Spine2|tuffs_latest:Spine3|tuffs_latest:Spine4|tuffs_latest:Shoulder|tuffs_latest:rightArm|tuffs_latest:rightElbow|tuffs_latest:rightwrist|tuffs_latest:rightpalm|tuffs_latest:rightFingerJunction|tuffs_latest:rightthumb|tuffs_latest:joint23|tuffs_latest:effector34" 
 		"visibility" " 1"
-		2 "|Tuffs005:controller_root|Tuffs005:spine|Tuffs005:Spine2|Tuffs005:Spine3|Tuffs005:Spine4|Tuffs005:Shoulder|Tuffs005:rightArm|Tuffs005:rightElbow|Tuffs005:rightwrist|Tuffs005:rightpalm|Tuffs005:rightFingerJunction|Tuffs005:rightthumb|Tuffs005:joint23|Tuffs005:effector38" 
+		2 "|tuffs_latest:controller_root|tuffs_latest:spine|tuffs_latest:Spine2|tuffs_latest:Spine3|tuffs_latest:Spine4|tuffs_latest:Shoulder|tuffs_latest:rightArm|tuffs_latest:rightElbow|tuffs_latest:rightwrist|tuffs_latest:rightpalm|tuffs_latest:rightFingerJunction|tuffs_latest:rightthumb|tuffs_latest:joint23|tuffs_latest:effector38" 
 		"visibility" " 1"
-		2 "|Tuffs005:controller_root|Tuffs005:spine|Tuffs005:Spine2|Tuffs005:Spine3|Tuffs005:Spine4|Tuffs005:Shoulder|Tuffs005:rightArm|Tuffs005:rightElbow|Tuffs005:rightwrist|Tuffs005:effector36" 
+		2 "|tuffs_latest:controller_root|tuffs_latest:spine|tuffs_latest:Spine2|tuffs_latest:Spine3|tuffs_latest:Spine4|tuffs_latest:Shoulder|tuffs_latest:rightArm|tuffs_latest:rightElbow|tuffs_latest:rightwrist|tuffs_latest:effector36" 
 		"visibility" " 1"
-		2 "|Tuffs005:controller_root|Tuffs005:spine|Tuffs005:Spine2|Tuffs005:Spine3|Tuffs005:Spine4|Tuffs005:Shoulder|Tuffs005:rightArm|Tuffs005:rightElbow|Tuffs005:effector44" 
+		2 "|tuffs_latest:controller_root|tuffs_latest:spine|tuffs_latest:Spine2|tuffs_latest:Spine3|tuffs_latest:Spine4|tuffs_latest:Shoulder|tuffs_latest:rightArm|tuffs_latest:rightElbow|tuffs_latest:effector44" 
 		"visibility" " 1";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
@@ -495,77 +519,77 @@ createNode reference -n "Sneaks_012RN";
 		"Sneaks_012RN"
 		"Sneaks_012RN" 0
 		"Sneaks_012RN" 44
-		2 "|Sneaks_012:controller_root" "translate" " -type \"double3\" -3.397666 -1.995577 365.089446"
+		2 "|sneaks_latest:controller_root" "translate" " -type \"double3\" -3.397666 -1.995577 365.089446"
 		
-		2 "|Sneaks_012:controller_root" "rotate" " -type \"double3\" 0 545.335989 0"
+		2 "|sneaks_latest:controller_root" "rotate" " -type \"double3\" 0 545.335989 0"
 		
-		2 "|Sneaks_012:controller_root|Sneaks_012:spine|Sneaks_012:tail_joints|Sneaks_012:leftButt|Sneaks_012:leftHip|Sneaks_012:leftKnee|Sneaks_012:LeftCarpal|Sneaks_012:LeftAnkle|Sneaks_012:effector27" 
+		2 "|sneaks_latest:controller_root|sneaks_latest:spine|sneaks_latest:tail_joints|sneaks_latest:leftButt|sneaks_latest:leftHip|sneaks_latest:leftKnee|sneaks_latest:LeftCarpal|sneaks_latest:LeftAnkle|sneaks_latest:effector27" 
 		"visibility" " 1"
-		2 "|Sneaks_012:controller_root|Sneaks_012:spine|Sneaks_012:tail_joints|Sneaks_012:RightButt|Sneaks_012:RightHip|Sneaks_012:RightKnee|Sneaks_012:RightCarpal|Sneaks_012:RightAnkle|Sneaks_012:effector54" 
+		2 "|sneaks_latest:controller_root|sneaks_latest:spine|sneaks_latest:tail_joints|sneaks_latest:RightButt|sneaks_latest:RightHip|sneaks_latest:RightKnee|sneaks_latest:RightCarpal|sneaks_latest:RightAnkle|sneaks_latest:effector54" 
 		"visibility" " 1"
-		2 "|Sneaks_012:controller_root|Sneaks_012:spine|Sneaks_012:Spine2|Sneaks_012:Spine3|Sneaks_012:Spine4|Sneaks_012:Shoulder|Sneaks_012:leftArm|Sneaks_012:leftElbow|Sneaks_012:leftwrist|Sneaks_012:leftpalm|Sneaks_012:leftFingerJunction|Sneaks_012:leftpinky|Sneaks_012:joint11|Sneaks_012:effector30" 
+		2 "|sneaks_latest:controller_root|sneaks_latest:spine|sneaks_latest:Spine2|sneaks_latest:Spine3|sneaks_latest:Spine4|sneaks_latest:Shoulder|sneaks_latest:leftArm|sneaks_latest:leftElbow|sneaks_latest:leftwrist|sneaks_latest:leftpalm|sneaks_latest:leftFingerJunction|sneaks_latest:leftpinky|sneaks_latest:joint11|sneaks_latest:effector30" 
 		"visibility" " 1"
-		2 "|Sneaks_012:controller_root|Sneaks_012:spine|Sneaks_012:Spine2|Sneaks_012:Spine3|Sneaks_012:Spine4|Sneaks_012:Shoulder|Sneaks_012:leftArm|Sneaks_012:leftElbow|Sneaks_012:leftwrist|Sneaks_012:leftpalm|Sneaks_012:leftFingerJunction|Sneaks_012:leftring|Sneaks_012:joint14|Sneaks_012:effector31" 
+		2 "|sneaks_latest:controller_root|sneaks_latest:spine|sneaks_latest:Spine2|sneaks_latest:Spine3|sneaks_latest:Spine4|sneaks_latest:Shoulder|sneaks_latest:leftArm|sneaks_latest:leftElbow|sneaks_latest:leftwrist|sneaks_latest:leftpalm|sneaks_latest:leftFingerJunction|sneaks_latest:leftring|sneaks_latest:joint14|sneaks_latest:effector31" 
 		"visibility" " 1"
-		2 "|Sneaks_012:controller_root|Sneaks_012:spine|Sneaks_012:Spine2|Sneaks_012:Spine3|Sneaks_012:Spine4|Sneaks_012:Shoulder|Sneaks_012:leftArm|Sneaks_012:leftElbow|Sneaks_012:leftwrist|Sneaks_012:leftpalm|Sneaks_012:leftFingerJunction|Sneaks_012:leftmiddle|Sneaks_012:joint17|Sneaks_012:effector32" 
+		2 "|sneaks_latest:controller_root|sneaks_latest:spine|sneaks_latest:Spine2|sneaks_latest:Spine3|sneaks_latest:Spine4|sneaks_latest:Shoulder|sneaks_latest:leftArm|sneaks_latest:leftElbow|sneaks_latest:leftwrist|sneaks_latest:leftpalm|sneaks_latest:leftFingerJunction|sneaks_latest:leftmiddle|sneaks_latest:joint17|sneaks_latest:effector32" 
 		"visibility" " 1"
-		2 "|Sneaks_012:controller_root|Sneaks_012:spine|Sneaks_012:Spine2|Sneaks_012:Spine3|Sneaks_012:Spine4|Sneaks_012:Shoulder|Sneaks_012:leftArm|Sneaks_012:leftElbow|Sneaks_012:leftwrist|Sneaks_012:leftpalm|Sneaks_012:leftFingerJunction|Sneaks_012:leftindex|Sneaks_012:joint20|Sneaks_012:effector33" 
+		2 "|sneaks_latest:controller_root|sneaks_latest:spine|sneaks_latest:Spine2|sneaks_latest:Spine3|sneaks_latest:Spine4|sneaks_latest:Shoulder|sneaks_latest:leftArm|sneaks_latest:leftElbow|sneaks_latest:leftwrist|sneaks_latest:leftpalm|sneaks_latest:leftFingerJunction|sneaks_latest:leftindex|sneaks_latest:joint20|sneaks_latest:effector33" 
 		"visibility" " 1"
-		2 "|Sneaks_012:controller_root|Sneaks_012:spine|Sneaks_012:Spine2|Sneaks_012:Spine3|Sneaks_012:Spine4|Sneaks_012:Shoulder|Sneaks_012:leftArm|Sneaks_012:leftElbow|Sneaks_012:leftwrist|Sneaks_012:leftpalm|Sneaks_012:leftFingerJunction|Sneaks_012:leftthumb|Sneaks_012:joint23|Sneaks_012:effector34" 
+		2 "|sneaks_latest:controller_root|sneaks_latest:spine|sneaks_latest:Spine2|sneaks_latest:Spine3|sneaks_latest:Spine4|sneaks_latest:Shoulder|sneaks_latest:leftArm|sneaks_latest:leftElbow|sneaks_latest:leftwrist|sneaks_latest:leftpalm|sneaks_latest:leftFingerJunction|sneaks_latest:leftthumb|sneaks_latest:joint23|sneaks_latest:effector34" 
 		"visibility" " 1"
-		2 "|Sneaks_012:controller_root|Sneaks_012:spine|Sneaks_012:Spine2|Sneaks_012:Spine3|Sneaks_012:Spine4|Sneaks_012:Shoulder|Sneaks_012:leftArm|Sneaks_012:leftElbow|Sneaks_012:leftwrist|Sneaks_012:effector36" 
+		2 "|sneaks_latest:controller_root|sneaks_latest:spine|sneaks_latest:Spine2|sneaks_latest:Spine3|sneaks_latest:Spine4|sneaks_latest:Shoulder|sneaks_latest:leftArm|sneaks_latest:leftElbow|sneaks_latest:leftwrist|sneaks_latest:effector36" 
 		"visibility" " 1"
-		2 "|Sneaks_012:controller_root|Sneaks_012:spine|Sneaks_012:Spine2|Sneaks_012:Spine3|Sneaks_012:Spine4|Sneaks_012:Shoulder|Sneaks_012:leftArm|Sneaks_012:leftElbow|Sneaks_012:effector35" 
+		2 "|sneaks_latest:controller_root|sneaks_latest:spine|sneaks_latest:Spine2|sneaks_latest:Spine3|sneaks_latest:Spine4|sneaks_latest:Shoulder|sneaks_latest:leftArm|sneaks_latest:leftElbow|sneaks_latest:effector35" 
 		"visibility" " 1"
-		2 "|Sneaks_012:controller_root|Sneaks_012:spine|Sneaks_012:Spine2|Sneaks_012:Spine3|Sneaks_012:Spine4|Sneaks_012:Shoulder|Sneaks_012:rightArm|Sneaks_012:rightElbow|Sneaks_012:rightWrist|Sneaks_012:rightPalm|Sneaks_012:rightFingerJunction|Sneaks_012:rightpinky|Sneaks_012:joint125|Sneaks_012:effector47" 
+		2 "|sneaks_latest:controller_root|sneaks_latest:spine|sneaks_latest:Spine2|sneaks_latest:Spine3|sneaks_latest:Spine4|sneaks_latest:Shoulder|sneaks_latest:rightArm|sneaks_latest:rightElbow|sneaks_latest:rightWrist|sneaks_latest:rightPalm|sneaks_latest:rightFingerJunction|sneaks_latest:rightpinky|sneaks_latest:joint125|sneaks_latest:effector47" 
 		"visibility" " 1"
-		2 "|Sneaks_012:controller_root|Sneaks_012:spine|Sneaks_012:Spine2|Sneaks_012:Spine3|Sneaks_012:Spine4|Sneaks_012:Shoulder|Sneaks_012:rightArm|Sneaks_012:rightElbow|Sneaks_012:rightWrist|Sneaks_012:rightPalm|Sneaks_012:rightFingerJunction|Sneaks_012:rightpinky|Sneaks_012:joint125|Sneaks_012:effector55" 
+		2 "|sneaks_latest:controller_root|sneaks_latest:spine|sneaks_latest:Spine2|sneaks_latest:Spine3|sneaks_latest:Spine4|sneaks_latest:Shoulder|sneaks_latest:rightArm|sneaks_latest:rightElbow|sneaks_latest:rightWrist|sneaks_latest:rightPalm|sneaks_latest:rightFingerJunction|sneaks_latest:rightpinky|sneaks_latest:joint125|sneaks_latest:effector55" 
 		"visibility" " 1"
-		2 "|Sneaks_012:controller_root|Sneaks_012:spine|Sneaks_012:Spine2|Sneaks_012:Spine3|Sneaks_012:Spine4|Sneaks_012:Shoulder|Sneaks_012:rightArm|Sneaks_012:rightElbow|Sneaks_012:rightWrist|Sneaks_012:rightPalm|Sneaks_012:rightFingerJunction|Sneaks_012:rightring|Sneaks_012:joint128|Sneaks_012:effector48" 
+		2 "|sneaks_latest:controller_root|sneaks_latest:spine|sneaks_latest:Spine2|sneaks_latest:Spine3|sneaks_latest:Spine4|sneaks_latest:Shoulder|sneaks_latest:rightArm|sneaks_latest:rightElbow|sneaks_latest:rightWrist|sneaks_latest:rightPalm|sneaks_latest:rightFingerJunction|sneaks_latest:rightring|sneaks_latest:joint128|sneaks_latest:effector48" 
 		"visibility" " 1"
-		2 "|Sneaks_012:controller_root|Sneaks_012:spine|Sneaks_012:Spine2|Sneaks_012:Spine3|Sneaks_012:Spine4|Sneaks_012:Shoulder|Sneaks_012:rightArm|Sneaks_012:rightElbow|Sneaks_012:rightWrist|Sneaks_012:rightPalm|Sneaks_012:rightFingerJunction|Sneaks_012:rightring|Sneaks_012:joint128|Sneaks_012:effector56" 
+		2 "|sneaks_latest:controller_root|sneaks_latest:spine|sneaks_latest:Spine2|sneaks_latest:Spine3|sneaks_latest:Spine4|sneaks_latest:Shoulder|sneaks_latest:rightArm|sneaks_latest:rightElbow|sneaks_latest:rightWrist|sneaks_latest:rightPalm|sneaks_latest:rightFingerJunction|sneaks_latest:rightring|sneaks_latest:joint128|sneaks_latest:effector56" 
 		"visibility" " 1"
-		2 "|Sneaks_012:controller_root|Sneaks_012:spine|Sneaks_012:Spine2|Sneaks_012:Spine3|Sneaks_012:Spine4|Sneaks_012:Shoulder|Sneaks_012:rightArm|Sneaks_012:rightElbow|Sneaks_012:rightWrist|Sneaks_012:rightPalm|Sneaks_012:rightFingerJunction|Sneaks_012:rightmiddle|Sneaks_012:joint131|Sneaks_012:effector49" 
+		2 "|sneaks_latest:controller_root|sneaks_latest:spine|sneaks_latest:Spine2|sneaks_latest:Spine3|sneaks_latest:Spine4|sneaks_latest:Shoulder|sneaks_latest:rightArm|sneaks_latest:rightElbow|sneaks_latest:rightWrist|sneaks_latest:rightPalm|sneaks_latest:rightFingerJunction|sneaks_latest:rightmiddle|sneaks_latest:joint131|sneaks_latest:effector49" 
 		"visibility" " 1"
-		2 "|Sneaks_012:controller_root|Sneaks_012:spine|Sneaks_012:Spine2|Sneaks_012:Spine3|Sneaks_012:Spine4|Sneaks_012:Shoulder|Sneaks_012:rightArm|Sneaks_012:rightElbow|Sneaks_012:rightWrist|Sneaks_012:rightPalm|Sneaks_012:rightFingerJunction|Sneaks_012:rightmiddle|Sneaks_012:joint131|Sneaks_012:effector57" 
+		2 "|sneaks_latest:controller_root|sneaks_latest:spine|sneaks_latest:Spine2|sneaks_latest:Spine3|sneaks_latest:Spine4|sneaks_latest:Shoulder|sneaks_latest:rightArm|sneaks_latest:rightElbow|sneaks_latest:rightWrist|sneaks_latest:rightPalm|sneaks_latest:rightFingerJunction|sneaks_latest:rightmiddle|sneaks_latest:joint131|sneaks_latest:effector57" 
 		"visibility" " 1"
-		2 "|Sneaks_012:controller_root|Sneaks_012:spine|Sneaks_012:Spine2|Sneaks_012:Spine3|Sneaks_012:Spine4|Sneaks_012:Shoulder|Sneaks_012:rightArm|Sneaks_012:rightElbow|Sneaks_012:rightWrist|Sneaks_012:rightPalm|Sneaks_012:rightFingerJunction|Sneaks_012:rightindex|Sneaks_012:joint134|Sneaks_012:effector50" 
+		2 "|sneaks_latest:controller_root|sneaks_latest:spine|sneaks_latest:Spine2|sneaks_latest:Spine3|sneaks_latest:Spine4|sneaks_latest:Shoulder|sneaks_latest:rightArm|sneaks_latest:rightElbow|sneaks_latest:rightWrist|sneaks_latest:rightPalm|sneaks_latest:rightFingerJunction|sneaks_latest:rightindex|sneaks_latest:joint134|sneaks_latest:effector50" 
 		"visibility" " 1"
-		2 "|Sneaks_012:controller_root|Sneaks_012:spine|Sneaks_012:Spine2|Sneaks_012:Spine3|Sneaks_012:Spine4|Sneaks_012:Shoulder|Sneaks_012:rightArm|Sneaks_012:rightElbow|Sneaks_012:rightWrist|Sneaks_012:rightPalm|Sneaks_012:rightFingerJunction|Sneaks_012:rightindex|Sneaks_012:joint134|Sneaks_012:effector58" 
+		2 "|sneaks_latest:controller_root|sneaks_latest:spine|sneaks_latest:Spine2|sneaks_latest:Spine3|sneaks_latest:Spine4|sneaks_latest:Shoulder|sneaks_latest:rightArm|sneaks_latest:rightElbow|sneaks_latest:rightWrist|sneaks_latest:rightPalm|sneaks_latest:rightFingerJunction|sneaks_latest:rightindex|sneaks_latest:joint134|sneaks_latest:effector58" 
 		"visibility" " 1"
-		2 "|Sneaks_012:controller_root|Sneaks_012:spine|Sneaks_012:Spine2|Sneaks_012:Spine3|Sneaks_012:Spine4|Sneaks_012:Shoulder|Sneaks_012:rightArm|Sneaks_012:rightElbow|Sneaks_012:rightWrist|Sneaks_012:rightPalm|Sneaks_012:rightFingerJunction|Sneaks_012:rightthumb|Sneaks_012:joint137|Sneaks_012:effector51" 
+		2 "|sneaks_latest:controller_root|sneaks_latest:spine|sneaks_latest:Spine2|sneaks_latest:Spine3|sneaks_latest:Spine4|sneaks_latest:Shoulder|sneaks_latest:rightArm|sneaks_latest:rightElbow|sneaks_latest:rightWrist|sneaks_latest:rightPalm|sneaks_latest:rightFingerJunction|sneaks_latest:rightthumb|sneaks_latest:joint137|sneaks_latest:effector51" 
 		"visibility" " 1"
-		2 "|Sneaks_012:controller_root|Sneaks_012:spine|Sneaks_012:Spine2|Sneaks_012:Spine3|Sneaks_012:Spine4|Sneaks_012:Shoulder|Sneaks_012:rightArm|Sneaks_012:rightElbow|Sneaks_012:rightWrist|Sneaks_012:rightPalm|Sneaks_012:rightFingerJunction|Sneaks_012:rightthumb|Sneaks_012:joint137|Sneaks_012:effector59" 
+		2 "|sneaks_latest:controller_root|sneaks_latest:spine|sneaks_latest:Spine2|sneaks_latest:Spine3|sneaks_latest:Spine4|sneaks_latest:Shoulder|sneaks_latest:rightArm|sneaks_latest:rightElbow|sneaks_latest:rightWrist|sneaks_latest:rightPalm|sneaks_latest:rightFingerJunction|sneaks_latest:rightthumb|sneaks_latest:joint137|sneaks_latest:effector59" 
 		"visibility" " 1"
-		2 "|Sneaks_012:controller_root|Sneaks_012:spine|Sneaks_012:Spine2|Sneaks_012:Spine3|Sneaks_012:Spine4|Sneaks_012:Shoulder|Sneaks_012:rightArm|Sneaks_012:rightElbow|Sneaks_012:rightWrist|Sneaks_012:effector52" 
+		2 "|sneaks_latest:controller_root|sneaks_latest:spine|sneaks_latest:Spine2|sneaks_latest:Spine3|sneaks_latest:Spine4|sneaks_latest:Shoulder|sneaks_latest:rightArm|sneaks_latest:rightElbow|sneaks_latest:rightWrist|sneaks_latest:effector52" 
 		"visibility" " 1"
-		2 "|Sneaks_012:controller_root|Sneaks_012:spine|Sneaks_012:Spine2|Sneaks_012:Spine3|Sneaks_012:Spine4|Sneaks_012:Shoulder|Sneaks_012:rightArm|Sneaks_012:rightElbow|Sneaks_012:effector53" 
+		2 "|sneaks_latest:controller_root|sneaks_latest:spine|sneaks_latest:Spine2|sneaks_latest:Spine3|sneaks_latest:Spine4|sneaks_latest:Shoulder|sneaks_latest:rightArm|sneaks_latest:rightElbow|sneaks_latest:effector53" 
 		"visibility" " 1"
-		2 "|Sneaks_012:left_pinkie" "visibility" " 1"
-		2 "|Sneaks_012:left_ring" "visibility" " 1"
-		2 "|Sneaks_012:left_middle" "visibility" " 1"
-		2 "|Sneaks_012:left_index" "visibility" " 1"
-		2 "|Sneaks_012:left_thumb" "visibility" " 1"
-		2 "|Sneaks_012:left_arm" "visibility" " 1"
-		2 "|Sneaks_012:left_wrist" "visibility" " 1"
-		2 "|Sneaks_012:left_wrist" "translate" " -type \"double3\" -6.70834399980527607 -2.52227725209285669 359.81785162117364507"
+		2 "|sneaks_latest:left_pinkie" "visibility" " 1"
+		2 "|sneaks_latest:left_ring" "visibility" " 1"
+		2 "|sneaks_latest:left_middle" "visibility" " 1"
+		2 "|sneaks_latest:left_index" "visibility" " 1"
+		2 "|sneaks_latest:left_thumb" "visibility" " 1"
+		2 "|sneaks_latest:left_arm" "visibility" " 1"
+		2 "|sneaks_latest:left_wrist" "visibility" " 1"
+		2 "|sneaks_latest:left_wrist" "translate" " -type \"double3\" -6.70834399980519702 -2.52227725209267017 359.81785162117353138"
 		
-		2 "|Sneaks_012:left_wrist" "rotate" " -type \"double3\" 3.28123364846534527 184.96091196581849658 1.84117576505525626"
+		2 "|sneaks_latest:left_wrist" "rotate" " -type \"double3\" 3.28123364844516763 184.96091196581264171 1.84117576506062508"
 		
-		2 "|Sneaks_012:leg_right" "visibility" " 1"
-		2 "|Sneaks_012:Sneakio002:Sneakio_Main_Mesh" "visibility" " 1"
-		2 "|Sneaks_012:RightArmHandle" "visibility" " 1"
-		2 "|Sneaks_012:RightHandHandle" "visibility" " 1"
-		2 "|Sneaks_012:RightHandHandle" "translate" " -type \"double3\" -1.08295412151731885 -2.58974644120039965 359.27918427692083014"
+		2 "|sneaks_latest:leg_right" "visibility" " 1"
+		2 "|sneaks_latest:Sneakio002:Sneakio_Main_Mesh" "visibility" " 1"
+		2 "|sneaks_latest:RightArmHandle" "visibility" " 1"
+		2 "|sneaks_latest:RightHandHandle" "visibility" " 1"
+		2 "|sneaks_latest:RightHandHandle" "translate" " -type \"double3\" -1.08295412151731707 -2.58974644120030995 359.27918427692088699"
 		
-		2 "|Sneaks_012:RightHandHandle" "rotate" " -type \"double3\" 0.5855197937224641 179.45252740056372431 0.45196687072377406"
+		2 "|sneaks_latest:RightHandHandle" "rotate" " -type \"double3\" 0.5855197937129224 179.45252740056386642 0.4519668707223492"
 		
-		2 "|Sneaks_012:RightLegHandle" "visibility" " 1"
-		2 "|Sneaks_012:RightPinky" "visibility" " 1"
-		2 "|Sneaks_012:RightRing" "visibility" " 1"
-		2 "|Sneaks_012:RightMiddle" "visibility" " 1"
-		2 "|Sneaks_012:RightIndex" "visibility" " 1"
-		2 "|Sneaks_012:RightThumb" "visibility" " 1";
+		2 "|sneaks_latest:RightLegHandle" "visibility" " 1"
+		2 "|sneaks_latest:RightPinky" "visibility" " 1"
+		2 "|sneaks_latest:RightRing" "visibility" " 1"
+		2 "|sneaks_latest:RightMiddle" "visibility" " 1"
+		2 "|sneaks_latest:RightIndex" "visibility" " 1"
+		2 "|sneaks_latest:RightThumb" "visibility" " 1";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode FurGlobals -n "defaultFurGlobals";
@@ -574,81 +598,48 @@ createNode FurGlobals -n "defaultFurGlobals";
 	setAttr ".av" 2;
 	setAttr ".rep" -type "string" "renderData/fur/furEqualMap/outside_house";
 	setAttr ".pjl" -type "string" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya";
-createNode reference -n "PigRig003RN";
-	setAttr -s 4 ".fn";
-	setAttr ".fn[0]" -type "string" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/pig/rig/rig_flexi001.ma";
-	setAttr ".fn[1]" -type "string" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/pig/rig/rig_flexi002.ma";
-	setAttr ".fn[2]" -type "string" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/pig/rig/rig_tracker001.ma";
-	setAttr ".fn[3]" -type "string" "/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/pig/rig/PigRig003.ma";
-	setAttr ".phl[1]" 0;
-	setAttr ".ed" -type "dataReferenceEdits" 
-		"PigRig003RN"
-		"PigRig003:Tyrion_Cattister_uv:Tyrion_CattisterRN" 0
-		"PigRig003RN" 1
-		2 "|PigRig003:controller_main01" "translate" " -type \"double3\" 0 -2.718011 -0.550229"
-		
-		"PigRig003RN" 7
-		2 "|PigRig003:PIG" "translate" " -type \"double3\" 40.9930763590536742 13.67707122590740632 -4.72714115182539185"
-		
-		2 "|PigRig003:PIG" "rotate" " -type \"double3\" 16.31634745519120244 -82.05726486785766838 -14.24826413954347615"
-		
-		2 "|PigRig003:PIG|PigRig003:pig" "translate" " -type \"double3\" 0 22.121696 0"
-		
-		2 "|PigRig003:PIG|PigRig003:pig|PigRig003:left_eye" "translate" " -type \"double3\" 0 0 0"
-		
-		2 "|PigRig003:PIG|PigRig003:pig|PigRig003:right_eye" "translate" " -type \"double3\" 0 0 0"
-		
-		3 ":defaultRenderGlobals.rendercallback" "PigRig003:defaultFurGlobals.callback" 
-		""
-		5 4 "PigRig003RN" "PigRig003:defaultFurGlobals.furNodeList" "PigRig003RN.placeHolderList[1]" 
-		"";
-	setAttr ".ptag" -type "string" "";
-lockNode -l 1 ;
 createNode vectorRenderGlobals -s -n "vectorRenderGlobals23";
-createNode reference -n "sharedReferenceNode";
-	setAttr ".ed" -type "dataReferenceEdits" 
-		"sharedReferenceNode";
 createNode vectorRenderGlobals -s -n "vectorRenderGlobals24";
 createNode reference -n "fancy_old_key_3RN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"fancy_old_key_3RN"
-		"fancy_old_key_3RN" 0
-		"fancy_old_key_3RN" 4
+		"fancy_old_key_3RN" 10
 		2 "|fancy_old_key_3:Lattice_37" "visibility" " 1"
-		2 "|fancy_old_key_3:Lattice_37" "translate" " -type \"double3\" 40.01417375674775911 38.66905524264573302 -3.80196356408119529"
+		2 "|fancy_old_key_3:Lattice_37" "translate" " -type \"double3\" 40.95984462559252393 33.44368058018441303 6.33355300528059306"
 		
-		2 "|fancy_old_key_3:Lattice_37" "rotate" " -type \"double3\" 21.23667596384273182 -135.35319712422943894 -11.49739189261578787"
+		2 "|fancy_old_key_3:Lattice_37" "rotate" " -type \"double3\" 30.80493861451212112 -44.98418218264540513 -22.85476351310363086"
 		
-		2 "|fancy_old_key_3:Lattice_37" "scale" " -type \"double3\" 0.15 0.15 0.15";
+		2 "|fancy_old_key_3:Lattice_37" "scale" " -type \"double3\" 0.1 0.1 0.1"
+		2 "|fancy_old_key_3:Lattice_37" "rotatePivot" " -type \"double3\" 0.50799304246902466 0.80860514640808023 -0.13970685005187988"
+		
+		2 "|fancy_old_key_3:Lattice_37" "rotatePivotTranslate" " -type \"double3\" 0 -0.0043058587556285555 0.30238119538884461"
+		
+		2 "|fancy_old_key_3:Lattice_37" "scalePivot" " -type \"double3\" 5.07993042469024658 8.08605146408081055 -1.39706850051879883"
+		
+		2 "|fancy_old_key_3:Lattice_37" "scalePivotTranslate" " -type \"double3\" -4.57193738222122192 -7.2774463176727302 1.25736165046691895"
+		
+		2 "|fancy_old_key_3:Lattice_37|fancy_old_key_3:Lattice_37Shape" "dispResolution" 
+		" 1"
+		2 "|fancy_old_key_3:Lattice_37|fancy_old_key_3:Lattice_37Shape" "displaySmoothMesh" 
+		" 0"
+		"fancy_old_key_3RN" 3
+		2 "|key_latest:Obj_000003" "translate" " -type \"double3\" 35.2963517198108292 35.7354044952636869 7.74948600257905262"
+		
+		2 "|key_latest:Obj_000003" "rotate" " -type \"double3\" -5.8208980968373174 -37.99067415503203904 0.66720758956000625"
+		
+		2 "|key_latest:Obj_000003" "scale" " -type \"double3\" 0.03 0.03 0.03";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "Smarty003RN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"Smarty003RN"
-		"Smarty003RN" 0
-		"Smarty003RN" 27
-		2 "|Smarty003:_UNKNOWN_REF_NODE_fosterParent1" "visibility" " 1"
-		2 "|Smarty003:turntable" "visibility" " 1"
-		2 "|Smarty003:turntable|Smarty003:turnTableCamera1" "visibility" " 1"
-		2 "|Smarty003:turntable|Smarty003:turnTableCamera1|Smarty003:turnTableCamera1Shape" 
-		"depth" " 0"
-		2 "|Smarty003:turntable|Smarty003:turnTableCamera1|Smarty003:turnTableCamera1Shape" 
-		"mask" " 1"
-		2 "|Smarty003:Smarty" "visibility" " 1"
+		"Smarty003RN" 18
 		2 "|Smarty003:Smarty|Smarty003:Glasses|Smarty003:Glasses|Smarty003:GlassesL|Smarty003:transform42" 
 		"visibility" " 1"
 		2 "|Smarty003:Smarty|Smarty003:Glasses|Smarty003:Glasses|Smarty003:GlassesR|Smarty003:transform41" 
 		"visibility" " 1"
 		2 "|Smarty003:Smarty|Smarty003:Glasses|Smarty003:Glasses|Smarty003:GlassesFrame|Smarty003:transform43" 
 		"visibility" " 1"
-		2 "|Smarty003:Smarty|Smarty003:Glasses|Smarty003:Glasses|Smarty003:glass|Smarty003:glassR" 
-		"visibility" " 1"
-		2 "|Smarty003:Smarty|Smarty003:Glasses|Smarty003:Glasses|Smarty003:glass|Smarty003:glassL" 
-		"visibility" " 1"
-		2 "|Smarty003:Smarty|Smarty003:Glasses|Smarty003:polySurface44" "visibility" 
-		" 1"
-		2 "|Smarty003:Smarty|Smarty003:BowTie|Smarty003:bowTie" "visibility" " 1"
-		
 		2 "|Smarty003:Smarty|Smarty003:Smarty1|Smarty003:transform45" "visibility" 
 		" 1"
 		2 "|Smarty003:polySurface47" "translate" " -type \"double3\" 5.761802 3.119924 369.472528"
@@ -664,12 +655,39 @@ createNode reference -n "Smarty003RN";
 		"visibility" " 1"
 		2 "|Smarty003:rootJ|Smarty003:hip|Smarty003:thighLJ1|Smarty003:kneeLJ1|Smarty003:effector8" 
 		"visibility" " 1"
-		2 "|Smarty003:leftArm_ik" "visibility" " 1"
-		2 "|Smarty003:rightArm_ik" "visibility" " 1"
 		2 "|Smarty003:leftFoot_ik" "visibility" " 1"
 		2 "|Smarty003:rightFoot_ik" "visibility" " 1"
-		2 "|Smarty003:cog_ctrl" "visibility" " 1"
-		2 "|Smarty003:global_ctrl" "visibility" " 1";
+		2 "|Smarty003:SmartyRig|Smarty003:global_ctrl|Smarty003:cog_ctrl" "visibility" 
+		" 1"
+		2 "|Smarty003:SmartyRig|Smarty003:global_ctrl" "visibility" " 1"
+		2 "|smarty_latest:turntable|smarty_latest:turnTableCamera1" "visibility" 
+		" 1"
+		2 "|smarty_latest:turntable|smarty_latest:turnTableCamera1|smarty_latest:turnTableCamera1Shape" 
+		"depth" " 0"
+		2 "|smarty_latest:turntable|smarty_latest:turnTableCamera1|smarty_latest:turnTableCamera1Shape" 
+		"mask" " 1"
+		"Smarty003RN" 12
+		2 "|smarty_latest:_UNKNOWN_REF_NODE_fosterParent1" "visibility" " 1"
+		2 "|smarty_latest:turntable" "visibility" " 1"
+		2 "|smarty_latest:SmartyRig|smarty_latest:Smarty" "visibility" " 1"
+		2 "|smarty_latest:SmartyRig|smarty_latest:global_ctrl" "translate" " -type \"double3\" 11.00121186977606058 0.017040793894327777 358.77375765861233958"
+		
+		2 "|smarty_latest:SmartyRig|smarty_latest:global_ctrl" "rotate" " -type \"double3\" 0 -170.74542718866092628 0"
+		
+		2 "|smarty_latest:SmartyRig|smarty_latest:global_ctrl" "scale" " -type \"double3\" 0.75 0.75 0.75"
+		
+		2 "|smarty_latest:SmartyRig|smarty_latest:global_ctrl|smarty_latest:cog_ctrl|smarty_latest:back_ctrl|smarty_latest:chest_ctrl|smarty_latest:head_ctrl|smarty_latest:Glasses|smarty_latest:Glasses|smarty_latest:glass|smarty_latest:glassR" 
+		"visibility" " 1"
+		2 "|smarty_latest:SmartyRig|smarty_latest:global_ctrl|smarty_latest:cog_ctrl|smarty_latest:back_ctrl|smarty_latest:chest_ctrl|smarty_latest:head_ctrl|smarty_latest:Glasses|smarty_latest:Glasses|smarty_latest:glass|smarty_latest:glassL" 
+		"visibility" " 1"
+		2 "|smarty_latest:SmartyRig|smarty_latest:global_ctrl|smarty_latest:cog_ctrl|smarty_latest:back_ctrl|smarty_latest:chest_ctrl|smarty_latest:head_ctrl|smarty_latest:Glasses|smarty_latest:polySurface44" 
+		"visibility" " 1"
+		2 "|smarty_latest:SmartyRig|smarty_latest:global_ctrl|smarty_latest:cog_ctrl|smarty_latest:back_ctrl|smarty_latest:chest_ctrl|smarty_latest:BowTie|smarty_latest:bowTie" 
+		"visibility" " 1"
+		2 "|smarty_latest:SmartyRig|smarty_latest:global_ctrl|smarty_latest:leftLeg_ik|smarty_latest:leftArm_ik" 
+		"visibility" " 1"
+		2 "|smarty_latest:SmartyRig|smarty_latest:global_ctrl|smarty_latest:rightArm_ik" 
+		"visibility" " 1";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode mentalrayOptions -s -n "miContourPreset";
@@ -891,26 +909,78 @@ createNode reference -n "binocularsRN";
 lockNode -l 1 ;
 createNode vectorRenderGlobals -s -n "vectorRenderGlobals28";
 createNode vectorRenderGlobals -s -n "vectorRenderGlobals29";
+createNode vectorRenderGlobals -s -n "vectorRenderGlobals30";
+createNode animLayer -s -n "BaseAnimation";
+	setAttr ".ovrd" yes;
+createNode reference -n "pig_latestRN";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"pig_latestRN"
+		"pig_latestRN" 0
+		"pig_latestRN" 6
+		2 "|pig_latest:Pig" "translate" " -type \"double3\" 40.85370360232414555 32.38108558946370152 0"
+		
+		2 "|pig_latest:Pig" "rotate" " -type \"double3\" -5.8208980968373174 -37.99067415503203904 0.66720758956000625"
+		
+		2 "|pig_latest:Pig" "scale" " -type \"double3\" 1.5 1.5 1.5"
+		2 "|pig_latest:Pig|pig_latest:Tyrion_Cattister_uv:Tyrion_Cattister:pigShapeDeformed" 
+		"dispResolution" " 3"
+		2 "|pig_latest:Pig|pig_latest:Tyrion_Cattister_uv:Tyrion_Cattister:pigShapeDeformed" 
+		"displaySmoothMesh" " 2"
+		3 ":defaultRenderGlobals.rendercallback" "pig_latest:defaultFurGlobals.callback" 
+		"";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "sharedReferenceNode";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"sharedReferenceNode";
+createNode reference -n "leavesRN1";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"leavesRN1"
+		"leavesRN1" 0
+		"leavesRN1" 7
+		2 "|leaves1:SH20_3_br1_NL_INV" "visibility" " 1"
+		2 "|leaves1:SH20_3_br1_NL_INV" "translate" " -type \"double3\" -12.89378485525575968 37.38496230543250931 458.62430440129094222"
+		
+		2 "|leaves1:SH20_3_br1_NL_INV" "translateX" " -av"
+		2 "|leaves1:SH20_3_br1_NL_INV" "translateY" " -av"
+		2 "|leaves1:SH20_3_br1_NL_INV" "translateZ" " -av"
+		2 "|leaves1:SH20_3_br1_NL_INV" "rotate" " -type \"double3\" 0 90 0"
+		2 "|leaves1:SH20_3_br1_NL_INV" "scale" " -type \"double3\" -5.96 2.91372355380305637 5.15239701874430889";
+lockNode -l 1 ;
+createNode reference -n "leavesRN2";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"leavesRN2"
+		"leavesRN2" 0
+		"leavesRN2" 7
+		2 "|leaves2:SH20_3_br1_NL_INV" "visibility" " 1"
+		2 "|leaves2:SH20_3_br1_NL_INV" "translate" " -type \"double3\" -35.50982832688870872 36.99578785592603936 385.29186438473021781"
+		
+		2 "|leaves2:SH20_3_br1_NL_INV" "translateX" " -av"
+		2 "|leaves2:SH20_3_br1_NL_INV" "translateY" " -av"
+		2 "|leaves2:SH20_3_br1_NL_INV" "translateZ" " -av"
+		2 "|leaves2:SH20_3_br1_NL_INV" "rotate" " -type \"double3\" 0 89.759 0"
+		2 "|leaves2:SH20_3_br1_NL_INV" "scale" " -type \"double3\" -5.96 2.567 -4.044";
+lockNode -l 1 ;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
 select -ne :renderPartition;
-	setAttr -s 90 ".st";
+	setAttr -s 87 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 76 ".s";
+	setAttr -s 84 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 27 ".u";
+	setAttr -s 30 ".u";
 select -ne :defaultRenderingList1;
-	setAttr -s 9 ".r";
+	setAttr -s 13 ".r";
 select -ne :defaultTextureList1;
 	setAttr -s 26 ".tx";
 select -ne :initialShadingGroup;
 	setAttr -s 16 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 5 ".gn";
+	setAttr -s 6 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :defaultRenderGlobals;
@@ -930,13 +1000,13 @@ select -ne :defaultHardwareRenderGlobals;
 	setAttr ".res" -type "string" "ntsc_4d 646 485 1.333";
 select -ne :ikSystem;
 	setAttr -s 5 ".sol";
-connectAttr "defaultFurGlobals.rogl" "PigRig003RN.phl[1]";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
+connectAttr "sharedReferenceNode.sr" "outside_house_latestRN.sr";
 connectAttr ":miContourPreset.msg" ":mentalrayItemsList.opt" -na;
 connectAttr ":Draft.msg" ":mentalrayItemsList.opt" -na;
 connectAttr ":DraftMotionBlur.msg" ":mentalrayItemsList.opt" -na;
@@ -953,10 +1023,16 @@ connectAttr ":ProductionRapidMotion.msg" ":mentalrayItemsList.opt" -na;
 connectAttr ":ProductionFineTrace.msg" ":mentalrayItemsList.opt" -na;
 connectAttr ":ProductionRapidFur.msg" ":mentalrayItemsList.opt" -na;
 connectAttr ":ProductionRapidHair.msg" ":mentalrayItemsList.opt" -na;
+connectAttr "sharedReferenceNode.sr" "leavesRN.sr";
+connectAttr "sharedReferenceNode.sr" "Tuffs005RN.sr";
+connectAttr "sharedReferenceNode.sr" "Sneaks_012RN.sr";
 connectAttr ":defaultRenderGlobals.rcb" "defaultFurGlobals.cb";
-connectAttr "sharedReferenceNode.sr" "PigRig003RN.sr";
+connectAttr "sharedReferenceNode.sr" "fancy_old_key_3RN.sr";
+connectAttr "sharedReferenceNode.sr" "Smarty003RN.sr";
+connectAttr "sharedReferenceNode.sr" "binocularsRN.sr";
+connectAttr "sharedReferenceNode.sr" "pig_latestRN.sr";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 dataStructure -fmt "raw" -as "name=externalContentTable:string=node:string=key:string=upath:uint32=upathcrc:string=rpath:string=roles";
-applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"outside_house_latestRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/outside_house_latest.ma\" 48534192 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/sets/house/outside_house_latest.ma\" \"FileRef\"\n1\n\"leavesRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/bush/leaves.ma\" 3237809300 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/sets/bush/leaves.ma\" \"FileRef\"\n2\n\"Tuffs005RN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/tuffs/Tuffs005.ma\" 673723939 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/tuffs/Tuffs005.ma\" \"FileRef\"\n3\n\"Sneaks_012RN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/sneaks/Sneaks_012.ma\" 38193552 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/sneaks/Sneaks_012.ma\" \"FileRef\"\n4\n\"PigRig003RN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/pig/mesh/Pig.ma\" 3148343566 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/pig/mesh/Pig.ma\" \"FileRef\"\n5\n\"fancy_old_key_3RN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/props/keys/fancy_old_key_3.ma\" 1667786347 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/props/keys/fancy_old_key_3.ma\" \"FileRef\"\n6\n\"Smarty003RN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/smarty/Smarty003.ma\" 542550007 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/smarty/Smarty003.ma\" \"FileRef\"\n7\n\"binocularsRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/props/binoculars.ma\" 1300799967 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/props/binoculars.ma\" \"FileRef\"\nendStream\nendChannel\nendAssociations\n" 
+applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"outside_house_latestRN\" \"\" \"assets/sets/house/outside_house_latest.ma\" 48534192 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/sets/house/outside_house_latest.ma\" \"FileRef\"\n1\n\"leavesRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/bush/leaves.ma\" 1815318665 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/sets/house/bush/leaves.ma\" \"FileRef\"\n2\n\"Tuffs005RN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/tuffs/tuffs_latest.ma\" 2068874992 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/tuffs/tuffs_latest.ma\" \"FileRef\"\n3\n\"Sneaks_012RN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/sneaks/sneaks_latest.ma\" 1942800631 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/sneaks/sneaks_latest.ma\" \"FileRef\"\n4\n\"fancy_old_key_3RN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/props/keys/key_latest.ma\" 2607318336 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/props/keys/key_latest.ma\" \"FileRef\"\n5\n\"Smarty003RN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/smarty/smarty_latest.ma\" 3360025303 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/smarty/smarty_latest.ma\" \"FileRef\"\n6\n\"binocularsRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/props/binoculars.ma\" 1300799967 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/props/binoculars.ma\" \"FileRef\"\n7\n\"pig_latestRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/characters/pig/pig_latest.ma\" 4255569589 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/characters/pig/pig_latest.ma\" \"FileRef\"\n8\n\"leavesRN1\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/bush/leaves.ma\" 1815318665 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/sets/house/bush/leaves.ma\" \"FileRef\"\n9\n\"leavesRN2\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya//assets/sets/house/bush/leaves.ma\" 1815318665 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/sets/house/bush/leaves.ma\" \"FileRef\"\nendStream\nendChannel\nendAssociations\n" 
 		-scn;
 // End of outside_house.ma

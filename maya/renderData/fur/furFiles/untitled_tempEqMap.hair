@@ -1,0 +1,43 @@
+hair "CalicoCat(0)" {
+	area_group="CalicoCat";
+	matrix 	1 0 0 0
+	0 1 0 0
+	0 0 1 0
+	0 0 0 1
+	casts_shadows true
+	prim_visibility true
+	light_model=2;
+	density=30000;
+	usamples=32;
+	vsamples=32;
+	diffuse_base=<0.281,0.163895,0.074465> + ( <1,1,1> * noise(15,<-1,-1,-1>,<1,1,1>) ) + <0,0,0>;
+	diffuse_tip=<0.43802,0.255477,0.116075> + ( <1,1,1> * noise(15,<-1,-1,-1>,<1,1,1>) ) + <0,0,0>;
+	specular=<0.1405,0.1405,0.1405> + ( <0,0,0> * noise(10,<-1,-1,-1>,<1,1,1>) ) + <0,0,0>;
+	ambient_base=<0,0,0> + ( <0,0,0> * noise(10,<-1,-1,-1>,<1,1,1>) ) + <0,0,0>;
+	ambient_tip=<0,0,0> + ( <0,0,0> * noise(10,<-1,-1,-1>,<1,1,1>) ) + <0,0,0>;
+	length=0.8 + ( 0.2 * noise(50,-1,1) );
+	sharpness=100 + ( 0 * noise(10,-1,1) );
+	baldness=1 + ( 0 * noise(10,-1,1) );
+	opacity_base=0.7 + ( 0 * noise(10,-1,1) );
+	opacity_tip=0.5 + ( 0 * noise(10,-1,1) );
+	width_base=0.02 + ( 0 * noise(10,-1,1) );
+	width_tip=0.005 + ( 0 * noise(10,-1,1) );
+	segments=10 + ( 0 * noise(10,-1,1) );
+	curl_base=0.5 + ( 0 * noise(10,-1,1) );
+	curl_tip=0.5 + ( 0 * noise(10,-1,1) );
+	scraggle=0.1 + ( 0 * noise(10,-1,1) );
+	frequency=5 + ( 0 * noise(10,-1,1) );
+	correlation=0 + ( 0 * noise(10,-1,1) );
+	clump=0.3 + ( 0.1 * noise(50,-1,1) );
+	clumpfrequency=100 + ( 0 * noise(10,-1,1) );
+	clumpshape=4 + ( 3 * noise(60,-1,1) );
+	erectness=0.7 + ( 0.2 * noise(50,-1,1) );
+	roll=0.5 + ( 0 * noise(10,-1,1) );
+	polar=0.5 + ( 0.1 * noise(80,-1,1) );
+	attractors=1 + ( 0 * noise(10,-1,1) );
+	offset=0 + ( 0 * noise(10,-1,1) );
+	custom_equalizer=1 + ( 0 * noise(10,-1,1) );
+	reference_equalmap=" ";
+	equalmap_type=1;
+	equalizer=image("/home/cc/cs199/fa13/class/cs199-abr/CNM190/Bandits/maya/renderData/fur//furEqualMap_$M_eqMap_1.iff", "r");
+}

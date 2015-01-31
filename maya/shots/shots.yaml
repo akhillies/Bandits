@@ -4,19 +4,19 @@
 # Pre-Title
 
 - name       : "RaccoonsLookingAtHouse"
-  file       : "shots/pre_title/raccoonsLookAtHouse/raccoonsLookAtHouse_latest.ma"
+  file       : "maya/shots/pre_title/raccoonsLookAtHouse/raccoonsLookAtHouse_latest.ma"
   camera     : 'outside_living_room:atHouse'
   startFrame : 1
   endFrame   : 150
 
 - name       : "RaccoonsLeavingBushes"
-  file       : "shots/pre_title/raccoonsLeaveBush/raccoonsLeaveBush_latest.ma"
+  file       : "maya/shots/pre_title/raccoonsLeaveBush/raccoonsLeaveBush_latest.ma"
   camera     : 'outside_living_room:atRaccoons'
   startFrame : 1
   endFrame   : 45
 
 - name       : "TitleOverlay"
-  file       : "shots/pre_title/blockTextTitle/bandits_title_overlay.ma"
+  file       : "maya/shots/pre_title/blockTextTitle/bandits_title_overlay.ma"
   camera     : 'camera1'
   startFrame : 1
   endFrame   : 100

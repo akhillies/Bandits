@@ -1,6 +1,6 @@
 //Maya ASCII 2015 scene
 //Name: lookingAtHouse_005.ma
-//Last modified: Sat, Feb 07, 2015 05:07:17 PM
+//Last modified: Sat, Feb 07, 2015 05:32:41 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "outside_living_room" -rfn "outside_living_roomRN" -op "v=0;"
 		 "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//scenes/outside_living_room.ma";
@@ -49,6 +49,7 @@ requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOptions" -nodeType
 		 -nodeType "mentalrayItemsList" -dataType "byteArray" "Mayatomr" "2015.0 - 3.12.1.18 ";
 requires -nodeType "FurGlobals" "Fur" "2015";
 requires "xfrog" "1.0";
+requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2015";
@@ -58,13 +59,13 @@ fileInfo "osv" "Mac OS X 10.9.2";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -390.0649768372237 217.03499267030315 -81.929226140830963 ;
-	setAttr ".r" -type "double3" 138.86164727039443 -60.200000000002717 179.99999999999841 ;
+	setAttr ".t" -type "double3" -204.08139043380211 14.858471682418537 39.893392021477027 ;
+	setAttr ".r" -type "double3" 161.66164727035263 -86.599999999988114 180.00000000000813 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 317.63118241968164;
+	setAttr ".coi" 26.355967209470808;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -111,6 +112,172 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".man" -type "string" "side_mask";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
+createNode mentalrayItemsList -s -n "mentalrayItemsList";
+	setAttr -s 3 ".opt";
+createNode mentalrayGlobals -s -n "mentalrayGlobals";
+	addAttr -s false -ci true -h true -sn "sunAndSkyShader" -ln "sunAndSkyShader" -at "message";
+	setAttr ".rvb" 3;
+	setAttr ".ivb" no;
+createNode mentalrayOptions -s -n "miDefaultOptions";
+	addAttr -ci true -m -sn "stringOptions" -ln "stringOptions" -at "compound" -nc 
+		3;
+	addAttr -ci true -sn "name" -ln "name" -dt "string" -p "stringOptions";
+	addAttr -ci true -sn "value" -ln "value" -dt "string" -p "stringOptions";
+	addAttr -ci true -sn "type" -ln "type" -dt "string" -p "stringOptions";
+	setAttr ".splck" yes;
+	setAttr ".fil" 0;
+	setAttr ".rflr" 1;
+	setAttr ".rfrr" 1;
+	setAttr ".maxr" 1;
+	setAttr ".shrd" 2;
+	setAttr ".mb" 2;
+	setAttr -s 48 ".stringOptions";
+	setAttr ".stringOptions[0].name" -type "string" "rast motion factor";
+	setAttr ".stringOptions[0].value" -type "string" "1.0";
+	setAttr ".stringOptions[0].type" -type "string" "scalar";
+	setAttr ".stringOptions[1].name" -type "string" "rast transparency depth";
+	setAttr ".stringOptions[1].value" -type "string" "8";
+	setAttr ".stringOptions[1].type" -type "string" "integer";
+	setAttr ".stringOptions[2].name" -type "string" "rast useopacity";
+	setAttr ".stringOptions[2].value" -type "string" "true";
+	setAttr ".stringOptions[2].type" -type "string" "boolean";
+	setAttr ".stringOptions[3].name" -type "string" "importon";
+	setAttr ".stringOptions[3].value" -type "string" "false";
+	setAttr ".stringOptions[3].type" -type "string" "boolean";
+	setAttr ".stringOptions[4].name" -type "string" "importon density";
+	setAttr ".stringOptions[4].value" -type "string" "1.0";
+	setAttr ".stringOptions[4].type" -type "string" "scalar";
+	setAttr ".stringOptions[5].name" -type "string" "importon merge";
+	setAttr ".stringOptions[5].value" -type "string" "0.0";
+	setAttr ".stringOptions[5].type" -type "string" "scalar";
+	setAttr ".stringOptions[6].name" -type "string" "importon trace depth";
+	setAttr ".stringOptions[6].value" -type "string" "0";
+	setAttr ".stringOptions[6].type" -type "string" "integer";
+	setAttr ".stringOptions[7].name" -type "string" "importon traverse";
+	setAttr ".stringOptions[7].value" -type "string" "true";
+	setAttr ".stringOptions[7].type" -type "string" "boolean";
+	setAttr ".stringOptions[8].name" -type "string" "shadowmap pixel samples";
+	setAttr ".stringOptions[8].value" -type "string" "3";
+	setAttr ".stringOptions[8].type" -type "string" "integer";
+	setAttr ".stringOptions[9].name" -type "string" "ambient occlusion";
+	setAttr ".stringOptions[9].value" -type "string" "false";
+	setAttr ".stringOptions[9].type" -type "string" "boolean";
+	setAttr ".stringOptions[10].name" -type "string" "ambient occlusion rays";
+	setAttr ".stringOptions[10].value" -type "string" "256";
+	setAttr ".stringOptions[10].type" -type "string" "integer";
+	setAttr ".stringOptions[11].name" -type "string" "ambient occlusion cache";
+	setAttr ".stringOptions[11].value" -type "string" "false";
+	setAttr ".stringOptions[11].type" -type "string" "boolean";
+	setAttr ".stringOptions[12].name" -type "string" "ambient occlusion cache density";
+	setAttr ".stringOptions[12].value" -type "string" "1.0";
+	setAttr ".stringOptions[12].type" -type "string" "scalar";
+	setAttr ".stringOptions[13].name" -type "string" "ambient occlusion cache points";
+	setAttr ".stringOptions[13].value" -type "string" "64";
+	setAttr ".stringOptions[13].type" -type "string" "integer";
+	setAttr ".stringOptions[14].name" -type "string" "irradiance particles";
+	setAttr ".stringOptions[14].value" -type "string" "false";
+	setAttr ".stringOptions[14].type" -type "string" "boolean";
+	setAttr ".stringOptions[15].name" -type "string" "irradiance particles rays";
+	setAttr ".stringOptions[15].value" -type "string" "256";
+	setAttr ".stringOptions[15].type" -type "string" "integer";
+	setAttr ".stringOptions[16].name" -type "string" "irradiance particles interpolate";
+	setAttr ".stringOptions[16].value" -type "string" "1";
+	setAttr ".stringOptions[16].type" -type "string" "integer";
+	setAttr ".stringOptions[17].name" -type "string" "irradiance particles interppoints";
+	setAttr ".stringOptions[17].value" -type "string" "64";
+	setAttr ".stringOptions[17].type" -type "string" "integer";
+	setAttr ".stringOptions[18].name" -type "string" "irradiance particles indirect passes";
+	setAttr ".stringOptions[18].value" -type "string" "0";
+	setAttr ".stringOptions[18].type" -type "string" "integer";
+	setAttr ".stringOptions[19].name" -type "string" "irradiance particles scale";
+	setAttr ".stringOptions[19].value" -type "string" "1.0";
+	setAttr ".stringOptions[19].type" -type "string" "scalar";
+	setAttr ".stringOptions[20].name" -type "string" "irradiance particles env";
+	setAttr ".stringOptions[20].value" -type "string" "true";
+	setAttr ".stringOptions[20].type" -type "string" "boolean";
+	setAttr ".stringOptions[21].name" -type "string" "irradiance particles env rays";
+	setAttr ".stringOptions[21].value" -type "string" "256";
+	setAttr ".stringOptions[21].type" -type "string" "integer";
+	setAttr ".stringOptions[22].name" -type "string" "irradiance particles env scale";
+	setAttr ".stringOptions[22].value" -type "string" "1";
+	setAttr ".stringOptions[22].type" -type "string" "integer";
+	setAttr ".stringOptions[23].name" -type "string" "irradiance particles rebuild";
+	setAttr ".stringOptions[23].value" -type "string" "true";
+	setAttr ".stringOptions[23].type" -type "string" "boolean";
+	setAttr ".stringOptions[24].name" -type "string" "irradiance particles file";
+	setAttr ".stringOptions[24].value" -type "string" "";
+	setAttr ".stringOptions[24].type" -type "string" "string";
+	setAttr ".stringOptions[25].name" -type "string" "geom displace motion factor";
+	setAttr ".stringOptions[25].value" -type "string" "1.0";
+	setAttr ".stringOptions[25].type" -type "string" "scalar";
+	setAttr ".stringOptions[26].name" -type "string" "contrast all buffers";
+	setAttr ".stringOptions[26].value" -type "string" "true";
+	setAttr ".stringOptions[26].type" -type "string" "boolean";
+	setAttr ".stringOptions[27].name" -type "string" "finalgather normal tolerance";
+	setAttr ".stringOptions[27].value" -type "string" "25.842";
+	setAttr ".stringOptions[27].type" -type "string" "scalar";
+	setAttr ".stringOptions[28].name" -type "string" "trace camera clip";
+	setAttr ".stringOptions[28].value" -type "string" "false";
+	setAttr ".stringOptions[28].type" -type "string" "boolean";
+	setAttr ".stringOptions[29].name" -type "string" "unified sampling";
+	setAttr ".stringOptions[29].value" -type "string" "true";
+	setAttr ".stringOptions[29].type" -type "string" "boolean";
+	setAttr ".stringOptions[30].name" -type "string" "samples quality";
+	setAttr ".stringOptions[30].value" -type "string" "0.25 0.25 0.25 0.25";
+	setAttr ".stringOptions[30].type" -type "string" "color";
+	setAttr ".stringOptions[31].name" -type "string" "samples min";
+	setAttr ".stringOptions[31].value" -type "string" "1.0";
+	setAttr ".stringOptions[31].type" -type "string" "scalar";
+	setAttr ".stringOptions[32].name" -type "string" "samples max";
+	setAttr ".stringOptions[32].value" -type "string" "100.0";
+	setAttr ".stringOptions[32].type" -type "string" "scalar";
+	setAttr ".stringOptions[33].name" -type "string" "samples error cutoff";
+	setAttr ".stringOptions[33].value" -type "string" "0.0 0.0 0.0 0.0";
+	setAttr ".stringOptions[33].type" -type "string" "color";
+	setAttr ".stringOptions[34].name" -type "string" "samples per object";
+	setAttr ".stringOptions[34].value" -type "string" "false";
+	setAttr ".stringOptions[34].type" -type "string" "boolean";
+	setAttr ".stringOptions[35].name" -type "string" "progressive";
+	setAttr ".stringOptions[35].value" -type "string" "false";
+	setAttr ".stringOptions[35].type" -type "string" "boolean";
+	setAttr ".stringOptions[36].name" -type "string" "progressive max time";
+	setAttr ".stringOptions[36].value" -type "string" "0";
+	setAttr ".stringOptions[36].type" -type "string" "integer";
+	setAttr ".stringOptions[37].name" -type "string" "progressive subsampling size";
+	setAttr ".stringOptions[37].value" -type "string" "1";
+	setAttr ".stringOptions[37].type" -type "string" "integer";
+	setAttr ".stringOptions[38].name" -type "string" "iray";
+	setAttr ".stringOptions[38].value" -type "string" "false";
+	setAttr ".stringOptions[38].type" -type "string" "boolean";
+	setAttr ".stringOptions[39].name" -type "string" "light relative scale";
+	setAttr ".stringOptions[39].value" -type "string" "0.31831";
+	setAttr ".stringOptions[39].type" -type "string" "scalar";
+	setAttr ".stringOptions[40].name" -type "string" "trace camera motion vectors";
+	setAttr ".stringOptions[40].value" -type "string" "false";
+	setAttr ".stringOptions[40].type" -type "string" "boolean";
+	setAttr ".stringOptions[41].name" -type "string" "ray differentials";
+	setAttr ".stringOptions[41].value" -type "string" "true";
+	setAttr ".stringOptions[41].type" -type "string" "boolean";
+	setAttr ".stringOptions[42].name" -type "string" "environment lighting mode";
+	setAttr ".stringOptions[42].value" -type "string" "off";
+	setAttr ".stringOptions[42].type" -type "string" "string";
+	setAttr ".stringOptions[43].name" -type "string" "environment lighting quality";
+	setAttr ".stringOptions[43].value" -type "string" "0.167";
+	setAttr ".stringOptions[43].type" -type "string" "scalar";
+	setAttr ".stringOptions[44].name" -type "string" "environment lighting shadow";
+	setAttr ".stringOptions[44].value" -type "string" "transparent";
+	setAttr ".stringOptions[44].type" -type "string" "string";
+	setAttr ".stringOptions[45].name" -type "string" "environment lighting resolution";
+	setAttr ".stringOptions[45].value" -type "string" "512";
+	setAttr ".stringOptions[45].type" -type "string" "integer";
+	setAttr ".stringOptions[46].name" -type "string" "environment lighting shader samples";
+	setAttr ".stringOptions[46].value" -type "string" "2";
+	setAttr ".stringOptions[46].type" -type "string" "integer";
+	setAttr ".stringOptions[47].name" -type "string" "environment lighting scale";
+	setAttr ".stringOptions[47].value" -type "string" "1.0 1.0 1.0";
+	setAttr ".stringOptions[47].type" -type "string" "color";
+createNode mentalrayFramebuffer -s -n "miDefaultFramebuffer";
+	setAttr ".dat" 2;
 createNode lightLinker -s -n "lightLinker1";
 	setAttr -s 355 ".lnk";
 	setAttr -s 354 ".slnk";
@@ -200,10 +367,7 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -editorChanged \"updateModelPanelBar\" \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n"
 		+ "                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n"
 		+ "                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"vacantCell.xpm\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"vertical2\\\" -ps 1 64 100 -ps 2 36 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Side View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Side View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"outside_living_room:atHouse\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 0\\n    -polymeshes 1\\n    -subdivSurfaces 0\\n    -planes 0\\n    -lights 0\\n    -cameras 0\\n    -controlVertices 0\\n    -hulls 0\\n    -grid 1\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 0\\n    -dynamics 0\\n    -particleInstancers 0\\n    -fluids 0\\n    -hairSystems 0\\n    -follicles 0\\n    -nCloths 0\\n    -nParticles 0\\n    -nRigids 0\\n    -dynamicConstraints 0\\n    -locators 0\\n    -manipulators 1\\n    -pluginShapes 0\\n    -dimensions 0\\n    -handles 0\\n    -pivots 0\\n    -textures 0\\n    -strokes 0\\n    -motionTrails 0\\n    -clipGhosts 0\\n    -greasePencils 0\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Side View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"outside_living_room:atHouse\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 0\\n    -polymeshes 1\\n    -subdivSurfaces 0\\n    -planes 0\\n    -lights 0\\n    -cameras 0\\n    -controlVertices 0\\n    -hulls 0\\n    -grid 1\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 0\\n    -dynamics 0\\n    -particleInstancers 0\\n    -fluids 0\\n    -hairSystems 0\\n    -follicles 0\\n    -nCloths 0\\n    -nParticles 0\\n    -nRigids 0\\n    -dynamicConstraints 0\\n    -locators 0\\n    -manipulators 1\\n    -pluginShapes 0\\n    -dimensions 0\\n    -handles 0\\n    -pivots 0\\n    -textures 0\\n    -strokes 0\\n    -motionTrails 0\\n    -clipGhosts 0\\n    -greasePencils 0\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
-		+ "\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"vacantCell.xpm\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
 		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 0\\n    -hulls 0\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
 		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 0\\n    -hulls 0\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        setFocus `paneLayout -q -p1 $gMainPane`;\n        sceneUIReplacement -deleteRemaining;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 1 -size 10 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
@@ -212,7 +376,7 @@ createNode script -n "sceneConfigurationScriptNode";
 	setAttr ".b" -type "string" "playbackOptions -min 1 -max 108 -ast 1 -aet 108 ";
 	setAttr ".st" 6;
 createNode reference -n "outside_living_roomRN";
-	setAttr -s 10 ".phl";
+	setAttr -s 573 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -223,6 +387,569 @@ createNode reference -n "outside_living_roomRN";
 	setAttr ".phl[8]" 0;
 	setAttr ".phl[9]" 0;
 	setAttr ".phl[10]" 0;
+	setAttr ".phl[11]" 0;
+	setAttr ".phl[12]" 0;
+	setAttr ".phl[13]" 0;
+	setAttr ".phl[14]" 0;
+	setAttr ".phl[15]" 0;
+	setAttr ".phl[16]" 0;
+	setAttr ".phl[17]" 0;
+	setAttr ".phl[18]" 0;
+	setAttr ".phl[19]" 0;
+	setAttr ".phl[20]" 0;
+	setAttr ".phl[21]" 0;
+	setAttr ".phl[22]" 0;
+	setAttr ".phl[23]" 0;
+	setAttr ".phl[24]" 0;
+	setAttr ".phl[25]" 0;
+	setAttr ".phl[26]" 0;
+	setAttr ".phl[27]" 0;
+	setAttr ".phl[28]" 0;
+	setAttr ".phl[29]" 0;
+	setAttr ".phl[30]" 0;
+	setAttr ".phl[31]" 0;
+	setAttr ".phl[32]" 0;
+	setAttr ".phl[33]" 0;
+	setAttr ".phl[34]" 0;
+	setAttr ".phl[35]" 0;
+	setAttr ".phl[36]" 0;
+	setAttr ".phl[37]" 0;
+	setAttr ".phl[38]" 0;
+	setAttr ".phl[39]" 0;
+	setAttr ".phl[40]" 0;
+	setAttr ".phl[41]" 0;
+	setAttr ".phl[42]" 0;
+	setAttr ".phl[43]" 0;
+	setAttr ".phl[44]" 0;
+	setAttr ".phl[45]" 0;
+	setAttr ".phl[46]" 0;
+	setAttr ".phl[47]" 0;
+	setAttr ".phl[48]" 0;
+	setAttr ".phl[49]" 0;
+	setAttr ".phl[50]" 0;
+	setAttr ".phl[51]" 0;
+	setAttr ".phl[52]" 0;
+	setAttr ".phl[53]" 0;
+	setAttr ".phl[54]" 0;
+	setAttr ".phl[55]" 0;
+	setAttr ".phl[56]" 0;
+	setAttr ".phl[57]" 0;
+	setAttr ".phl[58]" 0;
+	setAttr ".phl[59]" 0;
+	setAttr ".phl[60]" 0;
+	setAttr ".phl[61]" 0;
+	setAttr ".phl[62]" 0;
+	setAttr ".phl[63]" 0;
+	setAttr ".phl[64]" 0;
+	setAttr ".phl[65]" 0;
+	setAttr ".phl[66]" 0;
+	setAttr ".phl[67]" 0;
+	setAttr ".phl[68]" 0;
+	setAttr ".phl[69]" 0;
+	setAttr ".phl[70]" 0;
+	setAttr ".phl[71]" 0;
+	setAttr ".phl[72]" 0;
+	setAttr ".phl[73]" 0;
+	setAttr ".phl[74]" 0;
+	setAttr ".phl[75]" 0;
+	setAttr ".phl[76]" 0;
+	setAttr ".phl[77]" 0;
+	setAttr ".phl[78]" 0;
+	setAttr ".phl[79]" 0;
+	setAttr ".phl[80]" 0;
+	setAttr ".phl[81]" 0;
+	setAttr ".phl[82]" 0;
+	setAttr ".phl[83]" 0;
+	setAttr ".phl[84]" 0;
+	setAttr ".phl[85]" 0;
+	setAttr ".phl[86]" 0;
+	setAttr ".phl[87]" 0;
+	setAttr ".phl[88]" 0;
+	setAttr ".phl[89]" 0;
+	setAttr ".phl[90]" 0;
+	setAttr ".phl[91]" 0;
+	setAttr ".phl[92]" 0;
+	setAttr ".phl[93]" 0;
+	setAttr ".phl[94]" 0;
+	setAttr ".phl[95]" 0;
+	setAttr ".phl[96]" 0;
+	setAttr ".phl[97]" 0;
+	setAttr ".phl[98]" 0;
+	setAttr ".phl[99]" 0;
+	setAttr ".phl[100]" 0;
+	setAttr ".phl[101]" 0;
+	setAttr ".phl[102]" 0;
+	setAttr ".phl[103]" 0;
+	setAttr ".phl[104]" 0;
+	setAttr ".phl[105]" 0;
+	setAttr ".phl[106]" 0;
+	setAttr ".phl[107]" 0;
+	setAttr ".phl[108]" 0;
+	setAttr ".phl[109]" 0;
+	setAttr ".phl[110]" 0;
+	setAttr ".phl[111]" 0;
+	setAttr ".phl[112]" 0;
+	setAttr ".phl[113]" 0;
+	setAttr ".phl[114]" 0;
+	setAttr ".phl[115]" 0;
+	setAttr ".phl[116]" 0;
+	setAttr ".phl[117]" 0;
+	setAttr ".phl[118]" 0;
+	setAttr ".phl[119]" 0;
+	setAttr ".phl[120]" 0;
+	setAttr ".phl[121]" 0;
+	setAttr ".phl[122]" 0;
+	setAttr ".phl[123]" 0;
+	setAttr ".phl[124]" 0;
+	setAttr ".phl[125]" 0;
+	setAttr ".phl[126]" 0;
+	setAttr ".phl[127]" 0;
+	setAttr ".phl[128]" 0;
+	setAttr ".phl[129]" 0;
+	setAttr ".phl[130]" 0;
+	setAttr ".phl[131]" 0;
+	setAttr ".phl[132]" 0;
+	setAttr ".phl[133]" 0;
+	setAttr ".phl[134]" 0;
+	setAttr ".phl[135]" 0;
+	setAttr ".phl[136]" 0;
+	setAttr ".phl[137]" 0;
+	setAttr ".phl[138]" 0;
+	setAttr ".phl[139]" 0;
+	setAttr ".phl[140]" 0;
+	setAttr ".phl[141]" 0;
+	setAttr ".phl[142]" 0;
+	setAttr ".phl[143]" 0;
+	setAttr ".phl[144]" 0;
+	setAttr ".phl[145]" 0;
+	setAttr ".phl[146]" 0;
+	setAttr ".phl[147]" 0;
+	setAttr ".phl[148]" 0;
+	setAttr ".phl[149]" 0;
+	setAttr ".phl[150]" 0;
+	setAttr ".phl[151]" 0;
+	setAttr ".phl[152]" 0;
+	setAttr ".phl[153]" 0;
+	setAttr ".phl[154]" 0;
+	setAttr ".phl[155]" 0;
+	setAttr ".phl[156]" 0;
+	setAttr ".phl[157]" 0;
+	setAttr ".phl[158]" 0;
+	setAttr ".phl[159]" 0;
+	setAttr ".phl[160]" 0;
+	setAttr ".phl[161]" 0;
+	setAttr ".phl[162]" 0;
+	setAttr ".phl[163]" 0;
+	setAttr ".phl[164]" 0;
+	setAttr ".phl[165]" 0;
+	setAttr ".phl[166]" 0;
+	setAttr ".phl[167]" 0;
+	setAttr ".phl[168]" 0;
+	setAttr ".phl[169]" 0;
+	setAttr ".phl[170]" 0;
+	setAttr ".phl[171]" 0;
+	setAttr ".phl[172]" 0;
+	setAttr ".phl[173]" 0;
+	setAttr ".phl[174]" 0;
+	setAttr ".phl[175]" 0;
+	setAttr ".phl[176]" 0;
+	setAttr ".phl[177]" 0;
+	setAttr ".phl[178]" 0;
+	setAttr ".phl[179]" 0;
+	setAttr ".phl[180]" 0;
+	setAttr ".phl[181]" 0;
+	setAttr ".phl[182]" 0;
+	setAttr ".phl[183]" 0;
+	setAttr ".phl[184]" 0;
+	setAttr ".phl[185]" 0;
+	setAttr ".phl[186]" 0;
+	setAttr ".phl[187]" 0;
+	setAttr ".phl[188]" 0;
+	setAttr ".phl[189]" 0;
+	setAttr ".phl[190]" 0;
+	setAttr ".phl[191]" 0;
+	setAttr ".phl[192]" 0;
+	setAttr ".phl[193]" 0;
+	setAttr ".phl[194]" 0;
+	setAttr ".phl[195]" 0;
+	setAttr ".phl[196]" 0;
+	setAttr ".phl[197]" 0;
+	setAttr ".phl[198]" 0;
+	setAttr ".phl[199]" 0;
+	setAttr ".phl[200]" 0;
+	setAttr ".phl[201]" 0;
+	setAttr ".phl[202]" 0;
+	setAttr ".phl[203]" 0;
+	setAttr ".phl[204]" 0;
+	setAttr ".phl[205]" 0;
+	setAttr ".phl[206]" 0;
+	setAttr ".phl[207]" 0;
+	setAttr ".phl[208]" 0;
+	setAttr ".phl[209]" 0;
+	setAttr ".phl[210]" 0;
+	setAttr ".phl[211]" 0;
+	setAttr ".phl[212]" 0;
+	setAttr ".phl[213]" 0;
+	setAttr ".phl[214]" 0;
+	setAttr ".phl[215]" 0;
+	setAttr ".phl[216]" 0;
+	setAttr ".phl[217]" 0;
+	setAttr ".phl[218]" 0;
+	setAttr ".phl[219]" 0;
+	setAttr ".phl[220]" 0;
+	setAttr ".phl[221]" 0;
+	setAttr ".phl[222]" 0;
+	setAttr ".phl[223]" 0;
+	setAttr ".phl[224]" 0;
+	setAttr ".phl[225]" 0;
+	setAttr ".phl[226]" 0;
+	setAttr ".phl[227]" 0;
+	setAttr ".phl[228]" 0;
+	setAttr ".phl[229]" 0;
+	setAttr ".phl[230]" 0;
+	setAttr ".phl[231]" 0;
+	setAttr ".phl[232]" 0;
+	setAttr ".phl[233]" 0;
+	setAttr ".phl[234]" 0;
+	setAttr ".phl[235]" 0;
+	setAttr ".phl[236]" 0;
+	setAttr ".phl[237]" 0;
+	setAttr ".phl[238]" 0;
+	setAttr ".phl[239]" 0;
+	setAttr ".phl[240]" 0;
+	setAttr ".phl[241]" 0;
+	setAttr ".phl[242]" 0;
+	setAttr ".phl[243]" 0;
+	setAttr ".phl[244]" 0;
+	setAttr ".phl[245]" 0;
+	setAttr ".phl[246]" 0;
+	setAttr ".phl[247]" 0;
+	setAttr ".phl[248]" 0;
+	setAttr ".phl[249]" 0;
+	setAttr ".phl[250]" 0;
+	setAttr ".phl[251]" 0;
+	setAttr ".phl[252]" 0;
+	setAttr ".phl[253]" 0;
+	setAttr ".phl[254]" 0;
+	setAttr ".phl[255]" 0;
+	setAttr ".phl[256]" 0;
+	setAttr ".phl[257]" 0;
+	setAttr ".phl[258]" 0;
+	setAttr ".phl[259]" 0;
+	setAttr ".phl[260]" 0;
+	setAttr ".phl[261]" 0;
+	setAttr ".phl[262]" 0;
+	setAttr ".phl[263]" 0;
+	setAttr ".phl[264]" 0;
+	setAttr ".phl[265]" 0;
+	setAttr ".phl[266]" 0;
+	setAttr ".phl[267]" 0;
+	setAttr ".phl[268]" 0;
+	setAttr ".phl[269]" 0;
+	setAttr ".phl[270]" 0;
+	setAttr ".phl[271]" 0;
+	setAttr ".phl[272]" 0;
+	setAttr ".phl[273]" 0;
+	setAttr ".phl[274]" 0;
+	setAttr ".phl[275]" 0;
+	setAttr ".phl[276]" 0;
+	setAttr ".phl[277]" 0;
+	setAttr ".phl[278]" 0;
+	setAttr ".phl[279]" 0;
+	setAttr ".phl[280]" 0;
+	setAttr ".phl[281]" 0;
+	setAttr ".phl[282]" 0;
+	setAttr ".phl[283]" 0;
+	setAttr ".phl[284]" 0;
+	setAttr ".phl[285]" 0;
+	setAttr ".phl[286]" 0;
+	setAttr ".phl[287]" 0;
+	setAttr ".phl[288]" 0;
+	setAttr ".phl[289]" 0;
+	setAttr ".phl[290]" 0;
+	setAttr ".phl[291]" 0;
+	setAttr ".phl[292]" 0;
+	setAttr ".phl[293]" 0;
+	setAttr ".phl[294]" 0;
+	setAttr ".phl[295]" 0;
+	setAttr ".phl[296]" 0;
+	setAttr ".phl[297]" 0;
+	setAttr ".phl[298]" 0;
+	setAttr ".phl[299]" 0;
+	setAttr ".phl[300]" 0;
+	setAttr ".phl[301]" 0;
+	setAttr ".phl[302]" 0;
+	setAttr ".phl[303]" 0;
+	setAttr ".phl[304]" 0;
+	setAttr ".phl[305]" 0;
+	setAttr ".phl[306]" 0;
+	setAttr ".phl[307]" 0;
+	setAttr ".phl[308]" 0;
+	setAttr ".phl[309]" 0;
+	setAttr ".phl[310]" 0;
+	setAttr ".phl[311]" 0;
+	setAttr ".phl[312]" 0;
+	setAttr ".phl[313]" 0;
+	setAttr ".phl[314]" 0;
+	setAttr ".phl[315]" 0;
+	setAttr ".phl[316]" 0;
+	setAttr ".phl[317]" 0;
+	setAttr ".phl[318]" 0;
+	setAttr ".phl[319]" 0;
+	setAttr ".phl[320]" 0;
+	setAttr ".phl[321]" 0;
+	setAttr ".phl[322]" 0;
+	setAttr ".phl[323]" 0;
+	setAttr ".phl[324]" 0;
+	setAttr ".phl[325]" 0;
+	setAttr ".phl[326]" 0;
+	setAttr ".phl[327]" 0;
+	setAttr ".phl[328]" 0;
+	setAttr ".phl[329]" 0;
+	setAttr ".phl[330]" 0;
+	setAttr ".phl[331]" 0;
+	setAttr ".phl[332]" 0;
+	setAttr ".phl[333]" 0;
+	setAttr ".phl[334]" 0;
+	setAttr ".phl[335]" 0;
+	setAttr ".phl[336]" 0;
+	setAttr ".phl[337]" 0;
+	setAttr ".phl[338]" 0;
+	setAttr ".phl[339]" 0;
+	setAttr ".phl[340]" 0;
+	setAttr ".phl[341]" 0;
+	setAttr ".phl[342]" 0;
+	setAttr ".phl[343]" 0;
+	setAttr ".phl[344]" 0;
+	setAttr ".phl[345]" 0;
+	setAttr ".phl[346]" 0;
+	setAttr ".phl[347]" 0;
+	setAttr ".phl[348]" 0;
+	setAttr ".phl[349]" 0;
+	setAttr ".phl[350]" 0;
+	setAttr ".phl[351]" 0;
+	setAttr ".phl[352]" 0;
+	setAttr ".phl[353]" 0;
+	setAttr ".phl[354]" 0;
+	setAttr ".phl[355]" 0;
+	setAttr ".phl[356]" 0;
+	setAttr ".phl[357]" 0;
+	setAttr ".phl[358]" 0;
+	setAttr ".phl[359]" 0;
+	setAttr ".phl[360]" 0;
+	setAttr ".phl[361]" 0;
+	setAttr ".phl[362]" 0;
+	setAttr ".phl[363]" 0;
+	setAttr ".phl[364]" 0;
+	setAttr ".phl[365]" 0;
+	setAttr ".phl[366]" 0;
+	setAttr ".phl[367]" 0;
+	setAttr ".phl[368]" 0;
+	setAttr ".phl[369]" 0;
+	setAttr ".phl[370]" 0;
+	setAttr ".phl[371]" 0;
+	setAttr ".phl[372]" 0;
+	setAttr ".phl[373]" 0;
+	setAttr ".phl[374]" 0;
+	setAttr ".phl[375]" 0;
+	setAttr ".phl[376]" 0;
+	setAttr ".phl[377]" 0;
+	setAttr ".phl[378]" 0;
+	setAttr ".phl[379]" 0;
+	setAttr ".phl[380]" 0;
+	setAttr ".phl[381]" 0;
+	setAttr ".phl[382]" 0;
+	setAttr ".phl[383]" 0;
+	setAttr ".phl[384]" 0;
+	setAttr ".phl[385]" 0;
+	setAttr ".phl[386]" 0;
+	setAttr ".phl[387]" 0;
+	setAttr ".phl[388]" 0;
+	setAttr ".phl[389]" 0;
+	setAttr ".phl[390]" 0;
+	setAttr ".phl[391]" 0;
+	setAttr ".phl[392]" 0;
+	setAttr ".phl[393]" 0;
+	setAttr ".phl[394]" 0;
+	setAttr ".phl[395]" 0;
+	setAttr ".phl[396]" 0;
+	setAttr ".phl[397]" 0;
+	setAttr ".phl[398]" 0;
+	setAttr ".phl[399]" 0;
+	setAttr ".phl[400]" 0;
+	setAttr ".phl[401]" 0;
+	setAttr ".phl[402]" 0;
+	setAttr ".phl[403]" 0;
+	setAttr ".phl[404]" 0;
+	setAttr ".phl[405]" 0;
+	setAttr ".phl[406]" 0;
+	setAttr ".phl[407]" 0;
+	setAttr ".phl[408]" 0;
+	setAttr ".phl[409]" 0;
+	setAttr ".phl[410]" 0;
+	setAttr ".phl[411]" 0;
+	setAttr ".phl[412]" 0;
+	setAttr ".phl[413]" 0;
+	setAttr ".phl[414]" 0;
+	setAttr ".phl[415]" 0;
+	setAttr ".phl[416]" 0;
+	setAttr ".phl[417]" 0;
+	setAttr ".phl[418]" 0;
+	setAttr ".phl[419]" 0;
+	setAttr ".phl[420]" 0;
+	setAttr ".phl[421]" 0;
+	setAttr ".phl[422]" 0;
+	setAttr ".phl[423]" 0;
+	setAttr ".phl[424]" 0;
+	setAttr ".phl[425]" 0;
+	setAttr ".phl[426]" 0;
+	setAttr ".phl[427]" 0;
+	setAttr ".phl[428]" 0;
+	setAttr ".phl[429]" 0;
+	setAttr ".phl[430]" 0;
+	setAttr ".phl[431]" 0;
+	setAttr ".phl[432]" 0;
+	setAttr ".phl[433]" 0;
+	setAttr ".phl[434]" 0;
+	setAttr ".phl[435]" 0;
+	setAttr ".phl[436]" 0;
+	setAttr ".phl[437]" 0;
+	setAttr ".phl[438]" 0;
+	setAttr ".phl[439]" 0;
+	setAttr ".phl[440]" 0;
+	setAttr ".phl[441]" 0;
+	setAttr ".phl[442]" 0;
+	setAttr ".phl[443]" 0;
+	setAttr ".phl[444]" 0;
+	setAttr ".phl[445]" 0;
+	setAttr ".phl[446]" 0;
+	setAttr ".phl[447]" 0;
+	setAttr ".phl[448]" 0;
+	setAttr ".phl[449]" 0;
+	setAttr ".phl[450]" 0;
+	setAttr ".phl[451]" 0;
+	setAttr ".phl[452]" 0;
+	setAttr ".phl[453]" 0;
+	setAttr ".phl[454]" 0;
+	setAttr ".phl[455]" 0;
+	setAttr ".phl[456]" 0;
+	setAttr ".phl[457]" 0;
+	setAttr ".phl[458]" 0;
+	setAttr ".phl[459]" 0;
+	setAttr ".phl[460]" 0;
+	setAttr ".phl[461]" 0;
+	setAttr ".phl[462]" 0;
+	setAttr ".phl[463]" 0;
+	setAttr ".phl[464]" 0;
+	setAttr ".phl[465]" 0;
+	setAttr ".phl[466]" 0;
+	setAttr ".phl[467]" 0;
+	setAttr ".phl[468]" 0;
+	setAttr ".phl[469]" 0;
+	setAttr ".phl[470]" 0;
+	setAttr ".phl[471]" 0;
+	setAttr ".phl[472]" 0;
+	setAttr ".phl[473]" 0;
+	setAttr ".phl[474]" 0;
+	setAttr ".phl[475]" 0;
+	setAttr ".phl[476]" 0;
+	setAttr ".phl[477]" 0;
+	setAttr ".phl[478]" 0;
+	setAttr ".phl[479]" 0;
+	setAttr ".phl[480]" 0;
+	setAttr ".phl[481]" 0;
+	setAttr ".phl[482]" 0;
+	setAttr ".phl[483]" 0;
+	setAttr ".phl[484]" 0;
+	setAttr ".phl[485]" 0;
+	setAttr ".phl[486]" 0;
+	setAttr ".phl[487]" 0;
+	setAttr ".phl[488]" 0;
+	setAttr ".phl[489]" 0;
+	setAttr ".phl[490]" 0;
+	setAttr ".phl[491]" 0;
+	setAttr ".phl[492]" 0;
+	setAttr ".phl[493]" 0;
+	setAttr ".phl[494]" 0;
+	setAttr ".phl[495]" 0;
+	setAttr ".phl[496]" 0;
+	setAttr ".phl[497]" 0;
+	setAttr ".phl[498]" 0;
+	setAttr ".phl[499]" 0;
+	setAttr ".phl[500]" 0;
+	setAttr ".phl[501]" 0;
+	setAttr ".phl[502]" 0;
+	setAttr ".phl[503]" 0;
+	setAttr ".phl[504]" 0;
+	setAttr ".phl[505]" 0;
+	setAttr ".phl[506]" 0;
+	setAttr ".phl[507]" 0;
+	setAttr ".phl[508]" 0;
+	setAttr ".phl[509]" 0;
+	setAttr ".phl[510]" 0;
+	setAttr ".phl[511]" 0;
+	setAttr ".phl[512]" 0;
+	setAttr ".phl[513]" 0;
+	setAttr ".phl[514]" 0;
+	setAttr ".phl[515]" 0;
+	setAttr ".phl[516]" 0;
+	setAttr ".phl[517]" 0;
+	setAttr ".phl[518]" 0;
+	setAttr ".phl[519]" 0;
+	setAttr ".phl[520]" 0;
+	setAttr ".phl[521]" 0;
+	setAttr ".phl[522]" 0;
+	setAttr ".phl[523]" 0;
+	setAttr ".phl[524]" 0;
+	setAttr ".phl[525]" 0;
+	setAttr ".phl[526]" 0;
+	setAttr ".phl[527]" 0;
+	setAttr ".phl[528]" 0;
+	setAttr ".phl[529]" 0;
+	setAttr ".phl[530]" 0;
+	setAttr ".phl[531]" 0;
+	setAttr ".phl[532]" 0;
+	setAttr ".phl[533]" 0;
+	setAttr ".phl[534]" 0;
+	setAttr ".phl[535]" 0;
+	setAttr ".phl[536]" 0;
+	setAttr ".phl[537]" 0;
+	setAttr ".phl[538]" 0;
+	setAttr ".phl[539]" 0;
+	setAttr ".phl[540]" 0;
+	setAttr ".phl[541]" 0;
+	setAttr ".phl[542]" 0;
+	setAttr ".phl[543]" 0;
+	setAttr ".phl[544]" 0;
+	setAttr ".phl[545]" 0;
+	setAttr ".phl[546]" 0;
+	setAttr ".phl[547]" 0;
+	setAttr ".phl[548]" 0;
+	setAttr ".phl[549]" 0;
+	setAttr ".phl[550]" 0;
+	setAttr ".phl[551]" 0;
+	setAttr ".phl[552]" 0;
+	setAttr ".phl[553]" 0;
+	setAttr ".phl[554]" 0;
+	setAttr ".phl[555]" 0;
+	setAttr ".phl[556]" 0;
+	setAttr ".phl[557]" 0;
+	setAttr ".phl[558]" 0;
+	setAttr ".phl[559]" 0;
+	setAttr ".phl[560]" 0;
+	setAttr ".phl[561]" 0;
+	setAttr ".phl[562]" 0;
+	setAttr ".phl[563]" 0;
+	setAttr ".phl[564]" 0;
+	setAttr ".phl[565]" 0;
+	setAttr ".phl[566]" 0;
+	setAttr ".phl[567]" 0;
+	setAttr ".phl[568]" 0;
+	setAttr ".phl[569]" 0;
+	setAttr ".phl[570]" 0;
+	setAttr ".phl[571]" 0;
+	setAttr ".phl[572]" 0;
+	setAttr ".phl[573]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"outside_living_roomRN"
 		"outside_living_room:smarty_latestRN" 0
@@ -230,19 +957,58 @@ createNode reference -n "outside_living_roomRN";
 		"outside_living_room:living_room_latest:taller_window_four_squares_latestRN" 0
 		
 		"outside_living_room:sneaks_latestRN" 0
+		"outside_living_room:tuffs_latestRN" 0
 		"outside_living_room:living_room_latest:taller_window_four_squares_latest2RN" 
 		0
-		"outside_living_room:tuffs_latestRN" 0
 		"outside_living_room:living_room_latest:taller_window_four_squares_latest3RN" 
 		0
 		"outside_living_room:key_latestRN" 0
 		"outside_living_room:living_room_latest:armchair_latest1RN1" 0
 		"outside_living_room:pig_latestRN" 0
-		"outside_living_room:living_room_latestRN" 0
+		"outside_living_room:living_room_latestRN" 18
+		1 |outside_living_room:living_room_latest:walls|outside_living_room:living_room_latest:polySurfaceShape23 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:walls|outside_living_room:living_room_latest:polySurfaceShape23 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:walls|outside_living_room:living_room_latest:polySurfaceShape23 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:walls|outside_living_room:living_room_latest:polySurface22|outside_living_room:living_room_latest:polySurfaceShape36 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:walls|outside_living_room:living_room_latest:polySurface22|outside_living_room:living_room_latest:polySurfaceShape36 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:walls|outside_living_room:living_room_latest:polySurface22|outside_living_room:living_room_latest:polySurfaceShape36 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:walls|outside_living_room:living_room_latest:transform20|outside_living_room:living_room_latest:wallsShape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:walls|outside_living_room:living_room_latest:transform20|outside_living_room:living_room_latest:wallsShape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:walls|outside_living_room:living_room_latest:transform20|outside_living_room:living_room_latest:wallsShape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		2 "|outside_living_room:living_room_latest:walls|outside_living_room:living_room_latest:polySurfaceShape23" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:walls|outside_living_room:living_room_latest:polySurfaceShape23" 
+		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:walls|outside_living_room:living_room_latest:polySurfaceShape23" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:walls|outside_living_room:living_room_latest:polySurface22|outside_living_room:living_room_latest:polySurfaceShape36" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:walls|outside_living_room:living_room_latest:polySurface22|outside_living_room:living_room_latest:polySurfaceShape36" 
+		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:walls|outside_living_room:living_room_latest:polySurface22|outside_living_room:living_room_latest:polySurfaceShape36" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:walls|outside_living_room:living_room_latest:transform20|outside_living_room:living_room_latest:wallsShape" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:walls|outside_living_room:living_room_latest:transform20|outside_living_room:living_room_latest:wallsShape" 
+		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:walls|outside_living_room:living_room_latest:transform20|outside_living_room:living_room_latest:wallsShape" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		"outside_living_room:living_room_latest:armchair_latestRN1" 0
 		"outside_living_room:leavesRN" 0
-		"outside_living_room:living_room_latest:sofa_latestRN" 0
 		"outside_living_room:binocularsRN" 0
+		"outside_living_room:living_room_latest:sofa_latestRN" 0
 		"outside_living_room:living_room_latest:taller_window_four_squares_latest4RN" 
 		0
 		"outside_living_room:living_room_latest:taller_window_four_squares_latest1RN" 
@@ -808,6 +1574,44 @@ createNode reference -n "outside_living_roomRN";
 		
 		2 "|outside_living_room:living_room_latest:taller_window_four_squares_latest4:taller_window|outside_living_room:living_room_latest:taller_window_four_squares_latest4:transform1|outside_living_room:living_room_latest:taller_window_four_squares_latest4:taller_windowShape" 
 		"furNameSpace" " -type \"string\" \"taller_window_four_squares_latest4\""
+		"outside_living_room:key_latestRN" 18
+		1 |outside_living_room:key_latest:Obj_000003|outside_living_room:key_latest:Obj_000003Shape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:key_latest:Obj_000003|outside_living_room:key_latest:Obj_000003Shape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:key_latest:Obj_000003|outside_living_room:key_latest:Obj_000003Shape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		2 "|outside_living_room:key_latest:Obj_000003|outside_living_room:key_latest:Obj_000003Shape" 
+		"dispResolution" " 2"
+		2 "|outside_living_room:key_latest:Obj_000003|outside_living_room:key_latest:Obj_000003Shape" 
+		"displaySmoothMesh" " 1"
+		2 "|outside_living_room:key_latest:Obj_000003|outside_living_room:key_latest:Obj_000003Shape" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:key_latest:Obj_000003|outside_living_room:key_latest:Obj_000003Shape" 
+		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/props/keys/key_latest.ma\""
+		
+		2 "|outside_living_room:key_latest:Obj_000003|outside_living_room:key_latest:Obj_000003Shape" 
+		"furNameSpace" " -type \"string\" \"key_latest\""
+		5 4 "outside_living_roomRN" "|outside_living_room:key_latest:Obj_000003.translateX" 
+		"outside_living_roomRN.placeHolderList[554]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:key_latest:Obj_000003.translateY" 
+		"outside_living_roomRN.placeHolderList[555]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:key_latest:Obj_000003.translateZ" 
+		"outside_living_roomRN.placeHolderList[556]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:key_latest:Obj_000003.rotateX" 
+		"outside_living_roomRN.placeHolderList[557]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:key_latest:Obj_000003.rotateY" 
+		"outside_living_roomRN.placeHolderList[558]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:key_latest:Obj_000003.rotateZ" 
+		"outside_living_roomRN.placeHolderList[559]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:key_latest:Obj_000003.visibility" 
+		"outside_living_roomRN.placeHolderList[560]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:key_latest:Obj_000003.scaleX" 
+		"outside_living_roomRN.placeHolderList[561]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:key_latest:Obj_000003.scaleY" 
+		"outside_living_roomRN.placeHolderList[562]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:key_latest:Obj_000003.scaleZ" 
+		"outside_living_roomRN.placeHolderList[563]" ""
 		"outside_living_room:living_room_latest:armchair_latest1RN1" 24
 		1 |outside_living_room:living_room_latest:armchair_latest3:armchair_frame|outside_living_room:living_room_latest:armchair_latest3:armchair_frameShape 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
@@ -861,25 +1665,26 @@ createNode reference -n "outside_living_roomRN";
 		
 		2 "|outside_living_room:living_room_latest:armchair_latest3:armchair_frame|outside_living_room:living_room_latest:armchair_latest3:armchair_pillow_2|outside_living_room:living_room_latest:armchair_latest3:armchair_pillow_Shape2" 
 		"furNameSpace" " -type \"string\" \"armchair_latest3\""
-		"outside_living_room:key_latestRN" 8
-		1 |outside_living_room:key_latest:Obj_000003|outside_living_room:key_latest:Obj_000003Shape 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:key_latest:Obj_000003|outside_living_room:key_latest:Obj_000003Shape 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:key_latest:Obj_000003|outside_living_room:key_latest:Obj_000003Shape 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		2 "|outside_living_room:key_latest:Obj_000003" "translate" " -type \"double3\" -182.4359766989927607 8.05732264723247127 37.00639294951274394"
+		"outside_living_room:pig_latestRN" 714
+		1 |outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01 
+		"blendParent1" "blendParent1" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
+		1 |outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01 
+		"blendParent1" "blendParent1" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
+		1 |outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01 
+		"blendParent1" "blendParent1" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
+		1 |outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01 
+		"blendParent1" "blendParent1" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
+		1 |outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01 
+		"blendParent1" "blendParent1" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
+		1 |outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01 
+		"blendParent1" "blendParent1" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
+		1 |outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01 
+		"blendParent1" "blendParent1" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
+		1 |outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_end01 
+		"blendParent1" "blendParent1" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
+		1 |outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_start01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_start01 
+		"blendPairBlend1" "blendPairBlend1" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
 		
-		2 "|outside_living_room:key_latest:Obj_000003" "rotate" " -type \"double3\" -25.19315155850648935 27.67669260750280813 -37.97644203000393759"
-		
-		2 "|outside_living_room:key_latest:Obj_000003|outside_living_room:key_latest:Obj_000003Shape" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:key_latest:Obj_000003|outside_living_room:key_latest:Obj_000003Shape" 
-		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/props/keys/key_latest.ma\""
-		
-		2 "|outside_living_room:key_latest:Obj_000003|outside_living_room:key_latest:Obj_000003Shape" 
-		"furNameSpace" " -type \"string\" \"key_latest\""
-		"outside_living_room:pig_latestRN" 62
 		1 |outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:pig_mesh|outside_living_room:pig_latest:pig_body|outside_living_room:pig_latest:pigShapeDeformedOrig 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
 		1 |outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:pig_mesh|outside_living_room:pig_latest:pig_body|outside_living_room:pig_latest:pigShapeDeformedOrig 
@@ -914,6 +1719,59 @@ createNode reference -n "outside_living_roomRN";
 		
 		2 "|outside_living_room:pig_latest:Tyrion_Cattister_uv:Tyrion_CattisterRNfosterParent1|outside_living_room:pig_latest:Tyrion_Cattister_uv:Tyrion_Cattister:Tyrion_Cattister_uv:Tyrion_Cattister:pigShapeDeformedDeformed" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01" 
+		"translate" " -type \"double3\" -180.21295698611285729 8.78070965006269688 40.55155167731965804"
+		
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01" 
+		"translateY" " -av"
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01" 
+		"segmentScaleCompensate" " 1"
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01" 
+		"translate" " -type \"double3\" 0.01012860716986097 -8.0930387724720276e-08 5.7718461761169237e-06"
+		
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01" 
+		"translateX" " -av"
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01" 
+		"translateY" " -av"
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01" 
+		"translateZ" " -av"
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01" 
+		"rotate" " -type \"double3\" 0 -0.049171549951144429 0"
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01" 
+		"rotateX" " -av"
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01" 
+		"rotateY" " -av"
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01" 
+		"rotateZ" " -av"
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01" 
+		"blendParent1" " -k 1"
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01|outside_living_room:pig_latest:PigSkin002:bind_tailroot_a01|outside_living_room:pig_latest:PigSkin002:bind_tailroot_a02|outside_living_room:pig_latest:PigSkin002:bind_tail_a01|outside_living_room:pig_latest:PigSkin002:bind_tail_b01|outside_living_room:pig_latest:PigSkin002:bind_tail_c01" 
+		"translate" " -type \"double3\" 1.19945160627312641 0.010123022506743998 -3.4209652314589878e-06"
+		
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01|outside_living_room:pig_latest:PigSkin002:bind_tailroot_a01|outside_living_room:pig_latest:PigSkin002:bind_tailroot_a02|outside_living_room:pig_latest:PigSkin002:bind_tail_a01|outside_living_room:pig_latest:PigSkin002:bind_tail_b01|outside_living_room:pig_latest:PigSkin002:bind_tail_c01" 
+		"rotate" " -type \"double3\" -0.00059458294552257654 -0.0033772345103239513 5.8232637352251988"
+		
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01|outside_living_room:pig_latest:PigSkin002:bind_tailroot_a01|outside_living_room:pig_latest:PigSkin002:bind_tailroot_a02|outside_living_room:pig_latest:PigSkin002:bind_tail_a01|outside_living_room:pig_latest:PigSkin002:bind_tail_b01|outside_living_room:pig_latest:PigSkin002:bind_tail_c01" 
+		"segmentScaleCompensate" " 1"
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01|outside_living_room:pig_latest:curve_tail01" 
+		"translate" " -type \"double3\" -0.012794526884472914 -4.51848275598699267 4.36836937915581824"
+		
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01|outside_living_room:pig_latest:curve_tail01" 
+		"translateX" " -av"
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01|outside_living_room:pig_latest:curve_tail01" 
+		"translateY" " -av"
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01|outside_living_room:pig_latest:curve_tail01" 
+		"translateZ" " -av"
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01|outside_living_room:pig_latest:curve_tail01" 
+		"rotate" " -type \"double3\" 0 0.098343103552250358 0"
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01|outside_living_room:pig_latest:curve_tail01" 
+		"rotateY" " -av"
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_head01|outside_living_room:pig_latest:PigSkin002:be_head01" 
+		"translate" " -type \"double3\" 3.554766 0.040545699999999997 0"
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_head01|outside_living_room:pig_latest:pig_right_eye|outside_living_room:pig_latest:pig_right_eyeShape" 
+		"dispResolution" " 2"
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_head01|outside_living_room:pig_latest:pig_right_eye|outside_living_room:pig_latest:pig_right_eyeShape" 
+		"displaySmoothMesh" " 1"
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_head01|outside_living_room:pig_latest:pig_right_eye|outside_living_room:pig_latest:pig_right_eyeShape" 
 		"surfaceReference" " 1"
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_head01|outside_living_room:pig_latest:pig_right_eye|outside_living_room:pig_latest:pig_right_eyeShape" 
@@ -922,12 +1780,24 @@ createNode reference -n "outside_living_roomRN";
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_head01|outside_living_room:pig_latest:pig_right_eye|outside_living_room:pig_latest:pig_right_eyeShape" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_head01|outside_living_room:pig_latest:pig_left_eye|outside_living_room:pig_latest:pig_left_eyeShape" 
+		"dispResolution" " 2"
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_head01|outside_living_room:pig_latest:pig_left_eye|outside_living_room:pig_latest:pig_left_eyeShape" 
+		"displaySmoothMesh" " 1"
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_head01|outside_living_room:pig_latest:pig_left_eye|outside_living_room:pig_latest:pig_left_eyeShape" 
 		"surfaceReference" " 1"
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_head01|outside_living_room:pig_latest:pig_left_eye|outside_living_room:pig_latest:pig_left_eyeShape" 
 		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/characters/pig/pig_latest.ma\""
 		
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_head01|outside_living_room:pig_latest:pig_left_eye|outside_living_room:pig_latest:pig_left_eyeShape" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:splineiK_tail01" 
+		"translate" " -type \"double3\" -0.035655880159936267 9.50684562709211889 -13.33967157058285125"
+		
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:splineiK_tail01" 
+		"rotate" " -type \"double3\" 90.05808038304404306 41.80636397175460672 90.1012737150243197"
+		
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01" 
+		"blendParent1" " -k 1"
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_surface01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_surface0Shape1" 
 		"surfaceReference" " 1"
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_surface01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_surface0Shape1" 
@@ -942,6 +1812,10 @@ createNode reference -n "outside_living_roomRN";
 		
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_surface01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_surface0Shape1Orig" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01" 
+		"blendParent1" " -k 1"
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01" 
+		"blendParent1" " -k 1"
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_hidden01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_bshp_surface01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_bshp_surface01Shape" 
 		"surfaceReference" " 1"
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_hidden01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_bshp_surface01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_bshp_surface01Shape" 
@@ -956,6 +1830,8 @@ createNode reference -n "outside_living_roomRN";
 		
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_hidden01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_bshp_surface01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_bshp_surface01ShapeOrig" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01" 
+		"blendParent1" " -k 1"
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_surface01|outside_living_room:pig_latest:PigSkin002:neck_flexi_surface0Shape1" 
 		"surfaceReference" " 1"
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_surface01|outside_living_room:pig_latest:PigSkin002:neck_flexi_surface0Shape1" 
@@ -970,6 +1846,14 @@ createNode reference -n "outside_living_roomRN";
 		
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_surface01|outside_living_room:pig_latest:PigSkin002:neck_flexi_surface0Shape1Orig" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01" 
+		"blendParent1" " -k 1"
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01" 
+		"blendParent1" " -k 1"
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_end01" 
+		"blendParent1" " -k 1"
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_start01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_start01" 
+		"blendPairBlend1" " -k 1"
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_hidden01|outside_living_room:pig_latest:PigSkin002:neck_flexi_bshp_surface01|outside_living_room:pig_latest:PigSkin002:neck_flexi_bshp_surface01Shape" 
 		"surfaceReference" " 1"
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_hidden01|outside_living_room:pig_latest:PigSkin002:neck_flexi_bshp_surface01|outside_living_room:pig_latest:PigSkin002:neck_flexi_bshp_surface01Shape" 
@@ -1014,6 +1898,9 @@ createNode reference -n "outside_living_roomRN";
 		"furNameSpace" " -type \"string\" \"pig_latest\""
 		2 "|outside_living_room:pig_latest:persp1|outside_living_room:pig_latest:perspShape2" 
 		"renderable" " 0"
+		2 "outside_living_room:pig_latest:pairBlend1" "translateXMode" " 0"
+		2 "outside_living_room:pig_latest:pairBlend1" "translateYMode" " 0"
+		2 "outside_living_room:pig_latest:pairBlend1" "translateZMode" " 0"
 		2 "outside_living_room:pig_latest:defaultFurGlobals" "furGlobalReference" 
 		" 1"
 		2 "outside_living_room:pig_latest:PigSkin002:defaultFurGlobals" "furGlobalReference" 
@@ -1022,25 +1909,1314 @@ createNode reference -n "outside_living_roomRN";
 		"furGlobalReference" " 1"
 		2 "outside_living_room:pig_latest:PigSkin002:Tyrion_Cattister_uv:Tyrion_Cattister:furrified_bacon_latest:pigfur" 
 		"furReference" " 1"
-		"outside_living_room:living_room_latestRN" 4194
-		1 |outside_living_room:living_room_latest:walls|outside_living_room:living_room_latest:polySurfaceShape23 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:walls|outside_living_room:living_room_latest:polySurfaceShape23 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:walls|outside_living_room:living_room_latest:polySurfaceShape23 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:walls|outside_living_room:living_room_latest:polySurface22|outside_living_room:living_room_latest:polySurfaceShape36 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:walls|outside_living_room:living_room_latest:polySurface22|outside_living_room:living_room_latest:polySurfaceShape36 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:walls|outside_living_room:living_room_latest:polySurface22|outside_living_room:living_room_latest:polySurfaceShape36 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:walls|outside_living_room:living_room_latest:transform20|outside_living_room:living_room_latest:wallsShape 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:walls|outside_living_room:living_room_latest:transform20|outside_living_room:living_room_latest:wallsShape 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:walls|outside_living_room:living_room_latest:transform20|outside_living_room:living_room_latest:wallsShape 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		3 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01_parentConstraint1.constraintTranslateX" 
+		"|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01.translateX" 
+		""
+		3 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01_parentConstraint1.constraintTranslateY" 
+		"|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01.translateY" 
+		""
+		3 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01_parentConstraint1.constraintTranslateZ" 
+		"|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01.translateZ" 
+		""
+		3 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01_parentConstraint1.constraintRotateX" 
+		"|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01.rotateX" 
+		""
+		3 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01_parentConstraint1.constraintRotateY" 
+		"|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01.rotateY" 
+		""
+		3 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01_parentConstraint1.constraintRotateZ" 
+		"|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01.rotateZ" 
+		""
+		3 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01_parentConstraint1.constraintTranslateX" 
+		"|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01.translateX" 
+		""
+		3 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01_parentConstraint1.constraintTranslateY" 
+		"|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01.translateY" 
+		""
+		3 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01_parentConstraint1.constraintTranslateZ" 
+		"|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01.translateZ" 
+		""
+		3 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01_parentConstraint1.constraintRotateX" 
+		"|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01.rotateX" 
+		""
+		3 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01_parentConstraint1.constraintRotateY" 
+		"|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01.rotateY" 
+		""
+		3 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01_parentConstraint1.constraintRotateZ" 
+		"|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01.rotateZ" 
+		""
+		3 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01_parentConstraint1.constraintTranslateX" 
+		"|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01.translateX" 
+		""
+		3 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01_parentConstraint1.constraintTranslateY" 
+		"|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01.translateY" 
+		""
+		3 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01_parentConstraint1.constraintTranslateZ" 
+		"|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01.translateZ" 
+		""
+		3 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01_parentConstraint1.constraintRotateX" 
+		"|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01.rotateX" 
+		""
+		3 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01_parentConstraint1.constraintRotateY" 
+		"|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01.rotateY" 
+		""
+		3 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01_parentConstraint1.constraintRotateZ" 
+		"|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01.rotateZ" 
+		""
+		3 "outside_living_room:pig_latest:pairBlend1.outRotateX" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_start01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_start01.rotateX" 
+		""
+		3 "outside_living_room:pig_latest:pairBlend1.outRotateY" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_start01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_start01.rotateY" 
+		""
+		3 "outside_living_room:pig_latest:pairBlend1.outRotateZ" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_start01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_start01.rotateZ" 
+		""
+		3 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01_parentConstraint1.constraintTranslateX" 
+		"|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01.translateX" 
+		""
+		3 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01_parentConstraint1.constraintTranslateY" 
+		"|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01.translateY" 
+		""
+		3 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01_parentConstraint1.constraintTranslateZ" 
+		"|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01.translateZ" 
+		""
+		3 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01_parentConstraint1.constraintRotateX" 
+		"|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01.rotateX" 
+		""
+		3 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01_parentConstraint1.constraintRotateY" 
+		"|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01.rotateY" 
+		""
+		3 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01_parentConstraint1.constraintRotateZ" 
+		"|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01.rotateZ" 
+		""
+		3 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01_parentConstraint1.constraintTranslateX" 
+		"|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01.translateX" 
+		""
+		3 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01_parentConstraint1.constraintTranslateY" 
+		"|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01.translateY" 
+		""
+		3 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01_parentConstraint1.constraintTranslateZ" 
+		"|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01.translateZ" 
+		""
+		3 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01_parentConstraint1.constraintRotateX" 
+		"|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01.rotateX" 
+		""
+		3 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01_parentConstraint1.constraintRotateY" 
+		"|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01.rotateY" 
+		""
+		3 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01_parentConstraint1.constraintRotateZ" 
+		"|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01.rotateZ" 
+		""
+		3 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01_parentConstraint1.constraintTranslateX" 
+		"|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01.translateX" 
+		""
+		3 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01_parentConstraint1.constraintTranslateY" 
+		"|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01.translateY" 
+		""
+		3 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01_parentConstraint1.constraintTranslateZ" 
+		"|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01.translateZ" 
+		""
+		3 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01_parentConstraint1.constraintRotateX" 
+		"|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01.rotateX" 
+		""
+		3 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01_parentConstraint1.constraintRotateY" 
+		"|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01.rotateY" 
+		""
+		3 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01_parentConstraint1.constraintRotateZ" 
+		"|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01.rotateZ" 
+		""
+		3 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_end01_parentConstraint1.constraintTranslateX" 
+		"|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_end01.translateX" 
+		""
+		3 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_end01_parentConstraint1.constraintTranslateY" 
+		"|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_end01.translateY" 
+		""
+		3 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_end01_parentConstraint1.constraintTranslateZ" 
+		"|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_end01.translateZ" 
+		""
+		3 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_end01_parentConstraint1.constraintRotateX" 
+		"|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_end01.rotateX" 
+		""
+		3 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_end01_parentConstraint1.constraintRotateY" 
+		"|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_end01.rotateY" 
+		""
+		3 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_end01_parentConstraint1.constraintRotateZ" 
+		"|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_end01.rotateZ" 
+		""
+		3 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01_parentConstraint1.constraintTranslateX" 
+		"|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01.translateX" 
+		""
+		3 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01_parentConstraint1.constraintTranslateY" 
+		"|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01.translateY" 
+		""
+		3 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01_parentConstraint1.constraintTranslateZ" 
+		"|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01.translateZ" 
+		""
+		3 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01_parentConstraint1.constraintRotateX" 
+		"|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01.rotateX" 
+		""
+		3 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01_parentConstraint1.constraintRotateY" 
+		"|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01.rotateY" 
+		""
+		3 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01_parentConstraint1.constraintRotateZ" 
+		"|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01.rotateZ" 
+		""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01.translateZ" 
+		"outside_living_roomRN.placeHolderList[1]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01.translateY" 
+		"outside_living_roomRN.placeHolderList[2]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01.translateX" 
+		"outside_living_roomRN.placeHolderList[3]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01.rotateX" 
+		"outside_living_roomRN.placeHolderList[4]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01.rotateY" 
+		"outside_living_roomRN.placeHolderList[5]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01.rotateZ" 
+		"outside_living_roomRN.placeHolderList[6]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01.scaleX" 
+		"outside_living_roomRN.placeHolderList[7]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01.scaleY" 
+		"outside_living_roomRN.placeHolderList[8]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01.scaleZ" 
+		"outside_living_roomRN.placeHolderList[9]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01.visibility" 
+		"outside_living_roomRN.placeHolderList[10]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01.translateX" 
+		"outside_living_roomRN.placeHolderList[11]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01.translateY" 
+		"outside_living_roomRN.placeHolderList[12]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01.translateZ" 
+		"outside_living_roomRN.placeHolderList[13]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01.rotateX" 
+		"outside_living_roomRN.placeHolderList[14]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01.rotateY" 
+		"outside_living_roomRN.placeHolderList[15]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01.rotateZ" 
+		"outside_living_roomRN.placeHolderList[16]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01.visibility" 
+		"outside_living_roomRN.placeHolderList[17]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01.scaleX" 
+		"outside_living_roomRN.placeHolderList[18]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01.scaleY" 
+		"outside_living_roomRN.placeHolderList[19]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01.scaleZ" 
+		"outside_living_roomRN.placeHolderList[20]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01.scaleX" 
+		"outside_living_roomRN.placeHolderList[21]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01.scaleY" 
+		"outside_living_roomRN.placeHolderList[22]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01.scaleZ" 
+		"outside_living_roomRN.placeHolderList[23]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01.translateY" 
+		"outside_living_roomRN.placeHolderList[24]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01.translateZ" 
+		"outside_living_roomRN.placeHolderList[25]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01.translateX" 
+		"outside_living_roomRN.placeHolderList[26]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01.rotateX" 
+		"outside_living_roomRN.placeHolderList[27]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01.rotateY" 
+		"outside_living_roomRN.placeHolderList[28]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01.rotateZ" 
+		"outside_living_roomRN.placeHolderList[29]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01.visibility" 
+		"outside_living_roomRN.placeHolderList[30]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01.translateX" 
+		"outside_living_roomRN.placeHolderList[31]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01.translateY" 
+		"outside_living_roomRN.placeHolderList[32]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01.translateZ" 
+		"outside_living_roomRN.placeHolderList[33]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01.rotateX" 
+		"outside_living_roomRN.placeHolderList[34]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01.rotateY" 
+		"outside_living_roomRN.placeHolderList[35]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01.rotateZ" 
+		"outside_living_roomRN.placeHolderList[36]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01.scaleX" 
+		"outside_living_roomRN.placeHolderList[37]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01.scaleY" 
+		"outside_living_roomRN.placeHolderList[38]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01.scaleZ" 
+		"outside_living_roomRN.placeHolderList[39]" ""
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01.blendParent1" 
+		"outside_living_roomRN.placeHolderList[40]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01.blendParent1" 
+		"outside_living_roomRN.placeHolderList[41]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01.visibility" 
+		"outside_living_roomRN.placeHolderList[42]" ""
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01_parentConstraint1.constraintTranslateX" 
+		"outside_living_roomRN.placeHolderList[43]" "outside_living_room:pig_latest:PigSkin002:bind_pelvis01.tx"
+		
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01_parentConstraint1.constraintTranslateY" 
+		"outside_living_roomRN.placeHolderList[44]" "outside_living_room:pig_latest:PigSkin002:bind_pelvis01.ty"
+		
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01_parentConstraint1.constraintTranslateZ" 
+		"outside_living_roomRN.placeHolderList[45]" "outside_living_room:pig_latest:PigSkin002:bind_pelvis01.tz"
+		
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01_parentConstraint1.constraintRotateX" 
+		"outside_living_roomRN.placeHolderList[46]" "outside_living_room:pig_latest:PigSkin002:bind_pelvis01.rx"
+		
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01_parentConstraint1.constraintRotateY" 
+		"outside_living_roomRN.placeHolderList[47]" "outside_living_room:pig_latest:PigSkin002:bind_pelvis01.ry"
+		
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01_parentConstraint1.constraintRotateZ" 
+		"outside_living_roomRN.placeHolderList[48]" "outside_living_room:pig_latest:PigSkin002:bind_pelvis01.rz"
+		
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01|outside_living_room:pig_latest:curve_tail01.translateX" 
+		"outside_living_roomRN.placeHolderList[49]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01|outside_living_room:pig_latest:curve_tail01.translateY" 
+		"outside_living_roomRN.placeHolderList[50]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01|outside_living_room:pig_latest:curve_tail01.translateZ" 
+		"outside_living_roomRN.placeHolderList[51]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01|outside_living_room:pig_latest:curve_tail01.rotateY" 
+		"outside_living_roomRN.placeHolderList[52]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01|outside_living_room:pig_latest:curve_tail01.rotateX" 
+		"outside_living_roomRN.placeHolderList[53]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01|outside_living_room:pig_latest:curve_tail01.rotateZ" 
+		"outside_living_roomRN.placeHolderList[54]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01|outside_living_room:pig_latest:curve_tail01.visibility" 
+		"outside_living_roomRN.placeHolderList[55]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01|outside_living_room:pig_latest:curve_tail01.scaleX" 
+		"outside_living_roomRN.placeHolderList[56]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01|outside_living_room:pig_latest:curve_tail01.scaleY" 
+		"outside_living_roomRN.placeHolderList[57]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01|outside_living_room:pig_latest:curve_tail01.scaleZ" 
+		"outside_living_roomRN.placeHolderList[58]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:head_control.translateX" 
+		"outside_living_roomRN.placeHolderList[59]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:head_control.translateY" 
+		"outside_living_roomRN.placeHolderList[60]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:head_control.translateZ" 
+		"outside_living_roomRN.placeHolderList[61]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:head_control.rotateY" 
+		"outside_living_roomRN.placeHolderList[62]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:head_control.rotateX" 
+		"outside_living_roomRN.placeHolderList[63]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:head_control.rotateZ" 
+		"outside_living_roomRN.placeHolderList[64]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:head_control.scaleX" 
+		"outside_living_roomRN.placeHolderList[65]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:head_control.scaleY" 
+		"outside_living_roomRN.placeHolderList[66]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:head_control.scaleZ" 
+		"outside_living_roomRN.placeHolderList[67]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:head_control.visibility" 
+		"outside_living_roomRN.placeHolderList[68]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_frontfoot01.rotateX" 
+		"outside_living_roomRN.placeHolderList[69]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_frontfoot01.rotateY" 
+		"outside_living_roomRN.placeHolderList[70]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_frontfoot01.rotateZ" 
+		"outside_living_roomRN.placeHolderList[71]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_frontfoot01.translateX" 
+		"outside_living_roomRN.placeHolderList[72]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_frontfoot01.translateY" 
+		"outside_living_roomRN.placeHolderList[73]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_frontfoot01.translateZ" 
+		"outside_living_roomRN.placeHolderList[74]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_frontfoot01.scaleX" 
+		"outside_living_roomRN.placeHolderList[75]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_frontfoot01.scaleY" 
+		"outside_living_roomRN.placeHolderList[76]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_frontfoot01.scaleZ" 
+		"outside_living_roomRN.placeHolderList[77]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_frontfoot01.visibility" 
+		"outside_living_roomRN.placeHolderList[78]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_frontfoot01.rotateX" 
+		"outside_living_roomRN.placeHolderList[79]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_frontfoot01.rotateY" 
+		"outside_living_roomRN.placeHolderList[80]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_frontfoot01.rotateZ" 
+		"outside_living_roomRN.placeHolderList[81]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_frontfoot01.translateX" 
+		"outside_living_roomRN.placeHolderList[82]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_frontfoot01.translateY" 
+		"outside_living_roomRN.placeHolderList[83]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_frontfoot01.translateZ" 
+		"outside_living_roomRN.placeHolderList[84]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_frontfoot01.scaleX" 
+		"outside_living_roomRN.placeHolderList[85]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_frontfoot01.scaleY" 
+		"outside_living_roomRN.placeHolderList[86]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_frontfoot01.scaleZ" 
+		"outside_living_roomRN.placeHolderList[87]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_frontfoot01.visibility" 
+		"outside_living_roomRN.placeHolderList[88]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_backfoot01.rotateX" 
+		"outside_living_roomRN.placeHolderList[89]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_backfoot01.rotateY" 
+		"outside_living_roomRN.placeHolderList[90]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_backfoot01.rotateZ" 
+		"outside_living_roomRN.placeHolderList[91]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_backfoot01.translateX" 
+		"outside_living_roomRN.placeHolderList[92]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_backfoot01.translateZ" 
+		"outside_living_roomRN.placeHolderList[93]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_backfoot01.translateY" 
+		"outside_living_roomRN.placeHolderList[94]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_backfoot01.scaleX" 
+		"outside_living_roomRN.placeHolderList[95]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_backfoot01.scaleY" 
+		"outside_living_roomRN.placeHolderList[96]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_backfoot01.scaleZ" 
+		"outside_living_roomRN.placeHolderList[97]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_backfoot01.visibility" 
+		"outside_living_roomRN.placeHolderList[98]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_backfoot01.rotateX" 
+		"outside_living_roomRN.placeHolderList[99]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_backfoot01.rotateY" 
+		"outside_living_roomRN.placeHolderList[100]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_backfoot01.rotateZ" 
+		"outside_living_roomRN.placeHolderList[101]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_backfoot01.translateX" 
+		"outside_living_roomRN.placeHolderList[102]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_backfoot01.translateY" 
+		"outside_living_roomRN.placeHolderList[103]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_backfoot01.translateZ" 
+		"outside_living_roomRN.placeHolderList[104]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_backfoot01.scaleX" 
+		"outside_living_roomRN.placeHolderList[105]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_backfoot01.scaleY" 
+		"outside_living_roomRN.placeHolderList[106]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_backfoot01.scaleZ" 
+		"outside_living_roomRN.placeHolderList[107]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_backfoot01.visibility" 
+		"outside_living_roomRN.placeHolderList[108]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01.rotateZ" 
+		"outside_living_roomRN.placeHolderList[109]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:shoulders_rotation_ctrl01.translateY" 
+		"outside_living_roomRN.placeHolderList[110]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:shoulders_rotation_ctrl01.translateX" 
+		"outside_living_roomRN.placeHolderList[111]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:shoulders_rotation_ctrl01.translateZ" 
+		"outside_living_roomRN.placeHolderList[112]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:shoulders_rotation_ctrl01.rotateX" 
+		"outside_living_roomRN.placeHolderList[113]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:shoulders_rotation_ctrl01.rotateY" 
+		"outside_living_roomRN.placeHolderList[114]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:shoulders_rotation_ctrl01.rotateZ" 
+		"outside_living_roomRN.placeHolderList[115]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:shoulders_rotation_ctrl01.scaleX" 
+		"outside_living_roomRN.placeHolderList[116]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:shoulders_rotation_ctrl01.scaleY" 
+		"outside_living_roomRN.placeHolderList[117]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:shoulders_rotation_ctrl01.scaleZ" 
+		"outside_living_roomRN.placeHolderList[118]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:shoulders_rotation_ctrl01.visibility" 
+		"outside_living_roomRN.placeHolderList[119]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:tail_controllers_01.rotateX" 
+		"outside_living_roomRN.placeHolderList[120]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:tail_controllers_01.rotateY" 
+		"outside_living_roomRN.placeHolderList[121]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:tail_controllers_01.rotateZ" 
+		"outside_living_roomRN.placeHolderList[122]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:tail_controllers_01.visibility" 
+		"outside_living_roomRN.placeHolderList[123]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:tail_controllers_01.translateX" 
+		"outside_living_roomRN.placeHolderList[124]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:tail_controllers_01.translateY" 
+		"outside_living_roomRN.placeHolderList[125]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:tail_controllers_01.translateZ" 
+		"outside_living_roomRN.placeHolderList[126]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:tail_controllers_01.scaleX" 
+		"outside_living_roomRN.placeHolderList[127]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:tail_controllers_01.scaleY" 
+		"outside_living_roomRN.placeHolderList[128]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:tail_controllers_01.scaleZ" 
+		"outside_living_roomRN.placeHolderList[129]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_1control01.translateX" 
+		"outside_living_roomRN.placeHolderList[130]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_1control01.translateY" 
+		"outside_living_roomRN.placeHolderList[131]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_1control01.translateZ" 
+		"outside_living_roomRN.placeHolderList[132]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_1control01.rotateY" 
+		"outside_living_roomRN.placeHolderList[133]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_1control01.rotateX" 
+		"outside_living_roomRN.placeHolderList[134]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_1control01.rotateZ" 
+		"outside_living_roomRN.placeHolderList[135]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_1control01.scaleX" 
+		"outside_living_roomRN.placeHolderList[136]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_1control01.scaleY" 
+		"outside_living_roomRN.placeHolderList[137]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_1control01.scaleZ" 
+		"outside_living_roomRN.placeHolderList[138]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_1control01.visibility" 
+		"outside_living_roomRN.placeHolderList[139]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_2control01.translateX" 
+		"outside_living_roomRN.placeHolderList[140]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_2control01.translateY" 
+		"outside_living_roomRN.placeHolderList[141]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_2control01.translateZ" 
+		"outside_living_roomRN.placeHolderList[142]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_2control01.rotateX" 
+		"outside_living_roomRN.placeHolderList[143]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_2control01.rotateY" 
+		"outside_living_roomRN.placeHolderList[144]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_2control01.rotateZ" 
+		"outside_living_roomRN.placeHolderList[145]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_2control01.scaleX" 
+		"outside_living_roomRN.placeHolderList[146]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_2control01.scaleY" 
+		"outside_living_roomRN.placeHolderList[147]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_2control01.scaleZ" 
+		"outside_living_roomRN.placeHolderList[148]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_2control01.visibility" 
+		"outside_living_roomRN.placeHolderList[149]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_3control01.translateX" 
+		"outside_living_roomRN.placeHolderList[150]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_3control01.translateY" 
+		"outside_living_roomRN.placeHolderList[151]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_3control01.translateZ" 
+		"outside_living_roomRN.placeHolderList[152]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_3control01.rotateX" 
+		"outside_living_roomRN.placeHolderList[153]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_3control01.rotateY" 
+		"outside_living_roomRN.placeHolderList[154]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_3control01.rotateZ" 
+		"outside_living_roomRN.placeHolderList[155]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_3control01.scaleX" 
+		"outside_living_roomRN.placeHolderList[156]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_3control01.scaleY" 
+		"outside_living_roomRN.placeHolderList[157]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_3control01.scaleZ" 
+		"outside_living_roomRN.placeHolderList[158]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_3control01.visibility" 
+		"outside_living_roomRN.placeHolderList[159]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_4control01.translateX" 
+		"outside_living_roomRN.placeHolderList[160]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_4control01.translateY" 
+		"outside_living_roomRN.placeHolderList[161]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_4control01.translateZ" 
+		"outside_living_roomRN.placeHolderList[162]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_4control01.rotateX" 
+		"outside_living_roomRN.placeHolderList[163]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_4control01.rotateY" 
+		"outside_living_roomRN.placeHolderList[164]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_4control01.rotateZ" 
+		"outside_living_roomRN.placeHolderList[165]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_4control01.scaleX" 
+		"outside_living_roomRN.placeHolderList[166]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_4control01.scaleY" 
+		"outside_living_roomRN.placeHolderList[167]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_4control01.scaleZ" 
+		"outside_living_roomRN.placeHolderList[168]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_4control01.visibility" 
+		"outside_living_roomRN.placeHolderList[169]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems.rotateX" 
+		"outside_living_roomRN.placeHolderList[170]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems.rotateY" 
+		"outside_living_roomRN.placeHolderList[171]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems.rotateZ" 
+		"outside_living_roomRN.placeHolderList[172]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems.visibility" 
+		"outside_living_roomRN.placeHolderList[173]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems.translateX" 
+		"outside_living_roomRN.placeHolderList[174]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems.translateY" 
+		"outside_living_roomRN.placeHolderList[175]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems.translateZ" 
+		"outside_living_roomRN.placeHolderList[176]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems.scaleX" 
+		"outside_living_roomRN.placeHolderList[177]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems.scaleY" 
+		"outside_living_roomRN.placeHolderList[178]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems.scaleZ" 
+		"outside_living_roomRN.placeHolderList[179]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01.visibility" 
+		"outside_living_roomRN.placeHolderList[180]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01.autoVolume" 
+		"outside_living_roomRN.placeHolderList[181]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01.translateY" 
+		"outside_living_roomRN.placeHolderList[182]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01.translateX" 
+		"outside_living_roomRN.placeHolderList[183]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01.translateZ" 
+		"outside_living_roomRN.placeHolderList[184]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01.rotateX" 
+		"outside_living_roomRN.placeHolderList[185]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01.rotateY" 
+		"outside_living_roomRN.placeHolderList[186]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01.rotateZ" 
+		"outside_living_roomRN.placeHolderList[187]" ""
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01.blendParent1" 
+		"outside_living_roomRN.placeHolderList[188]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01.blendParent1" 
+		"outside_living_roomRN.placeHolderList[189]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_surface01.template" 
+		"outside_living_roomRN.placeHolderList[190]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_surface01.rotateX" 
+		"outside_living_roomRN.placeHolderList[191]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_surface01.rotateY" 
+		"outside_living_roomRN.placeHolderList[192]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_surface01.rotateZ" 
+		"outside_living_roomRN.placeHolderList[193]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_surface01.visibility" 
+		"outside_living_roomRN.placeHolderList[194]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_surface01.translateX" 
+		"outside_living_roomRN.placeHolderList[195]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_surface01.translateY" 
+		"outside_living_roomRN.placeHolderList[196]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_surface01.translateZ" 
+		"outside_living_roomRN.placeHolderList[197]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_surface01.scaleX" 
+		"outside_living_roomRN.placeHolderList[198]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_surface01.scaleY" 
+		"outside_living_roomRN.placeHolderList[199]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_surface01.scaleZ" 
+		"outside_living_roomRN.placeHolderList[200]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01.translateX" 
+		"outside_living_roomRN.placeHolderList[201]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01.translateY" 
+		"outside_living_roomRN.placeHolderList[202]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01.translateZ" 
+		"outside_living_roomRN.placeHolderList[203]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01.rotateX" 
+		"outside_living_roomRN.placeHolderList[204]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01.rotateY" 
+		"outside_living_roomRN.placeHolderList[205]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01.rotateZ" 
+		"outside_living_roomRN.placeHolderList[206]" ""
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01.blendParent1" 
+		"outside_living_roomRN.placeHolderList[207]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01.blendParent1" 
+		"outside_living_roomRN.placeHolderList[208]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_mid01.followStart" 
+		"outside_living_roomRN.placeHolderList[209]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_mid01.translateX" 
+		"outside_living_roomRN.placeHolderList[210]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_mid01.translateY" 
+		"outside_living_roomRN.placeHolderList[211]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_mid01.translateZ" 
+		"outside_living_roomRN.placeHolderList[212]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_mid01.rotateZ" 
+		"outside_living_roomRN.placeHolderList[213]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_mid01.rotateX" 
+		"outside_living_roomRN.placeHolderList[214]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_mid01.rotateY" 
+		"outside_living_roomRN.placeHolderList[215]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_mid01.scaleX" 
+		"outside_living_roomRN.placeHolderList[216]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_mid01.scaleY" 
+		"outside_living_roomRN.placeHolderList[217]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_mid01.scaleZ" 
+		"outside_living_roomRN.placeHolderList[218]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_mid01.visibility" 
+		"outside_living_roomRN.placeHolderList[219]" ""
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01_parentConstraint1.constraintTranslateX" 
+		"outside_living_roomRN.placeHolderList[220]" "outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01.tx"
+		
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01_parentConstraint1.constraintTranslateY" 
+		"outside_living_roomRN.placeHolderList[221]" "outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01.ty"
+		
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01_parentConstraint1.constraintTranslateZ" 
+		"outside_living_roomRN.placeHolderList[222]" "outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01.tz"
+		
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01_parentConstraint1.constraintRotateX" 
+		"outside_living_roomRN.placeHolderList[223]" "outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01.rx"
+		
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01_parentConstraint1.constraintRotateY" 
+		"outside_living_roomRN.placeHolderList[224]" "outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01.ry"
+		
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01_parentConstraint1.constraintRotateZ" 
+		"outside_living_roomRN.placeHolderList[225]" "outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01.rz"
+		
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01.translateX" 
+		"outside_living_roomRN.placeHolderList[226]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01.translateY" 
+		"outside_living_roomRN.placeHolderList[227]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01.translateZ" 
+		"outside_living_roomRN.placeHolderList[228]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01.rotateX" 
+		"outside_living_roomRN.placeHolderList[229]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01.rotateY" 
+		"outside_living_roomRN.placeHolderList[230]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01.rotateZ" 
+		"outside_living_roomRN.placeHolderList[231]" ""
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01.blendParent1" 
+		"outside_living_roomRN.placeHolderList[232]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01.blendParent1" 
+		"outside_living_roomRN.placeHolderList[233]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_end01.followMid" 
+		"outside_living_roomRN.placeHolderList[234]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_end01.translateX" 
+		"outside_living_roomRN.placeHolderList[235]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_end01.translateY" 
+		"outside_living_roomRN.placeHolderList[236]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_end01.translateZ" 
+		"outside_living_roomRN.placeHolderList[237]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_end01.rotateZ" 
+		"outside_living_roomRN.placeHolderList[238]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_end01.rotateX" 
+		"outside_living_roomRN.placeHolderList[239]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_end01.rotateY" 
+		"outside_living_roomRN.placeHolderList[240]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_end01.visibility" 
+		"outside_living_roomRN.placeHolderList[241]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_end01.scaleX" 
+		"outside_living_roomRN.placeHolderList[242]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_end01.scaleY" 
+		"outside_living_roomRN.placeHolderList[243]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_end01.scaleZ" 
+		"outside_living_roomRN.placeHolderList[244]" ""
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01_parentConstraint1.constraintTranslateX" 
+		"outside_living_roomRN.placeHolderList[245]" "outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01.tx"
+		
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01_parentConstraint1.constraintTranslateY" 
+		"outside_living_roomRN.placeHolderList[246]" "outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01.ty"
+		
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01_parentConstraint1.constraintTranslateZ" 
+		"outside_living_roomRN.placeHolderList[247]" "outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01.tz"
+		
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01_parentConstraint1.constraintRotateX" 
+		"outside_living_roomRN.placeHolderList[248]" "outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01.rx"
+		
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01_parentConstraint1.constraintRotateY" 
+		"outside_living_roomRN.placeHolderList[249]" "outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01.ry"
+		
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01_parentConstraint1.constraintRotateZ" 
+		"outside_living_roomRN.placeHolderList[250]" "outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01.rz"
+		
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_start01.rotateX" 
+		"outside_living_roomRN.placeHolderList[251]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_start01.rotateY" 
+		"outside_living_roomRN.placeHolderList[252]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_start01.rotateZ" 
+		"outside_living_roomRN.placeHolderList[253]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_start01.translateX" 
+		"outside_living_roomRN.placeHolderList[254]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_start01.translateY" 
+		"outside_living_roomRN.placeHolderList[255]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_start01.translateZ" 
+		"outside_living_roomRN.placeHolderList[256]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_start01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_start01.translateX" 
+		"outside_living_roomRN.placeHolderList[257]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_start01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_start01.translateY" 
+		"outside_living_roomRN.placeHolderList[258]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_start01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_start01.translateZ" 
+		"outside_living_roomRN.placeHolderList[259]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_start01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_start01.rotateZ" 
+		"outside_living_roomRN.placeHolderList[260]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_start01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_start01.rotateX" 
+		"outside_living_roomRN.placeHolderList[261]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_start01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_start01.rotateY" 
+		"outside_living_roomRN.placeHolderList[262]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_start01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_start01.scaleX" 
+		"outside_living_roomRN.placeHolderList[263]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_start01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_start01.scaleY" 
+		"outside_living_roomRN.placeHolderList[264]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_start01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_start01.scaleZ" 
+		"outside_living_roomRN.placeHolderList[265]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_start01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_start01.visibility" 
+		"outside_living_roomRN.placeHolderList[266]" ""
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01_parentConstraint1.constraintTranslateY" 
+		"outside_living_roomRN.placeHolderList[267]" "outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01.ty"
+		
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01_parentConstraint1.constraintTranslateX" 
+		"outside_living_roomRN.placeHolderList[268]" "outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01.tx"
+		
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01_parentConstraint1.constraintTranslateZ" 
+		"outside_living_roomRN.placeHolderList[269]" "outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01.tz"
+		
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01_parentConstraint1.constraintRotateX" 
+		"outside_living_roomRN.placeHolderList[270]" "outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01.rx"
+		
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01_parentConstraint1.constraintRotateY" 
+		"outside_living_roomRN.placeHolderList[271]" "outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01.ry"
+		
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01_parentConstraint1.constraintRotateZ" 
+		"outside_living_roomRN.placeHolderList[272]" "outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01.rz"
+		
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01.rotateX" 
+		"outside_living_roomRN.placeHolderList[273]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01.rotateY" 
+		"outside_living_roomRN.placeHolderList[274]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01.rotateZ" 
+		"outside_living_roomRN.placeHolderList[275]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01.visibility" 
+		"outside_living_roomRN.placeHolderList[276]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01.translateX" 
+		"outside_living_roomRN.placeHolderList[277]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01.translateY" 
+		"outside_living_roomRN.placeHolderList[278]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01.translateZ" 
+		"outside_living_roomRN.placeHolderList[279]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01.scaleX" 
+		"outside_living_roomRN.placeHolderList[280]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01.scaleY" 
+		"outside_living_roomRN.placeHolderList[281]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01.scaleZ" 
+		"outside_living_roomRN.placeHolderList[282]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_a01.visibility" 
+		"outside_living_roomRN.placeHolderList[283]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_a01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_a01.magnitude" 
+		"outside_living_roomRN.placeHolderList[284]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_a01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_a01.rotateX" 
+		"outside_living_roomRN.placeHolderList[285]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_a01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_a01.rotateY" 
+		"outside_living_roomRN.placeHolderList[286]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_a01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_a01.rotateZ" 
+		"outside_living_roomRN.placeHolderList[287]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_a01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_a01.translateX" 
+		"outside_living_roomRN.placeHolderList[288]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_a01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_a01.translateY" 
+		"outside_living_roomRN.placeHolderList[289]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_a01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_a01.translateZ" 
+		"outside_living_roomRN.placeHolderList[290]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_a01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_a01.scaleX" 
+		"outside_living_roomRN.placeHolderList[291]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_a01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_a01.scaleY" 
+		"outside_living_roomRN.placeHolderList[292]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_a01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_a01.scaleZ" 
+		"outside_living_roomRN.placeHolderList[293]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_b01.visibility" 
+		"outside_living_roomRN.placeHolderList[294]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_b01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_b01.magnitude" 
+		"outside_living_roomRN.placeHolderList[295]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_b01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_b01.rotateX" 
+		"outside_living_roomRN.placeHolderList[296]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_b01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_b01.rotateY" 
+		"outside_living_roomRN.placeHolderList[297]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_b01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_b01.rotateZ" 
+		"outside_living_roomRN.placeHolderList[298]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_b01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_b01.translateX" 
+		"outside_living_roomRN.placeHolderList[299]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_b01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_b01.translateY" 
+		"outside_living_roomRN.placeHolderList[300]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_b01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_b01.translateZ" 
+		"outside_living_roomRN.placeHolderList[301]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_b01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_b01.scaleX" 
+		"outside_living_roomRN.placeHolderList[302]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_b01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_b01.scaleY" 
+		"outside_living_roomRN.placeHolderList[303]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_b01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_b01.scaleZ" 
+		"outside_living_roomRN.placeHolderList[304]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_c01.visibility" 
+		"outside_living_roomRN.placeHolderList[305]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_c01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_c01.magnitude" 
+		"outside_living_roomRN.placeHolderList[306]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_c01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_c01.rotateX" 
+		"outside_living_roomRN.placeHolderList[307]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_c01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_c01.rotateY" 
+		"outside_living_roomRN.placeHolderList[308]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_c01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_c01.rotateZ" 
+		"outside_living_roomRN.placeHolderList[309]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_c01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_c01.translateX" 
+		"outside_living_roomRN.placeHolderList[310]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_c01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_c01.translateY" 
+		"outside_living_roomRN.placeHolderList[311]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_c01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_c01.translateZ" 
+		"outside_living_roomRN.placeHolderList[312]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_c01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_c01.scaleX" 
+		"outside_living_roomRN.placeHolderList[313]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_c01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_c01.scaleY" 
+		"outside_living_roomRN.placeHolderList[314]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_c01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_c01.scaleZ" 
+		"outside_living_roomRN.placeHolderList[315]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_d01.visibility" 
+		"outside_living_roomRN.placeHolderList[316]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_d01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_d01.magnitude" 
+		"outside_living_roomRN.placeHolderList[317]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_d01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_d01.rotateX" 
+		"outside_living_roomRN.placeHolderList[318]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_d01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_d01.rotateY" 
+		"outside_living_roomRN.placeHolderList[319]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_d01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_d01.rotateZ" 
+		"outside_living_roomRN.placeHolderList[320]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_d01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_d01.translateX" 
+		"outside_living_roomRN.placeHolderList[321]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_d01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_d01.translateY" 
+		"outside_living_roomRN.placeHolderList[322]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_d01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_d01.translateZ" 
+		"outside_living_roomRN.placeHolderList[323]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_d01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_d01.scaleX" 
+		"outside_living_roomRN.placeHolderList[324]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_d01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_d01.scaleY" 
+		"outside_living_roomRN.placeHolderList[325]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_d01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_d01.scaleZ" 
+		"outside_living_roomRN.placeHolderList[326]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_e01.visibility" 
+		"outside_living_roomRN.placeHolderList[327]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_e01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_e01.magnitude" 
+		"outside_living_roomRN.placeHolderList[328]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_e01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_e01.rotateX" 
+		"outside_living_roomRN.placeHolderList[329]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_e01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_e01.rotateY" 
+		"outside_living_roomRN.placeHolderList[330]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_e01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_e01.rotateZ" 
+		"outside_living_roomRN.placeHolderList[331]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_e01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_e01.translateX" 
+		"outside_living_roomRN.placeHolderList[332]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_e01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_e01.translateY" 
+		"outside_living_roomRN.placeHolderList[333]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_e01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_e01.translateZ" 
+		"outside_living_roomRN.placeHolderList[334]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_e01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_e01.scaleX" 
+		"outside_living_roomRN.placeHolderList[335]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_e01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_e01.scaleY" 
+		"outside_living_roomRN.placeHolderList[336]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_flc_e01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_anim_e01.scaleZ" 
+		"outside_living_roomRN.placeHolderList[337]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_hidden01.visibility" 
+		"outside_living_roomRN.placeHolderList[338]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_hidden01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_bshp_surface01.rotateX" 
+		"outside_living_roomRN.placeHolderList[339]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_hidden01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_bshp_surface01.rotateY" 
+		"outside_living_roomRN.placeHolderList[340]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_hidden01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_bshp_surface01.rotateZ" 
+		"outside_living_roomRN.placeHolderList[341]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_hidden01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_bshp_surface01.visibility" 
+		"outside_living_roomRN.placeHolderList[342]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_hidden01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_bshp_surface01.translateX" 
+		"outside_living_roomRN.placeHolderList[343]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_hidden01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_bshp_surface01.translateY" 
+		"outside_living_roomRN.placeHolderList[344]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_hidden01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_bshp_surface01.translateZ" 
+		"outside_living_roomRN.placeHolderList[345]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_hidden01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_bshp_surface01.scaleX" 
+		"outside_living_roomRN.placeHolderList[346]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_hidden01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_bshp_surface01.scaleY" 
+		"outside_living_roomRN.placeHolderList[347]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_hidden01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_bshp_surface01.scaleZ" 
+		"outside_living_roomRN.placeHolderList[348]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_hidden01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_cwire_surface01.visibility" 
+		"outside_living_roomRN.placeHolderList[349]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_hidden01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_cwire_surface01BaseWire.rotateX" 
+		"outside_living_roomRN.placeHolderList[350]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_hidden01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_cwire_surface01BaseWire.rotateY" 
+		"outside_living_roomRN.placeHolderList[351]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_hidden01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_cwire_surface01BaseWire.rotateZ" 
+		"outside_living_roomRN.placeHolderList[352]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_hidden01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_cwire_surface01BaseWire.visibility" 
+		"outside_living_roomRN.placeHolderList[353]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_hidden01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_cwire_surface01BaseWire.translateX" 
+		"outside_living_roomRN.placeHolderList[354]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_hidden01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_cwire_surface01BaseWire.translateY" 
+		"outside_living_roomRN.placeHolderList[355]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_hidden01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_cwire_surface01BaseWire.translateZ" 
+		"outside_living_roomRN.placeHolderList[356]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_hidden01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_cwire_surface01BaseWire.scaleX" 
+		"outside_living_roomRN.placeHolderList[357]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_hidden01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_cwire_surface01BaseWire.scaleY" 
+		"outside_living_roomRN.placeHolderList[358]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_hidden01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_cwire_surface01BaseWire.scaleZ" 
+		"outside_living_roomRN.placeHolderList[359]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01.visibility" 
+		"outside_living_roomRN.placeHolderList[360]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01.autoVolume" 
+		"outside_living_roomRN.placeHolderList[361]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01.rotateX" 
+		"outside_living_roomRN.placeHolderList[362]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01.rotateY" 
+		"outside_living_roomRN.placeHolderList[363]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01.rotateZ" 
+		"outside_living_roomRN.placeHolderList[364]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01.translateX" 
+		"outside_living_roomRN.placeHolderList[365]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01.translateY" 
+		"outside_living_roomRN.placeHolderList[366]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01.translateZ" 
+		"outside_living_roomRN.placeHolderList[367]" ""
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01.blendParent1" 
+		"outside_living_roomRN.placeHolderList[368]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01.blendParent1" 
+		"outside_living_roomRN.placeHolderList[369]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_surface01.template" 
+		"outside_living_roomRN.placeHolderList[370]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_surface01.rotateX" 
+		"outside_living_roomRN.placeHolderList[371]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_surface01.rotateY" 
+		"outside_living_roomRN.placeHolderList[372]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_surface01.rotateZ" 
+		"outside_living_roomRN.placeHolderList[373]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_surface01.visibility" 
+		"outside_living_roomRN.placeHolderList[374]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_surface01.translateX" 
+		"outside_living_roomRN.placeHolderList[375]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_surface01.translateY" 
+		"outside_living_roomRN.placeHolderList[376]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_surface01.translateZ" 
+		"outside_living_roomRN.placeHolderList[377]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_surface01.scaleX" 
+		"outside_living_roomRN.placeHolderList[378]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_surface01.scaleY" 
+		"outside_living_roomRN.placeHolderList[379]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_surface01.scaleZ" 
+		"outside_living_roomRN.placeHolderList[380]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01.translateX" 
+		"outside_living_roomRN.placeHolderList[381]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01.translateY" 
+		"outside_living_roomRN.placeHolderList[382]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01.translateZ" 
+		"outside_living_roomRN.placeHolderList[383]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01.rotateX" 
+		"outside_living_roomRN.placeHolderList[384]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01.rotateY" 
+		"outside_living_roomRN.placeHolderList[385]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01.rotateZ" 
+		"outside_living_roomRN.placeHolderList[386]" ""
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01.blendParent1" 
+		"outside_living_roomRN.placeHolderList[387]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01.blendParent1" 
+		"outside_living_roomRN.placeHolderList[388]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_mid01.followStart" 
+		"outside_living_roomRN.placeHolderList[389]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_mid01.translateX" 
+		"outside_living_roomRN.placeHolderList[390]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_mid01.translateY" 
+		"outside_living_roomRN.placeHolderList[391]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_mid01.translateZ" 
+		"outside_living_roomRN.placeHolderList[392]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_mid01.rotateZ" 
+		"outside_living_roomRN.placeHolderList[393]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_mid01.rotateX" 
+		"outside_living_roomRN.placeHolderList[394]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_mid01.rotateY" 
+		"outside_living_roomRN.placeHolderList[395]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_mid01.scaleX" 
+		"outside_living_roomRN.placeHolderList[396]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_mid01.scaleY" 
+		"outside_living_roomRN.placeHolderList[397]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_mid01.scaleZ" 
+		"outside_living_roomRN.placeHolderList[398]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_mid01.visibility" 
+		"outside_living_roomRN.placeHolderList[399]" ""
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01_parentConstraint1.constraintTranslateX" 
+		"outside_living_roomRN.placeHolderList[400]" "outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01.tx"
+		
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01_parentConstraint1.constraintTranslateY" 
+		"outside_living_roomRN.placeHolderList[401]" "outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01.ty"
+		
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01_parentConstraint1.constraintTranslateZ" 
+		"outside_living_roomRN.placeHolderList[402]" "outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01.tz"
+		
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01_parentConstraint1.constraintRotateX" 
+		"outside_living_roomRN.placeHolderList[403]" "outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01.rx"
+		
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01_parentConstraint1.constraintRotateY" 
+		"outside_living_roomRN.placeHolderList[404]" "outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01.ry"
+		
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01_parentConstraint1.constraintRotateZ" 
+		"outside_living_roomRN.placeHolderList[405]" "outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_mid01.rz"
+		
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01.translateX" 
+		"outside_living_roomRN.placeHolderList[406]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01.translateY" 
+		"outside_living_roomRN.placeHolderList[407]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01.translateZ" 
+		"outside_living_roomRN.placeHolderList[408]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01.rotateX" 
+		"outside_living_roomRN.placeHolderList[409]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01.rotateY" 
+		"outside_living_roomRN.placeHolderList[410]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01.rotateZ" 
+		"outside_living_roomRN.placeHolderList[411]" ""
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01.blendParent1" 
+		"outside_living_roomRN.placeHolderList[412]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01.blendParent1" 
+		"outside_living_roomRN.placeHolderList[413]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_end01.followMid" 
+		"outside_living_roomRN.placeHolderList[414]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_end01.translateX" 
+		"outside_living_roomRN.placeHolderList[415]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_end01.translateY" 
+		"outside_living_roomRN.placeHolderList[416]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_end01.translateZ" 
+		"outside_living_roomRN.placeHolderList[417]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_end01.rotateZ" 
+		"outside_living_roomRN.placeHolderList[418]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_end01.rotateX" 
+		"outside_living_roomRN.placeHolderList[419]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_end01.rotateY" 
+		"outside_living_roomRN.placeHolderList[420]" ""
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_end01.blendParent1" 
+		"outside_living_roomRN.placeHolderList[421]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_end01.blendParent1" 
+		"outside_living_roomRN.placeHolderList[422]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_end01.visibility" 
+		"outside_living_roomRN.placeHolderList[423]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_end01.scaleX" 
+		"outside_living_roomRN.placeHolderList[424]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_end01.scaleY" 
+		"outside_living_roomRN.placeHolderList[425]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_end01.scaleZ" 
+		"outside_living_roomRN.placeHolderList[426]" ""
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_end01_parentConstraint1.constraintTranslateX" 
+		"outside_living_roomRN.placeHolderList[427]" "outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_end01.tx"
+		
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_end01_parentConstraint1.constraintTranslateY" 
+		"outside_living_roomRN.placeHolderList[428]" "outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_end01.ty"
+		
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_end01_parentConstraint1.constraintTranslateZ" 
+		"outside_living_roomRN.placeHolderList[429]" "outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_end01.tz"
+		
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_end01_parentConstraint1.constraintRotateZ" 
+		"outside_living_roomRN.placeHolderList[430]" "outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_end01.rz"
+		
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_end01_parentConstraint1.constraintRotateX" 
+		"outside_living_roomRN.placeHolderList[431]" "outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_end01.rx"
+		
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_end01_parentConstraint1.constraintRotateY" 
+		"outside_living_roomRN.placeHolderList[432]" "outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_end01.ry"
+		
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01_parentConstraint1.constraintTranslateX" 
+		"outside_living_roomRN.placeHolderList[433]" "outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01.tx"
+		
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01_parentConstraint1.constraintTranslateY" 
+		"outside_living_roomRN.placeHolderList[434]" "outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01.ty"
+		
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01_parentConstraint1.constraintTranslateZ" 
+		"outside_living_roomRN.placeHolderList[435]" "outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01.tz"
+		
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01_parentConstraint1.constraintRotateX" 
+		"outside_living_roomRN.placeHolderList[436]" "outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01.rx"
+		
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01_parentConstraint1.constraintRotateY" 
+		"outside_living_roomRN.placeHolderList[437]" "outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01.ry"
+		
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01_parentConstraint1.constraintRotateZ" 
+		"outside_living_roomRN.placeHolderList[438]" "outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_end01.rz"
+		
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_start01.rotateX" 
+		"outside_living_roomRN.placeHolderList[439]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_start01.rotateY" 
+		"outside_living_roomRN.placeHolderList[440]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_start01.rotateZ" 
+		"outside_living_roomRN.placeHolderList[441]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_start01.translateX" 
+		"outside_living_roomRN.placeHolderList[442]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_start01.translateY" 
+		"outside_living_roomRN.placeHolderList[443]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_start01.translateZ" 
+		"outside_living_roomRN.placeHolderList[444]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_start01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_start01.rotateZ" 
+		"outside_living_roomRN.placeHolderList[445]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_start01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_start01.rotateX" 
+		"outside_living_roomRN.placeHolderList[446]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_start01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_start01.rotateY" 
+		"outside_living_roomRN.placeHolderList[447]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_start01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_start01.scaleX" 
+		"outside_living_roomRN.placeHolderList[448]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_start01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_start01.scaleY" 
+		"outside_living_roomRN.placeHolderList[449]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_start01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_start01.scaleZ" 
+		"outside_living_roomRN.placeHolderList[450]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_start01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_start01.blendParent1" 
+		"outside_living_roomRN.placeHolderList[451]" ""
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_start01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_start01.blendPairBlend1" 
+		"outside_living_roomRN.placeHolderList[452]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_start01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_start01.blendPairBlend1" 
+		"outside_living_roomRN.placeHolderList[453]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_start01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_start01.visibility" 
+		"outside_living_roomRN.placeHolderList[454]" ""
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01_parentConstraint1.constraintRotateX" 
+		"outside_living_roomRN.placeHolderList[455]" "outside_living_room:pig_latest:PigSkin002:neck_flexi_global01.rx"
+		
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01_parentConstraint1.constraintRotateY" 
+		"outside_living_roomRN.placeHolderList[456]" "outside_living_room:pig_latest:PigSkin002:neck_flexi_global01.ry"
+		
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01_parentConstraint1.constraintRotateZ" 
+		"outside_living_roomRN.placeHolderList[457]" "outside_living_room:pig_latest:PigSkin002:neck_flexi_global01.rz"
+		
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01_parentConstraint1.constraintTranslateX" 
+		"outside_living_roomRN.placeHolderList[458]" "outside_living_room:pig_latest:PigSkin002:neck_flexi_global01.tx"
+		
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01_parentConstraint1.constraintTranslateY" 
+		"outside_living_roomRN.placeHolderList[459]" "outside_living_room:pig_latest:PigSkin002:neck_flexi_global01.ty"
+		
+		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01_parentConstraint1.constraintTranslateZ" 
+		"outside_living_roomRN.placeHolderList[460]" "outside_living_room:pig_latest:PigSkin002:neck_flexi_global01.tz"
+		
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01.rotateX" 
+		"outside_living_roomRN.placeHolderList[461]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01.rotateY" 
+		"outside_living_roomRN.placeHolderList[462]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01.rotateZ" 
+		"outside_living_roomRN.placeHolderList[463]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01.visibility" 
+		"outside_living_roomRN.placeHolderList[464]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01.translateX" 
+		"outside_living_roomRN.placeHolderList[465]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01.translateY" 
+		"outside_living_roomRN.placeHolderList[466]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01.translateZ" 
+		"outside_living_roomRN.placeHolderList[467]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01.scaleX" 
+		"outside_living_roomRN.placeHolderList[468]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01.scaleY" 
+		"outside_living_roomRN.placeHolderList[469]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01.scaleZ" 
+		"outside_living_roomRN.placeHolderList[470]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_a01.visibility" 
+		"outside_living_roomRN.placeHolderList[471]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_a01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_a01.magnitude" 
+		"outside_living_roomRN.placeHolderList[472]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_a01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_a01.rotateX" 
+		"outside_living_roomRN.placeHolderList[473]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_a01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_a01.rotateY" 
+		"outside_living_roomRN.placeHolderList[474]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_a01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_a01.rotateZ" 
+		"outside_living_roomRN.placeHolderList[475]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_a01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_a01.translateX" 
+		"outside_living_roomRN.placeHolderList[476]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_a01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_a01.translateY" 
+		"outside_living_roomRN.placeHolderList[477]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_a01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_a01.translateZ" 
+		"outside_living_roomRN.placeHolderList[478]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_a01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_a01.scaleX" 
+		"outside_living_roomRN.placeHolderList[479]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_a01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_a01.scaleY" 
+		"outside_living_roomRN.placeHolderList[480]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_a01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_a01.scaleZ" 
+		"outside_living_roomRN.placeHolderList[481]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_b01.visibility" 
+		"outside_living_roomRN.placeHolderList[482]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_b01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_b01.magnitude" 
+		"outside_living_roomRN.placeHolderList[483]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_b01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_b01.rotateX" 
+		"outside_living_roomRN.placeHolderList[484]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_b01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_b01.rotateY" 
+		"outside_living_roomRN.placeHolderList[485]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_b01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_b01.rotateZ" 
+		"outside_living_roomRN.placeHolderList[486]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_b01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_b01.translateX" 
+		"outside_living_roomRN.placeHolderList[487]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_b01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_b01.translateY" 
+		"outside_living_roomRN.placeHolderList[488]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_b01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_b01.translateZ" 
+		"outside_living_roomRN.placeHolderList[489]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_b01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_b01.scaleX" 
+		"outside_living_roomRN.placeHolderList[490]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_b01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_b01.scaleY" 
+		"outside_living_roomRN.placeHolderList[491]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_b01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_b01.scaleZ" 
+		"outside_living_roomRN.placeHolderList[492]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_c01.visibility" 
+		"outside_living_roomRN.placeHolderList[493]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_c01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_c01.magnitude" 
+		"outside_living_roomRN.placeHolderList[494]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_c01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_c01.rotateX" 
+		"outside_living_roomRN.placeHolderList[495]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_c01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_c01.rotateY" 
+		"outside_living_roomRN.placeHolderList[496]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_c01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_c01.rotateZ" 
+		"outside_living_roomRN.placeHolderList[497]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_c01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_c01.translateX" 
+		"outside_living_roomRN.placeHolderList[498]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_c01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_c01.translateY" 
+		"outside_living_roomRN.placeHolderList[499]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_c01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_c01.translateZ" 
+		"outside_living_roomRN.placeHolderList[500]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_c01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_c01.scaleX" 
+		"outside_living_roomRN.placeHolderList[501]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_c01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_c01.scaleY" 
+		"outside_living_roomRN.placeHolderList[502]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_c01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_c01.scaleZ" 
+		"outside_living_roomRN.placeHolderList[503]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_d01.visibility" 
+		"outside_living_roomRN.placeHolderList[504]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_d01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_d01.magnitude" 
+		"outside_living_roomRN.placeHolderList[505]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_d01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_d01.rotateX" 
+		"outside_living_roomRN.placeHolderList[506]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_d01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_d01.rotateY" 
+		"outside_living_roomRN.placeHolderList[507]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_d01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_d01.rotateZ" 
+		"outside_living_roomRN.placeHolderList[508]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_d01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_d01.translateX" 
+		"outside_living_roomRN.placeHolderList[509]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_d01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_d01.translateY" 
+		"outside_living_roomRN.placeHolderList[510]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_d01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_d01.translateZ" 
+		"outside_living_roomRN.placeHolderList[511]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_d01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_d01.scaleX" 
+		"outside_living_roomRN.placeHolderList[512]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_d01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_d01.scaleY" 
+		"outside_living_roomRN.placeHolderList[513]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_d01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_d01.scaleZ" 
+		"outside_living_roomRN.placeHolderList[514]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_e01.visibility" 
+		"outside_living_roomRN.placeHolderList[515]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_e01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_e01.magnitude" 
+		"outside_living_roomRN.placeHolderList[516]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_e01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_e01.rotateX" 
+		"outside_living_roomRN.placeHolderList[517]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_e01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_e01.rotateY" 
+		"outside_living_roomRN.placeHolderList[518]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_e01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_e01.rotateZ" 
+		"outside_living_roomRN.placeHolderList[519]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_e01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_e01.translateX" 
+		"outside_living_roomRN.placeHolderList[520]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_e01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_e01.translateY" 
+		"outside_living_roomRN.placeHolderList[521]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_e01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_e01.translateZ" 
+		"outside_living_roomRN.placeHolderList[522]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_e01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_e01.scaleX" 
+		"outside_living_roomRN.placeHolderList[523]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_e01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_e01.scaleY" 
+		"outside_living_roomRN.placeHolderList[524]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flcs01|outside_living_room:pig_latest:PigSkin002:neck_flexi_flc_e01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_e01.scaleZ" 
+		"outside_living_roomRN.placeHolderList[525]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_hidden01.visibility" 
+		"outside_living_roomRN.placeHolderList[526]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_hidden01|outside_living_room:pig_latest:PigSkin002:neck_flexi_bshp_surface01.rotateX" 
+		"outside_living_roomRN.placeHolderList[527]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_hidden01|outside_living_room:pig_latest:PigSkin002:neck_flexi_bshp_surface01.rotateY" 
+		"outside_living_roomRN.placeHolderList[528]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_hidden01|outside_living_room:pig_latest:PigSkin002:neck_flexi_bshp_surface01.rotateZ" 
+		"outside_living_roomRN.placeHolderList[529]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_hidden01|outside_living_room:pig_latest:PigSkin002:neck_flexi_bshp_surface01.visibility" 
+		"outside_living_roomRN.placeHolderList[530]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_hidden01|outside_living_room:pig_latest:PigSkin002:neck_flexi_bshp_surface01.translateX" 
+		"outside_living_roomRN.placeHolderList[531]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_hidden01|outside_living_room:pig_latest:PigSkin002:neck_flexi_bshp_surface01.translateY" 
+		"outside_living_roomRN.placeHolderList[532]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_hidden01|outside_living_room:pig_latest:PigSkin002:neck_flexi_bshp_surface01.translateZ" 
+		"outside_living_roomRN.placeHolderList[533]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_hidden01|outside_living_room:pig_latest:PigSkin002:neck_flexi_bshp_surface01.scaleX" 
+		"outside_living_roomRN.placeHolderList[534]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_hidden01|outside_living_room:pig_latest:PigSkin002:neck_flexi_bshp_surface01.scaleY" 
+		"outside_living_roomRN.placeHolderList[535]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_hidden01|outside_living_room:pig_latest:PigSkin002:neck_flexi_bshp_surface01.scaleZ" 
+		"outside_living_roomRN.placeHolderList[536]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_hidden01|outside_living_room:pig_latest:PigSkin002:neck_flexi_cwire_surface01.visibility" 
+		"outside_living_roomRN.placeHolderList[537]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_hidden01|outside_living_room:pig_latest:PigSkin002:neck_flexi_cwire_surface01BaseWire.rotateX" 
+		"outside_living_roomRN.placeHolderList[538]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_hidden01|outside_living_room:pig_latest:PigSkin002:neck_flexi_cwire_surface01BaseWire.rotateY" 
+		"outside_living_roomRN.placeHolderList[539]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_hidden01|outside_living_room:pig_latest:PigSkin002:neck_flexi_cwire_surface01BaseWire.rotateZ" 
+		"outside_living_roomRN.placeHolderList[540]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_hidden01|outside_living_room:pig_latest:PigSkin002:neck_flexi_cwire_surface01BaseWire.visibility" 
+		"outside_living_roomRN.placeHolderList[541]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_hidden01|outside_living_room:pig_latest:PigSkin002:neck_flexi_cwire_surface01BaseWire.translateX" 
+		"outside_living_roomRN.placeHolderList[542]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_hidden01|outside_living_room:pig_latest:PigSkin002:neck_flexi_cwire_surface01BaseWire.translateY" 
+		"outside_living_roomRN.placeHolderList[543]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_hidden01|outside_living_room:pig_latest:PigSkin002:neck_flexi_cwire_surface01BaseWire.translateZ" 
+		"outside_living_roomRN.placeHolderList[544]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_hidden01|outside_living_room:pig_latest:PigSkin002:neck_flexi_cwire_surface01BaseWire.scaleX" 
+		"outside_living_roomRN.placeHolderList[545]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_hidden01|outside_living_room:pig_latest:PigSkin002:neck_flexi_cwire_surface01BaseWire.scaleY" 
+		"outside_living_roomRN.placeHolderList[546]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_hidden01|outside_living_room:pig_latest:PigSkin002:neck_flexi_cwire_surface01BaseWire.scaleZ" 
+		"outside_living_roomRN.placeHolderList[547]" ""
+		5 3 "outside_living_roomRN" "outside_living_room:pig_latest:pairBlend1.outRotateZ" 
+		"outside_living_roomRN.placeHolderList[548]" "outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_start01.rz"
+		
+		5 3 "outside_living_roomRN" "outside_living_room:pig_latest:pairBlend1.outRotateX" 
+		"outside_living_roomRN.placeHolderList[549]" "outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_start01.rx"
+		
+		5 3 "outside_living_roomRN" "outside_living_room:pig_latest:pairBlend1.outRotateY" 
+		"outside_living_roomRN.placeHolderList[550]" "outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_start01.ry"
+		
+		5 4 "outside_living_roomRN" "outside_living_room:pig_latest:pairBlend1.inTranslateX1" 
+		"outside_living_roomRN.placeHolderList[551]" ""
+		5 4 "outside_living_roomRN" "outside_living_room:pig_latest:pairBlend1.inTranslateY1" 
+		"outside_living_roomRN.placeHolderList[552]" ""
+		5 4 "outside_living_roomRN" "outside_living_room:pig_latest:pairBlend1.inTranslateZ1" 
+		"outside_living_roomRN.placeHolderList[553]" ""
+		"outside_living_room:living_room_latestRN" 4176
 		1 |outside_living_room:living_room_latest:pCylinder1|outside_living_room:living_room_latest:pCylinderShape1 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
 		1 |outside_living_room:living_room_latest:pCylinder1|outside_living_room:living_room_latest:pCylinderShape1 
@@ -4569,27 +6745,6 @@ createNode reference -n "outside_living_roomRN";
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |outside_living_room:living_room_latest:ripped_up_toy:torn_up_toy|outside_living_room:living_room_latest:ripped_up_toy:torn_up_toyShape 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		2 "|outside_living_room:living_room_latest:walls|outside_living_room:living_room_latest:polySurfaceShape23" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:walls|outside_living_room:living_room_latest:polySurfaceShape23" 
-		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:walls|outside_living_room:living_room_latest:polySurfaceShape23" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:walls|outside_living_room:living_room_latest:polySurface22|outside_living_room:living_room_latest:polySurfaceShape36" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:walls|outside_living_room:living_room_latest:polySurface22|outside_living_room:living_room_latest:polySurfaceShape36" 
-		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:walls|outside_living_room:living_room_latest:polySurface22|outside_living_room:living_room_latest:polySurfaceShape36" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:walls|outside_living_room:living_room_latest:transform20|outside_living_room:living_room_latest:wallsShape" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:walls|outside_living_room:living_room_latest:transform20|outside_living_room:living_room_latest:wallsShape" 
-		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:walls|outside_living_room:living_room_latest:transform20|outside_living_room:living_room_latest:wallsShape" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|outside_living_room:living_room_latest:pCylinder1|outside_living_room:living_room_latest:pCylinderShape1" 
 		"surfaceReference" " 1"
 		2 "|outside_living_room:living_room_latest:pCylinder1|outside_living_room:living_room_latest:pCylinderShape1" 
@@ -10299,7 +12454,7 @@ createNode reference -n "outside_living_roomRN";
 		
 		2 "|outside_living_room:binoculars:polySurface3|outside_living_room:binoculars:polySurface3Shape" 
 		"furNameSpace" " -type \"string\" \"binoculars\""
-		"outside_living_room:living_room_latest:sofa_latestRN" 54
+		"outside_living_room:living_room_latest:sofa_latestRN" 55
 		1 |outside_living_room:living_room_latest:sofa_latest:sofa_frame|outside_living_room:living_room_latest:sofa_latest:sofa_frameShape 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
 		1 |outside_living_room:living_room_latest:sofa_latest:sofa_frame|outside_living_room:living_room_latest:sofa_latest:sofa_frameShape 
@@ -10403,6 +12558,8 @@ createNode reference -n "outside_living_roomRN";
 		
 		2 "|outside_living_room:living_room_latest:sofa_latest:sofa_frame|outside_living_room:living_room_latest:sofa_latest:pillow_5|outside_living_room:living_room_latest:sofa_latest:pillow_Shape5" 
 		"furNameSpace" " -type \"string\" \"sofa_latest\""
+		2 "|outside_living_room:living_room_latest:sofa_latest:sofa_frame|outside_living_room:living_room_latest:sofa_latest:pillow_2" 
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|outside_living_room:living_room_latest:sofa_latest:sofa_frame|outside_living_room:living_room_latest:sofa_latest:pillow_2|outside_living_room:living_room_latest:sofa_latest:pillow_Shape2" 
 		"surfaceReference" " 1"
 		2 "|outside_living_room:living_room_latest:sofa_latest:sofa_frame|outside_living_room:living_room_latest:sofa_latest:pillow_2|outside_living_room:living_room_latest:sofa_latest:pillow_Shape2" 
@@ -10744,12 +12901,12 @@ createNode reference -n "outside_living_roomRN";
 		1 outside_living_room:defaultFurGlobals "furGlobalReference" "fgrf" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
 		
 		2 "|outside_living_room:atHouse" "visibility" " -av 1"
-		2 "|outside_living_room:atHouse" "translate" " -type \"double3\" -183.77136280626532994 8.2086865838106835 35.77953049395798502"
+		2 "|outside_living_room:atHouse" "translate" " -type \"double3\" -302.9686385712479364 19.79761120789127204 -3.08241314696724977"
 		
 		2 "|outside_living_room:atHouse" "translateX" " -av"
 		2 "|outside_living_room:atHouse" "translateY" " -av"
 		2 "|outside_living_room:atHouse" "translateZ" " -av"
-		2 "|outside_living_room:atHouse" "rotate" " -type \"double3\" -4.19999999999892459 -130.15373000019769734 0"
+		2 "|outside_living_room:atHouse" "rotate" " -type \"double3\" -0.59999999999996267 246.64626999980299615 0"
 		
 		2 "|outside_living_room:atHouse" "rotateX" " -av"
 		2 "|outside_living_room:atHouse" "rotateY" " -av"
@@ -10799,24 +12956,24 @@ createNode reference -n "outside_living_roomRN";
 		3 ":defaultRenderGlobals.rendercallback" "outside_living_room:defaultFurGlobals.callback" 
 		""
 		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.visibility" 
-		"outside_living_roomRN.placeHolderList[1]" ""
+		"outside_living_roomRN.placeHolderList[564]" ""
 		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.translateX" 
-		"outside_living_roomRN.placeHolderList[2]" ""
+		"outside_living_roomRN.placeHolderList[565]" ""
 		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.translateY" 
-		"outside_living_roomRN.placeHolderList[3]" ""
+		"outside_living_roomRN.placeHolderList[566]" ""
 		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.translateZ" 
-		"outside_living_roomRN.placeHolderList[4]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.rotateX" "outside_living_roomRN.placeHolderList[5]" 
+		"outside_living_roomRN.placeHolderList[567]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.rotateX" "outside_living_roomRN.placeHolderList[568]" 
 		""
-		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.rotateY" "outside_living_roomRN.placeHolderList[6]" 
+		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.rotateY" "outside_living_roomRN.placeHolderList[569]" 
 		""
-		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.rotateZ" "outside_living_roomRN.placeHolderList[7]" 
+		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.rotateZ" "outside_living_roomRN.placeHolderList[570]" 
 		""
-		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.scaleX" "outside_living_roomRN.placeHolderList[8]" 
+		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.scaleX" "outside_living_roomRN.placeHolderList[571]" 
 		""
-		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.scaleY" "outside_living_roomRN.placeHolderList[9]" 
+		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.scaleY" "outside_living_roomRN.placeHolderList[572]" 
 		""
-		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.scaleZ" "outside_living_roomRN.placeHolderList[10]" 
+		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.scaleZ" "outside_living_roomRN.placeHolderList[573]" 
 		""
 		"outside_living_room:living_room_latest:taller_window_four_squares_latestRN1" 
 		42
@@ -10913,172 +13070,6 @@ createNode reference -n "outside_living_roomRN";
 		"furNameSpace" " -type \"string\" \"taller_window_four_squares_latest1\"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode mentalrayItemsList -s -n "mentalrayItemsList";
-	setAttr -s 3 ".opt";
-createNode mentalrayGlobals -s -n "mentalrayGlobals";
-	addAttr -s false -ci true -h true -sn "sunAndSkyShader" -ln "sunAndSkyShader" -at "message";
-	setAttr ".rvb" 3;
-	setAttr ".ivb" no;
-createNode mentalrayOptions -s -n "miDefaultOptions";
-	addAttr -ci true -m -sn "stringOptions" -ln "stringOptions" -at "compound" -nc 
-		3;
-	addAttr -ci true -sn "name" -ln "name" -dt "string" -p "stringOptions";
-	addAttr -ci true -sn "value" -ln "value" -dt "string" -p "stringOptions";
-	addAttr -ci true -sn "type" -ln "type" -dt "string" -p "stringOptions";
-	setAttr ".splck" yes;
-	setAttr ".fil" 0;
-	setAttr ".rflr" 1;
-	setAttr ".rfrr" 1;
-	setAttr ".maxr" 1;
-	setAttr ".shrd" 2;
-	setAttr ".mb" 2;
-	setAttr -s 48 ".stringOptions";
-	setAttr ".stringOptions[0].name" -type "string" "rast motion factor";
-	setAttr ".stringOptions[0].value" -type "string" "1.0";
-	setAttr ".stringOptions[0].type" -type "string" "scalar";
-	setAttr ".stringOptions[1].name" -type "string" "rast transparency depth";
-	setAttr ".stringOptions[1].value" -type "string" "8";
-	setAttr ".stringOptions[1].type" -type "string" "integer";
-	setAttr ".stringOptions[2].name" -type "string" "rast useopacity";
-	setAttr ".stringOptions[2].value" -type "string" "true";
-	setAttr ".stringOptions[2].type" -type "string" "boolean";
-	setAttr ".stringOptions[3].name" -type "string" "importon";
-	setAttr ".stringOptions[3].value" -type "string" "false";
-	setAttr ".stringOptions[3].type" -type "string" "boolean";
-	setAttr ".stringOptions[4].name" -type "string" "importon density";
-	setAttr ".stringOptions[4].value" -type "string" "1.0";
-	setAttr ".stringOptions[4].type" -type "string" "scalar";
-	setAttr ".stringOptions[5].name" -type "string" "importon merge";
-	setAttr ".stringOptions[5].value" -type "string" "0.0";
-	setAttr ".stringOptions[5].type" -type "string" "scalar";
-	setAttr ".stringOptions[6].name" -type "string" "importon trace depth";
-	setAttr ".stringOptions[6].value" -type "string" "0";
-	setAttr ".stringOptions[6].type" -type "string" "integer";
-	setAttr ".stringOptions[7].name" -type "string" "importon traverse";
-	setAttr ".stringOptions[7].value" -type "string" "true";
-	setAttr ".stringOptions[7].type" -type "string" "boolean";
-	setAttr ".stringOptions[8].name" -type "string" "shadowmap pixel samples";
-	setAttr ".stringOptions[8].value" -type "string" "3";
-	setAttr ".stringOptions[8].type" -type "string" "integer";
-	setAttr ".stringOptions[9].name" -type "string" "ambient occlusion";
-	setAttr ".stringOptions[9].value" -type "string" "false";
-	setAttr ".stringOptions[9].type" -type "string" "boolean";
-	setAttr ".stringOptions[10].name" -type "string" "ambient occlusion rays";
-	setAttr ".stringOptions[10].value" -type "string" "256";
-	setAttr ".stringOptions[10].type" -type "string" "integer";
-	setAttr ".stringOptions[11].name" -type "string" "ambient occlusion cache";
-	setAttr ".stringOptions[11].value" -type "string" "false";
-	setAttr ".stringOptions[11].type" -type "string" "boolean";
-	setAttr ".stringOptions[12].name" -type "string" "ambient occlusion cache density";
-	setAttr ".stringOptions[12].value" -type "string" "1.0";
-	setAttr ".stringOptions[12].type" -type "string" "scalar";
-	setAttr ".stringOptions[13].name" -type "string" "ambient occlusion cache points";
-	setAttr ".stringOptions[13].value" -type "string" "64";
-	setAttr ".stringOptions[13].type" -type "string" "integer";
-	setAttr ".stringOptions[14].name" -type "string" "irradiance particles";
-	setAttr ".stringOptions[14].value" -type "string" "false";
-	setAttr ".stringOptions[14].type" -type "string" "boolean";
-	setAttr ".stringOptions[15].name" -type "string" "irradiance particles rays";
-	setAttr ".stringOptions[15].value" -type "string" "256";
-	setAttr ".stringOptions[15].type" -type "string" "integer";
-	setAttr ".stringOptions[16].name" -type "string" "irradiance particles interpolate";
-	setAttr ".stringOptions[16].value" -type "string" "1";
-	setAttr ".stringOptions[16].type" -type "string" "integer";
-	setAttr ".stringOptions[17].name" -type "string" "irradiance particles interppoints";
-	setAttr ".stringOptions[17].value" -type "string" "64";
-	setAttr ".stringOptions[17].type" -type "string" "integer";
-	setAttr ".stringOptions[18].name" -type "string" "irradiance particles indirect passes";
-	setAttr ".stringOptions[18].value" -type "string" "0";
-	setAttr ".stringOptions[18].type" -type "string" "integer";
-	setAttr ".stringOptions[19].name" -type "string" "irradiance particles scale";
-	setAttr ".stringOptions[19].value" -type "string" "1.0";
-	setAttr ".stringOptions[19].type" -type "string" "scalar";
-	setAttr ".stringOptions[20].name" -type "string" "irradiance particles env";
-	setAttr ".stringOptions[20].value" -type "string" "true";
-	setAttr ".stringOptions[20].type" -type "string" "boolean";
-	setAttr ".stringOptions[21].name" -type "string" "irradiance particles env rays";
-	setAttr ".stringOptions[21].value" -type "string" "256";
-	setAttr ".stringOptions[21].type" -type "string" "integer";
-	setAttr ".stringOptions[22].name" -type "string" "irradiance particles env scale";
-	setAttr ".stringOptions[22].value" -type "string" "1";
-	setAttr ".stringOptions[22].type" -type "string" "integer";
-	setAttr ".stringOptions[23].name" -type "string" "irradiance particles rebuild";
-	setAttr ".stringOptions[23].value" -type "string" "true";
-	setAttr ".stringOptions[23].type" -type "string" "boolean";
-	setAttr ".stringOptions[24].name" -type "string" "irradiance particles file";
-	setAttr ".stringOptions[24].value" -type "string" "";
-	setAttr ".stringOptions[24].type" -type "string" "string";
-	setAttr ".stringOptions[25].name" -type "string" "geom displace motion factor";
-	setAttr ".stringOptions[25].value" -type "string" "1.0";
-	setAttr ".stringOptions[25].type" -type "string" "scalar";
-	setAttr ".stringOptions[26].name" -type "string" "contrast all buffers";
-	setAttr ".stringOptions[26].value" -type "string" "true";
-	setAttr ".stringOptions[26].type" -type "string" "boolean";
-	setAttr ".stringOptions[27].name" -type "string" "finalgather normal tolerance";
-	setAttr ".stringOptions[27].value" -type "string" "25.842";
-	setAttr ".stringOptions[27].type" -type "string" "scalar";
-	setAttr ".stringOptions[28].name" -type "string" "trace camera clip";
-	setAttr ".stringOptions[28].value" -type "string" "false";
-	setAttr ".stringOptions[28].type" -type "string" "boolean";
-	setAttr ".stringOptions[29].name" -type "string" "unified sampling";
-	setAttr ".stringOptions[29].value" -type "string" "true";
-	setAttr ".stringOptions[29].type" -type "string" "boolean";
-	setAttr ".stringOptions[30].name" -type "string" "samples quality";
-	setAttr ".stringOptions[30].value" -type "string" "0.25 0.25 0.25 0.25";
-	setAttr ".stringOptions[30].type" -type "string" "color";
-	setAttr ".stringOptions[31].name" -type "string" "samples min";
-	setAttr ".stringOptions[31].value" -type "string" "1.0";
-	setAttr ".stringOptions[31].type" -type "string" "scalar";
-	setAttr ".stringOptions[32].name" -type "string" "samples max";
-	setAttr ".stringOptions[32].value" -type "string" "100.0";
-	setAttr ".stringOptions[32].type" -type "string" "scalar";
-	setAttr ".stringOptions[33].name" -type "string" "samples error cutoff";
-	setAttr ".stringOptions[33].value" -type "string" "0.0 0.0 0.0 0.0";
-	setAttr ".stringOptions[33].type" -type "string" "color";
-	setAttr ".stringOptions[34].name" -type "string" "samples per object";
-	setAttr ".stringOptions[34].value" -type "string" "false";
-	setAttr ".stringOptions[34].type" -type "string" "boolean";
-	setAttr ".stringOptions[35].name" -type "string" "progressive";
-	setAttr ".stringOptions[35].value" -type "string" "false";
-	setAttr ".stringOptions[35].type" -type "string" "boolean";
-	setAttr ".stringOptions[36].name" -type "string" "progressive max time";
-	setAttr ".stringOptions[36].value" -type "string" "0";
-	setAttr ".stringOptions[36].type" -type "string" "integer";
-	setAttr ".stringOptions[37].name" -type "string" "progressive subsampling size";
-	setAttr ".stringOptions[37].value" -type "string" "1";
-	setAttr ".stringOptions[37].type" -type "string" "integer";
-	setAttr ".stringOptions[38].name" -type "string" "iray";
-	setAttr ".stringOptions[38].value" -type "string" "false";
-	setAttr ".stringOptions[38].type" -type "string" "boolean";
-	setAttr ".stringOptions[39].name" -type "string" "light relative scale";
-	setAttr ".stringOptions[39].value" -type "string" "0.31831";
-	setAttr ".stringOptions[39].type" -type "string" "scalar";
-	setAttr ".stringOptions[40].name" -type "string" "trace camera motion vectors";
-	setAttr ".stringOptions[40].value" -type "string" "false";
-	setAttr ".stringOptions[40].type" -type "string" "boolean";
-	setAttr ".stringOptions[41].name" -type "string" "ray differentials";
-	setAttr ".stringOptions[41].value" -type "string" "true";
-	setAttr ".stringOptions[41].type" -type "string" "boolean";
-	setAttr ".stringOptions[42].name" -type "string" "environment lighting mode";
-	setAttr ".stringOptions[42].value" -type "string" "off";
-	setAttr ".stringOptions[42].type" -type "string" "string";
-	setAttr ".stringOptions[43].name" -type "string" "environment lighting quality";
-	setAttr ".stringOptions[43].value" -type "string" "0.167";
-	setAttr ".stringOptions[43].type" -type "string" "scalar";
-	setAttr ".stringOptions[44].name" -type "string" "environment lighting shadow";
-	setAttr ".stringOptions[44].value" -type "string" "transparent";
-	setAttr ".stringOptions[44].type" -type "string" "string";
-	setAttr ".stringOptions[45].name" -type "string" "environment lighting resolution";
-	setAttr ".stringOptions[45].value" -type "string" "512";
-	setAttr ".stringOptions[45].type" -type "string" "integer";
-	setAttr ".stringOptions[46].name" -type "string" "environment lighting shader samples";
-	setAttr ".stringOptions[46].value" -type "string" "2";
-	setAttr ".stringOptions[46].type" -type "string" "integer";
-	setAttr ".stringOptions[47].name" -type "string" "environment lighting scale";
-	setAttr ".stringOptions[47].value" -type "string" "1.0 1.0 1.0";
-	setAttr ".stringOptions[47].type" -type "string" "color";
-createNode mentalrayFramebuffer -s -n "miDefaultFramebuffer";
-	setAttr ".dat" 2;
 createNode animLayer -s -n "BaseAnimation";
 	setAttr -s 3 ".cdly";
 	setAttr -s 3 ".chsl";
@@ -11439,13 +13430,2093 @@ createNode animCurveTU -n "atHouse_scaleZ";
 		 91 5.6090346886147051 93 5.6090346886147051 108 5.6090346886147051;
 	setAttr -s 13 ".kit[6:12]"  2 18 18 2 2 18 18;
 	setAttr -s 13 ".kot[6:12]"  2 18 18 2 2 18 18;
+createNode animCurveTA -n "Obj_000003_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 -25.193151558506489;
+createNode animCurveTA -n "Obj_000003_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 27.676692607502808;
+createNode animCurveTA -n "Obj_000003_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 -37.976442030003938;
+createNode animCurveTA -n "controller_main01_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "controller_main01_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 -149.40123793007444;
+createNode animCurveTA -n "controller_main01_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTU -n "controller_main01_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "controller_main01_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 -180.21295698611286;
+createNode animCurveTL -n "controller_main01_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 8.7807096500626969;
+createNode animCurveTL -n "controller_main01_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 40.551551677319658;
+createNode animCurveTU -n "controller_main01_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0.575;
+createNode animCurveTU -n "controller_main01_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0.575;
+createNode animCurveTU -n "controller_main01_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0.575;
+createNode animCurveTU -n "Obj_000003_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "Obj_000003_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 -182.43597669899276;
+createNode animCurveTL -n "Obj_000003_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 8.0573226472324713;
+createNode animCurveTL -n "Obj_000003_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 36.901199503540525;
+createNode animCurveTU -n "Obj_000003_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0.012879969156260954;
+createNode animCurveTU -n "Obj_000003_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0.012879969156260954;
+createNode animCurveTU -n "Obj_000003_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0.012879969156260954;
+createNode animCurveTA -n "Skeleton_01_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Skeleton_01_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Skeleton_01_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "bind_root01_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "bind_root01_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "bind_root01_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode pairBlend -n "pairBlend1";
+createNode animCurveTA -n "pairBlend1_inRotateX1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 -1.908333518880166e-14;
+createNode animCurveTA -n "pairBlend1_inRotateY1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 -0.049171549951144429;
+createNode animCurveTA -n "pairBlend1_inRotateZ1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 8.358571562799496e-18;
+createNode animCurveTA -n "curve_tail01_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "curve_tail01_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0.098343103552250358;
+createNode animCurveTA -n "curve_tail01_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "controller_L_backfoot01_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "controller_L_backfoot01_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "controller_L_backfoot01_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "controller_L_frontfoot01_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "controller_L_frontfoot01_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 -4.3714398365801394e-08;
+createNode animCurveTA -n "controller_L_frontfoot01_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "controller_R_backfoot01_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "controller_R_backfoot01_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "controller_R_backfoot01_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "controller_R_frontfoot01_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "controller_R_frontfoot01_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 -4.3714398365801394e-08;
+createNode animCurveTA -n "controller_R_frontfoot01_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "head_control_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "head_control_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "head_control_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "hip_rotation_ctrl01_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "shoulders_rotation_ctrl01_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "shoulders_rotation_ctrl01_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "shoulders_rotation_ctrl01_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "tail_controllers_01_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "tail_controllers_01_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "tail_controllers_01_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "tail_1control01_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "tail_1control01_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "tail_1control01_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "tail_2control01_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "tail_2control01_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "tail_2control01_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "tail_3control01_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "tail_3control01_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "tail_3control01_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "tail_4control01_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "tail_4control01_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "tail_4control01_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "flexi_joint_systems_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "flexi_joint_systems_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "flexi_joint_systems_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "neck_flexi_flcs01_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "neck_flexi_flcs01_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "neck_flexi_flcs01_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "neck_flexi_anim_a01_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "neck_flexi_anim_a01_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "neck_flexi_anim_a01_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "neck_flexi_anim_b01_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "neck_flexi_anim_b01_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "neck_flexi_anim_b01_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "neck_flexi_anim_c01_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "neck_flexi_anim_c01_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "neck_flexi_anim_c01_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "neck_flexi_anim_d01_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "neck_flexi_anim_d01_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "neck_flexi_anim_d01_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "neck_flexi_anim_e01_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "neck_flexi_anim_e01_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "neck_flexi_anim_e01_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode pairBlend -n "pairBlend2";
+createNode animCurveTA -n "pairBlend2_inRotateX1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 -55.317009077719852;
+createNode animCurveTA -n "pairBlend2_inRotateY1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 -149.40123793007444;
+createNode animCurveTA -n "pairBlend2_inRotateZ1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode pairBlend -n "pairBlend3";
+createNode animCurveTA -n "pairBlend3_inRotateX1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "pairBlend3_inRotateY1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 -0.097937556285597846;
+createNode animCurveTA -n "pairBlend3_inRotateZ1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode pairBlend -n "pairBlend4";
+createNode animCurveTA -n "pairBlend4_inRotateX1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 3.8829175056016601e-08;
+createNode animCurveTA -n "pairBlend4_inRotateY1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0.097937543848078915;
+createNode animCurveTA -n "pairBlend4_inRotateZ1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 -1.7973485376033402e-08;
+createNode pairBlend -n "pairBlend5";
+createNode animCurveTA -n "pairBlend5_inRotateX1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "pairBlend5_inRotateY1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 -0.097937556285601524;
+createNode animCurveTA -n "pairBlend5_inRotateZ1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "neck_flexi_anim_mid01_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "neck_flexi_anim_mid01_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "neck_flexi_anim_mid01_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "neck_flexi_grp_anim_start01_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "neck_flexi_grp_anim_start01_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "neck_flexi_grp_anim_start01_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode pairBlend -n "pairBlend6";
+	setAttr ".txm" 2;
+	setAttr ".tym" 2;
+	setAttr ".tzm" 2;
+createNode animCurveTA -n "pairBlend6_inRotateX1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 -3.1805560426590131e-14;
+createNode animCurveTA -n "pairBlend6_inRotateY1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 -0.097937556285601524;
+createNode animCurveTA -n "pairBlend6_inRotateZ1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 2.3350582191809362e-18;
+createNode animCurveTA -n "neck_flexi_surface01_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "neck_flexi_surface01_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "neck_flexi_surface01_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "neck_flexi_bshp_surface01_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "neck_flexi_bshp_surface01_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "neck_flexi_bshp_surface01_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "neck_flexi_cwire_surface01BaseWire_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "neck_flexi_cwire_surface01BaseWire_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "neck_flexi_cwire_surface01BaseWire_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "vertebrae_flexi_flcs01_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "vertebrae_flexi_flcs01_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "vertebrae_flexi_flcs01_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "vertebrae_flexi_anim_a01_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "vertebrae_flexi_anim_a01_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "vertebrae_flexi_anim_a01_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "vertebrae_flexi_anim_b01_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "vertebrae_flexi_anim_b01_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "vertebrae_flexi_anim_b01_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "vertebrae_flexi_anim_c01_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "vertebrae_flexi_anim_c01_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "vertebrae_flexi_anim_c01_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "vertebrae_flexi_anim_d01_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "vertebrae_flexi_anim_d01_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "vertebrae_flexi_anim_d01_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "vertebrae_flexi_anim_e01_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "vertebrae_flexi_anim_e01_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "vertebrae_flexi_anim_e01_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode pairBlend -n "pairBlend7";
+createNode animCurveTA -n "pairBlend7_inRotateX1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "pairBlend7_inRotateY1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 -149.40123793007444;
+createNode animCurveTA -n "pairBlend7_inRotateZ1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode pairBlend -n "pairBlend8";
+createNode animCurveTA -n "pairBlend8_inRotateX1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "pairBlend8_inRotateY1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "pairBlend8_inRotateZ1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "vertebrae_flexi_anim_end01_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "vertebrae_flexi_anim_end01_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "vertebrae_flexi_anim_end01_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode pairBlend -n "pairBlend9";
+createNode animCurveTA -n "pairBlend9_inRotateX1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "pairBlend9_inRotateY1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "pairBlend9_inRotateZ1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "vertebrae_flexi_anim_mid01_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "vertebrae_flexi_anim_mid01_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "vertebrae_flexi_anim_mid01_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "vertebrae_flexi_grp_anim_start01_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "vertebrae_flexi_grp_anim_start01_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "vertebrae_flexi_grp_anim_start01_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "vertebrae_flexi_anim_start01_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "vertebrae_flexi_anim_start01_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 -0.0979376;
+createNode animCurveTA -n "vertebrae_flexi_anim_start01_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "vertebrae_flexi_surface01_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "vertebrae_flexi_surface01_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "vertebrae_flexi_surface01_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "vertebrae_flexi_bshp_surface01_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "vertebrae_flexi_bshp_surface01_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "vertebrae_flexi_bshp_surface01_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "vertebrae_flexi_cwire_surface01BaseWire_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "vertebrae_flexi_cwire_surface01BaseWire_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "vertebrae_flexi_cwire_surface01BaseWire_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTU -n "Skeleton_01_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "Skeleton_01_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "Skeleton_01_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "Skeleton_01_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTU -n "Skeleton_01_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "Skeleton_01_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "Skeleton_01_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "bind_root01_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "bind_root01_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 3.5158066127305432e-05;
+createNode animCurveTL -n "bind_root01_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 4.5184827559869953;
+createNode animCurveTL -n "bind_root01_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 -4.3683525525168214;
+createNode animCurveTU -n "bind_root01_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "bind_root01_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "bind_root01_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "bind_pelvis01_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "pairBlend1_inTranslateX1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0.01012860716986097;
+createNode animCurveTL -n "pairBlend1_inTranslateY1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 -8.0930387724720276e-08;
+createNode animCurveTL -n "pairBlend1_inTranslateZ1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 5.7718461761169237e-06;
+createNode animCurveTU -n "bind_pelvis01_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "bind_pelvis01_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "bind_pelvis01_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "bind_pelvis01_blendParent1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTU -n "curve_tail01_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "curve_tail01_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 -0.012794526884472914;
+createNode animCurveTL -n "curve_tail01_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 -4.5184827559869927;
+createNode animCurveTL -n "curve_tail01_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 4.3683693791558182;
+createNode animCurveTU -n "curve_tail01_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0.99999999999999989;
+createNode animCurveTU -n "curve_tail01_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0.99999999999999989;
+createNode animCurveTU -n "curve_tail01_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0.99999999999999989;
+createNode animCurveTU -n "head_control_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "head_control_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "head_control_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "head_control_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTU -n "head_control_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "head_control_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "head_control_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "controller_L_frontfoot01_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "controller_L_frontfoot01_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 2.0624657537382518e-10;
+createNode animCurveTL -n "controller_L_frontfoot01_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 -0.00016984476011838723;
+createNode animCurveTL -n "controller_L_frontfoot01_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0.00042836695035308736;
+createNode animCurveTU -n "controller_L_frontfoot01_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "controller_L_frontfoot01_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "controller_L_frontfoot01_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "controller_R_frontfoot01_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "controller_R_frontfoot01_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 2.0657298094306498e-10;
+createNode animCurveTL -n "controller_R_frontfoot01_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 8.8817841970012523e-16;
+createNode animCurveTL -n "controller_R_frontfoot01_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 -1.3928023179232696e-09;
+createNode animCurveTU -n "controller_R_frontfoot01_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "controller_R_frontfoot01_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "controller_R_frontfoot01_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "controller_L_backfoot01_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "controller_L_backfoot01_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 8.8817841970012523e-16;
+createNode animCurveTL -n "controller_L_backfoot01_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 -8.8817841970012523e-16;
+createNode animCurveTL -n "controller_L_backfoot01_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTU -n "controller_L_backfoot01_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "controller_L_backfoot01_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "controller_L_backfoot01_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "controller_R_backfoot01_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "controller_R_backfoot01_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 -8.8817841970012523e-16;
+createNode animCurveTL -n "controller_R_backfoot01_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 -8.8817841970012523e-16;
+createNode animCurveTL -n "controller_R_backfoot01_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0.00018369586493616197;
+createNode animCurveTU -n "controller_R_backfoot01_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "controller_R_backfoot01_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "controller_R_backfoot01_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "shoulders_rotation_ctrl01_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "shoulders_rotation_ctrl01_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "shoulders_rotation_ctrl01_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 -4.4408920985006252e-16;
+createNode animCurveTL -n "shoulders_rotation_ctrl01_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 -5.5511151231257827e-17;
+createNode animCurveTU -n "shoulders_rotation_ctrl01_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0.99999999999999989;
+createNode animCurveTU -n "shoulders_rotation_ctrl01_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0.99999999999999989;
+createNode animCurveTU -n "shoulders_rotation_ctrl01_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0.99999999999999989;
+createNode animCurveTU -n "tail_controllers_01_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "tail_controllers_01_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "tail_controllers_01_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "tail_controllers_01_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTU -n "tail_controllers_01_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "tail_controllers_01_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "tail_controllers_01_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "tail_1control01_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "tail_1control01_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "tail_1control01_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "tail_1control01_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTU -n "tail_1control01_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0.99999999999999989;
+createNode animCurveTU -n "tail_1control01_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0.99999999999999989;
+createNode animCurveTU -n "tail_1control01_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0.99999999999999989;
+createNode animCurveTU -n "tail_2control01_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "tail_2control01_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "tail_2control01_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 -8.8817841970012523e-16;
+createNode animCurveTL -n "tail_2control01_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTU -n "tail_2control01_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0.99999999999999989;
+createNode animCurveTU -n "tail_2control01_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0.99999999999999989;
+createNode animCurveTU -n "tail_2control01_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0.99999999999999989;
+createNode animCurveTU -n "tail_3control01_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "tail_3control01_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "tail_3control01_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "tail_3control01_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTU -n "tail_3control01_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0.99999999999999989;
+createNode animCurveTU -n "tail_3control01_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0.99999999999999989;
+createNode animCurveTU -n "tail_3control01_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0.99999999999999989;
+createNode animCurveTU -n "tail_4control01_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "tail_4control01_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "tail_4control01_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "tail_4control01_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1.7763568394002505e-15;
+createNode animCurveTU -n "tail_4control01_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0.99999999999999989;
+createNode animCurveTU -n "tail_4control01_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0.99999999999999989;
+createNode animCurveTU -n "tail_4control01_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0.99999999999999989;
+createNode animCurveTU -n "flexi_joint_systems_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "flexi_joint_systems_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "flexi_joint_systems_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "flexi_joint_systems_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTU -n "flexi_joint_systems_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "flexi_joint_systems_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "flexi_joint_systems_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "vertebrae_flexi_spine01_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "pairBlend7_inTranslateX1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 -180.31321205277567;
+createNode animCurveTL -n "pairBlend7_inTranslateY1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 10.349119480228561;
+createNode animCurveTL -n "pairBlend7_inTranslateZ1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 40.039489191852574;
+createNode animCurveTU -n "vertebrae_flexi_global01_autoVolume";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTU -n "vertebrae_flexi_global01_blendParent1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTU -n "vertebrae_flexi_surface01_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTU -n "vertebrae_flexi_surface01_template";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "vertebrae_flexi_surface01_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "vertebrae_flexi_surface01_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "vertebrae_flexi_surface01_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTU -n "vertebrae_flexi_surface01_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "vertebrae_flexi_surface01_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "vertebrae_flexi_surface01_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTL -n "pairBlend9_inTranslateX1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "pairBlend9_inTranslateY1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "pairBlend9_inTranslateZ1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 -4.4408920985006262e-16;
+createNode animCurveTU -n "vertebrae_flexi_grp_anim_mid01_blendParent1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTU -n "vertebrae_flexi_anim_mid01_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "vertebrae_flexi_anim_mid01_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "vertebrae_flexi_anim_mid01_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "vertebrae_flexi_anim_mid01_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTU -n "vertebrae_flexi_anim_mid01_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "vertebrae_flexi_anim_mid01_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "vertebrae_flexi_anim_mid01_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "vertebrae_flexi_anim_mid01_followStart";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "pairBlend8_inTranslateX1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "pairBlend8_inTranslateY1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "pairBlend8_inTranslateZ1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTU -n "vertebrae_flexi_grp_anim_end01_blendParent1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTU -n "vertebrae_flexi_anim_end01_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "vertebrae_flexi_anim_end01_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "vertebrae_flexi_anim_end01_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "vertebrae_flexi_anim_end01_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTU -n "vertebrae_flexi_anim_end01_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "vertebrae_flexi_anim_end01_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "vertebrae_flexi_anim_end01_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "vertebrae_flexi_anim_end01_followMid";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "vertebrae_flexi_grp_anim_start01_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "vertebrae_flexi_grp_anim_start01_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "vertebrae_flexi_grp_anim_start01_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTU -n "vertebrae_flexi_anim_start01_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "vertebrae_flexi_anim_start01_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0.0077654500000000001;
+createNode animCurveTL -n "vertebrae_flexi_anim_start01_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "vertebrae_flexi_anim_start01_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTU -n "vertebrae_flexi_anim_start01_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "vertebrae_flexi_anim_start01_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "vertebrae_flexi_anim_start01_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "vertebrae_flexi_flcs01_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "vertebrae_flexi_flcs01_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "vertebrae_flexi_flcs01_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "vertebrae_flexi_flcs01_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTU -n "vertebrae_flexi_flcs01_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "vertebrae_flexi_flcs01_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "vertebrae_flexi_flcs01_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "vertebrae_flexi_flc_a01_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "vertebrae_flexi_anim_a01_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "vertebrae_flexi_anim_a01_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "vertebrae_flexi_anim_a01_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTU -n "vertebrae_flexi_anim_a01_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "vertebrae_flexi_anim_a01_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "vertebrae_flexi_anim_a01_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "vertebrae_flexi_anim_a01_magnitude";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 3;
+createNode animCurveTU -n "vertebrae_flexi_flc_b01_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "vertebrae_flexi_anim_b01_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "vertebrae_flexi_anim_b01_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "vertebrae_flexi_anim_b01_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTU -n "vertebrae_flexi_anim_b01_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "vertebrae_flexi_anim_b01_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "vertebrae_flexi_anim_b01_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "vertebrae_flexi_anim_b01_magnitude";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 3;
+createNode animCurveTU -n "vertebrae_flexi_flc_c01_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "vertebrae_flexi_anim_c01_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "vertebrae_flexi_anim_c01_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "vertebrae_flexi_anim_c01_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTU -n "vertebrae_flexi_anim_c01_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "vertebrae_flexi_anim_c01_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "vertebrae_flexi_anim_c01_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "vertebrae_flexi_anim_c01_magnitude";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 3;
+createNode animCurveTU -n "vertebrae_flexi_flc_d01_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "vertebrae_flexi_anim_d01_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "vertebrae_flexi_anim_d01_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "vertebrae_flexi_anim_d01_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTU -n "vertebrae_flexi_anim_d01_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "vertebrae_flexi_anim_d01_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "vertebrae_flexi_anim_d01_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "vertebrae_flexi_anim_d01_magnitude";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 3;
+createNode animCurveTU -n "vertebrae_flexi_flc_e01_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "vertebrae_flexi_anim_e01_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "vertebrae_flexi_anim_e01_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "vertebrae_flexi_anim_e01_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTU -n "vertebrae_flexi_anim_e01_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "vertebrae_flexi_anim_e01_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "vertebrae_flexi_anim_e01_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "vertebrae_flexi_anim_e01_magnitude";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 6;
+createNode animCurveTU -n "vertebrae_flexi_hidden01_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+	setAttr ".kot[0]"  5;
+createNode animCurveTU -n "vertebrae_flexi_bshp_surface01_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "vertebrae_flexi_bshp_surface01_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 -5;
+createNode animCurveTL -n "vertebrae_flexi_bshp_surface01_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "vertebrae_flexi_bshp_surface01_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTU -n "vertebrae_flexi_bshp_surface01_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "vertebrae_flexi_bshp_surface01_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "vertebrae_flexi_bshp_surface01_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "vertebrae_flexi_cwire_surface01_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTU -n "vertebrae_flexi_cwire_surface01BaseWire_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "vertebrae_flexi_cwire_surface01BaseWire_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "vertebrae_flexi_cwire_surface01BaseWire_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "vertebrae_flexi_cwire_surface01BaseWire_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTU -n "vertebrae_flexi_cwire_surface01BaseWire_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "vertebrae_flexi_cwire_surface01BaseWire_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "vertebrae_flexi_cwire_surface01BaseWire_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "neck_flexi_spine01_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "pairBlend2_inTranslateX1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 -181.80415803020969;
+createNode animCurveTL -n "pairBlend2_inTranslateY1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 10.899216466720842;
+createNode animCurveTL -n "pairBlend2_inTranslateZ1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 37.518312903097296;
+createNode animCurveTU -n "neck_flexi_global01_autoVolume";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTU -n "neck_flexi_global01_blendParent1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTU -n "neck_flexi_surface01_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTU -n "neck_flexi_surface01_template";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "neck_flexi_surface01_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "neck_flexi_surface01_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "neck_flexi_surface01_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTU -n "neck_flexi_surface01_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "neck_flexi_surface01_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "neck_flexi_surface01_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTL -n "pairBlend5_inTranslateX1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0.014574546455833115;
+createNode animCurveTL -n "pairBlend5_inTranslateY1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "pairBlend5_inTranslateZ1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 5.8195079759570945e-06;
+createNode animCurveTU -n "neck_flexi_grp_anim_mid01_blendParent1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTU -n "neck_flexi_anim_mid01_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "neck_flexi_anim_mid01_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "neck_flexi_anim_mid01_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "neck_flexi_anim_mid01_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTU -n "neck_flexi_anim_mid01_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "neck_flexi_anim_mid01_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "neck_flexi_anim_mid01_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "neck_flexi_anim_mid01_followStart";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "pairBlend3_inTranslateX1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0.024830538372498268;
+createNode animCurveTL -n "pairBlend3_inTranslateY1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 -5.6843418860808015e-14;
+createNode animCurveTL -n "pairBlend3_inTranslateZ1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1.4584961776975547e-05;
+createNode animCurveTU -n "neck_flexi_grp_anim_end01_blendParent1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTU -n "neck_flexi_anim_end01_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "pairBlend4_inTranslateX1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 -0.021440828523282107;
+createNode animCurveTL -n "pairBlend4_inTranslateY1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 -1.5542519804512267e-07;
+createNode animCurveTL -n "pairBlend4_inTranslateZ1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 2.4977647393065183e-05;
+createNode animCurveTU -n "neck_flexi_anim_end01_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "neck_flexi_anim_end01_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "neck_flexi_anim_end01_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "neck_flexi_anim_end01_followMid";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTU -n "neck_flexi_anim_end01_blendParent1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "neck_flexi_grp_anim_start01_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "neck_flexi_grp_anim_start01_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "neck_flexi_grp_anim_start01_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTU -n "neck_flexi_anim_start01_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "pairBlend1_inTranslateX2";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0.0077654492008494272;
+createNode animCurveTL -n "pairBlend1_inTranslateY2";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 8.8817841970012523e-16;
+createNode animCurveTL -n "pairBlend1_inTranslateZ2";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 -5.7287508070658077e-14;
+createNode animCurveTU -n "neck_flexi_anim_start01_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "neck_flexi_anim_start01_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "neck_flexi_anim_start01_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "neck_flexi_anim_start01_blendParent1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "neck_flexi_anim_start01_blendPairBlend1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTU -n "neck_flexi_flcs01_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "neck_flexi_flcs01_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "neck_flexi_flcs01_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "neck_flexi_flcs01_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTU -n "neck_flexi_flcs01_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "neck_flexi_flcs01_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "neck_flexi_flcs01_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "neck_flexi_flc_a01_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "neck_flexi_anim_a01_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "neck_flexi_anim_a01_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "neck_flexi_anim_a01_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTU -n "neck_flexi_anim_a01_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "neck_flexi_anim_a01_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "neck_flexi_anim_a01_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "neck_flexi_anim_a01_magnitude";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTU -n "neck_flexi_flc_b01_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "neck_flexi_anim_b01_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "neck_flexi_anim_b01_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "neck_flexi_anim_b01_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTU -n "neck_flexi_anim_b01_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "neck_flexi_anim_b01_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "neck_flexi_anim_b01_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "neck_flexi_anim_b01_magnitude";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTU -n "neck_flexi_flc_c01_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "neck_flexi_anim_c01_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "neck_flexi_anim_c01_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "neck_flexi_anim_c01_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTU -n "neck_flexi_anim_c01_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "neck_flexi_anim_c01_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "neck_flexi_anim_c01_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "neck_flexi_anim_c01_magnitude";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTU -n "neck_flexi_flc_d01_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "neck_flexi_anim_d01_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "neck_flexi_anim_d01_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "neck_flexi_anim_d01_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTU -n "neck_flexi_anim_d01_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "neck_flexi_anim_d01_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "neck_flexi_anim_d01_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "neck_flexi_anim_d01_magnitude";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTU -n "neck_flexi_flc_e01_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "neck_flexi_anim_e01_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "neck_flexi_anim_e01_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "neck_flexi_anim_e01_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTU -n "neck_flexi_anim_e01_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "neck_flexi_anim_e01_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "neck_flexi_anim_e01_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "neck_flexi_anim_e01_magnitude";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTU -n "neck_flexi_hidden01_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+	setAttr ".kot[0]"  5;
+createNode animCurveTU -n "neck_flexi_bshp_surface01_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "neck_flexi_bshp_surface01_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 -5;
+createNode animCurveTL -n "neck_flexi_bshp_surface01_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "neck_flexi_bshp_surface01_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTU -n "neck_flexi_bshp_surface01_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "neck_flexi_bshp_surface01_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "neck_flexi_bshp_surface01_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "neck_flexi_cwire_surface01_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTU -n "neck_flexi_cwire_surface01BaseWire_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "neck_flexi_cwire_surface01BaseWire_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "neck_flexi_cwire_surface01BaseWire_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "neck_flexi_cwire_surface01BaseWire_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTU -n "neck_flexi_cwire_surface01BaseWire_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "neck_flexi_cwire_surface01BaseWire_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "neck_flexi_cwire_surface01BaseWire_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr ".o" 108;
-	setAttr ".unw" 108;
+	setAttr ".o" 15;
+	setAttr ".unw" 15;
 select -ne :renderPartition;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -11490,7 +15561,7 @@ select -ne :initialShadingGroup;
 	setAttr -cb on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 697 ".dsm";
+	setAttr -s 695 ".dsm";
 	setAttr -k on ".mwc";
 	setAttr -cb on ".an";
 	setAttr -cb on ".il";
@@ -11499,7 +15570,7 @@ select -ne :initialShadingGroup;
 	setAttr -cb on ".fo";
 	setAttr -cb on ".epo";
 	setAttr ".ro" yes;
-	setAttr -s 349 ".gn";
+	setAttr -s 348 ".gn";
 	setAttr -cb on ".mimt";
 	setAttr -cb on ".miop";
 	setAttr -cb on ".mise";
@@ -11634,16 +15705,798 @@ select -ne :defaultHardwareRenderGlobals;
 	setAttr -cb on ".sd";
 select -ne :ikSystem;
 	setAttr -s 8 ".sol";
-connectAttr "atHouse_visibility.o" "outside_living_roomRN.phl[1]";
-connectAttr "atHouse_translateX.o" "outside_living_roomRN.phl[2]";
-connectAttr "atHouse_translateY.o" "outside_living_roomRN.phl[3]";
-connectAttr "atHouse_translateZ.o" "outside_living_roomRN.phl[4]";
-connectAttr "atHouse_rotateX.o" "outside_living_roomRN.phl[5]";
-connectAttr "atHouse_rotateY.o" "outside_living_roomRN.phl[6]";
-connectAttr "atHouse_rotateZ.o" "outside_living_roomRN.phl[7]";
-connectAttr "atHouse_scaleX.o" "outside_living_roomRN.phl[8]";
-connectAttr "atHouse_scaleY.o" "outside_living_roomRN.phl[9]";
-connectAttr "atHouse_scaleZ.o" "outside_living_roomRN.phl[10]";
+connectAttr "Obj_000003_translateX.o" "outside_living_roomRN.phl[554]";
+connectAttr "Obj_000003_translateY.o" "outside_living_roomRN.phl[555]";
+connectAttr "Obj_000003_translateZ.o" "outside_living_roomRN.phl[556]";
+connectAttr "Obj_000003_rotateX.o" "outside_living_roomRN.phl[557]";
+connectAttr "Obj_000003_rotateY.o" "outside_living_roomRN.phl[558]";
+connectAttr "Obj_000003_rotateZ.o" "outside_living_roomRN.phl[559]";
+connectAttr "Obj_000003_visibility.o" "outside_living_roomRN.phl[560]";
+connectAttr "Obj_000003_scaleX.o" "outside_living_roomRN.phl[561]";
+connectAttr "Obj_000003_scaleY.o" "outside_living_roomRN.phl[562]";
+connectAttr "Obj_000003_scaleZ.o" "outside_living_roomRN.phl[563]";
+connectAttr "controller_main01_translateZ.o" "outside_living_roomRN.phl[1]";
+connectAttr "controller_main01_translateY.o" "outside_living_roomRN.phl[2]";
+connectAttr "controller_main01_translateX.o" "outside_living_roomRN.phl[3]";
+connectAttr "controller_main01_rotateX.o" "outside_living_roomRN.phl[4]";
+connectAttr "controller_main01_rotateY.o" "outside_living_roomRN.phl[5]";
+connectAttr "controller_main01_rotateZ.o" "outside_living_roomRN.phl[6]";
+connectAttr "controller_main01_scaleX.o" "outside_living_roomRN.phl[7]";
+connectAttr "controller_main01_scaleY.o" "outside_living_roomRN.phl[8]";
+connectAttr "controller_main01_scaleZ.o" "outside_living_roomRN.phl[9]";
+connectAttr "controller_main01_visibility.o" "outside_living_roomRN.phl[10]";
+connectAttr "Skeleton_01_translateX.o" "outside_living_roomRN.phl[11]";
+connectAttr "Skeleton_01_translateY.o" "outside_living_roomRN.phl[12]";
+connectAttr "Skeleton_01_translateZ.o" "outside_living_roomRN.phl[13]";
+connectAttr "Skeleton_01_rotateX.o" "outside_living_roomRN.phl[14]";
+connectAttr "Skeleton_01_rotateY.o" "outside_living_roomRN.phl[15]";
+connectAttr "Skeleton_01_rotateZ.o" "outside_living_roomRN.phl[16]";
+connectAttr "Skeleton_01_visibility.o" "outside_living_roomRN.phl[17]";
+connectAttr "Skeleton_01_scaleX.o" "outside_living_roomRN.phl[18]";
+connectAttr "Skeleton_01_scaleY.o" "outside_living_roomRN.phl[19]";
+connectAttr "Skeleton_01_scaleZ.o" "outside_living_roomRN.phl[20]";
+connectAttr "bind_root01_scaleX.o" "outside_living_roomRN.phl[21]";
+connectAttr "bind_root01_scaleY.o" "outside_living_roomRN.phl[22]";
+connectAttr "bind_root01_scaleZ.o" "outside_living_roomRN.phl[23]";
+connectAttr "bind_root01_translateY.o" "outside_living_roomRN.phl[24]";
+connectAttr "bind_root01_translateZ.o" "outside_living_roomRN.phl[25]";
+connectAttr "bind_root01_translateX.o" "outside_living_roomRN.phl[26]";
+connectAttr "bind_root01_rotateX.o" "outside_living_roomRN.phl[27]";
+connectAttr "bind_root01_rotateY.o" "outside_living_roomRN.phl[28]";
+connectAttr "bind_root01_rotateZ.o" "outside_living_roomRN.phl[29]";
+connectAttr "bind_root01_visibility.o" "outside_living_roomRN.phl[30]";
+connectAttr "pairBlend1.otx" "outside_living_roomRN.phl[31]";
+connectAttr "pairBlend1.oty" "outside_living_roomRN.phl[32]";
+connectAttr "pairBlend1.otz" "outside_living_roomRN.phl[33]";
+connectAttr "pairBlend1.orx" "outside_living_roomRN.phl[34]";
+connectAttr "pairBlend1.ory" "outside_living_roomRN.phl[35]";
+connectAttr "pairBlend1.orz" "outside_living_roomRN.phl[36]";
+connectAttr "bind_pelvis01_scaleX.o" "outside_living_roomRN.phl[37]";
+connectAttr "bind_pelvis01_scaleY.o" "outside_living_roomRN.phl[38]";
+connectAttr "bind_pelvis01_scaleZ.o" "outside_living_roomRN.phl[39]";
+connectAttr "outside_living_roomRN.phl[40]" "pairBlend1.w";
+connectAttr "bind_pelvis01_blendParent1.o" "outside_living_roomRN.phl[41]";
+connectAttr "bind_pelvis01_visibility.o" "outside_living_roomRN.phl[42]";
+connectAttr "outside_living_roomRN.phl[43]" "pairBlend1.itx2";
+connectAttr "outside_living_roomRN.phl[44]" "pairBlend1.ity2";
+connectAttr "outside_living_roomRN.phl[45]" "pairBlend1.itz2";
+connectAttr "outside_living_roomRN.phl[46]" "pairBlend1.irx2";
+connectAttr "outside_living_roomRN.phl[47]" "pairBlend1.iry2";
+connectAttr "outside_living_roomRN.phl[48]" "pairBlend1.irz2";
+connectAttr "curve_tail01_translateX.o" "outside_living_roomRN.phl[49]";
+connectAttr "curve_tail01_translateY.o" "outside_living_roomRN.phl[50]";
+connectAttr "curve_tail01_translateZ.o" "outside_living_roomRN.phl[51]";
+connectAttr "curve_tail01_rotateY.o" "outside_living_roomRN.phl[52]";
+connectAttr "curve_tail01_rotateX.o" "outside_living_roomRN.phl[53]";
+connectAttr "curve_tail01_rotateZ.o" "outside_living_roomRN.phl[54]";
+connectAttr "curve_tail01_visibility.o" "outside_living_roomRN.phl[55]";
+connectAttr "curve_tail01_scaleX.o" "outside_living_roomRN.phl[56]";
+connectAttr "curve_tail01_scaleY.o" "outside_living_roomRN.phl[57]";
+connectAttr "curve_tail01_scaleZ.o" "outside_living_roomRN.phl[58]";
+connectAttr "head_control_translateX.o" "outside_living_roomRN.phl[59]";
+connectAttr "head_control_translateY.o" "outside_living_roomRN.phl[60]";
+connectAttr "head_control_translateZ.o" "outside_living_roomRN.phl[61]";
+connectAttr "head_control_rotateY.o" "outside_living_roomRN.phl[62]";
+connectAttr "head_control_rotateX.o" "outside_living_roomRN.phl[63]";
+connectAttr "head_control_rotateZ.o" "outside_living_roomRN.phl[64]";
+connectAttr "head_control_scaleX.o" "outside_living_roomRN.phl[65]";
+connectAttr "head_control_scaleY.o" "outside_living_roomRN.phl[66]";
+connectAttr "head_control_scaleZ.o" "outside_living_roomRN.phl[67]";
+connectAttr "head_control_visibility.o" "outside_living_roomRN.phl[68]";
+connectAttr "controller_L_frontfoot01_rotateX.o" "outside_living_roomRN.phl[69]"
+		;
+connectAttr "controller_L_frontfoot01_rotateY.o" "outside_living_roomRN.phl[70]"
+		;
+connectAttr "controller_L_frontfoot01_rotateZ.o" "outside_living_roomRN.phl[71]"
+		;
+connectAttr "controller_L_frontfoot01_translateX.o" "outside_living_roomRN.phl[72]"
+		;
+connectAttr "controller_L_frontfoot01_translateY.o" "outside_living_roomRN.phl[73]"
+		;
+connectAttr "controller_L_frontfoot01_translateZ.o" "outside_living_roomRN.phl[74]"
+		;
+connectAttr "controller_L_frontfoot01_scaleX.o" "outside_living_roomRN.phl[75]";
+connectAttr "controller_L_frontfoot01_scaleY.o" "outside_living_roomRN.phl[76]";
+connectAttr "controller_L_frontfoot01_scaleZ.o" "outside_living_roomRN.phl[77]";
+connectAttr "controller_L_frontfoot01_visibility.o" "outside_living_roomRN.phl[78]"
+		;
+connectAttr "controller_R_frontfoot01_rotateX.o" "outside_living_roomRN.phl[79]"
+		;
+connectAttr "controller_R_frontfoot01_rotateY.o" "outside_living_roomRN.phl[80]"
+		;
+connectAttr "controller_R_frontfoot01_rotateZ.o" "outside_living_roomRN.phl[81]"
+		;
+connectAttr "controller_R_frontfoot01_translateX.o" "outside_living_roomRN.phl[82]"
+		;
+connectAttr "controller_R_frontfoot01_translateY.o" "outside_living_roomRN.phl[83]"
+		;
+connectAttr "controller_R_frontfoot01_translateZ.o" "outside_living_roomRN.phl[84]"
+		;
+connectAttr "controller_R_frontfoot01_scaleX.o" "outside_living_roomRN.phl[85]";
+connectAttr "controller_R_frontfoot01_scaleY.o" "outside_living_roomRN.phl[86]";
+connectAttr "controller_R_frontfoot01_scaleZ.o" "outside_living_roomRN.phl[87]";
+connectAttr "controller_R_frontfoot01_visibility.o" "outside_living_roomRN.phl[88]"
+		;
+connectAttr "controller_L_backfoot01_rotateX.o" "outside_living_roomRN.phl[89]";
+connectAttr "controller_L_backfoot01_rotateY.o" "outside_living_roomRN.phl[90]";
+connectAttr "controller_L_backfoot01_rotateZ.o" "outside_living_roomRN.phl[91]";
+connectAttr "controller_L_backfoot01_translateX.o" "outside_living_roomRN.phl[92]"
+		;
+connectAttr "controller_L_backfoot01_translateZ.o" "outside_living_roomRN.phl[93]"
+		;
+connectAttr "controller_L_backfoot01_translateY.o" "outside_living_roomRN.phl[94]"
+		;
+connectAttr "controller_L_backfoot01_scaleX.o" "outside_living_roomRN.phl[95]";
+connectAttr "controller_L_backfoot01_scaleY.o" "outside_living_roomRN.phl[96]";
+connectAttr "controller_L_backfoot01_scaleZ.o" "outside_living_roomRN.phl[97]";
+connectAttr "controller_L_backfoot01_visibility.o" "outside_living_roomRN.phl[98]"
+		;
+connectAttr "controller_R_backfoot01_rotateX.o" "outside_living_roomRN.phl[99]";
+connectAttr "controller_R_backfoot01_rotateY.o" "outside_living_roomRN.phl[100]"
+		;
+connectAttr "controller_R_backfoot01_rotateZ.o" "outside_living_roomRN.phl[101]"
+		;
+connectAttr "controller_R_backfoot01_translateX.o" "outside_living_roomRN.phl[102]"
+		;
+connectAttr "controller_R_backfoot01_translateY.o" "outside_living_roomRN.phl[103]"
+		;
+connectAttr "controller_R_backfoot01_translateZ.o" "outside_living_roomRN.phl[104]"
+		;
+connectAttr "controller_R_backfoot01_scaleX.o" "outside_living_roomRN.phl[105]";
+connectAttr "controller_R_backfoot01_scaleY.o" "outside_living_roomRN.phl[106]";
+connectAttr "controller_R_backfoot01_scaleZ.o" "outside_living_roomRN.phl[107]";
+connectAttr "controller_R_backfoot01_visibility.o" "outside_living_roomRN.phl[108]"
+		;
+connectAttr "hip_rotation_ctrl01_rotateZ.o" "outside_living_roomRN.phl[109]";
+connectAttr "shoulders_rotation_ctrl01_translateY.o" "outside_living_roomRN.phl[110]"
+		;
+connectAttr "shoulders_rotation_ctrl01_translateX.o" "outside_living_roomRN.phl[111]"
+		;
+connectAttr "shoulders_rotation_ctrl01_translateZ.o" "outside_living_roomRN.phl[112]"
+		;
+connectAttr "shoulders_rotation_ctrl01_rotateX.o" "outside_living_roomRN.phl[113]"
+		;
+connectAttr "shoulders_rotation_ctrl01_rotateY.o" "outside_living_roomRN.phl[114]"
+		;
+connectAttr "shoulders_rotation_ctrl01_rotateZ.o" "outside_living_roomRN.phl[115]"
+		;
+connectAttr "shoulders_rotation_ctrl01_scaleX.o" "outside_living_roomRN.phl[116]"
+		;
+connectAttr "shoulders_rotation_ctrl01_scaleY.o" "outside_living_roomRN.phl[117]"
+		;
+connectAttr "shoulders_rotation_ctrl01_scaleZ.o" "outside_living_roomRN.phl[118]"
+		;
+connectAttr "shoulders_rotation_ctrl01_visibility.o" "outside_living_roomRN.phl[119]"
+		;
+connectAttr "tail_controllers_01_rotateX.o" "outside_living_roomRN.phl[120]";
+connectAttr "tail_controllers_01_rotateY.o" "outside_living_roomRN.phl[121]";
+connectAttr "tail_controllers_01_rotateZ.o" "outside_living_roomRN.phl[122]";
+connectAttr "tail_controllers_01_visibility.o" "outside_living_roomRN.phl[123]";
+connectAttr "tail_controllers_01_translateX.o" "outside_living_roomRN.phl[124]";
+connectAttr "tail_controllers_01_translateY.o" "outside_living_roomRN.phl[125]";
+connectAttr "tail_controllers_01_translateZ.o" "outside_living_roomRN.phl[126]";
+connectAttr "tail_controllers_01_scaleX.o" "outside_living_roomRN.phl[127]";
+connectAttr "tail_controllers_01_scaleY.o" "outside_living_roomRN.phl[128]";
+connectAttr "tail_controllers_01_scaleZ.o" "outside_living_roomRN.phl[129]";
+connectAttr "tail_1control01_translateX.o" "outside_living_roomRN.phl[130]";
+connectAttr "tail_1control01_translateY.o" "outside_living_roomRN.phl[131]";
+connectAttr "tail_1control01_translateZ.o" "outside_living_roomRN.phl[132]";
+connectAttr "tail_1control01_rotateY.o" "outside_living_roomRN.phl[133]";
+connectAttr "tail_1control01_rotateX.o" "outside_living_roomRN.phl[134]";
+connectAttr "tail_1control01_rotateZ.o" "outside_living_roomRN.phl[135]";
+connectAttr "tail_1control01_scaleX.o" "outside_living_roomRN.phl[136]";
+connectAttr "tail_1control01_scaleY.o" "outside_living_roomRN.phl[137]";
+connectAttr "tail_1control01_scaleZ.o" "outside_living_roomRN.phl[138]";
+connectAttr "tail_1control01_visibility.o" "outside_living_roomRN.phl[139]";
+connectAttr "tail_2control01_translateX.o" "outside_living_roomRN.phl[140]";
+connectAttr "tail_2control01_translateY.o" "outside_living_roomRN.phl[141]";
+connectAttr "tail_2control01_translateZ.o" "outside_living_roomRN.phl[142]";
+connectAttr "tail_2control01_rotateX.o" "outside_living_roomRN.phl[143]";
+connectAttr "tail_2control01_rotateY.o" "outside_living_roomRN.phl[144]";
+connectAttr "tail_2control01_rotateZ.o" "outside_living_roomRN.phl[145]";
+connectAttr "tail_2control01_scaleX.o" "outside_living_roomRN.phl[146]";
+connectAttr "tail_2control01_scaleY.o" "outside_living_roomRN.phl[147]";
+connectAttr "tail_2control01_scaleZ.o" "outside_living_roomRN.phl[148]";
+connectAttr "tail_2control01_visibility.o" "outside_living_roomRN.phl[149]";
+connectAttr "tail_3control01_translateX.o" "outside_living_roomRN.phl[150]";
+connectAttr "tail_3control01_translateY.o" "outside_living_roomRN.phl[151]";
+connectAttr "tail_3control01_translateZ.o" "outside_living_roomRN.phl[152]";
+connectAttr "tail_3control01_rotateX.o" "outside_living_roomRN.phl[153]";
+connectAttr "tail_3control01_rotateY.o" "outside_living_roomRN.phl[154]";
+connectAttr "tail_3control01_rotateZ.o" "outside_living_roomRN.phl[155]";
+connectAttr "tail_3control01_scaleX.o" "outside_living_roomRN.phl[156]";
+connectAttr "tail_3control01_scaleY.o" "outside_living_roomRN.phl[157]";
+connectAttr "tail_3control01_scaleZ.o" "outside_living_roomRN.phl[158]";
+connectAttr "tail_3control01_visibility.o" "outside_living_roomRN.phl[159]";
+connectAttr "tail_4control01_translateX.o" "outside_living_roomRN.phl[160]";
+connectAttr "tail_4control01_translateY.o" "outside_living_roomRN.phl[161]";
+connectAttr "tail_4control01_translateZ.o" "outside_living_roomRN.phl[162]";
+connectAttr "tail_4control01_rotateX.o" "outside_living_roomRN.phl[163]";
+connectAttr "tail_4control01_rotateY.o" "outside_living_roomRN.phl[164]";
+connectAttr "tail_4control01_rotateZ.o" "outside_living_roomRN.phl[165]";
+connectAttr "tail_4control01_scaleX.o" "outside_living_roomRN.phl[166]";
+connectAttr "tail_4control01_scaleY.o" "outside_living_roomRN.phl[167]";
+connectAttr "tail_4control01_scaleZ.o" "outside_living_roomRN.phl[168]";
+connectAttr "tail_4control01_visibility.o" "outside_living_roomRN.phl[169]";
+connectAttr "flexi_joint_systems_rotateX.o" "outside_living_roomRN.phl[170]";
+connectAttr "flexi_joint_systems_rotateY.o" "outside_living_roomRN.phl[171]";
+connectAttr "flexi_joint_systems_rotateZ.o" "outside_living_roomRN.phl[172]";
+connectAttr "flexi_joint_systems_visibility.o" "outside_living_roomRN.phl[173]";
+connectAttr "flexi_joint_systems_translateX.o" "outside_living_roomRN.phl[174]";
+connectAttr "flexi_joint_systems_translateY.o" "outside_living_roomRN.phl[175]";
+connectAttr "flexi_joint_systems_translateZ.o" "outside_living_roomRN.phl[176]";
+connectAttr "flexi_joint_systems_scaleX.o" "outside_living_roomRN.phl[177]";
+connectAttr "flexi_joint_systems_scaleY.o" "outside_living_roomRN.phl[178]";
+connectAttr "flexi_joint_systems_scaleZ.o" "outside_living_roomRN.phl[179]";
+connectAttr "vertebrae_flexi_spine01_visibility.o" "outside_living_roomRN.phl[180]"
+		;
+connectAttr "vertebrae_flexi_global01_autoVolume.o" "outside_living_roomRN.phl[181]"
+		;
+connectAttr "pairBlend7.oty" "outside_living_roomRN.phl[182]";
+connectAttr "pairBlend7.otx" "outside_living_roomRN.phl[183]";
+connectAttr "pairBlend7.otz" "outside_living_roomRN.phl[184]";
+connectAttr "pairBlend7.orx" "outside_living_roomRN.phl[185]";
+connectAttr "pairBlend7.ory" "outside_living_roomRN.phl[186]";
+connectAttr "pairBlend7.orz" "outside_living_roomRN.phl[187]";
+connectAttr "outside_living_roomRN.phl[188]" "pairBlend7.w";
+connectAttr "vertebrae_flexi_global01_blendParent1.o" "outside_living_roomRN.phl[189]"
+		;
+connectAttr "vertebrae_flexi_surface01_template.o" "outside_living_roomRN.phl[190]"
+		;
+connectAttr "vertebrae_flexi_surface01_rotateX.o" "outside_living_roomRN.phl[191]"
+		;
+connectAttr "vertebrae_flexi_surface01_rotateY.o" "outside_living_roomRN.phl[192]"
+		;
+connectAttr "vertebrae_flexi_surface01_rotateZ.o" "outside_living_roomRN.phl[193]"
+		;
+connectAttr "vertebrae_flexi_surface01_visibility.o" "outside_living_roomRN.phl[194]"
+		;
+connectAttr "vertebrae_flexi_surface01_translateX.o" "outside_living_roomRN.phl[195]"
+		;
+connectAttr "vertebrae_flexi_surface01_translateY.o" "outside_living_roomRN.phl[196]"
+		;
+connectAttr "vertebrae_flexi_surface01_translateZ.o" "outside_living_roomRN.phl[197]"
+		;
+connectAttr "vertebrae_flexi_surface01_scaleX.o" "outside_living_roomRN.phl[198]"
+		;
+connectAttr "vertebrae_flexi_surface01_scaleY.o" "outside_living_roomRN.phl[199]"
+		;
+connectAttr "vertebrae_flexi_surface01_scaleZ.o" "outside_living_roomRN.phl[200]"
+		;
+connectAttr "pairBlend9.otx" "outside_living_roomRN.phl[201]";
+connectAttr "pairBlend9.oty" "outside_living_roomRN.phl[202]";
+connectAttr "pairBlend9.otz" "outside_living_roomRN.phl[203]";
+connectAttr "pairBlend9.orx" "outside_living_roomRN.phl[204]";
+connectAttr "pairBlend9.ory" "outside_living_roomRN.phl[205]";
+connectAttr "pairBlend9.orz" "outside_living_roomRN.phl[206]";
+connectAttr "outside_living_roomRN.phl[207]" "pairBlend9.w";
+connectAttr "vertebrae_flexi_grp_anim_mid01_blendParent1.o" "outside_living_roomRN.phl[208]"
+		;
+connectAttr "vertebrae_flexi_anim_mid01_followStart.o" "outside_living_roomRN.phl[209]"
+		;
+connectAttr "vertebrae_flexi_anim_mid01_translateX.o" "outside_living_roomRN.phl[210]"
+		;
+connectAttr "vertebrae_flexi_anim_mid01_translateY.o" "outside_living_roomRN.phl[211]"
+		;
+connectAttr "vertebrae_flexi_anim_mid01_translateZ.o" "outside_living_roomRN.phl[212]"
+		;
+connectAttr "vertebrae_flexi_anim_mid01_rotateZ.o" "outside_living_roomRN.phl[213]"
+		;
+connectAttr "vertebrae_flexi_anim_mid01_rotateX.o" "outside_living_roomRN.phl[214]"
+		;
+connectAttr "vertebrae_flexi_anim_mid01_rotateY.o" "outside_living_roomRN.phl[215]"
+		;
+connectAttr "vertebrae_flexi_anim_mid01_scaleX.o" "outside_living_roomRN.phl[216]"
+		;
+connectAttr "vertebrae_flexi_anim_mid01_scaleY.o" "outside_living_roomRN.phl[217]"
+		;
+connectAttr "vertebrae_flexi_anim_mid01_scaleZ.o" "outside_living_roomRN.phl[218]"
+		;
+connectAttr "vertebrae_flexi_anim_mid01_visibility.o" "outside_living_roomRN.phl[219]"
+		;
+connectAttr "outside_living_roomRN.phl[220]" "pairBlend9.itx2";
+connectAttr "outside_living_roomRN.phl[221]" "pairBlend9.ity2";
+connectAttr "outside_living_roomRN.phl[222]" "pairBlend9.itz2";
+connectAttr "outside_living_roomRN.phl[223]" "pairBlend9.irx2";
+connectAttr "outside_living_roomRN.phl[224]" "pairBlend9.iry2";
+connectAttr "outside_living_roomRN.phl[225]" "pairBlend9.irz2";
+connectAttr "pairBlend8.otx" "outside_living_roomRN.phl[226]";
+connectAttr "pairBlend8.oty" "outside_living_roomRN.phl[227]";
+connectAttr "pairBlend8.otz" "outside_living_roomRN.phl[228]";
+connectAttr "pairBlend8.orx" "outside_living_roomRN.phl[229]";
+connectAttr "pairBlend8.ory" "outside_living_roomRN.phl[230]";
+connectAttr "pairBlend8.orz" "outside_living_roomRN.phl[231]";
+connectAttr "outside_living_roomRN.phl[232]" "pairBlend8.w";
+connectAttr "vertebrae_flexi_grp_anim_end01_blendParent1.o" "outside_living_roomRN.phl[233]"
+		;
+connectAttr "vertebrae_flexi_anim_end01_followMid.o" "outside_living_roomRN.phl[234]"
+		;
+connectAttr "vertebrae_flexi_anim_end01_translateX.o" "outside_living_roomRN.phl[235]"
+		;
+connectAttr "vertebrae_flexi_anim_end01_translateY.o" "outside_living_roomRN.phl[236]"
+		;
+connectAttr "vertebrae_flexi_anim_end01_translateZ.o" "outside_living_roomRN.phl[237]"
+		;
+connectAttr "vertebrae_flexi_anim_end01_rotateZ.o" "outside_living_roomRN.phl[238]"
+		;
+connectAttr "vertebrae_flexi_anim_end01_rotateX.o" "outside_living_roomRN.phl[239]"
+		;
+connectAttr "vertebrae_flexi_anim_end01_rotateY.o" "outside_living_roomRN.phl[240]"
+		;
+connectAttr "vertebrae_flexi_anim_end01_visibility.o" "outside_living_roomRN.phl[241]"
+		;
+connectAttr "vertebrae_flexi_anim_end01_scaleX.o" "outside_living_roomRN.phl[242]"
+		;
+connectAttr "vertebrae_flexi_anim_end01_scaleY.o" "outside_living_roomRN.phl[243]"
+		;
+connectAttr "vertebrae_flexi_anim_end01_scaleZ.o" "outside_living_roomRN.phl[244]"
+		;
+connectAttr "outside_living_roomRN.phl[245]" "pairBlend8.itx2";
+connectAttr "outside_living_roomRN.phl[246]" "pairBlend8.ity2";
+connectAttr "outside_living_roomRN.phl[247]" "pairBlend8.itz2";
+connectAttr "outside_living_roomRN.phl[248]" "pairBlend8.irx2";
+connectAttr "outside_living_roomRN.phl[249]" "pairBlend8.iry2";
+connectAttr "outside_living_roomRN.phl[250]" "pairBlend8.irz2";
+connectAttr "vertebrae_flexi_grp_anim_start01_rotateX.o" "outside_living_roomRN.phl[251]"
+		;
+connectAttr "vertebrae_flexi_grp_anim_start01_rotateY.o" "outside_living_roomRN.phl[252]"
+		;
+connectAttr "vertebrae_flexi_grp_anim_start01_rotateZ.o" "outside_living_roomRN.phl[253]"
+		;
+connectAttr "vertebrae_flexi_grp_anim_start01_translateX.o" "outside_living_roomRN.phl[254]"
+		;
+connectAttr "vertebrae_flexi_grp_anim_start01_translateY.o" "outside_living_roomRN.phl[255]"
+		;
+connectAttr "vertebrae_flexi_grp_anim_start01_translateZ.o" "outside_living_roomRN.phl[256]"
+		;
+connectAttr "vertebrae_flexi_anim_start01_translateX.o" "outside_living_roomRN.phl[257]"
+		;
+connectAttr "vertebrae_flexi_anim_start01_translateY.o" "outside_living_roomRN.phl[258]"
+		;
+connectAttr "vertebrae_flexi_anim_start01_translateZ.o" "outside_living_roomRN.phl[259]"
+		;
+connectAttr "vertebrae_flexi_anim_start01_rotateZ.o" "outside_living_roomRN.phl[260]"
+		;
+connectAttr "vertebrae_flexi_anim_start01_rotateX.o" "outside_living_roomRN.phl[261]"
+		;
+connectAttr "vertebrae_flexi_anim_start01_rotateY.o" "outside_living_roomRN.phl[262]"
+		;
+connectAttr "vertebrae_flexi_anim_start01_scaleX.o" "outside_living_roomRN.phl[263]"
+		;
+connectAttr "vertebrae_flexi_anim_start01_scaleY.o" "outside_living_roomRN.phl[264]"
+		;
+connectAttr "vertebrae_flexi_anim_start01_scaleZ.o" "outside_living_roomRN.phl[265]"
+		;
+connectAttr "vertebrae_flexi_anim_start01_visibility.o" "outside_living_roomRN.phl[266]"
+		;
+connectAttr "outside_living_roomRN.phl[267]" "pairBlend7.ity2";
+connectAttr "outside_living_roomRN.phl[268]" "pairBlend7.itx2";
+connectAttr "outside_living_roomRN.phl[269]" "pairBlend7.itz2";
+connectAttr "outside_living_roomRN.phl[270]" "pairBlend7.irx2";
+connectAttr "outside_living_roomRN.phl[271]" "pairBlend7.iry2";
+connectAttr "outside_living_roomRN.phl[272]" "pairBlend7.irz2";
+connectAttr "vertebrae_flexi_flcs01_rotateX.o" "outside_living_roomRN.phl[273]";
+connectAttr "vertebrae_flexi_flcs01_rotateY.o" "outside_living_roomRN.phl[274]";
+connectAttr "vertebrae_flexi_flcs01_rotateZ.o" "outside_living_roomRN.phl[275]";
+connectAttr "vertebrae_flexi_flcs01_visibility.o" "outside_living_roomRN.phl[276]"
+		;
+connectAttr "vertebrae_flexi_flcs01_translateX.o" "outside_living_roomRN.phl[277]"
+		;
+connectAttr "vertebrae_flexi_flcs01_translateY.o" "outside_living_roomRN.phl[278]"
+		;
+connectAttr "vertebrae_flexi_flcs01_translateZ.o" "outside_living_roomRN.phl[279]"
+		;
+connectAttr "vertebrae_flexi_flcs01_scaleX.o" "outside_living_roomRN.phl[280]";
+connectAttr "vertebrae_flexi_flcs01_scaleY.o" "outside_living_roomRN.phl[281]";
+connectAttr "vertebrae_flexi_flcs01_scaleZ.o" "outside_living_roomRN.phl[282]";
+connectAttr "vertebrae_flexi_flc_a01_visibility.o" "outside_living_roomRN.phl[283]"
+		;
+connectAttr "vertebrae_flexi_anim_a01_magnitude.o" "outside_living_roomRN.phl[284]"
+		;
+connectAttr "vertebrae_flexi_anim_a01_rotateX.o" "outside_living_roomRN.phl[285]"
+		;
+connectAttr "vertebrae_flexi_anim_a01_rotateY.o" "outside_living_roomRN.phl[286]"
+		;
+connectAttr "vertebrae_flexi_anim_a01_rotateZ.o" "outside_living_roomRN.phl[287]"
+		;
+connectAttr "vertebrae_flexi_anim_a01_translateX.o" "outside_living_roomRN.phl[288]"
+		;
+connectAttr "vertebrae_flexi_anim_a01_translateY.o" "outside_living_roomRN.phl[289]"
+		;
+connectAttr "vertebrae_flexi_anim_a01_translateZ.o" "outside_living_roomRN.phl[290]"
+		;
+connectAttr "vertebrae_flexi_anim_a01_scaleX.o" "outside_living_roomRN.phl[291]"
+		;
+connectAttr "vertebrae_flexi_anim_a01_scaleY.o" "outside_living_roomRN.phl[292]"
+		;
+connectAttr "vertebrae_flexi_anim_a01_scaleZ.o" "outside_living_roomRN.phl[293]"
+		;
+connectAttr "vertebrae_flexi_flc_b01_visibility.o" "outside_living_roomRN.phl[294]"
+		;
+connectAttr "vertebrae_flexi_anim_b01_magnitude.o" "outside_living_roomRN.phl[295]"
+		;
+connectAttr "vertebrae_flexi_anim_b01_rotateX.o" "outside_living_roomRN.phl[296]"
+		;
+connectAttr "vertebrae_flexi_anim_b01_rotateY.o" "outside_living_roomRN.phl[297]"
+		;
+connectAttr "vertebrae_flexi_anim_b01_rotateZ.o" "outside_living_roomRN.phl[298]"
+		;
+connectAttr "vertebrae_flexi_anim_b01_translateX.o" "outside_living_roomRN.phl[299]"
+		;
+connectAttr "vertebrae_flexi_anim_b01_translateY.o" "outside_living_roomRN.phl[300]"
+		;
+connectAttr "vertebrae_flexi_anim_b01_translateZ.o" "outside_living_roomRN.phl[301]"
+		;
+connectAttr "vertebrae_flexi_anim_b01_scaleX.o" "outside_living_roomRN.phl[302]"
+		;
+connectAttr "vertebrae_flexi_anim_b01_scaleY.o" "outside_living_roomRN.phl[303]"
+		;
+connectAttr "vertebrae_flexi_anim_b01_scaleZ.o" "outside_living_roomRN.phl[304]"
+		;
+connectAttr "vertebrae_flexi_flc_c01_visibility.o" "outside_living_roomRN.phl[305]"
+		;
+connectAttr "vertebrae_flexi_anim_c01_magnitude.o" "outside_living_roomRN.phl[306]"
+		;
+connectAttr "vertebrae_flexi_anim_c01_rotateX.o" "outside_living_roomRN.phl[307]"
+		;
+connectAttr "vertebrae_flexi_anim_c01_rotateY.o" "outside_living_roomRN.phl[308]"
+		;
+connectAttr "vertebrae_flexi_anim_c01_rotateZ.o" "outside_living_roomRN.phl[309]"
+		;
+connectAttr "vertebrae_flexi_anim_c01_translateX.o" "outside_living_roomRN.phl[310]"
+		;
+connectAttr "vertebrae_flexi_anim_c01_translateY.o" "outside_living_roomRN.phl[311]"
+		;
+connectAttr "vertebrae_flexi_anim_c01_translateZ.o" "outside_living_roomRN.phl[312]"
+		;
+connectAttr "vertebrae_flexi_anim_c01_scaleX.o" "outside_living_roomRN.phl[313]"
+		;
+connectAttr "vertebrae_flexi_anim_c01_scaleY.o" "outside_living_roomRN.phl[314]"
+		;
+connectAttr "vertebrae_flexi_anim_c01_scaleZ.o" "outside_living_roomRN.phl[315]"
+		;
+connectAttr "vertebrae_flexi_flc_d01_visibility.o" "outside_living_roomRN.phl[316]"
+		;
+connectAttr "vertebrae_flexi_anim_d01_magnitude.o" "outside_living_roomRN.phl[317]"
+		;
+connectAttr "vertebrae_flexi_anim_d01_rotateX.o" "outside_living_roomRN.phl[318]"
+		;
+connectAttr "vertebrae_flexi_anim_d01_rotateY.o" "outside_living_roomRN.phl[319]"
+		;
+connectAttr "vertebrae_flexi_anim_d01_rotateZ.o" "outside_living_roomRN.phl[320]"
+		;
+connectAttr "vertebrae_flexi_anim_d01_translateX.o" "outside_living_roomRN.phl[321]"
+		;
+connectAttr "vertebrae_flexi_anim_d01_translateY.o" "outside_living_roomRN.phl[322]"
+		;
+connectAttr "vertebrae_flexi_anim_d01_translateZ.o" "outside_living_roomRN.phl[323]"
+		;
+connectAttr "vertebrae_flexi_anim_d01_scaleX.o" "outside_living_roomRN.phl[324]"
+		;
+connectAttr "vertebrae_flexi_anim_d01_scaleY.o" "outside_living_roomRN.phl[325]"
+		;
+connectAttr "vertebrae_flexi_anim_d01_scaleZ.o" "outside_living_roomRN.phl[326]"
+		;
+connectAttr "vertebrae_flexi_flc_e01_visibility.o" "outside_living_roomRN.phl[327]"
+		;
+connectAttr "vertebrae_flexi_anim_e01_magnitude.o" "outside_living_roomRN.phl[328]"
+		;
+connectAttr "vertebrae_flexi_anim_e01_rotateX.o" "outside_living_roomRN.phl[329]"
+		;
+connectAttr "vertebrae_flexi_anim_e01_rotateY.o" "outside_living_roomRN.phl[330]"
+		;
+connectAttr "vertebrae_flexi_anim_e01_rotateZ.o" "outside_living_roomRN.phl[331]"
+		;
+connectAttr "vertebrae_flexi_anim_e01_translateX.o" "outside_living_roomRN.phl[332]"
+		;
+connectAttr "vertebrae_flexi_anim_e01_translateY.o" "outside_living_roomRN.phl[333]"
+		;
+connectAttr "vertebrae_flexi_anim_e01_translateZ.o" "outside_living_roomRN.phl[334]"
+		;
+connectAttr "vertebrae_flexi_anim_e01_scaleX.o" "outside_living_roomRN.phl[335]"
+		;
+connectAttr "vertebrae_flexi_anim_e01_scaleY.o" "outside_living_roomRN.phl[336]"
+		;
+connectAttr "vertebrae_flexi_anim_e01_scaleZ.o" "outside_living_roomRN.phl[337]"
+		;
+connectAttr "vertebrae_flexi_hidden01_visibility.o" "outside_living_roomRN.phl[338]"
+		;
+connectAttr "vertebrae_flexi_bshp_surface01_rotateX.o" "outside_living_roomRN.phl[339]"
+		;
+connectAttr "vertebrae_flexi_bshp_surface01_rotateY.o" "outside_living_roomRN.phl[340]"
+		;
+connectAttr "vertebrae_flexi_bshp_surface01_rotateZ.o" "outside_living_roomRN.phl[341]"
+		;
+connectAttr "vertebrae_flexi_bshp_surface01_visibility.o" "outside_living_roomRN.phl[342]"
+		;
+connectAttr "vertebrae_flexi_bshp_surface01_translateX.o" "outside_living_roomRN.phl[343]"
+		;
+connectAttr "vertebrae_flexi_bshp_surface01_translateY.o" "outside_living_roomRN.phl[344]"
+		;
+connectAttr "vertebrae_flexi_bshp_surface01_translateZ.o" "outside_living_roomRN.phl[345]"
+		;
+connectAttr "vertebrae_flexi_bshp_surface01_scaleX.o" "outside_living_roomRN.phl[346]"
+		;
+connectAttr "vertebrae_flexi_bshp_surface01_scaleY.o" "outside_living_roomRN.phl[347]"
+		;
+connectAttr "vertebrae_flexi_bshp_surface01_scaleZ.o" "outside_living_roomRN.phl[348]"
+		;
+connectAttr "vertebrae_flexi_cwire_surface01_visibility.o" "outside_living_roomRN.phl[349]"
+		;
+connectAttr "vertebrae_flexi_cwire_surface01BaseWire_rotateX.o" "outside_living_roomRN.phl[350]"
+		;
+connectAttr "vertebrae_flexi_cwire_surface01BaseWire_rotateY.o" "outside_living_roomRN.phl[351]"
+		;
+connectAttr "vertebrae_flexi_cwire_surface01BaseWire_rotateZ.o" "outside_living_roomRN.phl[352]"
+		;
+connectAttr "vertebrae_flexi_cwire_surface01BaseWire_visibility.o" "outside_living_roomRN.phl[353]"
+		;
+connectAttr "vertebrae_flexi_cwire_surface01BaseWire_translateX.o" "outside_living_roomRN.phl[354]"
+		;
+connectAttr "vertebrae_flexi_cwire_surface01BaseWire_translateY.o" "outside_living_roomRN.phl[355]"
+		;
+connectAttr "vertebrae_flexi_cwire_surface01BaseWire_translateZ.o" "outside_living_roomRN.phl[356]"
+		;
+connectAttr "vertebrae_flexi_cwire_surface01BaseWire_scaleX.o" "outside_living_roomRN.phl[357]"
+		;
+connectAttr "vertebrae_flexi_cwire_surface01BaseWire_scaleY.o" "outside_living_roomRN.phl[358]"
+		;
+connectAttr "vertebrae_flexi_cwire_surface01BaseWire_scaleZ.o" "outside_living_roomRN.phl[359]"
+		;
+connectAttr "neck_flexi_spine01_visibility.o" "outside_living_roomRN.phl[360]";
+connectAttr "neck_flexi_global01_autoVolume.o" "outside_living_roomRN.phl[361]";
+connectAttr "pairBlend2.orx" "outside_living_roomRN.phl[362]";
+connectAttr "pairBlend2.ory" "outside_living_roomRN.phl[363]";
+connectAttr "pairBlend2.orz" "outside_living_roomRN.phl[364]";
+connectAttr "pairBlend2.otx" "outside_living_roomRN.phl[365]";
+connectAttr "pairBlend2.oty" "outside_living_roomRN.phl[366]";
+connectAttr "pairBlend2.otz" "outside_living_roomRN.phl[367]";
+connectAttr "outside_living_roomRN.phl[368]" "pairBlend2.w";
+connectAttr "neck_flexi_global01_blendParent1.o" "outside_living_roomRN.phl[369]"
+		;
+connectAttr "neck_flexi_surface01_template.o" "outside_living_roomRN.phl[370]";
+connectAttr "neck_flexi_surface01_rotateX.o" "outside_living_roomRN.phl[371]";
+connectAttr "neck_flexi_surface01_rotateY.o" "outside_living_roomRN.phl[372]";
+connectAttr "neck_flexi_surface01_rotateZ.o" "outside_living_roomRN.phl[373]";
+connectAttr "neck_flexi_surface01_visibility.o" "outside_living_roomRN.phl[374]"
+		;
+connectAttr "neck_flexi_surface01_translateX.o" "outside_living_roomRN.phl[375]"
+		;
+connectAttr "neck_flexi_surface01_translateY.o" "outside_living_roomRN.phl[376]"
+		;
+connectAttr "neck_flexi_surface01_translateZ.o" "outside_living_roomRN.phl[377]"
+		;
+connectAttr "neck_flexi_surface01_scaleX.o" "outside_living_roomRN.phl[378]";
+connectAttr "neck_flexi_surface01_scaleY.o" "outside_living_roomRN.phl[379]";
+connectAttr "neck_flexi_surface01_scaleZ.o" "outside_living_roomRN.phl[380]";
+connectAttr "pairBlend5.otx" "outside_living_roomRN.phl[381]";
+connectAttr "pairBlend5.oty" "outside_living_roomRN.phl[382]";
+connectAttr "pairBlend5.otz" "outside_living_roomRN.phl[383]";
+connectAttr "pairBlend5.orx" "outside_living_roomRN.phl[384]";
+connectAttr "pairBlend5.ory" "outside_living_roomRN.phl[385]";
+connectAttr "pairBlend5.orz" "outside_living_roomRN.phl[386]";
+connectAttr "outside_living_roomRN.phl[387]" "pairBlend5.w";
+connectAttr "neck_flexi_grp_anim_mid01_blendParent1.o" "outside_living_roomRN.phl[388]"
+		;
+connectAttr "neck_flexi_anim_mid01_followStart.o" "outside_living_roomRN.phl[389]"
+		;
+connectAttr "neck_flexi_anim_mid01_translateX.o" "outside_living_roomRN.phl[390]"
+		;
+connectAttr "neck_flexi_anim_mid01_translateY.o" "outside_living_roomRN.phl[391]"
+		;
+connectAttr "neck_flexi_anim_mid01_translateZ.o" "outside_living_roomRN.phl[392]"
+		;
+connectAttr "neck_flexi_anim_mid01_rotateZ.o" "outside_living_roomRN.phl[393]";
+connectAttr "neck_flexi_anim_mid01_rotateX.o" "outside_living_roomRN.phl[394]";
+connectAttr "neck_flexi_anim_mid01_rotateY.o" "outside_living_roomRN.phl[395]";
+connectAttr "neck_flexi_anim_mid01_scaleX.o" "outside_living_roomRN.phl[396]";
+connectAttr "neck_flexi_anim_mid01_scaleY.o" "outside_living_roomRN.phl[397]";
+connectAttr "neck_flexi_anim_mid01_scaleZ.o" "outside_living_roomRN.phl[398]";
+connectAttr "neck_flexi_anim_mid01_visibility.o" "outside_living_roomRN.phl[399]"
+		;
+connectAttr "outside_living_roomRN.phl[400]" "pairBlend5.itx2";
+connectAttr "outside_living_roomRN.phl[401]" "pairBlend5.ity2";
+connectAttr "outside_living_roomRN.phl[402]" "pairBlend5.itz2";
+connectAttr "outside_living_roomRN.phl[403]" "pairBlend5.irx2";
+connectAttr "outside_living_roomRN.phl[404]" "pairBlend5.iry2";
+connectAttr "outside_living_roomRN.phl[405]" "pairBlend5.irz2";
+connectAttr "pairBlend3.otx" "outside_living_roomRN.phl[406]";
+connectAttr "pairBlend3.oty" "outside_living_roomRN.phl[407]";
+connectAttr "pairBlend3.otz" "outside_living_roomRN.phl[408]";
+connectAttr "pairBlend3.orx" "outside_living_roomRN.phl[409]";
+connectAttr "pairBlend3.ory" "outside_living_roomRN.phl[410]";
+connectAttr "pairBlend3.orz" "outside_living_roomRN.phl[411]";
+connectAttr "outside_living_roomRN.phl[412]" "pairBlend3.w";
+connectAttr "neck_flexi_grp_anim_end01_blendParent1.o" "outside_living_roomRN.phl[413]"
+		;
+connectAttr "neck_flexi_anim_end01_followMid.o" "outside_living_roomRN.phl[414]"
+		;
+connectAttr "pairBlend4.otx" "outside_living_roomRN.phl[415]";
+connectAttr "pairBlend4.oty" "outside_living_roomRN.phl[416]";
+connectAttr "pairBlend4.otz" "outside_living_roomRN.phl[417]";
+connectAttr "pairBlend4.orz" "outside_living_roomRN.phl[418]";
+connectAttr "pairBlend4.orx" "outside_living_roomRN.phl[419]";
+connectAttr "pairBlend4.ory" "outside_living_roomRN.phl[420]";
+connectAttr "outside_living_roomRN.phl[421]" "pairBlend4.w";
+connectAttr "neck_flexi_anim_end01_blendParent1.o" "outside_living_roomRN.phl[422]"
+		;
+connectAttr "neck_flexi_anim_end01_visibility.o" "outside_living_roomRN.phl[423]"
+		;
+connectAttr "neck_flexi_anim_end01_scaleX.o" "outside_living_roomRN.phl[424]";
+connectAttr "neck_flexi_anim_end01_scaleY.o" "outside_living_roomRN.phl[425]";
+connectAttr "neck_flexi_anim_end01_scaleZ.o" "outside_living_roomRN.phl[426]";
+connectAttr "outside_living_roomRN.phl[427]" "pairBlend4.itx2";
+connectAttr "outside_living_roomRN.phl[428]" "pairBlend4.ity2";
+connectAttr "outside_living_roomRN.phl[429]" "pairBlend4.itz2";
+connectAttr "outside_living_roomRN.phl[430]" "pairBlend4.irz2";
+connectAttr "outside_living_roomRN.phl[431]" "pairBlend4.irx2";
+connectAttr "outside_living_roomRN.phl[432]" "pairBlend4.iry2";
+connectAttr "outside_living_roomRN.phl[433]" "pairBlend3.itx2";
+connectAttr "outside_living_roomRN.phl[434]" "pairBlend3.ity2";
+connectAttr "outside_living_roomRN.phl[435]" "pairBlend3.itz2";
+connectAttr "outside_living_roomRN.phl[436]" "pairBlend3.irx2";
+connectAttr "outside_living_roomRN.phl[437]" "pairBlend3.iry2";
+connectAttr "outside_living_roomRN.phl[438]" "pairBlend3.irz2";
+connectAttr "neck_flexi_grp_anim_start01_rotateX.o" "outside_living_roomRN.phl[439]"
+		;
+connectAttr "neck_flexi_grp_anim_start01_rotateY.o" "outside_living_roomRN.phl[440]"
+		;
+connectAttr "neck_flexi_grp_anim_start01_rotateZ.o" "outside_living_roomRN.phl[441]"
+		;
+connectAttr "neck_flexi_grp_anim_start01_translateX.o" "outside_living_roomRN.phl[442]"
+		;
+connectAttr "neck_flexi_grp_anim_start01_translateY.o" "outside_living_roomRN.phl[443]"
+		;
+connectAttr "neck_flexi_grp_anim_start01_translateZ.o" "outside_living_roomRN.phl[444]"
+		;
+connectAttr "pairBlend6.orz" "outside_living_roomRN.phl[445]";
+connectAttr "pairBlend6.orx" "outside_living_roomRN.phl[446]";
+connectAttr "pairBlend6.ory" "outside_living_roomRN.phl[447]";
+connectAttr "neck_flexi_anim_start01_scaleX.o" "outside_living_roomRN.phl[448]";
+connectAttr "neck_flexi_anim_start01_scaleY.o" "outside_living_roomRN.phl[449]";
+connectAttr "neck_flexi_anim_start01_scaleZ.o" "outside_living_roomRN.phl[450]";
+connectAttr "neck_flexi_anim_start01_blendParent1.o" "outside_living_roomRN.phl[451]"
+		;
+connectAttr "outside_living_roomRN.phl[452]" "pairBlend6.w";
+connectAttr "neck_flexi_anim_start01_blendPairBlend1.o" "outside_living_roomRN.phl[453]"
+		;
+connectAttr "neck_flexi_anim_start01_visibility.o" "outside_living_roomRN.phl[454]"
+		;
+connectAttr "outside_living_roomRN.phl[455]" "pairBlend2.irx2";
+connectAttr "outside_living_roomRN.phl[456]" "pairBlend2.iry2";
+connectAttr "outside_living_roomRN.phl[457]" "pairBlend2.irz2";
+connectAttr "outside_living_roomRN.phl[458]" "pairBlend2.itx2";
+connectAttr "outside_living_roomRN.phl[459]" "pairBlend2.ity2";
+connectAttr "outside_living_roomRN.phl[460]" "pairBlend2.itz2";
+connectAttr "neck_flexi_flcs01_rotateX.o" "outside_living_roomRN.phl[461]";
+connectAttr "neck_flexi_flcs01_rotateY.o" "outside_living_roomRN.phl[462]";
+connectAttr "neck_flexi_flcs01_rotateZ.o" "outside_living_roomRN.phl[463]";
+connectAttr "neck_flexi_flcs01_visibility.o" "outside_living_roomRN.phl[464]";
+connectAttr "neck_flexi_flcs01_translateX.o" "outside_living_roomRN.phl[465]";
+connectAttr "neck_flexi_flcs01_translateY.o" "outside_living_roomRN.phl[466]";
+connectAttr "neck_flexi_flcs01_translateZ.o" "outside_living_roomRN.phl[467]";
+connectAttr "neck_flexi_flcs01_scaleX.o" "outside_living_roomRN.phl[468]";
+connectAttr "neck_flexi_flcs01_scaleY.o" "outside_living_roomRN.phl[469]";
+connectAttr "neck_flexi_flcs01_scaleZ.o" "outside_living_roomRN.phl[470]";
+connectAttr "neck_flexi_flc_a01_visibility.o" "outside_living_roomRN.phl[471]";
+connectAttr "neck_flexi_anim_a01_magnitude.o" "outside_living_roomRN.phl[472]";
+connectAttr "neck_flexi_anim_a01_rotateX.o" "outside_living_roomRN.phl[473]";
+connectAttr "neck_flexi_anim_a01_rotateY.o" "outside_living_roomRN.phl[474]";
+connectAttr "neck_flexi_anim_a01_rotateZ.o" "outside_living_roomRN.phl[475]";
+connectAttr "neck_flexi_anim_a01_translateX.o" "outside_living_roomRN.phl[476]";
+connectAttr "neck_flexi_anim_a01_translateY.o" "outside_living_roomRN.phl[477]";
+connectAttr "neck_flexi_anim_a01_translateZ.o" "outside_living_roomRN.phl[478]";
+connectAttr "neck_flexi_anim_a01_scaleX.o" "outside_living_roomRN.phl[479]";
+connectAttr "neck_flexi_anim_a01_scaleY.o" "outside_living_roomRN.phl[480]";
+connectAttr "neck_flexi_anim_a01_scaleZ.o" "outside_living_roomRN.phl[481]";
+connectAttr "neck_flexi_flc_b01_visibility.o" "outside_living_roomRN.phl[482]";
+connectAttr "neck_flexi_anim_b01_magnitude.o" "outside_living_roomRN.phl[483]";
+connectAttr "neck_flexi_anim_b01_rotateX.o" "outside_living_roomRN.phl[484]";
+connectAttr "neck_flexi_anim_b01_rotateY.o" "outside_living_roomRN.phl[485]";
+connectAttr "neck_flexi_anim_b01_rotateZ.o" "outside_living_roomRN.phl[486]";
+connectAttr "neck_flexi_anim_b01_translateX.o" "outside_living_roomRN.phl[487]";
+connectAttr "neck_flexi_anim_b01_translateY.o" "outside_living_roomRN.phl[488]";
+connectAttr "neck_flexi_anim_b01_translateZ.o" "outside_living_roomRN.phl[489]";
+connectAttr "neck_flexi_anim_b01_scaleX.o" "outside_living_roomRN.phl[490]";
+connectAttr "neck_flexi_anim_b01_scaleY.o" "outside_living_roomRN.phl[491]";
+connectAttr "neck_flexi_anim_b01_scaleZ.o" "outside_living_roomRN.phl[492]";
+connectAttr "neck_flexi_flc_c01_visibility.o" "outside_living_roomRN.phl[493]";
+connectAttr "neck_flexi_anim_c01_magnitude.o" "outside_living_roomRN.phl[494]";
+connectAttr "neck_flexi_anim_c01_rotateX.o" "outside_living_roomRN.phl[495]";
+connectAttr "neck_flexi_anim_c01_rotateY.o" "outside_living_roomRN.phl[496]";
+connectAttr "neck_flexi_anim_c01_rotateZ.o" "outside_living_roomRN.phl[497]";
+connectAttr "neck_flexi_anim_c01_translateX.o" "outside_living_roomRN.phl[498]";
+connectAttr "neck_flexi_anim_c01_translateY.o" "outside_living_roomRN.phl[499]";
+connectAttr "neck_flexi_anim_c01_translateZ.o" "outside_living_roomRN.phl[500]";
+connectAttr "neck_flexi_anim_c01_scaleX.o" "outside_living_roomRN.phl[501]";
+connectAttr "neck_flexi_anim_c01_scaleY.o" "outside_living_roomRN.phl[502]";
+connectAttr "neck_flexi_anim_c01_scaleZ.o" "outside_living_roomRN.phl[503]";
+connectAttr "neck_flexi_flc_d01_visibility.o" "outside_living_roomRN.phl[504]";
+connectAttr "neck_flexi_anim_d01_magnitude.o" "outside_living_roomRN.phl[505]";
+connectAttr "neck_flexi_anim_d01_rotateX.o" "outside_living_roomRN.phl[506]";
+connectAttr "neck_flexi_anim_d01_rotateY.o" "outside_living_roomRN.phl[507]";
+connectAttr "neck_flexi_anim_d01_rotateZ.o" "outside_living_roomRN.phl[508]";
+connectAttr "neck_flexi_anim_d01_translateX.o" "outside_living_roomRN.phl[509]";
+connectAttr "neck_flexi_anim_d01_translateY.o" "outside_living_roomRN.phl[510]";
+connectAttr "neck_flexi_anim_d01_translateZ.o" "outside_living_roomRN.phl[511]";
+connectAttr "neck_flexi_anim_d01_scaleX.o" "outside_living_roomRN.phl[512]";
+connectAttr "neck_flexi_anim_d01_scaleY.o" "outside_living_roomRN.phl[513]";
+connectAttr "neck_flexi_anim_d01_scaleZ.o" "outside_living_roomRN.phl[514]";
+connectAttr "neck_flexi_flc_e01_visibility.o" "outside_living_roomRN.phl[515]";
+connectAttr "neck_flexi_anim_e01_magnitude.o" "outside_living_roomRN.phl[516]";
+connectAttr "neck_flexi_anim_e01_rotateX.o" "outside_living_roomRN.phl[517]";
+connectAttr "neck_flexi_anim_e01_rotateY.o" "outside_living_roomRN.phl[518]";
+connectAttr "neck_flexi_anim_e01_rotateZ.o" "outside_living_roomRN.phl[519]";
+connectAttr "neck_flexi_anim_e01_translateX.o" "outside_living_roomRN.phl[520]";
+connectAttr "neck_flexi_anim_e01_translateY.o" "outside_living_roomRN.phl[521]";
+connectAttr "neck_flexi_anim_e01_translateZ.o" "outside_living_roomRN.phl[522]";
+connectAttr "neck_flexi_anim_e01_scaleX.o" "outside_living_roomRN.phl[523]";
+connectAttr "neck_flexi_anim_e01_scaleY.o" "outside_living_roomRN.phl[524]";
+connectAttr "neck_flexi_anim_e01_scaleZ.o" "outside_living_roomRN.phl[525]";
+connectAttr "neck_flexi_hidden01_visibility.o" "outside_living_roomRN.phl[526]";
+connectAttr "neck_flexi_bshp_surface01_rotateX.o" "outside_living_roomRN.phl[527]"
+		;
+connectAttr "neck_flexi_bshp_surface01_rotateY.o" "outside_living_roomRN.phl[528]"
+		;
+connectAttr "neck_flexi_bshp_surface01_rotateZ.o" "outside_living_roomRN.phl[529]"
+		;
+connectAttr "neck_flexi_bshp_surface01_visibility.o" "outside_living_roomRN.phl[530]"
+		;
+connectAttr "neck_flexi_bshp_surface01_translateX.o" "outside_living_roomRN.phl[531]"
+		;
+connectAttr "neck_flexi_bshp_surface01_translateY.o" "outside_living_roomRN.phl[532]"
+		;
+connectAttr "neck_flexi_bshp_surface01_translateZ.o" "outside_living_roomRN.phl[533]"
+		;
+connectAttr "neck_flexi_bshp_surface01_scaleX.o" "outside_living_roomRN.phl[534]"
+		;
+connectAttr "neck_flexi_bshp_surface01_scaleY.o" "outside_living_roomRN.phl[535]"
+		;
+connectAttr "neck_flexi_bshp_surface01_scaleZ.o" "outside_living_roomRN.phl[536]"
+		;
+connectAttr "neck_flexi_cwire_surface01_visibility.o" "outside_living_roomRN.phl[537]"
+		;
+connectAttr "neck_flexi_cwire_surface01BaseWire_rotateX.o" "outside_living_roomRN.phl[538]"
+		;
+connectAttr "neck_flexi_cwire_surface01BaseWire_rotateY.o" "outside_living_roomRN.phl[539]"
+		;
+connectAttr "neck_flexi_cwire_surface01BaseWire_rotateZ.o" "outside_living_roomRN.phl[540]"
+		;
+connectAttr "neck_flexi_cwire_surface01BaseWire_visibility.o" "outside_living_roomRN.phl[541]"
+		;
+connectAttr "neck_flexi_cwire_surface01BaseWire_translateX.o" "outside_living_roomRN.phl[542]"
+		;
+connectAttr "neck_flexi_cwire_surface01BaseWire_translateY.o" "outside_living_roomRN.phl[543]"
+		;
+connectAttr "neck_flexi_cwire_surface01BaseWire_translateZ.o" "outside_living_roomRN.phl[544]"
+		;
+connectAttr "neck_flexi_cwire_surface01BaseWire_scaleX.o" "outside_living_roomRN.phl[545]"
+		;
+connectAttr "neck_flexi_cwire_surface01BaseWire_scaleY.o" "outside_living_roomRN.phl[546]"
+		;
+connectAttr "neck_flexi_cwire_surface01BaseWire_scaleZ.o" "outside_living_roomRN.phl[547]"
+		;
+connectAttr "outside_living_roomRN.phl[548]" "pairBlend6.irz2";
+connectAttr "outside_living_roomRN.phl[549]" "pairBlend6.irx2";
+connectAttr "outside_living_roomRN.phl[550]" "pairBlend6.iry2";
+connectAttr "pairBlend1_inTranslateX2.o" "outside_living_roomRN.phl[551]";
+connectAttr "pairBlend1_inTranslateY2.o" "outside_living_roomRN.phl[552]";
+connectAttr "pairBlend1_inTranslateZ2.o" "outside_living_roomRN.phl[553]";
+connectAttr "atHouse_visibility.o" "outside_living_roomRN.phl[564]";
+connectAttr "atHouse_translateX.o" "outside_living_roomRN.phl[565]";
+connectAttr "atHouse_translateY.o" "outside_living_roomRN.phl[566]";
+connectAttr "atHouse_translateZ.o" "outside_living_roomRN.phl[567]";
+connectAttr "atHouse_rotateX.o" "outside_living_roomRN.phl[568]";
+connectAttr "atHouse_rotateY.o" "outside_living_roomRN.phl[569]";
+connectAttr "atHouse_rotateZ.o" "outside_living_roomRN.phl[570]";
+connectAttr "atHouse_scaleX.o" "outside_living_roomRN.phl[571]";
+connectAttr "atHouse_scaleY.o" "outside_living_roomRN.phl[572]";
+connectAttr "atHouse_scaleZ.o" "outside_living_roomRN.phl[573]";
+connectAttr ":mentalrayGlobals.msg" ":mentalrayItemsList.glb";
+connectAttr ":miDefaultOptions.msg" ":mentalrayItemsList.opt" -na;
+connectAttr ":miDefaultFramebuffer.msg" ":mentalrayItemsList.fb" -na;
+connectAttr ":miDefaultOptions.msg" ":mentalrayGlobals.opt";
+connectAttr ":miDefaultFramebuffer.msg" ":mentalrayGlobals.fb";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -11664,6 +16517,57 @@ connectAttr "atHouse_scaleX.msg" "hyperLayout1.hyp[8].dn";
 connectAttr "atHouse_scaleY.msg" "hyperLayout1.hyp[9].dn";
 connectAttr "atHouse_scaleZ.msg" "hyperLayout1.hyp[10].dn";
 connectAttr ":defaultRenderGlobals.rcb" "defaultFurGlobals.cb";
+connectAttr "pairBlend1_inRotateX1.o" "pairBlend1.irx1";
+connectAttr "pairBlend1_inRotateY1.o" "pairBlend1.iry1";
+connectAttr "pairBlend1_inRotateZ1.o" "pairBlend1.irz1";
+connectAttr "pairBlend1_inTranslateX1.o" "pairBlend1.itx1";
+connectAttr "pairBlend1_inTranslateY1.o" "pairBlend1.ity1";
+connectAttr "pairBlend1_inTranslateZ1.o" "pairBlend1.itz1";
+connectAttr "pairBlend2_inRotateX1.o" "pairBlend2.irx1";
+connectAttr "pairBlend2_inRotateY1.o" "pairBlend2.iry1";
+connectAttr "pairBlend2_inRotateZ1.o" "pairBlend2.irz1";
+connectAttr "pairBlend2_inTranslateX1.o" "pairBlend2.itx1";
+connectAttr "pairBlend2_inTranslateY1.o" "pairBlend2.ity1";
+connectAttr "pairBlend2_inTranslateZ1.o" "pairBlend2.itz1";
+connectAttr "pairBlend3_inRotateX1.o" "pairBlend3.irx1";
+connectAttr "pairBlend3_inRotateY1.o" "pairBlend3.iry1";
+connectAttr "pairBlend3_inRotateZ1.o" "pairBlend3.irz1";
+connectAttr "pairBlend3_inTranslateX1.o" "pairBlend3.itx1";
+connectAttr "pairBlend3_inTranslateY1.o" "pairBlend3.ity1";
+connectAttr "pairBlend3_inTranslateZ1.o" "pairBlend3.itz1";
+connectAttr "pairBlend4_inRotateX1.o" "pairBlend4.irx1";
+connectAttr "pairBlend4_inRotateY1.o" "pairBlend4.iry1";
+connectAttr "pairBlend4_inRotateZ1.o" "pairBlend4.irz1";
+connectAttr "pairBlend4_inTranslateX1.o" "pairBlend4.itx1";
+connectAttr "pairBlend4_inTranslateY1.o" "pairBlend4.ity1";
+connectAttr "pairBlend4_inTranslateZ1.o" "pairBlend4.itz1";
+connectAttr "pairBlend5_inRotateX1.o" "pairBlend5.irx1";
+connectAttr "pairBlend5_inRotateY1.o" "pairBlend5.iry1";
+connectAttr "pairBlend5_inRotateZ1.o" "pairBlend5.irz1";
+connectAttr "pairBlend5_inTranslateX1.o" "pairBlend5.itx1";
+connectAttr "pairBlend5_inTranslateY1.o" "pairBlend5.ity1";
+connectAttr "pairBlend5_inTranslateZ1.o" "pairBlend5.itz1";
+connectAttr "pairBlend6_inRotateX1.o" "pairBlend6.irx1";
+connectAttr "pairBlend6_inRotateY1.o" "pairBlend6.iry1";
+connectAttr "pairBlend6_inRotateZ1.o" "pairBlend6.irz1";
+connectAttr "pairBlend7_inRotateX1.o" "pairBlend7.irx1";
+connectAttr "pairBlend7_inRotateY1.o" "pairBlend7.iry1";
+connectAttr "pairBlend7_inRotateZ1.o" "pairBlend7.irz1";
+connectAttr "pairBlend7_inTranslateX1.o" "pairBlend7.itx1";
+connectAttr "pairBlend7_inTranslateY1.o" "pairBlend7.ity1";
+connectAttr "pairBlend7_inTranslateZ1.o" "pairBlend7.itz1";
+connectAttr "pairBlend8_inRotateX1.o" "pairBlend8.irx1";
+connectAttr "pairBlend8_inRotateY1.o" "pairBlend8.iry1";
+connectAttr "pairBlend8_inRotateZ1.o" "pairBlend8.irz1";
+connectAttr "pairBlend8_inTranslateX1.o" "pairBlend8.itx1";
+connectAttr "pairBlend8_inTranslateY1.o" "pairBlend8.ity1";
+connectAttr "pairBlend8_inTranslateZ1.o" "pairBlend8.itz1";
+connectAttr "pairBlend9_inRotateX1.o" "pairBlend9.irx1";
+connectAttr "pairBlend9_inRotateY1.o" "pairBlend9.iry1";
+connectAttr "pairBlend9_inRotateZ1.o" "pairBlend9.irz1";
+connectAttr "pairBlend9_inTranslateX1.o" "pairBlend9.itx1";
+connectAttr "pairBlend9_inTranslateY1.o" "pairBlend9.ity1";
+connectAttr "pairBlend9_inTranslateZ1.o" "pairBlend9.itz1";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 dataStructure -fmt "raw" -as "name=externalContentTable:string=node:string=key:string=upath:uint32=upathcrc:string=rpath:string=roles";
 applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"outside_living_roomRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//scenes/outside_living_room.ma\" 3171040560 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/scenes/outside_living_room.ma\" \"FileRef\"\nendStream\nendChannel\nendAssociations\n" 

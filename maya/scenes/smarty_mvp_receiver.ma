@@ -1,6 +1,6 @@
 //Maya ASCII 2013 scene
 //Name: smarty_mvp_receiver.ma
-//Last modified: Sat, Feb 07, 2015 03:44:47 PM
+//Last modified: Sat, Feb 07, 2015 04:18:20 PM
 //Codeset: 1252
 file -rdi 1 -rpr "living_room_latest" -rfn "living_room_latestRN" "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/sets/livingroom/living_room_latest.ma";
 file -rdi 2 -ns "taller_window_four_squares_latest" -rfn "living_room_latest_taller_window_four_squares_latestRN"
@@ -43,26 +43,26 @@ fileInfo "osv" "Microsoft Home Premium Edition, 64-bit  (Build 9200)\n";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -186.97412126924149 22.532440629345512 110.95948785535559 ;
-	setAttr ".r" -type "double3" -15.338352729606525 12.600000000000758 2.0369018685217224e-016 ;
+	setAttr ".t" -type "double3" -152.05590433683474 10.905881436981618 103.8343032143633 ;
+	setAttr ".r" -type "double3" -23.138352729667719 -3.8000000000130609 -8.9650199221775869e-016 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 61.207075895227518;
+	setAttr ".coi" 10.008868760026278;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -218.10914611816406 9.5440435409545898 54.616151809692383 ;
+	setAttr ".tp" -type "double3" -151.2690268976109 8.1460838776241893 94.077011580436192 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0 100.1 0 ;
+	setAttr ".t" -type "double3" -168.40267680505022 100.09999999999998 73.098932923180612 ;
 	setAttr ".r" -type "double3" -89.999999999999986 0 0 ;
 createNode camera -s -n "topShape" -p "top";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 100.1;
-	setAttr ".ow" 30;
+	setAttr ".ow" 65.294109586230306;
 	setAttr ".imn" -type "string" "top";
 	setAttr ".den" -type "string" "top_depth";
 	setAttr ".man" -type "string" "top_mask";
@@ -114,8 +114,8 @@ createNode reference -n "living_room_latestRN";
 		"living_room_latest_sofa_latestRN" 0
 		"living_room_latest_taller_window_four_squares_latest1RN" 0
 		"living_room_latest_taller_window_four_squares_latestRN" 0
-		"living_room_latest_taller_window_four_squares_latest2RN" 0
 		"living_room_latest_armchair_latestRN1" 0
+		"living_room_latest_taller_window_four_squares_latest2RN" 0
 		"living_room_latest_taller_window_four_squares_latest3RN" 0
 		"living_room_latest_taller_window_four_squares_latestRN1" 0;
 	setAttr ".ptag" -type "string" "";
@@ -507,18 +507,114 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        setFocus `paneLayout -q -p1 $gMainPane`;\n        sceneUIReplacement -deleteRemaining;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
-	setAttr ".b" -type "string" "playbackOptions -min 1 -max 24 -ast 1 -aet 48 ";
+	setAttr ".b" -type "string" "playbackOptions -min 1 -max 144 -ast 1 -aet 144 ";
 	setAttr ".st" 6;
 createNode reference -n "smarty_latestRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"smarty_latestRN"
-		"smarty_latestRN" 0;
+		"smarty_latestRN" 0
+		"smarty_latestRN" 42
+		2 "|smarty_latest_SmartyRig|smarty_latest_global_ctrl" "translate" " -type \"double3\" -150.452643 16.810007 94.207319"
+		
+		2 "|smarty_latest_SmartyRig|smarty_latest_global_ctrl" "rotate" " -type \"double3\" -7.659017 -90 0"
+		
+		2 "|smarty_latest_SmartyRig|smarty_latest_global_ctrl|smarty_latest_rootJ|smarty_latest_backj|smarty_latest_chestJ|smarty_latest_clavicleLJ1|smarty_latest_shoulderLJ|smarty_latest_elbowLJ|smarty_latest_wristLJ" 
+		"translate" " -type \"double3\" 2.168164 -0.020562 0.309816"
+		2 "|smarty_latest_SmartyRig|smarty_latest_global_ctrl|smarty_latest_rootJ|smarty_latest_backj|smarty_latest_chestJ|smarty_latest_clavicleLJ1|smarty_latest_shoulderLJ|smarty_latest_elbowLJ|smarty_latest_wristLJ" 
+		"rotate" " -type \"double3\" 29.811821 -68.269538 -1.359299"
+		2 "|smarty_latest_SmartyRig|smarty_latest_global_ctrl|smarty_latest_rootJ|smarty_latest_backj|smarty_latest_chestJ|smarty_latest_clavicleLJ1|smarty_latest_shoulderLJ|smarty_latest_elbowLJ|smarty_latest_wristLJ" 
+		"rotateX" " -av"
+		2 "|smarty_latest_SmartyRig|smarty_latest_global_ctrl|smarty_latest_rootJ|smarty_latest_backj|smarty_latest_chestJ|smarty_latest_clavicleLJ1|smarty_latest_shoulderLJ|smarty_latest_elbowLJ|smarty_latest_wristLJ" 
+		"rotateY" " -av"
+		2 "|smarty_latest_SmartyRig|smarty_latest_global_ctrl|smarty_latest_rootJ|smarty_latest_backj|smarty_latest_chestJ|smarty_latest_clavicleLJ1|smarty_latest_shoulderLJ|smarty_latest_elbowLJ|smarty_latest_wristLJ" 
+		"rotateZ" " -av"
+		2 "|smarty_latest_SmartyRig|smarty_latest_global_ctrl|smarty_latest_rootJ|smarty_latest_backj|smarty_latest_chestJ|smarty_latest_clavicleLJ1|smarty_latest_shoulderLJ|smarty_latest_elbowLJ|smarty_latest_wristLJ" 
+		"segmentScaleCompensate" " 1"
+		2 "|smarty_latest_SmartyRig|smarty_latest_global_ctrl|smarty_latest_rootJ|smarty_latest_backj|smarty_latest_chestJ|smarty_latest_clavicleLJ1|smarty_latest_shoulderLJ|smarty_latest_elbowLJ|smarty_latest_wristLJ|smarty_latest_indexLJ_a|smarty_latest_indexLJ_b" 
+		"rotateX" " 0"
+		2 "|smarty_latest_SmartyRig|smarty_latest_global_ctrl|smarty_latest_rootJ|smarty_latest_backj|smarty_latest_chestJ|smarty_latest_clavicleLJ1|smarty_latest_shoulderLJ|smarty_latest_elbowLJ|smarty_latest_wristLJ|smarty_latest_indexLJ_a|smarty_latest_indexLJ_b" 
+		"rotateY" " 0"
+		2 "|smarty_latest_SmartyRig|smarty_latest_global_ctrl|smarty_latest_rootJ|smarty_latest_backj|smarty_latest_chestJ|smarty_latest_clavicleLJ1|smarty_latest_shoulderLJ|smarty_latest_elbowLJ|smarty_latest_wristLJ|smarty_latest_indexLJ_a|smarty_latest_indexLJ_b" 
+		"rotateZ" " -av -8.1"
+		2 "|smarty_latest_SmartyRig|smarty_latest_global_ctrl|smarty_latest_rootJ|smarty_latest_backj|smarty_latest_chestJ|smarty_latest_clavicleLJ1|smarty_latest_shoulderLJ|smarty_latest_elbowLJ|smarty_latest_wristLJ|smarty_latest_indexLJ_a|smarty_latest_indexLJ_b" 
+		"segmentScaleCompensate" " 1"
+		2 "|smarty_latest_SmartyRig|smarty_latest_global_ctrl|smarty_latest_rootJ|smarty_latest_backj|smarty_latest_chestJ|smarty_latest_clavicleLJ1|smarty_latest_shoulderLJ|smarty_latest_elbowLJ|smarty_latest_wristLJ|smarty_latest_pinkyLJ_a|smarty_latest_pinkyLJ_b|smarty_latest_pinkyLJ_c" 
+		"translate" " -type \"double3\" 0.401881 -0.0154359 0.00189847"
+		2 "|smarty_latest_SmartyRig|smarty_latest_global_ctrl|smarty_latest_rootJ|smarty_latest_backj|smarty_latest_chestJ|smarty_latest_clavicleLJ1|smarty_latest_shoulderLJ|smarty_latest_elbowLJ|smarty_latest_wristLJ|smarty_latest_pinkyLJ_a|smarty_latest_pinkyLJ_b|smarty_latest_pinkyLJ_c" 
+		"rotateX" " -24.326017"
+		2 "|smarty_latest_SmartyRig|smarty_latest_global_ctrl|smarty_latest_rootJ|smarty_latest_backj|smarty_latest_chestJ|smarty_latest_clavicleLJ1|smarty_latest_shoulderLJ|smarty_latest_elbowLJ|smarty_latest_wristLJ|smarty_latest_pinkyLJ_a|smarty_latest_pinkyLJ_b|smarty_latest_pinkyLJ_c" 
+		"rotateY" " 12.59765"
+		2 "|smarty_latest_SmartyRig|smarty_latest_global_ctrl|smarty_latest_rootJ|smarty_latest_backj|smarty_latest_chestJ|smarty_latest_clavicleLJ1|smarty_latest_shoulderLJ|smarty_latest_elbowLJ|smarty_latest_wristLJ|smarty_latest_pinkyLJ_a|smarty_latest_pinkyLJ_b|smarty_latest_pinkyLJ_c" 
+		"rotateZ" " -av 0"
+		2 "|smarty_latest_SmartyRig|smarty_latest_global_ctrl|smarty_latest_rootJ|smarty_latest_backj|smarty_latest_chestJ|smarty_latest_clavicleLJ1|smarty_latest_shoulderLJ|smarty_latest_elbowLJ|smarty_latest_wristLJ|smarty_latest_pinkyLJ_a|smarty_latest_pinkyLJ_b|smarty_latest_pinkyLJ_c" 
+		"segmentScaleCompensate" " 1"
+		2 "|smarty_latest_SmartyRig|smarty_latest_global_ctrl|smarty_latest_rootJ|smarty_latest_backj|smarty_latest_chestJ|smarty_latest_clavicleLJ1|smarty_latest_shoulderLJ|smarty_latest_elbowLJ|smarty_latest_wristLJ|smarty_latest_pinkyLJ_a|smarty_latest_pinkyLJ_b|smarty_latest_pinkyLJ_c|smarty_latest_pinkyLJ_d" 
+		"translate" " -type \"double3\" 0.355783 0 0"
+		2 "|smarty_latest_SmartyRig|smarty_latest_global_ctrl|smarty_latest_rootJ|smarty_latest_backj|smarty_latest_chestJ|smarty_latest_clavicleLJ1|smarty_latest_shoulderLJ|smarty_latest_elbowLJ|smarty_latest_wristLJ|smarty_latest_LeftPinky_ctrl" 
+		"rotate" " -type \"double3\" 15.033837 6.321891 -53.533979"
+		2 "|smarty_latest_SmartyRig|smarty_latest_global_ctrl|smarty_latest_rootJ|smarty_latest_backj|smarty_latest_chestJ|smarty_latest_clavicleLJ1|smarty_latest_shoulderLJ|smarty_latest_elbowLJ|smarty_latest_wristLJ|smarty_latest_LeftIndex_ctrl" 
+		"rotate" " -type \"double3\" -22.750117 10.099838 -49.981986"
+		2 "|smarty_latest_SmartyRig|smarty_latest_global_ctrl|smarty_latest_rootJ|smarty_latest_backj|smarty_latest_chestJ|smarty_latest_clavicleLJ1|smarty_latest_shoulderLJ|smarty_latest_elbowLJ|smarty_latest_wristLJ|smarty_latest_LeftRing_ctrl" 
+		"rotate" " -type \"double3\" -1.976265 10.610604 -57.705696"
+		2 "|smarty_latest_SmartyRig|smarty_latest_global_ctrl|smarty_latest_rootJ|smarty_latest_backj|smarty_latest_chestJ|smarty_latest_clavicleLJ1|smarty_latest_shoulderLJ|smarty_latest_elbowLJ|smarty_latest_wristLJ|smarty_latest_LeftMiddle_ctrl" 
+		"rotate" " -type \"double3\" 9.805706 3.103848 -51.502803"
+		2 "|smarty_latest_SmartyRig|smarty_latest_global_ctrl|smarty_latest_rootJ|smarty_latest_backj|smarty_latest_chestJ|smarty_latest_clavicleLJ1|smarty_latest_shoulderLJ|smarty_latest_elbowLJ|smarty_latest_wristLJ|smarty_latest_LeftThumb_ctrl" 
+		"rotate" " -type \"double3\" -3.139131 12.816812 -58.936234"
+		2 "|smarty_latest_SmartyRig|smarty_latest_global_ctrl|smarty_latest_rootJ|smarty_latest_backj|smarty_latest_chestJ|smarty_latest_clavicleRJ|smarty_latest_shoulderRJ|smarty_latest_elbowRJ|smarty_latest_wristRJ|smarty_latest_pinkyRJ_a|smarty_latest_pinkyRJ_b|smarty_latest_pinkyRJ_c" 
+		"rotateX" " 0"
+		2 "|smarty_latest_SmartyRig|smarty_latest_global_ctrl|smarty_latest_rootJ|smarty_latest_backj|smarty_latest_chestJ|smarty_latest_clavicleRJ|smarty_latest_shoulderRJ|smarty_latest_elbowRJ|smarty_latest_wristRJ|smarty_latest_pinkyRJ_a|smarty_latest_pinkyRJ_b|smarty_latest_pinkyRJ_c" 
+		"rotateY" " 0"
+		2 "|smarty_latest_SmartyRig|smarty_latest_global_ctrl|smarty_latest_rootJ|smarty_latest_backj|smarty_latest_chestJ|smarty_latest_clavicleRJ|smarty_latest_shoulderRJ|smarty_latest_elbowRJ|smarty_latest_wristRJ|smarty_latest_pinkyRJ_a|smarty_latest_pinkyRJ_b|smarty_latest_pinkyRJ_c" 
+		"rotateZ" " -av 0"
+		2 "|smarty_latest_SmartyRig|smarty_latest_global_ctrl|smarty_latest_rootJ|smarty_latest_backj|smarty_latest_chestJ|smarty_latest_clavicleRJ|smarty_latest_shoulderRJ|smarty_latest_elbowRJ|smarty_latest_wristRJ|smarty_latest_pinkyRJ_a|smarty_latest_pinkyRJ_b|smarty_latest_pinkyRJ_c" 
+		"segmentScaleCompensate" " 1"
+		2 "|smarty_latest_SmartyRig|smarty_latest_global_ctrl|smarty_latest_rootJ|smarty_latest_backj|smarty_latest_chestJ|smarty_latest_clavicleRJ|smarty_latest_shoulderRJ|smarty_latest_elbowRJ|smarty_latest_wristRJ|smarty_latest_RightIndex_ctrl" 
+		"rotate" " -type \"double3\" 0 0 -17.394829"
+		2 "|smarty_latest_SmartyRig|smarty_latest_global_ctrl|smarty_latest_rootJ|smarty_latest_backj|smarty_latest_chestJ|smarty_latest_clavicleRJ|smarty_latest_shoulderRJ|smarty_latest_elbowRJ|smarty_latest_wristRJ|smarty_latest_RightMiddle_ctrl" 
+		"rotate" " -type \"double3\" 3.742985 5.925876 -14.673803"
+		2 "|smarty_latest_SmartyRig|smarty_latest_global_ctrl|smarty_latest_rootJ|smarty_latest_backj|smarty_latest_chestJ|smarty_latest_clavicleRJ|smarty_latest_shoulderRJ|smarty_latest_elbowRJ|smarty_latest_wristRJ|smarty_latest_RightRing_ctrl" 
+		"rotate" " -type \"double3\" 9.877128 3.838719 -17.525792"
+		2 "|smarty_latest_SmartyRig|smarty_latest_global_ctrl|smarty_latest_rootJ|smarty_latest_backj|smarty_latest_chestJ|smarty_latest_clavicleRJ|smarty_latest_shoulderRJ|smarty_latest_elbowRJ|smarty_latest_wristRJ|smarty_latest_RightThumb_ctrl" 
+		"rotate" " -type \"double3\" -24.21917 43.834235 -62.166167"
+		2 "|smarty_latest_SmartyRig|smarty_latest_global_ctrl|smarty_latest_rootJ|smarty_latest_backj|smarty_latest_chestJ|smarty_latest_clavicleRJ|smarty_latest_shoulderRJ|smarty_latest_elbowRJ|smarty_latest_wristRJ|smarty_latest_RightPinky_ctrl2" 
+		"rotate" " -type \"double3\" 1.347413 5.950532 -13.488938"
+		2 "|smarty_latest_SmartyRig|smarty_latest_global_ctrl|smarty_latest_leftFoot_ctrl" 
+		"translate" " -type \"double3\" 0 1.666713 3.022519"
+		2 "|smarty_latest_SmartyRig|smarty_latest_global_ctrl|smarty_latest_leftFoot_ctrl" 
+		"rotate" " -type \"double3\" -59.34788 0 0"
+		2 "|smarty_latest_SmartyRig|smarty_latest_global_ctrl|smarty_latest_rightFoot_ctrl" 
+		"translate" " -type \"double3\" 0 1.666713 3.022519"
+		2 "|smarty_latest_SmartyRig|smarty_latest_global_ctrl|smarty_latest_rightFoot_ctrl" 
+		"rotate" " -type \"double3\" -59.34788 0 0"
+		2 "|smarty_latest_SmartyRig|smarty_latest_global_ctrl|smarty_latest_cog_ctrl|smarty_latest_Tail_Ctrl1" 
+		"rotate" " -type \"double3\" 25.957813 0 0"
+		2 "|smarty_latest_SmartyRig|smarty_latest_global_ctrl|smarty_latest_cog_ctrl|smarty_latest_Tail_Ctrl1|smarty_latest_Tail_Ctrl2" 
+		"rotate" " -type \"double3\" 20.734062 0 0"
+		2 "|smarty_latest_SmartyRig|smarty_latest_global_ctrl|smarty_latest_rightArm_ctrl" 
+		"translate" " -type \"double3\" -0.219318 -1.883116 -3.00123"
+		2 "|smarty_latest_SmartyRig|smarty_latest_global_ctrl|smarty_latest_rightArm_ctrl" 
+		"rotate" " -type \"double3\" 0 0 11.793956"
+		2 "|smarty_latest_SmartyRig|smarty_latest_global_ctrl|smarty_latest_leftArm_ctrl" 
+		"translate" " -type \"double3\" 0.479153 -2.809349 -2.767737"
+		2 "|smarty_latest_SmartyRig|smarty_latest_global_ctrl|smarty_latest_leftArm_ctrl" 
+		"rotate" " -type \"double3\" -36.075724 0 0";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "pig_latestRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"pig_latestRN"
-		"pig_latestRN" 0;
+		"pig_latestRN" 0
+		"pig_latestRN" 5
+		2 "|pig_latest_PIG|pig_latest_controller_main01" "translate" " -type \"double3\" -126.968527 2.895011 86.290748"
+		
+		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_tail_controllers_01|pig_latest_splineiK_tail01" 
+		"translate" " -type \"double3\" -0.0356559 9.506846 -13.339672"
+		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_tail_controllers_01|pig_latest_splineiK_tail01" 
+		"rotate" " -type \"double3\" 90.05808 41.806364 90.101274"
+		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_pigShapeDeformed" 
+		"dispResolution" " 3"
+		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_pigShapeDeformed" 
+		"displaySmoothMesh" " 2";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode vectorRenderGlobals -s -n "vectorRenderGlobals";
@@ -557,7 +653,12 @@ createNode mentalrayOptions -s -n "FineTrace";
 createNode reference -n "bikeRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"bikeRN"
-		"bikeRN" 0;
+		"bikeRN" 0
+		"bikeRN" 3
+		2 "|bike_wholeBike" "translate" " -type \"double3\" -150.835217 5.232716 95.190455"
+		
+		2 "|bike_wholeBike" "rotate" " -type \"double3\" 0 180 0"
+		2 "|bike_wholeBike" "scale" " -type \"double3\" 0.83535 0.83535 0.83535";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 select -ne :time1;
@@ -565,8 +666,8 @@ select -ne :time1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr ".o" 1;
-	setAttr ".unw" 1;
+	setAttr ".o" 16;
+	setAttr ".unw" 16;
 select -ne :renderPartition;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";

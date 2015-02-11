@@ -1,4 +1,0 @@
-smarty_mvp_receiver.ma
-camera3 40 65
-camera1 66 127
-camera2 128 155

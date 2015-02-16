@@ -1,6 +1,6 @@
 //Maya ASCII 2015 scene
 //Name: raccoonsLookAtHouse_latest.ma
-//Last modified: Sat, Feb 14, 2015 11:58:07 PM
+//Last modified: Sun, Feb 15, 2015 03:50:55 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "outside_living_room" -rfn "outside_living_roomRN" -op "v=0;"
 		 "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//scenes/outside_living_room.ma";
@@ -28,15 +28,6 @@ file -rdi 3 -ns "armchair_latest2" -rfn "outside_living_room:living_room_latest:
 		 "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya//assets/sets/livingroom/additions/sofa/armchair_latest.ma";
 file -rdi 3 -ns "armchair_latest3" -rfn "outside_living_room:living_room_latest:armchair_latest1RN1"
 		 "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya//assets/sets/livingroom/additions/sofa/armchair_latest.ma";
-file -rdi 2 -ns "smarty_latest" -rfn "outside_living_room:smarty_latestRN" 
-		-op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/characters/smarty/smarty_latest.ma";
-file -rdi 2 -ns "sneaks_latest" -rfn "outside_living_room:sneaks_latestRN" 
-		-op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/characters/sneaks/sneaks_latest.ma";
-file -rdi 2 -ns "tuffs_latest" -rfn "outside_living_room:tuffs_latestRN" -op
-		 "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/characters/tuffs/tuffs_latest.ma";
-file -rdi 2 -ns "binoculars" -rfn "outside_living_room:binocularsRN" -op "v=0;"
-		 "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/props/binoculars.ma";
-file -rdi 2 -ns "leaves" -rfn "outside_living_room:leavesRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/sets/bush/leaves.ma";
 file -rdi 2 -ns "pig_latest" -rfn "outside_living_room:pig_latestRN" -op "v=0;"
 		 "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/characters/pig/pig_latest.ma";
 file -rdi 3 -ns "key_latest" -rfn "outside_living_room:pig_latest:key_latestRN"
@@ -57,19 +48,19 @@ fileInfo "osv" "Mac OS X 10.9.2";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -203.78079922292432 6.8969042831977925 51.176944930761302 ;
-	setAttr ".r" -type "double3" 180.8616472703381 61.399999999978355 -179.9999999999942 ;
+	setAttr ".t" -type "double3" -206.21878618530127 12.255589178310528 35.146238695836772 ;
+	setAttr ".r" -type "double3" -17.738352729661699 162.20000000002125 0 ;
 	setAttr ".rp" -type "double3" 0 7.1054273576010019e-15 2.8421709430404007e-14 ;
 	setAttr ".rpt" -type "double3" 2.5517228896232203e-14 7.264980873434585e-15 -2.9223620654379387e-14 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 13.208129281111782;
+	setAttr ".coi" 20.589945449675284;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -215.59018612609495 7.9519863366027828 57.541254442760312 ;
+	setAttr ".tp" -type "double3" -212.21379307178617 5.9824363600936259 53.818498863555348 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	setAttr ".v" no;
@@ -279,8 +270,8 @@ createNode mentalrayOptions -s -n "miDefaultOptions";
 createNode mentalrayFramebuffer -s -n "miDefaultFramebuffer";
 	setAttr ".dat" 2;
 createNode lightLinker -s -n "lightLinker1";
-	setAttr -s 355 ".lnk";
-	setAttr -s 354 ".slnk";
+	setAttr -s 172 ".lnk";
+	setAttr -s 171 ".slnk";
 createNode displayLayerManager -n "layerManager";
 createNode displayLayer -n "defaultLayer";
 createNode renderLayerManager -n "renderLayerManager";
@@ -509,10 +500,10 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" == $panelName) {\n"
 		+ "\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n"
 		+ "                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"vp2Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n"
-		+ "                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 0\n                -hulls 0\n                -grid 0\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n"
+		+ "                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 0\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n"
 		+ "                -shadows 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n"
 		+ "            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n"
-		+ "            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 0\n            -hulls 0\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n"
+		+ "            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n"
 		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `outlinerPanel -unParent -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            outlinerEditor -e \n                -docTag \"isolOutln_fromSeln\" \n                -showShapes 0\n                -showReferenceNodes 1\n                -showReferenceMembers 1\n                -showAttributes 0\n                -showConnected 0\n                -showAnimCurvesOnly 0\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 1\n                -showAssets 1\n                -showContainedOnly 1\n                -showPublishedAsConnected 0\n                -showContainerContents 1\n                -ignoreDagHierarchy 0\n                -expandConnections 0\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 1\n                -showLeafs 1\n"
 		+ "                -showNumericAttrsOnly 0\n                -highlightActive 1\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"defaultSetFilter\" \n                -showSetMembers 1\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 0\n"
 		+ "                -ignoreHiddenAttribute 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n"
@@ -553,8 +544,8 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"outside_living_room:atHouse\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 0\\n    -polymeshes 1\\n    -subdivSurfaces 0\\n    -planes 0\\n    -lights 0\\n    -cameras 0\\n    -controlVertices 0\\n    -hulls 0\\n    -grid 0\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 0\\n    -dynamics 0\\n    -particleInstancers 0\\n    -fluids 0\\n    -hairSystems 0\\n    -follicles 0\\n    -nCloths 0\\n    -nParticles 0\\n    -nRigids 0\\n    -dynamicConstraints 0\\n    -locators 0\\n    -manipulators 1\\n    -pluginShapes 0\\n    -dimensions 0\\n    -handles 0\\n    -pivots 0\\n    -textures 0\\n    -strokes 0\\n    -motionTrails 0\\n    -clipGhosts 0\\n    -greasePencils 0\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
 		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"outside_living_room:atHouse\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 0\\n    -polymeshes 1\\n    -subdivSurfaces 0\\n    -planes 0\\n    -lights 0\\n    -cameras 0\\n    -controlVertices 0\\n    -hulls 0\\n    -grid 0\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 0\\n    -dynamics 0\\n    -particleInstancers 0\\n    -fluids 0\\n    -hairSystems 0\\n    -follicles 0\\n    -nCloths 0\\n    -nParticles 0\\n    -nRigids 0\\n    -dynamicConstraints 0\\n    -locators 0\\n    -manipulators 1\\n    -pluginShapes 0\\n    -dimensions 0\\n    -handles 0\\n    -pivots 0\\n    -textures 0\\n    -strokes 0\\n    -motionTrails 0\\n    -clipGhosts 0\\n    -greasePencils 0\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
 		+ "\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 0\\n    -hulls 0\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 0\\n    -hulls 0\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        setFocus `paneLayout -q -p1 $gMainPane`;\n        sceneUIReplacement -deleteRemaining;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 1 -size 10 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -766,56 +757,6 @@ createNode reference -n "outside_living_roomRN";
 	setAttr ".phl[287]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"outside_living_roomRN"
-		"outside_living_room:smarty_latestRN" 0
-		"outside_living_room:living_room_latest:armchair_latest1RN" 0
-		"outside_living_room:pig_latest:key_latestRN" 0
-		"outside_living_room:living_room_latest:taller_window_four_squares_latestRN" 0
-		
-		"outside_living_room:sneaks_latestRN" 0
-		"outside_living_room:living_room_latest:taller_window_four_squares_latest2RN" 
-		0
-		"outside_living_room:tuffs_latestRN" 0
-		"outside_living_room:living_room_latest:taller_window_four_squares_latest3RN" 
-		0
-		"outside_living_room:living_room_latest:armchair_latest1RN1" 0
-		"outside_living_room:pig_latestRN" 12
-		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:head_control|outside_living_room:pig_latest:nurbsCircle1" 
-		"translate" " -type \"double3\" 0 0 0"
-		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:head_control|outside_living_room:pig_latest:nurbsCircle1" 
-		"translateY" " -av"
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:head_control|outside_living_room:pig_latest:nurbsCircle1.visibility" 
-		"outside_living_roomRN.placeHolderList[76]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:head_control|outside_living_room:pig_latest:nurbsCircle1.translateX" 
-		"outside_living_roomRN.placeHolderList[77]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:head_control|outside_living_room:pig_latest:nurbsCircle1.translateY" 
-		"outside_living_roomRN.placeHolderList[78]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:head_control|outside_living_room:pig_latest:nurbsCircle1.translateZ" 
-		"outside_living_roomRN.placeHolderList[79]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:head_control|outside_living_room:pig_latest:nurbsCircle1.rotateX" 
-		"outside_living_roomRN.placeHolderList[80]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:head_control|outside_living_room:pig_latest:nurbsCircle1.rotateY" 
-		"outside_living_roomRN.placeHolderList[81]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:head_control|outside_living_room:pig_latest:nurbsCircle1.rotateZ" 
-		"outside_living_roomRN.placeHolderList[82]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:head_control|outside_living_room:pig_latest:nurbsCircle1.scaleX" 
-		"outside_living_roomRN.placeHolderList[83]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:head_control|outside_living_room:pig_latest:nurbsCircle1.scaleY" 
-		"outside_living_roomRN.placeHolderList[84]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:head_control|outside_living_room:pig_latest:nurbsCircle1.scaleZ" 
-		"outside_living_roomRN.placeHolderList[85]" ""
-		"outside_living_room:living_room_latestRN" 0
-		"outside_living_room:living_room_latest:armchair_latestRN1" 0
-		"outside_living_room:leavesRN" 0
-		"outside_living_room:living_room_latest:sofa_latestRN" 0
-		"outside_living_room:binocularsRN" 0
-		"outside_living_room:living_room_latest:taller_window_four_squares_latest4RN" 
-		0
-		"outside_living_room:living_room_latest:taller_window_four_squares_latest1RN" 
-		0
-		"outside_living_room:living_room_latest:armchair_latestRN" 0
-		"outside_living_roomRN" 0
-		"outside_living_room:living_room_latest:taller_window_four_squares_latestRN1" 
-		0
 		"outside_living_room:smarty_latestRN" 48
 		1 |outside_living_room:smarty_latest:SmartyRig|outside_living_room:smarty_latest:Smarty|outside_living_room:smarty_latest:polySurface6|outside_living_room:smarty_latest:polySurfaceShape4 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
@@ -921,6 +862,233 @@ createNode reference -n "outside_living_roomRN";
 		
 		2 "|outside_living_room:smarty_latest:SmartyRig|outside_living_room:smarty_latest:global_ctrl|outside_living_room:smarty_latest:rootJ|outside_living_room:smarty_latest:backj|outside_living_room:smarty_latest:chestJ|outside_living_room:smarty_latest:smarty_008_fixed_rig_:bowTie|outside_living_room:smarty_latest:smarty_008_fixed_rig_:bowTieShape" 
 		"furNameSpace" " -type \"string\" \"smarty_latest\""
+		"outside_living_room:living_room_latest:armchair_latest1RN" 0
+		"outside_living_room:pig_latest:key_latestRN" 0
+		"outside_living_room:living_room_latest:taller_window_four_squares_latestRN" 0
+		
+		"outside_living_room:sneaks_latestRN" 34
+		1 |outside_living_room:sneaks_latest:controller_root|outside_living_room:sneaks_latest:controller_COG|outside_living_room:sneaks_latest:controller_head|outside_living_room:sneaks_latest:sneaksmesh:pSphere2|outside_living_room:sneaks_latest:sneaksmesh:pSphereShape2 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:sneaks_latest:controller_root|outside_living_room:sneaks_latest:controller_COG|outside_living_room:sneaks_latest:controller_head|outside_living_room:sneaks_latest:sneaksmesh:pSphere2|outside_living_room:sneaks_latest:sneaksmesh:pSphereShape2 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:sneaks_latest:controller_root|outside_living_room:sneaks_latest:controller_COG|outside_living_room:sneaks_latest:controller_head|outside_living_room:sneaks_latest:sneaksmesh:pSphere2|outside_living_room:sneaks_latest:sneaksmesh:pSphereShape2 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:sneaks_latest:controller_root|outside_living_room:sneaks_latest:controller_COG|outside_living_room:sneaks_latest:controller_head|outside_living_room:sneaks_latest:sneaksmesh:pSphere1|outside_living_room:sneaks_latest:sneaksmesh:pSphereShape1 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:sneaks_latest:controller_root|outside_living_room:sneaks_latest:controller_COG|outside_living_room:sneaks_latest:controller_head|outside_living_room:sneaks_latest:sneaksmesh:pSphere1|outside_living_room:sneaks_latest:sneaksmesh:pSphereShape1 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:sneaks_latest:controller_root|outside_living_room:sneaks_latest:controller_COG|outside_living_room:sneaks_latest:controller_head|outside_living_room:sneaks_latest:sneaksmesh:pSphere1|outside_living_room:sneaks_latest:sneaksmesh:pSphereShape1 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:sneaks_latest:controller_root|outside_living_room:sneaks_latest:controller_COG|outside_living_room:sneaks_latest:Sneakio002:Bandana|outside_living_room:sneaks_latest:Sneakio002:BandanaShape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:sneaks_latest:controller_root|outside_living_room:sneaks_latest:controller_COG|outside_living_room:sneaks_latest:Sneakio002:Bandana|outside_living_room:sneaks_latest:Sneakio002:BandanaShape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:sneaks_latest:controller_root|outside_living_room:sneaks_latest:controller_COG|outside_living_room:sneaks_latest:Sneakio002:Bandana|outside_living_room:sneaks_latest:Sneakio002:BandanaShape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:sneaks_latest:sneaksmesh:polySurface1|outside_living_room:sneaks_latest:sneaksmesh:polySurfaceShape1 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:sneaks_latest:sneaksmesh:polySurface1|outside_living_room:sneaks_latest:sneaksmesh:polySurfaceShape1 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:sneaks_latest:sneaksmesh:polySurface1|outside_living_room:sneaks_latest:sneaksmesh:polySurfaceShape1 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:sneaks_latest:sneaksmesh:polySurface1|outside_living_room:sneaks_latest:polySurfaceShape1Orig 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:sneaks_latest:sneaksmesh:polySurface1|outside_living_room:sneaks_latest:polySurfaceShape1Orig 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:sneaks_latest:sneaksmesh:polySurface1|outside_living_room:sneaks_latest:polySurfaceShape1Orig 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		2 "|outside_living_room:sneaks_latest:controller_root|outside_living_room:sneaks_latest:controller_COG|outside_living_room:sneaks_latest:controller_head|outside_living_room:sneaks_latest:sneaksmesh:pSphere2|outside_living_room:sneaks_latest:sneaksmesh:pSphereShape2" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:sneaks_latest:controller_root|outside_living_room:sneaks_latest:controller_COG|outside_living_room:sneaks_latest:controller_head|outside_living_room:sneaks_latest:sneaksmesh:pSphere2|outside_living_room:sneaks_latest:sneaksmesh:pSphereShape2" 
+		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/characters/sneaks/sneaks_latest.ma\""
+		
+		2 "|outside_living_room:sneaks_latest:controller_root|outside_living_room:sneaks_latest:controller_COG|outside_living_room:sneaks_latest:controller_head|outside_living_room:sneaks_latest:sneaksmesh:pSphere2|outside_living_room:sneaks_latest:sneaksmesh:pSphereShape2" 
+		"furNameSpace" " -type \"string\" \"sneaks_latest\""
+		2 "|outside_living_room:sneaks_latest:controller_root|outside_living_room:sneaks_latest:controller_COG|outside_living_room:sneaks_latest:controller_head|outside_living_room:sneaks_latest:sneaksmesh:pSphere1|outside_living_room:sneaks_latest:sneaksmesh:pSphereShape1" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:sneaks_latest:controller_root|outside_living_room:sneaks_latest:controller_COG|outside_living_room:sneaks_latest:controller_head|outside_living_room:sneaks_latest:sneaksmesh:pSphere1|outside_living_room:sneaks_latest:sneaksmesh:pSphereShape1" 
+		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/characters/sneaks/sneaks_latest.ma\""
+		
+		2 "|outside_living_room:sneaks_latest:controller_root|outside_living_room:sneaks_latest:controller_COG|outside_living_room:sneaks_latest:controller_head|outside_living_room:sneaks_latest:sneaksmesh:pSphere1|outside_living_room:sneaks_latest:sneaksmesh:pSphereShape1" 
+		"furNameSpace" " -type \"string\" \"sneaks_latest\""
+		2 "|outside_living_room:sneaks_latest:controller_root|outside_living_room:sneaks_latest:controller_COG|outside_living_room:sneaks_latest:Sneakio002:Bandana|outside_living_room:sneaks_latest:Sneakio002:BandanaShape" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:sneaks_latest:controller_root|outside_living_room:sneaks_latest:controller_COG|outside_living_room:sneaks_latest:Sneakio002:Bandana|outside_living_room:sneaks_latest:Sneakio002:BandanaShape" 
+		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/characters/sneaks/sneaks_latest.ma\""
+		
+		2 "|outside_living_room:sneaks_latest:controller_root|outside_living_room:sneaks_latest:controller_COG|outside_living_room:sneaks_latest:Sneakio002:Bandana|outside_living_room:sneaks_latest:Sneakio002:BandanaShape" 
+		"furNameSpace" " -type \"string\" \"sneaks_latest\""
+		2 "|outside_living_room:sneaks_latest:controller_root|outside_living_room:sneaks_latest:spine|outside_living_room:sneaks_latest:Spine2|outside_living_room:sneaks_latest:Spine3|outside_living_room:sneaks_latest:Spine4|outside_living_room:sneaks_latest:Shoulder|outside_living_room:sneaks_latest:Neck" 
+		"rotate" " -type \"double3\" 3.76869303061608019 3.09128270371298841 0.27057766464021488"
+		
+		2 "|outside_living_room:sneaks_latest:controller_root|outside_living_room:sneaks_latest:spine|outside_living_room:sneaks_latest:Spine2|outside_living_room:sneaks_latest:Spine3|outside_living_room:sneaks_latest:Spine4|outside_living_room:sneaks_latest:Shoulder|outside_living_room:sneaks_latest:Neck" 
+		"rotateX" " -av"
+		2 "|outside_living_room:sneaks_latest:controller_root|outside_living_room:sneaks_latest:spine|outside_living_room:sneaks_latest:Spine2|outside_living_room:sneaks_latest:Spine3|outside_living_room:sneaks_latest:Spine4|outside_living_room:sneaks_latest:Shoulder|outside_living_room:sneaks_latest:Neck" 
+		"rotateY" " -av"
+		2 "|outside_living_room:sneaks_latest:controller_root|outside_living_room:sneaks_latest:spine|outside_living_room:sneaks_latest:Spine2|outside_living_room:sneaks_latest:Spine3|outside_living_room:sneaks_latest:Spine4|outside_living_room:sneaks_latest:Shoulder|outside_living_room:sneaks_latest:Neck" 
+		"rotateZ" " -av"
+		2 "|outside_living_room:sneaks_latest:sneaksmesh:polySurface1|outside_living_room:sneaks_latest:sneaksmesh:polySurfaceShape1" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:sneaks_latest:sneaksmesh:polySurface1|outside_living_room:sneaks_latest:sneaksmesh:polySurfaceShape1" 
+		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/characters/sneaks/sneaks_latest.ma\""
+		
+		2 "|outside_living_room:sneaks_latest:sneaksmesh:polySurface1|outside_living_room:sneaks_latest:sneaksmesh:polySurfaceShape1" 
+		"furNameSpace" " -type \"string\" \"sneaks_latest\""
+		2 "|outside_living_room:sneaks_latest:sneaksmesh:polySurface1|outside_living_room:sneaks_latest:polySurfaceShape1Orig" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:sneaks_latest:sneaksmesh:polySurface1|outside_living_room:sneaks_latest:polySurfaceShape1Orig" 
+		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/characters/sneaks/sneaks_latest.ma\""
+		
+		2 "|outside_living_room:sneaks_latest:sneaksmesh:polySurface1|outside_living_room:sneaks_latest:polySurfaceShape1Orig" 
+		"furNameSpace" " -type \"string\" \"sneaks_latest\""
+		"outside_living_room:tuffs_latestRN" 24
+		1 |outside_living_room:tuffs_latest:controller_root|outside_living_room:tuffs_latest:controller_COG|outside_living_room:tuffs_latest:controller_head|outside_living_room:tuffs_latest:pSphere2|outside_living_room:tuffs_latest:pSphereShape2 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:tuffs_latest:controller_root|outside_living_room:tuffs_latest:controller_COG|outside_living_room:tuffs_latest:controller_head|outside_living_room:tuffs_latest:pSphere2|outside_living_room:tuffs_latest:pSphereShape2 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:tuffs_latest:controller_root|outside_living_room:tuffs_latest:controller_COG|outside_living_room:tuffs_latest:controller_head|outside_living_room:tuffs_latest:pSphere2|outside_living_room:tuffs_latest:pSphereShape2 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:tuffs_latest:controller_root|outside_living_room:tuffs_latest:controller_COG|outside_living_room:tuffs_latest:controller_head|outside_living_room:tuffs_latest:pSphere1|outside_living_room:tuffs_latest:pSphereShape1 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:tuffs_latest:controller_root|outside_living_room:tuffs_latest:controller_COG|outside_living_room:tuffs_latest:controller_head|outside_living_room:tuffs_latest:pSphere1|outside_living_room:tuffs_latest:pSphereShape1 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:tuffs_latest:controller_root|outside_living_room:tuffs_latest:controller_COG|outside_living_room:tuffs_latest:controller_head|outside_living_room:tuffs_latest:pSphere1|outside_living_room:tuffs_latest:pSphereShape1 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:tuffs_latest:tuffs_mesh|outside_living_room:tuffs_latest:tuffs_meshShape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:tuffs_latest:tuffs_mesh|outside_living_room:tuffs_latest:tuffs_meshShape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:tuffs_latest:tuffs_mesh|outside_living_room:tuffs_latest:tuffs_meshShape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:tuffs_latest:tuffs_mesh|outside_living_room:tuffs_latest:tuffs_meshShapeOrig 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:tuffs_latest:tuffs_mesh|outside_living_room:tuffs_latest:tuffs_meshShapeOrig 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:tuffs_latest:tuffs_mesh|outside_living_room:tuffs_latest:tuffs_meshShapeOrig 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		2 "|outside_living_room:tuffs_latest:controller_root|outside_living_room:tuffs_latest:controller_COG|outside_living_room:tuffs_latest:controller_head|outside_living_room:tuffs_latest:pSphere2|outside_living_room:tuffs_latest:pSphereShape2" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:tuffs_latest:controller_root|outside_living_room:tuffs_latest:controller_COG|outside_living_room:tuffs_latest:controller_head|outside_living_room:tuffs_latest:pSphere2|outside_living_room:tuffs_latest:pSphereShape2" 
+		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/characters/tuffs/tuffs_latest.ma\""
+		
+		2 "|outside_living_room:tuffs_latest:controller_root|outside_living_room:tuffs_latest:controller_COG|outside_living_room:tuffs_latest:controller_head|outside_living_room:tuffs_latest:pSphere2|outside_living_room:tuffs_latest:pSphereShape2" 
+		"furNameSpace" " -type \"string\" \"tuffs_latest\""
+		2 "|outside_living_room:tuffs_latest:controller_root|outside_living_room:tuffs_latest:controller_COG|outside_living_room:tuffs_latest:controller_head|outside_living_room:tuffs_latest:pSphere1|outside_living_room:tuffs_latest:pSphereShape1" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:tuffs_latest:controller_root|outside_living_room:tuffs_latest:controller_COG|outside_living_room:tuffs_latest:controller_head|outside_living_room:tuffs_latest:pSphere1|outside_living_room:tuffs_latest:pSphereShape1" 
+		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/characters/tuffs/tuffs_latest.ma\""
+		
+		2 "|outside_living_room:tuffs_latest:controller_root|outside_living_room:tuffs_latest:controller_COG|outside_living_room:tuffs_latest:controller_head|outside_living_room:tuffs_latest:pSphere1|outside_living_room:tuffs_latest:pSphereShape1" 
+		"furNameSpace" " -type \"string\" \"tuffs_latest\""
+		2 "|outside_living_room:tuffs_latest:tuffs_mesh|outside_living_room:tuffs_latest:tuffs_meshShape" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:tuffs_latest:tuffs_mesh|outside_living_room:tuffs_latest:tuffs_meshShape" 
+		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/characters/tuffs/tuffs_latest.ma\""
+		
+		2 "|outside_living_room:tuffs_latest:tuffs_mesh|outside_living_room:tuffs_latest:tuffs_meshShape" 
+		"furNameSpace" " -type \"string\" \"tuffs_latest\""
+		2 "|outside_living_room:tuffs_latest:tuffs_mesh|outside_living_room:tuffs_latest:tuffs_meshShapeOrig" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:tuffs_latest:tuffs_mesh|outside_living_room:tuffs_latest:tuffs_meshShapeOrig" 
+		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/characters/tuffs/tuffs_latest.ma\""
+		
+		2 "|outside_living_room:tuffs_latest:tuffs_mesh|outside_living_room:tuffs_latest:tuffs_meshShapeOrig" 
+		"furNameSpace" " -type \"string\" \"tuffs_latest\""
+		"outside_living_room:living_room_latest:taller_window_four_squares_latest2RN" 
+		0
+		"outside_living_room:living_room_latest:taller_window_four_squares_latest3RN" 
+		0
+		"outside_living_room:living_room_latest:armchair_latest1RN1" 0
+		"outside_living_room:pig_latestRN" 12
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:head_control|outside_living_room:pig_latest:nurbsCircle1" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:head_control|outside_living_room:pig_latest:nurbsCircle1" 
+		"translateY" " -av"
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:head_control|outside_living_room:pig_latest:nurbsCircle1.visibility" 
+		"outside_living_roomRN.placeHolderList[76]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:head_control|outside_living_room:pig_latest:nurbsCircle1.translateX" 
+		"outside_living_roomRN.placeHolderList[77]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:head_control|outside_living_room:pig_latest:nurbsCircle1.translateY" 
+		"outside_living_roomRN.placeHolderList[78]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:head_control|outside_living_room:pig_latest:nurbsCircle1.translateZ" 
+		"outside_living_roomRN.placeHolderList[79]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:head_control|outside_living_room:pig_latest:nurbsCircle1.rotateX" 
+		"outside_living_roomRN.placeHolderList[80]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:head_control|outside_living_room:pig_latest:nurbsCircle1.rotateY" 
+		"outside_living_roomRN.placeHolderList[81]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:head_control|outside_living_room:pig_latest:nurbsCircle1.rotateZ" 
+		"outside_living_roomRN.placeHolderList[82]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:head_control|outside_living_room:pig_latest:nurbsCircle1.scaleX" 
+		"outside_living_roomRN.placeHolderList[83]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:head_control|outside_living_room:pig_latest:nurbsCircle1.scaleY" 
+		"outside_living_roomRN.placeHolderList[84]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:head_control|outside_living_room:pig_latest:nurbsCircle1.scaleZ" 
+		"outside_living_roomRN.placeHolderList[85]" ""
+		"outside_living_room:living_room_latestRN" 0
+		"outside_living_room:living_room_latest:armchair_latestRN1" 0
+		"outside_living_room:leavesRN" 6
+		1 |outside_living_room:leaves:SH20_3_br1_NL_INV|outside_living_room:leaves:SH20_3_br1_NL_INVShap 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:leaves:SH20_3_br1_NL_INV|outside_living_room:leaves:SH20_3_br1_NL_INVShap 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:leaves:SH20_3_br1_NL_INV|outside_living_room:leaves:SH20_3_br1_NL_INVShap 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		2 "|outside_living_room:leaves:SH20_3_br1_NL_INV|outside_living_room:leaves:SH20_3_br1_NL_INVShap" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:leaves:SH20_3_br1_NL_INV|outside_living_room:leaves:SH20_3_br1_NL_INVShap" 
+		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/sets/bush/leaves.ma\""
+		
+		2 "|outside_living_room:leaves:SH20_3_br1_NL_INV|outside_living_room:leaves:SH20_3_br1_NL_INVShap" 
+		"furNameSpace" " -type \"string\" \"leaves\""
+		"outside_living_room:binocularsRN" 6
+		1 |outside_living_room:binoculars:polySurface3|outside_living_room:binoculars:polySurface3Shape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:binoculars:polySurface3|outside_living_room:binoculars:polySurface3Shape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:binoculars:polySurface3|outside_living_room:binoculars:polySurface3Shape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		2 "|outside_living_room:binoculars:polySurface3|outside_living_room:binoculars:polySurface3Shape" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:binoculars:polySurface3|outside_living_room:binoculars:polySurface3Shape" 
+		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/props/binoculars.ma\""
+		
+		2 "|outside_living_room:binoculars:polySurface3|outside_living_room:binoculars:polySurface3Shape" 
+		"furNameSpace" " -type \"string\" \"binoculars\""
+		"outside_living_room:living_room_latest:sofa_latestRN" 0
+		"outside_living_room:living_room_latest:taller_window_four_squares_latest4RN" 
+		0
+		"outside_living_room:living_room_latest:taller_window_four_squares_latest1RN" 
+		0
+		"outside_living_room:living_room_latest:armchair_latestRN" 0
+		"outside_living_roomRN" 12
+		1 |outside_living_room:SH20_3_br1_NL_INV|outside_living_room:SH20_3_br1_NL_INVShap 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:SH20_3_br1_NL_INV|outside_living_room:SH20_3_br1_NL_INVShap 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:SH20_3_br1_NL_INV|outside_living_room:SH20_3_br1_NL_INVShap 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:SH20_3_br1_NL_INV1|outside_living_room:SH20_3_br1_NL_INV1Shap 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:SH20_3_br1_NL_INV1|outside_living_room:SH20_3_br1_NL_INV1Shap 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:SH20_3_br1_NL_INV1|outside_living_room:SH20_3_br1_NL_INV1Shap 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		2 "|outside_living_room:SH20_3_br1_NL_INV|outside_living_room:SH20_3_br1_NL_INVShap" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:SH20_3_br1_NL_INV|outside_living_room:SH20_3_br1_NL_INVShap" 
+		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/scenes/outside_living_room.ma\""
+		
+		2 "|outside_living_room:SH20_3_br1_NL_INV|outside_living_room:SH20_3_br1_NL_INVShap" 
+		"furNameSpace" " -type \"string\" \"outside_living_room\""
+		2 "|outside_living_room:SH20_3_br1_NL_INV1|outside_living_room:SH20_3_br1_NL_INV1Shap" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:SH20_3_br1_NL_INV1|outside_living_room:SH20_3_br1_NL_INV1Shap" 
+		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/scenes/outside_living_room.ma\""
+		
+		2 "|outside_living_room:SH20_3_br1_NL_INV1|outside_living_room:SH20_3_br1_NL_INV1Shap" 
+		"furNameSpace" " -type \"string\" \"outside_living_room\""
+		"outside_living_room:living_room_latest:taller_window_four_squares_latestRN1" 
+		0
 		"outside_living_room:living_room_latest:armchair_latest1RN" 24
 		1 |outside_living_room:living_room_latest:armchair_latest2:armchair_frame|outside_living_room:living_room_latest:armchair_latest2:armchair_frameShape 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
@@ -1081,134 +1249,6 @@ createNode reference -n "outside_living_roomRN";
 		
 		2 "|outside_living_room:living_room_latest:taller_window_four_squares_latest:taller_window|outside_living_room:living_room_latest:taller_window_four_squares_latest:transform1|outside_living_room:living_room_latest:taller_window_four_squares_latest:taller_windowShape" 
 		"furNameSpace" " -type \"string\" \"taller_window_four_squares_latest\""
-		"outside_living_room:sneaks_latestRN" 34
-		1 |outside_living_room:sneaks_latest:controller_root|outside_living_room:sneaks_latest:controller_COG|outside_living_room:sneaks_latest:controller_head|outside_living_room:sneaks_latest:sneaksmesh:pSphere2|outside_living_room:sneaks_latest:sneaksmesh:pSphereShape2 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:sneaks_latest:controller_root|outside_living_room:sneaks_latest:controller_COG|outside_living_room:sneaks_latest:controller_head|outside_living_room:sneaks_latest:sneaksmesh:pSphere2|outside_living_room:sneaks_latest:sneaksmesh:pSphereShape2 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:sneaks_latest:controller_root|outside_living_room:sneaks_latest:controller_COG|outside_living_room:sneaks_latest:controller_head|outside_living_room:sneaks_latest:sneaksmesh:pSphere2|outside_living_room:sneaks_latest:sneaksmesh:pSphereShape2 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:sneaks_latest:controller_root|outside_living_room:sneaks_latest:controller_COG|outside_living_room:sneaks_latest:controller_head|outside_living_room:sneaks_latest:sneaksmesh:pSphere1|outside_living_room:sneaks_latest:sneaksmesh:pSphereShape1 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:sneaks_latest:controller_root|outside_living_room:sneaks_latest:controller_COG|outside_living_room:sneaks_latest:controller_head|outside_living_room:sneaks_latest:sneaksmesh:pSphere1|outside_living_room:sneaks_latest:sneaksmesh:pSphereShape1 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:sneaks_latest:controller_root|outside_living_room:sneaks_latest:controller_COG|outside_living_room:sneaks_latest:controller_head|outside_living_room:sneaks_latest:sneaksmesh:pSphere1|outside_living_room:sneaks_latest:sneaksmesh:pSphereShape1 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:sneaks_latest:controller_root|outside_living_room:sneaks_latest:controller_COG|outside_living_room:sneaks_latest:Sneakio002:Bandana|outside_living_room:sneaks_latest:Sneakio002:BandanaShape 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:sneaks_latest:controller_root|outside_living_room:sneaks_latest:controller_COG|outside_living_room:sneaks_latest:Sneakio002:Bandana|outside_living_room:sneaks_latest:Sneakio002:BandanaShape 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:sneaks_latest:controller_root|outside_living_room:sneaks_latest:controller_COG|outside_living_room:sneaks_latest:Sneakio002:Bandana|outside_living_room:sneaks_latest:Sneakio002:BandanaShape 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:sneaks_latest:sneaksmesh:polySurface1|outside_living_room:sneaks_latest:sneaksmesh:polySurfaceShape1 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:sneaks_latest:sneaksmesh:polySurface1|outside_living_room:sneaks_latest:sneaksmesh:polySurfaceShape1 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:sneaks_latest:sneaksmesh:polySurface1|outside_living_room:sneaks_latest:sneaksmesh:polySurfaceShape1 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:sneaks_latest:sneaksmesh:polySurface1|outside_living_room:sneaks_latest:polySurfaceShape1Orig 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:sneaks_latest:sneaksmesh:polySurface1|outside_living_room:sneaks_latest:polySurfaceShape1Orig 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:sneaks_latest:sneaksmesh:polySurface1|outside_living_room:sneaks_latest:polySurfaceShape1Orig 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		2 "|outside_living_room:sneaks_latest:controller_root|outside_living_room:sneaks_latest:controller_COG|outside_living_room:sneaks_latest:controller_head|outside_living_room:sneaks_latest:sneaksmesh:pSphere2|outside_living_room:sneaks_latest:sneaksmesh:pSphereShape2" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:sneaks_latest:controller_root|outside_living_room:sneaks_latest:controller_COG|outside_living_room:sneaks_latest:controller_head|outside_living_room:sneaks_latest:sneaksmesh:pSphere2|outside_living_room:sneaks_latest:sneaksmesh:pSphereShape2" 
-		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/characters/sneaks/sneaks_latest.ma\""
-		
-		2 "|outside_living_room:sneaks_latest:controller_root|outside_living_room:sneaks_latest:controller_COG|outside_living_room:sneaks_latest:controller_head|outside_living_room:sneaks_latest:sneaksmesh:pSphere2|outside_living_room:sneaks_latest:sneaksmesh:pSphereShape2" 
-		"furNameSpace" " -type \"string\" \"sneaks_latest\""
-		2 "|outside_living_room:sneaks_latest:controller_root|outside_living_room:sneaks_latest:controller_COG|outside_living_room:sneaks_latest:controller_head|outside_living_room:sneaks_latest:sneaksmesh:pSphere1|outside_living_room:sneaks_latest:sneaksmesh:pSphereShape1" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:sneaks_latest:controller_root|outside_living_room:sneaks_latest:controller_COG|outside_living_room:sneaks_latest:controller_head|outside_living_room:sneaks_latest:sneaksmesh:pSphere1|outside_living_room:sneaks_latest:sneaksmesh:pSphereShape1" 
-		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/characters/sneaks/sneaks_latest.ma\""
-		
-		2 "|outside_living_room:sneaks_latest:controller_root|outside_living_room:sneaks_latest:controller_COG|outside_living_room:sneaks_latest:controller_head|outside_living_room:sneaks_latest:sneaksmesh:pSphere1|outside_living_room:sneaks_latest:sneaksmesh:pSphereShape1" 
-		"furNameSpace" " -type \"string\" \"sneaks_latest\""
-		2 "|outside_living_room:sneaks_latest:controller_root|outside_living_room:sneaks_latest:controller_COG|outside_living_room:sneaks_latest:Sneakio002:Bandana|outside_living_room:sneaks_latest:Sneakio002:BandanaShape" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:sneaks_latest:controller_root|outside_living_room:sneaks_latest:controller_COG|outside_living_room:sneaks_latest:Sneakio002:Bandana|outside_living_room:sneaks_latest:Sneakio002:BandanaShape" 
-		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/characters/sneaks/sneaks_latest.ma\""
-		
-		2 "|outside_living_room:sneaks_latest:controller_root|outside_living_room:sneaks_latest:controller_COG|outside_living_room:sneaks_latest:Sneakio002:Bandana|outside_living_room:sneaks_latest:Sneakio002:BandanaShape" 
-		"furNameSpace" " -type \"string\" \"sneaks_latest\""
-		2 "|outside_living_room:sneaks_latest:controller_root|outside_living_room:sneaks_latest:spine|outside_living_room:sneaks_latest:Spine2|outside_living_room:sneaks_latest:Spine3|outside_living_room:sneaks_latest:Spine4|outside_living_room:sneaks_latest:Shoulder|outside_living_room:sneaks_latest:Neck" 
-		"rotate" " -type \"double3\" 3.76869303061608019 3.09128270371298841 0.27057766464021488"
-		
-		2 "|outside_living_room:sneaks_latest:controller_root|outside_living_room:sneaks_latest:spine|outside_living_room:sneaks_latest:Spine2|outside_living_room:sneaks_latest:Spine3|outside_living_room:sneaks_latest:Spine4|outside_living_room:sneaks_latest:Shoulder|outside_living_room:sneaks_latest:Neck" 
-		"rotateX" " -av"
-		2 "|outside_living_room:sneaks_latest:controller_root|outside_living_room:sneaks_latest:spine|outside_living_room:sneaks_latest:Spine2|outside_living_room:sneaks_latest:Spine3|outside_living_room:sneaks_latest:Spine4|outside_living_room:sneaks_latest:Shoulder|outside_living_room:sneaks_latest:Neck" 
-		"rotateY" " -av"
-		2 "|outside_living_room:sneaks_latest:controller_root|outside_living_room:sneaks_latest:spine|outside_living_room:sneaks_latest:Spine2|outside_living_room:sneaks_latest:Spine3|outside_living_room:sneaks_latest:Spine4|outside_living_room:sneaks_latest:Shoulder|outside_living_room:sneaks_latest:Neck" 
-		"rotateZ" " -av"
-		2 "|outside_living_room:sneaks_latest:sneaksmesh:polySurface1|outside_living_room:sneaks_latest:sneaksmesh:polySurfaceShape1" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:sneaks_latest:sneaksmesh:polySurface1|outside_living_room:sneaks_latest:sneaksmesh:polySurfaceShape1" 
-		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/characters/sneaks/sneaks_latest.ma\""
-		
-		2 "|outside_living_room:sneaks_latest:sneaksmesh:polySurface1|outside_living_room:sneaks_latest:sneaksmesh:polySurfaceShape1" 
-		"furNameSpace" " -type \"string\" \"sneaks_latest\""
-		2 "|outside_living_room:sneaks_latest:sneaksmesh:polySurface1|outside_living_room:sneaks_latest:polySurfaceShape1Orig" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:sneaks_latest:sneaksmesh:polySurface1|outside_living_room:sneaks_latest:polySurfaceShape1Orig" 
-		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/characters/sneaks/sneaks_latest.ma\""
-		
-		2 "|outside_living_room:sneaks_latest:sneaksmesh:polySurface1|outside_living_room:sneaks_latest:polySurfaceShape1Orig" 
-		"furNameSpace" " -type \"string\" \"sneaks_latest\""
-		"outside_living_room:tuffs_latestRN" 24
-		1 |outside_living_room:tuffs_latest:controller_root|outside_living_room:tuffs_latest:controller_COG|outside_living_room:tuffs_latest:controller_head|outside_living_room:tuffs_latest:pSphere2|outside_living_room:tuffs_latest:pSphereShape2 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:tuffs_latest:controller_root|outside_living_room:tuffs_latest:controller_COG|outside_living_room:tuffs_latest:controller_head|outside_living_room:tuffs_latest:pSphere2|outside_living_room:tuffs_latest:pSphereShape2 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:tuffs_latest:controller_root|outside_living_room:tuffs_latest:controller_COG|outside_living_room:tuffs_latest:controller_head|outside_living_room:tuffs_latest:pSphere2|outside_living_room:tuffs_latest:pSphereShape2 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:tuffs_latest:controller_root|outside_living_room:tuffs_latest:controller_COG|outside_living_room:tuffs_latest:controller_head|outside_living_room:tuffs_latest:pSphere1|outside_living_room:tuffs_latest:pSphereShape1 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:tuffs_latest:controller_root|outside_living_room:tuffs_latest:controller_COG|outside_living_room:tuffs_latest:controller_head|outside_living_room:tuffs_latest:pSphere1|outside_living_room:tuffs_latest:pSphereShape1 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:tuffs_latest:controller_root|outside_living_room:tuffs_latest:controller_COG|outside_living_room:tuffs_latest:controller_head|outside_living_room:tuffs_latest:pSphere1|outside_living_room:tuffs_latest:pSphereShape1 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:tuffs_latest:tuffs_mesh|outside_living_room:tuffs_latest:tuffs_meshShape 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:tuffs_latest:tuffs_mesh|outside_living_room:tuffs_latest:tuffs_meshShape 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:tuffs_latest:tuffs_mesh|outside_living_room:tuffs_latest:tuffs_meshShape 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:tuffs_latest:tuffs_mesh|outside_living_room:tuffs_latest:tuffs_meshShapeOrig 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:tuffs_latest:tuffs_mesh|outside_living_room:tuffs_latest:tuffs_meshShapeOrig 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:tuffs_latest:tuffs_mesh|outside_living_room:tuffs_latest:tuffs_meshShapeOrig 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		2 "|outside_living_room:tuffs_latest:controller_root|outside_living_room:tuffs_latest:controller_COG|outside_living_room:tuffs_latest:controller_head|outside_living_room:tuffs_latest:pSphere2|outside_living_room:tuffs_latest:pSphereShape2" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:tuffs_latest:controller_root|outside_living_room:tuffs_latest:controller_COG|outside_living_room:tuffs_latest:controller_head|outside_living_room:tuffs_latest:pSphere2|outside_living_room:tuffs_latest:pSphereShape2" 
-		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/characters/tuffs/tuffs_latest.ma\""
-		
-		2 "|outside_living_room:tuffs_latest:controller_root|outside_living_room:tuffs_latest:controller_COG|outside_living_room:tuffs_latest:controller_head|outside_living_room:tuffs_latest:pSphere2|outside_living_room:tuffs_latest:pSphereShape2" 
-		"furNameSpace" " -type \"string\" \"tuffs_latest\""
-		2 "|outside_living_room:tuffs_latest:controller_root|outside_living_room:tuffs_latest:controller_COG|outside_living_room:tuffs_latest:controller_head|outside_living_room:tuffs_latest:pSphere1|outside_living_room:tuffs_latest:pSphereShape1" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:tuffs_latest:controller_root|outside_living_room:tuffs_latest:controller_COG|outside_living_room:tuffs_latest:controller_head|outside_living_room:tuffs_latest:pSphere1|outside_living_room:tuffs_latest:pSphereShape1" 
-		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/characters/tuffs/tuffs_latest.ma\""
-		
-		2 "|outside_living_room:tuffs_latest:controller_root|outside_living_room:tuffs_latest:controller_COG|outside_living_room:tuffs_latest:controller_head|outside_living_room:tuffs_latest:pSphere1|outside_living_room:tuffs_latest:pSphereShape1" 
-		"furNameSpace" " -type \"string\" \"tuffs_latest\""
-		2 "|outside_living_room:tuffs_latest:tuffs_mesh|outside_living_room:tuffs_latest:tuffs_meshShape" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:tuffs_latest:tuffs_mesh|outside_living_room:tuffs_latest:tuffs_meshShape" 
-		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/characters/tuffs/tuffs_latest.ma\""
-		
-		2 "|outside_living_room:tuffs_latest:tuffs_mesh|outside_living_room:tuffs_latest:tuffs_meshShape" 
-		"furNameSpace" " -type \"string\" \"tuffs_latest\""
-		2 "|outside_living_room:tuffs_latest:tuffs_mesh|outside_living_room:tuffs_latest:tuffs_meshShapeOrig" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:tuffs_latest:tuffs_mesh|outside_living_room:tuffs_latest:tuffs_meshShapeOrig" 
-		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/characters/tuffs/tuffs_latest.ma\""
-		
-		2 "|outside_living_room:tuffs_latest:tuffs_mesh|outside_living_room:tuffs_latest:tuffs_meshShapeOrig" 
-		"furNameSpace" " -type \"string\" \"tuffs_latest\""
 		"outside_living_room:living_room_latest:taller_window_four_squares_latest2RN" 
 		42
 		1 |outside_living_room:living_room_latest:taller_window_four_squares_latest3:taller_window|outside_living_room:living_room_latest:taller_window_four_squares_latest3:polySurfaceShape1 
@@ -1448,7 +1488,7 @@ createNode reference -n "outside_living_roomRN";
 		
 		2 "|outside_living_room:living_room_latest:armchair_latest3:armchair_frame|outside_living_room:living_room_latest:armchair_latest3:armchair_pillow_2|outside_living_room:living_room_latest:armchair_latest3:armchair_pillow_Shape2" 
 		"furNameSpace" " -type \"string\" \"armchair_latest3\""
-		"outside_living_room:pig_latestRN" 401
+		"outside_living_room:pig_latestRN" 403
 		1 |outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01 
 		"blendParent1" "blendParent1" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
 		1 |outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_1control01 
@@ -1552,7 +1592,7 @@ createNode reference -n "outside_living_roomRN";
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_head01|outside_living_room:pig_latest:pig_left_eye|outside_living_room:pig_latest:pig_left_eyeShape" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:head_control" 
-		"rotate" " -type \"double3\" 0 0 0"
+		"rotate" " -type \"double3\" 0 -7.79333165361476343 0"
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:head_control" 
 		"rotateX" " -av"
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:head_control" 
@@ -1901,6 +1941,10 @@ createNode reference -n "outside_living_roomRN";
 		"furNameSpace" " -type \"string\" \"pig_latest\""
 		2 "|outside_living_room:pig_latest:persp1|outside_living_room:pig_latest:perspShape2" 
 		"renderable" " 0"
+		2 "|outside_living_room:pig_latest:persp1|outside_living_room:pig_latest:perspShape2" 
+		"depth" " 0"
+		2 "|outside_living_room:pig_latest:persp1|outside_living_room:pig_latest:perspShape2" 
+		"mask" " 1"
 		2 "outside_living_room:pig_latest:defaultFurGlobals" "furGlobalReference" 
 		" 1"
 		2 "outside_living_room:pig_latest:PigSkin002:defaultFurGlobals" "furGlobalReference" 
@@ -11474,7 +11518,7 @@ createNode reference -n "outside_living_roomRN";
 		2 "|outside_living_room:living_room_latest:ripped_up_toy:torn_up_toy" "visibility" 
 		" -av 1"
 		2 "|outside_living_room:living_room_latest:ripped_up_toy:torn_up_toy" "translate" 
-		" -type \"double3\" 27.02042787952029812 7.88863806485671404 -55.77214765765050686"
+		" -type \"double3\" 19.32978485158355397 8.0823741363356838 -66.40620443046671539"
 		
 		2 "|outside_living_room:living_room_latest:ripped_up_toy:torn_up_toy" "translateX" 
 		" -av"
@@ -11483,7 +11527,7 @@ createNode reference -n "outside_living_roomRN";
 		2 "|outside_living_room:living_room_latest:ripped_up_toy:torn_up_toy" "translateZ" 
 		" -av"
 		2 "|outside_living_room:living_room_latest:ripped_up_toy:torn_up_toy" "rotate" 
-		" -type \"double3\" -5.84738062774179213 -53.36767838841435463 -24.81568768643411005"
+		" -type \"double3\" -29.92898865325387447 -55.90894236528470884 5.8073969483333876"
 		
 		2 "|outside_living_room:living_room_latest:ripped_up_toy:torn_up_toy" "rotateX" 
 		" -av"
@@ -11517,19 +11561,19 @@ createNode reference -n "outside_living_roomRN";
 		
 		2 "|outside_living_room:living_room_latest:ripped_up_toy:torn_up_toy|outside_living_room:living_room_latest:ripped_up_toy:torn_up_toyShape" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		5 4 "outside_living_roomRN" "|outside_living_room:living_room_latest:ripped_up_toy:torn_up_toy.translateX" 
-		"outside_living_roomRN.placeHolderList[86]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:living_room_latest:ripped_up_toy:torn_up_toy.translateY" 
-		"outside_living_roomRN.placeHolderList[87]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:living_room_latest:ripped_up_toy:torn_up_toy.translateZ" 
-		"outside_living_roomRN.placeHolderList[88]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:living_room_latest:ripped_up_toy:torn_up_toy.rotateX" 
-		"outside_living_roomRN.placeHolderList[89]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:living_room_latest:ripped_up_toy:torn_up_toy.rotateY" 
-		"outside_living_roomRN.placeHolderList[90]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:living_room_latest:ripped_up_toy:torn_up_toy.rotateZ" 
-		"outside_living_roomRN.placeHolderList[91]" ""
 		5 4 "outside_living_roomRN" "|outside_living_room:living_room_latest:ripped_up_toy:torn_up_toy.visibility" 
+		"outside_living_roomRN.placeHolderList[86]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:living_room_latest:ripped_up_toy:torn_up_toy.translateX" 
+		"outside_living_roomRN.placeHolderList[87]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:living_room_latest:ripped_up_toy:torn_up_toy.translateY" 
+		"outside_living_roomRN.placeHolderList[88]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:living_room_latest:ripped_up_toy:torn_up_toy.translateZ" 
+		"outside_living_roomRN.placeHolderList[89]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:living_room_latest:ripped_up_toy:torn_up_toy.rotateX" 
+		"outside_living_roomRN.placeHolderList[90]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:living_room_latest:ripped_up_toy:torn_up_toy.rotateY" 
+		"outside_living_roomRN.placeHolderList[91]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:living_room_latest:ripped_up_toy:torn_up_toy.rotateZ" 
 		"outside_living_roomRN.placeHolderList[92]" ""
 		5 4 "outside_living_roomRN" "|outside_living_room:living_room_latest:ripped_up_toy:torn_up_toy.scaleX" 
 		"outside_living_roomRN.placeHolderList[93]" ""
@@ -11590,34 +11634,6 @@ createNode reference -n "outside_living_roomRN";
 		
 		2 "|outside_living_room:living_room_latest:armchair_latest1:armchair_frame|outside_living_room:living_room_latest:armchair_latest1:armchair_pillow_2|outside_living_room:living_room_latest:armchair_latest1:armchair_pillow_Shape2" 
 		"furNameSpace" " -type \"string\" \"armchair_latest1\""
-		"outside_living_room:leavesRN" 6
-		1 |outside_living_room:leaves:SH20_3_br1_NL_INV|outside_living_room:leaves:SH20_3_br1_NL_INVShap 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:leaves:SH20_3_br1_NL_INV|outside_living_room:leaves:SH20_3_br1_NL_INVShap 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:leaves:SH20_3_br1_NL_INV|outside_living_room:leaves:SH20_3_br1_NL_INVShap 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		2 "|outside_living_room:leaves:SH20_3_br1_NL_INV|outside_living_room:leaves:SH20_3_br1_NL_INVShap" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:leaves:SH20_3_br1_NL_INV|outside_living_room:leaves:SH20_3_br1_NL_INVShap" 
-		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/sets/bush/leaves.ma\""
-		
-		2 "|outside_living_room:leaves:SH20_3_br1_NL_INV|outside_living_room:leaves:SH20_3_br1_NL_INVShap" 
-		"furNameSpace" " -type \"string\" \"leaves\""
-		"outside_living_room:binocularsRN" 6
-		1 |outside_living_room:binoculars:polySurface3|outside_living_room:binoculars:polySurface3Shape 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:binoculars:polySurface3|outside_living_room:binoculars:polySurface3Shape 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:binoculars:polySurface3|outside_living_room:binoculars:polySurface3Shape 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		2 "|outside_living_room:binoculars:polySurface3|outside_living_room:binoculars:polySurface3Shape" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:binoculars:polySurface3|outside_living_room:binoculars:polySurface3Shape" 
-		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/props/binoculars.ma\""
-		
-		2 "|outside_living_room:binoculars:polySurface3|outside_living_room:binoculars:polySurface3Shape" 
-		"furNameSpace" " -type \"string\" \"binoculars\""
 		"outside_living_room:living_room_latest:sofa_latestRN" 54
 		1 |outside_living_room:living_room_latest:sofa_latest:sofa_frame|outside_living_room:living_room_latest:sofa_latest:sofa_frameShape 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
@@ -11975,28 +11991,16 @@ createNode reference -n "outside_living_roomRN";
 		
 		2 "|outside_living_room:living_room_latest:armchair_latest:armchair_frame|outside_living_room:living_room_latest:armchair_latest:armchair_pillow_2|outside_living_room:living_room_latest:armchair_latest:armchair_pillow_Shape2" 
 		"furNameSpace" " -type \"string\" \"armchair_latest\""
-		"outside_living_roomRN" 51
-		1 |outside_living_room:SH20_3_br1_NL_INV|outside_living_room:SH20_3_br1_NL_INVShap 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:SH20_3_br1_NL_INV|outside_living_room:SH20_3_br1_NL_INVShap 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:SH20_3_br1_NL_INV|outside_living_room:SH20_3_br1_NL_INVShap 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:SH20_3_br1_NL_INV1|outside_living_room:SH20_3_br1_NL_INV1Shap 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:SH20_3_br1_NL_INV1|outside_living_room:SH20_3_br1_NL_INV1Shap 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:SH20_3_br1_NL_INV1|outside_living_room:SH20_3_br1_NL_INV1Shap 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		"outside_living_roomRN" 43
 		1 outside_living_room:defaultFurGlobals "furGlobalReference" "fgrf" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
 		
 		2 "|outside_living_room:atHouse" "visibility" " -av 1"
-		2 "|outside_living_room:atHouse" "translate" " -type \"double3\" -287.67083136567163137 18.29405318620747423 6.02164282826050279"
+		2 "|outside_living_room:atHouse" "translate" " -type \"double3\" -210.67412762217853128 6.31100488169222817 53.21637177509248318"
 		
 		2 "|outside_living_room:atHouse" "translateX" " -av"
 		2 "|outside_living_room:atHouse" "translateY" " -av"
 		2 "|outside_living_room:atHouse" "translateZ" " -av"
-		2 "|outside_living_room:atHouse" "rotate" " -type \"double3\" 1.19999999999995111 -101.37264933548371459 0"
+		2 "|outside_living_room:atHouse" "rotate" " -type \"double3\" -9.59999999999802966 -244.57264933547958208 0"
 		
 		2 "|outside_living_room:atHouse" "rotateX" " -av"
 		2 "|outside_living_room:atHouse" "rotateY" " -av"
@@ -12019,7 +12023,7 @@ createNode reference -n "outside_living_roomRN";
 		2 "|outside_living_room:atHouse|outside_living_room:atHouseShape" "farClipPlane" 
 		" 10000"
 		2 "|outside_living_room:atHouse|outside_living_room:atHouseShape" "centerOfInterest" 
-		" 1.59555253855786261"
+		" 0.026597879477456288"
 		2 "|outside_living_room:atHouse|outside_living_room:atHouseShape" "tumblePivot" 
 		" -type \"double3\" -212.21379307178617069 5.98243636009362589 53.81849886355534807"
 		
@@ -12027,24 +12031,18 @@ createNode reference -n "outside_living_roomRN";
 		" 0.66176497936248779"
 		2 "|outside_living_room:atHouse|outside_living_room:atHouseShape" "displayFilmGate" 
 		" 0"
+		2 "|outside_living_room:atHouse|outside_living_room:atHouseShape" "depth" 
+		" 1"
+		2 "|outside_living_room:atHouse|outside_living_room:atHouseShape" "mask" 
+		" 1"
 		2 "|outside_living_room:atHouse|outside_living_room:atHouseShape" "displayGateMaskColor" 
 		" -type \"float3\" 0 0 0"
 		2 "|outside_living_room:atRaccoons|outside_living_room:atRaccoonsShape" "renderable" 
 		" 0"
-		2 "|outside_living_room:SH20_3_br1_NL_INV|outside_living_room:SH20_3_br1_NL_INVShap" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:SH20_3_br1_NL_INV|outside_living_room:SH20_3_br1_NL_INVShap" 
-		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/scenes/outside_living_room.ma\""
-		
-		2 "|outside_living_room:SH20_3_br1_NL_INV|outside_living_room:SH20_3_br1_NL_INVShap" 
-		"furNameSpace" " -type \"string\" \"outside_living_room\""
-		2 "|outside_living_room:SH20_3_br1_NL_INV1|outside_living_room:SH20_3_br1_NL_INV1Shap" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:SH20_3_br1_NL_INV1|outside_living_room:SH20_3_br1_NL_INV1Shap" 
-		"referenceFile" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/scenes/outside_living_room.ma\""
-		
-		2 "|outside_living_room:SH20_3_br1_NL_INV1|outside_living_room:SH20_3_br1_NL_INV1Shap" 
-		"furNameSpace" " -type \"string\" \"outside_living_room\""
+		2 "|outside_living_room:atRaccoons|outside_living_room:atRaccoonsShape" "depth" 
+		" 0"
+		2 "|outside_living_room:atRaccoons|outside_living_room:atRaccoonsShape" "mask" 
+		" 1"
 		2 "outside_living_room:defaultFurGlobals" "furGlobalReference" " 1"
 		2 "outside_living_room:living_room_latestRN" "fileNames[0]" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/sets/livingroom/living_room_latest.ma\""
 		
@@ -12166,8 +12164,6 @@ createNode reference -n "outside_living_roomRN";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode animLayer -s -n "BaseAnimation";
-	setAttr -s 3 ".cdly";
-	setAttr -s 3 ".chsl";
 	setAttr ".ovrd" yes;
 createNode vectorRenderGlobals -s -n "vectorRenderGlobals";
 createNode vectorRenderGlobals -s -n "vectorRenderGlobals1";
@@ -12439,7 +12435,7 @@ createNode animCurveTA -n "atHouse_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 9 ".ktv[0:8]"  1 1.1999999999999511 27 1.1999999999999511
 		 30 -0.60000000000002585 33 -2.4000000000000035 57 -2.4000000000000035 63 -9.5999999999980297
-		 88 -9.5999999999980297 92 176.40000000000197 120 176.40000000000197;
+		 88 -9.5999999999980297 92 -9.5999999999980297 120 -9.5999999999980297;
 	setAttr -s 9 ".kit[7:8]"  1 1;
 	setAttr -s 9 ".kot[7:8]"  1 1;
 	setAttr -s 9 ".kix[7:8]"  1 1;
@@ -12451,7 +12447,7 @@ createNode animCurveTA -n "atHouse_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 9 ".ktv[0:8]"  1 -101.37264933548371 27 -101.37264933548371
 		 30 -114.77264933548328 33 -128.17264933548282 57 -128.17264933548282 63 -244.57264933547958
-		 88 -244.57264933547958 92 58.172649335479306 120 58.172649335479306;
+		 88 -244.57264933547958 92 -244.57264933547958 120 -244.57264933547958;
 	setAttr -s 9 ".kit[7:8]"  1 1;
 	setAttr -s 9 ".kot[7:8]"  1 1;
 	setAttr -s 9 ".kix[7:8]"  1 1;
@@ -12461,8 +12457,7 @@ createNode animCurveTA -n "atHouse_rotateY";
 createNode animCurveTA -n "atHouse_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 0 27 0 30 0 33 0 57 0 63 0 88 0 92 180
-		 120 180;
+	setAttr -s 9 ".ktv[0:8]"  1 0 27 0 30 0 33 0 57 0 63 0 88 0 92 0 120 0;
 	setAttr -s 9 ".kit[7:8]"  1 1;
 	setAttr -s 9 ".kot[7:8]"  1 1;
 	setAttr -s 9 ".kix[7:8]"  1 1;
@@ -12482,7 +12477,7 @@ createNode animCurveTL -n "atHouse_translateX";
 	setAttr ".wgt" no;
 	setAttr -s 9 ".ktv[0:8]"  1 -287.67083136567163 27 -287.67083136567163
 		 30 -228.10070238635541 33 -192.52409757926375 57 -192.52409757926375 63 -195.33707770091971
-		 88 -195.33707770091971 92 -210.60853307967028 120 -210.60853307967028;
+		 88 -195.33707770091971 92 -210.67412762217853 120 -210.67412762217853;
 	setAttr -s 9 ".kit[7:8]"  1 1;
 	setAttr -s 9 ".kot[7:8]"  1 1;
 	setAttr -s 9 ".kix[7:8]"  1 1;
@@ -12494,7 +12489,7 @@ createNode animCurveTL -n "atHouse_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 9 ".ktv[0:8]"  1 18.294053186207474 27 18.294053186207474
 		 30 13.908911209600895 33 9.5237692329943151 57 9.5237692329943151 63 9.483099757776591
-		 88 9.483099757776591 92 6.1071810072209587 120 6.1071810072209587;
+		 88 9.483099757776591 92 6.3110048816922282 120 6.3110048816922282;
 	setAttr -s 9 ".kit[7:8]"  1 1;
 	setAttr -s 9 ".kot[7:8]"  1 1;
 	setAttr -s 9 ".kix[7:8]"  1 1;
@@ -12506,7 +12501,7 @@ createNode animCurveTL -n "atHouse_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 9 ".ktv[0:8]"  1 6.0216428282605028 27 6.0216428282605028
 		 30 23.057041205110224 33 66.30074477711338 57 66.30074477711338 63 46.37985902309341
-		 88 46.37985902309341 92 52.900203705201832 120 52.900203705201832;
+		 88 46.37985902309341 92 53.216371775092483 120 53.216371775092483;
 	setAttr -s 9 ".kit[7:8]"  1 1;
 	setAttr -s 9 ".kot[7:8]"  1 1;
 	setAttr -s 9 ".kix[7:8]"  1 1;
@@ -13390,14 +13385,14 @@ select -ne :time1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr ".o" 1;
-	setAttr ".unw" 1;
+	setAttr ".o" 118;
+	setAttr ".unw" 118;
 select -ne :renderPartition;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 355 ".st";
+	setAttr -s 172 ".st";
 	setAttr -cb on ".an";
 	setAttr -cb on ".pt";
 select -ne :renderGlobalsList1;
@@ -13410,7 +13405,7 @@ select -ne :defaultShaderList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 197 ".s";
+	setAttr -s 105 ".s";
 select -ne :postProcessList1;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -13422,21 +13417,21 @@ select -ne :defaultRenderUtilityList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 394 ".u";
+	setAttr -s 336 ".u";
 select -ne :defaultRenderingList1;
-	setAttr -s 24 ".r";
+	setAttr -s 19 ".r";
 select -ne :defaultTextureList1;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 181 ".tx";
+	setAttr -s 123 ".tx";
 select -ne :initialShadingGroup;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 682 ".dsm";
+	setAttr -s 675 ".dsm";
 	setAttr -k on ".mwc";
 	setAttr -cb on ".an";
 	setAttr -cb on ".il";
@@ -13445,7 +13440,7 @@ select -ne :initialShadingGroup;
 	setAttr -cb on ".fo";
 	setAttr -cb on ".epo";
 	setAttr ".ro" yes;
-	setAttr -s 335 ".gn";
+	setAttr -s 332 ".gn";
 	setAttr -cb on ".mimt";
 	setAttr -cb on ".miop";
 	setAttr -cb on ".mise";
@@ -13477,16 +13472,66 @@ select -ne :initialParticleSE;
 	setAttr -cb on ".mica";
 	setAttr -cb on ".micw";
 	setAttr -cb on ".mirw";
-select -ne :initialMaterialInfo;
 select -ne :defaultRenderGlobals;
+	setAttr -k on ".cch";
+	setAttr -k on ".nds";
 	setAttr ".mcfr" 30;
+	setAttr -k on ".clip";
+	setAttr -k on ".edm";
 	setAttr ".ren" -type "string" "mentalRay";
+	setAttr -av -k on ".esr";
+	setAttr -k on ".ors";
 	setAttr ".outf" 3;
+	setAttr -k on ".gama";
 	setAttr ".an" yes;
-	setAttr ".ef" 96;
+	setAttr ".ef" 120;
+	setAttr ".sef" yes;
+	setAttr -k on ".be";
 	setAttr ".ep" 3;
+	setAttr -k on ".fec";
+	setAttr -k on ".ofc";
+	setAttr ".oft" -type "string" "";
 	setAttr ".pff" yes;
 	setAttr ".peie" 2;
+	setAttr ".ifp" -type "string" "";
+	setAttr ".rv" -type "string" "";
+	setAttr -k on ".comp";
+	setAttr -k on ".cth";
+	setAttr -k on ".soll";
+	setAttr -k on ".rd";
+	setAttr -k on ".lp";
+	setAttr -k on ".sp";
+	setAttr -k on ".shs";
+	setAttr -k on ".lpr";
+	setAttr -k on ".mm";
+	setAttr -k on ".npu";
+	setAttr -k on ".itf";
+	setAttr -k on ".shp";
+	setAttr -k on ".uf";
+	setAttr -k on ".oi";
+	setAttr -k on ".rut";
+	setAttr -k on ".mbf";
+	setAttr -k on ".afp";
+	setAttr -k on ".pfb";
+	setAttr ".pram" -type "string" "";
+	setAttr ".poam" -type "string" "";
+	setAttr ".prlm" -type "string" "";
+	setAttr ".polm" -type "string" "";
+	setAttr ".prm" -type "string" "";
+	setAttr ".pom" -type "string" "";
+	setAttr -k on ".bll";
+	setAttr -k on ".bls";
+	setAttr -k on ".smv";
+	setAttr -k on ".ubc";
+	setAttr -k on ".mbc";
+	setAttr -k on ".udbx";
+	setAttr -k on ".smc";
+	setAttr -k on ".kmv";
+	setAttr -k on ".rlen";
+	setAttr -av -k on ".frts";
+	setAttr -k on ".tlwd";
+	setAttr -k on ".tlht";
+	setAttr -k on ".jfc";
 select -ne :defaultResolution;
 	setAttr -av -k on ".cch";
 	setAttr -k on ".ihi";
@@ -13517,7 +13562,7 @@ select -ne :hardwareRenderGlobals;
 	setAttr -k off ".eeaa";
 	setAttr -k off ".engm";
 	setAttr -k off ".mes";
-	setAttr -k off ".emb";
+	setAttr -k off ".emb" yes;
 	setAttr -av -k off ".mbbf";
 	setAttr -k off ".mbs";
 	setAttr -k off ".trm";
@@ -13581,7 +13626,7 @@ select -ne :defaultHardwareRenderGlobals;
 	setAttr -k on ".gh";
 	setAttr -cb on ".sd";
 select -ne :ikSystem;
-	setAttr -s 8 ".sol";
+	setAttr -s 2 ".sol";
 connectAttr "controller_main01_translateX.o" "outside_living_roomRN.phl[96]";
 connectAttr "controller_main01_translateY.o" "outside_living_roomRN.phl[97]";
 connectAttr "controller_main01_translateZ.o" "outside_living_roomRN.phl[98]";
@@ -13803,13 +13848,13 @@ connectAttr "tail_4control01_rotateZ.o" "outside_living_roomRN.phl[274]";
 connectAttr "tail_4control01_scaleX.o" "outside_living_roomRN.phl[275]";
 connectAttr "tail_4control01_scaleY.o" "outside_living_roomRN.phl[276]";
 connectAttr "tail_4control01_scaleZ.o" "outside_living_roomRN.phl[277]";
-connectAttr "torn_up_toy_translateX.o" "outside_living_roomRN.phl[86]";
-connectAttr "torn_up_toy_translateY.o" "outside_living_roomRN.phl[87]";
-connectAttr "torn_up_toy_translateZ.o" "outside_living_roomRN.phl[88]";
-connectAttr "torn_up_toy_rotateX.o" "outside_living_roomRN.phl[89]";
-connectAttr "torn_up_toy_rotateY.o" "outside_living_roomRN.phl[90]";
-connectAttr "torn_up_toy_rotateZ.o" "outside_living_roomRN.phl[91]";
-connectAttr "torn_up_toy_visibility.o" "outside_living_roomRN.phl[92]";
+connectAttr "torn_up_toy_visibility.o" "outside_living_roomRN.phl[86]";
+connectAttr "torn_up_toy_translateX.o" "outside_living_roomRN.phl[87]";
+connectAttr "torn_up_toy_translateY.o" "outside_living_roomRN.phl[88]";
+connectAttr "torn_up_toy_translateZ.o" "outside_living_roomRN.phl[89]";
+connectAttr "torn_up_toy_rotateX.o" "outside_living_roomRN.phl[90]";
+connectAttr "torn_up_toy_rotateY.o" "outside_living_roomRN.phl[91]";
+connectAttr "torn_up_toy_rotateZ.o" "outside_living_roomRN.phl[92]";
 connectAttr "torn_up_toy_scaleX.o" "outside_living_roomRN.phl[93]";
 connectAttr "torn_up_toy_scaleY.o" "outside_living_roomRN.phl[94]";
 connectAttr "torn_up_toy_scaleZ.o" "outside_living_roomRN.phl[95]";

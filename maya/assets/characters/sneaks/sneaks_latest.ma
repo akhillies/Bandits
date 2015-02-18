@@ -1,11 +1,10 @@
 //Maya ASCII 2013 scene
 //Name: sneaks16-FixedMask.ma
-//Last modified: Tue, Feb 17, 2015 08:28:16 PM
+//Last modified: Tue, Feb 17, 2015 10:16:27 PM
 //Codeset: 1252
 requires maya "2013";
 requires "Mayatomr" "2013.0 - 3.10.1.4 ";
 requires "stereoCamera" "10.0";
-requires "Mayatomr" "2013.0 - 3.10.1.9 ";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2013";
@@ -15,8 +14,8 @@ fileInfo "osv" "Microsoft Home Premium Edition, 64-bit  (Build 9200)\n";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0.51879206757119922 9.6728283298810602 24.192320288793574 ;
-	setAttr ".r" -type "double3" -4.6358340430394698 -1.0000000000058473 -9.319450690830151e-017 ;
+	setAttr ".t" -type "double3" -8.1356575157563498 7.1608917001847017 21.238866351799825 ;
+	setAttr ".r" -type "double3" 4.9641659569605041 -36.600000000006219 0 ;
 	setAttr ".rp" -type "double3" -4.142876531583194e-015 1.3670000628359979e-015 2.8421709430404007e-014 ;
 	setAttr ".rpt" -type "double3" -6.8715299695384634e-015 4.7029818763071908e-015 
 		-2.0757743370446488e-014 ;
@@ -22842,8 +22841,8 @@ createNode mentalrayOptions -s -n "miDefaultOptions";
 	setAttr ".stringOptions[47].type" -type "string" "color";
 createNode mentalrayFramebuffer -s -n "miDefaultFramebuffer";
 createNode lightLinker -s -n "lightLinker1";
-	setAttr -s 12 ".lnk";
-	setAttr -s 12 ".slnk";
+	setAttr -s 13 ".lnk";
+	setAttr -s 13 ".slnk";
 createNode displayLayerManager -n "layerManager";
 	setAttr ".cdl" 1;
 	setAttr -s 5 ".dli[1:4]"  3 1 4 2;
@@ -24257,7 +24256,7 @@ createNode skinCluster -n "skinCluster1";
 		0.15301424137608607 0.84698573406827826 2.4555635622413926e-008;
 	setAttr -s 5 ".wl[310].w[8:12]"  7.4259700785802019e-024 8.5767361929799879e-014 
 		0.35684611490765566 0.64315379914212356 8.5950135048989512e-008;
-	setAttr -s 5 ".wl[311].w[8:12]"  7.696265264025485e-025 6.1296039529653974e-014 
+	setAttr -s 5 ".wl[311].w[8:12]"  7.6962652640254859e-025 6.1296039529653974e-014 
 		0.022278720402263537 0.91261469252282434 0.065106587074850786;
 	setAttr -s 5 ".wl[312].w[8:12]"  2.1891936494048832e-025 1.5218840162528103e-016 
 		7.8407607299681033e-006 0.79049425538978946 0.20949790384948044;
@@ -24275,7 +24274,7 @@ createNode skinCluster -n "skinCluster1";
 		2.5130992541982877e-013 0.66895279007027464 0.33104720992947406;
 	setAttr -s 5 ".wl[319].w[8:12]"  6.0530760133774335e-026 6.2517516688775144e-018 
 		6.5039378479169578e-011 0.72932914512335922 0.27067085481160136;
-	setAttr -s 5 ".wl[320].w[8:12]"  2.5662308408245638e-025 4.6296500475007519e-017 
+	setAttr -s 5 ".wl[320].w[8:12]"  2.5662308408245647e-025 4.6296500475007519e-017 
 		2.4481172009564615e-009 0.7935599753599466 0.20644002219193611;
 	setAttr -s 5 ".wl[321].w[8:12]"  6.3463761282222434e-025 2.093278818333764e-016 
 		3.6876351391196598e-007 0.91708300108589436 0.082916630150591419;
@@ -24377,7 +24376,7 @@ createNode skinCluster -n "skinCluster1";
 		0.99949410040823827 1.9095318222556487e-009 1.7714449788604852e-016;
 	setAttr -s 5 ".wl[352].w[8:12]"  3.5002001066109623e-023 7.3452513837035457e-006 
 		0.99999264521049613 9.5381199952672557e-009 2.1747483876463542e-016;
-	setAttr -s 5 ".wl[353].w[8:12]"  5.2349353083022045e-025 1.3524652086529147e-010 
+	setAttr -s 5 ".wl[353].w[8:12]"  5.2349353083022054e-025 1.3524652086529147e-010 
 		0.99429293200998481 0.0057070678547683521 3.6655083416564944e-016;
 	setAttr -s 5 ".wl[354].w";
 	setAttr ".wl[354].w[28]" 0.48648571343337743;
@@ -27281,7 +27280,7 @@ createNode skinCluster -n "skinCluster1";
 		0.28450689440080945 0.71536022835782009 0.00013287719999845326;
 	setAttr -s 5 ".wl[1120].w[8:12]"  1.7442427254282952e-024 3.4335754428042402e-013 
 		0.03160142398076151 0.96462604174312117 0.0037725342757741033;
-	setAttr -s 5 ".wl[1121].w[8:12]"  3.1174553345248915e-025 1.0500064512001266e-016 
+	setAttr -s 5 ".wl[1121].w[8:12]"  3.117455334524892e-025 1.0500064512001266e-016 
 		9.4432731110037105e-007 0.96376244331959093 0.036236612353098045;
 	setAttr -s 5 ".wl[1122].w[8:12]"  2.1551868287056778e-025 3.8005452431972906e-017 
 		1.6321044641451464e-009 0.86917694810415436 0.13082305026374105;
@@ -29386,7 +29385,7 @@ createNode skinCluster -n "skinCluster1";
 		1.4167822876797398e-009 0.67726182236449539 0.32273817621872242;
 	setAttr -s 5 ".wl[1625].w[8:12]"  9.2980339962824744e-026 4.0368380984321075e-017 
 		3.8102362749309299e-006 0.86320547890605681 0.13679071085766831;
-	setAttr -s 5 ".wl[1626].w[8:12]"  2.0875864530005619e-025 1.0990836644922582e-015 
+	setAttr -s 5 ".wl[1626].w[8:12]"  2.0875864530005623e-025 1.0990836644922582e-015 
 		0.00072493777582226064 0.97904009735727793 0.020234964866898717;
 	setAttr -s 5 ".wl[1627].w[8:12]"  4.1359648669951766e-025 3.7795911677233026e-015 
 		0.013379760625101666 0.98646293875864433 0.00015730061625020148;
@@ -30525,9 +30524,9 @@ createNode skinCluster -n "skinCluster1";
 		0.84504883873555436 0.15495116126108346 1.0291306380400894e-014;
 	setAttr -s 5 ".wl[1948].w[8:12]"  8.8047139230713588e-026 2.5137525331878256e-012 
 		0.92804167122663073 0.071958328770854924 6.0244436982156073e-016;
-	setAttr -s 5 ".wl[1949].w[8:12]"  2.8346062644741275e-025 3.1247702942728909e-010 
+	setAttr -s 5 ".wl[1949].w[8:12]"  2.8346062644741279e-025 3.1247702942728909e-010 
 		0.99979035840541808 0.00020964128210489209 1.4170252925745534e-016;
-	setAttr -s 5 ".wl[1950].w[8:12]"  5.9837335618589977e-025 3.9401338829653615e-009 
+	setAttr -s 5 ".wl[1950].w[8:12]"  5.9837335618589987e-025 3.9401338829653615e-009 
 		0.99999941121467917 5.8484518695034556e-007 9.0724951856925391e-017;
 	setAttr -s 5 ".wl[1951].w[8:12]"  1.0551968532116037e-022 3.5251279570536601e-005 
 		0.99996474466558316 4.0548459407122691e-009 2.6884221485491846e-016;
@@ -31682,7 +31681,7 @@ createNode skinCluster -n "skinCluster1";
 		3.3430235531976112e-011 0.82368697436506477 0.17631302560150508;
 	setAttr -s 5 ".wl[2208].w[8:12]"  5.486136333300819e-024 2.0803736126015521e-008 
 		0.99999935808622686 6.2111003680599617e-007 1.6111990293281468e-016;
-	setAttr -s 5 ".wl[2209].w[8:12]"  7.553822887868813e-025 7.5379295511162003e-010 
+	setAttr -s 5 ".wl[2209].w[8:12]"  7.5538228878688139e-025 7.5379295511162003e-010 
 		0.99986121309716147 0.00013878614904558488 1.2887476096225124e-016;
 	setAttr -s 5 ".wl[2210].w[8:12]"  1.8267264734207413e-024 1.5505226385569339e-014 
 		0.21341144299370005 0.78658849379231444 6.3213969911427879e-008;
@@ -41228,6 +41227,15 @@ createNode shadingEngine -n "lambert2SG";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo1";
+createNode lambert -n "SneaksEye";
+createNode shadingEngine -n "lambert3SG";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".dsm";
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo2";
+createNode file -n "file3";
+	setAttr ".ftn" -type "string" "C:/Users/Adelyn/Documents/GitHub/Bandits/maya//sourceimages/RaccoonEye.png";
+createNode place2dTexture -n "place2dTexture3";
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -41240,7 +41248,7 @@ select -ne :renderPartition;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 12 ".st";
+	setAttr -s 13 ".st";
 	setAttr -cb on ".an";
 	setAttr -cb on ".pt";
 select -ne :initialShadingGroup;
@@ -41248,7 +41256,7 @@ select -ne :initialShadingGroup;
 	setAttr -cb on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 4 ".dsm";
+	setAttr -s 2 ".dsm";
 	setAttr -k on ".mwc";
 	setAttr -cb on ".an";
 	setAttr -cb on ".il";
@@ -41293,13 +41301,13 @@ select -ne :defaultShaderList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 12 ".s";
+	setAttr -s 13 ".s";
 select -ne :defaultTextureList1;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 5 ".tx";
+	setAttr -s 6 ".tx";
 select -ne :postProcessList1;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -41311,14 +41319,13 @@ select -ne :defaultRenderUtilityList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 5 ".u";
+	setAttr -s 6 ".u";
 select -ne :defaultRenderingList1;
 select -ne :renderGlobalsList1;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-select -ne :initialMaterialInfo;
 select -ne :defaultResolution;
 	setAttr -av -k on ".cch";
 	setAttr -k on ".ihi";
@@ -42153,6 +42160,7 @@ relationship "link" ":lightLinker1" "sneaksmesh:Sneakio002:lambert4SG.message" "
 relationship "link" ":lightLinker1" "sneaksmesh:Sneakio002:lambert5SG.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "teeth:lambert2SG.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert3SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "Sneakio002:lambert2SG.message" ":defaultLightSet.message";
@@ -42165,6 +42173,7 @@ relationship "shadowLink" ":lightLinker1" "sneaksmesh:Sneakio002:lambert4SG.mess
 relationship "shadowLink" ":lightLinker1" "sneaksmesh:Sneakio002:lambert5SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "teeth:lambert2SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert3SG.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr "Sneakio002:file1.oc" "Sneakio002:DisplacementGrid.c";
@@ -42692,6 +42701,31 @@ connectAttr "lambert2.oc" "lambert2SG.ss";
 connectAttr "tongue:pPlaneShape1.iog" "lambert2SG.dsm" -na;
 connectAttr "lambert2SG.msg" "materialInfo1.sg";
 connectAttr "lambert2.msg" "materialInfo1.m";
+connectAttr "file3.oc" "SneaksEye.c";
+connectAttr "SneaksEye.oc" "lambert3SG.ss";
+connectAttr "sneaksmesh:pSphereShape2.iog" "lambert3SG.dsm" -na;
+connectAttr "sneaksmesh:pSphereShape1.iog" "lambert3SG.dsm" -na;
+connectAttr "lambert3SG.msg" "materialInfo2.sg";
+connectAttr "SneaksEye.msg" "materialInfo2.m";
+connectAttr "file3.msg" "materialInfo2.t" -na;
+connectAttr "place2dTexture3.c" "file3.c";
+connectAttr "place2dTexture3.tf" "file3.tf";
+connectAttr "place2dTexture3.rf" "file3.rf";
+connectAttr "place2dTexture3.mu" "file3.mu";
+connectAttr "place2dTexture3.mv" "file3.mv";
+connectAttr "place2dTexture3.s" "file3.s";
+connectAttr "place2dTexture3.wu" "file3.wu";
+connectAttr "place2dTexture3.wv" "file3.wv";
+connectAttr "place2dTexture3.re" "file3.re";
+connectAttr "place2dTexture3.of" "file3.of";
+connectAttr "place2dTexture3.r" "file3.ro";
+connectAttr "place2dTexture3.n" "file3.n";
+connectAttr "place2dTexture3.vt1" "file3.vt1";
+connectAttr "place2dTexture3.vt2" "file3.vt2";
+connectAttr "place2dTexture3.vt3" "file3.vt3";
+connectAttr "place2dTexture3.vc1" "file3.vc1";
+connectAttr "place2dTexture3.o" "file3.uv";
+connectAttr "place2dTexture3.ofs" "file3.fs";
 connectAttr "Sneakio002:lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "Sneakio002:lambert3SG.pa" ":renderPartition.st" -na;
 connectAttr "Sneakio002:lambert4SG.pa" ":renderPartition.st" -na;
@@ -42702,8 +42736,7 @@ connectAttr "sneaksmesh:Sneakio002:lambert4SG.pa" ":renderPartition.st" -na;
 connectAttr "sneaksmesh:Sneakio002:lambert5SG.pa" ":renderPartition.st" -na;
 connectAttr "teeth:lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
-connectAttr "sneaksmesh:pSphereShape1.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "sneaksmesh:pSphereShape2.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "lambert3SG.pa" ":renderPartition.st" -na;
 connectAttr "teeth:pCubeShape1.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "teeth:pCubeShape2.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "Sneakio002:DisplacementGrid.msg" ":defaultShaderList1.s" -na;
@@ -42720,20 +42753,21 @@ connectAttr "sneaksmesh:Sneakio002:TempBandanaColor.msg" ":defaultShaderList1.s"
 		 -na;
 connectAttr "teeth:imagePlane.msg" ":defaultShaderList1.s" -na;
 connectAttr "lambert2.msg" ":defaultShaderList1.s" -na;
+connectAttr "SneaksEye.msg" ":defaultShaderList1.s" -na;
 connectAttr "Sneakio002:file1.msg" ":defaultTextureList1.tx" -na;
 connectAttr "sneaksmesh:Sneakio002:file1.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file1.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file2.msg" ":defaultTextureList1.tx" -na;
 connectAttr "teeth:file1.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2.oc" ":lambert1.c";
+connectAttr "file3.msg" ":defaultTextureList1.tx" -na;
 connectAttr "Sneakio002:place2dTexture1.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "sneaksmesh:Sneakio002:place2dTexture1.msg" ":defaultRenderUtilityList1.u"
 		 -na;
 connectAttr "place2dTexture1.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "place2dTexture2.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "teeth:place2dTexture1.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "place2dTexture3.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-connectAttr "file2.msg" ":initialMaterialInfo.t" -na;
 connectAttr "ikSCsolver.msg" ":ikSystem.sol" -na;
 connectAttr "ikRPsolver.msg" ":ikSystem.sol" -na;
 // End of sneaks16-FixedMask.ma

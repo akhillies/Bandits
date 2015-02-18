@@ -1,6 +1,6 @@
 //Maya ASCII 2015 scene
 //Name: livingroom_shading_latest.ma
-//Last modified: Tue, Feb 17, 2015 08:50:51 PM
+//Last modified: Tue, Feb 17, 2015 08:58:53 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "living_room_latest" -rfn "living_room_latestRN" "/Users/AshleyTheMagnificant/GitHub/Bandits/maya//assets/sets/livingroom/living_room_latest.ma";
 file -rdi 2 -ns "taller_window_four_squares_latest" -rfn "living_room_latest:taller_window_four_squares_latestRN"
@@ -757,15 +757,16 @@ createNode reference -n "living_room_latestRN";
 		"living_room_latest:taller_window_four_squares_latestRN" 0
 		"living_room_latest:armchair_latestRN1" 0
 		"living_room_latest:taller_window_four_squares_latestRN1" 0
-		"living_room_latestRN" 128
+		"living_room_latestRN" 39
 		0 "|living_room_latestRNfosterParent1|living_room_latest:polySurfaceShape309" 
 		"|living_room_latest:photo_frame" "-s -r "
-		2 "|living_room_latest:photo_frame" "translate" " -type \"double3\" 0 0 0"
+		2 "|living_room_latest:photo_frame" "translate" " -type \"double3\" 185.85328100925127615 -9.79983632615858724 -27.25576738551557909"
 		
-		2 "|living_room_latest:photo_frame" "scale" " -type \"double3\" 1 1 1"
-		2 "|living_room_latest:photo_frame" "rotatePivot" " -type \"double3\" -184.49745751613934885 9.92304880567735026 26.89550634190141309"
+		2 "|living_room_latest:photo_frame" "scale" " -type \"double3\" 0.61129818994266594 0.91008963841599433 0.61129818994266594"
 		
-		2 "|living_room_latest:photo_frame" "scalePivot" " -type \"double3\" -184.49745751613934885 9.92304880567735026 26.89550634190141309"
+		2 "|living_room_latest:photo_frame" "rotatePivot" " -type \"double3\" -370.350738525390625 19.7228851318359375 54.15127372741699219"
+		
+		2 "|living_room_latest:photo_frame" "scalePivot" " -type \"double3\" -370.350738525390625 19.7228851318359375 54.15127372741699219"
 		
 		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "uvPivot" 
 		" -type \"double2\" 0.714737 0.334473"
@@ -775,184 +776,6 @@ createNode reference -n "living_room_latestRN";
 		" -type \"string\" \"map1\""
 		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "uvSet[1].uvSetName" 
 		" -type \"string\" \"map11\""
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts" 
-		" -s 88"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[0]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[1]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[2]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[3]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[4]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[5]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[6]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[7]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[8]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[9]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[10]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[11]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[12]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[13]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[14]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[15]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[16]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[17]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[18]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[19]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[20]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[21]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[22]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[23]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[24]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[25]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[26]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[27]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[28]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[29]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[30]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[31]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[32]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[33]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[34]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[35]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[36]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[37]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[38]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[39]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[40]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[41]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[42]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[43]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[44]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[45]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[46]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[47]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[48]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[49]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[50]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[51]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[52]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[53]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[54]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[55]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[56]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[57]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[58]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[59]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[60]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[61]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[62]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[63]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[64]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[65]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[66]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[67]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[68]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[69]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[70]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[71]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[72]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[73]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[74]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[75]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[76]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[77]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[78]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[79]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[80]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[81]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[82]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[83]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[84]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[85]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[86]" 
-		" -type \"float3\" 0 0 0"
-		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "pnts[87]" 
-		" -type \"float3\" 0 0 0"
 		2 "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape" 
 		"instObjGroups.objectGroups" " -s 4"
 		2 "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape" 
@@ -1407,50 +1230,6 @@ createNode polyTweakUV -n "living_room_latest:polyTweakUV1";
 		 0.098305441 0.026845034 0.097379662 -0.15251371 0.32020003 -0.26795793 0.3234517
 		 0.39359108 -0.3802073 0.39490482 -0.22724399 0.49308738 -0.38117081 0.49306002 -0.229029
 		 -0.26819807 0.31781161 -0.15382209 0.31461996;
-createNode polyTweak -n "polyTweak1";
-	setAttr ".uopa" yes;
-	setAttr -s 88 ".tk[0:87]" -type "float3"  -185.49609375 9.64852428 25.42424774
-		 -186.57301331 9.64852428 27.89840698 -184.70367432 10.085755348 25.76916504 -185.78059387
-		 10.085755348 28.24332809 -184.55093384 10.079705238 25.83563232 -185.62785339 10.079705238
-		 28.30980682 -185.34335327 9.64247322 25.49072647 -186.42027283 9.64247322 27.96488571
-		 -185.68135071 10.085755348 28.015304565 -185.52859497 10.079705238 28.081771851 -186.32102966
-		 9.64247322 27.736866 -186.47377014 9.64852428 27.67038345 -185.83355713 10.056530952
-		 28.22026443 -185.73431396 10.056530952 27.99224091 -184.75663757 10.056530952 25.74610138
-		 -184.60391235 10.050479889 25.81258774 -185.58157349 10.050479889 28.058727264 -185.68081665
-		 10.050479889 28.28675079 -186.51011658 9.68322563 27.92578888 -186.41087341 9.68322563
-		 27.69776535 -185.43321228 9.68322563 25.45162582 -185.2804718 9.67717552 25.51811218
-		 -186.25814819 9.67717552 27.76425171 -186.35739136 9.67717552 27.99227524 -184.85177612
-		 10.056530952 25.96465302 -185.52833557 9.68322563 25.67017746 -185.5912323 9.64852428
-		 25.64279556 -185.43849182 9.64247322 25.70927429 -185.37561035 9.67717552 25.73666
-		 -184.69903564 10.050479889 26.031139374 -184.64607239 10.079705238 26.054195404 -184.79881287
-		 10.085755348 25.98771667 -185.59765625 10.054032326 28.073181152 -186.28474426 9.67455959
-		 27.77229691 -185.38800049 9.67477703 25.71318054 -184.69947815 10.054073334 26.0098304749
-		 -185.30235291 10.050479889 27.41720581 -185.97891235 9.67717552 27.122715 -186.041809082
-		 9.64247322 27.095344543 -186.19454956 9.64852428 27.028862 -186.13165283 9.68322563
-		 27.056243896 -186.0010070801 9.67462826 27.12080765 -185.31347656 10.054044724 27.42032623
-		 -185.45509338 10.056530952 27.35071945 -185.40213013 10.085755348 27.37376785 -185.24938965
-		 10.079705238 27.4402504 -184.96357727 10.050479889 26.63892365 -185.64013672 9.67717552
-		 26.34443283 -185.70303345 9.64247322 26.31706238 -185.85577393 9.64852428 26.25057983
-		 -185.7928772 9.68322563 26.27796173 -185.65681458 9.67471218 26.33041 -184.96870422
-		 10.054060936 26.6283226 -185.11631775 10.056530952 26.57243729 -185.063354492 10.085755348
-		 26.59548569 -184.91061401 10.079705238 26.66196823 -184.93824768 9.91849613 25.92702866
-		 -185.20277405 9.91849613 26.53479767 -185.54154968 9.91849613 27.31307983 -185.82077026
-		 9.91849613 27.95460129 -185.92001343 9.91849613 28.18262482 -186.072769165 9.9245472
-		 28.11616135 -185.973526 9.9245472 27.88813782 -185.84057617 9.91986847 27.96679688
-		 -185.55656433 9.91990089 27.31444168 -185.21199036 9.91994095 26.52298355 -184.94291687
-		 9.91997242 25.90493393 -185.090988159 9.9245472 25.86054993 -184.99584961 9.9245472
-		 25.64198303 -184.84310913 9.91849613 25.70846176 -184.9675293 9.90233898 25.91426849
-		 -185.23207092 9.90233898 26.52205658 -185.5708313 9.90233898 27.30033875 -185.85005188
-		 9.90233898 27.9418602 -185.9493103 9.90233898 28.16987991 -186.10205078 9.90839005
-		 28.10340118 -186.0027923584 9.90839005 27.87538147 -185.87033081 9.90344334 27.95376587
-		 -185.58631897 9.90347862 27.30146408 -185.24176025 9.90352154 26.51010132 -184.97270203
-		 9.90355492 25.89209747 -185.12026978 9.90839005 25.84778976 -185.025131226 9.90839005
-		 25.62924194 -184.87239075 9.90233898 25.69572067 -184.14758301 9.64241695 27.0018310547
-		 -184.48548889 9.64241695 27.77816772 -184.065139771 9.64242363 27.037708282 -184.40304565
-		 9.64242363 27.81404495;
-createNode transformGeometry -n "transformGeometry1";
-	setAttr ".txf" -type "matrix" 0.61129818994266594 0 0 0 0 0.91008963841599433 0 0
-		 0 0 0.61129818994266594 0 41.897278588361502 -8.0265445924754104 -6.207069270758435 1;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -1489,7 +1268,7 @@ select -ne :ikSystem;
 connectAttr "living_room_latestRN.phl[1]" "lambert3SG.dsm" -na;
 connectAttr "living_room_latest:polyTweakUV1.uvtk[0]" "living_room_latestRN.phl[2]"
 		;
-connectAttr "transformGeometry1.og" "living_room_latestRN.phl[3]";
+connectAttr "living_room_latest:polyTweakUV1.out" "living_room_latestRN.phl[3]";
 connectAttr "living_room_latestRN.phl[4]" "polyPlanarProj1.mp";
 connectAttr "living_room_latestRN.phl[5]" "living_room_latest:polyPlanarProj1.mp"
 		;
@@ -1576,8 +1355,6 @@ connectAttr "living_room_latest:polySurfaceShape309.o" "polyPlanarProj1.ip";
 connectAttr "polyPlanarProj1.out" "living_room_latest:polyPlanarProj1.ip";
 connectAttr "living_room_latest:polyPlanarProj1.out" "living_room_latest:polyTweakUV1.ip"
 		;
-connectAttr "living_room_latest:polyTweakUV1.out" "polyTweak1.ip";
-connectAttr "polyTweak1.out" "transformGeometry1.ig";
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert3SG.pa" ":renderPartition.st" -na;
 connectAttr "WallsAndCeiling1.msg" ":defaultShaderList1.s" -na;

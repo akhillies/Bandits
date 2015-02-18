@@ -1,0 +1,120 @@
+//Maya ASCII 2013 scene
+//Name: kitchenCam.ma
+//Last modified: Tue, Feb 17, 2015 09:19:57 PM
+//Codeset: UTF-8
+requires maya "2013";
+requires "Mayatomr" "2013.0 - 3.10.1.9 ";
+requires "stereoCamera" "10.0";
+currentUnit -l centimeter -a degree -t film;
+fileInfo "application" "maya";
+fileInfo "product" "Maya 2013";
+fileInfo "version" "2013 x64";
+fileInfo "cutIdentifier" "201207040330-835994";
+fileInfo "osv" "Mac OS X 10.9.5";
+fileInfo "license" "student";
+createNode transform -n "KitchenCam";
+createNode camera -n "KitchenCamShape" -p "KitchenCam";
+	setAttr -k off ".v";
+	setAttr ".rnd" no;
+	setAttr ".cap" -type "double2" 1.41732 0.94488 ;
+	setAttr ".ff" 0;
+	setAttr ".coi" 13.36768733640594;
+	setAttr ".ow" 30;
+	setAttr ".imn" -type "string" "camera1";
+	setAttr ".den" -type "string" "camera1_depth";
+	setAttr ".man" -type "string" "camera1_mask";
+createNode animCurveTL -n "KitchenCam_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  22 -141.37661494651033 25 -141.37661494651033
+		 30 -139.5614590795202;
+createNode animCurveTL -n "KitchenCam_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  22 19.502087862034593 25 19.502087862034593
+		 30 16.650743637304743;
+createNode animCurveTL -n "KitchenCam_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  22 111.41501620516264 25 111.41501620516264
+		 30 111.32480627498198;
+createNode animCurveTU -n "KitchenCam_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  22 1 25 1 30 1;
+	setAttr -s 3 ".kot[0:2]"  5 5 5;
+createNode animCurveTA -n "KitchenCam_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  22 -1.7999999999999994 25 -1.7999999999999994
+		 30 -12.341941999508823;
+createNode animCurveTA -n "KitchenCam_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  22 -1.2000000000000091 25 -1.2000000000000091
+		 30 25.250016664217473;
+createNode animCurveTA -n "KitchenCam_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  22 2.4853534239700979e-17 25 2.4853534239700979e-17
+		 30 2.4397072634103147;
+createNode animCurveTU -n "KitchenCam_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  22 1 25 1 30 1;
+createNode animCurveTU -n "KitchenCam_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  22 1 25 1 30 1;
+createNode animCurveTU -n "KitchenCam_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  22 1 25 1 30 1;
+select -ne :time1;
+	setAttr ".o" 12;
+	setAttr ".unw" 12;
+select -ne :renderPartition;
+	setAttr -s 331 ".st";
+select -ne :initialShadingGroup;
+	setAttr -s 496 ".dsm";
+	setAttr ".ro" yes;
+	setAttr -s 96 ".gn";
+select -ne :initialParticleSE;
+	setAttr ".ro" yes;
+select -ne :defaultShaderList1;
+	setAttr -s 181 ".s";
+select -ne :defaultTextureList1;
+	setAttr -s 153 ".tx";
+select -ne :postProcessList1;
+	setAttr -s 2 ".p";
+select -ne :defaultRenderUtilityList1;
+	setAttr -s 154 ".u";
+select -ne :defaultRenderingList1;
+	setAttr -s 15 ".r";
+select -ne :renderGlobalsList1;
+select -ne :defaultRenderGlobals;
+	setAttr ".ren" -type "string" "mentalRay";
+select -ne :defaultResolution;
+	setAttr ".w" 1920;
+	setAttr ".h" 1080;
+	setAttr ".pa" 1;
+	setAttr ".dar" 1.7769999504089355;
+select -ne :hardwareRenderGlobals;
+	setAttr ".ctrs" 256;
+	setAttr ".btrs" 512;
+select -ne :defaultHardwareRenderGlobals;
+	setAttr ".fn" -type "string" "im";
+	setAttr ".res" -type "string" "ntsc_4d 646 485 1.333";
+select -ne :ikSystem;
+	setAttr -s 6 ".sol";
+connectAttr "KitchenCam_translateX.o" "KitchenCam.tx";
+connectAttr "KitchenCam_translateY.o" "KitchenCam.ty";
+connectAttr "KitchenCam_translateZ.o" "KitchenCam.tz";
+connectAttr "KitchenCam_visibility.o" "KitchenCam.v";
+connectAttr "KitchenCam_rotateX.o" "KitchenCam.rx";
+connectAttr "KitchenCam_rotateY.o" "KitchenCam.ry";
+connectAttr "KitchenCam_rotateZ.o" "KitchenCam.rz";
+connectAttr "KitchenCam_scaleX.o" "KitchenCam.sx";
+connectAttr "KitchenCam_scaleY.o" "KitchenCam.sy";
+connectAttr "KitchenCam_scaleZ.o" "KitchenCam.sz";
+// End of kitchenCam.ma

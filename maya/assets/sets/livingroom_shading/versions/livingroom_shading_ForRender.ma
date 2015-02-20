@@ -1,6 +1,6 @@
 //Maya ASCII 2013 scene
 //Name: livingroom_shading_ForRender.ma
-//Last modified: Fri, Feb 20, 2015 12:14:57 AM
+//Last modified: Fri, Feb 20, 2015 12:32:43 AM
 //Codeset: UTF-8
 file -rdi 1 -ns "living_room_latest" -rfn "living_room_latestRN" "/Users/AshleyTheMagnificant/GitHub/Bandits/maya//assets/sets/livingroom/living_room_latest.ma";
 file -rdi 2 -ns "taller_window_four_squares_latest" -rfn "living_room_latest:taller_window_four_squares_latestRN"
@@ -39,14 +39,14 @@ fileInfo "osv" "Mac OS X 10.9.1";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -195.44635900276438 11.131797813468165 71.445075067386682 ;
+	setAttr ".t" -type "double3" -194.89314971474488 11.390542254645014 72.871333759258761 ;
 	setAttr ".r" -type "double3" -9.6000000000000902 21.1999999999978 2.1321419375146531e-16 ;
 	setAttr ".rp" -type "double3" 2.8421709430404007e-14 8.8817841970012523e-16 -2.8421709430404007e-14 ;
 	setAttr ".rpt" -type "double3" -9.1852198331851395e-14 1.0294374222404692e-14 -1.0825337491203914e-14 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 19.759282909565883;
+	setAttr ".coi" 21.31079928341812;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";

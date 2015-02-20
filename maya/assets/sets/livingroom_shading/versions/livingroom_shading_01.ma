@@ -1,6 +1,6 @@
 //Maya ASCII 2013 scene
 //Name: livingroom_shading_01.ma
-//Last modified: Wed, Feb 18, 2015 01:34:20 AM
+//Last modified: Thu, Feb 19, 2015 04:56:39 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "living_room_latest" -rfn "living_room_latestRN" "/Users/AshleyTheMagnificant/GitHub/Bandits/maya//assets/sets/livingroom/living_room_latest.ma";
 file -rdi 2 -ns "taller_window_four_squares_latest" -rfn "living_room_latest:taller_window_four_squares_latestRN"
@@ -20,6 +20,10 @@ file -rdi 2 -ns "armchair_latest" -rfn "living_room_latest:armchair_latestRN"
 		 "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya//assets/sets/livingroom/additions/sofa/armchair_latest.ma";
 file -rdi 2 -ns "armchair_latest1" -rfn "living_room_latest:armchair_latestRN1"
 		 "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya//assets/sets/livingroom/additions/sofa/armchair_latest.ma";
+file -rdi 2 -ns "desk_latest" -rfn "living_room_latest:bedroom_updated_layout:desk_latestRN"
+		 "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya//assets/sets/bedroom/additions/desk_latest.ma";
+file -rdi 2 -ns "chair" -rfn "living_room_latest:bedroom_updated_layout:chairRN"
+		 "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya//assets/sets/bedroom/additions/chair.ma";
 file -r -ns "living_room_latest" -dr 1 -rfn "living_room_latestRN" "/Users/AshleyTheMagnificant/GitHub/Bandits/maya//assets/sets/livingroom/living_room_latest.ma";
 requires maya "2013";
 requires "Mayatomr" "2013.0 - 3.10.1.9 ";
@@ -33,27 +37,28 @@ fileInfo "osv" "Mac OS X 10.9.1";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -212.71766886318312 35.361716900347389 78.966135629940965 ;
-	setAttr ".r" -type "double3" -15.600000000000406 -61.800000000015608 1.6826523825151777e-15 ;
-	setAttr ".rpt" -type "double3" 2.1191765308313968e-15 -2.0129357539392044e-15 -5.6123822871162377e-14 ;
+	setAttr ".t" -type "double3" -195.90366523584322 23.607623070864339 -10.885707719480427 ;
+	setAttr ".r" -type "double3" -18.000000000021725 8.8000000000067171 -2.0115255878453478e-16 ;
+	setAttr ".rp" -type "double3" 7.1054273576010019e-15 0 -2.8421709430404007e-14 ;
+	setAttr ".rpt" -type "double3" -8.5784671327874927e-14 1.0509599021191097e-14 1.9706596624180713e-14 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 95.273813161973976;
+	setAttr ".coi" 12.954443781394513;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -131.84558868408203 9.7407001554965973 35.602906703948975 ;
+	setAttr ".tp" -type "double3" -197.78851318359375 19.604479789733887 -23.061084747314453 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0 100.1 0 ;
+	setAttr ".t" -type "double3" -101.08815383911131 149.50081537312352 1.4015884399414349 ;
 	setAttr ".r" -type "double3" -89.999999999999986 0 0 ;
 createNode camera -s -n "topShape" -p "top";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 100.1;
-	setAttr ".ow" 30;
+	setAttr ".ow" 302.81573646946958;
 	setAttr ".imn" -type "string" "top";
 	setAttr ".den" -type "string" "top_depth";
 	setAttr ".man" -type "string" "top_mask";
@@ -61,12 +66,12 @@ createNode camera -s -n "topShape" -p "top";
 	setAttr ".o" yes;
 createNode transform -s -n "front";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0 0 100.1 ;
+	setAttr ".t" -type "double3" -101.08815383911131 21.352931976318359 144.28664362439318 ;
 createNode camera -s -n "frontShape" -p "front";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 100.1;
-	setAttr ".ow" 30;
+	setAttr ".ow" 302.81573646946958;
 	setAttr ".imn" -type "string" "front";
 	setAttr ".den" -type "string" "front_depth";
 	setAttr ".man" -type "string" "front_mask";
@@ -74,13 +79,13 @@ createNode camera -s -n "frontShape" -p "front";
 	setAttr ".o" yes;
 createNode transform -s -n "side";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 100.1 0 0 ;
+	setAttr ".t" -type "double3" 101.23481915043874 21.352931976318359 1.4015884399414511 ;
 	setAttr ".r" -type "double3" 0 89.999999999999986 0 ;
 createNode camera -s -n "sideShape" -p "side";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 100.1;
-	setAttr ".ow" 30;
+	setAttr ".ow" 291.02482845908719;
 	setAttr ".imn" -type "string" "side";
 	setAttr ".den" -type "string" "side_depth";
 	setAttr ".man" -type "string" "side_mask";
@@ -707,23 +712,15 @@ createNode mentalrayOptions -s -n "miDefaultOptions";
 	setAttr ".stringOptions[47].type" -type "string" "color";
 createNode mentalrayFramebuffer -s -n "miDefaultFramebuffer";
 createNode lightLinker -s -n "lightLinker1";
-	setAttr -s 164 ".lnk";
-	setAttr -s 163 ".slnk";
+	setAttr -s 184 ".lnk";
+	setAttr -s 185 ".slnk";
 createNode displayLayerManager -n "layerManager";
 createNode displayLayer -n "defaultLayer";
 createNode renderLayerManager -n "renderLayerManager";
 createNode renderLayer -n "defaultRenderLayer";
 	setAttr ".g" yes;
 createNode reference -n "living_room_latestRN";
-	setAttr -s 157 ".phl";
-	setAttr ".phl[1]" 0;
-	setAttr ".phl[2]" 0;
-	setAttr ".phl[3]" 0;
-	setAttr ".phl[4]" 0;
-	setAttr ".phl[5]" 0;
-	setAttr ".phl[6]" 0;
-	setAttr ".phl[7]" 0;
-	setAttr ".phl[8]" 0;
+	setAttr -s 49 ".phl";
 	setAttr ".phl[9]" 0;
 	setAttr ".phl[10]" 0;
 	setAttr ".phl[11]" 0;
@@ -772,3137 +769,37 @@ createNode reference -n "living_room_latestRN";
 	setAttr ".phl[54]" 0;
 	setAttr ".phl[55]" 0;
 	setAttr ".phl[56]" 0;
-	setAttr ".phl[57]" 0;
-	setAttr ".phl[58]" 0;
-	setAttr ".phl[59]" 0;
-	setAttr ".phl[60]" 0;
-	setAttr ".phl[61]" 0;
-	setAttr ".phl[62]" 0;
-	setAttr ".phl[63]" 0;
-	setAttr ".phl[64]" 0;
-	setAttr ".phl[65]" 0;
-	setAttr ".phl[66]" 0;
-	setAttr ".phl[67]" 0;
-	setAttr ".phl[68]" 0;
-	setAttr ".phl[69]" 0;
-	setAttr ".phl[70]" 0;
-	setAttr ".phl[71]" 0;
-	setAttr ".phl[72]" 0;
-	setAttr ".phl[73]" 0;
-	setAttr ".phl[74]" 0;
-	setAttr ".phl[75]" 0;
-	setAttr ".phl[76]" 0;
-	setAttr ".phl[77]" 0;
-	setAttr ".phl[78]" 0;
-	setAttr ".phl[79]" 0;
-	setAttr ".phl[80]" 0;
-	setAttr ".phl[81]" 0;
-	setAttr ".phl[82]" 0;
-	setAttr ".phl[83]" 0;
-	setAttr ".phl[84]" 0;
-	setAttr ".phl[85]" 0;
-	setAttr ".phl[86]" 0;
-	setAttr ".phl[87]" 0;
-	setAttr ".phl[88]" 0;
-	setAttr ".phl[89]" 0;
-	setAttr ".phl[90]" 0;
-	setAttr ".phl[91]" 0;
-	setAttr ".phl[92]" 0;
-	setAttr ".phl[93]" 0;
-	setAttr ".phl[94]" 0;
-	setAttr ".phl[95]" 0;
-	setAttr ".phl[96]" 0;
-	setAttr ".phl[97]" 0;
-	setAttr ".phl[98]" 0;
-	setAttr ".phl[99]" 0;
-	setAttr ".phl[100]" 0;
-	setAttr ".phl[101]" 0;
-	setAttr ".phl[102]" 0;
-	setAttr ".phl[103]" 0;
-	setAttr ".phl[104]" 0;
-	setAttr ".phl[105]" 0;
-	setAttr ".phl[106]" 0;
-	setAttr ".phl[107]" 0;
-	setAttr ".phl[108]" 0;
-	setAttr ".phl[109]" 0;
-	setAttr ".phl[110]" 0;
-	setAttr ".phl[111]" 0;
-	setAttr ".phl[112]" 0;
-	setAttr ".phl[113]" 0;
-	setAttr ".phl[114]" 0;
-	setAttr ".phl[115]" 0;
-	setAttr ".phl[116]" 0;
-	setAttr ".phl[117]" 0;
-	setAttr ".phl[118]" 0;
-	setAttr ".phl[119]" 0;
-	setAttr ".phl[120]" 0;
-	setAttr ".phl[121]" 0;
-	setAttr ".phl[122]" 0;
-	setAttr ".phl[123]" 0;
-	setAttr ".phl[124]" 0;
-	setAttr ".phl[125]" 0;
-	setAttr ".phl[126]" 0;
-	setAttr ".phl[127]" 0;
-	setAttr ".phl[128]" 0;
-	setAttr ".phl[129]" 0;
-	setAttr ".phl[130]" 0;
-	setAttr ".phl[131]" 0;
-	setAttr ".phl[132]" 0;
-	setAttr ".phl[133]" 0;
-	setAttr ".phl[134]" 0;
-	setAttr ".phl[135]" 0;
-	setAttr ".phl[136]" 0;
-	setAttr ".phl[137]" 0;
-	setAttr ".phl[138]" 0;
-	setAttr ".phl[139]" 0;
-	setAttr ".phl[140]" 0;
-	setAttr ".phl[141]" 0;
-	setAttr ".phl[142]" 0;
-	setAttr ".phl[143]" 0;
-	setAttr ".phl[144]" 0;
-	setAttr ".phl[145]" 0;
-	setAttr ".phl[146]" 0;
-	setAttr ".phl[147]" 0;
-	setAttr ".phl[148]" 0;
-	setAttr ".phl[149]" 0;
-	setAttr ".phl[150]" 0;
-	setAttr ".phl[151]" 0;
-	setAttr ".phl[152]" 0;
-	setAttr ".phl[153]" 0;
-	setAttr ".phl[154]" 0;
-	setAttr ".phl[155]" 0;
-	setAttr ".phl[156]" 0;
-	setAttr ".phl[157]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"living_room_latestRN"
-		"living_room_latest:armchair_latestRN1" 0
 		"living_room_latest:taller_window_four_squares_latest4RN" 0
-		"living_room_latest:armchair_latest1RN1" 0
 		"living_room_latest:armchair_latestRN" 0
-		"living_room_latest:armchair_latest1RN" 0
-		"living_room_latestRN" 0
+		"living_room_latestRN" 2
+		3 "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		5 4 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[1].objectGrpColor" 
+		"living_room_latestRN.placeHolderList[8]" ""
 		"living_room_latest:taller_window_four_squares_latest1RN" 0
+		"living_room_latest:bedroom_updated_layout:desk_latestRN" 0
 		"living_room_latest:taller_window_four_squares_latestRN" 0
 		"living_room_latest:taller_window_four_squares_latest2RN" 0
-		"living_room_latest:sofa_latestRN" 0
 		"living_room_latest:taller_window_four_squares_latest3RN" 0
 		"living_room_latest:taller_window_four_squares_latestRN1" 0
-		"living_room_latestRN" 2841
+		"living_room_latest:armchair_latestRN1" 0
+		"living_room_latest:armchair_latest1RN1" 0
+		"living_room_latest:bedroom_updated_layout:chairRN" 0
+		"living_room_latest:armchair_latest1RN" 0
+		"living_room_latest:sofa_latestRN" 0
+		"living_room_latestRN" 104
 		0 "|living_room_latestRNfosterParent1|living_room_latest:polySurfaceShape309" 
 		"|living_room_latest:photo_frame" "-s -r "
-		2 "|living_room_latest:lamp|living_room_latest:lampShape" "uvPivot" " -type \"double2\" 0.856168 0.5"
+		2 "|living_room_latest:lamp|living_room_latest:lampShape" "uvPivot" " -type \"double2\" 0.857939 0.5"
 		
 		2 "|living_room_latest:lamp|living_room_latest:lampShape" "uvSet[0].uvSetName" 
 		" -type \"string\" \"map1\""
 		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 1 \"f[0:1459]\""
-		
+		"uvPivot" " -type \"double2\" 0.242699 0.275137"
 		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvPivot" " -type \"double2\" 0.951154 0.17463"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints" " -s 1501"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[0]" " -type \"float2\" 0.885497 0.923817"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1]" " -type \"float2\" 0.937378 0.951908"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[2]" " -type \"float2\" 0.937378 0.946379"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[3]" " -type \"float2\" 0.885497 0.91896"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[4]" " -type \"float2\" 0.892102 0.92786"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[5]" " -type \"float2\" 0.892102 0.922926"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[6]" " -type \"float2\" 0.92838 0.941952"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[7]" " -type \"float2\" 0.92838 0.947358"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[8]" " -type \"float2\" 0.907344 0.930759"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[9]" " -type \"float2\" 0.939393 0.947485"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[10]" " -type \"float2\" 0.939393 0.953039"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[11]" " -type \"float2\" 0.907344 0.935895"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[12]" " -type \"float2\" 0.88113 0.92786"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[13]" " -type \"float2\" 0.916358 0.947357"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[14]" " -type \"float2\" 0.895924 0.935895"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[15]" " -type \"float2\" 0.927042 0.953039"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[16]" " -type \"float2\" 0.874695 0.923817"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[17]" " -type \"float2\" 0.925082 0.951908"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[18]" " -type \"float2\" 0.875746 0.919522"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[19]" " -type \"float2\" 0.881344 0.923061"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[20]" " -type \"float2\" 0.892322 0.923061"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[21]" " -type \"float2\" 0.892322 0.927998"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[22]" " -type \"float2\" 0.881344 0.927998"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[23]" " -type \"float2\" 0.881344 0.903644"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[24]" " -type \"float2\" 0.892322 0.903644"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[25]" " -type \"float2\" 0.892322 0.909038"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[26]" " -type \"float2\" 0.881344 0.909038"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[27]" " -type \"float2\" 0.878728 0.901969"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[28]" " -type \"float2\" 0.878728 0.907342"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[29]" " -type \"float2\" 0.885497 0.905161"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[30]" " -type \"float2\" 0.885497 0.899851"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[31]" " -type \"float2\" 0.937378 0.924632"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[32]" " -type \"float2\" 0.937378 0.930674"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[33]" " -type \"float2\" 0.907344 0.910558"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[34]" " -type \"float2\" 0.939394 0.925638"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[35]" " -type \"float2\" 0.939393 0.931708"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[36]" " -type \"float2\" 0.907344 0.916172"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[37]" " -type \"float2\" 0.892102 0.90891"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[38]" " -type \"float2\" 0.892102 0.903517"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[39]" " -type \"float2\" 0.92838 0.920688"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[40]" " -type \"float2\" 0.92838 0.926596"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[41]" " -type \"float2\" 0.912991 0.933763"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[42]" " -type \"float2\" 0.912991 0.938972"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[43]" " -type \"float2\" 0.901409 0.938972"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[44]" " -type \"float2\" 0.91299 0.913277"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[45]" " -type \"float2\" 0.91299 0.91897"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[46]" " -type \"float2\" 0.85307 0.898731"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[47]" " -type \"float2\" 0.849667 0.896896"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[48]" " -type \"float2\" 0.849667 0.902139"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[49]" " -type \"float2\" 0.850887 0.897531"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[50]" " -type \"float2\" 0.637688 0.898961"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[51]" " -type \"float2\" 0.637688 0.904261"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[52]" " -type \"float2\" 0.741065 0.900942"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[53]" " -type \"float2\" 0.741065 0.895732"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[54]" " -type \"float2\" 0.743409 0.897531"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[55]" " -type \"float2\" 0.742563 0.902139"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[56]" " -type \"float2\" 0.638269 0.905089"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[57]" " -type \"float2\" 0.639181 0.901005"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[58]" " -type \"float2\" 0.638559 0.923817"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[59]" " -type \"float2\" 0.746285 0.923817"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[60]" " -type \"float2\" 0.748324 0.920561"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[61]" " -type \"float2\" 0.639633 0.920561"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[62]" " -type \"float2\" 0.656321 0.951908"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[63]" " -type \"float2\" 0.778931 0.951908"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[64]" " -type \"float2\" 0.65705 0.953039"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[65]" " -type \"float2\" 0.780221 0.953039"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[66]" " -type \"float2\" 0.646281 0.935895"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[67]" " -type \"float2\" 0.760169 0.935895"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[68]" " -type \"float2\" 0.648239 0.938972"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[69]" " -type \"float2\" 0.763736 0.938972"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[70]" " -type \"float2\" 0.641274 0.92786"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[71]" " -type \"float2\" 0.750696 0.92786"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[72]" " -type \"float2\" 0.773458 0.947358"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[73]" " -type \"float2\" 0.653576 0.947357"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[74]" " -type \"float2\" 0.641368 0.927998"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[75]" " -type \"float2\" 0.750846 0.927998"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[76]" " -type \"float2\" 0.641368 0.923061"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[77]" " -type \"float2\" 0.750846 0.923061"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[78]" " -type \"float2\" 0.641368 0.903643"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[79]" " -type \"float2\" 0.750845 0.903643"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[80]" " -type \"float2\" 0.750846 0.909038"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[81]" " -type \"float2\" 0.641369 0.909038"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[82]" " -type \"float2\" 0.85307 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[83]" " -type \"float2\" 0.849667 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[84]" " -type \"float2\" 0.849667 0.785666"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[85]" " -type \"float2\" 0.85307 0.786419"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[86]" " -type \"float2\" 0.878728 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[87]" " -type \"float2\" 0.878728 0.787956"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[88]" " -type \"float2\" 0.885498 0.787201"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[89]" " -type \"float2\" 0.885498 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[90]" " -type \"float2\" 0.937378 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[91]" " -type \"float2\" 0.937378 0.796415"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[92]" " -type \"float2\" 0.939393 0.796835"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[93]" " -type \"float2\" 0.939393 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[94]" " -type \"float2\" 0.907344 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[95]" " -type \"float2\" 0.907344 0.791463"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[96]" " -type \"float2\" 0.912991 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[97]" " -type \"float2\" 0.912991 0.7925"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[98]" " -type \"float2\" 0.892102 0.789091"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[99]" " -type \"float2\" 0.892102 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[100]" " -type \"float2\" 0.92838 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[101]" " -type \"float2\" 0.92838 0.795323"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[102]" " -type \"float2\" 0.892322 0.78916"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[103]" " -type \"float2\" 0.892322 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[104]" " -type \"float2\" 0.881344 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[105]" " -type \"float2\" 0.881344 0.78916"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[106]" " -type \"float2\" 0.641368 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[107]" " -type \"float2\" 0.750846 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[108]" " -type \"float2\" 0.750846 0.789159"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[109]" " -type \"float2\" 0.641368 0.789159"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[110]" " -type \"float2\" 0.637688 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[111]" " -type \"float2\" 0.637688 0.786513"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[112]" " -type \"float2\" 0.741065 0.785189"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[113]" " -type \"float2\" 0.741065 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[114]" " -type \"float2\" 0.754092 0.911351"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[115]" " -type \"float2\" 0.64267 0.911351"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[116]" " -type \"float2\" 0.860878 0.92786"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[117]" " -type \"float2\" 0.861083 0.927998"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[118]" " -type \"float2\" 0.894172 0.947357"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[119]" " -type \"float2\" 0.880033 0.938972"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[120]" " -type \"float2\" 0.874846 0.935895"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[121]" " -type \"float2\" 0.904246 0.953039"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[122]" " -type \"float2\" 0.902392 0.951908"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[123]" " -type \"float2\" 0.854758 0.923817"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[124]" " -type \"float2\" 0.85777 0.920561"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[125]" " -type \"float2\" 0.866287 0.911351"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[126]" " -type \"float2\" 0.866287 0.90586"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[127]" " -type \"float2\" 0.866287 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[128]" " -type \"float2\" 0.866287 0.789343"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[129]" " -type \"float2\" 0.861083 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[130]" " -type \"float2\" 0.861083 0.789159"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[131]" " -type \"float2\" 0.861083 0.903644"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[132]" " -type \"float2\" 0.861083 0.909038"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[133]" " -type \"float2\" 0.861083 0.923061"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[134]" " -type \"float2\" 0.800247 0.785189"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[135]" " -type \"float2\" 0.800247 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[136]" " -type \"float2\" 0.800247 0.900942"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[137]" " -type \"float2\" 0.804375 0.890039"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[138]" " -type \"float2\" 0.803167 0.897531"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[139]" " -type \"float2\" 0.802113 0.902139"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[140]" " -type \"float2\" 0.809176 0.920561"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[141]" " -type \"float2\" 0.816472 0.911351"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[142]" " -type \"float2\" 0.806596 0.923817"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[143]" " -type \"float2\" 0.847575 0.951908"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[144]" " -type \"float2\" 0.849179 0.953039"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[145]" " -type \"float2\" 0.823929 0.935895"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[146]" " -type \"float2\" 0.828397 0.938972"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[147]" " -type \"float2\" 0.811958 0.92786"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[148]" " -type \"float2\" 0.840574 0.947357"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[149]" " -type \"float2\" 0.812138 0.927998"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[150]" " -type \"float2\" 0.812138 0.923061"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[151]" " -type \"float2\" 0.812138 0.909038"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[152]" " -type \"float2\" 0.812138 0.903643"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[153]" " -type \"float2\" 0.812138 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[154]" " -type \"float2\" 0.812138 0.789159"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[155]" " -type \"float2\" 0.5 0.785189"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[156]" " -type \"float2\" 0.6334 0.786471"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[157]" " -type \"float2\" 0.633401 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[158]" " -type \"float2\" 0.5 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[159]" " -type \"float2\" 0.5 0.900942"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[160]" " -type \"float2\" 0.6334 0.904154"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[161]" " -type \"float2\" 0.6334 0.898858"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[162]" " -type \"float2\" 0.500651 0.895732"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[163]" " -type \"float2\" 0.63487 0.900932"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[164]" " -type \"float2\" 0.633972 0.904994"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[165]" " -type \"float2\" 0.499673 0.898925"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[166]" " -type \"float2\" 0.500658 0.897531"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[167]" " -type \"float2\" 0.635373 0.920561"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[168]" " -type \"float2\" 0.638302 0.911351"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[169]" " -type \"float2\" 0.5 0.911351"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[170]" " -type \"float2\" 0.5 0.920561"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[171]" " -type \"float2\" 0.5 0.923817"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[172]" " -type \"float2\" 0.634337 0.923817"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[173]" " -type \"float2\" 0.5 0.951908"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[174]" " -type \"float2\" 0.651515 0.951908"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[175]" " -type \"float2\" 0.5 0.953039"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[176]" " -type \"float2\" 0.652221 0.953039"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[177]" " -type \"float2\" 0.5 0.935895"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[178]" " -type \"float2\" 0.641817 0.935895"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[179]" " -type \"float2\" 0.5 0.938972"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[180]" " -type \"float2\" 0.643712 0.938972"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[181]" " -type \"float2\" 0.5 0.92786"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[182]" " -type \"float2\" 0.636984 0.92786"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[183]" " -type \"float2\" 0.648876 0.947358"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[184]" " -type \"float2\" 0.5 0.947357"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[185]" " -type \"float2\" 0.5 0.927998"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[186]" " -type \"float2\" 0.637077 0.927998"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[187]" " -type \"float2\" 0.5 0.923061"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[188]" " -type \"float2\" 0.637076 0.923061"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[189]" " -type \"float2\" 0.5 0.909038"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[190]" " -type \"float2\" 0.637077 0.909038"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[191]" " -type \"float2\" 0.5 0.903643"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[192]" " -type \"float2\" 0.637076 0.903643"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[193]" " -type \"float2\" 0.5 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[194]" " -type \"float2\" 0.637077 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[195]" " -type \"float2\" 0.637077 0.78916"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[196]" " -type \"float2\" 0.5 0.78916"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[197]" " -type \"float2\" 0.849667 0.848778"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[198]" " -type \"float2\" 0.85307 0.850145"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[199]" " -type \"float2\" 0.866287 0.855454"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[200]" " -type \"float2\" 0.878727 0.852646"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[201]" " -type \"float2\" 0.885498 0.851119"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[202]" " -type \"float2\" 0.937378 0.869165"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[203]" " -type \"float2\" 0.939393 0.869917"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[204]" " -type \"float2\" 0.907344 0.859038"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[205]" " -type \"float2\" 0.912991 0.861028"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[206]" " -type \"float2\" 0.928379 0.866455"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[207]" " -type \"float2\" 0.892102 0.854016"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[208]" " -type \"float2\" 0.892322 0.854117"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[209]" " -type \"float2\" 0.881344 0.854117"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[210]" " -type \"float2\" 0.861083 0.854117"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[211]" " -type \"float2\" 0.812138 0.854117"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[212]" " -type \"float2\" 0.750846 0.854117"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[213]" " -type \"float2\" 0.641368 0.854117"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[214]" " -type \"float2\" 0.637076 0.854117"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[215]" " -type \"float2\" 0.5 0.854117"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[216]" " -type \"float2\" 0.633401 0.850239"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[217]" " -type \"float2\" 0.5 0.84791"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[218]" " -type \"float2\" 0.637688 0.850316"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[219]" " -type \"float2\" 0.741065 0.84791"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[220]" " -type \"float2\" 0.80421 0.855976"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[221]" " -type \"float2\" 0.847508 0.895732"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[222]" " -type \"float2\" 0.847508 0.900942"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[223]" " -type \"float2\" 0.847508 0.785189"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[224]" " -type \"float2\" 0.847508 0.84791"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[225]" " -type \"float2\" 0.847508 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[226]" " -type \"float2\" 0.842339 0.785189"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[227]" " -type \"float2\" 0.842339 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[228]" " -type \"float2\" 0.836202 0.854243"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[229]" " -type \"float2\" 0.842339 0.900942"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[230]" " -type \"float2\" 0.834057 0.888607"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[231]" " -type \"float2\" 0.844466 0.902139"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[232]" " -type \"float2\" 0.845668 0.897531"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[233]" " -type \"float2\" 0.860838 0.911351"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[234]" " -type \"float2\" 0.852454 0.920561"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[235]" " -type \"float2\" 0.84949 0.923817"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[236]" " -type \"float2\" 0.896396 0.951908"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[237]" " -type \"float2\" 0.898223 0.953039"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[238]" " -type \"float2\" 0.869278 0.935895"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[239]" " -type \"float2\" 0.874386 0.938972"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[240]" " -type \"float2\" 0.888309 0.947357"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[241]" " -type \"float2\" 0.855528 0.92786"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[242]" " -type \"float2\" 0.85573 0.927998"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[243]" " -type \"float2\" 0.85573 0.923061"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[244]" " -type \"float2\" 0.85573 0.909038"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[245]" " -type \"float2\" 0.85573 0.903644"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[246]" " -type \"float2\" 0.85573 0.789159"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[247]" " -type \"float2\" 0.85573 0.854117"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[248]" " -type \"float2\" 0.85573 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[249]" " -type \"float2\" 0.849667 0.872313"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[250]" " -type \"float2\" 0.847508 0.8713"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[251]" " -type \"float2\" 0.85307 0.873909"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[252]" " -type \"float2\" 0.866287 0.880108"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[253]" " -type \"float2\" 0.878727 0.876771"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[254]" " -type \"float2\" 0.885497 0.874955"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[255]" " -type \"float2\" 0.937378 0.896294"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[256]" " -type \"float2\" 0.939393 0.89717"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[257]" " -type \"float2\" 0.907344 0.884237"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[258]" " -type \"float2\" 0.912991 0.886584"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[259]" " -type \"float2\" 0.892102 0.878227"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[260]" " -type \"float2\" 0.92838 0.89298"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[261]" " -type \"float2\" 0.892322 0.878341"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[262]" " -type \"float2\" 0.881344 0.878341"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[263]" " -type \"float2\" 0.861083 0.878341"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[264]" " -type \"float2\" 0.85573 0.878341"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[265]" " -type \"float2\" 0.750845 0.878341"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[266]" " -type \"float2\" 0.812137 0.878341"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[267]" " -type \"float2\" 0.641368 0.878341"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[268]" " -type \"float2\" 0.637076 0.878341"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[269]" " -type \"float2\" 0.5 0.878341"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[270]" " -type \"float2\" 0.6334 0.876367"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[271]" " -type \"float2\" 0.5 0.87361"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[272]" " -type \"float2\" 0.637688 0.876458"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[273]" " -type \"float2\" 0.741065 0.87361"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[274]" " -type \"float2\" 0.800247 0.87361"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[275]" " -type \"float2\" 0.842338 0.871301"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[276]" " -type \"float2\" 0.819297 0.900942"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[277]" " -type \"float2\" 0.819297 0.895732"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[278]" " -type \"float2\" 0.821281 0.902139"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[279]" " -type \"float2\" 0.822402 0.897531"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[280]" " -type \"float2\" 0.836551 0.911351"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[281]" " -type \"float2\" 0.828762 0.920561"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[282]" " -type \"float2\" 0.826009 0.923817"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[283]" " -type \"float2\" 0.869669 0.951908"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[284]" " -type \"float2\" 0.871376 0.953039"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[285]" " -type \"float2\" 0.844453 0.935895"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[286]" " -type \"float2\" 0.849211 0.938972"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[287]" " -type \"float2\" 0.831677 0.92786"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[288]" " -type \"float2\" 0.862178 0.947357"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[289]" " -type \"float2\" 0.831866 0.927998"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[290]" " -type \"float2\" 0.831866 0.923061"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[291]" " -type \"float2\" 0.831867 0.909038"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[292]" " -type \"float2\" 0.831866 0.903644"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[293]" " -type \"float2\" 0.831866 0.878341"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[294]" " -type \"float2\" 0.831867 0.78916"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[295]" " -type \"float2\" 0.831866 0.854117"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[296]" " -type \"float2\" 0.831867 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[297]" " -type \"float2\" 0.703354 0.0672317"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[298]" " -type \"float2\" 0.730956 0.0674228"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[299]" " -type \"float2\" 0.821307 0.785189"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[300]" " -type \"float2\" 0.821307 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[301]" " -type \"float2\" 0.729071 0.0675592"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[302]" " -type \"float2\" 0.702566 0.0673622"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[303]" " -type \"float2\" 0.821307 0.84791"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[304]" " -type \"float2\" 0.841415 0.870861"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[305]" " -type \"float2\" 0.719849 0.0675975"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[306]" " -type \"float2\" 0.70734 0.0675127"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[307]" " -type \"float2\" 0.833157 0.888121"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[308]" " -type \"float2\" 0.80339 0.855577"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[309]" " -type \"float2\" 0.712538 0.0671999"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[310]" " -type \"float2\" 0.723204 0.0672722"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[311]" " -type \"float2\" 0.820441 0.847534"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[312]" " -type \"float2\" 0.72333 0.345781"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[313]" " -type \"float2\" 0.818436 0.895226"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[314]" " -type \"float2\" 0.742799 0.320895"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[315]" " -type \"float2\" 0.799437 0.873165"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[316]" " -type \"float2\" 0.803554 0.889549"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[317]" " -type \"float2\" 0.722491 0.316113"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[318]" " -type \"float2\" 0.835296 0.85385"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[319]" " -type \"float2\" 0.712752 0.343018"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[320]" " -type \"float2\" 0.817732 0.894692"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[321]" " -type \"float2\" 0.802955 0.889055"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[322]" " -type \"float2\" 0.832347 0.887637"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[323]" " -type \"float2\" 0.840548 0.870499"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[324]" " -type \"float2\" 0.834472 0.853608"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[325]" " -type \"float2\" 0.819723 0.847337"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[326]" " -type \"float2\" 0.802791 0.855324"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[327]" " -type \"float2\" 0.798868 0.872786"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[328]" " -type \"float2\" 0.854343 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[329]" " -type \"float2\" 0.854343 0.786701"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[330]" " -type \"float2\" 0.854343 0.850656"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[331]" " -type \"float2\" 0.854343 0.874506"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[332]" " -type \"float2\" 0.854343 0.899418"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[333]" " -type \"float2\" 0.852145 0.903512"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[334]" " -type \"float2\" 0.846907 0.903512"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[335]" " -type \"float2\" 0.823558 0.903512"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[336]" " -type \"float2\" 0.804254 0.903512"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[337]" " -type \"float2\" 0.744282 0.903512"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[338]" " -type \"float2\" 0.639521 0.90687"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[339]" " -type \"float2\" 0.635203 0.906801"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[340]" " -type \"float2\" 0.5 0.903512"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[341]" " -type \"float2\" 0.833588 0.870308"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[342]" " -type \"float2\" 0.827823 0.880817"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[343]" " -type \"float2\" 0.829317 0.859949"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[344]" " -type \"float2\" 0.81895 0.856105"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[345]" " -type \"float2\" 0.807051 0.861002"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[346]" " -type \"float2\" 0.804293 0.871711"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[347]" " -type \"float2\" 0.807166 0.881687"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[348]" " -type \"float2\" 0.817552 0.885144"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[349]" " -type \"float2\" 0.885497 0.492795"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[350]" " -type \"float2\" 0.885497 0.497652"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[351]" " -type \"float2\" 0.937378 0.470233"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[352]" " -type \"float2\" 0.937378 0.464704"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[353]" " -type \"float2\" 0.892102 0.488751"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[354]" " -type \"float2\" 0.928379 0.469254"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[355]" " -type \"float2\" 0.92838 0.47466"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[356]" " -type \"float2\" 0.892102 0.493686"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[357]" " -type \"float2\" 0.907344 0.485852"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[358]" " -type \"float2\" 0.720159 0.348255"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[359]" " -type \"float2\" 0.737024 0.325244"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[360]" " -type \"float2\" 0.71139 0.32642"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[361]" " -type \"float2\" 0.706782 0.348917"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[362]" " -type \"float2\" 0.689148 0.347319"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[363]" " -type \"float2\" 0.677619 0.323591"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[364]" " -type \"float2\" 0.682889 0.344566"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[365]" " -type \"float2\" 0.665948 0.318783"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[366]" " -type \"float2\" 0.684521 0.342205"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[367]" " -type \"float2\" 0.669273 0.314721"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[368]" " -type \"float2\" 0.694227 0.313803"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[369]" " -type \"float2\" 0.697765 0.341666"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[370]" " -type \"float2\" 0.907344 0.480716"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[371]" " -type \"float2\" 0.939393 0.463572"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[372]" " -type \"float2\" 0.939393 0.469126"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[373]" " -type \"float2\" 0.88113 0.488751"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[374]" " -type \"float2\" 0.916358 0.469254"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[375]" " -type \"float2\" 0.895923 0.480716"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[376]" " -type \"float2\" 0.927042 0.463572"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[377]" " -type \"float2\" 0.874695 0.492794"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[378]" " -type \"float2\" 0.925083 0.464704"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[379]" " -type \"float2\" 0.875746 0.497089"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[380]" " -type \"float2\" 0.881344 0.49355"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[381]" " -type \"float2\" 0.881344 0.488613"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[382]" " -type \"float2\" 0.892322 0.488613"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[383]" " -type \"float2\" 0.892322 0.49355"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[384]" " -type \"float2\" 0.881344 0.512968"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[385]" " -type \"float2\" 0.881344 0.507573"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[386]" " -type \"float2\" 0.892322 0.507573"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[387]" " -type \"float2\" 0.722666 0.29752"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[388]" " -type \"float2\" 0.713671 0.295549"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[389]" " -type \"float2\" 0.719969 0.29928"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[390]" " -type \"float2\" 0.708623 0.299751"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[391]" " -type \"float2\" 0.693644 0.298615"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[392]" " -type \"float2\" 0.688288 0.296655"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[393]" " -type \"float2\" 0.68964 0.294968"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[394]" " -type \"float2\" 0.700908 0.294583"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[395]" " -type \"float2\" 0.733288 0.294733"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[396]" " -type \"float2\" 0.718733 0.291607"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[397]" " -type \"float2\" 0.729046 0.297549"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[398]" " -type \"float2\" 0.710691 0.298306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[399]" " -type \"float2\" 0.686479 0.296481"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[400]" " -type \"float2\" 0.677957 0.293356"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[401]" " -type \"float2\" 0.680234 0.290691"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[402]" " -type \"float2\" 0.698283 0.290086"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[403]" " -type \"float2\" 0.733505 0.288674"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[404]" " -type \"float2\" 0.718989 0.285634"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[405]" " -type \"float2\" 0.729278 0.291414"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[406]" " -type \"float2\" 0.710978 0.29215"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[407]" " -type \"float2\" 0.686834 0.290375"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[408]" " -type \"float2\" 0.678332 0.287335"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[409]" " -type \"float2\" 0.680599 0.284743"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[410]" " -type \"float2\" 0.698595 0.284154"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[411]" " -type \"float2\" 0.721449 0.283985"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[412]" " -type \"float2\" 0.713443 0.282324"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[413]" " -type \"float2\" 0.719043 0.285467"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[414]" " -type \"float2\" 0.708949 0.285862"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[415]" " -type \"float2\" 0.695619 0.284907"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[416]" " -type \"float2\" 0.690834 0.283256"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[417]" " -type \"float2\" 0.692024 0.281833"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[418]" " -type \"float2\" 0.702066 0.281508"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[419]" " -type \"float2\" 0.709249 0.139089"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[420]" " -type \"float2\" 0.720154 0.139395"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[421]" " -type \"float2\" 0.727853 0.140019"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[422]" " -type \"float2\" 0.725591 0.140575"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[423]" " -type \"float2\" 0.715955 0.140723"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[424]" " -type \"float2\" 0.703186 0.140365"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[425]" " -type \"float2\" 0.698561 0.139745"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[426]" " -type \"float2\" 0.699655 0.139211"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[427]" " -type \"float2\" 0.957973 0.0301075"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[428]" " -type \"float2\" 0.952229 0.0299048"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[429]" " -type \"float2\" 0.973771 0.0297275"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[430]" " -type \"float2\" 0.981194 0.029937"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[431]" " -type \"float2\" 0.951971 0.0297032"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[432]" " -type \"float2\" 0.962363 0.0296333"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[433]" " -type \"float2\" 0.969523 0.0301982"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[434]" " -type \"float2\" 0.978627 0.030133"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[435]" " -type \"float2\" 0.969896 0.315037"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[436]" " -type \"float2\" 0.965539 0.318512"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[437]" " -type \"float2\" 0.982207 0.295912"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[438]" " -type \"float2\" 0.990151 0.289774"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[439]" " -type \"float2\" 0.960135 0.311281"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[440]" " -type \"float2\" 0.971289 0.283281"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[441]" " -type \"float2\" 0.941562 0.280347"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[442]" " -type \"float2\" 0.944342 0.309557"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[443]" " -type \"float2\" 0.929365 0.310735"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[444]" " -type \"float2\" 0.913364 0.282349"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[445]" " -type \"float2\" 0.928919 0.314307"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[446]" " -type \"float2\" 0.912156 0.288501"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[447]" " -type \"float2\" 0.892322 0.512968"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[448]" " -type \"float2\" 0.878727 0.514643"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[449]" " -type \"float2\" 0.885497 0.51676"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[450]" " -type \"float2\" 0.885497 0.51145"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[451]" " -type \"float2\" 0.878727 0.509269"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[452]" " -type \"float2\" 0.937378 0.49198"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[453]" " -type \"float2\" 0.937378 0.485937"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[454]" " -type \"float2\" 0.907344 0.506052"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[455]" " -type \"float2\" 0.907344 0.50044"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[456]" " -type \"float2\" 0.939393 0.484903"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[457]" " -type \"float2\" 0.939393 0.490974"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[458]" " -type \"float2\" 0.892102 0.507702"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[459]" " -type \"float2\" 0.936262 0.317942"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[460]" " -type \"float2\" 0.925885 0.294898"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[461]" " -type \"float2\" 0.956827 0.297907"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[462]" " -type \"float2\" 0.952339 0.319626"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[463]" " -type \"float2\" 0.966099 0.268519"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[464]" " -type \"float2\" 0.969803 0.266038"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[465]" " -type \"float2\" 0.96148 0.263348"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[466]" " -type \"float2\" 0.947995 0.26211"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[467]" " -type \"float2\" 0.935233 0.262956"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[468]" " -type \"float2\" 0.934912 0.265516"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[469]" " -type \"float2\" 0.941214 0.268113"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[470]" " -type \"float2\" 0.954891 0.269312"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[471]" " -type \"float2\" 0.974903 0.26717"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[472]" " -type \"float2\" 0.980734 0.263193"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[473]" " -type \"float2\" 0.967226 0.258934"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[474]" " -type \"float2\" 0.945655 0.256991"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[475]" " -type \"float2\" 0.925228 0.258318"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[476]" " -type \"float2\" 0.924549 0.262363"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[477]" " -type \"float2\" 0.934585 0.266516"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[478]" " -type \"float2\" 0.956745 0.268451"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[479]" " -type \"float2\" 0.975224 0.260898"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[480]" " -type \"float2\" 0.981034 0.257029"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[481]" " -type \"float2\" 0.967556 0.252883"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[482]" " -type \"float2\" 0.946039 0.250993"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[483]" " -type \"float2\" 0.928379 0.490016"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[484]" " -type \"float2\" 0.928379 0.495924"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[485]" " -type \"float2\" 0.892102 0.513095"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[486]" " -type \"float2\" 0.912991 0.482849"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[487]" " -type \"float2\" 0.912991 0.47764"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[488]" " -type \"float2\" 0.901409 0.47764"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[489]" " -type \"float2\" 0.91299 0.503334"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[490]" " -type \"float2\" 0.91299 0.497642"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[491]" " -type \"float2\" 0.85307 0.51788"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[492]" " -type \"float2\" 0.850887 0.51908"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[493]" " -type \"float2\" 0.849667 0.514473"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[494]" " -type \"float2\" 0.849667 0.519715"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[495]" " -type \"float2\" 0.637688 0.51765"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[496]" " -type \"float2\" 0.741065 0.520879"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[497]" " -type \"float2\" 0.741065 0.51567"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[498]" " -type \"float2\" 0.637688 0.512351"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[499]" " -type \"float2\" 0.743409 0.51908"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[500]" " -type \"float2\" 0.639181 0.515606"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[501]" " -type \"float2\" 0.638269 0.511523"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[502]" " -type \"float2\" 0.742563 0.514473"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[503]" " -type \"float2\" 0.638559 0.492794"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[504]" " -type \"float2\" 0.639633 0.49605"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[505]" " -type \"float2\" 0.748324 0.49605"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[506]" " -type \"float2\" 0.746285 0.492795"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[507]" " -type \"float2\" 0.656321 0.464704"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[508]" " -type \"float2\" 0.778931 0.464704"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[509]" " -type \"float2\" 0.657049 0.463572"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[510]" " -type \"float2\" 0.780221 0.463572"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[511]" " -type \"float2\" 0.646281 0.480717"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[512]" " -type \"float2\" 0.760169 0.480716"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[513]" " -type \"float2\" 0.648239 0.47764"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[514]" " -type \"float2\" 0.763736 0.47764"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[515]" " -type \"float2\" 0.641274 0.488751"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[516]" " -type \"float2\" 0.653576 0.469254"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[517]" " -type \"float2\" 0.773458 0.469254"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[518]" " -type \"float2\" 0.750697 0.488751"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[519]" " -type \"float2\" 0.641368 0.488613"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[520]" " -type \"float2\" 0.750845 0.488613"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[521]" " -type \"float2\" 0.641368 0.49355"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[522]" " -type \"float2\" 0.750845 0.49355"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[523]" " -type \"float2\" 0.641368 0.512968"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[524]" " -type \"float2\" 0.641368 0.507573"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[525]" " -type \"float2\" 0.750846 0.507573"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[526]" " -type \"float2\" 0.750846 0.512968"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[527]" " -type \"float2\" 0.85307 0.630192"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[528]" " -type \"float2\" 0.849667 0.630945"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[529]" " -type \"float2\" 0.885498 0.629411"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[530]" " -type \"float2\" 0.878728 0.628656"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[531]" " -type \"float2\" 0.937378 0.620196"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[532]" " -type \"float2\" 0.939393 0.619777"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[533]" " -type \"float2\" 0.907344 0.625148"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[534]" " -type \"float2\" 0.91299 0.624111"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[535]" " -type \"float2\" 0.892102 0.627521"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[536]" " -type \"float2\" 0.92838 0.621288"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[537]" " -type \"float2\" 0.892322 0.627452"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[538]" " -type \"float2\" 0.881344 0.627452"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[539]" " -type \"float2\" 0.641368 0.627452"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[540]" " -type \"float2\" 0.750846 0.627452"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[541]" " -type \"float2\" 0.741065 0.631423"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[542]" " -type \"float2\" 0.637688 0.630098"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[543]" " -type \"float2\" 0.64267 0.50526"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[544]" " -type \"float2\" 0.754091 0.50526"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[545]" " -type \"float2\" 0.861083 0.488613"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[546]" " -type \"float2\" 0.860879 0.488751"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[547]" " -type \"float2\" 0.894172 0.469254"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[548]" " -type \"float2\" 0.880033 0.47764"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[549]" " -type \"float2\" 0.874846 0.480716"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[550]" " -type \"float2\" 0.904246 0.463572"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[551]" " -type \"float2\" 0.902391 0.464703"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[552]" " -type \"float2\" 0.854758 0.492794"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[553]" " -type \"float2\" 0.857769 0.49605"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[554]" " -type \"float2\" 0.866286 0.50526"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[555]" " -type \"float2\" 0.866287 0.510751"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[556]" " -type \"float2\" 0.866287 0.627268"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[557]" " -type \"float2\" 0.861083 0.627452"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[558]" " -type \"float2\" 0.861083 0.512968"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[559]" " -type \"float2\" 0.861083 0.507573"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[560]" " -type \"float2\" 0.861083 0.49355"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[561]" " -type \"float2\" 0.800247 0.631423"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[562]" " -type \"float2\" 0.804375 0.526573"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[563]" " -type \"float2\" 0.800247 0.51567"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[564]" " -type \"float2\" 0.803167 0.51908"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[565]" " -type \"float2\" 0.802112 0.514473"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[566]" " -type \"float2\" 0.809176 0.49605"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[567]" " -type \"float2\" 0.816471 0.50526"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[568]" " -type \"float2\" 0.806596 0.492794"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[569]" " -type \"float2\" 0.847574 0.464704"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[570]" " -type \"float2\" 0.849178 0.463572"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[571]" " -type \"float2\" 0.823929 0.480716"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[572]" " -type \"float2\" 0.828397 0.47764"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[573]" " -type \"float2\" 0.840574 0.469254"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[574]" " -type \"float2\" 0.811958 0.488751"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[575]" " -type \"float2\" 0.812137 0.488613"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[576]" " -type \"float2\" 0.812138 0.49355"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[577]" " -type \"float2\" 0.812138 0.507573"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[578]" " -type \"float2\" 0.812138 0.512968"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[579]" " -type \"float2\" 0.812138 0.627452"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[580]" " -type \"float2\" 0.5 0.631423"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[581]" " -type \"float2\" 0.6334 0.63014"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[582]" " -type \"float2\" 0.5 0.51567"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[583]" " -type \"float2\" 0.5 0.520879"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[584]" " -type \"float2\" 0.6334 0.517753"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[585]" " -type \"float2\" 0.6334 0.512457"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[586]" " -type \"float2\" 0.63487 0.515679"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[587]" " -type \"float2\" 0.5 0.51908"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[588]" " -type \"float2\" 0.5 0.514473"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[589]" " -type \"float2\" 0.633972 0.511617"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[590]" " -type \"float2\" 0.635373 0.49605"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[591]" " -type \"float2\" 0.5 0.49605"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[592]" " -type \"float2\" 0.5 0.50526"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[593]" " -type \"float2\" 0.638302 0.50526"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[594]" " -type \"float2\" 0.5 0.492794"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[595]" " -type \"float2\" 0.634337 0.492794"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[596]" " -type \"float2\" 0.5 0.464704"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[597]" " -type \"float2\" 0.651515 0.464704"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[598]" " -type \"float2\" 0.5 0.463572"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[599]" " -type \"float2\" 0.652221 0.463572"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[600]" " -type \"float2\" 0.5 0.480716"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[601]" " -type \"float2\" 0.641817 0.480716"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[602]" " -type \"float2\" 0.5 0.47764"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[603]" " -type \"float2\" 0.643712 0.47764"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[604]" " -type \"float2\" 0.5 0.488751"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[605]" " -type \"float2\" 0.5 0.469254"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[606]" " -type \"float2\" 0.648876 0.469254"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[607]" " -type \"float2\" 0.636984 0.488751"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[608]" " -type \"float2\" 0.5 0.488613"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[609]" " -type \"float2\" 0.637076 0.488613"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[610]" " -type \"float2\" 0.5 0.49355"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[611]" " -type \"float2\" 0.637076 0.49355"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[612]" " -type \"float2\" 0.5 0.507573"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[613]" " -type \"float2\" 0.637077 0.507573"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[614]" " -type \"float2\" 0.5 0.512968"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[615]" " -type \"float2\" 0.637076 0.512968"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[616]" " -type \"float2\" 0.5 0.627452"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[617]" " -type \"float2\" 0.637077 0.627452"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[618]" " -type \"float2\" 0.85307 0.566467"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[619]" " -type \"float2\" 0.849667 0.567834"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[620]" " -type \"float2\" 0.878728 0.563965"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[621]" " -type \"float2\" 0.866287 0.561157"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[622]" " -type \"float2\" 0.885498 0.565493"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[623]" " -type \"float2\" 0.937378 0.547447"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[624]" " -type \"float2\" 0.939393 0.546695"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[625]" " -type \"float2\" 0.907344 0.557573"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[626]" " -type \"float2\" 0.912991 0.555582"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[627]" " -type \"float2\" 0.928379 0.550157"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[628]" " -type \"float2\" 0.892102 0.562596"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[629]" " -type \"float2\" 0.892322 0.562494"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[630]" " -type \"float2\" 0.881344 0.562494"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[631]" " -type \"float2\" 0.861083 0.562494"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[632]" " -type \"float2\" 0.750845 0.562494"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[633]" " -type \"float2\" 0.812138 0.562494"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[634]" " -type \"float2\" 0.641368 0.562494"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[635]" " -type \"float2\" 0.5 0.562494"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[636]" " -type \"float2\" 0.637076 0.562494"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[637]" " -type \"float2\" 0.633401 0.566372"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[638]" " -type \"float2\" 0.5 0.568701"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[639]" " -type \"float2\" 0.741065 0.568701"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[640]" " -type \"float2\" 0.637688 0.566296"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[641]" " -type \"float2\" 0.80421 0.560636"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[642]" " -type \"float2\" 0.847507 0.51567"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[643]" " -type \"float2\" 0.847508 0.520879"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[644]" " -type \"float2\" 0.847508 0.568701"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[645]" " -type \"float2\" 0.847508 0.631423"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[646]" " -type \"float2\" 0.842338 0.631423"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[647]" " -type \"float2\" 0.836202 0.562369"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[648]" " -type \"float2\" 0.842338 0.51567"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[649]" " -type \"float2\" 0.834057 0.528005"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[650]" " -type \"float2\" 0.844465 0.514473"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[651]" " -type \"float2\" 0.845668 0.51908"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[652]" " -type \"float2\" 0.852454 0.49605"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[653]" " -type \"float2\" 0.860837 0.50526"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[654]" " -type \"float2\" 0.84949 0.492794"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[655]" " -type \"float2\" 0.896396 0.464704"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[656]" " -type \"float2\" 0.898223 0.463572"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[657]" " -type \"float2\" 0.869277 0.480716"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[658]" " -type \"float2\" 0.874386 0.47764"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[659]" " -type \"float2\" 0.888309 0.469254"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[660]" " -type \"float2\" 0.855528 0.488751"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[661]" " -type \"float2\" 0.85573 0.488613"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[662]" " -type \"float2\" 0.85573 0.49355"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[663]" " -type \"float2\" 0.85573 0.507573"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[664]" " -type \"float2\" 0.85573 0.512968"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[665]" " -type \"float2\" 0.85573 0.627452"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[666]" " -type \"float2\" 0.85573 0.562494"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[667]" " -type \"float2\" 0.849667 0.544298"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[668]" " -type \"float2\" 0.847508 0.545311"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[669]" " -type \"float2\" 0.85307 0.542703"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[670]" " -type \"float2\" 0.866287 0.536503"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[671]" " -type \"float2\" 0.878728 0.539841"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[672]" " -type \"float2\" 0.885497 0.541657"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[673]" " -type \"float2\" 0.937378 0.520318"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[674]" " -type \"float2\" 0.939393 0.519441"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[675]" " -type \"float2\" 0.907344 0.532374"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[676]" " -type \"float2\" 0.912991 0.530027"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[677]" " -type \"float2\" 0.928379 0.523631"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[678]" " -type \"float2\" 0.892102 0.538384"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[679]" " -type \"float2\" 0.892322 0.538271"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[680]" " -type \"float2\" 0.881344 0.538271"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[681]" " -type \"float2\" 0.861083 0.538271"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[682]" " -type \"float2\" 0.85573 0.538271"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[683]" " -type \"float2\" 0.750846 0.538271"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[684]" " -type \"float2\" 0.812138 0.538271"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[685]" " -type \"float2\" 0.641368 0.538271"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[686]" " -type \"float2\" 0.637077 0.538271"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[687]" " -type \"float2\" 0.5 0.538271"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[688]" " -type \"float2\" 0.6334 0.540244"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[689]" " -type \"float2\" 0.5 0.543001"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[690]" " -type \"float2\" 0.637688 0.540153"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[691]" " -type \"float2\" 0.741065 0.543001"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[692]" " -type \"float2\" 0.800247 0.543001"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[693]" " -type \"float2\" 0.842339 0.545311"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[694]" " -type \"float2\" 0.819297 0.51567"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[695]" " -type \"float2\" 0.819297 0.520879"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[696]" " -type \"float2\" 0.821281 0.514473"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[697]" " -type \"float2\" 0.822402 0.519081"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[698]" " -type \"float2\" 0.828762 0.49605"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[699]" " -type \"float2\" 0.836551 0.50526"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[700]" " -type \"float2\" 0.826009 0.492795"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[701]" " -type \"float2\" 0.86967 0.464704"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[702]" " -type \"float2\" 0.871375 0.463572"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[703]" " -type \"float2\" 0.844452 0.480716"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[704]" " -type \"float2\" 0.849211 0.47764"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[705]" " -type \"float2\" 0.831677 0.488751"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[706]" " -type \"float2\" 0.862178 0.469254"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[707]" " -type \"float2\" 0.831866 0.488613"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[708]" " -type \"float2\" 0.831866 0.49355"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[709]" " -type \"float2\" 0.831867 0.507573"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[710]" " -type \"float2\" 0.831866 0.512968"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[711]" " -type \"float2\" 0.831866 0.538271"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[712]" " -type \"float2\" 0.831867 0.627452"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[713]" " -type \"float2\" 0.831866 0.562494"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[714]" " -type \"float2\" 0.821307 0.631423"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[715]" " -type \"float2\" 0.821307 0.568701"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[716]" " -type \"float2\" 0.833156 0.528491"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[717]" " -type \"float2\" 0.841416 0.545751"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[718]" " -type \"float2\" 0.820441 0.569078"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[719]" " -type \"float2\" 0.803389 0.561034"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[720]" " -type \"float2\" 0.818436 0.521385"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[721]" " -type \"float2\" 0.799437 0.543447"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[722]" " -type \"float2\" 0.803554 0.527063"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[723]" " -type \"float2\" 0.835296 0.562762"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[724]" " -type \"float2\" 0.817732 0.521919"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[725]" " -type \"float2\" 0.802955 0.527557"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[726]" " -type \"float2\" 0.832347 0.528975"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[727]" " -type \"float2\" 0.840549 0.546113"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[728]" " -type \"float2\" 0.834472 0.563004"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[729]" " -type \"float2\" 0.819722 0.569274"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[730]" " -type \"float2\" 0.802791 0.561288"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[731]" " -type \"float2\" 0.798867 0.543825"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[732]" " -type \"float2\" 0.854343 0.62991"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[733]" " -type \"float2\" 0.854343 0.565955"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[734]" " -type \"float2\" 0.854343 0.542105"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[735]" " -type \"float2\" 0.854343 0.517193"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[736]" " -type \"float2\" 0.852144 0.513099"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[737]" " -type \"float2\" 0.846906 0.513099"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[738]" " -type \"float2\" 0.823557 0.513099"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[739]" " -type \"float2\" 0.804253 0.513099"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[740]" " -type \"float2\" 0.744281 0.513099"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[741]" " -type \"float2\" 0.639521 0.509742"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[742]" " -type \"float2\" 0.635203 0.50981"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[743]" " -type \"float2\" 0.5 0.513099"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[744]" " -type \"float2\" 0.827824 0.535795"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[745]" " -type \"float2\" 0.833588 0.546304"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[746]" " -type \"float2\" 0.829317 0.556662"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[747]" " -type \"float2\" 0.81895 0.560507"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[748]" " -type \"float2\" 0.807052 0.55561"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[749]" " -type \"float2\" 0.804293 0.544901"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[750]" " -type \"float2\" 0.807167 0.534926"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[751]" " -type \"float2\" 0.817552 0.531468"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[752]" " -type \"float2\" 0.114502 0.923817"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[753]" " -type \"float2\" 0.114502 0.918959"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[754]" " -type \"float2\" 0.0626209 0.946379"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[755]" " -type \"float2\" 0.0626209 0.951908"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[756]" " -type \"float2\" 0.107897 0.92786"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[757]" " -type \"float2\" 0.0716191 0.947358"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[758]" " -type \"float2\" 0.0716198 0.941951"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[759]" " -type \"float2\" 0.107897 0.922926"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[760]" " -type \"float2\" 0.0926557 0.930759"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[761]" " -type \"float2\" 0.0926557 0.935895"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[762]" " -type \"float2\" 0.0606061 0.953039"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[763]" " -type \"float2\" 0.0606061 0.947485"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[764]" " -type \"float2\" 0.11887 0.92786"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[765]" " -type \"float2\" 0.0836412 0.947357"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[766]" " -type \"float2\" 0.104076 0.935895"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[767]" " -type \"float2\" 0.0729577 0.953039"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[768]" " -type \"float2\" 0.125305 0.923817"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[769]" " -type \"float2\" 0.0749172 0.951908"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[770]" " -type \"float2\" 0.124253 0.919522"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[771]" " -type \"float2\" 0.118655 0.923061"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[772]" " -type \"float2\" 0.118655 0.927998"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[773]" " -type \"float2\" 0.107677 0.927998"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[774]" " -type \"float2\" 0.107677 0.923061"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[775]" " -type \"float2\" 0.118655 0.903643"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[776]" " -type \"float2\" 0.118655 0.909038"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[777]" " -type \"float2\" 0.107677 0.909038"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[778]" " -type \"float2\" 0.107677 0.903643"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[779]" " -type \"float2\" 0.121272 0.901969"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[780]" " -type \"float2\" 0.114501 0.899851"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[781]" " -type \"float2\" 0.114502 0.905161"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[782]" " -type \"float2\" 0.121272 0.907342"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[783]" " -type \"float2\" 0.0626216 0.924632"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[784]" " -type \"float2\" 0.0626216 0.930674"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[785]" " -type \"float2\" 0.092655 0.910558"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[786]" " -type \"float2\" 0.092655 0.916172"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[787]" " -type \"float2\" 0.0606061 0.931708"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[788]" " -type \"float2\" 0.0606061 0.925638"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[789]" " -type \"float2\" 0.107897 0.90891"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[790]" " -type \"float2\" 0.0716191 0.926596"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[791]" " -type \"float2\" 0.0716191 0.920687"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[792]" " -type \"float2\" 0.107898 0.903517"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[793]" " -type \"float2\" 0.0870093 0.933764"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[794]" " -type \"float2\" 0.0870093 0.938972"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[795]" " -type \"float2\" 0.0985912 0.938972"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[796]" " -type \"float2\" 0.0870093 0.913278"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[797]" " -type \"float2\" 0.0870093 0.91897"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[798]" " -type \"float2\" 0.14693 0.898731"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[799]" " -type \"float2\" 0.149113 0.897531"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[800]" " -type \"float2\" 0.150332 0.902139"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[801]" " -type \"float2\" 0.150332 0.896896"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[802]" " -type \"float2\" 0.362312 0.898961"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[803]" " -type \"float2\" 0.258934 0.895732"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[804]" " -type \"float2\" 0.258934 0.900942"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[805]" " -type \"float2\" 0.362312 0.90426"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[806]" " -type \"float2\" 0.25659 0.897531"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[807]" " -type \"float2\" 0.360818 0.901005"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[808]" " -type \"float2\" 0.36173 0.905088"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[809]" " -type \"float2\" 0.257436 0.902139"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[810]" " -type \"float2\" 0.361439 0.923817"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[811]" " -type \"float2\" 0.360366 0.920561"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[812]" " -type \"float2\" 0.251675 0.920561"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[813]" " -type \"float2\" 0.253714 0.923817"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[814]" " -type \"float2\" 0.343679 0.951908"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[815]" " -type \"float2\" 0.221068 0.951908"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[816]" " -type \"float2\" 0.34295 0.953039"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[817]" " -type \"float2\" 0.219778 0.953039"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[818]" " -type \"float2\" 0.353719 0.935895"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[819]" " -type \"float2\" 0.239831 0.935895"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[820]" " -type \"float2\" 0.351761 0.938972"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[821]" " -type \"float2\" 0.236264 0.938972"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[822]" " -type \"float2\" 0.358725 0.92786"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[823]" " -type \"float2\" 0.346424 0.947357"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[824]" " -type \"float2\" 0.226542 0.947358"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[825]" " -type \"float2\" 0.249302 0.92786"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[826]" " -type \"float2\" 0.358631 0.927998"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[827]" " -type \"float2\" 0.249154 0.927998"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[828]" " -type \"float2\" 0.358631 0.923061"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[829]" " -type \"float2\" 0.249153 0.923061"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[830]" " -type \"float2\" 0.358631 0.903643"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[831]" " -type \"float2\" 0.358631 0.909038"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[832]" " -type \"float2\" 0.249154 0.909038"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[833]" " -type \"float2\" 0.249153 0.903643"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[834]" " -type \"float2\" 0.14693 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[835]" " -type \"float2\" 0.14693 0.786419"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[836]" " -type \"float2\" 0.150332 0.785666"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[837]" " -type \"float2\" 0.150333 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[838]" " -type \"float2\" 0.121272 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[839]" " -type \"float2\" 0.114502 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[840]" " -type \"float2\" 0.114502 0.787201"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[841]" " -type \"float2\" 0.121272 0.787955"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[842]" " -type \"float2\" 0.0626216 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[843]" " -type \"float2\" 0.0626216 0.796415"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[844]" " -type \"float2\" 0.0606061 0.796835"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[845]" " -type \"float2\" 0.0606061 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[846]" " -type \"float2\" 0.0926557 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[847]" " -type \"float2\" 0.0926557 0.791464"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[848]" " -type \"float2\" 0.0870093 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[849]" " -type \"float2\" 0.0870093 0.7925"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[850]" " -type \"float2\" 0.107897 0.789091"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[851]" " -type \"float2\" 0.0716198 0.795323"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[852]" " -type \"float2\" 0.0716198 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[853]" " -type \"float2\" 0.107897 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[854]" " -type \"float2\" 0.107677 0.789159"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[855]" " -type \"float2\" 0.107677 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[856]" " -type \"float2\" 0.118655 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[857]" " -type \"float2\" 0.118655 0.78916"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[858]" " -type \"float2\" 0.925667 0.252284"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[859]" " -type \"float2\" 0.924998 0.25622"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[860]" " -type \"float2\" 0.935013 0.260262"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[861]" " -type \"float2\" 0.957116 0.262145"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[862]" " -type \"float2\" 0.965415 0.254354"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[863]" " -type \"float2\" 0.968719 0.252265"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[864]" " -type \"float2\" 0.961308 0.249995"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[865]" " -type \"float2\" 0.949277 0.248947"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[866]" " -type \"float2\" 0.937897 0.249663"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[867]" " -type \"float2\" 0.937635 0.251825"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[868]" " -type \"float2\" 0.943269 0.254013"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[869]" " -type \"float2\" 0.955443 0.255021"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[870]" " -type \"float2\" 0.964424 0.105919"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[871]" " -type \"float2\" 0.973983 0.105666"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[872]" " -type \"float2\" 0.977091 0.104873"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[873]" " -type \"float2\" 0.969887 0.104012"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[874]" " -type \"float2\" 0.958281 0.103614"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[875]" " -type \"float2\" 0.947364 0.103886"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[876]" " -type \"float2\" 0.947193 0.104706"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[877]" " -type \"float2\" 0.95269 0.105536"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[878]" " -type \"float2\" 0.356186 0.0941233"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[879]" " -type \"float2\" 0.355369 0.0942435"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[880]" " -type \"float2\" 0.330684 0.094352"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[881]" " -type \"float2\" 0.330635 0.0942242"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[882]" " -type \"float2\" 0.349603 0.0943671"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[883]" " -type \"float2\" 0.33804 0.0944108"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[884]" " -type \"float2\" 0.348747 0.0940707"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[885]" " -type \"float2\" 0.338889 0.0941085"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[886]" " -type \"float2\" 0.334138 0.350022"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[887]" " -type \"float2\" 0.345259 0.34793"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[888]" " -type \"float2\" 0.338836 0.322867"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[889]" " -type \"float2\" 0.31763 0.326474"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[890]" " -type \"float2\" 0.334878 0.352375"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[891]" " -type \"float2\" 0.318775 0.330589"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[892]" " -type \"float2\" 0.339398 0.33256"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[893]" " -type \"float2\" 0.345682 0.353489"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[894]" " -type \"float2\" 0.361937 0.352726"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[895]" " -type \"float2\" 0.370564 0.331208"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[896]" " -type \"float2\" 0.369455 0.350472"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[897]" " -type \"float2\" 0.384726 0.327255"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[898]" " -type \"float2\" 0.369929 0.348267"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[899]" " -type \"float2\" 0.385387 0.323445"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[900]" " -type \"float2\" 0.364825 0.321749"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[901]" " -type \"float2\" 0.359057 0.347276"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[902]" " -type \"float2\" 0.344703 0.304214"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[903]" " -type \"float2\" 0.335249 0.305707"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[904]" " -type \"float2\" 0.335885 0.307381"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[905]" " -type \"float2\" 0.345052 0.308173"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[906]" " -type \"float2\" 0.358845 0.30763"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[907]" " -type \"float2\" 0.365253 0.306027"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[908]" " -type \"float2\" 0.365685 0.304455"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[909]" " -type \"float2\" 0.356445 0.303747"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[910]" " -type \"float2\" 0.341353 0.300444"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[911]" " -type \"float2\" 0.326109 0.302806"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[912]" " -type \"float2\" 0.327029 0.305478"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[913]" " -type \"float2\" 0.341824 0.306749"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[914]" " -type \"float2\" 0.364141 0.305877"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[915]" " -type \"float2\" 0.374399 0.303315"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[916]" " -type \"float2\" 0.374991 0.300824"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[917]" " -type \"float2\" 0.360158 0.299709"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[918]" " -type \"float2\" 0.341189 0.294944"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[919]" " -type \"float2\" 0.325987 0.297241"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[920]" " -type \"float2\" 0.326905 0.29984"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[921]" " -type \"float2\" 0.341655 0.301076"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[922]" " -type \"float2\" 0.363906 0.300228"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[923]" " -type \"float2\" 0.374137 0.297737"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[924]" " -type \"float2\" 0.37473 0.295313"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[925]" " -type \"float2\" 0.359941 0.294228"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[926]" " -type \"float2\" 0.344869 0.292049"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[927]" " -type \"float2\" 0.336452 0.293308"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[928]" " -type \"float2\" 0.337026 0.294718"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[929]" " -type \"float2\" 0.345182 0.295383"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[930]" " -type \"float2\" 0.357453 0.294927"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[931]" " -type \"float2\" 0.363167 0.293578"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[932]" " -type \"float2\" 0.363564 0.292252"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[933]" " -type \"float2\" 0.355335 0.291655"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[934]" " -type \"float2\" 0.350589 0.16029"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[935]" " -type \"float2\" 0.340581 0.160437"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[936]" " -type \"float2\" 0.332516 0.160909"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[937]" " -type \"float2\" 0.33304 0.161437"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[938]" " -type \"float2\" 0.340817 0.161686"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[939]" " -type \"float2\" 0.352544 0.161516"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[940]" " -type \"float2\" 0.358031 0.16101"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[941]" " -type \"float2\" 0.35844 0.160514"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[942]" " -type \"float2\" 0 0.387861"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[943]" " -type \"float2\" 0.00106959 0.393777"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[944]" " -type \"float2\" 0.00465491 0.391547"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[945]" " -type \"float2\" 0.00359893 0.385658"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[946]" " -type \"float2\" 0.0138126 0.388449"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[947]" " -type \"float2\" 0.0148549 0.394373"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[948]" " -type \"float2\" 0.113631 0.110866"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[949]" " -type \"float2\" 0.0965426 0.110632"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[950]" " -type \"float2\" 0.104927 0.11047"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[951]" " -type \"float2\" 0.120618 0.110705"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[952]" " -type \"float2\" 0.115322 0.110426"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[953]" " -type \"float2\" 0.123088 0.110525"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[954]" " -type \"float2\" 0.103161 0.110906"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[955]" " -type \"float2\" 0.0964567 0.110815"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[956]" " -type \"float2\" 0.105258 0.372018"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[957]" " -type \"float2\" 0.0884442 0.347908"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[958]" " -type \"float2\" 0.0897554 0.35375"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[959]" " -type \"float2\" 0.106141 0.375349"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[960]" " -type \"float2\" 0.116159 0.369152"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[961]" " -type \"float2\" 0.10927 0.34298"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[962]" " -type \"float2\" 0.13623 0.341706"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[963]" " -type \"float2\" 0.130507 0.368403"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[964]" " -type \"float2\" 0.141999 0.370224"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[965]" " -type \"float2\" 0.15799 0.344813"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[966]" " -type \"float2\" 0.358631 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[967]" " -type \"float2\" 0.358631 0.78916"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[968]" " -type \"float2\" 0.249154 0.78916"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[969]" " -type \"float2\" 0.249154 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[970]" " -type \"float2\" 0.362312 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[971]" " -type \"float2\" 0.258935 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[972]" " -type \"float2\" 0.258934 0.785189"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[973]" " -type \"float2\" 0.362312 0.786513"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[974]" " -type \"float2\" 0.357329 0.911351"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[975]" " -type \"float2\" 0.245907 0.911351"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[976]" " -type \"float2\" 0.138917 0.927998"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[977]" " -type \"float2\" 0.13912 0.92786"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[978]" " -type \"float2\" 0.105828 0.947357"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[979]" " -type \"float2\" 0.119966 0.938972"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[980]" " -type \"float2\" 0.125154 0.935895"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[981]" " -type \"float2\" 0.0957531 0.953039"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[982]" " -type \"float2\" 0.0976074 0.951908"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[983]" " -type \"float2\" 0.145241 0.923817"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[984]" " -type \"float2\" 0.14223 0.920561"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[985]" " -type \"float2\" 0.133713 0.911351"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[986]" " -type \"float2\" 0.133713 0.90586"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[987]" " -type \"float2\" 0.133713 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[988]" " -type \"float2\" 0.133713 0.789343"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[989]" " -type \"float2\" 0.138917 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[990]" " -type \"float2\" 0.138917 0.78916"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[991]" " -type \"float2\" 0.138916 0.903643"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[992]" " -type \"float2\" 0.138917 0.909038"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[993]" " -type \"float2\" 0.138916 0.923061"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[994]" " -type \"float2\" 0.199752 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[995]" " -type \"float2\" 0.199752 0.785189"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[996]" " -type \"float2\" 0.195625 0.890039"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[997]" " -type \"float2\" 0.199752 0.900942"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[998]" " -type \"float2\" 0.196833 0.897531"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[999]" " -type \"float2\" 0.197887 0.902139"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1000]" " -type \"float2\" 0.190824 0.920561"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1001]" " -type \"float2\" 0.183528 0.911351"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1002]" " -type \"float2\" 0.193404 0.923817"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1003]" " -type \"float2\" 0.152424 0.951908"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1004]" " -type \"float2\" 0.15082 0.953039"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1005]" " -type \"float2\" 0.176071 0.935895"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1006]" " -type \"float2\" 0.171603 0.938972"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1007]" " -type \"float2\" 0.159425 0.947357"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1008]" " -type \"float2\" 0.188042 0.92786"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1009]" " -type \"float2\" 0.187862 0.927998"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1010]" " -type \"float2\" 0.187862 0.923061"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1011]" " -type \"float2\" 0.187862 0.909038"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1012]" " -type \"float2\" 0.187862 0.903643"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1013]" " -type \"float2\" 0.187862 0.78916"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1014]" " -type \"float2\" 0.187862 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1015]" " -type \"float2\" 0.366599 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1016]" " -type \"float2\" 0.366599 0.786471"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1017]" " -type \"float2\" 0.366599 0.898858"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1018]" " -type \"float2\" 0.366599 0.904155"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1019]" " -type \"float2\" 0.36513 0.900932"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1020]" " -type \"float2\" 0.499342 0.897531"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1021]" " -type \"float2\" 0.366027 0.904995"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1022]" " -type \"float2\" 0.364627 0.920561"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1023]" " -type \"float2\" 0.361697 0.911351"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1024]" " -type \"float2\" 0.365662 0.923817"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1025]" " -type \"float2\" 0.348485 0.951908"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1026]" " -type \"float2\" 0.347778 0.953039"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1027]" " -type \"float2\" 0.358183 0.935895"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1028]" " -type \"float2\" 0.356288 0.938972"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1029]" " -type \"float2\" 0.351124 0.947358"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1030]" " -type \"float2\" 0.363014 0.92786"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1031]" " -type \"float2\" 0.362923 0.927998"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1032]" " -type \"float2\" 0.362922 0.923061"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1033]" " -type \"float2\" 0.362923 0.909038"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1034]" " -type \"float2\" 0.362922 0.903643"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1035]" " -type \"float2\" 0.362923 0.789159"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1036]" " -type \"float2\" 0.362923 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1037]" " -type \"float2\" 0.14693 0.850145"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1038]" " -type \"float2\" 0.150333 0.848778"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1039]" " -type \"float2\" 0.121271 0.852646"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1040]" " -type \"float2\" 0.133713 0.855454"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1041]" " -type \"float2\" 0.114502 0.851118"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1042]" " -type \"float2\" 0.0626216 0.869164"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1043]" " -type \"float2\" 0.0606061 0.869917"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1044]" " -type \"float2\" 0.0926557 0.859038"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1045]" " -type \"float2\" 0.0870093 0.861028"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1046]" " -type \"float2\" 0.0716191 0.866455"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1047]" " -type \"float2\" 0.107897 0.854016"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1048]" " -type \"float2\" 0.107677 0.854117"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1049]" " -type \"float2\" 0.118655 0.854117"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1050]" " -type \"float2\" 0.138916 0.854117"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1051]" " -type \"float2\" 0.249153 0.854117"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1052]" " -type \"float2\" 0.187862 0.854117"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1053]" " -type \"float2\" 0.358631 0.854117"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1054]" " -type \"float2\" 0.362922 0.854117"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1055]" " -type \"float2\" 0.366599 0.850239"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1056]" " -type \"float2\" 0.258935 0.84791"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1057]" " -type \"float2\" 0.362312 0.850316"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1058]" " -type \"float2\" 0.19579 0.855976"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1059]" " -type \"float2\" 0.152491 0.900942"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1060]" " -type \"float2\" 0.152491 0.895732"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1061]" " -type \"float2\" 0.152492 0.84791"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1062]" " -type \"float2\" 0.152491 0.785189"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1063]" " -type \"float2\" 0.152492 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1064]" " -type \"float2\" 0.15766 0.785189"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1065]" " -type \"float2\" 0.157661 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1066]" " -type \"float2\" 0.163797 0.854242"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1067]" " -type \"float2\" 0.15766 0.900942"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1068]" " -type \"float2\" 0.165942 0.888607"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1069]" " -type \"float2\" 0.155533 0.902139"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1070]" " -type \"float2\" 0.154332 0.897531"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1071]" " -type \"float2\" 0.147545 0.920561"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1072]" " -type \"float2\" 0.139161 0.911351"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1073]" " -type \"float2\" 0.150509 0.923817"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1074]" " -type \"float2\" 0.103604 0.951908"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1075]" " -type \"float2\" 0.101776 0.953039"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1076]" " -type \"float2\" 0.130722 0.935895"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1077]" " -type \"float2\" 0.125614 0.938972"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1078]" " -type \"float2\" 0.11169 0.947357"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1079]" " -type \"float2\" 0.144471 0.92786"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1080]" " -type \"float2\" 0.14427 0.927998"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1081]" " -type \"float2\" 0.14427 0.923061"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1082]" " -type \"float2\" 0.14427 0.909038"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1083]" " -type \"float2\" 0.14427 0.903643"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1084]" " -type \"float2\" 0.14427 0.78916"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1085]" " -type \"float2\" 0.14427 0.854117"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1086]" " -type \"float2\" 0.14427 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1087]" " -type \"float2\" 0.150332 0.872313"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1088]" " -type \"float2\" 0.152491 0.8713"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1089]" " -type \"float2\" 0.14693 0.873909"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1090]" " -type \"float2\" 0.133713 0.880108"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1091]" " -type \"float2\" 0.121271 0.876771"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1092]" " -type \"float2\" 0.114502 0.874954"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1093]" " -type \"float2\" 0.0626216 0.896294"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1094]" " -type \"float2\" 0.0606061 0.89717"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1095]" " -type \"float2\" 0.0926557 0.884237"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1096]" " -type \"float2\" 0.0870085 0.886583"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1097]" " -type \"float2\" 0.0716191 0.89298"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1098]" " -type \"float2\" 0.107897 0.878227"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1099]" " -type \"float2\" 0.107677 0.878341"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1100]" " -type \"float2\" 0.118655 0.878341"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1101]" " -type \"float2\" 0.138916 0.878341"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1102]" " -type \"float2\" 0.14427 0.878341"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1103]" " -type \"float2\" 0.249153 0.878341"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1104]" " -type \"float2\" 0.187862 0.878341"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1105]" " -type \"float2\" 0.358631 0.878341"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1106]" " -type \"float2\" 0.362922 0.878341"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1107]" " -type \"float2\" 0.366599 0.876367"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1108]" " -type \"float2\" 0.362312 0.876458"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1109]" " -type \"float2\" 0.258934 0.87361"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1110]" " -type \"float2\" 0.199752 0.87361"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1111]" " -type \"float2\" 0.15766 0.8713"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1112]" " -type \"float2\" 0.180703 0.900942"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1113]" " -type \"float2\" 0.180702 0.895732"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1114]" " -type \"float2\" 0.178718 0.902139"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1115]" " -type \"float2\" 0.177598 0.897531"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1116]" " -type \"float2\" 0.171237 0.920561"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1117]" " -type \"float2\" 0.163448 0.911351"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1118]" " -type \"float2\" 0.17399 0.923817"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1119]" " -type \"float2\" 0.13033 0.951908"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1120]" " -type \"float2\" 0.128623 0.953039"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1121]" " -type \"float2\" 0.155547 0.935895"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1122]" " -type \"float2\" 0.150789 0.938972"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1123]" " -type \"float2\" 0.168323 0.92786"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1124]" " -type \"float2\" 0.137821 0.947357"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1125]" " -type \"float2\" 0.168133 0.927998"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1126]" " -type \"float2\" 0.168133 0.923061"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1127]" " -type \"float2\" 0.168133 0.909038"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1128]" " -type \"float2\" 0.168133 0.903643"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1129]" " -type \"float2\" 0.168132 0.878341"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1130]" " -type \"float2\" 0.168133 0.789159"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1131]" " -type \"float2\" 0.168133 0.854117"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1132]" " -type \"float2\" 0.168133 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1133]" " -type \"float2\" 0.178692 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1134]" " -type \"float2\" 0.178692 0.785189"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1135]" " -type \"float2\" 0.178692 0.84791"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1136]" " -type \"float2\" 0.166842 0.888121"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1137]" " -type \"float2\" 0.158583 0.87086"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1138]" " -type \"float2\" 0.179559 0.847534"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1139]" " -type \"float2\" 0.19661 0.855577"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1140]" " -type \"float2\" 0.181563 0.895226"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1141]" " -type \"float2\" 0.200561 0.873164"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1142]" " -type \"float2\" 0.196445 0.889549"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1143]" " -type \"float2\" 0.164703 0.853849"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1144]" " -type \"float2\" 0.182267 0.894692"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1145]" " -type \"float2\" 0.197044 0.889055"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1146]" " -type \"float2\" 0.167652 0.887637"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1147]" " -type \"float2\" 0.15945 0.870499"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1148]" " -type \"float2\" 0.165527 0.853608"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1149]" " -type \"float2\" 0.180277 0.847336"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1150]" " -type \"float2\" 0.197208 0.855324"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1151]" " -type \"float2\" 0.201132 0.872786"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1152]" " -type \"float2\" 0.145656 0.786701"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1153]" " -type \"float2\" 0.145657 0.708306"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1154]" " -type \"float2\" 0.145657 0.850656"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1155]" " -type \"float2\" 0.145656 0.874506"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1156]" " -type \"float2\" 0.145656 0.899418"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1157]" " -type \"float2\" 0.147854 0.903512"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1158]" " -type \"float2\" 0.153092 0.903512"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1159]" " -type \"float2\" 0.176442 0.903512"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1160]" " -type \"float2\" 0.195746 0.903512"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1161]" " -type \"float2\" 0.255717 0.903512"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1162]" " -type \"float2\" 0.360478 0.906869"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1163]" " -type \"float2\" 0.364796 0.906802"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1164]" " -type \"float2\" 0.172175 0.880816"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1165]" " -type \"float2\" 0.166412 0.870308"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1166]" " -type \"float2\" 0.170683 0.859949"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1167]" " -type \"float2\" 0.181049 0.856104"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1168]" " -type \"float2\" 0.192948 0.861002"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1169]" " -type \"float2\" 0.195706 0.871711"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1170]" " -type \"float2\" 0.192833 0.881687"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1171]" " -type \"float2\" 0.182448 0.885144"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1172]" " -type \"float2\" 0.114502 0.492795"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1173]" " -type \"float2\" 0.0626216 0.464703"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1174]" " -type \"float2\" 0.0626216 0.470233"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1175]" " -type \"float2\" 0.114502 0.497652"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1176]" " -type \"float2\" 0.107897 0.488752"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1177]" " -type \"float2\" 0.107897 0.493686"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1178]" " -type \"float2\" 0.0716198 0.474661"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1179]" " -type \"float2\" 0.0716191 0.469254"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1180]" " -type \"float2\" 0.092655 0.485853"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1181]" " -type \"float2\" 0.0606061 0.469126"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1182]" " -type \"float2\" 0.0606061 0.463572"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1183]" " -type \"float2\" 0.0926557 0.480717"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1184]" " -type \"float2\" 0.11887 0.488752"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1185]" " -type \"float2\" 0.0836412 0.469254"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1186]" " -type \"float2\" 0.104076 0.480717"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1187]" " -type \"float2\" 0.0729577 0.463572"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1188]" " -type \"float2\" 0.125305 0.492794"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1189]" " -type \"float2\" 0.0749172 0.464704"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1190]" " -type \"float2\" 0.124253 0.497089"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1191]" " -type \"float2\" 0.118655 0.49355"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1192]" " -type \"float2\" 0.107677 0.49355"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1193]" " -type \"float2\" 0.107677 0.488613"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1194]" " -type \"float2\" 0.118655 0.488613"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1195]" " -type \"float2\" 0.118655 0.512968"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1196]" " -type \"float2\" 0.107677 0.512968"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1197]" " -type \"float2\" 0.107677 0.507573"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1198]" " -type \"float2\" 0.118655 0.507573"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1199]" " -type \"float2\" 0.121271 0.514642"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1200]" " -type \"float2\" 0.121271 0.509269"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1201]" " -type \"float2\" 0.114501 0.51145"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1202]" " -type \"float2\" 0.114502 0.51676"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1203]" " -type \"float2\" 0.0626209 0.49198"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1204]" " -type \"float2\" 0.0626209 0.485937"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1205]" " -type \"float2\" 0.0926557 0.506052"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1206]" " -type \"float2\" 0.0606061 0.490974"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1207]" " -type \"float2\" 0.0606061 0.484903"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1208]" " -type \"float2\" 0.0926557 0.50044"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1209]" " -type \"float2\" 0.107897 0.507702"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1210]" " -type \"float2\" 0.107897 0.513095"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1211]" " -type \"float2\" 0.0716191 0.495924"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1212]" " -type \"float2\" 0.0716191 0.490016"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1213]" " -type \"float2\" 0.0870085 0.482847"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1214]" " -type \"float2\" 0.0870093 0.47764"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1215]" " -type \"float2\" 0.0985912 0.47764"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1216]" " -type \"float2\" 0.0870085 0.503334"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1217]" " -type \"float2\" 0.0870085 0.497642"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1218]" " -type \"float2\" 0.14693 0.51788"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1219]" " -type \"float2\" 0.150332 0.519715"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1220]" " -type \"float2\" 0.150332 0.514473"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1221]" " -type \"float2\" 0.149113 0.519081"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1222]" " -type \"float2\" 0.362312 0.51765"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1223]" " -type \"float2\" 0.362312 0.512351"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1224]" " -type \"float2\" 0.258934 0.51567"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1225]" " -type \"float2\" 0.258934 0.520879"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1226]" " -type \"float2\" 0.25659 0.519081"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1227]" " -type \"float2\" 0.257436 0.514473"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1228]" " -type \"float2\" 0.36173 0.511523"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1229]" " -type \"float2\" 0.360818 0.515606"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1230]" " -type \"float2\" 0.361439 0.492795"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1231]" " -type \"float2\" 0.253714 0.492794"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1232]" " -type \"float2\" 0.251675 0.49605"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1233]" " -type \"float2\" 0.360366 0.49605"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1234]" " -type \"float2\" 0.343679 0.464704"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1235]" " -type \"float2\" 0.221069 0.464704"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1236]" " -type \"float2\" 0.342949 0.463572"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1237]" " -type \"float2\" 0.219778 0.463572"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1238]" " -type \"float2\" 0.353719 0.480717"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1239]" " -type \"float2\" 0.239831 0.480717"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1240]" " -type \"float2\" 0.351761 0.47764"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1241]" " -type \"float2\" 0.236264 0.47764"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1242]" " -type \"float2\" 0.358725 0.488751"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1243]" " -type \"float2\" 0.249302 0.488752"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1244]" " -type \"float2\" 0.226542 0.469254"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1245]" " -type \"float2\" 0.346424 0.469254"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1246]" " -type \"float2\" 0.358631 0.488613"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1247]" " -type \"float2\" 0.249153 0.488613"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1248]" " -type \"float2\" 0.358631 0.49355"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1249]" " -type \"float2\" 0.249153 0.49355"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1250]" " -type \"float2\" 0.358631 0.512968"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1251]" " -type \"float2\" 0.249153 0.512968"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1252]" " -type \"float2\" 0.249154 0.507573"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1253]" " -type \"float2\" 0.358631 0.507573"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1254]" " -type \"float2\" 0.150332 0.630945"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1255]" " -type \"float2\" 0.14693 0.630192"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1256]" " -type \"float2\" 0.121272 0.628656"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1257]" " -type \"float2\" 0.114502 0.629411"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1258]" " -type \"float2\" 0.0626216 0.620196"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1259]" " -type \"float2\" 0.0606061 0.619777"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1260]" " -type \"float2\" 0.092655 0.625148"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1261]" " -type \"float2\" 0.0870085 0.624112"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1262]" " -type \"float2\" 0.107897 0.627521"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1263]" " -type \"float2\" 0.0716198 0.621288"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1264]" " -type \"float2\" 0.107677 0.627452"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1265]" " -type \"float2\" 0.118655 0.627452"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1266]" " -type \"float2\" 0.249154 0.627452"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1267]" " -type \"float2\" 0.358631 0.627452"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1268]" " -type \"float2\" 0.362312 0.630098"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1269]" " -type \"float2\" 0.258934 0.631423"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1270]" " -type \"float2\" 0.245907 0.50526"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1271]" " -type \"float2\" 0.357329 0.50526"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1272]" " -type \"float2\" 0.139121 0.488752"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1273]" " -type \"float2\" 0.138916 0.488613"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1274]" " -type \"float2\" 0.105828 0.469254"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1275]" " -type \"float2\" 0.119966 0.47764"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1276]" " -type \"float2\" 0.125154 0.480717"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1277]" " -type \"float2\" 0.0957524 0.463572"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1278]" " -type \"float2\" 0.0976081 0.464704"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1279]" " -type \"float2\" 0.145241 0.492795"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1280]" " -type \"float2\" 0.14223 0.49605"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1281]" " -type \"float2\" 0.133713 0.50526"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1282]" " -type \"float2\" 0.133713 0.510751"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1283]" " -type \"float2\" 0.133713 0.627268"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1284]" " -type \"float2\" 0.138917 0.627452"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1285]" " -type \"float2\" 0.138916 0.512968"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1286]" " -type \"float2\" 0.138917 0.507573"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1287]" " -type \"float2\" 0.138916 0.49355"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1288]" " -type \"float2\" 0.199752 0.631423"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1289]" " -type \"float2\" 0.199752 0.51567"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1290]" " -type \"float2\" 0.195625 0.526573"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1291]" " -type \"float2\" 0.196833 0.519081"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1292]" " -type \"float2\" 0.197886 0.514473"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1293]" " -type \"float2\" 0.190824 0.49605"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1294]" " -type \"float2\" 0.183527 0.50526"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1295]" " -type \"float2\" 0.193404 0.492795"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1296]" " -type \"float2\" 0.152425 0.464703"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1297]" " -type \"float2\" 0.15082 0.463572"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1298]" " -type \"float2\" 0.176071 0.480717"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1299]" " -type \"float2\" 0.171603 0.47764"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1300]" " -type \"float2\" 0.188042 0.488752"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1301]" " -type \"float2\" 0.159425 0.469254"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1302]" " -type \"float2\" 0.187862 0.488613"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1303]" " -type \"float2\" 0.187862 0.49355"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1304]" " -type \"float2\" 0.187862 0.507573"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1305]" " -type \"float2\" 0.187862 0.512968"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1306]" " -type \"float2\" 0.187862 0.627452"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1307]" " -type \"float2\" 0.366599 0.63014"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1308]" " -type \"float2\" 0.366598 0.512457"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1309]" " -type \"float2\" 0.366599 0.517753"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1310]" " -type \"float2\" 0.36513 0.515679"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1311]" " -type \"float2\" 0.366026 0.511617"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1312]" " -type \"float2\" 0.364627 0.49605"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1313]" " -type \"float2\" 0.361696 0.50526"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1314]" " -type \"float2\" 0.365662 0.492795"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1315]" " -type \"float2\" 0.348485 0.464703"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1316]" " -type \"float2\" 0.347777 0.463572"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1317]" " -type \"float2\" 0.358183 0.480717"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1318]" " -type \"float2\" 0.356288 0.47764"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1319]" " -type \"float2\" 0.363015 0.488751"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1320]" " -type \"float2\" 0.351123 0.469254"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1321]" " -type \"float2\" 0.362922 0.488613"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1322]" " -type \"float2\" 0.362922 0.49355"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1323]" " -type \"float2\" 0.362923 0.507573"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1324]" " -type \"float2\" 0.362923 0.512968"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1325]" " -type \"float2\" 0.362923 0.627452"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1326]" " -type \"float2\" 0.150332 0.567834"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1327]" " -type \"float2\" 0.14693 0.566467"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1328]" " -type \"float2\" 0.133713 0.561157"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1329]" " -type \"float2\" 0.121272 0.563965"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1330]" " -type \"float2\" 0.114502 0.565494"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1331]" " -type \"float2\" 0.0626209 0.547447"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1332]" " -type \"float2\" 0.0606061 0.546695"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1333]" " -type \"float2\" 0.092655 0.557574"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1334]" " -type \"float2\" 0.0870093 0.555583"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1335]" " -type \"float2\" 0.0716191 0.550157"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1336]" " -type \"float2\" 0.107897 0.562596"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1337]" " -type \"float2\" 0.107677 0.562495"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1338]" " -type \"float2\" 0.118655 0.562495"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1339]" " -type \"float2\" 0.138916 0.562495"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1340]" " -type \"float2\" 0.187862 0.562495"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1341]" " -type \"float2\" 0.139584 0.373465"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1342]" " -type \"float2\" 0.153739 0.35043"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1343]" " -type \"float2\" 0.130666 0.376356"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1344]" " -type \"float2\" 0.136854 0.355541"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1345]" " -type \"float2\" 0.10879 0.356746"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1346]" " -type \"float2\" 0.116106 0.37703"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1347]" " -type \"float2\" 0.105458 0.327109"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1348]" " -type \"float2\" 0.10621 0.329486"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1349]" " -type \"float2\" 0.114748 0.325056"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1350]" " -type \"float2\" 0.126987 0.324519"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1351]" " -type \"float2\" 0.136759 0.325825"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1352]" " -type \"float2\" 0.134653 0.328142"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1353]" " -type \"float2\" 0.127038 0.330203"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1354]" " -type \"float2\" 0.114669 0.330683"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1355]" " -type \"float2\" 0.0963403 0.324034"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1356]" " -type \"float2\" 0.0974097 0.32783"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1357]" " -type \"float2\" 0.111329 0.320794"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1358]" " -type \"float2\" 0.130893 0.319951"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1359]" " -type \"float2\" 0.14659 0.322003"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1360]" " -type \"float2\" 0.14335 0.325679"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1361]" " -type \"float2\" 0.13113 0.328985"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1362]" " -type \"float2\" 0.111068 0.329759"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1363]" " -type \"float2\" 0.0961058 0.318382"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1364]" " -type \"float2\" 0.0971678 0.322076"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1365]" " -type \"float2\" 0.111058 0.315229"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1366]" " -type \"float2\" 0.13057 0.314408"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1367]" " -type \"float2\" 0.146222 0.316406"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1368]" " -type \"float2\" 0.142986 0.319983"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1369]" " -type \"float2\" 0.130793 0.323199"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1370]" " -type \"float2\" 0.110786 0.323952"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1371]" " -type \"float2\" 0.106397 0.314528"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1372]" " -type \"float2\" 0.107076 0.316531"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1373]" " -type \"float2\" 0.114676 0.312795"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1374]" " -type \"float2\" 0.125595 0.312341"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1375]" " -type \"float2\" 0.134298 0.313444"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1376]" " -type \"float2\" 0.132401 0.315399"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1377]" " -type \"float2\" 0.125609 0.317134"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1378]" " -type \"float2\" 0.114604 0.317537"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1379]" " -type \"float2\" 0.107556 0.18039"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1380]" " -type \"float2\" 0.100363 0.18001"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1381]" " -type \"float2\" 0.0997701 0.179252"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1382]" " -type \"float2\" 0.107767 0.178597"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1383]" " -type \"float2\" 0.118265 0.178425"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1384]" " -type \"float2\" 0.126585 0.178842"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1385]" " -type \"float2\" 0.124699 0.179582"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1386]" " -type \"float2\" 0.118126 0.180237"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1387]" " -type \"float2\" 0.182448 0.531468"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1388]" " -type \"float2\" 0.192833 0.534925"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1389]" " -type \"float2\" 0.195706 0.544901"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1390]" " -type \"float2\" 0.192948 0.55561"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1391]" " -type \"float2\" 0.181049 0.560507"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1392]" " -type \"float2\" 0.170683 0.556662"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1393]" " -type \"float2\" 0.172175 0.535795"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1394]" " -type \"float2\" 0.166412 0.546304"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1395]" " -type \"float2\" 0.364795 0.50981"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1396]" " -type \"float2\" 0.360478 0.509742"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1397]" " -type \"float2\" 0.255717 0.513099"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1398]" " -type \"float2\" 0.195745 0.513099"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1399]" " -type \"float2\" 0.176441 0.513099"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1400]" " -type \"float2\" 0.153092 0.513099"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1401]" " -type \"float2\" 0.147854 0.513099"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1402]" " -type \"float2\" 0.145656 0.517193"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1403]" " -type \"float2\" 0.145656 0.542105"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1404]" " -type \"float2\" 0.145656 0.565955"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1405]" " -type \"float2\" 0.145656 0.62991"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1406]" " -type \"float2\" 0.201132 0.543825"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1407]" " -type \"float2\" 0.197208 0.561288"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1408]" " -type \"float2\" 0.180277 0.569274"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1409]" " -type \"float2\" 0.165527 0.563004"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1410]" " -type \"float2\" 0.159451 0.546113"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1411]" " -type \"float2\" 0.167651 0.528975"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1412]" " -type \"float2\" 0.197044 0.527557"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1413]" " -type \"float2\" 0.182268 0.521919"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1414]" " -type \"float2\" 0.164703 0.562762"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1415]" " -type \"float2\" 0.196445 0.527063"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1416]" " -type \"float2\" 0.200561 0.543447"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1417]" " -type \"float2\" 0.181563 0.521385"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1418]" " -type \"float2\" 0.179559 0.569078"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1419]" " -type \"float2\" 0.19661 0.561034"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1420]" " -type \"float2\" 0.166843 0.528491"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1421]" " -type \"float2\" 0.158583 0.545751"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1422]" " -type \"float2\" 0.178692 0.568701"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1423]" " -type \"float2\" 0.178692 0.631423"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1424]" " -type \"float2\" 0.168133 0.562495"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1425]" " -type \"float2\" 0.168133 0.627452"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1426]" " -type \"float2\" 0.168133 0.538271"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1427]" " -type \"float2\" 0.168133 0.512968"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1428]" " -type \"float2\" 0.168133 0.507573"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1429]" " -type \"float2\" 0.168133 0.49355"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1430]" " -type \"float2\" 0.168132 0.488613"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1431]" " -type \"float2\" 0.137821 0.469254"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1432]" " -type \"float2\" 0.168323 0.488751"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1433]" " -type \"float2\" 0.150789 0.47764"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1434]" " -type \"float2\" 0.155547 0.480717"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1435]" " -type \"float2\" 0.128623 0.463572"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1436]" " -type \"float2\" 0.130329 0.464703"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1437]" " -type \"float2\" 0.17399 0.492794"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1438]" " -type \"float2\" 0.171236 0.49605"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1439]" " -type \"float2\" 0.163448 0.50526"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1440]" " -type \"float2\" 0.177598 0.519081"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1441]" " -type \"float2\" 0.178718 0.514473"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1442]" " -type \"float2\" 0.180703 0.520879"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1443]" " -type \"float2\" 0.180702 0.51567"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1444]" " -type \"float2\" 0.15766 0.545311"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1445]" " -type \"float2\" 0.199752 0.543001"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1446]" " -type \"float2\" 0.258934 0.543001"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1447]" " -type \"float2\" 0.362312 0.540153"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1448]" " -type \"float2\" 0.366599 0.540244"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1449]" " -type \"float2\" 0.249153 0.562495"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1450]" " -type \"float2\" 0.362923 0.538271"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1451]" " -type \"float2\" 0.358631 0.538271"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1452]" " -type \"float2\" 0.358631 0.562494"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1453]" " -type \"float2\" 0.362922 0.562494"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1454]" " -type \"float2\" 0.366599 0.566373"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1455]" " -type \"float2\" 0.362312 0.566295"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1456]" " -type \"float2\" 0.258935 0.568701"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1457]" " -type \"float2\" 0.19579 0.560636"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1458]" " -type \"float2\" 0.187862 0.538271"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1459]" " -type \"float2\" 0.249154 0.538271"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1460]" " -type \"float2\" 0.152491 0.520879"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1461]" " -type \"float2\" 0.152491 0.51567"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1462]" " -type \"float2\" 0.152491 0.631423"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1463]" " -type \"float2\" 0.152491 0.568701"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1464]" " -type \"float2\" 0.14427 0.538271"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1465]" " -type \"float2\" 0.15766 0.631423"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1466]" " -type \"float2\" 0.138917 0.538271"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1467]" " -type \"float2\" 0.163797 0.562369"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1468]" " -type \"float2\" 0.15766 0.51567"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1469]" " -type \"float2\" 0.165942 0.528005"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1470]" " -type \"float2\" 0.155533 0.514473"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1471]" " -type \"float2\" 0.154332 0.519081"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1472]" " -type \"float2\" 0.139161 0.50526"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1473]" " -type \"float2\" 0.147545 0.49605"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1474]" " -type \"float2\" 0.150509 0.492795"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1475]" " -type \"float2\" 0.103604 0.464703"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1476]" " -type \"float2\" 0.101776 0.463572"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1477]" " -type \"float2\" 0.130722 0.480717"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1478]" " -type \"float2\" 0.125614 0.47764"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1479]" " -type \"float2\" 0.11169 0.469254"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1480]" " -type \"float2\" 0.144472 0.488752"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1481]" " -type \"float2\" 0.14427 0.488613"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1482]" " -type \"float2\" 0.14427 0.49355"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1483]" " -type \"float2\" 0.14427 0.507573"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1484]" " -type \"float2\" 0.14427 0.512968"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1485]" " -type \"float2\" 0.14427 0.627452"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1486]" " -type \"float2\" 0.14427 0.562495"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1487]" " -type \"float2\" 0.150332 0.544298"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1488]" " -type \"float2\" 0.152491 0.545311"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1489]" " -type \"float2\" 0.14693 0.542703"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1490]" " -type \"float2\" 0.133713 0.536503"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1491]" " -type \"float2\" 0.121271 0.539841"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1492]" " -type \"float2\" 0.114501 0.541657"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1493]" " -type \"float2\" 0.0626216 0.520318"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1494]" " -type \"float2\" 0.0606061 0.519441"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1495]" " -type \"float2\" 0.092655 0.532374"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1496]" " -type \"float2\" 0.0870093 0.530027"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1497]" " -type \"float2\" 0.107897 0.538384"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1498]" " -type \"float2\" 0.0716191 0.523631"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1499]" " -type \"float2\" 0.107677 0.538271"
-		2 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape" 
-		"uvSet[0].uvSetPoints[1500]" " -type \"float2\" 0.118655 0.538271"
+		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
 		2 "|living_room_latest:photo_frame" "translate" " -type \"double3\" 185.853281 -9.799836 -27.255767"
 		
 		2 "|living_room_latest:photo_frame" "scale" " -type \"double3\" 0.611298 0.91009 0.611298"
@@ -3920,2687 +817,218 @@ createNode reference -n "living_room_latestRN";
 		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "uvSet[1].uvSetName" 
 		" -type \"string\" \"map11\""
 		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvPivot" " -type \"double2\" 0.197759 0.401756"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints" " -s 522"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[0]" " -type \"float2\" 0.725226 0.186681"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[1]" " -type \"float2\" 0.79547 0.222469"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[2]" " -type \"float2\" 0.799345 0.217135"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[3]" " -type \"float2\" 0.727263 0.180411"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[4]" " -type \"float2\" 0.851212 0.278213"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[5]" " -type \"float2\" 0.856546 0.274338"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[6]" " -type \"float2\" 0.887003 0.348453"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[7]" " -type \"float2\" 0.893272 0.346416"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[8]" " -type \"float2\" 0.899332 0.426317"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[9]" " -type \"float2\" 0.905925 0.426317"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[10]" " -type \"float2\" 0.887003 0.504179"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[11]" " -type \"float2\" 0.893272 0.506216"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[12]" " -type \"float2\" 0.851212 0.574421"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[13]" " -type \"float2\" 0.856546 0.578296"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[14]" " -type \"float2\" 0.795469 0.630163"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[15]" " -type \"float2\" 0.799344 0.635497"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[16]" " -type \"float2\" 0.725226 0.665954"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[17]" " -type \"float2\" 0.727263 0.672224"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[18]" " -type \"float2\" 0.647366 0.678285"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[19]" " -type \"float2\" 0.647366 0.684878"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[20]" " -type \"float2\" 0.569503 0.665954"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[21]" " -type \"float2\" 0.567466 0.672224"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[22]" " -type \"float2\" 0.49926 0.630163"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[23]" " -type \"float2\" 0.495385 0.635497"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[24]" " -type \"float2\" 0.443516 0.574421"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[25]" " -type \"float2\" 0.438183 0.578296"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[26]" " -type \"float2\" 0.407728 0.504179"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[27]" " -type \"float2\" 0.401459 0.506216"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[28]" " -type \"float2\" 0.395397 0.426317"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[29]" " -type \"float2\" 0.388805 0.426317"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[30]" " -type \"float2\" 0.407728 0.348453"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[31]" " -type \"float2\" 0.401459 0.346416"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[32]" " -type \"float2\" 0.443516 0.278213"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[33]" " -type \"float2\" 0.438183 0.274338"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[34]" " -type \"float2\" 0.49926 0.22247"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[35]" " -type \"float2\" 0.495385 0.217137"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[36]" " -type \"float2\" 0.569503 0.186681"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[37]" " -type \"float2\" 0.567466 0.180411"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[38]" " -type \"float2\" 0.647366 0.174347"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[39]" " -type \"float2\" 0.647366 0.167755"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[40]" " -type \"float2\" 0.737366 0.149327"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[41]" " -type \"float2\" 0.818554 0.190694"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[42]" " -type \"float2\" 0.647366 0.426317"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[43]" " -type \"float2\" 0.882988 0.255126"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[44]" " -type \"float2\" 0.924355 0.336317"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[45]" " -type \"float2\" 0.938611 0.426317"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[46]" " -type \"float2\" 0.924355 0.516317"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[47]" " -type \"float2\" 0.882988 0.597508"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[48]" " -type \"float2\" 0.818554 0.66194"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[49]" " -type \"float2\" 0.737366 0.703307"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[50]" " -type \"float2\" 0.647366 0.717563"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[51]" " -type \"float2\" 0.557362 0.703307"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[52]" " -type \"float2\" 0.476176 0.66194"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[53]" " -type \"float2\" 0.411743 0.597508"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[54]" " -type \"float2\" 0.370375 0.516317"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[55]" " -type \"float2\" 0.35612 0.426317"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[56]" " -type \"float2\" 0.370375 0.336317"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[57]" " -type \"float2\" 0.411743 0.255126"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[58]" " -type \"float2\" 0.476176 0.190695"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[59]" " -type \"float2\" 0.557362 0.149325"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[60]" " -type \"float2\" 0.647366 0.135071"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[61]" " -type \"float2\" 0.729609 0.173193"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[62]" " -type \"float2\" 0.803806 0.210995"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[63]" " -type \"float2\" 0.782465 0.240369"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[64]" " -type \"float2\" 0.718392 0.207722"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[65]" " -type \"float2\" 0.862685 0.269877"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[66]" " -type \"float2\" 0.833314 0.291218"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[67]" " -type \"float2\" 0.90049 0.344071"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[68]" " -type \"float2\" 0.865961 0.355291"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[69]" " -type \"float2\" 0.913514 0.426317"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[70]" " -type \"float2\" 0.877208 0.426317"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[71]" " -type \"float2\" 0.90049 0.508562"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[72]" " -type \"float2\" 0.865961 0.497342"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[73]" " -type \"float2\" 0.862685 0.582756"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[74]" " -type \"float2\" 0.833314 0.561416"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[75]" " -type \"float2\" 0.803805 0.641637"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[76]" " -type \"float2\" 0.782465 0.612265"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[77]" " -type \"float2\" 0.729609 0.679442"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[78]" " -type \"float2\" 0.718392 0.644912"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[79]" " -type \"float2\" 0.647366 0.692467"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[80]" " -type \"float2\" 0.647366 0.656162"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[81]" " -type \"float2\" 0.565121 0.679442"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[82]" " -type \"float2\" 0.272692 0.0496844"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[83]" " -type \"float2\" 0.576339 0.644912"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[84]" " -type \"float2\" 0.490924 0.641637"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[85]" " -type \"float2\" 0.512265 0.612265"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[86]" " -type \"float2\" 0.432043 0.582756"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[87]" " -type \"float2\" 0.461415 0.561416"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[88]" " -type \"float2\" 0.394241 0.508562"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[89]" " -type \"float2\" 0.428768 0.497342"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[90]" " -type \"float2\" 0.381216 0.426317"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[91]" " -type \"float2\" 0.417518 0.426317"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[92]" " -type \"float2\" 0.394241 0.344071"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[93]" " -type \"float2\" 0.428768 0.355291"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[94]" " -type \"float2\" 0.432043 0.269877"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[95]" " -type \"float2\" 0.461415 0.291218"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[96]" " -type \"float2\" 0.490924 0.210997"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[97]" " -type \"float2\" 0.512265 0.240369"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[98]" " -type \"float2\" 0.565121 0.173193"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[99]" " -type \"float2\" 0.576339 0.207722"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[100]" " -type \"float2\" 0.647366 0.160165"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[101]" " -type \"float2\" 0.647366 0.196472"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[102]" " -type \"float2\" 0.717037 0.211888"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[103]" " -type \"float2\" 0.779889 0.243913"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[104]" " -type \"float2\" 0.78038 0.243237"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[105]" " -type \"float2\" 0.717295 0.211094"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[106]" " -type \"float2\" 0.829769 0.293793"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[107]" " -type \"float2\" 0.830444 0.293303"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[108]" " -type \"float2\" 0.861793 0.356644"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[109]" " -type \"float2\" 0.862587 0.356386"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[110]" " -type \"float2\" 0.872826 0.426317"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[111]" " -type \"float2\" 0.873661 0.426317"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[112]" " -type \"float2\" 0.861793 0.495988"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[113]" " -type \"float2\" 0.862587 0.496246"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[114]" " -type \"float2\" 0.829769 0.55884"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[115]" " -type \"float2\" 0.830444 0.559331"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[116]" " -type \"float2\" 0.779889 0.60872"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[117]" " -type \"float2\" 0.78038 0.609395"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[118]" " -type \"float2\" 0.717037 0.640745"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[119]" " -type \"float2\" 0.717295 0.641539"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[120]" " -type \"float2\" 0.647366 0.651779"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[121]" " -type \"float2\" 0.647366 0.652613"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[122]" " -type \"float2\" 0.577692 0.640745"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[123]" " -type \"float2\" 0.577434 0.641539"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[124]" " -type \"float2\" 0.514841 0.60872"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[125]" " -type \"float2\" 0.51435 0.609395"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[126]" " -type \"float2\" 0.464962 0.55884"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[127]" " -type \"float2\" 0.464286 0.559331"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[128]" " -type \"float2\" 0.432935 0.495988"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[129]" " -type \"float2\" 0.432141 0.496246"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[130]" " -type \"float2\" 0.421903 0.426317"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[131]" " -type \"float2\" 0.421068 0.426317"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[132]" " -type \"float2\" 0.432935 0.356644"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[133]" " -type \"float2\" 0.432141 0.356386"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[134]" " -type \"float2\" 0.464962 0.293793"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[135]" " -type \"float2\" 0.464286 0.293303"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[136]" " -type \"float2\" 0.514841 0.243913"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[137]" " -type \"float2\" 0.51435 0.243237"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[138]" " -type \"float2\" 0.577692 0.21189"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[139]" " -type \"float2\" 0.577434 0.211096"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[140]" " -type \"float2\" 0.647366 0.200853"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[141]" " -type \"float2\" 0.647366 0.200019"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[142]" " -type \"float2\" 0.720855 0.200138"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[143]" " -type \"float2\" 0.787151 0.233917"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[144]" " -type \"float2\" 0.791847 0.227455"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[145]" " -type \"float2\" 0.723321 0.19254"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[146]" " -type \"float2\" 0.839764 0.286532"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[147]" " -type \"float2\" 0.846227 0.281837"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[148]" " -type \"float2\" 0.873543 0.352826"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[149]" " -type \"float2\" 0.881139 0.350359"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[150]" " -type \"float2\" 0.88518 0.426317"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[151]" " -type \"float2\" 0.893168 0.426317"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[152]" " -type \"float2\" 0.873543 0.499806"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[153]" " -type \"float2\" 0.881139 0.502274"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[154]" " -type \"float2\" 0.839764 0.566102"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[155]" " -type \"float2\" 0.846227 0.570797"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[156]" " -type \"float2\" 0.787151 0.618715"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[157]" " -type \"float2\" 0.791846 0.625178"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[158]" " -type \"float2\" 0.720855 0.652495"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[159]" " -type \"float2\" 0.723321 0.660092"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[160]" " -type \"float2\" 0.647366 0.664133"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[161]" " -type \"float2\" 0.647366 0.672122"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[162]" " -type \"float2\" 0.573874 0.652495"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[163]" " -type \"float2\" 0.571405 0.660092"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[164]" " -type \"float2\" 0.507579 0.618715"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[165]" " -type \"float2\" 0.502882 0.625178"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[166]" " -type \"float2\" 0.454967 0.566102"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[167]" " -type \"float2\" 0.448501 0.570797"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[168]" " -type \"float2\" 0.421185 0.499806"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[169]" " -type \"float2\" 0.41359 0.502274"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[170]" " -type \"float2\" 0.409548 0.426317"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[171]" " -type \"float2\" 0.40156 0.426317"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[172]" " -type \"float2\" 0.421185 0.352826"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[173]" " -type \"float2\" 0.41359 0.350359"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[174]" " -type \"float2\" 0.454967 0.286532"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[175]" " -type \"float2\" 0.448502 0.281835"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[176]" " -type \"float2\" 0.507579 0.233917"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[177]" " -type \"float2\" 0.502882 0.227455"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[178]" " -type \"float2\" 0.573874 0.20014"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[179]" " -type \"float2\" 0.571405 0.192542"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[180]" " -type \"float2\" 0.647366 0.188499"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[181]" " -type \"float2\" 0.647366 0.18051"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[182]" " -type \"float2\" 0.733013 0.162721"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[183]" " -type \"float2\" 0.810276 0.202088"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[184]" " -type \"float2\" 0.81414 0.196769"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[185]" " -type \"float2\" 0.735045 0.156469"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[186]" " -type \"float2\" 0.871594 0.263404"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[187]" " -type \"float2\" 0.876912 0.25954"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[188]" " -type \"float2\" 0.91096 0.340669"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[189]" " -type \"float2\" 0.917213 0.338638"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[190]" " -type \"float2\" 0.924528 0.426317"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[191]" " -type \"float2\" 0.931101 0.426317"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[192]" " -type \"float2\" 0.91096 0.511964"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[193]" " -type \"float2\" 0.917213 0.513996"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[194]" " -type \"float2\" 0.871594 0.58923"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[195]" " -type \"float2\" 0.876912 0.593094"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[196]" " -type \"float2\" 0.810276 0.650546"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[197]" " -type \"float2\" 0.81414 0.655865"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[198]" " -type \"float2\" 0.733013 0.689913"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[199]" " -type \"float2\" 0.735045 0.696165"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[200]" " -type \"float2\" 0.647366 0.703479"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[201]" " -type \"float2\" 0.647366 0.710053"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[202]" " -type \"float2\" 0.561715 0.689913"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[203]" " -type \"float2\" 0.559683 0.696165"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[204]" " -type \"float2\" 0.484454 0.650546"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[205]" " -type \"float2\" 0.48059 0.655865"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[206]" " -type \"float2\" 0.423137 0.58923"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[207]" " -type \"float2\" 0.417818 0.593094"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[208]" " -type \"float2\" 0.383769 0.511964"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[209]" " -type \"float2\" 0.377517 0.513996"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[210]" " -type \"float2\" 0.370203 0.426317"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[211]" " -type \"float2\" 0.363629 0.426317"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[212]" " -type \"float2\" 0.383769 0.340669"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[213]" " -type \"float2\" 0.377517 0.338638"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[214]" " -type \"float2\" 0.423137 0.263404"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[215]" " -type \"float2\" 0.417818 0.25954"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[216]" " -type \"float2\" 0.484454 0.202089"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[217]" " -type \"float2\" 0.48059 0.196771"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[218]" " -type \"float2\" 0.561715 0.162719"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[219]" " -type \"float2\" 0.559683 0.156467"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[220]" " -type \"float2\" 0.647366 0.149155"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[221]" " -type \"float2\" 0.647366 0.142581"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[222]" " -type \"float2\" 0.460361 0.562183"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[223]" " -type \"float2\" 0.427526 0.497745"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[224]" " -type \"float2\" 0.422298 0.499444"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[225]" " -type \"float2\" 0.455913 0.565414"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[226]" " -type \"float2\" 0.511498 0.613321"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[227]" " -type \"float2\" 0.508267 0.617768"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[228]" " -type \"float2\" 0.575934 0.646154"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[229]" " -type \"float2\" 0.574236 0.651383"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[230]" " -type \"float2\" 0.647366 0.657466"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[231]" " -type \"float2\" 0.647366 0.662963"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[232]" " -type \"float2\" 0.718795 0.646154"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[233]" " -type \"float2\" 0.720494 0.651383"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[234]" " -type \"float2\" 0.783232 0.613321"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[235]" " -type \"float2\" 0.786463 0.617768"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[236]" " -type \"float2\" 0.83437 0.562183"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[237]" " -type \"float2\" 0.838817 0.565414"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[238]" " -type \"float2\" 0.867202 0.497745"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[239]" " -type \"float2\" 0.87243 0.499444"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[240]" " -type \"float2\" 0.878513 0.426317"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[241]" " -type \"float2\" 0.88401 0.426317"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[242]" " -type \"float2\" 0.867202 0.354887"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[243]" " -type \"float2\" 0.87243 0.353188"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[244]" " -type \"float2\" 0.83437 0.290451"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[245]" " -type \"float2\" 0.838817 0.287219"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[246]" " -type \"float2\" 0.783232 0.239312"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[247]" " -type \"float2\" 0.786463 0.234864"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[248]" " -type \"float2\" 0.718795 0.20648"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[249]" " -type \"float2\" 0.720494 0.201251"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[250]" " -type \"float2\" 0.647366 0.195166"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[251]" " -type \"float2\" 0.647366 0.189669"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[252]" " -type \"float2\" 0.575934 0.206481"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[253]" " -type \"float2\" 0.574236 0.201253"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[254]" " -type \"float2\" 0.511498 0.239312"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[255]" " -type \"float2\" 0.508267 0.234864"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[256]" " -type \"float2\" 0.460361 0.290451"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[257]" " -type \"float2\" 0.455913 0.287219"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[258]" " -type \"float2\" 0.427526 0.354887"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[259]" " -type \"float2\" 0.422298 0.353188"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[260]" " -type \"float2\" 0.416216 0.426317"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[261]" " -type \"float2\" 0.410718 0.426317"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[262]" " -type \"float2\" 0.676326 0.337177"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[263]" " -type \"float2\" 0.702455 0.35049"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[264]" " -type \"float2\" 0.723192 0.371225"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[265]" " -type \"float2\" 0.736503 0.397354"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[266]" " -type \"float2\" 0.741091 0.426317"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[267]" " -type \"float2\" 0.736503 0.455281"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[268]" " -type \"float2\" 0.723192 0.481407"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[269]" " -type \"float2\" 0.702455 0.502144"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[270]" " -type \"float2\" 0.676326 0.515456"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[271]" " -type \"float2\" 0.647366 0.520044"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[272]" " -type \"float2\" 0.6184 0.515456"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[273]" " -type \"float2\" 0.592274 0.502144"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[274]" " -type \"float2\" 0.571539 0.481407"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[275]" " -type \"float2\" 0.558223 0.455281"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[276]" " -type \"float2\" 0.553638 0.426317"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[277]" " -type \"float2\" 0.558223 0.397354"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[278]" " -type \"float2\" 0.571539 0.371225"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[279]" " -type \"float2\" 0.592274 0.35049"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[280]" " -type \"float2\" 0.6184 0.337177"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[281]" " -type \"float2\" 0.647366 0.33259"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[282]" " -type \"float2\" 0.234996 0.0446484"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[283]" " -type \"float2\" 0.197352 0.0784122"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[284]" " -type \"float2\" 0.30126 0.0575324"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[285]" " -type \"float2\" 0.317973 0.0671208"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[286]" " -type \"float2\" 0.32192 0.0772934"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[287]" " -type \"float2\" 0.313763 0.0869969"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[288]" " -type \"float2\" 0.295207 0.0953882"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[289]" " -type \"float2\" 0.268566 0.101856"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[290]" " -type \"float2\" 0.236395 0.106002"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[291]" " -type \"float2\" 0.201316 0.107605"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[292]" " -type \"float2\" 0.165943 0.106583"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[293]" " -type \"float2\" 0.132899 0.102988"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[294]" " -type \"float2\" 0.104805 0.0970088"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[295]" " -type \"float2\" 0.0842419 0.0890001"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[296]" " -type \"float2\" 0.0735985 0.0795236"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[297]" " -type \"float2\" 0.0747536 0.0693706"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[298]" " -type \"float2\" 0.0886452 0.0595537"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[299]" " -type \"float2\" 0.114749 0.0512202"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[300]" " -type \"float2\" 0.150746 0.0454793"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[301]" " -type \"float2\" 0.192567 0.0431705"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[302]" " -type \"float2\" 0.261561 0.755287"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[303]" " -type \"float2\" 0.229368 0.759197"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[304]" " -type \"float2\" 0.229319 0.563072"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[305]" " -type \"float2\" 0.261462 0.561415"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[306]" " -type \"float2\" 0.286191 0.749161"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[307]" " -type \"float2\" 0.286058 0.558821"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[308]" " -type \"float2\" 0.300873 0.741625"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[309]" " -type \"float2\" 0.300721 0.555628"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[310]" " -type \"float2\" 0.304705 0.733566"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[311]" " -type \"float2\" 0.304551 0.552213"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[312]" " -type \"float2\" 0.298067 0.725815"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[313]" " -type \"float2\" 0.297927 0.548929"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[314]" " -type \"float2\" 0.282308 0.719064"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[315]" " -type \"float2\" 0.282192 0.546068"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[316]" " -type \"float2\" 0.259341 0.713828"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[317]" " -type \"float2\" 0.259258 0.543849"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[318]" " -type \"float2\" 0.231395 0.710457"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[319]" " -type \"float2\" 0.23135 0.542421"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[320]" " -type \"float2\" 0.200812 0.709152"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[321]" " -type \"float2\" 0.200808 0.541867"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[322]" " -type \"float2\" 0.16996 0.709984"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[323]" " -type \"float2\" 0.169996 0.54222"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[324]" " -type \"float2\" 0.141225 0.712909"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[325]" " -type \"float2\" 0.1413 0.54346"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[326]" " -type \"float2\" 0.116955 0.717755"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[327]" " -type \"float2\" 0.117065 0.545513"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[328]" " -type \"float2\" 0.09941 0.724207"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[329]" " -type \"float2\" 0.0995462 0.548248"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[330]" " -type \"float2\" 0.0906066 0.73179"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[331]" " -type \"float2\" 0.0907586 0.55146"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[332]" " -type \"float2\" 0.0920352 0.739848"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[333]" " -type \"float2\" 0.0921891 0.554875"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[334]" " -type \"float2\" 0.104339 0.747578"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[335]" " -type \"float2\" 0.104478 0.55815"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[336]" " -type \"float2\" 0.126912 0.754091"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[337]" " -type \"float2\" 0.127019 0.560909"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[338]" " -type \"float2\" 0.157698 0.758553"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[339]" " -type \"float2\" 0.157759 0.562799"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[340]" " -type \"float2\" 0.193287 0.760342"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[341]" " -type \"float2\" 0.193293 0.563557"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[342]" " -type \"float2\" 0.205981 0.554869"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[343]" " -type \"float2\" 0.214805 0.554443"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[344]" " -type \"float2\" 0.221822 0.553762"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[345]" " -type \"float2\" 0.226347 0.552899"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[346]" " -type \"float2\" 0.227969 0.551943"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[347]" " -type \"float2\" 0.226591 0.550991"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[348]" " -type \"float2\" 0.222405 0.550132"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[349]" " -type \"float2\" 0.215861 0.549448"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[350]" " -type \"float2\" 0.207597 0.548998"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[351]" " -type \"float2\" 0.198398 0.548822"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[352]" " -type \"float2\" 0.189098 0.548935"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[353]" " -type \"float2\" 0.180558 0.549326"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[354]" " -type \"float2\" 0.173571 0.549963"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[355]" " -type \"float2\" 0.168815 0.550789"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[356]" " -type \"float2\" 0.166787 0.551728"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[357]" " -type \"float2\" 0.16774 0.552691"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[358]" " -type \"float2\" 0.171644 0.553583"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[359]" " -type \"float2\" 0.178157 0.554312"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[360]" " -type \"float2\" 0.18665 0.554799"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[361]" " -type \"float2\" 0.19626 0.554992"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[362]" " -type \"float2\" 0.205971 0.412419"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[363]" " -type \"float2\" 0.214786 0.412438"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[364]" " -type \"float2\" 0.221795 0.412468"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[365]" " -type \"float2\" 0.226315 0.412507"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[366]" " -type \"float2\" 0.227935 0.41255"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[367]" " -type \"float2\" 0.226559 0.412593"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[368]" " -type \"float2\" 0.222378 0.412631"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[369]" " -type \"float2\" 0.215841 0.412662"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[370]" " -type \"float2\" 0.207586 0.412682"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[371]" " -type \"float2\" 0.198397 0.41269"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[372]" " -type \"float2\" 0.189107 0.412685"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[373]" " -type \"float2\" 0.180576 0.412668"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[374]" " -type \"float2\" 0.173597 0.412639"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[375]" " -type \"float2\" 0.168846 0.412602"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[376]" " -type \"float2\" 0.166821 0.41256"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[377]" " -type \"float2\" 0.167773 0.412517"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[378]" " -type \"float2\" 0.171673 0.412476"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[379]" " -type \"float2\" 0.178179 0.412444"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[380]" " -type \"float2\" 0.186662 0.412422"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[381]" " -type \"float2\" 0.196261 0.412413"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[382]" " -type \"float2\" 0.218466 0.412221"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[383]" " -type \"float2\" 0.239859 0.412269"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[384]" " -type \"float2\" 0.256527 0.412346"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[385]" " -type \"float2\" 0.266838 0.41244"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[386]" " -type \"float2\" 0.270005 0.412543"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[387]" " -type \"float2\" 0.26606 0.412644"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[388]" " -type \"float2\" 0.255714 0.412733"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[389]" " -type \"float2\" 0.240171 0.412803"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[390]" " -type \"float2\" 0.22095 0.412849"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[391]" " -type \"float2\" 0.199753 0.412866"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[392]" " -type \"float2\" 0.178354 0.412855"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[393]" " -type \"float2\" 0.158543 0.412816"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[394]" " -type \"float2\" 0.142045 0.412751"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[395]" " -type \"float2\" 0.130426 0.412665"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[396]" " -type \"float2\" 0.124979 0.412566"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[397]" " -type \"float2\" 0.126534 0.412463"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[398]" " -type \"float2\" 0.135296 0.412365"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[399]" " -type \"float2\" 0.150662 0.412284"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[400]" " -type \"float2\" 0.171187 0.412229"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[401]" " -type \"float2\" 0.194673 0.412207"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[402]" " -type \"float2\" 0.21846 0.378983"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[403]" " -type \"float2\" 0.239848 0.379284"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[404]" " -type \"float2\" 0.256512 0.379759"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[405]" " -type \"float2\" 0.26682 0.380352"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[406]" " -type \"float2\" 0.269987 0.380997"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[407]" " -type \"float2\" 0.266043 0.381627"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[408]" " -type \"float2\" 0.2557 0.382184"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[409]" " -type \"float2\" 0.240161 0.382622"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[410]" " -type \"float2\" 0.220944 0.382906"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[411]" " -type \"float2\" 0.199752 0.383017"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[412]" " -type \"float2\" 0.178358 0.382946"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[413]" " -type \"float2\" 0.158552 0.382699"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[414]" " -type \"float2\" 0.142058 0.382293"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[415]" " -type \"float2\" 0.130442 0.381759"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[416]" " -type \"float2\" 0.124997 0.381141"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[417]" " -type \"float2\" 0.126552 0.380494"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[418]" " -type \"float2\" 0.135312 0.379883"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[419]" " -type \"float2\" 0.150674 0.379376"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[420]" " -type \"float2\" 0.171193 0.379032"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[421]" " -type \"float2\" 0.194674 0.378896"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[422]" " -type \"float2\" 0.211923 0.379629"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[423]" " -type \"float2\" 0.226759 0.379834"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[424]" " -type \"float2\" 0.238442 0.380159"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[425]" " -type \"float2\" 0.24583 0.380569"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[426]" " -type \"float2\" 0.248298 0.381019"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[427]" " -type \"float2\" 0.245776 0.381462"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[428]" " -type \"float2\" 0.238667 0.381859"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[429]" " -type \"float2\" 0.227771 0.382172"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[430]" " -type \"float2\" 0.214155 0.382377"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[431]" " -type \"float2\" 0.199063 0.382457"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[432]" " -type \"float2\" 0.18382 0.382406"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[433]" " -type \"float2\" 0.169765 0.382228"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[434]" " -type \"float2\" 0.158164 0.381937"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[435]" " -type \"float2\" 0.150136 0.381556"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[436]" " -type \"float2\" 0.146543 0.381119"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[437]" " -type \"float2\" 0.147891 0.380667"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[438]" " -type \"float2\" 0.154219 0.380245"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[439]" " -type \"float2\" 0.165029 0.379897"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[440]" " -type \"float2\" 0.179286 0.379662"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[441]" " -type \"float2\" 0.195505 0.37957"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[442]" " -type \"float2\" 0.211897 0.156596"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[443]" " -type \"float2\" 0.226708 0.157971"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[444]" " -type \"float2\" 0.23837 0.160159"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[445]" " -type \"float2\" 0.245746 0.162912"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[446]" " -type \"float2\" 0.248211 0.165934"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[447]" " -type \"float2\" 0.245694 0.168917"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[448]" " -type \"float2\" 0.238599 0.17158"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[449]" " -type \"float2\" 0.227721 0.173688"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[450]" " -type \"float2\" 0.214127 0.175065"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[451]" " -type \"float2\" 0.19906 0.175603"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[452]" " -type \"float2\" 0.183842 0.17526"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[453]" " -type \"float2\" 0.16981 0.174062"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[454]" " -type \"float2\" 0.158229 0.172103"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[455]" " -type \"float2\" 0.150215 0.169545"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[456]" " -type \"float2\" 0.146629 0.16661"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[457]" " -type \"float2\" 0.147976 0.163572"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[458]" " -type \"float2\" 0.154294 0.160733"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[459]" " -type \"float2\" 0.165086 0.158395"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[460]" " -type \"float2\" 0.179318 0.156821"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[461]" " -type \"float2\" 0.195508 0.156197"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[462]" " -type \"float2\" 0.225498 0.147548"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[463]" " -type \"float2\" 0.253876 0.150287"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[464]" " -type \"float2\" 0.275726 0.154592"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[465]" " -type \"float2\" 0.288929 0.159915"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[466]" " -type \"float2\" 0.29259 0.165638"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[467]" " -type \"float2\" 0.286953 0.171173"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[468]" " -type \"float2\" 0.273112 0.176021"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[469]" " -type \"float2\" 0.252738 0.179795"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[470]" " -type \"float2\" 0.227805 0.182234"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[471]" " -type \"float2\" 0.200448 0.18318"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[472]" " -type \"float2\" 0.172843 0.182577"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[473]" " -type \"float2\" 0.147185 0.18046"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[474]" " -type \"float2\" 0.12562 0.176963"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[475]" " -type \"float2\" 0.11017 0.172326"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[476]" " -type \"float2\" 0.102591 0.166904"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[477]" " -type \"float2\" 0.104129 0.161174"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[478]" " -type \"float2\" 0.115245 0.155708"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[479]" " -type \"float2\" 0.135314 0.151126"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[480]" " -type \"float2\" 0.162484 0.147999"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[481]" " -type \"float2\" 0.193778 0.146748"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[482]" " -type \"float2\" 0.22549 0.110387"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[483]" " -type \"float2\" 0.25386 0.1135"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[484]" " -type \"float2\" 0.275703 0.118394"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[485]" " -type \"float2\" 0.288904 0.124445"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[486]" " -type \"float2\" 0.292564 0.130952"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[487]" " -type \"float2\" 0.286929 0.137244"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[488]" " -type \"float2\" 0.273092 0.142755"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[489]" " -type \"float2\" 0.252724 0.147046"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[490]" " -type \"float2\" 0.227797 0.149819"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[491]" " -type \"float2\" 0.200447 0.150894"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[492]" " -type \"float2\" 0.172849 0.150208"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[493]" " -type \"float2\" 0.147198 0.147802"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[494]" " -type \"float2\" 0.125639 0.143827"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[495]" " -type \"float2\" 0.110193 0.138554"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[496]" " -type \"float2\" 0.102617 0.13239"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[497]" " -type \"float2\" 0.104155 0.125876"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[498]" " -type \"float2\" 0.115269 0.119663"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[499]" " -type \"float2\" 0.135332 0.114454"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[500]" " -type \"float2\" 0.162495 0.110899"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[501]" " -type \"float2\" 0.193779 0.109477"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[502]" " -type \"float2\" 0.235013 0.103183"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[503]" " -type \"float2\" 0.272727 0.107432"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[504]" " -type \"float2\" 0.301306 0.114055"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[505]" " -type \"float2\" 0.318026 0.122145"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[506]" " -type \"float2\" 0.321973 0.130729"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[507]" " -type \"float2\" 0.313811 0.138916"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[508]" " -type \"float2\" 0.295246 0.145996"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[509]" " -type \"float2\" 0.268595 0.151453"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[510]" " -type \"float2\" 0.23641 0.154952"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[511]" " -type \"float2\" 0.201318 0.156304"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[512]" " -type \"float2\" 0.165931 0.155442"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[513]" " -type \"float2\" 0.132874 0.152409"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[514]" " -type \"float2\" 0.104768 0.147364"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[515]" " -type \"float2\" 0.0841955 0.140607"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[516]" " -type \"float2\" 0.0735464 0.132611"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[517]" " -type \"float2\" 0.0747003 0.124044"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[518]" " -type \"float2\" 0.0885967 0.11576"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[519]" " -type \"float2\" 0.114711 0.108728"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[520]" " -type \"float2\" 0.150724 0.103884"
-		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
-		"uvSet[0].uvSetPoints[521]" " -type \"float2\" 0.192565 0.101936"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvPivot" " -type \"double2\" 0.195494 0.407897"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints" " -s 522"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[0]" " -type \"float2\" 0.522407 0.685238"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[1]" " -type \"float2\" 0.442911 0.644734"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[2]" " -type \"float2\" 0.438526 0.65077"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[3]" " -type \"float2\" 0.520102 0.692333"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[4]" " -type \"float2\" 0.379826 0.581647"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[5]" " -type \"float2\" 0.37379 0.586032"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[6]" " -type \"float2\" 0.339321 0.502155"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[7]" " -type \"float2\" 0.332226 0.50446"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[8]" " -type \"float2\" 0.325368 0.414036"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[9]" " -type \"float2\" 0.317907 0.414036"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[10]" " -type \"float2\" 0.339321 0.325916"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[11]" " -type \"float2\" 0.332226 0.323611"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[12]" " -type \"float2\" 0.379826 0.246424"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[13]" " -type \"float2\" 0.37379 0.242039"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[14]" " -type \"float2\" 0.442912 0.183337"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[15]" " -type \"float2\" 0.438527 0.177301"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[16]" " -type \"float2\" 0.522407 0.142833"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[17]" " -type \"float2\" 0.520102 0.135738"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[18]" " -type \"float2\" 0.610524 0.128876"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[19]" " -type \"float2\" 0.610524 0.121416"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[20]" " -type \"float2\" 0.698643 0.142833"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[21]" " -type \"float2\" 0.700948 0.135738"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[22]" " -type \"float2\" 0.778138 0.183337"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[23]" " -type \"float2\" 0.782523 0.177301"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[24]" " -type \"float2\" 0.841225 0.246424"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[25]" " -type \"float2\" 0.847261 0.242039"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[26]" " -type \"float2\" 0.881727 0.325916"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[27]" " -type \"float2\" 0.888822 0.323611"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[28]" " -type \"float2\" 0.895682 0.414036"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[29]" " -type \"float2\" 0.903143 0.414036"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[30]" " -type \"float2\" 0.881727 0.502155"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[31]" " -type \"float2\" 0.888822 0.50446"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[32]" " -type \"float2\" 0.841225 0.581647"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[33]" " -type \"float2\" 0.847261 0.586032"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[34]" " -type \"float2\" 0.778138 0.644733"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[35]" " -type \"float2\" 0.782523 0.650768"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[36]" " -type \"float2\" 0.698643 0.685238"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[37]" " -type \"float2\" 0.700948 0.692333"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[38]" " -type \"float2\" 0.610524 0.699195"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[39]" " -type \"float2\" 0.610524 0.706655"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[40]" " -type \"float2\" 0.508669 0.727512"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[41]" " -type \"float2\" 0.416786 0.680696"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[42]" " -type \"float2\" 0.610524 0.414037"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[43]" " -type \"float2\" 0.343865 0.607775"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[44]" " -type \"float2\" 0.297049 0.515891"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[45]" " -type \"float2\" 0.280915 0.414037"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[46]" " -type \"float2\" 0.297049 0.312182"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[47]" " -type \"float2\" 0.343865 0.220296"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[48]" " -type \"float2\" 0.416786 0.147377"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[49]" " -type \"float2\" 0.508669 0.100559"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[50]" " -type \"float2\" 0.610524 0.0844275"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[51]" " -type \"float2\" 0.712383 0.100559"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[52]" " -type \"float2\" 0.804263 0.147377"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[53]" " -type \"float2\" 0.877183 0.220296"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[54]" " -type \"float2\" 0.924 0.312182"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[55]" " -type \"float2\" 0.940133 0.414037"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[56]" " -type \"float2\" 0.924 0.515891"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[57]" " -type \"float2\" 0.877183 0.607775"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[58]" " -type \"float2\" 0.804263 0.680695"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[59]" " -type \"float2\" 0.712383 0.727512"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[60]" " -type \"float2\" 0.610524 0.743645"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[61]" " -type \"float2\" 0.517448 0.700502"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[62]" " -type \"float2\" 0.433477 0.657719"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[63]" " -type \"float2\" 0.457629 0.624478"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[64]" " -type \"float2\" 0.530142 0.661424"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[65]" " -type \"float2\" 0.366842 0.591081"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[66]" " -type \"float2\" 0.400082 0.566931"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[67]" " -type \"float2\" 0.324057 0.507115"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[68]" " -type \"float2\" 0.363135 0.494416"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[69]" " -type \"float2\" 0.309318 0.414036"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[70]" " -type \"float2\" 0.350407 0.414036"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[71]" " -type \"float2\" 0.324057 0.320956"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[72]" " -type \"float2\" 0.363135 0.333655"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[73]" " -type \"float2\" 0.366842 0.23699"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[74]" " -type \"float2\" 0.400082 0.26114"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[75]" " -type \"float2\" 0.433479 0.170352"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[76]" " -type \"float2\" 0.457629 0.203595"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[77]" " -type \"float2\" 0.517448 0.127569"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[78]" " -type \"float2\" 0.530142 0.166646"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[79]" " -type \"float2\" 0.610524 0.112827"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[80]" " -type \"float2\" 0.610524 0.153914"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[81]" " -type \"float2\" 0.703602 0.127569"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[82]" " -type \"float2\" 0.130198 0.155713"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[83]" " -type \"float2\" 0.690906 0.166646"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[84]" " -type \"float2\" 0.787572 0.170352"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[85]" " -type \"float2\" 0.76342 0.203595"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[86]" " -type \"float2\" 0.854209 0.23699"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[87]" " -type \"float2\" 0.820968 0.26114"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[88]" " -type \"float2\" 0.896991 0.320956"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[89]" " -type \"float2\" 0.857916 0.333655"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[90]" " -type \"float2\" 0.911732 0.414036"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[91]" " -type \"float2\" 0.870647 0.414036"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[92]" " -type \"float2\" 0.896991 0.507115"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[93]" " -type \"float2\" 0.857916 0.494418"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[94]" " -type \"float2\" 0.854209 0.591081"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[95]" " -type \"float2\" 0.820968 0.566931"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[96]" " -type \"float2\" 0.787572 0.657717"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[97]" " -type \"float2\" 0.76342 0.624478"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[98]" " -type \"float2\" 0.703602 0.700502"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[99]" " -type \"float2\" 0.690906 0.661424"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[100]" " -type \"float2\" 0.610524 0.715244"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[101]" " -type \"float2\" 0.610524 0.674155"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[102]" " -type \"float2\" 0.531675 0.656708"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[103]" " -type \"float2\" 0.460544 0.620466"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[104]" " -type \"float2\" 0.459989 0.62123"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[105]" " -type \"float2\" 0.531383 0.657607"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[106]" " -type \"float2\" 0.404094 0.564014"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[107]" " -type \"float2\" 0.40333 0.56457"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[108]" " -type \"float2\" 0.367852 0.492885"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[109]" " -type \"float2\" 0.366953 0.493177"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[110]" " -type \"float2\" 0.355365 0.414036"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[111]" " -type \"float2\" 0.354421 0.414036"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[112]" " -type \"float2\" 0.367852 0.335186"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[113]" " -type \"float2\" 0.366953 0.334894"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[114]" " -type \"float2\" 0.404094 0.264057"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[115]" " -type \"float2\" 0.40333 0.263501"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[116]" " -type \"float2\" 0.460544 0.207607"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[117]" " -type \"float2\" 0.459989 0.206843"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[118]" " -type \"float2\" 0.531675 0.171363"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[119]" " -type \"float2\" 0.531383 0.170464"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[120]" " -type \"float2\" 0.610524 0.158875"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[121]" " -type \"float2\" 0.610524 0.15793"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[122]" " -type \"float2\" 0.689375 0.171363"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[123]" " -type \"float2\" 0.689667 0.170464"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[124]" " -type \"float2\" 0.760505 0.207607"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[125]" " -type \"float2\" 0.76106 0.206843"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[126]" " -type \"float2\" 0.816954 0.264057"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[127]" " -type \"float2\" 0.817719 0.263501"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[128]" " -type \"float2\" 0.853199 0.335186"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[129]" " -type \"float2\" 0.854098 0.334894"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[130]" " -type \"float2\" 0.865685 0.414036"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[131]" " -type \"float2\" 0.86663 0.414036"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[132]" " -type \"float2\" 0.853199 0.492885"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[133]" " -type \"float2\" 0.854098 0.493177"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[134]" " -type \"float2\" 0.816954 0.564014"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[135]" " -type \"float2\" 0.817719 0.56457"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[136]" " -type \"float2\" 0.760505 0.620466"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[137]" " -type \"float2\" 0.76106 0.62123"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[138]" " -type \"float2\" 0.689375 0.656707"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[139]" " -type \"float2\" 0.689667 0.657605"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[140]" " -type \"float2\" 0.610524 0.669196"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[141]" " -type \"float2\" 0.610524 0.670141"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[142]" " -type \"float2\" 0.527354 0.670006"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[143]" " -type \"float2\" 0.452326 0.631777"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[144]" " -type \"float2\" 0.447012 0.639091"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[145]" " -type \"float2\" 0.524563 0.678605"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[146]" " -type \"float2\" 0.392783 0.572233"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[147]" " -type \"float2\" 0.385468 0.577548"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[148]" " -type \"float2\" 0.354554 0.497205"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[149]" " -type \"float2\" 0.345958 0.499999"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[150]" " -type \"float2\" 0.341384 0.414036"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[151]" " -type \"float2\" 0.332344 0.414036"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[152]" " -type \"float2\" 0.354554 0.330866"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[153]" " -type \"float2\" 0.345958 0.328072"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[154]" " -type \"float2\" 0.392783 0.255838"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[155]" " -type \"float2\" 0.385468 0.250523"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[156]" " -type \"float2\" 0.452326 0.196296"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[157]" " -type \"float2\" 0.447012 0.18898"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[158]" " -type \"float2\" 0.527354 0.158065"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[159]" " -type \"float2\" 0.524563 0.149466"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[160]" " -type \"float2\" 0.610524 0.144893"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[161]" " -type \"float2\" 0.610524 0.135851"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[162]" " -type \"float2\" 0.693696 0.158065"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[163]" " -type \"float2\" 0.696491 0.149466"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[164]" " -type \"float2\" 0.768723 0.196296"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[165]" " -type \"float2\" 0.774039 0.18898"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[166]" " -type \"float2\" 0.828266 0.255838"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[167]" " -type \"float2\" 0.835583 0.250523"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[168]" " -type \"float2\" 0.866497 0.330866"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[169]" " -type \"float2\" 0.875093 0.328072"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[170]" " -type \"float2\" 0.879667 0.414036"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[171]" " -type \"float2\" 0.888708 0.414036"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[172]" " -type \"float2\" 0.866497 0.497205"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[173]" " -type \"float2\" 0.875093 0.499999"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[174]" " -type \"float2\" 0.828266 0.572233"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[175]" " -type \"float2\" 0.835582 0.577548"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[176]" " -type \"float2\" 0.768723 0.631777"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[177]" " -type \"float2\" 0.774039 0.639091"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[178]" " -type \"float2\" 0.693696 0.670004"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[179]" " -type \"float2\" 0.696491 0.678603"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[180]" " -type \"float2\" 0.610524 0.683178"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[181]" " -type \"float2\" 0.610524 0.69222"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[182]" " -type \"float2\" 0.513594 0.712354"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[183]" " -type \"float2\" 0.426155 0.667801"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[184]" " -type \"float2\" 0.421782 0.67382"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[185]" " -type \"float2\" 0.511295 0.719429"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[186]" " -type \"float2\" 0.35676 0.598406"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[187]" " -type \"float2\" 0.350741 0.602779"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[188]" " -type \"float2\" 0.312208 0.510966"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[189]" " -type \"float2\" 0.305132 0.513265"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[190]" " -type \"float2\" 0.296854 0.414036"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[191]" " -type \"float2\" 0.289414 0.414036"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[192]" " -type \"float2\" 0.312208 0.317107"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[193]" " -type \"float2\" 0.305132 0.314808"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[194]" " -type \"float2\" 0.35676 0.229665"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[195]" " -type \"float2\" 0.350741 0.225292"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[196]" " -type \"float2\" 0.426155 0.160271"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[197]" " -type \"float2\" 0.421782 0.154252"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[198]" " -type \"float2\" 0.513594 0.115717"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[199]" " -type \"float2\" 0.511295 0.108642"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[200]" " -type \"float2\" 0.610524 0.100366"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[201]" " -type \"float2\" 0.610524 0.0929265"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[202]" " -type \"float2\" 0.707457 0.115717"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[203]" " -type \"float2\" 0.709756 0.108642"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[204]" " -type \"float2\" 0.794895 0.160271"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[205]" " -type \"float2\" 0.799268 0.154252"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[206]" " -type \"float2\" 0.864288 0.229665"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[207]" " -type \"float2\" 0.870308 0.225292"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[208]" " -type \"float2\" 0.908842 0.317107"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[209]" " -type \"float2\" 0.915917 0.314808"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[210]" " -type \"float2\" 0.924194 0.414036"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[211]" " -type \"float2\" 0.931634 0.414036"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[212]" " -type \"float2\" 0.908842 0.510966"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[213]" " -type \"float2\" 0.915917 0.513265"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[214]" " -type \"float2\" 0.864288 0.598406"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[215]" " -type \"float2\" 0.870308 0.602779"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[216]" " -type \"float2\" 0.794895 0.6678"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[217]" " -type \"float2\" 0.799268 0.67382"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[218]" " -type \"float2\" 0.707457 0.712354"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[219]" " -type \"float2\" 0.709756 0.719429"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[220]" " -type \"float2\" 0.610524 0.727706"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[221]" " -type \"float2\" 0.610524 0.735146"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[222]" " -type \"float2\" 0.822161 0.260274"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[223]" " -type \"float2\" 0.859321 0.333197"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[224]" " -type \"float2\" 0.865238 0.331275"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[225]" " -type \"float2\" 0.827195 0.256617"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[226]" " -type \"float2\" 0.764288 0.2024"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[227]" " -type \"float2\" 0.767945 0.197367"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[228]" " -type \"float2\" 0.691364 0.165242"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[229]" " -type \"float2\" 0.693287 0.159325"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[230]" " -type \"float2\" 0.610524 0.152438"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[231]" " -type \"float2\" 0.610524 0.146217"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[232]" " -type \"float2\" 0.529686 0.165242"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[233]" " -type \"float2\" 0.527763 0.159325"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[234]" " -type \"float2\" 0.456761 0.2024"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[235]" " -type \"float2\" 0.453104 0.197367"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[236]" " -type \"float2\" 0.398887 0.260274"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[237]" " -type \"float2\" 0.393854 0.256617"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[238]" " -type \"float2\" 0.361731 0.333197"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[239]" " -type \"float2\" 0.355813 0.331275"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[240]" " -type \"float2\" 0.348929 0.414036"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[241]" " -type \"float2\" 0.342708 0.414036"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[242]" " -type \"float2\" 0.361731 0.494874"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[243]" " -type \"float2\" 0.355813 0.496796"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[244]" " -type \"float2\" 0.398887 0.567797"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[245]" " -type \"float2\" 0.393854 0.571454"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[246]" " -type \"float2\" 0.456761 0.625673"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[247]" " -type \"float2\" 0.453104 0.630706"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[248]" " -type \"float2\" 0.529686 0.662829"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[249]" " -type \"float2\" 0.527763 0.668746"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[250]" " -type \"float2\" 0.610524 0.675633"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[251]" " -type \"float2\" 0.610524 0.681854"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[252]" " -type \"float2\" 0.691364 0.662828"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[253]" " -type \"float2\" 0.693287 0.668745"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[254]" " -type \"float2\" 0.764288 0.625673"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[255]" " -type \"float2\" 0.767945 0.630706"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[256]" " -type \"float2\" 0.822161 0.567797"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[257]" " -type \"float2\" 0.827195 0.571454"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[258]" " -type \"float2\" 0.859321 0.494874"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[259]" " -type \"float2\" 0.865238 0.496796"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[260]" " -type \"float2\" 0.872121 0.414036"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[261]" " -type \"float2\" 0.878343 0.414036"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[262]" " -type \"float2\" 0.577749 0.514917"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[263]" " -type \"float2\" 0.548178 0.49985"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[264]" " -type \"float2\" 0.524709 0.476383"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[265]" " -type \"float2\" 0.509646 0.446812"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[266]" " -type \"float2\" 0.504452 0.414036"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[267]" " -type \"float2\" 0.509646 0.381257"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[268]" " -type \"float2\" 0.524709 0.351688"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[269]" " -type \"float2\" 0.548178 0.328221"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[270]" " -type \"float2\" 0.577749 0.313154"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[271]" " -type \"float2\" 0.610524 0.307963"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[272]" " -type \"float2\" 0.643305 0.313154"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[273]" " -type \"float2\" 0.672872 0.328221"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[274]" " -type \"float2\" 0.696339 0.351688"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[275]" " -type \"float2\" 0.711408 0.381257"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[276]" " -type \"float2\" 0.716597 0.414036"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[277]" " -type \"float2\" 0.711408 0.446812"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[278]" " -type \"float2\" 0.696339 0.476383"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[279]" " -type \"float2\" 0.672872 0.49985"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[280]" " -type \"float2\" 0.643305 0.514917"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[281]" " -type \"float2\" 0.610524 0.520109"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[282]" " -type \"float2\" 0.159473 0.16152"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[283]" " -type \"float2\" 0.195898 0.123733"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[284]" " -type \"float2\" 0.106161 0.146735"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[285]" " -type \"float2\" 0.0896854 0.135174"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[286]" " -type \"float2\" 0.082816 0.121905"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[287]" " -type \"float2\" 0.0869772 0.108106"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[288]" " -type \"float2\" 0.102612 0.0952074"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[289]" " -type \"float2\" 0.128757 0.0847444"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[290]" " -type \"float2\" 0.162881 0.0781079"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[291]" " -type \"float2\" 0.201057 0.0762467"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[292]" " -type \"float2\" 0.238596 0.0794394"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[293]" " -type \"float2\" 0.270926 0.0872123"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[294]" " -type \"float2\" 0.294449 0.0984718"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[295]" " -type \"float2\" 0.307054 0.11176"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[296]" " -type \"float2\" 0.308182 0.125549"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[297]" " -type \"float2\" 0.29858 0.138465"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[298]" " -type \"float2\" 0.279873 0.149411"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[299]" " -type \"float2\" 0.254204 0.157589"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[300]" " -type \"float2\" 0.223944 0.162485"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[301]" " -type \"float2\" 0.191543 0.163819"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[302]" " -type \"float2\" 0.134692 0.726191"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[303]" " -type \"float2\" 0.161937 0.725204"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[304]" " -type \"float2\" 0.16263 0.560184"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[305]" " -type \"float2\" 0.135955 0.559317"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[306]" " -type \"float2\" 0.112401 0.727715"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[307]" " -type \"float2\" 0.114154 0.55798"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[308]" " -type \"float2\" 0.0972375 0.729672"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[309]" " -type \"float2\" 0.099353 0.556265"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[310]" " -type \"float2\" 0.0910491 0.73191"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[311]" " -type \"float2\" 0.0933511 0.554306"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[312]" " -type \"float2\" 0.0951076 0.734228"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[313]" " -type \"float2\" 0.0973739 0.552278"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[314]" " -type \"float2\" 0.109727 0.736387"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[315]" " -type \"float2\" 0.111707 0.550392"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[316]" " -type \"float2\" 0.13397 0.738133"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[317]" " -type \"float2\" 0.135418 0.548868"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[318]" " -type \"float2\" 0.165473 0.739237"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[319]" " -type \"float2\" 0.166191 0.547904"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[320]" " -type \"float2\" 0.200649 0.739546"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[321]" " -type \"float2\" 0.200536 0.547635"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[322]" " -type \"float2\" 0.235251 0.739016"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[323]" " -type \"float2\" 0.234323 0.548097"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[324]" " -type \"float2\" 0.265121 0.737721"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[325]" " -type \"float2\" 0.263509 0.549227"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[326]" " -type \"float2\" 0.28697 0.735841"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[327]" " -type \"float2\" 0.284888 0.550868"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[328]" " -type \"float2\" 0.298813 0.733615"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[329]" " -type \"float2\" 0.296513 0.552814"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[330]" " -type \"float2\" 0.300058 0.731296"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[331]" " -type \"float2\" 0.297786 0.554843"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[332]" " -type \"float2\" 0.291326 0.729116"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[333]" " -type \"float2\" 0.289292 0.556753"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[334]" " -type \"float2\" 0.274059 0.727262"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[335]" " -type \"float2\" 0.272427 0.558378"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[336]" " -type \"float2\" 0.250229 0.725872"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[337]" " -type \"float2\" 0.249112 0.559597"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[338]" " -type \"float2\" 0.222051 0.725039"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[339]" " -type \"float2\" 0.221518 0.560328"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[340]" " -type \"float2\" 0.191835 0.724812"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[341]" " -type \"float2\" 0.191917 0.560528"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[342]" " -type \"float2\" 0.185899 0.556261"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[343]" " -type \"float2\" 0.178019 0.55599"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[344]" " -type \"float2\" 0.171804 0.555579"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[345]" " -type \"float2\" 0.167863 0.555066"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[346]" " -type \"float2\" 0.166618 0.554498"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[347]" " -type \"float2\" 0.168244 0.553931"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[348]" " -type \"float2\" 0.172635 0.553419"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[349]" " -type \"float2\" 0.179393 0.553018"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[350]" " -type \"float2\" 0.187856 0.552769"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[351]" " -type \"float2\" 0.19715 0.5527"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[352]" " -type \"float2\" 0.206318 0.552819"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[353]" " -type \"float2\" 0.214402 0.553111"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[354]" " -type \"float2\" 0.220583 0.553547"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[355]" " -type \"float2\" 0.224264 0.554079"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[356]" " -type \"float2\" 0.225122 0.554652"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[357]" " -type \"float2\" 0.22313 0.55521"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[358]" " -type \"float2\" 0.218533 0.5557"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[359]" " -type \"float2\" 0.211809 0.556077"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[360]" " -type \"float2\" 0.203609 0.556307"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[361]" " -type \"float2\" 0.194697 0.55637"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[362]" " -type \"float2\" 0.186062 0.427365"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[363]" " -type \"float2\" 0.178311 0.426678"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[364]" " -type \"float2\" 0.1722 0.425638"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[365]" " -type \"float2\" 0.168326 0.42434"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[366]" " -type \"float2\" 0.167105 0.422904"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[367]" " -type \"float2\" 0.168707 0.421468"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[368]" " -type \"float2\" 0.173027 0.420175"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[369]" " -type \"float2\" 0.179673 0.41916"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[370]" " -type \"float2\" 0.187992 0.418531"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[371]" " -type \"float2\" 0.197129 0.418357"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[372]" " -type \"float2\" 0.206142 0.418656"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[373]" " -type \"float2\" 0.214089 0.419397"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[374]" " -type \"float2\" 0.220168 0.420498"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[375]" " -type \"float2\" 0.22379 0.421843"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[376]" " -type \"float2\" 0.224637 0.423293"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[377]" " -type \"float2\" 0.222681 0.424705"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[378]" " -type \"float2\" 0.218162 0.425945"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[379]" " -type \"float2\" 0.211549 0.426898"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[380]" " -type \"float2\" 0.203483 0.42748"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[381]" " -type \"float2\" 0.194717 0.427641"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[382]" " -type \"float2\" 0.173173 0.432954"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[383]" " -type \"float2\" 0.155098 0.431402"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[384]" " -type \"float2\" 0.14056 0.429029"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[385]" " -type \"float2\" 0.130987 0.426022"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[386]" " -type \"float2\" 0.127489 0.422636"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[387]" " -type \"float2\" 0.130696 0.419188"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[388]" " -type \"float2\" 0.140595 0.416029"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[389]" " -type \"float2\" 0.156404 0.413511"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[390]" " -type \"float2\" 0.176573 0.411934"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[391]" " -type \"float2\" 0.198913 0.411494"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[392]" " -type \"float2\" 0.220915 0.412249"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[393]" " -type \"float2\" 0.240113 0.414101"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[394]" " -type \"float2\" 0.254465 0.416822"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[395]" " -type \"float2\" 0.262623 0.420094"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[396]" " -type \"float2\" 0.264013 0.423559"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[397]" " -type \"float2\" 0.258812 0.426872"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[398]" " -type \"float2\" 0.247789 0.429733"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[399]" " -type \"float2\" 0.232161 0.431902"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[400]" " -type \"float2\" 0.213408 0.433214"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[401]" " -type \"float2\" 0.193176 0.433573"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[402]" " -type \"float2\" 0.173255 0.405093"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[403]" " -type \"float2\" 0.155245 0.403336"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[404]" " -type \"float2\" 0.140762 0.400651"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[405]" " -type \"float2\" 0.131227 0.397248"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[406]" " -type \"float2\" 0.127746 0.393418"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[407]" " -type \"float2\" 0.130945 0.389517"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[408]" " -type \"float2\" 0.140809 0.385944"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[409]" " -type \"float2\" 0.156559 0.383096"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[410]" " -type \"float2\" 0.176649 0.381312"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[411]" " -type \"float2\" 0.198901 0.380816"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[412]" " -type \"float2\" 0.220817 0.381669"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[413]" " -type \"float2\" 0.23994 0.383763"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[414]" " -type \"float2\" 0.254239 0.386841"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[415]" " -type \"float2\" 0.26237 0.390542"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[416]" " -type \"float2\" 0.263758 0.394462"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[417]" " -type \"float2\" 0.258581 0.398211"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[418]" " -type \"float2\" 0.247601 0.401447"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[419]" " -type \"float2\" 0.23203 0.403902"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[420]" " -type \"float2\" 0.213345 0.405386"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[421]" " -type \"float2\" 0.193186 0.405793"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[422]" " -type \"float2\" 0.179788 0.401876"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[423]" " -type \"float2\" 0.167036 0.400611"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[424]" " -type \"float2\" 0.156884 0.398689"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[425]" " -type \"float2\" 0.150327 0.396271"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[426]" " -type \"float2\" 0.148099 0.393574"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[427]" " -type \"float2\" 0.150558 0.390853"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[428]" " -type \"float2\" 0.15761 0.388382"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[429]" " -type \"float2\" 0.168651 0.386429"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[430]" " -type \"float2\" 0.182594 0.385213"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[431]" " -type \"float2\" 0.197972 0.384875"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[432]" " -type \"float2\" 0.213128 0.385455"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[433]" " -type \"float2\" 0.226427 0.386886"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[434]" " -type \"float2\" 0.236491 0.389001"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[435]" " -type \"float2\" 0.242355 0.391565"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[436]" " -type \"float2\" 0.243554 0.394307"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[437]" " -type \"float2\" 0.240119 0.396953"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[438]" " -type \"float2\" 0.23252 0.399257"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[439]" " -type \"float2\" 0.221568 0.401017"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[440]" " -type \"float2\" 0.208316 0.402087"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[441]" " -type \"float2\" 0.193967 0.402381"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[442]" " -type \"float2\" 0.180178 0.214225"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[443]" " -type \"float2\" 0.167737 0.21201"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[444]" " -type \"float2\" 0.15784 0.208648"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[445]" " -type \"float2\" 0.151454 0.204419"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[446]" " -type \"float2\" 0.149295 0.199704"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[447]" " -type \"float2\" 0.151704 0.194948"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[448]" " -type \"float2\" 0.158588 0.190635"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[449]" " -type \"float2\" 0.169352 0.187225"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[450]" " -type \"float2\" 0.182938 0.185102"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[451]" " -type \"float2\" 0.197919 0.184513"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[452]" " -type \"float2\" 0.212683 0.185526"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[453]" " -type \"float2\" 0.225643 0.188022"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[454]" " -type \"float2\" 0.235457 0.191715"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[455]" " -type \"float2\" 0.241184 0.196193"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[456]" " -type \"float2\" 0.242365 0.200985"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[457]" " -type \"float2\" 0.239028 0.205612"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[458]" " -type \"float2\" 0.231625 0.209642"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[459]" " -type \"float2\" 0.220945 0.212722"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[460]" " -type \"float2\" 0.208016 0.214596"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[461]" " -type \"float2\" 0.194013 0.215109"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[462]" " -type \"float2\" 0.167284 0.225608"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[463]" " -type \"float2\" 0.144421 0.22167"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[464]" " -type \"float2\" 0.12587 0.215622"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[465]" " -type \"float2\" 0.113439 0.207904"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[466]" " -type \"float2\" 0.10862 0.199144"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[467]" " -type \"float2\" 0.112342 0.190142"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[468]" " -type \"float2\" 0.124739 0.181826"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[469]" " -type \"float2\" 0.144915 0.175149"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[470]" " -type \"float2\" 0.170899 0.170944"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[471]" " -type \"float2\" 0.199801 0.169769"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[472]" " -type \"float2\" 0.228246 0.171786"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[473]" " -type \"float2\" 0.252931 0.176718"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[474]" " -type \"float2\" 0.271181 0.183921"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[475]" " -type \"float2\" 0.281306 0.192515"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[476]" " -type \"float2\" 0.2827 0.20154"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[477]" " -type \"float2\" 0.275733 0.210094"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[478]" " -type \"float2\" 0.261508 0.21742"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[479]" " -type \"float2\" 0.24162 0.22294"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[480]" " -type \"float2\" 0.217939 0.226265"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[481]" " -type \"float2\" 0.192473 0.227173"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[482]" " -type \"float2\" 0.167393 0.196913"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[483]" " -type \"float2\" 0.144618 0.192717"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[484]" " -type \"float2\" 0.126141 0.186274"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[485]" " -type \"float2\" 0.113764 0.178053"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[486]" " -type \"float2\" 0.108971 0.168722"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[487]" " -type \"float2\" 0.112685 0.159136"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[488]" " -type \"float2\" 0.125037 0.150282"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[489]" " -type \"float2\" 0.145131 0.143173"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[490]" " -type \"float2\" 0.171006 0.138697"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[491]" " -type \"float2\" 0.199784 0.137447"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[492]" " -type \"float2\" 0.228108 0.139593"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[493]" " -type \"float2\" 0.25269 0.144844"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[494]" " -type \"float2\" 0.270868 0.152512"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[495]" " -type \"float2\" 0.280957 0.161663"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[496]" " -type \"float2\" 0.282352 0.171274"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[497]" " -type \"float2\" 0.27542 0.180385"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[498]" " -type \"float2\" 0.261255 0.188189"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[499]" " -type \"float2\" 0.241446 0.194071"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[500]" " -type \"float2\" 0.217856 0.197612"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[501]" " -type \"float2\" 0.192486 0.19858"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[502]" " -type \"float2\" 0.159264 0.204587"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[503]" " -type \"float2\" 0.129817 0.199274"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[504]" " -type \"float2\" 0.105631 0.191058"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[505]" " -type \"float2\" 0.0890432 0.180476"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[506]" " -type \"float2\" 0.0821142 0.168327"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[507]" " -type \"float2\" 0.086283 0.155688"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[508]" " -type \"float2\" 0.102003 0.143872"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[509]" " -type \"float2\" 0.12831 0.134283"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[510]" " -type \"float2\" 0.162659 0.1282"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[511]" " -type \"float2\" 0.201091 0.126494"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[512]" " -type \"float2\" 0.238883 0.12942"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[513]" " -type \"float2\" 0.271423 0.136545"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[514]" " -type \"float2\" 0.295089 0.146863"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[515]" " -type \"float2\" 0.307757 0.159036"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[516]" " -type \"float2\" 0.308874 0.171664"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[517]" " -type \"float2\" 0.299196 0.183489"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[518]" " -type \"float2\" 0.280366 0.193507"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[519]" " -type \"float2\" 0.254541 0.20099"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[520]" " -type \"float2\" 0.224104 0.205469"
-		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
-		"uvSet[0].uvSetPoints[521]" " -type \"float2\" 0.191518 0.20669"
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:kitchen_cabinet_lower_unitShape" 
-		"instObjGroups.objectGroups" " -s 3"
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:kitchen_cabinet_lower_unitShape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 12 \"f[1]\" \"f[6]\" \"f[9]\" \"f[26:28]\" \"f[36:39]\" \"f[41]\" \"f[48]\" \"f[63]\" \"f[69:74]\" \"f[83:91]\" \"f[101:104]\" \"f[106:109]\""
+		"uvPivot" " -type \"double2\" 0.5 0.5"
+		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
+		"uvSet[0].uvSetPoints" " -s 545"
+		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
+		"uvst[0].uvsp[0:249]" (" -type \"float2\" 0.835779 0.65437 0.875425 0.637485 0.907912 0.609174 0.930061 0.572211 0.939704 0.530211 0.935896 0.487288 0.919011 0.447642 0.890701 0.415155 0.853737 0.393005 0.811738 0.383363 0.768814 0.38717 0.729168 0.404056 0.696681 0.432366 0.674532 0.46933 0.664889 0.511329 0.668697 0.554253 0.685582 0.593898 0.713892 0.626386 0.750856 0.648535 0.792856 0.658178 0.672442 0.401403 0.671687 0.412396 0.670931 0.423388 0.670176 0.434381 0.669421 0.445374 0.668665 0.456366 0.66791 0.467359 0.667155 0.478351 0.6664 0.489344 0.665644 0.500337 0.664889 0.511329 0.664134 0.522322 0.663378 0.533314 0.662623 0.544307 0.661868 0.555299 0.661113 0.566292 0.660357 0.577285 0.659602 0.588277 0.658847 0.59927 0.658091 0.610262 0.657336 0.621255 0.341837 0.378688 0.341082 0.38968 0.340327 0.400673 0.339571 0.411666 0.338816 0.422658 0.338061 0.433651 0.337306 0.444643 0.33655 0.455636 0.335795 0.466629 0.33504 0.477621 0.334284 0.488614 0.333529 0.499606 0.332774 0.510599 0.332019 0.521592 0.331263 0.532584 0.330508 0"
+		+ ".543577 0.329753 0.554569 0.328997 0.565562 0.328242 0.576555 0.327487 0.587547 0.326732 0.59854 0.231186 0.61283 0.270832 0.595944 0.303319 0.567634 0.325468 0.53067 0.335111 0.488671 0.331303 0.445747 0.314418 0.406102 0.286108 0.373614 0.249144 0.351465 0.207145 0.341822 0.164221 0.34563 0.124575 0.362515 0.0920877 0.390826 0.0699385 0.427789 0.0602959 0.469789 0.0641036 0.512712 0.0809891 0.552358 0.109299 0.584845 0.146263 0.606995 0.188262 0.616637 0.807793 0.521148 0.2032 0.479607 0.146263 0.606995 0.109299 0.584845 0.0809891 0.552358 0.0641036 0.512712 0.0602959 0.469789 0.0699385 0.427789 0.0920877 0.390826 0.124575 0.362515 0.164221 0.34563 0.207145 0.341822 0.249144 0.351465 0.286108 0.373614 0.314418 0.406102 0.331303 0.445747 0.335111 0.488671 0.325468 0.53067 0.303319 0.567634 0.270832 0.595944 0.231186 0.61283 0.188262 0.616637 0.146263 0.606995 0.109299 0.584845 0.0809891 0.552358 0.0641036 0.512712 0.0602959 0.469789 0.0699385 0.427789 0.0920877 0.390826 0.124575 0.362515 0.164221 0.34563 0.2"
+		+ "07145 0.341822 0.249144 0.351465 0.286108 0.373614 0.314418 0.406102 0.331303 0.445747 0.335111 0.488671 0.325468 0.53067 0.303319 0.567634 0.270832 0.595944 0.231186 0.61283 0.188262 0.616637 0.146263 0.606995 0.109299 0.584845 0.0809891 0.552358 0.0641036 0.512712 0.0602959 0.469789 0.0699385 0.427789 0.0920877 0.390826 0.124575 0.362515 0.164221 0.34563 0.207145 0.341822 0.249144 0.351465 0.286108 0.373614 0.314418 0.406102 0.331303 0.445747 0.335111 0.488671 0.325468 0.53067 0.303319 0.567634 0.270832 0.595944 0.231186 0.61283 0.188262 0.616637 0.146263 0.606995 0.109299 0.584845 0.0809891 0.552358 0.0641036 0.512712 0.0602959 0.469789 0.0699385 0.427789 0.0920877 0.390826 0.124575 0.362515 0.164221 0.34563 0.207145 0.341822 0.249144 0.351465 0.286108 0.373614 0.314418 0.406102 0.331303 0.445747 0.335111 0.488671 0.325468 0.53067 0.303319 0.567634 0.270832 0.595944 0.231186 0.61283 0.188262 0.616637 0.331303 0.445747 0.314418 0.406101 0.286108 0.373614 0.249144 0.351465 0.207145 0.341822 0.164221 0.34563 "
+		+ "0.124575 0.362515 0.0920878 0.390826 0.0699385 0.427789 0.0602959 0.469789 0.0641036 0.512712 0.0809891 0.552358 0.109299 0.584845 0.146263 0.606995 0.188262 0.616637 0.231186 0.612829 0.270832 0.595944 0.303319 0.567634 0.325468 0.53067 0.335111 0.488671 0.331303 0.445747 0.314418 0.406102 0.286108 0.373614 0.249144 0.351465 0.207145 0.341822 0.164221 0.34563 0.124575 0.362515 0.0920877 0.390826 0.0699385 0.427789 0.0602959 0.469789 0.0641036 0.512712 0.0809891 0.552358 0.109299 0.584845 0.146263 0.606995 0.188262 0.616637 0.231186 0.61283 0.270832 0.595944 0.303319 0.567634 0.325468 0.53067 0.335111 0.488671 0.331303 0.445747 0.314418 0.406102 0.286108 0.373614 0.249144 0.351465 0.207145 0.341822 0.164221 0.34563 0.124575 0.362515 0.0920877 0.390826 0.0699385 0.427789 0.0602959 0.469789 0.0641036 0.512712 0.0809891 0.552358 0.109299 0.584845 0.146263 0.606995 0.188262 0.616637 0.231186 0.61283 0.270832 0.595944 0.303319 0.567634 0.325468 0.53067 0.335111 0.488671 0.331303 0.445747 0.314418 0.406102 0.286108"
+		+ " 0.373614 0.249144 0.351465 0.207145 0.341822 0.164221 0.34563 0.124575 0.362515 0.0920877 0.390826 0.0699385 0.427789 0.0602959 0.469789 0.0641036 0.512712 0.0809891 0.552358 0.109299 0.584845 0.146263 0.606995 0.188262 0.616637 0.231186 0.61283 0.270832 0.595944 0.303319 0.567634 0.325468 0.53067 0.335111 0.488671 0.331303 0.445747 0.314418 0.406102 0.286108 0.373614 0.249144 0.351465 0.207145 0.341822 0.164221 0.34563"
+		)
+		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
+		"uvst[0].uvsp[250:499]" (" 0.124575 0.362515 0.0920877 0.390826 0.0699385 0.427789 0.0602959 0.469789 0.0641036 0.512712 0.0809891 0.552358 0.109299 0.584845 0.146263 0.606995 0.188262 0.616637 0.231186 0.61283 0.270832 0.595944 0.303319 0.567634 0.325468 0.53067 0.335111 0.488671 0.331303 0.445747 0.314418 0.406102 0.286108 0.373614 0.249144 0.351465 0.207145 0.341822 0.164221 0.34563 0.124575 0.362515 0.0920877 0.390826 0.0699385 0.427789 0.0602959 0.469789 0.0641036 0.512712 0.0809891 0.552358 0.109299 0.584845 0.146263 0.606995 0.188262 0.616637 0.231186 0.61283 0.270832 0.595944 0.303319 0.567634 0.325468 0.53067 0.335111 0.488671 0.504432 0.533438 0.505187 0.522445 0.505943 0.511453 0.506698 0.50046 0.507453 0.489467 0.508208 0.478475 0.508964 0.467482 0.509719 0.45649 0.510474 0.445497 0.51123 0.434505 0.511985 0.423512 0.51274 0.412519 0.513495 0.401527 0.499145 0.610386 0.514251 0.390534 0.4999 0.599393 0.500656 0.588401 0.501411 0.577408 0.502166 0.566416 0.502921 0.555423 0.503677 0.54443 0.875425 0.637485 0.835779 0.65437 "
+		+ "0.907912 0.609174 0.930061 0.572211 0.939704 0.530211 0.935896 0.487288 0.919011 0.447642 0.890701 0.415155 0.853737 0.393005 0.811738 0.383363 0.768814 0.38717 0.729168 0.404056 0.696681 0.432366 0.674532 0.46933 0.664889 0.511329 0.668697 0.554253 0.685582 0.593898 0.713892 0.626386 0.750856 0.648535 0.792856 0.658178 0.875425 0.637485 0.835779 0.65437 0.907912 0.609174 0.930061 0.572211 0.939704 0.530211 0.935896 0.487288 0.919011 0.447642 0.890701 0.415155 0.853737 0.393005 0.811738 0.383363 0.768814 0.38717 0.729168 0.404056 0.696681 0.432366 0.674532 0.46933 0.664889 0.511329 0.668697 0.554253 0.685582 0.593898 0.713892 0.626386 0.750856 0.648535 0.792856 0.658178 0.875425 0.637485 0.835779 0.65437 0.907912 0.609174 0.930061 0.572211 0.939704 0.530211 0.935896 0.487288 0.919011 0.447642 0.890701 0.415155 0.853737 0.393005 0.811738 0.383363 0.768814 0.38717 0.729168 0.404056 0.696681 0.432366 0.674532 0.46933 0.664889 0.511329 0.668697 0.554253 0.685582 0.593898 0.713892 0.626386 0.750856 0.648535 0.7928"
+		+ "56 0.658178 0.875425 0.637485 0.835779 0.65437 0.907912 0.609174 0.930061 0.572211 0.939704 0.530211 0.935896 0.487288 0.919011 0.447642 0.890701 0.415155 0.853737 0.393005 0.811738 0.383363 0.768814 0.38717 0.729168 0.404056 0.696681 0.432366 0.674532 0.46933 0.664889 0.511329 0.668697 0.554253 0.685582 0.593898 0.713892 0.626386 0.750856 0.648535 0.792856 0.658178 0.875425 0.637485 0.835779 0.65437 0.907912 0.609174 0.930061 0.572211 0.939704 0.530211 0.935896 0.487288 0.919011 0.447642 0.890701 0.415155 0.853737 0.393005 0.811738 0.383363 0.768814 0.38717 0.729168 0.404056 0.696681 0.432366 0.674532 0.46933 0.664889 0.511329 0.668697 0.554253 0.685582 0.593898 0.713892 0.626386 0.750856 0.648535 0.792856 0.658178 0.875425 0.637485 0.835779 0.65437 0.907912 0.609174 0.930061 0.572211 0.939704 0.530211 0.935896 0.487288 0.919011 0.447642 0.890701 0.415155 0.853737 0.393005 0.811738 0.383363 0.768814 0.38717 0.729168 0.404056 0.696681 0.432366 0.674532 0.46933 0.664889 0.511329 0.668697 0.554253 0.685582 0.59"
+		+ "3898 0.713892 0.626386 0.750856 0.648535 0.792856 0.658178 0.875425 0.637485 0.835779 0.65437 0.907912 0.609174 0.930061 0.572211 0.939704 0.530211 0.935896 0.487288 0.919011 0.447642 0.890701 0.415155 0.853737 0.393005 0.811738 0.383363 0.768814 0.38717 0.729168 0.404056 0.696681 0.432366 0.674532 0.46933 0.664889 0.511329 0.668697 0.554253 0.685582 0.593898 0.713892 0.626386 0.750856 0.648535 0.792856 0.658178 0.875425 0.637485 0.835779 0.65437 0.907912 0.609174 0.930061 0.572211 0.939704 0.530211 0.935896 0.487288 0.919011 0.447642 0.890701 0.415155 0.853737 0.393005 0.811738 0.383363 0.768814 0.38717 0.729168 0.404056 0.696681 0.432366 0.674532 0.46933 0.664889 0.511329 0.668697 0.554253 0.685582 0.593898 0.713892 0.626386 0.750856 0.648535 0.792856 0.658178 0.875425 0.637485 0.835779 0.65437 0.907912 0.609174 0.930061 0.572211 0.939704 0.530211 0.935896 0.487288 0.919011 0.447642 0.890701 0.415155 0.853737 0.393005 0.811738 0.383363 0.768814 0.38717 0.729168 0.404056 0.696681 0.432366 0.674532 0.46933 0."
+		+ "664889 0.511329 0.668697 0.554253 0.685582 0.593898 0.713892 0.626386 0.750856 0.648535 0.792856 0.658178 0.875425 0.637485 0.835779 0.65437 0.907912 0.609174 0.930061 0.572211 0.939704 0.530211 0.935896 0.487288 0.919011 0.447642 0.890701 0.415155 0.853737 0.393005 0.811738 0.383363 0.768814 0.38717 0.729168 0.404056 0.696681 0.432366 0.674532 0.46933 0.664889 0.511329"
+		)
+		2 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1" 
+		"uvst[0].uvsp[500:544]" " 0.668697 0.554253 0.685582 0.593898 0.713892 0.626386 0.750856 0.648535 0.792856 0.658178 0.875425 0.637485 0.835779 0.65437 0.907912 0.609174 0.930061 0.572211 0.939704 0.530211 0.935896 0.487288 0.919011 0.447642 0.890701 0.415155 0.853737 0.393005 0.811738 0.383363 0.768814 0.38717 0.729168 0.404056 0.696681 0.432366 0.674532 0.46933 0.664889 0.511329 0.668697 0.554253 0.685582 0.593898 0.713892 0.626386 0.750856 0.648535 0.792856 0.658178 0.875425 0.637485 0.835779 0.65437 0.907912 0.609174 0.930061 0.572211 0.939704 0.530211 0.935896 0.487288 0.919011 0.447642 0.890701 0.415155 0.853737 0.393005 0.811738 0.383363 0.768814 0.38717 0.729168 0.404056 0.696681 0.432366 0.674532 0.46933 0.664889 0.511329 0.668697 0.554253 0.685582 0.593898 0.713892 0.626386 0.750856 0.648535 0.792856 0.658178"
 		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:kitchen_cabinet_lower_unitShape" 
-		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 13 \"f[0]\" \"f[2:5]\" \"f[7:8]\" \"f[10:25]\" \"f[29:35]\" \"f[40]\" \"f[42:47]\" \"f[49:62]\" \"f[64:68]\" \"f[75:82]\" \"f[92:100]\" \"f[105]\" \"f[110:121]\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:kitchen_cabinet_lower_unitShape" 
-		"instObjGroups.objectGroups[2].objectGrpCompList" " -type \"componentList\" 12 \"f[1]\" \"f[6]\" \"f[9]\" \"f[26:28]\" \"f[36:39]\" \"f[41]\" \"f[48]\" \"f[63]\" \"f[69:74]\" \"f[83:91]\" \"f[101:104]\" \"f[106:109]\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube4|living_room_latest:pCubeShape4" 
-		"instObjGroups.objectGroups" " -s 3"
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube4|living_room_latest:pCubeShape4" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 3 \"f[3]\" \"f[14:16]\" \"f[58]\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube4|living_room_latest:pCubeShape4" 
-		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[0:2]\" \"f[4:13]\" \"f[17:57]\" \"f[59:60]\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube4|living_room_latest:pCubeShape4" 
-		"instObjGroups.objectGroups[2].objectGrpCompList" " -type \"componentList\" 3 \"f[3]\" \"f[14:16]\" \"f[58]\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube5|living_room_latest:pCubeShape5" 
-		"instObjGroups.objectGroups" " -s 3"
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube5|living_room_latest:pCubeShape5" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 3 \"f[3]\" \"f[14:16]\" \"f[58]\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube5|living_room_latest:pCubeShape5" 
-		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[0:2]\" \"f[4:13]\" \"f[17:57]\" \"f[59:60]\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube5|living_room_latest:pCubeShape5" 
-		"instObjGroups.objectGroups[2].objectGrpCompList" " -type \"componentList\" 3 \"f[3]\" \"f[14:16]\" \"f[58]\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCylinder6|living_room_latest:pCylinderShape6" 
-		"instObjGroups.objectGroups" " -s 3"
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCylinder6|living_room_latest:pCylinderShape6" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 3 \"f[94:95]\" \"f[144]\" \"f[158:159]\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCylinder6|living_room_latest:pCylinderShape6" 
-		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[0:93]\" \"f[96:143]\" \"f[145:157]\" \"f[160:299]\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCylinder6|living_room_latest:pCylinderShape6" 
-		"instObjGroups.objectGroups[2].objectGrpCompList" " -type \"componentList\" 3 \"f[94:95]\" \"f[144]\" \"f[158:159]\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube133|living_room_latest:pCubeShape133" 
-		"instObjGroups.objectGroups" " -s 3"
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube133|living_room_latest:pCubeShape133" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 11 \"f[1]\" \"f[8:9]\" \"f[12:13]\" \"f[16:17]\" \"f[20]\" \"f[26:28]\" \"f[36:41]\" \"f[47:48]\" \"f[63]\" \"f[71]\" \"f[74:77]\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube133|living_room_latest:pCubeShape133" 
-		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 12 \"f[0]\" \"f[2:7]\" \"f[10:11]\" \"f[14:15]\" \"f[18:19]\" \"f[21:25]\" \"f[29:35]\" \"f[42:46]\" \"f[49:62]\" \"f[64:70]\" \"f[72:73]\" \"f[78:81]\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube133|living_room_latest:pCubeShape133" 
-		"instObjGroups.objectGroups[2].objectGrpCompList" " -type \"componentList\" 11 \"f[1]\" \"f[8:9]\" \"f[12:13]\" \"f[16:17]\" \"f[20]\" \"f[26:28]\" \"f[36:41]\" \"f[47:48]\" \"f[63]\" \"f[71]\" \"f[74:77]\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube150|living_room_latest:pCubeShape150" 
-		"instObjGroups.objectGroups" " -s 3"
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube150|living_room_latest:pCubeShape150" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 10 \"f[1]\" \"f[6:7]\" \"f[9]\" \"f[11:18]\" \"f[20:23]\" \"f[31:32]\" \"f[36:37]\" \"f[40]\" \"f[45:47]\" \"f[50:54]\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube150|living_room_latest:pCubeShape150" 
-		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 11 \"f[0]\" \"f[2:5]\" \"f[8]\" \"f[10]\" \"f[19]\" \"f[24:30]\" \"f[33:35]\" \"f[38:39]\" \"f[41:44]\" \"f[48:49]\" \"f[55:57]\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube150|living_room_latest:pCubeShape150" 
-		"instObjGroups.objectGroups[2].objectGrpCompList" " -type \"componentList\" 10 \"f[1]\" \"f[6:7]\" \"f[9]\" \"f[11:18]\" \"f[20:23]\" \"f[31:32]\" \"f[36:37]\" \"f[40]\" \"f[45:47]\" \"f[50:54]\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube137|living_room_latest:pCubeShape137" 
-		"instObjGroups.objectGroups" " -s 3"
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube137|living_room_latest:pCubeShape137" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 3 \"f[36:39]\" \"f[41]\" \"f[70:72]\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube137|living_room_latest:pCubeShape137" 
-		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[0:35]\" \"f[40]\" \"f[42:69]\" \"f[73]\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube137|living_room_latest:pCubeShape137" 
-		"instObjGroups.objectGroups[2].objectGrpCompList" " -type \"componentList\" 3 \"f[36:39]\" \"f[41]\" \"f[70:72]\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube138|living_room_latest:pCubeShape138" 
-		"instObjGroups.objectGroups" " -s 3"
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube138|living_room_latest:pCubeShape138" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 8 \"f[15]\" \"f[23]\" \"f[26:27]\" \"f[36:39]\" \"f[41:42]\" \"f[57:62]\" \"f[64]\" \"f[72:73]\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube138|living_room_latest:pCubeShape138" 
-		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 8 \"f[0:14]\" \"f[16:22]\" \"f[24:25]\" \"f[28:35]\" \"f[40]\" \"f[43:56]\" \"f[63]\" \"f[65:71]\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube138|living_room_latest:pCubeShape138" 
-		"instObjGroups.objectGroups[2].objectGrpCompList" " -type \"componentList\" 8 \"f[15]\" \"f[23]\" \"f[26:27]\" \"f[36:39]\" \"f[41:42]\" \"f[57:62]\" \"f[64]\" \"f[72:73]\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube96|living_room_latest:pCubeShape190" 
-		"instObjGroups.objectGroups" " -s 3"
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube96|living_room_latest:pCubeShape190" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 1 \"f[1]\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube96|living_room_latest:pCubeShape190" 
-		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 2 \"f[0]\" \"f[2:5]\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube96|living_room_latest:pCubeShape190" 
-		"instObjGroups.objectGroups[2].objectGrpCompList" " -type \"componentList\" 1 \"f[1]\""
+		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
+		"uvPivot" " -type \"double2\" 0.5 0.506494"
+		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
+		"uvSet[0].uvSetPoints" " -s 545"
+		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
+		"uvst[0].uvsp[0:249]" (" -type \"float2\" 0.851955 0.659464 0.892748 0.641073 0.925862 0.610975 0.948054 0.572119 0.957152 0.528306 0.952266 0.483826 0.933875 0.443033 0.903777 0.40992 0.864921 0.387728 0.821108 0.37863 0.776628 0.383515 0.735835 0.401907 0.702722 0.432004 0.68053 0.470861 0.671432 0.514673 0.676318 0.559153 0.694709 0.599946 0.724806 0.633059 0.763663 0.655251 0.807476 0.66435 0.676885 0.400386 0.67634 0.411814 0.675794 0.423243 0.675249 0.434672 0.674704 0.446101 0.674158 0.457529 0.673613 0.468958 0.673068 0.480387 0.672523 0.491816 0.671977 0.503245 0.671432 0.514673 0.670887 0.526102 0.670341 0.537531 0.669796 0.54896 0.669251 0.560388 0.668705 0.571817 0.66816 0.583246 0.667615 0.594675 0.667069 0.606104 0.666524 0.617532 0.665979 0.628961 0.333162 0.383985 0.332616 0.395414 0.332071 0.406843 0.331526 0.418272 0.330981 0.4297 0.330435 0.441129 0.32989 0.452558 0.329345 0.463987 0.328799 0.475416 0.328254 0.486844 0.327709 0.498273 0.327163 0.509702 0.326618 0.521131 0.326073 0.53256 0.325527 0.543988 0.324982 0."
+		+ "555417 0.324437 0.566846 0.323892 0.578275 0.323346 0.589703 0.322801 0.601132 0.322256 0.612561 0.223371 0.629472 0.264165 0.611081 0.297278 0.580984 0.31947 0.542127 0.328568 0.498314 0.323682 0.453834 0.305291 0.413041 0.275194 0.379928 0.236337 0.357736 0.192524 0.348638 0.148045 0.353524 0.107252 0.371915 0.0741384 0.402012 0.0519464 0.440869 0.0428481 0.484682 0.0477337 0.529161 0.0661253 0.569954 0.0962225 0.603068 0.135079 0.625259 0.178892 0.634358 0.820006 0.521762 0.191422 0.491771 0.135079 0.625259 0.0962225 0.603068 0.0661253 0.569954 0.0477337 0.529161 0.0428481 0.484682 0.0519464 0.440869 0.0741384 0.402012 0.107252 0.371915 0.148045 0.353524 0.192524 0.348638 0.236337 0.357736 0.275194 0.379928 0.305291 0.413041 0.323682 0.453834 0.328568 0.498314 0.31947 0.542127 0.297278 0.580984 0.264165 0.611081 0.223371 0.629472 0.178892 0.634358 0.135079 0.625259 0.0962225 0.603068 0.0661253 0.569954 0.0477337 0.529161 0.0428481 0.484682 0.0519464 0.440869 0.0741384 0.402012 0.107252 0.371915 0.148045 0."
+		+ "353524 0.192524 0.348638 0.236337 0.357736 0.275194 0.379928 0.305291 0.413041 0.323682 0.453834 0.328568 0.498314 0.31947 0.542127 0.297278 0.580984 0.264165 0.611081 0.223371 0.629472 0.178892 0.634358 0.135079 0.625259 0.0962225 0.603068 0.0661253 0.569954 0.0477337 0.529161 0.0428481 0.484682 0.0519464 0.440869 0.0741384 0.402012 0.107252 0.371915 0.148045 0.353524 0.192524 0.348638 0.236337 0.357736 0.275194 0.379928 0.305291 0.413041 0.323682 0.453834 0.328568 0.498314 0.31947 0.542127 0.297278 0.580984 0.264165 0.611081 0.223371 0.629472 0.178892 0.634358 0.135079 0.625259 0.0962225 0.603068 0.0661253 0.569954 0.0477337 0.529161 0.0428481 0.484682 0.0519464 0.440869 0.0741384 0.402012 0.107252 0.371915 0.148045 0.353524 0.192524 0.348638 0.236337 0.357736 0.275194 0.379928 0.305291 0.413041 0.323682 0.453834 0.328568 0.498314 0.31947 0.542127 0.297278 0.580984 0.264165 0.611081 0.223371 0.629472 0.178892 0.634358 0.323682 0.453834 0.305291 0.413041 0.275194 0.379928 0.236337 0.357736 0.192524 0.348638 "
+		+ "0.148045 0.353524 0.107252 0.371915 0.0741385 0.402012 0.0519464 0.440869 0.0428481 0.484682 0.0477337 0.529161 0.0661254 0.569954 0.0962225 0.603068 0.135079 0.625259 0.178892 0.634358 0.223371 0.629472 0.264165 0.611081 0.297278 0.580984 0.31947 0.542127 0.328568 0.498314 0.323682 0.453834 0.305291 0.413041 0.275194 0.379928 0.236337 0.357736 0.192524 0.348638 0.148045 0.353524 0.107252 0.371915 0.0741384 0.402012 0.0519464 0.440869 0.0428481 0.484682 0.0477337 0.529161 0.0661253 0.569954 0.0962225 0.603068 0.135079 0.625259 0.178892 0.634358 0.223371 0.629472 0.264165 0.611081 0.297278 0.580984 0.31947 0.542127 0.328568 0.498314 0.323682 0.453834 0.305291 0.413041 0.275194 0.379928 0.236337 0.357736 0.192524 0.348638 0.148044 0.353524 0.107252 0.371915 0.0741384 0.402012 0.0519464 0.440869 0.0428481 0.484682 0.0477337 0.529161 0.0661253 0.569954 0.0962225 0.603068 0.135079 0.625259 0.178892 0.634358 0.223371 0.629472 0.264165 0.611081 0.297278 0.580984 0.31947 0.542127 0.328568 0.498314 0.323682 0.453834 0"
+		+ ".305291 0.413041 0.275194 0.379928 0.236337 0.357736 0.192524 0.348638 0.148045 0.353524 0.107252 0.371915 0.0741384 0.402012 0.0519464 0.440869 0.0428481 0.484682 0.0477337 0.529161 0.0661253 0.569954 0.0962226 0.603068 0.135079 0.625259 0.178892 0.634358 0.223371 0.629472 0.264165 0.611081 0.297278 0.580984 0.31947 0.542127 0.328568 0.498314 0.323682 0.453834 0.305291 0.413041 0.275194 0.379928 0.236337 0.357736 0.192524 0.348638 0.148045 0.353524"
+		)
+		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
+		"uvst[0].uvsp[250:499]" (" 0.107252 0.371915 0.0741384 0.402012 0.0519464 0.440869 0.0428481 0.484682 0.0477337 0.529161 0.0661253 0.569954 0.0962225 0.603068 0.135079 0.625259 0.178892 0.634358 0.223371 0.629472 0.264165 0.611081 0.297278 0.580984 0.31947 0.542127 0.328568 0.498314 0.323682 0.453834 0.305291 0.413041 0.275194 0.379928 0.236337 0.357736 0.192524 0.348638 0.148045 0.353524 0.107252 0.371915 0.0741384 0.402012 0.0519464 0.440869 0.0428481 0.484682 0.0477337 0.529161 0.0661253 0.569954 0.0962225 0.603068 0.135079 0.625259 0.178892 0.634358 0.223371 0.629472 0.264164 0.611081 0.297278 0.580984 0.31947 0.542127 0.328568 0.498314 0.505328 0.541112 0.505873 0.529684 0.506418 0.518255 0.506964 0.506826 0.507509 0.495397 0.508054 0.483968 0.5086 0.47254 0.509145 0.461111 0.50969 0.449682 0.510235 0.438253 0.510781 0.426825 0.511326 0.415396 0.511871 0.403967 0.50151 0.621114 0.512417 0.392538 0.502056 0.609685 0.502601 0.598256 0.503146 0.586828 0.503692 0.575399 0.504237 0.56397 0.504782 0.552541 0.892748 0.641073 0.851955 0."
+		+ "659464 0.925862 0.610975 0.948054 0.572119 0.957152 0.528306 0.952266 0.483826 0.933875 0.443033 0.903777 0.40992 0.864921 0.387728 0.821108 0.37863 0.776628 0.383515 0.735835 0.401907 0.702722 0.432004 0.68053 0.470861 0.671432 0.514673 0.676318 0.559153 0.694709 0.599946 0.724806 0.633059 0.763663 0.655251 0.807476 0.66435 0.892748 0.641073 0.851955 0.659464 0.925862 0.610975 0.948054 0.572119 0.957152 0.528306 0.952266 0.483826 0.933875 0.443033 0.903777 0.40992 0.864921 0.387728 0.821108 0.37863 0.776628 0.383515 0.735835 0.401907 0.702722 0.432004 0.68053 0.470861 0.671432 0.514673 0.676318 0.559153 0.694709 0.599946 0.724806 0.633059 0.763663 0.655251 0.807476 0.66435 0.892748 0.641073 0.851955 0.659464 0.925862 0.610975 0.948054 0.572119 0.957152 0.528306 0.952266 0.483826 0.933875 0.443033 0.903777 0.40992 0.864921 0.387728 0.821108 0.37863 0.776628 0.383515 0.735835 0.401907 0.702722 0.432004 0.68053 0.470861 0.671432 0.514673 0.676318 0.559153 0.694709 0.599946 0.724806 0.633059 0.763663 0.655251 0."
+		+ "807476 0.66435 0.892748 0.641073 0.851955 0.659464 0.925862 0.610975 0.948054 0.572119 0.957152 0.528306 0.952266 0.483826 0.933875 0.443033 0.903777 0.40992 0.864921 0.387728 0.821108 0.37863 0.776628 0.383515 0.735835 0.401907 0.702722 0.432004 0.68053 0.470861 0.671432 0.514673 0.676318 0.559153 0.694709 0.599946 0.724806 0.633059 0.763663 0.655251 0.807476 0.66435 0.892748 0.641073 0.851955 0.659464 0.925862 0.610975 0.948054 0.572119 0.957152 0.528306 0.952266 0.483826 0.933875 0.443033 0.903777 0.40992 0.864921 0.387728 0.821108 0.37863 0.776628 0.383515 0.735835 0.401907 0.702722 0.432004 0.68053 0.470861 0.671432 0.514673 0.676318 0.559153 0.694709 0.599946 0.724806 0.633059 0.763663 0.655251 0.807476 0.66435 0.892748 0.641073 0.851955 0.659464 0.925862 0.610975 0.948054 0.572119 0.957152 0.528306 0.952266 0.483826 0.933875 0.443033 0.903777 0.40992 0.864921 0.387728 0.821108 0.37863 0.776628 0.383515 0.735835 0.401907 0.702722 0.432004 0.68053 0.470861 0.671432 0.514673 0.676318 0.559153 0.694709 0.5"
+		+ "99946 0.724806 0.633059 0.763663 0.655251 0.807476 0.66435 0.892748 0.641073 0.851955 0.659464 0.925862 0.610975 0.948054 0.572119 0.957152 0.528306 0.952266 0.483826 0.933875 0.443033 0.903777 0.40992 0.864921 0.387728 0.821108 0.37863 0.776628 0.383515 0.735835 0.401907 0.702722 0.432004 0.68053 0.470861 0.671432 0.514673 0.676318 0.559153 0.694709 0.599946 0.724806 0.633059 0.763663 0.655251 0.807476 0.66435 0.892748 0.641073 0.851955 0.659464 0.925862 0.610975 0.948054 0.572119 0.957152 0.528306 0.952266 0.483826 0.933875 0.443033 0.903777 0.40992 0.864921 0.387728 0.821108 0.37863 0.776628 0.383515 0.735835 0.401907 0.702722 0.432004 0.68053 0.470861 0.671432 0.514673 0.676318 0.559153 0.694709 0.599946 0.724806 0.633059 0.763663 0.655251 0.807476 0.66435 0.892748 0.641073 0.851955 0.659464 0.925862 0.610975 0.948054 0.572119 0.957152 0.528306 0.952266 0.483826 0.933875 0.443033 0.903777 0.40992 0.864921 0.387728 0.821108 0.37863 0.776628 0.383515 0.735835 0.401907 0.702722 0.432004 0.68053 0.470861 0.67"
+		+ "1432 0.514673 0.676318 0.559153 0.694709 0.599946 0.724806 0.633059 0.763663 0.655251 0.807476 0.66435 0.892748 0.641073 0.851955 0.659464 0.925862 0.610975 0.948054 0.572119 0.957152 0.528306 0.952266 0.483826 0.933875 0.443033 0.903777 0.40992 0.864921 0.387728 0.821108 0.37863 0.776628 0.383515 0.735835 0.401907 0.702722 0.432004 0.68053 0.470861 0.671432 0.514673"
+		)
+		2 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2" 
+		"uvst[0].uvsp[500:544]" " 0.676318 0.559153 0.694709 0.599946 0.724806 0.633059 0.763663 0.655251 0.807476 0.66435 0.892748 0.641073 0.851955 0.659464 0.925862 0.610975 0.948054 0.572119 0.957152 0.528306 0.952266 0.483826 0.933875 0.443033 0.903777 0.40992 0.864921 0.387728 0.821108 0.37863 0.776628 0.383515 0.735835 0.401907 0.702722 0.432004 0.68053 0.470861 0.671432 0.514673 0.676318 0.559153 0.694709 0.599946 0.724806 0.633059 0.763663 0.655251 0.807476 0.66435 0.892748 0.641073 0.851955 0.659464 0.925862 0.610975 0.948054 0.572119 0.957152 0.528306 0.952266 0.483826 0.933875 0.443033 0.903777 0.40992 0.864921 0.387728 0.821108 0.37863 0.776628 0.383515 0.735835 0.401907 0.702722 0.432004 0.68053 0.470861 0.671432 0.514673 0.676318 0.559153 0.694709 0.599946 0.724806 0.633059 0.763663 0.655251 0.807476 0.66435"
 		
 		2 "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape" 
-		"instObjGroups.objectGroups" " -s 4"
+		"instObjGroups.objectGroups" " -s 10"
 		2 "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape" 
-		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 24 \"f[0]\" \"f[3:10]\" \"f[31:32]\" \"f[35:36]\" \"f[63]\" \"f[71:72]\" \"f[74:75]\" \"f[81:82]\" \"f[85:86]\" \"f[92:93]\" \"f[96:97]\" \"f[105:117]\" \"f[127:139]\" \"f[151:153]\" \"f[160:162]\" \"f[173]\" \"f[181:185]\" \"f[194]\" \"f[196]\" \"f[199:200]\" \"f[207:209]\" \"f[212:215]\" \"f[218:219]\" \"f[222:230]\""
+		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 6 \"f[257]\" \"f[260:268]\" \"f[271:272]\" \"f[275:280]\" \"f[283:284]\" \"f[287:303]\""
+		
+		2 "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape" 
+		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[269:270]\" \"f[273:274]\" \"f[281:282]\" \"f[285:286]\""
 		
 		2 "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape" 
 		"instObjGroups.objectGroups[2].objectGrpCompList" " -type \"componentList\" 24 \"f[1:2]\" \"f[11:30]\" \"f[33:34]\" \"f[37:62]\" \"f[64:70]\" \"f[73]\" \"f[76:80]\" \"f[83:84]\" \"f[87:91]\" \"f[94:95]\" \"f[98:104]\" \"f[118:126]\" \"f[140:150]\" \"f[154:159]\" \"f[163:172]\" \"f[174:180]\" \"f[186:193]\" \"f[195]\" \"f[197:198]\" \"f[201:206]\" \"f[210:211]\" \"f[216:217]\" \"f[220:221]\" \"f[231:256]\""
 		
 		2 "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape" 
-		"instObjGroups.objectGroups[3].objectGrpCompList" " -type \"componentList\" 24 \"f[0]\" \"f[3:10]\" \"f[31:32]\" \"f[35:36]\" \"f[63]\" \"f[71:72]\" \"f[74:75]\" \"f[81:82]\" \"f[85:86]\" \"f[92:93]\" \"f[96:97]\" \"f[105:117]\" \"f[127:139]\" \"f[151:153]\" \"f[160:162]\" \"f[173]\" \"f[181:185]\" \"f[194]\" \"f[196]\" \"f[199:200]\" \"f[207:209]\" \"f[212:215]\" \"f[218:219]\" \"f[222:230]\""
+		"instObjGroups.objectGroups[3].objectGrpCompList" " -type \"componentList\" 18 \"f[10]\" \"f[31:32]\" \"f[35:36]\" \"f[63]\" \"f[74:75]\" \"f[81]\" \"f[85:86]\" \"f[92]\" \"f[96:97]\" \"f[115:117]\" \"f[137:139]\" \"f[151:153]\" \"f[160:162]\" \"f[181:183]\" \"f[194]\" \"f[207]\" \"f[218:219]\" \"f[222:230]\""
 		
 		2 "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape" 
-		"instObjGroups.objectGroups[4].objectGrpCompList" " -type \"componentList\" 24 \"f[1:2]\" \"f[11:30]\" \"f[33:34]\" \"f[37:62]\" \"f[64:70]\" \"f[73]\" \"f[76:80]\" \"f[83:84]\" \"f[87:91]\" \"f[94:95]\" \"f[98:104]\" \"f[118:126]\" \"f[140:150]\" \"f[154:159]\" \"f[163:172]\" \"f[174:180]\" \"f[186:193]\" \"f[195]\" \"f[197:198]\" \"f[201:206]\" \"f[210:211]\" \"f[216:217]\" \"f[220:221]\" \"f[231:256]\""
+		"instObjGroups.objectGroups[4].objectGrpCompList" " -type \"componentList\" 27 \"f[1]\" \"f[11:27]\" \"f[37:59]\" \"f[61:62]\" \"f[64:67]\" \"f[70]\" \"f[73]\" \"f[76:77]\" \"f[80]\" \"f[84]\" \"f[87:88]\" \"f[91]\" \"f[95]\" \"f[98:101]\" \"f[118:123]\" \"f[140:144]\" \"f[154]\" \"f[158:159]\" \"f[163:164]\" \"f[166:170]\" \"f[177:180]\" \"f[189:193]\" \"f[202:203]\" \"f[206]\" \"f[217]\" \"f[220:221]\" \"f[231:256]\""
 		
 		2 "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape" 
-		"pnts" " -s 24"
+		"instObjGroups.objectGroups[5].objectGrpCompList" " -type \"componentList\" 22 \"f[1]\" \"f[10:27]\" \"f[31:32]\" \"f[35:59]\" \"f[61:67]\" \"f[70]\" \"f[73:77]\" \"f[80:81]\" \"f[84:88]\" \"f[91:92]\" \"f[95:101]\" \"f[115:123]\" \"f[137:144]\" \"f[151:154]\" \"f[158:164]\" \"f[166:170]\" \"f[177:183]\" \"f[189:194]\" \"f[202:203]\" \"f[206:207]\" \"f[217:256]\" \"f[258]\""
+		
 		2 "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape" 
-		"pnts[0]" " -type \"float3\" 0 0 0"
+		"instObjGroups.objectGroups[6].objectGrpCompList" " -type \"componentList\" 21 \"f[0]\" \"f[2:9]\" \"f[28:30]\" \"f[33:34]\" \"f[60]\" \"f[68:69]\" \"f[71:72]\" \"f[78:79]\" \"f[82:83]\" \"f[89:90]\" \"f[93:94]\" \"f[102:114]\" \"f[124:136]\" \"f[145:150]\" \"f[155:157]\" \"f[165]\" \"f[171:176]\" \"f[184:188]\" \"f[195:201]\" \"f[204:205]\" \"f[208:216]\""
+		
 		2 "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape" 
-		"pnts[23]" " -type \"float3\" 0 0 7.15279"
+		"instObjGroups.objectGroups[7].objectGrpCompList" " -type \"componentList\" 22 \"f[0]\" \"f[2:9]\" \"f[28:30]\" \"f[33:34]\" \"f[60]\" \"f[68:69]\" \"f[71:72]\" \"f[78:79]\" \"f[82:83]\" \"f[89:90]\" \"f[93:94]\" \"f[102:114]\" \"f[124:136]\" \"f[148:150]\" \"f[155:157]\" \"f[165]\" \"f[171:176]\" \"f[185:186]\" \"f[188]\" \"f[195:201]\" \"f[204:205]\" \"f[208:216]\""
+		
 		2 "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape" 
-		"pnts[24]" " -type \"float3\" 0.0301599 0 7.871557"
+		"instObjGroups.objectGroups[8].objectGrpCompList" " -type \"componentList\" 1 \"f[258]\""
+		
 		2 "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape" 
-		"pnts[31]" " -type \"float3\" 0 0 4.713097"
-		2 "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape" 
-		"pnts[32]" " -type \"float3\" 0 0 4.713097"
-		2 "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape" 
-		"pnts[131]" " -type \"float3\" 0 0 7.15279"
-		2 "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape" 
-		"pnts[132]" " -type \"float3\" 0 0 4.713097"
-		2 "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape" 
-		"pnts[141]" " -type \"float3\" 0 0 7.15279"
-		2 "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape" 
-		"pnts[142]" " -type \"float3\" 0 0 4.713097"
-		2 "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape" 
-		"pnts[151]" " -type \"float3\" 0 0 7.630298"
-		2 "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape" 
-		"pnts[152]" " -type \"float3\" 0 0 4.713097"
-		2 "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape" 
-		"pnts[161]" " -type \"float3\" 0.0301599 0 7.451412"
-		2 "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape" 
-		"pnts[162]" " -type \"float3\" 0 0 4.713097"
-		2 "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape" 
-		"pnts[171]" " -type \"float3\" 0 0 1.278845"
-		2 "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape" 
-		"pnts[172]" " -type \"float3\" 0 0 0.389244"
-		2 "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape" 
-		"pnts[229]" " -type \"float3\" 0 0 0"
-		2 "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape" 
-		"pnts[292]" " -type \"float3\" 1.90735e-06 0 0"
-		2 "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape" 
-		"pnts[292]" " -type \"float3\" 1.90735e-06 0 1.90735e-06"
-		2 "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape" 
-		"pnts[292]" " -type \"float3\" 1.90735e-06 0 0"
-		2 "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape" 
-		"pnts[292]" " -type \"float3\" 0 0 -3.8147e-06"
-		2 "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape" 
-		"pnts[292]" " -type \"float3\" 1.90735e-06 0 -3.8147e-06"
-		2 "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape" 
-		"pnts[292]" " -type \"float3\" 1.90735e-06 0 0"
-		2 "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape" 
-		"pnts[292]" " -type \"float3\" 1.90735e-06 0 9.53674e-07"
-		2 "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape" 
-		"pnts[292]" " -type \"float3\" 1.90735e-06 0 0"
-		2 "|living_room_latest:pPipe1|living_room_latest:pPipeShape1" "uvPivot" " -type \"double2\" 0.421212 0.54222"
+		"instObjGroups.objectGroups[9].objectGrpCompList" " -type \"componentList\" 4 \"f[145:147]\" \"f[184]\" \"f[187]\" \"f[259]\""
+		
+		2 "|living_room_latest:pPipe1|living_room_latest:pPipeShape1" "uvPivot" " -type \"double2\" 0.362338 0.703246"
 		
 		2 "|living_room_latest:pPipe1|living_room_latest:pPipeShape1" "uvSet[0].uvSetName" 
 		" -type \"string\" \"map1\""
 		2 "living_room_latest:nonselectablelayer" "displayType" " 0"
-		3 "|living_room_latest:crown_molding|living_room_latest:crown_unit_10|living_room_latest:crown_unit_Shape10.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube147|living_room_latest:pCubeShape147.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:crown_molding|living_room_latest:crown_unit_9|living_room_latest:crown_unit_Shape9.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCylinder6|living_room_latest:pCylinderShape6.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube133|living_room_latest:pCubeShape133.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube122|living_room_latest:pCubeShape122.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:crown_molding|living_room_latest:crown_unit_1|living_room_latest:crown_unit_Shape1.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:crown_molding|living_room_latest:crown_unit_11|living_room_latest:crown_unit_Shape11.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:crown_molding|living_room_latest:crown_unit_8|living_room_latest:crown_unit_Shape8.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube144|living_room_latest:pCubeShape144.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:kitchen_cabinet_lower_unitShape.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube142|living_room_latest:pCubeShape142.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId161.message" ":initialShadingGroup.groupNodes" 
-		"-na"
-		3 "|living_room_latest:pCube143|living_room_latest:pCubeShape143.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube125|living_room_latest:pCubeShape125.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube5|living_room_latest:pCubeShape5.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pPipe1|living_room_latest:pPipeShape1.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:polyPlanarProj2.output" "|living_room_latest:pPipe1|living_room_latest:pPipeShape1.inMesh" 
+		2 "living_room_latest:groupParts9" "inputRemoveComponent" " -type \"componentList\" 1 \"f[0:1459]\""
+		
+		2 "living_room_latest:groupParts9" "groupId" " 2148"
+		3 "living_room_latest:groupId394.groupId" "living_room_latest:groupParts9.groupId" 
 		""
-		3 "|living_room_latest:crown_molding|living_room_latest:crown_unit_2|living_room_latest:crown_unit_Shape2.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:crown_molding|living_room_latest:crown_unit_7|living_room_latest:crown_unit_Shape7.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube150|living_room_latest:pCubeShape150.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:crown_molding|living_room_latest:crown_unit_5|living_room_latest:crown_unit_Shape5.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube149|living_room_latest:pCubeShape149.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube148|living_room_latest:pCubeShape148.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|living_room_latest:rug|living_room_latest:rugShape.instObjGroups" ":initialShadingGroup.dagSetMembers" 
 		"-na"
-		3 "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube96|living_room_latest:pCubeShape190.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:crown_molding|living_room_latest:crown_unit_6|living_room_latest:crown_unit_Shape6.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube145|living_room_latest:pCubeShape145.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube4|living_room_latest:pCubeShape4.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
 		3 "living_room_latest:groupId161.groupId" "|living_room_latest:photo_frame|living_room_latest:photo_frameShape.instObjGroups.objectGroups[0].objectGroupId" 
 		""
 		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:photo_frame|living_room_latest:photo_frameShape.instObjGroups.objectGroups[0].objectGrpColor" 
 		""
 		3 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape.instObjGroups.objectGroups[0]" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube137|living_room_latest:pCubeShape137.instObjGroups" 
+		3 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:crown_molding|living_room_latest:crown_unit_3|living_room_latest:crown_unit_Shape3.instObjGroups" 
+		3 "living_room_latest:groupId161.message" ":initialShadingGroup.groupNodes" 
+		"-na"
+		3 "living_room_latest:groupId394.message" ":initialShadingGroup.groupNodes" 
+		"-na"
+		3 "|living_room_latest:pPipe1|living_room_latest:pPipeShape1.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId355.groupId" "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape.instObjGroups.objectGroups[0].objectGroupId" 
+		3 "living_room_latest:polyPlanarProj5.output" "|living_room_latest:pPipe1|living_room_latest:pPipeShape1.inMesh" 
+		""
+		3 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:groupId394.groupId" "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape.instObjGroups.objectGroups[0].objectGroupId" 
 		""
 		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape.instObjGroups.objectGroups[0].objectGrpColor" 
 		""
 		3 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape.instObjGroups.objectGroups[0]" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube123|living_room_latest:pCubeShape123.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube89|living_room_latest:pCubeShape89.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube141|living_room_latest:pCubeShape141.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube124|living_room_latest:pCubeShape124.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube79|living_room_latest:pCubeShape79.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId355.message" ":initialShadingGroup.groupNodes" 
-		"-na"
-		3 "|living_room_latest:pCube146|living_room_latest:pCubeShape146.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:crown_molding|living_room_latest:crown_unit_4|living_room_latest:crown_unit_Shape4.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:crown_molding|living_room_latest:crown_unit_12|living_room_latest:crown_unit_Shape12.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:polyPlanarProj3.output" "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape.inMesh" 
+		""
 		3 "|living_room_latest:lamp|living_room_latest:lampShape.instObjGroups" ":initialShadingGroup.dagSetMembers" 
 		"-na"
-		3 "living_room_latest:polyPlanarProj3.output" "|living_room_latest:lamp|living_room_latest:lampShape.inMesh" 
+		3 "living_room_latest:polyPlanarProj4.output" "|living_room_latest:lamp|living_room_latest:lampShape.inMesh" 
 		""
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube138|living_room_latest:pCubeShape138.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		5 3 "living_room_latestRN" "|living_room_latest:crown_molding|living_room_latest:crown_unit_1|living_room_latest:crown_unit_Shape1.instObjGroups" 
-		"living_room_latestRN.placeHolderList[1]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:crown_molding|living_room_latest:crown_unit_2|living_room_latest:crown_unit_Shape2.instObjGroups" 
-		"living_room_latestRN.placeHolderList[2]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:crown_molding|living_room_latest:crown_unit_3|living_room_latest:crown_unit_Shape3.instObjGroups" 
-		"living_room_latestRN.placeHolderList[3]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:crown_molding|living_room_latest:crown_unit_4|living_room_latest:crown_unit_Shape4.instObjGroups" 
-		"living_room_latestRN.placeHolderList[4]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:crown_molding|living_room_latest:crown_unit_5|living_room_latest:crown_unit_Shape5.instObjGroups" 
-		"living_room_latestRN.placeHolderList[5]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:crown_molding|living_room_latest:crown_unit_6|living_room_latest:crown_unit_Shape6.instObjGroups" 
-		"living_room_latestRN.placeHolderList[6]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:crown_molding|living_room_latest:crown_unit_7|living_room_latest:crown_unit_Shape7.instObjGroups" 
-		"living_room_latestRN.placeHolderList[7]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:crown_molding|living_room_latest:crown_unit_8|living_room_latest:crown_unit_Shape8.instObjGroups" 
-		"living_room_latestRN.placeHolderList[8]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:crown_molding|living_room_latest:crown_unit_9|living_room_latest:crown_unit_Shape9.instObjGroups" 
-		"living_room_latestRN.placeHolderList[9]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:crown_molding|living_room_latest:crown_unit_10|living_room_latest:crown_unit_Shape10.instObjGroups" 
-		"living_room_latestRN.placeHolderList[10]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:crown_molding|living_room_latest:crown_unit_11|living_room_latest:crown_unit_Shape11.instObjGroups" 
-		"living_room_latestRN.placeHolderList[11]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:crown_molding|living_room_latest:crown_unit_12|living_room_latest:crown_unit_Shape12.instObjGroups" 
-		"living_room_latestRN.placeHolderList[12]" ":initialShadingGroup.dsm"
 		5 4 "living_room_latestRN" "|living_room_latest:lamp|living_room_latest:lampShape.inMesh" 
-		"living_room_latestRN.placeHolderList[13]" ""
+		"living_room_latestRN.placeHolderList[9]" ""
 		5 3 "living_room_latestRN" "|living_room_latest:lamp|living_room_latest:lampShape.instObjGroups" 
-		"living_room_latestRN.placeHolderList[14]" ":initialShadingGroup.dsm"
+		"living_room_latestRN.placeHolderList[10]" ":initialShadingGroup.dsm"
 		5 4 "living_room_latestRN" "|living_room_latest:lamp|living_room_latest:lampShape.uvSet[0].uvSetTweakLocation" 
-		"living_room_latestRN.placeHolderList[15]" ""
+		"living_room_latestRN.placeHolderList[11]" ""
 		5 3 "living_room_latestRN" "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape.instObjGroups" 
-		"living_room_latestRN.placeHolderList[16]" ""
+		"living_room_latestRN.placeHolderList[12]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape.inMesh" 
+		"living_room_latestRN.placeHolderList[13]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape.uvSet[0].uvSetTweakLocation" 
+		"living_room_latestRN.placeHolderList[14]" ""
 		5 3 "living_room_latestRN" "|living_room_latest:photo_frame|living_room_latest:photo_frameShape.instObjGroups" 
-		"living_room_latestRN.placeHolderList[17]" ""
+		"living_room_latestRN.placeHolderList[15]" ""
 		5 4 "living_room_latestRN" "|living_room_latest:photo_frame|living_room_latest:photo_frameShape.uvSet[0].uvSetTweakLocation" 
-		"living_room_latestRN.placeHolderList[18]" ""
+		"living_room_latestRN.placeHolderList[16]" ""
 		5 4 "living_room_latestRN" "|living_room_latest:photo_frame|living_room_latest:photo_frameShape.inMesh" 
+		"living_room_latestRN.placeHolderList[17]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:photo_frame|living_room_latest:photo_frameShape.worldMatrix" 
+		"living_room_latestRN.placeHolderList[18]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:photo_frame|living_room_latest:photo_frameShape.worldMatrix" 
 		"living_room_latestRN.placeHolderList[19]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:photo_frame|living_room_latest:photo_frameShape.worldMatrix" 
-		"living_room_latestRN.placeHolderList[20]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:photo_frame|living_room_latest:photo_frameShape.worldMatrix" 
-		"living_room_latestRN.placeHolderList[21]" ""
 		5 3 "living_room_latestRN" "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1.instObjGroups" 
-		"living_room_latestRN.placeHolderList[22]" ":initialShadingGroup.dsm"
+		"living_room_latestRN.placeHolderList[20]" ":initialShadingGroup.dsm"
 		5 3 "living_room_latestRN" "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2.instObjGroups" 
-		"living_room_latestRN.placeHolderList[23]" ":initialShadingGroup.dsm"
+		"living_room_latestRN.placeHolderList[21]" ":initialShadingGroup.dsm"
 		5 3 "living_room_latestRN" "|living_room_latest:rug|living_room_latest:rugShape.instObjGroups" 
-		"living_room_latestRN.placeHolderList[24]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube79|living_room_latest:pCubeShape79.instObjGroups" 
-		"living_room_latestRN.placeHolderList[25]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube89|living_room_latest:pCubeShape89.instObjGroups" 
-		"living_room_latestRN.placeHolderList[26]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:kitchen_cabinet_lower_unitShape.instObjGroups.objectGroups[0]" 
-		"living_room_latestRN.placeHolderList[27]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:kitchen_cabinet_lower_unitShape.instObjGroups.objectGroups[0].objectGroupId" 
-		"living_room_latestRN.placeHolderList[28]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:kitchen_cabinet_lower_unitShape.instObjGroups.objectGroups[0].objectGrpColor" 
-		"living_room_latestRN.placeHolderList[29]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:kitchen_cabinet_lower_unitShape.instObjGroups.objectGroups[1]" 
-		"living_room_latestRN.placeHolderList[30]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:kitchen_cabinet_lower_unitShape.instObjGroups.objectGroups[1].objectGroupId" 
-		"living_room_latestRN.placeHolderList[31]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:kitchen_cabinet_lower_unitShape.instObjGroups.objectGroups[1].objectGrpColor" 
-		"living_room_latestRN.placeHolderList[32]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:kitchen_cabinet_lower_unitShape.instObjGroups.objectGroups[2]" 
-		"living_room_latestRN.placeHolderList[33]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:kitchen_cabinet_lower_unitShape.instObjGroups.objectGroups[2].objectGroupId" 
-		"living_room_latestRN.placeHolderList[34]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:kitchen_cabinet_lower_unitShape.instObjGroups.objectGroups[2].objectGrpColor" 
-		"living_room_latestRN.placeHolderList[35]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:kitchen_cabinet_lower_unitShape.compInstObjGroups.compObjectGroups[0]" 
-		"living_room_latestRN.placeHolderList[36]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:kitchen_cabinet_lower_unitShape.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
-		"living_room_latestRN.placeHolderList[37]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube4|living_room_latest:pCubeShape4.instObjGroups.objectGroups[0]" 
-		"living_room_latestRN.placeHolderList[38]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube4|living_room_latest:pCubeShape4.instObjGroups.objectGroups[0].objectGroupId" 
-		"living_room_latestRN.placeHolderList[39]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube4|living_room_latest:pCubeShape4.instObjGroups.objectGroups[0].objectGrpColor" 
-		"living_room_latestRN.placeHolderList[40]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube4|living_room_latest:pCubeShape4.instObjGroups.objectGroups[1]" 
-		"living_room_latestRN.placeHolderList[41]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube4|living_room_latest:pCubeShape4.instObjGroups.objectGroups[1].objectGroupId" 
-		"living_room_latestRN.placeHolderList[42]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube4|living_room_latest:pCubeShape4.instObjGroups.objectGroups[1].objectGrpColor" 
-		"living_room_latestRN.placeHolderList[43]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube4|living_room_latest:pCubeShape4.instObjGroups.objectGroups[2]" 
-		"living_room_latestRN.placeHolderList[44]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube4|living_room_latest:pCubeShape4.instObjGroups.objectGroups[2].objectGroupId" 
-		"living_room_latestRN.placeHolderList[45]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube4|living_room_latest:pCubeShape4.instObjGroups.objectGroups[2].objectGrpColor" 
-		"living_room_latestRN.placeHolderList[46]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube4|living_room_latest:pCubeShape4.compInstObjGroups.compObjectGroups[0]" 
-		"living_room_latestRN.placeHolderList[47]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube4|living_room_latest:pCubeShape4.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
-		"living_room_latestRN.placeHolderList[48]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube5|living_room_latest:pCubeShape5.instObjGroups.objectGroups[0]" 
-		"living_room_latestRN.placeHolderList[49]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube5|living_room_latest:pCubeShape5.instObjGroups.objectGroups[0].objectGroupId" 
-		"living_room_latestRN.placeHolderList[50]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube5|living_room_latest:pCubeShape5.instObjGroups.objectGroups[0].objectGrpColor" 
-		"living_room_latestRN.placeHolderList[51]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube5|living_room_latest:pCubeShape5.instObjGroups.objectGroups[1]" 
-		"living_room_latestRN.placeHolderList[52]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube5|living_room_latest:pCubeShape5.instObjGroups.objectGroups[1].objectGroupId" 
-		"living_room_latestRN.placeHolderList[53]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube5|living_room_latest:pCubeShape5.instObjGroups.objectGroups[1].objectGrpColor" 
-		"living_room_latestRN.placeHolderList[54]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube5|living_room_latest:pCubeShape5.instObjGroups.objectGroups[2]" 
-		"living_room_latestRN.placeHolderList[55]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube5|living_room_latest:pCubeShape5.instObjGroups.objectGroups[2].objectGroupId" 
-		"living_room_latestRN.placeHolderList[56]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube5|living_room_latest:pCubeShape5.instObjGroups.objectGroups[2].objectGrpColor" 
-		"living_room_latestRN.placeHolderList[57]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube5|living_room_latest:pCubeShape5.compInstObjGroups.compObjectGroups[0]" 
-		"living_room_latestRN.placeHolderList[58]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube5|living_room_latest:pCubeShape5.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
-		"living_room_latestRN.placeHolderList[59]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCylinder6|living_room_latest:pCylinderShape6.instObjGroups.objectGroups[0]" 
-		"living_room_latestRN.placeHolderList[60]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCylinder6|living_room_latest:pCylinderShape6.instObjGroups.objectGroups[0].objectGroupId" 
-		"living_room_latestRN.placeHolderList[61]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCylinder6|living_room_latest:pCylinderShape6.instObjGroups.objectGroups[0].objectGrpColor" 
-		"living_room_latestRN.placeHolderList[62]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCylinder6|living_room_latest:pCylinderShape6.instObjGroups.objectGroups[1]" 
-		"living_room_latestRN.placeHolderList[63]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCylinder6|living_room_latest:pCylinderShape6.instObjGroups.objectGroups[1].objectGroupId" 
-		"living_room_latestRN.placeHolderList[64]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCylinder6|living_room_latest:pCylinderShape6.instObjGroups.objectGroups[1].objectGrpColor" 
-		"living_room_latestRN.placeHolderList[65]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCylinder6|living_room_latest:pCylinderShape6.instObjGroups.objectGroups[2]" 
-		"living_room_latestRN.placeHolderList[66]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCylinder6|living_room_latest:pCylinderShape6.instObjGroups.objectGroups[2].objectGroupId" 
-		"living_room_latestRN.placeHolderList[67]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCylinder6|living_room_latest:pCylinderShape6.instObjGroups.objectGroups[2].objectGrpColor" 
-		"living_room_latestRN.placeHolderList[68]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCylinder6|living_room_latest:pCylinderShape6.compInstObjGroups.compObjectGroups[0]" 
-		"living_room_latestRN.placeHolderList[69]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCylinder6|living_room_latest:pCylinderShape6.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
-		"living_room_latestRN.placeHolderList[70]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube133|living_room_latest:pCubeShape133.instObjGroups.objectGroups[0]" 
-		"living_room_latestRN.placeHolderList[71]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube133|living_room_latest:pCubeShape133.instObjGroups.objectGroups[0].objectGroupId" 
-		"living_room_latestRN.placeHolderList[72]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube133|living_room_latest:pCubeShape133.instObjGroups.objectGroups[0].objectGrpColor" 
-		"living_room_latestRN.placeHolderList[73]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube133|living_room_latest:pCubeShape133.instObjGroups.objectGroups[1]" 
-		"living_room_latestRN.placeHolderList[74]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube133|living_room_latest:pCubeShape133.instObjGroups.objectGroups[1].objectGroupId" 
-		"living_room_latestRN.placeHolderList[75]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube133|living_room_latest:pCubeShape133.instObjGroups.objectGroups[1].objectGrpColor" 
-		"living_room_latestRN.placeHolderList[76]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube133|living_room_latest:pCubeShape133.instObjGroups.objectGroups[2]" 
-		"living_room_latestRN.placeHolderList[77]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube133|living_room_latest:pCubeShape133.instObjGroups.objectGroups[2].objectGroupId" 
-		"living_room_latestRN.placeHolderList[78]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube133|living_room_latest:pCubeShape133.instObjGroups.objectGroups[2].objectGrpColor" 
-		"living_room_latestRN.placeHolderList[79]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube133|living_room_latest:pCubeShape133.compInstObjGroups.compObjectGroups[0]" 
-		"living_room_latestRN.placeHolderList[80]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube133|living_room_latest:pCubeShape133.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
-		"living_room_latestRN.placeHolderList[81]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube150|living_room_latest:pCubeShape150.instObjGroups.objectGroups[0]" 
-		"living_room_latestRN.placeHolderList[82]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube150|living_room_latest:pCubeShape150.instObjGroups.objectGroups[0].objectGroupId" 
-		"living_room_latestRN.placeHolderList[83]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube150|living_room_latest:pCubeShape150.instObjGroups.objectGroups[0].objectGrpColor" 
-		"living_room_latestRN.placeHolderList[84]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube150|living_room_latest:pCubeShape150.instObjGroups.objectGroups[1]" 
-		"living_room_latestRN.placeHolderList[85]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube150|living_room_latest:pCubeShape150.instObjGroups.objectGroups[1].objectGroupId" 
-		"living_room_latestRN.placeHolderList[86]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube150|living_room_latest:pCubeShape150.instObjGroups.objectGroups[1].objectGrpColor" 
-		"living_room_latestRN.placeHolderList[87]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube150|living_room_latest:pCubeShape150.instObjGroups.objectGroups[2]" 
-		"living_room_latestRN.placeHolderList[88]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube150|living_room_latest:pCubeShape150.instObjGroups.objectGroups[2].objectGroupId" 
-		"living_room_latestRN.placeHolderList[89]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube150|living_room_latest:pCubeShape150.instObjGroups.objectGroups[2].objectGrpColor" 
-		"living_room_latestRN.placeHolderList[90]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube150|living_room_latest:pCubeShape150.compInstObjGroups.compObjectGroups[0]" 
-		"living_room_latestRN.placeHolderList[91]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube150|living_room_latest:pCubeShape150.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
-		"living_room_latestRN.placeHolderList[92]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube137|living_room_latest:pCubeShape137.instObjGroups.objectGroups[0]" 
-		"living_room_latestRN.placeHolderList[93]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube137|living_room_latest:pCubeShape137.instObjGroups.objectGroups[0].objectGroupId" 
-		"living_room_latestRN.placeHolderList[94]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube137|living_room_latest:pCubeShape137.instObjGroups.objectGroups[0].objectGrpColor" 
-		"living_room_latestRN.placeHolderList[95]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube137|living_room_latest:pCubeShape137.instObjGroups.objectGroups[1]" 
-		"living_room_latestRN.placeHolderList[96]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube137|living_room_latest:pCubeShape137.instObjGroups.objectGroups[1].objectGroupId" 
-		"living_room_latestRN.placeHolderList[97]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube137|living_room_latest:pCubeShape137.instObjGroups.objectGroups[1].objectGrpColor" 
-		"living_room_latestRN.placeHolderList[98]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube137|living_room_latest:pCubeShape137.instObjGroups.objectGroups[2]" 
-		"living_room_latestRN.placeHolderList[99]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube137|living_room_latest:pCubeShape137.instObjGroups.objectGroups[2].objectGroupId" 
-		"living_room_latestRN.placeHolderList[100]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube137|living_room_latest:pCubeShape137.instObjGroups.objectGroups[2].objectGrpColor" 
-		"living_room_latestRN.placeHolderList[101]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube137|living_room_latest:pCubeShape137.compInstObjGroups.compObjectGroups[0]" 
-		"living_room_latestRN.placeHolderList[102]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube137|living_room_latest:pCubeShape137.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
-		"living_room_latestRN.placeHolderList[103]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube138|living_room_latest:pCubeShape138.instObjGroups.objectGroups[0]" 
-		"living_room_latestRN.placeHolderList[104]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube138|living_room_latest:pCubeShape138.instObjGroups.objectGroups[0].objectGroupId" 
-		"living_room_latestRN.placeHolderList[105]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube138|living_room_latest:pCubeShape138.instObjGroups.objectGroups[0].objectGrpColor" 
-		"living_room_latestRN.placeHolderList[106]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube138|living_room_latest:pCubeShape138.instObjGroups.objectGroups[1]" 
-		"living_room_latestRN.placeHolderList[107]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube138|living_room_latest:pCubeShape138.instObjGroups.objectGroups[1].objectGroupId" 
-		"living_room_latestRN.placeHolderList[108]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube138|living_room_latest:pCubeShape138.instObjGroups.objectGroups[1].objectGrpColor" 
-		"living_room_latestRN.placeHolderList[109]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube138|living_room_latest:pCubeShape138.instObjGroups.objectGroups[2]" 
-		"living_room_latestRN.placeHolderList[110]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube138|living_room_latest:pCubeShape138.instObjGroups.objectGroups[2].objectGroupId" 
-		"living_room_latestRN.placeHolderList[111]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube138|living_room_latest:pCubeShape138.instObjGroups.objectGroups[2].objectGrpColor" 
-		"living_room_latestRN.placeHolderList[112]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube138|living_room_latest:pCubeShape138.compInstObjGroups.compObjectGroups[0]" 
-		"living_room_latestRN.placeHolderList[113]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube138|living_room_latest:pCubeShape138.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
-		"living_room_latestRN.placeHolderList[114]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube96|living_room_latest:pCubeShape190.instObjGroups.objectGroups[0]" 
-		"living_room_latestRN.placeHolderList[115]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube96|living_room_latest:pCubeShape190.instObjGroups.objectGroups[0].objectGroupId" 
-		"living_room_latestRN.placeHolderList[116]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube96|living_room_latest:pCubeShape190.instObjGroups.objectGroups[0].objectGrpColor" 
-		"living_room_latestRN.placeHolderList[117]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube96|living_room_latest:pCubeShape190.instObjGroups.objectGroups[1]" 
-		"living_room_latestRN.placeHolderList[118]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube96|living_room_latest:pCubeShape190.instObjGroups.objectGroups[1].objectGroupId" 
-		"living_room_latestRN.placeHolderList[119]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube96|living_room_latest:pCubeShape190.instObjGroups.objectGroups[1].objectGrpColor" 
-		"living_room_latestRN.placeHolderList[120]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube96|living_room_latest:pCubeShape190.instObjGroups.objectGroups[2]" 
-		"living_room_latestRN.placeHolderList[121]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube96|living_room_latest:pCubeShape190.instObjGroups.objectGroups[2].objectGroupId" 
-		"living_room_latestRN.placeHolderList[122]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube96|living_room_latest:pCubeShape190.instObjGroups.objectGroups[2].objectGrpColor" 
-		"living_room_latestRN.placeHolderList[123]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube96|living_room_latest:pCubeShape190.compInstObjGroups.compObjectGroups[0]" 
-		"living_room_latestRN.placeHolderList[124]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube96|living_room_latest:pCubeShape190.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
-		"living_room_latestRN.placeHolderList[125]" ""
+		"living_room_latestRN.placeHolderList[22]" ":initialShadingGroup.dsm"
 		5 3 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[1]" 
-		"living_room_latestRN.placeHolderList[126]" ""
+		"living_room_latestRN.placeHolderList[23]" ""
 		5 4 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[1].objectGroupId" 
-		"living_room_latestRN.placeHolderList[127]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[1].objectGrpColor" 
-		"living_room_latestRN.placeHolderList[128]" ""
+		"living_room_latestRN.placeHolderList[24]" ""
 		5 3 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[2]" 
-		"living_room_latestRN.placeHolderList[129]" ""
+		"living_room_latestRN.placeHolderList[25]" ""
 		5 4 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[2].objectGroupId" 
-		"living_room_latestRN.placeHolderList[130]" ""
+		"living_room_latestRN.placeHolderList[26]" ""
 		5 4 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[2].objectGrpColor" 
-		"living_room_latestRN.placeHolderList[131]" ""
+		"living_room_latestRN.placeHolderList[27]" ""
 		5 3 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[3]" 
-		"living_room_latestRN.placeHolderList[132]" ""
+		"living_room_latestRN.placeHolderList[28]" ""
 		5 4 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[3].objectGroupId" 
-		"living_room_latestRN.placeHolderList[133]" ""
+		"living_room_latestRN.placeHolderList[29]" ""
 		5 4 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[3].objectGrpColor" 
-		"living_room_latestRN.placeHolderList[134]" ""
+		"living_room_latestRN.placeHolderList[30]" ""
 		5 3 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[4]" 
-		"living_room_latestRN.placeHolderList[135]" ""
+		"living_room_latestRN.placeHolderList[31]" ""
 		5 4 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[4].objectGroupId" 
-		"living_room_latestRN.placeHolderList[136]" ""
+		"living_room_latestRN.placeHolderList[32]" ""
 		5 4 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[4].objectGrpColor" 
-		"living_room_latestRN.placeHolderList[137]" ""
+		"living_room_latestRN.placeHolderList[33]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[5]" 
+		"living_room_latestRN.placeHolderList[34]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[5].objectGroupId" 
+		"living_room_latestRN.placeHolderList[35]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[5].objectGrpColor" 
+		"living_room_latestRN.placeHolderList[36]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[6]" 
+		"living_room_latestRN.placeHolderList[37]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[6].objectGroupId" 
+		"living_room_latestRN.placeHolderList[38]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[6].objectGrpColor" 
+		"living_room_latestRN.placeHolderList[39]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[7]" 
+		"living_room_latestRN.placeHolderList[40]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[7].objectGroupId" 
+		"living_room_latestRN.placeHolderList[41]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[7].objectGrpColor" 
+		"living_room_latestRN.placeHolderList[42]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[8]" 
+		"living_room_latestRN.placeHolderList[43]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[8].objectGroupId" 
+		"living_room_latestRN.placeHolderList[44]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[8].objectGrpColor" 
+		"living_room_latestRN.placeHolderList[45]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[9]" 
+		"living_room_latestRN.placeHolderList[46]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[9].objectGroupId" 
+		"living_room_latestRN.placeHolderList[47]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[9].objectGrpColor" 
+		"living_room_latestRN.placeHolderList[48]" ""
 		5 3 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.compInstObjGroups.compObjectGroups[0]" 
-		"living_room_latestRN.placeHolderList[138]" ""
+		"living_room_latestRN.placeHolderList[49]" ""
 		5 4 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
-		"living_room_latestRN.placeHolderList[139]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:pCube122|living_room_latest:pCubeShape122.instObjGroups" 
-		"living_room_latestRN.placeHolderList[140]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube123|living_room_latest:pCubeShape123.instObjGroups" 
-		"living_room_latestRN.placeHolderList[141]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube124|living_room_latest:pCubeShape124.instObjGroups" 
-		"living_room_latestRN.placeHolderList[142]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube125|living_room_latest:pCubeShape125.instObjGroups" 
-		"living_room_latestRN.placeHolderList[143]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube141|living_room_latest:pCubeShape141.instObjGroups" 
-		"living_room_latestRN.placeHolderList[144]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube142|living_room_latest:pCubeShape142.instObjGroups" 
-		"living_room_latestRN.placeHolderList[145]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube143|living_room_latest:pCubeShape143.instObjGroups" 
-		"living_room_latestRN.placeHolderList[146]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube144|living_room_latest:pCubeShape144.instObjGroups" 
-		"living_room_latestRN.placeHolderList[147]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube145|living_room_latest:pCubeShape145.instObjGroups" 
-		"living_room_latestRN.placeHolderList[148]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube146|living_room_latest:pCubeShape146.instObjGroups" 
-		"living_room_latestRN.placeHolderList[149]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube147|living_room_latest:pCubeShape147.instObjGroups" 
-		"living_room_latestRN.placeHolderList[150]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube148|living_room_latest:pCubeShape148.instObjGroups" 
-		"living_room_latestRN.placeHolderList[151]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube149|living_room_latest:pCubeShape149.instObjGroups" 
-		"living_room_latestRN.placeHolderList[152]" ":initialShadingGroup.dsm"
+		"living_room_latestRN.placeHolderList[50]" ""
 		5 4 "living_room_latestRN" "|living_room_latest:pPipe1|living_room_latest:pPipeShape1.inMesh" 
-		"living_room_latestRN.placeHolderList[153]" ""
+		"living_room_latestRN.placeHolderList[51]" ""
 		5 3 "living_room_latestRN" "|living_room_latest:pPipe1|living_room_latest:pPipeShape1.instObjGroups" 
-		"living_room_latestRN.placeHolderList[154]" ":initialShadingGroup.dsm"
+		"living_room_latestRN.placeHolderList[52]" ":initialShadingGroup.dsm"
 		5 4 "living_room_latestRN" "|living_room_latest:pPipe1|living_room_latest:pPipeShape1.uvSet[0].uvSetTweakLocation" 
-		"living_room_latestRN.placeHolderList[155]" ""
-		5 3 "living_room_latestRN" "living_room_latest:polyPlanarProj2.output" 
-		"living_room_latestRN.placeHolderList[156]" "living_room_latest:pPipeShape1.i"
+		"living_room_latestRN.placeHolderList[53]" ""
 		5 3 "living_room_latestRN" "living_room_latest:polyPlanarProj3.output" 
-		"living_room_latestRN.placeHolderList[157]" "living_room_latest:lampShape.i";
+		"living_room_latestRN.placeHolderList[54]" "living_room_latest:coffee_tableShape.i"
+		
+		5 3 "living_room_latestRN" "living_room_latest:polyPlanarProj4.output" 
+		"living_room_latestRN.placeHolderList[55]" "living_room_latest:lampShape.i"
+		5 3 "living_room_latestRN" "living_room_latest:polyPlanarProj5.output" 
+		"living_room_latestRN.placeHolderList[56]" "living_room_latest:pPipeShape1.i";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode animLayer -s -n "BaseAnimation";
@@ -6813,10 +1241,10 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperGraphPanel\" -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n"
 		+ "                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showUnderworld 0\n                -showInvisible 0\n"
 		+ "                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperShadePanel\" -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"visorPanel\" -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n"
-		+ "                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -island 0\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;\n\t\t\tif (`objExists nodeEditorPanel1Info`) nodeEditor -e -restoreInfo nodeEditorPanel1Info $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n"
-		+ "                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -island 0\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;\n\t\t\tif (`objExists nodeEditorPanel1Info`) nodeEditor -e -restoreInfo nodeEditorPanel1Info $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"createNodePanel\" -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n"
-		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Texture Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"polyTexturePlacementPanel\" -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"renderWindowPanel\" -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels `;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\tif ($useSceneConfig) {\n\t\tscriptedPanel -e -to $panelName;\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"visorPanel\" -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n"
+		+ "                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -island 0\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;\n\t\t\tif (`objExists nodeEditorPanel1Info`) nodeEditor -e -restoreInfo nodeEditorPanel1Info $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n"
+		+ "                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -island 0\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;\n\t\t\tif (`objExists nodeEditorPanel1Info`) nodeEditor -e -restoreInfo nodeEditorPanel1Info $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"createNodePanel\" -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels `;\n"
+		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Texture Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"polyTexturePlacementPanel\" -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"renderWindowPanel\" -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels `;\n"
 		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"blendShapePanel\" (localizedPanelLabel(\"Blend Shape\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\tblendShapePanel -unParent -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels ;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tblendShapePanel -edit -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynRelEdPanel\" -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n"
 		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"relationshipPanel\" -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"referenceEditorPanel\" -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels `;\n"
 		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"componentEditorPanel\" -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynPaintScriptedPanelType\" -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels `;\n"
@@ -6827,10 +1255,10 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -editorChanged \"updateModelPanelBar\" \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n"
 		+ "                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n"
 		+ "                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                $editorName;\nstereoCameraView -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
-		+ "\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"vertical2\\\" -ps 1 50 100 -ps 2 50 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
 		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
 		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
-		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        setFocus `paneLayout -q -p1 $gMainPane`;\n        sceneUIReplacement -deleteRemaining;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
+		+ "\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"UV Texture Editor\")) \n\t\t\t\t\t\"scriptedPanel\"\n\t\t\t\t\t\"$panelName = `scriptedPanel -unParent  -type \\\"polyTexturePlacementPanel\\\" -l (localizedPanelLabel(\\\"UV Texture Editor\\\")) -mbv $menusOkayInPanels `\"\n\t\t\t\t\t\"scriptedPanel -edit -l (localizedPanelLabel(\\\"UV Texture Editor\\\")) -mbv $menusOkayInPanels  $panelName\"\n\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        setFocus `paneLayout -q -p1 $gMainPane`;\n        sceneUIReplacement -deleteRemaining;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	setAttr ".b" -type "string" "playbackOptions -min 1 -max 24 -ast 1 -aet 48 ";
@@ -6845,7 +1273,6 @@ createNode objectSet -n "WallsAndCeiling";
 	setAttr ".an" -type "string" "gCharacterSet";
 createNode groupId -n "groupId2";
 	setAttr ".ihi" 0;
-createNode lambert -n "WallsAndCeiling1";
 createNode shadingEngine -n "lambert2SG";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
@@ -6927,396 +1354,724 @@ createNode polyTweakUV -n "living_room_latest:polyTweakUV1";
 		 0.098305441 0.026845034 0.097379662 -0.15251371 0.32020003 -0.26795793 0.3234517
 		 0.39359108 -0.3802073 0.39490482 -0.22724399 0.49308738 -0.38117081 0.49306002 -0.229029
 		 -0.26819807 0.31781161 -0.15382209 0.31461996;
-createNode lambert -n "SideTables";
-createNode shadingEngine -n "lambert4SG";
+createNode objectSet -n "WallsAndCeiling2";
 	setAttr ".ihi" 0;
-	setAttr -s 2 ".dsm";
-	setAttr ".ro" yes;
-createNode materialInfo -n "materialInfo3";
-createNode file -n "file3";
-	setAttr ".ftn" -type "string" "/Users/AshleyTheMagnificant/GitHub/Bandits/maya//sourceimages/SideTable.jpg";
-createNode place2dTexture -n "place2dTexture3";
+	setAttr ".an" -type "string" "gCharacterSet";
+createNode groupId -n "groupId6";
+	setAttr ".ihi" 0;
 createNode hyperGraphInfo -n "nodeEditorPanel1Info";
 createNode hyperView -n "hyperView1";
 	setAttr ".dag" no;
 createNode hyperLayout -n "hyperLayout1";
 	setAttr ".ihi" 0;
-	setAttr -s 31 ".hyp";
-	setAttr ".hyp[0].nvs" 1664;
-	setAttr ".hyp[1].nvs" 2128;
-	setAttr ".hyp[2].nvs" 1648;
-	setAttr ".hyp[3].nvs" 2304;
-	setAttr ".hyp[4].nvs" 1664;
-	setAttr ".hyp[5].nvs" 2128;
-	setAttr ".hyp[6].nvs" 1648;
-	setAttr ".hyp[7].nvs" 2304;
-	setAttr ".hyp[8].nvs" 1664;
-	setAttr ".hyp[9].nvs" 2128;
-	setAttr ".hyp[10].nvs" 1648;
-	setAttr ".hyp[11].nvs" 2304;
-	setAttr ".hyp[12].nvs" 2144;
-	setAttr ".hyp[13].nvs" 2144;
-	setAttr ".hyp[14].nvs" 1664;
-	setAttr ".hyp[15].nvs" 2128;
+	setAttr -s 20 ".hyp";
+	setAttr ".hyp[0].nvs" 2368;
+	setAttr ".hyp[1].nvs" 1712;
+	setAttr ".hyp[2].nvs" 1664;
+	setAttr ".hyp[3].nvs" 2128;
+	setAttr ".hyp[4].nvs" 1648;
+	setAttr ".hyp[5].nvs" 2304;
+	setAttr ".hyp[6].nvs" 2128;
+	setAttr ".hyp[7].nvs" 1664;
+	setAttr ".hyp[8].nvs" 2128;
+	setAttr ".hyp[9].nvs" 1648;
+	setAttr ".hyp[10].nvs" 2304;
+	setAttr ".hyp[11].nvs" 1664;
+	setAttr ".hyp[12].nvs" 2128;
+	setAttr ".hyp[13].nvs" 1648;
+	setAttr ".hyp[14].nvs" 2304;
+	setAttr ".hyp[15].nvs" 2144;
 	setAttr ".hyp[16].nvs" 1664;
 	setAttr ".hyp[17].nvs" 2128;
-	setAttr ".hyp[18].nvs" 1664;
-	setAttr ".hyp[19].nvs" 2128;
-	setAttr ".hyp[20].nvs" 1648;
-	setAttr ".hyp[21].nvs" 2304;
-	setAttr ".hyp[22].nvs" 1776;
-	setAttr ".hyp[23].nvs" 2128;
-	setAttr ".hyp[24].nvs" 1648;
-	setAttr ".hyp[25].nvs" 2304;
-	setAttr ".hyp[26].nvs" 1712;
-	setAttr ".hyp[27].nvs" 1776;
-	setAttr ".hyp[28].nvs" 2128;
-	setAttr ".hyp[29].nvs" 1648;
-	setAttr ".hyp[30].nvs" 2304;
+	setAttr ".hyp[18].nvs" 1648;
+	setAttr ".hyp[19].nvs" 2304;
 	setAttr ".anf" yes;
-createNode lambert -n "CoffeTable";
+createNode objectSet -n "Floors";
+	setAttr ".ihi" 0;
+	setAttr ".an" -type "string" "gCharacterSet";
+createNode groupId -n "groupId7";
+	setAttr ".ihi" 0;
+createNode lambert -n "Floor1";
+createNode shadingEngine -n "lambert4SG";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo3";
+createNode groupId -n "groupId8";
+	setAttr ".ihi" 0;
+createNode file -n "file3";
+	setAttr ".ftn" -type "string" "/Users/AshleyTheMagnificant/GitHub/Bandits/maya//sourceimages/FloorBoards.jpg";
+createNode place2dTexture -n "place2dTexture3";
+	setAttr ".re" -type "float2" 19 7 ;
 createNode shadingEngine -n "lambert5SG";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo4";
-createNode file -n "file4";
-	setAttr ".ftn" -type "string" "/Users/AshleyTheMagnificant/GitHub/Bandits/maya//sourceimages/CoffeeTable.jpg";
-createNode place2dTexture -n "place2dTexture4";
-createNode lambert -n "Lamp";
+createNode groupId -n "groupId9";
+	setAttr ".ihi" 0;
+createNode lambert -n "WallsAndCeiling3";
 createNode shadingEngine -n "lambert6SG";
 	setAttr ".ihi" 0;
-	setAttr -s 2 ".dsm";
+	setAttr -s 4 ".dsm";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo5";
-createNode file -n "file5";
-	setAttr ".ftn" -type "string" "/Users/AshleyTheMagnificant/GitHub/Bandits/maya//sourceimages/Lamp.jpg";
+createNode groupId -n "groupId10";
+	setAttr ".ihi" 0;
+createNode file -n "file4";
+	setAttr ".ftn" -type "string" "/Users/AshleyTheMagnificant/GitHub/Bandits/maya//sourceimages/Wall.jpg";
+createNode place2dTexture -n "place2dTexture4";
+createNode lambert -n "CoffeeTable";
+createNode shadingEngine -n "lambert7SG";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo6";
+createNode file -n "file5e";
+	setAttr ".ftn" -type "string" "/Users/AshleyTheMagnificant/GitHub/Bandits/maya//sourceimages/CoffeeTable.jpg";
 createNode place2dTexture -n "place2dTexture5";
 createNode polyTweakUV -n "polyTweakUV1";
 	setAttr ".uopa" yes;
-	setAttr -s 280 ".uvtk";
-	setAttr ".uvtk[0:249]" -type "float2" -0.15760924 0.065774709 -0.16293563
-		 0.063773423 -0.17420329 0.063779503 -0.16800983 0.066045135 -0.1448914 0.067532152
-		 -0.15349956 0.068027943 -0.12618299 0.068893701 -0.13229002 0.06956014 -0.10329472
-		 0.069749326 -0.10642813 0.070521206 -0.078284845 0.070032686 -0.078212127 0.070839375
-		 -0.053324088 0.069723099 -0.050050601 0.070491761 -0.030580729 0.068843275 -0.0243496
-		 0.069503576 -0.01210475 0.067461401 -0.0033994615 0.067948371 0.00030770898 0.065689713
-		 0.010768294 0.065948933 0.0052784234 0.063681632 0.016560286 0.063675553 0.0020338446
-		 0.061625034 0.013044268 0.061338812 -0.0094150007 0.059727103 0.00016668439 0.059175164
-		 -0.028152376 0.058193415 -0.021079421 0.057421416 -0.052358493 0.057199866 -0.048636332
-		 0.056282908 -0.079472229 0.056865364 -0.079559341 0.055899113 -0.10651766 0.057230681
-		 -0.1104032 0.056318253 -0.13052888 0.058251232 -0.1377349 0.057487637 -0.14897211
-		 0.059805185 -0.15864225 0.059264392 -0.16006561 0.06171456 -0.17111321 0.061440855
-		 -0.17529203 0.065072626 -0.18211628 0.062603325 -0.18371262 0.074512571 -0.17675872
-		 0.076828569 -0.15951122 0.067228884 -0.16072012 0.07885018 -0.13654675 0.068892032
-		 -0.13740207 0.080408841 -0.10860939 0.069933563 -0.10904761 0.081384569 -0.078161523
-		 0.070278078 -0.078151211 0.081707388 -0.047771707 0.069901437 -0.047313645 0.081354529
-		 -0.02000618 0.068830341 -0.019133061 0.080351025 0.0026808083 0.067142218 0.0039037913
-		 0.078768939 0.018093467 0.064967722 0.019569159 0.076730222 0.024484351 0.062489659
-		 0.026083156 0.074405879 0.020800591 0.059936374 0.022367902 0.072009772 0.0069355816
-		 0.057566673 0.0083047599 0.06978485 -0.0160712 0.0556418 -0.015056714 0.067976803
-		 -0.045996949 0.054390162 -0.045461729 0.066800743 -0.079621181 0.053967863 -0.079633519
-		 0.066404015 -0.11315842 0.054428965 -0.11371686 0.066837281 -0.14283676 0.055714816
-		 -0.14386995 0.068045288 -0.16547288 0.057664663 -0.16685428 0.069876939 -0.17889471
-		 0.060048133 -0.18046661 0.072114617 -0.19208373 0.25786141 -0.20043637 0.25859284
-		 -0.18606938 0.25859487 -0.17892285 0.25794837 -0.17332478 0.25722593 -0.16250296
-		 0.25738445 -0.14629973 0.25673795 -0.1386617 0.25694996 -0.11359848 0.25643328 -0.10969163
-		 0.25667799 -0.078043923 0.25633261 -0.078134462 0.25658801 -0.042555317 0.25644258
-		 -0.046637192 0.25668624 -0.010049507 0.25675598 -0.017844141 0.25696602 0.016657501
-		 0.25725141 0.0057106763 0.25740707 0.034991063 0.25789234 0.021749958 0.25797573
-		 0.042837281 0.25862661 0.028447196 0.25862461 0.038839541 0.25938749 0.024686538
-		 0.25929397 0.022738881 0.26009771 0.010332301 0.25991601 -0.0043425411 0.2606774
-		 -0.013554201 0.26042175 -0.039801627 0.26105571 -0.044668093 0.26075086 -0.079764232
-		 0.26118362 -0.079650208 0.26086199 -0.11962081 0.26104394 -0.11454131 0.2607407 -0.15477945
-		 0.26065549 -0.14539672 0.26040262 -0.18141367 0.26006836 -0.16889627 0.25989029 -0.19698472
-		 0.25935417 -0.18278886 0.25926471 -0.079571709 0.0682818 -0.0481029 0.068642884 -0.040358216
-		 0.24815683 -0.079751268 0.24824415 -0.11095978 0.068676025 -0.11904015 0.24814877
-		 -0.13876583 0.069775552 -0.15370764 0.24788353 -0.16002317 0.071445554 -0.17998625
-		 0.2474826 -0.17268844 0.073490471 -0.19536914 0.24699455 -0.17580684 0.075686961
-		 -0.19880445 0.24647415 -0.16948684 0.077813417 -0.19059195 0.24597389 -0.15471937
-		 0.079673797 -0.17210002 0.24553911 -0.13315453 0.081110746 -0.1454363 0.24520504
-		 -0.10687144 0.082011789 -0.11315723 0.24499638 -0.078201666 0.08231017 -0.078054294
-		 0.24492741 -0.049587205 0.081984192 -0.043016568 0.24500269 -0.023467243 0.081057578
-		 -0.010930941 0.24521732 -0.0021654665 0.079599053 0.015418321 0.24555647 0.012254253
-		 0.077723175 0.033489816 0.24599499 0.018166229 0.07558921 0.041202415 0.24649726
-		 0.014614582 0.073394805 0.037228547 0.2470174 0.0015354007 0.07136175 0.0213238 0.2475027
-		 -0.020067215 0.069713384 -0.0053951144 0.24789855 -0.079856262 0.24639285 -0.035885543
-		 0.24630132 -0.035325706 0.25928864 -0.079869285 0.25942552 -0.12370832 0.24629319
-		 -0.12429239 0.25927627 -0.16231509 0.24601617 -0.16339077 0.25886184 -0.19143529
-		 0.24559908 -0.19286318 0.25823763 -0.20830746 0.24509324 -0.20991738 0.25748104 -0.21184845
-		 0.24455562 -0.21346797 0.25667745 -0.2024972 0.24404065 -0.20397182 0.25590828 -0.1818576
-		 0.24359477 -0.18306412 0.25524244 -0.15230645 0.24325337 -0.15315481 0.25473288 -0.11666532
-		 0.24304047 -0.11709805 0.25441527 -0.077972993 0.24297017 -0.07796286 0.25431037
-		 -0.039351046 0.24304675 -0.038898706 0.25442472 -0.003919363 0.24326527 -0.0030532181
-		 0.25475091 0.025289923 0.24361221 0.026510797 0.25526878 0.045469534 0.24406259 0.046953704
-		 0.25594082 0.0542695 0.24457936 0.055892259 0.25671291 0.050129861 0.24511658 0.051735595
-		 0.25751603 0.032673083 0.24561952 0.034088999 0.25826851 0.0030562431 0.24603149
-		 0.0041127801 0.25888485 -0.068429396 0.24844252 -0.07625322 0.068233341 -0.10892858
-		 0.24839656 -0.10878231 0.068561703 -0.14594568 0.24817045 -0.13795532 0.06962654
-		 -0.17535909 0.24779387 -0.16063054 0.071296006 -0.19423105 0.24731331 -0.17459632
-		 0.073372275 -0.20108868 0.24678431 -0.17877044 0.075626165 -0.19589259 0.24626188
-		 -0.17317344 0.077828437 -0.17978103 0.2457948 -0.15876223 0.07977441 -0.15472724
-		 0.24542205 -0.13718154 0.081299037 -0.12323023 0.24517135 -0.11053969 0.082282394
-		 -0.088072315 0.24506049 -0.081204876 0.082652658 -0.052163318 0.2450965 -0.051672116
-		 0.082382888 -0.018436551 0.24527718 -0.024442911 0.081492633 0.010243356 0.24559042
-		 -0.0019175559 0.080046982 0.031210676 0.24601342 0.013745904 0.078157455 0.042187463
-		 0.24651313 0.020815358 0.075983018 0.041565802 0.24704526 0.018208131 0.073722333
-		 0.028744392 0.24755767 0.0057424456 0.071602374 0.00443995 0.24799399 -0.015681088
-		 0.069854409 -0.029142708 0.24830201 -0.044017538 0.068683237 -0.16993476 0.07775262
-		 -0.17629357 0.075614601 -0.15508951 0.079622954 -0.13341661 0.081067353 -0.10700612
-		 0.081973046 -0.078198597 0.082272738 -0.049446598 0.08194527 -0.023199826 0.081014007
-		 -0.0017911047 0.079547852 0.012704775 0.077662021;
-	setAttr ".uvtk[250:279]" 0.018653646 0.075516373 0.015091002 0.073309571 0.0019509941
-		 0.071265012 -0.019759893 0.06960687 -0.047940686 0.068529814 -0.079575434 0.068166822
-		 -0.11112912 0.068563193 -0.13907881 0.069669336 -0.16044267 0.071349233 -0.17316635
-		 0.073405892 -0.040022999 0.24801764 -0.079759225 0.24810532 -0.11938997 0.24800962
-		 -0.15435399 0.24774332 -0.18084748 0.24734101 -0.19634373 0.24685137 -0.19978894
-		 0.24632934 -0.19149198 0.24582773 -0.1728393 0.2453918 -0.14595731 0.24505706 -0.11342318
-		 0.244848 -0.078048125 0.2447788 -0.042738631 0.24485427 -0.010399252 0.24506928 0.016166151
-		 0.24540924 0.034395337 0.24584892 0.042188406 0.24635252 0.038200118 0.24687421 0.022177428
-		 0.24736105 -0.0047604591 0.24775839;
-createNode polyTweakUV -n "polyTweakUV2";
-	setAttr ".uopa" yes;
-	setAttr -s 442 ".uvtk";
-	setAttr ".uvtk[0:249]" -type "float2" 0.71118981 0.050910264 0.71356922 0.049375355
-		 0.71356004 0.048267528 0.71117878 0.049784318 0.71698636 0.048198193 0.71697992 0.047104366
-		 0.7211144 0.047463894 0.72111112 0.046378769 0.72559923 0.04722137 0.72559923 0.046139158
-		 0.73007584 0.047486261 0.73007929 0.046400934 0.73417974 0.048241615 0.73418623 0.047147244
-		 0.73755729 0.049436718 0.73756659 0.048328221 0.7398836 0.050984986 0.73989487 0.049858116
-		 0.74088913 0.052761663 0.74090135 0.051613905 0.74039751 0.054606181 0.74040961 0.0534367
-		 0.73837066 0.056330897 0.73838133 0.055141177 0.73494619 0.057740819 0.73495412 0.056534555
-		 0.73045254 0.058661982 0.73045683 0.057444997 0.7253834 0.058973581 0.72538328 0.057752956
-		 0.72032762 0.058633372 0.72032326 0.057416715 0.71587211 0.057687357 0.715864 0.056481775
-		 0.71250421 0.056259476 0.71249348 0.055070594 0.71054405 0.05452529 0.71053195 0.053356778
-		 0.71012104 0.052679989 0.71010888 0.051533177 0.7254982 0.052720804 0.7246269 -0.058870852
-		 0.72476 -0.058849335 0.72549814 -0.058895409 0.72496474 -0.058832288 0.72522116 -0.058821499
-		 0.72550458 -0.058817863 0.72578722 -0.058821797 0.72604191 -0.058832943 0.72624391
-		 -0.058850169 0.72637331 -0.058871984 0.72641736 -0.058896005 0.72637141 -0.058920085
-		 0.72623968 -0.058941782 0.726035 -0.058959007 0.72577703 -0.058969915 0.72549164
-		 -0.05897361 0.72520685 -0.058969617 0.72495091 -0.058958232 0.72474909 -0.058940828
-		 0.72462088 -0.058919013 0.72457904 -0.058894932 0.71116489 0.048401028 0.71354878
-		 0.046906598 0.71429127 0.047054023 0.71207005 0.048456483 0.71697199 0.045760572
-		 0.71749502 0.04597646 0.72110701 0.045045711 0.72137421 0.045303352 0.72559935 0.044809625
-		 0.72559321 0.045080923 0.73008353 0.045067519 0.7298044 0.045323916 0.73419434 0.045802876
-		 0.73366058 0.046016254 0.73757792 0.046966374 0.73682696 0.047110163 0.73990864 0.048473768
-		 0.73899794 0.048524678 0.74091643 0.050203748 0.73992389 0.050144233 0.74042451 0.051999785
-		 0.73944545 0.051821392 0.73839438 0.053679332 0.73753393 0.053385802 0.73496389 0.055052459
-		 0.7343235 0.054661926 0.73046196 0.055949599 0.73012316 0.055494349 0.72538316 0.056253068
-		 0.72539103 0.055775687 0.72031784 0.055921733 0.72067124 0.055468488 0.71585417 0.055000424
-		 0.71650624 0.054613613 0.71248031 0.053609859 0.71334827 0.053321097 0.71051699 0.051921044
-		 0.7114988 0.051747922 0.71009386 0.050124183 0.71108449 0.050069831 0.71286666 0.048505306
-		 0.71494591 0.047184013 0.71494168 0.046596371 0.71286142 0.047909148 0.71795696 0.046167143
-		 0.71795398 0.045586064 0.72161055 0.045531161 0.721609 0.044954181 0.72558779 0.045320883
-		 0.72558779 0.044745274 0.72955763 0.0455506 0.72955924 0.044973493 0.73318917 0.046204679
-		 0.73319227 0.045623347 0.73616463 0.047236994 0.73616892 0.046649002 0.73819661 0.0485695
-		 0.73820186 0.047972932 0.73905253 0.050091982 0.73905826 0.049485646 0.73858815 0.051665101
-		 0.7385937 0.051048659 0.73678201 0.053129252 0.7367869 0.052503426 0.73376501 0.054321289
-		 0.73376864 0.053687859 0.72982812 0.055097751 0.72983003 0.054459404 0.72539794 0.055359997
-		 0.72539788 0.054719932 0.72097921 0.055073682 0.72097719 0.054435443 0.71707493 0.054276187
-		 0.71707124 0.053643078 0.71410674 0.053068798 0.71410185 0.05244337 0.71235877 0.051596284
-		 0.71235317 0.050980285 0.71195453 0.05002211 0.71194881 0.049416244 0.7128548 0.047144361
-		 0.71493614 0.045842499 0.71773261 0.046592005 0.71624005 0.047553688 0.71795011 0.044840612
-		 0.71993107 0.045846432 0.72160703 0.044214025 0.72262251 0.045377806 0.7255879 0.044006854
-		 0.72556448 0.045222461 0.72956133 0.044233166 0.7285006 0.045392178 0.7331962 0.044877626
-		 0.7311753 0.045874082 0.73617452 0.04589469 0.73334658 0.046630643 0.73820853 0.047207586
-		 0.73480356 0.047600225 0.73906547 0.048707731 0.73538464 0.048698388 0.73860091 0.050257757
-		 0.73500031 0.049822345 0.73679316 0.05170051 0.73365289 0.050858878 0.73377335 0.052875157
-		 0.73145109 0.051696036 0.72983247 0.053640295 0.72860891 0.052238066 0.72539777 0.053898748
-		 0.72542626 0.052420553 0.72097468 0.053616557 0.72225142 0.052221276 0.71706647 0.052830767
-		 0.71943188 0.051664475 0.71409547 0.051640969 0.71726424 0.050816253 0.71234602 0.050189987
-		 0.71595824 0.04977341 0.71194154 0.048638873 0.71561748 0.048648201 0.72348535 0.048429862
-		 0.723795 0.048216783 0.7237947 0.047986262 0.72348505 0.048198856 0.72426867 0.048049003
-		 0.72426838 0.047818929 0.72486055 0.047942378 0.72486025 0.047712542 0.72551292 0.047906816
-		 0.72551292 0.047677025 0.7261641 0.047945634 0.72616422 0.047715791 0.72675163 0.048055261
-		 0.7267518 0.04782515 0.72721899 0.04822544 0.72721928 0.047994882 0.72752047 0.048440091
-		 0.72752076 0.048209026 0.72762549 0.048678689 0.72762591 0.048447005 0.72752231 0.048918076
-		 0.72752267 0.048685774 0.72721946 0.049134627 0.7272197 0.048901804 0.72674549 0.049306624
-		 0.72674567 0.049073406 0.72614688 0.049416684 0.72614694 0.049183168 0.72548324 0.049453482
-		 0.72548324 0.049219862 0.72482115 0.049413279 0.72482097 0.049179792 0.72422677 0.049300194
-		 0.72422653 0.049066961 0.72375965 0.049125776 0.72375935 0.048893012 0.72346514 0.048907757
-		 0.72346479 0.048675515 0.72337115 0.04866787 0.72337085 0.048436247 0.72239065 -0.01788938
-		 0.7228722 -0.017967463 0.72261709 -0.026422441 0.7220875 -0.026371956 0.72360456
-		 -0.018028796 0.72342128 -0.026462197 0.72451645 -0.018067718 0.7244215 -0.026487291
-		 0.72552079 -0.018080711 0.72552299 -0.026495695 0.72652304 -0.018066525 0.72662216
-		 -0.026486576 0.72742867 -0.018026471 0.72761571 -0.026460707 0.72815132 -0.017964244
-		 0.72840917 -0.026420474 0.72862035 -0.017885566 0.72892505 -0.026369512 0.72878754
-		 -0.017797887 0.72911 -0.026312709 0.72863257 -0.017709613 0.72894138 -0.026255488
-		 0.72816724 -0.017629564 0.72843122 -0.026203513 0.7274344 -0.017565846 0.72762656
-		 -0.026162148 0.72650594 -0.017524958 0.72660613 -0.026135623;
-	setAttr ".uvtk[250:441]" 0.72547489 -0.017511249 0.72547257 -0.026126742 0.7244463
-		 -0.017526209 0.72434163 -0.026136458 0.72352451 -0.017568171 0.72332871 -0.026163697
-		 0.72280222 -0.017632842 0.72253573 -0.026205659 0.72235 -0.017713428 0.72203994 -0.026257932
-		 0.72220945 -0.017801881 0.72188705 -0.026315331 0.7215603 -0.033175707 0.72082937
-		 -0.03314501 0.72266287 -0.033199787 0.7240296 -0.033215046 0.725532 -0.033220112
-		 0.72703135 -0.033214509 0.72838897 -0.033198893 0.72947699 -0.033174455 0.73018944
-		 -0.03314352 0.73045105 -0.03310883 0.73022813 -0.033073902 0.72953361 -0.033041954
-		 0.72843021 -0.033016443 0.72702557 -0.033000112 0.72546291 -0.032994628 0.72390366
-		 -0.033000588 0.72250974 -0.033017457 0.72142243 -0.033043265 0.72074795 -0.033075392
-		 0.72054672 -0.03311038 0.72296458 -0.033152163 0.7225005 -0.033132374 0.72367114
-		 -0.03316772 0.72455084 -0.033177614 0.72552007 -0.033180892 0.72648716 -0.033177316
-		 0.7273609 -0.033167183 0.72805792 -0.033151388 0.72851002 -0.033131361 0.72867078
-		 -0.033109128 0.72852099 -0.033086777 0.72807175 -0.033066452 0.72736496 -0.033050358
-		 0.72646964 -0.033039987 0.72547573 -0.03303653 0.72448409 -0.033040285 0.72359532
-		 -0.033050954 0.7228986 -0.033067346 0.72246212 -0.03308773 0.72232616 -0.033110142
-		 0.72296125 -0.035158634 0.72249657 -0.035146177 0.72366869 -0.035168469 0.72454965
-		 -0.035174668 0.72552007 -0.035176814 0.72648841 -0.035174489 0.72736341 -0.035168111
-		 0.72806126 -0.035158157 0.72851396 -0.035145581 0.72867495 -0.035131574 0.72852504
-		 -0.035117388 0.72807521 -0.035104632 0.7273674 -0.03509444 0.72647095 -0.035087943
-		 0.72547567 -0.035085738 0.72448272 -0.035088122 0.72359282 -0.035094857 0.72289521
-		 -0.035105109 0.72245812 -0.035117984 0.72232199 -0.03513217 0.7217201 -0.035171747
-		 0.72101998 -0.03515321 0.72277749 -0.035186291 0.72408885 -0.03519547 0.72553068
-		 -0.03519851 0.72696948 -0.035195231 0.72827202 -0.035185754 0.72931546 -0.035170972
-		 0.72999775 -0.035152256 0.73024756 -0.035131395 0.7300325 -0.035110295 0.72936589
-		 -0.035090983 0.7283076 -0.035075605 0.72696167 -0.03506577 0.72546434 -0.035062432
-		 0.72397053 -0.035066068 0.72263443 -0.035076201 0.72159177 -0.035091758 0.72094429
-		 -0.035111189 0.72075009 -0.035132349 0.72171688 -0.0364905 0.72101617 -0.036479175
-		 0.72277522 -0.036499441 0.72408766 -0.036505103 0.72553068 -0.036506951 0.72697073
-		 -0.036504924 0.72827441 -0.036499143 0.7293188 -0.036490083 0.73000163 -0.036478579
-		 0.73025173 -0.036465824 0.7300365 -0.03645283 0.72936928 -0.036441028 0.72831017
-		 -0.036431611 0.72696292 -0.036425531 0.72546428 -0.036423564 0.7239691 -0.036425769
-		 0.72263187 -0.036432028 0.72158831 -0.036441505 0.72094035 -0.036453426 0.72074592
-		 -0.03646642 0.72362632 -0.036478162 0.72328544 -0.036472559 0.7241472 -0.036482692
-		 0.72479743 -0.036485434 0.72551429 -0.036486387 0.72622979 -0.036485374 0.72687536
-		 -0.036482513 0.72738934 -0.036477983 0.72772115 -0.036472261 0.72783732 -0.036465943
-		 0.72772449 -0.036459565 0.72739178 -0.036453843 0.72687066 -0.036449254 0.72621208
-		 -0.036446333 0.72548163 -0.03644532 0.72475278 -0.036446452 0.72409904 -0.036449432
-		 0.72358543 -0.036454082 0.72326195 -0.036459804 0.72315937 -0.036466241 0.72360396
-		 -0.054757118 0.72325897 -0.054801404 0.72413111 -0.054722369 0.72478908 -0.054700255
-		 0.72551453 -0.054692805 0.72623837 -0.054700911 0.7268917 -0.05472368 0.72741193
-		 -0.054758906 0.72774774 -0.054803491 0.7278654 -0.054853022 0.72775126 -0.054902732
-		 0.72741461 -0.054947793 0.72688711 -0.054983556 0.72622073 -0.055006385 0.72548145
-		 -0.055014074 0.72474396 -0.055005729 0.72408217 -0.054982185 0.7235623 -0.054945886
-		 0.72323501 -0.054900587 0.72313124 -0.054850757 0.72476196 -0.054814994 0.72462916
-		 -0.05483228 0.72496611 -0.054801404 0.72522187 -0.054792821 0.72550458 -0.054789901
-		 0.72578651 -0.054793119 0.72604054 -0.054802001 0.72624195 -0.05481571 0.72637105
-		 -0.054833114 0.72641492 -0.054852307 0.72636914 -0.054871619 0.72623777 -0.054888904
-		 0.72603357 -0.054902613 0.72577637 -0.054911375 0.7254917 -0.054914296 0.72520763
-		 -0.054911137 0.72495234 -0.054902136 0.72475106 -0.054888189 0.7246232 -0.054870725
-		 0.72458142 -0.054851472 0.72627211 0.049560137 0.72548038 0.049604148 0.72698581
-		 0.049428679 0.72755033 0.049223311 0.72791028 0.048964977 0.72803193 0.048679702
-		 0.72790551 0.048395671 0.72754574 0.048140399 0.72698897 0.047938205 0.72629005 0.047807977
-		 0.72551572 0.047761887 0.72473985 0.047804125 0.72403592 0.047930755 0.72347152 0.048130132
-		 0.72310203 0.048383534 0.72296482 0.04866685 0.72307533 0.048952699 0.72342533 0.049212739
-		 0.7239818 0.04942099 0.72469044 0.049556091;
-createNode lambert -n "CrownMolding";
-	setAttr ".c" -type "float3" 0.80000001 0.75686276 0.65882355 ;
-createNode shadingEngine -n "lambert7SG";
-	setAttr ".ihi" 0;
-	setAttr -s 12 ".dsm";
-	setAttr ".ro" yes;
-createNode materialInfo -n "materialInfo6";
-createNode lambert -n "FloorMolding";
-	setAttr ".c" -type "float3" 0.86274511 0.83137256 0.76078433 ;
+	setAttr -s 1495 ".uvtk";
+	setAttr ".uvtk[0:249]" -type "float2" 0.05566952 0.48840505 0.063194156 0.49247977
+		 0.063194066 0.49168092 0.05566952 0.48770362 0.056683425 0.48902249 0.056683425 0.4883092
+		 0.061914973 0.49105263 0.061914973 0.49183401 0.058868304 0.48943162 0.063491963
+		 0.49184442 0.063491963 0.49264696 0.058868434 0.49017382 0.055097133 0.48902249 0.060177375
+		 0.49183387 0.057217959 0.49017382 0.061707146 0.49264696 0.054109521 0.48840505 0.061417565
+		 0.49247977 0.054260939 0.48778462 0.055130541 0.48833022 0.056717698 0.48833022 0.056717698
+		 0.48904389 0.055130541 0.48904389 0.055130541 0.48552299 0.056717698 0.48552299 0.056717698
+		 0.48630291 0.055130541 0.48630291 0.054690547 0.48524925 0.054690547 0.48602509 0.05566952
+		 0.48571104 0.05566952 0.48494419 0.063194066 0.48853877 0.063194066 0.48941177 0.058868304
+		 0.48651221 0.06349206 0.48868749 0.063491963 0.48956454 0.058868304 0.48732349 0.056683425
+		 0.48628306 0.056683425 0.48550341 0.061914973 0.48797935 0.061914973 0.48883325 0.059686136
+		 0.48986661 0.059686136 0.49061942 0.058012288 0.49061942 0.059686027 0.48690599 0.059686027
+		 0.48772869 0.050949335 0.48476228 0.050449856 0.48449293 0.050449856 0.48524931 0.050628923
+		 0.48458615 0.019869298 0.48479599 0.019869298 0.48556086 0.034777045 0.4850736 0.034776956
+		 0.48432198 0.035121113 0.48458615 0.034996927 0.48524931 0.019954711 0.48568237 0.020088643
+		 0.48509634 0.020009309 0.48840505 0.035565898 0.48840505 0.035859704 0.48793423 0.020164013
+		 0.48793423 0.022585869 0.49247977 0.040301085 0.49247977 0.022693604 0.49264696 0.040491655
+		 0.49264696 0.021140218 0.49017382 0.037598968 0.49017382 0.021423697 0.49061942 0.038115501
+		 0.49061942 0.020422935 0.48902249 0.036241338 0.48902249 0.039523602 0.49183401 0.02219671
+		 0.49183387 0.020437419 0.48904389 0.036264554 0.48904389 0.020437419 0.48833022 0.036264554
+		 0.48833022 0.020437419 0.48552284 0.036264449 0.48552284 0.036264554 0.48630291 0.020437509
+		 0.48630291 0.050949335 0.45728314 0.050449856 0.45728314 0.050449856 0.46844465 0.050949335
+		 0.46855521 0.054690547 0.45728314 0.054690547 0.46878511 0.05566965 0.46867636 0.05566965
+		 0.45728314 0.063194156 0.45728314 0.063194066 0.47001353 0.063491963 0.47007558 0.063491963
+		 0.45728314 0.058868434 0.45728314 0.058868304 0.46930084 0.059686136 0.45728314 0.059686136
+		 0.46945101 0.056683425 0.46896172 0.056683425 0.45728311 0.061914973 0.45728314 0.061914973
+		 0.46986011 0.056717698 0.46897215 0.056717698 0.45728311 0.055130541 0.45728311 0.055130541
+		 0.46897215 0.020437419 0.45728311 0.036264554 0.45728311 0.036264554 0.46897203 0.020437419
+		 0.46897203 0.019869298 0.45728314 0.019869298 0.46856904 0.034777045 0.46837458 0.034777045
+		 0.45728314 0.036690503 0.48660266 0.020601362 0.48660266 0.052169606 0.48902249 0.052201495
+		 0.48904389 0.056970723 0.49183387 0.054923095 0.49061942 0.054171927 0.49017382 0.058413252
+		 0.49264696 0.058139186 0.49247977 0.051230453 0.48840505 0.051664352 0.48793423 0.052891277
+		 0.48660266 0.052891277 0.48580962 0.052891277 0.45728314 0.052891277 0.46898481 0.052201495
+		 0.45728311 0.052201495 0.46897203 0.052201398 0.48552299 0.052201495 0.48630291 0.052201398
+		 0.48833022 0.043314859 0.46837458 0.043314919 0.45728314 0.043314919 0.4850736 0.043910429
+		 0.48350075 0.043743476 0.48458615 0.043588743 0.48524931 0.044647068 0.48793423 0.045698136
+		 0.48660266 0.044275388 0.48840505 0.050219007 0.49247977 0.050456062 0.49264696 0.046813503
+		 0.49017382 0.047460556 0.49061942 0.045097485 0.48902249 0.049224183 0.49183387 0.04512541
+		 0.48904389 0.04512541 0.48833022 0.04512541 0.48630291 0.04512541 0.48552284 0.04512541
+		 0.45728311 0.04512541 0.46897203 -5.9604645e-08 0.46837458 0.019250423 0.46856284
+		 0.019250512 0.45728314 -5.9604645e-08 0.45728314 -5.9604645e-08 0.4850736 0.019250423
+		 0.48554519 0.019250423 0.48478088 9.3966722e-05 0.48432198 0.019466192 0.48508558
+		 0.019334406 0.48566851 -4.7206879e-05 0.48478422 9.5009804e-05 0.48458615 0.019548714
+		 0.48793423 0.019970626 0.48660254 -5.9604645e-08 0.48660266 -5.9604645e-08 0.48793423
+		 -5.9604645e-08 0.48840505 0.019399494 0.48840505 -5.9604645e-08 0.49247977 0.021891475
+		 0.49247977 -5.9604645e-08 0.49264696 0.021995813 0.49264696 -5.9604645e-08 0.49017382
+		 0.020495027 0.49017382 -5.9604645e-08 0.49061942 0.020769447 0.49061942 -5.9604645e-08
+		 0.48902249 0.019802839 0.48902249 0.021517426 0.49183401 -5.9604645e-08 0.49183387
+		 -5.9604645e-08 0.48904389 0.019817084 0.48904389 -5.9604645e-08 0.48833022 0.019816965
+		 0.48833022 -5.9604645e-08 0.48630291 0.019817084 0.48630291 -5.9604645e-08 0.48552284
+		 0.019816965 0.48552284 -5.9604645e-08 0.45728311 0.019817084 0.45728311 0.019817084
+		 0.46897215 -5.9604645e-08 0.46897215 0.050449856 0.47755039 0.050949335 0.47775108
+		 0.052891277 0.47853124 0.054690421 0.4781267 0.05566965 0.47790673 0.063194066 0.48052472
+		 0.063491963 0.48063585 0.058868304 0.47906658 0.059686136 0.47935492 0.061914891
+		 0.48014089 0.056683425 0.47834742 0.056717698 0.47836292 0.055130541 0.47836292 0.052201398
+		 0.47836292 0.04512541 0.47836292 0.036264554 0.47836292 0.020437419 0.47836292 0.019816965
+		 0.47836292 -5.9604645e-08 0.47836292 0.019250512 0.47776496 -5.9604645e-08 0.47742307
+		 0.019869298 0.47777617 0.034777045 0.47742307 0.043886602 0.47858661 0.05013293 0.48432198
+		 0.05013293 0.4850736 0.05013293 0.46837458 0.05013293 0.4774231 0.05013293 0.45728314
+		 0.049387231 0.46837458 0.049387231 0.45728314 0.048501946 0.47833663 0.049387231
+		 0.4850736 0.048192494 0.48329416 0.049699418 0.48524931 0.049875833 0.48458615 0.05210454
+		 0.48660266 0.050896816 0.48793423 0.050469734 0.48840505 0.057272796 0.49247977 0.057542965
+		 0.49264696 0.053367145 0.49017382 0.054106884 0.49061942 0.056123432 0.49183387 0.051396064
+		 0.48902249 0.051427469 0.48904389 0.051427469 0.48833022 0.051427469 0.48630291 0.051427469
+		 0.48552299 0.051427469 0.46897203 0.051427469 0.47836292 0.051427469 0.45728311 0.050449856
+		 0.48094603;
+	setAttr ".uvtk[250:499]" 0.05013293 0.48079735 0.050949335 0.48118031 0.052891277
+		 0.4820911 0.054690421 0.48161042 0.05566952 0.4813489 0.063194156 0.48444441 0.063491963
+		 0.48457393 0.058868304 0.48270831 0.059686136 0.48304832 0.056683425 0.48184749 0.061914973
+		 0.48397467 0.056717698 0.48186496 0.055130541 0.48186496 0.052201398 0.48186496 0.051427469
+		 0.48186496 0.036264449 0.48186496 0.045125306 0.48186496 0.020437419 0.48186496 0.019816965
+		 0.48186496 -5.9604645e-08 0.48186496 0.019250423 0.48153532 -5.9604645e-08 0.48113057
+		 0.019869298 0.4815487 0.034777045 0.48113057 0.043314859 0.48113066 0.049387112 0.48079741
+		 0.046063155 0.4850736 0.046063066 0.48432204 0.046354368 0.48524931 0.046518907 0.48458615
+		 0.048597574 0.48660266 0.047475547 0.48793423 0.047078818 0.48840505 0.05341132 0.49247977
+		 0.053663515 0.49264696 0.049779564 0.49017382 0.050468601 0.49061942 0.047948137
+		 0.48902249 0.052346654 0.49183387 0.047977604 0.48904389 0.047977604 0.48833022 0.047977708
+		 0.48630291 0.047977604 0.48552299 0.047977604 0.48186496 0.047977708 0.46897215 0.047977604
+		 0.47836292 0.047977708 0.45728311 0.012926744 -0.11472476 0.012926744 -0.11472476
+		 0.046353042 0.46837458 0.046353132 0.45728314 0.012926744 -0.11472476 0.012926744
+		 -0.11472476 0.046353117 0.4774231 0.049251676 0.48073295 0.012926744 -0.11472476
+		 0.012926744 -0.11472476 0.04806032 0.48322284 0.043766275 0.47852814 0.012926744
+		 -0.11472476 0.012926744 -0.11472476 0.04622604 0.47736788 0.012926744 -0.11472473
+		 0.045936733 0.48424786 0.012926744 -0.11472473 0.043196037 0.48106527 0.043789983
+		 0.48342884 0.012926744 -0.11472473 0.048368923 0.47827893 0.012926744 -0.11472473
+		 0.045833394 0.48416978 0.043701798 0.48335657 0.047941752 0.48315194 0.049124755
+		 0.48067975 0.048248239 0.47824323 0.046120599 0.47733867 0.043678224 0.47849077 0.043112218
+		 0.48100975 0.051136337 0.45728314 0.051136337 0.46859655 0.051136337 0.47782618 0.051136337
+		 0.48126805 0.051136337 0.48486319 0.050813578 0.48545092 0.050057754 0.48545098 0.046688542
+		 0.48545092 0.043903038 0.48545098 0.035249233 0.48545098 0.020138532 0.48594403 0.019515216
+		 0.48593396 -5.9604645e-08 0.48545098 0.048118651 0.48065132 0.047287196 0.48216721
+		 0.047502652 0.47915712 0.04600732 0.47860256 0.044290856 0.47930893 0.043893084 0.48085359
+		 0.044307455 0.48229262 0.045805529 0.48279127 0.05566952 0.42616129 0.05566952 0.42686272
+		 0.063194066 0.42288539 0.063194156 0.42208657 0.056683425 0.42554373 0.061914891
+		 0.42273232 0.061914973 0.42351368 0.056683425 0.42625713 0.058868304 0.42513463 0.012926744
+		 -0.11472473 0.012926744 -0.11472473 0.012926744 -0.11472473 0.012926744 -0.11472473
+		 0.012926744 -0.11472473 0.012926744 -0.11472473 0.012926744 -0.11472473 0.012926744
+		 -0.11472473 0.012926744 -0.11472473 0.012926744 -0.11472473 0.012926744 -0.11472473
+		 0.012926744 -0.11472473 0.058868434 0.42439243 0.063491963 0.42191938 0.063491963
+		 0.42272195 0.055097133 0.42554373 0.060177375 0.42273232 0.057217859 0.42439243 0.061707146
+		 0.42191938 0.054109521 0.42616117 0.061417624 0.42208657 0.054260939 0.42678159 0.055130541
+		 0.42623615 0.055130541 0.42552242 0.056717698 0.42552242 0.056717698 0.42623615 0.055130541
+		 0.42904335 0.055130541 0.42826337 0.056717698 0.42826337 0.012926744 -0.11472473
+		 0.012926744 -0.11472473 0.012926744 -0.11472473 0.012926744 -0.11472473 0.012926744
+		 -0.11472473 0.012926744 -0.11472473 0.012926744 -0.11472473 0.012926744 -0.11472473
+		 0.012926744 -0.11472473 0.012926744 -0.11472473 0.012926744 -0.11472473 0.012926744
+		 -0.11472473 0.012926744 -0.11472473 0.012926744 -0.11472473 0.012926744 -0.11472473
+		 0.012926744 -0.11472473 0.012926744 -0.11472473 0.012926744 -0.11472473 0.012926744
+		 -0.11472473 0.012926744 -0.11472473 0.012926744 -0.11472473 0.012926744 -0.11472473
+		 0.012926744 -0.11472473 0.012926744 -0.11472473 0.012926744 -0.11472473 0.012926744
+		 -0.11472473 0.012926744 -0.11472473 0.012926744 -0.11472473 0.012926744 -0.11472473
+		 0.012926744 -0.11472473 0.012926744 -0.11472473 0.012926744 -0.11472473 0.012926744
+		 -0.11472476 0.012926744 -0.11472476 0.012926744 -0.11472476 0.012926744 -0.11472476
+		 0.012926744 -0.11472476 0.012926744 -0.11472476 0.012926744 -0.11472476 0.012926744
+		 -0.11472476 0.28438815 -0.10826138 0.28438815 -0.10826138 0.28438815 -0.10826138
+		 0.28438815 -0.10826138 0.28438815 -0.10826138 0.28438815 -0.10826138 0.28438815 -0.10826138
+		 0.28438815 -0.10826138 0.28438815 -0.10826139 0.28438815 -0.10826139 0.28438815 -0.10826138
+		 0.28438815 -0.10826138 0.28438815 -0.10826139 0.28438815 -0.10826138 0.28438815 -0.10826138
+		 0.28438815 -0.10826139 0.28438815 -0.10826139 0.28438815 -0.10826138 0.28438815 -0.10826139
+		 0.28438815 -0.10826138 0.056717698 0.42904335 0.054690421 0.42931709 0.05566952 0.42962205
+		 0.05566952 0.42885536 0.054690421 0.42854112 0.063194066 0.4260276 0.063194066 0.42515445
+		 0.058868304 0.42805398 0.058868304 0.42724288 0.063491963 0.42500171 0.063491963
+		 0.42587888 0.056683425 0.42828327 0.28438815 -0.10826139 0.28438815 -0.10826138 0.28438815
+		 -0.10826138 0.28438815 -0.10826139 0.28438815 -0.10826139 0.28438815 -0.10826139
+		 0.28438815 -0.10826139 0.28438815 -0.10826139 0.28438815 -0.10826139 0.28438815 -0.10826139
+		 0.28438815 -0.10826139 0.28438815 -0.10826139 0.28438815 -0.10826139 0.28438815 -0.10826139
+		 0.28438815 -0.10826139 0.28438815 -0.10826139 0.28438815 -0.10826139 0.28438815 -0.10826139
+		 0.28438815 -0.10826139 0.28438815 -0.10826139 0.28438815 -0.10826139 0.28438815 -0.10826139
+		 0.28438815 -0.10826139 0.28438815 -0.10826139 0.061914891 0.42573309 0.061914891
+		 0.42658693 0.056683425 0.4290629 0.059686136 0.42469969 0.059686136 0.42394695 0.058012288
+		 0.42394695 0.059686027 0.42766029 0.059686027 0.42683762 0.050949335 0.42980391 0.050628923
+		 0.4299801 0.050449774 0.42931706 0.050449856 0.43007332 0.019869298 0.4297702 0.034777045
+		 0.43024421 0.034776956 0.42949265 0.019869298 0.4290055 0.035121113 0.4299801;
+	setAttr ".uvtk[500:749]" 0.020088643 0.42946991 0.019954711 0.42888397 0.034996808
+		 0.42931706 0.020009309 0.42616117 0.020164013 0.42663205 0.035859704 0.42663205 0.035565898
+		 0.42616129 0.022585869 0.42208657 0.040300995 0.42208657 0.022693485 0.42191938 0.040491655
+		 0.42191938 0.021140218 0.42439255 0.037598968 0.42439243 0.021423697 0.42394695 0.038115501
+		 0.42394695 0.020422935 0.42554373 0.02219671 0.42273232 0.039523602 0.42273232 0.036241442
+		 0.42554373 0.020437419 0.42552242 0.036264449 0.42552242 0.020437419 0.42623615 0.036264449
+		 0.42623615 0.020437419 0.42904335 0.020437419 0.42826337 0.036264554 0.42826337 0.036264554
+		 0.42904335 0.050949335 0.44601104 0.050449856 0.44612154 0.05566965 0.44588998 0.054690547
+		 0.4457812 0.063194066 0.44455269 0.063491963 0.44449079 0.058868304 0.44526535 0.059686027
+		 0.44511524 0.056683425 0.44560462 0.061914973 0.44470617 0.056717698 0.44559419 0.055130541
+		 0.44559419 0.020437419 0.44559419 0.036264554 0.44559419 0.034777045 0.44619167 0.019869298
+		 0.44599721 0.020601362 0.42796367 0.036690414 0.42796367 0.052201398 0.42552242 0.052169688
+		 0.42554373 0.056970723 0.42273232 0.054923095 0.42394695 0.054171927 0.42439243 0.058413252
+		 0.42191938 0.058139067 0.42208645 0.051230453 0.42616117 0.051664278 0.42663205 0.052891187
+		 0.42796367 0.052891277 0.42875654 0.052891277 0.44558141 0.052201495 0.44559419 0.052201398
+		 0.42904335 0.052201495 0.42826337 0.052201398 0.42623615 0.043314859 0.44619167 0.043910429
+		 0.43106559 0.043314859 0.42949265 0.043743476 0.4299801 0.043588623 0.42931706 0.044647068
+		 0.42663205 0.045698032 0.42796367 0.044275388 0.42616117 0.050218917 0.42208657 0.050455973
+		 0.42191938 0.046813414 0.42439243 0.047460556 0.42394695 0.049224183 0.42273232 0.045097485
+		 0.42554373 0.045125306 0.42552242 0.04512541 0.42623615 0.04512541 0.42826337 0.04512541
+		 0.42904335 0.04512541 0.44559419 -5.9604645e-08 0.44619167 0.019250423 0.44600341
+		 -5.9604645e-08 0.42949265 -5.9604645e-08 0.43024421 0.019250423 0.42978531 0.019250423
+		 0.42902106 0.019466192 0.42948058 -5.9604645e-08 0.4299801 -5.9604645e-08 0.42931706
+		 0.019334406 0.42889774 0.019548714 0.42663205 -5.9604645e-08 0.42663205 -5.9604645e-08
+		 0.42796367 0.019970626 0.42796367 -5.9604645e-08 0.42616117 0.019399494 0.42616117
+		 -5.9604645e-08 0.42208657 0.021891475 0.42208657 -5.9604645e-08 0.42191938 0.021995813
+		 0.42191938 -5.9604645e-08 0.42439243 0.020495027 0.42439243 -5.9604645e-08 0.42394695
+		 0.020769447 0.42394695 -5.9604645e-08 0.42554373 -5.9604645e-08 0.42273232 0.021517426
+		 0.42273232 0.019802839 0.42554373 -5.9604645e-08 0.42552242 0.019816965 0.42552242
+		 -5.9604645e-08 0.42623615 0.019816965 0.42623615 -5.9604645e-08 0.42826337 0.019817084
+		 0.42826337 -5.9604645e-08 0.42904335 0.019816965 0.42904335 -5.9604645e-08 0.44559419
+		 0.019817084 0.44559419 0.050949335 0.43681523 0.050449856 0.43701592 0.054690547
+		 0.43643951 0.052891277 0.43603513 0.05566965 0.4366596 0.063194066 0.43404162 0.063491963
+		 0.43393049 0.058868304 0.43549964 0.059686136 0.43521133 0.061914891 0.43442544 0.056683425
+		 0.43621892 0.056717698 0.4362033 0.055130541 0.4362033 0.052201398 0.4362033 0.036264449
+		 0.4362033 0.04512541 0.4362033 0.020437419 0.4362033 -5.9604645e-08 0.4362033 0.019816965
+		 0.4362033 0.019250512 0.43680131 -5.9604645e-08 0.43714324 0.034777045 0.43714324
+		 0.019869298 0.43679014 0.043886498 0.43597963 0.050132848 0.42949265 0.05013293 0.43024421
+		 0.05013293 0.43714324 0.05013293 0.44619167 0.049387112 0.44619167 0.048501946 0.43622965
+		 0.049387112 0.42949265 0.048192404 0.43127221 0.049699299 0.42931706 0.049875833
+		 0.4299801 0.050896719 0.42663205 0.052104399 0.42796367 0.050469734 0.42616117 0.057272796
+		 0.42208657 0.057542965 0.42191938 0.053367011 0.42439243 0.054106884 0.42394695 0.056123432
+		 0.42273232 0.051396064 0.42554373 0.051427469 0.42552242 0.051427469 0.42623615 0.051427469
+		 0.42826337 0.051427469 0.42904335 0.051427469 0.44559419 0.051427469 0.4362033 0.050449856
+		 0.43362024 0.05013293 0.43376884 0.050949335 0.43338597 0.052891277 0.43247515 0.054690547
+		 0.43295589 0.05566952 0.43321747 0.063194156 0.4301219 0.063491963 0.42999241 0.058868304
+		 0.43185797 0.059686136 0.43151802 0.061914891 0.43059158 0.056683425 0.43271881 0.056717698
+		 0.43270138 0.055130541 0.43270138 0.052201495 0.43270138 0.051427469 0.43270138 0.036264554
+		 0.43270138 0.04512541 0.43270138 0.020437419 0.43270138 0.019817084 0.43270138 -5.9604645e-08
+		 0.43270138 0.019250423 0.43303087 -5.9604645e-08 0.43343559 0.019869298 0.43301752
+		 0.034777045 0.43343559 0.043314859 0.43343559 0.049387231 0.43376884 0.046063066
+		 0.42949265 0.046063066 0.43024421 0.046354249 0.42931706 0.046518907 0.42998016 0.047475547
+		 0.42663205 0.0485975 0.42796367 0.047078818 0.42616129 0.053411379 0.42208657 0.053663395
+		 0.42191938 0.049779452 0.42439243 0.050468601 0.42394695 0.047948137 0.42554373 0.052346654
+		 0.42273232 0.047977604 0.42552242 0.047977604 0.42623615 0.047977708 0.42826337 0.047977604
+		 0.42904335 0.047977604 0.43270138 0.047977708 0.44559419 0.047977604 0.4362033 0.046353042
+		 0.44619167 0.046353117 0.43714324 0.048060253 0.4313435 0.049251765 0.43383333 0.04622604
+		 0.43719846 0.043766156 0.43603808 0.045936733 0.43031842 0.043196037 0.43350103 0.043789983
+		 0.43113753 0.048368923 0.43628737 0.045833394 0.43039656 0.043701798 0.43120977 0.047941752
+		 0.43141437 0.049124852 0.43388644 0.048248239 0.43632314 0.04612048 0.43722761 0.043678224
+		 0.43607557 0.043112129 0.4335565 0.051136337 0.44596964 0.051136337 0.43674013 0.051136337
+		 0.43329826 0.051136337 0.42970303 0.050813504 0.42911536 0.050057635 0.42911536 0.046688467
+		 0.42911536 0.043902919 0.42911536 0.035249144 0.42911536 0.020138532 0.42862231 0.019515216
+		 0.42863226 -5.9604645e-08 0.42911536 0.047287285 0.43239909 0.048118651 0.43391505
+		 0.047502652 0.4354091 0.04600732 0.43596375 0.044290945 0.43525735 0.043893084 0.43371272;
+	setAttr ".uvtk[750:999]" 0.044307515 0.43227381 0.045805529 0.43177506 -0.055669606
+		 0.48840505 -0.055669606 0.48770347 -0.063194215 0.49168092 -0.063194215 0.49247977
+		 -0.05668354 0.48902249 -0.0619151 0.49183401 -0.06191498 0.4910526 -0.05668354 0.4883092
+		 -0.058868468 0.48943162 -0.058868468 0.49017382 -0.06349206 0.49264696 -0.06349206
+		 0.49184442 -0.055097222 0.48902249 -0.060177505 0.49183387 -0.057217956 0.49017382
+		 -0.061707199 0.49264696 -0.054109633 0.48840505 -0.061417639 0.49247977 -0.054261088
+		 0.48778462 -0.055130601 0.48833022 -0.055130601 0.48904389 -0.056717813 0.48904389
+		 -0.056717813 0.48833022 -0.055130601 0.48552284 -0.055130601 0.48630291 -0.056717813
+		 0.48630291 -0.056717813 0.48552284 -0.05469048 0.48524925 -0.055669725 0.48494419
+		 -0.055669606 0.48571092 -0.05469048 0.48602509 -0.063194156 0.48853877 -0.063194156
+		 0.48941177 -0.058868527 0.48651221 -0.058868527 0.48732349 -0.06349206 0.48956454
+		 -0.06349206 0.48868749 -0.05668354 0.48628306 -0.0619151 0.48883325 -0.0619151 0.48797929
+		 -0.056683421 0.48550341 -0.059686124 0.48986673 -0.059686124 0.49061942 -0.058012247
+		 0.49061942 -0.059686124 0.48690611 -0.059686124 0.48772869 -0.050949395 0.48476228
+		 -0.05062896 0.48458615 -0.050449967 0.48524931 -0.050449967 0.48449293 -0.019869387
+		 0.48479599 -0.034777164 0.48432198 -0.034777164 0.4850736 -0.019869387 0.48556072
+		 -0.035121143 0.48458615 -0.020088732 0.48509634 -0.019954801 0.48568228 -0.034996986
+		 0.48524931 -0.020009518 0.48840505 -0.020164073 0.48793423 -0.035859764 0.48793423
+		 -0.035566032 0.48840505 -0.022585869 0.49247977 -0.040301204 0.49247977 -0.022693634
+		 0.49264696 -0.04049176 0.49264696 -0.021140218 0.49017382 -0.037598968 0.49017382
+		 -0.021423697 0.49061942 -0.038115501 0.49061942 -0.020423055 0.48902249 -0.022196829
+		 0.49183387 -0.039523721 0.49183401 -0.036241531 0.48902249 -0.020437479 0.48904389
+		 -0.036264598 0.48904389 -0.020437479 0.48833022 -0.036264658 0.48833022 -0.020437479
+		 0.48552284 -0.020437479 0.48630291 -0.036264598 0.48630291 -0.036264658 0.48552284
+		 -0.050949335 0.45728314 -0.050949395 0.46855521 -0.050449967 0.46844465 -0.050449848
+		 0.45728314 -0.05469048 0.45728314 -0.055669606 0.45728314 -0.055669606 0.46867636
+		 -0.05469048 0.46878505 -0.063194156 0.45728314 -0.063194156 0.47001353 -0.06349206
+		 0.47007558 -0.06349206 0.45728314 -0.058868468 0.45728314 -0.058868468 0.46930099
+		 -0.059686124 0.45728314 -0.059686124 0.46945101 -0.05668354 0.46896172 -0.06191498
+		 0.46986011 -0.06191498 0.45728314 -0.05668354 0.45728311 -0.056717813 0.46897203
+		 -0.056717813 0.45728311 -0.055130601 0.45728311 -0.055130601 0.46897215 0.28438815
+		 -0.10826139 0.28438815 -0.10826139 0.28438815 -0.10826139 0.28438815 -0.10826139
+		 0.28438815 -0.10826139 0.28438815 -0.10826139 0.28438815 -0.10826139 0.28438815 -0.10826139
+		 0.28438815 -0.10826139 0.28438815 -0.10826139 0.28438815 -0.10826139 0.28438815 -0.10826139
+		 0.28438815 -0.10826138 0.28438815 -0.10826138 0.28438815 -0.10826138 0.28438815 -0.10826138
+		 0.28438815 -0.10826138 0.28438815 -0.10826138 0.28438815 -0.10826138 0.28438815 -0.10826138
+		 0.05748982 0.022748243 0.046858624 0.022151127 0.043426752 0.027544532 0.05536633
+		 0.028510354 0.037344307 0.02272407 0.036243923 0.025256652 0.064516746 0.024953619
+		 0.063916422 0.027210157 0.057728641 -0.24193428 0.068347715 -0.24003135 0.08489009
+		 -0.21716546 0.064542614 -0.22025184 0.041995771 -0.24051897 0.033880144 -0.21794866
+		 0.015683331 -0.21273033 0.032195732 -0.2372046 0.033027343 -0.23359798 0.01806955
+		 -0.20731701 0.044956774 -0.23279046 0.040192954 -0.20614062 0.058621369 -0.23363177
+		 0.065416515 -0.20736663 0.08406686 -0.21206389 0.068319432 -0.23676978 0.065563947
+		 -0.19223289 0.056599267 -0.19325645 0.043356918 -0.19249569 0.035040081 -0.19070385
+		 0.035678536 -0.188738 0.045805991 -0.18829565 0.057417169 -0.18875657 0.065597445
+		 -0.19046788 0.074934945 -0.19021849 0.060419448 -0.19185723 0.038770452 -0.19063686
+		 0.025542162 -0.18781643 0.026911266 -0.18480574 0.043002896 -0.18414004 0.061399564
+		 -0.18483375 0.074675843 -0.18745033 0.074847519 -0.18423282 0.060383521 -0.18574755
+		 0.038813874 -0.18461953 0.025630094 -0.18201213 0.026991449 -0.17922826 0.043028481
+		 -0.17861259 0.06136287 -0.1792542 0.074592255 -0.18167375 0.063882582 -0.17890522
+		 0.055920005 -0.1796698 0.044177204 -0.17910171 0.036766775 -0.17775922 0.037300296
+		 -0.17627889 0.046326689 -0.17594475 0.056680746 -0.17629297 0.063943729 -0.17758192
+		 0.060774989 -0.24704401 0.078780584 -0.24421416 0.035328366 -0.24493615 0.020639345
+		 -0.24007545 0.023496717 -0.2349029 0.042962603 -0.23376106 0.064645849 -0.23495112
+		 0.079511017 -0.23944573 0.063178636 -0.041984886 0.063107707 -0.040823326 0.055607498
+		 -0.040153265 0.044555992 -0.040650979 0.03756509 -0.041829079 0.038051859 -0.043131068
+		 0.046568044 -0.043425485 0.056338675 -0.043118745 -0.22069064 0.036069978 -0.21856633
+		 0.04183206 -0.20662704 0.040866449 -0.21005836 0.035472669 -0.19944397 0.038578361
+		 -0.20054433 0.03604579 -0.22771671 0.038275331 -0.22711727 0.040531885 -0.22092864
+		 -0.22861254 -0.22774258 -0.20693016 -0.24809009 -0.2038438 -0.23154858 -0.22670969
+		 -0.20519659 -0.22719726 -0.19708005 -0.20462701 -0.17888424 -0.19940868 -0.19539657
+		 -0.22388288 -0.020437479 0.45728311 -0.020437479 0.46897215 -0.036264598 0.46897215
+		 -0.036264598 0.45728311 -0.019869387 0.45728314 -0.034777105 0.45728314 -0.034777164
+		 0.46837458 -0.019869387 0.46856904 -0.020601451 0.48660254 -0.036690593 0.48660266
+		 -0.05220145 0.48904389 -0.0521698 0.48902249 -0.056970835 0.49183387 -0.054923177
+		 0.49061942 -0.05417192 0.49017382 -0.058413327 0.49264696 -0.058139265 0.49247977
+		 -0.05123055 0.48840505 -0.051664352 0.48793423 -0.052891374 0.48660266 -0.052891374
+		 0.48580962 -0.052891314 0.45728314 -0.052891374 0.46898481 -0.05220145 0.45728311
+		 -0.05220145 0.46897215 -0.052201569 0.48552284 -0.05220145 0.48630291 -0.052201569
+		 0.48833022 -0.043314934 0.45728314 -0.043314934 0.46837458 -0.043910384 0.48350075
+		 -0.043314934 0.4850736 -0.043743432 0.48458615 -0.043588758 0.48524931;
+	setAttr ".uvtk[1000:1249]" -0.044647157 0.48793423 -0.045698106 0.48660266 -0.044275463
+		 0.48840505 -0.050219119 0.49247977 -0.050456166 0.49264696 -0.046813488 0.49017382
+		 -0.047460556 0.49061942 -0.049224317 0.49183387 -0.045097589 0.48902249 -0.045125544
+		 0.48904389 -0.045125544 0.48833022 -0.045125425 0.48630291 -0.045125544 0.48552284
+		 -0.045125425 0.46897215 -0.045125425 0.45728311 -0.019250512 0.45728314 -0.019250512
+		 0.46856284 -0.019250512 0.48478088 -0.019250512 0.48554531 -0.019466221 0.48508558
+		 -9.5009804e-05 0.48458615 -0.019334495 0.48566857 -0.019548774 0.48793423 -0.019970715
+		 0.48660266 -0.019399703 0.48840505 -0.021891475 0.49247977 -0.021995902 0.49264696
+		 -0.020495057 0.49017382 -0.020769477 0.49061942 -0.021517515 0.49183401 -0.019803047
+		 0.48902249 -0.019817054 0.48904389 -0.019817173 0.48833022 -0.019817054 0.48630291
+		 -0.019817173 0.48552284 -0.019817054 0.46897203 -0.019817054 0.45728311 -0.050949335
+		 0.47775108 -0.050449848 0.47755039 -0.054690659 0.4781267 -0.052891314 0.47853124
+		 -0.055669606 0.47790664 -0.063194156 0.48052463 -0.06349206 0.48063585 -0.058868468
+		 0.47906658 -0.059686124 0.47935492 -0.0619151 0.48014089 -0.05668354 0.47834742 -0.056717813
+		 0.47836292 -0.055130601 0.47836292 -0.052201569 0.47836292 -0.036264658 0.47836292
+		 -0.045125544 0.47836292 -0.020437479 0.47836292 -0.019817173 0.47836292 -0.019250512
+		 0.47776496 -0.034777105 0.47742307 -0.019869387 0.47777617 -0.043886602 0.47858661
+		 -0.050133049 0.4850736 -0.050133049 0.48432198 -0.05013299 0.4774231 -0.050133049
+		 0.46837458 -0.05013299 0.45728314 -0.049387276 0.46837458 -0.049387217 0.45728314
+		 -0.048502028 0.47833657 -0.049387276 0.4850736 -0.04819262 0.48329416 -0.049699485
+		 0.48524931 -0.049875796 0.48458615 -0.050896943 0.48793423 -0.052104652 0.48660266
+		 -0.050469875 0.48840505 -0.057272851 0.49247977 -0.057543039 0.49264696 -0.053367078
+		 0.49017382 -0.054106832 0.49061942 -0.056123555 0.49183387 -0.051396251 0.48902249
+		 -0.051427603 0.48904389 -0.051427603 0.48833022 -0.051427603 0.48630291 -0.051427603
+		 0.48552284 -0.051427603 0.46897215 -0.051427603 0.47836292 -0.051427603 0.45728311
+		 -0.050449967 0.48094603 -0.050133049 0.48079735 -0.050949395 0.48118031 -0.052891374
+		 0.4820911 -0.054690659 0.48161042 -0.055669606 0.48134878 -0.063194156 0.48444441
+		 -0.06349206 0.48457393 -0.058868468 0.48270831 -0.059686244 0.48304808 -0.0619151
+		 0.48397467 -0.05668354 0.48184749 -0.056717813 0.48186496 -0.055130601 0.48186496
+		 -0.052201569 0.48186496 -0.051427603 0.48186496 -0.036264658 0.48186496 -0.045125544
+		 0.48186496 -0.020437658 0.48186496 -0.019817173 0.48186496 -0.019250512 0.48153532
+		 -0.019869387 0.4815487 -0.034777164 0.48113057 -0.043315053 0.48113057 -0.049387336
+		 0.48079735 -0.046063185 0.4850736 -0.046063244 0.48432198 -0.046354353 0.48524931
+		 -0.046518862 0.48458615 -0.047475636 0.48793423 -0.048597574 0.48660266 -0.047079027
+		 0.48840505 -0.053411424 0.49247977 -0.053663611 0.49264696 -0.049779534 0.49017382
+		 -0.050468564 0.49061942 -0.047948182 0.48902249 -0.052346706 0.49183387 -0.047977686
+		 0.48904389 -0.047977686 0.48833022 -0.047977686 0.48630291 -0.047977686 0.48552284
+		 -0.047977805 0.48186496 -0.047977686 0.46897203 -0.047977686 0.47836292 -0.047977686
+		 0.45728311 -0.046353161 0.45728314 -0.046353161 0.46837458 -0.046353102 0.4774231
+		 -0.048060477 0.48322284 -0.049251854 0.48073289 -0.046226025 0.47736788 -0.04376626
+		 0.47852814 -0.045936942 0.48424786 -0.043196201 0.48106521 -0.043789983 0.48342884
+		 -0.04836905 0.47827885 -0.045833528 0.48416978 -0.043702006 0.48335657 -0.047941864
+		 0.48315194 -0.049124897 0.48067975 -0.048248291 0.47824323 -0.046120644 0.47733852
+		 -0.043678343 0.47849077 -0.043112218 0.48100975 -0.051136434 0.46859655 -0.051136374
+		 0.45728314 -0.051136374 0.47782618 -0.051136434 0.48126805 -0.051136434 0.48486319
+		 -0.050813735 0.48545092 -0.050057828 0.48545098 -0.046688557 0.48545092 -0.043902993
+		 0.48545098 -0.035249352 0.48545098 -0.020138681 0.48594394 -0.019515336 0.48593405
+		 -0.055669606 0.42616129 -0.063194156 0.42208645 -0.063194156 0.42288539 -0.055669606
+		 0.42686272 -0.05668354 0.42554384 -0.05668354 0.42625713 -0.06191498 0.42351374 -0.0619151
+		 0.42273232 -0.058868527 0.42513475 -0.06349206 0.42272195 -0.06349206 0.42191938
+		 -0.058868468 0.42439255 -0.055097222 0.42554384 -0.060177505 0.42273232 -0.057217956
+		 0.42439255 -0.061707199 0.42191938 -0.054109633 0.42616117 -0.061417639 0.42208657
+		 -0.054261148 0.42678159 -0.055130601 0.42623615 -0.056717813 0.42623615 -0.056717813
+		 0.42552242 -0.055130601 0.42552242 -0.055130601 0.42904335 -0.056717813 0.42904335
+		 -0.056717813 0.42826337 -0.055130601 0.42826337 -0.054690659 0.429317 -0.054690659
+		 0.42854112 -0.055669725 0.42885536 -0.055669606 0.42962205 -0.063194215 0.4260276
+		 -0.063194215 0.42515445 -0.058868468 0.42805398 -0.06349206 0.42587888 -0.06349206
+		 0.42500171 -0.058868468 0.42724288 -0.05668354 0.42828327 -0.05668354 0.4290629 -0.0619151
+		 0.42658693 -0.0619151 0.42573309 -0.059686244 0.42469952 -0.059686124 0.42394695
+		 -0.058012247 0.42394695 -0.059686244 0.42766029 -0.059686244 0.42683762 -0.050949395
+		 0.42980391 -0.050449967 0.43007332 -0.050449967 0.42931706 -0.05062896 0.42998016
+		 -0.019869387 0.4297702 -0.019869387 0.4290055 -0.034777164 0.42949265 -0.034777164
+		 0.43024421 -0.035121143 0.42998016 -0.034996986 0.42931706 -0.019954801 0.42888397
+		 -0.020088732 0.42946991 -0.020009518 0.42616129 -0.035566032 0.42616117 -0.035859764
+		 0.42663205 -0.020164073 0.42663205 -0.022585869 0.42208657 -0.040301085 0.42208657
+		 -0.022693694 0.42191938 -0.04049176 0.42191938 -0.021140218 0.42439255 -0.037598968
+		 0.42439255 -0.021423817 0.42394695 -0.038115501 0.42394695 -0.020423055 0.42554373
+		 -0.036241531 0.42554384 -0.039523721 0.42273232 -0.022196829 0.42273232 -0.020437479
+		 0.42552242 -0.036264658 0.42552242 -0.020437479 0.42623615 -0.036264658 0.42623615
+		 -0.020437479 0.42904335 -0.036264658 0.42904335 -0.036264598 0.42826337 -0.020437479
+		 0.42826337 -0.050449967 0.44612154 -0.050949395 0.44601104 -0.05469048 0.4457812
+		 -0.055669606 0.44588998;
+	setAttr ".uvtk[1250:1494]" -0.063194156 0.44455269 -0.06349206 0.44449079 -0.058868527
+		 0.44526535 -0.059686244 0.44511533 -0.05668354 0.44560462 -0.06191498 0.44470617
+		 -0.056717813 0.44559419 -0.055130601 0.44559419 -0.036264598 0.44559419 -0.020437479
+		 0.44559419 -0.019869387 0.44599721 -0.034777164 0.44619167 -0.036690593 0.42796367
+		 -0.020601451 0.42796367 -0.052169681 0.42554384 -0.052201569 0.42552242 -0.056970835
+		 0.42273232 -0.054923177 0.42394695 -0.05417192 0.42439255 -0.058413446 0.42191938
+		 -0.058139145 0.42208657 -0.05123055 0.42616129 -0.051664472 0.42663205 -0.052891374
+		 0.42796367 -0.052891374 0.42875654 -0.052891374 0.44558141 -0.05220145 0.44559419
+		 -0.052201569 0.42904335 -0.05220145 0.42826337 -0.052201569 0.42623615 -0.043315053
+		 0.44619167 -0.043315053 0.42949265 -0.043910384 0.43106559 -0.043743432 0.42998016
+		 -0.043588877 0.42931706 -0.044647157 0.42663205 -0.045698225 0.42796367 -0.044275463
+		 0.42616129 -0.050218999 0.42208645 -0.050456166 0.42191938 -0.046813488 0.42439255
+		 -0.047460556 0.42394695 -0.045097589 0.42554384 -0.049224317 0.42273232 -0.045125544
+		 0.42552242 -0.045125544 0.42623615 -0.045125544 0.42826337 -0.045125544 0.42904335
+		 -0.045125425 0.44559419 -0.019250512 0.44600341 -0.019250572 0.42902106 -0.019250512
+		 0.42978531 -0.019466221 0.42948058 -0.019334614 0.42889774 -0.019548774 0.42663205
+		 -0.019970834 0.42796367 -0.019399703 0.42616129 -0.021891475 0.42208645 -0.021996021
+		 0.42191938 -0.020495057 0.42439255 -0.020769477 0.42394695 -0.019802928 0.42554373
+		 -0.021517634 0.42273232 -0.019817173 0.42552242 -0.019817173 0.42623615 -0.019817054
+		 0.42826337 -0.1962271 -0.22027609 -0.18126962 -0.1939953 -0.20815685 -0.21946877
+		 -0.20339337 -0.19281909 -0.22182259 -0.2203103 -0.22861746 -0.19404498 -0.2472676
+		 -0.19874224 -0.23151943 -0.22344813 -0.21979925 -0.17993477 -0.22876391 -0.17891118
+		 -0.20655772 -0.17917398 -0.19824126 -0.17738229 -0.019817054 0.42904335 -0.019817054
+		 0.44559419 -0.050449967 0.43701592 -0.050949395 0.43681523 -0.052891374 0.43603513
+		 -0.05469048 0.43643951 -0.055669606 0.43665966 -0.063194215 0.43404162 -0.06349206
+		 0.43393049 -0.058868527 0.43549976 -0.059686124 0.43521145 -0.0619151 0.43442544
+		 -0.05668354 0.43621892 -0.19887939 -0.17541635 -0.20900682 -0.17497393 -0.2206175
+		 -0.17543507 -0.22879747 -0.17714623 -0.22361979 -0.17853564 -0.23813495 -0.17689681
+		 -0.20197132 -0.17731521 -0.18874297 -0.17449471 -0.19011131 -0.17148405 -0.20620301
+		 -0.17081836 -0.22459963 -0.1715121 -0.23787585 -0.17412868 -0.22358432 -0.17242584
+		 -0.23804834 -0.17091113 -0.20201382 -0.17129788 -0.18883035 -0.16869053 -0.19019154
+		 -0.16590655 -0.20622829 -0.16529074 -0.22456375 -0.16593251 -0.23779228 -0.16835204
+		 -0.21912029 -0.16634816 -0.22708341 -0.16558352 -0.20737806 -0.16577998 -0.19996646
+		 -0.16443738 -0.2005004 -0.16295719 -0.20952752 -0.16262302 -0.21988085 -0.16297126
+		 -0.22714373 -0.16426024 -0.22397551 -0.23372212 -0.24198094 -0.23089269 -0.19852868
+		 -0.23161468 -0.18384078 -0.22675362 -0.1866968 -0.22158125 -0.20616385 -0.22043964
+		 -0.22784558 -0.22162926 -0.24271068 -0.2261239 -0.22637859 -0.028663162 -0.22630808
+		 -0.027501497 -0.21880749 -0.026831556 -0.20775601 -0.027329255 -0.2007651 -0.028507371
+		 -0.20125267 -0.029809345 -0.20976898 -0.030103777 -0.21953955 -0.029797036 -0.019515395
+		 0.42863226 -0.020138681 0.42862231 -0.035249352 0.42911536 -0.043903112 0.42911536
+		 -0.046688616 0.42911536 -0.050057828 0.42911536 -0.050813735 0.42911536 -0.051136434
+		 0.42970303 -0.051136434 0.43329826 -0.051136434 0.43674013 -0.051136434 0.44596964
+		 -0.043112278 0.4335565 -0.043678343 0.43607557 -0.046120584 0.43722761 -0.04824841
+		 0.43632314 -0.049124837 0.43388644 -0.047941923 0.43141437 -0.043701947 0.43120977
+		 -0.045833468 0.43039656 -0.04836905 0.43628737 -0.043789983 0.43113753 -0.043196201
+		 0.43350103 -0.045936823 0.43031842 -0.046226025 0.43719846 -0.04376626 0.43603814
+		 -0.048060298 0.4313435 -0.049251854 0.43383333 -0.046353102 0.43714324 -0.046353281
+		 0.44619167 -0.047977686 0.43620339 -0.047977686 0.44559419 -0.047977686 0.43270138
+		 -0.047977686 0.42904335 -0.047977686 0.42826337 -0.047977686 0.42623615 -0.047977805
+		 0.42552242 -0.052346706 0.42273232 -0.047948182 0.42554373 -0.050468564 0.42394695
+		 -0.049779534 0.42439255 -0.053663611 0.42191938 -0.053411543 0.42208645 -0.047079027
+		 0.42616117 -0.047475755 0.42663205 -0.048597693 0.42796367 -0.046518862 0.42998016
+		 -0.046354413 0.42931706 -0.046063185 0.43024421 -0.046063244 0.42949265 -0.049387336
+		 0.43376884 -0.043315053 0.43343559 -0.034777164 0.43343559 -0.019869387 0.43301752
+		 -0.019250512 0.43303087 -0.019817054 0.43270138 -0.020437479 0.43270138 -0.045125544
+		 0.43270138 -0.036264598 0.43270138 -0.051427603 0.43270138 -0.05220145 0.43270138
+		 -0.055130601 0.43270138 -0.056717813 0.43270138 -0.0619151 0.43059158 -0.05668354
+		 0.43271881 -0.056717813 0.43620339 -0.055130601 0.43620339 -0.052201569 0.43620339
+		 -0.045125544 0.43620339 -0.036264658 0.43620339 -0.020437479 0.4362033 -0.019817173
+		 0.4362033 -0.019250512 0.4368014 -0.019869387 0.43679005 -0.034777105 0.43714324
+		 -0.043886602 0.43597972 -0.050133049 0.43024421 -0.050133049 0.42949265 -0.050133049
+		 0.44619167 -0.050133049 0.43714324 -0.049387276 0.44619167 -0.048502028 0.43622965
+		 -0.049387276 0.42949265 -0.048192501 0.43127221 -0.049699485 0.42931706 -0.049875796
+		 0.42998016 -0.052104652 0.42796367 -0.050896943 0.42663205 -0.050469875 0.42616129
+		 -0.057272851 0.42208645 -0.057543039 0.42191938 -0.053367078 0.42439255 -0.054106832
+		 0.42394695 -0.056123555 0.42273232 -0.051396191 0.42554384 -0.051427603 0.42552242
+		 -0.051427603 0.42623615 -0.051427603 0.42826337 -0.051427603 0.42904335 -0.051427603
+		 0.44559419 -0.051427603 0.43620339 -0.050449967 0.43362024 -0.050133049 0.43376884
+		 -0.050949395 0.43338597 -0.052891374 0.43247515 -0.054690659 0.43295589 -0.055669725
+		 0.43321747 -0.063194156 0.4301219 -0.06349206 0.42999241 -0.058868527 0.43185797
+		 -0.059686124 0.43151802;
+createNode lambert -n "sideTables";
 createNode shadingEngine -n "lambert8SG";
 	setAttr ".ihi" 0;
-	setAttr -s 15 ".dsm";
+	setAttr -s 2 ".dsm";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo7";
+createNode file -n "file6";
+	setAttr ".ftn" -type "string" "/Users/AshleyTheMagnificant/GitHub/Bandits/maya//sourceimages/SideTable.jpg";
+createNode place2dTexture -n "place2dTexture6";
 createNode lambert -n "Rug";
 createNode shadingEngine -n "lambert9SG";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo8";
-createNode file -n "file6";
+createNode file -n "file7";
 	setAttr ".ftn" -type "string" "/Users/AshleyTheMagnificant/GitHub/Bandits/maya//sourceimages/RugText_smaller.jpg";
-createNode place2dTexture -n "place2dTexture6";
-	setAttr ".re" -type "float2" 12 12 ;
-createNode lambert -n "Floor1";
+createNode place2dTexture -n "place2dTexture7";
+	setAttr ".re" -type "float2" 6 6 ;
+createNode lambert -n "Lamp";
 createNode shadingEngine -n "lambert10SG";
 	setAttr ".ihi" 0;
+	setAttr -s 2 ".dsm";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo9";
-createNode file -n "file7";
-	setAttr ".ftn" -type "string" "/Users/AshleyTheMagnificant/GitHub/Bandits/maya//sourceimages/FloorBoards.jpg";
-createNode place2dTexture -n "place2dTexture7";
-	setAttr ".re" -type "float2" 22 22 ;
-createNode objectSet -n "Marble";
-	setAttr ".ihi" 0;
-	setAttr -s 9 ".dsm";
-	setAttr ".an" -type "string" "gCharacterSet";
-	setAttr -s 9 ".gn";
-createNode groupId -n "groupId6";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId7";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId8";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId9";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId10";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId11";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId12";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId13";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId14";
-	setAttr ".ihi" 0;
-createNode lambert -n "MArble";
-createNode shadingEngine -n "lambert11SG";
-	setAttr ".ihi" 0;
-	setAttr -s 9 ".dsm";
-	setAttr ".ro" yes;
-	setAttr -s 9 ".gn";
-createNode materialInfo -n "materialInfo10";
-createNode groupId -n "groupId15";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId16";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId17";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId18";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId19";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId20";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId21";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId22";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId23";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId24";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId25";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId26";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId27";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId28";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId29";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId30";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId31";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId32";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId33";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId34";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId35";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId36";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId37";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId38";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId39";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId40";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId41";
-	setAttr ".ihi" 0;
 createNode file -n "file8";
-	setAttr ".ftn" -type "string" "/Users/AshleyTheMagnificant/GitHub/Bandits/maya//sourceimages/Marble.jpg";
+	setAttr ".ftn" -type "string" "/Users/AshleyTheMagnificant/GitHub/Bandits/maya//sourceimages/Lamp.jpg";
 createNode place2dTexture -n "place2dTexture8";
-	setAttr ".re" -type "float2" 20 20 ;
+createNode polyTweakUV -n "polyTweakUV2";
+	setAttr ".uopa" yes;
+	setAttr -s 280 ".uvtk";
+	setAttr ".uvtk[0:249]" -type "float2" -0.24959268 0.14760676 -0.25695997
+		 0.13860323 -0.27295232 0.13860323 -0.26436967 0.14879534 -0.23173191 0.15552369 -0.24398281
+		 0.15772727 -0.20536079 0.16167286 -0.21408375 0.16464522 -0.17303504 0.16556016 -0.17756177
+		 0.16900989 -0.13765408 0.16688886 -0.13765298 0.17050013 -0.10227393 0.16556016 -0.097745135
+		 0.16900989 -0.069950417 0.16167286 -0.061225738 0.16464528 -0.043582764 0.15552369
+		 -0.031330522 0.15772727 -0.025726594 0.14760676 -0.010948919 0.14879534 -0.018364526
+		 0.13860323 -0.0023723915 0.13860323 -0.022638418 0.12935068 -0.0069761798 0.12809099
+		 -0.038584959 0.12078191 -0.024900146 0.11832042 -0.064953417 0.11382605 -0.054794665
+		 0.11036439 -0.099191889 0.10928549 -0.093776837 0.10515888 -0.13767134 0.10770704
+		 -0.13767253 0.10334714 -0.1761498 0.10928549 -0.18156721 0.10515888 -0.21038564 0.11382605
+		 -0.22054638 0.11036439 -0.23675002 0.12078191 -0.25043613 0.11832042 -0.2526916 0.12935068
+		 -0.26835454 0.12809099 -0.27470315 0.14801946 -0.28417045 0.13696881 -0.28657401
+		 0.15346816 -0.27691358 0.16442087 -0.252527 0.15768066 -0.25435159 0.17399183 -0.22015484
+		 0.16514871 -0.22145052 0.18138704 -0.18070818 0.16985372 -0.18137951 0.18604466 -0.13765232
+		 0.17145899 -0.13765211 0.18763354 -0.094597295 0.16985354 -0.093925759 0.18604442
+		 -0.055153366 0.16514853 -0.053857561 0.18138674 -0.022785597 0.15768042 -0.020960815
+		 0.17399159 -0.00061500818 0.14801911 0.0015955642 0.16442057 0.0088458583 0.13696875
+		 0.011249416 0.15346798 0.0040446743 0.12554206 0.0064095631 0.14213631 -0.01524239
+		 0.1148953 -0.013167612 0.13157214 -0.047607984 0.10620637 -0.04606181 0.12294663
+		 -0.089940116 0.10051186 -0.089113668 0.1172917 -0.13767342 0.098528281 -0.13767363
+		 0.11532159 -0.18540569 0.10051186 -0.1862324 0.1172917 -0.22773446 0.10620655 -0.22928096
+		 0.12294681 -0.26009494 0.11489554 -0.26217002 0.13157256 -0.27937585 0.12554218 -0.28174078
+		 0.14213637 -0.30099839 0.4202306 -0.31284577 0.41246593 -0.29213756 0.41246593 -0.28202569
+		 0.41932863 -0.27418375 0.4269782 -0.258569 0.42531839 -0.2354957 0.43216848 -0.22444166
+		 0.42994228 -0.18864448 0.43542689 -0.1829281 0.43285245 -0.13765047 0.43653667 -0.13765179
+		 0.43384498 -0.086657569 0.43542689 -0.092376426 0.43285245 -0.039809596 0.43216848
+		 -0.050865855 0.42994228 -0.0011265799 0.4269782 -0.016742878 0.42531839 0.025681376
+		 0.4202306 0.0067078248 0.41932863 0.037521146 0.41246593 0.016812935 0.41246593 0.032345936
+		 0.40438414 0.011888482 0.40535668 0.0096658841 0.39680484 -0.008355476 0.3987205
+		 -0.029008724 0.39058435 -0.042474832 0.39329636 -0.079986565 0.3864904 -0.087196335
+		 0.38973731 -0.13767584 0.38506103 -0.13767408 0.38849688 -0.19536354 0.3864904 -0.1881506
+		 0.38973731 -0.24633749 0.39058435 -0.23286869 0.39329636 -0.28500593 0.39680484 -0.26698273
+		 0.3987205 -0.30767846 0.40438414 -0.28722018 0.40535668 -0.13767274 0.12007155 -0.092957273
+		 0.12187327 -0.080869183 0.36848763 -0.1376756 0.36702016 -0.18238713 0.12187327 -0.19448055
+		 0.36848763 -0.22208215 0.12704934 -0.24469019 0.3726916 -0.25250077 0.13495721 -0.28280574
+		 0.37908176 -0.27071339 0.1446642 -0.30518621 0.38687173 -0.27535588 0.15510246 -0.31032819
+		 0.39518285 -0.26658583 0.16521725 -0.2986967 0.4031724 -0.24581607 0.17407706 -0.27229267
+		 0.4101193 -0.21538766 0.18093625 -0.23415835 0.41546494 -0.17823811 0.18526229 -0.18795361
+		 0.41882199 -0.13765286 0.1867393 -0.13765059 0.41996557 -0.097068474 0.18526229 -0.087348625
+		 0.41882199 -0.05992147 0.18093625 -0.04114705 0.41546494 -0.029497139 0.17407706
+		 -0.0030179098 0.4101193 -0.0087327734 0.16521725 0.023379669 0.4031724 3.1240284e-05
+		 0.15510246 0.035003521 0.39518285 -0.0046174005 0.1446642 0.029853791 0.38687173
+		 -0.022835873 0.13495721 0.0074658766 0.37908176 -0.05325922 0.12704934 -0.03065563
+		 0.3726916 -0.13767712 0.36078784 -0.074255332 0.36244893 -0.073360249 0.38057342
+		 -0.13767736 0.37895736 -0.20109726 0.3624492 -0.20199277 0.38057378 -0.25702214 0.36720195
+		 -0.25868917 0.38519686 -0.29925656 0.37440637 -0.30147564 0.39220217 -0.32379067
+		 0.38315615 -0.32629377 0.40070581 -0.32908392 0.39245152 -0.33160168 0.40973455 -0.31581497
+		 0.40134847 -0.31810695 0.41837138 -0.28633314 0.4090541 -0.2882095 0.42584777 -0.24407263
+		 0.41496474 -0.24539568 0.4315801 -0.19307156 0.41866818 -0.19375391 0.43517056 -0.13764949
+		 0.41992807 -0.13764925 0.43639189 -0.082228497 0.41866785 -0.081545934 0.4351702
+		 -0.031230908 0.41496375 -0.029907502 0.43157902 0.01102411 0.40905362 0.012900673
+		 0.42584726 0.040498644 0.40134883 0.042790838 0.41837162 0.053759433 0.39245141 0.056277066
+		 0.40973449 0.048457287 0.38315585 0.050960369 0.40070549 0.023915194 0.37440595 0.026133858
+		 0.39220172 -0.018326081 0.36720139 -0.016659491 0.38519627 -0.1213062 0.36687633
+		 -0.13291998 0.11925407 -0.17982973 0.36754325 -0.17925294 0.12074031 -0.23342384
+		 0.37109289 -0.22089382 0.12575205 -0.27606899 0.37705258 -0.2533333 0.13366164 -0.30348974
+		 0.38467109 -0.27339995 0.14352468 -0.31356716 0.39306423 -0.27954644 0.15424481 -0.30627596
+		 0.40135354 -0.27180696 0.16472796 -0.28329015 0.40876672 -0.25154686 0.17400107 -0.24746771
+		 0.41469091 -0.2211016 0.18128112 -0.20239337 0.41868705 -0.18345101 0.18600246 -0.15203144
+		 0.42048499 -0.14193262 0.18782225 -0.10051207 0.41996872 -0.10005711 0.18661228 -0.051996585
+		 0.41717118 -0.061346915 0.18245712 -0.010563977 0.41227561 -0.029193036 0.17565671
+		 0.019959889 0.40562555 -0.0066639856 0.16673037 0.036262251 0.3977375 0.0037502423
+		 0.15641883 0.035947882 0.38929862 0.0004574731 0.14566109 0.018039718 0.38113782
+		 -0.016869508 0.13553394 -0.016543575 0.37415132 -0.047017422 0.12714566 -0.064703554
+		 0.36918274 -0.087125316 0.12148423 -0.26722217 0.16516826 -0.27604651 0.15500185
+		 -0.24634273 0.1740717 -0.21576174 0.1809639 -0.17843248 0.18531075 -0.13765286 0.18679449
+		 -0.096873984 0.18531075 -0.059547361 0.18096408 -0.028970487 0.1740717 -0.0080965236
+		 0.16516826;
+	setAttr ".uvtk[250:279]" 0.0007218793 0.15500185 -0.0039397404 0.14450869 -0.022242121
+		 0.13474943 -0.052817907 0.12679751 -0.092721269 0.12159242 -0.13767274 0.11978032
+		 -0.18262322 0.12159242 -0.22252353 0.12679751 -0.25309452 0.13474943 -0.27139109
+		 0.14450869 -0.080373578 0.36803475 -0.13767572 0.3665528 -0.1949764 0.36803475 -0.24561609
+		 0.37227944 -0.28404295 0.37873042 -0.3065874 0.38659179 -0.31174362 0.39497665 -0.29999113
+		 0.40303454 -0.27335668 0.41003853 -0.2349105 0.41542703 -0.18834181 0.41881043 -0.13765059
+		 0.41996261 -0.086960301 0.41881031 -0.040394809 0.41542694 -0.0019538328 0.41003841
+		 0.024674095 0.40303454 0.036419131 0.39497665 0.031254962 0.38659179 0.0087030604
+		 0.37873018 -0.029729955 0.37227944;
+createNode polyTweakUV -n "polyTweakUV3";
+	setAttr ".uopa" yes;
+	setAttr -s 442 ".uvtk";
+	setAttr ".uvtk[0:249]" -type "float2" 0.7063188 0.056391127 0.70893031 0.055263571
+		 0.70893031 0.053991824 0.7063188 0.055094406 0.71266937 0.054399125 0.71266937 0.053146496
+		 0.71717888 0.053857706 0.71717888 0.052617073 0.72207791 0.053673565 0.72207791 0.052437022
+		 0.72697693 0.053857706 0.72697693 0.052617073 0.73148644 0.05439914 0.73148644 0.053146519
+		 0.73522544 0.055263571 0.73522544 0.053991824 0.73783696 0.056391127 0.73783696 0.055094406
+		 0.73901647 0.057693914 0.73901647 0.056368381 0.7385537 0.059055939 0.7385537 0.057700269
+		 0.73638666 0.060338914 0.73638666 0.05895482 0.73264945 0.061395988 0.73264945 0.059988506
+		 0.72769666 0.062093697 0.72769666 0.060670778 0.72207791 0.062337667 0.72207791 0.060909353
+		 0.71645916 0.062093697 0.71645916 0.060670778 0.71150631 0.061395988 0.71150631 0.059988506
+		 0.70776922 0.060338914 0.70776922 0.05895482 0.70560205 0.059055939 0.70560205 0.057700269
+		 0.70513928 0.057693914 0.70513928 0.056368381 0.72207791 0.057693914 0.72118551 -0.062023938
+		 0.72131974 -0.061957538 0.72207791 -0.062097728 0.72152746 -0.061904967 0.72178864
+		 -0.061871231 0.72207791 -0.061859667 0.72236711 -0.061871231 0.72262836 -0.061904967
+		 0.72283608 -0.061957538 0.72297025 -0.062023938 0.72301728 -0.062097728 0.72297245
+		 -0.062171638 0.72283965 -0.062238514 0.72263187 -0.062291682 0.72236931 -0.062325895
+		 0.72207791 -0.062337637 0.72178644 -0.062325895 0.72152388 -0.062291682 0.72131616
+		 -0.062238514 0.72118336 -0.062171638 0.7211386 -0.062097728 0.7063188 0.053504094
+		 0.70893031 0.052432083 0.70974463 0.052512124 0.7073127 0.053517982 0.71266937 0.051610246
+		 0.71324384 0.051739335 0.71717888 0.051095553 0.71747524 0.05125457 0.72207791 0.050920449
+		 0.72207791 0.051089562 0.72697693 0.051095553 0.72668052 0.051254593 0.73148644 0.051610269
+		 0.73091197 0.051739328 0.73522544 0.052432083 0.73441124 0.052512117 0.73783696 0.053504094
+		 0.73684305 0.053518005 0.73901647 0.054742686 0.73792589 0.054677129 0.7385537 0.056037635
+		 0.73747045 0.055885538 0.73638666 0.057257392 0.7354275 0.05702053 0.73264945 0.058262348
+		 0.73192966 0.057953358 0.72769666 0.058925681 0.72731018 0.058567919 0.72207791 0.059157632
+		 0.72207791 0.0587826 0.71645916 0.058925681 0.71684551 0.058567919 0.71150631 0.058262348
+		 0.71222615 0.057953358 0.70776922 0.057257392 0.70872837 0.05702053 0.70560205 0.056037635
+		 0.7066853 0.055885538 0.70513928 0.054742686 0.70622987 0.054677129 0.70818752 0.053530224
+		 0.71046293 0.052582704 0.71046293 0.051909767 0.70818752 0.05284562 0.71375144 0.051853426
+		 0.71375144 0.051189408 0.71773756 0.051395312 0.71773756 0.050736926 0.72207791 0.051239245
+		 0.72207791 0.050582796 0.72641826 0.051395312 0.72641826 0.050736926 0.73040432 0.051853426
+		 0.73040432 0.051189408 0.73369282 0.052582718 0.73369282 0.051909782 0.73596823 0.053530224
+		 0.73596823 0.05284562 0.73696846 0.054619581 0.73696846 0.053921588 0.73652208 0.055752374
+		 0.73652208 0.055040464 0.73458982 0.056813732 0.73458982 0.056088775 0.73130244 0.057684101
+		 0.73130244 0.056948483 0.72697389 0.058256567 0.72697389 0.05751393 0.72207791 0.058456391
+		 0.72207791 0.057711273 0.71718192 0.058256567 0.71718192 0.05751393 0.71285337 0.057684101
+		 0.71285337 0.056948483 0.70956588 0.056813732 0.70956588 0.056088775 0.70763367 0.055752374
+		 0.70763367 0.055040464 0.70718724 0.054619581 0.70718724 0.053921588 0.70818752 0.051968165
+		 0.71046293 0.051047236 0.71353012 0.051570021 0.71190214 0.052251324 0.71375144 0.050338358
+		 0.71592867 0.051041365 0.71773756 0.049893104 0.71886528 0.050707415 0.72207791 0.049741417
+		 0.72207791 0.050593279 0.72641826 0.049893104 0.72529042 0.050707415 0.73040432 0.050338358
+		 0.72822714 0.051041365 0.73369282 0.051047228 0.73062563 0.051570021 0.73596823 0.051968165
+		 0.73225367 0.052251324 0.73696846 0.053026967 0.73292977 0.053026967 0.73652208 0.054128021
+		 0.73254776 0.05382508 0.73458982 0.055159636 0.73110169 0.054565094 0.73130244 0.056005642
+		 0.72870356 0.055166416 0.72697389 0.056562036 0.72558504 0.05555927 0.72207791 0.056756258
+		 0.72207791 0.055695876 0.71718192 0.056562036 0.71857071 0.05555927 0.71285337 0.056005642
+		 0.71545225 0.055166416 0.70956588 0.055159636 0.713054 0.054565094 0.70763367 0.054128021
+		 0.71160799 0.05382508 0.70718724 0.053026967 0.71122605 0.053026967 0.71986347 0.052858189
+		 0.72019935 0.052706763 0.72019935 0.052442014 0.71986347 0.052592665 0.72071594 0.052587211
+		 0.72071594 0.052323028 0.72136295 0.052510746 0.72136295 0.052246913 0.72207791 0.052484408
+		 0.72207791 0.052220739 0.72279298 0.052510746 0.72279298 0.052246913 0.72343975 0.052587204
+		 0.72343975 0.052323021 0.72395647 0.052706763 0.72395647 0.052442014 0.72429234 0.052858189
+		 0.72429234 0.052592665 0.72441351 0.053026967 0.72441351 0.052760676 0.72430605 0.053196825
+		 0.72430605 0.052929685 0.72397852 0.053350925 0.72397852 0.05308307 0.72346181 0.053473867
+		 0.72346181 0.053205371 0.72280663 0.053553045 0.72280663 0.053284183 0.72207791 0.053580403
+		 0.72207791 0.053311415 0.72134936 0.053553045 0.72134936 0.053284183 0.72069389 0.053473867
+		 0.72069389 0.053205371 0.72017735 0.053350925 0.72017735 0.05308307 0.71984977 0.053196825
+		 0.71984977 0.052929685 0.7197423 0.053026967 0.7197423 0.052760676 0.71880907 -0.019966841
+		 0.7193085 -0.019894779 0.71905649 -0.028696418 0.71851021 -0.028814077 0.72007227
+		 -0.019838095 0.71989036 -0.028603733 0.72102565 -0.019801855 0.72093046 -0.028544605
+		 0.72207791 -0.019789398 0.72207791 -0.02852428 0.72313017 -0.019801855 0.72322541
+		 -0.028544605 0.72408354 -0.019838095 0.72426546 -0.028603733 0.72484726 -0.019894779
+		 0.72509933 -0.028696418 0.72534668 -0.019966841 0.7256456 -0.028814077 0.72553056
+		 -0.020047307 0.72584778 -0.028945744 0.72537643 -0.020128548 0.72568113 -0.029078782
+		 0.72489536 -0.020202518 0.72515672 -0.029199898 0.7241317 -0.020261586 0.72432286
+		 -0.029296815 0.72315997 -0.020299792 0.72326094 -0.0293594;
+	setAttr ".uvtk[250:441]" 0.72207791 -0.020312965 0.72207791 -0.029381037 0.72099584
+		 -0.020299792 0.72089493 -0.0293594 0.72002411 -0.020261586 0.71983296 -0.029296815
+		 0.71926033 -0.020202518 0.71899909 -0.029199898 0.71877933 -0.020128548 0.71847475
+		 -0.029078782 0.71862525 -0.020047307 0.71830803 -0.028945744 0.71796715 -0.035548568
+		 0.71721613 -0.035750449 0.71910548 -0.035390079 0.72051996 -0.035289109 0.72207791
+		 -0.035254478 0.72363579 -0.035289109 0.72505033 -0.035390079 0.7261886 -0.035548568
+		 0.72693962 -0.035750449 0.72722435 -0.035977066 0.72700578 -0.036206782 0.72629553
+		 -0.036416709 0.72515738 -0.036585152 0.72370195 -0.036694229 0.72207791 -0.036731958
+		 0.7204538 -0.036694229 0.71899843 -0.036585152 0.7178601 -0.036416709 0.71714997
+		 -0.036206782 0.71693152 -0.035977066 0.71943253 -0.035701334 0.71895605 -0.035831511
+		 0.72016186 -0.035598695 0.72107255 -0.03553313 0.72207791 -0.0355106 0.72308326 -0.03553313
+		 0.72399396 -0.035598695 0.72472322 -0.035701334 0.72519976 -0.035831511 0.72537458
+		 -0.035977066 0.72522688 -0.036123872 0.72476715 -0.036257386 0.72403789 -0.036364079
+		 0.72311044 -0.036432981 0.72207791 -0.036456764 0.72104537 -0.036432981 0.72011793
+		 -0.036364079 0.7193886 -0.036257386 0.71892899 -0.036123872 0.71878123 -0.035977066
+		 0.71943253 -0.037764609 0.71895605 -0.037902832 0.72016186 -0.037655652 0.72107255
+		 -0.037586093 0.72207791 -0.037562191 0.72308326 -0.037586093 0.72399396 -0.037655652
+		 0.72472322 -0.037764609 0.72519976 -0.037902832 0.72537458 -0.038057327 0.72522688
+		 -0.038213134 0.72476715 -0.038354933 0.72403789 -0.038468242 0.72311044 -0.038541317
+		 0.72207791 -0.038566589 0.72104537 -0.038541317 0.72011793 -0.038468242 0.7193886
+		 -0.038354933 0.71892899 -0.038213134 0.71878123 -0.038057327 0.71813899 -0.037621439
+		 0.71742076 -0.037826836 0.71922916 -0.037460148 0.72058463 -0.03735739 0.72207791
+		 -0.037322104 0.72357118 -0.03735739 0.72492653 -0.037460148 0.7260167 -0.037621439
+		 0.72673506 -0.037826836 0.72700644 -0.038057327 0.72679567 -0.038290799 0.72611481
+		 -0.038504064 0.72502464 -0.03867507 0.7236318 -0.038785756 0.72207791 -0.038824022
+		 0.72052401 -0.038785756 0.71913105 -0.03867507 0.71804094 -0.038504064 0.71736008
+		 -0.038290799 0.71714938 -0.038057327 0.71813899 -0.038974345 0.71742076 -0.03918761
+		 0.71922916 -0.038806915 0.72058463 -0.038700104 0.72207791 -0.038663507 0.72357118
+		 -0.038700104 0.72492653 -0.038806915 0.7260167 -0.038974345 0.72673506 -0.03918761
+		 0.72700644 -0.039426863 0.72679567 -0.039669275 0.72611481 -0.039890647 0.72502464
+		 -0.040068209 0.7236318 -0.040183127 0.72207791 -0.040222824 0.72052401 -0.040183127
+		 0.71913105 -0.040068209 0.71804094 -0.039890647 0.71736008 -0.039669275 0.71714938
+		 -0.039426863 0.72012752 -0.03920275 0.71977848 -0.039308727 0.72066402 -0.039119124
+		 0.72133565 -0.039065659 0.72207791 -0.039047241 0.72282016 -0.039065659 0.72349173
+		 -0.039119124 0.72402829 -0.03920275 0.72437727 -0.039308727 0.72450334 -0.039426863
+		 0.724392 -0.039545715 0.72405207 -0.039653659 0.72351551 -0.039739728 0.72283483
+		 -0.03979522 0.72207791 -0.039814353 0.72132099 -0.03979522 0.72064024 -0.039739728
+		 0.72010374 -0.039653659 0.71976376 -0.039545715 0.71965247 -0.039426863 0.72012752
+		 -0.057722867 0.71977848 -0.057881832 0.72066402 -0.057597339 0.72133565 -0.057517111
+		 0.72207791 -0.057489455 0.72282016 -0.057517111 0.72349173 -0.057597339 0.72402829
+		 -0.057722867 0.72437727 -0.057881832 0.72450334 -0.058059096 0.724392 -0.058237493
+		 0.72405207 -0.058399379 0.72351551 -0.058528602 0.72283483 -0.05861181 0.72207791
+		 -0.058640599 0.72132099 -0.05861181 0.72064024 -0.058528602 0.72010374 -0.058399379
+		 0.71976376 -0.058237493 0.71965247 -0.058059096 0.72131974 -0.057928383 0.72118551
+		 -0.057990313 0.72152746 -0.057879329 0.72178864 -0.057847917 0.72207791 -0.057837069
+		 0.72236711 -0.057847917 0.72262836 -0.057879329 0.72283608 -0.057928383 0.72297025
+		 -0.057990313 0.72301728 -0.058059096 0.72297245 -0.058128059 0.72283965 -0.058190405
+		 0.72263187 -0.058239996 0.72236931 -0.058271885 0.72207791 -0.058282852 0.72178644
+		 -0.058271885 0.72152388 -0.058239996 0.72131616 -0.058190405 0.72118336 -0.058128059
+		 0.7211386 -0.058059096 0.7229473 0.053654708 0.72207791 0.053687401 0.72372866 0.053560063
+		 0.72434413 0.053413257 0.72473317 0.053229392 0.72485965 0.053026967 0.72471386 0.052826039
+		 0.7243129 0.052646033 0.72369742 0.05250401 0.72292799 0.052413203 0.72207791 0.052381992
+		 0.72122782 0.052413203 0.72045833 0.05250401 0.71984285 0.052646033 0.71944189 0.052826039
+		 0.71929616 0.053026967 0.71942258 0.053229392 0.71981162 0.053413257 0.7204271 0.053560063
+		 0.72120857 0.053654708;
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -7329,7 +2084,7 @@ select -ne :renderPartition;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 164 ".st";
+	setAttr -s 186 ".st";
 	setAttr -cb on ".an";
 	setAttr -cb on ".pt";
 select -ne :initialShadingGroup;
@@ -7337,7 +2092,7 @@ select -ne :initialShadingGroup;
 	setAttr -cb on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 464 ".dsm";
+	setAttr -s 492 ".dsm";
 	setAttr -k on ".mwc";
 	setAttr -cb on ".an";
 	setAttr -cb on ".il";
@@ -7346,7 +2101,7 @@ select -ne :initialShadingGroup;
 	setAttr -cb on ".fo";
 	setAttr -cb on ".epo";
 	setAttr ".ro" yes;
-	setAttr -s 111 ".gn";
+	setAttr -s 152 ".gn";
 	setAttr -cb on ".mimt";
 	setAttr -cb on ".miop";
 	setAttr -cb on ".mise";
@@ -7383,7 +2138,7 @@ select -ne :defaultShaderList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 104 ".s";
+	setAttr -s 124 ".s";
 select -ne :defaultTextureList1;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -7401,9 +2156,9 @@ select -ne :defaultRenderUtilityList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 106 ".u";
+	setAttr -s 105 ".u";
 select -ne :defaultRenderingList1;
-	setAttr -s 11 ".r";
+	setAttr -s 13 ".r";
 select -ne :renderGlobalsList1;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -7493,168 +2248,57 @@ select -ne :defaultHardwareRenderGlobals;
 	setAttr -k on ".aap";
 	setAttr -k on ".gh";
 	setAttr -cb on ".sd";
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
-connectAttr "living_room_latestRN.phl[1]" "lambert7SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[2]" "lambert7SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[3]" "lambert7SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[4]" "lambert7SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[5]" "lambert7SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[6]" "lambert7SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[7]" "lambert7SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[8]" "lambert7SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[9]" "lambert7SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[10]" "lambert7SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[11]" "lambert7SG.dsm" -na;
+connectAttr "polyTweakUV3.out" "living_room_latestRN.phl[9]";
+connectAttr "living_room_latestRN.phl[10]" "lambert10SG.dsm" -na;
+connectAttr "polyTweakUV3.uvtk[0]" "living_room_latestRN.phl[11]";
 connectAttr "living_room_latestRN.phl[12]" "lambert7SG.dsm" -na;
-connectAttr "polyTweakUV2.out" "living_room_latestRN.phl[13]";
-connectAttr "living_room_latestRN.phl[14]" "lambert6SG.dsm" -na;
-connectAttr "polyTweakUV2.uvtk[0]" "living_room_latestRN.phl[15]";
-connectAttr "living_room_latestRN.phl[16]" "lambert5SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[17]" "lambert3SG.dsm" -na;
-connectAttr "living_room_latest:polyTweakUV1.uvtk[0]" "living_room_latestRN.phl[18]"
+connectAttr "polyTweakUV1.out" "living_room_latestRN.phl[13]";
+connectAttr "polyTweakUV1.uvtk[0]" "living_room_latestRN.phl[14]";
+connectAttr "living_room_latestRN.phl[15]" "lambert3SG.dsm" -na;
+connectAttr "living_room_latest:polyTweakUV1.uvtk[0]" "living_room_latestRN.phl[16]"
 		;
-connectAttr "living_room_latest:polyTweakUV1.out" "living_room_latestRN.phl[19]"
+connectAttr "living_room_latest:polyTweakUV1.out" "living_room_latestRN.phl[17]"
 		;
-connectAttr "living_room_latestRN.phl[20]" "living_room_latest:polyPlanarProj1.mp"
+connectAttr "living_room_latestRN.phl[18]" "polyPlanarProj1.mp";
+connectAttr "living_room_latestRN.phl[19]" "living_room_latest:polyPlanarProj1.mp"
 		;
-connectAttr "living_room_latestRN.phl[21]" "polyPlanarProj1.mp";
-connectAttr "living_room_latestRN.phl[22]" "lambert4SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[23]" "lambert4SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[24]" "lambert9SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[25]" "lambert8SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[26]" "lambert8SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[27]" "Marble.dsm" -na;
-connectAttr "groupId8.id" "living_room_latestRN.phl[28]";
-connectAttr "Marble.mwc" "living_room_latestRN.phl[29]";
-connectAttr "living_room_latestRN.phl[30]" ":initialShadingGroup.dsm" -na;
-connectAttr "groupId27.id" "living_room_latestRN.phl[31]";
-connectAttr ":initialShadingGroup.mwc" "living_room_latestRN.phl[32]";
-connectAttr "living_room_latestRN.phl[33]" "lambert11SG.dsm" -na;
-connectAttr "groupId39.id" "living_room_latestRN.phl[34]";
-connectAttr "lambert11SG.mwc" "living_room_latestRN.phl[35]";
-connectAttr "living_room_latestRN.phl[36]" ":initialShadingGroup.dsm" -na;
-connectAttr "groupId28.id" "living_room_latestRN.phl[37]";
-connectAttr "living_room_latestRN.phl[38]" "Marble.dsm" -na;
-connectAttr "groupId9.id" "living_room_latestRN.phl[39]";
-connectAttr "Marble.mwc" "living_room_latestRN.phl[40]";
-connectAttr "living_room_latestRN.phl[41]" ":initialShadingGroup.dsm" -na;
-connectAttr "groupId25.id" "living_room_latestRN.phl[42]";
-connectAttr ":initialShadingGroup.mwc" "living_room_latestRN.phl[43]";
-connectAttr "living_room_latestRN.phl[44]" "lambert11SG.dsm" -na;
-connectAttr "groupId38.id" "living_room_latestRN.phl[45]";
-connectAttr "lambert11SG.mwc" "living_room_latestRN.phl[46]";
-connectAttr "living_room_latestRN.phl[47]" ":initialShadingGroup.dsm" -na;
-connectAttr "groupId26.id" "living_room_latestRN.phl[48]";
-connectAttr "living_room_latestRN.phl[49]" "Marble.dsm" -na;
-connectAttr "groupId11.id" "living_room_latestRN.phl[50]";
-connectAttr "Marble.mwc" "living_room_latestRN.phl[51]";
-connectAttr "living_room_latestRN.phl[52]" ":initialShadingGroup.dsm" -na;
-connectAttr "groupId21.id" "living_room_latestRN.phl[53]";
-connectAttr ":initialShadingGroup.mwc" "living_room_latestRN.phl[54]";
-connectAttr "living_room_latestRN.phl[55]" "lambert11SG.dsm" -na;
-connectAttr "groupId36.id" "living_room_latestRN.phl[56]";
-connectAttr "lambert11SG.mwc" "living_room_latestRN.phl[57]";
-connectAttr "living_room_latestRN.phl[58]" ":initialShadingGroup.dsm" -na;
-connectAttr "groupId22.id" "living_room_latestRN.phl[59]";
-connectAttr "living_room_latestRN.phl[60]" "Marble.dsm" -na;
-connectAttr "groupId10.id" "living_room_latestRN.phl[61]";
-connectAttr "Marble.mwc" "living_room_latestRN.phl[62]";
-connectAttr "living_room_latestRN.phl[63]" ":initialShadingGroup.dsm" -na;
-connectAttr "groupId23.id" "living_room_latestRN.phl[64]";
-connectAttr ":initialShadingGroup.mwc" "living_room_latestRN.phl[65]";
-connectAttr "living_room_latestRN.phl[66]" "lambert11SG.dsm" -na;
-connectAttr "groupId37.id" "living_room_latestRN.phl[67]";
-connectAttr "lambert11SG.mwc" "living_room_latestRN.phl[68]";
-connectAttr "living_room_latestRN.phl[69]" ":initialShadingGroup.dsm" -na;
-connectAttr "groupId24.id" "living_room_latestRN.phl[70]";
-connectAttr "living_room_latestRN.phl[71]" "Marble.dsm" -na;
-connectAttr "groupId7.id" "living_room_latestRN.phl[72]";
-connectAttr "Marble.mwc" "living_room_latestRN.phl[73]";
-connectAttr "living_room_latestRN.phl[74]" ":initialShadingGroup.dsm" -na;
-connectAttr "groupId29.id" "living_room_latestRN.phl[75]";
-connectAttr ":initialShadingGroup.mwc" "living_room_latestRN.phl[76]";
-connectAttr "living_room_latestRN.phl[77]" "lambert11SG.dsm" -na;
-connectAttr "groupId40.id" "living_room_latestRN.phl[78]";
-connectAttr "lambert11SG.mwc" "living_room_latestRN.phl[79]";
-connectAttr "living_room_latestRN.phl[80]" ":initialShadingGroup.dsm" -na;
-connectAttr "groupId30.id" "living_room_latestRN.phl[81]";
-connectAttr "living_room_latestRN.phl[82]" "Marble.dsm" -na;
-connectAttr "groupId6.id" "living_room_latestRN.phl[83]";
-connectAttr "Marble.mwc" "living_room_latestRN.phl[84]";
-connectAttr "living_room_latestRN.phl[85]" ":initialShadingGroup.dsm" -na;
-connectAttr "groupId31.id" "living_room_latestRN.phl[86]";
-connectAttr ":initialShadingGroup.mwc" "living_room_latestRN.phl[87]";
-connectAttr "living_room_latestRN.phl[88]" "lambert11SG.dsm" -na;
-connectAttr "groupId41.id" "living_room_latestRN.phl[89]";
-connectAttr "lambert11SG.mwc" "living_room_latestRN.phl[90]";
-connectAttr "living_room_latestRN.phl[91]" ":initialShadingGroup.dsm" -na;
-connectAttr "groupId32.id" "living_room_latestRN.phl[92]";
-connectAttr "living_room_latestRN.phl[93]" "Marble.dsm" -na;
-connectAttr "groupId13.id" "living_room_latestRN.phl[94]";
-connectAttr "Marble.mwc" "living_room_latestRN.phl[95]";
-connectAttr "living_room_latestRN.phl[96]" ":initialShadingGroup.dsm" -na;
-connectAttr "groupId17.id" "living_room_latestRN.phl[97]";
-connectAttr ":initialShadingGroup.mwc" "living_room_latestRN.phl[98]";
-connectAttr "living_room_latestRN.phl[99]" "lambert11SG.dsm" -na;
-connectAttr "groupId34.id" "living_room_latestRN.phl[100]";
-connectAttr "lambert11SG.mwc" "living_room_latestRN.phl[101]";
-connectAttr "living_room_latestRN.phl[102]" ":initialShadingGroup.dsm" -na;
-connectAttr "groupId18.id" "living_room_latestRN.phl[103]";
-connectAttr "living_room_latestRN.phl[104]" "Marble.dsm" -na;
-connectAttr "groupId14.id" "living_room_latestRN.phl[105]";
-connectAttr "Marble.mwc" "living_room_latestRN.phl[106]";
-connectAttr "living_room_latestRN.phl[107]" ":initialShadingGroup.dsm" -na;
-connectAttr "groupId15.id" "living_room_latestRN.phl[108]";
-connectAttr ":initialShadingGroup.mwc" "living_room_latestRN.phl[109]";
-connectAttr "living_room_latestRN.phl[110]" "lambert11SG.dsm" -na;
-connectAttr "groupId33.id" "living_room_latestRN.phl[111]";
-connectAttr "lambert11SG.mwc" "living_room_latestRN.phl[112]";
-connectAttr "living_room_latestRN.phl[113]" ":initialShadingGroup.dsm" -na;
-connectAttr "groupId16.id" "living_room_latestRN.phl[114]";
-connectAttr "living_room_latestRN.phl[115]" "Marble.dsm" -na;
-connectAttr "groupId12.id" "living_room_latestRN.phl[116]";
-connectAttr "Marble.mwc" "living_room_latestRN.phl[117]";
-connectAttr "living_room_latestRN.phl[118]" ":initialShadingGroup.dsm" -na;
-connectAttr "groupId19.id" "living_room_latestRN.phl[119]";
-connectAttr ":initialShadingGroup.mwc" "living_room_latestRN.phl[120]";
-connectAttr "living_room_latestRN.phl[121]" "lambert11SG.dsm" -na;
-connectAttr "groupId35.id" "living_room_latestRN.phl[122]";
-connectAttr "lambert11SG.mwc" "living_room_latestRN.phl[123]";
-connectAttr "living_room_latestRN.phl[124]" ":initialShadingGroup.dsm" -na;
-connectAttr "groupId20.id" "living_room_latestRN.phl[125]";
-connectAttr "living_room_latestRN.phl[126]" "Floor.dsm" -na;
-connectAttr "groupId1.id" "living_room_latestRN.phl[127]";
-connectAttr "Floor.mwc" "living_room_latestRN.phl[128]";
-connectAttr "living_room_latestRN.phl[129]" "WallsAndCeiling.dsm" -na;
-connectAttr "groupId2.id" "living_room_latestRN.phl[130]";
-connectAttr "WallsAndCeiling.mwc" "living_room_latestRN.phl[131]";
-connectAttr "living_room_latestRN.phl[132]" "lambert10SG.dsm" -na;
-connectAttr "groupId3.id" "living_room_latestRN.phl[133]";
-connectAttr "lambert10SG.mwc" "living_room_latestRN.phl[134]";
-connectAttr "living_room_latestRN.phl[135]" "lambert2SG.dsm" -na;
-connectAttr "groupId5.id" "living_room_latestRN.phl[136]";
-connectAttr "lambert2SG.mwc" "living_room_latestRN.phl[137]";
-connectAttr "living_room_latestRN.phl[138]" ":initialShadingGroup.dsm" -na;
-connectAttr "groupId4.id" "living_room_latestRN.phl[139]";
-connectAttr "living_room_latestRN.phl[140]" "lambert8SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[141]" "lambert8SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[142]" "lambert8SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[143]" "lambert8SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[144]" "lambert8SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[145]" "lambert8SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[146]" "lambert8SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[147]" "lambert8SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[148]" "lambert8SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[149]" "lambert8SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[150]" "lambert8SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[151]" "lambert8SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[152]" "lambert8SG.dsm" -na;
-connectAttr "polyTweakUV1.out" "living_room_latestRN.phl[153]";
-connectAttr "living_room_latestRN.phl[154]" "lambert6SG.dsm" -na;
-connectAttr "polyTweakUV1.uvtk[0]" "living_room_latestRN.phl[155]";
-connectAttr "living_room_latestRN.phl[156]" "polyTweakUV1.ip";
-connectAttr "living_room_latestRN.phl[157]" "polyTweakUV2.ip";
+connectAttr "living_room_latestRN.phl[20]" "lambert8SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[21]" "lambert8SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[22]" "lambert9SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[23]" "Floor.dsm" -na;
+connectAttr "groupId1.id" "living_room_latestRN.phl[24]";
+connectAttr "living_room_latestRN.phl[25]" "WallsAndCeiling.dsm" -na;
+connectAttr "groupId2.id" "living_room_latestRN.phl[26]";
+connectAttr "WallsAndCeiling.mwc" "living_room_latestRN.phl[27]";
+connectAttr "living_room_latestRN.phl[28]" "lambert6SG.dsm" -na;
+connectAttr "groupId3.id" "living_room_latestRN.phl[29]";
+connectAttr "lambert6SG.mwc" "living_room_latestRN.phl[30]";
+connectAttr "living_room_latestRN.phl[31]" "lambert6SG.dsm" -na;
+connectAttr "groupId5.id" "living_room_latestRN.phl[32]";
+connectAttr "lambert6SG.mwc" "living_room_latestRN.phl[33]";
+connectAttr "living_room_latestRN.phl[34]" "WallsAndCeiling2.dsm" -na;
+connectAttr "groupId6.id" "living_room_latestRN.phl[35]";
+connectAttr "WallsAndCeiling2.mwc" "living_room_latestRN.phl[36]";
+connectAttr "living_room_latestRN.phl[37]" "Floors.dsm" -na;
+connectAttr "groupId7.id" "living_room_latestRN.phl[38]";
+connectAttr "Floors.mwc" "living_room_latestRN.phl[39]";
+connectAttr "living_room_latestRN.phl[40]" "lambert4SG.dsm" -na;
+connectAttr "groupId8.id" "living_room_latestRN.phl[41]";
+connectAttr "lambert4SG.mwc" "living_room_latestRN.phl[42]";
+connectAttr "living_room_latestRN.phl[43]" "lambert6SG.dsm" -na;
+connectAttr "groupId9.id" "living_room_latestRN.phl[44]";
+connectAttr "lambert6SG.mwc" "living_room_latestRN.phl[45]";
+connectAttr "living_room_latestRN.phl[46]" "lambert6SG.dsm" -na;
+connectAttr "groupId10.id" "living_room_latestRN.phl[47]";
+connectAttr "lambert6SG.mwc" "living_room_latestRN.phl[48]";
+connectAttr "living_room_latestRN.phl[49]" ":initialShadingGroup.dsm" -na;
+connectAttr "groupId4.id" "living_room_latestRN.phl[50]";
+connectAttr "polyTweakUV2.out" "living_room_latestRN.phl[51]";
+connectAttr "living_room_latestRN.phl[52]" "lambert10SG.dsm" -na;
+connectAttr "polyTweakUV2.uvtk[0]" "living_room_latestRN.phl[53]";
+connectAttr "living_room_latestRN.phl[54]" "polyTweakUV1.ip";
+connectAttr "living_room_latestRN.phl[55]" "polyTweakUV3.ip";
+connectAttr "living_room_latestRN.phl[56]" "polyTweakUV2.ip";
 connectAttr ":mentalrayGlobals.msg" ":mentalrayItemsList.glb";
 connectAttr ":miDefaultOptions.msg" ":mentalrayItemsList.opt" -na;
 connectAttr ":miDefaultFramebuffer.msg" ":mentalrayItemsList.fb" -na;
@@ -7671,7 +2315,6 @@ relationship "link" ":lightLinker1" "lambert7SG.message" ":defaultLightSet.messa
 relationship "link" ":lightLinker1" "lambert8SG.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "lambert9SG.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "lambert10SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "lambert11SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
@@ -7683,18 +2326,14 @@ relationship "shadowLink" ":lightLinker1" "lambert7SG.message" ":defaultLightSet
 relationship "shadowLink" ":lightLinker1" "lambert8SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "lambert9SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "lambert10SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "lambert11SG.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
+connectAttr "Floor.mwc" "living_room_latestRN.phl[8]";
 connectAttr "living_room_latestRNfosterParent1.msg" "living_room_latestRN.fp";
 connectAttr "groupId1.msg" "Floor.gn" -na;
 connectAttr "groupId2.msg" "WallsAndCeiling.gn" -na;
-connectAttr "file1.oc" "WallsAndCeiling1.c";
-connectAttr "WallsAndCeiling1.oc" "lambert2SG.ss";
 connectAttr "groupId5.msg" "lambert2SG.gn" -na;
 connectAttr "lambert2SG.msg" "materialInfo1.sg";
-connectAttr "WallsAndCeiling1.msg" "materialInfo1.m";
-connectAttr "file1.msg" "materialInfo1.t" -na;
 connectAttr "place2dTexture1.c" "file1.c";
 connectAttr "place2dTexture1.tf" "file1.tf";
 connectAttr "place2dTexture1.rf" "file1.rf";
@@ -7741,10 +2380,35 @@ connectAttr "|living_room_latestRNfosterParent1|living_room_latest:polySurfaceSh
 connectAttr "polyPlanarProj1.out" "living_room_latest:polyPlanarProj1.ip";
 connectAttr "living_room_latest:polyPlanarProj1.out" "living_room_latest:polyTweakUV1.ip"
 		;
-connectAttr "file3.oc" "SideTables.c";
-connectAttr "SideTables.oc" "lambert4SG.ss";
+connectAttr "groupId6.msg" "WallsAndCeiling2.gn" -na;
+connectAttr "hyperView1.msg" "nodeEditorPanel1Info.b[0]";
+connectAttr "hyperLayout1.msg" "hyperView1.hl";
+connectAttr "WallsAndCeiling2.msg" "hyperLayout1.hyp[0].dn";
+connectAttr "Floors.msg" "hyperLayout1.hyp[1].dn";
+connectAttr "Floor1.msg" "hyperLayout1.hyp[2].dn";
+connectAttr "lambert4SG.msg" "hyperLayout1.hyp[3].dn";
+connectAttr "file3.msg" "hyperLayout1.hyp[4].dn";
+connectAttr "place2dTexture3.msg" "hyperLayout1.hyp[5].dn";
+connectAttr "lambert5SG.msg" "hyperLayout1.hyp[6].dn";
+connectAttr "WallsAndCeiling3.msg" "hyperLayout1.hyp[7].dn";
+connectAttr "lambert6SG.msg" "hyperLayout1.hyp[8].dn";
+connectAttr "file4.msg" "hyperLayout1.hyp[9].dn";
+connectAttr "place2dTexture4.msg" "hyperLayout1.hyp[10].dn";
+connectAttr "CoffeeTable.msg" "hyperLayout1.hyp[11].dn";
+connectAttr "lambert7SG.msg" "hyperLayout1.hyp[12].dn";
+connectAttr "file5e.msg" "hyperLayout1.hyp[13].dn";
+connectAttr "place2dTexture5.msg" "hyperLayout1.hyp[14].dn";
+connectAttr "polyTweakUV1.msg" "hyperLayout1.hyp[15].dn";
+connectAttr "sideTables.msg" "hyperLayout1.hyp[16].dn";
+connectAttr "lambert8SG.msg" "hyperLayout1.hyp[17].dn";
+connectAttr "file6.msg" "hyperLayout1.hyp[18].dn";
+connectAttr "place2dTexture6.msg" "hyperLayout1.hyp[19].dn";
+connectAttr "groupId7.msg" "Floors.gn" -na;
+connectAttr "file3.oc" "Floor1.c";
+connectAttr "Floor1.oc" "lambert4SG.ss";
+connectAttr "groupId8.msg" "lambert4SG.gn" -na;
 connectAttr "lambert4SG.msg" "materialInfo3.sg";
-connectAttr "SideTables.msg" "materialInfo3.m";
+connectAttr "Floor1.msg" "materialInfo3.m";
 connectAttr "file3.msg" "materialInfo3.t" -na;
 connectAttr "place2dTexture3.c" "file3.c";
 connectAttr "place2dTexture3.tf" "file3.tf";
@@ -7764,44 +2428,14 @@ connectAttr "place2dTexture3.vt3" "file3.vt3";
 connectAttr "place2dTexture3.vc1" "file3.vc1";
 connectAttr "place2dTexture3.o" "file3.uv";
 connectAttr "place2dTexture3.ofs" "file3.fs";
-connectAttr "hyperView1.msg" "nodeEditorPanel1Info.b[0]";
-connectAttr "hyperLayout1.msg" "hyperView1.hl";
-connectAttr "SideTables.msg" "hyperLayout1.hyp[0].dn";
-connectAttr "lambert4SG.msg" "hyperLayout1.hyp[1].dn";
-connectAttr "file3.msg" "hyperLayout1.hyp[2].dn";
-connectAttr "place2dTexture3.msg" "hyperLayout1.hyp[3].dn";
-connectAttr "CoffeTable.msg" "hyperLayout1.hyp[4].dn";
-connectAttr "lambert5SG.msg" "hyperLayout1.hyp[5].dn";
-connectAttr "file4.msg" "hyperLayout1.hyp[6].dn";
-connectAttr "place2dTexture4.msg" "hyperLayout1.hyp[7].dn";
-connectAttr "Lamp.msg" "hyperLayout1.hyp[8].dn";
-connectAttr "lambert6SG.msg" "hyperLayout1.hyp[9].dn";
-connectAttr "file5.msg" "hyperLayout1.hyp[10].dn";
-connectAttr "place2dTexture5.msg" "hyperLayout1.hyp[11].dn";
-connectAttr "polyTweakUV1.msg" "hyperLayout1.hyp[12].dn";
-connectAttr "polyTweakUV2.msg" "hyperLayout1.hyp[13].dn";
-connectAttr "CrownMolding.msg" "hyperLayout1.hyp[14].dn";
-connectAttr "lambert7SG.msg" "hyperLayout1.hyp[15].dn";
-connectAttr "FloorMolding.msg" "hyperLayout1.hyp[16].dn";
-connectAttr "lambert8SG.msg" "hyperLayout1.hyp[17].dn";
-connectAttr "Rug.msg" "hyperLayout1.hyp[18].dn";
-connectAttr "lambert9SG.msg" "hyperLayout1.hyp[19].dn";
-connectAttr "file6.msg" "hyperLayout1.hyp[20].dn";
-connectAttr "place2dTexture6.msg" "hyperLayout1.hyp[21].dn";
-connectAttr "Floor1.msg" "hyperLayout1.hyp[22].dn";
-connectAttr "lambert10SG.msg" "hyperLayout1.hyp[23].dn";
-connectAttr "file7.msg" "hyperLayout1.hyp[24].dn";
-connectAttr "place2dTexture7.msg" "hyperLayout1.hyp[25].dn";
-connectAttr "Marble.msg" "hyperLayout1.hyp[26].dn";
-connectAttr "MArble.msg" "hyperLayout1.hyp[27].dn";
-connectAttr "lambert11SG.msg" "hyperLayout1.hyp[28].dn";
-connectAttr "file8.msg" "hyperLayout1.hyp[29].dn";
-connectAttr "place2dTexture8.msg" "hyperLayout1.hyp[30].dn";
-connectAttr "file4.oc" "CoffeTable.c";
-connectAttr "CoffeTable.oc" "lambert5SG.ss";
+connectAttr "groupId9.msg" "lambert5SG.gn" -na;
 connectAttr "lambert5SG.msg" "materialInfo4.sg";
-connectAttr "CoffeTable.msg" "materialInfo4.m";
-connectAttr "file4.msg" "materialInfo4.t" -na;
+connectAttr "file4.oc" "WallsAndCeiling3.c";
+connectAttr "WallsAndCeiling3.oc" "lambert6SG.ss";
+connectAttr "groupId10.msg" "lambert6SG.gn" -na;
+connectAttr "lambert6SG.msg" "materialInfo5.sg";
+connectAttr "WallsAndCeiling3.msg" "materialInfo5.m";
+connectAttr "file4.msg" "materialInfo5.t" -na;
 connectAttr "place2dTexture4.c" "file4.c";
 connectAttr "place2dTexture4.tf" "file4.tf";
 connectAttr "place2dTexture4.rf" "file4.rf";
@@ -7820,40 +2454,34 @@ connectAttr "place2dTexture4.vt3" "file4.vt3";
 connectAttr "place2dTexture4.vc1" "file4.vc1";
 connectAttr "place2dTexture4.o" "file4.uv";
 connectAttr "place2dTexture4.ofs" "file4.fs";
-connectAttr "file5.oc" "Lamp.c";
-connectAttr "Lamp.oc" "lambert6SG.ss";
-connectAttr "lambert6SG.msg" "materialInfo5.sg";
-connectAttr "Lamp.msg" "materialInfo5.m";
-connectAttr "file5.msg" "materialInfo5.t" -na;
-connectAttr "place2dTexture5.c" "file5.c";
-connectAttr "place2dTexture5.tf" "file5.tf";
-connectAttr "place2dTexture5.rf" "file5.rf";
-connectAttr "place2dTexture5.mu" "file5.mu";
-connectAttr "place2dTexture5.mv" "file5.mv";
-connectAttr "place2dTexture5.s" "file5.s";
-connectAttr "place2dTexture5.wu" "file5.wu";
-connectAttr "place2dTexture5.wv" "file5.wv";
-connectAttr "place2dTexture5.re" "file5.re";
-connectAttr "place2dTexture5.of" "file5.of";
-connectAttr "place2dTexture5.r" "file5.ro";
-connectAttr "place2dTexture5.n" "file5.n";
-connectAttr "place2dTexture5.vt1" "file5.vt1";
-connectAttr "place2dTexture5.vt2" "file5.vt2";
-connectAttr "place2dTexture5.vt3" "file5.vt3";
-connectAttr "place2dTexture5.vc1" "file5.vc1";
-connectAttr "place2dTexture5.o" "file5.uv";
-connectAttr "place2dTexture5.ofs" "file5.fs";
-connectAttr "CrownMolding.oc" "lambert7SG.ss";
+connectAttr "file5e.oc" "CoffeeTable.c";
+connectAttr "CoffeeTable.oc" "lambert7SG.ss";
 connectAttr "lambert7SG.msg" "materialInfo6.sg";
-connectAttr "CrownMolding.msg" "materialInfo6.m";
-connectAttr "FloorMolding.oc" "lambert8SG.ss";
+connectAttr "CoffeeTable.msg" "materialInfo6.m";
+connectAttr "file5e.msg" "materialInfo6.t" -na;
+connectAttr "place2dTexture5.c" "file5e.c";
+connectAttr "place2dTexture5.tf" "file5e.tf";
+connectAttr "place2dTexture5.rf" "file5e.rf";
+connectAttr "place2dTexture5.mu" "file5e.mu";
+connectAttr "place2dTexture5.mv" "file5e.mv";
+connectAttr "place2dTexture5.s" "file5e.s";
+connectAttr "place2dTexture5.wu" "file5e.wu";
+connectAttr "place2dTexture5.wv" "file5e.wv";
+connectAttr "place2dTexture5.re" "file5e.re";
+connectAttr "place2dTexture5.of" "file5e.of";
+connectAttr "place2dTexture5.r" "file5e.ro";
+connectAttr "place2dTexture5.n" "file5e.n";
+connectAttr "place2dTexture5.vt1" "file5e.vt1";
+connectAttr "place2dTexture5.vt2" "file5e.vt2";
+connectAttr "place2dTexture5.vt3" "file5e.vt3";
+connectAttr "place2dTexture5.vc1" "file5e.vc1";
+connectAttr "place2dTexture5.o" "file5e.uv";
+connectAttr "place2dTexture5.ofs" "file5e.fs";
+connectAttr "file6.oc" "sideTables.c";
+connectAttr "sideTables.oc" "lambert8SG.ss";
 connectAttr "lambert8SG.msg" "materialInfo7.sg";
-connectAttr "FloorMolding.msg" "materialInfo7.m";
-connectAttr "file6.oc" "Rug.c";
-connectAttr "Rug.oc" "lambert9SG.ss";
-connectAttr "lambert9SG.msg" "materialInfo8.sg";
-connectAttr "Rug.msg" "materialInfo8.m";
-connectAttr "file6.msg" "materialInfo8.t" -na;
+connectAttr "sideTables.msg" "materialInfo7.m";
+connectAttr "file6.msg" "materialInfo7.t" -na;
 connectAttr "place2dTexture6.c" "file6.c";
 connectAttr "place2dTexture6.tf" "file6.tf";
 connectAttr "place2dTexture6.rf" "file6.rf";
@@ -7872,11 +2500,11 @@ connectAttr "place2dTexture6.vt3" "file6.vt3";
 connectAttr "place2dTexture6.vc1" "file6.vc1";
 connectAttr "place2dTexture6.o" "file6.uv";
 connectAttr "place2dTexture6.ofs" "file6.fs";
-connectAttr "file7.oc" "Floor1.c";
-connectAttr "Floor1.oc" "lambert10SG.ss";
-connectAttr "lambert10SG.msg" "materialInfo9.sg";
-connectAttr "Floor1.msg" "materialInfo9.m";
-connectAttr "file7.msg" "materialInfo9.t" -na;
+connectAttr "file7.oc" "Rug.c";
+connectAttr "Rug.oc" "lambert9SG.ss";
+connectAttr "lambert9SG.msg" "materialInfo8.sg";
+connectAttr "Rug.msg" "materialInfo8.m";
+connectAttr "file7.msg" "materialInfo8.t" -na;
 connectAttr "place2dTexture7.c" "file7.c";
 connectAttr "place2dTexture7.tf" "file7.tf";
 connectAttr "place2dTexture7.rf" "file7.rf";
@@ -7895,29 +2523,11 @@ connectAttr "place2dTexture7.vt3" "file7.vt3";
 connectAttr "place2dTexture7.vc1" "file7.vc1";
 connectAttr "place2dTexture7.o" "file7.uv";
 connectAttr "place2dTexture7.ofs" "file7.fs";
-connectAttr "groupId6.msg" "Marble.gn" -na;
-connectAttr "groupId7.msg" "Marble.gn" -na;
-connectAttr "groupId8.msg" "Marble.gn" -na;
-connectAttr "groupId9.msg" "Marble.gn" -na;
-connectAttr "groupId10.msg" "Marble.gn" -na;
-connectAttr "groupId11.msg" "Marble.gn" -na;
-connectAttr "groupId12.msg" "Marble.gn" -na;
-connectAttr "groupId13.msg" "Marble.gn" -na;
-connectAttr "groupId14.msg" "Marble.gn" -na;
-connectAttr "file8.oc" "MArble.c";
-connectAttr "MArble.oc" "lambert11SG.ss";
-connectAttr "groupId33.msg" "lambert11SG.gn" -na;
-connectAttr "groupId34.msg" "lambert11SG.gn" -na;
-connectAttr "groupId35.msg" "lambert11SG.gn" -na;
-connectAttr "groupId36.msg" "lambert11SG.gn" -na;
-connectAttr "groupId37.msg" "lambert11SG.gn" -na;
-connectAttr "groupId38.msg" "lambert11SG.gn" -na;
-connectAttr "groupId39.msg" "lambert11SG.gn" -na;
-connectAttr "groupId40.msg" "lambert11SG.gn" -na;
-connectAttr "groupId41.msg" "lambert11SG.gn" -na;
-connectAttr "lambert11SG.msg" "materialInfo10.sg";
-connectAttr "MArble.msg" "materialInfo10.m";
-connectAttr "file8.msg" "materialInfo10.t" -na;
+connectAttr "file8.oc" "Lamp.c";
+connectAttr "Lamp.oc" "lambert10SG.ss";
+connectAttr "lambert10SG.msg" "materialInfo9.sg";
+connectAttr "Lamp.msg" "materialInfo9.m";
+connectAttr "file8.msg" "materialInfo9.t" -na;
 connectAttr "place2dTexture8.c" "file8.c";
 connectAttr "place2dTexture8.tf" "file8.tf";
 connectAttr "place2dTexture8.rf" "file8.rf";
@@ -7945,42 +2555,20 @@ connectAttr "lambert7SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert8SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert9SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert10SG.pa" ":renderPartition.st" -na;
-connectAttr "lambert11SG.pa" ":renderPartition.st" -na;
 connectAttr "groupId3.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId4.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId15.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId16.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId17.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId18.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId19.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId20.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId21.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId22.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId23.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId24.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId25.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId26.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId27.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId28.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId29.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId30.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId31.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId32.msg" ":initialShadingGroup.gn" -na;
-connectAttr "WallsAndCeiling1.msg" ":defaultShaderList1.s" -na;
 connectAttr "PictureFrame.msg" ":defaultShaderList1.s" -na;
-connectAttr "SideTables.msg" ":defaultShaderList1.s" -na;
-connectAttr "CoffeTable.msg" ":defaultShaderList1.s" -na;
-connectAttr "Lamp.msg" ":defaultShaderList1.s" -na;
-connectAttr "CrownMolding.msg" ":defaultShaderList1.s" -na;
-connectAttr "FloorMolding.msg" ":defaultShaderList1.s" -na;
-connectAttr "Rug.msg" ":defaultShaderList1.s" -na;
 connectAttr "Floor1.msg" ":defaultShaderList1.s" -na;
-connectAttr "MArble.msg" ":defaultShaderList1.s" -na;
+connectAttr "WallsAndCeiling3.msg" ":defaultShaderList1.s" -na;
+connectAttr "CoffeeTable.msg" ":defaultShaderList1.s" -na;
+connectAttr "sideTables.msg" ":defaultShaderList1.s" -na;
+connectAttr "Rug.msg" ":defaultShaderList1.s" -na;
+connectAttr "Lamp.msg" ":defaultShaderList1.s" -na;
 connectAttr "file1.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file2.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file3.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file4.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file5.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file5e.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file6.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file7.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file8.msg" ":defaultTextureList1.tx" -na;

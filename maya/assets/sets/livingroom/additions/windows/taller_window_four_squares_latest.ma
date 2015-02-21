@@ -1,6 +1,6 @@
 //Maya ASCII 2015 scene
-//Name: taller_window_four_squares_shaded.ma
-//Last modified: Fri, Feb 20, 2015 08:11:17 PM
+//Name: taller_window_four_squares_latest.ma
+//Last modified: Fri, Feb 20, 2015 08:12:38 PM
 //Codeset: UTF-8
 requires maya "2015";
 requires -dataType "byteArray" "Mayatomr" "2015.0 - 3.12.1.18 ";
@@ -1067,4 +1067,4 @@ connectAttr "window:lambert2.msg" ":defaultShaderList1.s" -na;
 connectAttr "WindowSeal.msg" ":defaultShaderList1.s" -na;
 connectAttr "glass.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-// End of taller_window_four_squares_shaded.ma
+// End of taller_window_four_squares_latest.ma

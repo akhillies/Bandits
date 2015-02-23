@@ -26,24 +26,6 @@ workspace -fr "mayaAscii" "scenes";
 workspace -fr "move" "data";
 workspace -fr "sound" "sound";
 workspace -fr "mayaBinary" "scenes";
-<<<<<<< HEAD
-workspace -fr "fluidCache" "cache/nCache/fluid";
-workspace -fr "clips" "clips";
-workspace -fr "templates" "assets";
-workspace -fr "DWG_DC" "data";
-workspace -fr "translatorData" "data";
-workspace -fr "offlineEdit" "scenes/edits";
-workspace -fr "renderData" "renderData";
-workspace -fr "DXF_DC" "data";
-workspace -fr "SPF_DCE" "data";
-workspace -fr "furShadowMap" "renderData/fur/furShadowMap";
-workspace -fr "audio" "sound";
-workspace -fr "scripts" "scripts";
-workspace -fr "STL_DCE" "data";
-workspace -fr "furAttrMap" "renderData/fur/furAttrMap";
-workspace -fr "FBX export" "data";
-workspace -fr "sourceImages" "sourceimages";
-=======
 workspace -fr "ZPR_DCE" "";
 workspace -fr "STL_DCE" "data";
 workspace -fr "iprImages" "renderData/iprImages";
@@ -59,21 +41,11 @@ workspace -fr "mel" "scripts";
 workspace -fr "particles" "cache/particles";
 workspace -fr "IV_DC" "";
 workspace -fr "scene" "scenes";
->>>>>>> c10dd42ab81e41c1695dea246106a23420652225
 workspace -fr "DWG_DCE" "data";
 workspace -fr "sourceImages" "sourceimages";
 workspace -fr "furImages" "renderData/fur/furImages";
-<<<<<<< HEAD
-workspace -fr "IGES_DC" "data";
-workspace -fr "illustrator" "data";
-workspace -fr "furEqualMap" "renderData/fur/furEqualMap";
-workspace -fr "images" "images/RenderedImages";
-workspace -fr "SPF_DC" "data";
-workspace -fr "OBJ" "data";
-=======
 workspace -fr "clips" "clips";
 workspace -fr "PTC_DC" "";
->>>>>>> c10dd42ab81e41c1695dea246106a23420652225
 workspace -fr "STL_DC" "data";
 workspace -fr "IPT_DC" "";
 workspace -fr "SW_DC" "";

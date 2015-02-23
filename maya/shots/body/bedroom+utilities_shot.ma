@@ -1,6 +1,6 @@
 //Maya ASCII 2015 scene
 //Name: bedroom+utilities_shot.ma
-//Last modified: Sun, Feb 22, 2015 02:55:34 AM
+//Last modified: Sun, Feb 22, 2015 08:26:09 PM
 //Codeset: 1252
 file -rdi 1 -ns "utility_room_view" -rfn "utility_room_viewRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//scenes/utility_room_view.ma";
 file -rdi 2 -ns "livingroom_shading_latest" -rfn "utility_room_view:livingroom_shading_latestRN"
@@ -43,7 +43,7 @@ file -rdi 4 -ns "cat_robot" -rfn "utility_room_view:livingroom_shading_latest:li
 		 "/Users/Amy/Desktop/cnm190/Bandits/maya//assets/sets/bedroom/additions/cat_robot.ma";
 file -rdi 4 -ns "bed_latest1" -rfn "utility_room_view:livingroom_shading_latest:living_room_latest:bed_latestRN"
 		 "/Users/Amy/Desktop/cnm190/Bandits/maya//assets/sets/bedroom/additions/bed_latest.ma";
-file -rdi 4 -ns "airplane_003" -rfn "utility_room_view:livingroom_shading_latest:living_room_latest:airplane_002RN"
+file -rdi 4 -ns "airplane_003" -dr 1 -rfn "utility_room_view:livingroom_shading_latest:living_room_latest:airplane_002RN"
 		 "/Users/Amy/Desktop/cnm190/Bandits/maya//assets/sets/bedroom/additions/airplane_002.ma";
 file -rdi 2 -ns "pig_latest" -rfn "utility_room_view:pig_latestRN" -op "v=0;p=17;f=0"
 		 "X:/documents/GitHub/Bandits/maya//assets/characters/pig/pig_latest.ma";
@@ -161,7 +161,7 @@ createNode nRigid -n "nRigidShape1" -p "nRigid1";
 	setAttr -k off ".mxc";
 	setAttr -k off ".lod";
 	setAttr -k off ".inh";
-	setAttr ".cts" 230;
+	setAttr ".cts" 50;
 	setAttr -k off ".stf";
 	setAttr -k off ".igs";
 	setAttr -k off ".ecfh";
@@ -212,7 +212,7 @@ createNode nRigid -n "nRigidShape2" -p "nRigid2";
 	setAttr -k off ".mxc";
 	setAttr -k off ".lod";
 	setAttr -k off ".inh";
-	setAttr ".cts" 230;
+	setAttr ".cts" 50;
 	setAttr -k off ".stf";
 	setAttr -k off ".igs";
 	setAttr -k off ".ecfh";
@@ -263,7 +263,7 @@ createNode nRigid -n "nRigidShape3" -p "nRigid3";
 	setAttr -k off ".mxc";
 	setAttr -k off ".lod";
 	setAttr -k off ".inh";
-	setAttr ".cts" 230;
+	setAttr ".cts" 50;
 	setAttr -k off ".stf";
 	setAttr -k off ".igs";
 	setAttr -k off ".ecfh";
@@ -314,7 +314,7 @@ createNode nRigid -n "nRigidShape4" -p "nRigid4";
 	setAttr -k off ".mxc";
 	setAttr -k off ".lod";
 	setAttr -k off ".inh";
-	setAttr ".cts" 230;
+	setAttr ".cts" 50;
 	setAttr -k off ".stf";
 	setAttr -k off ".igs";
 	setAttr -k off ".ecfh";
@@ -365,7 +365,7 @@ createNode nRigid -n "nRigidShape5" -p "nRigid5";
 	setAttr -k off ".mxc";
 	setAttr -k off ".lod";
 	setAttr -k off ".inh";
-	setAttr ".cts" 230;
+	setAttr ".cts" 50;
 	setAttr -k off ".stf";
 	setAttr -k off ".igs";
 	setAttr -k off ".ecfh";
@@ -416,7 +416,7 @@ createNode nRigid -n "nRigidShape6" -p "nRigid6";
 	setAttr -k off ".mxc";
 	setAttr -k off ".lod";
 	setAttr -k off ".inh";
-	setAttr ".cts" 230;
+	setAttr ".cts" 50;
 	setAttr -k off ".stf";
 	setAttr -k off ".igs";
 	setAttr -k off ".ecfh";
@@ -462,13 +462,11 @@ createNode lattice -n "ffd1LatticeShape" -p "ffd1Lattice";
 	setAttr -s 16 ".cp";
 	setAttr ".sd" 4;
 	setAttr ".td" 2;
-	setAttr ".cc" -type "lattice" 4 2 2 16 -0.47863077747099819 -0.5
-		 -0.5 -0.15017799726263681 -0.5 -0.5 0.15017799726263678 -0.5 -0.5 0.47863077747099808
-		 -0.5 -0.5 -0.47863077747099819 0.5 -0.5 -0.15017799726263681 0.5 -0.5 0.15017799726263678
-		 0.5 -0.5 0.47863077747099808 0.5 -0.5 -0.47863077747099819 -0.5 0.5 -0.15017799726263681
-		 -0.5 0.5 0.15017799726263678 -0.5 0.5 0.47863077747099808 -0.5 0.5 -0.47863077747099819
-		 0.5 0.5 -0.15017799726263681 0.5 0.5 0.15017799726263678 0.5 0.5 0.47863077747099808
-		 0.5 0.5 ;
+	setAttr ".cc" -type "lattice" 4 2 2 16 -0.5 -0.5 -0.5 -0.16666666666666669
+		 -0.5 -0.5 0.16666666666666663 -0.5 -0.5 0.49999999999999994 -0.5 -0.5 -0.5 0.5 -0.5 -0.16666666666666669
+		 0.5 -0.5 0.16666666666666663 0.5 -0.5 0.49999999999999994 0.5 -0.5 -0.5 -0.5 0.5 -0.16666666666666669
+		 -0.5 0.5 0.16666666666666663 -0.5 0.5 0.49999999999999994 -0.5 0.5 -0.5 0.5 0.5 -0.16666666666666669
+		 0.5 0.5 0.16666666666666663 0.5 0.5 0.49999999999999994 0.5 0.5 ;
 createNode transform -n "ffd1Base" -p "ffd1LatticeGroup";
 	setAttr ".t" -type "double3" 0 4.3266401588916779 -0.82858926057815552 ;
 	setAttr ".s" -type "double3" 27.323542375741582 6.7982034087181091 0.89049971103668213 ;
@@ -680,40 +678,40 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -docTag \"isolOutln_fromSeln\" \n                -showShapes 0\n                -showReferenceNodes 1\n                -showReferenceMembers 1\n                -showAttributes 0\n                -showConnected 0\n                -showAnimCurvesOnly 0\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 1\n                -showAssets 1\n                -showContainedOnly 1\n                -showPublishedAsConnected 0\n                -showContainerContents 1\n                -ignoreDagHierarchy 0\n                -expandConnections 0\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 0\n                -highlightActive 1\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 0\n"
 		+ "                -setFilter \"defaultSetFilter\" \n                -showSetMembers 1\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 0\n                -ignoreHiddenAttribute 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n"
-		+ "            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\tif ($useSceneConfig) {\n\t\toutlinerPanel -e -to $panelName;\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n"
-		+ "\t\t\t$panelName = `scriptedPanel -unParent  -type \"graphEditor\" -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n"
-		+ "                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n"
-		+ "\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"graphEditor\" -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels `;\n"
 		+ "\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n"
 		+ "                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n"
-		+ "                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n"
-		+ "\t\t\t$panelName = `scriptedPanel -unParent  -type \"dopeSheetPanel\" -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n"
-		+ "                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n"
-		+ "\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n"
-		+ "                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n"
-		+ "                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n"
-		+ "                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"clipEditorPanel\" -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n"
-		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"sequenceEditorPanel\" -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n"
-		+ "                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n"
-		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperGraphPanel\" -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n"
-		+ "                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n"
-		+ "                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperShadePanel\" -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n"
-		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"visorPanel\" -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n"
-		+ "                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -keyReleaseCommand \"nodeEdKeyReleaseCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;\n\t\t\tif (`objExists nodeEditorPanel1Info`) nodeEditor -e -restoreInfo nodeEditorPanel1Info $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n"
-		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -keyReleaseCommand \"nodeEdKeyReleaseCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n"
-		+ "                $editorName;\n\t\t\tif (`objExists nodeEditorPanel1Info`) nodeEditor -e -restoreInfo nodeEditorPanel1Info $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"createNodePanel\" -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Texture Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"polyTexturePlacementPanel\" -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels `;\n"
-		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"renderWindowPanel\" -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"blendShapePanel\" (localizedPanelLabel(\"Blend Shape\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\tblendShapePanel -unParent -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels ;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n"
-		+ "\t\tblendShapePanel -edit -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynRelEdPanel\" -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"relationshipPanel\" -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels `;\n"
-		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"referenceEditorPanel\" -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"componentEditorPanel\" -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels `;\n"
-		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynPaintScriptedPanelType\" -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"scriptEditorPanel\" -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels `;\n"
-		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"Stereo\" -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels `;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -editorChanged \"updateModelPanelBar\" \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n"
-		+ "                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n"
-		+ "                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n"
-		+ "                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -editorChanged \"updateModelPanelBar\" \n                -camera \"persp\" \n"
-		+ "                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n"
-		+ "                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n"
-		+ "                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n"
-		+ "                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"vertical2\\\" -ps 1 59 100 -ps 2 41 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Top View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n"
+		+ "                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n"
+		+ "                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n"
+		+ "                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dopeSheetPanel\" -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels `;\n"
+		+ "\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n"
+		+ "                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n"
+		+ "                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n"
+		+ "                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n"
+		+ "                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n"
+		+ "                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"clipEditorPanel\" -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n"
+		+ "            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"sequenceEditorPanel\" -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n"
+		+ "                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperGraphPanel\" -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels `;\n"
+		+ "\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n"
+		+ "                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n"
+		+ "                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperShadePanel\" -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"visorPanel\" -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n"
+		+ "                -defaultPinnedState 0\n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -keyReleaseCommand \"nodeEdKeyReleaseCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;\n\t\t\tif (`objExists nodeEditorPanel1Info`) nodeEditor -e -restoreInfo nodeEditorPanel1Info $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n"
+		+ "            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -keyReleaseCommand \"nodeEdKeyReleaseCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;\n\t\t\tif (`objExists nodeEditorPanel1Info`) nodeEditor -e -restoreInfo nodeEditorPanel1Info $editorName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"createNodePanel\" -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Texture Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"polyTexturePlacementPanel\" -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"renderWindowPanel\" -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"blendShapePanel\" (localizedPanelLabel(\"Blend Shape\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\tblendShapePanel -unParent -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels ;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tblendShapePanel -edit -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynRelEdPanel\" -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"relationshipPanel\" -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"referenceEditorPanel\" -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"componentEditorPanel\" -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynPaintScriptedPanelType\" -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"scriptEditorPanel\" -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"Stereo\" -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels `;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -editorChanged \"updateModelPanelBar\" \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n"
+		+ "                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n"
+		+ "                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n"
+		+ "                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -editorChanged \"updateModelPanelBar\" \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n"
+		+ "                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n"
+		+ "                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n"
+		+ "                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"vertical2\\\" -ps 1 59 100 -ps 2 41 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Top View\")) \n\t\t\t\t\t\"modelPanel\"\n"
 		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"utility_room_view:at_dryer\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 1\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 0\\n    -polymeshes 1\\n    -subdivSurfaces 0\\n    -planes 0\\n    -lights 0\\n    -cameras 0\\n    -controlVertices 0\\n    -hulls 0\\n    -grid 0\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 0\\n    -dynamics 0\\n    -particleInstancers 0\\n    -fluids 0\\n    -hairSystems 0\\n    -follicles 0\\n    -nCloths 0\\n    -nParticles 0\\n    -nRigids 0\\n    -dynamicConstraints 0\\n    -locators 0\\n    -manipulators 1\\n    -pluginShapes 0\\n    -dimensions 0\\n    -handles 0\\n    -pivots 0\\n    -textures 0\\n    -strokes 0\\n    -motionTrails 0\\n    -clipGhosts 0\\n    -greasePencils 0\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"utility_room_view:at_dryer\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 1\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 0\\n    -polymeshes 1\\n    -subdivSurfaces 0\\n    -planes 0\\n    -lights 0\\n    -cameras 0\\n    -controlVertices 0\\n    -hulls 0\\n    -grid 0\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 0\\n    -dynamics 0\\n    -particleInstancers 0\\n    -fluids 0\\n    -hairSystems 0\\n    -follicles 0\\n    -nCloths 0\\n    -nParticles 0\\n    -nRigids 0\\n    -dynamicConstraints 0\\n    -locators 0\\n    -manipulators 1\\n    -pluginShapes 0\\n    -dimensions 0\\n    -handles 0\\n    -pivots 0\\n    -textures 0\\n    -strokes 0\\n    -motionTrails 0\\n    -clipGhosts 0\\n    -greasePencils 0\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
@@ -1869,7 +1867,311 @@ createNode reference -n "utility_room_viewRN";
 		"utility_room_view:livingroom_shading_latest:living_room_latest:bedroom_updated_layout:chairRN" 
 		0
 		"utility_room_view:livingroom_shading_latest:living_room_latest:airplane_002RN" 
-		0
+		140
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Circle05|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform17|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Circle05Shape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Circle05|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform17|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Circle05Shape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Circle05|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform17|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Circle05Shape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Circle06|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform16|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Circle06Shape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Circle06|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform16|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Circle06Shape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Circle06|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform16|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Circle06Shape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Cylinder05|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform15|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Cylinder05Shape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Cylinder05|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform15|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Cylinder05Shape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Cylinder05|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform15|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Cylinder05Shape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Cylinder06|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform14|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Cylinder06Shape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Cylinder06|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform14|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Cylinder06Shape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Cylinder06|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform14|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Cylinder06Shape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Cylinder07|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform13|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Cylinder07Shape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Cylinder07|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform13|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Cylinder07Shape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Cylinder07|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform13|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Cylinder07Shape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line05|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform12|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line05Shape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line05|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform12|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line05Shape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line05|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform12|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line05Shape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line06|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform11|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line06Shape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line06|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform11|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line06Shape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line06|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform11|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line06Shape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line07|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform10|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line07Shape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line07|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform10|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line07Shape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line07|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform10|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line07Shape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line08|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform9|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line08Shape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line08|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform9|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line08Shape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line08|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform9|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line08Shape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line09|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform8|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line09Shape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line09|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform8|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line09Shape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line09|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform8|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line09Shape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle01|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform7|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle01Shape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle01|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform7|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle01Shape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle01|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform7|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle01Shape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle03|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform6|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle03Shape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle03|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform6|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle03Shape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle03|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform6|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle03Shape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle04|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform5|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle04Shape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle04|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform5|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle04Shape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle04|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform5|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle04Shape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle05|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform4|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle05Shape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle05|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform4|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle05Shape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle05|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform4|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle05Shape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle06|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform3|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle06Shape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle06|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform3|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle06Shape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle06|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform3|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle06Shape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Sphere02|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform2|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Sphere02Shape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Sphere02|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform2|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Sphere02Shape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Sphere02|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform2|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Sphere02Shape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Sphere03|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Sphere03Shape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Sphere03|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Sphere03Shape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Sphere03|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Sphere03Shape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCube2|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCubeShape2 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCube2|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCubeShape2 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCube2|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCubeShape2 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCube2|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Box02|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Box02Shape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCube2|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Box02|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Box02Shape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCube2|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Box02|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Box02Shape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCube2|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCube1|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCubeShape1 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCube2|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCube1|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCubeShape1 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCube2|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCube1|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCubeShape1 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046alarmFBXASC032cloc" 
+		"translate" " -type \"double3\" 20.067708969116211 34.252059936523438 4.092653751373291"
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046alarmFBXASC032cloc" 
+		"translateX" " -av"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046alarmFBXASC032cloc" 
+		"translateY" " -av"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046alarmFBXASC032cloc" 
+		"translateZ" " -av"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Circle05|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform17|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Circle05Shape" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Circle05|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform17|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Circle05Shape" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/airplane_002.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Circle05|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform17|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Circle05Shape" 
+		"furNameSpace" " -type \"string\" \"airplane_003\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Circle06|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform16|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Circle06Shape" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Circle06|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform16|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Circle06Shape" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/airplane_002.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Circle06|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform16|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Circle06Shape" 
+		"furNameSpace" " -type \"string\" \"airplane_003\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Cylinder05|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform15|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Cylinder05Shape" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Cylinder05|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform15|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Cylinder05Shape" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/airplane_002.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Cylinder05|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform15|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Cylinder05Shape" 
+		"furNameSpace" " -type \"string\" \"airplane_003\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Cylinder06|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform14|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Cylinder06Shape" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Cylinder06|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform14|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Cylinder06Shape" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/airplane_002.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Cylinder06|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform14|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Cylinder06Shape" 
+		"furNameSpace" " -type \"string\" \"airplane_003\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Cylinder07|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform13|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Cylinder07Shape" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Cylinder07|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform13|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Cylinder07Shape" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/airplane_002.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Cylinder07|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform13|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Cylinder07Shape" 
+		"furNameSpace" " -type \"string\" \"airplane_003\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line05|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform12|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line05Shape" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line05|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform12|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line05Shape" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/airplane_002.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line05|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform12|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line05Shape" 
+		"furNameSpace" " -type \"string\" \"airplane_003\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line06|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform11|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line06Shape" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line06|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform11|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line06Shape" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/airplane_002.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line06|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform11|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line06Shape" 
+		"furNameSpace" " -type \"string\" \"airplane_003\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line07|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform10|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line07Shape" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line07|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform10|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line07Shape" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/airplane_002.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line07|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform10|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line07Shape" 
+		"furNameSpace" " -type \"string\" \"airplane_003\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line08|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform9|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line08Shape" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line08|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform9|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line08Shape" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/airplane_002.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line08|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform9|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line08Shape" 
+		"furNameSpace" " -type \"string\" \"airplane_003\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line09|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform8|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line09Shape" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line09|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform8|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line09Shape" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/airplane_002.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line09|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform8|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Line09Shape" 
+		"furNameSpace" " -type \"string\" \"airplane_003\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle01|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform7|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle01Shape" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle01|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform7|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle01Shape" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/airplane_002.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle01|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform7|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle01Shape" 
+		"furNameSpace" " -type \"string\" \"airplane_003\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle03|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform6|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle03Shape" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle03|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform6|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle03Shape" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/airplane_002.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle03|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform6|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle03Shape" 
+		"furNameSpace" " -type \"string\" \"airplane_003\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle04|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform5|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle04Shape" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle04|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform5|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle04Shape" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/airplane_002.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle04|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform5|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle04Shape" 
+		"furNameSpace" " -type \"string\" \"airplane_003\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle05|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform4|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle05Shape" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle05|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform4|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle05Shape" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/airplane_002.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle05|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform4|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle05Shape" 
+		"furNameSpace" " -type \"string\" \"airplane_003\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle06|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform3|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle06Shape" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle06|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform3|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle06Shape" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/airplane_002.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle06|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform3|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Rectangle06Shape" 
+		"furNameSpace" " -type \"string\" \"airplane_003\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Sphere02|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform2|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Sphere02Shape" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Sphere02|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform2|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Sphere02Shape" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/airplane_002.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Sphere02|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform2|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Sphere02Shape" 
+		"furNameSpace" " -type \"string\" \"airplane_003\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Sphere03|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Sphere03Shape" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Sphere03|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Sphere03Shape" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/airplane_002.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:alarmFBXASC032clock_root|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Sphere03|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Sphere03Shape" 
+		"furNameSpace" " -type \"string\" \"airplane_003\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Omni01" 
+		"translate" " -type \"double3\" -347.5557861328125 234.88270568847656 1072.8299560546875"
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Omni01" 
+		"translateX" " -av"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Omni01" 
+		"translateY" " -av"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Omni01" 
+		"translateZ" " -av"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCube2|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCubeShape2" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCube2|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCubeShape2" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/airplane_002.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCube2|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCubeShape2" 
+		"furNameSpace" " -type \"string\" \"airplane_003\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCube2|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Box02" 
+		"translate" " -type \"double3\" 144.76170349121094 -29.627830505371097 -197.89039611816409"
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCube2|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Box02" 
+		"translateX" " -av"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCube2|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Box02" 
+		"translateY" " -av"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCube2|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Box02" 
+		"translateZ" " -av"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCube2|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Box02" 
+		"rotate" " -type \"double3\" -25.527769088745121 -40.247211456298835 9.3925113677978516"
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCube2|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Box02" 
+		"rotateX" " -av"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCube2|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Box02" 
+		"rotateY" " -av"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCube2|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Box02" 
+		"rotateZ" " -av"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCube2|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Box02" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCube2|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Box02" 
+		"scaleX" " -av"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCube2|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Box02" 
+		"scaleY" " -av"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCube2|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Box02" 
+		"scaleZ" " -av"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCube2|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Box02|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Box02Shape" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCube2|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Box02|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Box02Shape" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/airplane_002.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCube2|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Box02|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Box02Shape" 
+		"furNameSpace" " -type \"string\" \"airplane_003\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCube2|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCube1|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCubeShape1" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCube2|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCube1|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCubeShape1" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/airplane_002.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCube2|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCube1|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCubeShape1" 
+		"furNameSpace" " -type \"string\" \"airplane_003\""
 		"utility_room_view:living_room_latest:living_room_latest:bedroom_updated_layout:chairRN" 
 		0
 		"utility_room_view:living_room_latest:living_room_latest:taller_window_four_squares_latestRN" 
@@ -11694,6 +11996,931 @@ createNode reference -n "utility_room_viewRN";
 		0
 		"utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latestRN1" 
 		0
+		"utility_room_view:livingroom_shading_latest:living_room_latest:bed_latestRN" 
+		426
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:pillow:armchair_pillow_1|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:pillow:armchair_pillow_Shape1 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:pillow:armchair_pillow_1|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:pillow:armchair_pillow_Shape1 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:pillow:armchair_pillow_1|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:pillow:armchair_pillow_Shape1 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:pCube1|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:pCubeShape1 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:pCube1|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:pCubeShape1 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:pCube1|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:pCubeShape1 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface291|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape292 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface291|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape292 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface291|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape292 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface292|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape293 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface292|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape293 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface292|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape293 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface293|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape294 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface293|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape294 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface293|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape294 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface294|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape295 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface294|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape295 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface294|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape295 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface295|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape296 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface295|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape296 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface295|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape296 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface296|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape297 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface296|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape297 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface296|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape297 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface297|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape298 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface297|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape298 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface297|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape298 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface298|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape299 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface298|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape299 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface298|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape299 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface299|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape300 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface299|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape300 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface299|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape300 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface300|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape301 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface300|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape301 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface300|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape301 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface301|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape302 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface301|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape302 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface301|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape302 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface302|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape303 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface302|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape303 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface302|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape303 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface303|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape304 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface303|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape304 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface303|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape304 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface304|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape305 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface304|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape305 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface304|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape305 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface305|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape306 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface305|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape306 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface305|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape306 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface306|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape307 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface306|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape307 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface306|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape307 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface307|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape308 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface307|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape308 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface307|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape308 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface308|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape309 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface308|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape309 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface308|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape309 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface309|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape310 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface309|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape310 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface309|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape310 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface310|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape311 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface310|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape311 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface310|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape311 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface311|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape312 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface311|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape312 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface311|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape312 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface312|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape313 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface312|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape313 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface312|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape313 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface313|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape314 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface313|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape314 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface313|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape314 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface314|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape315 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface314|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape315 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface314|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape315 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface315|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape316 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface315|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape316 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface315|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape316 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface316|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape317 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface316|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape317 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface316|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape317 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface317|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape318 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface317|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape318 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface317|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape318 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface318|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape319 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface318|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape319 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface318|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape319 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface319|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape320 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface319|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape320 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface319|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape320 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface322|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape323 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface322|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape323 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface322|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape323 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface323|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape324 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface323|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape324 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface323|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape324 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface324|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape325 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface324|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape325 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface324|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape325 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface325|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape326 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface325|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape326 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface325|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape326 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface326|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape327 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface326|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape327 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface326|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape327 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface327|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape328 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface327|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape328 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface327|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape328 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface328|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape329 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface328|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape329 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface328|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape329 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface329|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape330 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface329|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape330 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface329|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape330 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface330|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape331 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface330|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape331 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface330|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape331 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface333|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape334 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface333|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape334 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface333|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape334 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface334|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape335 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface334|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape335 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface334|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape335 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface335|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape336 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface335|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape336 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface335|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape336 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface336|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape337 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface336|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape337 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface336|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape337 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface338|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape339 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface338|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape339 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface338|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape339 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface339|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape340 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface339|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape340 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface339|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape340 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface340|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape341 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface340|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape341 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface340|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape341 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface341|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape342 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface341|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape342 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface341|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape342 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface342|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape343 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface342|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape343 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface342|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape343 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface343|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape344 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface343|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape344 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface343|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape344 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface344|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape345 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface344|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape345 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface344|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape345 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface345|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape346 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface345|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape346 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface345|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape346 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface346|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape347 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface346|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape347 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface346|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape347 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface347|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape348 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface347|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape348 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface347|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape348 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface348|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape349 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface348|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape349 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface348|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape349 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface349|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape350 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface349|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape350 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface349|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape350 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface350|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape351 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface350|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape351 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface350|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape351 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface351|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape352 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface351|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape352 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface351|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape352 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface352|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape353 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface352|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape353 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface352|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape353 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface353|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape354 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface353|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape354 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface353|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape354 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface354|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape355 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface354|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape355 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface354|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape355 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface355|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape356 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface355|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape356 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface355|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape356 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface356|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape357 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface356|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape357 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface356|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape357 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface357|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape358 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface357|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape358 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface357|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape358 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface358|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape359 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface358|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape359 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface358|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape359 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface359|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape360 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface359|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape360 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface359|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape360 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface361|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape362 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface361|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape362 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface361|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape362 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface363|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape363 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface363|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape363 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface363|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape363 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface364|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape364 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface364|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape364 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface364|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape364 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface365|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape365 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface365|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape365 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface365|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape365 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface362|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape363 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface362|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape363 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface362|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape363 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:pillow:armchair_pillow_1|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:pillow:armchair_pillow_Shape1" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:pillow:armchair_pillow_1|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:pillow:armchair_pillow_Shape1" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:pillow:armchair_pillow_1|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:pillow:armchair_pillow_Shape1" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:pCube1|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:pCubeShape1" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:pCube1|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:pCubeShape1" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:pCube1|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:pCubeShape1" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface291|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape292" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface291|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape292" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface291|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape292" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface292|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape293" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface292|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape293" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface292|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape293" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface293|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape294" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface293|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape294" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface293|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape294" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface294|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape295" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface294|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape295" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface294|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape295" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface295|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape296" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface295|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape296" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface295|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape296" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface296|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape297" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface296|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape297" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface296|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape297" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface297|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape298" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface297|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape298" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface297|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape298" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface298|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape299" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface298|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape299" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface298|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape299" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface299|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape300" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface299|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape300" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface299|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape300" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface300|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape301" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface300|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape301" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface300|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape301" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface301|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape302" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface301|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape302" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface301|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape302" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface302|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape303" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface302|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape303" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface302|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape303" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface303|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape304" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface303|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape304" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface303|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape304" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface304|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape305" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface304|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape305" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface304|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape305" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface305|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape306" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface305|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape306" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface305|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape306" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface306|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape307" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface306|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape307" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface306|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape307" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface307|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape308" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface307|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape308" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface307|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape308" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface308|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape309" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface308|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape309" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface308|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape309" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface309|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape310" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface309|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape310" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface309|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape310" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface310|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape311" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface310|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape311" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface310|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape311" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface311|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape312" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface311|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape312" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface311|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape312" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface312|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape313" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface312|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape313" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface312|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape313" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface313|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape314" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface313|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape314" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface313|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape314" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface314|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape315" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface314|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape315" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface314|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape315" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface315|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape316" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface315|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape316" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface315|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape316" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface316|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape317" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface316|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape317" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface316|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape317" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface317|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape318" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface317|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape318" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface317|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape318" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface318|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape319" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface318|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape319" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface318|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape319" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface319|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape320" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface319|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape320" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface319|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape320" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface322|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape323" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface322|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape323" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface322|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape323" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface323|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape324" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface323|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape324" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface323|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape324" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface324|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape325" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface324|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape325" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface324|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape325" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface325|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape326" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface325|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape326" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface325|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape326" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface326|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape327" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface326|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape327" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface326|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape327" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface327|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape328" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface327|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape328" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface327|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape328" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface328|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape329" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface328|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape329" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface328|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape329" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface329|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape330" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface329|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape330" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface329|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape330" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface330|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape331" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface330|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape331" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface330|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape331" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface333|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape334" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface333|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape334" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface333|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape334" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface334|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape335" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface334|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape335" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface334|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape335" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface335|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape336" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface335|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape336" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface335|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape336" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface336|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape337" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface336|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape337" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface336|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape337" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface338|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape339" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface338|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape339" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface338|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape339" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface339|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape340" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface339|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape340" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface339|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape340" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface340|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape341" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface340|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape341" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface340|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape341" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface341|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape342" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface341|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape342" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface341|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape342" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface342|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape343" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface342|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape343" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface342|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape343" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface343|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape344" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface343|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape344" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface343|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape344" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface344|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape345" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface344|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape345" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface344|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape345" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface345|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape346" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface345|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape346" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface345|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape346" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface346|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape347" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface346|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape347" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface346|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape347" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface347|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape348" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface347|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape348" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface347|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape348" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface348|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape349" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface348|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape349" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface348|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape349" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface349|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape350" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface349|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape350" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface349|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape350" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface350|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape351" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface350|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape351" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface350|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape351" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface351|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape352" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface351|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape352" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface351|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape352" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface352|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape353" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface352|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape353" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface352|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape353" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface353|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape354" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface353|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape354" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface353|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape354" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface354|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape355" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface354|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape355" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface354|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape355" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface355|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape356" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface355|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape356" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface355|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape356" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface356|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape357" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface356|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape357" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface356|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape357" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface357|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape358" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface357|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape358" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface357|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape358" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface358|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape359" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface358|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape359" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface358|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape359" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface359|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape360" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface359|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape360" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface359|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape360" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface361|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape362" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface361|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape362" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface361|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape362" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface363|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape363" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface363|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape363" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface363|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape363" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface364|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape364" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface364|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape364" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface364|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape364" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface365|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape365" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface365|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape365" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface365|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape365" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface362|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape363" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface362|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape363" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/bed_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:bed|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface362|utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurfaceShape363" 
+		"furNameSpace" " -type \"string\" \"bed_latest1\""
 		"utility_room_view:livingroom_shading_latest:living_room_latest:bedroom_updated_layout:chairRN" 
 		126
 		1 |utility_room_view:livingroom_shading_latest:living_room_latest:bedroom_updated_layout:chair:DeskFBXASC032Chair_root|utility_room_view:livingroom_shading_latest:living_room_latest:bedroom_updated_layout:chair:Box119|utility_room_view:livingroom_shading_latest:living_room_latest:bedroom_updated_layout:chair:transform20|utility_room_view:livingroom_shading_latest:living_room_latest:bedroom_updated_layout:chair:Box119Shape 
@@ -11970,51 +13197,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bedroom_updated_layout:chair:Box119|utility_room_view:livingroom_shading_latest:living_room_latest:bedroom_updated_layout:chair:Box119Shape" 
 		"furNameSpace" " -type \"string\" \"chair\""
 		"utility_room_view:livingroom_shading_latest:living_room_latest:airplane_002RN" 
-		20
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046alarmFBXASC032cloc" 
-		"translate" " -type \"double3\" 20.067708969116211 34.252059936523438 4.092653751373291"
-		
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046alarmFBXASC032cloc" 
-		"translateX" " -av"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046alarmFBXASC032cloc" 
-		"translateY" " -av"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046alarmFBXASC032cloc" 
-		"translateZ" " -av"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Omni01" 
-		"translate" " -type \"double3\" -347.5557861328125 234.88270568847656 1072.8299560546875"
-		
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Omni01" 
-		"translateX" " -av"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Omni01" 
-		"translateY" " -av"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Omni01" 
-		"translateZ" " -av"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCube2|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Box02" 
-		"translate" " -type \"double3\" 144.76170349121094 -29.627830505371097 -197.89039611816409"
-		
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCube2|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Box02" 
-		"translateX" " -av"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCube2|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Box02" 
-		"translateY" " -av"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCube2|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Box02" 
-		"translateZ" " -av"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCube2|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Box02" 
-		"rotate" " -type \"double3\" -25.527769088745121 -40.247211456298835 9.3925113677978516"
-		
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCube2|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Box02" 
-		"rotateX" " -av"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCube2|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Box02" 
-		"rotateY" " -av"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCube2|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Box02" 
-		"rotateZ" " -av"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCube2|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Box02" 
-		"scale" " -type \"double3\" 1 1 1"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCube2|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Box02" 
-		"scaleX" " -av"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCube2|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Box02" 
-		"scaleY" " -av"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:pCube2|utility_room_view:livingroom_shading_latest:living_room_latest:airplane_003:toy_airplane:Box02" 
-		"scaleZ" " -av"
+		0
 		"utility_room_view:sneaks_latestRN" 1409
 		1 |utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:pSphere2 
 		"blendAim1" "blendAim1" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
@@ -12086,12 +13269,12 @@ createNode reference -n "utility_room_viewRN";
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		2 "|utility_room_view:sneaks_latest:controller_root" "visibility" " -av 1"
 		
-		2 "|utility_room_view:sneaks_latest:controller_root" "translate" " -type \"double3\" -42.201965112651109 3.2125557333516297 -111.63602519290063"
+		2 "|utility_room_view:sneaks_latest:controller_root" "translate" " -type \"double3\" -43.305427691460729 0.7368014573619126 -117.85310864395346"
 		
 		2 "|utility_room_view:sneaks_latest:controller_root" "translateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root" "translateY" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root" "translateZ" " -av"
-		2 "|utility_room_view:sneaks_latest:controller_root" "rotate" " -type \"double3\" -223.7588977660476 -205.81468296686526 -180.66671908578797"
+		2 "|utility_room_view:sneaks_latest:controller_root" "rotate" " -type \"double3\" 0 -217.79200000000009 0"
 		
 		2 "|utility_room_view:sneaks_latest:controller_root" "rotateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root" "rotateY" " -av"
@@ -12104,7 +13287,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG" 
 		"visibility" " -av 1"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG" 
-		"translate" " -type \"double3\" 0 0.59257456141636689 0.64748390594143046"
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG" 
 		"translateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG" 
@@ -12112,7 +13295,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG" 
 		"translateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG" 
-		"rotate" " -type \"double3\" -4.0437826784525441 0 0"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG" 
 		"rotateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG" 
@@ -12234,8 +13417,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head" 
 		"visibility" " -av 1"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head" 
-		"translate" " -type \"double3\" 0.068713647354338575 0.06607035489943143 0.8289812722569303"
-		
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head" 
 		"translateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head" 
@@ -12243,7 +13425,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head" 
 		"translateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head" 
-		"rotate" " -type \"double3\" 44.940563177304483 0 0"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head" 
 		"rotateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head" 
@@ -12417,8 +13599,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase" 
 		"visibility" " -av 1"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase" 
-		"translate" " -type \"double3\" -1.6184855594036294 -0.57864001895808059 0.50700509247772341"
-		
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase" 
 		"translateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase" 
@@ -12426,7 +13607,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase" 
 		"translateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase" 
-		"rotate" " -type \"double3\" 0 33.70007069638806 0"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase" 
 		"rotateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase" 
@@ -12470,8 +13651,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3" 
 		"visibility" " -av 1"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3" 
-		"translate" " -type \"double3\" -0.72389040724688292 -0.69186613734660884 0.27121665224490582"
-		
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3" 
 		"translateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3" 
@@ -12479,8 +13659,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3" 
 		"translateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3" 
-		"rotate" " -type \"double3\" -1.0653030001515873 19.730265418737734 47.24851561437179"
-		
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3" 
 		"rotateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3" 
@@ -12565,8 +13744,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg" 
 		"visibility" " -av 1"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg" 
-		"translate" " -type \"double3\" -0.197302460740192 1.6298543616809067 -2.7142497506087824"
-		
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg" 
 		"translateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg" 
@@ -12574,7 +13752,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg" 
 		"translateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg" 
-		"rotate" " -type \"double3\" 36.450724451618939 0 0"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg" 
 		"rotateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg" 
@@ -12606,7 +13784,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:ikHandle14" 
 		"rotateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:ikHandle14" 
-		"poleVector" " -type \"double3\" 3.8645079118273173 -3.5212943787206221 -14.634260060093936"
+		"poleVector" " -type \"double3\" 4.0618103725675496 -2.9087364260442148 -15.031812334651804"
 		
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:ikHandle14" 
 		"poleVectorX" " -av"
@@ -12654,7 +13832,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm" 
 		"visibility" " -av 1"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm" 
-		"translate" " -type \"double3\" -0.57335281112975356 1.147219912108741 2.79915259631046"
+		"translate" " -type \"double3\" 1.9431135261065178 1.021512533399741 2.5361415988292602"
 		
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm" 
 		"translateX" " -av"
@@ -12663,52 +13841,52 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm" 
 		"translateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm" 
-		"rotate" " -type \"double3\" 0 0 0"
-		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm" 
-		"rotateX" " -av"
-		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm" 
-		"rotateY" " -av"
-		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm" 
-		"rotateZ" " -av"
-		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm" 
-		"scale" " -type \"double3\" 1 1 1"
-		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm" 
-		"scaleX" " -av"
-		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm" 
-		"scaleY" " -av"
-		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm" 
-		"scaleZ" " -av"
-		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist" 
-		"visibility" " -av 1"
-		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist" 
-		"translate" " -type \"double3\" 0 0 0"
-		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist" 
-		"translateX" " -av"
-		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist" 
-		"translateY" " -av"
-		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist" 
-		"translateZ" " -av"
-		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist" 
-		"rotate" " -type \"double3\" 0 0 0"
-		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist" 
-		"rotateX" " -av"
-		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist" 
-		"rotateY" " -av"
-		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist" 
-		"rotateZ" " -av"
-		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist" 
-		"scale" " -type \"double3\" 1 1 1"
-		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist" 
-		"scaleX" " -av"
-		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist" 
-		"scaleY" " -av"
-		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist" 
-		"scaleZ" " -av"
-		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6" 
-		"visibility" " -av 1"
-		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6" 
-		"translate" " -type \"double3\" -0.0085461173449622313 -0.62292899875399255 -0.49193929072284942"
+		"rotate" " -type \"double3\" -16.566340516050928 10.386570619019615 -68.037731663231213"
 		
+		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm" 
+		"rotateX" " -av"
+		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm" 
+		"rotateY" " -av"
+		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm" 
+		"rotateZ" " -av"
+		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm" 
+		"scaleX" " -av"
+		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm" 
+		"scaleY" " -av"
+		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm" 
+		"scaleZ" " -av"
+		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist" 
+		"visibility" " -av 1"
+		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist" 
+		"translateX" " -av"
+		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist" 
+		"translateY" " -av"
+		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist" 
+		"translateZ" " -av"
+		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist" 
+		"rotateX" " -av"
+		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist" 
+		"rotateY" " -av"
+		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist" 
+		"rotateZ" " -av"
+		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist" 
+		"scaleX" " -av"
+		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist" 
+		"scaleY" " -av"
+		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist" 
+		"scaleZ" " -av"
+		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6" 
+		"visibility" " -av 1"
+		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6" 
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6" 
 		"translateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6" 
@@ -12734,8 +13912,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5" 
 		"visibility" " -av 1"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5" 
-		"translate" " -type \"double3\" 0.010108059832543613 -0.70029220731147435 -0.66382246603551642"
-		
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5" 
 		"translateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5" 
@@ -12761,8 +13938,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2" 
 		"visibility" " -av 1"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2" 
-		"translate" " -type \"double3\" 0.010108059832543613 -0.70029220731147435 -0.66382246603551642"
-		
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2" 
 		"translateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2" 
@@ -12788,8 +13964,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3" 
 		"visibility" " -av 1"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3" 
-		"translate" " -type \"double3\" 0.21393083455551867 -0.45759200247762821 -0.37183274837090374"
-		
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3" 
 		"translateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3" 
@@ -12797,7 +13972,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3" 
 		"translateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3" 
-		"rotate" " -type \"double3\" 0 60.502643075587528 0"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3" 
 		"rotateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3" 
@@ -12815,8 +13990,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4" 
 		"visibility" " -av 1"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4" 
-		"translate" " -type \"double3\" -0.091882680437239392 0.11436532108490687 0.3602277755749676"
-		
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4" 
 		"translateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4" 
@@ -12986,7 +14160,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:ikHandle2" 
 		"rotateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:ikHandle2" 
-		"poleVector" " -type \"double3\" 6.3628059212693273 -2.5297814899087712 -6.4708030016883242"
+		"poleVector" " -type \"double3\" 11.924349502333605 2.8992329150831893 -5.2760685890103787"
 		
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:ikHandle2" 
 		"poleVectorX" " -av"
@@ -13026,7 +14200,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:spine" 
 		"blendParent1" " -k 1"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:spine|utility_room_view:sneaks_latest:tail_joints|utility_room_view:sneaks_latest:tail2|utility_room_view:sneaks_latest:tail3" 
-		"rotate" " -type \"double3\" -0.50354862578176662 -0.43190008747923309 -0.0831109157457567"
+		"rotate" " -type \"double3\" -0.50354862578176529 -0.43190008747923131 -0.083110915745755146"
 		
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:spine|utility_room_view:sneaks_latest:tail_joints|utility_room_view:sneaks_latest:tail2|utility_room_view:sneaks_latest:tail3" 
 		"rotateX" " -av"
@@ -13037,7 +14211,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:spine|utility_room_view:sneaks_latest:tail_joints|utility_room_view:sneaks_latest:tail2|utility_room_view:sneaks_latest:tail3" 
 		"segmentScaleCompensate" " 1"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:spine|utility_room_view:sneaks_latest:Spine2|utility_room_view:sneaks_latest:Spine3|utility_room_view:sneaks_latest:Spine4|utility_room_view:sneaks_latest:Shoulder|utility_room_view:sneaks_latest:Neck" 
-		"rotate" " -type \"double3\" 48.688464114480958 1.1512850245547634 0.89200970438656368"
+		"rotate" " -type \"double3\" 3.7686930306160802 3.0912827037129964 0.27057766464021465"
 		
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:spine|utility_room_view:sneaks_latest:Spine2|utility_room_view:sneaks_latest:Spine3|utility_room_view:sneaks_latest:Spine4|utility_room_view:sneaks_latest:Shoulder|utility_room_view:sneaks_latest:Neck" 
 		"rotateX" " -av"
@@ -13048,7 +14222,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:spine|utility_room_view:sneaks_latest:Spine2|utility_room_view:sneaks_latest:Spine3|utility_room_view:sneaks_latest:Spine4|utility_room_view:sneaks_latest:Shoulder|utility_room_view:sneaks_latest:leftArm|utility_room_view:sneaks_latest:leftElbow" 
 		"translate" " -type \"double3\" 0.332909 -2.907748 -1.503776"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:spine|utility_room_view:sneaks_latest:Spine2|utility_room_view:sneaks_latest:Spine3|utility_room_view:sneaks_latest:Spine4|utility_room_view:sneaks_latest:Shoulder|utility_room_view:sneaks_latest:leftArm|utility_room_view:sneaks_latest:leftElbow" 
-		"rotate" " -type \"double3\" 3.2076881970531459 -0.55801915938466395 0.53027272453310248"
+		"rotate" " -type \"double3\" -17.211695412367874 0.094178972528194613 -3.9924676461433677"
 		
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:spine|utility_room_view:sneaks_latest:Spine2|utility_room_view:sneaks_latest:Spine3|utility_room_view:sneaks_latest:Spine4|utility_room_view:sneaks_latest:Shoulder|utility_room_view:sneaks_latest:leftArm|utility_room_view:sneaks_latest:leftElbow" 
 		"segmentScaleCompensate" " 1"
@@ -13104,8 +14278,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1" 
 		"visibility" " -av 1"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1" 
-		"translate" " -type \"double3\" -0.47826538289531612 3.2154531836925204 -3.7048730388728419"
-		
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1" 
 		"translateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1" 
@@ -13113,7 +14286,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1" 
 		"translateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1" 
-		"rotate" " -type \"double3\" 46.364161049625324 0 0"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1" 
 		"rotateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1" 
@@ -13145,7 +14318,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:ikHandle15" 
 		"rotateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:ikHandle15" 
-		"poleVector" " -type \"double3\" -1.3938957562241114 -6.4473202850151807 -8.8142001936373902"
+		"poleVector" " -type \"double3\" -0.91563037332878139 -6.1632344590316102 -8.5265270666025117"
 		
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:ikHandle15" 
 		"poleVectorX" " -av"
@@ -13193,7 +14366,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm" 
 		"visibility" " -av 1"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm" 
-		"translate" " -type \"double3\" 1.4530036196920191 1.4333229862772474 2.5535539210704852"
+		"translate" " -type \"double3\" 0.56248425945010594 1.5733379844790887 2.9529254325335583"
 		
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm" 
 		"translateX" " -av"
@@ -13202,7 +14375,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm" 
 		"translateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm" 
-		"rotate" " -type \"double3\" 0 20.44252101166115 0"
+		"rotate" " -type \"double3\" -5.6454314498962548 0 0"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm" 
 		"rotateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm" 
@@ -13220,7 +14393,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist" 
 		"visibility" " -av 1"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist" 
-		"translate" " -type \"double3\" -0.41214264102158565 0.019808708875643177 0.57434402373259563"
+		"translate" " -type \"double3\" -0.22029468114646725 -0.098348953023468577 0.13580877154056731"
 		
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist" 
 		"translateX" " -av"
@@ -13229,7 +14402,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist" 
 		"translateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist" 
-		"rotate" " -type \"double3\" 52.481819454131404 -13.676130640244613 21.133352766658334"
+		"rotate" " -type \"double3\" 21.293180901860573 2.9274864894296435 69.914151779626152"
 		
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist" 
 		"rotateX" " -av"
@@ -13539,7 +14712,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:ikHandle3" 
 		"rotateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:ikHandle3" 
-		"poleVector" " -type \"double3\" -4.2368122316179964 -4.9395547954011079 -3.9733568574690707"
+		"poleVector" " -type \"double3\" -4.516901175291764 -4.0366200029014685 -3.9877694251691054"
 		
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:ikHandle3" 
 		"poleVectorX" " -av"
@@ -15310,8 +16483,26 @@ createNode reference -n "utility_room_viewRN";
 		
 		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:bedroom_updated_layout:desk_latest:polySurface3|utility_room_view:livingroom_shading_latest:living_room_latest:bedroom_updated_layout:desk_latest:polySurfaceShape3" 
 		"furNameSpace" " -type \"string\" \"desk_latest\""
-		"utility_room_view:livingroom_shading_latest:living_room_latest:telescopeRN" 20
+		"utility_room_view:livingroom_shading_latest:living_room_latest:telescopeRN" 38
 		
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform4|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02Shape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform4|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02Shape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform4|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02Shape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04Shape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04Shape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04Shape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurface1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurfaceShape1 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurface1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurfaceShape1 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurface1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurfaceShape1 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_" 
 		"translate" " -type \"double3\" 0 2169.506103515625 0"
 		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_" 
@@ -15329,6 +16520,13 @@ createNode reference -n "utility_room_viewRN";
 		"translateY" " -av"
 		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02" 
 		"translateZ" " -av"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform4|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02Shape" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform4|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02Shape" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/telescope.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform4|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02Shape" 
+		"furNameSpace" " -type \"string\" \"telescope\""
 		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02FBXASC046Object03" 
 		"translate" " -type \"double3\" -132.75840759277344 496.37063598632812 -271.658447265625"
 		
@@ -15356,6 +16554,20 @@ createNode reference -n "utility_room_viewRN";
 		"translateZ" " -av"
 		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04" 
 		"translateX" " -av"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04Shape" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04Shape" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/telescope.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04Shape" 
+		"furNameSpace" " -type \"string\" \"telescope\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurface1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurfaceShape1" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurface1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurfaceShape1" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/telescope.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurface1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurfaceShape1" 
+		"furNameSpace" " -type \"string\" \"telescope\""
 		"utility_room_view:pig_latestRN" 99
 		1 |utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:pig_mesh|utility_room_view:pig_latest:pig_body|utility_room_view:pig_latest:pigShapeDeformedOrig 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
@@ -15392,7 +16604,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:pig_latest:Tyrion_Cattister_uv:Tyrion_CattisterRNfosterParent1|utility_room_view:pig_latest:Tyrion_Cattister_uv:Tyrion_Cattister:Tyrion_Cattister_uv:Tyrion_Cattister:pigShapeDeformedDeformed" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
 		2 "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01" 
-		"translate" " -type \"double3\" -153.14732841627628 2.4208219590193432 93.835865570284213"
+		"translate" " -type \"double3\" -165.61646970195429 2.5367069911953974 62.72698048015701"
 		
 		2 "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01" 
 		"translateX" " -av"
@@ -15401,7 +16613,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01" 
 		"translateZ" " -av"
 		2 "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01" 
-		"rotate" " -type \"double3\" 0 221.24112854099317 0"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01" 
 		"rotateX" " -av"
 		2 "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01" 
@@ -15437,10 +16649,10 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:Skeleton_01|utility_room_view:pig_latest:PigSkin002:bind_root01|utility_room_view:pig_latest:PigSkin002:bind_head01|utility_room_view:pig_latest:pig_left_eye|utility_room_view:pig_latest:pig_left_eyeShape" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
 		2 "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:splineiK_tail01" 
-		"translate" " -type \"double3\" -0.035714577018609368 9.5068445740562204 -13.339665699517958"
+		"translate" " -type \"double3\" -0.035714577019007272 9.5068445740561565 -13.339665699518093"
 		
 		2 "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:splineiK_tail01" 
-		"rotate" " -type \"double3\" 90.076272601859657 41.806374187181625 90.09686023648041"
+		"rotate" " -type \"double3\" 90.076272601860381 41.806374187183287 90.096860236481433"
 		
 		2 "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:flexi_joint_systems|utility_room_view:pig_latest:vertebrae_flexi_spine01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_global01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_surface01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_surface0Shape1" 
 		"surfaceReference" " 1"
@@ -15751,6 +16963,20 @@ createNode reference -n "utility_room_viewRN";
 		
 		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest:armchair_frame|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest:armchair_pillow_2|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest:armchair_pillow_Shape2" 
 		"furNameSpace" " -type \"string\" \"armchair_latest\""
+		"utility_room_view:pig_latest:key_latestRN" 6
+		1 |utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:cat_collar:diamond:pPyramid2|utility_room_view:pig_latest:colorClip_control|utility_room_view:pig_latest:key_control|utility_room_view:pig_latest:key_latest:Obj_000003|utility_room_view:pig_latest:key_latest:Obj_000003Shape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:cat_collar:diamond:pPyramid2|utility_room_view:pig_latest:colorClip_control|utility_room_view:pig_latest:key_control|utility_room_view:pig_latest:key_latest:Obj_000003|utility_room_view:pig_latest:key_latest:Obj_000003Shape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:cat_collar:diamond:pPyramid2|utility_room_view:pig_latest:colorClip_control|utility_room_view:pig_latest:key_control|utility_room_view:pig_latest:key_latest:Obj_000003|utility_room_view:pig_latest:key_latest:Obj_000003Shape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		2 "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:cat_collar:diamond:pPyramid2|utility_room_view:pig_latest:colorClip_control|utility_room_view:pig_latest:key_control|utility_room_view:pig_latest:key_latest:Obj_000003|utility_room_view:pig_latest:key_latest:Obj_000003Shape" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:cat_collar:diamond:pPyramid2|utility_room_view:pig_latest:colorClip_control|utility_room_view:pig_latest:key_control|utility_room_view:pig_latest:key_latest:Obj_000003|utility_room_view:pig_latest:key_latest:Obj_000003Shape" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/props/keys/key_latest.ma\""
+		
+		2 "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:cat_collar:diamond:pPyramid2|utility_room_view:pig_latest:colorClip_control|utility_room_view:pig_latest:key_control|utility_room_view:pig_latest:key_latest:Obj_000003|utility_room_view:pig_latest:key_latest:Obj_000003Shape" 
+		"furNameSpace" " -type \"string\" \"key_latest\""
 		"utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest1RN" 
 		42
 		1 |utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest2:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest2:polySurfaceShape1 
@@ -15937,6 +17163,489 @@ createNode reference -n "utility_room_viewRN";
 		
 		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest:taller_windowShape" 
 		"furNameSpace" " -type \"string\" \"taller_window_four_squares_latest\""
+		"utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRN" 222
+		
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform13|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape1 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform13|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape1 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform13|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape1 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform14|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape2 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform14|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape2 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform14|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape2 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform15|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:torsoShape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform15|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:torsoShape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform15|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:torsoShape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform22|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape15 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform22|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape15 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform22|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape15 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform21|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pSphereShape6 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform21|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pSphereShape6 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform21|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pSphereShape6 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform20|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape12 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform20|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape12 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform20|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape12 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform19|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape13 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform19|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape13 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform19|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape13 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:CatRobot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinder13|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:polySurfaceShape2 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:CatRobot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinder13|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:polySurfaceShape2 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:CatRobot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinder13|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:polySurfaceShape2 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform18|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:headShape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform18|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:headShape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform18|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:headShape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform17|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:head1Shape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform17|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:head1Shape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform17|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:head1Shape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:CatRobot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:head1|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:polySurfaceShape1 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:CatRobot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:head1|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:polySurfaceShape1 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:CatRobot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:head1|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:polySurfaceShape1 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform16|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:left_earShape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform16|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:left_earShape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform16|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:left_earShape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform12|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:right_earShape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform12|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:right_earShape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform12|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:right_earShape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform11|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape5 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform11|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape5 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform11|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape5 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform10|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pSphereShape2 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform10|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pSphereShape2 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform10|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pSphereShape2 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform24|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pSphereShape4 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform24|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pSphereShape4 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform24|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pSphereShape4 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform9|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape6 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform9|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape6 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform9|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape6 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:CatRobot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinder6|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:polySurfaceShape6 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:CatRobot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinder6|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:polySurfaceShape6 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:CatRobot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinder6|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:polySurfaceShape6 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform8|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pSphereShape1 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform8|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pSphereShape1 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform8|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pSphereShape1 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform23|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape4 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform23|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape4 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform23|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape4 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform25|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pSphereShape3 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform25|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pSphereShape3 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform25|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pSphereShape3 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform7|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape7 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform7|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape7 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform7|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape7 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:CatRobot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinder7|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:polySurfaceShape5 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:CatRobot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinder7|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:polySurfaceShape5 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:CatRobot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinder7|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:polySurfaceShape5 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform4|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape14 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform4|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape14 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform4|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape14 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:CatRobot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinder14|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:polySurfaceShape4 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:CatRobot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinder14|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:polySurfaceShape4 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:CatRobot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinder14|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:polySurfaceShape4 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform5|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:botShape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform5|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:botShape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform5|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:botShape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:CatRobot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:bot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:polySurfaceShape3 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:CatRobot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:bot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:polySurfaceShape3 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:CatRobot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:bot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:polySurfaceShape3 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform6|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:topShape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform6|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:topShape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform6|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:topShape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform29|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape8 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform29|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape8 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform29|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape8 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform26|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pSphereShape5 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform26|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pSphereShape5 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform26|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pSphereShape5 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform3|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape16 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform3|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape16 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform3|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape16 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:CatRobot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinder16|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:polySurfaceShape4 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:CatRobot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinder16|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:polySurfaceShape4 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:CatRobot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinder16|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:polySurfaceShape4 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:bot1Shape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:bot1Shape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:bot1Shape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:CatRobot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:bot1|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:polySurfaceShape3 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:CatRobot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:bot1|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:polySurfaceShape3 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:CatRobot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:bot1|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:polySurfaceShape3 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform2|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:top1Shape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform2|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:top1Shape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform2|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:top1Shape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform27|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape17 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform27|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape17 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform27|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape17 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform28|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pSphereShape7 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform28|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pSphereShape7 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform28|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pSphereShape7 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform13|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape1" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform13|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape1" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform13|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape1" 
+		"furNameSpace" " -type \"string\" \"cat_robot\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform14|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape2" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform14|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape2" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform14|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape2" 
+		"furNameSpace" " -type \"string\" \"cat_robot\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform15|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:torsoShape" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform15|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:torsoShape" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform15|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:torsoShape" 
+		"furNameSpace" " -type \"string\" \"cat_robot\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform22|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape15" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform22|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape15" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform22|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape15" 
+		"furNameSpace" " -type \"string\" \"cat_robot\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform21|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pSphereShape6" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform21|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pSphereShape6" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform21|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pSphereShape6" 
+		"furNameSpace" " -type \"string\" \"cat_robot\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform20|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape12" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform20|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape12" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform20|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape12" 
+		"furNameSpace" " -type \"string\" \"cat_robot\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform19|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape13" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform19|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape13" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform19|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape13" 
+		"furNameSpace" " -type \"string\" \"cat_robot\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:CatRobot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinder13|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:polySurfaceShape2" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:CatRobot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinder13|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:polySurfaceShape2" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:CatRobot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinder13|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:polySurfaceShape2" 
+		"furNameSpace" " -type \"string\" \"cat_robot\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform18|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:headShape" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform18|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:headShape" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform18|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:headShape" 
+		"furNameSpace" " -type \"string\" \"cat_robot\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform17|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:head1Shape" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform17|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:head1Shape" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform17|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:head1Shape" 
+		"furNameSpace" " -type \"string\" \"cat_robot\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:CatRobot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:head1|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:polySurfaceShape1" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:CatRobot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:head1|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:polySurfaceShape1" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:CatRobot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:head1|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:polySurfaceShape1" 
+		"furNameSpace" " -type \"string\" \"cat_robot\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform16|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:left_earShape" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform16|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:left_earShape" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform16|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:left_earShape" 
+		"furNameSpace" " -type \"string\" \"cat_robot\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform12|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:right_earShape" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform12|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:right_earShape" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform12|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:right_earShape" 
+		"furNameSpace" " -type \"string\" \"cat_robot\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform11|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape5" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform11|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape5" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform11|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape5" 
+		"furNameSpace" " -type \"string\" \"cat_robot\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform10|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pSphereShape2" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform10|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pSphereShape2" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform10|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pSphereShape2" 
+		"furNameSpace" " -type \"string\" \"cat_robot\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform24|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pSphereShape4" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform24|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pSphereShape4" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform24|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pSphereShape4" 
+		"furNameSpace" " -type \"string\" \"cat_robot\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform9|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape6" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform9|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape6" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform9|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape6" 
+		"furNameSpace" " -type \"string\" \"cat_robot\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:CatRobot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinder6|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:polySurfaceShape6" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:CatRobot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinder6|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:polySurfaceShape6" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:CatRobot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinder6|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:polySurfaceShape6" 
+		"furNameSpace" " -type \"string\" \"cat_robot\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform8|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pSphereShape1" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform8|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pSphereShape1" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform8|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pSphereShape1" 
+		"furNameSpace" " -type \"string\" \"cat_robot\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform23|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape4" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform23|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape4" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform23|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape4" 
+		"furNameSpace" " -type \"string\" \"cat_robot\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform25|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pSphereShape3" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform25|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pSphereShape3" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform25|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pSphereShape3" 
+		"furNameSpace" " -type \"string\" \"cat_robot\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform7|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape7" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform7|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape7" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform7|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape7" 
+		"furNameSpace" " -type \"string\" \"cat_robot\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:CatRobot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinder7|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:polySurfaceShape5" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:CatRobot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinder7|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:polySurfaceShape5" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:CatRobot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinder7|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:polySurfaceShape5" 
+		"furNameSpace" " -type \"string\" \"cat_robot\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform4|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape14" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform4|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape14" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform4|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape14" 
+		"furNameSpace" " -type \"string\" \"cat_robot\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:CatRobot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinder14|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:polySurfaceShape4" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:CatRobot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinder14|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:polySurfaceShape4" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:CatRobot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinder14|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:polySurfaceShape4" 
+		"furNameSpace" " -type \"string\" \"cat_robot\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform5|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:botShape" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform5|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:botShape" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform5|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:botShape" 
+		"furNameSpace" " -type \"string\" \"cat_robot\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:CatRobot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:bot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:polySurfaceShape3" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:CatRobot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:bot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:polySurfaceShape3" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:CatRobot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:bot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:polySurfaceShape3" 
+		"furNameSpace" " -type \"string\" \"cat_robot\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform6|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:topShape" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform6|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:topShape" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform6|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:topShape" 
+		"furNameSpace" " -type \"string\" \"cat_robot\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform29|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape8" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform29|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape8" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform29|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape8" 
+		"furNameSpace" " -type \"string\" \"cat_robot\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform26|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pSphereShape5" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform26|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pSphereShape5" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform26|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pSphereShape5" 
+		"furNameSpace" " -type \"string\" \"cat_robot\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform3|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape16" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform3|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape16" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform3|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape16" 
+		"furNameSpace" " -type \"string\" \"cat_robot\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:CatRobot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinder16|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:polySurfaceShape4" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:CatRobot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinder16|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:polySurfaceShape4" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:CatRobot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinder16|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:polySurfaceShape4" 
+		"furNameSpace" " -type \"string\" \"cat_robot\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:bot1Shape" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:bot1Shape" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:bot1Shape" 
+		"furNameSpace" " -type \"string\" \"cat_robot\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:CatRobot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:bot1|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:polySurfaceShape3" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:CatRobot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:bot1|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:polySurfaceShape3" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:CatRobot|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:bot1|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:polySurfaceShape3" 
+		"furNameSpace" " -type \"string\" \"cat_robot\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform2|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:top1Shape" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform2|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:top1Shape" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform2|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:top1Shape" 
+		"furNameSpace" " -type \"string\" \"cat_robot\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform27|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape17" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform27|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape17" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform27|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pCylinderShape17" 
+		"furNameSpace" " -type \"string\" \"cat_robot\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform28|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pSphereShape7" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform28|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pSphereShape7" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robotRNfosterParent1|utility_room_view:livingroom_shading_latest:living_room_latest:transform28|utility_room_view:livingroom_shading_latest:living_room_latest:cat_robot:pSphereShape7" 
+		"furNameSpace" " -type \"string\" \"cat_robot\""
 		"utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latestRN3" 
 		42
 		1 |utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest7:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest7:polySurfaceShape1 
@@ -16294,17 +18003,17 @@ createNode reference -n "utility_room_viewRN";
 		1 |utility_room_view:undies_latest:undies|utility_room_view:undies_latest:undiesShape 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		2 "|utility_room_view:undies_latest:undies" "visibility" " -av 1"
-		2 "|utility_room_view:undies_latest:undies" "translate" " -type \"double3\" -40.095366825408369 4.1070401505552301 -109.68058742156362"
+		2 "|utility_room_view:undies_latest:undies" "translate" " -type \"double3\" -39.336160536144895 6.157353105497962 -116.89415581274692"
 		
 		2 "|utility_room_view:undies_latest:undies" "translateX" " -av"
 		2 "|utility_room_view:undies_latest:undies" "translateY" " -av"
 		2 "|utility_room_view:undies_latest:undies" "translateZ" " -av"
-		2 "|utility_room_view:undies_latest:undies" "rotate" " -type \"double3\" 14.333349933197564 25.079222876397733 10.528437436571403"
+		2 "|utility_room_view:undies_latest:undies" "rotate" " -type \"double3\" 162.35587425990761 -35.866164183487335 -160.26920906204953"
 		
 		2 "|utility_room_view:undies_latest:undies" "rotateX" " -av"
 		2 "|utility_room_view:undies_latest:undies" "rotateY" " -av"
 		2 "|utility_room_view:undies_latest:undies" "rotateZ" " -av"
-		2 "|utility_room_view:undies_latest:undies" "scale" " -type \"double3\" 0.29790832364931197 0.36812578851026567 0.36812578851026567"
+		2 "|utility_room_view:undies_latest:undies" "scale" " -type \"double3\" 0.2570207017184899 0.27558491232274351 0.27558491232274351"
 		
 		2 "|utility_room_view:undies_latest:undies" "scaleX" " -av"
 		2 "|utility_room_view:undies_latest:undies" "scaleY" " -av"
@@ -16438,13 +18147,12 @@ createNode reference -n "utility_room_viewRN";
 		"utility_room_viewRN" 35
 		1 utility_room_view:defaultFurGlobals "furGlobalReference" "fgrf" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
 		
-		2 "|utility_room_view:at_dryer" "translate" " -type \"double3\" -141.377 19.502 111.415"
+		2 "|utility_room_view:at_dryer" "translate" " -type \"double3\" 11.228646623318468 1.7078115739215427 50.890432943412407"
 		
 		2 "|utility_room_view:at_dryer" "translateX" " -av"
 		2 "|utility_room_view:at_dryer" "translateY" " -av"
 		2 "|utility_room_view:at_dryer" "translateZ" " -av"
-		2 "|utility_room_view:at_dryer" "rotate" " -type \"double3\" -1.8 -1.2 0"
-		
+		2 "|utility_room_view:at_dryer" "rotate" " -type \"double3\" 0 0 0"
 		2 "|utility_room_view:at_dryer" "rotateX" " -av"
 		2 "|utility_room_view:at_dryer" "rotateY" " -av"
 		2 "|utility_room_view:at_dryer" "rotateZ" " -av"
@@ -16591,7 +18299,7 @@ createNode reference -n "utility_room_viewRN";
 		
 		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest8:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest8:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest8:taller_windowShape" 
 		"furNameSpace" " -type \"string\" \"taller_window_four_squares_latest8\""
-		"utility_room_view:livingroom_shading_latest:living_room_latestRN" 3255
+		"utility_room_view:livingroom_shading_latest:living_room_latestRN" 3291
 		1 |utility_room_view:livingroom_shading_latest:living_room_latest:crown_molding|utility_room_view:livingroom_shading_latest:living_room_latest:crown_unit_1|utility_room_view:livingroom_shading_latest:living_room_latest:crown_unit_Shape1 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
 		1 |utility_room_view:livingroom_shading_latest:living_room_latest:crown_molding|utility_room_view:livingroom_shading_latest:living_room_latest:crown_unit_1|utility_room_view:livingroom_shading_latest:living_room_latest:crown_unit_Shape1 
@@ -19789,6 +21497,42 @@ createNode reference -n "utility_room_viewRN";
 		1 |utility_room_view:livingroom_shading_latest:living_room_latest:polySurface41|utility_room_view:livingroom_shading_latest:living_room_latest:polySurfaceShape41 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |utility_room_view:livingroom_shading_latest:living_room_latest:polySurface41|utility_room_view:livingroom_shading_latest:living_room_latest:polySurfaceShape41 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:pCylinder100|utility_room_view:livingroom_shading_latest:living_room_latest:pCylinderShape100 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:pCylinder100|utility_room_view:livingroom_shading_latest:living_room_latest:pCylinderShape100 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:pCylinder100|utility_room_view:livingroom_shading_latest:living_room_latest:pCylinderShape100 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:pCube1|utility_room_view:livingroom_shading_latest:living_room_latest:pCubeShape1 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:pCube1|utility_room_view:livingroom_shading_latest:living_room_latest:pCubeShape1 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:pCube1|utility_room_view:livingroom_shading_latest:living_room_latest:pCubeShape1 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:polySurface46|utility_room_view:livingroom_shading_latest:living_room_latest:transform30|utility_room_view:livingroom_shading_latest:living_room_latest:polySurfaceShape309 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:polySurface46|utility_room_view:livingroom_shading_latest:living_room_latest:transform30|utility_room_view:livingroom_shading_latest:living_room_latest:polySurfaceShape309 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:polySurface46|utility_room_view:livingroom_shading_latest:living_room_latest:transform30|utility_room_view:livingroom_shading_latest:living_room_latest:polySurfaceShape309 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:polySurface47|utility_room_view:livingroom_shading_latest:living_room_latest:polySurfaceShape310 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:polySurface47|utility_room_view:livingroom_shading_latest:living_room_latest:polySurfaceShape310 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:polySurface47|utility_room_view:livingroom_shading_latest:living_room_latest:polySurfaceShape310 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:pPlane1|utility_room_view:livingroom_shading_latest:living_room_latest:pPlaneShape1 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:pPlane1|utility_room_view:livingroom_shading_latest:living_room_latest:pPlaneShape1 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:pPlane1|utility_room_view:livingroom_shading_latest:living_room_latest:pPlaneShape1 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:pPlane1|utility_room_view:livingroom_shading_latest:living_room_latest:outputCloth1 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:pPlane1|utility_room_view:livingroom_shading_latest:living_room_latest:outputCloth1 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:pPlane1|utility_room_view:livingroom_shading_latest:living_room_latest:outputCloth1 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:crown_molding|utility_room_view:livingroom_shading_latest:living_room_latest:crown_unit_1|utility_room_view:livingroom_shading_latest:living_room_latest:crown_unit_Shape1" 
 		"surfaceReference" " 1"
@@ -23544,6 +25288,34 @@ createNode reference -n "utility_room_viewRN";
 		
 		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:polySurface41|utility_room_view:livingroom_shading_latest:living_room_latest:polySurfaceShape41" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:pCylinder100|utility_room_view:livingroom_shading_latest:living_room_latest:pCylinderShape100" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:pCylinder100|utility_room_view:livingroom_shading_latest:living_room_latest:pCylinderShape100" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:pCylinder100|utility_room_view:livingroom_shading_latest:living_room_latest:pCylinderShape100" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:pCube1|utility_room_view:livingroom_shading_latest:living_room_latest:pCubeShape1" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:pCube1|utility_room_view:livingroom_shading_latest:living_room_latest:pCubeShape1" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:pCube1|utility_room_view:livingroom_shading_latest:living_room_latest:pCubeShape1" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:polySurface46|utility_room_view:livingroom_shading_latest:living_room_latest:transform30|utility_room_view:livingroom_shading_latest:living_room_latest:polySurfaceShape309" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:polySurface46|utility_room_view:livingroom_shading_latest:living_room_latest:transform30|utility_room_view:livingroom_shading_latest:living_room_latest:polySurfaceShape309" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:polySurface46|utility_room_view:livingroom_shading_latest:living_room_latest:transform30|utility_room_view:livingroom_shading_latest:living_room_latest:polySurfaceShape309" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:polySurface47|utility_room_view:livingroom_shading_latest:living_room_latest:polySurfaceShape310" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:polySurface47|utility_room_view:livingroom_shading_latest:living_room_latest:polySurfaceShape310" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:polySurface47|utility_room_view:livingroom_shading_latest:living_room_latest:polySurfaceShape310" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:pPlane1" 
 		"visibility" " 1"
 		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:pPlane1" 
@@ -23560,8 +25332,22 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:pPlane1" 
 		"scale" " -type \"double3\" 1.0645726417588264 1.3279596097903059 1.1191132468386176"
 		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:pPlane1|utility_room_view:livingroom_shading_latest:living_room_latest:pPlaneShape1" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:pPlane1|utility_room_view:livingroom_shading_latest:living_room_latest:pPlaneShape1" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:pPlane1|utility_room_view:livingroom_shading_latest:living_room_latest:pPlaneShape1" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:pPlane1|utility_room_view:livingroom_shading_latest:living_room_latest:outputCloth1" 
 		"uvPivot" " -type \"double2\" 0.37306436896324158 0.033333335071802139"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:pPlane1|utility_room_view:livingroom_shading_latest:living_room_latest:outputCloth1" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:pPlane1|utility_room_view:livingroom_shading_latest:living_room_latest:outputCloth1" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:pPlane1|utility_room_view:livingroom_shading_latest:living_room_latest:outputCloth1" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1" 
 		"startFrame" " 1"
 		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1" 
@@ -23672,12 +25458,12 @@ createNode reference -n "utility_room_viewRN";
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		2 "|utility_room_view:tuffs_latest:controller_root" "visibility" " -av 1"
 		
-		2 "|utility_room_view:tuffs_latest:controller_root" "translate" " -type \"double3\" -145.035 13.439 64.766"
+		2 "|utility_room_view:tuffs_latest:controller_root" "translate" " -type \"double3\" -107.65072326621745 -0.96294921469516925 39.93919147576662"
 		
 		2 "|utility_room_view:tuffs_latest:controller_root" "translateX" " -av"
 		2 "|utility_room_view:tuffs_latest:controller_root" "translateY" " -av"
 		2 "|utility_room_view:tuffs_latest:controller_root" "translateZ" " -av"
-		2 "|utility_room_view:tuffs_latest:controller_root" "rotate" " -type \"double3\" 0 -10 0"
+		2 "|utility_room_view:tuffs_latest:controller_root" "rotate" " -type \"double3\" 0 -21.443570877228353 0"
 		
 		2 "|utility_room_view:tuffs_latest:controller_root" "rotateX" " -av"
 		2 "|utility_room_view:tuffs_latest:controller_root" "rotateY" " -av"
@@ -23820,8 +25606,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:tuffs_latest:controller_root|utility_room_view:tuffs_latest:controller_COG|utility_room_view:tuffs_latest:controller_head" 
 		"visibility" " -av 1"
 		2 "|utility_room_view:tuffs_latest:controller_root|utility_room_view:tuffs_latest:controller_COG|utility_room_view:tuffs_latest:controller_head" 
-		"translate" " -type \"double3\" -0.019573703401299616 -0.28992209342733244 2.3520478298788592"
-		
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|utility_room_view:tuffs_latest:controller_root|utility_room_view:tuffs_latest:controller_COG|utility_room_view:tuffs_latest:controller_head" 
 		"translateX" " -av"
 		2 "|utility_room_view:tuffs_latest:controller_root|utility_room_view:tuffs_latest:controller_COG|utility_room_view:tuffs_latest:controller_head" 
@@ -23829,7 +25614,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:tuffs_latest:controller_root|utility_room_view:tuffs_latest:controller_COG|utility_room_view:tuffs_latest:controller_head" 
 		"translateZ" " -av"
 		2 "|utility_room_view:tuffs_latest:controller_root|utility_room_view:tuffs_latest:controller_COG|utility_room_view:tuffs_latest:controller_head" 
-		"rotate" " -type \"double3\" 50.301207865879455 0 0"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|utility_room_view:tuffs_latest:controller_root|utility_room_view:tuffs_latest:controller_COG|utility_room_view:tuffs_latest:controller_head" 
 		"rotateX" " -av"
 		2 "|utility_room_view:tuffs_latest:controller_root|utility_room_view:tuffs_latest:controller_COG|utility_room_view:tuffs_latest:controller_head" 
@@ -23955,7 +25740,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:tuffs_latest:controller_root|utility_room_view:tuffs_latest:controller_COG|utility_room_view:tuffs_latest:controller_hip" 
 		"translateZ" " -av"
 		2 "|utility_room_view:tuffs_latest:controller_root|utility_room_view:tuffs_latest:controller_COG|utility_room_view:tuffs_latest:controller_hip" 
-		"rotate" " -type \"double3\" 6.7469185700167795 0 0"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|utility_room_view:tuffs_latest:controller_root|utility_room_view:tuffs_latest:controller_COG|utility_room_view:tuffs_latest:controller_hip" 
 		"rotateX" " -av"
 		2 "|utility_room_view:tuffs_latest:controller_root|utility_room_view:tuffs_latest:controller_COG|utility_room_view:tuffs_latest:controller_hip" 
@@ -23981,7 +25766,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:tuffs_latest:controller_root|utility_room_view:tuffs_latest:controller_COG|utility_room_view:tuffs_latest:controller_tailbase" 
 		"translateZ" " -av"
 		2 "|utility_room_view:tuffs_latest:controller_root|utility_room_view:tuffs_latest:controller_COG|utility_room_view:tuffs_latest:controller_tailbase" 
-		"rotate" " -type \"double3\" -35.216408865951159 0 0"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|utility_room_view:tuffs_latest:controller_root|utility_room_view:tuffs_latest:controller_COG|utility_room_view:tuffs_latest:controller_tailbase" 
 		"rotateX" " -av"
 		2 "|utility_room_view:tuffs_latest:controller_root|utility_room_view:tuffs_latest:controller_COG|utility_room_view:tuffs_latest:controller_tailbase" 
@@ -24007,7 +25792,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:tuffs_latest:controller_root|utility_room_view:tuffs_latest:controller_COG|utility_room_view:tuffs_latest:controller_tailbase|utility_room_view:tuffs_latest:controller_tail1" 
 		"translateZ" " -av"
 		2 "|utility_room_view:tuffs_latest:controller_root|utility_room_view:tuffs_latest:controller_COG|utility_room_view:tuffs_latest:controller_tailbase|utility_room_view:tuffs_latest:controller_tail1" 
-		"rotate" " -type \"double3\" -51.553679628487785 0 0"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|utility_room_view:tuffs_latest:controller_root|utility_room_view:tuffs_latest:controller_COG|utility_room_view:tuffs_latest:controller_tailbase|utility_room_view:tuffs_latest:controller_tail1" 
 		"rotateX" " -av"
 		2 "|utility_room_view:tuffs_latest:controller_root|utility_room_view:tuffs_latest:controller_COG|utility_room_view:tuffs_latest:controller_tailbase|utility_room_view:tuffs_latest:controller_tail1" 
@@ -24033,7 +25818,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:tuffs_latest:controller_root|utility_room_view:tuffs_latest:controller_COG|utility_room_view:tuffs_latest:controller_tailbase|utility_room_view:tuffs_latest:controller_tail1|utility_room_view:tuffs_latest:controller_tail2" 
 		"translateZ" " -av"
 		2 "|utility_room_view:tuffs_latest:controller_root|utility_room_view:tuffs_latest:controller_COG|utility_room_view:tuffs_latest:controller_tailbase|utility_room_view:tuffs_latest:controller_tail1|utility_room_view:tuffs_latest:controller_tail2" 
-		"rotate" " -type \"double3\" 46.324148504667832 0 0"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|utility_room_view:tuffs_latest:controller_root|utility_room_view:tuffs_latest:controller_COG|utility_room_view:tuffs_latest:controller_tailbase|utility_room_view:tuffs_latest:controller_tail1|utility_room_view:tuffs_latest:controller_tail2" 
 		"rotateX" " -av"
 		2 "|utility_room_view:tuffs_latest:controller_root|utility_room_view:tuffs_latest:controller_COG|utility_room_view:tuffs_latest:controller_tailbase|utility_room_view:tuffs_latest:controller_tail1|utility_room_view:tuffs_latest:controller_tail2" 
@@ -24059,7 +25844,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:tuffs_latest:controller_root|utility_room_view:tuffs_latest:controller_COG|utility_room_view:tuffs_latest:controller_tailbase|utility_room_view:tuffs_latest:controller_tail1|utility_room_view:tuffs_latest:controller_tail2|utility_room_view:tuffs_latest:controller_tail3" 
 		"translateZ" " -av"
 		2 "|utility_room_view:tuffs_latest:controller_root|utility_room_view:tuffs_latest:controller_COG|utility_room_view:tuffs_latest:controller_tailbase|utility_room_view:tuffs_latest:controller_tail1|utility_room_view:tuffs_latest:controller_tail2|utility_room_view:tuffs_latest:controller_tail3" 
-		"rotate" " -type \"double3\" -62.019675992768732 0 0"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|utility_room_view:tuffs_latest:controller_root|utility_room_view:tuffs_latest:controller_COG|utility_room_view:tuffs_latest:controller_tailbase|utility_room_view:tuffs_latest:controller_tail1|utility_room_view:tuffs_latest:controller_tail2|utility_room_view:tuffs_latest:controller_tail3" 
 		"rotateX" " -av"
 		2 "|utility_room_view:tuffs_latest:controller_root|utility_room_view:tuffs_latest:controller_COG|utility_room_view:tuffs_latest:controller_tailbase|utility_room_view:tuffs_latest:controller_tail1|utility_room_view:tuffs_latest:controller_tail2|utility_room_view:tuffs_latest:controller_tail3" 
@@ -24085,7 +25870,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:tuffs_latest:controller_root|utility_room_view:tuffs_latest:controller_COG|utility_room_view:tuffs_latest:controller_tailbase|utility_room_view:tuffs_latest:controller_tail1|utility_room_view:tuffs_latest:controller_tail2|utility_room_view:tuffs_latest:controller_tail3|utility_room_view:tuffs_latest:controller_tailtip" 
 		"translateZ" " -av"
 		2 "|utility_room_view:tuffs_latest:controller_root|utility_room_view:tuffs_latest:controller_COG|utility_room_view:tuffs_latest:controller_tailbase|utility_room_view:tuffs_latest:controller_tail1|utility_room_view:tuffs_latest:controller_tail2|utility_room_view:tuffs_latest:controller_tail3|utility_room_view:tuffs_latest:controller_tailtip" 
-		"rotate" " -type \"double3\" 51.136691629661328 0 0"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|utility_room_view:tuffs_latest:controller_root|utility_room_view:tuffs_latest:controller_COG|utility_room_view:tuffs_latest:controller_tailbase|utility_room_view:tuffs_latest:controller_tail1|utility_room_view:tuffs_latest:controller_tail2|utility_room_view:tuffs_latest:controller_tail3|utility_room_view:tuffs_latest:controller_tailtip" 
 		"rotateX" " -av"
 		2 "|utility_room_view:tuffs_latest:controller_root|utility_room_view:tuffs_latest:controller_COG|utility_room_view:tuffs_latest:controller_tailbase|utility_room_view:tuffs_latest:controller_tail1|utility_room_view:tuffs_latest:controller_tail2|utility_room_view:tuffs_latest:controller_tail3|utility_room_view:tuffs_latest:controller_tailtip" 
@@ -26061,6 +27846,21 @@ createNode reference -n "utility_room_viewRN";
 		
 		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_windowShape" 
 		"furNameSpace" " -type \"string\" \"taller_window_four_squares_latest6\""
+		"utility_room_view:livingroom_shading_latest:living_room_latest:cube_cushionRN" 
+		6
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cube_cushion:pCube1|utility_room_view:livingroom_shading_latest:living_room_latest:cube_cushion:pCubeShape1 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cube_cushion:pCube1|utility_room_view:livingroom_shading_latest:living_room_latest:cube_cushion:pCubeShape1 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cube_cushion:pCube1|utility_room_view:livingroom_shading_latest:living_room_latest:cube_cushion:pCubeShape1 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cube_cushion:pCube1|utility_room_view:livingroom_shading_latest:living_room_latest:cube_cushion:pCubeShape1" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cube_cushion:pCube1|utility_room_view:livingroom_shading_latest:living_room_latest:cube_cushion:pCubeShape1" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cube_cushion.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cube_cushion:pCube1|utility_room_view:livingroom_shading_latest:living_room_latest:cube_cushion:pCubeShape1" 
+		"furNameSpace" " -type \"string\" \"cube_cushion\""
 		"utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latestRN1" 
 		24
 		1 |utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frameShape 
@@ -32085,14 +33885,14 @@ select -ne :time1;
 	setAttr -cb on ".ihi" 0;
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr ".o" 230;
-	setAttr ".unw" 230;
+	setAttr ".o" 50;
+	setAttr ".unw" 50;
 select -ne :renderPartition;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 537 ".st";
+	setAttr -s 511 ".st";
 	setAttr -cb on ".an";
 	setAttr -cb on ".pt";
 select -ne :renderGlobalsList1;
@@ -32105,7 +33905,7 @@ select -ne :defaultShaderList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 357 ".s";
+	setAttr -s 331 ".s";
 select -ne :postProcessList1;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -32119,21 +33919,22 @@ select -ne :defaultRenderUtilityList1;
 	setAttr -cb on ".bnm";
 	setAttr -s 429 ".u";
 select -ne :defaultRenderingList1;
-	setAttr -s 33 ".r";
+	setAttr -s 32 ".r";
 select -ne :lightList1;
-	setAttr -s 12 ".l";
+	setAttr -s 11 ".l";
 select -ne :defaultTextureList1;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
 	setAttr -s 221 ".tx";
+select -ne :lambert1;
 select -ne :initialShadingGroup;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 354 ".dsm";
+	setAttr -s 352 ".dsm";
 	setAttr -k on ".mwc";
 	setAttr -cb on ".an";
 	setAttr -cb on ".il";
@@ -32187,7 +33988,8 @@ select -ne :defaultRenderGlobals;
 	setAttr ".outf" 3;
 	setAttr -k on ".gama";
 	setAttr ".an" yes;
-	setAttr ".ef" 98;
+	setAttr ".fs" 165;
+	setAttr ".ef" 220;
 	setAttr -k on ".be";
 	setAttr ".ep" 3;
 	setAttr -k on ".fec";
@@ -32247,7 +34049,7 @@ select -ne :defaultLightSet;
 	setAttr -k on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -k on ".bnm";
-	setAttr -s 12 ".dsm";
+	setAttr -s 11 ".dsm";
 	setAttr -k on ".mwc";
 	setAttr -k on ".an";
 	setAttr -k on ".il";

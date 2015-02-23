@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<Autodesk_Cache_File>
+  <cacheType Type="OneFilePerFrame" Format="mcx"/>
+  <time Range="250-19250"/>
+  <cacheTimePerFrame TimePerFrame="250"/>
+  <cacheVersion Version="2.0"/>
+  <extra>X:/documents/GitHub/Bandits/maya/shots/body/bedroom+utilities_shot.ma</extra>
+  <extra>maya 2015</extra>
+  <extra>AkhilBatra</extra>
+  <Channels>
+    <channel0 ChannelName="utility_room_view:livingroom_shading_latest:living_room_latest:nClothShape1" ChannelType="FloatVectorArray" ChannelInterpretation="positions" SamplingType="Regular" SamplingRate="250" StartTime="250" EndTime="19250"/>
+  </Channels>
+</Autodesk_Cache_File>

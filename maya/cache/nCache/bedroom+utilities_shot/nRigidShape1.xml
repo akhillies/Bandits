@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<Autodesk_Cache_File>
+  <cacheType Type="OneFilePerFrame" Format="mcx"/>
+  <time Range="250-16250"/>
+  <cacheTimePerFrame TimePerFrame="250"/>
+  <cacheVersion Version="2.0"/>
+  <extra>X:/documents/GitHub/Bandits/maya/shots/body/bedroom+utilities_shot.ma</extra>
+  <extra>maya 2015</extra>
+  <extra>AkhilBatra</extra>
+  <extra>NCloth Info for nRigidShape1:</extra>
+  <extra>Passive Colliders:  utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:pCube1 utility_room_view:bike_rig:rightWheel utility_room_view:bike_rig:leftWheel utility_room_view:bike_rig:frontWheel utility_room_view:bike_rig:left utility_room_view:bike_rig:right utility_room_view:bike_rig:frame</extra>
+  <extra>Constraints: none</extra>
+  <extra>nRigidShape1.depthSort=0</extra>
+  <extra>nRigidShape1.isDynamic=1</extra>
+  <extra>nRigidShape1.evaluationTime=1</extra>
+  <extra>nRigidShape1.playFromCache=0</extra>
+  <extra>nRigidShape1.thickness=0.01310558431</extra>
+  <extra>nRigidShape1.bounce=0</extra>
+  <extra>nRigidShape1.friction=0.1000000015</extra>
+  <extra>nRigidShape1.damp=0</extra>
+  <extra>nRigidShape1.stickiness=0</extra>
+  <extra>nRigidShape1.collideStrength=1</extra>
+  <extra>nRigidShape1.collisionFlag=3</extra>
+  <extra>nRigidShape1.selfCollisionFlag=1</extra>
+  <extra>nRigidShape1.maxSelfCollisionIterations=4</extra>
+  <extra>nRigidShape1.maxIterations=10000</extra>
+  <extra>nRigidShape1.pointMass=1</extra>
+  <extra>nRigidShape1.restLengthScale=1</extra>
+  <extra>nRigidShape1.localForceX=0</extra>
+  <extra>nRigidShape1.localForceY=0</extra>
+  <extra>nRigidShape1.localForceZ=0</extra>
+  <extra>nRigidShape1.localWindX=0</extra>
+  <extra>nRigidShape1.localWindY=0</extra>
+  <extra>nRigidShape1.localWindZ=0</extra>
+  <extra>nRigidShape1.collide=1</extra>
+  <extra>nRigidShape1.selfCollide=0</extra>
+  <extra>nRigidShape1.collisionLayer=0</extra>
+  <extra>nRigidShape1.windShadowDiffusion=0</extra>
+  <extra>nRigidShape1.windShadowDistance=0</extra>
+  <extra>nRigidShape1.airPushDistance=0</extra>
+  <extra>nRigidShape1.airPushVorticity=0</extra>
+  <extra>nRigidShape1.pushOut=0</extra>
+  <extra>nRigidShape1.pushOutRadius=0.05242233723</extra>
+  <extra>nRigidShape1.crossoverPush=0</extra>
+  <extra>nRigidShape1.trappedCheck=1</extra>
+  <extra>nRigidShape1.forceField=0</extra>
+  <extra>nRigidShape1.fieldMagnitude=1</extra>
+  <extra>nRigidShape1.fieldDistance=1</extra>
+  <extra>nRigidShape1.fieldScale[0].fieldScale_Position=0</extra>
+  <extra>nRigidShape1.fieldScale[0].fieldScale_FloatValue=1</extra>
+  <extra>nRigidShape1.fieldScale[0].fieldScale_Interp=1</extra>
+  <extra>nRigidShape1.fieldScale[1].fieldScale_Position=1</extra>
+  <extra>nRigidShape1.fieldScale[1].fieldScale_FloatValue=0</extra>
+  <extra>nRigidShape1.fieldScale[1].fieldScale_Interp=1</extra>
+  <extra>nRigidShape1.pointForceField=0</extra>
+  <extra>nRigidShape1.pointFieldMagnitude=1</extra>
+  <extra>nRigidShape1.selfAttract=0</extra>
+  <extra>nRigidShape1.pointFieldDistance=2</extra>
+  <extra>nRigidShape1.pointFieldDropoff[0].pointFieldDropoff_Position=0</extra>
+  <extra>nRigidShape1.pointFieldDropoff[0].pointFieldDropoff_FloatValue=1</extra>
+  <extra>nRigidShape1.pointFieldDropoff[0].pointFieldDropoff_Interp=1</extra>
+  <extra>nRigidShape1.pointFieldDropoff[1].pointFieldDropoff_Position=1</extra>
+  <extra>nRigidShape1.pointFieldDropoff[1].pointFieldDropoff_FloatValue=0</extra>
+  <extra>nRigidShape1.pointFieldDropoff[1].pointFieldDropoff_Interp=1</extra>
+  <extra>nRigidShape1.localSpaceOutput=0</extra>
+  <extra>nRigidShape1.displayColorR=1</extra>
+  <extra>nRigidShape1.displayColorG=0.8000000119</extra>
+  <extra>nRigidShape1.displayColorB=0</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.visibility=1</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.translateX=0</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.translateY=0</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.translateZ=0</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.rotateX=0</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.rotateY=0</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.rotateZ=0</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.scaleX=1</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.scaleY=1</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.scaleZ=1</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.currentTime=1</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.startFrame=1</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.frameJumpLimit=1</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.enable=1</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.useTransform=1</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.gravity=47.58620834</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.gravityDirectionX=0</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.gravityDirectionY=-1</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.gravityDirectionZ=0</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.airDensity=2.275861979</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.windSpeed=0</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.windDirectionX=1</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.windDirectionY=0</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.windDirectionZ=0</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.windNoise=0</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.collisionLayerRange=4</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.collisionSoftness=0</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.usePlane=0</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.planeOriginX=0</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.planeOriginY=0</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.planeOriginZ=0</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.planeNormalX=0</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.planeNormalY=1</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.planeNormalZ=0</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.planeBounce=0</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.planeFriction=0.1000000015</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.planeStickiness=0</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.subSteps=3</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.maxCollisionIterations=12</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.timeScale=1</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.spaceScale=1</extra>
+  <Channels>
+    <channel0 ChannelName="nRigidShape1" ChannelType="FloatVectorArray" ChannelInterpretation="positions" SamplingType="Regular" SamplingRate="250" StartTime="250" EndTime="16250"/>
+  </Channels>
+</Autodesk_Cache_File>

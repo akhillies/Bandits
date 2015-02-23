@@ -1,6 +1,6 @@
 //Maya ASCII 2015 scene
 //Name: utility_room_view.ma
-//Last modified: Sun, Feb 22, 2015 10:26:41 PM
+//Last modified: Sun, Feb 22, 2015 10:38:59 PM
 //Codeset: 1252
 file -rdi 1 -ns "livingroom_shading_latest" -rfn "livingroom_shading_latestRN"
 		 -op "v=0;p=17;f=0" "X:/documents/GitHub/Bandits/maya//assets/sets/livingroom_shading/livingroom_shading_latest.ma";
@@ -80,12 +80,12 @@ fileInfo "osv" "Microsoft Windows 8 Business Edition, 64-bit  (Build 9200)\n";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -72.677079065805799 26.32659883723721 114.96621500147261 ;
-	setAttr ".r" -type "double3" -14.138352729594807 395.39999999997195 -1.9509546221642819e-015 ;
+	setAttr ".t" -type "double3" -104.48628253063291 34.200975965081952 21.597054887993785 ;
+	setAttr ".r" -type "double3" -25.538352729603609 140.60000000001335 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 234.49775876042023;
+	setAttr ".coi" 18.483294847735863;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -319,7 +319,7 @@ createNode renderLayerManager -n "renderLayerManager";
 createNode renderLayer -n "defaultRenderLayer";
 	setAttr ".g" yes;
 createNode reference -n "livingroom_shading_latestRN";
-	setAttr -s 103 ".phl";
+	setAttr -s 116 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -423,6 +423,19 @@ createNode reference -n "livingroom_shading_latestRN";
 	setAttr ".phl[101]" 0;
 	setAttr ".phl[102]" 0;
 	setAttr ".phl[103]" 0;
+	setAttr ".phl[104]" 0;
+	setAttr ".phl[105]" 0;
+	setAttr ".phl[106]" 0;
+	setAttr ".phl[107]" 0;
+	setAttr ".phl[108]" 0;
+	setAttr ".phl[109]" 0;
+	setAttr ".phl[110]" 0;
+	setAttr ".phl[111]" 0;
+	setAttr ".phl[112]" 0;
+	setAttr ".phl[113]" 0;
+	setAttr ".phl[114]" 0;
+	setAttr ".phl[115]" 0;
+	setAttr ".phl[116]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"livingroom_shading_latestRN"
 		"livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest4RN" 
@@ -792,7 +805,7 @@ createNode reference -n "livingroom_shading_latestRN";
 		"inputComponents" " -type \"componentList\" 1 \"f[16]\""
 		2 "livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:groupParts11" 
 		"inputComponents" " -type \"componentList\" 1 \"f[0:73]\""
-		"livingroom_shading_latestRN" 8
+		"livingroom_shading_latestRN" 10
 		2 "livingroom_shading_latest:NewKitchen" "color" " -type \"float3\" 1 1 1"
 		
 		3 "livingroom_shading_latest:groupId9.message" "livingroom_shading_latest:lambert5SG.groupNodes" 
@@ -809,6 +822,10 @@ createNode reference -n "livingroom_shading_latestRN";
 		"-na"
 		3 "livingroom_shading_latest:groupId10.message" "livingroom_shading_latest:lambert6SG.groupNodes" 
 		"-na"
+		5 4 "livingroom_shading_latestRN" "livingroom_shading_latest:lambert6SG.groupNodes" 
+		"livingroom_shading_latestRN.placeHolderList[115]" ""
+		5 4 "livingroom_shading_latestRN" "livingroom_shading_latest:lambert6SG.groupNodes" 
+		"livingroom_shading_latestRN.placeHolderList[116]" ""
 		"livingroom_shading_latest:living_room_latest:taller_window_four_squares_latestRN" 
 		2
 		3 "livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest:window:lambert2SG.memberWireframeColor" 
@@ -817,7 +834,7 @@ createNode reference -n "livingroom_shading_latestRN";
 		3 "|livingroom_shading_latest:living_room_latest:walls_and_floors|livingroom_shading_latest:living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[1]" 
 		"livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest:window:lambert2SG.dagSetMembers" 
 		"-na"
-		"livingroom_shading_latest:living_room_latestRN" 310
+		"livingroom_shading_latest:living_room_latestRN" 320
 		2 "|livingroom_shading_latest:living_room_latest:fridge|livingroom_shading_latest:living_room_latest:polySurface11|livingroom_shading_latest:living_room_latest:polySurfaceShape11" 
 		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 1 \"f[0:179]\""
 		
@@ -856,7 +873,7 @@ createNode reference -n "livingroom_shading_latestRN";
 		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 1 \"f[0:655]\""
 		
 		2 "|livingroom_shading_latest:living_room_latest:walls_and_floors|livingroom_shading_latest:living_room_latest:walls_and_floorsShape" 
-		"instObjGroups.objectGroups" " -s 10"
+		"instObjGroups.objectGroups" " -s 12"
 		2 "|livingroom_shading_latest:living_room_latest:walls_and_floors|livingroom_shading_latest:living_room_latest:walls_and_floorsShape" 
 		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 9 \"f[0:264]\" \"f[267:268]\" \"f[271:276]\" \"f[279:280]\" \"f[283:323]\" \"f[267:268]\" \"f[271:276]\" \"f[279:280]\" \"f[283:323]\""
 		
@@ -878,6 +895,14 @@ createNode reference -n "livingroom_shading_latestRN";
 		2 "|livingroom_shading_latest:living_room_latest:walls_and_floors|livingroom_shading_latest:living_room_latest:walls_and_floorsShape" 
 		"instObjGroups.objectGroups[9].objectGrpCompList" " -type \"componentList\" 7 \"f[145]\" \"f[147]\" \"f[187]\" \"f[259]\" \"f[147]\" \"f[187]\" \"f[259]\""
 		
+		2 "|livingroom_shading_latest:living_room_latest:walls_and_floors|livingroom_shading_latest:living_room_latest:walls_and_floorsShape" 
+		"instObjGroups.objectGroups[10].objectGrpCompList" " -type \"componentList\" 30 \"f[1:2]\" \"f[4]\" \"f[8:28]\" \"f[31:32]\" \"f[35:52]\" \"f[55:67]\" \"f[70]\" \"f[73:78]\" \"f[80:81]\" \"f[84:92]\" \"f[95:101]\" \"f[105]\" \"f[107:108]\" \"f[110:111]\" \"f[113]\" \"f[115:119]\" \"f[123]\" \"f[125:126]\" \"f[129]\" \"f[131]\" \"f[133:144]\" \"f[147:150]\" \"f[154:160]\" \"f[162:168]\" \"f[173:183]\" \"f[185:190]\" \"f[196:199]\" \"f[202:203]\" \"f[208]\" \"f[213:323]\""
+		
+		2 "|livingroom_shading_latest:living_room_latest:walls_and_floors|livingroom_shading_latest:living_room_latest:walls_and_floorsShape" 
+		"instObjGroups.objectGroups[11].objectGrpCompList" " -type \"componentList\" 30 \"f[0]\" \"f[3]\" \"f[5:7]\" \"f[29:30]\" \"f[33:34]\" \"f[53:54]\" \"f[68:69]\" \"f[71:72]\" \"f[79]\" \"f[82:83]\" \"f[93:94]\" \"f[102:104]\" \"f[106]\" \"f[109]\" \"f[112]\" \"f[114]\" \"f[120:122]\" \"f[124]\" \"f[127:128]\" \"f[130]\" \"f[132]\" \"f[145:146]\" \"f[151:153]\" \"f[161]\" \"f[169:172]\" \"f[184]\" \"f[191:195]\" \"f[200:201]\" \"f[204:207]\" \"f[209:212]\""
+		
+		2 "|livingroom_shading_latest:living_room_latest:walls_and_floors|livingroom_shading_latest:living_room_latest:walls_and_floorsShape" 
+		"compInstObjGroups.compObjectGroups" " -s 2"
 		2 "|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurface14|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurface43|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurfaceShape338" 
 		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 1 \"f[0:879]\""
 		
@@ -1429,63 +1454,85 @@ createNode reference -n "livingroom_shading_latestRN";
 		"livingroom_shading_latestRN.placeHolderList[73]" ""
 		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:utilities_room_table|livingroom_shading_latest:living_room_latest:pasted__pPlane6|livingroom_shading_latest:living_room_latest:pasted__pPlaneShape6.instObjGroups" 
 		"livingroom_shading_latestRN.placeHolderList[74]" ":initialShadingGroup.dsm"
-		5 0 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:walls_and_floors|livingroom_shading_latest:living_room_latest:walls_and_floorsShape.instObjGroups" 
+		5 0 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:walls_and_floors|livingroom_shading_latest:living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[10]" 
 		"livingroom_shading_latest:lambert6SG.dagSetMembers" "livingroom_shading_latestRN.placeHolderList[75]" 
 		"livingroom_shading_latestRN.placeHolderList[76]" ""
-		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:bedroom_trashcan|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:bedroom_trashcanShape.instObjGroups" 
-		"livingroom_shading_latestRN.placeHolderList[77]" ":initialShadingGroup.dsm"
-		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:bedroom_trashbag|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:bedroom_trashbagShape.instObjGroups" 
-		"livingroom_shading_latestRN.placeHolderList[78]" ":initialShadingGroup.dsm"
-		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:soccer_ball|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:soccer_ballShape.instObjGroups" 
-		"livingroom_shading_latestRN.placeHolderList[79]" ":initialShadingGroup.dsm"
-		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:poster_1|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:poster_Shape1.instObjGroups" 
-		"livingroom_shading_latestRN.placeHolderList[80]" ":initialShadingGroup.dsm"
-		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:poster_2|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:poster_Shape2.instObjGroups" 
-		"livingroom_shading_latestRN.placeHolderList[81]" ":initialShadingGroup.dsm"
-		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:poster_3|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:poster_Shape3.instObjGroups" 
-		"livingroom_shading_latestRN.placeHolderList[82]" ":initialShadingGroup.dsm"
-		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:poster_4|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:poster_Shape4.instObjGroups" 
-		"livingroom_shading_latestRN.placeHolderList[83]" ":initialShadingGroup.dsm"
-		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:poster_5|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:poster_Shape5.instObjGroups" 
-		"livingroom_shading_latestRN.placeHolderList[84]" ":initialShadingGroup.dsm"
-		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:poster_6|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:poster_Shape6.instObjGroups" 
-		"livingroom_shading_latestRN.placeHolderList[85]" ":initialShadingGroup.dsm"
-		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurface14|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurface43|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurfaceShape338.instObjGroups" 
+		5 4 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:walls_and_floors|livingroom_shading_latest:living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[10].objectGroupId" 
+		"livingroom_shading_latestRN.placeHolderList[77]" ""
+		5 0 "livingroom_shading_latestRN" "livingroom_shading_latest:lambert6SG.memberWireframeColor" 
+		"|livingroom_shading_latest:living_room_latest:walls_and_floors|livingroom_shading_latest:living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[10].objectGrpColor" 
+		"livingroom_shading_latestRN.placeHolderList[78]" "livingroom_shading_latestRN.placeHolderList[79]" 
+		"livingroom_shading_latest:living_room_latest:walls_and_floorsShape.iog.og[3].gco"
+		
+		5 0 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:walls_and_floors|livingroom_shading_latest:living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[11]" 
+		"livingroom_shading_latest:lambert4SG.dagSetMembers" "livingroom_shading_latestRN.placeHolderList[80]" 
+		"livingroom_shading_latestRN.placeHolderList[81]" ""
+		5 4 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:walls_and_floors|livingroom_shading_latest:living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[11].objectGroupId" 
+		"livingroom_shading_latestRN.placeHolderList[82]" ""
+		5 0 "livingroom_shading_latestRN" "livingroom_shading_latest:lambert4SG.memberWireframeColor" 
+		"|livingroom_shading_latest:living_room_latest:walls_and_floors|livingroom_shading_latest:living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[11].objectGrpColor" 
+		"livingroom_shading_latestRN.placeHolderList[83]" "livingroom_shading_latestRN.placeHolderList[84]" 
+		"livingroom_shading_latest:living_room_latest:walls_and_floorsShape.iog.og[7].gco"
+		
+		5 0 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:walls_and_floors|livingroom_shading_latest:living_room_latest:walls_and_floorsShape.compInstObjGroups.compObjectGroups[1]" 
+		"livingroom_shading_latest:lambert6SG.dagSetMembers" "livingroom_shading_latestRN.placeHolderList[85]" 
 		"livingroom_shading_latestRN.placeHolderList[86]" ""
-		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurface14|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurface48|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurfaceShape343.instObjGroups" 
+		5 4 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:walls_and_floors|livingroom_shading_latest:living_room_latest:walls_and_floorsShape.compInstObjGroups.compObjectGroups[1].compObjectGroupId" 
 		"livingroom_shading_latestRN.placeHolderList[87]" ""
-		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurface14|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurface53|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurfaceShape348.instObjGroups" 
-		"livingroom_shading_latestRN.placeHolderList[88]" ""
-		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurface14|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurface57|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurfaceShape352.instObjGroups" 
-		"livingroom_shading_latestRN.placeHolderList[89]" ""
-		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurface14|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurface60|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurfaceShape355.instObjGroups" 
-		"livingroom_shading_latestRN.placeHolderList[90]" ""
-		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurface14|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurface66|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurfaceShape361.instObjGroups" 
-		"livingroom_shading_latestRN.placeHolderList[91]" ""
-		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurface14|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurface67|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurfaceShape362.instObjGroups" 
-		"livingroom_shading_latestRN.placeHolderList[92]" ""
-		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurface14|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurface75|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurfaceShape75.instObjGroups" 
-		"livingroom_shading_latestRN.placeHolderList[93]" ""
-		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurface14|livingroom_shading_latest:living_room_latest:polySurface45|livingroom_shading_latest:living_room_latest:polySurfaceShape45.instObjGroups" 
-		"livingroom_shading_latestRN.placeHolderList[94]" ""
-		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurface16|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurfaceShape312.instObjGroups" 
-		"livingroom_shading_latestRN.placeHolderList[95]" ""
-		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurface40|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurfaceShape336.instObjGroups" 
-		"livingroom_shading_latestRN.placeHolderList[96]" ""
-		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurface41|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurfaceShape41.instObjGroups" 
+		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:bedroom_trashcan|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:bedroom_trashcanShape.instObjGroups" 
+		"livingroom_shading_latestRN.placeHolderList[88]" ":initialShadingGroup.dsm"
+		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:bedroom_trashbag|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:bedroom_trashbagShape.instObjGroups" 
+		"livingroom_shading_latestRN.placeHolderList[89]" ":initialShadingGroup.dsm"
+		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:soccer_ball|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:soccer_ballShape.instObjGroups" 
+		"livingroom_shading_latestRN.placeHolderList[90]" ":initialShadingGroup.dsm"
+		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:poster_1|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:poster_Shape1.instObjGroups" 
+		"livingroom_shading_latestRN.placeHolderList[91]" ":initialShadingGroup.dsm"
+		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:poster_2|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:poster_Shape2.instObjGroups" 
+		"livingroom_shading_latestRN.placeHolderList[92]" ":initialShadingGroup.dsm"
+		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:poster_3|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:poster_Shape3.instObjGroups" 
+		"livingroom_shading_latestRN.placeHolderList[93]" ":initialShadingGroup.dsm"
+		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:poster_4|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:poster_Shape4.instObjGroups" 
+		"livingroom_shading_latestRN.placeHolderList[94]" ":initialShadingGroup.dsm"
+		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:poster_5|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:poster_Shape5.instObjGroups" 
+		"livingroom_shading_latestRN.placeHolderList[95]" ":initialShadingGroup.dsm"
+		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:poster_6|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:poster_Shape6.instObjGroups" 
+		"livingroom_shading_latestRN.placeHolderList[96]" ":initialShadingGroup.dsm"
+		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurface14|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurface43|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurfaceShape338.instObjGroups" 
 		"livingroom_shading_latestRN.placeHolderList[97]" ""
-		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurface74|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurfaceShape363.instObjGroups" 
+		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurface14|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurface48|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurfaceShape343.instObjGroups" 
 		"livingroom_shading_latestRN.placeHolderList[98]" ""
-		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurface77|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurfaceShape77.instObjGroups" 
+		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurface14|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurface53|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurfaceShape348.instObjGroups" 
 		"livingroom_shading_latestRN.placeHolderList[99]" ""
-		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:polySurface41|livingroom_shading_latest:living_room_latest:polySurfaceShape41.instObjGroups" 
+		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurface14|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurface57|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurfaceShape352.instObjGroups" 
 		"livingroom_shading_latestRN.placeHolderList[100]" ""
+		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurface14|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurface60|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurfaceShape355.instObjGroups" 
+		"livingroom_shading_latestRN.placeHolderList[101]" ""
+		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurface14|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurface66|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurfaceShape361.instObjGroups" 
+		"livingroom_shading_latestRN.placeHolderList[102]" ""
+		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurface14|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurface67|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurfaceShape362.instObjGroups" 
+		"livingroom_shading_latestRN.placeHolderList[103]" ""
+		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurface14|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurface75|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurfaceShape75.instObjGroups" 
+		"livingroom_shading_latestRN.placeHolderList[104]" ""
+		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurface14|livingroom_shading_latest:living_room_latest:polySurface45|livingroom_shading_latest:living_room_latest:polySurfaceShape45.instObjGroups" 
+		"livingroom_shading_latestRN.placeHolderList[105]" ""
+		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurface16|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurfaceShape312.instObjGroups" 
+		"livingroom_shading_latestRN.placeHolderList[106]" ""
+		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurface40|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurfaceShape336.instObjGroups" 
+		"livingroom_shading_latestRN.placeHolderList[107]" ""
+		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurface41|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurfaceShape41.instObjGroups" 
+		"livingroom_shading_latestRN.placeHolderList[108]" ""
+		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurface74|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurfaceShape363.instObjGroups" 
+		"livingroom_shading_latestRN.placeHolderList[109]" ""
+		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurface77|livingroom_shading_latest:living_room_latest:bedroom_updated_layout:polySurfaceShape77.instObjGroups" 
+		"livingroom_shading_latestRN.placeHolderList[110]" ""
+		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:polySurface41|livingroom_shading_latest:living_room_latest:polySurfaceShape41.instObjGroups" 
+		"livingroom_shading_latestRN.placeHolderList[111]" ""
 		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:pCylinder100|livingroom_shading_latest:living_room_latest:pCylinderShape100.instObjGroups" 
-		"livingroom_shading_latestRN.placeHolderList[101]" ":initialShadingGroup.dsm"
+		"livingroom_shading_latestRN.placeHolderList[112]" ":initialShadingGroup.dsm"
 		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:pCube1|livingroom_shading_latest:living_room_latest:pCubeShape1.instObjGroups" 
-		"livingroom_shading_latestRN.placeHolderList[102]" ":initialShadingGroup.dsm"
+		"livingroom_shading_latestRN.placeHolderList[113]" ":initialShadingGroup.dsm"
 		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:pPlane1|livingroom_shading_latest:living_room_latest:outputCloth1.instObjGroups" 
-		"livingroom_shading_latestRN.placeHolderList[103]" ":initialShadingGroup.dsm"
+		"livingroom_shading_latestRN.placeHolderList[114]" ":initialShadingGroup.dsm"
 		"livingroom_shading_latest:living_room_latest:cube_cushionRN" 2
 		3 "|livingroom_shading_latest:living_room_latest:cube_cushion:pCube1|livingroom_shading_latest:living_room_latest:cube_cushion:pCubeShape1.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
@@ -1756,7 +1803,7 @@ createNode reference -n "pig_latestRN";
 		"pig_latestRN"
 		"pig_latest:key_latestRN" 0
 		"pig_latestRN" 0
-		"pig_latestRN" 5
+		"pig_latestRN" 6
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:splineiK_tail01" 
 		"translate" " -type \"double3\" -0.035711666399980746 9.5068445753056103 -13.339665934742582"
 		
@@ -1765,6 +1812,7 @@ createNode reference -n "pig_latestRN";
 		
 		2 "|pig_latest:PIG|pig_latest:flexi_joint_systems|pig_latest:vertebrae_flexi_spine01|pig_latest:PigSkin002:vertebrae_flexi_global01|pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01|pig_latest:PigSkin002:vertebrae_flexi_anim_end01" 
 		"followMid" " -av -k 1 0"
+		2 "pig_latest:pigmesh" "displayType" " 0"
 		3 ":defaultRenderGlobals.rendercallback" "pig_latest:defaultFurGlobals.callback" 
 		""
 		5 4 "pig_latestRN" "pig_latest:defaultFurGlobals.furNodeList" "pig_latestRN.placeHolderList[1]" 
@@ -1813,6 +1861,7 @@ createNode FurGlobals -n "defaultFurGlobals";
 	addAttr -s false -ci true -sn "cb" -ln "callback" -at "message";
 	addAttr -s false -ci true -sn "rogl" -ln "referencedFurGlobals" -at "message";
 	setAttr ".av" 2;
+	setAttr ".rep" -type "string" "renderData/fur/furEqualMap/utility_room_view";
 	setAttr ".pjl" -type "string" "X:/documents/GitHub/Bandits/maya";
 createNode reference -n "smarty_latestRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
@@ -1970,6 +2019,18 @@ createNode shadingEngine -n "lambert2SG";
 	setAttr -s 99 ".dsm";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo1";
+createNode lambert -n "lambert3";
+	setAttr ".dc" 0.76068377494812012;
+createNode shadingEngine -n "lambert3SG";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo2";
+createNode groupId -n "groupId1";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId2";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId3";
+	setAttr ".ihi" 0;
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -1982,7 +2043,7 @@ select -ne :renderPartition;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 518 ".st";
+	setAttr -s 519 ".st";
 	setAttr -cb on ".an";
 	setAttr -cb on ".pt";
 select -ne :renderGlobalsList1;
@@ -1995,7 +2056,7 @@ select -ne :defaultShaderList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 337 ".s";
+	setAttr -s 338 ".s";
 select -ne :postProcessList1;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -2172,6 +2233,8 @@ connectAttr "livingroom_shading_latestRN.phl[9]" "lambert2SG.dsm" -na;
 connectAttr "livingroom_shading_latestRN.phl[10]" "lambert2SG.dsm" -na;
 connectAttr "livingroom_shading_latestRN.phl[11]" "lambert2SG.dsm" -na;
 connectAttr "livingroom_shading_latestRN.phl[12]" "lambert2SG.dsm" -na;
+connectAttr "groupId1.msg" "livingroom_shading_latestRN.phl[115]";
+connectAttr "groupId2.msg" "livingroom_shading_latestRN.phl[116]";
 connectAttr "livingroom_shading_latestRN.phl[13]" "lambert2SG.dsm" -na;
 connectAttr "livingroom_shading_latestRN.phl[14]" "lambert2SG.dsm" -na;
 connectAttr "livingroom_shading_latestRN.phl[15]" "lambert2SG.dsm" -na;
@@ -2236,17 +2299,17 @@ connectAttr "livingroom_shading_latestRN.phl[73]" "lambert2SG.dsm" -na;
 connectAttr "livingroom_shading_latestRN.phl[74]" "lambert2SG.dsm" -na;
 connectAttr "livingroom_shading_latestRN.phl[75]" "livingroom_shading_latestRN.phl[76]"
 		;
-connectAttr "livingroom_shading_latestRN.phl[77]" "lambert2SG.dsm" -na;
-connectAttr "livingroom_shading_latestRN.phl[78]" "lambert2SG.dsm" -na;
-connectAttr "livingroom_shading_latestRN.phl[79]" "lambert2SG.dsm" -na;
-connectAttr "livingroom_shading_latestRN.phl[80]" "lambert2SG.dsm" -na;
-connectAttr "livingroom_shading_latestRN.phl[81]" "lambert2SG.dsm" -na;
-connectAttr "livingroom_shading_latestRN.phl[82]" "lambert2SG.dsm" -na;
-connectAttr "livingroom_shading_latestRN.phl[83]" "lambert2SG.dsm" -na;
-connectAttr "livingroom_shading_latestRN.phl[84]" "lambert2SG.dsm" -na;
-connectAttr "livingroom_shading_latestRN.phl[85]" "lambert2SG.dsm" -na;
-connectAttr "livingroom_shading_latestRN.phl[86]" "lambert2SG.dsm" -na;
-connectAttr "livingroom_shading_latestRN.phl[87]" "lambert2SG.dsm" -na;
+connectAttr "groupId1.id" "livingroom_shading_latestRN.phl[77]";
+connectAttr "livingroom_shading_latestRN.phl[78]" "livingroom_shading_latestRN.phl[79]"
+		;
+connectAttr "livingroom_shading_latestRN.phl[80]" "livingroom_shading_latestRN.phl[81]"
+		;
+connectAttr "groupId3.id" "livingroom_shading_latestRN.phl[82]";
+connectAttr "livingroom_shading_latestRN.phl[83]" "livingroom_shading_latestRN.phl[84]"
+		;
+connectAttr "livingroom_shading_latestRN.phl[85]" "livingroom_shading_latestRN.phl[86]"
+		;
+connectAttr "groupId2.id" "livingroom_shading_latestRN.phl[87]";
 connectAttr "livingroom_shading_latestRN.phl[88]" "lambert2SG.dsm" -na;
 connectAttr "livingroom_shading_latestRN.phl[89]" "lambert2SG.dsm" -na;
 connectAttr "livingroom_shading_latestRN.phl[90]" "lambert2SG.dsm" -na;
@@ -2263,6 +2326,17 @@ connectAttr "livingroom_shading_latestRN.phl[100]" "lambert2SG.dsm" -na;
 connectAttr "livingroom_shading_latestRN.phl[101]" "lambert2SG.dsm" -na;
 connectAttr "livingroom_shading_latestRN.phl[102]" "lambert2SG.dsm" -na;
 connectAttr "livingroom_shading_latestRN.phl[103]" "lambert2SG.dsm" -na;
+connectAttr "livingroom_shading_latestRN.phl[104]" "lambert2SG.dsm" -na;
+connectAttr "livingroom_shading_latestRN.phl[105]" "lambert2SG.dsm" -na;
+connectAttr "livingroom_shading_latestRN.phl[106]" "lambert2SG.dsm" -na;
+connectAttr "livingroom_shading_latestRN.phl[107]" "lambert2SG.dsm" -na;
+connectAttr "livingroom_shading_latestRN.phl[108]" "lambert2SG.dsm" -na;
+connectAttr "livingroom_shading_latestRN.phl[109]" "lambert2SG.dsm" -na;
+connectAttr "livingroom_shading_latestRN.phl[110]" "lambert2SG.dsm" -na;
+connectAttr "livingroom_shading_latestRN.phl[111]" "lambert2SG.dsm" -na;
+connectAttr "livingroom_shading_latestRN.phl[112]" "lambert2SG.dsm" -na;
+connectAttr "livingroom_shading_latestRN.phl[113]" "lambert2SG.dsm" -na;
+connectAttr "livingroom_shading_latestRN.phl[114]" "lambert2SG.dsm" -na;
 connectAttr "livingroom_shading_latestRN.phl[4]" "lambert2SG.dsm" -na;
 connectAttr "livingroom_shading_latestRN.phl[1]" "livingroom_shading_latestRN.phl[2]"
 		;
@@ -2276,11 +2350,13 @@ connectAttr ":miDefaultFramebuffer.msg" ":mentalrayGlobals.fb";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert3SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "light_setup_003:lightFogSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "light_setup_003:lightFogSE1.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert3SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "light_setup_004:lightFogSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "light_setup_004:lightFogSE1.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
@@ -2306,16 +2382,22 @@ connectAttr "sharedReferenceNode.sr" "bedroom_lights_06RN.sr";
 connectAttr "z_lambert2.oc" "lambert2SG.ss";
 connectAttr "lambert2SG.msg" "materialInfo1.sg";
 connectAttr "z_lambert2.msg" "materialInfo1.m";
+connectAttr "lambert3.oc" "lambert3SG.ss";
+connectAttr "groupId3.msg" "lambert3SG.gn" -na;
+connectAttr "lambert3SG.msg" "materialInfo2.sg";
+connectAttr "lambert3.msg" "materialInfo2.m";
 connectAttr "light_setup_003:lightFogSE.pa" ":renderPartition.st" -na;
 connectAttr "light_setup_003:lightFogSE1.pa" ":renderPartition.st" -na;
 connectAttr "light_setup_004:lightFogSE.pa" ":renderPartition.st" -na;
 connectAttr "light_setup_004:lightFogSE1.pa" ":renderPartition.st" -na;
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
+connectAttr "lambert3SG.pa" ":renderPartition.st" -na;
 connectAttr "light_setup_003:lightFog1.msg" ":defaultShaderList1.s" -na;
 connectAttr "light_setup_003:lightFog2.msg" ":defaultShaderList1.s" -na;
 connectAttr "light_setup_004:lightFog1.msg" ":defaultShaderList1.s" -na;
 connectAttr "light_setup_004:lightFog2.msg" ":defaultShaderList1.s" -na;
 connectAttr "z_lambert2.msg" ":defaultShaderList1.s" -na;
+connectAttr "lambert3.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "defaultLightShape.ltd" ":lightList1.l" -na;
 connectAttr "defaultLightShape.iog" ":defaultLightSet.dsm" -na;

@@ -1,6 +1,6 @@
 //Maya ASCII 2015 scene
 //Name: raccoonsLookAtHouse_latest.ma
-//Last modified: Fri, Feb 27, 2015 12:06:13 AM
+//Last modified: Sat, Feb 21, 2015 11:51:43 PM
 //Codeset: 1252
 file -rdi 1 -ns "outside_living_room" -rfn "outside_living_roomRN" -op "v=0;"
 		 "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//scenes/outside_living_room.ma";
@@ -26,32 +26,20 @@ file -rdi 4 -ns "armchair_latest" -rfn "outside_living_room:living_room_latest:l
 		 "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya//assets/sets/livingroom/additions/sofa/armchair_latest.ma";
 file -rdi 4 -ns "armchair_latest1" -rfn "outside_living_room:living_room_latest:living_room_latest:armchair_latestRN1"
 		 "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya//assets/sets/livingroom/additions/sofa/armchair_latest.ma";
-file -rdi 4 -ns "desk_latest" -rfn "outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:desk_latestRN"
+file -rdi 4 -ns "desk_latest" -dr 1 -rfn "outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:desk_latestRN"
 		 "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya//assets/sets/bedroom/additions/desk_latest.ma";
-file -rdi 4 -ns "taller_window_four_squares_latest6" -rfn "outside_living_room:living_room_latest:living_room_latest:taller_window_four_squares_latestRN2"
+file -rdi 4 -ns "chair" -dr 1 -rfn "outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:chairRN"
+		 "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya//assets/sets/bedroom/additions/chair.ma";
+file -rdi 4 -ns "taller_window_four_squares_latest6" -dr 1 -rfn "outside_living_room:living_room_latest:living_room_latest:taller_window_four_squares_latestRN2"
 		 "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya//assets/sets/livingroom/additions/windows/taller_window_four_squares_latest.ma";
-file -rdi 4 -ns "taller_window_four_squares_latest7" -rfn "outside_living_room:living_room_latest:living_room_latest:taller_window_four_squares_latestRN3"
+file -rdi 4 -ns "taller_window_four_squares_latest7" -dr 1 -rfn "outside_living_room:living_room_latest:living_room_latest:taller_window_four_squares_latestRN3"
 		 "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya//assets/sets/livingroom/additions/windows/taller_window_four_squares_latest.ma";
-file -rdi 4 -ns "taller_window_four_squares_latest8" -rfn "outside_living_room:living_room_latest:living_room_latest:taller_window_four_squares_latestRN4"
+file -rdi 4 -ns "taller_window_four_squares_latest8" -dr 1 -rfn "outside_living_room:living_room_latest:living_room_latest:taller_window_four_squares_latestRN4"
 		 "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya//assets/sets/livingroom/additions/windows/taller_window_four_squares_latest.ma";
-file -rdi 4 -ns "telescope" -rfn "outside_living_room:living_room_latest:living_room_latest:telescopeRN"
-		 "/Users/Amy/Desktop/cnm190/Bandits/maya//assets/sets/bedroom/additions/telescope.ma";
-file -rdi 4 -ns "cube_cushion" -rfn "outside_living_room:living_room_latest:living_room_latest:cube_cushionRN"
-		 "/Users/Amy/Desktop/cnm190/Bandits/maya//assets/sets/bedroom/additions/cube_cushion.ma";
-file -rdi 4 -ns "cat_robot" -rfn "outside_living_room:living_room_latest:living_room_latest:cat_robotRN"
-		 "/Users/Amy/Desktop/cnm190/Bandits/maya//assets/sets/bedroom/additions/cat_robot.ma";
-file -rdi 4 -ns "bed_latest1" -rfn "outside_living_room:living_room_latest:living_room_latest:bed_latestRN"
-		 "/Users/Amy/Desktop/cnm190/Bandits/maya//assets/sets/bedroom/additions/bed_latest.ma";
-file -rdi 4 -ns "resurrected_staircase" -rfn "outside_living_room:living_room_latest:living_room_latest:resurrected_staircaseRN"
-		 "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya//assets/sets/livingroom/additions/staircase/resurrected_staircase.ma";
 file -rdi 2 -ns "pig_latest" -rfn "outside_living_room:pig_latestRN" -op "v=0;"
 		 "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/characters/pig/pig_latest.ma";
 file -rdi 3 -ns "key_latest" -rfn "outside_living_room:pig_latest:key_latestRN"
 		 "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/props/keys/key_latest.ma";
-file -rdi 2 -ns "light_setup_004" -rfn "outside_living_room:light_setup_004RN"
-		 -op "v=0;p=17;f=0" "X:/documents/GitHub/Bandits/maya//assets/sets/livingroom/versions/light_setup_004.ma";
-file -rdi 2 -ns "bedroom_lights_06" -rfn "outside_living_room:bedroom_lights_06RN"
-		 -op "v=0;p=17;f=0" "X:/documents/GitHub/Bandits/maya//assets/sets/bedroom/bedroom_lights_06.ma";
 file -r -ns "outside_living_room" -dr 1 -rfn "outside_living_roomRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//scenes/outside_living_room.ma";
 requires maya "2015";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOptions" -nodeType "mentalrayGlobals"
@@ -68,15 +56,15 @@ fileInfo "osv" "Microsoft Windows 8 Business Edition, 64-bit  (Build 9200)\n";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -322.88756409809292 139.84681172980115 -84.497273844204116 ;
-	setAttr ".r" -type "double3" -31.538352729628169 219.79999999996485 0 ;
+	setAttr ".t" -type "double3" -207.79063281649263 7.1512485446456378 51.824876987582897 ;
+	setAttr ".r" -type "double3" 8.6616472703611116 103.79999999997366 0 ;
 	setAttr ".rp" -type "double3" 0 7.1054273576010019e-015 2.8421709430404007e-014 ;
 	setAttr ".rpt" -type "double3" 2.5517228896232203e-014 7.264980873434585e-015 -2.9223620654379387e-014 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 98.756333530797079;
+	setAttr ".coi" 5.1517251281555989;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -127,8 +115,6 @@ createNode mentalrayItemsList -s -n "mentalrayItemsList";
 	setAttr -s 3 ".opt";
 createNode mentalrayGlobals -s -n "mentalrayGlobals";
 	addAttr -s false -ci true -h true -sn "sunAndSkyShader" -ln "sunAndSkyShader" -at "message";
-	setAttr ".rvb" 3;
-	setAttr ".ivb" no;
 createNode mentalrayOptions -s -n "miDefaultOptions";
 	addAttr -ci true -m -sn "stringOptions" -ln "stringOptions" -at "compound" -nc 
 		3;
@@ -292,8 +278,8 @@ createNode mentalrayOptions -s -n "miDefaultOptions";
 	setAttr ".stringOptions[47].type" -type "string" "color";
 createNode mentalrayFramebuffer -s -n "miDefaultFramebuffer";
 createNode lightLinker -s -n "lightLinker1";
-	setAttr -s 301 ".lnk";
-	setAttr -s 304 ".slnk";
+	setAttr -s 207 ".lnk";
+	setAttr -s 208 ".slnk";
 createNode displayLayerManager -n "layerManager";
 createNode displayLayer -n "defaultLayer";
 createNode renderLayerManager -n "renderLayerManager";
@@ -575,7 +561,7 @@ createNode script -n "sceneConfigurationScriptNode";
 	setAttr ".b" -type "string" "playbackOptions -min 1 -max 150 -ast 1 -aet 150 ";
 	setAttr ".st" 6;
 createNode reference -n "outside_living_roomRN";
-	setAttr -s 263 ".phl";
+	setAttr -s 262 ".phl";
 	setAttr ".phl[96]" 0;
 	setAttr ".phl[97]" 0;
 	setAttr ".phl[98]" 0;
@@ -818,7 +804,6 @@ createNode reference -n "outside_living_roomRN";
 	setAttr ".phl[335]" 0;
 	setAttr ".phl[336]" 0;
 	setAttr ".phl[337]" 0;
-	setAttr ".phl[338]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"outside_living_roomRN"
 		"outside_living_room:smarty_latestRN" 48
@@ -10246,9 +10231,6 @@ createNode reference -n "outside_living_roomRN";
 		
 		2 "|outside_living_room:leaves:SH20_3_br1_NL_INV|outside_living_room:leaves:SH20_3_br1_NL_INVShap" 
 		"furNameSpace" " -type \"string\" \"leaves\""
-		"outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:desk_latestRN" 
-		0
-		"outside_living_room:light_setup_004RN" 0
 		"outside_living_room:living_room_latest:sofa_latestRN" 54
 		1 |outside_living_room:living_room_latest:sofa_latest:sofa_frame|outside_living_room:living_room_latest:sofa_latest:sofa_frameShape 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
@@ -10460,8 +10442,6 @@ createNode reference -n "outside_living_roomRN";
 		
 		2 "|outside_living_room:living_room_latest:taller_window_four_squares_latest5:taller_window|outside_living_room:living_room_latest:taller_window_four_squares_latest5:transform1|outside_living_room:living_room_latest:taller_window_four_squares_latest5:taller_windowShape" 
 		"furNameSpace" " -type \"string\" \"taller_window_four_squares_latest5\""
-		"outside_living_room:living_room_latest:living_room_latest:taller_window_four_squares_latestRN4" 
-		0
 		"outside_living_roomRN" 15
 		1 |outside_living_room:SH20_3_br1_NL_INV|outside_living_room:SH20_3_br1_NL_INVShap 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
@@ -10592,241 +10572,8 @@ createNode reference -n "outside_living_roomRN";
 		0
 		"outside_living_room:living_room_latest:living_room_latest:sofa_latestRN" 0
 		
-		"outside_living_room:living_room_latest:living_room_latestRN" 108
-		1 |outside_living_room:living_room_latest:living_room_latest:crown_molding|outside_living_room:living_room_latest:living_room_latest:crown_unit_11|outside_living_room:living_room_latest:living_room_latest:crown_unit_Shape11 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:crown_molding|outside_living_room:living_room_latest:living_room_latest:crown_unit_11|outside_living_room:living_room_latest:living_room_latest:crown_unit_Shape11 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:crown_molding|outside_living_room:living_room_latest:living_room_latest:crown_unit_11|outside_living_room:living_room_latest:living_room_latest:crown_unit_Shape11 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:crown_molding|outside_living_room:living_room_latest:living_room_latest:crown_unit_11|outside_living_room:living_room_latest:living_room_latest:pasted__polySurfaceShape1 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:crown_molding|outside_living_room:living_room_latest:living_room_latest:crown_unit_11|outside_living_room:living_room_latest:living_room_latest:pasted__polySurfaceShape1 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:crown_molding|outside_living_room:living_room_latest:living_room_latest:crown_unit_11|outside_living_room:living_room_latest:living_room_latest:pasted__polySurfaceShape1 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:crown_molding|outside_living_room:living_room_latest:living_room_latest:crown_unit_12|outside_living_room:living_room_latest:living_room_latest:crown_unit_Shape12 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:crown_molding|outside_living_room:living_room_latest:living_room_latest:crown_unit_12|outside_living_room:living_room_latest:living_room_latest:crown_unit_Shape12 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:crown_molding|outside_living_room:living_room_latest:living_room_latest:crown_unit_12|outside_living_room:living_room_latest:living_room_latest:crown_unit_Shape12 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:crown_molding|outside_living_room:living_room_latest:living_room_latest:crown_unit_12|outside_living_room:living_room_latest:living_room_latest:pasted__polySurfaceShape1 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:crown_molding|outside_living_room:living_room_latest:living_room_latest:crown_unit_12|outside_living_room:living_room_latest:living_room_latest:pasted__polySurfaceShape1 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:crown_molding|outside_living_room:living_room_latest:living_room_latest:crown_unit_12|outside_living_room:living_room_latest:living_room_latest:pasted__polySurfaceShape1 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:coffee_table|outside_living_room:living_room_latest:living_room_latest:coffee_tableShape 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:coffee_table|outside_living_room:living_room_latest:living_room_latest:coffee_tableShape 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:coffee_table|outside_living_room:living_room_latest:living_room_latest:coffee_tableShape 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unitShape 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unitShape 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unitShape 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube2|outside_living_room:living_room_latest:living_room_latest:pCubeShape2 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube2|outside_living_room:living_room_latest:living_room_latest:pCubeShape2 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube2|outside_living_room:living_room_latest:living_room_latest:pCubeShape2 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube3|outside_living_room:living_room_latest:living_room_latest:pCubeShape3 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube3|outside_living_room:living_room_latest:living_room_latest:pCubeShape3 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube3|outside_living_room:living_room_latest:living_room_latest:pCubeShape3 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube4|outside_living_room:living_room_latest:living_room_latest:pCubeShape4 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube4|outside_living_room:living_room_latest:living_room_latest:pCubeShape4 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube4|outside_living_room:living_room_latest:living_room_latest:pCubeShape4 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube5|outside_living_room:living_room_latest:living_room_latest:pCubeShape5 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube5|outside_living_room:living_room_latest:living_room_latest:pCubeShape5 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube5|outside_living_room:living_room_latest:living_room_latest:pCubeShape5 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube7|outside_living_room:living_room_latest:living_room_latest:pCubeShape7 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube7|outside_living_room:living_room_latest:living_room_latest:pCubeShape7 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube7|outside_living_room:living_room_latest:living_room_latest:pCubeShape7 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube8|outside_living_room:living_room_latest:living_room_latest:pCubeShape8 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube8|outside_living_room:living_room_latest:living_room_latest:pCubeShape8 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube8|outside_living_room:living_room_latest:living_room_latest:pCubeShape8 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube8|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape1 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube8|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape1 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube8|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape1 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder3|outside_living_room:living_room_latest:living_room_latest:pCylinderShape3 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder3|outside_living_room:living_room_latest:living_room_latest:pCylinderShape3 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder3|outside_living_room:living_room_latest:living_room_latest:pCylinderShape3 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder4|outside_living_room:living_room_latest:living_room_latest:pCylinderShape4 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder4|outside_living_room:living_room_latest:living_room_latest:pCylinderShape4 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder4|outside_living_room:living_room_latest:living_room_latest:pCylinderShape4 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder9|outside_living_room:living_room_latest:living_room_latest:pCylinderShape9 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder9|outside_living_room:living_room_latest:living_room_latest:pCylinderShape9 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder9|outside_living_room:living_room_latest:living_room_latest:pCylinderShape9 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:polySurface2|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape2 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:polySurface2|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape2 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:polySurface2|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape2 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:polySurface3|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape3 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:polySurface3|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape3 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:polySurface3|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape3 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:polySurface3|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape302 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:polySurface3|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape302 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:polySurface3|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape302 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:polySurface4|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:polySurface4|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:polySurface4|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube133|outside_living_room:living_room_latest:living_room_latest:pCubeShape133 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube133|outside_living_room:living_room_latest:living_room_latest:pCubeShape133 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube133|outside_living_room:living_room_latest:living_room_latest:pCubeShape133 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube150|outside_living_room:living_room_latest:living_room_latest:pCubeShape150 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube150|outside_living_room:living_room_latest:living_room_latest:pCubeShape150 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube150|outside_living_room:living_room_latest:living_room_latest:pCubeShape150 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube137|outside_living_room:living_room_latest:living_room_latest:pCubeShape137 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube137|outside_living_room:living_room_latest:living_room_latest:pCubeShape137 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube137|outside_living_room:living_room_latest:living_room_latest:pCubeShape137 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:crown_molding|outside_living_room:living_room_latest:living_room_latest:crown_unit_11|outside_living_room:living_room_latest:living_room_latest:crown_unit_Shape11" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:crown_molding|outside_living_room:living_room_latest:living_room_latest:crown_unit_11|outside_living_room:living_room_latest:living_room_latest:crown_unit_Shape11" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:crown_molding|outside_living_room:living_room_latest:living_room_latest:crown_unit_11|outside_living_room:living_room_latest:living_room_latest:crown_unit_Shape11" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:crown_molding|outside_living_room:living_room_latest:living_room_latest:crown_unit_12|outside_living_room:living_room_latest:living_room_latest:crown_unit_Shape12" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:crown_molding|outside_living_room:living_room_latest:living_room_latest:crown_unit_12|outside_living_room:living_room_latest:living_room_latest:crown_unit_Shape12" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:crown_molding|outside_living_room:living_room_latest:living_room_latest:crown_unit_12|outside_living_room:living_room_latest:living_room_latest:crown_unit_Shape12" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:coffee_table|outside_living_room:living_room_latest:living_room_latest:coffee_tableShape" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:coffee_table|outside_living_room:living_room_latest:living_room_latest:coffee_tableShape" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:coffee_table|outside_living_room:living_room_latest:living_room_latest:coffee_tableShape" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unitShape" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unitShape" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unitShape" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube8|outside_living_room:living_room_latest:living_room_latest:pCubeShape8" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube8|outside_living_room:living_room_latest:living_room_latest:pCubeShape8" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube8|outside_living_room:living_room_latest:living_room_latest:pCubeShape8" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder9|outside_living_room:living_room_latest:living_room_latest:pCylinderShape9" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder9|outside_living_room:living_room_latest:living_room_latest:pCylinderShape9" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder9|outside_living_room:living_room_latest:living_room_latest:pCylinderShape9" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:polySurface3|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape302" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:polySurface3|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape302" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:polySurface3|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape302" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube133|outside_living_room:living_room_latest:living_room_latest:pCubeShape133" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube133|outside_living_room:living_room_latest:living_room_latest:pCubeShape133" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube133|outside_living_room:living_room_latest:living_room_latest:pCubeShape133" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube150|outside_living_room:living_room_latest:living_room_latest:pCubeShape150" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube150|outside_living_room:living_room_latest:living_room_latest:pCubeShape150" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube150|outside_living_room:living_room_latest:living_room_latest:pCubeShape150" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube137|outside_living_room:living_room_latest:living_room_latest:pCubeShape137" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube137|outside_living_room:living_room_latest:living_room_latest:pCubeShape137" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube137|outside_living_room:living_room_latest:living_room_latest:pCubeShape137" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:bed_pillow|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:bed_pillowShape" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:bed_pillow|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:bed_pillowShape" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:bed_pillow|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:bed_pillowShape" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:bed_mattress|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:bed_mattressShape" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:bed_mattress|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:bed_mattressShape" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:bed_mattress|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:bed_mattressShape" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:bed_frame|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:bed_frameShape" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:bed_frame|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:bed_frameShape" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:bed_frame|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:bed_frameShape" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		"outside_living_room:living_room_latest:living_room_latest:cube_cushionRN" 0
-		
+		"outside_living_room:living_room_latest:living_room_latestRN" 0
 		"outside_living_room:living_room_latest:living_room_latest:taller_window_four_squares_latestRN1" 
-		0
-		"outside_living_room:living_room_latest:living_room_latest:taller_window_four_squares_latestRN2" 
 		0
 		"outside_living_room:tuffs_latestRN" 24
 		1 |outside_living_room:tuffs_latest:controller_root|outside_living_room:tuffs_latest:controller_COG|outside_living_room:tuffs_latest:controller_head|outside_living_room:tuffs_latest:pSphere2|outside_living_room:tuffs_latest:pSphereShape2 
@@ -10938,8 +10685,6 @@ createNode reference -n "outside_living_roomRN";
 		
 		2 "|outside_living_room:living_room_latest:armchair_latest3:armchair_frame|outside_living_room:living_room_latest:armchair_latest3:armchair_pillow_2|outside_living_room:living_room_latest:armchair_latest3:armchair_pillow_Shape2" 
 		"furNameSpace" " -type \"string\" \"armchair_latest3\""
-		"outside_living_room:living_room_latest:living_room_latest:cat_robotRN" 0
-		
 		"outside_living_room:pig_latestRN" 15
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:head_control|outside_living_room:pig_latest:nurbsCircle1" 
 		"translate" " -type \"double3\" 0 0 0"
@@ -11024,7 +10769,6 @@ createNode reference -n "outside_living_roomRN";
 		
 		2 "|outside_living_room:living_room_latest:armchair_latest1:armchair_frame|outside_living_room:living_room_latest:armchair_latest1:armchair_pillow_2|outside_living_room:living_room_latest:armchair_latest1:armchair_pillow_Shape2" 
 		"furNameSpace" " -type \"string\" \"armchair_latest1\""
-		"outside_living_room:bedroom_lights_06RN" 0
 		"outside_living_room:living_room_latest:living_room_latest:taller_window_four_squares_latestRN" 
 		0
 		"outside_living_room:binocularsRN" 6
@@ -11041,8 +10785,6 @@ createNode reference -n "outside_living_roomRN";
 		
 		2 "|outside_living_room:binoculars:polySurface3|outside_living_room:binoculars:polySurface3Shape" 
 		"furNameSpace" " -type \"string\" \"binoculars\""
-		"outside_living_room:living_room_latest:living_room_latest:bed_latestRN" 0
-		
 		"outside_living_room:living_room_latest:taller_window_four_squares_latest1RN" 
 		42
 		1 |outside_living_room:living_room_latest:taller_window_four_squares_latest2:taller_window|outside_living_room:living_room_latest:taller_window_four_squares_latest2:polySurfaceShape1 
@@ -11138,10 +10880,6 @@ createNode reference -n "outside_living_roomRN";
 		"furNameSpace" " -type \"string\" \"taller_window_four_squares_latest2\""
 		"outside_living_room:living_room_latest:living_room_latest:armchair_latestRN1" 
 		0
-		"outside_living_room:living_room_latest:living_room_latest:telescopeRN" 0
-		
-		"outside_living_room:living_room_latest:living_room_latest:resurrected_staircaseRN" 
-		0
 		"outside_living_room:living_room_latest:armchair_latestRN" 24
 		1 |outside_living_room:living_room_latest:armchair_latest:armchair_frame|outside_living_room:living_room_latest:armchair_latest:armchair_frameShape 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
@@ -11195,8 +10933,6 @@ createNode reference -n "outside_living_roomRN";
 		
 		2 "|outside_living_room:living_room_latest:armchair_latest:armchair_frame|outside_living_room:living_room_latest:armchair_latest:armchair_pillow_2|outside_living_room:living_room_latest:armchair_latest:armchair_pillow_Shape2" 
 		"furNameSpace" " -type \"string\" \"armchair_latest\""
-		"outside_living_room:living_room_latest:living_room_latest:taller_window_four_squares_latestRN3" 
-		0
 		"outside_living_room:living_room_latest:living_room_latest:taller_window_four_squares_latest2RN" 
 		42
 		1 |outside_living_room:living_room_latest:living_room_latest:taller_window_four_squares_latest3:taller_window|outside_living_room:living_room_latest:living_room_latest:taller_window_four_squares_latest3:polySurfaceShape1 
@@ -11502,7 +11238,7 @@ createNode reference -n "outside_living_roomRN";
 		
 		2 "|outside_living_room:living_room_latest:living_room_latest:taller_window_four_squares_latest2:taller_window|outside_living_room:living_room_latest:living_room_latest:taller_window_four_squares_latest2:transform1|outside_living_room:living_room_latest:living_room_latest:taller_window_four_squares_latest2:taller_windowShape" 
 		"furNameSpace" " -type \"string\" \"taller_window_four_squares_latest2\""
-		"outside_living_room:living_room_latest:living_room_latestRN" 3086
+		"outside_living_room:living_room_latest:living_room_latestRN" 3231
 		1 |outside_living_room:living_room_latest:living_room_latest:crown_molding|outside_living_room:living_room_latest:living_room_latest:crown_unit_1|outside_living_room:living_room_latest:living_room_latest:crown_unit_Shape1 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
 		1 |outside_living_room:living_room_latest:living_room_latest:crown_molding|outside_living_room:living_room_latest:living_room_latest:crown_unit_1|outside_living_room:living_room_latest:living_room_latest:crown_unit_Shape1 
@@ -11623,6 +11359,30 @@ createNode reference -n "outside_living_roomRN";
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |outside_living_room:living_room_latest:living_room_latest:crown_molding|outside_living_room:living_room_latest:living_room_latest:crown_unit_10|outside_living_room:living_room_latest:living_room_latest:pasted__polySurfaceShape1 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:crown_molding|outside_living_room:living_room_latest:living_room_latest:crown_unit_11|outside_living_room:living_room_latest:living_room_latest:crown_unit_Shape11 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:crown_molding|outside_living_room:living_room_latest:living_room_latest:crown_unit_11|outside_living_room:living_room_latest:living_room_latest:crown_unit_Shape11 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:crown_molding|outside_living_room:living_room_latest:living_room_latest:crown_unit_11|outside_living_room:living_room_latest:living_room_latest:crown_unit_Shape11 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:crown_molding|outside_living_room:living_room_latest:living_room_latest:crown_unit_11|outside_living_room:living_room_latest:living_room_latest:pasted__polySurfaceShape1 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:crown_molding|outside_living_room:living_room_latest:living_room_latest:crown_unit_11|outside_living_room:living_room_latest:living_room_latest:pasted__polySurfaceShape1 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:crown_molding|outside_living_room:living_room_latest:living_room_latest:crown_unit_11|outside_living_room:living_room_latest:living_room_latest:pasted__polySurfaceShape1 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:crown_molding|outside_living_room:living_room_latest:living_room_latest:crown_unit_12|outside_living_room:living_room_latest:living_room_latest:crown_unit_Shape12 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:crown_molding|outside_living_room:living_room_latest:living_room_latest:crown_unit_12|outside_living_room:living_room_latest:living_room_latest:crown_unit_Shape12 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:crown_molding|outside_living_room:living_room_latest:living_room_latest:crown_unit_12|outside_living_room:living_room_latest:living_room_latest:crown_unit_Shape12 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:crown_molding|outside_living_room:living_room_latest:living_room_latest:crown_unit_12|outside_living_room:living_room_latest:living_room_latest:pasted__polySurfaceShape1 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:crown_molding|outside_living_room:living_room_latest:living_room_latest:crown_unit_12|outside_living_room:living_room_latest:living_room_latest:pasted__polySurfaceShape1 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:crown_molding|outside_living_room:living_room_latest:living_room_latest:crown_unit_12|outside_living_room:living_room_latest:living_room_latest:pasted__polySurfaceShape1 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |outside_living_room:living_room_latest:living_room_latest:cabinet|outside_living_room:living_room_latest:living_room_latest:cabinetShape 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
 		1 |outside_living_room:living_room_latest:living_room_latest:cabinet|outside_living_room:living_room_latest:living_room_latest:cabinetShape 
@@ -11742,6 +11502,12 @@ createNode reference -n "outside_living_roomRN";
 		1 |outside_living_room:living_room_latest:living_room_latest:lamp|outside_living_room:living_room_latest:living_room_latest:lampShape 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |outside_living_room:living_room_latest:living_room_latest:lamp|outside_living_room:living_room_latest:living_room_latest:lampShape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:coffee_table|outside_living_room:living_room_latest:living_room_latest:coffee_tableShape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:coffee_table|outside_living_room:living_room_latest:living_room_latest:coffee_tableShape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:coffee_table|outside_living_room:living_room_latest:living_room_latest:coffee_tableShape 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |outside_living_room:living_room_latest:living_room_latest:photo_frame|outside_living_room:living_room_latest:living_room_latest:photo_frameShape 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
@@ -12001,6 +11767,534 @@ createNode reference -n "outside_living_roomRN";
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_upper_unit_1|outside_living_room:living_room_latest:living_room_latest:cabinet_door_7|outside_living_room:living_room_latest:living_room_latest:cabinet_door_7_handle|outside_living_room:living_room_latest:living_room_latest:cabinet_door_7_handleShape 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unitShape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unitShape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unitShape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube2|outside_living_room:living_room_latest:living_room_latest:pCubeShape2 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube2|outside_living_room:living_room_latest:living_room_latest:pCubeShape2 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube2|outside_living_room:living_room_latest:living_room_latest:pCubeShape2 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube3|outside_living_room:living_room_latest:living_room_latest:pCubeShape3 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube3|outside_living_room:living_room_latest:living_room_latest:pCubeShape3 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube3|outside_living_room:living_room_latest:living_room_latest:pCubeShape3 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube3|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube3|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube3|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube4|outside_living_room:living_room_latest:living_room_latest:pCubeShape4 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube4|outside_living_room:living_room_latest:living_room_latest:pCubeShape4 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube4|outside_living_room:living_room_latest:living_room_latest:pCubeShape4 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube4|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape13 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube4|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape13 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube4|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape13 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube5|outside_living_room:living_room_latest:living_room_latest:pCubeShape5 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube5|outside_living_room:living_room_latest:living_room_latest:pCubeShape5 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube5|outside_living_room:living_room_latest:living_room_latest:pCubeShape5 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube5|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape12 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube5|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape12 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube5|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape12 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube7|outside_living_room:living_room_latest:living_room_latest:pCubeShape7 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube7|outside_living_room:living_room_latest:living_room_latest:pCubeShape7 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube7|outside_living_room:living_room_latest:living_room_latest:pCubeShape7 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube7|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape2 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube7|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape2 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube7|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape2 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube8|outside_living_room:living_room_latest:living_room_latest:pCubeShape8 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube8|outside_living_room:living_room_latest:living_room_latest:pCubeShape8 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube8|outside_living_room:living_room_latest:living_room_latest:pCubeShape8 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube8|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape1 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube8|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape1 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube8|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape1 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube9|outside_living_room:living_room_latest:living_room_latest:pCubeShape9 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube9|outside_living_room:living_room_latest:living_room_latest:pCubeShape9 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube9|outside_living_room:living_room_latest:living_room_latest:pCubeShape9 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube9|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube9|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube9|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube10|outside_living_room:living_room_latest:living_room_latest:pCubeShape10 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube10|outside_living_room:living_room_latest:living_room_latest:pCubeShape10 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube10|outside_living_room:living_room_latest:living_room_latest:pCubeShape10 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube10|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape3 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube10|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape3 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube10|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape3 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube11|outside_living_room:living_room_latest:living_room_latest:pCubeShape11 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube11|outside_living_room:living_room_latest:living_room_latest:pCubeShape11 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube11|outside_living_room:living_room_latest:living_room_latest:pCubeShape11 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube11|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape6 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube11|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape6 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube11|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape6 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube12|outside_living_room:living_room_latest:living_room_latest:pCubeShape12 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube12|outside_living_room:living_room_latest:living_room_latest:pCubeShape12 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube12|outside_living_room:living_room_latest:living_room_latest:pCubeShape12 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube12|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape5 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube12|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape5 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube12|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape5 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube13|outside_living_room:living_room_latest:living_room_latest:pCubeShape13 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube13|outside_living_room:living_room_latest:living_room_latest:pCubeShape13 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube13|outside_living_room:living_room_latest:living_room_latest:pCubeShape13 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube13|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape8 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube13|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape8 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube13|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape8 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube14|outside_living_room:living_room_latest:living_room_latest:pCubeShape14 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube14|outside_living_room:living_room_latest:living_room_latest:pCubeShape14 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube14|outside_living_room:living_room_latest:living_room_latest:pCubeShape14 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube14|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape7 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube14|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape7 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube14|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape7 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder3|outside_living_room:living_room_latest:living_room_latest:pCylinderShape3 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder3|outside_living_room:living_room_latest:living_room_latest:pCylinderShape3 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder3|outside_living_room:living_room_latest:living_room_latest:pCylinderShape3 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder4|outside_living_room:living_room_latest:living_room_latest:pCylinderShape4 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder4|outside_living_room:living_room_latest:living_room_latest:pCylinderShape4 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder4|outside_living_room:living_room_latest:living_room_latest:pCylinderShape4 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder5|outside_living_room:living_room_latest:living_room_latest:pCylinderShape5 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder5|outside_living_room:living_room_latest:living_room_latest:pCylinderShape5 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder5|outside_living_room:living_room_latest:living_room_latest:pCylinderShape5 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder6|outside_living_room:living_room_latest:living_room_latest:pCylinderShape6 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder6|outside_living_room:living_room_latest:living_room_latest:pCylinderShape6 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder6|outside_living_room:living_room_latest:living_room_latest:pCylinderShape6 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder8|outside_living_room:living_room_latest:living_room_latest:pCylinderShape8 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder8|outside_living_room:living_room_latest:living_room_latest:pCylinderShape8 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder8|outside_living_room:living_room_latest:living_room_latest:pCylinderShape8 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder9|outside_living_room:living_room_latest:living_room_latest:pCylinderShape9 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder9|outside_living_room:living_room_latest:living_room_latest:pCylinderShape9 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder9|outside_living_room:living_room_latest:living_room_latest:pCylinderShape9 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder10|outside_living_room:living_room_latest:living_room_latest:pCylinderShape10 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder10|outside_living_room:living_room_latest:living_room_latest:pCylinderShape10 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder10|outside_living_room:living_room_latest:living_room_latest:pCylinderShape10 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder11|outside_living_room:living_room_latest:living_room_latest:pCylinderShape11 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder11|outside_living_room:living_room_latest:living_room_latest:pCylinderShape11 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder11|outside_living_room:living_room_latest:living_room_latest:pCylinderShape11 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder12|outside_living_room:living_room_latest:living_room_latest:pCylinderShape12 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder12|outside_living_room:living_room_latest:living_room_latest:pCylinderShape12 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder12|outside_living_room:living_room_latest:living_room_latest:pCylinderShape12 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder13|outside_living_room:living_room_latest:living_room_latest:pCylinderShape13 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder13|outside_living_room:living_room_latest:living_room_latest:pCylinderShape13 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder13|outside_living_room:living_room_latest:living_room_latest:pCylinderShape13 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder14|outside_living_room:living_room_latest:living_room_latest:pCylinderShape14 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder14|outside_living_room:living_room_latest:living_room_latest:pCylinderShape14 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder14|outside_living_room:living_room_latest:living_room_latest:pCylinderShape14 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder15|outside_living_room:living_room_latest:living_room_latest:pCylinderShape15 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder15|outside_living_room:living_room_latest:living_room_latest:pCylinderShape15 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder15|outside_living_room:living_room_latest:living_room_latest:pCylinderShape15 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder7|outside_living_room:living_room_latest:living_room_latest:pCylinderShape7 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder7|outside_living_room:living_room_latest:living_room_latest:pCylinderShape7 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder7|outside_living_room:living_room_latest:living_room_latest:pCylinderShape7 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder17|outside_living_room:living_room_latest:living_room_latest:pCylinderShape17 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder17|outside_living_room:living_room_latest:living_room_latest:pCylinderShape17 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder17|outside_living_room:living_room_latest:living_room_latest:pCylinderShape17 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder16|outside_living_room:living_room_latest:living_room_latest:pCylinderShape16 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder16|outside_living_room:living_room_latest:living_room_latest:pCylinderShape16 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder16|outside_living_room:living_room_latest:living_room_latest:pCylinderShape16 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube15|outside_living_room:living_room_latest:living_room_latest:pCubeShape15 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube15|outside_living_room:living_room_latest:living_room_latest:pCubeShape15 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube15|outside_living_room:living_room_latest:living_room_latest:pCubeShape15 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube15|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape10 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube15|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape10 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube15|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape10 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:polySurface2|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape2 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:polySurface2|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape2 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:polySurface2|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape2 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:polySurface3|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape3 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:polySurface3|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape3 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:polySurface3|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape3 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:polySurface3|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape302 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:polySurface3|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape302 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:polySurface3|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape302 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube17|outside_living_room:living_room_latest:living_room_latest:pCubeShape17 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube17|outside_living_room:living_room_latest:living_room_latest:pCubeShape17 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube17|outside_living_room:living_room_latest:living_room_latest:pCubeShape17 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:polySurface4|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:polySurface4|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:polySurface4|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube18|outside_living_room:living_room_latest:living_room_latest:pCubeShape18 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube18|outside_living_room:living_room_latest:living_room_latest:pCubeShape18 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube18|outside_living_room:living_room_latest:living_room_latest:pCubeShape18 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube100|outside_living_room:living_room_latest:living_room_latest:pCubeShape100 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube100|outside_living_room:living_room_latest:living_room_latest:pCubeShape100 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube100|outside_living_room:living_room_latest:living_room_latest:pCubeShape100 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube100|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube100|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube100|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder83|outside_living_room:living_room_latest:living_room_latest:pCylinderShape83 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder83|outside_living_room:living_room_latest:living_room_latest:pCylinderShape83 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder83|outside_living_room:living_room_latest:living_room_latest:pCylinderShape83 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube101|outside_living_room:living_room_latest:living_room_latest:pCubeShape101 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube101|outside_living_room:living_room_latest:living_room_latest:pCubeShape101 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube101|outside_living_room:living_room_latest:living_room_latest:pCubeShape101 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube101|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube101|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube101|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder84|outside_living_room:living_room_latest:living_room_latest:pCylinderShape84 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder84|outside_living_room:living_room_latest:living_room_latest:pCylinderShape84 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder84|outside_living_room:living_room_latest:living_room_latest:pCylinderShape84 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube103|outside_living_room:living_room_latest:living_room_latest:pCubeShape103 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube103|outside_living_room:living_room_latest:living_room_latest:pCubeShape103 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube103|outside_living_room:living_room_latest:living_room_latest:pCubeShape103 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube103|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube103|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube103|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder86|outside_living_room:living_room_latest:living_room_latest:pCylinderShape86 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder86|outside_living_room:living_room_latest:living_room_latest:pCylinderShape86 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder86|outside_living_room:living_room_latest:living_room_latest:pCylinderShape86 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder87|outside_living_room:living_room_latest:living_room_latest:pCylinderShape87 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder87|outside_living_room:living_room_latest:living_room_latest:pCylinderShape87 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder87|outside_living_room:living_room_latest:living_room_latest:pCylinderShape87 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube105|outside_living_room:living_room_latest:living_room_latest:pCubeShape105 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube105|outside_living_room:living_room_latest:living_room_latest:pCubeShape105 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube105|outside_living_room:living_room_latest:living_room_latest:pCubeShape105 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube105|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube105|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube105|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube106|outside_living_room:living_room_latest:living_room_latest:pCubeShape106 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube106|outside_living_room:living_room_latest:living_room_latest:pCubeShape106 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube106|outside_living_room:living_room_latest:living_room_latest:pCubeShape106 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube106|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube106|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube106|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder88|outside_living_room:living_room_latest:living_room_latest:pCylinderShape88 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder88|outside_living_room:living_room_latest:living_room_latest:pCylinderShape88 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder88|outside_living_room:living_room_latest:living_room_latest:pCylinderShape88 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube114|outside_living_room:living_room_latest:living_room_latest:pCubeShape114 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube114|outside_living_room:living_room_latest:living_room_latest:pCubeShape114 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube114|outside_living_room:living_room_latest:living_room_latest:pCubeShape114 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube114|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube114|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube114|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder92|outside_living_room:living_room_latest:living_room_latest:pCylinderShape92 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder92|outside_living_room:living_room_latest:living_room_latest:pCylinderShape92 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder92|outside_living_room:living_room_latest:living_room_latest:pCylinderShape92 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube115|outside_living_room:living_room_latest:living_room_latest:pCubeShape115 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube115|outside_living_room:living_room_latest:living_room_latest:pCubeShape115 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube115|outside_living_room:living_room_latest:living_room_latest:pCubeShape115 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube115|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube115|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube115|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder93|outside_living_room:living_room_latest:living_room_latest:pCylinderShape93 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder93|outside_living_room:living_room_latest:living_room_latest:pCylinderShape93 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder93|outside_living_room:living_room_latest:living_room_latest:pCylinderShape93 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube116|outside_living_room:living_room_latest:living_room_latest:pCubeShape116 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube116|outside_living_room:living_room_latest:living_room_latest:pCubeShape116 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube116|outside_living_room:living_room_latest:living_room_latest:pCubeShape116 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube116|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube116|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube116|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube117|outside_living_room:living_room_latest:living_room_latest:pCubeShape117 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube117|outside_living_room:living_room_latest:living_room_latest:pCubeShape117 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube117|outside_living_room:living_room_latest:living_room_latest:pCubeShape117 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube117|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube117|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube117|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder94|outside_living_room:living_room_latest:living_room_latest:pCylinderShape94 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder94|outside_living_room:living_room_latest:living_room_latest:pCylinderShape94 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder94|outside_living_room:living_room_latest:living_room_latest:pCylinderShape94 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder95|outside_living_room:living_room_latest:living_room_latest:pCylinderShape95 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder95|outside_living_room:living_room_latest:living_room_latest:pCylinderShape95 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder95|outside_living_room:living_room_latest:living_room_latest:pCylinderShape95 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube118|outside_living_room:living_room_latest:living_room_latest:pCubeShape118 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube118|outside_living_room:living_room_latest:living_room_latest:pCubeShape118 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube118|outside_living_room:living_room_latest:living_room_latest:pCubeShape118 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube118|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube118|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube118|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube119|outside_living_room:living_room_latest:living_room_latest:pCubeShape119 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube119|outside_living_room:living_room_latest:living_room_latest:pCubeShape119 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube119|outside_living_room:living_room_latest:living_room_latest:pCubeShape119 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube119|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube119|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube119|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder96|outside_living_room:living_room_latest:living_room_latest:pCylinderShape96 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder96|outside_living_room:living_room_latest:living_room_latest:pCylinderShape96 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder96|outside_living_room:living_room_latest:living_room_latest:pCylinderShape96 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder97|outside_living_room:living_room_latest:living_room_latest:pCylinderShape97 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder97|outside_living_room:living_room_latest:living_room_latest:pCylinderShape97 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder97|outside_living_room:living_room_latest:living_room_latest:pCylinderShape97 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube120|outside_living_room:living_room_latest:living_room_latest:pCubeShape120 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube120|outside_living_room:living_room_latest:living_room_latest:pCubeShape120 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube120|outside_living_room:living_room_latest:living_room_latest:pCubeShape120 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube120|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube120|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube120|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube121|outside_living_room:living_room_latest:living_room_latest:pCubeShape121 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube121|outside_living_room:living_room_latest:living_room_latest:pCubeShape121 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube121|outside_living_room:living_room_latest:living_room_latest:pCubeShape121 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube121|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube121|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube121|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder98|outside_living_room:living_room_latest:living_room_latest:pCylinderShape98 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder98|outside_living_room:living_room_latest:living_room_latest:pCylinderShape98 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder98|outside_living_room:living_room_latest:living_room_latest:pCylinderShape98 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder99|outside_living_room:living_room_latest:living_room_latest:pCylinderShape99 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder99|outside_living_room:living_room_latest:living_room_latest:pCylinderShape99 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder99|outside_living_room:living_room_latest:living_room_latest:pCylinderShape99 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube133|outside_living_room:living_room_latest:living_room_latest:pCubeShape133 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube133|outside_living_room:living_room_latest:living_room_latest:pCubeShape133 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube133|outside_living_room:living_room_latest:living_room_latest:pCubeShape133 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube150|outside_living_room:living_room_latest:living_room_latest:pCubeShape150 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube150|outside_living_room:living_room_latest:living_room_latest:pCubeShape150 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube150|outside_living_room:living_room_latest:living_room_latest:pCubeShape150 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:cabinet_door_1|outside_living_room:living_room_latest:living_room_latest:cabinet_door_Shape1 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
 		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:cabinet_door_1|outside_living_room:living_room_latest:living_room_latest:cabinet_door_Shape1 
@@ -12121,6 +12415,12 @@ createNode reference -n "outside_living_roomRN";
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:cabinet_door_3|outside_living_room:living_room_latest:living_room_latest:cabinet_door_3_handle|outside_living_room:living_room_latest:living_room_latest:cabinet_door_3_handleShape 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube137|outside_living_room:living_room_latest:living_room_latest:pCubeShape137 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube137|outside_living_room:living_room_latest:living_room_latest:pCubeShape137 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube137|outside_living_room:living_room_latest:living_room_latest:pCubeShape137 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube138|outside_living_room:living_room_latest:living_room_latest:pCubeShape138 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
 		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube138|outside_living_room:living_room_latest:living_room_latest:pCubeShape138 
@@ -12132,432 +12432,6 @@ createNode reference -n "outside_living_roomRN";
 		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube96|outside_living_room:living_room_latest:living_room_latest:pCubeShape190 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube96|outside_living_room:living_room_latest:living_room_latest:pCubeShape190 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder99|outside_living_room:living_room_latest:living_room_latest:pCylinderShape99 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder99|outside_living_room:living_room_latest:living_room_latest:pCylinderShape99 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder99|outside_living_room:living_room_latest:living_room_latest:pCylinderShape99 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder98|outside_living_room:living_room_latest:living_room_latest:pCylinderShape98 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder98|outside_living_room:living_room_latest:living_room_latest:pCylinderShape98 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder98|outside_living_room:living_room_latest:living_room_latest:pCylinderShape98 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube121|outside_living_room:living_room_latest:living_room_latest:pCubeShape121 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube121|outside_living_room:living_room_latest:living_room_latest:pCubeShape121 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube121|outside_living_room:living_room_latest:living_room_latest:pCubeShape121 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube121|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube121|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube121|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube120|outside_living_room:living_room_latest:living_room_latest:pCubeShape120 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube120|outside_living_room:living_room_latest:living_room_latest:pCubeShape120 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube120|outside_living_room:living_room_latest:living_room_latest:pCubeShape120 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube120|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube120|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube120|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder97|outside_living_room:living_room_latest:living_room_latest:pCylinderShape97 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder97|outside_living_room:living_room_latest:living_room_latest:pCylinderShape97 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder97|outside_living_room:living_room_latest:living_room_latest:pCylinderShape97 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder96|outside_living_room:living_room_latest:living_room_latest:pCylinderShape96 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder96|outside_living_room:living_room_latest:living_room_latest:pCylinderShape96 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder96|outside_living_room:living_room_latest:living_room_latest:pCylinderShape96 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube119|outside_living_room:living_room_latest:living_room_latest:pCubeShape119 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube119|outside_living_room:living_room_latest:living_room_latest:pCubeShape119 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube119|outside_living_room:living_room_latest:living_room_latest:pCubeShape119 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube119|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube119|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube119|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube118|outside_living_room:living_room_latest:living_room_latest:pCubeShape118 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube118|outside_living_room:living_room_latest:living_room_latest:pCubeShape118 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube118|outside_living_room:living_room_latest:living_room_latest:pCubeShape118 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube118|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube118|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube118|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder95|outside_living_room:living_room_latest:living_room_latest:pCylinderShape95 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder95|outside_living_room:living_room_latest:living_room_latest:pCylinderShape95 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder95|outside_living_room:living_room_latest:living_room_latest:pCylinderShape95 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder94|outside_living_room:living_room_latest:living_room_latest:pCylinderShape94 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder94|outside_living_room:living_room_latest:living_room_latest:pCylinderShape94 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder94|outside_living_room:living_room_latest:living_room_latest:pCylinderShape94 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube117|outside_living_room:living_room_latest:living_room_latest:pCubeShape117 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube117|outside_living_room:living_room_latest:living_room_latest:pCubeShape117 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube117|outside_living_room:living_room_latest:living_room_latest:pCubeShape117 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube117|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube117|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube117|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube116|outside_living_room:living_room_latest:living_room_latest:pCubeShape116 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube116|outside_living_room:living_room_latest:living_room_latest:pCubeShape116 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube116|outside_living_room:living_room_latest:living_room_latest:pCubeShape116 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube116|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube116|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube116|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder93|outside_living_room:living_room_latest:living_room_latest:pCylinderShape93 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder93|outside_living_room:living_room_latest:living_room_latest:pCylinderShape93 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder93|outside_living_room:living_room_latest:living_room_latest:pCylinderShape93 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube115|outside_living_room:living_room_latest:living_room_latest:pCubeShape115 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube115|outside_living_room:living_room_latest:living_room_latest:pCubeShape115 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube115|outside_living_room:living_room_latest:living_room_latest:pCubeShape115 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube115|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube115|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube115|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder92|outside_living_room:living_room_latest:living_room_latest:pCylinderShape92 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder92|outside_living_room:living_room_latest:living_room_latest:pCylinderShape92 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder92|outside_living_room:living_room_latest:living_room_latest:pCylinderShape92 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube114|outside_living_room:living_room_latest:living_room_latest:pCubeShape114 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube114|outside_living_room:living_room_latest:living_room_latest:pCubeShape114 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube114|outside_living_room:living_room_latest:living_room_latest:pCubeShape114 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube114|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube114|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube114|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder88|outside_living_room:living_room_latest:living_room_latest:pCylinderShape88 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder88|outside_living_room:living_room_latest:living_room_latest:pCylinderShape88 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder88|outside_living_room:living_room_latest:living_room_latest:pCylinderShape88 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube106|outside_living_room:living_room_latest:living_room_latest:pCubeShape106 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube106|outside_living_room:living_room_latest:living_room_latest:pCubeShape106 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube106|outside_living_room:living_room_latest:living_room_latest:pCubeShape106 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube106|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube106|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube106|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube105|outside_living_room:living_room_latest:living_room_latest:pCubeShape105 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube105|outside_living_room:living_room_latest:living_room_latest:pCubeShape105 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube105|outside_living_room:living_room_latest:living_room_latest:pCubeShape105 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube105|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube105|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube105|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder87|outside_living_room:living_room_latest:living_room_latest:pCylinderShape87 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder87|outside_living_room:living_room_latest:living_room_latest:pCylinderShape87 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder87|outside_living_room:living_room_latest:living_room_latest:pCylinderShape87 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder86|outside_living_room:living_room_latest:living_room_latest:pCylinderShape86 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder86|outside_living_room:living_room_latest:living_room_latest:pCylinderShape86 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder86|outside_living_room:living_room_latest:living_room_latest:pCylinderShape86 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube103|outside_living_room:living_room_latest:living_room_latest:pCubeShape103 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube103|outside_living_room:living_room_latest:living_room_latest:pCubeShape103 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube103|outside_living_room:living_room_latest:living_room_latest:pCubeShape103 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube103|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube103|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube103|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder84|outside_living_room:living_room_latest:living_room_latest:pCylinderShape84 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder84|outside_living_room:living_room_latest:living_room_latest:pCylinderShape84 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder84|outside_living_room:living_room_latest:living_room_latest:pCylinderShape84 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube101|outside_living_room:living_room_latest:living_room_latest:pCubeShape101 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube101|outside_living_room:living_room_latest:living_room_latest:pCubeShape101 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube101|outside_living_room:living_room_latest:living_room_latest:pCubeShape101 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube101|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube101|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube101|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder83|outside_living_room:living_room_latest:living_room_latest:pCylinderShape83 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder83|outside_living_room:living_room_latest:living_room_latest:pCylinderShape83 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder83|outside_living_room:living_room_latest:living_room_latest:pCylinderShape83 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube100|outside_living_room:living_room_latest:living_room_latest:pCubeShape100 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube100|outside_living_room:living_room_latest:living_room_latest:pCubeShape100 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube100|outside_living_room:living_room_latest:living_room_latest:pCubeShape100 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube100|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube100|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube100|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube18|outside_living_room:living_room_latest:living_room_latest:pCubeShape18 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube18|outside_living_room:living_room_latest:living_room_latest:pCubeShape18 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube18|outside_living_room:living_room_latest:living_room_latest:pCubeShape18 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube17|outside_living_room:living_room_latest:living_room_latest:pCubeShape17 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube17|outside_living_room:living_room_latest:living_room_latest:pCubeShape17 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube17|outside_living_room:living_room_latest:living_room_latest:pCubeShape17 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube15|outside_living_room:living_room_latest:living_room_latest:pCubeShape15 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube15|outside_living_room:living_room_latest:living_room_latest:pCubeShape15 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube15|outside_living_room:living_room_latest:living_room_latest:pCubeShape15 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube15|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape10 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube15|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape10 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube15|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape10 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder16|outside_living_room:living_room_latest:living_room_latest:pCylinderShape16 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder16|outside_living_room:living_room_latest:living_room_latest:pCylinderShape16 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder16|outside_living_room:living_room_latest:living_room_latest:pCylinderShape16 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder17|outside_living_room:living_room_latest:living_room_latest:pCylinderShape17 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder17|outside_living_room:living_room_latest:living_room_latest:pCylinderShape17 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder17|outside_living_room:living_room_latest:living_room_latest:pCylinderShape17 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder7|outside_living_room:living_room_latest:living_room_latest:pCylinderShape7 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder7|outside_living_room:living_room_latest:living_room_latest:pCylinderShape7 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder7|outside_living_room:living_room_latest:living_room_latest:pCylinderShape7 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder15|outside_living_room:living_room_latest:living_room_latest:pCylinderShape15 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder15|outside_living_room:living_room_latest:living_room_latest:pCylinderShape15 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder15|outside_living_room:living_room_latest:living_room_latest:pCylinderShape15 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder14|outside_living_room:living_room_latest:living_room_latest:pCylinderShape14 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder14|outside_living_room:living_room_latest:living_room_latest:pCylinderShape14 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder14|outside_living_room:living_room_latest:living_room_latest:pCylinderShape14 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder13|outside_living_room:living_room_latest:living_room_latest:pCylinderShape13 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder13|outside_living_room:living_room_latest:living_room_latest:pCylinderShape13 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder13|outside_living_room:living_room_latest:living_room_latest:pCylinderShape13 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder12|outside_living_room:living_room_latest:living_room_latest:pCylinderShape12 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder12|outside_living_room:living_room_latest:living_room_latest:pCylinderShape12 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder12|outside_living_room:living_room_latest:living_room_latest:pCylinderShape12 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder11|outside_living_room:living_room_latest:living_room_latest:pCylinderShape11 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder11|outside_living_room:living_room_latest:living_room_latest:pCylinderShape11 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder11|outside_living_room:living_room_latest:living_room_latest:pCylinderShape11 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder10|outside_living_room:living_room_latest:living_room_latest:pCylinderShape10 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder10|outside_living_room:living_room_latest:living_room_latest:pCylinderShape10 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder10|outside_living_room:living_room_latest:living_room_latest:pCylinderShape10 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder8|outside_living_room:living_room_latest:living_room_latest:pCylinderShape8 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder8|outside_living_room:living_room_latest:living_room_latest:pCylinderShape8 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder8|outside_living_room:living_room_latest:living_room_latest:pCylinderShape8 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder6|outside_living_room:living_room_latest:living_room_latest:pCylinderShape6 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder6|outside_living_room:living_room_latest:living_room_latest:pCylinderShape6 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder6|outside_living_room:living_room_latest:living_room_latest:pCylinderShape6 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder5|outside_living_room:living_room_latest:living_room_latest:pCylinderShape5 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder5|outside_living_room:living_room_latest:living_room_latest:pCylinderShape5 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder5|outside_living_room:living_room_latest:living_room_latest:pCylinderShape5 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube14|outside_living_room:living_room_latest:living_room_latest:pCubeShape14 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube14|outside_living_room:living_room_latest:living_room_latest:pCubeShape14 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube14|outside_living_room:living_room_latest:living_room_latest:pCubeShape14 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube14|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape7 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube14|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape7 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube14|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape7 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube13|outside_living_room:living_room_latest:living_room_latest:pCubeShape13 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube13|outside_living_room:living_room_latest:living_room_latest:pCubeShape13 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube13|outside_living_room:living_room_latest:living_room_latest:pCubeShape13 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube13|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape8 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube13|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape8 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube13|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape8 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube12|outside_living_room:living_room_latest:living_room_latest:pCubeShape12 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube12|outside_living_room:living_room_latest:living_room_latest:pCubeShape12 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube12|outside_living_room:living_room_latest:living_room_latest:pCubeShape12 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube12|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape5 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube12|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape5 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube12|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape5 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube11|outside_living_room:living_room_latest:living_room_latest:pCubeShape11 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube11|outside_living_room:living_room_latest:living_room_latest:pCubeShape11 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube11|outside_living_room:living_room_latest:living_room_latest:pCubeShape11 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube11|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape6 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube11|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape6 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube11|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape6 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube10|outside_living_room:living_room_latest:living_room_latest:pCubeShape10 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube10|outside_living_room:living_room_latest:living_room_latest:pCubeShape10 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube10|outside_living_room:living_room_latest:living_room_latest:pCubeShape10 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube10|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape3 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube10|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape3 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube10|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape3 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube9|outside_living_room:living_room_latest:living_room_latest:pCubeShape9 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube9|outside_living_room:living_room_latest:living_room_latest:pCubeShape9 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube9|outside_living_room:living_room_latest:living_room_latest:pCubeShape9 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube9|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube9|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube9|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube7|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape2 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube7|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape2 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube7|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape2 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube5|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape12 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube5|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape12 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube5|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape12 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube4|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape13 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube4|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape13 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube4|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape13 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube3|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube3|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube3|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |outside_living_room:living_room_latest:living_room_latest:exit_window_2|outside_living_room:living_room_latest:living_room_latest:exit_window_2Shape 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
@@ -14545,11 +14419,11 @@ createNode reference -n "outside_living_roomRN";
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:polySurface74|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:polySurfaceShape363 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:polySurface77|outside_living_room:living_room_latest:living_room_latest:transform40|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:polySurfaceShape77 
+		1 |outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:polySurface77|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:polySurfaceShape77 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:polySurface77|outside_living_room:living_room_latest:living_room_latest:transform40|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:polySurfaceShape77 
+		1 |outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:polySurface77|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:polySurfaceShape77 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:polySurface77|outside_living_room:living_room_latest:living_room_latest:transform40|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:polySurfaceShape77 
+		1 |outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:polySurface77|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:polySurfaceShape77 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:polySurface78|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:polySurfaceShape364 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
@@ -14703,6 +14577,34 @@ createNode reference -n "outside_living_roomRN";
 		
 		2 "|outside_living_room:living_room_latest:living_room_latest:crown_molding|outside_living_room:living_room_latest:living_room_latest:crown_unit_10|outside_living_room:living_room_latest:living_room_latest:pasted__polySurfaceShape1" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:crown_molding|outside_living_room:living_room_latest:living_room_latest:crown_unit_11|outside_living_room:living_room_latest:living_room_latest:crown_unit_Shape11" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:crown_molding|outside_living_room:living_room_latest:living_room_latest:crown_unit_11|outside_living_room:living_room_latest:living_room_latest:crown_unit_Shape11" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:crown_molding|outside_living_room:living_room_latest:living_room_latest:crown_unit_11|outside_living_room:living_room_latest:living_room_latest:crown_unit_Shape11" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:crown_molding|outside_living_room:living_room_latest:living_room_latest:crown_unit_11|outside_living_room:living_room_latest:living_room_latest:pasted__polySurfaceShape1" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:crown_molding|outside_living_room:living_room_latest:living_room_latest:crown_unit_11|outside_living_room:living_room_latest:living_room_latest:pasted__polySurfaceShape1" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:crown_molding|outside_living_room:living_room_latest:living_room_latest:crown_unit_11|outside_living_room:living_room_latest:living_room_latest:pasted__polySurfaceShape1" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:crown_molding|outside_living_room:living_room_latest:living_room_latest:crown_unit_12|outside_living_room:living_room_latest:living_room_latest:crown_unit_Shape12" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:crown_molding|outside_living_room:living_room_latest:living_room_latest:crown_unit_12|outside_living_room:living_room_latest:living_room_latest:crown_unit_Shape12" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:crown_molding|outside_living_room:living_room_latest:living_room_latest:crown_unit_12|outside_living_room:living_room_latest:living_room_latest:crown_unit_Shape12" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:crown_molding|outside_living_room:living_room_latest:living_room_latest:crown_unit_12|outside_living_room:living_room_latest:living_room_latest:pasted__polySurfaceShape1" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:crown_molding|outside_living_room:living_room_latest:living_room_latest:crown_unit_12|outside_living_room:living_room_latest:living_room_latest:pasted__polySurfaceShape1" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:crown_molding|outside_living_room:living_room_latest:living_room_latest:crown_unit_12|outside_living_room:living_room_latest:living_room_latest:pasted__polySurfaceShape1" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|outside_living_room:living_room_latest:living_room_latest:cabinet|outside_living_room:living_room_latest:living_room_latest:cabinetShape" 
 		"surfaceReference" " 1"
 		2 "|outside_living_room:living_room_latest:living_room_latest:cabinet|outside_living_room:living_room_latest:living_room_latest:cabinetShape" 
@@ -14842,6 +14744,13 @@ createNode reference -n "outside_living_roomRN";
 		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
 		2 "|outside_living_room:living_room_latest:living_room_latest:lamp|outside_living_room:living_room_latest:living_room_latest:lampShape" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:coffee_table|outside_living_room:living_room_latest:living_room_latest:coffee_tableShape" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:coffee_table|outside_living_room:living_room_latest:living_room_latest:coffee_tableShape" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:coffee_table|outside_living_room:living_room_latest:living_room_latest:coffee_tableShape" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|outside_living_room:living_room_latest:living_room_latest:photo_frame|outside_living_room:living_room_latest:living_room_latest:photo_frameShape" 
 		"surfaceReference" " 1"
@@ -15144,6 +15053,622 @@ createNode reference -n "outside_living_roomRN";
 		
 		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_upper_unit_1|outside_living_room:living_room_latest:living_room_latest:cabinet_door_7|outside_living_room:living_room_latest:living_room_latest:cabinet_door_7_handle|outside_living_room:living_room_latest:living_room_latest:cabinet_door_7_handleShape" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unitShape" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unitShape" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unitShape" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube2|outside_living_room:living_room_latest:living_room_latest:pCubeShape2" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube2|outside_living_room:living_room_latest:living_room_latest:pCubeShape2" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube2|outside_living_room:living_room_latest:living_room_latest:pCubeShape2" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube3|outside_living_room:living_room_latest:living_room_latest:pCubeShape3" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube3|outside_living_room:living_room_latest:living_room_latest:pCubeShape3" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube3|outside_living_room:living_room_latest:living_room_latest:pCubeShape3" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube3|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube3|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube3|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube4|outside_living_room:living_room_latest:living_room_latest:pCubeShape4" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube4|outside_living_room:living_room_latest:living_room_latest:pCubeShape4" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube4|outside_living_room:living_room_latest:living_room_latest:pCubeShape4" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube4|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape13" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube4|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape13" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube4|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape13" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube5|outside_living_room:living_room_latest:living_room_latest:pCubeShape5" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube5|outside_living_room:living_room_latest:living_room_latest:pCubeShape5" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube5|outside_living_room:living_room_latest:living_room_latest:pCubeShape5" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube5|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape12" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube5|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape12" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube5|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape12" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube7|outside_living_room:living_room_latest:living_room_latest:pCubeShape7" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube7|outside_living_room:living_room_latest:living_room_latest:pCubeShape7" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube7|outside_living_room:living_room_latest:living_room_latest:pCubeShape7" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube7|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape2" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube7|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape2" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube7|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape2" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube8|outside_living_room:living_room_latest:living_room_latest:pCubeShape8" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube8|outside_living_room:living_room_latest:living_room_latest:pCubeShape8" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube8|outside_living_room:living_room_latest:living_room_latest:pCubeShape8" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube8|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape1" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube8|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape1" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube8|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape1" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube9|outside_living_room:living_room_latest:living_room_latest:pCubeShape9" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube9|outside_living_room:living_room_latest:living_room_latest:pCubeShape9" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube9|outside_living_room:living_room_latest:living_room_latest:pCubeShape9" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube9|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube9|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube9|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube10|outside_living_room:living_room_latest:living_room_latest:pCubeShape10" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube10|outside_living_room:living_room_latest:living_room_latest:pCubeShape10" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube10|outside_living_room:living_room_latest:living_room_latest:pCubeShape10" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube10|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape3" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube10|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape3" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube10|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape3" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube11|outside_living_room:living_room_latest:living_room_latest:pCubeShape11" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube11|outside_living_room:living_room_latest:living_room_latest:pCubeShape11" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube11|outside_living_room:living_room_latest:living_room_latest:pCubeShape11" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube11|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape6" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube11|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape6" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube11|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape6" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube12|outside_living_room:living_room_latest:living_room_latest:pCubeShape12" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube12|outside_living_room:living_room_latest:living_room_latest:pCubeShape12" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube12|outside_living_room:living_room_latest:living_room_latest:pCubeShape12" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube12|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape5" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube12|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape5" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube12|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape5" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube13|outside_living_room:living_room_latest:living_room_latest:pCubeShape13" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube13|outside_living_room:living_room_latest:living_room_latest:pCubeShape13" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube13|outside_living_room:living_room_latest:living_room_latest:pCubeShape13" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube13|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape8" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube13|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape8" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube13|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape8" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube14|outside_living_room:living_room_latest:living_room_latest:pCubeShape14" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube14|outside_living_room:living_room_latest:living_room_latest:pCubeShape14" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube14|outside_living_room:living_room_latest:living_room_latest:pCubeShape14" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube14|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape7" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube14|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape7" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube14|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape7" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder3|outside_living_room:living_room_latest:living_room_latest:pCylinderShape3" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder3|outside_living_room:living_room_latest:living_room_latest:pCylinderShape3" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder3|outside_living_room:living_room_latest:living_room_latest:pCylinderShape3" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder4|outside_living_room:living_room_latest:living_room_latest:pCylinderShape4" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder4|outside_living_room:living_room_latest:living_room_latest:pCylinderShape4" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder4|outside_living_room:living_room_latest:living_room_latest:pCylinderShape4" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder5|outside_living_room:living_room_latest:living_room_latest:pCylinderShape5" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder5|outside_living_room:living_room_latest:living_room_latest:pCylinderShape5" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder5|outside_living_room:living_room_latest:living_room_latest:pCylinderShape5" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder6|outside_living_room:living_room_latest:living_room_latest:pCylinderShape6" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder6|outside_living_room:living_room_latest:living_room_latest:pCylinderShape6" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder6|outside_living_room:living_room_latest:living_room_latest:pCylinderShape6" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder8|outside_living_room:living_room_latest:living_room_latest:pCylinderShape8" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder8|outside_living_room:living_room_latest:living_room_latest:pCylinderShape8" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder8|outside_living_room:living_room_latest:living_room_latest:pCylinderShape8" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder9|outside_living_room:living_room_latest:living_room_latest:pCylinderShape9" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder9|outside_living_room:living_room_latest:living_room_latest:pCylinderShape9" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder9|outside_living_room:living_room_latest:living_room_latest:pCylinderShape9" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder10|outside_living_room:living_room_latest:living_room_latest:pCylinderShape10" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder10|outside_living_room:living_room_latest:living_room_latest:pCylinderShape10" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder10|outside_living_room:living_room_latest:living_room_latest:pCylinderShape10" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder11|outside_living_room:living_room_latest:living_room_latest:pCylinderShape11" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder11|outside_living_room:living_room_latest:living_room_latest:pCylinderShape11" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder11|outside_living_room:living_room_latest:living_room_latest:pCylinderShape11" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder12|outside_living_room:living_room_latest:living_room_latest:pCylinderShape12" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder12|outside_living_room:living_room_latest:living_room_latest:pCylinderShape12" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder12|outside_living_room:living_room_latest:living_room_latest:pCylinderShape12" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder13|outside_living_room:living_room_latest:living_room_latest:pCylinderShape13" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder13|outside_living_room:living_room_latest:living_room_latest:pCylinderShape13" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder13|outside_living_room:living_room_latest:living_room_latest:pCylinderShape13" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder14|outside_living_room:living_room_latest:living_room_latest:pCylinderShape14" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder14|outside_living_room:living_room_latest:living_room_latest:pCylinderShape14" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder14|outside_living_room:living_room_latest:living_room_latest:pCylinderShape14" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder15|outside_living_room:living_room_latest:living_room_latest:pCylinderShape15" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder15|outside_living_room:living_room_latest:living_room_latest:pCylinderShape15" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder15|outside_living_room:living_room_latest:living_room_latest:pCylinderShape15" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder7|outside_living_room:living_room_latest:living_room_latest:pCylinderShape7" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder7|outside_living_room:living_room_latest:living_room_latest:pCylinderShape7" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder7|outside_living_room:living_room_latest:living_room_latest:pCylinderShape7" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder17|outside_living_room:living_room_latest:living_room_latest:pCylinderShape17" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder17|outside_living_room:living_room_latest:living_room_latest:pCylinderShape17" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder17|outside_living_room:living_room_latest:living_room_latest:pCylinderShape17" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder16|outside_living_room:living_room_latest:living_room_latest:pCylinderShape16" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder16|outside_living_room:living_room_latest:living_room_latest:pCylinderShape16" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder16|outside_living_room:living_room_latest:living_room_latest:pCylinderShape16" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube15|outside_living_room:living_room_latest:living_room_latest:pCubeShape15" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube15|outside_living_room:living_room_latest:living_room_latest:pCubeShape15" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube15|outside_living_room:living_room_latest:living_room_latest:pCubeShape15" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube15|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape10" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube15|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape10" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube15|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape10" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:polySurface2|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape2" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:polySurface2|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape2" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:polySurface2|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape2" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:polySurface3|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape3" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:polySurface3|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape3" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:polySurface3|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape3" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:polySurface3|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape302" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:polySurface3|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape302" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:polySurface3|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape302" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube17|outside_living_room:living_room_latest:living_room_latest:pCubeShape17" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube17|outside_living_room:living_room_latest:living_room_latest:pCubeShape17" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube17|outside_living_room:living_room_latest:living_room_latest:pCubeShape17" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:polySurface4|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:polySurface4|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:polySurface4|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube18|outside_living_room:living_room_latest:living_room_latest:pCubeShape18" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube18|outside_living_room:living_room_latest:living_room_latest:pCubeShape18" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube18|outside_living_room:living_room_latest:living_room_latest:pCubeShape18" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube100|outside_living_room:living_room_latest:living_room_latest:pCubeShape100" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube100|outside_living_room:living_room_latest:living_room_latest:pCubeShape100" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube100|outside_living_room:living_room_latest:living_room_latest:pCubeShape100" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube100|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube100|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube100|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder83|outside_living_room:living_room_latest:living_room_latest:pCylinderShape83" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder83|outside_living_room:living_room_latest:living_room_latest:pCylinderShape83" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder83|outside_living_room:living_room_latest:living_room_latest:pCylinderShape83" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube101|outside_living_room:living_room_latest:living_room_latest:pCubeShape101" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube101|outside_living_room:living_room_latest:living_room_latest:pCubeShape101" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube101|outside_living_room:living_room_latest:living_room_latest:pCubeShape101" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube101|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube101|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube101|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder84|outside_living_room:living_room_latest:living_room_latest:pCylinderShape84" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder84|outside_living_room:living_room_latest:living_room_latest:pCylinderShape84" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder84|outside_living_room:living_room_latest:living_room_latest:pCylinderShape84" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube103|outside_living_room:living_room_latest:living_room_latest:pCubeShape103" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube103|outside_living_room:living_room_latest:living_room_latest:pCubeShape103" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube103|outside_living_room:living_room_latest:living_room_latest:pCubeShape103" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube103|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube103|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube103|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder86|outside_living_room:living_room_latest:living_room_latest:pCylinderShape86" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder86|outside_living_room:living_room_latest:living_room_latest:pCylinderShape86" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder86|outside_living_room:living_room_latest:living_room_latest:pCylinderShape86" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder87|outside_living_room:living_room_latest:living_room_latest:pCylinderShape87" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder87|outside_living_room:living_room_latest:living_room_latest:pCylinderShape87" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder87|outside_living_room:living_room_latest:living_room_latest:pCylinderShape87" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube105|outside_living_room:living_room_latest:living_room_latest:pCubeShape105" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube105|outside_living_room:living_room_latest:living_room_latest:pCubeShape105" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube105|outside_living_room:living_room_latest:living_room_latest:pCubeShape105" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube105|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube105|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube105|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube106|outside_living_room:living_room_latest:living_room_latest:pCubeShape106" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube106|outside_living_room:living_room_latest:living_room_latest:pCubeShape106" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube106|outside_living_room:living_room_latest:living_room_latest:pCubeShape106" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube106|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube106|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube106|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder88|outside_living_room:living_room_latest:living_room_latest:pCylinderShape88" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder88|outside_living_room:living_room_latest:living_room_latest:pCylinderShape88" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder88|outside_living_room:living_room_latest:living_room_latest:pCylinderShape88" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube114|outside_living_room:living_room_latest:living_room_latest:pCubeShape114" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube114|outside_living_room:living_room_latest:living_room_latest:pCubeShape114" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube114|outside_living_room:living_room_latest:living_room_latest:pCubeShape114" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube114|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube114|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube114|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder92|outside_living_room:living_room_latest:living_room_latest:pCylinderShape92" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder92|outside_living_room:living_room_latest:living_room_latest:pCylinderShape92" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder92|outside_living_room:living_room_latest:living_room_latest:pCylinderShape92" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube115|outside_living_room:living_room_latest:living_room_latest:pCubeShape115" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube115|outside_living_room:living_room_latest:living_room_latest:pCubeShape115" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube115|outside_living_room:living_room_latest:living_room_latest:pCubeShape115" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube115|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube115|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube115|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder93|outside_living_room:living_room_latest:living_room_latest:pCylinderShape93" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder93|outside_living_room:living_room_latest:living_room_latest:pCylinderShape93" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder93|outside_living_room:living_room_latest:living_room_latest:pCylinderShape93" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube116|outside_living_room:living_room_latest:living_room_latest:pCubeShape116" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube116|outside_living_room:living_room_latest:living_room_latest:pCubeShape116" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube116|outside_living_room:living_room_latest:living_room_latest:pCubeShape116" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube116|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube116|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube116|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube117|outside_living_room:living_room_latest:living_room_latest:pCubeShape117" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube117|outside_living_room:living_room_latest:living_room_latest:pCubeShape117" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube117|outside_living_room:living_room_latest:living_room_latest:pCubeShape117" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube117|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube117|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube117|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder94|outside_living_room:living_room_latest:living_room_latest:pCylinderShape94" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder94|outside_living_room:living_room_latest:living_room_latest:pCylinderShape94" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder94|outside_living_room:living_room_latest:living_room_latest:pCylinderShape94" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder95|outside_living_room:living_room_latest:living_room_latest:pCylinderShape95" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder95|outside_living_room:living_room_latest:living_room_latest:pCylinderShape95" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder95|outside_living_room:living_room_latest:living_room_latest:pCylinderShape95" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube118|outside_living_room:living_room_latest:living_room_latest:pCubeShape118" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube118|outside_living_room:living_room_latest:living_room_latest:pCubeShape118" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube118|outside_living_room:living_room_latest:living_room_latest:pCubeShape118" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube118|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube118|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube118|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube119|outside_living_room:living_room_latest:living_room_latest:pCubeShape119" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube119|outside_living_room:living_room_latest:living_room_latest:pCubeShape119" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube119|outside_living_room:living_room_latest:living_room_latest:pCubeShape119" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube119|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube119|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube119|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder96|outside_living_room:living_room_latest:living_room_latest:pCylinderShape96" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder96|outside_living_room:living_room_latest:living_room_latest:pCylinderShape96" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder96|outside_living_room:living_room_latest:living_room_latest:pCylinderShape96" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder97|outside_living_room:living_room_latest:living_room_latest:pCylinderShape97" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder97|outside_living_room:living_room_latest:living_room_latest:pCylinderShape97" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder97|outside_living_room:living_room_latest:living_room_latest:pCylinderShape97" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube120|outside_living_room:living_room_latest:living_room_latest:pCubeShape120" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube120|outside_living_room:living_room_latest:living_room_latest:pCubeShape120" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube120|outside_living_room:living_room_latest:living_room_latest:pCubeShape120" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube120|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube120|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube120|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube121|outside_living_room:living_room_latest:living_room_latest:pCubeShape121" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube121|outside_living_room:living_room_latest:living_room_latest:pCubeShape121" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube121|outside_living_room:living_room_latest:living_room_latest:pCubeShape121" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube121|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube121|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube121|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder98|outside_living_room:living_room_latest:living_room_latest:pCylinderShape98" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder98|outside_living_room:living_room_latest:living_room_latest:pCylinderShape98" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder98|outside_living_room:living_room_latest:living_room_latest:pCylinderShape98" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder99|outside_living_room:living_room_latest:living_room_latest:pCylinderShape99" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder99|outside_living_room:living_room_latest:living_room_latest:pCylinderShape99" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCylinder99|outside_living_room:living_room_latest:living_room_latest:pCylinderShape99" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube133|outside_living_room:living_room_latest:living_room_latest:pCubeShape133" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube133|outside_living_room:living_room_latest:living_room_latest:pCubeShape133" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube133|outside_living_room:living_room_latest:living_room_latest:pCubeShape133" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube150|outside_living_room:living_room_latest:living_room_latest:pCubeShape150" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube150|outside_living_room:living_room_latest:living_room_latest:pCubeShape150" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:kitchen_cabinet_lower_unit|outside_living_room:living_room_latest:living_room_latest:pCube150|outside_living_room:living_room_latest:living_room_latest:pCubeShape150" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:cabinet_door_1|outside_living_room:living_room_latest:living_room_latest:cabinet_door_Shape1" 
 		"surfaceReference" " 1"
 		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:cabinet_door_1|outside_living_room:living_room_latest:living_room_latest:cabinet_door_Shape1" 
@@ -15284,6 +15809,13 @@ createNode reference -n "outside_living_roomRN";
 		
 		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:cabinet_door_3|outside_living_room:living_room_latest:living_room_latest:cabinet_door_3_handle|outside_living_room:living_room_latest:living_room_latest:cabinet_door_3_handleShape" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube137|outside_living_room:living_room_latest:living_room_latest:pCubeShape137" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube137|outside_living_room:living_room_latest:living_room_latest:pCubeShape137" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube137|outside_living_room:living_room_latest:living_room_latest:pCubeShape137" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube138|outside_living_room:living_room_latest:living_room_latest:pCubeShape138" 
 		"surfaceReference" " 1"
 		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube138|outside_living_room:living_room_latest:living_room_latest:pCubeShape138" 
@@ -15297,503 +15829,6 @@ createNode reference -n "outside_living_roomRN";
 		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
 		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube96|outside_living_room:living_room_latest:living_room_latest:pCubeShape190" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder99|outside_living_room:living_room_latest:living_room_latest:pCylinderShape99" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder99|outside_living_room:living_room_latest:living_room_latest:pCylinderShape99" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder99|outside_living_room:living_room_latest:living_room_latest:pCylinderShape99" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder98|outside_living_room:living_room_latest:living_room_latest:pCylinderShape98" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder98|outside_living_room:living_room_latest:living_room_latest:pCylinderShape98" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder98|outside_living_room:living_room_latest:living_room_latest:pCylinderShape98" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube121|outside_living_room:living_room_latest:living_room_latest:pCubeShape121" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube121|outside_living_room:living_room_latest:living_room_latest:pCubeShape121" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube121|outside_living_room:living_room_latest:living_room_latest:pCubeShape121" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube121|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube121|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube121|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube120|outside_living_room:living_room_latest:living_room_latest:pCubeShape120" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube120|outside_living_room:living_room_latest:living_room_latest:pCubeShape120" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube120|outside_living_room:living_room_latest:living_room_latest:pCubeShape120" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube120|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube120|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube120|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder97|outside_living_room:living_room_latest:living_room_latest:pCylinderShape97" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder97|outside_living_room:living_room_latest:living_room_latest:pCylinderShape97" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder97|outside_living_room:living_room_latest:living_room_latest:pCylinderShape97" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder96|outside_living_room:living_room_latest:living_room_latest:pCylinderShape96" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder96|outside_living_room:living_room_latest:living_room_latest:pCylinderShape96" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder96|outside_living_room:living_room_latest:living_room_latest:pCylinderShape96" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube119|outside_living_room:living_room_latest:living_room_latest:pCubeShape119" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube119|outside_living_room:living_room_latest:living_room_latest:pCubeShape119" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube119|outside_living_room:living_room_latest:living_room_latest:pCubeShape119" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube119|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube119|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube119|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube118|outside_living_room:living_room_latest:living_room_latest:pCubeShape118" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube118|outside_living_room:living_room_latest:living_room_latest:pCubeShape118" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube118|outside_living_room:living_room_latest:living_room_latest:pCubeShape118" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube118|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube118|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube118|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder95|outside_living_room:living_room_latest:living_room_latest:pCylinderShape95" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder95|outside_living_room:living_room_latest:living_room_latest:pCylinderShape95" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder95|outside_living_room:living_room_latest:living_room_latest:pCylinderShape95" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder94|outside_living_room:living_room_latest:living_room_latest:pCylinderShape94" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder94|outside_living_room:living_room_latest:living_room_latest:pCylinderShape94" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder94|outside_living_room:living_room_latest:living_room_latest:pCylinderShape94" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube117|outside_living_room:living_room_latest:living_room_latest:pCubeShape117" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube117|outside_living_room:living_room_latest:living_room_latest:pCubeShape117" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube117|outside_living_room:living_room_latest:living_room_latest:pCubeShape117" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube117|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube117|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube117|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube116|outside_living_room:living_room_latest:living_room_latest:pCubeShape116" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube116|outside_living_room:living_room_latest:living_room_latest:pCubeShape116" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube116|outside_living_room:living_room_latest:living_room_latest:pCubeShape116" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube116|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube116|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube116|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder93|outside_living_room:living_room_latest:living_room_latest:pCylinderShape93" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder93|outside_living_room:living_room_latest:living_room_latest:pCylinderShape93" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder93|outside_living_room:living_room_latest:living_room_latest:pCylinderShape93" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube115|outside_living_room:living_room_latest:living_room_latest:pCubeShape115" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube115|outside_living_room:living_room_latest:living_room_latest:pCubeShape115" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube115|outside_living_room:living_room_latest:living_room_latest:pCubeShape115" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube115|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube115|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube115|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder92|outside_living_room:living_room_latest:living_room_latest:pCylinderShape92" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder92|outside_living_room:living_room_latest:living_room_latest:pCylinderShape92" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder92|outside_living_room:living_room_latest:living_room_latest:pCylinderShape92" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube114|outside_living_room:living_room_latest:living_room_latest:pCubeShape114" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube114|outside_living_room:living_room_latest:living_room_latest:pCubeShape114" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube114|outside_living_room:living_room_latest:living_room_latest:pCubeShape114" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube114|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube114|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube114|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder88|outside_living_room:living_room_latest:living_room_latest:pCylinderShape88" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder88|outside_living_room:living_room_latest:living_room_latest:pCylinderShape88" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder88|outside_living_room:living_room_latest:living_room_latest:pCylinderShape88" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube106|outside_living_room:living_room_latest:living_room_latest:pCubeShape106" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube106|outside_living_room:living_room_latest:living_room_latest:pCubeShape106" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube106|outside_living_room:living_room_latest:living_room_latest:pCubeShape106" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube106|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube106|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube106|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube105|outside_living_room:living_room_latest:living_room_latest:pCubeShape105" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube105|outside_living_room:living_room_latest:living_room_latest:pCubeShape105" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube105|outside_living_room:living_room_latest:living_room_latest:pCubeShape105" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube105|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube105|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube105|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder87|outside_living_room:living_room_latest:living_room_latest:pCylinderShape87" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder87|outside_living_room:living_room_latest:living_room_latest:pCylinderShape87" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder87|outside_living_room:living_room_latest:living_room_latest:pCylinderShape87" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder86|outside_living_room:living_room_latest:living_room_latest:pCylinderShape86" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder86|outside_living_room:living_room_latest:living_room_latest:pCylinderShape86" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder86|outside_living_room:living_room_latest:living_room_latest:pCylinderShape86" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube103|outside_living_room:living_room_latest:living_room_latest:pCubeShape103" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube103|outside_living_room:living_room_latest:living_room_latest:pCubeShape103" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube103|outside_living_room:living_room_latest:living_room_latest:pCubeShape103" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube103|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube103|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube103|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder84|outside_living_room:living_room_latest:living_room_latest:pCylinderShape84" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder84|outside_living_room:living_room_latest:living_room_latest:pCylinderShape84" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder84|outside_living_room:living_room_latest:living_room_latest:pCylinderShape84" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube101|outside_living_room:living_room_latest:living_room_latest:pCubeShape101" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube101|outside_living_room:living_room_latest:living_room_latest:pCubeShape101" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube101|outside_living_room:living_room_latest:living_room_latest:pCubeShape101" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube101|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube101|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube101|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder83|outside_living_room:living_room_latest:living_room_latest:pCylinderShape83" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder83|outside_living_room:living_room_latest:living_room_latest:pCylinderShape83" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder83|outside_living_room:living_room_latest:living_room_latest:pCylinderShape83" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube100|outside_living_room:living_room_latest:living_room_latest:pCubeShape100" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube100|outside_living_room:living_room_latest:living_room_latest:pCubeShape100" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube100|outside_living_room:living_room_latest:living_room_latest:pCubeShape100" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube100|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube100|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube100|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube18|outside_living_room:living_room_latest:living_room_latest:pCubeShape18" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube18|outside_living_room:living_room_latest:living_room_latest:pCubeShape18" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube18|outside_living_room:living_room_latest:living_room_latest:pCubeShape18" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube17|outside_living_room:living_room_latest:living_room_latest:pCubeShape17" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube17|outside_living_room:living_room_latest:living_room_latest:pCubeShape17" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube17|outside_living_room:living_room_latest:living_room_latest:pCubeShape17" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube15|outside_living_room:living_room_latest:living_room_latest:pCubeShape15" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube15|outside_living_room:living_room_latest:living_room_latest:pCubeShape15" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube15|outside_living_room:living_room_latest:living_room_latest:pCubeShape15" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube15|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape10" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube15|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape10" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube15|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape10" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder16|outside_living_room:living_room_latest:living_room_latest:pCylinderShape16" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder16|outside_living_room:living_room_latest:living_room_latest:pCylinderShape16" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder16|outside_living_room:living_room_latest:living_room_latest:pCylinderShape16" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder17|outside_living_room:living_room_latest:living_room_latest:pCylinderShape17" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder17|outside_living_room:living_room_latest:living_room_latest:pCylinderShape17" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder17|outside_living_room:living_room_latest:living_room_latest:pCylinderShape17" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder7|outside_living_room:living_room_latest:living_room_latest:pCylinderShape7" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder7|outside_living_room:living_room_latest:living_room_latest:pCylinderShape7" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder7|outside_living_room:living_room_latest:living_room_latest:pCylinderShape7" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder15|outside_living_room:living_room_latest:living_room_latest:pCylinderShape15" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder15|outside_living_room:living_room_latest:living_room_latest:pCylinderShape15" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder15|outside_living_room:living_room_latest:living_room_latest:pCylinderShape15" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder14|outside_living_room:living_room_latest:living_room_latest:pCylinderShape14" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder14|outside_living_room:living_room_latest:living_room_latest:pCylinderShape14" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder14|outside_living_room:living_room_latest:living_room_latest:pCylinderShape14" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder13|outside_living_room:living_room_latest:living_room_latest:pCylinderShape13" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder13|outside_living_room:living_room_latest:living_room_latest:pCylinderShape13" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder13|outside_living_room:living_room_latest:living_room_latest:pCylinderShape13" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder12|outside_living_room:living_room_latest:living_room_latest:pCylinderShape12" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder12|outside_living_room:living_room_latest:living_room_latest:pCylinderShape12" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder12|outside_living_room:living_room_latest:living_room_latest:pCylinderShape12" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder11|outside_living_room:living_room_latest:living_room_latest:pCylinderShape11" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder11|outside_living_room:living_room_latest:living_room_latest:pCylinderShape11" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder11|outside_living_room:living_room_latest:living_room_latest:pCylinderShape11" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder10|outside_living_room:living_room_latest:living_room_latest:pCylinderShape10" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder10|outside_living_room:living_room_latest:living_room_latest:pCylinderShape10" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder10|outside_living_room:living_room_latest:living_room_latest:pCylinderShape10" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder8|outside_living_room:living_room_latest:living_room_latest:pCylinderShape8" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder8|outside_living_room:living_room_latest:living_room_latest:pCylinderShape8" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder8|outside_living_room:living_room_latest:living_room_latest:pCylinderShape8" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder6|outside_living_room:living_room_latest:living_room_latest:pCylinderShape6" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder6|outside_living_room:living_room_latest:living_room_latest:pCylinderShape6" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder6|outside_living_room:living_room_latest:living_room_latest:pCylinderShape6" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder5|outside_living_room:living_room_latest:living_room_latest:pCylinderShape5" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder5|outside_living_room:living_room_latest:living_room_latest:pCylinderShape5" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCylinder5|outside_living_room:living_room_latest:living_room_latest:pCylinderShape5" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube14|outside_living_room:living_room_latest:living_room_latest:pCubeShape14" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube14|outside_living_room:living_room_latest:living_room_latest:pCubeShape14" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube14|outside_living_room:living_room_latest:living_room_latest:pCubeShape14" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube14|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape7" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube14|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape7" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube14|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape7" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube13|outside_living_room:living_room_latest:living_room_latest:pCubeShape13" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube13|outside_living_room:living_room_latest:living_room_latest:pCubeShape13" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube13|outside_living_room:living_room_latest:living_room_latest:pCubeShape13" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube13|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape8" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube13|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape8" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube13|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape8" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube12|outside_living_room:living_room_latest:living_room_latest:pCubeShape12" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube12|outside_living_room:living_room_latest:living_room_latest:pCubeShape12" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube12|outside_living_room:living_room_latest:living_room_latest:pCubeShape12" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube12|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape5" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube12|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape5" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube12|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape5" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube11|outside_living_room:living_room_latest:living_room_latest:pCubeShape11" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube11|outside_living_room:living_room_latest:living_room_latest:pCubeShape11" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube11|outside_living_room:living_room_latest:living_room_latest:pCubeShape11" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube11|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape6" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube11|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape6" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube11|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape6" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube10|outside_living_room:living_room_latest:living_room_latest:pCubeShape10" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube10|outside_living_room:living_room_latest:living_room_latest:pCubeShape10" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube10|outside_living_room:living_room_latest:living_room_latest:pCubeShape10" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube10|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape3" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube10|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape3" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube10|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape3" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube9|outside_living_room:living_room_latest:living_room_latest:pCubeShape9" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube9|outside_living_room:living_room_latest:living_room_latest:pCubeShape9" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube9|outside_living_room:living_room_latest:living_room_latest:pCubeShape9" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube9|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube9|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube9|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape4" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube7|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape2" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube7|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape2" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube7|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape2" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube5|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape12" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube5|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape12" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube5|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape12" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube4|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape13" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube4|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape13" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube4|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape13" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube3|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14" 
-		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube3|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:countersinkRNfosterParent1|outside_living_room:living_room_latest:living_room_latest:pCube3|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape14" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|outside_living_room:living_room_latest:living_room_latest:exit_window_2|outside_living_room:living_room_latest:living_room_latest:exit_window_2Shape" 
 		"surfaceReference" " 1"
@@ -17842,6 +17877,27 @@ createNode reference -n "outside_living_roomRN";
 		
 		2 "|outside_living_room:living_room_latest:living_room_latest:vase_flowers:pCylinder8|outside_living_room:living_room_latest:living_room_latest:vase_flowers:pCylinderShape8" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:bed_pillow|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:bed_pillowShape" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:bed_pillow|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:bed_pillowShape" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:bed_pillow|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:bed_pillowShape" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:bed_mattress|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:bed_mattressShape" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:bed_mattress|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:bed_mattressShape" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:bed_mattress|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:bed_mattressShape" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:bed_frame|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:bed_frameShape" 
+		"surfaceReference" " 1"
+		2 "|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:bed_frame|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:bed_frameShape" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:bed_frame|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:bed_frameShape" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:bedroom_trashcan|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:bedroom_trashcanShape" 
 		"surfaceReference" " 1"
 		2 "|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:bedroom_trashcan|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:bedroom_trashcanShape" 
@@ -18143,12 +18199,12 @@ createNode reference -n "outside_living_roomRN";
 		
 		2 "|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:polySurface74|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:polySurfaceShape363" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:polySurface77|outside_living_room:living_room_latest:living_room_latest:transform40|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:polySurfaceShape77" 
+		2 "|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:polySurface77|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:polySurfaceShape77" 
 		"surfaceReference" " 1"
-		2 "|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:polySurface77|outside_living_room:living_room_latest:living_room_latest:transform40|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:polySurfaceShape77" 
+		2 "|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:polySurface77|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:polySurfaceShape77" 
 		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
-		2 "|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:polySurface77|outside_living_room:living_room_latest:living_room_latest:transform40|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:polySurfaceShape77" 
+		2 "|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:polySurface77|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:polySurfaceShape77" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:polySurface78|outside_living_room:living_room_latest:living_room_latest:bedroom_updated_layout:polySurfaceShape364" 
 		"surfaceReference" " 1"
@@ -18164,10 +18220,6 @@ createNode reference -n "outside_living_roomRN";
 		
 		2 "|outside_living_room:living_room_latest:living_room_latest:polySurface41|outside_living_room:living_room_latest:living_room_latest:polySurfaceShape41" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|outside_living_room:living_room_latest:living_room_latest:nCloth1|outside_living_room:living_room_latest:living_room_latest:nClothShape1" 
-		"cacheWidth" " 150"
-		2 "|outside_living_room:living_room_latest:living_room_latest:nRigid1|outside_living_room:living_room_latest:living_room_latest:nRigidShape1" 
-		"cacheWidth" " 150"
 		5 4 "outside_living_roomRN" "|outside_living_room:living_room_latest:living_room_latest:ripped_up_toy1.visibility" 
 		"outside_living_roomRN.placeHolderList[96]" ""
 		5 4 "outside_living_roomRN" "|outside_living_room:living_room_latest:living_room_latest:ripped_up_toy1.translateX" 
@@ -18535,7 +18587,7 @@ createNode reference -n "outside_living_roomRN";
 		
 		2 "|outside_living_room:living_room_latest:living_room_latest:taller_window_four_squares_latest5:taller_window|outside_living_room:living_room_latest:living_room_latest:taller_window_four_squares_latest5:transform1|outside_living_room:living_room_latest:living_room_latest:taller_window_four_squares_latest5:taller_windowShape" 
 		"furNameSpace" " -type \"string\" \"taller_window_four_squares_latest5\""
-		"outside_living_room:pig_latestRN" 474
+		"outside_living_room:pig_latestRN" 470
 		1 |outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:Skeleton_01|outside_living_room:pig_latest:PigSkin002:bind_root01|outside_living_room:pig_latest:PigSkin002:bind_pelvis01 
 		"blendParent1" "blendParent1" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
 		1 |outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_1control01 
@@ -18575,7 +18627,7 @@ createNode reference -n "outside_living_roomRN";
 		2 "|outside_living_room:pig_latest:Tyrion_Cattister_uv:Tyrion_CattisterRNfosterParent1|outside_living_room:pig_latest:Tyrion_Cattister_uv:Tyrion_Cattister:Tyrion_Cattister_uv:Tyrion_Cattister:pigShapeDeformedDeformed" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01" 
-		"translate" " -type \"double3\" -214.83613446405775 7.7534606758249636 57.341143754854777"
+		"translate" " -type \"double3\" -214.83782444998809 7.7534606758249636 57.229432344784172"
 		
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01" 
 		"translateX" " -av"
@@ -18645,7 +18697,7 @@ createNode reference -n "outside_living_roomRN";
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:head_control" 
 		"translateZ" " -av"
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:head_control" 
-		"rotate" " -type \"double3\" 3.1747852092746403 6.4801907635397349 2.0436556686499059"
+		"rotate" " -type \"double3\" 0.050340933899970401 0.1027530473348417 0.032405195359124832"
 		
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:head_control" 
 		"rotateX" " -av"
@@ -18685,22 +18737,81 @@ createNode reference -n "outside_living_roomRN";
 		
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:shoulders_rotation_ctrl01" 
 		"scalePivotTranslate" " -type \"double3\" 0 0 0"
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_frontfoot01" 
+		"translate" " -type \"double3\" 3.5749254156688752 1.1537535618389612 4.2247826923308454"
+		
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_frontfoot01" 
+		"translateX" " -av"
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_frontfoot01" 
+		"translateY" " -av"
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_frontfoot01" 
+		"translateZ" " -av"
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_frontfoot01" 
+		"rotate" " -type \"double3\" -0.022380854703656708 0.05018058686710377 -0.01035862690553618"
+		
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_frontfoot01" 
+		"rotateX" " -av"
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_frontfoot01" 
+		"rotateY" " -av"
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_frontfoot01" 
+		"rotateZ" " -av"
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_frontfoot01" 
+		"rotatePivot" " -type \"double3\" 1.6819367851925493 -2.4275720119476318 4.1398538622537453"
+		
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_frontfoot01" 
+		"scalePivot" " -type \"double3\" 1.6819367851925493 -2.4275720119476318 4.1398538622537453"
+		
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_frontfoot01" 
+		"translate" " -type \"double3\" -0.40016524352315191 -3.3113432118500503 -0.57829611502290434"
+		
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_frontfoot01" 
+		"translateX" " -av"
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_frontfoot01" 
+		"translateY" " -av"
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_frontfoot01" 
+		"translateZ" " -av"
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_frontfoot01" 
+		"rotate" " -type \"double3\" 72.484506084732416 0 0"
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_frontfoot01" 
+		"rotateX" " -av"
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_frontfoot01" 
+		"rotateY" " -av"
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_frontfoot01" 
+		"rotateZ" " -av"
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_frontfoot01" 
+		"rotatePivot" " -type \"double3\" -1.8187183141708376 -2.4275720119476318 4.1398538622537453"
+		
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_frontfoot01" 
+		"scalePivot" " -type \"double3\" -1.8187183141708376 -2.4275720119476318 4.1398538622537453"
+		
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_backfoot01" 
+		"rotatePivot" " -type \"double3\" 2.5111263667124968 -2.4275720119476318 -4.6557644648147507"
+		
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_backfoot01" 
+		"scalePivot" " -type \"double3\" 2.5111263667124968 -2.4275720119476318 -4.6557644648147507"
+		
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_backfoot01" 
+		"rotatePivot" " -type \"double3\" -2.6477183141708371 -2.4275720119476318 -4.6557644648147507"
+		
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_backfoot01" 
+		"scalePivot" " -type \"double3\" -2.6477183141708371 -2.4275720119476318 -4.6557644648147507"
+		
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01" 
 		"translate" " -type \"double3\" 0 -0.76523450390537151 0"
-		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01" 
-		"translateZ" " -av"
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01" 
 		"translateX" " -av"
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01" 
 		"translateY" " -av"
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01" 
-		"rotate" " -type \"double3\" 0 0 0"
+		"translateZ" " -av"
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01" 
-		"rotateZ" " -av"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01" 
 		"rotateX" " -av"
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01" 
 		"rotateY" " -av"
+		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01" 
+		"rotateZ" " -av"
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01" 
 		"rotatePivot" " -type \"double3\" 0 3.9485195941380455 -4.3479556088246509"
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01" 
@@ -18730,7 +18841,7 @@ createNode reference -n "outside_living_roomRN";
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_1control01" 
 		"blendParent1" " -k 1"
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_1cluster" 
-		"translate" " -type \"double3\" -0.0063797517922503074 -8.0930385948363437e-008 1.0009464523896838e-005"
+		"translate" " -type \"double3\" -0.0063797517923355725 -8.0930385948363437e-008 1.0009464467053419e-005"
 		
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_1cluster" 
 		"translateX" " -av"
@@ -18773,7 +18884,7 @@ createNode reference -n "outside_living_roomRN";
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_2control01" 
 		"scalePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail2_cluster" 
-		"translate" " -type \"double3\" -0.0063797517922649337 -8.0930389501077116e-008 1.0009464531890444e-005"
+		"translate" " -type \"double3\" -0.0063797517923501988 -8.0930389501077116e-008 1.0009464475047025e-005"
 		
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail2_cluster" 
 		"translateX" " -av"
@@ -18816,7 +18927,7 @@ createNode reference -n "outside_living_roomRN";
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_3control01" 
 		"scalePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_3cluster" 
-		"translate" " -type \"double3\" -0.0063797517923232187 -8.0930389501077116e-008 1.0009464514126876e-005"
+		"translate" " -type \"double3\" -0.006379751792294797 -8.0930389501077116e-008 1.0009464514126876e-005"
 		
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_3cluster" 
 		"translateX" " -av"
@@ -18859,7 +18970,7 @@ createNode reference -n "outside_living_roomRN";
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_4control01" 
 		"scalePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_4cluster" 
-		"translate" " -type \"double3\" -0.0063797517922859117 -8.0930387724720276e-008 1.0009464467941598e-005"
+		"translate" " -type \"double3\" -0.0063797517922859117 -8.0930387724720276e-008 1.0009464411098179e-005"
 		
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_4cluster" 
 		"translateX" " -av"
@@ -18888,10 +18999,10 @@ createNode reference -n "outside_living_roomRN";
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_4cluster" 
 		"scalePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:splineiK_tail01" 
-		"translate" " -type \"double3\" -0.080086334409287474 9.6397578700779682 -14.407414312530534"
+		"translate" " -type \"double3\" -0.080086334409145365 9.6397578700780997 -14.407414312530477"
 		
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:splineiK_tail01" 
-		"rotate" " -type \"double3\" 89.982516540249563 50.280231535891843 89.99317737110232"
+		"rotate" " -type \"double3\" 89.982516540250458 50.280231535894963 89.993177371104267"
 		
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:splineiK_tail01" 
 		"scale" " -type \"double3\" 0.99999999999999933 0.99999999999999989 0.99999999999999967"
@@ -18904,67 +19015,8 @@ createNode reference -n "outside_living_roomRN";
 		"scalePivot" " -type \"double3\" 0 0 0"
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:splineiK_tail01" 
 		"scalePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchr_ctrl01|outside_living_room:pig_latest:controller_L_backfoot01" 
-		"rotatePivot" " -type \"double3\" 2.5111263667124968 -2.4275720119476318 -4.6557644648147507"
-		
-		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchr_ctrl01|outside_living_room:pig_latest:controller_L_backfoot01" 
-		"scalePivot" " -type \"double3\" 2.5111263667124968 -2.4275720119476318 -4.6557644648147507"
-		
-		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchr_ctrl01|outside_living_room:pig_latest:controller_R_backfoot01" 
-		"rotatePivot" " -type \"double3\" -2.6477183141708371 -2.4275720119476318 -4.6557644648147507"
-		
-		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchr_ctrl01|outside_living_room:pig_latest:controller_R_backfoot01" 
-		"scalePivot" " -type \"double3\" -2.6477183141708371 -2.4275720119476318 -4.6557644648147507"
-		
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchf_ctrl01" 
 		"translate" " -type \"double3\" 0 0 0"
-		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchf_ctrl01|outside_living_room:pig_latest:controller_L_frontfoot01" 
-		"translate" " -type \"double3\" 3.655870003767145 1.5470145696453095 4.2271918354466154"
-		
-		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchf_ctrl01|outside_living_room:pig_latest:controller_L_frontfoot01" 
-		"translateX" " -av"
-		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchf_ctrl01|outside_living_room:pig_latest:controller_L_frontfoot01" 
-		"translateY" " -av"
-		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchf_ctrl01|outside_living_room:pig_latest:controller_L_frontfoot01" 
-		"translateZ" " -av"
-		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchf_ctrl01|outside_living_room:pig_latest:controller_L_frontfoot01" 
-		"rotate" " -type \"double3\" -1.4114638124370567 3.1646728146713219 -0.6532738457621251"
-		
-		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchf_ctrl01|outside_living_room:pig_latest:controller_L_frontfoot01" 
-		"rotateX" " -av"
-		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchf_ctrl01|outside_living_room:pig_latest:controller_L_frontfoot01" 
-		"rotateY" " -av"
-		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchf_ctrl01|outside_living_room:pig_latest:controller_L_frontfoot01" 
-		"rotateZ" " -av"
-		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchf_ctrl01|outside_living_room:pig_latest:controller_L_frontfoot01" 
-		"rotatePivot" " -type \"double3\" 1.6819367851925493 -2.4275720119476318 4.1398538622537453"
-		
-		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchf_ctrl01|outside_living_room:pig_latest:controller_L_frontfoot01" 
-		"scalePivot" " -type \"double3\" 1.6819367851925493 -2.4275720119476318 4.1398538622537453"
-		
-		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchf_ctrl01|outside_living_room:pig_latest:controller_R_frontfoot01" 
-		"translate" " -type \"double3\" -0.40016524352315191 -3.3113432118500503 -0.57829611502290434"
-		
-		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchf_ctrl01|outside_living_room:pig_latest:controller_R_frontfoot01" 
-		"translateX" " -av"
-		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchf_ctrl01|outside_living_room:pig_latest:controller_R_frontfoot01" 
-		"translateY" " -av"
-		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchf_ctrl01|outside_living_room:pig_latest:controller_R_frontfoot01" 
-		"translateZ" " -av"
-		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchf_ctrl01|outside_living_room:pig_latest:controller_R_frontfoot01" 
-		"rotate" " -type \"double3\" 72.484506084732416 0 0"
-		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchf_ctrl01|outside_living_room:pig_latest:controller_R_frontfoot01" 
-		"rotateX" " -av"
-		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchf_ctrl01|outside_living_room:pig_latest:controller_R_frontfoot01" 
-		"rotateY" " -av"
-		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchf_ctrl01|outside_living_room:pig_latest:controller_R_frontfoot01" 
-		"rotateZ" " -av"
-		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchf_ctrl01|outside_living_room:pig_latest:controller_R_frontfoot01" 
-		"rotatePivot" " -type \"double3\" -1.8187183141708376 -2.4275720119476318 4.1398538622537453"
-		
-		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchf_ctrl01|outside_living_room:pig_latest:controller_R_frontfoot01" 
-		"scalePivot" " -type \"double3\" -1.8187183141708376 -2.4275720119476318 4.1398538622537453"
-		
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_surface01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_surface0Shape1" 
 		"surfaceReference" " 1"
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:vertebrae_flexi_spine01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_global01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_surface01|outside_living_room:pig_latest:PigSkin002:vertebrae_flexi_surface0Shape1" 
@@ -19017,14 +19069,6 @@ createNode reference -n "outside_living_roomRN";
 		
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_surface01|outside_living_room:pig_latest:PigSkin002:neck_flexi_surface0Shape1Orig" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_start01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_start01" 
-		"translate" " -type \"double3\" 0.0077654492008494272 0 0"
-		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_start01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_start01" 
-		"translateY" " -av"
-		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_start01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_start01" 
-		"translateZ" " -av"
-		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_global01|outside_living_room:pig_latest:PigSkin002:neck_flexi_grp_anim_start01|outside_living_room:pig_latest:PigSkin002:neck_flexi_anim_start01" 
-		"translateX" " -av"
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_hidden01|outside_living_room:pig_latest:PigSkin002:neck_flexi_bshp_surface01|outside_living_room:pig_latest:PigSkin002:neck_flexi_bshp_surface01Shape" 
 		"surfaceReference" " 1"
 		2 "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:flexi_joint_systems|outside_living_room:pig_latest:neck_flexi_spine01|outside_living_room:pig_latest:PigSkin002:neck_flexi_hidden01|outside_living_room:pig_latest:PigSkin002:neck_flexi_bshp_surface01|outside_living_room:pig_latest:PigSkin002:neck_flexi_bshp_surface01Shape" 
@@ -19315,247 +19359,247 @@ createNode reference -n "outside_living_roomRN";
 		"outside_living_roomRN.placeHolderList[208]" ""
 		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:shoulders_rotation_ctrl01.scaleZ" 
 		"outside_living_roomRN.placeHolderList[209]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:locator_L_elbow01.translateX" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_frontfoot01.rotateX" 
 		"outside_living_roomRN.placeHolderList[210]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:locator_L_elbow01.translateY" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_frontfoot01.rotateY" 
 		"outside_living_roomRN.placeHolderList[211]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:locator_L_elbow01.translateZ" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_frontfoot01.rotateZ" 
 		"outside_living_roomRN.placeHolderList[212]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:locator_L_elbow01.visibility" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_frontfoot01.translateX" 
 		"outside_living_roomRN.placeHolderList[213]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:locator_L_elbow01.rotateX" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_frontfoot01.translateY" 
 		"outside_living_roomRN.placeHolderList[214]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:locator_L_elbow01.rotateY" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_frontfoot01.translateZ" 
 		"outside_living_roomRN.placeHolderList[215]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:locator_L_elbow01.rotateZ" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_frontfoot01.scaleX" 
 		"outside_living_roomRN.placeHolderList[216]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:locator_L_elbow01.scaleX" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_frontfoot01.scaleY" 
 		"outside_living_roomRN.placeHolderList[217]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:locator_L_elbow01.scaleY" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_frontfoot01.scaleZ" 
 		"outside_living_roomRN.placeHolderList[218]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:locator_L_elbow01.scaleZ" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:locator_L_elbow01.translateX" 
 		"outside_living_roomRN.placeHolderList[219]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01.translateZ" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:locator_L_elbow01.translateY" 
 		"outside_living_roomRN.placeHolderList[220]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01.translateX" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:locator_L_elbow01.translateZ" 
 		"outside_living_roomRN.placeHolderList[221]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01.translateY" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:locator_L_elbow01.visibility" 
 		"outside_living_roomRN.placeHolderList[222]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01.rotateZ" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:locator_L_elbow01.rotateX" 
 		"outside_living_roomRN.placeHolderList[223]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01.rotateX" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:locator_L_elbow01.rotateY" 
 		"outside_living_roomRN.placeHolderList[224]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01.rotateY" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:locator_L_elbow01.rotateZ" 
 		"outside_living_roomRN.placeHolderList[225]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01.scaleX" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:locator_L_elbow01.scaleX" 
 		"outside_living_roomRN.placeHolderList[226]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01.scaleY" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:locator_L_elbow01.scaleY" 
 		"outside_living_roomRN.placeHolderList[227]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01.scaleZ" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:locator_L_elbow01.scaleZ" 
 		"outside_living_roomRN.placeHolderList[228]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01.translateX" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_frontfoot01.rotateX" 
 		"outside_living_roomRN.placeHolderList[229]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01.translateY" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_frontfoot01.rotateY" 
 		"outside_living_roomRN.placeHolderList[230]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01.translateZ" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_frontfoot01.rotateZ" 
 		"outside_living_roomRN.placeHolderList[231]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01.rotateX" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_frontfoot01.translateX" 
 		"outside_living_roomRN.placeHolderList[232]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01.rotateY" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_frontfoot01.translateY" 
 		"outside_living_roomRN.placeHolderList[233]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01.rotateZ" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_frontfoot01.translateZ" 
 		"outside_living_roomRN.placeHolderList[234]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01.scaleX" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_frontfoot01.scaleX" 
 		"outside_living_roomRN.placeHolderList[235]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01.scaleY" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_frontfoot01.scaleY" 
 		"outside_living_roomRN.placeHolderList[236]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01.scaleZ" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_frontfoot01.scaleZ" 
 		"outside_living_roomRN.placeHolderList[237]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01.visibility" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_backfoot01.rotateX" 
 		"outside_living_roomRN.placeHolderList[238]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_1control01.translateX" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_backfoot01.rotateY" 
 		"outside_living_roomRN.placeHolderList[239]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_1control01.translateY" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_backfoot01.rotateZ" 
 		"outside_living_roomRN.placeHolderList[240]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_1control01.translateZ" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_backfoot01.translateX" 
 		"outside_living_roomRN.placeHolderList[241]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_1control01.rotateX" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_backfoot01.translateY" 
 		"outside_living_roomRN.placeHolderList[242]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_1control01.rotateY" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_backfoot01.translateZ" 
 		"outside_living_roomRN.placeHolderList[243]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_1control01.rotateZ" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_backfoot01.scaleX" 
 		"outside_living_roomRN.placeHolderList[244]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_1control01.scaleX" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_backfoot01.scaleY" 
 		"outside_living_roomRN.placeHolderList[245]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_1control01.scaleY" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_L_backfoot01.scaleZ" 
 		"outside_living_roomRN.placeHolderList[246]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_1control01.scaleZ" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_backfoot01.rotateX" 
 		"outside_living_roomRN.placeHolderList[247]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_1control01.blendParent1" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_backfoot01.rotateY" 
 		"outside_living_roomRN.placeHolderList[248]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_backfoot01.rotateZ" 
+		"outside_living_roomRN.placeHolderList[249]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_backfoot01.translateX" 
+		"outside_living_roomRN.placeHolderList[250]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_backfoot01.translateY" 
+		"outside_living_roomRN.placeHolderList[251]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_backfoot01.translateZ" 
+		"outside_living_roomRN.placeHolderList[252]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_backfoot01.scaleX" 
+		"outside_living_roomRN.placeHolderList[253]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_backfoot01.scaleY" 
+		"outside_living_roomRN.placeHolderList[254]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:controller_R_backfoot01.scaleZ" 
+		"outside_living_roomRN.placeHolderList[255]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01.translateX" 
+		"outside_living_roomRN.placeHolderList[256]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01.translateY" 
+		"outside_living_roomRN.placeHolderList[257]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01.translateZ" 
+		"outside_living_roomRN.placeHolderList[258]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01.rotateX" 
+		"outside_living_roomRN.placeHolderList[259]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01.rotateY" 
+		"outside_living_roomRN.placeHolderList[260]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01.rotateZ" 
+		"outside_living_roomRN.placeHolderList[261]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01.scaleX" 
+		"outside_living_roomRN.placeHolderList[262]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01.scaleY" 
+		"outside_living_roomRN.placeHolderList[263]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01.scaleZ" 
+		"outside_living_roomRN.placeHolderList[264]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01.translateX" 
+		"outside_living_roomRN.placeHolderList[265]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01.translateY" 
+		"outside_living_roomRN.placeHolderList[266]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01.translateZ" 
+		"outside_living_roomRN.placeHolderList[267]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01.rotateX" 
+		"outside_living_roomRN.placeHolderList[268]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01.rotateY" 
+		"outside_living_roomRN.placeHolderList[269]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01.rotateZ" 
+		"outside_living_roomRN.placeHolderList[270]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01.scaleX" 
+		"outside_living_roomRN.placeHolderList[271]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01.scaleY" 
+		"outside_living_roomRN.placeHolderList[272]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01.scaleZ" 
+		"outside_living_roomRN.placeHolderList[273]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01.visibility" 
+		"outside_living_roomRN.placeHolderList[274]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_1control01.translateX" 
+		"outside_living_roomRN.placeHolderList[275]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_1control01.translateY" 
+		"outside_living_roomRN.placeHolderList[276]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_1control01.translateZ" 
+		"outside_living_roomRN.placeHolderList[277]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_1control01.rotateX" 
+		"outside_living_roomRN.placeHolderList[278]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_1control01.rotateY" 
+		"outside_living_roomRN.placeHolderList[279]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_1control01.rotateZ" 
+		"outside_living_roomRN.placeHolderList[280]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_1control01.scaleX" 
+		"outside_living_roomRN.placeHolderList[281]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_1control01.scaleY" 
+		"outside_living_roomRN.placeHolderList[282]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_1control01.scaleZ" 
+		"outside_living_roomRN.placeHolderList[283]" ""
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_1control01.blendParent1" 
+		"outside_living_roomRN.placeHolderList[284]" ""
 		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_1control01|outside_living_room:pig_latest:tail_1control01_parentConstraint1.constraintTranslateX" 
-		"outside_living_roomRN.placeHolderList[249]" "outside_living_room:pig_latest:tail_1control01.tx"
+		"outside_living_roomRN.placeHolderList[285]" "outside_living_room:pig_latest:tail_1control01.tx"
 		
 		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_1control01|outside_living_room:pig_latest:tail_1control01_parentConstraint1.constraintTranslateY" 
-		"outside_living_roomRN.placeHolderList[250]" "outside_living_room:pig_latest:tail_1control01.ty"
+		"outside_living_roomRN.placeHolderList[286]" "outside_living_room:pig_latest:tail_1control01.ty"
 		
 		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_1control01|outside_living_room:pig_latest:tail_1control01_parentConstraint1.constraintTranslateZ" 
-		"outside_living_roomRN.placeHolderList[251]" "outside_living_room:pig_latest:tail_1control01.tz"
+		"outside_living_roomRN.placeHolderList[287]" "outside_living_room:pig_latest:tail_1control01.tz"
 		
 		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_1control01|outside_living_room:pig_latest:tail_1control01_parentConstraint1.constraintRotateX" 
-		"outside_living_roomRN.placeHolderList[252]" "outside_living_room:pig_latest:tail_1control01.rx"
+		"outside_living_roomRN.placeHolderList[288]" "outside_living_room:pig_latest:tail_1control01.rx"
 		
 		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_1control01|outside_living_room:pig_latest:tail_1control01_parentConstraint1.constraintRotateY" 
-		"outside_living_roomRN.placeHolderList[253]" "outside_living_room:pig_latest:tail_1control01.ry"
+		"outside_living_roomRN.placeHolderList[289]" "outside_living_room:pig_latest:tail_1control01.ry"
 		
 		5 3 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_1control01|outside_living_room:pig_latest:tail_1control01_parentConstraint1.constraintRotateZ" 
-		"outside_living_roomRN.placeHolderList[254]" "outside_living_room:pig_latest:tail_1control01.rz"
+		"outside_living_roomRN.placeHolderList[290]" "outside_living_room:pig_latest:tail_1control01.rz"
 		
 		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_2control01.translateX" 
-		"outside_living_roomRN.placeHolderList[255]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_2control01.translateY" 
-		"outside_living_roomRN.placeHolderList[256]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_2control01.translateZ" 
-		"outside_living_roomRN.placeHolderList[257]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_2control01.rotateX" 
-		"outside_living_roomRN.placeHolderList[258]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_2control01.rotateY" 
-		"outside_living_roomRN.placeHolderList[259]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_2control01.rotateZ" 
-		"outside_living_roomRN.placeHolderList[260]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_2control01.scaleX" 
-		"outside_living_roomRN.placeHolderList[261]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_2control01.scaleY" 
-		"outside_living_roomRN.placeHolderList[262]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_2control01.scaleZ" 
-		"outside_living_roomRN.placeHolderList[263]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_3control01.translateX" 
-		"outside_living_roomRN.placeHolderList[264]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_3control01.translateY" 
-		"outside_living_roomRN.placeHolderList[265]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_3control01.translateZ" 
-		"outside_living_roomRN.placeHolderList[266]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_3control01.rotateX" 
-		"outside_living_roomRN.placeHolderList[267]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_3control01.rotateY" 
-		"outside_living_roomRN.placeHolderList[268]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_3control01.rotateZ" 
-		"outside_living_roomRN.placeHolderList[269]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_3control01.scaleX" 
-		"outside_living_roomRN.placeHolderList[270]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_3control01.scaleY" 
-		"outside_living_roomRN.placeHolderList[271]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_3control01.scaleZ" 
-		"outside_living_roomRN.placeHolderList[272]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_4control01.translateX" 
-		"outside_living_roomRN.placeHolderList[273]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_4control01.translateY" 
-		"outside_living_roomRN.placeHolderList[274]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_4control01.translateZ" 
-		"outside_living_roomRN.placeHolderList[275]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_4control01.rotateX" 
-		"outside_living_roomRN.placeHolderList[276]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_4control01.rotateY" 
-		"outside_living_roomRN.placeHolderList[277]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_4control01.rotateZ" 
-		"outside_living_roomRN.placeHolderList[278]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_4control01.scaleX" 
-		"outside_living_roomRN.placeHolderList[279]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_4control01.scaleY" 
-		"outside_living_roomRN.placeHolderList[280]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_4control01.scaleZ" 
-		"outside_living_roomRN.placeHolderList[281]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:back_flex_ctrl01.translateX" 
-		"outside_living_roomRN.placeHolderList[282]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:back_flex_ctrl01.translateY" 
-		"outside_living_roomRN.placeHolderList[283]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:back_flex_ctrl01.translateZ" 
-		"outside_living_roomRN.placeHolderList[284]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:back_flex_ctrl01.rotateX" 
-		"outside_living_roomRN.placeHolderList[285]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:back_flex_ctrl01.rotateY" 
-		"outside_living_roomRN.placeHolderList[286]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:back_flex_ctrl01.rotateZ" 
-		"outside_living_roomRN.placeHolderList[287]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:back_flex_ctrl01.scaleX" 
-		"outside_living_roomRN.placeHolderList[288]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:back_flex_ctrl01.scaleY" 
-		"outside_living_roomRN.placeHolderList[289]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:back_flex_ctrl01.scaleZ" 
-		"outside_living_roomRN.placeHolderList[290]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:back_flex_ctrl01.visibility" 
 		"outside_living_roomRN.placeHolderList[291]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchr_ctrl01|outside_living_room:pig_latest:controller_L_backfoot01.rotateX" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_2control01.translateY" 
 		"outside_living_roomRN.placeHolderList[292]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchr_ctrl01|outside_living_room:pig_latest:controller_L_backfoot01.rotateY" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_2control01.translateZ" 
 		"outside_living_roomRN.placeHolderList[293]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchr_ctrl01|outside_living_room:pig_latest:controller_L_backfoot01.rotateZ" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_2control01.rotateX" 
 		"outside_living_roomRN.placeHolderList[294]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchr_ctrl01|outside_living_room:pig_latest:controller_L_backfoot01.translateX" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_2control01.rotateY" 
 		"outside_living_roomRN.placeHolderList[295]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchr_ctrl01|outside_living_room:pig_latest:controller_L_backfoot01.translateY" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_2control01.rotateZ" 
 		"outside_living_roomRN.placeHolderList[296]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchr_ctrl01|outside_living_room:pig_latest:controller_L_backfoot01.translateZ" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_2control01.scaleX" 
 		"outside_living_roomRN.placeHolderList[297]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchr_ctrl01|outside_living_room:pig_latest:controller_L_backfoot01.scaleX" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_2control01.scaleY" 
 		"outside_living_roomRN.placeHolderList[298]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchr_ctrl01|outside_living_room:pig_latest:controller_L_backfoot01.scaleY" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_2control01.scaleZ" 
 		"outside_living_roomRN.placeHolderList[299]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchr_ctrl01|outside_living_room:pig_latest:controller_L_backfoot01.scaleZ" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_3control01.translateX" 
 		"outside_living_roomRN.placeHolderList[300]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchr_ctrl01|outside_living_room:pig_latest:controller_R_backfoot01.rotateX" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_3control01.translateY" 
 		"outside_living_roomRN.placeHolderList[301]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchr_ctrl01|outside_living_room:pig_latest:controller_R_backfoot01.rotateY" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_3control01.translateZ" 
 		"outside_living_roomRN.placeHolderList[302]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchr_ctrl01|outside_living_room:pig_latest:controller_R_backfoot01.rotateZ" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_3control01.rotateX" 
 		"outside_living_roomRN.placeHolderList[303]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchr_ctrl01|outside_living_room:pig_latest:controller_R_backfoot01.translateX" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_3control01.rotateY" 
 		"outside_living_roomRN.placeHolderList[304]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchr_ctrl01|outside_living_room:pig_latest:controller_R_backfoot01.translateY" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_3control01.rotateZ" 
 		"outside_living_roomRN.placeHolderList[305]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchr_ctrl01|outside_living_room:pig_latest:controller_R_backfoot01.translateZ" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_3control01.scaleX" 
 		"outside_living_roomRN.placeHolderList[306]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchr_ctrl01|outside_living_room:pig_latest:controller_R_backfoot01.scaleX" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_3control01.scaleY" 
 		"outside_living_roomRN.placeHolderList[307]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchr_ctrl01|outside_living_room:pig_latest:controller_R_backfoot01.scaleY" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_3control01.scaleZ" 
 		"outside_living_roomRN.placeHolderList[308]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchr_ctrl01|outside_living_room:pig_latest:controller_R_backfoot01.scaleZ" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_4control01.translateX" 
 		"outside_living_roomRN.placeHolderList[309]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchf_ctrl01|outside_living_room:pig_latest:controller_L_frontfoot01.rotateX" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_4control01.translateY" 
 		"outside_living_roomRN.placeHolderList[310]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchf_ctrl01|outside_living_room:pig_latest:controller_L_frontfoot01.rotateY" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_4control01.translateZ" 
 		"outside_living_roomRN.placeHolderList[311]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchf_ctrl01|outside_living_room:pig_latest:controller_L_frontfoot01.rotateZ" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_4control01.rotateX" 
 		"outside_living_roomRN.placeHolderList[312]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchf_ctrl01|outside_living_room:pig_latest:controller_L_frontfoot01.translateX" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_4control01.rotateY" 
 		"outside_living_roomRN.placeHolderList[313]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchf_ctrl01|outside_living_room:pig_latest:controller_L_frontfoot01.translateY" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_4control01.rotateZ" 
 		"outside_living_roomRN.placeHolderList[314]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchf_ctrl01|outside_living_room:pig_latest:controller_L_frontfoot01.translateZ" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_4control01.scaleX" 
 		"outside_living_roomRN.placeHolderList[315]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchf_ctrl01|outside_living_room:pig_latest:controller_L_frontfoot01.scaleX" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_4control01.scaleY" 
 		"outside_living_roomRN.placeHolderList[316]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchf_ctrl01|outside_living_room:pig_latest:controller_L_frontfoot01.scaleY" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:hip_rotation_ctrl01|outside_living_room:pig_latest:tail_controllers_01|outside_living_room:pig_latest:tail_4control01.scaleZ" 
 		"outside_living_roomRN.placeHolderList[317]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchf_ctrl01|outside_living_room:pig_latest:controller_L_frontfoot01.scaleZ" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:back_flex_ctrl01.translateX" 
 		"outside_living_roomRN.placeHolderList[318]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchf_ctrl01|outside_living_room:pig_latest:controller_R_frontfoot01.rotateX" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:back_flex_ctrl01.translateY" 
 		"outside_living_roomRN.placeHolderList[319]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchf_ctrl01|outside_living_room:pig_latest:controller_R_frontfoot01.rotateY" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:back_flex_ctrl01.translateZ" 
 		"outside_living_roomRN.placeHolderList[320]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchf_ctrl01|outside_living_room:pig_latest:controller_R_frontfoot01.rotateZ" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:back_flex_ctrl01.rotateX" 
 		"outside_living_roomRN.placeHolderList[321]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchf_ctrl01|outside_living_room:pig_latest:controller_R_frontfoot01.translateX" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:back_flex_ctrl01.rotateY" 
 		"outside_living_roomRN.placeHolderList[322]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchf_ctrl01|outside_living_room:pig_latest:controller_R_frontfoot01.translateY" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:back_flex_ctrl01.rotateZ" 
 		"outside_living_roomRN.placeHolderList[323]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchf_ctrl01|outside_living_room:pig_latest:controller_R_frontfoot01.translateZ" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:back_flex_ctrl01.scaleX" 
 		"outside_living_roomRN.placeHolderList[324]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchf_ctrl01|outside_living_room:pig_latest:controller_R_frontfoot01.scaleX" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:back_flex_ctrl01.scaleY" 
 		"outside_living_roomRN.placeHolderList[325]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchf_ctrl01|outside_living_room:pig_latest:controller_R_frontfoot01.scaleY" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:back_flex_ctrl01.scaleZ" 
 		"outside_living_roomRN.placeHolderList[326]" ""
-		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:stretchf_ctrl01|outside_living_room:pig_latest:controller_R_frontfoot01.scaleZ" 
+		5 4 "outside_living_roomRN" "|outside_living_room:pig_latest:PIG|outside_living_room:pig_latest:controller_main01|outside_living_room:pig_latest:back_flex_ctrl01.visibility" 
 		"outside_living_roomRN.placeHolderList[327]" ""
 		"outside_living_room:living_room_latestRN" 19
 		1 |outside_living_room:living_room_latest:pPlane1|outside_living_room:living_room_latest:GardenPlane 
@@ -19745,53 +19789,7 @@ createNode reference -n "outside_living_roomRN";
 		
 		2 "|outside_living_room:living_room_latest:living_room_latest:armchair_latest1:armchair_frame|outside_living_room:living_room_latest:living_room_latest:armchair_latest1:armchair_pillow_2|outside_living_room:living_room_latest:living_room_latest:armchair_latest1:armchair_pillow_Shape2" 
 		"furNameSpace" " -type \"string\" \"armchair_latest1\""
-		"outside_living_room:living_room_latest:living_room_latest:telescopeRN" 20
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_" 
-		"translate" " -type \"double3\" 0 2169.506103515625 0"
-		2 "|outside_living_room:living_room_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_" 
-		"translateY" " -av"
-		2 "|outside_living_room:living_room_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_" 
-		"translateX" " -av"
-		2 "|outside_living_room:living_room_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_" 
-		"translateZ" " -av"
-		2 "|outside_living_room:living_room_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|outside_living_room:living_room_latest:living_room_latest:telescope:Object02" 
-		"translate" " -type \"double3\" 1.0936300754547119 496.37063598632812 -28.757314682006836"
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|outside_living_room:living_room_latest:living_room_latest:telescope:Object02" 
-		"translateX" " -av"
-		2 "|outside_living_room:living_room_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|outside_living_room:living_room_latest:living_room_latest:telescope:Object02" 
-		"translateY" " -av"
-		2 "|outside_living_room:living_room_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|outside_living_room:living_room_latest:living_room_latest:telescope:Object02" 
-		"translateZ" " -av"
-		2 "|outside_living_room:living_room_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|outside_living_room:living_room_latest:living_room_latest:telescope:Object02FBXASC046Object03" 
-		"translate" " -type \"double3\" -132.75840759277344 496.37063598632812 -271.658447265625"
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|outside_living_room:living_room_latest:living_room_latest:telescope:Object02FBXASC046Object03" 
-		"translateX" " -av"
-		2 "|outside_living_room:living_room_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|outside_living_room:living_room_latest:living_room_latest:telescope:Object02FBXASC046Object03" 
-		"translateY" " -av"
-		2 "|outside_living_room:living_room_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|outside_living_room:living_room_latest:living_room_latest:telescope:Object02FBXASC046Object03" 
-		"translateZ" " -av"
-		2 "|outside_living_room:living_room_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|outside_living_room:living_room_latest:living_room_latest:telescope:Object02FBXASC046Object04" 
-		"translate" " -type \"double3\" 134.15425109863281 496.37063598632812 -270.25698852539062"
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|outside_living_room:living_room_latest:living_room_latest:telescope:Object02FBXASC046Object04" 
-		"translateX" " -av"
-		2 "|outside_living_room:living_room_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|outside_living_room:living_room_latest:living_room_latest:telescope:Object02FBXASC046Object04" 
-		"translateY" " -av"
-		2 "|outside_living_room:living_room_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|outside_living_room:living_room_latest:living_room_latest:telescope:Object02FBXASC046Object04" 
-		"translateZ" " -av"
-		2 "|outside_living_room:living_room_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|outside_living_room:living_room_latest:living_room_latest:telescope:Line04" 
-		"translate" " -type \"double3\" 3.3914475440979004 787.89642333984375 -217.28875732421875"
-		
-		2 "|outside_living_room:living_room_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|outside_living_room:living_room_latest:living_room_latest:telescope:Line04" 
-		"translateY" " -av"
-		2 "|outside_living_room:living_room_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|outside_living_room:living_room_latest:living_room_latest:telescope:Line04" 
-		"translateZ" " -av"
-		2 "|outside_living_room:living_room_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|outside_living_room:living_room_latest:living_room_latest:telescope:Line04" 
-		"translateX" " -av"
-		"outside_living_roomRN" 41
+		"outside_living_roomRN" 40
 		1 outside_living_room:defaultFurGlobals "furGlobalReference" "fgrf" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
 		
 		2 "|outside_living_room:atHouse" "visibility" " -av 1"
@@ -19817,7 +19815,7 @@ createNode reference -n "outside_living_roomRN";
 		2 "|outside_living_room:atHouse|outside_living_room:atHouseShape" "renderable" 
 		" 1"
 		2 "|outside_living_room:atHouse|outside_living_room:atHouseShape" "focalLength" 
-		" -av 35"
+		" 35"
 		2 "|outside_living_room:atHouse|outside_living_room:atHouseShape" "nearClipPlane" 
 		" 0.1"
 		2 "|outside_living_room:atHouse|outside_living_room:atHouseShape" "farClipPlane" 
@@ -19860,9 +19858,7 @@ createNode reference -n "outside_living_roomRN";
 		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.scaleY" "outside_living_roomRN.placeHolderList[336]" 
 		""
 		5 4 "outside_living_roomRN" "|outside_living_room:atHouse.scaleZ" "outside_living_roomRN.placeHolderList[337]" 
-		""
-		5 4 "outside_living_roomRN" "|outside_living_room:atHouse|outside_living_room:atHouseShape.focalLength" 
-		"outside_living_roomRN.placeHolderList[338]" "";
+		"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode animLayer -s -n "BaseAnimation";
@@ -20133,160 +20129,133 @@ createNode FurGlobals -n "defaultFurGlobals";
 	setAttr ".rep" -type "string" "renderData/fur/furEqualMap/raccoonsLookAtHouse_latest";
 	setAttr ".pjl" -type "string" "X:/documents/GitHub/Bandits/maya";
 createNode animCurveTA -n "atHouse_rotateX";
-	setAttr ".tan" 1;
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1.1999999999999511 38 1.1999999999999511
-		 42 -5.2200575454372178 77 -5.2200575454372178 78 -4.6092338800914234 80 -2.8640311112736243
-		 115 -2.8640311112736243 118 -20.264031111272288 150 -20.264031111272288;
-	setAttr -s 9 ".kit[0:8]"  18 1 1 1 18 18 1 1 
-		1;
-	setAttr -s 9 ".kot[0:8]"  18 1 1 1 18 18 1 2 
-		1;
-	setAttr -s 9 ".ktl[1:8]" no yes yes yes yes no no yes;
-	setAttr -s 9 ".kix[1:8]"  1 1 1 0.94992130994796753 1 1 0.70559889078140259 
-		1;
-	setAttr -s 9 ".kiy[1:8]"  0 0 0 0.31248927116394043 0 0 -0.70861148834228516 
-		0;
-	setAttr -s 9 ".kox[1:8]"  0.42439442873001099 1 1 0.94992130994796753 
-		1 0.68190842866897583 1 1;
-	setAttr -s 9 ".koy[1:8]"  -0.90547746419906616 0 0 0.31248930096626282 
-		0 -0.7314375638961792 0 0;
+	setAttr -s 10 ".ktv[0:9]"  1 1.1999999999999511 38 1.1999999999999511
+		 40 -5.2125853448441815 42 -14.659082035636077 77 -14.659082035636077 79 -10.122017275642534
+		 80 -2.8640311112736243 115 -2.8640311112736243 118 -9.9357519726446384 150 -9.9357519726446384;
+	setAttr -s 10 ".kit[4:9]"  1 18 18 1 1 1;
+	setAttr -s 10 ".kot[4:9]"  1 18 18 1 1 1;
+	setAttr -s 10 ".kix[4:9]"  1 0.51901471614837646 1 1 1 1;
+	setAttr -s 10 ".kiy[4:9]"  0 0.85476529598236084 0 0 0 0;
+	setAttr -s 10 ".kox[4:9]"  1 0.51901477575302124 1 1 1 1;
+	setAttr -s 10 ".koy[4:9]"  0 0.85476529598236084 0 0 0 0;
 createNode animCurveTA -n "atHouse_rotateY";
-	setAttr ".tan" 1;
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -101.37264933548371 38 -101.37264933548371
-		 42 -101.42095541933445 77 -101.42095541933445 78 -126.55297481281715 80 -237.13339159225831
-		 115 -237.13339159225831 118 -243.13339159225703 150 -243.13339159225703;
-	setAttr -s 9 ".kit[0:8]"  18 1 1 1 18 2 2 2 
-		1;
-	setAttr -s 9 ".kot[0:8]"  18 1 1 1 18 2 1 2 
-		1;
-	setAttr -s 9 ".ktl[6:8]" no yes yes;
-	setAttr -s 9 ".kix[1:8]"  1 1 1 0.05269981175661087 0.043137829750776291 
-		1 0.76655060052871704 1;
-	setAttr -s 9 ".kiy[1:8]"  0 0 0 -0.99861037731170654 -0.99906909465789795 
-		0 -0.64218395948410034 0;
-	setAttr -s 9 ".kox[1:8]"  1 1 1 0.05269981175661087 1 0.99317777156829834 
-		1 0.63163501024246216;
-	setAttr -s 9 ".koy[1:8]"  0 0 0 -0.99861037731170654 0 0.11661036312580109 
-		0 -0.77526593208312988;
+	setAttr -s 10 ".ktv[0:9]"  1 -101.37264933548371 38 -101.37264933548371
+		 40 -96.183125611210627 42 -81.607885215503956 77 -81.607885215503956 79 -182.57101615242769
+		 80 -237.13339159225831 115 -237.13339159225831 118 -245.92396369181398 150 -245.92396369181398;
+	setAttr -s 10 ".kit[2:9]"  1 18 1 18 2 2 1 1;
+	setAttr -s 10 ".kot[2:9]"  1 18 1 18 2 2 1 1;
+	setAttr -s 10 ".kix[2:9]"  0.3453640341758728 1 1 0.04600139707326889 
+		0.04371204599738121 1 1 1;
+	setAttr -s 10 ".kiy[2:9]"  0.9384688138961792 0 0 -0.99894136190414429 
+		-0.99904417991638184 0 0 0;
+	setAttr -s 10 ".kox[2:9]"  0.34536436200141907 1 1 0.04600139707326889 
+		1 0.63163501024246216 1 1;
+	setAttr -s 10 ".koy[2:9]"  0.93846869468688965 0 0 -0.99894136190414429 
+		0 -0.77526593208312988 0 0;
 createNode animCurveTA -n "atHouse_rotateZ";
-	setAttr ".tan" 1;
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 0 38 0 42 0.34877391507561828 77 0.34877391507561828
-		 78 0.25835075254470957 80 0 115 0 118 0 150 0;
-	setAttr -s 9 ".kit[0:8]"  18 1 1 1 18 18 1 2 
-		1;
-	setAttr -s 9 ".kot[0:8]"  18 1 1 1 18 18 1 2 
-		1;
-	setAttr -s 9 ".kix[1:8]"  1 1 1 0.99881643056869507 1 1 1 1;
-	setAttr -s 9 ".kiy[1:8]"  0 0 0 -0.048640388995409012 0 0 0 0;
-	setAttr -s 9 ".kox[1:8]"  1 1 1 0.99881643056869507 1 1 1 1;
-	setAttr -s 9 ".koy[1:8]"  0 0 0 -0.048640388995409012 0 0 0 0;
+	setAttr -s 10 ".ktv[0:9]"  1 0 38 0 40 0 42 0 77 0 79 0 80 0 115 0
+		 118 -0.54866803739236247 150 -0.54866803739236247;
+	setAttr -s 10 ".kit[4:9]"  1 18 18 1 1 1;
+	setAttr -s 10 ".kot[4:9]"  1 18 18 1 1 1;
+	setAttr -s 10 ".kix[4:9]"  1 1 1 1 1 1;
+	setAttr -s 10 ".kiy[4:9]"  0 0 0 0 0 0;
+	setAttr -s 10 ".kox[4:9]"  1 1 1 1 1 1;
+	setAttr -s 10 ".koy[4:9]"  0 0 0 0 0 0;
 createNode animCurveTU -n "atHouse_visibility";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1 38 1 42 1 77 1 78 1 80 1 115 1 118 1
-		 150 1;
-	setAttr -s 9 ".kit[0:8]"  9 1 1 1 9 9 1 2 
-		1;
-	setAttr -s 9 ".kot[7:8]"  2 5;
-	setAttr -s 9 ".kix[1:8]"  1 1 1 1 1 1 1 1;
-	setAttr -s 9 ".kiy[1:8]"  0 0 0 0 0 0 0 0;
+	setAttr -s 10 ".ktv[0:9]"  1 1 38 1 40 1 42 1 77 1 79 1 80 1 115 1
+		 118 1 150 1;
+	setAttr -s 10 ".kit[0:9]"  9 9 9 9 1 9 9 1 
+		1 1;
+	setAttr -s 10 ".kix[4:9]"  1 1 1 1 1 1;
+	setAttr -s 10 ".kiy[4:9]"  0 0 0 0 0 0;
 createNode animCurveTL -n "atHouse_translateX";
-	setAttr ".tan" 1;
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -287.67083136567163 38 -287.67083136567163
-		 42 -287.63895560986521 77 -287.63895560986521 78 -213.70315989354577 80 -202.17154747918659
-		 115 -202.17154747918659 118 -202.18579114410124 150 -202.18579114410124;
-	setAttr -s 9 ".kit[0:8]"  18 1 1 1 18 2 2 2 
-		1;
-	setAttr -s 9 ".kot[0:8]"  18 1 1 1 18 2 2 2 
-		1;
-	setAttr -s 9 ".kix[1:8]"  1 0.99808180332183838 0.99808180332183838 
-		0.0024088281206786633 0.0072263162583112717 1 0.99357032775878906 1;
-	setAttr -s 9 ".kiy[1:8]"  0 0.061909511685371399 0.061909511685371399 
-		0.99999713897705078 0.99997389316558838 0 -0.11321666836738586 0;
-	setAttr -s 9 ".kox[1:8]"  1 0.99808180332183838 0.99808180332183838 
-		0.0024088281206786633 1 0.99357032775878906 1 0.014829281717538834;
-	setAttr -s 9 ".koy[1:8]"  0 0.061909511685371399 0.061909511685371399 
-		0.99999713897705078 0 -0.11321666836738586 0 -0.9998900294303894;
+	setAttr -s 10 ".ktv[0:9]"  1 -287.67083136567163 38 -287.67083136567163
+		 40 -240.09285960288915 42 -192.5335377606778 77 -192.5335377606778 79 -196.61130793711374
+		 80 -202.17154747918659 115 -202.17154747918659 118 -210.59988887784749 150 -210.59988887784749;
+	setAttr -s 10 ".kit[4:9]"  1 18 2 2 1 1;
+	setAttr -s 10 ".kot[4:9]"  1 18 2 2 1 1;
+	setAttr -s 10 ".kix[4:9]"  0.99926483631134033 0.012968392111361027 
+		0.0074934433214366436 1 1 1;
+	setAttr -s 10 ".kiy[4:9]"  0.038337346166372299 -0.99991589784622192 
+		-0.99997198581695557 0 0 0;
+	setAttr -s 10 ".kox[4:9]"  0.99926483631134033 0.012968392111361027 
+		1 0.014829281717538834 1 1;
+	setAttr -s 10 ".koy[4:9]"  0.038337349891662598 -0.99991589784622192 
+		0 -0.9998900294303894 0 0;
 createNode animCurveTL -n "atHouse_translateY";
-	setAttr ".tan" 1;
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 18.294053186207474 38 18.294053186207474
-		 42 18.879031217013711 77 18.879031217013711 78 16.070612468898943 80 8.0465943221314102
-		 115 8.0465943221314102 118 10.117180663947209 150 10.117180663947209;
-	setAttr -s 9 ".kit[0:8]"  18 1 1 1 18 10 10 2 
-		1;
-	setAttr -s 9 ".kot[0:8]"  18 1 1 1 18 10 10 2 
-		1;
-	setAttr -s 9 ".kix[1:8]"  1 1 1 0.01153864897787571 1 1 0.060259662568569183 
-		1;
-	setAttr -s 9 ".kiy[1:8]"  0 0 0 -0.99993342161178589 0 0 0.99818277359008789 
-		0;
-	setAttr -s 9 ".kox[1:8]"  1 1 1 0.011538648046553135 1 1 1 1;
-	setAttr -s 9 ".koy[1:8]"  0 0 0 -0.99993342161178589 0 0 0 0;
+	setAttr -s 10 ".ktv[0:9]"  1 18.294053186207474 38 18.294053186207474
+		 40 14.916964398531166 42 11.808004300101205 77 11.808004300101205 79 12.206136597112879
+		 80 8.0465943221314102 115 8.0465943221314102 118 6.3039742344094014 150 6.3039742344094014;
+	setAttr -s 10 ".kit[3:9]"  3 1 18 10 10 1 1;
+	setAttr -s 10 ".kot[3:9]"  3 1 18 10 10 1 1;
+	setAttr -s 10 ".kix[4:9]"  1 1 1 1 1 1;
+	setAttr -s 10 ".kiy[4:9]"  0 0 0 0 0 0;
+	setAttr -s 10 ".kox[4:9]"  1 1 1 1 1 1;
+	setAttr -s 10 ".koy[4:9]"  0 0 0 0 0 0;
 createNode animCurveTL -n "atHouse_translateZ";
-	setAttr ".tan" 1;
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 6.0216428282605028 38 6.0216428282605028
-		 42 5.9287539538585188 77 5.9287539538585188 78 25.257926774599387 80 47.956141822970778
-		 115 47.956141822970778 118 48.780956700163493 150 48.780956700163493;
-	setAttr -s 9 ".kit[0:8]"  18 1 1 1 18 2 2 2 
-		1;
-	setAttr -s 9 ".kot[0:8]"  18 1 1 1 18 2 2 2 
-		1;
-	setAttr -s 9 ".kix[1:8]"  1 1 1 0.0029742377810180187 0.0036713324952870607 
-		1 0.14983825385570526 1;
-	setAttr -s 9 ".kiy[1:8]"  0 0 0 0.99999558925628662 0.99999326467514038 
-		0 0.98871052265167236 0;
-	setAttr -s 9 ".kox[1:8]"  1 1 1 0.0029742377810180187 1 0.14983825385570526 
-		1 0.023813886567950249;
-	setAttr -s 9 ".koy[1:8]"  0 0 0 0.99999558925628662 0 0.98871052265167236 
-		0 0.99971640110015869;
+	setAttr -s 10 ".ktv[0:9]"  1 6.0216428282605028 38 6.0216428282605028
+		 40 22.217098381010459 42 28.571816221257514 77 28.571816221257514 79 35.157608720880582
+		 80 47.956141822970778 115 47.956141822970778 118 53.203691363656311 150 53.203691363656311;
+	setAttr -s 10 ".kit[3:9]"  3 1 18 2 2 1 1;
+	setAttr -s 10 ".kot[3:9]"  3 1 18 2 2 1 1;
+	setAttr -s 10 ".kix[4:9]"  1 0.0064483745954930782 0.0032555516809225082 
+		1 1 1;
+	setAttr -s 10 ".kiy[4:9]"  0 0.99997919797897339 0.99999469518661499 
+		0 0 0;
+	setAttr -s 10 ".kox[4:9]"  1 0.0064483750611543655 1 0.023813886567950249 
+		1 1;
+	setAttr -s 10 ".koy[4:9]"  0 0.99997919797897339 0 0.99971640110015869 
+		0 0;
 createNode animCurveTU -n "atHouse_scaleX";
-	setAttr ".tan" 1;
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 5.6090346886147016 38 5.6090346886147016
-		 42 5.6090346886147016 77 5.6090346886147016 78 5.6090346886147016 80 5.6090346886147016
-		 115 5.6090346886147016 118 5.6090346886147016 150 5.6090346886147016;
-	setAttr -s 9 ".kit[0:8]"  18 1 1 1 18 18 1 2 
-		1;
-	setAttr -s 9 ".kot[0:8]"  18 1 1 1 18 18 1 2 
-		1;
-	setAttr -s 9 ".kix[1:8]"  1 1 1 1 1 1 1 1;
-	setAttr -s 9 ".kiy[1:8]"  0 0 0 0 0 0 0 0;
-	setAttr -s 9 ".kox[1:8]"  1 1 1 1 1 1 1 1;
-	setAttr -s 9 ".koy[1:8]"  0 0 0 0 0 0 0 0;
+	setAttr -s 10 ".ktv[0:9]"  1 5.6090346886147016 38 5.6090346886147016
+		 40 5.6090346886147016 42 5.6090346886147016 77 5.6090346886147016 79 5.6090346886147016
+		 80 5.6090346886147016 115 5.6090346886147016 118 5.6090346886147016 150 5.6090346886147016;
+	setAttr -s 10 ".kit[4:9]"  1 18 18 1 1 1;
+	setAttr -s 10 ".kot[4:9]"  1 18 18 1 1 1;
+	setAttr -s 10 ".kix[4:9]"  1 1 1 1 1 1;
+	setAttr -s 10 ".kiy[4:9]"  0 0 0 0 0 0;
+	setAttr -s 10 ".kox[4:9]"  1 1 1 1 1 1;
+	setAttr -s 10 ".koy[4:9]"  0 0 0 0 0 0;
 createNode animCurveTU -n "atHouse_scaleY";
-	setAttr ".tan" 1;
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 5.6090346886146971 38 5.6090346886146971
-		 42 5.6090346886146971 77 5.6090346886146971 78 5.6090346886146971 80 5.6090346886146971
-		 115 5.6090346886146971 118 5.6090346886146971 150 5.6090346886146971;
-	setAttr -s 9 ".kit[0:8]"  18 1 1 1 18 18 1 2 
-		1;
-	setAttr -s 9 ".kot[0:8]"  18 1 1 1 18 18 1 2 
-		1;
-	setAttr -s 9 ".kix[1:8]"  1 1 1 1 1 1 1 1;
-	setAttr -s 9 ".kiy[1:8]"  0 0 0 0 0 0 0 0;
-	setAttr -s 9 ".kox[1:8]"  1 1 1 1 1 1 1 1;
-	setAttr -s 9 ".koy[1:8]"  0 0 0 0 0 0 0 0;
+	setAttr -s 10 ".ktv[0:9]"  1 5.6090346886146971 38 5.6090346886146971
+		 40 5.6090346886146971 42 5.6090346886146971 77 5.6090346886146971 79 5.6090346886146971
+		 80 5.6090346886146971 115 5.6090346886146971 118 5.6090346886146971 150 5.6090346886146971;
+	setAttr -s 10 ".kit[4:9]"  1 18 18 1 1 1;
+	setAttr -s 10 ".kot[4:9]"  1 18 18 1 1 1;
+	setAttr -s 10 ".kix[4:9]"  1 1 1 1 1 1;
+	setAttr -s 10 ".kiy[4:9]"  0 0 0 0 0 0;
+	setAttr -s 10 ".kox[4:9]"  1 1 1 1 1 1;
+	setAttr -s 10 ".koy[4:9]"  0 0 0 0 0 0;
 createNode animCurveTU -n "atHouse_scaleZ";
-	setAttr ".tan" 1;
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 5.6090346886147051 38 5.6090346886147051
-		 42 5.6090346886147051 77 5.6090346886147051 78 5.6090346886147051 80 5.6090346886147051
-		 115 5.6090346886147051 118 5.6090346886147051 150 5.6090346886147051;
-	setAttr -s 9 ".kit[0:8]"  18 1 1 1 18 18 1 2 
-		1;
-	setAttr -s 9 ".kot[0:8]"  18 1 1 1 18 18 1 2 
-		1;
-	setAttr -s 9 ".kix[1:8]"  1 1 1 1 1 1 1 1;
-	setAttr -s 9 ".kiy[1:8]"  0 0 0 0 0 0 0 0;
-	setAttr -s 9 ".kox[1:8]"  1 1 1 1 1 1 1 1;
-	setAttr -s 9 ".koy[1:8]"  0 0 0 0 0 0 0 0;
+	setAttr -s 10 ".ktv[0:9]"  1 5.6090346886147051 38 5.6090346886147051
+		 40 5.6090346886147051 42 5.6090346886147051 77 5.6090346886147051 79 5.6090346886147051
+		 80 5.6090346886147051 115 5.6090346886147051 118 5.6090346886147051 150 5.6090346886147051;
+	setAttr -s 10 ".kit[4:9]"  1 18 18 1 1 1;
+	setAttr -s 10 ".kot[4:9]"  1 18 18 1 1 1;
+	setAttr -s 10 ".kix[4:9]"  1 1 1 1 1 1;
+	setAttr -s 10 ".kiy[4:9]"  0 0 0 0 0 0;
+	setAttr -s 10 ".kox[4:9]"  1 1 1 1 1 1;
+	setAttr -s 10 ".koy[4:9]"  0 0 0 0 0 0;
 createNode reference -n "sharedReferenceNode";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"sharedReferenceNode";
@@ -22517,30 +22486,19 @@ createNode animCurveTU -n "back_flex_ctrl01_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  110 1;
-createNode animCurveTU -n "atHouseShape_focalLength";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 35 38 35 42 540.577 77 540.577 78 35 80 35
-		 115 35 118 241.64529836577418 150 241.64529836577418;
-	setAttr -s 9 ".kit[1:8]"  1 1 1 18 18 18 2 1;
-	setAttr -s 9 ".kot[1:8]"  1 1 1 18 18 18 2 1;
-	setAttr -s 9 ".kix[1:8]"  1 1 1 1 1 1 0.00060490117175504565 1;
-	setAttr -s 9 ".kiy[1:8]"  0 0 0 0 0 0 0.99999988079071045 0;
-	setAttr -s 9 ".kox[1:8]"  1 1 1 1 1 1 1 1;
-	setAttr -s 9 ".koy[1:8]"  0 0 0 0 0 0 0 0;
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr ".o" 18;
-	setAttr ".unw" 18;
+	setAttr ".o" 3;
+	setAttr ".unw" 3;
 select -ne :renderPartition;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 303 ".st";
+	setAttr -s 209 ".st";
 	setAttr -cb on ".an";
 	setAttr -cb on ".pt";
 select -ne :renderGlobalsList1;
@@ -22553,7 +22511,7 @@ select -ne :defaultShaderList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 210 ".s";
+	setAttr -s 145 ".s";
 select -ne :postProcessList1;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -22565,23 +22523,21 @@ select -ne :defaultRenderUtilityList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 364 ".u";
+	setAttr -s 354 ".u";
 select -ne :defaultRenderingList1;
-	setAttr -s 27 ".r";
-select -ne :lightList1;
-	setAttr -s 18 ".l";
+	setAttr -s 18 ".r";
 select -ne :defaultTextureList1;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 156 ".tx";
+	setAttr -s 142 ".tx";
 select -ne :initialShadingGroup;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 648 ".dsm";
+	setAttr -s 255 ".dsm";
 	setAttr -k on ".mwc";
 	setAttr -cb on ".an";
 	setAttr -cb on ".il";
@@ -22590,7 +22546,7 @@ select -ne :initialShadingGroup;
 	setAttr -cb on ".fo";
 	setAttr -cb on ".epo";
 	setAttr ".ro" yes;
-	setAttr -s 216 ".gn";
+	setAttr -s 114 ".gn";
 	setAttr -cb on ".mimt";
 	setAttr -cb on ".miop";
 	setAttr -cb on ".mise";
@@ -22700,8 +22656,6 @@ select -ne :defaultResolution;
 	setAttr -av -k on ".zsl";
 	setAttr -k on ".isu";
 	setAttr -k on ".pdu";
-select -ne :defaultLightSet;
-	setAttr -s 18 ".dsm";
 select -ne :hardwareRenderGlobals;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -22903,154 +22857,154 @@ connectAttr "shoulders_rotation_ctrl01_scaleY.o" "outside_living_roomRN.phl[208]
 		;
 connectAttr "shoulders_rotation_ctrl01_scaleZ.o" "outside_living_roomRN.phl[209]"
 		;
-connectAttr "locator_L_elbow01_translateX.o" "outside_living_roomRN.phl[210]";
-connectAttr "locator_L_elbow01_translateY.o" "outside_living_roomRN.phl[211]";
-connectAttr "locator_L_elbow01_translateZ.o" "outside_living_roomRN.phl[212]";
-connectAttr "locator_L_elbow01_visibility.o" "outside_living_roomRN.phl[213]";
-connectAttr "locator_L_elbow01_rotateX.o" "outside_living_roomRN.phl[214]";
-connectAttr "locator_L_elbow01_rotateY.o" "outside_living_roomRN.phl[215]";
-connectAttr "locator_L_elbow01_rotateZ.o" "outside_living_roomRN.phl[216]";
-connectAttr "locator_L_elbow01_scaleX.o" "outside_living_roomRN.phl[217]";
-connectAttr "locator_L_elbow01_scaleY.o" "outside_living_roomRN.phl[218]";
-connectAttr "locator_L_elbow01_scaleZ.o" "outside_living_roomRN.phl[219]";
-connectAttr "hip_rotation_ctrl01_translateZ.o" "outside_living_roomRN.phl[220]";
-connectAttr "hip_rotation_ctrl01_translateX.o" "outside_living_roomRN.phl[221]";
-connectAttr "hip_rotation_ctrl01_translateY.o" "outside_living_roomRN.phl[222]";
-connectAttr "hip_rotation_ctrl01_rotateZ.o" "outside_living_roomRN.phl[223]";
-connectAttr "hip_rotation_ctrl01_rotateX.o" "outside_living_roomRN.phl[224]";
-connectAttr "hip_rotation_ctrl01_rotateY.o" "outside_living_roomRN.phl[225]";
-connectAttr "hip_rotation_ctrl01_scaleX.o" "outside_living_roomRN.phl[226]";
-connectAttr "hip_rotation_ctrl01_scaleY.o" "outside_living_roomRN.phl[227]";
-connectAttr "hip_rotation_ctrl01_scaleZ.o" "outside_living_roomRN.phl[228]";
-connectAttr "tail_controllers_01_translateX.o" "outside_living_roomRN.phl[229]";
-connectAttr "tail_controllers_01_translateY.o" "outside_living_roomRN.phl[230]";
-connectAttr "tail_controllers_01_translateZ.o" "outside_living_roomRN.phl[231]";
-connectAttr "tail_controllers_01_rotateX.o" "outside_living_roomRN.phl[232]";
-connectAttr "tail_controllers_01_rotateY.o" "outside_living_roomRN.phl[233]";
-connectAttr "tail_controllers_01_rotateZ.o" "outside_living_roomRN.phl[234]";
-connectAttr "tail_controllers_01_scaleX.o" "outside_living_roomRN.phl[235]";
-connectAttr "tail_controllers_01_scaleY.o" "outside_living_roomRN.phl[236]";
-connectAttr "tail_controllers_01_scaleZ.o" "outside_living_roomRN.phl[237]";
-connectAttr "tail_controllers_01_visibility.o" "outside_living_roomRN.phl[238]";
-connectAttr "pairBlend2.otx" "outside_living_roomRN.phl[239]";
-connectAttr "pairBlend2.oty" "outside_living_roomRN.phl[240]";
-connectAttr "pairBlend2.otz" "outside_living_roomRN.phl[241]";
-connectAttr "pairBlend2.orx" "outside_living_roomRN.phl[242]";
-connectAttr "pairBlend2.ory" "outside_living_roomRN.phl[243]";
-connectAttr "pairBlend2.orz" "outside_living_roomRN.phl[244]";
-connectAttr "tail_1control01_scaleX.o" "outside_living_roomRN.phl[245]";
-connectAttr "tail_1control01_scaleY.o" "outside_living_roomRN.phl[246]";
-connectAttr "tail_1control01_scaleZ.o" "outside_living_roomRN.phl[247]";
-connectAttr "tail_1control01_blendParent1.o" "outside_living_roomRN.phl[248]";
-connectAttr "outside_living_roomRN.phl[249]" "pairBlend2.itx2";
-connectAttr "outside_living_roomRN.phl[250]" "pairBlend2.ity2";
-connectAttr "outside_living_roomRN.phl[251]" "pairBlend2.itz2";
-connectAttr "outside_living_roomRN.phl[252]" "pairBlend2.irx2";
-connectAttr "outside_living_roomRN.phl[253]" "pairBlend2.iry2";
-connectAttr "outside_living_roomRN.phl[254]" "pairBlend2.irz2";
-connectAttr "tail_2control01_translateX.o" "outside_living_roomRN.phl[255]";
-connectAttr "tail_2control01_translateY.o" "outside_living_roomRN.phl[256]";
-connectAttr "tail_2control01_translateZ.o" "outside_living_roomRN.phl[257]";
-connectAttr "tail_2control01_rotateX.o" "outside_living_roomRN.phl[258]";
-connectAttr "tail_2control01_rotateY.o" "outside_living_roomRN.phl[259]";
-connectAttr "tail_2control01_rotateZ.o" "outside_living_roomRN.phl[260]";
-connectAttr "tail_2control01_scaleX.o" "outside_living_roomRN.phl[261]";
-connectAttr "tail_2control01_scaleY.o" "outside_living_roomRN.phl[262]";
-connectAttr "tail_2control01_scaleZ.o" "outside_living_roomRN.phl[263]";
-connectAttr "tail_3control01_translateX.o" "outside_living_roomRN.phl[264]";
-connectAttr "tail_3control01_translateY.o" "outside_living_roomRN.phl[265]";
-connectAttr "tail_3control01_translateZ.o" "outside_living_roomRN.phl[266]";
-connectAttr "tail_3control01_rotateX.o" "outside_living_roomRN.phl[267]";
-connectAttr "tail_3control01_rotateY.o" "outside_living_roomRN.phl[268]";
-connectAttr "tail_3control01_rotateZ.o" "outside_living_roomRN.phl[269]";
-connectAttr "tail_3control01_scaleX.o" "outside_living_roomRN.phl[270]";
-connectAttr "tail_3control01_scaleY.o" "outside_living_roomRN.phl[271]";
-connectAttr "tail_3control01_scaleZ.o" "outside_living_roomRN.phl[272]";
-connectAttr "tail_4control01_translateX.o" "outside_living_roomRN.phl[273]";
-connectAttr "tail_4control01_translateY.o" "outside_living_roomRN.phl[274]";
-connectAttr "tail_4control01_translateZ.o" "outside_living_roomRN.phl[275]";
-connectAttr "tail_4control01_rotateX.o" "outside_living_roomRN.phl[276]";
-connectAttr "tail_4control01_rotateY.o" "outside_living_roomRN.phl[277]";
-connectAttr "tail_4control01_rotateZ.o" "outside_living_roomRN.phl[278]";
-connectAttr "tail_4control01_scaleX.o" "outside_living_roomRN.phl[279]";
-connectAttr "tail_4control01_scaleY.o" "outside_living_roomRN.phl[280]";
-connectAttr "tail_4control01_scaleZ.o" "outside_living_roomRN.phl[281]";
-connectAttr "back_flex_ctrl01_translateX.o" "outside_living_roomRN.phl[282]";
-connectAttr "back_flex_ctrl01_translateY.o" "outside_living_roomRN.phl[283]";
-connectAttr "back_flex_ctrl01_translateZ.o" "outside_living_roomRN.phl[284]";
-connectAttr "back_flex_ctrl01_rotateX.o" "outside_living_roomRN.phl[285]";
-connectAttr "back_flex_ctrl01_rotateY.o" "outside_living_roomRN.phl[286]";
-connectAttr "back_flex_ctrl01_rotateZ.o" "outside_living_roomRN.phl[287]";
-connectAttr "back_flex_ctrl01_scaleX.o" "outside_living_roomRN.phl[288]";
-connectAttr "back_flex_ctrl01_scaleY.o" "outside_living_roomRN.phl[289]";
-connectAttr "back_flex_ctrl01_scaleZ.o" "outside_living_roomRN.phl[290]";
-connectAttr "back_flex_ctrl01_visibility.o" "outside_living_roomRN.phl[291]";
-connectAttr "controller_L_backfoot01_rotateX.o" "outside_living_roomRN.phl[292]"
+connectAttr "controller_L_frontfoot01_rotateX.o" "outside_living_roomRN.phl[210]"
 		;
-connectAttr "controller_L_backfoot01_rotateY.o" "outside_living_roomRN.phl[293]"
+connectAttr "controller_L_frontfoot01_rotateY.o" "outside_living_roomRN.phl[211]"
 		;
-connectAttr "controller_L_backfoot01_rotateZ.o" "outside_living_roomRN.phl[294]"
+connectAttr "controller_L_frontfoot01_rotateZ.o" "outside_living_roomRN.phl[212]"
 		;
-connectAttr "controller_L_backfoot01_translateX.o" "outside_living_roomRN.phl[295]"
+connectAttr "controller_L_frontfoot01_translateX.o" "outside_living_roomRN.phl[213]"
 		;
-connectAttr "controller_L_backfoot01_translateY.o" "outside_living_roomRN.phl[296]"
+connectAttr "controller_L_frontfoot01_translateY.o" "outside_living_roomRN.phl[214]"
 		;
-connectAttr "controller_L_backfoot01_translateZ.o" "outside_living_roomRN.phl[297]"
+connectAttr "controller_L_frontfoot01_translateZ.o" "outside_living_roomRN.phl[215]"
 		;
-connectAttr "controller_L_backfoot01_scaleX.o" "outside_living_roomRN.phl[298]";
-connectAttr "controller_L_backfoot01_scaleY.o" "outside_living_roomRN.phl[299]";
-connectAttr "controller_L_backfoot01_scaleZ.o" "outside_living_roomRN.phl[300]";
-connectAttr "controller_R_backfoot01_rotateX.o" "outside_living_roomRN.phl[301]"
+connectAttr "controller_L_frontfoot01_scaleX.o" "outside_living_roomRN.phl[216]"
 		;
-connectAttr "controller_R_backfoot01_rotateY.o" "outside_living_roomRN.phl[302]"
+connectAttr "controller_L_frontfoot01_scaleY.o" "outside_living_roomRN.phl[217]"
 		;
-connectAttr "controller_R_backfoot01_rotateZ.o" "outside_living_roomRN.phl[303]"
+connectAttr "controller_L_frontfoot01_scaleZ.o" "outside_living_roomRN.phl[218]"
 		;
-connectAttr "controller_R_backfoot01_translateX.o" "outside_living_roomRN.phl[304]"
+connectAttr "locator_L_elbow01_translateX.o" "outside_living_roomRN.phl[219]";
+connectAttr "locator_L_elbow01_translateY.o" "outside_living_roomRN.phl[220]";
+connectAttr "locator_L_elbow01_translateZ.o" "outside_living_roomRN.phl[221]";
+connectAttr "locator_L_elbow01_visibility.o" "outside_living_roomRN.phl[222]";
+connectAttr "locator_L_elbow01_rotateX.o" "outside_living_roomRN.phl[223]";
+connectAttr "locator_L_elbow01_rotateY.o" "outside_living_roomRN.phl[224]";
+connectAttr "locator_L_elbow01_rotateZ.o" "outside_living_roomRN.phl[225]";
+connectAttr "locator_L_elbow01_scaleX.o" "outside_living_roomRN.phl[226]";
+connectAttr "locator_L_elbow01_scaleY.o" "outside_living_roomRN.phl[227]";
+connectAttr "locator_L_elbow01_scaleZ.o" "outside_living_roomRN.phl[228]";
+connectAttr "controller_R_frontfoot01_rotateX.o" "outside_living_roomRN.phl[229]"
 		;
-connectAttr "controller_R_backfoot01_translateY.o" "outside_living_roomRN.phl[305]"
+connectAttr "controller_R_frontfoot01_rotateY.o" "outside_living_roomRN.phl[230]"
 		;
-connectAttr "controller_R_backfoot01_translateZ.o" "outside_living_roomRN.phl[306]"
+connectAttr "controller_R_frontfoot01_rotateZ.o" "outside_living_roomRN.phl[231]"
 		;
-connectAttr "controller_R_backfoot01_scaleX.o" "outside_living_roomRN.phl[307]";
-connectAttr "controller_R_backfoot01_scaleY.o" "outside_living_roomRN.phl[308]";
-connectAttr "controller_R_backfoot01_scaleZ.o" "outside_living_roomRN.phl[309]";
-connectAttr "controller_L_frontfoot01_rotateX.o" "outside_living_roomRN.phl[310]"
+connectAttr "controller_R_frontfoot01_translateX.o" "outside_living_roomRN.phl[232]"
 		;
-connectAttr "controller_L_frontfoot01_rotateY.o" "outside_living_roomRN.phl[311]"
+connectAttr "controller_R_frontfoot01_translateY.o" "outside_living_roomRN.phl[233]"
 		;
-connectAttr "controller_L_frontfoot01_rotateZ.o" "outside_living_roomRN.phl[312]"
+connectAttr "controller_R_frontfoot01_translateZ.o" "outside_living_roomRN.phl[234]"
 		;
-connectAttr "controller_L_frontfoot01_translateX.o" "outside_living_roomRN.phl[313]"
+connectAttr "controller_R_frontfoot01_scaleX.o" "outside_living_roomRN.phl[235]"
 		;
-connectAttr "controller_L_frontfoot01_translateY.o" "outside_living_roomRN.phl[314]"
+connectAttr "controller_R_frontfoot01_scaleY.o" "outside_living_roomRN.phl[236]"
 		;
-connectAttr "controller_L_frontfoot01_translateZ.o" "outside_living_roomRN.phl[315]"
+connectAttr "controller_R_frontfoot01_scaleZ.o" "outside_living_roomRN.phl[237]"
 		;
-connectAttr "controller_L_frontfoot01_scaleX.o" "outside_living_roomRN.phl[316]"
+connectAttr "controller_L_backfoot01_rotateX.o" "outside_living_roomRN.phl[238]"
 		;
-connectAttr "controller_L_frontfoot01_scaleY.o" "outside_living_roomRN.phl[317]"
+connectAttr "controller_L_backfoot01_rotateY.o" "outside_living_roomRN.phl[239]"
 		;
-connectAttr "controller_L_frontfoot01_scaleZ.o" "outside_living_roomRN.phl[318]"
+connectAttr "controller_L_backfoot01_rotateZ.o" "outside_living_roomRN.phl[240]"
 		;
-connectAttr "controller_R_frontfoot01_rotateX.o" "outside_living_roomRN.phl[319]"
+connectAttr "controller_L_backfoot01_translateX.o" "outside_living_roomRN.phl[241]"
 		;
-connectAttr "controller_R_frontfoot01_rotateY.o" "outside_living_roomRN.phl[320]"
+connectAttr "controller_L_backfoot01_translateY.o" "outside_living_roomRN.phl[242]"
 		;
-connectAttr "controller_R_frontfoot01_rotateZ.o" "outside_living_roomRN.phl[321]"
+connectAttr "controller_L_backfoot01_translateZ.o" "outside_living_roomRN.phl[243]"
 		;
-connectAttr "controller_R_frontfoot01_translateX.o" "outside_living_roomRN.phl[322]"
+connectAttr "controller_L_backfoot01_scaleX.o" "outside_living_roomRN.phl[244]";
+connectAttr "controller_L_backfoot01_scaleY.o" "outside_living_roomRN.phl[245]";
+connectAttr "controller_L_backfoot01_scaleZ.o" "outside_living_roomRN.phl[246]";
+connectAttr "controller_R_backfoot01_rotateX.o" "outside_living_roomRN.phl[247]"
 		;
-connectAttr "controller_R_frontfoot01_translateY.o" "outside_living_roomRN.phl[323]"
+connectAttr "controller_R_backfoot01_rotateY.o" "outside_living_roomRN.phl[248]"
 		;
-connectAttr "controller_R_frontfoot01_translateZ.o" "outside_living_roomRN.phl[324]"
+connectAttr "controller_R_backfoot01_rotateZ.o" "outside_living_roomRN.phl[249]"
 		;
-connectAttr "controller_R_frontfoot01_scaleX.o" "outside_living_roomRN.phl[325]"
+connectAttr "controller_R_backfoot01_translateX.o" "outside_living_roomRN.phl[250]"
 		;
-connectAttr "controller_R_frontfoot01_scaleY.o" "outside_living_roomRN.phl[326]"
+connectAttr "controller_R_backfoot01_translateY.o" "outside_living_roomRN.phl[251]"
 		;
-connectAttr "controller_R_frontfoot01_scaleZ.o" "outside_living_roomRN.phl[327]"
+connectAttr "controller_R_backfoot01_translateZ.o" "outside_living_roomRN.phl[252]"
 		;
+connectAttr "controller_R_backfoot01_scaleX.o" "outside_living_roomRN.phl[253]";
+connectAttr "controller_R_backfoot01_scaleY.o" "outside_living_roomRN.phl[254]";
+connectAttr "controller_R_backfoot01_scaleZ.o" "outside_living_roomRN.phl[255]";
+connectAttr "hip_rotation_ctrl01_translateX.o" "outside_living_roomRN.phl[256]";
+connectAttr "hip_rotation_ctrl01_translateY.o" "outside_living_roomRN.phl[257]";
+connectAttr "hip_rotation_ctrl01_translateZ.o" "outside_living_roomRN.phl[258]";
+connectAttr "hip_rotation_ctrl01_rotateX.o" "outside_living_roomRN.phl[259]";
+connectAttr "hip_rotation_ctrl01_rotateY.o" "outside_living_roomRN.phl[260]";
+connectAttr "hip_rotation_ctrl01_rotateZ.o" "outside_living_roomRN.phl[261]";
+connectAttr "hip_rotation_ctrl01_scaleX.o" "outside_living_roomRN.phl[262]";
+connectAttr "hip_rotation_ctrl01_scaleY.o" "outside_living_roomRN.phl[263]";
+connectAttr "hip_rotation_ctrl01_scaleZ.o" "outside_living_roomRN.phl[264]";
+connectAttr "tail_controllers_01_translateX.o" "outside_living_roomRN.phl[265]";
+connectAttr "tail_controllers_01_translateY.o" "outside_living_roomRN.phl[266]";
+connectAttr "tail_controllers_01_translateZ.o" "outside_living_roomRN.phl[267]";
+connectAttr "tail_controllers_01_rotateX.o" "outside_living_roomRN.phl[268]";
+connectAttr "tail_controllers_01_rotateY.o" "outside_living_roomRN.phl[269]";
+connectAttr "tail_controllers_01_rotateZ.o" "outside_living_roomRN.phl[270]";
+connectAttr "tail_controllers_01_scaleX.o" "outside_living_roomRN.phl[271]";
+connectAttr "tail_controllers_01_scaleY.o" "outside_living_roomRN.phl[272]";
+connectAttr "tail_controllers_01_scaleZ.o" "outside_living_roomRN.phl[273]";
+connectAttr "tail_controllers_01_visibility.o" "outside_living_roomRN.phl[274]";
+connectAttr "pairBlend2.otx" "outside_living_roomRN.phl[275]";
+connectAttr "pairBlend2.oty" "outside_living_roomRN.phl[276]";
+connectAttr "pairBlend2.otz" "outside_living_roomRN.phl[277]";
+connectAttr "pairBlend2.orx" "outside_living_roomRN.phl[278]";
+connectAttr "pairBlend2.ory" "outside_living_roomRN.phl[279]";
+connectAttr "pairBlend2.orz" "outside_living_roomRN.phl[280]";
+connectAttr "tail_1control01_scaleX.o" "outside_living_roomRN.phl[281]";
+connectAttr "tail_1control01_scaleY.o" "outside_living_roomRN.phl[282]";
+connectAttr "tail_1control01_scaleZ.o" "outside_living_roomRN.phl[283]";
+connectAttr "tail_1control01_blendParent1.o" "outside_living_roomRN.phl[284]";
+connectAttr "outside_living_roomRN.phl[285]" "pairBlend2.itx2";
+connectAttr "outside_living_roomRN.phl[286]" "pairBlend2.ity2";
+connectAttr "outside_living_roomRN.phl[287]" "pairBlend2.itz2";
+connectAttr "outside_living_roomRN.phl[288]" "pairBlend2.irx2";
+connectAttr "outside_living_roomRN.phl[289]" "pairBlend2.iry2";
+connectAttr "outside_living_roomRN.phl[290]" "pairBlend2.irz2";
+connectAttr "tail_2control01_translateX.o" "outside_living_roomRN.phl[291]";
+connectAttr "tail_2control01_translateY.o" "outside_living_roomRN.phl[292]";
+connectAttr "tail_2control01_translateZ.o" "outside_living_roomRN.phl[293]";
+connectAttr "tail_2control01_rotateX.o" "outside_living_roomRN.phl[294]";
+connectAttr "tail_2control01_rotateY.o" "outside_living_roomRN.phl[295]";
+connectAttr "tail_2control01_rotateZ.o" "outside_living_roomRN.phl[296]";
+connectAttr "tail_2control01_scaleX.o" "outside_living_roomRN.phl[297]";
+connectAttr "tail_2control01_scaleY.o" "outside_living_roomRN.phl[298]";
+connectAttr "tail_2control01_scaleZ.o" "outside_living_roomRN.phl[299]";
+connectAttr "tail_3control01_translateX.o" "outside_living_roomRN.phl[300]";
+connectAttr "tail_3control01_translateY.o" "outside_living_roomRN.phl[301]";
+connectAttr "tail_3control01_translateZ.o" "outside_living_roomRN.phl[302]";
+connectAttr "tail_3control01_rotateX.o" "outside_living_roomRN.phl[303]";
+connectAttr "tail_3control01_rotateY.o" "outside_living_roomRN.phl[304]";
+connectAttr "tail_3control01_rotateZ.o" "outside_living_roomRN.phl[305]";
+connectAttr "tail_3control01_scaleX.o" "outside_living_roomRN.phl[306]";
+connectAttr "tail_3control01_scaleY.o" "outside_living_roomRN.phl[307]";
+connectAttr "tail_3control01_scaleZ.o" "outside_living_roomRN.phl[308]";
+connectAttr "tail_4control01_translateX.o" "outside_living_roomRN.phl[309]";
+connectAttr "tail_4control01_translateY.o" "outside_living_roomRN.phl[310]";
+connectAttr "tail_4control01_translateZ.o" "outside_living_roomRN.phl[311]";
+connectAttr "tail_4control01_rotateX.o" "outside_living_roomRN.phl[312]";
+connectAttr "tail_4control01_rotateY.o" "outside_living_roomRN.phl[313]";
+connectAttr "tail_4control01_rotateZ.o" "outside_living_roomRN.phl[314]";
+connectAttr "tail_4control01_scaleX.o" "outside_living_roomRN.phl[315]";
+connectAttr "tail_4control01_scaleY.o" "outside_living_roomRN.phl[316]";
+connectAttr "tail_4control01_scaleZ.o" "outside_living_roomRN.phl[317]";
+connectAttr "back_flex_ctrl01_translateX.o" "outside_living_roomRN.phl[318]";
+connectAttr "back_flex_ctrl01_translateY.o" "outside_living_roomRN.phl[319]";
+connectAttr "back_flex_ctrl01_translateZ.o" "outside_living_roomRN.phl[320]";
+connectAttr "back_flex_ctrl01_rotateX.o" "outside_living_roomRN.phl[321]";
+connectAttr "back_flex_ctrl01_rotateY.o" "outside_living_roomRN.phl[322]";
+connectAttr "back_flex_ctrl01_rotateZ.o" "outside_living_roomRN.phl[323]";
+connectAttr "back_flex_ctrl01_scaleX.o" "outside_living_roomRN.phl[324]";
+connectAttr "back_flex_ctrl01_scaleY.o" "outside_living_roomRN.phl[325]";
+connectAttr "back_flex_ctrl01_scaleZ.o" "outside_living_roomRN.phl[326]";
+connectAttr "back_flex_ctrl01_visibility.o" "outside_living_roomRN.phl[327]";
 connectAttr "atHouse_visibility.o" "outside_living_roomRN.phl[328]";
 connectAttr "atHouse_translateX.o" "outside_living_roomRN.phl[329]";
 connectAttr "atHouse_translateY.o" "outside_living_roomRN.phl[330]";
@@ -23061,7 +23015,6 @@ connectAttr "atHouse_rotateZ.o" "outside_living_roomRN.phl[334]";
 connectAttr "atHouse_scaleX.o" "outside_living_roomRN.phl[335]";
 connectAttr "atHouse_scaleY.o" "outside_living_roomRN.phl[336]";
 connectAttr "atHouse_scaleZ.o" "outside_living_roomRN.phl[337]";
-connectAttr "atHouseShape_focalLength.o" "outside_living_roomRN.phl[338]";
 connectAttr ":mentalrayGlobals.msg" ":mentalrayItemsList.glb";
 connectAttr ":miDefaultOptions.msg" ":mentalrayItemsList.opt" -na;
 connectAttr ":miDefaultFramebuffer.msg" ":mentalrayItemsList.fb" -na;

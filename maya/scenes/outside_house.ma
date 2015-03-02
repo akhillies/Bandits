@@ -1,6 +1,6 @@
 //Maya ASCII 2015 scene
 //Name: outside_house.ma
-//Last modified: Sat, Feb 21, 2015 12:48:46 PM
+//Last modified: Sun, Mar 01, 2015 10:35:50 PM
 //Codeset: 1252
 file -rdi 1 -ns "smarty_latest" -rfn "smarty_latestRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/characters/smarty/smarty_latest.ma";
 file -rdi 1 -ns "sneaks_latest" -rfn "sneaks_latestRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/characters/sneaks/sneaks_latest.ma";
@@ -9,6 +9,7 @@ file -rdi 1 -ns "leaves" -rfn "leavesRN" -op "v=0;" "X:/documents/GitHub/Bandits
 file -rdi 1 -ns "leaves1" -rfn "leavesRN1" "X:/documents/GitHub/Bandits/maya//assets/sets/exterior/BushLeaves.ma";
 file -rdi 1 -ns "leaves2" -rfn "leavesRN2" "X:/documents/GitHub/Bandits/maya//assets/sets/exterior/BushLeaves.ma";
 file -rdi 1 -ns "tuffs_latest" -rfn "tuffs_latestRN" -op "v=0;p=17;f=0" "X:/documents/GitHub/Bandits/maya//assets/characters/tuffs/tuffs_latest.ma";
+file -rdi 1 -ns "leaves3" -rfn "leaves2RN" "X:/documents/GitHub/Bandits/maya//assets/sets/exterior/BushLeaves.ma";
 file -r -ns "smarty_latest" -dr 1 -rfn "smarty_latestRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/characters/smarty/smarty_latest.ma";
 file -r -ns "sneaks_latest" -dr 1 -rfn "sneaks_latestRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/characters/sneaks/sneaks_latest.ma";
 file -r -ns "binoculars" -dr 1 -rfn "binocularsRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/props/binoculars.ma";
@@ -16,11 +17,13 @@ file -r -ns "leaves" -dr 1 -rfn "leavesRN" -op "v=0;" "X:/documents/GitHub/Bandi
 file -r -ns "leaves1" -dr 1 -rfn "leavesRN1" "X:/documents/GitHub/Bandits/maya//assets/sets/exterior/BushLeaves.ma";
 file -r -ns "leaves2" -dr 1 -rfn "leavesRN2" "X:/documents/GitHub/Bandits/maya//assets/sets/exterior/BushLeaves.ma";
 file -r -ns "tuffs_latest" -dr 1 -rfn "tuffs_latestRN" -op "v=0;p=17;f=0" "X:/documents/GitHub/Bandits/maya//assets/characters/tuffs/tuffs_latest.ma";
+file -r -ns "leaves3" -dr 1 -rfn "leaves2RN" "X:/documents/GitHub/Bandits/maya//assets/sets/exterior/BushLeaves.ma";
 requires maya "2015";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOptions" -nodeType "mentalrayGlobals"
 		 -nodeType "mentalrayItemsList" -dataType "byteArray" "Mayatomr" "2015.0 - 3.12.1.18 ";
 requires -nodeType "FurGlobals" "Fur" "2015";
 requires "xfrog" "1.0";
+requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2015";
@@ -52,7 +55,7 @@ createNode camera -n "atRaccoonsShape" -p "atRaccoons";
 	setAttr ".dr" yes;
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -270.55021291062968 56.521253801446242 -51.898678478020727 ;
+	setAttr ".t" -type "double3" -281.06697300796588 53.433124214685108 -47.448973873869591 ;
 	setAttr ".r" -type "double3" 147.26164727065188 49.399999999985589 -179.99999999999855 ;
 	setAttr ".rp" -type "double3" -3.5527136788005009e-015 1.4210854715202004e-014 0 ;
 	setAttr ".rpt" -type "double3" -1.9596174818287018e-014 1.3652240190584011e-014 
@@ -60,11 +63,11 @@ createNode transform -s -n "persp";
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 92.713824577670835;
+	setAttr ".coi" 83.229346174690221;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -329.7628496625473 6.3812937992647152 -1.1473107360270749 ;
+	setAttr ".tp" -type "double3" -334.22225016960726 8.4224032438237124 -1.8893912131517308 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	setAttr ".v" no;
@@ -271,8 +274,8 @@ createNode mentalrayOptions -s -n "miDefaultOptions";
 createNode mentalrayFramebuffer -s -n "miDefaultFramebuffer";
 	setAttr ".dat" 2;
 createNode lightLinker -s -n "lightLinker1";
-	setAttr -s 289 ".lnk";
-	setAttr -s 289 ".slnk";
+	setAttr -s 209 ".lnk";
+	setAttr -s 209 ".slnk";
 createNode displayLayerManager -n "layerManager";
 createNode displayLayer -n "defaultLayer";
 createNode renderLayerManager -n "renderLayerManager";
@@ -351,7 +354,7 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                $editorName;\n\t\t\tif (`objExists nodeEditorPanel1Info`) nodeEditor -e -restoreInfo nodeEditorPanel1Info $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"createNodePanel\" -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Texture Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"polyTexturePlacementPanel\" -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels `;\n"
 		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"renderWindowPanel\" -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"blendShapePanel\" (localizedPanelLabel(\"Blend Shape\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\tblendShapePanel -unParent -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels ;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n"
 		+ "\t\tblendShapePanel -edit -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynRelEdPanel\" -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"relationshipPanel\" -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels `;\n"
-		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"referenceEditorPanel\" -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"componentEditorPanel\" -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels `;\n"
+		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"referenceEditorPanel\" -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\tif ($useSceneConfig) {\n\t\tscriptedPanel -e -to $panelName;\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"componentEditorPanel\" -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels `;\n"
 		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynPaintScriptedPanelType\" -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"scriptEditorPanel\" -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels `;\n"
 		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"Stereo\" -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels `;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -editorChanged \"updateModelPanelBar\" \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n"
 		+ "                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n"
@@ -704,6 +707,13 @@ createNode reference -n "tuffs_latestRN";
 		"tuffs_latestRN" 0;
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
+createNode reference -n "leaves2RN";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"leaves2RN"
+		"leaves2RN" 0
+		"leaves2RN" 1
+		2 "|leaves3:SH20_3_br1_NL_INV" "translate" " -type \"double3\" -331.15534386579134 0 -9.2173646593751499";
+lockNode -l 1 ;
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -716,7 +726,7 @@ select -ne :renderPartition;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 195 ".st";
+	setAttr -s 209 ".st";
 	setAttr -cb on ".an";
 	setAttr -cb on ".pt";
 select -ne :renderGlobalsList1;
@@ -729,7 +739,7 @@ select -ne :defaultShaderList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 105 ".s";
+	setAttr -s 119 ".s";
 select -ne :postProcessList1;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -741,21 +751,21 @@ select -ne :defaultRenderUtilityList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 67 ".u";
+	setAttr -s 74 ".u";
 select -ne :defaultRenderingList1;
-	setAttr -s 8 ".r";
+	setAttr -s 9 ".r";
 select -ne :defaultTextureList1;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 67 ".tx";
+	setAttr -s 74 ".tx";
 select -ne :initialShadingGroup;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 4 ".dsm";
+	setAttr -s 6 ".dsm";
 	setAttr -k on ".mwc";
 	setAttr -cb on ".an";
 	setAttr -cb on ".il";
@@ -910,6 +920,6 @@ connectAttr "sharedReferenceNode.sr" "sneaks_latestRN.sr";
 connectAttr "sharedReferenceNode.sr" "leavesRN.sr";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 dataStructure -fmt "raw" -as "name=externalContentTable:string=node:string=key:string=upath:uint32=upathcrc:string=rpath:string=roles";
-applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"smarty_latestRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/characters/smarty/smarty_latest.ma\" 3117033860 \"X:/documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\" \"FileRef\"\n1\n\"sneaks_latestRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/characters/sneaks/sneaks_latest.ma\" 37948324 \"X:/documents/GitHub/Bandits/maya/assets/characters/sneaks/sneaks_latest.ma\" \"FileRef\"\n2\n\"binocularsRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/props/binoculars.ma\" 2829508519 \"X:/documents/GitHub/Bandits/maya/assets/props/binoculars.ma\" \"FileRef\"\n3\n\"leavesRN\" \"\" \"X:/documents/GitHub/Bandits/maya//assets/sets/exterior/BushLeaves.ma\" 2902018114 \"X:/documents/GitHub/Bandits/maya/assets/sets/exterior/BushLeaves.ma\" \"FileRef\"\n4\n\"leavesRN1\" \"\" \"X:/documents/GitHub/Bandits/maya//assets/sets/exterior/BushLeaves.ma\" 2902018114 \"X:/documents/GitHub/Bandits/maya/assets/sets/exterior/BushLeaves.ma\" \"FileRef\"\n5\n\"leavesRN2\" \"\" \"X:/documents/GitHub/Bandits/maya//assets/sets/exterior/BushLeaves.ma\" 2902018114 \"X:/documents/GitHub/Bandits/maya/assets/sets/exterior/BushLeaves.ma\" \"FileRef\"\n6\n\"tuffs_latestRN\" \"\" \"X:/documents/GitHub/Bandits/maya/assets/characters/tuffs/tuffs_latest.ma\" 3170279251 \"X:/documents/GitHub/Bandits/maya/assets/characters/tuffs/tuffs_latest.ma\" \"FileRef\"\nendStream\nendChannel\nendAssociations\n" 
+applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"smarty_latestRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/characters/smarty/smarty_latest.ma\" 3117033860 \"X:/documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\" \"FileRef\"\n1\n\"sneaks_latestRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/characters/sneaks/sneaks_latest.ma\" 37948324 \"X:/documents/GitHub/Bandits/maya/assets/characters/sneaks/sneaks_latest.ma\" \"FileRef\"\n2\n\"binocularsRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/props/binoculars.ma\" 2829508519 \"X:/documents/GitHub/Bandits/maya/assets/props/binoculars.ma\" \"FileRef\"\n3\n\"leavesRN\" \"\" \"X:/documents/GitHub/Bandits/maya//assets/sets/exterior/BushLeaves.ma\" 2902018114 \"X:/documents/GitHub/Bandits/maya/assets/sets/exterior/BushLeaves.ma\" \"FileRef\"\n4\n\"leavesRN1\" \"\" \"X:/documents/GitHub/Bandits/maya//assets/sets/exterior/BushLeaves.ma\" 2902018114 \"X:/documents/GitHub/Bandits/maya/assets/sets/exterior/BushLeaves.ma\" \"FileRef\"\n5\n\"leavesRN2\" \"\" \"X:/documents/GitHub/Bandits/maya//assets/sets/exterior/BushLeaves.ma\" 2902018114 \"X:/documents/GitHub/Bandits/maya/assets/sets/exterior/BushLeaves.ma\" \"FileRef\"\n6\n\"tuffs_latestRN\" \"\" \"X:/documents/GitHub/Bandits/maya//assets/characters/tuffs/tuffs_latest.ma\" 3888614028 \"X:/documents/GitHub/Bandits/maya/assets/characters/tuffs/tuffs_latest.ma\" \"FileRef\"\n7\n\"leaves2RN\" \"\" \"X:/documents/GitHub/Bandits/maya/assets/sets/exterior/BushLeaves.ma\" 3550701845 \"X:/documents/GitHub/Bandits/maya/assets/sets/exterior/BushLeaves.ma\" \"FileRef\"\nendStream\nendChannel\nendAssociations\n" 
 		-scn;
 // End of outside_house.ma

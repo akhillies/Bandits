@@ -1,6 +1,6 @@
 //Maya ASCII 2013 scene
-//Name: livingroom_shading_latest.ma
-//Last modified: Sun, Mar 01, 2015 03:54:28 PM
+//Name: livingroom_shading_02.ma
+//Last modified: Sun, Mar 01, 2015 03:53:57 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "living_room_latest" -rfn "living_room_latestRN" "/Users/AshleyTheMagnificant/GitHub/Bandits/maya//assets/sets/livingroom/living_room_latest.ma";
 file -rdi 2 -ns "taller_window_four_squares_latest" -rfn "living_room_latest:taller_window_four_squares_latestRN"
@@ -6021,4 +6021,4 @@ connectAttr "place2dTexture4.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "place2dTexture5.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "place2dTexture6.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-// End of livingroom_shading_latest.ma
+// End of livingroom_shading_02.ma

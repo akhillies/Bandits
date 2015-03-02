@@ -1,6 +1,6 @@
 //Maya ASCII 2013 scene
 //Name: smarty_under_table.ma
-//Last modified: Sun, Mar 01, 2015 07:46:38 PM
+//Last modified: Sun, Mar 01, 2015 07:53:24 PM
 //Codeset: 1252
 file -rdi 1 -rpr "livingroom_shading_latest" -rfn "livingroom_shading_latestRN"
 		 "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/sets/livingroom_shading/livingroom_shading_latest.ma";

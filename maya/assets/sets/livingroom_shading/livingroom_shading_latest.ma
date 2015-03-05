@@ -1,6 +1,6 @@
-//Maya ASCII 2013 scene
+//Maya ASCII 2015 scene
 //Name: livingroom_shading_latest.ma
-//Last modified: Mon, Mar 02, 2015 01:52:26 AM
+//Last modified: Thu, Mar 05, 2015 01:04:57 AM
 //Codeset: UTF-8
 file -rdi 1 -ns "living_room_latest" -rfn "living_room_latestRN" "/Users/AshleyTheMagnificant/GitHub/Bandits/maya//assets/sets/livingroom/living_room_latest.ma";
 file -rdi 2 -ns "taller_window_four_squares_latest" -rfn "living_room_latest:taller_window_four_squares_latestRN"
@@ -35,30 +35,30 @@ file -rdi 2 -ns "resurrected_staircase" -rfn "living_room_latest:resurrected_sta
 file -rdi 2 -ns "chair_2" -rfn "living_room_latest:chair_2RN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya//assets/sets/bedroom/additions/chair_2.ma";
 file -rdi 2 -ns "desk_latest" -rfn "living_room_latest:desk_latestRN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya//assets/sets/bedroom/additions/desk_latest.ma";
 file -r -ns "living_room_latest" -dr 1 -rfn "living_room_latestRN" "/Users/AshleyTheMagnificant/GitHub/Bandits/maya//assets/sets/livingroom/living_room_latest.ma";
-requires maya "2013";
-requires "Mayatomr" "2013.0 - 3.10.1.9 ";
-requires "stereoCamera" "10.0";
+requires maya "2015";
+requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOptions" -nodeType "mentalrayGlobals"
+		 -nodeType "mentalrayItemsList" -dataType "byteArray" "Mayatomr" "2015.0 - 3.12.1.18 ";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
-fileInfo "product" "Maya 2013";
-fileInfo "version" "2013 x64";
-fileInfo "cutIdentifier" "201207040330-835994";
+fileInfo "product" "Maya 2015";
+fileInfo "version" "2015";
+fileInfo "cutIdentifier" "201408201531-928694";
 fileInfo "osv" "Mac OS X 10.9.1";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -229.90790162250426 5.8682553320707305 109.07550472031919 ;
-	setAttr ".r" -type "double3" 146.66164727002848 106.19999999999921 180.00000000000026 ;
+	setAttr ".t" -type "double3" -202.85047089449958 30.28093249140284 112.2340596199933 ;
+	setAttr ".r" -type "double3" 163.46164727001789 196.9999999999896 179.99999999999366 ;
 	setAttr ".rp" -type "double3" -2.6645352591003757e-15 -3.5527136788005009e-15 0 ;
 	setAttr ".rpt" -type "double3" 1.1138706104759493e-14 1.3711913436633638e-15 3.6927854488298209e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 9.7680423636297746;
+	setAttr ".coi" 38.060427242236713;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -237.74448394775391 0.49991342425346375 106.79876708984375 ;
+	setAttr ".tp" -type "double3" -197.87519836425781 9.3423361778259277 46.908683776855469 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	setAttr ".v" no;
@@ -101,7 +101,7 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".man" -type "string" "side_mask";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
-createNode transform -n "living_room_latestRNfosterParent1";
+createNode fosterParent -n "living_room_latestRNfosterParent1";
 createNode mesh -n "living_room_latest:bed_latest1:polySurfaceShape366" -p "living_room_latestRNfosterParent1";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -280,6 +280,8 @@ createNode mesh -n "living_room_latest:bed_latest1:polySurfaceShape366" -p "livi
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
+	setAttr ".sdt" 0;
+	setAttr ".ugsdt" no;
 	setAttr -s 154 ".pt[0:153]" -type "float3"  -4.9979868 0 0 -4.9979868 
 		-3.7252901e-09 0 -4.9979868 0 0 -4.9979868 7.4505802e-09 0 -4.9979868 7.4505802e-09 
 		0 -4.9979868 0 0 -4.9979868 0 0 -4.9979868 0 0 -4.9979868 0 0 -4.9979868 0 0 -4.9979868 
@@ -1067,6 +1069,8 @@ createNode mesh -n "living_room_latest:bed_latest1:polySurfaceShape367" -p "livi
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
+	setAttr ".sdt" 0;
+	setAttr ".ugsdt" no;
 	setAttr -s 154 ".pt[0:153]" -type "float3"  -0.021723101 0 0 -0.021723101 
 		-3.7252901e-09 0 -0.021723101 0 0 -0.021723101 7.4505802e-09 0 -0.021723101 7.4505802e-09 
 		0 -0.021723101 0 0 -0.021723101 0 0 -0.021723101 0 0 -0.021723101 0 0 -0.021723101 
@@ -1684,7 +1688,7 @@ createNode mesh -n "living_room_latest:bed_latest1:polySurfaceShape367" -p "livi
 createNode mentalrayItemsList -s -n "mentalrayItemsList";
 	setAttr -s 3 ".opt";
 createNode mentalrayGlobals -s -n "mentalrayGlobals";
-	addAttr -ci true -h true -sn "sunAndSkyShader" -ln "sunAndSkyShader" -at "message";
+	addAttr -s false -ci true -h true -sn "sunAndSkyShader" -ln "sunAndSkyShader" -at "message";
 	setAttr ".rvb" 3;
 	setAttr ".ivb" no;
 createNode mentalrayOptions -s -n "miDefaultOptions";
@@ -1693,13 +1697,16 @@ createNode mentalrayOptions -s -n "miDefaultOptions";
 	addAttr -ci true -sn "name" -ln "name" -dt "string" -p "stringOptions";
 	addAttr -ci true -sn "value" -ln "value" -dt "string" -p "stringOptions";
 	addAttr -ci true -sn "type" -ln "type" -dt "string" -p "stringOptions";
+	setAttr ".splck" yes;
 	setAttr ".minsp" 0;
 	setAttr ".maxsp" 2;
+	setAttr ".fil" 0;
 	setAttr ".filw" 0.66666668653488159;
 	setAttr ".filh" 0.66666668653488159;
 	setAttr ".rflr" 10;
 	setAttr ".rfrr" 10;
 	setAttr ".maxr" 20;
+	setAttr ".shrd" 2;
 	setAttr -s 48 ".stringOptions";
 	setAttr ".stringOptions[0].name" -type "string" "rast motion factor";
 	setAttr ".stringOptions[0].value" -type "string" "1.0";
@@ -1846,9 +1853,10 @@ createNode mentalrayOptions -s -n "miDefaultOptions";
 	setAttr ".stringOptions[47].value" -type "string" "1.0 1.0 1.0";
 	setAttr ".stringOptions[47].type" -type "string" "color";
 createNode mentalrayFramebuffer -s -n "miDefaultFramebuffer";
+	setAttr ".dat" 2;
 createNode lightLinker -s -n "lightLinker1";
-	setAttr -s 293 ".lnk";
-	setAttr -s 294 ".slnk";
+	setAttr -s 296 ".lnk";
+	setAttr -s 297 ".slnk";
 createNode displayLayerManager -n "layerManager";
 createNode displayLayer -n "defaultLayer";
 createNode renderLayerManager -n "renderLayerManager";
@@ -1859,72 +1867,74 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"top\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n"
 		+ "                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"base_OpenGL_Renderer\" \n"
 		+ "                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n"
-		+ "                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -shadows 0\n                $editorName;\nmodelEditor -e -viewSelected 0 $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n"
-		+ "            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n"
-		+ "            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n"
-		+ "            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -shadows 0\n            $editorName;\nmodelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"side\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n"
-		+ "                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"base_OpenGL_Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n"
-		+ "                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n"
-		+ "                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -shadows 0\n                $editorName;\nmodelEditor -e -viewSelected 0 $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n"
-		+ "            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n"
-		+ "            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -dimensions 1\n"
-		+ "            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -shadows 0\n            $editorName;\nmodelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"front\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n"
-		+ "                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"base_OpenGL_Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n"
-		+ "                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n"
-		+ "                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -shadows 0\n                $editorName;\nmodelEditor -e -viewSelected 0 $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n"
-		+ "            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n"
-		+ "            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n"
-		+ "            -motionTrails 1\n            -clipGhosts 1\n            -shadows 0\n            $editorName;\nmodelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n"
-		+ "                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 1\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"base_OpenGL_Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n"
-		+ "                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 0\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n"
-		+ "                -locators 1\n                -manipulators 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -shadows 0\n                $editorName;\nmodelEditor -e -viewSelected 0 $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n"
-		+ "            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n"
-		+ "            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -shadows 0\n            $editorName;\n"
-		+ "modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `outlinerPanel -unParent -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            outlinerEditor -e \n                -docTag \"isolOutln_fromSeln\" \n                -showShapes 0\n                -showReferenceNodes 1\n                -showReferenceMembers 1\n                -showAttributes 0\n                -showConnected 0\n                -showAnimCurvesOnly 0\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 1\n                -showAssets 1\n                -showContainedOnly 1\n                -showPublishedAsConnected 0\n                -showContainerContents 1\n"
-		+ "                -ignoreDagHierarchy 0\n                -expandConnections 0\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 0\n                -highlightActive 1\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"defaultSetFilter\" \n                -showSetMembers 1\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n"
-		+ "                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n"
-		+ "            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n"
-		+ "            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\tif ($useSceneConfig) {\n\t\toutlinerPanel -e -to $panelName;\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"graphEditor\" -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n"
-		+ "                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n"
-		+ "                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n"
-		+ "                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n"
-		+ "                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n"
-		+ "                -showPinIcons 1\n                -mapMotionTrails 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dopeSheetPanel\" -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n"
-		+ "                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n"
-		+ "                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n"
-		+ "                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n"
-		+ "                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n"
-		+ "                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"clipEditorPanel\" -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n"
-		+ "                -manageSequencer 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"sequenceEditorPanel\" -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels `;\n"
-		+ "\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n"
-		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperGraphPanel\" -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n"
-		+ "                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showUnderworld 0\n                -showInvisible 0\n"
-		+ "                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperShadePanel\" -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\tif ($useSceneConfig) {\n\t\tscriptedPanel -e -to $panelName;\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"visorPanel\" -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n"
-		+ "                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -island 0\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -ignoreAssets 1\n"
-		+ "                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -island 0\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"createNodePanel\" -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n"
-		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Texture Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"polyTexturePlacementPanel\" -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"renderWindowPanel\" -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"blendShapePanel\" (localizedPanelLabel(\"Blend Shape\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\tblendShapePanel -unParent -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels ;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tblendShapePanel -edit -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynRelEdPanel\" -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n"
-		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"relationshipPanel\" -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"referenceEditorPanel\" -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"componentEditorPanel\" -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynPaintScriptedPanelType\" -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"scriptEditorPanel\" -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"Stereo\" -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels `;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n"
-		+ "                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n"
-		+ "                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n"
-		+ "                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                $editorName;\nstereoCameraView -e -viewSelected 0 $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"persp\" \n"
+		+ "                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n"
+		+ "            -camera \"top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n"
+		+ "            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n"
+		+ "            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"side\" \n"
 		+ "                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n"
-		+ "                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n"
-		+ "                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                $editorName;\nstereoCameraView -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n"
-		+ "\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
+		+ "                -maxConstantTransparency 1\n                -rendererName \"base_OpenGL_Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n"
+		+ "                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n"
+		+ "            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n"
+		+ "            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n"
+		+ "                -camera \"front\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n"
+		+ "                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"base_OpenGL_Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n"
+		+ "                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n"
+		+ "            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n"
+		+ "            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n"
+		+ "                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 1\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n"
+		+ "                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"base_OpenGL_Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n"
+		+ "                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 0\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n"
+		+ "            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n"
+		+ "            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `outlinerPanel -unParent -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels `;\n"
+		+ "\t\t\t$editorName = $panelName;\n            outlinerEditor -e \n                -docTag \"isolOutln_fromSeln\" \n                -showShapes 0\n                -showReferenceNodes 1\n                -showReferenceMembers 1\n                -showAttributes 0\n                -showConnected 0\n                -showAnimCurvesOnly 0\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 1\n                -showAssets 1\n                -showContainedOnly 1\n                -showPublishedAsConnected 0\n                -showContainerContents 1\n                -ignoreDagHierarchy 0\n                -expandConnections 0\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 0\n                -highlightActive 1\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 0\n"
+		+ "                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"defaultSetFilter\" \n                -showSetMembers 1\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 0\n                -ignoreHiddenAttribute 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n"
+		+ "            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"graphEditor\" -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels `;\n"
+		+ "\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n"
+		+ "                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n"
+		+ "                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n"
+		+ "                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n"
+		+ "                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n"
+		+ "                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dopeSheetPanel\" -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels `;\n"
+		+ "\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n"
+		+ "                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n"
+		+ "                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n"
+		+ "                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n"
+		+ "                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n"
+		+ "                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"clipEditorPanel\" -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n"
+		+ "            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"sequenceEditorPanel\" -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n"
+		+ "                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperGraphPanel\" -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels `;\n"
+		+ "\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n"
+		+ "                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n"
+		+ "                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperShadePanel\" -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"visorPanel\" -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n"
+		+ "                -defaultPinnedState 0\n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -keyReleaseCommand \"nodeEdKeyReleaseCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;\n\t\t\tif (`objExists nodeEditorPanel1Info`) nodeEditor -e -restoreInfo nodeEditorPanel1Info $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n"
+		+ "            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -keyReleaseCommand \"nodeEdKeyReleaseCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;\n\t\t\tif (`objExists nodeEditorPanel1Info`) nodeEditor -e -restoreInfo nodeEditorPanel1Info $editorName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"createNodePanel\" -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Texture Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"polyTexturePlacementPanel\" -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"renderWindowPanel\" -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"blendShapePanel\" (localizedPanelLabel(\"Blend Shape\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\tblendShapePanel -unParent -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels ;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tblendShapePanel -edit -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynRelEdPanel\" -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"relationshipPanel\" -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"referenceEditorPanel\" -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"componentEditorPanel\" -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynPaintScriptedPanelType\" -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"scriptEditorPanel\" -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"Stereo\" -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels `;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n"
+		+ "                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n"
+		+ "                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n"
+		+ "                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n"
+		+ "                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n"
+		+ "                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n"
+		+ "                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n"
+		+ "\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        setFocus `paneLayout -q -p1 $gMainPane`;\n        sceneUIReplacement -deleteRemaining;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	setAttr ".b" -type "string" "playbackOptions -min 1 -max 24 -ast 1 -aet 48 ";
 	setAttr ".st" 6;
 createNode reference -n "living_room_latestRN";
-	setAttr -s 906 ".phl";
+	setAttr -s 910 ".phl";
 	setAttr ".phl[73]" 0;
 	setAttr ".phl[75]" 0;
 	setAttr ".phl[249]" 0;
@@ -2820,12 +2830,49 @@ createNode reference -n "living_room_latestRN";
 	setAttr ".phl[1396]" 0;
 	setAttr ".phl[1397]" 0;
 	setAttr ".phl[1398]" 0;
+	setAttr ".phl[1399]" 0;
+	setAttr ".phl[1400]" 0;
+	setAttr ".phl[1401]" 0;
+	setAttr ".phl[1402]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"living_room_latestRN"
-		"living_room_latest:cube_cushionRN" 0
-		"living_room_latest:taller_window_four_squares_latest4RN" 0
+		"living_room_latest:taller_window_four_squares_latestRN4" 0
 		"living_room_latest:resurrected_staircaseRN" 0
-		"living_room_latest:armchair_latestRN" 0
+		"living_room_latest:taller_window_four_squares_latest4RN" 0
+		"living_room_latest:cat_robotRN" 0
+		"living_room_latest:taller_window_four_squares_latest3RN" 0
+		"living_room_latest:bed_latestRN" 0
+		"living_room_latest:taller_window_four_squares_latest2RN" 0
+		"living_room_latest:taller_window_four_squares_latestRN2" 0
+		"living_room_latest:taller_window_four_squares_latestRN3" 0
+		"living_room_latest:telescopeRN" 0
+		"living_room_latest:chair_2RN" 0
+		"living_room_latest:taller_window_four_squares_latest1RN" 0
+		"living_room_latest:bedroom_updated_layout:desk_latestRN" 10
+		2 "|living_room_latest:bedroom_updated_layout:desk_latest:polySurface3|living_room_latest:bedroom_updated_layout:desk_latest:polySurfaceShape3" 
+		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
+		2 "living_room_latest:bedroom_updated_layout:desk_latest:groupParts10" "groupId" 
+		" 463"
+		3 "living_room_latest:bedroom_updated_layout:desk_latest:groupId25.message" 
+		":initialShadingGroup.groupNodes" "-na"
+		3 "living_room_latest:bedroom_updated_layout:desk_latest:groupId25.groupId" 
+		"living_room_latest:bedroom_updated_layout:desk_latest:groupParts10.groupId" ""
+		3 "living_room_latest:transformGeometry32.outputGeometry" "|living_room_latest:bedroom_updated_layout:desk_latest:polySurface3|living_room_latest:bedroom_updated_layout:desk_latest:polySurfaceShape3.inMesh" 
+		""
+		3 "living_room_latest:bedroom_updated_layout:desk_latest:groupId25.groupId" 
+		"|living_room_latest:bedroom_updated_layout:desk_latest:polySurface3|living_room_latest:bedroom_updated_layout:desk_latest:polySurfaceShape3.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:bedroom_updated_layout:desk_latest:polySurface3|living_room_latest:bedroom_updated_layout:desk_latest:polySurfaceShape3.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|living_room_latest:bedroom_updated_layout:desk_latest:polySurface3|living_room_latest:bedroom_updated_layout:desk_latest:polySurfaceShape3.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		5 0 "living_room_latestRN" "living_room_latest:transformGeometry32.outputGeometry" 
+		"|living_room_latest:bedroom_updated_layout:desk_latest:polySurface3|living_room_latest:bedroom_updated_layout:desk_latest:polySurfaceShape3.inMesh" 
+		"living_room_latestRN.placeHolderList[73]" "living_room_latestRN.placeHolderList[74]" 
+		"living_room_latest:bedroom_updated_layout:desk_latest:polySurfaceShape3.i"
+		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:desk_latest:polySurface3|living_room_latest:bedroom_updated_layout:desk_latest:polySurfaceShape3.instObjGroups" 
+		"living_room_latestRN.placeHolderList[75]" ""
+		"living_room_latest:sofa_latestRN" 0
 		"living_room_latestRN" 175
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube231|living_room_latest:pCubeShape231" 
 		"instObjGroups.objectGroups" " -s 3"
@@ -3181,136 +3228,103 @@ createNode reference -n "living_room_latestRN";
 		"living_room_latestRN.placeHolderList[577]" ":initialShadingGroup.dsm"
 		5 3 "living_room_latestRN" "|living_room_latest:pCube229|living_room_latest:pCubeShape229.instObjGroups" 
 		"living_room_latestRN.placeHolderList[578]" ":initialShadingGroup.dsm"
-		"living_room_latest:telescopeRN" 0
-		"living_room_latest:bed_latestRN" 0
-		"living_room_latest:taller_window_four_squares_latest1RN" 0
-		"living_room_latest:bedroom_updated_layout:desk_latestRN" 10
-		2 "|living_room_latest:bedroom_updated_layout:desk_latest:polySurface3|living_room_latest:bedroom_updated_layout:desk_latest:polySurfaceShape3" 
-		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
-		2 "living_room_latest:bedroom_updated_layout:desk_latest:groupParts10" "groupId" 
-		" 463"
-		3 "living_room_latest:bedroom_updated_layout:desk_latest:groupId25.message" 
-		":initialShadingGroup.groupNodes" "-na"
-		3 "living_room_latest:bedroom_updated_layout:desk_latest:groupId25.groupId" 
-		"living_room_latest:bedroom_updated_layout:desk_latest:groupParts10.groupId" ""
-		3 "living_room_latest:transformGeometry32.outputGeometry" "|living_room_latest:bedroom_updated_layout:desk_latest:polySurface3|living_room_latest:bedroom_updated_layout:desk_latest:polySurfaceShape3.inMesh" 
-		""
-		3 "living_room_latest:bedroom_updated_layout:desk_latest:groupId25.groupId" 
-		"|living_room_latest:bedroom_updated_layout:desk_latest:polySurface3|living_room_latest:bedroom_updated_layout:desk_latest:polySurfaceShape3.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:bedroom_updated_layout:desk_latest:polySurface3|living_room_latest:bedroom_updated_layout:desk_latest:polySurfaceShape3.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|living_room_latest:bedroom_updated_layout:desk_latest:polySurface3|living_room_latest:bedroom_updated_layout:desk_latest:polySurfaceShape3.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		5 0 "living_room_latestRN" "living_room_latest:transformGeometry32.outputGeometry" 
-		"|living_room_latest:bedroom_updated_layout:desk_latest:polySurface3|living_room_latest:bedroom_updated_layout:desk_latest:polySurfaceShape3.inMesh" 
-		"living_room_latestRN.placeHolderList[73]" "living_room_latestRN.placeHolderList[74]" 
-		"living_room_latest:bedroom_updated_layout:desk_latest:polySurfaceShape3.i"
-		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:desk_latest:polySurface3|living_room_latest:bedroom_updated_layout:desk_latest:polySurfaceShape3.instObjGroups" 
-		"living_room_latestRN.placeHolderList[75]" ""
+		"living_room_latest:cube_cushionRN" 0
+		"living_room_latest:armchair_latestRN" 0
 		"living_room_latest:taller_window_four_squares_latestRN" 0
-		"living_room_latest:taller_window_four_squares_latest2RN" 0
-		"living_room_latest:taller_window_four_squares_latestRN4" 0
-		"living_room_latest:taller_window_four_squares_latestRN3" 0
-		"living_room_latest:taller_window_four_squares_latestRN2" 0
-		"living_room_latest:taller_window_four_squares_latest3RN" 0
-		"living_room_latest:taller_window_four_squares_latestRN1" 0
 		"living_room_latest:armchair_latestRN1" 0
+		"living_room_latest:taller_window_four_squares_latestRN1" 0
 		"living_room_latest:desk_latestRN" 0
-		"living_room_latest:chair_2RN" 0
-		"living_room_latest:cat_robotRN" 0
-		"living_room_latest:sofa_latestRN" 0
-		"living_room_latest:taller_window_four_squares_latest4RN" 33
-		2 "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8" 
+		"living_room_latest:taller_window_four_squares_latestRN4" 33
+		2 "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8" 
 		"instObjGroups.objectGroups" " -s 4"
-		2 "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8" 
+		2 "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8" 
 		"uvSet" " -s 14"
-		2 "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8" 
+		2 "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8" 
 		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
-		2 "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8" 
+		2 "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8" 
 		"uvSet[1].uvSetName" " -type \"string\" \"map11\""
-		2 "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8" 
+		2 "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8" 
 		"uvSet[2].uvSetName" " -type \"string\" \"map12\""
-		2 "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8" 
+		2 "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8" 
 		"uvSet[3].uvSetName" " -type \"string\" \"map13\""
-		2 "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8" 
+		2 "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8" 
 		"uvSet[4].uvSetName" " -type \"string\" \"map14\""
-		2 "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8" 
+		2 "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8" 
 		"uvSet[5].uvSetName" " -type \"string\" \"map15\""
-		2 "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8" 
+		2 "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8" 
 		"uvSet[6].uvSetName" " -type \"string\" \"map16\""
-		2 "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8" 
+		2 "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8" 
 		"uvSet[7].uvSetName" " -type \"string\" \"map17\""
-		2 "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8" 
+		2 "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8" 
 		"uvSet[8].uvSetName" " -type \"string\" \"map18\""
-		2 "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8" 
+		2 "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8" 
 		"uvSet[9].uvSetName" " -type \"string\" \"map19\""
-		2 "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8" 
+		2 "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8" 
 		"uvSet[10].uvSetName" " -type \"string\" \"map110\""
-		2 "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8" 
+		2 "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8" 
 		"uvSet[11].uvSetName" " -type \"string\" \"map111\""
-		2 "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8" 
+		2 "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8" 
 		"uvSet[12].uvSetName" " -type \"string\" \"map112\""
-		2 "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8" 
+		2 "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8" 
 		"uvSet[13].uvSetName" " -type \"string\" \"map113\""
-		3 "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurface6|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape7.instObjGroups" 
+		3 "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurface7|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape7.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:transformGeometry23.outputGeometry" "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8.inMesh" 
+		3 "living_room_latest:transformGeometry44.outputGeometry" "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8.inMesh" 
 		""
-		3 "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurface9|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape9.instObjGroups" 
+		3 "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurface6|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape7.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8.inMesh" 
-		"living_room_latestRN.placeHolderList[639]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8.instObjGroups.objectGroups[0]" 
-		"living_room_latestRN.placeHolderList[640]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8.instObjGroups.objectGroups[0].objectGroupId" 
-		"living_room_latestRN.placeHolderList[641]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8.instObjGroups.objectGroups[0].objectGrpColor" 
-		"living_room_latestRN.placeHolderList[642]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8.instObjGroups.objectGroups[1]" 
-		"living_room_latestRN.placeHolderList[643]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8.instObjGroups.objectGroups[1].objectGroupId" 
-		"living_room_latestRN.placeHolderList[644]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8.instObjGroups.objectGroups[1].objectGrpColor" 
-		"living_room_latestRN.placeHolderList[645]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8.compInstObjGroups.compObjectGroups[0]" 
-		"living_room_latestRN.placeHolderList[646]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
-		"living_room_latestRN.placeHolderList[647]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurface9|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape9.instObjGroups" 
-		"living_room_latestRN.placeHolderList[648]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurface6|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape7.instObjGroups" 
-		"living_room_latestRN.placeHolderList[649]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurface7|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape7.instObjGroups" 
-		"living_room_latestRN.placeHolderList[650]" ":initialShadingGroup.dsm"
+		3 "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurface7|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape7.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurface9|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape9.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8.inMesh" 
+		"living_room_latestRN.placeHolderList[675]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8.instObjGroups.objectGroups[0]" 
+		"living_room_latestRN.placeHolderList[676]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8.instObjGroups.objectGroups[0].objectGroupId" 
+		"living_room_latestRN.placeHolderList[677]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8.instObjGroups.objectGroups[0].objectGrpColor" 
+		"living_room_latestRN.placeHolderList[678]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8.instObjGroups.objectGroups[1]" 
+		"living_room_latestRN.placeHolderList[679]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8.instObjGroups.objectGroups[1].objectGroupId" 
+		"living_room_latestRN.placeHolderList[680]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8.instObjGroups.objectGroups[1].objectGrpColor" 
+		"living_room_latestRN.placeHolderList[681]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8.compInstObjGroups.compObjectGroups[0]" 
+		"living_room_latestRN.placeHolderList[682]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"living_room_latestRN.placeHolderList[683]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurface9|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape9.instObjGroups" 
+		"living_room_latestRN.placeHolderList[684]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurface6|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape7.instObjGroups" 
+		"living_room_latestRN.placeHolderList[685]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurface7|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape7.instObjGroups" 
+		"living_room_latestRN.placeHolderList[686]" ":initialShadingGroup.dsm"
 		"living_room_latest:resurrected_staircaseRN" 30
-		3 "|living_room_latest:resurrected_staircase:pCube109|living_room_latest:resurrected_staircase:pCubeShape109.instObjGroups" 
+		3 "|living_room_latest:resurrected_staircase:pCube117|living_room_latest:resurrected_staircase:pCubeShape117.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|living_room_latest:resurrected_staircase:pCube119|living_room_latest:resurrected_staircase:pCubeShape119.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:resurrected_staircase:pCube127|living_room_latest:resurrected_staircase:pCubeShape127.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:resurrected_staircase:pCube123|living_room_latest:resurrected_staircase:pCubeShape123.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|living_room_latest:resurrected_staircase:pCube125|living_room_latest:resurrected_staircase:pCubeShape125.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:resurrected_staircase:pCube117|living_room_latest:resurrected_staircase:pCubeShape117.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:resurrected_staircase:pCube134|living_room_latest:resurrected_staircase:pCubeShape134.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:resurrected_staircase:pCube111|living_room_latest:resurrected_staircase:pCubeShape111.instObjGroups" 
+		3 "|living_room_latest:resurrected_staircase:pCube132|living_room_latest:resurrected_staircase:pCubeShape132.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|living_room_latest:resurrected_staircase:pCube115|living_room_latest:resurrected_staircase:pCubeShape115.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:resurrected_staircase:pCube127|living_room_latest:resurrected_staircase:pCubeShape127.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|living_room_latest:resurrected_staircase:pCube121|living_room_latest:resurrected_staircase:pCubeShape121.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:resurrected_staircase:pCube134|living_room_latest:resurrected_staircase:pCubeShape134.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:resurrected_staircase:pCube123|living_room_latest:resurrected_staircase:pCubeShape123.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|living_room_latest:resurrected_staircase:pCube113|living_room_latest:resurrected_staircase:pCubeShape113.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:resurrected_staircase:pCube132|living_room_latest:resurrected_staircase:pCubeShape132.instObjGroups" 
+		3 "|living_room_latest:resurrected_staircase:pCube109|living_room_latest:resurrected_staircase:pCubeShape109.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:resurrected_staircase:pCube111|living_room_latest:resurrected_staircase:pCubeShape111.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|living_room_latest:resurrected_staircase:pCube128|living_room_latest:resurrected_staircase:pCubeShape128.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
@@ -3348,7 +3362,607 @@ createNode reference -n "living_room_latestRN";
 		"living_room_latestRN.placeHolderList[734]" ":initialShadingGroup.dsm"
 		5 3 "living_room_latestRN" "|living_room_latest:resurrected_staircase:pCube134|living_room_latest:resurrected_staircase:pCubeShape134.instObjGroups" 
 		"living_room_latestRN.placeHolderList[735]" ":initialShadingGroup.dsm"
-		"living_room_latestRN" 1364
+		"living_room_latest:taller_window_four_squares_latest4RN" 34
+		2 "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8" 
+		"instObjGroups.objectGroups" " -s 4"
+		2 "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8" 
+		"uvSet" " -s 14"
+		2 "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8" 
+		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
+		2 "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8" 
+		"uvSet[1].uvSetName" " -type \"string\" \"map11\""
+		2 "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8" 
+		"uvSet[2].uvSetName" " -type \"string\" \"map12\""
+		2 "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8" 
+		"uvSet[3].uvSetName" " -type \"string\" \"map13\""
+		2 "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8" 
+		"uvSet[4].uvSetName" " -type \"string\" \"map14\""
+		2 "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8" 
+		"uvSet[5].uvSetName" " -type \"string\" \"map15\""
+		2 "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8" 
+		"uvSet[6].uvSetName" " -type \"string\" \"map16\""
+		2 "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8" 
+		"uvSet[7].uvSetName" " -type \"string\" \"map17\""
+		2 "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8" 
+		"uvSet[8].uvSetName" " -type \"string\" \"map18\""
+		2 "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8" 
+		"uvSet[9].uvSetName" " -type \"string\" \"map19\""
+		2 "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8" 
+		"uvSet[10].uvSetName" " -type \"string\" \"map110\""
+		2 "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8" 
+		"uvSet[11].uvSetName" " -type \"string\" \"map111\""
+		2 "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8" 
+		"uvSet[12].uvSetName" " -type \"string\" \"map112\""
+		2 "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8" 
+		"uvSet[13].uvSetName" " -type \"string\" \"map113\""
+		2 "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurface7|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape7" 
+		"currentUVSet" " -type \"string\" \"map19\""
+		3 "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurface9|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape9.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:transformGeometry23.outputGeometry" "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8.inMesh" 
+		""
+		3 "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurface6|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape7.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurface7|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape7.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8.inMesh" 
+		"living_room_latestRN.placeHolderList[639]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8.instObjGroups.objectGroups[0]" 
+		"living_room_latestRN.placeHolderList[640]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8.instObjGroups.objectGroups[0].objectGroupId" 
+		"living_room_latestRN.placeHolderList[641]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8.instObjGroups.objectGroups[0].objectGrpColor" 
+		"living_room_latestRN.placeHolderList[642]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8.instObjGroups.objectGroups[1]" 
+		"living_room_latestRN.placeHolderList[643]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8.instObjGroups.objectGroups[1].objectGroupId" 
+		"living_room_latestRN.placeHolderList[644]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8.instObjGroups.objectGroups[1].objectGrpColor" 
+		"living_room_latestRN.placeHolderList[645]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8.compInstObjGroups.compObjectGroups[0]" 
+		"living_room_latestRN.placeHolderList[646]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"living_room_latestRN.placeHolderList[647]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurface9|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape9.instObjGroups" 
+		"living_room_latestRN.placeHolderList[648]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurface6|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape7.instObjGroups" 
+		"living_room_latestRN.placeHolderList[649]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:polySurface5|living_room_latest:taller_window_four_squares_latest5:polySurface8|living_room_latest:taller_window_four_squares_latest5:polySurface7|living_room_latest:taller_window_four_squares_latest5:polySurfaceShape7.instObjGroups" 
+		"living_room_latestRN.placeHolderList[650]" ":initialShadingGroup.dsm"
+		"living_room_latest:taller_window_four_squares_latest3RN" 33
+		2 "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8" 
+		"instObjGroups.objectGroups" " -s 4"
+		2 "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8" 
+		"uvSet" " -s 14"
+		2 "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8" 
+		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
+		2 "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8" 
+		"uvSet[1].uvSetName" " -type \"string\" \"map11\""
+		2 "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8" 
+		"uvSet[2].uvSetName" " -type \"string\" \"map12\""
+		2 "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8" 
+		"uvSet[3].uvSetName" " -type \"string\" \"map13\""
+		2 "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8" 
+		"uvSet[4].uvSetName" " -type \"string\" \"map14\""
+		2 "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8" 
+		"uvSet[5].uvSetName" " -type \"string\" \"map15\""
+		2 "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8" 
+		"uvSet[6].uvSetName" " -type \"string\" \"map16\""
+		2 "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8" 
+		"uvSet[7].uvSetName" " -type \"string\" \"map17\""
+		2 "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8" 
+		"uvSet[8].uvSetName" " -type \"string\" \"map18\""
+		2 "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8" 
+		"uvSet[9].uvSetName" " -type \"string\" \"map19\""
+		2 "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8" 
+		"uvSet[10].uvSetName" " -type \"string\" \"map110\""
+		2 "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8" 
+		"uvSet[11].uvSetName" " -type \"string\" \"map111\""
+		2 "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8" 
+		"uvSet[12].uvSetName" " -type \"string\" \"map112\""
+		2 "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8" 
+		"uvSet[13].uvSetName" " -type \"string\" \"map113\""
+		3 "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:transformGeometry21.outputGeometry" "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8.inMesh" 
+		""
+		3 "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurface6|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape7.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurface9|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape9.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurface7|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape7.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8.inMesh" 
+		"living_room_latestRN.placeHolderList[627]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8.instObjGroups.objectGroups[0]" 
+		"living_room_latestRN.placeHolderList[628]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8.instObjGroups.objectGroups[0].objectGroupId" 
+		"living_room_latestRN.placeHolderList[629]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8.instObjGroups.objectGroups[0].objectGrpColor" 
+		"living_room_latestRN.placeHolderList[630]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8.instObjGroups.objectGroups[1]" 
+		"living_room_latestRN.placeHolderList[631]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8.instObjGroups.objectGroups[1].objectGroupId" 
+		"living_room_latestRN.placeHolderList[632]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8.instObjGroups.objectGroups[1].objectGrpColor" 
+		"living_room_latestRN.placeHolderList[633]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8.compInstObjGroups.compObjectGroups[0]" 
+		"living_room_latestRN.placeHolderList[634]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"living_room_latestRN.placeHolderList[635]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurface9|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape9.instObjGroups" 
+		"living_room_latestRN.placeHolderList[636]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurface6|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape7.instObjGroups" 
+		"living_room_latestRN.placeHolderList[637]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurface7|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape7.instObjGroups" 
+		"living_room_latestRN.placeHolderList[638]" ":initialShadingGroup.dsm"
+		"living_room_latest:bed_latestRN" 74
+		0 "|living_room_latestRNfosterParent1|living_room_latest:bed_latest1:polySurfaceShape367" 
+		"|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface361" 
+		"-s -r "
+		0 "|living_room_latestRNfosterParent1|living_room_latest:bed_latest1:polySurfaceShape366" 
+		"|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface363" 
+		"-s -r "
+		2 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface361|living_room_latest:bed_latest1:polySurfaceShape362" 
+		"uvSet" " -s 2"
+		2 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface361|living_room_latest:bed_latest1:polySurfaceShape362" 
+		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
+		2 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface361|living_room_latest:bed_latest1:polySurfaceShape362" 
+		"uvSet[1].uvSetName" " -type \"string\" \"UVSet0\""
+		2 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface361|living_room_latest:bed_latest1:polySurfaceShape362" 
+		"currentUVSet" " -type \"string\" \"map1\""
+		2 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface363|living_room_latest:bed_latest1:polySurfaceShape363" 
+		"uvSet" " -s 2"
+		2 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface363|living_room_latest:bed_latest1:polySurfaceShape363" 
+		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
+		2 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface363|living_room_latest:bed_latest1:polySurfaceShape363" 
+		"uvSet[1].uvSetName" " -type \"string\" \"UVSet0\""
+		2 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface363|living_room_latest:bed_latest1:polySurfaceShape363" 
+		"currentUVSet" " -type \"string\" \"map1\""
+		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface346|living_room_latest:bed_latest1:polySurfaceShape347.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface361|living_room_latest:bed_latest1:polySurfaceShape362.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface311|living_room_latest:bed_latest1:polySurfaceShape312.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface341|living_room_latest:bed_latest1:polySurfaceShape342.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface348|living_room_latest:bed_latest1:polySurfaceShape349.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:pCube1|living_room_latest:bed_latest1:pCubeShape1.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface363|living_room_latest:bed_latest1:polySurfaceShape363.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface365|living_room_latest:bed_latest1:polySurfaceShape365.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface344|living_room_latest:bed_latest1:polySurfaceShape345.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface357|living_room_latest:bed_latest1:polySurfaceShape358.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface342|living_room_latest:bed_latest1:polySurfaceShape343.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface356|living_room_latest:bed_latest1:polySurfaceShape357.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface353|living_room_latest:bed_latest1:polySurfaceShape354.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:pillow:armchair_pillow_1|living_room_latest:bed_latest1:pillow:armchair_pillow_Shape1.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface351|living_room_latest:bed_latest1:polySurfaceShape352.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface359|living_room_latest:bed_latest1:polySurfaceShape360.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface362|living_room_latest:bed_latest1:polySurfaceShape363.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface352|living_room_latest:bed_latest1:polySurfaceShape353.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface343|living_room_latest:bed_latest1:polySurfaceShape344.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface350|living_room_latest:bed_latest1:polySurfaceShape351.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface358|living_room_latest:bed_latest1:polySurfaceShape359.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface364|living_room_latest:bed_latest1:polySurfaceShape364.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface349|living_room_latest:bed_latest1:polySurfaceShape350.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface354|living_room_latest:bed_latest1:polySurfaceShape355.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface322|living_room_latest:bed_latest1:polySurfaceShape323.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface355|living_room_latest:bed_latest1:polySurfaceShape356.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface328|living_room_latest:bed_latest1:polySurfaceShape329.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface317|living_room_latest:bed_latest1:polySurfaceShape318.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface345|living_room_latest:bed_latest1:polySurfaceShape346.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface347|living_room_latest:bed_latest1:polySurfaceShape348.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:pillow:armchair_pillow_1|living_room_latest:bed_latest1:pillow:armchair_pillow_Shape1.instObjGroups" 
+		"living_room_latestRN.placeHolderList[687]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:pCube1|living_room_latest:bed_latest1:pCubeShape1.instObjGroups" 
+		"living_room_latestRN.placeHolderList[688]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface311|living_room_latest:bed_latest1:polySurfaceShape312.instObjGroups" 
+		"living_room_latestRN.placeHolderList[689]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface317|living_room_latest:bed_latest1:polySurfaceShape318.instObjGroups" 
+		"living_room_latestRN.placeHolderList[690]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface322|living_room_latest:bed_latest1:polySurfaceShape323.instObjGroups" 
+		"living_room_latestRN.placeHolderList[691]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface328|living_room_latest:bed_latest1:polySurfaceShape329.instObjGroups" 
+		"living_room_latestRN.placeHolderList[692]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface341|living_room_latest:bed_latest1:polySurfaceShape342.instObjGroups" 
+		"living_room_latestRN.placeHolderList[693]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface342|living_room_latest:bed_latest1:polySurfaceShape343.instObjGroups" 
+		"living_room_latestRN.placeHolderList[694]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface343|living_room_latest:bed_latest1:polySurfaceShape344.instObjGroups" 
+		"living_room_latestRN.placeHolderList[695]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface344|living_room_latest:bed_latest1:polySurfaceShape345.instObjGroups" 
+		"living_room_latestRN.placeHolderList[696]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface345|living_room_latest:bed_latest1:polySurfaceShape346.instObjGroups" 
+		"living_room_latestRN.placeHolderList[697]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface346|living_room_latest:bed_latest1:polySurfaceShape347.instObjGroups" 
+		"living_room_latestRN.placeHolderList[698]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface347|living_room_latest:bed_latest1:polySurfaceShape348.instObjGroups" 
+		"living_room_latestRN.placeHolderList[699]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface348|living_room_latest:bed_latest1:polySurfaceShape349.instObjGroups" 
+		"living_room_latestRN.placeHolderList[700]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface349|living_room_latest:bed_latest1:polySurfaceShape350.instObjGroups" 
+		"living_room_latestRN.placeHolderList[701]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface350|living_room_latest:bed_latest1:polySurfaceShape351.instObjGroups" 
+		"living_room_latestRN.placeHolderList[702]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface351|living_room_latest:bed_latest1:polySurfaceShape352.instObjGroups" 
+		"living_room_latestRN.placeHolderList[703]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface352|living_room_latest:bed_latest1:polySurfaceShape353.instObjGroups" 
+		"living_room_latestRN.placeHolderList[704]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface353|living_room_latest:bed_latest1:polySurfaceShape354.instObjGroups" 
+		"living_room_latestRN.placeHolderList[705]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface354|living_room_latest:bed_latest1:polySurfaceShape355.instObjGroups" 
+		"living_room_latestRN.placeHolderList[706]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface355|living_room_latest:bed_latest1:polySurfaceShape356.instObjGroups" 
+		"living_room_latestRN.placeHolderList[707]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface356|living_room_latest:bed_latest1:polySurfaceShape357.instObjGroups" 
+		"living_room_latestRN.placeHolderList[708]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface357|living_room_latest:bed_latest1:polySurfaceShape358.instObjGroups" 
+		"living_room_latestRN.placeHolderList[709]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface358|living_room_latest:bed_latest1:polySurfaceShape359.instObjGroups" 
+		"living_room_latestRN.placeHolderList[710]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface359|living_room_latest:bed_latest1:polySurfaceShape360.instObjGroups" 
+		"living_room_latestRN.placeHolderList[711]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface361|living_room_latest:bed_latest1:polySurfaceShape362.instObjGroups" 
+		"living_room_latestRN.placeHolderList[712]" ":initialShadingGroup.dsm"
+		5 4 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface361|living_room_latest:bed_latest1:polySurfaceShape362.inMesh" 
+		"living_room_latestRN.placeHolderList[713]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface361|living_room_latest:bed_latest1:polySurfaceShape362.worldMatrix" 
+		"living_room_latestRN.placeHolderList[714]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface363|living_room_latest:bed_latest1:polySurfaceShape363.instObjGroups" 
+		"living_room_latestRN.placeHolderList[715]" ":initialShadingGroup.dsm"
+		5 4 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface363|living_room_latest:bed_latest1:polySurfaceShape363.inMesh" 
+		"living_room_latestRN.placeHolderList[716]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface363|living_room_latest:bed_latest1:polySurfaceShape363.worldMatrix" 
+		"living_room_latestRN.placeHolderList[717]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface364|living_room_latest:bed_latest1:polySurfaceShape364.instObjGroups" 
+		"living_room_latestRN.placeHolderList[718]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface365|living_room_latest:bed_latest1:polySurfaceShape365.instObjGroups" 
+		"living_room_latestRN.placeHolderList[719]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface362|living_room_latest:bed_latest1:polySurfaceShape363.instObjGroups" 
+		"living_room_latestRN.placeHolderList[720]" ":initialShadingGroup.dsm"
+		"living_room_latest:taller_window_four_squares_latest2RN" 33
+		2 "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8" 
+		"instObjGroups.objectGroups" " -s 4"
+		2 "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8" 
+		"uvSet" " -s 14"
+		2 "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8" 
+		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
+		2 "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8" 
+		"uvSet[1].uvSetName" " -type \"string\" \"map11\""
+		2 "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8" 
+		"uvSet[2].uvSetName" " -type \"string\" \"map12\""
+		2 "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8" 
+		"uvSet[3].uvSetName" " -type \"string\" \"map13\""
+		2 "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8" 
+		"uvSet[4].uvSetName" " -type \"string\" \"map14\""
+		2 "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8" 
+		"uvSet[5].uvSetName" " -type \"string\" \"map15\""
+		2 "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8" 
+		"uvSet[6].uvSetName" " -type \"string\" \"map16\""
+		2 "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8" 
+		"uvSet[7].uvSetName" " -type \"string\" \"map17\""
+		2 "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8" 
+		"uvSet[8].uvSetName" " -type \"string\" \"map18\""
+		2 "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8" 
+		"uvSet[9].uvSetName" " -type \"string\" \"map19\""
+		2 "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8" 
+		"uvSet[10].uvSetName" " -type \"string\" \"map110\""
+		2 "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8" 
+		"uvSet[11].uvSetName" " -type \"string\" \"map111\""
+		2 "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8" 
+		"uvSet[12].uvSetName" " -type \"string\" \"map112\""
+		2 "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8" 
+		"uvSet[13].uvSetName" " -type \"string\" \"map113\""
+		3 "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurface6|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape7.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurface9|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape9.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:transformGeometry19.outputGeometry" "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8.inMesh" 
+		""
+		3 "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurface7|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape7.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8.inMesh" 
+		"living_room_latestRN.placeHolderList[615]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8.instObjGroups.objectGroups[2]" 
+		"living_room_latestRN.placeHolderList[616]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8.instObjGroups.objectGroups[2].objectGroupId" 
+		"living_room_latestRN.placeHolderList[617]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8.instObjGroups.objectGroups[2].objectGrpColor" 
+		"living_room_latestRN.placeHolderList[618]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8.instObjGroups.objectGroups[3]" 
+		"living_room_latestRN.placeHolderList[619]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8.instObjGroups.objectGroups[3].objectGroupId" 
+		"living_room_latestRN.placeHolderList[620]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8.instObjGroups.objectGroups[3].objectGrpColor" 
+		"living_room_latestRN.placeHolderList[621]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8.compInstObjGroups.compObjectGroups[1]" 
+		"living_room_latestRN.placeHolderList[622]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8.compInstObjGroups.compObjectGroups[1].compObjectGroupId" 
+		"living_room_latestRN.placeHolderList[623]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurface9|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape9.instObjGroups" 
+		"living_room_latestRN.placeHolderList[624]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurface6|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape7.instObjGroups" 
+		"living_room_latestRN.placeHolderList[625]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurface7|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape7.instObjGroups" 
+		"living_room_latestRN.placeHolderList[626]" ":initialShadingGroup.dsm"
+		"living_room_latest:taller_window_four_squares_latestRN2" 33
+		2 "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8" 
+		"instObjGroups.objectGroups" " -s 4"
+		2 "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8" 
+		"uvSet" " -s 14"
+		2 "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8" 
+		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
+		2 "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8" 
+		"uvSet[1].uvSetName" " -type \"string\" \"map11\""
+		2 "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8" 
+		"uvSet[2].uvSetName" " -type \"string\" \"map12\""
+		2 "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8" 
+		"uvSet[3].uvSetName" " -type \"string\" \"map13\""
+		2 "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8" 
+		"uvSet[4].uvSetName" " -type \"string\" \"map14\""
+		2 "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8" 
+		"uvSet[5].uvSetName" " -type \"string\" \"map15\""
+		2 "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8" 
+		"uvSet[6].uvSetName" " -type \"string\" \"map16\""
+		2 "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8" 
+		"uvSet[7].uvSetName" " -type \"string\" \"map17\""
+		2 "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8" 
+		"uvSet[8].uvSetName" " -type \"string\" \"map18\""
+		2 "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8" 
+		"uvSet[9].uvSetName" " -type \"string\" \"map19\""
+		2 "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8" 
+		"uvSet[10].uvSetName" " -type \"string\" \"map110\""
+		2 "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8" 
+		"uvSet[11].uvSetName" " -type \"string\" \"map111\""
+		2 "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8" 
+		"uvSet[12].uvSetName" " -type \"string\" \"map112\""
+		2 "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8" 
+		"uvSet[13].uvSetName" " -type \"string\" \"map113\""
+		3 "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurface6|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape7.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:transformGeometry40.outputGeometry" "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8.inMesh" 
+		""
+		3 "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurface7|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape7.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurface9|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape9.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8.inMesh" 
+		"living_room_latestRN.placeHolderList[651]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8.instObjGroups.objectGroups[0]" 
+		"living_room_latestRN.placeHolderList[652]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8.instObjGroups.objectGroups[0].objectGroupId" 
+		"living_room_latestRN.placeHolderList[653]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8.instObjGroups.objectGroups[0].objectGrpColor" 
+		"living_room_latestRN.placeHolderList[654]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8.instObjGroups.objectGroups[1]" 
+		"living_room_latestRN.placeHolderList[655]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8.instObjGroups.objectGroups[1].objectGroupId" 
+		"living_room_latestRN.placeHolderList[656]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8.instObjGroups.objectGroups[1].objectGrpColor" 
+		"living_room_latestRN.placeHolderList[657]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8.compInstObjGroups.compObjectGroups[0]" 
+		"living_room_latestRN.placeHolderList[658]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"living_room_latestRN.placeHolderList[659]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurface9|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape9.instObjGroups" 
+		"living_room_latestRN.placeHolderList[660]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurface6|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape7.instObjGroups" 
+		"living_room_latestRN.placeHolderList[661]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurface7|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape7.instObjGroups" 
+		"living_room_latestRN.placeHolderList[662]" ":initialShadingGroup.dsm"
+		"living_room_latest:taller_window_four_squares_latestRN3" 33
+		2 "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8" 
+		"instObjGroups.objectGroups" " -s 4"
+		2 "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8" 
+		"uvSet" " -s 14"
+		2 "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8" 
+		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
+		2 "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8" 
+		"uvSet[1].uvSetName" " -type \"string\" \"map11\""
+		2 "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8" 
+		"uvSet[2].uvSetName" " -type \"string\" \"map12\""
+		2 "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8" 
+		"uvSet[3].uvSetName" " -type \"string\" \"map13\""
+		2 "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8" 
+		"uvSet[4].uvSetName" " -type \"string\" \"map14\""
+		2 "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8" 
+		"uvSet[5].uvSetName" " -type \"string\" \"map15\""
+		2 "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8" 
+		"uvSet[6].uvSetName" " -type \"string\" \"map16\""
+		2 "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8" 
+		"uvSet[7].uvSetName" " -type \"string\" \"map17\""
+		2 "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8" 
+		"uvSet[8].uvSetName" " -type \"string\" \"map18\""
+		2 "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8" 
+		"uvSet[9].uvSetName" " -type \"string\" \"map19\""
+		2 "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8" 
+		"uvSet[10].uvSetName" " -type \"string\" \"map110\""
+		2 "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8" 
+		"uvSet[11].uvSetName" " -type \"string\" \"map111\""
+		2 "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8" 
+		"uvSet[12].uvSetName" " -type \"string\" \"map112\""
+		2 "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8" 
+		"uvSet[13].uvSetName" " -type \"string\" \"map113\""
+		3 "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurface9|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape9.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurface6|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape7.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:transformGeometry42.outputGeometry" "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8.inMesh" 
+		""
+		3 "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurface7|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape7.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8.inMesh" 
+		"living_room_latestRN.placeHolderList[663]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8.instObjGroups.objectGroups[0]" 
+		"living_room_latestRN.placeHolderList[664]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8.instObjGroups.objectGroups[0].objectGroupId" 
+		"living_room_latestRN.placeHolderList[665]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8.instObjGroups.objectGroups[0].objectGrpColor" 
+		"living_room_latestRN.placeHolderList[666]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8.instObjGroups.objectGroups[1]" 
+		"living_room_latestRN.placeHolderList[667]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8.instObjGroups.objectGroups[1].objectGroupId" 
+		"living_room_latestRN.placeHolderList[668]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8.instObjGroups.objectGroups[1].objectGrpColor" 
+		"living_room_latestRN.placeHolderList[669]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8.compInstObjGroups.compObjectGroups[0]" 
+		"living_room_latestRN.placeHolderList[670]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"living_room_latestRN.placeHolderList[671]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurface9|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape9.instObjGroups" 
+		"living_room_latestRN.placeHolderList[672]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurface6|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape7.instObjGroups" 
+		"living_room_latestRN.placeHolderList[673]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurface7|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape7.instObjGroups" 
+		"living_room_latestRN.placeHolderList[674]" ":initialShadingGroup.dsm"
+		"living_room_latest:telescopeRN" 20
+		2 "|living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_" 
+		"translate" " -type \"double3\" 0 2169.506103515625 0"
+		2 "|living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_" 
+		"translateY" " -av"
+		2 "|living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_" 
+		"translateX" " -av"
+		2 "|living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_" 
+		"translateZ" " -av"
+		2 "|living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|living_room_latest:telescope:Object02" 
+		"translate" " -type \"double3\" 1.09363007545471191 496.370635986328125 -28.75731468200683594"
+		
+		2 "|living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|living_room_latest:telescope:Object02" 
+		"translateX" " -av"
+		2 "|living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|living_room_latest:telescope:Object02" 
+		"translateY" " -av"
+		2 "|living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|living_room_latest:telescope:Object02" 
+		"translateZ" " -av"
+		2 "|living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|living_room_latest:telescope:Object02FBXASC046Object03" 
+		"translate" " -type \"double3\" -132.7584075927734375 496.370635986328125 -271.658447265625"
+		
+		2 "|living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|living_room_latest:telescope:Object02FBXASC046Object03" 
+		"translateX" " -av"
+		2 "|living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|living_room_latest:telescope:Object02FBXASC046Object03" 
+		"translateY" " -av"
+		2 "|living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|living_room_latest:telescope:Object02FBXASC046Object03" 
+		"translateZ" " -av"
+		2 "|living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|living_room_latest:telescope:Object02FBXASC046Object04" 
+		"translate" " -type \"double3\" 134.1542510986328125 496.370635986328125 -270.256988525390625"
+		
+		2 "|living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|living_room_latest:telescope:Object02FBXASC046Object04" 
+		"translateX" " -av"
+		2 "|living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|living_room_latest:telescope:Object02FBXASC046Object04" 
+		"translateY" " -av"
+		2 "|living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|living_room_latest:telescope:Object02FBXASC046Object04" 
+		"translateZ" " -av"
+		2 "|living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|living_room_latest:telescope:Line04" 
+		"translate" " -type \"double3\" 3.39144754409790039 787.89642333984375 -217.28875732421875"
+		
+		2 "|living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|living_room_latest:telescope:Line04" 
+		"translateY" " -av"
+		2 "|living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|living_room_latest:telescope:Line04" 
+		"translateZ" " -av"
+		2 "|living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|living_room_latest:telescope:Line04" 
+		"translateX" " -av"
+		"living_room_latest:taller_window_four_squares_latest1RN" 33
+		2 "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8" 
+		"instObjGroups.objectGroups" " -s 4"
+		2 "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8" 
+		"uvSet" " -s 14"
+		2 "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8" 
+		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
+		2 "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8" 
+		"uvSet[1].uvSetName" " -type \"string\" \"map11\""
+		2 "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8" 
+		"uvSet[2].uvSetName" " -type \"string\" \"map12\""
+		2 "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8" 
+		"uvSet[3].uvSetName" " -type \"string\" \"map13\""
+		2 "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8" 
+		"uvSet[4].uvSetName" " -type \"string\" \"map14\""
+		2 "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8" 
+		"uvSet[5].uvSetName" " -type \"string\" \"map15\""
+		2 "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8" 
+		"uvSet[6].uvSetName" " -type \"string\" \"map16\""
+		2 "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8" 
+		"uvSet[7].uvSetName" " -type \"string\" \"map17\""
+		2 "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8" 
+		"uvSet[8].uvSetName" " -type \"string\" \"map18\""
+		2 "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8" 
+		"uvSet[9].uvSetName" " -type \"string\" \"map19\""
+		2 "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8" 
+		"uvSet[10].uvSetName" " -type \"string\" \"map110\""
+		2 "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8" 
+		"uvSet[11].uvSetName" " -type \"string\" \"map111\""
+		2 "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8" 
+		"uvSet[12].uvSetName" " -type \"string\" \"map112\""
+		2 "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8" 
+		"uvSet[13].uvSetName" " -type \"string\" \"map113\""
+		3 "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurface7|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape7.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurface6|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape7.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:transformGeometry17.outputGeometry" "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8.inMesh" 
+		""
+		3 "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurface9|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape9.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8.inMesh" 
+		"living_room_latestRN.placeHolderList[603]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8.instObjGroups.objectGroups[2]" 
+		"living_room_latestRN.placeHolderList[604]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8.instObjGroups.objectGroups[2].objectGroupId" 
+		"living_room_latestRN.placeHolderList[605]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8.instObjGroups.objectGroups[2].objectGrpColor" 
+		"living_room_latestRN.placeHolderList[606]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8.instObjGroups.objectGroups[3]" 
+		"living_room_latestRN.placeHolderList[607]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8.instObjGroups.objectGroups[3].objectGroupId" 
+		"living_room_latestRN.placeHolderList[608]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8.instObjGroups.objectGroups[3].objectGrpColor" 
+		"living_room_latestRN.placeHolderList[609]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8.compInstObjGroups.compObjectGroups[1]" 
+		"living_room_latestRN.placeHolderList[610]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8.compInstObjGroups.compObjectGroups[1].compObjectGroupId" 
+		"living_room_latestRN.placeHolderList[611]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurface9|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape9.instObjGroups" 
+		"living_room_latestRN.placeHolderList[612]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurface6|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape7.instObjGroups" 
+		"living_room_latestRN.placeHolderList[613]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurface7|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape7.instObjGroups" 
+		"living_room_latestRN.placeHolderList[614]" ":initialShadingGroup.dsm"
+		"living_room_latestRN" 1372
 		2 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape" "instObjGroups.objectGroups[0].objectGrpCompList" 
 		" -type \"componentList\" 1 \"f[0:87]\""
 		2 "|living_room_latest:fridge|living_room_latest:polySurface11|living_room_latest:polySurfaceShape11" 
@@ -3360,10 +3974,10 @@ createNode reference -n "living_room_latestRN";
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:kitchen_cabinet_upper_unit_Shape1" 
 		"instObjGroups.objectGroups" " -s 2"
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:kitchen_cabinet_upper_unit_Shape1" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 4 \"f[0:30]\" \"f[32:35]\" \"f[37:66]\" \"f[68:73]\""
+		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:30]\" \"f[32:35]\" \"f[37:63]\" \"f[66]\" \"f[68:73]\""
 		
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:kitchen_cabinet_upper_unit_Shape1" 
-		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 3 \"f[31]\" \"f[36]\" \"f[67]\""
+		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[31]\" \"f[36]\" \"f[64:65]\" \"f[67]\""
 		
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:vent_door|living_room_latest:vent_doorShape" 
 		"instObjGroups.objectGroups" " -s 2"
@@ -3845,305 +4459,61 @@ createNode reference -n "living_room_latestRN";
 		2 "|living_room_latest:resurrected_staircaseRNfosterParent2|living_room_latest:pCubeShape245" 
 		"instObjGroups.objectGroups[2].objectGrpCompList" " -type \"componentList\" 4 \"f[26]\" \"f[36:39]\" \"f[41]\" \"f[72]\""
 		
-		3 "|living_room_latest:pCube250|living_room_latest:pCube222|living_room_latest:pCubeShape222.instObjGroups" 
+		3 "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCubeShape92.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube250|living_room_latest:pCube229|living_room_latest:pCubeShape229.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_10|living_room_latest:cabinet_door_10_handle|living_room_latest:cabinet_door_10_handleShape.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId369.groupId" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface50|living_room_latest:bedroom_updated_layout:polySurfaceShape345.instObjGroups.objectGroups[0].objectGroupId" 
+		3 "living_room_latest:groupId365.groupId" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface44|living_room_latest:bedroom_updated_layout:polySurfaceShape339.instObjGroups.objectGroups[0].objectGroupId" 
 		""
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface50|living_room_latest:bedroom_updated_layout:polySurfaceShape345.instObjGroups.objectGroups[0].objectGrpColor" 
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface44|living_room_latest:bedroom_updated_layout:polySurfaceShape339.instObjGroups.objectGroups[0].objectGrpColor" 
 		""
-		3 "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface50|living_room_latest:bedroom_updated_layout:polySurfaceShape345.instObjGroups.objectGroups[0]" 
+		3 "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface44|living_room_latest:bedroom_updated_layout:polySurfaceShape339.instObjGroups.objectGroups[0]" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube269|living_room_latest:pCubeShape269.instObjGroups" 
+		3 "|living_room_latest:pCube149|living_room_latest:pCubeShape149.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:left_washing_machine|living_room_latest:pasted__pCube309|living_room_latest:pasted__pCubeShape309.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCube2|living_room_latest:side_table:pCubeShape2.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId169.groupId" "|living_room_latest:right_washing_machine|living_room_latest:pasted__polySurface38|living_room_latest:pasted__polySurfaceShape38.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:right_washing_machine|living_room_latest:pasted__polySurface38|living_room_latest:pasted__polySurfaceShape38.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|living_room_latest:right_washing_machine|living_room_latest:pasted__polySurface38|living_room_latest:pasted__polySurfaceShape38.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube223|living_room_latest:pCube221|living_room_latest:pCubeShape221.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube250|living_room_latest:pCube217|living_room_latest:pCubeShape217.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:kitchen_lights:pSphere8|living_room_latest:kitchen_lights:pSphereShape8.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube79|living_room_latest:pCubeShape79.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId480.message" ":initialShadingGroup.groupNodes" 
-		"-na"
-		3 "living_room_latest:groupId368.groupId" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface49|living_room_latest:bedroom_updated_layout:polySurfaceShape344.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface49|living_room_latest:bedroom_updated_layout:polySurfaceShape344.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface49|living_room_latest:bedroom_updated_layout:polySurfaceShape344.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:kitchen_lights:pSphere4|living_room_latest:kitchen_lights:pSphereShape4.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube125|living_room_latest:pCubeShape125.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_4|living_room_latest:cabinet_door_Shape4.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:left_washing_machine|living_room_latest:pasted__pasted__pTorus1|living_room_latest:pasted__pasted__pTorusShape1.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:lamp|living_room_latest:lampShape.instObjGroups" ":initialShadingGroup.dagSetMembers" 
-		"-na"
-		3 "living_room_latest:pasted__groupId268.groupId" "|living_room_latest:boiler|living_room_latest:boilerShape.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:boiler|living_room_latest:boilerShape.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|living_room_latest:boiler|living_room_latest:boilerShape.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:pasted__groupId269.groupId" "|living_room_latest:boiler|living_room_latest:boilerShape.instObjGroups.objectGroups[1].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:boiler|living_room_latest:boilerShape.instObjGroups.objectGroups[1].objectGrpColor" 
-		""
-		3 "|living_room_latest:boiler|living_room_latest:boilerShape.instObjGroups.objectGroups[1]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:pasted__groupId270.groupId" "|living_room_latest:boiler|living_room_latest:boilerShape.instObjGroups.objectGroups[3].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:boiler|living_room_latest:boilerShape.instObjGroups.objectGroups[3].objectGrpColor" 
-		""
-		3 "|living_room_latest:boiler|living_room_latest:boilerShape.instObjGroups.objectGroups[3]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:pasted__groupId223.groupId" "|living_room_latest:boiler|living_room_latest:boilerShape.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
-		""
-		3 "|living_room_latest:bedroom_updated_layout:soccer_ball|living_room_latest:bedroom_updated_layout:soccer_ballShape.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId370.message" ":initialShadingGroup.groupNodes" 
-		"-na"
-		3 "|living_room_latest:crown_molding|living_room_latest:crown_unit_9|living_room_latest:crown_unit_Shape9.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube250|living_room_latest:pCube219|living_room_latest:pCubeShape219.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId392.groupId" "|living_room_latest:bedroom_updated_layout:polySurface74|living_room_latest:bedroom_updated_layout:polySurfaceShape363.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:bedroom_updated_layout:polySurface74|living_room_latest:bedroom_updated_layout:polySurfaceShape363.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|living_room_latest:bedroom_updated_layout:polySurface74|living_room_latest:bedroom_updated_layout:polySurfaceShape363.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:tissue_box1|living_room_latest:tissue|living_room_latest:tissueShape.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pot|living_room_latest:pasted__polySurface42|living_room_latest:pasted__polySurfaceShape42.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCylinder97|living_room_latest:pCylinderShape97.instObjGroups" 
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:kitchen_cabinet_upper_unit_Shape1.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_2|living_room_latest:cabinet_door_Shape2.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:mug|living_room_latest:pasted__pPlane9|living_room_latest:pasted__pPlaneShape9.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube321|living_room_latest:pasted__pCubeShape321.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCubeShape223.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCylinder3|living_room_latest:pCylinderShape3.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId476.groupId" "|living_room_latest:coffee_table1|living_room_latest:coffee_table1Shape.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:coffee_table1|living_room_latest:coffee_table1Shape.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|living_room_latest:coffee_table1|living_room_latest:coffee_table1Shape.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:pasted__groupId285.message" "living_room_latest:pasted__lambert24SG.groupNodes" 
-		"-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube264|living_room_latest:pCubeShape264.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCylinder14|living_room_latest:pCylinderShape14.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId373.message" ":initialShadingGroup.groupNodes" 
-		"-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCylinder96|living_room_latest:pCylinderShape96.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId161.message" ":initialShadingGroup.groupNodes" 
-		"-na"
-		3 "living_room_latest:groupId374.groupId" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface55|living_room_latest:bedroom_updated_layout:polySurfaceShape350.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface55|living_room_latest:bedroom_updated_layout:polySurfaceShape350.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface55|living_room_latest:bedroom_updated_layout:polySurfaceShape350.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube146|living_room_latest:pCubeShape146.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:side_table:groupId186.message" ":initialShadingGroup.groupNodes" 
-		"-na"
-		3 "living_room_latest:groupId479.groupId" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:polySurface3|living_room_latest:polySurfaceShape3.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:polySurface3|living_room_latest:polySurfaceShape3.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:polySurface3|living_room_latest:polySurfaceShape3.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube11|living_room_latest:pCubeShape11.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:crown_molding|living_room_latest:crown_unit_6|living_room_latest:crown_unit_Shape6.instObjGroups" 
+		3 "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube213|living_room_latest:barstool_latest:pCubeShape213.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|living_room_latest:left_washing_machine|living_room_latest:pasted__pCylinder30|living_room_latest:pasted__pCylinderShape30.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:left_washing_machine|living_room_latest:pasted__pCylinder28|living_room_latest:pasted__pCylinderShape28.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:mug|living_room_latest:pasted__pCube233|living_room_latest:pasted__pCubeShape233.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId409.groupId" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:polySurface45|living_room_latest:polySurfaceShape45.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:polySurface45|living_room_latest:polySurfaceShape45.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:polySurface45|living_room_latest:polySurfaceShape45.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube109|living_room_latest:pCubeShape109.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId376.message" ":initialShadingGroup.groupNodes" 
+		3 "living_room_latest:pasted__groupId285.message" "living_room_latest:pasted__lambert24SG.groupNodes" 
 		"-na"
-		3 "living_room_latest:pasted__groupId185.message" ":initialShadingGroup.groupNodes" 
+		3 "|living_room_latest:left_washing_machine|living_room_latest:pasted__pCube309|living_room_latest:pasted__pCubeShape309.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_8|living_room_latest:cabinet_door_8_handle|living_room_latest:cabinet_door_8_handleShape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_3|living_room_latest:cabinet_door_3_handle|living_room_latest:cabinet_door_3_handleShape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:kitchen_lights:pSphere9|living_room_latest:kitchen_lights:pSphereShape9.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:pCube250|living_room_latest:pCube221|living_room_latest:pCubeShape221.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:groupId162.groupId" "|living_room_latest:fridge|living_room_latest:polySurface11|living_room_latest:polySurfaceShape11.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:fridge|living_room_latest:polySurface11|living_room_latest:polySurfaceShape11.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|living_room_latest:fridge|living_room_latest:polySurface11|living_room_latest:polySurfaceShape11.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:pPipe1|living_room_latest:pPipeShape1.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:cabinet|living_room_latest:cabinetShape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube244|living_room_latest:pCubeShape244.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:fridge|living_room_latest:pCube7|living_room_latest:pCubeShape7.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_6|living_room_latest:cabinet_door_Shape6.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:pasted__groupId270.message" "living_room_latest:pasted__phong12SG.groupNodes" 
 		"-na"
-		3 "living_room_latest:groupId381.groupId" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface67|living_room_latest:bedroom_updated_layout:polySurfaceShape362.instObjGroups.objectGroups[0].objectGroupId" 
+		3 "living_room_latest:groupId372.groupId" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface53|living_room_latest:bedroom_updated_layout:polySurfaceShape348.instObjGroups.objectGroups[0].objectGroupId" 
 		""
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface67|living_room_latest:bedroom_updated_layout:polySurfaceShape362.instObjGroups.objectGroups[0].objectGrpColor" 
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface53|living_room_latest:bedroom_updated_layout:polySurfaceShape348.instObjGroups.objectGroups[0].objectGrpColor" 
 		""
-		3 "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface67|living_room_latest:bedroom_updated_layout:polySurfaceShape362.instObjGroups.objectGroups[0]" 
+		3 "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface53|living_room_latest:bedroom_updated_layout:polySurfaceShape348.instObjGroups.objectGroups[0]" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:fridge|living_room_latest:pCylinder2|living_room_latest:pCylinderShape2.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:bedroom_updated_layout:bedroom_trashbag|living_room_latest:bedroom_updated_layout:bedroom_trashbagShape.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId167.groupId" "|living_room_latest:right_washing_machine|living_room_latest:right_washing_machineShape.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:right_washing_machine|living_room_latest:right_washing_machineShape.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|living_room_latest:right_washing_machine|living_room_latest:right_washing_machineShape.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube114|living_room_latest:pCubeShape114.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId367.message" ":initialShadingGroup.groupNodes" 
-		"-na"
-		3 "living_room_latest:groupId367.groupId" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface48|living_room_latest:bedroom_updated_layout:polySurfaceShape343.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface48|living_room_latest:bedroom_updated_layout:polySurfaceShape343.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface48|living_room_latest:bedroom_updated_layout:polySurfaceShape343.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube223|living_room_latest:pCube227|living_room_latest:pCubeShape227.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube262|living_room_latest:pCubeShape262.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:bedroom_updated_layout:groupId510.message" ":initialShadingGroup.groupNodes" 
-		"-na"
-		3 "living_room_latest:groupId393.groupId" "|living_room_latest:bedroom_updated_layout:polySurface78|living_room_latest:bedroom_updated_layout:polySurfaceShape364.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:bedroom_updated_layout:polySurface78|living_room_latest:bedroom_updated_layout:polySurfaceShape364.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|living_room_latest:bedroom_updated_layout:polySurface78|living_room_latest:bedroom_updated_layout:polySurfaceShape364.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube250|living_room_latest:pCube228|living_room_latest:pCubeShape228.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube260|living_room_latest:pCubeShape260.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube223|living_room_latest:pCube216|living_room_latest:pCubeShape216.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube232|living_room_latest:pCubeShape232.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId476.message" ":initialShadingGroup.groupNodes" 
-		"-na"
-		3 "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCylinder4|living_room_latest:side_table:pCylinderShape4.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube92|living_room_latest:polySurface4|living_room_latest:polySurfaceShape4.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:pCube92|living_room_latest:polySurface4|living_room_latest:polySurfaceShape4.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube228|living_room_latest:barstool_latest:pCubeShape228.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:left_washing_machine|living_room_latest:pasted__pCylinder27|living_room_latest:pasted__pCylinderShape27.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_10|living_room_latest:cabinet_door_Shape10.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId365.message" ":initialShadingGroup.groupNodes" 
-		"-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCylinder95|living_room_latest:pCylinderShape95.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube92|living_room_latest:pCylinder2|living_room_latest:pCylinderShape2.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube250|living_room_latest:pCube220|living_room_latest:pCubeShape220.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId378.message" ":initialShadingGroup.groupNodes" 
-		"-na"
-		3 "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube217|living_room_latest:barstool_latest:pCubeShape217.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCylinder100|living_room_latest:pCylinderShape100.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:left_washing_machine|living_room_latest:pasted__pasted__pCylinder6|living_room_latest:pasted__pasted__pCylinderShape6.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube223|living_room_latest:pCube225|living_room_latest:pCubeShape225.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId220.groupId" "|living_room_latest:exit_window_4|living_room_latest:exit_window_1Shape4.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:exit_window_4|living_room_latest:exit_window_1Shape4.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|living_room_latest:exit_window_4|living_room_latest:exit_window_1Shape4.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:oven|living_room_latest:pasted__pPlane4|living_room_latest:pasted__outputCloth1.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube142|living_room_latest:pCubeShape142.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface3|living_room_latest:side_table:polySurfaceShape3.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface3|living_room_latest:side_table:polySurfaceShape3.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube259|living_room_latest:pCubeShape259.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_1|living_room_latest:cabinet_door_Shape1.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube123|living_room_latest:pCubeShape123.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube267|living_room_latest:pCubeShape267.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube250|living_room_latest:pTorus4|living_room_latest:pTorusShape4.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube120|living_room_latest:pCubeShape120.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube274|living_room_latest:pCubeShape274.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCylinder6|living_room_latest:pCylinderShape6.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube270|living_room_latest:pCubeShape270.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube223|living_room_latest:pCube224|living_room_latest:pCubeShape224.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube216|living_room_latest:barstool_latest:pCubeShape216.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCylinder13|living_room_latest:pCylinderShape13.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube5|living_room_latest:pCubeShape5.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube147|living_room_latest:pCubeShape147.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCylinder10|living_room_latest:pCylinderShape10.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:oven|living_room_latest:pasted__polySurface7|living_room_latest:pasted__polySurfaceShape7.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:pasted__groupId189.message" ":initialShadingGroup.groupNodes" 
-		"-na"
-		3 "living_room_latest:groupId381.message" ":initialShadingGroup.groupNodes" 
-		"-na"
-		3 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCylinder91|living_room_latest:pasted__pCylinderShape91.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCylinder4|living_room_latest:pCylinderShape4.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:mug|living_room_latest:pasted__pCylinder73|living_room_latest:pasted__pCylinderShape73.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:sink|living_room_latest:sinkShape.instObjGroups" ":initialShadingGroup.dagSetMembers" 
-		"-na"
-		3 "|living_room_latest:pCube250|living_room_latest:pCube224|living_room_latest:pCubeShape224.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCylinder11|living_room_latest:pCylinderShape11.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube223|living_room_latest:pCube213|living_room_latest:pCubeShape213.instObjGroups" 
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube13|living_room_latest:pCubeShape13.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "living_room_latest:groupId478.groupId" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:polySurface2|living_room_latest:polySurfaceShape2.instObjGroups.objectGroups[0].objectGroupId" 
 		""
@@ -4151,344 +4521,90 @@ createNode reference -n "living_room_latestRN";
 		""
 		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:polySurface2|living_room_latest:polySurfaceShape2.instObjGroups.objectGroups[0]" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube227|living_room_latest:barstool_latest:pCubeShape227.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCylinder94|living_room_latest:pCylinderShape94.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube248|living_room_latest:pCubeShape276.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId351.groupId" "|living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube250|living_room_latest:pCubeShape250.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCylinder5|living_room_latest:pCylinderShape5.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube250|living_room_latest:pCube225|living_room_latest:pCubeShape225.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:crown_molding|living_room_latest:crown_unit_3|living_room_latest:crown_unit_Shape3.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
 		3 "living_room_latest:groupId377.groupId" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface58|living_room_latest:bedroom_updated_layout:polySurfaceShape353.instObjGroups.objectGroups[0].objectGroupId" 
 		""
 		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface58|living_room_latest:bedroom_updated_layout:polySurfaceShape353.instObjGroups.objectGroups[0].objectGrpColor" 
 		""
 		3 "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface58|living_room_latest:bedroom_updated_layout:polySurfaceShape353.instObjGroups.objectGroups[0]" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId216.message" ":initialShadingGroup.groupNodes" 
-		"-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_7|living_room_latest:cabinet_door_7_handle|living_room_latest:cabinet_door_7_handleShape.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:kitchen_lights:pSphere7|living_room_latest:kitchen_lights:pSphereShape7.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube215|living_room_latest:barstool_latest:pCubeShape215.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:left_washing_machine|living_room_latest:pasted__pCube277|living_room_latest:pasted__pCubeShape277.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube257|living_room_latest:pCubeShape257.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId352.message" ":initialShadingGroup.groupNodes" 
-		"-na"
-		3 "|living_room_latest:crown_molding|living_room_latest:crown_unit_4|living_room_latest:crown_unit_Shape4.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pPipe2|living_room_latest:pPipeShape2.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube213|living_room_latest:barstool_latest:pCubeShape213.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_6|living_room_latest:cabinet_door_Shape6.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube223|living_room_latest:pCube215|living_room_latest:pCubeShape215.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube223|living_room_latest:pCube220|living_room_latest:pCubeShape220.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:fridge|living_room_latest:pCylinder4|living_room_latest:pCylinderShape4.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:crown_molding|living_room_latest:crown_unit_2|living_room_latest:crown_unit_Shape2.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:side_table:groupId187.groupId" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface2|living_room_latest:side_table:polySurfaceShape2.instObjGroups.objectGroups[0].objectGroupId" 
+		3 "living_room_latest:groupId374.groupId" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface55|living_room_latest:bedroom_updated_layout:polySurfaceShape350.instObjGroups.objectGroups[0].objectGroupId" 
 		""
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface2|living_room_latest:side_table:polySurfaceShape2.instObjGroups.objectGroups[0].objectGrpColor" 
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface55|living_room_latest:bedroom_updated_layout:polySurfaceShape350.instObjGroups.objectGroups[0].objectGrpColor" 
 		""
-		3 "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface2|living_room_latest:side_table:polySurfaceShape2.instObjGroups.objectGroups[0]" 
+		3 "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface55|living_room_latest:bedroom_updated_layout:polySurfaceShape350.instObjGroups.objectGroups[0]" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube224|living_room_latest:barstool_latest:pCubeShape224.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube124|living_room_latest:pCubeShape124.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:ripped_up_toy:groupId1.message" ":initialShadingGroup.groupNodes" 
-		"-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_8|living_room_latest:cabinet_door_8_handle|living_room_latest:cabinet_door_8_handleShape.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pPipe1|living_room_latest:pPipeShape1.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube119|living_room_latest:pCubeShape119.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_3|living_room_latest:cabinet_door_3_handle|living_room_latest:cabinet_door_3_handleShape.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube256|living_room_latest:pCubeShape256.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:pasted__groupId188.message" ":initialShadingGroup.groupNodes" 
-		"-na"
-		3 "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube222|living_room_latest:barstool_latest:pCubeShape222.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube223|living_room_latest:pCube217|living_room_latest:pCubeShape217.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube89|living_room_latest:pCubeShape89.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_4|living_room_latest:cabinet_door_4_handle|living_room_latest:cabinet_door_4_handleShape.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube2|living_room_latest:pCubeShape2.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:fridge|living_room_latest:fridgeShape.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube250|living_room_latest:pCube214|living_room_latest:pCubeShape214.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:pasted__groupId284.message" ":initialShadingGroup.groupNodes" 
-		"-na"
-		3 "living_room_latest:pasted__groupId71.groupId" "|living_room_latest:toaster_oven|living_room_latest:pasted__polySurface39|living_room_latest:pasted__polySurfaceShape39.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:toaster_oven|living_room_latest:pasted__polySurface39|living_room_latest:pasted__polySurfaceShape39.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|living_room_latest:toaster_oven|living_room_latest:pasted__polySurface39|living_room_latest:pasted__polySurfaceShape39.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube258|living_room_latest:pCubeShape258.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_12|living_room_latest:cabinet_door_Shape12.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId392.message" ":initialShadingGroup.groupNodes" 
-		"-na"
-		3 "living_room_latest:groupId376.groupId" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface57|living_room_latest:bedroom_updated_layout:polySurfaceShape352.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface57|living_room_latest:bedroom_updated_layout:polySurfaceShape352.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface57|living_room_latest:bedroom_updated_layout:polySurfaceShape352.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube92|living_room_latest:pCubeShape92.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_11|living_room_latest:cabinet_door_Shape11.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCubeShape92.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId163.groupId" "|living_room_latest:fridge|living_room_latest:polySurface12|living_room_latest:polySurfaceShape12.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:fridge|living_room_latest:polySurface12|living_room_latest:polySurfaceShape12.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|living_room_latest:fridge|living_room_latest:polySurface12|living_room_latest:polySurfaceShape12.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube223|living_room_latest:pCube228|living_room_latest:pCubeShape228.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:kitchen_lights:pSphere10|living_room_latest:kitchen_lights:pSphereShape10.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:fridge|living_room_latest:pCube4|living_room_latest:pCubeShape4.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_6|living_room_latest:cabinet_door_6_handle|living_room_latest:cabinet_door_6_handleShape.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:left_washing_machine|living_room_latest:pasted__pCylinder43|living_room_latest:pasted__pCylinderShape43.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId163.message" ":initialShadingGroup.groupNodes" 
-		"-na"
-		3 "|living_room_latest:stove_vent|living_room_latest:stove_ventShape.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pTorus4|living_room_latest:barstool_latest:pTorusShape4.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_2|living_room_latest:cabinet_door_2_handle|living_room_latest:cabinet_door_2_handleShape.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube250|living_room_latest:pCube218|living_room_latest:pCubeShape218.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:fridge|living_room_latest:pCube1|living_room_latest:pCubeShape1.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pot|living_room_latest:pasted__polySurface41|living_room_latest:pasted__polySurfaceShape41.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube250|living_room_latest:pCube221|living_room_latest:pCubeShape221.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_5|living_room_latest:cabinet_door_5_handle|living_room_latest:cabinet_door_5_handleShape.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId372.message" ":initialShadingGroup.groupNodes" 
-		"-na"
-		3 "living_room_latest:groupId216.groupId" "|living_room_latest:exit_window_1|living_room_latest:exit_window_1Shape1.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:exit_window_1|living_room_latest:exit_window_1Shape1.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|living_room_latest:exit_window_1|living_room_latest:exit_window_1Shape1.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId352.groupId" "|living_room_latest:pCube92|living_room_latest:polySurface2|living_room_latest:polySurfaceShape2.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:pCube92|living_room_latest:polySurface2|living_room_latest:polySurfaceShape2.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|living_room_latest:pCube92|living_room_latest:polySurface2|living_room_latest:polySurfaceShape2.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube116|living_room_latest:pCubeShape116.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId371.groupId" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface52|living_room_latest:bedroom_updated_layout:polySurfaceShape347.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface52|living_room_latest:bedroom_updated_layout:polySurfaceShape347.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface52|living_room_latest:bedroom_updated_layout:polySurfaceShape347.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId361.groupId" "|living_room_latest:polySurface41|living_room_latest:polySurfaceShape41.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:polySurface41|living_room_latest:polySurfaceShape41.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|living_room_latest:polySurface41|living_room_latest:polySurfaceShape41.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:kitchen_lights:pSphere1|living_room_latest:kitchen_lights:pSphereShape1.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube218|living_room_latest:barstool_latest:pCubeShape218.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId168.groupId" "|living_room_latest:right_washing_machine|living_room_latest:pasted__polySurface39|living_room_latest:pasted__polySurfaceShape39.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:right_washing_machine|living_room_latest:pasted__polySurface39|living_room_latest:pasted__polySurfaceShape39.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|living_room_latest:right_washing_machine|living_room_latest:pasted__polySurface39|living_room_latest:pasted__polySurfaceShape39.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube261|living_room_latest:pCubeShape261.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube229|living_room_latest:barstool_latest:pCubeShape229.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:bowl|living_room_latest:bowlShape.instObjGroups" ":initialShadingGroup.dagSetMembers" 
-		"-na"
-		3 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube316|living_room_latest:pasted__pCubeShape316.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube273|living_room_latest:pCubeShape273.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_7|living_room_latest:cabinet_door_Shape7.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:kitchen_lights:pSphere5|living_room_latest:kitchen_lights:pSphereShape5.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:crown_molding|living_room_latest:crown_unit_7|living_room_latest:crown_unit_Shape7.instObjGroups" 
+		3 "|living_room_latest:tissue_box1|living_room_latest:tissue|living_room_latest:tissueShape.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pasted__pCylinder7|living_room_latest:pasted__pasted__pCylinderShape7.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube10|living_room_latest:pCubeShape10.instObjGroups" 
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube14|living_room_latest:pCubeShape14.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube110|living_room_latest:pCubeShape110.instObjGroups" 
+		3 "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube217|living_room_latest:barstool_latest:pCubeShape217.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube138|living_room_latest:pCubeShape138.instObjGroups" 
+		3 "|living_room_latest:rug|living_room_latest:rugShape.instObjGroups" ":initialShadingGroup.dagSetMembers" 
+		"-na"
+		3 "living_room_latest:groupId375.groupId" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface56|living_room_latest:bedroom_updated_layout:polySurfaceShape351.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface56|living_room_latest:bedroom_updated_layout:polySurfaceShape351.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface56|living_room_latest:bedroom_updated_layout:polySurfaceShape351.instObjGroups.objectGroups[0]" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube12|living_room_latest:pCubeShape12.instObjGroups" 
+		3 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pasted__pTorus2|living_room_latest:pasted__pasted__pTorusShape2.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube7|living_room_latest:pCubeShape7.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId371.message" ":initialShadingGroup.groupNodes" 
+		3 "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube215|living_room_latest:barstool_latest:pCubeShape215.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCylinder5|living_room_latest:pCylinderShape5.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCubeShape223.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:pCube250|living_room_latest:pCube218|living_room_latest:pCubeShape218.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:sink|living_room_latest:sinkShape.instObjGroups" ":initialShadingGroup.dagSetMembers" 
 		"-na"
-		3 "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube225|living_room_latest:barstool_latest:pCubeShape225.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube244|living_room_latest:pCubeShape244.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube221|living_room_latest:barstool_latest:pCubeShape221.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube92|living_room_latest:pCylinder4|living_room_latest:pCylinderShape4.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:bedroom_updated_layout:groupId512.message" ":initialShadingGroup.groupNodes" 
+		3 "living_room_latest:groupId380.message" ":initialShadingGroup.groupNodes" 
 		"-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube253|living_room_latest:pCubeShape253.instObjGroups" 
+		3 "|living_room_latest:pCube250|living_room_latest:pCube213|living_room_latest:pCubeShape213.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId351.message" ":initialShadingGroup.groupNodes" 
+		3 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCylinder93|living_room_latest:pasted__pCylinderShape93.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:fridge|living_room_latest:fridgeShape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface3|living_room_latest:side_table:polySurfaceShape3.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface3|living_room_latest:side_table:polySurfaceShape3.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "living_room_latest:groupId370.message" ":initialShadingGroup.groupNodes" 
 		"-na"
-		3 "living_room_latest:groupId364.groupId" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface43|living_room_latest:bedroom_updated_layout:polySurfaceShape338.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface43|living_room_latest:bedroom_updated_layout:polySurfaceShape338.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface43|living_room_latest:bedroom_updated_layout:polySurfaceShape338.instObjGroups.objectGroups[0]" 
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube259|living_room_latest:pCubeShape259.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:fridge|living_room_latest:pCube6|living_room_latest:pCubeShape6.instObjGroups" 
+		3 "|living_room_latest:pCube142|living_room_latest:pCubeShape142.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:bedroom_updated_layout:groupId511.groupId" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface76|living_room_latest:bedroom_updated_layout:polySurfaceShape76.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface76|living_room_latest:bedroom_updated_layout:polySurfaceShape76.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface76|living_room_latest:bedroom_updated_layout:polySurfaceShape76.instObjGroups.objectGroups[0]" 
+		3 "|living_room_latest:boiler|living_room_latest:pasted__pCube151|living_room_latest:pasted__pCubeShape151.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_12|living_room_latest:cabinet_door_12_handle|living_room_latest:cabinet_door_12_handleShape.instObjGroups" 
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube268|living_room_latest:pCubeShape268.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_5|living_room_latest:cabinet_door_Shape5.instObjGroups" 
+		3 "|living_room_latest:pCube250|living_room_latest:pCube215|living_room_latest:pCubeShape215.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:kitchen_lights:pSphere9|living_room_latest:kitchen_lights:pSphereShape9.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:toaster_oven|living_room_latest:pasted__pCube204|living_room_latest:pasted__pCubeShape204.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId380.groupId" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface66|living_room_latest:bedroom_updated_layout:polySurfaceShape361.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface66|living_room_latest:bedroom_updated_layout:polySurfaceShape361.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface66|living_room_latest:bedroom_updated_layout:polySurfaceShape361.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:crown_molding|living_room_latest:crown_unit_8|living_room_latest:crown_unit_Shape8.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:cabinet|living_room_latest:cabinetShape.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:crown_molding|living_room_latest:crown_unit_5|living_room_latest:crown_unit_Shape5.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_3|living_room_latest:cabinet_door_Shape3.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:bedroom_updated_layout:poster_1|living_room_latest:bedroom_updated_layout:poster_Shape1.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_9|living_room_latest:cabinet_door_Shape9.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube92|living_room_latest:polySurface3|living_room_latest:polySurfaceShape3.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:pCube92|living_room_latest:polySurface3|living_room_latest:polySurfaceShape3.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "living_room_latest:groupId218.groupId" "|living_room_latest:exit_window_3|living_room_latest:exit_window_1Shape3.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:exit_window_3|living_room_latest:exit_window_1Shape3.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|living_room_latest:exit_window_3|living_room_latest:exit_window_1Shape3.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:pasted__groupId71.message" ":initialShadingGroup.groupNodes" 
+		3 "living_room_latest:pasted__groupId190.message" "living_room_latest:pasted__phong8SG1.groupNodes" 
 		"-na"
-		3 "|living_room_latest:door_1|living_room_latest:door_Shape1.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube223|living_room_latest:pTorus4|living_room_latest:pTorusShape4.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube14|living_room_latest:pCubeShape14.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:stove_metal|living_room_latest:pasted__pCylinder11|living_room_latest:pasted__pCylinderShape11.instObjGroups" 
-		"living_room_latest:pasted__lambert18SG1.dagSetMembers" "-na"
-		3 "|living_room_latest:stove_metal|living_room_latest:pasted__pCylinder4|living_room_latest:pasted__pCylinderShape4.instObjGroups" 
-		"living_room_latest:pasted__lambert18SG1.dagSetMembers" "-na"
-		3 "|living_room_latest:stove_metal|living_room_latest:pasted__pCylinder9|living_room_latest:pasted__pCylinderShape9.instObjGroups" 
-		"living_room_latest:pasted__lambert18SG1.dagSetMembers" "-na"
-		3 "|living_room_latest:stove_metal|living_room_latest:pasted__polySurface5|living_room_latest:pasted__polySurfaceShape5.instObjGroups" 
-		"living_room_latest:pasted__lambert18SG1.dagSetMembers" "-na"
-		3 "|living_room_latest:stove_metal|living_room_latest:pasted__pCylinder7|living_room_latest:pasted__pCylinderShape7.instObjGroups" 
-		"living_room_latest:pasted__lambert18SG1.dagSetMembers" "-na"
-		3 "|living_room_latest:stove_metal|living_room_latest:pasted__polySurface3|living_room_latest:pasted__polySurfaceShape3.instObjGroups" 
-		"living_room_latest:pasted__lambert18SG1.dagSetMembers" "-na"
-		3 "|living_room_latest:stove_metal|living_room_latest:pasted__pCylinder7|living_room_latest:pasted__pCylinder6|living_room_latest:pasted__pCylinderShape6.instObjGroups" 
-		"living_room_latest:pasted__lambert18SG1.dagSetMembers" "-na"
-		3 "|living_room_latest:stove_metal|living_room_latest:pasted__pCylinder4|living_room_latest:pasted__pCylinder5|living_room_latest:pasted__pCylinderShape5.instObjGroups" 
-		"living_room_latest:pasted__lambert18SG1.dagSetMembers" "-na"
-		3 "living_room_latest:pasted__groupId269.message" "living_room_latest:pasted__lambert18SG1.groupNodes" 
+		3 "living_room_latest:pasted__groupId187.message" "living_room_latest:pasted__phong8SG1.groupNodes" 
 		"-na"
-		3 "|living_room_latest:stove_metal|living_room_latest:pasted__pCylinder11|living_room_latest:pasted__pCylinder10|living_room_latest:pasted__pCylinderShape10.instObjGroups" 
-		"living_room_latest:pasted__lambert18SG1.dagSetMembers" "-na"
-		3 "|living_room_latest:stove_metal|living_room_latest:stove_metalShape.instObjGroups" 
-		"living_room_latest:pasted__lambert18SG1.dagSetMembers" "-na"
-		3 "|living_room_latest:stove_metal|living_room_latest:pasted__pCylinder9|living_room_latest:pasted__pCylinder8|living_room_latest:pasted__pCylinderShape8.instObjGroups" 
-		"living_room_latest:pasted__lambert18SG1.dagSetMembers" "-na"
-		3 "|living_room_latest:stove_metal|living_room_latest:pasted__polySurface6|living_room_latest:pasted__polySurfaceShape6.instObjGroups" 
-		"living_room_latest:pasted__lambert18SG1.dagSetMembers" "-na"
-		3 "living_room_latest:ripped_up_toy:groupId1.groupId" "|living_room_latest:ripped_up_toy1|living_room_latest:ripped_up_toy1Shape.instObjGroups.objectGroups[0].objectGroupId" 
+		3 "living_room_latest:pasted__groupId287.message" "living_room_latest:pasted__phong8SG1.groupNodes" 
+		"-na"
+		3 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube318|living_room_latest:pasted__pCubeShape318.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCylinder92|living_room_latest:pCylinderShape92.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube2|living_room_latest:pCubeShape2.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:side_table:groupId186.groupId" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface1|living_room_latest:side_table:polySurfaceShape1.instObjGroups.objectGroups[0].objectGroupId" 
 		""
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:ripped_up_toy1|living_room_latest:ripped_up_toy1Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface1|living_room_latest:side_table:polySurfaceShape1.instObjGroups.objectGroups[0].objectGrpColor" 
 		""
-		3 "|living_room_latest:ripped_up_toy1|living_room_latest:ripped_up_toy1Shape.instObjGroups.objectGroups[0]" 
+		3 "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface1|living_room_latest:side_table:polySurfaceShape1.instObjGroups.objectGroups[0]" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:pasted__groupId286.message" "living_room_latest:pasted__lambert27SG.groupNodes" 
-		"-na"
-		3 "|living_room_latest:pCube223|living_room_latest:pCube214|living_room_latest:pCubeShape214.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube223|living_room_latest:pCube226|living_room_latest:pCubeShape226.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_1|living_room_latest:cabinet_door_1_handle|living_room_latest:cabinet_door_1_handleShape.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId379.message" ":initialShadingGroup.groupNodes" 
-		"-na"
 		3 "living_room_latest:pasted__groupId284.groupId" "|living_room_latest:toaster_oven|living_room_latest:toaster_ovenShape.instObjGroups.objectGroups[0].objectGroupId" 
 		""
 		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:toaster_oven|living_room_latest:toaster_ovenShape.instObjGroups.objectGroups[0].objectGrpColor" 
@@ -4517,267 +4633,15 @@ createNode reference -n "living_room_latestRN";
 		""
 		3 "|living_room_latest:toaster_oven|living_room_latest:toaster_ovenShape.compInstObjGroups.compObjectGroups[0]" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_9|living_room_latest:cabinet_door_9_handle|living_room_latest:cabinet_door_9_handleShape.instObjGroups" 
+		3 "living_room_latest:ripped_up_toy:groupId1.message" ":initialShadingGroup.groupNodes" 
+		"-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCylinder96|living_room_latest:pCylinderShape96.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId365.groupId" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface44|living_room_latest:bedroom_updated_layout:polySurfaceShape339.instObjGroups.objectGroups[0].objectGroupId" 
+		3 "living_room_latest:groupId214.groupId" "|living_room_latest:exit_window_2|living_room_latest:exit_window_2Shape.instObjGroups.objectGroups[0].objectGroupId" 
 		""
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface44|living_room_latest:bedroom_updated_layout:polySurfaceShape339.instObjGroups.objectGroups[0].objectGrpColor" 
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:exit_window_2|living_room_latest:exit_window_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
 		""
-		3 "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface44|living_room_latest:bedroom_updated_layout:polySurfaceShape339.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:left_washing_machine|living_room_latest:pasted__pCube308|living_room_latest:pasted__pCubeShape308.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube223|living_room_latest:pCube222|living_room_latest:pCubeShape222.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube145|living_room_latest:pCubeShape145.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId393.message" ":initialShadingGroup.groupNodes" 
-		"-na"
-		3 "|living_room_latest:crown_molding|living_room_latest:crown_unit_1|living_room_latest:crown_unit_Shape1.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId364.message" ":initialShadingGroup.groupNodes" 
-		"-na"
-		3 "living_room_latest:groupId409.message" ":initialShadingGroup.groupNodes" 
-		"-na"
-		3 "living_room_latest:groupId408.groupId" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:polySurface44|living_room_latest:polySurfaceShape44.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:polySurface44|living_room_latest:polySurfaceShape44.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:polySurface44|living_room_latest:polySurfaceShape44.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube266|living_room_latest:pCubeShape266.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:left_washing_machine|living_room_latest:pasted__pPipe2|living_room_latest:pasted__pPipeShape2.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:kitchen_lights:pSphere6|living_room_latest:kitchen_lights:pSphereShape6.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId218.message" ":initialShadingGroup.groupNodes" 
-		"-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube3|living_room_latest:pCubeShape3.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:mug|living_room_latest:mugShape.instObjGroups" ":initialShadingGroup.dagSetMembers" 
-		"-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube9|living_room_latest:pCubeShape9.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:kitchen_lights:pSphere2|living_room_latest:kitchen_lights:pSphereShape2.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:utilities_room_wall|living_room_latest:utilities_room_wallShape.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_11|living_room_latest:cabinet_door_11_handle|living_room_latest:cabinet_door_11_handleShape.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCylinder90|living_room_latest:pasted__pCylinderShape90.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:bedroom_updated_layout:groupId510.groupId" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface75|living_room_latest:bedroom_updated_layout:polySurfaceShape75.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface75|living_room_latest:bedroom_updated_layout:polySurfaceShape75.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface75|living_room_latest:bedroom_updated_layout:polySurfaceShape75.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:pasted__groupId268.message" "living_room_latest:pasted__mia_material_x1SG1.groupNodes" 
-		"-na"
-		3 "|living_room_latest:boiler|living_room_latest:boilerShape.compInstObjGroups.compObjectGroups[0]" 
-		"living_room_latest:pasted__mia_material_x1SG1.dagSetMembers" "-na"
-		3 "living_room_latest:pasted__groupId223.message" "living_room_latest:pasted__mia_material_x1SG1.groupNodes" 
-		"-na"
-		3 "|living_room_latest:pCube250|living_room_latest:pCube215|living_room_latest:pCubeShape215.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId408.message" ":initialShadingGroup.groupNodes" 
-		"-na"
-		3 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube315|living_room_latest:pasted__pCubeShape315.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube318|living_room_latest:pasted__pCubeShape318.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube272|living_room_latest:pCubeShape272.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:pasted__groupId190.message" "living_room_latest:pasted__phong8SG1.groupNodes" 
-		"-na"
-		3 "living_room_latest:pasted__groupId187.message" "living_room_latest:pasted__phong8SG1.groupNodes" 
-		"-na"
-		3 "living_room_latest:pasted__groupId287.message" "living_room_latest:pasted__phong8SG1.groupNodes" 
-		"-na"
-		3 "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCylinder2|living_room_latest:side_table:pCylinderShape2.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId370.groupId" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface51|living_room_latest:bedroom_updated_layout:polySurfaceShape346.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface51|living_room_latest:bedroom_updated_layout:polySurfaceShape346.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface51|living_room_latest:bedroom_updated_layout:polySurfaceShape346.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCylinder92|living_room_latest:pCylinderShape92.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:boiler|living_room_latest:pasted__pCube151|living_room_latest:pasted__pCubeShape151.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId166.groupId" "|living_room_latest:left_washing_machine|living_room_latest:pasted__polySurface35|living_room_latest:pasted__polySurfaceShape35.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:left_washing_machine|living_room_latest:pasted__polySurface35|living_room_latest:pasted__polySurfaceShape35.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|living_room_latest:left_washing_machine|living_room_latest:pasted__polySurface35|living_room_latest:pasted__polySurfaceShape35.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId361.message" ":initialShadingGroup.groupNodes" 
-		"-na"
-		3 "living_room_latest:groupId368.message" ":initialShadingGroup.groupNodes" 
-		"-na"
-		3 "|living_room_latest:pCube143|living_room_latest:pCubeShape143.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube268|living_room_latest:pCubeShape268.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCylinder92|living_room_latest:pasted__pCylinderShape92.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:kitchen_cabinet_upper_unit_Shape1.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube13|living_room_latest:pCubeShape13.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCylinder12|living_room_latest:pCylinderShape12.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId479.message" ":initialShadingGroup.groupNodes" 
-		"-na"
-		3 "|living_room_latest:pot|living_room_latest:pasted__pCylinder28|living_room_latest:pasted__pCylinderShape28.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube121|living_room_latest:pCubeShape121.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:tissue_box1|living_room_latest:tissue_box1Shape.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId380.message" ":initialShadingGroup.groupNodes" 
-		"-na"
-		3 "living_room_latest:pasted__groupId181.message" ":initialShadingGroup.groupNodes" 
-		"-na"
-		3 "living_room_latest:groupId162.groupId" "|living_room_latest:fridge|living_room_latest:polySurface11|living_room_latest:polySurfaceShape11.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:fridge|living_room_latest:polySurface11|living_room_latest:polySurfaceShape11.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|living_room_latest:fridge|living_room_latest:polySurface11|living_room_latest:polySurfaceShape11.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube223|living_room_latest:pCube219|living_room_latest:pCubeShape219.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCylinder99|living_room_latest:pCylinderShape99.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId375.message" ":initialShadingGroup.groupNodes" 
-		"-na"
-		3 "|living_room_latest:bedroom_updated_layout:bedroom_trashcan|living_room_latest:bedroom_updated_layout:bedroom_trashcanShape.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId379.groupId" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface60|living_room_latest:bedroom_updated_layout:polySurfaceShape355.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface60|living_room_latest:bedroom_updated_layout:polySurfaceShape355.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface60|living_room_latest:bedroom_updated_layout:polySurfaceShape355.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId161.groupId" "|living_room_latest:photo_frame|living_room_latest:photo_frameShape.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:photo_frame|living_room_latest:photo_frameShape.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube263|living_room_latest:pCubeShape263.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:bedroom_updated_layout:groupId512.groupId" "|living_room_latest:bedroom_updated_layout:polySurface77|living_room_latest:bedroom_updated_layout:polySurfaceShape77.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:bedroom_updated_layout:polySurface77|living_room_latest:bedroom_updated_layout:polySurfaceShape77.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|living_room_latest:bedroom_updated_layout:polySurface77|living_room_latest:bedroom_updated_layout:polySurfaceShape77.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId162.message" ":initialShadingGroup.groupNodes" 
-		"-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCylinder98|living_room_latest:pCylinderShape98.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:boiler|living_room_latest:pasted__pCylinder12|living_room_latest:pasted__pCylinderShape12.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId374.message" ":initialShadingGroup.groupNodes" 
-		"-na"
-		3 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube314|living_room_latest:pasted__pCubeShape314.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube92|living_room_latest:pCube2|living_room_latest:pCubeShape2.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pot|living_room_latest:pasted__polySurface40|living_room_latest:pasted__polySurfaceShape40.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube243|living_room_latest:pCubeShape243.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:bedroom_updated_layout:groupId511.message" ":initialShadingGroup.groupNodes" 
-		"-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube265|living_room_latest:pCubeShape265.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId378.groupId" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface59|living_room_latest:bedroom_updated_layout:polySurfaceShape354.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface59|living_room_latest:bedroom_updated_layout:polySurfaceShape354.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface59|living_room_latest:bedroom_updated_layout:polySurfaceShape354.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCylinder94|living_room_latest:pasted__pCylinderShape94.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:pasted__groupId270.message" "living_room_latest:pasted__phong12SG.groupNodes" 
-		"-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube118|living_room_latest:pCubeShape118.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube219|living_room_latest:barstool_latest:pCubeShape219.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:vase_flowers:pCylinder8|living_room_latest:vase_flowers:pCylinderShape8.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId478.message" ":initialShadingGroup.groupNodes" 
-		"-na"
-		3 "|living_room_latest:kitchen_lights:pSphere3|living_room_latest:kitchen_lights:pSphereShape3.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:fridge|living_room_latest:pCube5|living_room_latest:pCubeShape5.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube149|living_room_latest:pCubeShape149.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube271|living_room_latest:pCubeShape271.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCylinder93|living_room_latest:pCylinderShape93.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId214.message" ":initialShadingGroup.groupNodes" 
-		"-na"
-		3 "living_room_latest:groupId369.message" ":initialShadingGroup.groupNodes" 
-		"-na"
-		3 "|living_room_latest:rug|living_room_latest:rugShape.instObjGroups" ":initialShadingGroup.dagSetMembers" 
-		"-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCylinder15|living_room_latest:pCylinderShape15.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube141|living_room_latest:pCubeShape141.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:paper_towels|living_room_latest:paper_towelsShape.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_8|living_room_latest:cabinet_door_Shape8.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCylinder8|living_room_latest:pCylinderShape8.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube250|living_room_latest:pCube213|living_room_latest:pCubeShape213.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube117|living_room_latest:pCubeShape117.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:fridge|living_room_latest:pCylinder3|living_room_latest:pCylinderShape3.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId166.message" "living_room_latest:pasted__phong9SG.groupNodes" 
-		"-na"
-		3 "living_room_latest:groupId165.message" "living_room_latest:pasted__phong9SG.groupNodes" 
-		"-na"
-		3 "living_room_latest:groupId169.message" "living_room_latest:pasted__phong9SG.groupNodes" 
-		"-na"
-		3 "living_room_latest:groupId168.message" "living_room_latest:pasted__phong9SG.groupNodes" 
-		"-na"
-		3 "living_room_latest:groupId167.message" "living_room_latest:pasted__phong9SG.groupNodes" 
-		"-na"
-		3 "living_room_latest:pasted__groupId185.groupId" "|living_room_latest:toaster_oven|living_room_latest:pasted__pCylinder26|living_room_latest:pasted__pCylinderShape26.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:toaster_oven|living_room_latest:pasted__pCylinder26|living_room_latest:pasted__pCylinderShape26.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|living_room_latest:toaster_oven|living_room_latest:pasted__pCylinder26|living_room_latest:pasted__pCylinderShape26.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:pasted__groupId187.groupId" "|living_room_latest:toaster_oven|living_room_latest:pasted__pCylinder26|living_room_latest:pasted__pCylinderShape26.instObjGroups.objectGroups[1].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:toaster_oven|living_room_latest:pasted__pCylinder26|living_room_latest:pasted__pCylinderShape26.instObjGroups.objectGroups[1].objectGrpColor" 
-		""
-		3 "|living_room_latest:toaster_oven|living_room_latest:pasted__pCylinder26|living_room_latest:pasted__pCylinderShape26.instObjGroups.objectGroups[1]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:pasted__groupId186.groupId" "|living_room_latest:toaster_oven|living_room_latest:pasted__pCylinder26|living_room_latest:pasted__pCylinderShape26.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
-		""
-		3 "|living_room_latest:toaster_oven|living_room_latest:pasted__pCylinder26|living_room_latest:pasted__pCylinderShape26.compInstObjGroups.compObjectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube220|living_room_latest:barstool_latest:pCubeShape220.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId372.groupId" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface53|living_room_latest:bedroom_updated_layout:polySurfaceShape348.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface53|living_room_latest:bedroom_updated_layout:polySurfaceShape348.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface53|living_room_latest:bedroom_updated_layout:polySurfaceShape348.instObjGroups.objectGroups[0]" 
+		3 "|living_room_latest:exit_window_2|living_room_latest:exit_window_2Shape.instObjGroups.objectGroups[0]" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "living_room_latest:pasted__groupId188.groupId" "|living_room_latest:toaster_oven|living_room_latest:pasted__pCylinder25|living_room_latest:pasted__pCylinderShape25.instObjGroups.objectGroups[0].objectGroupId" 
 		""
@@ -4795,73 +4659,253 @@ createNode reference -n "living_room_latestRN";
 		""
 		3 "|living_room_latest:toaster_oven|living_room_latest:pasted__pCylinder25|living_room_latest:pasted__pCylinderShape25.compInstObjGroups.compObjectGroups[0]" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:fridge|living_room_latest:pCube3|living_room_latest:pCubeShape3.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube226|living_room_latest:barstool_latest:pCubeShape226.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId366.groupId" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface47|living_room_latest:bedroom_updated_layout:polySurfaceShape342.instObjGroups.objectGroups[0].objectGroupId" 
+		3 "living_room_latest:groupId367.groupId" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface48|living_room_latest:bedroom_updated_layout:polySurfaceShape343.instObjGroups.objectGroups[0].objectGroupId" 
 		""
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface47|living_room_latest:bedroom_updated_layout:polySurfaceShape342.instObjGroups.objectGroups[0].objectGrpColor" 
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface48|living_room_latest:bedroom_updated_layout:polySurfaceShape343.instObjGroups.objectGroups[0].objectGrpColor" 
 		""
-		3 "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface47|living_room_latest:bedroom_updated_layout:polySurfaceShape342.instObjGroups.objectGroups[0]" 
+		3 "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface48|living_room_latest:bedroom_updated_layout:polySurfaceShape343.instObjGroups.objectGroups[0]" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube223|living_room_latest:pCube229|living_room_latest:pCubeShape229.instObjGroups" 
+		3 "|living_room_latest:pCube122|living_room_latest:pCubeShape122.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube115|living_room_latest:pCubeShape115.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube4|living_room_latest:pCubeShape4.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId375.groupId" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface56|living_room_latest:bedroom_updated_layout:polySurfaceShape351.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface56|living_room_latest:bedroom_updated_layout:polySurfaceShape351.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface56|living_room_latest:bedroom_updated_layout:polySurfaceShape351.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId373.groupId" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface54|living_room_latest:bedroom_updated_layout:polySurfaceShape349.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface54|living_room_latest:bedroom_updated_layout:polySurfaceShape349.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface54|living_room_latest:bedroom_updated_layout:polySurfaceShape349.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:side_table:groupId187.message" ":initialShadingGroup.groupNodes" 
+		3 "living_room_latest:groupId162.message" ":initialShadingGroup.groupNodes" 
 		"-na"
+		3 "|living_room_latest:crown_molding|living_room_latest:crown_unit_4|living_room_latest:crown_unit_Shape4.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:pasted__groupId181.message" ":initialShadingGroup.groupNodes" 
+		"-na"
+		3 "|living_room_latest:crown_molding|living_room_latest:crown_unit_6|living_room_latest:crown_unit_Shape6.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCylinder12|living_room_latest:pCylinderShape12.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube314|living_room_latest:pasted__pCubeShape314.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:pCube223|living_room_latest:pCubeShape223.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:boiler|living_room_latest:pasted__pCylinder12|living_room_latest:pasted__pCylinderShape12.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:left_washing_machine|living_room_latest:pasted__pCylinder28|living_room_latest:pasted__pCylinderShape28.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCube2|living_room_latest:side_table:pCubeShape2.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube243|living_room_latest:pCubeShape243.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:round_table_2|living_room_latest:round_table_Shape2.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:pCube79|living_room_latest:pCubeShape79.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:utilities_room_wall|living_room_latest:utilities_room_wallShape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:groupId220.groupId" "|living_room_latest:exit_window_4|living_room_latest:exit_window_1Shape4.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:exit_window_4|living_room_latest:exit_window_1Shape4.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|living_room_latest:exit_window_4|living_room_latest:exit_window_1Shape4.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:groupId379.groupId" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface60|living_room_latest:bedroom_updated_layout:polySurfaceShape355.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface60|living_room_latest:bedroom_updated_layout:polySurfaceShape355.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface60|living_room_latest:bedroom_updated_layout:polySurfaceShape355.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:bedroom_updated_layout:poster_1|living_room_latest:bedroom_updated_layout:poster_Shape1.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:groupId216.groupId" "|living_room_latest:exit_window_1|living_room_latest:exit_window_1Shape1.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:exit_window_1|living_room_latest:exit_window_1Shape1.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|living_room_latest:exit_window_1|living_room_latest:exit_window_1Shape1.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube117|living_room_latest:pCubeShape117.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:kitchen_lights:pSphere1|living_room_latest:kitchen_lights:pSphereShape1.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube269|living_room_latest:pCubeShape269.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:pCube125|living_room_latest:pCubeShape125.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube11|living_room_latest:pCubeShape11.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:groupId214.message" ":initialShadingGroup.groupNodes" 
+		"-na"
+		3 "|living_room_latest:kitchen_lights:pSphere5|living_room_latest:kitchen_lights:pSphereShape5.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCylinder2|living_room_latest:side_table:pCylinderShape2.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube121|living_room_latest:pCubeShape121.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:pCube92|living_room_latest:polySurface4|living_room_latest:polySurfaceShape4.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:pCube92|living_room_latest:polySurface4|living_room_latest:polySurfaceShape4.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_7|living_room_latest:cabinet_door_7_handle|living_room_latest:cabinet_door_7_handleShape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:groupId166.message" "living_room_latest:pasted__phong9SG.groupNodes" 
+		"-na"
+		3 "living_room_latest:groupId165.message" "living_room_latest:pasted__phong9SG.groupNodes" 
+		"-na"
+		3 "living_room_latest:groupId169.message" "living_room_latest:pasted__phong9SG.groupNodes" 
+		"-na"
+		3 "living_room_latest:groupId168.message" "living_room_latest:pasted__phong9SG.groupNodes" 
+		"-na"
+		3 "living_room_latest:groupId167.message" "living_room_latest:pasted__phong9SG.groupNodes" 
+		"-na"
+		3 "living_room_latest:pasted__groupId284.message" ":initialShadingGroup.groupNodes" 
+		"-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube256|living_room_latest:pCubeShape256.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCylinder15|living_room_latest:pCylinderShape15.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:groupId372.message" ":initialShadingGroup.groupNodes" 
+		"-na"
+		3 "living_room_latest:groupId392.groupId" "|living_room_latest:bedroom_updated_layout:polySurface74|living_room_latest:bedroom_updated_layout:polySurfaceShape363.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:bedroom_updated_layout:polySurface74|living_room_latest:bedroom_updated_layout:polySurfaceShape363.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|living_room_latest:bedroom_updated_layout:polySurface74|living_room_latest:bedroom_updated_layout:polySurfaceShape363.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube263|living_room_latest:pCubeShape263.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCylinder97|living_room_latest:pCylinderShape97.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:groupId381.groupId" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface67|living_room_latest:bedroom_updated_layout:polySurfaceShape362.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface67|living_room_latest:bedroom_updated_layout:polySurfaceShape362.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface67|living_room_latest:bedroom_updated_layout:polySurfaceShape362.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:pasted__groupId268.groupId" "|living_room_latest:boiler|living_room_latest:boilerShape.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:boiler|living_room_latest:boilerShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|living_room_latest:boiler|living_room_latest:boilerShape.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:pasted__groupId269.groupId" "|living_room_latest:boiler|living_room_latest:boilerShape.instObjGroups.objectGroups[1].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:boiler|living_room_latest:boilerShape.instObjGroups.objectGroups[1].objectGrpColor" 
+		""
+		3 "|living_room_latest:boiler|living_room_latest:boilerShape.instObjGroups.objectGroups[1]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:pasted__groupId270.groupId" "|living_room_latest:boiler|living_room_latest:boilerShape.instObjGroups.objectGroups[3].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:boiler|living_room_latest:boilerShape.instObjGroups.objectGroups[3].objectGrpColor" 
+		""
+		3 "|living_room_latest:boiler|living_room_latest:boilerShape.instObjGroups.objectGroups[3]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:pasted__groupId223.groupId" "|living_room_latest:boiler|living_room_latest:boilerShape.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		""
+		3 "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube221|living_room_latest:barstool_latest:pCubeShape221.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:groupId364.message" ":initialShadingGroup.groupNodes" 
+		"-na"
+		3 "living_room_latest:groupId369.message" ":initialShadingGroup.groupNodes" 
+		"-na"
+		3 "|living_room_latest:pCube223|living_room_latest:pCube220|living_room_latest:pCubeShape220.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:bedroom_updated_layout:groupId511.message" ":initialShadingGroup.groupNodes" 
+		"-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube262|living_room_latest:pCubeShape262.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:pot|living_room_latest:pasted__pCylinder28|living_room_latest:pasted__pCylinderShape28.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:groupId361.groupId" "|living_room_latest:polySurface41|living_room_latest:polySurfaceShape41.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:polySurface41|living_room_latest:polySurfaceShape41.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|living_room_latest:polySurface41|living_room_latest:polySurfaceShape41.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube261|living_room_latest:pCubeShape261.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:pCube250|living_room_latest:pCube229|living_room_latest:pCubeShape229.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:bedroom_updated_layout:groupId510.groupId" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface75|living_room_latest:bedroom_updated_layout:polySurfaceShape75.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface75|living_room_latest:bedroom_updated_layout:polySurfaceShape75.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface75|living_room_latest:bedroom_updated_layout:polySurfaceShape75.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:left_washing_machine|living_room_latest:pasted__pPipe2|living_room_latest:pasted__pPipeShape2.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:groupId365.message" ":initialShadingGroup.groupNodes" 
+		"-na"
+		3 "living_room_latest:groupId371.groupId" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface52|living_room_latest:bedroom_updated_layout:polySurfaceShape347.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface52|living_room_latest:bedroom_updated_layout:polySurfaceShape347.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface52|living_room_latest:bedroom_updated_layout:polySurfaceShape347.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:groupId169.groupId" "|living_room_latest:right_washing_machine|living_room_latest:pasted__polySurface38|living_room_latest:pasted__polySurfaceShape38.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:right_washing_machine|living_room_latest:pasted__polySurface38|living_room_latest:pasted__polySurfaceShape38.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|living_room_latest:right_washing_machine|living_room_latest:pasted__polySurface38|living_room_latest:pasted__polySurfaceShape38.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:kitchen_lights:pSphere3|living_room_latest:kitchen_lights:pSphereShape3.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:kitchen_lights:pSphere2|living_room_latest:kitchen_lights:pSphereShape2.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_9|living_room_latest:cabinet_door_9_handle|living_room_latest:cabinet_door_9_handleShape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube109|living_room_latest:pCubeShape109.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_2|living_room_latest:cabinet_door_2_handle|living_room_latest:cabinet_door_2_handleShape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|living_room_latest:pCube250|living_room_latest:pCube216|living_room_latest:pCubeShape216.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube148|living_room_latest:pCubeShape148.instObjGroups" 
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube273|living_room_latest:pCubeShape273.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:fridge|living_room_latest:pCylinder1|living_room_latest:pCylinderShape1.instObjGroups" 
+		3 "living_room_latest:groupId364.groupId" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface43|living_room_latest:bedroom_updated_layout:polySurfaceShape338.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface43|living_room_latest:bedroom_updated_layout:polySurfaceShape338.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface43|living_room_latest:bedroom_updated_layout:polySurfaceShape338.instObjGroups.objectGroups[0]" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube319|living_room_latest:pasted__pCubeShape319.instObjGroups" 
+		3 "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube222|living_room_latest:barstool_latest:pCubeShape222.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_12|living_room_latest:cabinet_door_Shape12.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube119|living_room_latest:pCubeShape119.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|living_room_latest:pCube250|living_room_latest:pCube227|living_room_latest:pCubeShape227.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube214|living_room_latest:barstool_latest:pCubeShape214.instObjGroups" 
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_4|living_room_latest:cabinet_door_4_handle|living_room_latest:cabinet_door_4_handleShape.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube250|living_room_latest:pCube226|living_room_latest:pCubeShape226.instObjGroups" 
+		3 "|living_room_latest:pCube223|living_room_latest:pCube213|living_room_latest:pCubeShape213.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:pasted__groupId186.message" ":initialShadingGroup.groupNodes" 
-		"-na"
-		3 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pasted__pTorus2|living_room_latest:pasted__pasted__pTorusShape2.instObjGroups" 
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCylinder95|living_room_latest:pCylinderShape95.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_5|living_room_latest:cabinet_door_5_handle|living_room_latest:cabinet_door_5_handleShape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_3|living_room_latest:cabinet_door_Shape3.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:pCube223|living_room_latest:pCube227|living_room_latest:pCubeShape227.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "living_room_latest:groupId377.message" ":initialShadingGroup.groupNodes" 
 		"-na"
-		3 "living_room_latest:side_table:groupId186.groupId" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface1|living_room_latest:side_table:polySurfaceShape1.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface1|living_room_latest:side_table:polySurfaceShape1.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface1|living_room_latest:side_table:polySurfaceShape1.instObjGroups.objectGroups[0]" 
+		3 "|living_room_latest:pCube250|living_room_latest:pCube225|living_room_latest:pCubeShape225.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:fridge|living_room_latest:pCube7|living_room_latest:pCubeShape7.instObjGroups" 
+		3 "|living_room_latest:crown_molding|living_room_latest:crown_unit_5|living_room_latest:crown_unit_Shape5.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:groupId214.groupId" "|living_room_latest:exit_window_2|living_room_latest:exit_window_2Shape.instObjGroups.objectGroups[0].objectGroupId" 
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCylinder10|living_room_latest:pCylinderShape10.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:fridge|living_room_latest:pCube3|living_room_latest:pCubeShape3.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:left_washing_machine|living_room_latest:pasted__pasted__pCylinder6|living_room_latest:pasted__pasted__pCylinderShape6.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube319|living_room_latest:pasted__pCubeShape319.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:ripped_up_toy:groupId1.groupId" "|living_room_latest:ripped_up_toy1|living_room_latest:ripped_up_toy1Shape.instObjGroups.objectGroups[0].objectGroupId" 
 		""
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:exit_window_2|living_room_latest:exit_window_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:ripped_up_toy1|living_room_latest:ripped_up_toy1Shape.instObjGroups.objectGroups[0].objectGrpColor" 
 		""
-		3 "|living_room_latest:exit_window_2|living_room_latest:exit_window_2Shape.instObjGroups.objectGroups[0]" 
+		3 "|living_room_latest:ripped_up_toy1|living_room_latest:ripped_up_toy1Shape.instObjGroups.objectGroups[0]" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube223|living_room_latest:pCube218|living_room_latest:pCubeShape218.instObjGroups" 
+		3 "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pTorus4|living_room_latest:barstool_latest:pTorusShape4.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube122|living_room_latest:pCubeShape122.instObjGroups" 
+		3 "living_room_latest:groupId393.message" ":initialShadingGroup.groupNodes" 
+		"-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube5|living_room_latest:pCubeShape5.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube229|living_room_latest:barstool_latest:pCubeShape229.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "living_room_latest:groupId165.groupId" "|living_room_latest:left_washing_machine|living_room_latest:left_washing_machineShape.instObjGroups.objectGroups[0].objectGroupId" 
 		""
@@ -4869,29 +4913,607 @@ createNode reference -n "living_room_latestRN";
 		""
 		3 "|living_room_latest:left_washing_machine|living_room_latest:left_washing_machineShape.instObjGroups.objectGroups[0]" 
 		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:pCube223|living_room_latest:pCube229|living_room_latest:pCubeShape229.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:groupId374.message" ":initialShadingGroup.groupNodes" 
+		"-na"
+		3 "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube224|living_room_latest:barstool_latest:pCubeShape224.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_11|living_room_latest:cabinet_door_Shape11.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube219|living_room_latest:barstool_latest:pCubeShape219.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:groupId476.message" ":initialShadingGroup.groupNodes" 
+		"-na"
+		3 "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface4|living_room_latest:side_table:polySurfaceShape4.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface4|living_room_latest:side_table:polySurfaceShape4.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "living_room_latest:groupId373.groupId" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface54|living_room_latest:bedroom_updated_layout:polySurfaceShape349.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface54|living_room_latest:bedroom_updated_layout:polySurfaceShape349.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface54|living_room_latest:bedroom_updated_layout:polySurfaceShape349.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:pasted__groupId71.message" ":initialShadingGroup.groupNodes" 
+		"-na"
+		3 "living_room_latest:bedroom_updated_layout:groupId510.message" ":initialShadingGroup.groupNodes" 
+		"-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube4|living_room_latest:pCubeShape4.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:groupId393.groupId" "|living_room_latest:bedroom_updated_layout:polySurface78|living_room_latest:bedroom_updated_layout:polySurfaceShape364.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:bedroom_updated_layout:polySurface78|living_room_latest:bedroom_updated_layout:polySurfaceShape364.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|living_room_latest:bedroom_updated_layout:polySurface78|living_room_latest:bedroom_updated_layout:polySurfaceShape364.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:groupId167.groupId" "|living_room_latest:right_washing_machine|living_room_latest:right_washing_machineShape.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:right_washing_machine|living_room_latest:right_washing_machineShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|living_room_latest:right_washing_machine|living_room_latest:right_washing_machineShape.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:fridge|living_room_latest:pCylinder4|living_room_latest:pCylinderShape4.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:pasted__groupId189.message" ":initialShadingGroup.groupNodes" 
+		"-na"
+		3 "|living_room_latest:crown_molding|living_room_latest:crown_unit_7|living_room_latest:crown_unit_Shape7.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube258|living_room_latest:pCubeShape258.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:kitchen_lights:pSphere8|living_room_latest:kitchen_lights:pSphereShape8.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCylinder93|living_room_latest:pCylinderShape93.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:bedroom_updated_layout:bedroom_trashcan|living_room_latest:bedroom_updated_layout:bedroom_trashcanShape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube12|living_room_latest:pCubeShape12.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:stove_vent|living_room_latest:stove_ventShape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
 		3 "living_room_latest:groupId480.groupId" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:polySurface4|living_room_latest:polySurfaceShape4.instObjGroups.objectGroups[0].objectGroupId" 
 		""
 		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:polySurface4|living_room_latest:polySurfaceShape4.instObjGroups.objectGroups[0].objectGrpColor" 
 		""
 		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:polySurface4|living_room_latest:polySurfaceShape4.instObjGroups.objectGroups[0]" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:pCube223|living_room_latest:pCubeShape223.instObjGroups" 
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube270|living_room_latest:pCubeShape270.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:groupId378.message" ":initialShadingGroup.groupNodes" 
+		"-na"
+		3 "|living_room_latest:paper_towels|living_room_latest:paper_towelsShape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:groupId479.message" ":initialShadingGroup.groupNodes" 
+		"-na"
+		3 "|living_room_latest:fridge|living_room_latest:pCube5|living_room_latest:pCubeShape5.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:pCube250|living_room_latest:pCube228|living_room_latest:pCubeShape228.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:bedroom_front_wall|living_room_latest:bedroom_front_wallShape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube321|living_room_latest:pasted__pCubeShape321.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:pCube124|living_room_latest:pCubeShape124.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:mug|living_room_latest:pasted__pCube233|living_room_latest:pasted__pCubeShape233.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:fridge|living_room_latest:pCube1|living_room_latest:pCubeShape1.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:groupId480.message" ":initialShadingGroup.groupNodes" 
+		"-na"
+		3 "living_room_latest:groupId379.message" ":initialShadingGroup.groupNodes" 
+		"-na"
+		3 "|living_room_latest:crown_molding|living_room_latest:crown_unit_3|living_room_latest:crown_unit_Shape3.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:pCube223|living_room_latest:pCube224|living_room_latest:pCubeShape224.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_12|living_room_latest:cabinet_door_12_handle|living_room_latest:cabinet_door_12_handleShape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:pasted__groupId185.groupId" "|living_room_latest:toaster_oven|living_room_latest:pasted__pCylinder26|living_room_latest:pasted__pCylinderShape26.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:toaster_oven|living_room_latest:pasted__pCylinder26|living_room_latest:pasted__pCylinderShape26.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|living_room_latest:toaster_oven|living_room_latest:pasted__pCylinder26|living_room_latest:pasted__pCylinderShape26.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:pasted__groupId187.groupId" "|living_room_latest:toaster_oven|living_room_latest:pasted__pCylinder26|living_room_latest:pasted__pCylinderShape26.instObjGroups.objectGroups[1].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:toaster_oven|living_room_latest:pasted__pCylinder26|living_room_latest:pasted__pCylinderShape26.instObjGroups.objectGroups[1].objectGrpColor" 
+		""
+		3 "|living_room_latest:toaster_oven|living_room_latest:pasted__pCylinder26|living_room_latest:pasted__pCylinderShape26.instObjGroups.objectGroups[1]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:pasted__groupId186.groupId" "|living_room_latest:toaster_oven|living_room_latest:pasted__pCylinder26|living_room_latest:pasted__pCylinderShape26.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		""
+		3 "|living_room_latest:toaster_oven|living_room_latest:pasted__pCylinder26|living_room_latest:pasted__pCylinderShape26.compInstObjGroups.compObjectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube138|living_room_latest:pCubeShape138.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_5|living_room_latest:cabinet_door_Shape5.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:crown_molding|living_room_latest:crown_unit_8|living_room_latest:crown_unit_Shape8.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube274|living_room_latest:pCubeShape274.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:groupId392.message" ":initialShadingGroup.groupNodes" 
+		"-na"
+		3 "|living_room_latest:pCube92|living_room_latest:polySurface3|living_room_latest:polySurfaceShape3.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:pCube92|living_room_latest:polySurface3|living_room_latest:polySurfaceShape3.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "living_room_latest:groupId366.groupId" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface47|living_room_latest:bedroom_updated_layout:polySurfaceShape342.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface47|living_room_latest:bedroom_updated_layout:polySurfaceShape342.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface47|living_room_latest:bedroom_updated_layout:polySurfaceShape342.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube214|living_room_latest:barstool_latest:pCubeShape214.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube118|living_room_latest:pCubeShape118.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:pCube223|living_room_latest:pCube216|living_room_latest:pCubeShape216.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube232|living_room_latest:pCubeShape232.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:vent_door|living_room_latest:vent_doorShape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:groupId408.groupId" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:polySurface44|living_room_latest:polySurfaceShape44.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:polySurface44|living_room_latest:polySurfaceShape44.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:polySurface44|living_room_latest:polySurfaceShape44.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube220|living_room_latest:barstool_latest:pCubeShape220.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:kitchen_lights:pSphere10|living_room_latest:kitchen_lights:pSphereShape10.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:groupId367.message" ":initialShadingGroup.groupNodes" 
+		"-na"
+		3 "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCylinder4|living_room_latest:side_table:pCylinderShape4.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:pasted__groupId268.message" "living_room_latest:pasted__mia_material_x1SG1.groupNodes" 
+		"-na"
+		3 "|living_room_latest:boiler|living_room_latest:boilerShape.compInstObjGroups.compObjectGroups[0]" 
+		"living_room_latest:pasted__mia_material_x1SG1.dagSetMembers" "-na"
+		3 "living_room_latest:pasted__groupId223.message" "living_room_latest:pasted__mia_material_x1SG1.groupNodes" 
+		"-na"
+		3 "|living_room_latest:pCube250|living_room_latest:pCube214|living_room_latest:pCubeShape214.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:pCube123|living_room_latest:pCubeShape123.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:pCube223|living_room_latest:pCube228|living_room_latest:pCubeShape228.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:groupId161.message" ":initialShadingGroup.groupNodes" 
+		"-na"
+		3 "|living_room_latest:pCube146|living_room_latest:pCubeShape146.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:pCube250|living_room_latest:pCube220|living_room_latest:pCubeShape220.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCylinder90|living_room_latest:pasted__pCylinderShape90.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:groupId163.groupId" "|living_room_latest:fridge|living_room_latest:polySurface12|living_room_latest:polySurfaceShape12.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:fridge|living_room_latest:polySurface12|living_room_latest:polySurfaceShape12.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|living_room_latest:fridge|living_room_latest:polySurface12|living_room_latest:polySurfaceShape12.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube225|living_room_latest:barstool_latest:pCubeShape225.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:pCube145|living_room_latest:pCubeShape145.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:groupId380.groupId" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface66|living_room_latest:bedroom_updated_layout:polySurfaceShape361.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface66|living_room_latest:bedroom_updated_layout:polySurfaceShape361.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface66|living_room_latest:bedroom_updated_layout:polySurfaceShape361.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:left_washing_machine|living_room_latest:pasted__pCube277|living_room_latest:pasted__pCubeShape277.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_1|living_room_latest:cabinet_door_1_handle|living_room_latest:cabinet_door_1_handleShape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube218|living_room_latest:barstool_latest:pCubeShape218.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube260|living_room_latest:pCubeShape260.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:groupId216.message" ":initialShadingGroup.groupNodes" 
+		"-na"
+		3 "|living_room_latest:crown_molding|living_room_latest:crown_unit_9|living_room_latest:crown_unit_Shape9.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube257|living_room_latest:pCubeShape257.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:groupId409.groupId" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:polySurface45|living_room_latest:polySurfaceShape45.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:polySurface45|living_room_latest:polySurfaceShape45.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:polySurface45|living_room_latest:polySurfaceShape45.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:kitchen_lights:pSphere7|living_room_latest:kitchen_lights:pSphereShape7.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:mug|living_room_latest:pasted__pCylinder73|living_room_latest:pasted__pCylinderShape73.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:pot|living_room_latest:pasted__polySurface41|living_room_latest:pasted__polySurfaceShape41.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube266|living_room_latest:pCubeShape266.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:pPipe2|living_room_latest:pPipeShape2.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:fridge|living_room_latest:pCube6|living_room_latest:pCubeShape6.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube315|living_room_latest:pasted__pCubeShape315.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:pCube92|living_room_latest:pCubeShape92.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:left_washing_machine|living_room_latest:pasted__pCylinder29|living_room_latest:pasted__pCylinderShape29.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:bedroom_updated_layout:groupId512.groupId" "|living_room_latest:bedroom_updated_layout:polySurface77|living_room_latest:bedroom_updated_layout:polySurfaceShape77.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:bedroom_updated_layout:polySurface77|living_room_latest:bedroom_updated_layout:polySurfaceShape77.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|living_room_latest:bedroom_updated_layout:polySurface77|living_room_latest:bedroom_updated_layout:polySurfaceShape77.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:groupId369.groupId" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface50|living_room_latest:bedroom_updated_layout:polySurfaceShape345.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface50|living_room_latest:bedroom_updated_layout:polySurfaceShape345.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface50|living_room_latest:bedroom_updated_layout:polySurfaceShape345.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube116|living_room_latest:pCubeShape116.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:groupId375.message" ":initialShadingGroup.groupNodes" 
+		"-na"
+		3 "|living_room_latest:lamp|living_room_latest:lampShape.instObjGroups" ":initialShadingGroup.dagSetMembers" 
+		"-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube10|living_room_latest:pCubeShape10.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "living_room_latest:groupId366.message" ":initialShadingGroup.groupNodes" 
 		"-na"
-		3 "|living_room_latest:left_washing_machine|living_room_latest:pasted__pCylinder29|living_room_latest:pasted__pCylinderShape29.instObjGroups" 
+		3 "|living_room_latest:pCube92|living_room_latest:pCylinder4|living_room_latest:pCylinderShape4.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:groupId368.groupId" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface49|living_room_latest:bedroom_updated_layout:polySurfaceShape344.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface49|living_room_latest:bedroom_updated_layout:polySurfaceShape344.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface49|living_room_latest:bedroom_updated_layout:polySurfaceShape344.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:groupId352.groupId" "|living_room_latest:pCube92|living_room_latest:polySurface2|living_room_latest:polySurfaceShape2.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:pCube92|living_room_latest:polySurface2|living_room_latest:polySurfaceShape2.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|living_room_latest:pCube92|living_room_latest:polySurface2|living_room_latest:polySurfaceShape2.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:pasted__groupId286.message" "living_room_latest:pasted__lambert27SG.groupNodes" 
+		"-na"
+		3 "living_room_latest:groupId351.groupId" "|living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:groupId218.groupId" "|living_room_latest:exit_window_3|living_room_latest:exit_window_1Shape3.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:exit_window_3|living_room_latest:exit_window_1Shape3.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|living_room_latest:exit_window_3|living_room_latest:exit_window_1Shape3.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_10|living_room_latest:cabinet_door_Shape10.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube272|living_room_latest:pCubeShape272.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_1|living_room_latest:cabinet_door_Shape1.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:fridge|living_room_latest:pCylinder1|living_room_latest:pCylinderShape1.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:bedroom_updated_layout:groupId512.message" ":initialShadingGroup.groupNodes" 
+		"-na"
+		3 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCylinder91|living_room_latest:pasted__pCylinderShape91.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCylinder94|living_room_latest:pasted__pCylinderShape94.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:groupId361.message" ":initialShadingGroup.groupNodes" 
+		"-na"
+		3 "living_room_latest:groupId409.message" ":initialShadingGroup.groupNodes" 
+		"-na"
+		3 "|living_room_latest:pCube223|living_room_latest:pCube218|living_room_latest:pCubeShape218.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:bowl|living_room_latest:bowlShape.instObjGroups" ":initialShadingGroup.dagSetMembers" 
+		"-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_8|living_room_latest:cabinet_door_Shape8.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:oven|living_room_latest:pasted__pPlane4|living_room_latest:pasted__outputCloth1.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_11|living_room_latest:cabinet_door_11_handle|living_room_latest:cabinet_door_11_handleShape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube9|living_room_latest:pCubeShape9.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:pCube250|living_room_latest:pCube224|living_room_latest:pCubeShape224.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:pCube250|living_room_latest:pCube219|living_room_latest:pCubeShape219.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:pasted__groupId71.groupId" "|living_room_latest:toaster_oven|living_room_latest:pasted__polySurface39|living_room_latest:pasted__polySurfaceShape39.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:toaster_oven|living_room_latest:pasted__polySurface39|living_room_latest:pasted__polySurfaceShape39.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|living_room_latest:toaster_oven|living_room_latest:pasted__polySurface39|living_room_latest:pasted__polySurfaceShape39.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCylinder94|living_room_latest:pCylinderShape94.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:fridge|living_room_latest:pCube4|living_room_latest:pCubeShape4.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:groupId220.message" ":initialShadingGroup.groupNodes" 
+		"-na"
+		3 "living_room_latest:groupId163.message" ":initialShadingGroup.groupNodes" 
+		"-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCylinder3|living_room_latest:pCylinderShape3.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_4|living_room_latest:cabinet_door_Shape4.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube3|living_room_latest:pCubeShape3.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pPipe3|living_room_latest:pasted__pPipeShape3.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface4|living_room_latest:side_table:polySurfaceShape4.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface4|living_room_latest:side_table:polySurfaceShape4.instObjGroups.objectGroups[0].objectGrpColor" 
+		3 "living_room_latest:groupId476.groupId" "|living_room_latest:coffee_table1|living_room_latest:coffee_table1Shape.instObjGroups.objectGroups[0].objectGroupId" 
 		""
-		3 "living_room_latest:groupId220.message" ":initialShadingGroup.groupNodes" 
-		"-na"
-		3 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCylinder93|living_room_latest:pasted__pCylinderShape93.instObjGroups" 
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:coffee_table1|living_room_latest:coffee_table1Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|living_room_latest:coffee_table1|living_room_latest:coffee_table1Shape.instObjGroups.objectGroups[0]" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:vent_door|living_room_latest:vent_doorShape.instObjGroups" 
+		3 "|living_room_latest:pCube223|living_room_latest:pCube215|living_room_latest:pCubeShape215.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:side_table:groupId186.message" ":initialShadingGroup.groupNodes" 
+		"-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCylinder13|living_room_latest:pCylinderShape13.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube253|living_room_latest:pCubeShape253.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:side_table:groupId187.message" ":initialShadingGroup.groupNodes" 
+		"-na"
+		3 "living_room_latest:groupId378.groupId" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface59|living_room_latest:bedroom_updated_layout:polySurfaceShape354.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface59|living_room_latest:bedroom_updated_layout:polySurfaceShape354.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface59|living_room_latest:bedroom_updated_layout:polySurfaceShape354.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:pasted__groupId188.message" ":initialShadingGroup.groupNodes" 
+		"-na"
+		3 "|living_room_latest:pCube89|living_room_latest:pCubeShape89.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:pCube250|living_room_latest:pCube222|living_room_latest:pCubeShape222.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:pCube250|living_room_latest:pCube226|living_room_latest:pCubeShape226.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:pCube92|living_room_latest:pCylinder2|living_room_latest:pCylinderShape2.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:door_1|living_room_latest:door_Shape1.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:pCube223|living_room_latest:pCube217|living_room_latest:pCubeShape217.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:pCube223|living_room_latest:pCube221|living_room_latest:pCubeShape221.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:pasted__groupId186.message" ":initialShadingGroup.groupNodes" 
+		"-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCylinder11|living_room_latest:pCylinderShape11.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:pCube223|living_room_latest:pTorus4|living_room_latest:pTorusShape4.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube120|living_room_latest:pCubeShape120.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:bedroom_updated_layout:bedroom_trashbag|living_room_latest:bedroom_updated_layout:bedroom_trashbagShape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:groupId161.groupId" "|living_room_latest:photo_frame|living_room_latest:photo_frameShape.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:photo_frame|living_room_latest:photo_frameShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|living_room_latest:photo_frame|living_room_latest:photo_frameShape.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:groupId218.message" ":initialShadingGroup.groupNodes" 
+		"-na"
+		3 "living_room_latest:groupId371.message" ":initialShadingGroup.groupNodes" 
+		"-na"
+		3 "|living_room_latest:vase_flowers:pCylinder8|living_room_latest:vase_flowers:pCylinderShape8.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCylinder99|living_room_latest:pCylinderShape99.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:groupId381.message" ":initialShadingGroup.groupNodes" 
+		"-na"
+		3 "|living_room_latest:stove_metal|living_room_latest:pasted__pCylinder11|living_room_latest:pasted__pCylinderShape11.instObjGroups" 
+		"living_room_latest:pasted__lambert18SG1.dagSetMembers" "-na"
+		3 "|living_room_latest:stove_metal|living_room_latest:pasted__pCylinder4|living_room_latest:pasted__pCylinderShape4.instObjGroups" 
+		"living_room_latest:pasted__lambert18SG1.dagSetMembers" "-na"
+		3 "|living_room_latest:stove_metal|living_room_latest:pasted__pCylinder9|living_room_latest:pasted__pCylinderShape9.instObjGroups" 
+		"living_room_latest:pasted__lambert18SG1.dagSetMembers" "-na"
+		3 "|living_room_latest:stove_metal|living_room_latest:pasted__polySurface5|living_room_latest:pasted__polySurfaceShape5.instObjGroups" 
+		"living_room_latest:pasted__lambert18SG1.dagSetMembers" "-na"
+		3 "|living_room_latest:stove_metal|living_room_latest:pasted__pCylinder7|living_room_latest:pasted__pCylinderShape7.instObjGroups" 
+		"living_room_latest:pasted__lambert18SG1.dagSetMembers" "-na"
+		3 "|living_room_latest:stove_metal|living_room_latest:pasted__polySurface3|living_room_latest:pasted__polySurfaceShape3.instObjGroups" 
+		"living_room_latest:pasted__lambert18SG1.dagSetMembers" "-na"
+		3 "|living_room_latest:stove_metal|living_room_latest:pasted__pCylinder7|living_room_latest:pasted__pCylinder6|living_room_latest:pasted__pCylinderShape6.instObjGroups" 
+		"living_room_latest:pasted__lambert18SG1.dagSetMembers" "-na"
+		3 "|living_room_latest:stove_metal|living_room_latest:pasted__pCylinder4|living_room_latest:pasted__pCylinder5|living_room_latest:pasted__pCylinderShape5.instObjGroups" 
+		"living_room_latest:pasted__lambert18SG1.dagSetMembers" "-na"
+		3 "living_room_latest:pasted__groupId269.message" "living_room_latest:pasted__lambert18SG1.groupNodes" 
+		"-na"
+		3 "|living_room_latest:stove_metal|living_room_latest:pasted__pCylinder11|living_room_latest:pasted__pCylinder10|living_room_latest:pasted__pCylinderShape10.instObjGroups" 
+		"living_room_latest:pasted__lambert18SG1.dagSetMembers" "-na"
+		3 "|living_room_latest:stove_metal|living_room_latest:stove_metalShape.instObjGroups" 
+		"living_room_latest:pasted__lambert18SG1.dagSetMembers" "-na"
+		3 "|living_room_latest:stove_metal|living_room_latest:pasted__pCylinder9|living_room_latest:pasted__pCylinder8|living_room_latest:pasted__pCylinderShape8.instObjGroups" 
+		"living_room_latest:pasted__lambert18SG1.dagSetMembers" "-na"
+		3 "|living_room_latest:stove_metal|living_room_latest:pasted__polySurface6|living_room_latest:pasted__polySurfaceShape6.instObjGroups" 
+		"living_room_latest:pasted__lambert18SG1.dagSetMembers" "-na"
+		3 "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube227|living_room_latest:barstool_latest:pCubeShape227.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:mug|living_room_latest:pasted__pPlane9|living_room_latest:pasted__pPlaneShape9.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:pCube223|living_room_latest:pCube222|living_room_latest:pCubeShape222.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:pCube223|living_room_latest:pCube219|living_room_latest:pCubeShape219.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_10|living_room_latest:cabinet_door_10_handle|living_room_latest:cabinet_door_10_handleShape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_6|living_room_latest:cabinet_door_6_handle|living_room_latest:cabinet_door_6_handleShape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:left_washing_machine|living_room_latest:pasted__pCube308|living_room_latest:pasted__pCubeShape308.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:tissue_box1|living_room_latest:tissue_box1Shape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:kitchen_lights:pSphere4|living_room_latest:kitchen_lights:pSphereShape4.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:pCube143|living_room_latest:pCubeShape143.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:groupId168.groupId" "|living_room_latest:right_washing_machine|living_room_latest:pasted__polySurface39|living_room_latest:pasted__polySurfaceShape39.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:right_washing_machine|living_room_latest:pasted__polySurface39|living_room_latest:pasted__polySurfaceShape39.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|living_room_latest:right_washing_machine|living_room_latest:pasted__polySurface39|living_room_latest:pasted__polySurfaceShape39.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:groupId376.message" ":initialShadingGroup.groupNodes" 
+		"-na"
+		3 "|living_room_latest:toaster_oven|living_room_latest:pasted__pCube204|living_room_latest:pasted__pCubeShape204.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:groupId478.message" ":initialShadingGroup.groupNodes" 
+		"-na"
+		3 "|living_room_latest:pCube223|living_room_latest:pCube214|living_room_latest:pCubeShape214.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:left_washing_machine|living_room_latest:pasted__pasted__pTorus1|living_room_latest:pasted__pasted__pTorusShape1.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCylinder8|living_room_latest:pCylinderShape8.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCylinder92|living_room_latest:pasted__pCylinderShape92.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:groupId352.message" ":initialShadingGroup.groupNodes" 
+		"-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube254|living_room_latest:pCubeShape254.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube216|living_room_latest:barstool_latest:pCubeShape216.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:fridge|living_room_latest:pCylinder3|living_room_latest:pCylinderShape3.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_7|living_room_latest:cabinet_door_Shape7.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube115|living_room_latest:pCubeShape115.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:pCube223|living_room_latest:pCube225|living_room_latest:pCubeShape225.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:pCube248|living_room_latest:pCubeShape276.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube114|living_room_latest:pCubeShape114.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:groupId479.groupId" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:polySurface3|living_room_latest:polySurfaceShape3.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:polySurface3|living_room_latest:polySurfaceShape3.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:polySurface3|living_room_latest:polySurfaceShape3.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:bedroom_corner_wall|living_room_latest:bedroom_corner_wallShape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:mug|living_room_latest:mugShape.instObjGroups" ":initialShadingGroup.dagSetMembers" 
+		"-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCylinder14|living_room_latest:pCylinderShape14.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:pot|living_room_latest:pasted__polySurface42|living_room_latest:pasted__polySurfaceShape42.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_9|living_room_latest:cabinet_door_Shape9.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:groupId370.groupId" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface51|living_room_latest:bedroom_updated_layout:polySurfaceShape346.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface51|living_room_latest:bedroom_updated_layout:polySurfaceShape346.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface51|living_room_latest:bedroom_updated_layout:polySurfaceShape346.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube267|living_room_latest:pCubeShape267.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCylinder4|living_room_latest:pCylinderShape4.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:bedroom_updated_layout:soccer_ball|living_room_latest:bedroom_updated_layout:soccer_ballShape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube264|living_room_latest:pCubeShape264.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:pCube148|living_room_latest:pCubeShape148.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube255|living_room_latest:pCubeShape255.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:crown_molding|living_room_latest:crown_unit_2|living_room_latest:crown_unit_Shape2.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube226|living_room_latest:barstool_latest:pCubeShape226.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:pCylinder100|living_room_latest:pCylinderShape100.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube228|living_room_latest:barstool_latest:pCubeShape228.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:pCube250|living_room_latest:pCubeShape250.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:pCube147|living_room_latest:pCubeShape147.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:oven|living_room_latest:pasted__polySurface7|living_room_latest:pasted__polySurfaceShape7.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:groupId351.message" ":initialShadingGroup.groupNodes" 
+		"-na"
+		3 "living_room_latest:groupId373.message" ":initialShadingGroup.groupNodes" 
+		"-na"
+		3 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube316|living_room_latest:pasted__pCubeShape316.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:groupId376.groupId" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface57|living_room_latest:bedroom_updated_layout:polySurfaceShape352.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface57|living_room_latest:bedroom_updated_layout:polySurfaceShape352.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface57|living_room_latest:bedroom_updated_layout:polySurfaceShape352.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube271|living_room_latest:pCubeShape271.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:groupId368.message" ":initialShadingGroup.groupNodes" 
+		"-na"
+		3 "|living_room_latest:crown_molding|living_room_latest:crown_unit_1|living_room_latest:crown_unit_Shape1.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:pCube92|living_room_latest:pCube2|living_room_latest:pCubeShape2.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:fridge|living_room_latest:pCylinder2|living_room_latest:pCylinderShape2.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:groupId408.message" ":initialShadingGroup.groupNodes" 
+		"-na"
+		3 "|living_room_latest:pCube141|living_room_latest:pCubeShape141.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:pCube250|living_room_latest:pTorus4|living_room_latest:pTorusShape4.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:left_washing_machine|living_room_latest:pasted__pCylinder27|living_room_latest:pasted__pCylinderShape27.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:kitchen_lights:pSphere6|living_room_latest:kitchen_lights:pSphereShape6.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:side_table:groupId187.groupId" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface2|living_room_latest:side_table:polySurfaceShape2.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface2|living_room_latest:side_table:polySurfaceShape2.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface2|living_room_latest:side_table:polySurfaceShape2.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:pCube250|living_room_latest:pCube217|living_room_latest:pCubeShape217.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:pot|living_room_latest:pasted__polySurface40|living_room_latest:pasted__polySurfaceShape40.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:round_table_1|living_room_latest:round_table_Shape1.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:groupId166.groupId" "|living_room_latest:left_washing_machine|living_room_latest:pasted__polySurface35|living_room_latest:pasted__polySurfaceShape35.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:left_washing_machine|living_room_latest:pasted__polySurface35|living_room_latest:pasted__polySurfaceShape35.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|living_room_latest:left_washing_machine|living_room_latest:pasted__polySurface35|living_room_latest:pasted__polySurfaceShape35.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:pasted__groupId185.message" ":initialShadingGroup.groupNodes" 
+		"-na"
+		3 "|living_room_latest:pCube223|living_room_latest:pCube226|living_room_latest:pCubeShape226.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube110|living_room_latest:pCubeShape110.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCylinder98|living_room_latest:pCylinderShape98.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCylinder6|living_room_latest:pCylinderShape6.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:left_washing_machine|living_room_latest:pasted__pCylinder43|living_room_latest:pasted__pCylinderShape43.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube265|living_room_latest:pCubeShape265.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "living_room_latest:bedroom_updated_layout:groupId511.groupId" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface76|living_room_latest:bedroom_updated_layout:polySurfaceShape76.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface76|living_room_latest:bedroom_updated_layout:polySurfaceShape76.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface76|living_room_latest:bedroom_updated_layout:polySurfaceShape76.instObjGroups.objectGroups[0]" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		5 3 "living_room_latestRN" "|living_room_latest:crown_molding|living_room_latest:crown_unit_1.instObjGroups" 
 		"living_room_latestRN.placeHolderList[736]" ""
@@ -5243,1262 +5865,1011 @@ createNode reference -n "living_room_latestRN";
 		"living_room_latestRN.placeHolderList[909]" ":initialShadingGroup.dsm"
 		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube253|living_room_latest:pCubeShape253.instObjGroups" 
 		"living_room_latestRN.placeHolderList[910]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube256|living_room_latest:pCubeShape256.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube254|living_room_latest:pCubeShape254.instObjGroups" 
 		"living_room_latestRN.placeHolderList[911]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube257|living_room_latest:pCubeShape257.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube255|living_room_latest:pCubeShape255.instObjGroups" 
 		"living_room_latestRN.placeHolderList[912]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube258|living_room_latest:pCubeShape258.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube256|living_room_latest:pCubeShape256.instObjGroups" 
 		"living_room_latestRN.placeHolderList[913]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube259|living_room_latest:pCubeShape259.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube257|living_room_latest:pCubeShape257.instObjGroups" 
 		"living_room_latestRN.placeHolderList[914]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube260|living_room_latest:pCubeShape260.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube258|living_room_latest:pCubeShape258.instObjGroups" 
 		"living_room_latestRN.placeHolderList[915]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube261|living_room_latest:pCubeShape261.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube259|living_room_latest:pCubeShape259.instObjGroups" 
 		"living_room_latestRN.placeHolderList[916]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube262|living_room_latest:pCubeShape262.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube260|living_room_latest:pCubeShape260.instObjGroups" 
 		"living_room_latestRN.placeHolderList[917]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube263|living_room_latest:pCubeShape263.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube261|living_room_latest:pCubeShape261.instObjGroups" 
 		"living_room_latestRN.placeHolderList[918]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube264|living_room_latest:pCubeShape264.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube262|living_room_latest:pCubeShape262.instObjGroups" 
 		"living_room_latestRN.placeHolderList[919]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube265|living_room_latest:pCubeShape265.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube263|living_room_latest:pCubeShape263.instObjGroups" 
 		"living_room_latestRN.placeHolderList[920]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube266|living_room_latest:pCubeShape266.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube264|living_room_latest:pCubeShape264.instObjGroups" 
 		"living_room_latestRN.placeHolderList[921]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube267|living_room_latest:pCubeShape267.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube265|living_room_latest:pCubeShape265.instObjGroups" 
 		"living_room_latestRN.placeHolderList[922]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube268|living_room_latest:pCubeShape268.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube266|living_room_latest:pCubeShape266.instObjGroups" 
 		"living_room_latestRN.placeHolderList[923]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube269|living_room_latest:pCubeShape269.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube267|living_room_latest:pCubeShape267.instObjGroups" 
 		"living_room_latestRN.placeHolderList[924]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube270|living_room_latest:pCubeShape270.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube268|living_room_latest:pCubeShape268.instObjGroups" 
 		"living_room_latestRN.placeHolderList[925]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube271|living_room_latest:pCubeShape271.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube269|living_room_latest:pCubeShape269.instObjGroups" 
 		"living_room_latestRN.placeHolderList[926]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube272|living_room_latest:pCubeShape272.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube270|living_room_latest:pCubeShape270.instObjGroups" 
 		"living_room_latestRN.placeHolderList[927]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube273|living_room_latest:pCubeShape273.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube271|living_room_latest:pCubeShape271.instObjGroups" 
 		"living_room_latestRN.placeHolderList[928]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube274|living_room_latest:pCubeShape274.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube272|living_room_latest:pCubeShape272.instObjGroups" 
 		"living_room_latestRN.placeHolderList[929]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube273|living_room_latest:pCubeShape273.instObjGroups" 
+		"living_room_latestRN.placeHolderList[930]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube274|living_room_latest:pCubeShape274.instObjGroups" 
+		"living_room_latestRN.placeHolderList[931]" ":initialShadingGroup.dsm"
 		5 3 "living_room_latestRN" "|living_room_latest:exit_window_2|living_room_latest:exit_window_2Shape.instObjGroups.objectGroups[4]" 
-		"living_room_latestRN.placeHolderList[930]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:exit_window_2|living_room_latest:exit_window_2Shape.instObjGroups.objectGroups[4].objectGroupId" 
-		"living_room_latestRN.placeHolderList[931]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:exit_window_2|living_room_latest:exit_window_2Shape.instObjGroups.objectGroups[4].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[932]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:exit_window_2|living_room_latest:exit_window_2Shape.instObjGroups.objectGroups[5]" 
+		5 4 "living_room_latestRN" "|living_room_latest:exit_window_2|living_room_latest:exit_window_2Shape.instObjGroups.objectGroups[4].objectGroupId" 
 		"living_room_latestRN.placeHolderList[933]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:exit_window_2|living_room_latest:exit_window_2Shape.instObjGroups.objectGroups[5].objectGroupId" 
+		5 4 "living_room_latestRN" "|living_room_latest:exit_window_2|living_room_latest:exit_window_2Shape.instObjGroups.objectGroups[4].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[934]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:exit_window_2|living_room_latest:exit_window_2Shape.instObjGroups.objectGroups[5].objectGrpColor" 
+		5 3 "living_room_latestRN" "|living_room_latest:exit_window_2|living_room_latest:exit_window_2Shape.instObjGroups.objectGroups[5]" 
 		"living_room_latestRN.placeHolderList[935]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:exit_window_2|living_room_latest:exit_window_2Shape.compInstObjGroups.compObjectGroups[1]" 
+		5 4 "living_room_latestRN" "|living_room_latest:exit_window_2|living_room_latest:exit_window_2Shape.instObjGroups.objectGroups[5].objectGroupId" 
 		"living_room_latestRN.placeHolderList[936]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:exit_window_2|living_room_latest:exit_window_2Shape.compInstObjGroups.compObjectGroups[1].compObjectGroupId" 
+		5 4 "living_room_latestRN" "|living_room_latest:exit_window_2|living_room_latest:exit_window_2Shape.instObjGroups.objectGroups[5].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[937]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:exit_window_1|living_room_latest:exit_window_1Shape1.instObjGroups.objectGroups[4]" 
+		5 3 "living_room_latestRN" "|living_room_latest:exit_window_2|living_room_latest:exit_window_2Shape.compInstObjGroups.compObjectGroups[1]" 
 		"living_room_latestRN.placeHolderList[938]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:exit_window_1|living_room_latest:exit_window_1Shape1.instObjGroups.objectGroups[4].objectGroupId" 
+		5 4 "living_room_latestRN" "|living_room_latest:exit_window_2|living_room_latest:exit_window_2Shape.compInstObjGroups.compObjectGroups[1].compObjectGroupId" 
 		"living_room_latestRN.placeHolderList[939]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:exit_window_1|living_room_latest:exit_window_1Shape1.instObjGroups.objectGroups[4].objectGrpColor" 
+		5 3 "living_room_latestRN" "|living_room_latest:exit_window_1|living_room_latest:exit_window_1Shape1.instObjGroups.objectGroups[4]" 
 		"living_room_latestRN.placeHolderList[940]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:exit_window_1|living_room_latest:exit_window_1Shape1.instObjGroups.objectGroups[5]" 
+		5 4 "living_room_latestRN" "|living_room_latest:exit_window_1|living_room_latest:exit_window_1Shape1.instObjGroups.objectGroups[4].objectGroupId" 
 		"living_room_latestRN.placeHolderList[941]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:exit_window_1|living_room_latest:exit_window_1Shape1.instObjGroups.objectGroups[5].objectGroupId" 
+		5 4 "living_room_latestRN" "|living_room_latest:exit_window_1|living_room_latest:exit_window_1Shape1.instObjGroups.objectGroups[4].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[942]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:exit_window_1|living_room_latest:exit_window_1Shape1.instObjGroups.objectGroups[5].objectGrpColor" 
+		5 3 "living_room_latestRN" "|living_room_latest:exit_window_1|living_room_latest:exit_window_1Shape1.instObjGroups.objectGroups[5]" 
 		"living_room_latestRN.placeHolderList[943]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:exit_window_1|living_room_latest:exit_window_1Shape1.compInstObjGroups.compObjectGroups[1]" 
+		5 4 "living_room_latestRN" "|living_room_latest:exit_window_1|living_room_latest:exit_window_1Shape1.instObjGroups.objectGroups[5].objectGroupId" 
 		"living_room_latestRN.placeHolderList[944]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:exit_window_1|living_room_latest:exit_window_1Shape1.compInstObjGroups.compObjectGroups[1].compObjectGroupId" 
+		5 4 "living_room_latestRN" "|living_room_latest:exit_window_1|living_room_latest:exit_window_1Shape1.instObjGroups.objectGroups[5].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[945]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:exit_window_3|living_room_latest:exit_window_1Shape3.instObjGroups.objectGroups[4]" 
+		5 3 "living_room_latestRN" "|living_room_latest:exit_window_1|living_room_latest:exit_window_1Shape1.compInstObjGroups.compObjectGroups[1]" 
 		"living_room_latestRN.placeHolderList[946]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:exit_window_3|living_room_latest:exit_window_1Shape3.instObjGroups.objectGroups[4].objectGroupId" 
+		5 4 "living_room_latestRN" "|living_room_latest:exit_window_1|living_room_latest:exit_window_1Shape1.compInstObjGroups.compObjectGroups[1].compObjectGroupId" 
 		"living_room_latestRN.placeHolderList[947]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:exit_window_3|living_room_latest:exit_window_1Shape3.instObjGroups.objectGroups[4].objectGrpColor" 
+		5 3 "living_room_latestRN" "|living_room_latest:exit_window_3|living_room_latest:exit_window_1Shape3.instObjGroups.objectGroups[4]" 
 		"living_room_latestRN.placeHolderList[948]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:exit_window_3|living_room_latest:exit_window_1Shape3.instObjGroups.objectGroups[5]" 
+		5 4 "living_room_latestRN" "|living_room_latest:exit_window_3|living_room_latest:exit_window_1Shape3.instObjGroups.objectGroups[4].objectGroupId" 
 		"living_room_latestRN.placeHolderList[949]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:exit_window_3|living_room_latest:exit_window_1Shape3.instObjGroups.objectGroups[5].objectGroupId" 
+		5 4 "living_room_latestRN" "|living_room_latest:exit_window_3|living_room_latest:exit_window_1Shape3.instObjGroups.objectGroups[4].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[950]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:exit_window_3|living_room_latest:exit_window_1Shape3.instObjGroups.objectGroups[5].objectGrpColor" 
+		5 3 "living_room_latestRN" "|living_room_latest:exit_window_3|living_room_latest:exit_window_1Shape3.instObjGroups.objectGroups[5]" 
 		"living_room_latestRN.placeHolderList[951]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:exit_window_3|living_room_latest:exit_window_1Shape3.compInstObjGroups.compObjectGroups[1]" 
+		5 4 "living_room_latestRN" "|living_room_latest:exit_window_3|living_room_latest:exit_window_1Shape3.instObjGroups.objectGroups[5].objectGroupId" 
 		"living_room_latestRN.placeHolderList[952]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:exit_window_3|living_room_latest:exit_window_1Shape3.compInstObjGroups.compObjectGroups[1].compObjectGroupId" 
+		5 4 "living_room_latestRN" "|living_room_latest:exit_window_3|living_room_latest:exit_window_1Shape3.instObjGroups.objectGroups[5].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[953]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:exit_window_4|living_room_latest:exit_window_1Shape4.instObjGroups.objectGroups[4]" 
+		5 3 "living_room_latestRN" "|living_room_latest:exit_window_3|living_room_latest:exit_window_1Shape3.compInstObjGroups.compObjectGroups[1]" 
 		"living_room_latestRN.placeHolderList[954]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:exit_window_4|living_room_latest:exit_window_1Shape4.instObjGroups.objectGroups[4].objectGroupId" 
+		5 4 "living_room_latestRN" "|living_room_latest:exit_window_3|living_room_latest:exit_window_1Shape3.compInstObjGroups.compObjectGroups[1].compObjectGroupId" 
 		"living_room_latestRN.placeHolderList[955]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:exit_window_4|living_room_latest:exit_window_1Shape4.instObjGroups.objectGroups[4].objectGrpColor" 
+		5 3 "living_room_latestRN" "|living_room_latest:exit_window_4|living_room_latest:exit_window_1Shape4.instObjGroups.objectGroups[4]" 
 		"living_room_latestRN.placeHolderList[956]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:exit_window_4|living_room_latest:exit_window_1Shape4.instObjGroups.objectGroups[5]" 
+		5 4 "living_room_latestRN" "|living_room_latest:exit_window_4|living_room_latest:exit_window_1Shape4.instObjGroups.objectGroups[4].objectGroupId" 
 		"living_room_latestRN.placeHolderList[957]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:exit_window_4|living_room_latest:exit_window_1Shape4.instObjGroups.objectGroups[5].objectGroupId" 
+		5 4 "living_room_latestRN" "|living_room_latest:exit_window_4|living_room_latest:exit_window_1Shape4.instObjGroups.objectGroups[4].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[958]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:exit_window_4|living_room_latest:exit_window_1Shape4.instObjGroups.objectGroups[5].objectGrpColor" 
+		5 3 "living_room_latestRN" "|living_room_latest:exit_window_4|living_room_latest:exit_window_1Shape4.instObjGroups.objectGroups[5]" 
 		"living_room_latestRN.placeHolderList[959]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:exit_window_4|living_room_latest:exit_window_1Shape4.compInstObjGroups.compObjectGroups[1]" 
+		5 4 "living_room_latestRN" "|living_room_latest:exit_window_4|living_room_latest:exit_window_1Shape4.instObjGroups.objectGroups[5].objectGroupId" 
 		"living_room_latestRN.placeHolderList[960]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:exit_window_4|living_room_latest:exit_window_1Shape4.compInstObjGroups.compObjectGroups[1].compObjectGroupId" 
+		5 4 "living_room_latestRN" "|living_room_latest:exit_window_4|living_room_latest:exit_window_1Shape4.instObjGroups.objectGroups[5].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[961]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:right_washing_machine|living_room_latest:right_washing_machineShape.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:exit_window_4|living_room_latest:exit_window_1Shape4.compInstObjGroups.compObjectGroups[1]" 
 		"living_room_latestRN.placeHolderList[962]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:right_washing_machine|living_room_latest:pasted__polySurface39|living_room_latest:pasted__polySurfaceShape39.instObjGroups" 
+		5 4 "living_room_latestRN" "|living_room_latest:exit_window_4|living_room_latest:exit_window_1Shape4.compInstObjGroups.compObjectGroups[1].compObjectGroupId" 
 		"living_room_latestRN.placeHolderList[963]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:right_washing_machine|living_room_latest:right_washing_machineShape.instObjGroups" 
+		"living_room_latestRN.placeHolderList[964]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:right_washing_machine|living_room_latest:pasted__polySurface39|living_room_latest:pasted__polySurfaceShape39.instObjGroups" 
+		"living_room_latestRN.placeHolderList[965]" ""
 		5 3 "living_room_latestRN" "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube319|living_room_latest:pasted__pCubeShape319.instObjGroups" 
-		"living_room_latestRN.placeHolderList[964]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube321|living_room_latest:pasted__pCubeShape321.instObjGroups" 
-		"living_room_latestRN.placeHolderList[965]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCylinder94|living_room_latest:pasted__pCylinderShape94.instObjGroups" 
 		"living_room_latestRN.placeHolderList[966]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube316|living_room_latest:pasted__pCubeShape316.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube321|living_room_latest:pasted__pCubeShape321.instObjGroups" 
 		"living_room_latestRN.placeHolderList[967]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube315|living_room_latest:pasted__pCubeShape315.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCylinder94|living_room_latest:pasted__pCylinderShape94.instObjGroups" 
 		"living_room_latestRN.placeHolderList[968]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube314|living_room_latest:pasted__pCubeShape314.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube316|living_room_latest:pasted__pCubeShape316.instObjGroups" 
 		"living_room_latestRN.placeHolderList[969]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube318|living_room_latest:pasted__pCubeShape318.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube315|living_room_latest:pasted__pCubeShape315.instObjGroups" 
 		"living_room_latestRN.placeHolderList[970]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:right_washing_machine|living_room_latest:pasted__pasted__pTorus2|living_room_latest:pasted__pasted__pTorusShape2.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube314|living_room_latest:pasted__pCubeShape314.instObjGroups" 
 		"living_room_latestRN.placeHolderList[971]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:right_washing_machine|living_room_latest:pasted__pPipe3|living_room_latest:pasted__pPipeShape3.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube318|living_room_latest:pasted__pCubeShape318.instObjGroups" 
 		"living_room_latestRN.placeHolderList[972]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCylinder91|living_room_latest:pasted__pCylinderShape91.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:right_washing_machine|living_room_latest:pasted__pasted__pTorus2|living_room_latest:pasted__pasted__pTorusShape2.instObjGroups" 
 		"living_room_latestRN.placeHolderList[973]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCylinder92|living_room_latest:pasted__pCylinderShape92.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:right_washing_machine|living_room_latest:pasted__pPipe3|living_room_latest:pasted__pPipeShape3.instObjGroups" 
 		"living_room_latestRN.placeHolderList[974]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCylinder93|living_room_latest:pasted__pCylinderShape93.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCylinder91|living_room_latest:pasted__pCylinderShape91.instObjGroups" 
 		"living_room_latestRN.placeHolderList[975]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCylinder90|living_room_latest:pasted__pCylinderShape90.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCylinder92|living_room_latest:pasted__pCylinderShape92.instObjGroups" 
 		"living_room_latestRN.placeHolderList[976]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:right_washing_machine|living_room_latest:pasted__polySurface38|living_room_latest:pasted__polySurfaceShape38.instObjGroups" 
-		"living_room_latestRN.placeHolderList[977]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:right_washing_machine|living_room_latest:pasted__pasted__pCylinder7|living_room_latest:pasted__pasted__pCylinderShape7.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCylinder93|living_room_latest:pasted__pCylinderShape93.instObjGroups" 
+		"living_room_latestRN.placeHolderList[977]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCylinder90|living_room_latest:pasted__pCylinderShape90.instObjGroups" 
 		"living_room_latestRN.placeHolderList[978]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:left_washing_machine|living_room_latest:left_washing_machineShape.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:right_washing_machine|living_room_latest:pasted__polySurface38|living_room_latest:pasted__polySurfaceShape38.instObjGroups" 
 		"living_room_latestRN.placeHolderList[979]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:left_washing_machine|living_room_latest:pasted__pCylinder43|living_room_latest:pasted__pCylinderShape43.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:right_washing_machine|living_room_latest:pasted__pasted__pCylinder7|living_room_latest:pasted__pasted__pCylinderShape7.instObjGroups" 
 		"living_room_latestRN.placeHolderList[980]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:left_washing_machine|living_room_latest:pasted__pCube309|living_room_latest:pasted__pCubeShape309.instObjGroups" 
-		"living_room_latestRN.placeHolderList[981]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:left_washing_machine|living_room_latest:pasted__pCube308|living_room_latest:pasted__pCubeShape308.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:left_washing_machine|living_room_latest:left_washing_machineShape.instObjGroups" 
+		"living_room_latestRN.placeHolderList[981]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:left_washing_machine|living_room_latest:pasted__pCylinder43|living_room_latest:pasted__pCylinderShape43.instObjGroups" 
 		"living_room_latestRN.placeHolderList[982]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:left_washing_machine|living_room_latest:pasted__pCube277|living_room_latest:pasted__pCubeShape277.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:left_washing_machine|living_room_latest:pasted__pCube309|living_room_latest:pasted__pCubeShape309.instObjGroups" 
 		"living_room_latestRN.placeHolderList[983]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:left_washing_machine|living_room_latest:pasted__pasted__pTorus1|living_room_latest:pasted__pasted__pTorusShape1.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:left_washing_machine|living_room_latest:pasted__pCube308|living_room_latest:pasted__pCubeShape308.instObjGroups" 
 		"living_room_latestRN.placeHolderList[984]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:left_washing_machine|living_room_latest:pasted__pasted__pCylinder6|living_room_latest:pasted__pasted__pCylinderShape6.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:left_washing_machine|living_room_latest:pasted__pCube277|living_room_latest:pasted__pCubeShape277.instObjGroups" 
 		"living_room_latestRN.placeHolderList[985]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:left_washing_machine|living_room_latest:pasted__pPipe2|living_room_latest:pasted__pPipeShape2.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:left_washing_machine|living_room_latest:pasted__pasted__pTorus1|living_room_latest:pasted__pasted__pTorusShape1.instObjGroups" 
 		"living_room_latestRN.placeHolderList[986]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:left_washing_machine|living_room_latest:pasted__pCylinder28|living_room_latest:pasted__pCylinderShape28.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:left_washing_machine|living_room_latest:pasted__pasted__pCylinder6|living_room_latest:pasted__pasted__pCylinderShape6.instObjGroups" 
 		"living_room_latestRN.placeHolderList[987]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:left_washing_machine|living_room_latest:pasted__pCylinder29|living_room_latest:pasted__pCylinderShape29.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:left_washing_machine|living_room_latest:pasted__pPipe2|living_room_latest:pasted__pPipeShape2.instObjGroups" 
 		"living_room_latestRN.placeHolderList[988]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:left_washing_machine|living_room_latest:pasted__pCylinder27|living_room_latest:pasted__pCylinderShape27.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:left_washing_machine|living_room_latest:pasted__pCylinder28|living_room_latest:pasted__pCylinderShape28.instObjGroups" 
 		"living_room_latestRN.placeHolderList[989]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:left_washing_machine|living_room_latest:pasted__pCylinder30|living_room_latest:pasted__pCylinderShape30.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:left_washing_machine|living_room_latest:pasted__pCylinder29|living_room_latest:pasted__pCylinderShape29.instObjGroups" 
 		"living_room_latestRN.placeHolderList[990]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:left_washing_machine|living_room_latest:pasted__pCylinder27|living_room_latest:pasted__pCylinderShape27.instObjGroups" 
+		"living_room_latestRN.placeHolderList[991]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:left_washing_machine|living_room_latest:pasted__pCylinder30|living_room_latest:pasted__pCylinderShape30.instObjGroups" 
+		"living_room_latestRN.placeHolderList[992]" ":initialShadingGroup.dsm"
 		5 3 "living_room_latestRN" "|living_room_latest:left_washing_machine|living_room_latest:pasted__polySurface35|living_room_latest:pasted__polySurfaceShape35.instObjGroups" 
-		"living_room_latestRN.placeHolderList[991]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[0]" 
-		"living_room_latestRN.placeHolderList[992]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[0].objectGroupId" 
 		"living_room_latestRN.placeHolderList[993]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		5 3 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[0]" 
 		"living_room_latestRN.placeHolderList[994]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[1]" 
+		5 4 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[0].objectGroupId" 
 		"living_room_latestRN.placeHolderList[995]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[1].objectGroupId" 
+		5 4 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[0].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[996]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[1].objectGrpColor" 
+		5 3 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[1]" 
 		"living_room_latestRN.placeHolderList[997]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[2]" 
+		5 4 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[1].objectGroupId" 
 		"living_room_latestRN.placeHolderList[998]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[2].objectGroupId" 
+		5 4 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[1].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[999]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[2].objectGrpColor" 
+		5 3 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[2]" 
 		"living_room_latestRN.placeHolderList[1000]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[3]" 
+		5 4 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[2].objectGroupId" 
 		"living_room_latestRN.placeHolderList[1001]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[3].objectGroupId" 
+		5 4 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[2].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1002]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[3].objectGrpColor" 
+		5 3 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[3]" 
 		"living_room_latestRN.placeHolderList[1003]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[4]" 
+		5 4 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[3].objectGroupId" 
 		"living_room_latestRN.placeHolderList[1004]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[4].objectGroupId" 
+		5 4 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[3].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1005]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[4].objectGrpColor" 
+		5 3 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[4]" 
 		"living_room_latestRN.placeHolderList[1006]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.compInstObjGroups.compObjectGroups[0]" 
+		5 4 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[4].objectGroupId" 
 		"living_room_latestRN.placeHolderList[1007]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		5 4 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.instObjGroups.objectGroups[4].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1008]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.compInstObjGroups.compObjectGroups[0]" 
+		"living_room_latestRN.placeHolderList[1009]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"living_room_latestRN.placeHolderList[1010]" ""
 		5 3 "living_room_latestRN" "|living_room_latest:mug|living_room_latest:mugShape.instObjGroups" 
-		"living_room_latestRN.placeHolderList[1009]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:mug|living_room_latest:pasted__pCylinder73|living_room_latest:pasted__pCylinderShape73.instObjGroups" 
-		"living_room_latestRN.placeHolderList[1010]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:mug|living_room_latest:pasted__pCube233|living_room_latest:pasted__pCubeShape233.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1011]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:mug|living_room_latest:pasted__pPlane9|living_room_latest:pasted__pPlaneShape9.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:mug|living_room_latest:pasted__pCylinder73|living_room_latest:pasted__pCylinderShape73.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1012]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:bowl|living_room_latest:bowlShape.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:mug|living_room_latest:pasted__pCube233|living_room_latest:pasted__pCubeShape233.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1013]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pot|living_room_latest:pasted__polySurface42|living_room_latest:pasted__polySurfaceShape42.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:mug|living_room_latest:pasted__pPlane9|living_room_latest:pasted__pPlaneShape9.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1014]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pot|living_room_latest:pasted__polySurface41|living_room_latest:pasted__polySurfaceShape41.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:bowl|living_room_latest:bowlShape.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1015]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pot|living_room_latest:pasted__polySurface40|living_room_latest:pasted__polySurfaceShape40.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pot|living_room_latest:pasted__polySurface42|living_room_latest:pasted__polySurfaceShape42.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1016]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pot|living_room_latest:pasted__pCylinder28|living_room_latest:pasted__pCylinderShape28.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pot|living_room_latest:pasted__polySurface41|living_room_latest:pasted__polySurfaceShape41.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1017]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:pot|living_room_latest:pasted__polySurface40|living_room_latest:pasted__polySurfaceShape40.instObjGroups" 
+		"living_room_latestRN.placeHolderList[1018]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:pot|living_room_latest:pasted__pCylinder28|living_room_latest:pasted__pCylinderShape28.instObjGroups" 
+		"living_room_latestRN.placeHolderList[1019]" ":initialShadingGroup.dsm"
 		5 3 "living_room_latestRN" "|living_room_latest:frying_pan|living_room_latest:frying_panShape.instObjGroups" 
-		"living_room_latestRN.placeHolderList[1018]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:frying_pan|living_room_latest:pasted__pCube167|living_room_latest:pasted__pCubeShape167.instObjGroups" 
-		"living_room_latestRN.placeHolderList[1019]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:toaster_oven|living_room_latest:toaster_ovenShape.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1020]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:toaster_oven|living_room_latest:pasted__pCylinder26|living_room_latest:pasted__pCylinderShape26.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:frying_pan|living_room_latest:pasted__pCube167|living_room_latest:pasted__pCubeShape167.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1021]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:toaster_oven|living_room_latest:pasted__pCylinder25|living_room_latest:pasted__pCylinderShape25.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:toaster_oven|living_room_latest:toaster_ovenShape.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1022]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:toaster_oven|living_room_latest:pasted__polySurface39|living_room_latest:pasted__polySurfaceShape39.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:toaster_oven|living_room_latest:pasted__pCylinder26|living_room_latest:pasted__pCylinderShape26.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1023]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:toaster_oven|living_room_latest:pasted__pCylinder25|living_room_latest:pasted__pCylinderShape25.instObjGroups" 
+		"living_room_latestRN.placeHolderList[1024]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:toaster_oven|living_room_latest:pasted__polySurface39|living_room_latest:pasted__polySurfaceShape39.instObjGroups" 
+		"living_room_latestRN.placeHolderList[1025]" ""
 		5 3 "living_room_latestRN" "|living_room_latest:toaster_oven|living_room_latest:pasted__pCube204|living_room_latest:pasted__pCubeShape204.instObjGroups" 
-		"living_room_latestRN.placeHolderList[1024]" ":initialShadingGroup.dsm"
+		"living_room_latestRN.placeHolderList[1026]" ":initialShadingGroup.dsm"
 		5 3 "living_room_latestRN" "|living_room_latest:sink|living_room_latest:sinkShape.instObjGroups" 
-		"living_room_latestRN.placeHolderList[1025]" ":initialShadingGroup.dsm"
+		"living_room_latestRN.placeHolderList[1027]" ":initialShadingGroup.dsm"
 		5 3 "living_room_latestRN" "|living_room_latest:oven|living_room_latest:ovenShape.instObjGroups" 
-		"living_room_latestRN.placeHolderList[1026]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:oven|living_room_latest:pasted__pCube161|living_room_latest:pasted__pCubeShape161.instObjGroups" 
-		"living_room_latestRN.placeHolderList[1027]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:oven|living_room_latest:pasted__pCylinder19|living_room_latest:pasted__pCylinderShape19.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1028]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:oven|living_room_latest:pasted__pCylinder18|living_room_latest:pasted__pCylinderShape18.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:oven|living_room_latest:pasted__pCube161|living_room_latest:pasted__pCubeShape161.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1029]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:oven|living_room_latest:pasted__pCylinder17|living_room_latest:pasted__pCylinderShape17.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:oven|living_room_latest:pasted__pCylinder19|living_room_latest:pasted__pCylinderShape19.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1030]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:oven|living_room_latest:pasted__pCylinder16|living_room_latest:pasted__pCylinderShape16.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:oven|living_room_latest:pasted__pCylinder18|living_room_latest:pasted__pCylinderShape18.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1031]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:oven|living_room_latest:pasted__pCylinder17|living_room_latest:pasted__pCylinderShape17.instObjGroups" 
+		"living_room_latestRN.placeHolderList[1032]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:oven|living_room_latest:pasted__pCylinder16|living_room_latest:pasted__pCylinderShape16.instObjGroups" 
+		"living_room_latestRN.placeHolderList[1033]" ""
 		5 3 "living_room_latestRN" "|living_room_latest:oven|living_room_latest:pasted__polySurface7|living_room_latest:pasted__polySurfaceShape7.instObjGroups" 
-		"living_room_latestRN.placeHolderList[1032]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:oven|living_room_latest:pasted__pPlane4|living_room_latest:pasted__outputCloth1.instObjGroups" 
-		"living_room_latestRN.placeHolderList[1033]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:paper_towels|living_room_latest:paper_towelsShape.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1034]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:boiler|living_room_latest:boilerShape.instObjGroups" 
-		"living_room_latestRN.placeHolderList[1035]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:boiler|living_room_latest:pasted__pCylinder12|living_room_latest:pasted__pCylinderShape12.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:oven|living_room_latest:pasted__pPlane4|living_room_latest:pasted__outputCloth1.instObjGroups" 
+		"living_room_latestRN.placeHolderList[1035]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:paper_towels|living_room_latest:paper_towelsShape.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1036]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:boiler|living_room_latest:boilerShape.instObjGroups" 
+		"living_room_latestRN.placeHolderList[1037]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:boiler|living_room_latest:pasted__pCylinder12|living_room_latest:pasted__pCylinderShape12.instObjGroups" 
+		"living_room_latestRN.placeHolderList[1038]" ":initialShadingGroup.dsm"
 		5 3 "living_room_latestRN" "|living_room_latest:boiler|living_room_latest:pasted__pCube151|living_room_latest:pasted__pCubeShape151.instObjGroups" 
-		"living_room_latestRN.placeHolderList[1037]" ":initialShadingGroup.dsm"
+		"living_room_latestRN.placeHolderList[1039]" ":initialShadingGroup.dsm"
 		5 3 "living_room_latestRN" "|living_room_latest:stove_metal|living_room_latest:stove_metalShape.instObjGroups" 
-		"living_room_latestRN.placeHolderList[1038]" "living_room_latest:pasted__lambert18SG1.dsm"
-		
-		5 3 "living_room_latestRN" "|living_room_latest:stove_metal|living_room_latest:pasted__polySurface3|living_room_latest:pasted__polySurfaceShape3.instObjGroups" 
-		"living_room_latestRN.placeHolderList[1039]" "living_room_latest:pasted__lambert18SG1.dsm"
-		
-		5 3 "living_room_latestRN" "|living_room_latest:stove_metal|living_room_latest:pasted__pCylinder9|living_room_latest:pasted__pCylinderShape9.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1040]" "living_room_latest:pasted__lambert18SG1.dsm"
 		
-		5 3 "living_room_latestRN" "|living_room_latest:stove_metal|living_room_latest:pasted__pCylinder9|living_room_latest:pasted__pCylinder8|living_room_latest:pasted__pCylinderShape8.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:stove_metal|living_room_latest:pasted__polySurface3|living_room_latest:pasted__polySurfaceShape3.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1041]" "living_room_latest:pasted__lambert18SG1.dsm"
 		
-		5 3 "living_room_latestRN" "|living_room_latest:stove_metal|living_room_latest:pasted__polySurface5|living_room_latest:pasted__polySurfaceShape5.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:stove_metal|living_room_latest:pasted__pCylinder9|living_room_latest:pasted__pCylinderShape9.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1042]" "living_room_latest:pasted__lambert18SG1.dsm"
 		
-		5 3 "living_room_latestRN" "|living_room_latest:stove_metal|living_room_latest:pasted__polySurface6|living_room_latest:pasted__polySurfaceShape6.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:stove_metal|living_room_latest:pasted__pCylinder9|living_room_latest:pasted__pCylinder8|living_room_latest:pasted__pCylinderShape8.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1043]" "living_room_latest:pasted__lambert18SG1.dsm"
 		
-		5 3 "living_room_latestRN" "|living_room_latest:stove_metal|living_room_latest:pasted__pCylinder11|living_room_latest:pasted__pCylinderShape11.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:stove_metal|living_room_latest:pasted__polySurface5|living_room_latest:pasted__polySurfaceShape5.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1044]" "living_room_latest:pasted__lambert18SG1.dsm"
 		
-		5 3 "living_room_latestRN" "|living_room_latest:stove_metal|living_room_latest:pasted__pCylinder11|living_room_latest:pasted__pCylinder10|living_room_latest:pasted__pCylinderShape10.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:stove_metal|living_room_latest:pasted__polySurface6|living_room_latest:pasted__polySurfaceShape6.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1045]" "living_room_latest:pasted__lambert18SG1.dsm"
 		
-		5 3 "living_room_latestRN" "|living_room_latest:stove_metal|living_room_latest:pasted__pCylinder7|living_room_latest:pasted__pCylinderShape7.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:stove_metal|living_room_latest:pasted__pCylinder11|living_room_latest:pasted__pCylinderShape11.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1046]" "living_room_latest:pasted__lambert18SG1.dsm"
 		
-		5 3 "living_room_latestRN" "|living_room_latest:stove_metal|living_room_latest:pasted__pCylinder7|living_room_latest:pasted__pCylinder6|living_room_latest:pasted__pCylinderShape6.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:stove_metal|living_room_latest:pasted__pCylinder11|living_room_latest:pasted__pCylinder10|living_room_latest:pasted__pCylinderShape10.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1047]" "living_room_latest:pasted__lambert18SG1.dsm"
 		
-		5 3 "living_room_latestRN" "|living_room_latest:stove_metal|living_room_latest:pasted__pCylinder4|living_room_latest:pasted__pCylinderShape4.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:stove_metal|living_room_latest:pasted__pCylinder7|living_room_latest:pasted__pCylinderShape7.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1048]" "living_room_latest:pasted__lambert18SG1.dsm"
 		
-		5 3 "living_room_latestRN" "|living_room_latest:stove_metal|living_room_latest:pasted__pCylinder4|living_room_latest:pasted__pCylinder5|living_room_latest:pasted__pCylinderShape5.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:stove_metal|living_room_latest:pasted__pCylinder7|living_room_latest:pasted__pCylinder6|living_room_latest:pasted__pCylinderShape6.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1049]" "living_room_latest:pasted__lambert18SG1.dsm"
 		
+		5 3 "living_room_latestRN" "|living_room_latest:stove_metal|living_room_latest:pasted__pCylinder4|living_room_latest:pasted__pCylinderShape4.instObjGroups" 
+		"living_room_latestRN.placeHolderList[1050]" "living_room_latest:pasted__lambert18SG1.dsm"
+		
+		5 3 "living_room_latestRN" "|living_room_latest:stove_metal|living_room_latest:pasted__pCylinder4|living_room_latest:pasted__pCylinder5|living_room_latest:pasted__pCylinderShape5.instObjGroups" 
+		"living_room_latestRN.placeHolderList[1051]" "living_room_latest:pasted__lambert18SG1.dsm"
+		
 		5 3 "living_room_latestRN" "|living_room_latest:stove_vent|living_room_latest:stove_ventShape.instObjGroups" 
-		"living_room_latestRN.placeHolderList[1050]" ":initialShadingGroup.dsm"
+		"living_room_latestRN.placeHolderList[1052]" ":initialShadingGroup.dsm"
 		5 3 "living_room_latestRN" "|living_room_latest:kitchen_window_1|living_room_latest:kitchen_window_1Shape1.instObjGroups.objectGroups[0]" 
-		"living_room_latestRN.placeHolderList[1051]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:kitchen_window_1|living_room_latest:kitchen_window_1Shape1.instObjGroups.objectGroups[0].objectGroupId" 
-		"living_room_latestRN.placeHolderList[1052]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:kitchen_window_1|living_room_latest:kitchen_window_1Shape1.instObjGroups.objectGroups[0].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1053]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:kitchen_window_1|living_room_latest:kitchen_window_1Shape1.instObjGroups.objectGroups[1]" 
+		5 4 "living_room_latestRN" "|living_room_latest:kitchen_window_1|living_room_latest:kitchen_window_1Shape1.instObjGroups.objectGroups[0].objectGroupId" 
 		"living_room_latestRN.placeHolderList[1054]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:kitchen_window_1|living_room_latest:kitchen_window_1Shape1.instObjGroups.objectGroups[1].objectGroupId" 
+		5 4 "living_room_latestRN" "|living_room_latest:kitchen_window_1|living_room_latest:kitchen_window_1Shape1.instObjGroups.objectGroups[0].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1055]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:kitchen_window_1|living_room_latest:kitchen_window_1Shape1.instObjGroups.objectGroups[1].objectGrpColor" 
+		5 3 "living_room_latestRN" "|living_room_latest:kitchen_window_1|living_room_latest:kitchen_window_1Shape1.instObjGroups.objectGroups[1]" 
 		"living_room_latestRN.placeHolderList[1056]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:kitchen_window_1|living_room_latest:kitchen_window_1Shape1.compInstObjGroups.compObjectGroups[0]" 
+		5 4 "living_room_latestRN" "|living_room_latest:kitchen_window_1|living_room_latest:kitchen_window_1Shape1.instObjGroups.objectGroups[1].objectGroupId" 
 		"living_room_latestRN.placeHolderList[1057]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:kitchen_window_1|living_room_latest:kitchen_window_1Shape1.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		5 4 "living_room_latestRN" "|living_room_latest:kitchen_window_1|living_room_latest:kitchen_window_1Shape1.instObjGroups.objectGroups[1].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1058]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:kitchen_window_2|living_room_latest:kitchen_window_1Shape2.instObjGroups.objectGroups[0]" 
+		5 3 "living_room_latestRN" "|living_room_latest:kitchen_window_1|living_room_latest:kitchen_window_1Shape1.compInstObjGroups.compObjectGroups[0]" 
 		"living_room_latestRN.placeHolderList[1059]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:kitchen_window_2|living_room_latest:kitchen_window_1Shape2.instObjGroups.objectGroups[0].objectGroupId" 
+		5 4 "living_room_latestRN" "|living_room_latest:kitchen_window_1|living_room_latest:kitchen_window_1Shape1.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
 		"living_room_latestRN.placeHolderList[1060]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:kitchen_window_2|living_room_latest:kitchen_window_1Shape2.instObjGroups.objectGroups[0].objectGrpColor" 
+		5 3 "living_room_latestRN" "|living_room_latest:kitchen_window_2|living_room_latest:kitchen_window_1Shape2.instObjGroups.objectGroups[0]" 
 		"living_room_latestRN.placeHolderList[1061]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:kitchen_window_2|living_room_latest:kitchen_window_1Shape2.instObjGroups.objectGroups[1]" 
+		5 4 "living_room_latestRN" "|living_room_latest:kitchen_window_2|living_room_latest:kitchen_window_1Shape2.instObjGroups.objectGroups[0].objectGroupId" 
 		"living_room_latestRN.placeHolderList[1062]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:kitchen_window_2|living_room_latest:kitchen_window_1Shape2.instObjGroups.objectGroups[1].objectGroupId" 
+		5 4 "living_room_latestRN" "|living_room_latest:kitchen_window_2|living_room_latest:kitchen_window_1Shape2.instObjGroups.objectGroups[0].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1063]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:kitchen_window_2|living_room_latest:kitchen_window_1Shape2.instObjGroups.objectGroups[1].objectGrpColor" 
+		5 3 "living_room_latestRN" "|living_room_latest:kitchen_window_2|living_room_latest:kitchen_window_1Shape2.instObjGroups.objectGroups[1]" 
 		"living_room_latestRN.placeHolderList[1064]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:kitchen_window_2|living_room_latest:kitchen_window_1Shape2.compInstObjGroups.compObjectGroups[0]" 
+		5 4 "living_room_latestRN" "|living_room_latest:kitchen_window_2|living_room_latest:kitchen_window_1Shape2.instObjGroups.objectGroups[1].objectGroupId" 
 		"living_room_latestRN.placeHolderList[1065]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:kitchen_window_2|living_room_latest:kitchen_window_1Shape2.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		5 4 "living_room_latestRN" "|living_room_latest:kitchen_window_2|living_room_latest:kitchen_window_1Shape2.instObjGroups.objectGroups[1].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1066]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:kitchen_window_3|living_room_latest:kitchen_window_1Shape3.instObjGroups.objectGroups[0]" 
+		5 3 "living_room_latestRN" "|living_room_latest:kitchen_window_2|living_room_latest:kitchen_window_1Shape2.compInstObjGroups.compObjectGroups[0]" 
 		"living_room_latestRN.placeHolderList[1067]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:kitchen_window_3|living_room_latest:kitchen_window_1Shape3.instObjGroups.objectGroups[0].objectGroupId" 
+		5 4 "living_room_latestRN" "|living_room_latest:kitchen_window_2|living_room_latest:kitchen_window_1Shape2.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
 		"living_room_latestRN.placeHolderList[1068]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:kitchen_window_3|living_room_latest:kitchen_window_1Shape3.instObjGroups.objectGroups[0].objectGrpColor" 
+		5 3 "living_room_latestRN" "|living_room_latest:kitchen_window_3|living_room_latest:kitchen_window_1Shape3.instObjGroups.objectGroups[0]" 
 		"living_room_latestRN.placeHolderList[1069]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:kitchen_window_3|living_room_latest:kitchen_window_1Shape3.instObjGroups.objectGroups[1]" 
+		5 4 "living_room_latestRN" "|living_room_latest:kitchen_window_3|living_room_latest:kitchen_window_1Shape3.instObjGroups.objectGroups[0].objectGroupId" 
 		"living_room_latestRN.placeHolderList[1070]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:kitchen_window_3|living_room_latest:kitchen_window_1Shape3.instObjGroups.objectGroups[1].objectGroupId" 
+		5 4 "living_room_latestRN" "|living_room_latest:kitchen_window_3|living_room_latest:kitchen_window_1Shape3.instObjGroups.objectGroups[0].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1071]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:kitchen_window_3|living_room_latest:kitchen_window_1Shape3.instObjGroups.objectGroups[1].objectGrpColor" 
+		5 3 "living_room_latestRN" "|living_room_latest:kitchen_window_3|living_room_latest:kitchen_window_1Shape3.instObjGroups.objectGroups[1]" 
 		"living_room_latestRN.placeHolderList[1072]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:kitchen_window_3|living_room_latest:kitchen_window_1Shape3.compInstObjGroups.compObjectGroups[0]" 
+		5 4 "living_room_latestRN" "|living_room_latest:kitchen_window_3|living_room_latest:kitchen_window_1Shape3.instObjGroups.objectGroups[1].objectGroupId" 
 		"living_room_latestRN.placeHolderList[1073]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:kitchen_window_3|living_room_latest:kitchen_window_1Shape3.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		5 4 "living_room_latestRN" "|living_room_latest:kitchen_window_3|living_room_latest:kitchen_window_1Shape3.instObjGroups.objectGroups[1].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1074]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:pCube122.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:kitchen_window_3|living_room_latest:kitchen_window_1Shape3.compInstObjGroups.compObjectGroups[0]" 
 		"living_room_latestRN.placeHolderList[1075]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:pCube122|living_room_latest:pCubeShape122.instObjGroups" 
-		"living_room_latestRN.placeHolderList[1076]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube123.instObjGroups" 
+		5 4 "living_room_latestRN" "|living_room_latest:kitchen_window_3|living_room_latest:kitchen_window_1Shape3.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"living_room_latestRN.placeHolderList[1076]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:pCube122.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1077]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:pCube123|living_room_latest:pCubeShape123.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube122|living_room_latest:pCubeShape122.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1078]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube124.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube123.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1079]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:pCube124|living_room_latest:pCubeShape124.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube123|living_room_latest:pCubeShape123.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1080]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube125.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube124.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1081]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:pCube125|living_room_latest:pCubeShape125.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube124|living_room_latest:pCubeShape124.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1082]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:utilities_room_wall|living_room_latest:utilities_room_wallShape.instObjGroups.objectGroups[0]" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube125.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1083]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:utilities_room_wall|living_room_latest:utilities_room_wallShape.instObjGroups.objectGroups[0].objectGroupId" 
-		"living_room_latestRN.placeHolderList[1084]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:utilities_room_wall|living_room_latest:utilities_room_wallShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube125|living_room_latest:pCubeShape125.instObjGroups" 
+		"living_room_latestRN.placeHolderList[1084]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:utilities_room_wall|living_room_latest:utilities_room_wallShape.instObjGroups.objectGroups[0]" 
 		"living_room_latestRN.placeHolderList[1085]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:utilities_room_wall|living_room_latest:utilities_room_wallShape.instObjGroups.objectGroups[1]" 
+		5 4 "living_room_latestRN" "|living_room_latest:utilities_room_wall|living_room_latest:utilities_room_wallShape.instObjGroups.objectGroups[0].objectGroupId" 
 		"living_room_latestRN.placeHolderList[1086]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:utilities_room_wall|living_room_latest:utilities_room_wallShape.instObjGroups.objectGroups[1].objectGroupId" 
+		5 4 "living_room_latestRN" "|living_room_latest:utilities_room_wall|living_room_latest:utilities_room_wallShape.instObjGroups.objectGroups[0].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1087]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:utilities_room_wall|living_room_latest:utilities_room_wallShape.instObjGroups.objectGroups[1].objectGrpColor" 
+		5 3 "living_room_latestRN" "|living_room_latest:utilities_room_wall|living_room_latest:utilities_room_wallShape.instObjGroups.objectGroups[1]" 
 		"living_room_latestRN.placeHolderList[1088]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:utilities_room_wall|living_room_latest:utilities_room_wallShape.compInstObjGroups.compObjectGroups[0]" 
+		5 4 "living_room_latestRN" "|living_room_latest:utilities_room_wall|living_room_latest:utilities_room_wallShape.instObjGroups.objectGroups[1].objectGroupId" 
 		"living_room_latestRN.placeHolderList[1089]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:utilities_room_wall|living_room_latest:utilities_room_wallShape.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		5 4 "living_room_latestRN" "|living_room_latest:utilities_room_wall|living_room_latest:utilities_room_wallShape.instObjGroups.objectGroups[1].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1090]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:pCube141.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:utilities_room_wall|living_room_latest:utilities_room_wallShape.compInstObjGroups.compObjectGroups[0]" 
 		"living_room_latestRN.placeHolderList[1091]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:pCube141|living_room_latest:pCubeShape141.instObjGroups" 
-		"living_room_latestRN.placeHolderList[1092]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube142.instObjGroups" 
-		"living_room_latestRN.placeHolderList[1093]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:pCube142|living_room_latest:pCubeShape142.instObjGroups" 
+		5 4 "living_room_latestRN" "|living_room_latest:utilities_room_wall|living_room_latest:utilities_room_wallShape.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"living_room_latestRN.placeHolderList[1092]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:bedroom_corner_wall|living_room_latest:bedroom_corner_wallShape.instObjGroups" 
+		"living_room_latestRN.placeHolderList[1093]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:bedroom_front_wall|living_room_latest:bedroom_front_wallShape.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1094]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube143.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube141.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1095]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:pCube143|living_room_latest:pCubeShape143.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube141|living_room_latest:pCubeShape141.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1096]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube145.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube142.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1097]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:pCube145|living_room_latest:pCubeShape145.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube142|living_room_latest:pCubeShape142.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1098]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube146.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube143.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1099]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:pCube146|living_room_latest:pCubeShape146.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube143|living_room_latest:pCubeShape143.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1100]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube147.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube145.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1101]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:pCube147|living_room_latest:pCubeShape147.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube145|living_room_latest:pCubeShape145.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1102]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube148.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube146.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1103]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:pCube148|living_room_latest:pCubeShape148.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube146|living_room_latest:pCubeShape146.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1104]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube149.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube147.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1105]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:pCube149|living_room_latest:pCubeShape149.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube147|living_room_latest:pCubeShape147.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1106]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:ripped_up_toy1|living_room_latest:ripped_up_toy1Shape.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube148.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1107]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:pPipe1|living_room_latest:pPipeShape1.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube148|living_room_latest:pCubeShape148.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1108]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCubeShape92.instObjGroups.objectGroups[0]" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube149.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1109]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCubeShape92.instObjGroups.objectGroups[0].objectGroupId" 
-		"living_room_latestRN.placeHolderList[1110]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCubeShape92.instObjGroups.objectGroups[0].objectGrpColor" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube149|living_room_latest:pCubeShape149.instObjGroups" 
+		"living_room_latestRN.placeHolderList[1110]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:ripped_up_toy1|living_room_latest:ripped_up_toy1Shape.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1111]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCubeShape92.instObjGroups.objectGroups[1]" 
-		"living_room_latestRN.placeHolderList[1112]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCubeShape92.instObjGroups.objectGroups[1].objectGroupId" 
+		5 3 "living_room_latestRN" "|living_room_latest:pPipe1|living_room_latest:pPipeShape1.instObjGroups" 
+		"living_room_latestRN.placeHolderList[1112]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCubeShape92.instObjGroups.objectGroups[0]" 
 		"living_room_latestRN.placeHolderList[1113]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCubeShape92.instObjGroups.objectGroups[1].objectGrpColor" 
+		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCubeShape92.instObjGroups.objectGroups[0].objectGroupId" 
 		"living_room_latestRN.placeHolderList[1114]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCubeShape92.instObjGroups.objectGroups[2]" 
+		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCubeShape92.instObjGroups.objectGroups[0].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1115]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCubeShape92.instObjGroups.objectGroups[2].objectGroupId" 
+		5 3 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCubeShape92.instObjGroups.objectGroups[1]" 
 		"living_room_latestRN.placeHolderList[1116]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCubeShape92.instObjGroups.objectGroups[2].objectGrpColor" 
+		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCubeShape92.instObjGroups.objectGroups[1].objectGroupId" 
 		"living_room_latestRN.placeHolderList[1117]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCubeShape92.instObjGroups.objectGroups[3]" 
+		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCubeShape92.instObjGroups.objectGroups[1].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1118]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCubeShape92.instObjGroups.objectGroups[3].objectGroupId" 
+		5 3 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCubeShape92.instObjGroups.objectGroups[2]" 
 		"living_room_latestRN.placeHolderList[1119]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCubeShape92.instObjGroups.objectGroups[3].objectGrpColor" 
+		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCubeShape92.instObjGroups.objectGroups[2].objectGroupId" 
 		"living_room_latestRN.placeHolderList[1120]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCubeShape92.compInstObjGroups.compObjectGroups[0]" 
+		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCubeShape92.instObjGroups.objectGroups[2].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1121]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCubeShape92.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		5 3 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCubeShape92.instObjGroups.objectGroups[3]" 
 		"living_room_latestRN.placeHolderList[1122]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCylinder2|living_room_latest:side_table:pCylinderShape2.instObjGroups" 
-		"living_room_latestRN.placeHolderList[1123]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCylinder2|living_room_latest:side_table:pCylinderShape2.instObjGroups.objectGroups[0]" 
+		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCubeShape92.instObjGroups.objectGroups[3].objectGroupId" 
+		"living_room_latestRN.placeHolderList[1123]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCubeShape92.instObjGroups.objectGroups[3].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1124]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCylinder2|living_room_latest:side_table:pCylinderShape2.instObjGroups.objectGroups[0].objectGroupId" 
+		5 3 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCubeShape92.compInstObjGroups.compObjectGroups[0]" 
 		"living_room_latestRN.placeHolderList[1125]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCylinder2|living_room_latest:side_table:pCylinderShape2.instObjGroups.objectGroups[0].objectGrpColor" 
+		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCubeShape92.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
 		"living_room_latestRN.placeHolderList[1126]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCylinder4|living_room_latest:side_table:pCylinderShape4.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCylinder2|living_room_latest:side_table:pCylinderShape2.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1127]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCylinder4|living_room_latest:side_table:pCylinderShape4.instObjGroups.objectGroups[0]" 
+		5 3 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCylinder2|living_room_latest:side_table:pCylinderShape2.instObjGroups.objectGroups[0]" 
 		"living_room_latestRN.placeHolderList[1128]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCylinder4|living_room_latest:side_table:pCylinderShape4.instObjGroups.objectGroups[0].objectGroupId" 
+		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCylinder2|living_room_latest:side_table:pCylinderShape2.instObjGroups.objectGroups[0].objectGroupId" 
 		"living_room_latestRN.placeHolderList[1129]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCylinder4|living_room_latest:side_table:pCylinderShape4.instObjGroups.objectGroups[0].objectGrpColor" 
+		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCylinder2|living_room_latest:side_table:pCylinderShape2.instObjGroups.objectGroups[0].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1130]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCube2|living_room_latest:side_table:pCubeShape2.instObjGroups.objectGroups[0]" 
-		"living_room_latestRN.placeHolderList[1131]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCube2|living_room_latest:side_table:pCubeShape2.instObjGroups.objectGroups[0].objectGroupId" 
+		5 3 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCylinder4|living_room_latest:side_table:pCylinderShape4.instObjGroups" 
+		"living_room_latestRN.placeHolderList[1131]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCylinder4|living_room_latest:side_table:pCylinderShape4.instObjGroups.objectGroups[0]" 
 		"living_room_latestRN.placeHolderList[1132]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCube2|living_room_latest:side_table:pCubeShape2.instObjGroups.objectGroups[0].objectGrpColor" 
+		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCylinder4|living_room_latest:side_table:pCylinderShape4.instObjGroups.objectGroups[0].objectGroupId" 
 		"living_room_latestRN.placeHolderList[1133]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCube2|living_room_latest:side_table:pCubeShape2.instObjGroups.objectGroups[1]" 
+		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCylinder4|living_room_latest:side_table:pCylinderShape4.instObjGroups.objectGroups[0].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1134]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCube2|living_room_latest:side_table:pCubeShape2.instObjGroups.objectGroups[1].objectGroupId" 
+		5 3 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCube2|living_room_latest:side_table:pCubeShape2.instObjGroups.objectGroups[0]" 
 		"living_room_latestRN.placeHolderList[1135]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCube2|living_room_latest:side_table:pCubeShape2.instObjGroups.objectGroups[1].objectGrpColor" 
+		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCube2|living_room_latest:side_table:pCubeShape2.instObjGroups.objectGroups[0].objectGroupId" 
 		"living_room_latestRN.placeHolderList[1136]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCube2|living_room_latest:side_table:pCubeShape2.instObjGroups.objectGroups[2]" 
+		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCube2|living_room_latest:side_table:pCubeShape2.instObjGroups.objectGroups[0].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1137]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCube2|living_room_latest:side_table:pCubeShape2.instObjGroups.objectGroups[2].objectGroupId" 
+		5 3 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCube2|living_room_latest:side_table:pCubeShape2.instObjGroups.objectGroups[1]" 
 		"living_room_latestRN.placeHolderList[1138]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCube2|living_room_latest:side_table:pCubeShape2.instObjGroups.objectGroups[2].objectGrpColor" 
+		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCube2|living_room_latest:side_table:pCubeShape2.instObjGroups.objectGroups[1].objectGroupId" 
 		"living_room_latestRN.placeHolderList[1139]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCube2|living_room_latest:side_table:pCubeShape2.instObjGroups.objectGroups[3]" 
+		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCube2|living_room_latest:side_table:pCubeShape2.instObjGroups.objectGroups[1].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1140]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCube2|living_room_latest:side_table:pCubeShape2.instObjGroups.objectGroups[3].objectGroupId" 
+		5 3 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCube2|living_room_latest:side_table:pCubeShape2.instObjGroups.objectGroups[2]" 
 		"living_room_latestRN.placeHolderList[1141]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCube2|living_room_latest:side_table:pCubeShape2.instObjGroups.objectGroups[3].objectGrpColor" 
+		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCube2|living_room_latest:side_table:pCubeShape2.instObjGroups.objectGroups[2].objectGroupId" 
 		"living_room_latestRN.placeHolderList[1142]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCube2|living_room_latest:side_table:pCubeShape2.compInstObjGroups.compObjectGroups[0]" 
+		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCube2|living_room_latest:side_table:pCubeShape2.instObjGroups.objectGroups[2].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1143]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCube2|living_room_latest:side_table:pCubeShape2.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		5 3 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCube2|living_room_latest:side_table:pCubeShape2.instObjGroups.objectGroups[3]" 
 		"living_room_latestRN.placeHolderList[1144]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface1|living_room_latest:side_table:polySurfaceShape1.instObjGroups" 
+		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCube2|living_room_latest:side_table:pCubeShape2.instObjGroups.objectGroups[3].objectGroupId" 
 		"living_room_latestRN.placeHolderList[1145]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface1|living_room_latest:side_table:polySurfaceShape1.instObjGroups.objectGroups[1]" 
+		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCube2|living_room_latest:side_table:pCubeShape2.instObjGroups.objectGroups[3].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1146]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface1|living_room_latest:side_table:polySurfaceShape1.instObjGroups.objectGroups[1].objectGroupId" 
+		5 3 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCube2|living_room_latest:side_table:pCubeShape2.compInstObjGroups.compObjectGroups[0]" 
 		"living_room_latestRN.placeHolderList[1147]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface1|living_room_latest:side_table:polySurfaceShape1.instObjGroups.objectGroups[1].objectGrpColor" 
+		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCube2|living_room_latest:side_table:pCubeShape2.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
 		"living_room_latestRN.placeHolderList[1148]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface2|living_room_latest:side_table:polySurfaceShape2.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface1|living_room_latest:side_table:polySurfaceShape1.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1149]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface2|living_room_latest:side_table:polySurfaceShape2.instObjGroups.objectGroups[1]" 
+		5 3 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface1|living_room_latest:side_table:polySurfaceShape1.instObjGroups.objectGroups[1]" 
 		"living_room_latestRN.placeHolderList[1150]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface2|living_room_latest:side_table:polySurfaceShape2.instObjGroups.objectGroups[1].objectGroupId" 
+		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface1|living_room_latest:side_table:polySurfaceShape1.instObjGroups.objectGroups[1].objectGroupId" 
 		"living_room_latestRN.placeHolderList[1151]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface2|living_room_latest:side_table:polySurfaceShape2.instObjGroups.objectGroups[1].objectGrpColor" 
+		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface1|living_room_latest:side_table:polySurfaceShape1.instObjGroups.objectGroups[1].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1152]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface3|living_room_latest:side_table:polySurfaceShape3.instObjGroups.objectGroups[0]" 
-		"living_room_latestRN.placeHolderList[1153]" ":initialShadingGroup.dsm"
-		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface3|living_room_latest:side_table:polySurfaceShape3.instObjGroups.objectGroups[0].objectGrpColor" 
+		5 3 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface2|living_room_latest:side_table:polySurfaceShape2.instObjGroups" 
+		"living_room_latestRN.placeHolderList[1153]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface2|living_room_latest:side_table:polySurfaceShape2.instObjGroups.objectGroups[1]" 
 		"living_room_latestRN.placeHolderList[1154]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface3|living_room_latest:side_table:polySurfaceShape3.instObjGroups.objectGroups[1]" 
+		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface2|living_room_latest:side_table:polySurfaceShape2.instObjGroups.objectGroups[1].objectGroupId" 
 		"living_room_latestRN.placeHolderList[1155]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface3|living_room_latest:side_table:polySurfaceShape3.instObjGroups.objectGroups[1].objectGroupId" 
+		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface2|living_room_latest:side_table:polySurfaceShape2.instObjGroups.objectGroups[1].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1156]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface3|living_room_latest:side_table:polySurfaceShape3.instObjGroups.objectGroups[1].objectGrpColor" 
-		"living_room_latestRN.placeHolderList[1157]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface3|living_room_latest:side_table:polySurfaceShape3.instObjGroups.objectGroups[2]" 
+		5 3 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface3|living_room_latest:side_table:polySurfaceShape3.instObjGroups.objectGroups[0]" 
+		"living_room_latestRN.placeHolderList[1157]" ":initialShadingGroup.dsm"
+		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface3|living_room_latest:side_table:polySurfaceShape3.instObjGroups.objectGroups[0].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1158]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface3|living_room_latest:side_table:polySurfaceShape3.instObjGroups.objectGroups[2].objectGroupId" 
+		5 3 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface3|living_room_latest:side_table:polySurfaceShape3.instObjGroups.objectGroups[1]" 
 		"living_room_latestRN.placeHolderList[1159]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface3|living_room_latest:side_table:polySurfaceShape3.instObjGroups.objectGroups[2].objectGrpColor" 
+		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface3|living_room_latest:side_table:polySurfaceShape3.instObjGroups.objectGroups[1].objectGroupId" 
 		"living_room_latestRN.placeHolderList[1160]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface3|living_room_latest:side_table:polySurfaceShape3.instObjGroups.objectGroups[3]" 
+		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface3|living_room_latest:side_table:polySurfaceShape3.instObjGroups.objectGroups[1].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1161]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface3|living_room_latest:side_table:polySurfaceShape3.instObjGroups.objectGroups[3].objectGroupId" 
+		5 3 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface3|living_room_latest:side_table:polySurfaceShape3.instObjGroups.objectGroups[2]" 
 		"living_room_latestRN.placeHolderList[1162]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface3|living_room_latest:side_table:polySurfaceShape3.instObjGroups.objectGroups[3].objectGrpColor" 
+		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface3|living_room_latest:side_table:polySurfaceShape3.instObjGroups.objectGroups[2].objectGroupId" 
 		"living_room_latestRN.placeHolderList[1163]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface4|living_room_latest:side_table:polySurfaceShape4.instObjGroups.objectGroups[0]" 
-		"living_room_latestRN.placeHolderList[1164]" ":initialShadingGroup.dsm"
-		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface4|living_room_latest:side_table:polySurfaceShape4.instObjGroups.objectGroups[0].objectGrpColor" 
+		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface3|living_room_latest:side_table:polySurfaceShape3.instObjGroups.objectGroups[2].objectGrpColor" 
+		"living_room_latestRN.placeHolderList[1164]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface3|living_room_latest:side_table:polySurfaceShape3.instObjGroups.objectGroups[3]" 
 		"living_room_latestRN.placeHolderList[1165]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface4|living_room_latest:side_table:polySurfaceShape4.instObjGroups.objectGroups[1]" 
+		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface3|living_room_latest:side_table:polySurfaceShape3.instObjGroups.objectGroups[3].objectGroupId" 
 		"living_room_latestRN.placeHolderList[1166]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface4|living_room_latest:side_table:polySurfaceShape4.instObjGroups.objectGroups[1].objectGroupId" 
+		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface3|living_room_latest:side_table:polySurfaceShape3.instObjGroups.objectGroups[3].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1167]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface4|living_room_latest:side_table:polySurfaceShape4.instObjGroups.objectGroups[1].objectGrpColor" 
-		"living_room_latestRN.placeHolderList[1168]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface4|living_room_latest:side_table:polySurfaceShape4.instObjGroups.objectGroups[2]" 
+		5 3 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface4|living_room_latest:side_table:polySurfaceShape4.instObjGroups.objectGroups[0]" 
+		"living_room_latestRN.placeHolderList[1168]" ":initialShadingGroup.dsm"
+		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface4|living_room_latest:side_table:polySurfaceShape4.instObjGroups.objectGroups[0].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1169]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface4|living_room_latest:side_table:polySurfaceShape4.instObjGroups.objectGroups[2].objectGroupId" 
+		5 3 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface4|living_room_latest:side_table:polySurfaceShape4.instObjGroups.objectGroups[1]" 
 		"living_room_latestRN.placeHolderList[1170]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface4|living_room_latest:side_table:polySurfaceShape4.instObjGroups.objectGroups[2].objectGrpColor" 
+		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface4|living_room_latest:side_table:polySurfaceShape4.instObjGroups.objectGroups[1].objectGroupId" 
 		"living_room_latestRN.placeHolderList[1171]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface4|living_room_latest:side_table:polySurfaceShape4.instObjGroups.objectGroups[3]" 
+		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface4|living_room_latest:side_table:polySurfaceShape4.instObjGroups.objectGroups[1].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1172]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface4|living_room_latest:side_table:polySurfaceShape4.instObjGroups.objectGroups[3].objectGroupId" 
+		5 3 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface4|living_room_latest:side_table:polySurfaceShape4.instObjGroups.objectGroups[2]" 
 		"living_room_latestRN.placeHolderList[1173]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface4|living_room_latest:side_table:polySurfaceShape4.instObjGroups.objectGroups[3].objectGrpColor" 
+		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface4|living_room_latest:side_table:polySurfaceShape4.instObjGroups.objectGroups[2].objectGroupId" 
 		"living_room_latestRN.placeHolderList[1174]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCubeShape92.instObjGroups.objectGroups[2]" 
+		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface4|living_room_latest:side_table:polySurfaceShape4.instObjGroups.objectGroups[2].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1175]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCubeShape92.instObjGroups.objectGroups[2].objectGroupId" 
+		5 3 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface4|living_room_latest:side_table:polySurfaceShape4.instObjGroups.objectGroups[3]" 
 		"living_room_latestRN.placeHolderList[1176]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCubeShape92.instObjGroups.objectGroups[2].objectGrpColor" 
+		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface4|living_room_latest:side_table:polySurfaceShape4.instObjGroups.objectGroups[3].objectGroupId" 
 		"living_room_latestRN.placeHolderList[1177]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCubeShape92.instObjGroups.objectGroups[3]" 
+		5 4 "living_room_latestRN" "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface4|living_room_latest:side_table:polySurfaceShape4.instObjGroups.objectGroups[3].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1178]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCubeShape92.instObjGroups.objectGroups[3].objectGroupId" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCubeShape92.instObjGroups.objectGroups[2]" 
 		"living_room_latestRN.placeHolderList[1179]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCubeShape92.instObjGroups.objectGroups[3].objectGrpColor" 
+		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCubeShape92.instObjGroups.objectGroups[2].objectGroupId" 
 		"living_room_latestRN.placeHolderList[1180]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCubeShape92.instObjGroups.objectGroups[4]" 
+		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCubeShape92.instObjGroups.objectGroups[2].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1181]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCubeShape92.instObjGroups.objectGroups[4].objectGroupId" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCubeShape92.instObjGroups.objectGroups[3]" 
 		"living_room_latestRN.placeHolderList[1182]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCubeShape92.instObjGroups.objectGroups[4].objectGrpColor" 
+		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCubeShape92.instObjGroups.objectGroups[3].objectGroupId" 
 		"living_room_latestRN.placeHolderList[1183]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCubeShape92.instObjGroups.objectGroups[5]" 
+		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCubeShape92.instObjGroups.objectGroups[3].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1184]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCubeShape92.instObjGroups.objectGroups[5].objectGroupId" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCubeShape92.instObjGroups.objectGroups[4]" 
 		"living_room_latestRN.placeHolderList[1185]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCubeShape92.instObjGroups.objectGroups[5].objectGrpColor" 
+		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCubeShape92.instObjGroups.objectGroups[4].objectGroupId" 
 		"living_room_latestRN.placeHolderList[1186]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCubeShape92.compInstObjGroups.compObjectGroups[1]" 
+		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCubeShape92.instObjGroups.objectGroups[4].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1187]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCubeShape92.compInstObjGroups.compObjectGroups[1].compObjectGroupId" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCubeShape92.instObjGroups.objectGroups[5]" 
 		"living_room_latestRN.placeHolderList[1188]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCylinder2|living_room_latest:pCylinderShape2.instObjGroups" 
-		"living_room_latestRN.placeHolderList[1189]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCylinder2|living_room_latest:pCylinderShape2.instObjGroups.objectGroups[0]" 
+		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCubeShape92.instObjGroups.objectGroups[5].objectGroupId" 
+		"living_room_latestRN.placeHolderList[1189]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCubeShape92.instObjGroups.objectGroups[5].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1190]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCylinder2|living_room_latest:pCylinderShape2.instObjGroups.objectGroups[0].objectGroupId" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCubeShape92.compInstObjGroups.compObjectGroups[1]" 
 		"living_room_latestRN.placeHolderList[1191]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCylinder2|living_room_latest:pCylinderShape2.instObjGroups.objectGroups[0].objectGrpColor" 
+		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCubeShape92.compInstObjGroups.compObjectGroups[1].compObjectGroupId" 
 		"living_room_latestRN.placeHolderList[1192]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCylinder4|living_room_latest:pCylinderShape4.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCylinder2|living_room_latest:pCylinderShape2.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1193]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCylinder4|living_room_latest:pCylinderShape4.instObjGroups.objectGroups[0]" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCylinder2|living_room_latest:pCylinderShape2.instObjGroups.objectGroups[0]" 
 		"living_room_latestRN.placeHolderList[1194]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCylinder4|living_room_latest:pCylinderShape4.instObjGroups.objectGroups[0].objectGroupId" 
+		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCylinder2|living_room_latest:pCylinderShape2.instObjGroups.objectGroups[0].objectGroupId" 
 		"living_room_latestRN.placeHolderList[1195]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCylinder4|living_room_latest:pCylinderShape4.instObjGroups.objectGroups[0].objectGrpColor" 
+		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCylinder2|living_room_latest:pCylinderShape2.instObjGroups.objectGroups[0].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1196]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCube2|living_room_latest:pCubeShape2.instObjGroups.objectGroups[0]" 
-		"living_room_latestRN.placeHolderList[1197]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCube2|living_room_latest:pCubeShape2.instObjGroups.objectGroups[0].objectGroupId" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCylinder4|living_room_latest:pCylinderShape4.instObjGroups" 
+		"living_room_latestRN.placeHolderList[1197]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCylinder4|living_room_latest:pCylinderShape4.instObjGroups.objectGroups[0]" 
 		"living_room_latestRN.placeHolderList[1198]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCube2|living_room_latest:pCubeShape2.instObjGroups.objectGroups[0].objectGrpColor" 
+		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCylinder4|living_room_latest:pCylinderShape4.instObjGroups.objectGroups[0].objectGroupId" 
 		"living_room_latestRN.placeHolderList[1199]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCube2|living_room_latest:pCubeShape2.instObjGroups.objectGroups[1]" 
+		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCylinder4|living_room_latest:pCylinderShape4.instObjGroups.objectGroups[0].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1200]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCube2|living_room_latest:pCubeShape2.instObjGroups.objectGroups[1].objectGroupId" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCube2|living_room_latest:pCubeShape2.instObjGroups.objectGroups[0]" 
 		"living_room_latestRN.placeHolderList[1201]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCube2|living_room_latest:pCubeShape2.instObjGroups.objectGroups[1].objectGrpColor" 
+		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCube2|living_room_latest:pCubeShape2.instObjGroups.objectGroups[0].objectGroupId" 
 		"living_room_latestRN.placeHolderList[1202]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCube2|living_room_latest:pCubeShape2.instObjGroups.objectGroups[2]" 
+		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCube2|living_room_latest:pCubeShape2.instObjGroups.objectGroups[0].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1203]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCube2|living_room_latest:pCubeShape2.instObjGroups.objectGroups[2].objectGroupId" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCube2|living_room_latest:pCubeShape2.instObjGroups.objectGroups[1]" 
 		"living_room_latestRN.placeHolderList[1204]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCube2|living_room_latest:pCubeShape2.instObjGroups.objectGroups[2].objectGrpColor" 
+		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCube2|living_room_latest:pCubeShape2.instObjGroups.objectGroups[1].objectGroupId" 
 		"living_room_latestRN.placeHolderList[1205]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCube2|living_room_latest:pCubeShape2.instObjGroups.objectGroups[3]" 
+		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCube2|living_room_latest:pCubeShape2.instObjGroups.objectGroups[1].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1206]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCube2|living_room_latest:pCubeShape2.instObjGroups.objectGroups[3].objectGroupId" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCube2|living_room_latest:pCubeShape2.instObjGroups.objectGroups[2]" 
 		"living_room_latestRN.placeHolderList[1207]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCube2|living_room_latest:pCubeShape2.instObjGroups.objectGroups[3].objectGrpColor" 
+		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCube2|living_room_latest:pCubeShape2.instObjGroups.objectGroups[2].objectGroupId" 
 		"living_room_latestRN.placeHolderList[1208]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCube2|living_room_latest:pCubeShape2.compInstObjGroups.compObjectGroups[0]" 
+		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCube2|living_room_latest:pCubeShape2.instObjGroups.objectGroups[2].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1209]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCube2|living_room_latest:pCubeShape2.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCube2|living_room_latest:pCubeShape2.instObjGroups.objectGroups[3]" 
 		"living_room_latestRN.placeHolderList[1210]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1.instObjGroups.objectGroups[1]" 
+		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCube2|living_room_latest:pCubeShape2.instObjGroups.objectGroups[3].objectGroupId" 
 		"living_room_latestRN.placeHolderList[1211]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1.instObjGroups.objectGroups[1].objectGroupId" 
+		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCube2|living_room_latest:pCubeShape2.instObjGroups.objectGroups[3].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1212]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1.instObjGroups.objectGroups[1].objectGrpColor" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCube2|living_room_latest:pCubeShape2.compInstObjGroups.compObjectGroups[0]" 
 		"living_room_latestRN.placeHolderList[1213]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1.instObjGroups.objectGroups[2]" 
+		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:pCube2|living_room_latest:pCubeShape2.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
 		"living_room_latestRN.placeHolderList[1214]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1.instObjGroups.objectGroups[2].objectGroupId" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1.instObjGroups.objectGroups[1]" 
 		"living_room_latestRN.placeHolderList[1215]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1.instObjGroups.objectGroups[2].objectGrpColor" 
+		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1.instObjGroups.objectGroups[1].objectGroupId" 
 		"living_room_latestRN.placeHolderList[1216]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1.instObjGroups.objectGroups[3]" 
+		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1.instObjGroups.objectGroups[1].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1217]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1.instObjGroups.objectGroups[3].objectGroupId" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1.instObjGroups.objectGroups[2]" 
 		"living_room_latestRN.placeHolderList[1218]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1.instObjGroups.objectGroups[3].objectGrpColor" 
+		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1.instObjGroups.objectGroups[2].objectGroupId" 
 		"living_room_latestRN.placeHolderList[1219]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1.instObjGroups.objectGroups[4]" 
+		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1.instObjGroups.objectGroups[2].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1220]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1.instObjGroups.objectGroups[4].objectGroupId" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1.instObjGroups.objectGroups[3]" 
 		"living_room_latestRN.placeHolderList[1221]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1.instObjGroups.objectGroups[4].objectGrpColor" 
+		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1.instObjGroups.objectGroups[3].objectGroupId" 
 		"living_room_latestRN.placeHolderList[1222]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1.compInstObjGroups.compObjectGroups[0]" 
+		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1.instObjGroups.objectGroups[3].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1223]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1.instObjGroups.objectGroups[4]" 
 		"living_room_latestRN.placeHolderList[1224]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface2|living_room_latest:polySurfaceShape2.instObjGroups.objectGroups[1]" 
+		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1.instObjGroups.objectGroups[4].objectGroupId" 
 		"living_room_latestRN.placeHolderList[1225]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface2|living_room_latest:polySurfaceShape2.instObjGroups.objectGroups[1].objectGroupId" 
+		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1.instObjGroups.objectGroups[4].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1226]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface2|living_room_latest:polySurfaceShape2.instObjGroups.objectGroups[1].objectGrpColor" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1.compInstObjGroups.compObjectGroups[0]" 
 		"living_room_latestRN.placeHolderList[1227]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface2|living_room_latest:polySurfaceShape2.instObjGroups.objectGroups[2]" 
+		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
 		"living_room_latestRN.placeHolderList[1228]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface2|living_room_latest:polySurfaceShape2.instObjGroups.objectGroups[2].objectGroupId" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface2|living_room_latest:polySurfaceShape2.instObjGroups.objectGroups[1]" 
 		"living_room_latestRN.placeHolderList[1229]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface2|living_room_latest:polySurfaceShape2.instObjGroups.objectGroups[2].objectGrpColor" 
+		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface2|living_room_latest:polySurfaceShape2.instObjGroups.objectGroups[1].objectGroupId" 
 		"living_room_latestRN.placeHolderList[1230]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface2|living_room_latest:polySurfaceShape2.instObjGroups.objectGroups[3]" 
+		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface2|living_room_latest:polySurfaceShape2.instObjGroups.objectGroups[1].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1231]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface2|living_room_latest:polySurfaceShape2.instObjGroups.objectGroups[3].objectGroupId" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface2|living_room_latest:polySurfaceShape2.instObjGroups.objectGroups[2]" 
 		"living_room_latestRN.placeHolderList[1232]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface2|living_room_latest:polySurfaceShape2.instObjGroups.objectGroups[3].objectGrpColor" 
+		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface2|living_room_latest:polySurfaceShape2.instObjGroups.objectGroups[2].objectGroupId" 
 		"living_room_latestRN.placeHolderList[1233]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface2|living_room_latest:polySurfaceShape2.compInstObjGroups.compObjectGroups[0]" 
+		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface2|living_room_latest:polySurfaceShape2.instObjGroups.objectGroups[2].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1234]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface2|living_room_latest:polySurfaceShape2.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface2|living_room_latest:polySurfaceShape2.instObjGroups.objectGroups[3]" 
 		"living_room_latestRN.placeHolderList[1235]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface3|living_room_latest:polySurfaceShape3.instObjGroups.objectGroups[0]" 
-		"living_room_latestRN.placeHolderList[1236]" ":initialShadingGroup.dsm"
-		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface3|living_room_latest:polySurfaceShape3.instObjGroups.objectGroups[0].objectGrpColor" 
+		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface2|living_room_latest:polySurfaceShape2.instObjGroups.objectGroups[3].objectGroupId" 
+		"living_room_latestRN.placeHolderList[1236]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface2|living_room_latest:polySurfaceShape2.instObjGroups.objectGroups[3].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1237]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface3|living_room_latest:polySurfaceShape3.instObjGroups.objectGroups[1]" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface2|living_room_latest:polySurfaceShape2.compInstObjGroups.compObjectGroups[0]" 
 		"living_room_latestRN.placeHolderList[1238]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface3|living_room_latest:polySurfaceShape3.instObjGroups.objectGroups[1].objectGroupId" 
+		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface2|living_room_latest:polySurfaceShape2.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
 		"living_room_latestRN.placeHolderList[1239]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface3|living_room_latest:polySurfaceShape3.instObjGroups.objectGroups[1].objectGrpColor" 
-		"living_room_latestRN.placeHolderList[1240]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface3|living_room_latest:polySurfaceShape3.instObjGroups.objectGroups[2]" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface3|living_room_latest:polySurfaceShape3.instObjGroups.objectGroups[0]" 
+		"living_room_latestRN.placeHolderList[1240]" ":initialShadingGroup.dsm"
+		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface3|living_room_latest:polySurfaceShape3.instObjGroups.objectGroups[0].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1241]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface3|living_room_latest:polySurfaceShape3.instObjGroups.objectGroups[2].objectGroupId" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface3|living_room_latest:polySurfaceShape3.instObjGroups.objectGroups[1]" 
 		"living_room_latestRN.placeHolderList[1242]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface3|living_room_latest:polySurfaceShape3.instObjGroups.objectGroups[2].objectGrpColor" 
+		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface3|living_room_latest:polySurfaceShape3.instObjGroups.objectGroups[1].objectGroupId" 
 		"living_room_latestRN.placeHolderList[1243]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface3|living_room_latest:polySurfaceShape3.instObjGroups.objectGroups[3]" 
+		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface3|living_room_latest:polySurfaceShape3.instObjGroups.objectGroups[1].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1244]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface3|living_room_latest:polySurfaceShape3.instObjGroups.objectGroups[3].objectGroupId" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface3|living_room_latest:polySurfaceShape3.instObjGroups.objectGroups[2]" 
 		"living_room_latestRN.placeHolderList[1245]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface3|living_room_latest:polySurfaceShape3.instObjGroups.objectGroups[3].objectGrpColor" 
+		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface3|living_room_latest:polySurfaceShape3.instObjGroups.objectGroups[2].objectGroupId" 
 		"living_room_latestRN.placeHolderList[1246]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface3|living_room_latest:polySurfaceShape3.instObjGroups.objectGroups[4]" 
+		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface3|living_room_latest:polySurfaceShape3.instObjGroups.objectGroups[2].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1247]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface3|living_room_latest:polySurfaceShape3.instObjGroups.objectGroups[4].objectGroupId" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface3|living_room_latest:polySurfaceShape3.instObjGroups.objectGroups[3]" 
 		"living_room_latestRN.placeHolderList[1248]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface3|living_room_latest:polySurfaceShape3.instObjGroups.objectGroups[4].objectGrpColor" 
+		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface3|living_room_latest:polySurfaceShape3.instObjGroups.objectGroups[3].objectGroupId" 
 		"living_room_latestRN.placeHolderList[1249]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface4|living_room_latest:polySurfaceShape4.instObjGroups.objectGroups[0]" 
-		"living_room_latestRN.placeHolderList[1250]" ":initialShadingGroup.dsm"
-		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface4|living_room_latest:polySurfaceShape4.instObjGroups.objectGroups[0].objectGrpColor" 
+		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface3|living_room_latest:polySurfaceShape3.instObjGroups.objectGroups[3].objectGrpColor" 
+		"living_room_latestRN.placeHolderList[1250]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface3|living_room_latest:polySurfaceShape3.instObjGroups.objectGroups[4]" 
 		"living_room_latestRN.placeHolderList[1251]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface4|living_room_latest:polySurfaceShape4.instObjGroups.objectGroups[1]" 
+		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface3|living_room_latest:polySurfaceShape3.instObjGroups.objectGroups[4].objectGroupId" 
 		"living_room_latestRN.placeHolderList[1252]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface4|living_room_latest:polySurfaceShape4.instObjGroups.objectGroups[1].objectGroupId" 
+		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface3|living_room_latest:polySurfaceShape3.instObjGroups.objectGroups[4].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1253]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface4|living_room_latest:polySurfaceShape4.instObjGroups.objectGroups[0]" 
+		"living_room_latestRN.placeHolderList[1254]" ":initialShadingGroup.dsm"
+		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface4|living_room_latest:polySurfaceShape4.instObjGroups.objectGroups[0].objectGrpColor" 
+		"living_room_latestRN.placeHolderList[1255]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface4|living_room_latest:polySurfaceShape4.instObjGroups.objectGroups[1]" 
+		"living_room_latestRN.placeHolderList[1256]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface4|living_room_latest:polySurfaceShape4.instObjGroups.objectGroups[1].objectGroupId" 
+		"living_room_latestRN.placeHolderList[1257]" ""
 		5 4 "living_room_latestRN" "|living_room_latest:pCube92|living_room_latest:polySurface4|living_room_latest:polySurfaceShape4.instObjGroups.objectGroups[1].objectGrpColor" 
-		"living_room_latestRN.placeHolderList[1254]" ""
+		"living_room_latestRN.placeHolderList[1258]" ""
 		5 3 "living_room_latestRN" "|living_room_latest:pPipe2|living_room_latest:pPipeShape2.instObjGroups" 
-		"living_room_latestRN.placeHolderList[1255]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:tissue_box1|living_room_latest:tissue_box1Shape.instObjGroups" 
-		"living_room_latestRN.placeHolderList[1256]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:tissue_box1|living_room_latest:tissue|living_room_latest:tissueShape.instObjGroups" 
-		"living_room_latestRN.placeHolderList[1257]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:vase_flowers:pCylinder8|living_room_latest:vase_flowers:pCylinderShape8.instObjGroups" 
-		"living_room_latestRN.placeHolderList[1258]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:bedroom_trashcan|living_room_latest:bedroom_updated_layout:bedroom_trashcanShape.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1259]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:bedroom_trashbag|living_room_latest:bedroom_updated_layout:bedroom_trashbagShape.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:tissue_box1|living_room_latest:tissue_box1Shape.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1260]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:soccer_ball|living_room_latest:bedroom_updated_layout:soccer_ballShape.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:tissue_box1|living_room_latest:tissue|living_room_latest:tissueShape.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1261]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:poster_1|living_room_latest:bedroom_updated_layout:poster_Shape1.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:vase_flowers:pCylinder8|living_room_latest:vase_flowers:pCylinderShape8.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1262]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:bedroom_trashcan|living_room_latest:bedroom_updated_layout:bedroom_trashcanShape.instObjGroups" 
+		"living_room_latestRN.placeHolderList[1263]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:bedroom_trashbag|living_room_latest:bedroom_updated_layout:bedroom_trashbagShape.instObjGroups" 
+		"living_room_latestRN.placeHolderList[1264]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:soccer_ball|living_room_latest:bedroom_updated_layout:soccer_ballShape.instObjGroups" 
+		"living_room_latestRN.placeHolderList[1265]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:poster_1|living_room_latest:bedroom_updated_layout:poster_Shape1.instObjGroups" 
+		"living_room_latestRN.placeHolderList[1266]" ":initialShadingGroup.dsm"
 		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface43|living_room_latest:bedroom_updated_layout:polySurfaceShape338.instObjGroups" 
-		"living_room_latestRN.placeHolderList[1263]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface44|living_room_latest:bedroom_updated_layout:polySurfaceShape339.instObjGroups" 
-		"living_room_latestRN.placeHolderList[1264]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface47|living_room_latest:bedroom_updated_layout:polySurfaceShape342.instObjGroups" 
-		"living_room_latestRN.placeHolderList[1265]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface48|living_room_latest:bedroom_updated_layout:polySurfaceShape343.instObjGroups" 
-		"living_room_latestRN.placeHolderList[1266]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface49|living_room_latest:bedroom_updated_layout:polySurfaceShape344.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1267]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface50|living_room_latest:bedroom_updated_layout:polySurfaceShape345.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface44|living_room_latest:bedroom_updated_layout:polySurfaceShape339.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1268]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface51|living_room_latest:bedroom_updated_layout:polySurfaceShape346.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface47|living_room_latest:bedroom_updated_layout:polySurfaceShape342.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1269]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface52|living_room_latest:bedroom_updated_layout:polySurfaceShape347.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface48|living_room_latest:bedroom_updated_layout:polySurfaceShape343.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1270]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface53|living_room_latest:bedroom_updated_layout:polySurfaceShape348.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface49|living_room_latest:bedroom_updated_layout:polySurfaceShape344.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1271]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface54|living_room_latest:bedroom_updated_layout:polySurfaceShape349.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface50|living_room_latest:bedroom_updated_layout:polySurfaceShape345.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1272]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface55|living_room_latest:bedroom_updated_layout:polySurfaceShape350.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface51|living_room_latest:bedroom_updated_layout:polySurfaceShape346.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1273]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface56|living_room_latest:bedroom_updated_layout:polySurfaceShape351.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface52|living_room_latest:bedroom_updated_layout:polySurfaceShape347.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1274]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface57|living_room_latest:bedroom_updated_layout:polySurfaceShape352.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface53|living_room_latest:bedroom_updated_layout:polySurfaceShape348.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1275]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface58|living_room_latest:bedroom_updated_layout:polySurfaceShape353.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface54|living_room_latest:bedroom_updated_layout:polySurfaceShape349.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1276]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface59|living_room_latest:bedroom_updated_layout:polySurfaceShape354.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface55|living_room_latest:bedroom_updated_layout:polySurfaceShape350.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1277]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface60|living_room_latest:bedroom_updated_layout:polySurfaceShape355.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface56|living_room_latest:bedroom_updated_layout:polySurfaceShape351.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1278]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface66|living_room_latest:bedroom_updated_layout:polySurfaceShape361.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface57|living_room_latest:bedroom_updated_layout:polySurfaceShape352.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1279]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface67|living_room_latest:bedroom_updated_layout:polySurfaceShape362.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface58|living_room_latest:bedroom_updated_layout:polySurfaceShape353.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1280]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface75|living_room_latest:bedroom_updated_layout:polySurfaceShape75.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface59|living_room_latest:bedroom_updated_layout:polySurfaceShape354.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1281]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface76|living_room_latest:bedroom_updated_layout:polySurfaceShape76.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface60|living_room_latest:bedroom_updated_layout:polySurfaceShape355.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1282]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:polySurface44|living_room_latest:polySurfaceShape44.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface66|living_room_latest:bedroom_updated_layout:polySurfaceShape361.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1283]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:polySurface45|living_room_latest:polySurfaceShape45.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface67|living_room_latest:bedroom_updated_layout:polySurfaceShape362.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1284]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface15|living_room_latest:bedroom_updated_layout:polySurface18|living_room_latest:bedroom_updated_layout:polySurfaceShape314.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface75|living_room_latest:bedroom_updated_layout:polySurfaceShape75.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1285]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface15|living_room_latest:bedroom_updated_layout:polySurface19|living_room_latest:bedroom_updated_layout:polySurfaceShape315.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:bedroom_updated_layout:polySurface76|living_room_latest:bedroom_updated_layout:polySurfaceShape76.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1286]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface15|living_room_latest:bedroom_updated_layout:polySurface20|living_room_latest:bedroom_updated_layout:polySurfaceShape316.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:polySurface44|living_room_latest:polySurfaceShape44.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1287]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface16|living_room_latest:bedroom_updated_layout:polySurfaceShape312.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface14|living_room_latest:polySurface45|living_room_latest:polySurfaceShape45.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1288]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface28|living_room_latest:bedroom_updated_layout:polySurfaceShape324.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface15|living_room_latest:bedroom_updated_layout:polySurface18|living_room_latest:bedroom_updated_layout:polySurfaceShape314.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1289]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface40|living_room_latest:bedroom_updated_layout:polySurfaceShape336.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface15|living_room_latest:bedroom_updated_layout:polySurface19|living_room_latest:bedroom_updated_layout:polySurfaceShape315.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1290]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface41|living_room_latest:bedroom_updated_layout:polySurfaceShape41.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface15|living_room_latest:bedroom_updated_layout:polySurface20|living_room_latest:bedroom_updated_layout:polySurfaceShape316.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1291]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface74|living_room_latest:bedroom_updated_layout:polySurfaceShape363.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface16|living_room_latest:bedroom_updated_layout:polySurfaceShape312.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1292]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface77|living_room_latest:bedroom_updated_layout:polySurfaceShape77.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface28|living_room_latest:bedroom_updated_layout:polySurfaceShape324.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1293]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface78|living_room_latest:bedroom_updated_layout:polySurfaceShape364.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface40|living_room_latest:bedroom_updated_layout:polySurfaceShape336.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1294]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:polySurface41|living_room_latest:polySurfaceShape41.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface41|living_room_latest:bedroom_updated_layout:polySurfaceShape41.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1295]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:pCylinder100|living_room_latest:pCylinderShape100.instObjGroups" 
-		"living_room_latestRN.placeHolderList[1296]" ":initialShadingGroup.dsm"
-		5 4 "living_room_latestRN" "|living_room_latest:coffee_table1.translateX" 
+		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface74|living_room_latest:bedroom_updated_layout:polySurfaceShape363.instObjGroups" 
+		"living_room_latestRN.placeHolderList[1296]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface77|living_room_latest:bedroom_updated_layout:polySurfaceShape77.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1297]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:coffee_table1.translateY" 
+		5 3 "living_room_latestRN" "|living_room_latest:bedroom_updated_layout:polySurface78|living_room_latest:bedroom_updated_layout:polySurfaceShape364.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1298]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:coffee_table1.translateZ" 
+		5 3 "living_room_latestRN" "|living_room_latest:polySurface41|living_room_latest:polySurfaceShape41.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1299]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:coffee_table1|living_room_latest:coffee_table1Shape.instObjGroups" 
-		"living_room_latestRN.placeHolderList[1300]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape242.instObjGroups.objectGroups[1]" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCylinder100|living_room_latest:pCylinderShape100.instObjGroups" 
+		"living_room_latestRN.placeHolderList[1300]" ":initialShadingGroup.dsm"
+		5 4 "living_room_latestRN" "|living_room_latest:coffee_table1.translateX" 
 		"living_room_latestRN.placeHolderList[1301]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape242.instObjGroups.objectGroups[1].objectGroupId" 
+		5 4 "living_room_latestRN" "|living_room_latest:coffee_table1.translateY" 
 		"living_room_latestRN.placeHolderList[1302]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape242.instObjGroups.objectGroups[1].objectGrpColor" 
+		5 4 "living_room_latestRN" "|living_room_latest:coffee_table1.translateZ" 
 		"living_room_latestRN.placeHolderList[1303]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape242.instObjGroups.objectGroups[2]" 
+		5 3 "living_room_latestRN" "|living_room_latest:coffee_table1|living_room_latest:coffee_table1Shape.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1304]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape242.instObjGroups.objectGroups[2].objectGroupId" 
+		5 3 "living_room_latestRN" "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape242.instObjGroups.objectGroups[1]" 
 		"living_room_latestRN.placeHolderList[1305]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape242.instObjGroups.objectGroups[2].objectGrpColor" 
+		5 4 "living_room_latestRN" "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape242.instObjGroups.objectGroups[1].objectGroupId" 
 		"living_room_latestRN.placeHolderList[1306]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape242.compInstObjGroups.compObjectGroups[0]" 
+		5 4 "living_room_latestRN" "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape242.instObjGroups.objectGroups[1].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1307]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape242.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		5 3 "living_room_latestRN" "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape242.instObjGroups.objectGroups[2]" 
 		"living_room_latestRN.placeHolderList[1308]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape242.instObjGroups.objectGroups[2].objectGroupId" 
+		"living_room_latestRN.placeHolderList[1309]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape242.instObjGroups.objectGroups[2].objectGrpColor" 
+		"living_room_latestRN.placeHolderList[1310]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape242.compInstObjGroups.compObjectGroups[0]" 
+		"living_room_latestRN.placeHolderList[1311]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape242.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"living_room_latestRN.placeHolderList[1312]" ""
 		5 3 "living_room_latestRN" "|living_room_latest:pCube248|living_room_latest:pCubeShape276.instObjGroups" 
-		"living_room_latestRN.placeHolderList[1309]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:kitchen_lights:pSphere1|living_room_latest:kitchen_lights:pSphereShape1.instObjGroups" 
-		"living_room_latestRN.placeHolderList[1310]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:kitchen_lights:pSphere2|living_room_latest:kitchen_lights:pSphereShape2.instObjGroups" 
-		"living_room_latestRN.placeHolderList[1311]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:kitchen_lights:pSphere3|living_room_latest:kitchen_lights:pSphereShape3.instObjGroups" 
-		"living_room_latestRN.placeHolderList[1312]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:kitchen_lights:pSphere4|living_room_latest:kitchen_lights:pSphereShape4.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1313]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:kitchen_lights:pSphere5|living_room_latest:kitchen_lights:pSphereShape5.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:kitchen_lights:pSphere1|living_room_latest:kitchen_lights:pSphereShape1.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1314]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:kitchen_lights:pSphere6|living_room_latest:kitchen_lights:pSphereShape6.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:kitchen_lights:pSphere2|living_room_latest:kitchen_lights:pSphereShape2.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1315]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:kitchen_lights:pSphere7|living_room_latest:kitchen_lights:pSphereShape7.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:kitchen_lights:pSphere3|living_room_latest:kitchen_lights:pSphereShape3.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1316]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:kitchen_lights:pSphere8|living_room_latest:kitchen_lights:pSphereShape8.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:kitchen_lights:pSphere4|living_room_latest:kitchen_lights:pSphereShape4.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1317]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:kitchen_lights:pSphere9|living_room_latest:kitchen_lights:pSphereShape9.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:kitchen_lights:pSphere5|living_room_latest:kitchen_lights:pSphereShape5.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1318]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:kitchen_lights:pSphere10|living_room_latest:kitchen_lights:pSphereShape10.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:kitchen_lights:pSphere6|living_room_latest:kitchen_lights:pSphereShape6.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1319]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCubeShape223.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:kitchen_lights:pSphere7|living_room_latest:kitchen_lights:pSphereShape7.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1320]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube213|living_room_latest:barstool_latest:pCubeShape213.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:kitchen_lights:pSphere8|living_room_latest:kitchen_lights:pSphereShape8.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1321]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube214|living_room_latest:barstool_latest:pCubeShape214.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:kitchen_lights:pSphere9|living_room_latest:kitchen_lights:pSphereShape9.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1322]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube215|living_room_latest:barstool_latest:pCubeShape215.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:kitchen_lights:pSphere10|living_room_latest:kitchen_lights:pSphereShape10.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1323]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube216|living_room_latest:barstool_latest:pCubeShape216.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCubeShape223.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1324]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube217|living_room_latest:barstool_latest:pCubeShape217.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube213|living_room_latest:barstool_latest:pCubeShape213.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1325]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube218|living_room_latest:barstool_latest:pCubeShape218.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube214|living_room_latest:barstool_latest:pCubeShape214.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1326]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube219|living_room_latest:barstool_latest:pCubeShape219.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube215|living_room_latest:barstool_latest:pCubeShape215.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1327]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube220|living_room_latest:barstool_latest:pCubeShape220.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube216|living_room_latest:barstool_latest:pCubeShape216.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1328]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube221|living_room_latest:barstool_latest:pCubeShape221.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube217|living_room_latest:barstool_latest:pCubeShape217.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1329]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube222|living_room_latest:barstool_latest:pCubeShape222.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube218|living_room_latest:barstool_latest:pCubeShape218.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1330]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pTorus4|living_room_latest:barstool_latest:pTorusShape4.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube219|living_room_latest:barstool_latest:pCubeShape219.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1331]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube224|living_room_latest:barstool_latest:pCubeShape224.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube220|living_room_latest:barstool_latest:pCubeShape220.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1332]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube225|living_room_latest:barstool_latest:pCubeShape225.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube221|living_room_latest:barstool_latest:pCubeShape221.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1333]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube226|living_room_latest:barstool_latest:pCubeShape226.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube222|living_room_latest:barstool_latest:pCubeShape222.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1334]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube227|living_room_latest:barstool_latest:pCubeShape227.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pTorus4|living_room_latest:barstool_latest:pTorusShape4.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1335]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube228|living_room_latest:barstool_latest:pCubeShape228.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube224|living_room_latest:barstool_latest:pCubeShape224.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1336]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube229|living_room_latest:barstool_latest:pCubeShape229.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube225|living_room_latest:barstool_latest:pCubeShape225.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1337]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube223|living_room_latest:pCubeShape223.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube226|living_room_latest:barstool_latest:pCubeShape226.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1338]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube223|living_room_latest:pCube213|living_room_latest:pCubeShape213.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube227|living_room_latest:barstool_latest:pCubeShape227.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1339]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube223|living_room_latest:pCube214|living_room_latest:pCubeShape214.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube228|living_room_latest:barstool_latest:pCubeShape228.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1340]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube223|living_room_latest:pCube215|living_room_latest:pCubeShape215.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:barstool_latest:pCube223|living_room_latest:barstool_latest:pCube229|living_room_latest:barstool_latest:pCubeShape229.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1341]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube223|living_room_latest:pCube216|living_room_latest:pCubeShape216.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube223|living_room_latest:pCubeShape223.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1342]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube223|living_room_latest:pCube217|living_room_latest:pCubeShape217.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube223|living_room_latest:pCube213|living_room_latest:pCubeShape213.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1343]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube223|living_room_latest:pCube218|living_room_latest:pCubeShape218.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube223|living_room_latest:pCube214|living_room_latest:pCubeShape214.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1344]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube223|living_room_latest:pCube219|living_room_latest:pCubeShape219.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube223|living_room_latest:pCube215|living_room_latest:pCubeShape215.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1345]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube223|living_room_latest:pCube220|living_room_latest:pCubeShape220.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube223|living_room_latest:pCube216|living_room_latest:pCubeShape216.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1346]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube223|living_room_latest:pCube221|living_room_latest:pCubeShape221.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube223|living_room_latest:pCube217|living_room_latest:pCubeShape217.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1347]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube223|living_room_latest:pCube222|living_room_latest:pCubeShape222.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube223|living_room_latest:pCube218|living_room_latest:pCubeShape218.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1348]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube223|living_room_latest:pTorus4|living_room_latest:pTorusShape4.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube223|living_room_latest:pCube219|living_room_latest:pCubeShape219.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1349]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube223|living_room_latest:pCube224|living_room_latest:pCubeShape224.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube223|living_room_latest:pCube220|living_room_latest:pCubeShape220.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1350]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube223|living_room_latest:pCube225|living_room_latest:pCubeShape225.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube223|living_room_latest:pCube221|living_room_latest:pCubeShape221.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1351]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube223|living_room_latest:pCube226|living_room_latest:pCubeShape226.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube223|living_room_latest:pCube222|living_room_latest:pCubeShape222.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1352]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube223|living_room_latest:pCube227|living_room_latest:pCubeShape227.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube223|living_room_latest:pTorus4|living_room_latest:pTorusShape4.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1353]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube223|living_room_latest:pCube228|living_room_latest:pCubeShape228.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube223|living_room_latest:pCube224|living_room_latest:pCubeShape224.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1354]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube223|living_room_latest:pCube229|living_room_latest:pCubeShape229.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube223|living_room_latest:pCube225|living_room_latest:pCubeShape225.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1355]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube250|living_room_latest:pCubeShape250.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube223|living_room_latest:pCube226|living_room_latest:pCubeShape226.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1356]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube250|living_room_latest:pCube213|living_room_latest:pCubeShape213.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube223|living_room_latest:pCube227|living_room_latest:pCubeShape227.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1357]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube250|living_room_latest:pCube214|living_room_latest:pCubeShape214.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube223|living_room_latest:pCube228|living_room_latest:pCubeShape228.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1358]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube250|living_room_latest:pCube215|living_room_latest:pCubeShape215.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube223|living_room_latest:pCube229|living_room_latest:pCubeShape229.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1359]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube250|living_room_latest:pCube216|living_room_latest:pCubeShape216.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube250|living_room_latest:pCubeShape250.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1360]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube250|living_room_latest:pCube217|living_room_latest:pCubeShape217.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube250|living_room_latest:pCube213|living_room_latest:pCubeShape213.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1361]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube250|living_room_latest:pCube218|living_room_latest:pCubeShape218.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube250|living_room_latest:pCube214|living_room_latest:pCubeShape214.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1362]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube250|living_room_latest:pCube219|living_room_latest:pCubeShape219.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube250|living_room_latest:pCube215|living_room_latest:pCubeShape215.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1363]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube250|living_room_latest:pCube220|living_room_latest:pCubeShape220.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube250|living_room_latest:pCube216|living_room_latest:pCubeShape216.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1364]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube250|living_room_latest:pCube221|living_room_latest:pCubeShape221.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube250|living_room_latest:pCube217|living_room_latest:pCubeShape217.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1365]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube250|living_room_latest:pCube222|living_room_latest:pCubeShape222.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube250|living_room_latest:pCube218|living_room_latest:pCubeShape218.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1366]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube250|living_room_latest:pTorus4|living_room_latest:pTorusShape4.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube250|living_room_latest:pCube219|living_room_latest:pCubeShape219.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1367]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube250|living_room_latest:pCube224|living_room_latest:pCubeShape224.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube250|living_room_latest:pCube220|living_room_latest:pCubeShape220.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1368]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube250|living_room_latest:pCube225|living_room_latest:pCubeShape225.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube250|living_room_latest:pCube221|living_room_latest:pCubeShape221.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1369]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube250|living_room_latest:pCube226|living_room_latest:pCubeShape226.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube250|living_room_latest:pCube222|living_room_latest:pCubeShape222.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1370]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube250|living_room_latest:pCube227|living_room_latest:pCubeShape227.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube250|living_room_latest:pTorus4|living_room_latest:pTorusShape4.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1371]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube250|living_room_latest:pCube228|living_room_latest:pCubeShape228.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube250|living_room_latest:pCube224|living_room_latest:pCubeShape224.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1372]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:pCube250|living_room_latest:pCube229|living_room_latest:pCubeShape229.instObjGroups" 
+		5 3 "living_room_latestRN" "|living_room_latest:pCube250|living_room_latest:pCube225|living_room_latest:pCubeShape225.instObjGroups" 
 		"living_room_latestRN.placeHolderList[1373]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:pCube250|living_room_latest:pCube226|living_room_latest:pCubeShape226.instObjGroups" 
+		"living_room_latestRN.placeHolderList[1374]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:pCube250|living_room_latest:pCube227|living_room_latest:pCubeShape227.instObjGroups" 
+		"living_room_latestRN.placeHolderList[1375]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:pCube250|living_room_latest:pCube228|living_room_latest:pCubeShape228.instObjGroups" 
+		"living_room_latestRN.placeHolderList[1376]" ":initialShadingGroup.dsm"
+		5 3 "living_room_latestRN" "|living_room_latest:pCube250|living_room_latest:pCube229|living_room_latest:pCubeShape229.instObjGroups" 
+		"living_room_latestRN.placeHolderList[1377]" ":initialShadingGroup.dsm"
 		5 3 "living_room_latestRN" "|living_room_latest:resurrected_staircaseRNfosterParent2|living_room_latest:pCubeShape246.instObjGroups.objectGroups[1]" 
-		"living_room_latestRN.placeHolderList[1374]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:resurrected_staircaseRNfosterParent2|living_room_latest:pCubeShape246.instObjGroups.objectGroups[1].objectGroupId" 
-		"living_room_latestRN.placeHolderList[1375]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:resurrected_staircaseRNfosterParent2|living_room_latest:pCubeShape246.instObjGroups.objectGroups[1].objectGrpColor" 
-		"living_room_latestRN.placeHolderList[1376]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:resurrected_staircaseRNfosterParent2|living_room_latest:pCubeShape246.instObjGroups.objectGroups[2]" 
-		"living_room_latestRN.placeHolderList[1377]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:resurrected_staircaseRNfosterParent2|living_room_latest:pCubeShape246.instObjGroups.objectGroups[2].objectGroupId" 
 		"living_room_latestRN.placeHolderList[1378]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:resurrected_staircaseRNfosterParent2|living_room_latest:pCubeShape246.instObjGroups.objectGroups[2].objectGrpColor" 
+		5 4 "living_room_latestRN" "|living_room_latest:resurrected_staircaseRNfosterParent2|living_room_latest:pCubeShape246.instObjGroups.objectGroups[1].objectGroupId" 
 		"living_room_latestRN.placeHolderList[1379]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:resurrected_staircaseRNfosterParent2|living_room_latest:pCubeShape246.compInstObjGroups.compObjectGroups[0]" 
+		5 4 "living_room_latestRN" "|living_room_latest:resurrected_staircaseRNfosterParent2|living_room_latest:pCubeShape246.instObjGroups.objectGroups[1].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1380]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:resurrected_staircaseRNfosterParent2|living_room_latest:pCubeShape246.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		5 3 "living_room_latestRN" "|living_room_latest:resurrected_staircaseRNfosterParent2|living_room_latest:pCubeShape246.instObjGroups.objectGroups[2]" 
 		"living_room_latestRN.placeHolderList[1381]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:resurrected_staircaseRNfosterParent2|living_room_latest:pCubeShape245.instObjGroups.objectGroups[1]" 
+		5 4 "living_room_latestRN" "|living_room_latest:resurrected_staircaseRNfosterParent2|living_room_latest:pCubeShape246.instObjGroups.objectGroups[2].objectGroupId" 
 		"living_room_latestRN.placeHolderList[1382]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:resurrected_staircaseRNfosterParent2|living_room_latest:pCubeShape245.instObjGroups.objectGroups[1].objectGroupId" 
+		5 4 "living_room_latestRN" "|living_room_latest:resurrected_staircaseRNfosterParent2|living_room_latest:pCubeShape246.instObjGroups.objectGroups[2].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1383]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:resurrected_staircaseRNfosterParent2|living_room_latest:pCubeShape245.instObjGroups.objectGroups[1].objectGrpColor" 
+		5 3 "living_room_latestRN" "|living_room_latest:resurrected_staircaseRNfosterParent2|living_room_latest:pCubeShape246.compInstObjGroups.compObjectGroups[0]" 
 		"living_room_latestRN.placeHolderList[1384]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:resurrected_staircaseRNfosterParent2|living_room_latest:pCubeShape245.instObjGroups.objectGroups[2]" 
+		5 4 "living_room_latestRN" "|living_room_latest:resurrected_staircaseRNfosterParent2|living_room_latest:pCubeShape246.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
 		"living_room_latestRN.placeHolderList[1385]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:resurrected_staircaseRNfosterParent2|living_room_latest:pCubeShape245.instObjGroups.objectGroups[2].objectGroupId" 
+		5 3 "living_room_latestRN" "|living_room_latest:resurrected_staircaseRNfosterParent2|living_room_latest:pCubeShape245.instObjGroups.objectGroups[1]" 
 		"living_room_latestRN.placeHolderList[1386]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:resurrected_staircaseRNfosterParent2|living_room_latest:pCubeShape245.instObjGroups.objectGroups[2].objectGrpColor" 
+		5 4 "living_room_latestRN" "|living_room_latest:resurrected_staircaseRNfosterParent2|living_room_latest:pCubeShape245.instObjGroups.objectGroups[1].objectGroupId" 
 		"living_room_latestRN.placeHolderList[1387]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:resurrected_staircaseRNfosterParent2|living_room_latest:pCubeShape245.compInstObjGroups.compObjectGroups[0]" 
+		5 4 "living_room_latestRN" "|living_room_latest:resurrected_staircaseRNfosterParent2|living_room_latest:pCubeShape245.instObjGroups.objectGroups[1].objectGrpColor" 
 		"living_room_latestRN.placeHolderList[1388]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:resurrected_staircaseRNfosterParent2|living_room_latest:pCubeShape245.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		5 3 "living_room_latestRN" "|living_room_latest:resurrected_staircaseRNfosterParent2|living_room_latest:pCubeShape245.instObjGroups.objectGroups[2]" 
 		"living_room_latestRN.placeHolderList[1389]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:resurrected_staircaseRNfosterParent2|living_room_latest:pCubeShape245.instObjGroups.objectGroups[2].objectGroupId" 
+		"living_room_latestRN.placeHolderList[1390]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:resurrected_staircaseRNfosterParent2|living_room_latest:pCubeShape245.instObjGroups.objectGroups[2].objectGrpColor" 
+		"living_room_latestRN.placeHolderList[1391]" ""
+		5 3 "living_room_latestRN" "|living_room_latest:resurrected_staircaseRNfosterParent2|living_room_latest:pCubeShape245.compInstObjGroups.compObjectGroups[0]" 
+		"living_room_latestRN.placeHolderList[1392]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:resurrected_staircaseRNfosterParent2|living_room_latest:pCubeShape245.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"living_room_latestRN.placeHolderList[1393]" ""
 		5 3 "living_room_latestRN" "living_room_latest:transformGeometry13.outputGeometry" 
-		"living_room_latestRN.placeHolderList[1390]" "living_room_latest:taller_window_four_squares_latest:polySurfaceShape8.i"
+		"living_room_latestRN.placeHolderList[1394]" "living_room_latest:taller_window_four_squares_latest:polySurfaceShape8.i"
 		
 		5 3 "living_room_latestRN" "living_room_latest:transformGeometry15.outputGeometry" 
-		"living_room_latestRN.placeHolderList[1391]" "living_room_latest:taller_window_four_squares_latest1:polySurfaceShape8.i"
+		"living_room_latestRN.placeHolderList[1395]" "living_room_latest:taller_window_four_squares_latest1:polySurfaceShape8.i"
 		
 		5 3 "living_room_latestRN" "living_room_latest:transformGeometry17.outputGeometry" 
-		"living_room_latestRN.placeHolderList[1392]" "living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8.i"
+		"living_room_latestRN.placeHolderList[1396]" "living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8.i"
 		
 		5 3 "living_room_latestRN" "living_room_latest:transformGeometry19.outputGeometry" 
-		"living_room_latestRN.placeHolderList[1393]" "living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8.i"
+		"living_room_latestRN.placeHolderList[1397]" "living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8.i"
 		
 		5 3 "living_room_latestRN" "living_room_latest:transformGeometry21.outputGeometry" 
-		"living_room_latestRN.placeHolderList[1394]" "living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8.i"
+		"living_room_latestRN.placeHolderList[1398]" "living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8.i"
 		
 		5 3 "living_room_latestRN" "living_room_latest:transformGeometry23.outputGeometry" 
-		"living_room_latestRN.placeHolderList[1395]" "living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8.i"
+		"living_room_latestRN.placeHolderList[1399]" "living_room_latest:taller_window_four_squares_latest5:polySurfaceShape8.i"
 		
 		5 3 "living_room_latestRN" "living_room_latest:transformGeometry40.outputGeometry" 
-		"living_room_latestRN.placeHolderList[1396]" "living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8.i"
+		"living_room_latestRN.placeHolderList[1400]" "living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8.i"
 		
 		5 3 "living_room_latestRN" "living_room_latest:transformGeometry42.outputGeometry" 
-		"living_room_latestRN.placeHolderList[1397]" "living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8.i"
+		"living_room_latestRN.placeHolderList[1401]" "living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8.i"
 		
 		5 3 "living_room_latestRN" "living_room_latest:transformGeometry44.outputGeometry" 
-		"living_room_latestRN.placeHolderList[1398]" "living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8.i"
+		"living_room_latestRN.placeHolderList[1402]" "living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8.i"
 		
-		"living_room_latest:telescopeRN" 20
-		2 "|living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_" 
-		"translate" " -type \"double3\" 0 2169.506104 0"
-		2 "|living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_" 
-		"translateY" " -av"
-		2 "|living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_" 
-		"translateX" " -av"
-		2 "|living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_" 
-		"translateZ" " -av"
-		2 "|living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|living_room_latest:telescope:Object02" 
-		"translate" " -type \"double3\" 1.09363 496.370636 -28.757315"
-		2 "|living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|living_room_latest:telescope:Object02" 
-		"translateX" " -av"
-		2 "|living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|living_room_latest:telescope:Object02" 
-		"translateY" " -av"
-		2 "|living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|living_room_latest:telescope:Object02" 
-		"translateZ" " -av"
-		2 "|living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|living_room_latest:telescope:Object02FBXASC046Object03" 
-		"translate" " -type \"double3\" -132.758408 496.370636 -271.658447"
-		2 "|living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|living_room_latest:telescope:Object02FBXASC046Object03" 
-		"translateX" " -av"
-		2 "|living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|living_room_latest:telescope:Object02FBXASC046Object03" 
-		"translateY" " -av"
-		2 "|living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|living_room_latest:telescope:Object02FBXASC046Object03" 
-		"translateZ" " -av"
-		2 "|living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|living_room_latest:telescope:Object02FBXASC046Object04" 
-		"translate" " -type \"double3\" 134.154251 496.370636 -270.256989"
-		2 "|living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|living_room_latest:telescope:Object02FBXASC046Object04" 
-		"translateX" " -av"
-		2 "|living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|living_room_latest:telescope:Object02FBXASC046Object04" 
-		"translateY" " -av"
-		2 "|living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|living_room_latest:telescope:Object02FBXASC046Object04" 
-		"translateZ" " -av"
-		2 "|living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|living_room_latest:telescope:Line04" 
-		"translate" " -type \"double3\" 3.391448 787.896423 -217.288757"
-		2 "|living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|living_room_latest:telescope:Line04" 
-		"translateY" " -av"
-		2 "|living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|living_room_latest:telescope:Line04" 
-		"translateZ" " -av"
-		2 "|living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|living_room_latest:telescope:Line04" 
-		"translateX" " -av"
-		"living_room_latest:taller_window_four_squares_latest1RN" 33
-		2 "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8" 
-		"instObjGroups.objectGroups" " -s 4"
-		2 "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8" 
-		"uvSet" " -s 14"
-		2 "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8" 
-		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
-		2 "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8" 
-		"uvSet[1].uvSetName" " -type \"string\" \"map11\""
-		2 "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8" 
-		"uvSet[2].uvSetName" " -type \"string\" \"map12\""
-		2 "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8" 
-		"uvSet[3].uvSetName" " -type \"string\" \"map13\""
-		2 "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8" 
-		"uvSet[4].uvSetName" " -type \"string\" \"map14\""
-		2 "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8" 
-		"uvSet[5].uvSetName" " -type \"string\" \"map15\""
-		2 "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8" 
-		"uvSet[6].uvSetName" " -type \"string\" \"map16\""
-		2 "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8" 
-		"uvSet[7].uvSetName" " -type \"string\" \"map17\""
-		2 "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8" 
-		"uvSet[8].uvSetName" " -type \"string\" \"map18\""
-		2 "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8" 
-		"uvSet[9].uvSetName" " -type \"string\" \"map19\""
-		2 "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8" 
-		"uvSet[10].uvSetName" " -type \"string\" \"map110\""
-		2 "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8" 
-		"uvSet[11].uvSetName" " -type \"string\" \"map111\""
-		2 "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8" 
-		"uvSet[12].uvSetName" " -type \"string\" \"map112\""
-		2 "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8" 
-		"uvSet[13].uvSetName" " -type \"string\" \"map113\""
-		3 "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurface6|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape7.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:transformGeometry17.outputGeometry" "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8.inMesh" 
-		""
-		3 "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurface9|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape9.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurface7|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape7.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8.inMesh" 
-		"living_room_latestRN.placeHolderList[603]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8.instObjGroups.objectGroups[2]" 
-		"living_room_latestRN.placeHolderList[604]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8.instObjGroups.objectGroups[2].objectGroupId" 
-		"living_room_latestRN.placeHolderList[605]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8.instObjGroups.objectGroups[2].objectGrpColor" 
-		"living_room_latestRN.placeHolderList[606]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8.instObjGroups.objectGroups[3]" 
-		"living_room_latestRN.placeHolderList[607]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8.instObjGroups.objectGroups[3].objectGroupId" 
-		"living_room_latestRN.placeHolderList[608]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8.instObjGroups.objectGroups[3].objectGrpColor" 
-		"living_room_latestRN.placeHolderList[609]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8.compInstObjGroups.compObjectGroups[1]" 
-		"living_room_latestRN.placeHolderList[610]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape8.compInstObjGroups.compObjectGroups[1].compObjectGroupId" 
-		"living_room_latestRN.placeHolderList[611]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurface9|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape9.instObjGroups" 
-		"living_room_latestRN.placeHolderList[612]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurface6|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape7.instObjGroups" 
-		"living_room_latestRN.placeHolderList[613]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest2:taller_window|living_room_latest:taller_window_four_squares_latest2:polySurface5|living_room_latest:taller_window_four_squares_latest2:polySurface8|living_room_latest:taller_window_four_squares_latest2:polySurface7|living_room_latest:taller_window_four_squares_latest2:polySurfaceShape7.instObjGroups" 
-		"living_room_latestRN.placeHolderList[614]" ":initialShadingGroup.dsm"
-		"living_room_latest:bed_latestRN" 74
-		0 "|living_room_latestRNfosterParent1|living_room_latest:bed_latest1:polySurfaceShape367" 
-		"|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface361" 
-		"-s -r "
-		0 "|living_room_latestRNfosterParent1|living_room_latest:bed_latest1:polySurfaceShape366" 
-		"|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface363" 
-		"-s -r "
-		2 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface361|living_room_latest:bed_latest1:polySurfaceShape362" 
-		"uvSet" " -s 2"
-		2 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface361|living_room_latest:bed_latest1:polySurfaceShape362" 
-		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
-		2 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface361|living_room_latest:bed_latest1:polySurfaceShape362" 
-		"uvSet[1].uvSetName" " -type \"string\" \"UVSet0\""
-		2 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface361|living_room_latest:bed_latest1:polySurfaceShape362" 
-		"currentUVSet" " -type \"string\" \"map1\""
-		2 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface363|living_room_latest:bed_latest1:polySurfaceShape363" 
-		"uvSet" " -s 2"
-		2 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface363|living_room_latest:bed_latest1:polySurfaceShape363" 
-		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
-		2 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface363|living_room_latest:bed_latest1:polySurfaceShape363" 
-		"uvSet[1].uvSetName" " -type \"string\" \"UVSet0\""
-		2 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface363|living_room_latest:bed_latest1:polySurfaceShape363" 
-		"currentUVSet" " -type \"string\" \"map1\""
-		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface355|living_room_latest:bed_latest1:polySurfaceShape356.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface358|living_room_latest:bed_latest1:polySurfaceShape359.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface362|living_room_latest:bed_latest1:polySurfaceShape363.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface350|living_room_latest:bed_latest1:polySurfaceShape351.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface359|living_room_latest:bed_latest1:polySurfaceShape360.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface363|living_room_latest:bed_latest1:polySurfaceShape363.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface322|living_room_latest:bed_latest1:polySurfaceShape323.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface357|living_room_latest:bed_latest1:polySurfaceShape358.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface361|living_room_latest:bed_latest1:polySurfaceShape362.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface344|living_room_latest:bed_latest1:polySurfaceShape345.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface354|living_room_latest:bed_latest1:polySurfaceShape355.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface345|living_room_latest:bed_latest1:polySurfaceShape346.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface317|living_room_latest:bed_latest1:polySurfaceShape318.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:pCube1|living_room_latest:bed_latest1:pCubeShape1.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface352|living_room_latest:bed_latest1:polySurfaceShape353.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:pillow:armchair_pillow_1|living_room_latest:bed_latest1:pillow:armchair_pillow_Shape1.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface311|living_room_latest:bed_latest1:polySurfaceShape312.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface328|living_room_latest:bed_latest1:polySurfaceShape329.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface349|living_room_latest:bed_latest1:polySurfaceShape350.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface347|living_room_latest:bed_latest1:polySurfaceShape348.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface364|living_room_latest:bed_latest1:polySurfaceShape364.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface341|living_room_latest:bed_latest1:polySurfaceShape342.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface365|living_room_latest:bed_latest1:polySurfaceShape365.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface342|living_room_latest:bed_latest1:polySurfaceShape343.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface356|living_room_latest:bed_latest1:polySurfaceShape357.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface343|living_room_latest:bed_latest1:polySurfaceShape344.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface348|living_room_latest:bed_latest1:polySurfaceShape349.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface351|living_room_latest:bed_latest1:polySurfaceShape352.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface353|living_room_latest:bed_latest1:polySurfaceShape354.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface346|living_room_latest:bed_latest1:polySurfaceShape347.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:pillow:armchair_pillow_1|living_room_latest:bed_latest1:pillow:armchair_pillow_Shape1.instObjGroups" 
-		"living_room_latestRN.placeHolderList[687]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:pCube1|living_room_latest:bed_latest1:pCubeShape1.instObjGroups" 
-		"living_room_latestRN.placeHolderList[688]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface311|living_room_latest:bed_latest1:polySurfaceShape312.instObjGroups" 
-		"living_room_latestRN.placeHolderList[689]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface317|living_room_latest:bed_latest1:polySurfaceShape318.instObjGroups" 
-		"living_room_latestRN.placeHolderList[690]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface322|living_room_latest:bed_latest1:polySurfaceShape323.instObjGroups" 
-		"living_room_latestRN.placeHolderList[691]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface328|living_room_latest:bed_latest1:polySurfaceShape329.instObjGroups" 
-		"living_room_latestRN.placeHolderList[692]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface341|living_room_latest:bed_latest1:polySurfaceShape342.instObjGroups" 
-		"living_room_latestRN.placeHolderList[693]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface342|living_room_latest:bed_latest1:polySurfaceShape343.instObjGroups" 
-		"living_room_latestRN.placeHolderList[694]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface343|living_room_latest:bed_latest1:polySurfaceShape344.instObjGroups" 
-		"living_room_latestRN.placeHolderList[695]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface344|living_room_latest:bed_latest1:polySurfaceShape345.instObjGroups" 
-		"living_room_latestRN.placeHolderList[696]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface345|living_room_latest:bed_latest1:polySurfaceShape346.instObjGroups" 
-		"living_room_latestRN.placeHolderList[697]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface346|living_room_latest:bed_latest1:polySurfaceShape347.instObjGroups" 
-		"living_room_latestRN.placeHolderList[698]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface347|living_room_latest:bed_latest1:polySurfaceShape348.instObjGroups" 
-		"living_room_latestRN.placeHolderList[699]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface348|living_room_latest:bed_latest1:polySurfaceShape349.instObjGroups" 
-		"living_room_latestRN.placeHolderList[700]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface349|living_room_latest:bed_latest1:polySurfaceShape350.instObjGroups" 
-		"living_room_latestRN.placeHolderList[701]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface350|living_room_latest:bed_latest1:polySurfaceShape351.instObjGroups" 
-		"living_room_latestRN.placeHolderList[702]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface351|living_room_latest:bed_latest1:polySurfaceShape352.instObjGroups" 
-		"living_room_latestRN.placeHolderList[703]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface352|living_room_latest:bed_latest1:polySurfaceShape353.instObjGroups" 
-		"living_room_latestRN.placeHolderList[704]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface353|living_room_latest:bed_latest1:polySurfaceShape354.instObjGroups" 
-		"living_room_latestRN.placeHolderList[705]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface354|living_room_latest:bed_latest1:polySurfaceShape355.instObjGroups" 
-		"living_room_latestRN.placeHolderList[706]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface355|living_room_latest:bed_latest1:polySurfaceShape356.instObjGroups" 
-		"living_room_latestRN.placeHolderList[707]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface356|living_room_latest:bed_latest1:polySurfaceShape357.instObjGroups" 
-		"living_room_latestRN.placeHolderList[708]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface357|living_room_latest:bed_latest1:polySurfaceShape358.instObjGroups" 
-		"living_room_latestRN.placeHolderList[709]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface358|living_room_latest:bed_latest1:polySurfaceShape359.instObjGroups" 
-		"living_room_latestRN.placeHolderList[710]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface359|living_room_latest:bed_latest1:polySurfaceShape360.instObjGroups" 
-		"living_room_latestRN.placeHolderList[711]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface361|living_room_latest:bed_latest1:polySurfaceShape362.instObjGroups" 
-		"living_room_latestRN.placeHolderList[712]" ":initialShadingGroup.dsm"
-		5 4 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface361|living_room_latest:bed_latest1:polySurfaceShape362.inMesh" 
-		"living_room_latestRN.placeHolderList[713]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface361|living_room_latest:bed_latest1:polySurfaceShape362.worldMatrix" 
-		"living_room_latestRN.placeHolderList[714]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface363|living_room_latest:bed_latest1:polySurfaceShape363.instObjGroups" 
-		"living_room_latestRN.placeHolderList[715]" ":initialShadingGroup.dsm"
-		5 4 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface363|living_room_latest:bed_latest1:polySurfaceShape363.inMesh" 
-		"living_room_latestRN.placeHolderList[716]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface363|living_room_latest:bed_latest1:polySurfaceShape363.worldMatrix" 
-		"living_room_latestRN.placeHolderList[717]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface364|living_room_latest:bed_latest1:polySurfaceShape364.instObjGroups" 
-		"living_room_latestRN.placeHolderList[718]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface365|living_room_latest:bed_latest1:polySurfaceShape365.instObjGroups" 
-		"living_room_latestRN.placeHolderList[719]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:bed_latest1:bed|living_room_latest:bed_latest1:polySurface362|living_room_latest:bed_latest1:polySurfaceShape363.instObjGroups" 
-		"living_room_latestRN.placeHolderList[720]" ":initialShadingGroup.dsm"
 		"living_room_latest:taller_window_four_squares_latestRN" 33
 		2 "|living_room_latest:taller_window_four_squares_latest:taller_window|living_room_latest:taller_window_four_squares_latest:polySurface5|living_room_latest:taller_window_four_squares_latest:polySurface8|living_room_latest:taller_window_four_squares_latest:polySurfaceShape8" 
 		"instObjGroups.objectGroups" " -s 4"
@@ -6536,12 +6907,12 @@ createNode reference -n "living_room_latestRN";
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|living_room_latest:taller_window_four_squares_latest:taller_window|living_room_latest:taller_window_four_squares_latest:polySurface5|living_room_latest:taller_window_four_squares_latest:polySurface8|living_room_latest:taller_window_four_squares_latest:polySurface9|living_room_latest:taller_window_four_squares_latest:polySurfaceShape9.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:taller_window_four_squares_latest:taller_window|living_room_latest:taller_window_four_squares_latest:polySurface5|living_room_latest:taller_window_four_squares_latest:polySurface8|living_room_latest:taller_window_four_squares_latest:polySurface7|living_room_latest:taller_window_four_squares_latest:polySurfaceShape7.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|living_room_latest:taller_window_four_squares_latest:taller_window|living_room_latest:taller_window_four_squares_latest:polySurface5|living_room_latest:taller_window_four_squares_latest:polySurface8|living_room_latest:taller_window_four_squares_latest:polySurfaceShape8.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "living_room_latest:transformGeometry13.outputGeometry" "|living_room_latest:taller_window_four_squares_latest:taller_window|living_room_latest:taller_window_four_squares_latest:polySurface5|living_room_latest:taller_window_four_squares_latest:polySurface8|living_room_latest:taller_window_four_squares_latest:polySurfaceShape8.inMesh" 
 		""
+		3 "|living_room_latest:taller_window_four_squares_latest:taller_window|living_room_latest:taller_window_four_squares_latest:polySurface5|living_room_latest:taller_window_four_squares_latest:polySurface8|living_room_latest:taller_window_four_squares_latest:polySurface7|living_room_latest:taller_window_four_squares_latest:polySurfaceShape7.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
 		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest:taller_window|living_room_latest:taller_window_four_squares_latest:polySurface5|living_room_latest:taller_window_four_squares_latest:polySurface8|living_room_latest:taller_window_four_squares_latest:polySurfaceShape8.inMesh" 
 		"living_room_latestRN.placeHolderList[579]" ""
 		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest:taller_window|living_room_latest:taller_window_four_squares_latest:polySurface5|living_room_latest:taller_window_four_squares_latest:polySurface8|living_room_latest:taller_window_four_squares_latest:polySurfaceShape8.instObjGroups.objectGroups[2]" 
@@ -6566,341 +6937,6 @@ createNode reference -n "living_room_latestRN";
 		"living_room_latestRN.placeHolderList[589]" ":initialShadingGroup.dsm"
 		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest:taller_window|living_room_latest:taller_window_four_squares_latest:polySurface5|living_room_latest:taller_window_four_squares_latest:polySurface8|living_room_latest:taller_window_four_squares_latest:polySurface7|living_room_latest:taller_window_four_squares_latest:polySurfaceShape7.instObjGroups" 
 		"living_room_latestRN.placeHolderList[590]" ":initialShadingGroup.dsm"
-		"living_room_latest:taller_window_four_squares_latest2RN" 33
-		2 "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8" 
-		"instObjGroups.objectGroups" " -s 4"
-		2 "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8" 
-		"uvSet" " -s 14"
-		2 "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8" 
-		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
-		2 "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8" 
-		"uvSet[1].uvSetName" " -type \"string\" \"map11\""
-		2 "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8" 
-		"uvSet[2].uvSetName" " -type \"string\" \"map12\""
-		2 "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8" 
-		"uvSet[3].uvSetName" " -type \"string\" \"map13\""
-		2 "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8" 
-		"uvSet[4].uvSetName" " -type \"string\" \"map14\""
-		2 "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8" 
-		"uvSet[5].uvSetName" " -type \"string\" \"map15\""
-		2 "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8" 
-		"uvSet[6].uvSetName" " -type \"string\" \"map16\""
-		2 "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8" 
-		"uvSet[7].uvSetName" " -type \"string\" \"map17\""
-		2 "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8" 
-		"uvSet[8].uvSetName" " -type \"string\" \"map18\""
-		2 "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8" 
-		"uvSet[9].uvSetName" " -type \"string\" \"map19\""
-		2 "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8" 
-		"uvSet[10].uvSetName" " -type \"string\" \"map110\""
-		2 "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8" 
-		"uvSet[11].uvSetName" " -type \"string\" \"map111\""
-		2 "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8" 
-		"uvSet[12].uvSetName" " -type \"string\" \"map112\""
-		2 "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8" 
-		"uvSet[13].uvSetName" " -type \"string\" \"map113\""
-		3 "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurface9|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape9.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:transformGeometry19.outputGeometry" "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8.inMesh" 
-		""
-		3 "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurface7|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape7.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurface6|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape7.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8.inMesh" 
-		"living_room_latestRN.placeHolderList[615]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8.instObjGroups.objectGroups[2]" 
-		"living_room_latestRN.placeHolderList[616]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8.instObjGroups.objectGroups[2].objectGroupId" 
-		"living_room_latestRN.placeHolderList[617]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8.instObjGroups.objectGroups[2].objectGrpColor" 
-		"living_room_latestRN.placeHolderList[618]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8.instObjGroups.objectGroups[3]" 
-		"living_room_latestRN.placeHolderList[619]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8.instObjGroups.objectGroups[3].objectGroupId" 
-		"living_room_latestRN.placeHolderList[620]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8.instObjGroups.objectGroups[3].objectGrpColor" 
-		"living_room_latestRN.placeHolderList[621]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8.compInstObjGroups.compObjectGroups[1]" 
-		"living_room_latestRN.placeHolderList[622]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape8.compInstObjGroups.compObjectGroups[1].compObjectGroupId" 
-		"living_room_latestRN.placeHolderList[623]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurface9|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape9.instObjGroups" 
-		"living_room_latestRN.placeHolderList[624]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurface6|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape7.instObjGroups" 
-		"living_room_latestRN.placeHolderList[625]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest3:taller_window|living_room_latest:taller_window_four_squares_latest3:polySurface5|living_room_latest:taller_window_four_squares_latest3:polySurface8|living_room_latest:taller_window_four_squares_latest3:polySurface7|living_room_latest:taller_window_four_squares_latest3:polySurfaceShape7.instObjGroups" 
-		"living_room_latestRN.placeHolderList[626]" ":initialShadingGroup.dsm"
-		"living_room_latest:taller_window_four_squares_latestRN4" 33
-		2 "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8" 
-		"instObjGroups.objectGroups" " -s 4"
-		2 "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8" 
-		"uvSet" " -s 14"
-		2 "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8" 
-		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
-		2 "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8" 
-		"uvSet[1].uvSetName" " -type \"string\" \"map11\""
-		2 "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8" 
-		"uvSet[2].uvSetName" " -type \"string\" \"map12\""
-		2 "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8" 
-		"uvSet[3].uvSetName" " -type \"string\" \"map13\""
-		2 "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8" 
-		"uvSet[4].uvSetName" " -type \"string\" \"map14\""
-		2 "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8" 
-		"uvSet[5].uvSetName" " -type \"string\" \"map15\""
-		2 "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8" 
-		"uvSet[6].uvSetName" " -type \"string\" \"map16\""
-		2 "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8" 
-		"uvSet[7].uvSetName" " -type \"string\" \"map17\""
-		2 "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8" 
-		"uvSet[8].uvSetName" " -type \"string\" \"map18\""
-		2 "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8" 
-		"uvSet[9].uvSetName" " -type \"string\" \"map19\""
-		2 "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8" 
-		"uvSet[10].uvSetName" " -type \"string\" \"map110\""
-		2 "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8" 
-		"uvSet[11].uvSetName" " -type \"string\" \"map111\""
-		2 "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8" 
-		"uvSet[12].uvSetName" " -type \"string\" \"map112\""
-		2 "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8" 
-		"uvSet[13].uvSetName" " -type \"string\" \"map113\""
-		3 "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurface7|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape7.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurface9|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape9.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:transformGeometry44.outputGeometry" "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8.inMesh" 
-		""
-		3 "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurface6|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape7.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8.inMesh" 
-		"living_room_latestRN.placeHolderList[675]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8.instObjGroups.objectGroups[0]" 
-		"living_room_latestRN.placeHolderList[676]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8.instObjGroups.objectGroups[0].objectGroupId" 
-		"living_room_latestRN.placeHolderList[677]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8.instObjGroups.objectGroups[0].objectGrpColor" 
-		"living_room_latestRN.placeHolderList[678]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8.instObjGroups.objectGroups[1]" 
-		"living_room_latestRN.placeHolderList[679]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8.instObjGroups.objectGroups[1].objectGroupId" 
-		"living_room_latestRN.placeHolderList[680]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8.instObjGroups.objectGroups[1].objectGrpColor" 
-		"living_room_latestRN.placeHolderList[681]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8.compInstObjGroups.compObjectGroups[0]" 
-		"living_room_latestRN.placeHolderList[682]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape8.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
-		"living_room_latestRN.placeHolderList[683]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurface9|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape9.instObjGroups" 
-		"living_room_latestRN.placeHolderList[684]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurface6|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape7.instObjGroups" 
-		"living_room_latestRN.placeHolderList[685]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurface5|living_room_latest:taller_window_four_squares_latest8:polySurface8|living_room_latest:taller_window_four_squares_latest8:polySurface7|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape7.instObjGroups" 
-		"living_room_latestRN.placeHolderList[686]" ":initialShadingGroup.dsm"
-		"living_room_latest:taller_window_four_squares_latestRN3" 33
-		2 "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8" 
-		"instObjGroups.objectGroups" " -s 4"
-		2 "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8" 
-		"uvSet" " -s 14"
-		2 "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8" 
-		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
-		2 "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8" 
-		"uvSet[1].uvSetName" " -type \"string\" \"map11\""
-		2 "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8" 
-		"uvSet[2].uvSetName" " -type \"string\" \"map12\""
-		2 "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8" 
-		"uvSet[3].uvSetName" " -type \"string\" \"map13\""
-		2 "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8" 
-		"uvSet[4].uvSetName" " -type \"string\" \"map14\""
-		2 "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8" 
-		"uvSet[5].uvSetName" " -type \"string\" \"map15\""
-		2 "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8" 
-		"uvSet[6].uvSetName" " -type \"string\" \"map16\""
-		2 "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8" 
-		"uvSet[7].uvSetName" " -type \"string\" \"map17\""
-		2 "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8" 
-		"uvSet[8].uvSetName" " -type \"string\" \"map18\""
-		2 "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8" 
-		"uvSet[9].uvSetName" " -type \"string\" \"map19\""
-		2 "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8" 
-		"uvSet[10].uvSetName" " -type \"string\" \"map110\""
-		2 "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8" 
-		"uvSet[11].uvSetName" " -type \"string\" \"map111\""
-		2 "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8" 
-		"uvSet[12].uvSetName" " -type \"string\" \"map112\""
-		2 "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8" 
-		"uvSet[13].uvSetName" " -type \"string\" \"map113\""
-		3 "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:transformGeometry42.outputGeometry" "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8.inMesh" 
-		""
-		3 "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurface9|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape9.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurface6|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape7.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurface7|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape7.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8.inMesh" 
-		"living_room_latestRN.placeHolderList[663]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8.instObjGroups.objectGroups[0]" 
-		"living_room_latestRN.placeHolderList[664]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8.instObjGroups.objectGroups[0].objectGroupId" 
-		"living_room_latestRN.placeHolderList[665]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8.instObjGroups.objectGroups[0].objectGrpColor" 
-		"living_room_latestRN.placeHolderList[666]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8.instObjGroups.objectGroups[1]" 
-		"living_room_latestRN.placeHolderList[667]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8.instObjGroups.objectGroups[1].objectGroupId" 
-		"living_room_latestRN.placeHolderList[668]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8.instObjGroups.objectGroups[1].objectGrpColor" 
-		"living_room_latestRN.placeHolderList[669]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8.compInstObjGroups.compObjectGroups[0]" 
-		"living_room_latestRN.placeHolderList[670]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape8.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
-		"living_room_latestRN.placeHolderList[671]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurface9|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape9.instObjGroups" 
-		"living_room_latestRN.placeHolderList[672]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurface6|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape7.instObjGroups" 
-		"living_room_latestRN.placeHolderList[673]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest7:taller_window|living_room_latest:taller_window_four_squares_latest7:polySurface5|living_room_latest:taller_window_four_squares_latest7:polySurface8|living_room_latest:taller_window_four_squares_latest7:polySurface7|living_room_latest:taller_window_four_squares_latest7:polySurfaceShape7.instObjGroups" 
-		"living_room_latestRN.placeHolderList[674]" ":initialShadingGroup.dsm"
-		"living_room_latest:taller_window_four_squares_latestRN2" 33
-		2 "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8" 
-		"instObjGroups.objectGroups" " -s 4"
-		2 "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8" 
-		"uvSet" " -s 14"
-		2 "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8" 
-		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
-		2 "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8" 
-		"uvSet[1].uvSetName" " -type \"string\" \"map11\""
-		2 "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8" 
-		"uvSet[2].uvSetName" " -type \"string\" \"map12\""
-		2 "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8" 
-		"uvSet[3].uvSetName" " -type \"string\" \"map13\""
-		2 "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8" 
-		"uvSet[4].uvSetName" " -type \"string\" \"map14\""
-		2 "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8" 
-		"uvSet[5].uvSetName" " -type \"string\" \"map15\""
-		2 "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8" 
-		"uvSet[6].uvSetName" " -type \"string\" \"map16\""
-		2 "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8" 
-		"uvSet[7].uvSetName" " -type \"string\" \"map17\""
-		2 "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8" 
-		"uvSet[8].uvSetName" " -type \"string\" \"map18\""
-		2 "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8" 
-		"uvSet[9].uvSetName" " -type \"string\" \"map19\""
-		2 "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8" 
-		"uvSet[10].uvSetName" " -type \"string\" \"map110\""
-		2 "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8" 
-		"uvSet[11].uvSetName" " -type \"string\" \"map111\""
-		2 "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8" 
-		"uvSet[12].uvSetName" " -type \"string\" \"map112\""
-		2 "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8" 
-		"uvSet[13].uvSetName" " -type \"string\" \"map113\""
-		3 "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurface7|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape7.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:transformGeometry40.outputGeometry" "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8.inMesh" 
-		""
-		3 "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurface9|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape9.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurface6|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape7.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8.inMesh" 
-		"living_room_latestRN.placeHolderList[651]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8.instObjGroups.objectGroups[0]" 
-		"living_room_latestRN.placeHolderList[652]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8.instObjGroups.objectGroups[0].objectGroupId" 
-		"living_room_latestRN.placeHolderList[653]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8.instObjGroups.objectGroups[0].objectGrpColor" 
-		"living_room_latestRN.placeHolderList[654]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8.instObjGroups.objectGroups[1]" 
-		"living_room_latestRN.placeHolderList[655]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8.instObjGroups.objectGroups[1].objectGroupId" 
-		"living_room_latestRN.placeHolderList[656]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8.instObjGroups.objectGroups[1].objectGrpColor" 
-		"living_room_latestRN.placeHolderList[657]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8.compInstObjGroups.compObjectGroups[0]" 
-		"living_room_latestRN.placeHolderList[658]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
-		"living_room_latestRN.placeHolderList[659]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurface9|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape9.instObjGroups" 
-		"living_room_latestRN.placeHolderList[660]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurface6|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape7.instObjGroups" 
-		"living_room_latestRN.placeHolderList[661]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest6:taller_window|living_room_latest:taller_window_four_squares_latest6:polySurface5|living_room_latest:taller_window_four_squares_latest6:polySurface8|living_room_latest:taller_window_four_squares_latest6:polySurface7|living_room_latest:taller_window_four_squares_latest6:polySurfaceShape7.instObjGroups" 
-		"living_room_latestRN.placeHolderList[662]" ":initialShadingGroup.dsm"
-		"living_room_latest:taller_window_four_squares_latest3RN" 33
-		2 "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8" 
-		"instObjGroups.objectGroups" " -s 4"
-		2 "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8" 
-		"uvSet" " -s 14"
-		2 "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8" 
-		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
-		2 "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8" 
-		"uvSet[1].uvSetName" " -type \"string\" \"map11\""
-		2 "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8" 
-		"uvSet[2].uvSetName" " -type \"string\" \"map12\""
-		2 "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8" 
-		"uvSet[3].uvSetName" " -type \"string\" \"map13\""
-		2 "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8" 
-		"uvSet[4].uvSetName" " -type \"string\" \"map14\""
-		2 "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8" 
-		"uvSet[5].uvSetName" " -type \"string\" \"map15\""
-		2 "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8" 
-		"uvSet[6].uvSetName" " -type \"string\" \"map16\""
-		2 "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8" 
-		"uvSet[7].uvSetName" " -type \"string\" \"map17\""
-		2 "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8" 
-		"uvSet[8].uvSetName" " -type \"string\" \"map18\""
-		2 "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8" 
-		"uvSet[9].uvSetName" " -type \"string\" \"map19\""
-		2 "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8" 
-		"uvSet[10].uvSetName" " -type \"string\" \"map110\""
-		2 "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8" 
-		"uvSet[11].uvSetName" " -type \"string\" \"map111\""
-		2 "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8" 
-		"uvSet[12].uvSetName" " -type \"string\" \"map112\""
-		2 "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8" 
-		"uvSet[13].uvSetName" " -type \"string\" \"map113\""
-		3 "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "living_room_latest:transformGeometry21.outputGeometry" "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8.inMesh" 
-		""
-		3 "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurface9|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape9.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurface7|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape7.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurface6|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape7.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8.inMesh" 
-		"living_room_latestRN.placeHolderList[627]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8.instObjGroups.objectGroups[0]" 
-		"living_room_latestRN.placeHolderList[628]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8.instObjGroups.objectGroups[0].objectGroupId" 
-		"living_room_latestRN.placeHolderList[629]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8.instObjGroups.objectGroups[0].objectGrpColor" 
-		"living_room_latestRN.placeHolderList[630]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8.instObjGroups.objectGroups[1]" 
-		"living_room_latestRN.placeHolderList[631]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8.instObjGroups.objectGroups[1].objectGroupId" 
-		"living_room_latestRN.placeHolderList[632]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8.instObjGroups.objectGroups[1].objectGrpColor" 
-		"living_room_latestRN.placeHolderList[633]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8.compInstObjGroups.compObjectGroups[0]" 
-		"living_room_latestRN.placeHolderList[634]" ""
-		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape8.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
-		"living_room_latestRN.placeHolderList[635]" ""
-		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurface9|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape9.instObjGroups" 
-		"living_room_latestRN.placeHolderList[636]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurface6|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape7.instObjGroups" 
-		"living_room_latestRN.placeHolderList[637]" ":initialShadingGroup.dsm"
-		5 3 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurface5|living_room_latest:taller_window_four_squares_latest4:polySurface8|living_room_latest:taller_window_four_squares_latest4:polySurface7|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape7.instObjGroups" 
-		"living_room_latestRN.placeHolderList[638]" ":initialShadingGroup.dsm"
 		"living_room_latest:taller_window_four_squares_latestRN1" 33
 		2 "|living_room_latest:taller_window_four_squares_latest1:taller_window|living_room_latest:taller_window_four_squares_latest1:polySurface5|living_room_latest:taller_window_four_squares_latest1:polySurface8|living_room_latest:taller_window_four_squares_latest1:polySurfaceShape8" 
 		"instObjGroups.objectGroups" " -s 4"
@@ -6934,14 +6970,14 @@ createNode reference -n "living_room_latestRN";
 		"uvSet[12].uvSetName" " -type \"string\" \"map112\""
 		2 "|living_room_latest:taller_window_four_squares_latest1:taller_window|living_room_latest:taller_window_four_squares_latest1:polySurface5|living_room_latest:taller_window_four_squares_latest1:polySurface8|living_room_latest:taller_window_four_squares_latest1:polySurfaceShape8" 
 		"uvSet[13].uvSetName" " -type \"string\" \"map113\""
-		3 "|living_room_latest:taller_window_four_squares_latest1:taller_window|living_room_latest:taller_window_four_squares_latest1:polySurface5|living_room_latest:taller_window_four_squares_latest1:polySurface8|living_room_latest:taller_window_four_squares_latest1:polySurface6|living_room_latest:taller_window_four_squares_latest1:polySurfaceShape7.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|living_room_latest:taller_window_four_squares_latest1:taller_window|living_room_latest:taller_window_four_squares_latest1:polySurface5|living_room_latest:taller_window_four_squares_latest1:polySurface8|living_room_latest:taller_window_four_squares_latest1:polySurface7|living_room_latest:taller_window_four_squares_latest1:polySurfaceShape7.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|living_room_latest:taller_window_four_squares_latest1:taller_window|living_room_latest:taller_window_four_squares_latest1:polySurface5|living_room_latest:taller_window_four_squares_latest1:polySurface8|living_room_latest:taller_window_four_squares_latest1:polySurfaceShape8.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "living_room_latest:transformGeometry15.outputGeometry" "|living_room_latest:taller_window_four_squares_latest1:taller_window|living_room_latest:taller_window_four_squares_latest1:polySurface5|living_room_latest:taller_window_four_squares_latest1:polySurface8|living_room_latest:taller_window_four_squares_latest1:polySurfaceShape8.inMesh" 
 		""
+		3 "|living_room_latest:taller_window_four_squares_latest1:taller_window|living_room_latest:taller_window_four_squares_latest1:polySurface5|living_room_latest:taller_window_four_squares_latest1:polySurface8|living_room_latest:taller_window_four_squares_latest1:polySurface6|living_room_latest:taller_window_four_squares_latest1:polySurfaceShape7.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|living_room_latest:taller_window_four_squares_latest1:taller_window|living_room_latest:taller_window_four_squares_latest1:polySurface5|living_room_latest:taller_window_four_squares_latest1:polySurface8|living_room_latest:taller_window_four_squares_latest1:polySurface9|living_room_latest:taller_window_four_squares_latest1:polySurfaceShape9.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		5 4 "living_room_latestRN" "|living_room_latest:taller_window_four_squares_latest1:taller_window|living_room_latest:taller_window_four_squares_latest1:polySurface5|living_room_latest:taller_window_four_squares_latest1:polySurface8|living_room_latest:taller_window_four_squares_latest1:polySurfaceShape8.inMesh" 
@@ -6973,45 +7009,71 @@ lockNode -l 1 ;
 createNode animLayer -s -n "BaseAnimation";
 	setAttr ".ovrd" yes;
 createNode mentalrayOptions -s -n "miContourPreset";
+	setAttr ".splck" yes;
+	setAttr ".fil" 0;
+	setAttr ".rflr" 1;
+	setAttr ".rfrr" 1;
+	setAttr ".maxr" 1;
+	setAttr ".shrd" 2;
 createNode mentalrayOptions -s -n "Draft";
+	setAttr ".splck" yes;
+	setAttr ".fil" 0;
+	setAttr ".rflr" 1;
+	setAttr ".rfrr" 1;
 	setAttr ".maxr" 2;
+	setAttr ".shrd" 2;
 createNode mentalrayOptions -s -n "DraftMotionBlur";
+	setAttr ".splck" yes;
+	setAttr ".fil" 0;
+	setAttr ".rflr" 1;
+	setAttr ".rfrr" 1;
 	setAttr ".maxr" 2;
+	setAttr ".shrd" 2;
 	setAttr ".mb" 1;
 	setAttr ".tconr" 1;
 	setAttr ".tcong" 1;
 	setAttr ".tconb" 1;
 	setAttr ".tcona" 1;
 createNode mentalrayOptions -s -n "DraftRapidMotion";
+	setAttr ".splck" yes;
+	setAttr ".fil" 0;
 	setAttr ".scan" 3;
 	setAttr ".rapc" 1;
 	setAttr ".raps" 0.25;
+	setAttr ".rflr" 1;
+	setAttr ".rfrr" 1;
 	setAttr ".maxr" 2;
+	setAttr ".shrd" 2;
 	setAttr ".mb" 1;
 	setAttr ".tconr" 1;
 	setAttr ".tcong" 1;
 	setAttr ".tconb" 1;
 	setAttr ".tcona" 1;
 createNode mentalrayOptions -s -n "Preview";
+	setAttr ".splck" yes;
 	setAttr ".minsp" -1;
 	setAttr ".maxsp" 1;
 	setAttr ".fil" 1;
 	setAttr ".rflr" 2;
 	setAttr ".rfrr" 2;
 	setAttr ".maxr" 4;
+	setAttr ".shrd" 2;
 createNode mentalrayOptions -s -n "PreviewMotionblur";
+	setAttr ".splck" yes;
 	setAttr ".minsp" -1;
 	setAttr ".maxsp" 1;
 	setAttr ".fil" 1;
 	setAttr ".rflr" 2;
 	setAttr ".rfrr" 2;
 	setAttr ".maxr" 4;
+	setAttr ".shrd" 2;
 	setAttr ".mb" 1;
 	setAttr ".tconr" 0.5;
 	setAttr ".tcong" 0.5;
 	setAttr ".tconb" 0.5;
 	setAttr ".tcona" 0.5;
 createNode mentalrayOptions -s -n "PreviewRapidMotion";
+	setAttr ".splck" yes;
 	setAttr ".minsp" -1;
 	setAttr ".maxsp" 1;
 	setAttr ".fil" 1;
@@ -7020,76 +7082,98 @@ createNode mentalrayOptions -s -n "PreviewRapidMotion";
 	setAttr ".rflr" 2;
 	setAttr ".rfrr" 2;
 	setAttr ".maxr" 4;
+	setAttr ".shrd" 2;
 	setAttr ".mb" 1;
 	setAttr ".tconr" 0.5;
 	setAttr ".tcong" 0.5;
 	setAttr ".tconb" 0.5;
 	setAttr ".tcona" 0.5;
 createNode mentalrayOptions -s -n "PreviewCaustics";
+	setAttr ".splck" yes;
 	setAttr ".minsp" -1;
 	setAttr ".maxsp" 1;
 	setAttr ".fil" 1;
 	setAttr ".rflr" 2;
 	setAttr ".rfrr" 2;
 	setAttr ".maxr" 4;
+	setAttr ".shrd" 2;
 	setAttr ".ca" yes;
 	setAttr ".cc" 1;
 	setAttr ".cr" 1;
 createNode mentalrayOptions -s -n "PreviewGlobalIllum";
+	setAttr ".splck" yes;
 	setAttr ".minsp" -1;
 	setAttr ".maxsp" 1;
 	setAttr ".fil" 1;
 	setAttr ".rflr" 2;
 	setAttr ".rfrr" 2;
 	setAttr ".maxr" 4;
+	setAttr ".shrd" 2;
 	setAttr ".gi" yes;
 	setAttr ".gc" 1;
 	setAttr ".gr" 1;
 createNode mentalrayOptions -s -n "PreviewFinalGather";
+	setAttr ".splck" yes;
 	setAttr ".minsp" -1;
 	setAttr ".maxsp" 1;
 	setAttr ".fil" 1;
 	setAttr ".rflr" 2;
 	setAttr ".rfrr" 2;
 	setAttr ".maxr" 4;
+	setAttr ".shrd" 2;
 	setAttr ".fg" yes;
 createNode mentalrayOptions -s -n "Production";
+	setAttr ".splck" yes;
 	setAttr ".minsp" 0;
 	setAttr ".maxsp" 2;
+	setAttr ".fil" 0;
 	setAttr ".rflr" 10;
 	setAttr ".rfrr" 10;
 	setAttr ".maxr" 20;
+	setAttr ".shrd" 2;
 createNode mentalrayOptions -s -n "ProductionMotionblur";
+	setAttr ".splck" yes;
 	setAttr ".minsp" 0;
 	setAttr ".maxsp" 2;
+	setAttr ".fil" 0;
 	setAttr ".rflr" 10;
 	setAttr ".rfrr" 10;
 	setAttr ".maxr" 20;
+	setAttr ".shrd" 2;
 	setAttr ".mb" 2;
 createNode mentalrayOptions -s -n "ProductionRapidMotion";
+	setAttr ".splck" yes;
 	setAttr ".minsp" 0;
 	setAttr ".maxsp" 2;
+	setAttr ".fil" 0;
 	setAttr ".scan" 3;
 	setAttr ".rapc" 8;
 	setAttr ".raps" 2;
 	setAttr ".rflr" 10;
 	setAttr ".rfrr" 10;
 	setAttr ".maxr" 20;
+	setAttr ".shrd" 2;
 	setAttr ".mb" 2;
 createNode mentalrayOptions -s -n "ProductionFineTrace";
 	setAttr ".conr" 0.019999999552965164;
 	setAttr ".cong" 0.019999999552965164;
 	setAttr ".conb" 0.019999999552965164;
+	setAttr ".splck" yes;
 	setAttr ".minsp" 1;
 	setAttr ".maxsp" 2;
 	setAttr ".fil" 1;
 	setAttr ".filw" 0.75;
 	setAttr ".filh" 0.75;
 	setAttr ".jit" yes;
+	setAttr ".rflr" 1;
+	setAttr ".rfrr" 1;
+	setAttr ".maxr" 1;
+	setAttr ".shrd" 2;
 createNode mentalrayOptions -s -n "ProductionRapidFur";
 	setAttr ".conr" 0.039999999105930328;
 	setAttr ".cong" 0.029999999329447746;
 	setAttr ".conb" 0.070000000298023224;
+	setAttr ".splck" yes;
 	setAttr ".minsp" 0;
 	setAttr ".maxsp" 2;
 	setAttr ".fil" 1;
@@ -7100,6 +7184,10 @@ createNode mentalrayOptions -s -n "ProductionRapidFur";
 	setAttr ".rapc" 3;
 	setAttr ".raps" 0.25;
 	setAttr ".ray" no;
+	setAttr ".rflr" 1;
+	setAttr ".rfrr" 1;
+	setAttr ".maxr" 1;
+	setAttr ".shrd" 2;
 	setAttr ".shmth" 3;
 	setAttr ".shmap" 3;
 	setAttr ".mbsm" no;
@@ -7108,6 +7196,7 @@ createNode mentalrayOptions -s -n "ProductionRapidHair";
 	setAttr ".conr" 0.039999999105930328;
 	setAttr ".cong" 0.029999999329447746;
 	setAttr ".conb" 0.070000000298023224;
+	setAttr ".splck" yes;
 	setAttr ".minsp" 0;
 	setAttr ".maxsp" 2;
 	setAttr ".fil" 1;
@@ -7117,19 +7206,30 @@ createNode mentalrayOptions -s -n "ProductionRapidHair";
 	setAttr ".scan" 3;
 	setAttr ".rapc" 6;
 	setAttr ".ray" no;
+	setAttr ".rflr" 1;
+	setAttr ".rfrr" 1;
+	setAttr ".maxr" 1;
+	setAttr ".shrd" 2;
 	setAttr ".shmth" 3;
 	setAttr ".shmap" 3;
 	setAttr ".mbsm" no;
 	setAttr ".bism" 0.019999999552965164;
 createNode mentalrayOptions -s -n "PreviewImrRayTracyOff";
+	setAttr ".splck" yes;
 	setAttr ".minsp" 0;
 	setAttr ".fil" 1;
 	setAttr ".scan" 1;
 	setAttr ".ray" no;
+	setAttr ".rflr" 1;
+	setAttr ".rfrr" 1;
+	setAttr ".maxr" 1;
+	setAttr ".shrd" 2;
 createNode mentalrayOptions -s -n "PreviewImrRayTracyOn";
+	setAttr ".splck" yes;
 	setAttr ".minsp" 0;
 	setAttr ".fil" 1;
 	setAttr ".scan" 1;
+	setAttr ".rflr" 1;
 	setAttr ".rfrr" 2;
 	setAttr ".maxr" 3;
 	setAttr ".shrd" 1;
@@ -7225,7 +7325,7 @@ createNode lambert -n "RandomSeatAccent";
 	setAttr ".c" -type "float3" 1 0.7135756 0.56299996 ;
 createNode shadingEngine -n "lambert5SG";
 	setAttr ".ihi" 0;
-	setAttr -s 61 ".dsm";
+	setAttr -s 63 ".dsm";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo4";
 createNode lambert -n "MetalicSurfaces";
@@ -7251,7 +7351,7 @@ createNode lambert -n "Handles";
 	setAttr ".c" -type "float3" 0.059830625 0.059830625 0.059830625 ;
 createNode shadingEngine -n "lambert7SG";
 	setAttr ".ihi" 0;
-	setAttr -s 24 ".dsm";
+	setAttr -s 19 ".dsm";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo6";
 createNode lambert -n "GlassPane";
@@ -7460,7 +7560,7 @@ createNode groupId -n "groupId85";
 createNode lambert -n "Walls1";
 createNode shadingEngine -n "lambert13SG";
 	setAttr ".ihi" 0;
-	setAttr -s 2 ".dsm";
+	setAttr -s 4 ".dsm";
 	setAttr ".ro" yes;
 	setAttr -s 2 ".gn";
 createNode materialInfo -n "materialInfo12";
@@ -7486,7 +7586,7 @@ createNode lambert -n "Stove";
 	setAttr ".c" -type "float3" 0.19658197 0.19658197 0.19658197 ;
 createNode shadingEngine -n "lambert15SG";
 	setAttr ".ihi" 0;
-	setAttr -s 19 ".dsm";
+	setAttr -s 24 ".dsm";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo14";
 createNode lambert -n "FunColors02";
@@ -7760,48 +7860,244 @@ createNode materialInfo -n "materialInfo33";
 createNode file -n "file8";
 	setAttr ".ftn" -type "string" "/Users/AshleyTheMagnificant/GitHub/Bandits/maya//sourceimages/SpaceDrawing01.jpg";
 createNode place2dTexture -n "place2dTexture8";
+createNode hyperGraphInfo -n "nodeEditorPanel1Info";
+createNode hyperView -n "hyperView1";
+	setAttr ".dag" no;
+createNode hyperLayout -n "hyperLayout1";
+	setAttr ".ihi" 0;
+	setAttr ".anf" yes;
 select -ne :time1;
+	setAttr -av -k on ".cch";
+	setAttr -cb on ".ihi";
+	setAttr -k on ".nds";
+	setAttr -cb on ".bnm";
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
 select -ne :renderPartition;
-	setAttr -s 295 ".st";
-select -ne :initialShadingGroup;
-	setAttr -s 498 ".dsm";
-	setAttr ".ro" yes;
-	setAttr -s 94 ".gn";
-select -ne :initialParticleSE;
-	setAttr ".ro" yes;
+	setAttr -k on ".cch";
+	setAttr -cb on ".ihi";
+	setAttr -k on ".nds";
+	setAttr -cb on ".bnm";
+	setAttr -s 298 ".st";
+	setAttr -cb on ".an";
+	setAttr -cb on ".pt";
+select -ne :renderGlobalsList1;
+	setAttr -k on ".cch";
+	setAttr -cb on ".ihi";
+	setAttr -k on ".nds";
+	setAttr -cb on ".bnm";
 select -ne :defaultShaderList1;
-	setAttr -s 128 ".s";
-select -ne :defaultTextureList1;
-	setAttr -s 116 ".tx";
+	setAttr -k on ".cch";
+	setAttr -cb on ".ihi";
+	setAttr -k on ".nds";
+	setAttr -cb on ".bnm";
+	setAttr -s 131 ".s";
 select -ne :postProcessList1;
+	setAttr -k on ".cch";
+	setAttr -cb on ".ihi";
+	setAttr -k on ".nds";
+	setAttr -cb on ".bnm";
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 112 ".u";
+	setAttr -k on ".cch";
+	setAttr -cb on ".ihi";
+	setAttr -k on ".nds";
+	setAttr -cb on ".bnm";
+	setAttr -s 115 ".u";
 select -ne :defaultRenderingList1;
 	setAttr -s 21 ".r";
-select -ne :renderGlobalsList1;
+select -ne :defaultTextureList1;
+	setAttr -k on ".cch";
+	setAttr -cb on ".ihi";
+	setAttr -k on ".nds";
+	setAttr -cb on ".bnm";
+	setAttr -s 119 ".tx";
+select -ne :initialShadingGroup;
+	setAttr -k on ".cch";
+	setAttr -cb on ".ihi";
+	setAttr -av -k on ".nds";
+	setAttr -cb on ".bnm";
+	setAttr -s 494 ".dsm";
+	setAttr -k on ".mwc";
+	setAttr -cb on ".an";
+	setAttr -cb on ".il";
+	setAttr -cb on ".vo";
+	setAttr -cb on ".eo";
+	setAttr -cb on ".fo";
+	setAttr -cb on ".epo";
+	setAttr ".ro" yes;
+	setAttr -s 94 ".gn";
+	setAttr -cb on ".mimt";
+	setAttr -cb on ".miop";
+	setAttr -cb on ".mise";
+	setAttr -cb on ".mism";
+	setAttr -cb on ".mice";
+	setAttr -av -cb on ".micc";
+	setAttr -cb on ".mica";
+	setAttr -cb on ".micw";
+	setAttr -cb on ".mirw";
+select -ne :initialParticleSE;
+	setAttr -k on ".cch";
+	setAttr -cb on ".ihi";
+	setAttr -k on ".nds";
+	setAttr -cb on ".bnm";
+	setAttr -k on ".mwc";
+	setAttr -cb on ".an";
+	setAttr -cb on ".il";
+	setAttr -cb on ".vo";
+	setAttr -cb on ".eo";
+	setAttr -cb on ".fo";
+	setAttr -cb on ".epo";
+	setAttr ".ro" yes;
+	setAttr -cb on ".mimt";
+	setAttr -cb on ".miop";
+	setAttr -cb on ".mise";
+	setAttr -cb on ".mism";
+	setAttr -cb on ".mice";
+	setAttr -cb on ".micc";
+	setAttr -cb on ".mica";
+	setAttr -cb on ".micw";
+	setAttr -cb on ".mirw";
+select -ne :defaultRenderGlobals;
+	setAttr -k on ".cch";
+	setAttr -k on ".nds";
+	setAttr -k on ".clip";
+	setAttr -k on ".edm";
+	setAttr -av -k on ".esr";
+	setAttr -k on ".ors";
+	setAttr -k on ".gama";
+	setAttr -k on ".be";
+	setAttr ".ep" 1;
+	setAttr -k on ".fec";
+	setAttr -k on ".ofc";
+	setAttr -k on ".comp";
+	setAttr -k on ".cth";
+	setAttr -k on ".soll";
+	setAttr -k on ".rd";
+	setAttr -k on ".lp";
+	setAttr -k on ".sp";
+	setAttr -k on ".shs";
+	setAttr -k on ".lpr";
+	setAttr -k on ".mm";
+	setAttr -k on ".npu";
+	setAttr -k on ".itf";
+	setAttr -k on ".shp";
+	setAttr -k on ".uf";
+	setAttr -k on ".oi";
+	setAttr -k on ".rut";
+	setAttr -k on ".mbf";
+	setAttr -k on ".afp";
+	setAttr -k on ".pfb";
+	setAttr -k on ".bll";
+	setAttr -k on ".bls";
+	setAttr -k on ".smv";
+	setAttr -k on ".ubc";
+	setAttr -k on ".mbc";
+	setAttr -k on ".udbx";
+	setAttr -k on ".smc";
+	setAttr -k on ".kmv";
+	setAttr -k on ".rlen";
+	setAttr -av -k on ".frts";
+	setAttr -k on ".tlwd";
+	setAttr -k on ".tlht";
+	setAttr -k on ".jfc";
+select -ne :defaultResolution;
+	setAttr -av -k on ".cch";
+	setAttr -k on ".ihi";
+	setAttr -av -k on ".nds";
+	setAttr -k on ".bnm";
+	setAttr -av ".w" 640;
+	setAttr -av ".h" 480;
+	setAttr -av -k on ".pa";
+	setAttr -av -k on ".al";
+	setAttr -av ".dar" 1.3333332538604736;
+	setAttr -av -k on ".ldar";
+	setAttr -k on ".dpi";
+	setAttr -av -k on ".off";
+	setAttr -av -k on ".fld";
+	setAttr -av -k on ".zsl";
+	setAttr -k on ".isu";
+	setAttr -k on ".pdu";
 select -ne :hardwareRenderGlobals;
+	setAttr -k on ".cch";
+	setAttr -cb on ".ihi";
+	setAttr -k on ".nds";
+	setAttr -cb on ".bnm";
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
+	setAttr -k off ".fbfm";
+	setAttr -k off -cb on ".ehql";
+	setAttr -k off -cb on ".eams";
+	setAttr -k off ".eeaa";
+	setAttr -k off ".engm";
+	setAttr -k off ".mes";
+	setAttr -k off ".emb";
+	setAttr -av -k off ".mbbf";
+	setAttr -k off ".mbs";
+	setAttr -k off ".trm";
+	setAttr -k off -cb on ".tshc";
+	setAttr -k off ".enpt";
+	setAttr -k off ".clmt";
+	setAttr -k off -cb on ".tcov";
+	setAttr -k off -cb on ".lith";
+	setAttr -k off -cb on ".sobc";
+	setAttr -k off -cb on ".cuth";
+	setAttr -k off -cb on ".hgcd";
+	setAttr -k off -cb on ".hgci";
+	setAttr -k off -cb on ".mgcs";
+	setAttr -k off ".twa";
+	setAttr -k off ".twz";
+	setAttr -k on ".hwcc";
+	setAttr -k on ".hwdp";
+	setAttr -k on ".hwql";
 select -ne :defaultHardwareRenderGlobals;
-	setAttr ".fn" -type "string" "im";
+	setAttr -k on ".cch";
+	setAttr -cb on ".ihi";
+	setAttr -k on ".nds";
+	setAttr -cb on ".bnm";
+	setAttr -k on ".rp";
+	setAttr -k on ".cai";
+	setAttr -k on ".coi";
+	setAttr -cb on ".bc";
+	setAttr -av -k on ".bcb";
+	setAttr -av -k on ".bcg";
+	setAttr -av -k on ".bcr";
+	setAttr -k on ".ei";
+	setAttr -k on ".ex";
+	setAttr -av -k on ".es";
+	setAttr -av -k on ".ef";
+	setAttr -av -k on ".bf";
+	setAttr -k on ".fii";
+	setAttr -av -k on ".sf";
+	setAttr -k on ".gr";
+	setAttr -k on ".li";
+	setAttr -k on ".ls";
+	setAttr -k on ".mb";
+	setAttr -k on ".ti";
+	setAttr -k on ".txt";
+	setAttr -k on ".mpr";
+	setAttr -k on ".wzd";
+	setAttr -k on ".if";
 	setAttr ".res" -type "string" "ntsc_4d 646 485 1.333";
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
-connectAttr "groupParts13.og" "living_room_latestRN.phl[639]";
-connectAttr "living_room_latestRN.phl[640]" "lambert2SG.dsm" -na;
-connectAttr "groupId58.id" "living_room_latestRN.phl[641]";
-connectAttr "lambert2SG.mwc" "living_room_latestRN.phl[642]";
-connectAttr "living_room_latestRN.phl[643]" "lambert8SG.dsm" -na;
-connectAttr "groupId76.id" "living_room_latestRN.phl[644]";
-connectAttr "lambert8SG.mwc" "living_room_latestRN.phl[645]";
-connectAttr "living_room_latestRN.phl[646]" "lambert2SG.dsm" -na;
-connectAttr "groupId59.id" "living_room_latestRN.phl[647]";
-connectAttr "living_room_latestRN.phl[648]" "lambert2SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[649]" "lambert2SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[650]" "lambert2SG.dsm" -na;
+	setAttr -k on ".as";
+	setAttr -k on ".ds";
+	setAttr -k on ".lm";
+	setAttr -k on ".fir";
+	setAttr -k on ".aap";
+	setAttr -k on ".gh";
+	setAttr -cb on ".sd";
+connectAttr "groupParts10.og" "living_room_latestRN.phl[675]";
+connectAttr "living_room_latestRN.phl[676]" "lambert2SG.dsm" -na;
+connectAttr "groupId46.id" "living_room_latestRN.phl[677]";
+connectAttr "lambert2SG.mwc" "living_room_latestRN.phl[678]";
+connectAttr "living_room_latestRN.phl[679]" "lambert8SG.dsm" -na;
+connectAttr "groupId70.id" "living_room_latestRN.phl[680]";
+connectAttr "lambert8SG.mwc" "living_room_latestRN.phl[681]";
+connectAttr "living_room_latestRN.phl[682]" "lambert2SG.dsm" -na;
+connectAttr "groupId47.id" "living_room_latestRN.phl[683]";
+connectAttr "living_room_latestRN.phl[684]" "lambert2SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[685]" "lambert2SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[686]" "lambert2SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[721]" "lambert2SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[722]" "lambert2SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[723]" "lambert2SG.dsm" -na;
@@ -7817,6 +8113,112 @@ connectAttr "living_room_latestRN.phl[732]" "lambert2SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[733]" "lambert2SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[734]" "lambert2SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[735]" "lambert2SG.dsm" -na;
+connectAttr "groupParts13.og" "living_room_latestRN.phl[639]";
+connectAttr "living_room_latestRN.phl[640]" "lambert2SG.dsm" -na;
+connectAttr "groupId58.id" "living_room_latestRN.phl[641]";
+connectAttr "lambert2SG.mwc" "living_room_latestRN.phl[642]";
+connectAttr "living_room_latestRN.phl[643]" "lambert8SG.dsm" -na;
+connectAttr "groupId76.id" "living_room_latestRN.phl[644]";
+connectAttr "lambert8SG.mwc" "living_room_latestRN.phl[645]";
+connectAttr "living_room_latestRN.phl[646]" "lambert2SG.dsm" -na;
+connectAttr "groupId59.id" "living_room_latestRN.phl[647]";
+connectAttr "living_room_latestRN.phl[648]" "lambert2SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[649]" "lambert2SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[650]" "lambert2SG.dsm" -na;
+connectAttr "groupParts14.og" "living_room_latestRN.phl[627]";
+connectAttr "living_room_latestRN.phl[628]" "lambert2SG.dsm" -na;
+connectAttr "groupId60.id" "living_room_latestRN.phl[629]";
+connectAttr "lambert2SG.mwc" "living_room_latestRN.phl[630]";
+connectAttr "living_room_latestRN.phl[631]" "lambert8SG.dsm" -na;
+connectAttr "groupId77.id" "living_room_latestRN.phl[632]";
+connectAttr "lambert8SG.mwc" "living_room_latestRN.phl[633]";
+connectAttr "living_room_latestRN.phl[634]" "lambert2SG.dsm" -na;
+connectAttr "groupId61.id" "living_room_latestRN.phl[635]";
+connectAttr "living_room_latestRN.phl[636]" "lambert2SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[637]" "lambert2SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[638]" "lambert2SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[687]" "lambert31SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[688]" "lambert31SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[689]" "lambert21SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[690]" "lambert21SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[691]" "lambert21SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[692]" "lambert21SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[693]" "lambert21SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[694]" "lambert21SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[695]" "lambert21SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[696]" "lambert21SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[697]" "lambert21SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[698]" "lambert21SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[699]" "lambert21SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[700]" "lambert21SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[701]" "lambert21SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[702]" "lambert21SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[703]" "lambert21SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[704]" "lambert21SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[705]" "lambert21SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[706]" "lambert21SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[707]" "lambert21SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[708]" "lambert21SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[709]" "lambert21SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[710]" "lambert21SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[711]" "lambert21SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[712]" "lambert21SG.dsm" -na;
+connectAttr "polyAutoProj2.out" "living_room_latestRN.phl[713]";
+connectAttr "living_room_latestRN.phl[714]" "polyAutoProj2.mp";
+connectAttr "living_room_latestRN.phl[715]" "lambert21SG.dsm" -na;
+connectAttr "polyAutoProj1.out" "living_room_latestRN.phl[716]";
+connectAttr "living_room_latestRN.phl[717]" "polyAutoProj1.mp";
+connectAttr "living_room_latestRN.phl[718]" "lambert21SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[719]" "lambert21SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[720]" "lambert21SG.dsm" -na;
+connectAttr "groupParts15.og" "living_room_latestRN.phl[615]";
+connectAttr "living_room_latestRN.phl[616]" "lambert2SG.dsm" -na;
+connectAttr "groupId62.id" "living_room_latestRN.phl[617]";
+connectAttr "lambert2SG.mwc" "living_room_latestRN.phl[618]";
+connectAttr "living_room_latestRN.phl[619]" "lambert8SG.dsm" -na;
+connectAttr "groupId78.id" "living_room_latestRN.phl[620]";
+connectAttr "lambert8SG.mwc" "living_room_latestRN.phl[621]";
+connectAttr "living_room_latestRN.phl[622]" "lambert2SG.dsm" -na;
+connectAttr "groupId63.id" "living_room_latestRN.phl[623]";
+connectAttr "living_room_latestRN.phl[624]" "lambert2SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[625]" "lambert2SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[626]" "lambert2SG.dsm" -na;
+connectAttr "groupParts12.og" "living_room_latestRN.phl[651]";
+connectAttr "living_room_latestRN.phl[652]" "lambert2SG.dsm" -na;
+connectAttr "groupId50.id" "living_room_latestRN.phl[653]";
+connectAttr "lambert2SG.mwc" "living_room_latestRN.phl[654]";
+connectAttr "living_room_latestRN.phl[655]" "lambert8SG.dsm" -na;
+connectAttr "groupId72.id" "living_room_latestRN.phl[656]";
+connectAttr "lambert8SG.mwc" "living_room_latestRN.phl[657]";
+connectAttr "living_room_latestRN.phl[658]" "lambert2SG.dsm" -na;
+connectAttr "groupId51.id" "living_room_latestRN.phl[659]";
+connectAttr "living_room_latestRN.phl[660]" "lambert2SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[661]" "lambert2SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[662]" "lambert2SG.dsm" -na;
+connectAttr "groupParts11.og" "living_room_latestRN.phl[663]";
+connectAttr "living_room_latestRN.phl[664]" "lambert2SG.dsm" -na;
+connectAttr "groupId48.id" "living_room_latestRN.phl[665]";
+connectAttr "lambert2SG.mwc" "living_room_latestRN.phl[666]";
+connectAttr "living_room_latestRN.phl[667]" "lambert8SG.dsm" -na;
+connectAttr "groupId71.id" "living_room_latestRN.phl[668]";
+connectAttr "lambert8SG.mwc" "living_room_latestRN.phl[669]";
+connectAttr "living_room_latestRN.phl[670]" "lambert2SG.dsm" -na;
+connectAttr "groupId49.id" "living_room_latestRN.phl[671]";
+connectAttr "living_room_latestRN.phl[672]" "lambert2SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[673]" "lambert2SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[674]" "lambert2SG.dsm" -na;
+connectAttr "groupParts16.og" "living_room_latestRN.phl[603]";
+connectAttr "living_room_latestRN.phl[604]" "lambert2SG.dsm" -na;
+connectAttr "groupId64.id" "living_room_latestRN.phl[605]";
+connectAttr "lambert2SG.mwc" "living_room_latestRN.phl[606]";
+connectAttr "living_room_latestRN.phl[607]" "lambert8SG.dsm" -na;
+connectAttr "groupId79.id" "living_room_latestRN.phl[608]";
+connectAttr "lambert8SG.mwc" "living_room_latestRN.phl[609]";
+connectAttr "living_room_latestRN.phl[610]" "lambert2SG.dsm" -na;
+connectAttr "groupId65.id" "living_room_latestRN.phl[611]";
+connectAttr "living_room_latestRN.phl[612]" "lambert2SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[613]" "lambert2SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[614]" "lambert2SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[736]" "CrownMolding.dsm" -na;
 connectAttr "living_room_latestRN.phl[737]" "lambert14SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[738]" "CrownMolding.dsm" -na;
@@ -8011,171 +8413,171 @@ connectAttr "living_room_latestRN.phl[926]" "lambert5SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[927]" "lambert5SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[928]" "lambert5SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[929]" "lambert5SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[930]" "lambert2SG.dsm" -na;
-connectAttr "groupId34.id" "living_room_latestRN.phl[931]";
-connectAttr "lambert2SG.mwc" "living_room_latestRN.phl[932]";
-connectAttr "living_room_latestRN.phl[933]" "lambert8SG.dsm" -na;
-connectAttr "groupId42.id" "living_room_latestRN.phl[934]";
-connectAttr "lambert8SG.mwc" "living_room_latestRN.phl[935]";
-connectAttr "living_room_latestRN.phl[936]" "lambert2SG.dsm" -na;
-connectAttr "groupId35.id" "living_room_latestRN.phl[937]";
+connectAttr "living_room_latestRN.phl[930]" "lambert5SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[931]" "lambert5SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[932]" "lambert2SG.dsm" -na;
+connectAttr "groupId34.id" "living_room_latestRN.phl[933]";
+connectAttr "lambert2SG.mwc" "living_room_latestRN.phl[934]";
+connectAttr "living_room_latestRN.phl[935]" "lambert8SG.dsm" -na;
+connectAttr "groupId42.id" "living_room_latestRN.phl[936]";
+connectAttr "lambert8SG.mwc" "living_room_latestRN.phl[937]";
 connectAttr "living_room_latestRN.phl[938]" "lambert2SG.dsm" -na;
-connectAttr "groupId40.id" "living_room_latestRN.phl[939]";
-connectAttr "lambert2SG.mwc" "living_room_latestRN.phl[940]";
-connectAttr "living_room_latestRN.phl[941]" "lambert8SG.dsm" -na;
-connectAttr "groupId45.id" "living_room_latestRN.phl[942]";
-connectAttr "lambert8SG.mwc" "living_room_latestRN.phl[943]";
-connectAttr "living_room_latestRN.phl[944]" "lambert2SG.dsm" -na;
-connectAttr "groupId41.id" "living_room_latestRN.phl[945]";
+connectAttr "groupId35.id" "living_room_latestRN.phl[939]";
+connectAttr "living_room_latestRN.phl[940]" "lambert2SG.dsm" -na;
+connectAttr "groupId40.id" "living_room_latestRN.phl[941]";
+connectAttr "lambert2SG.mwc" "living_room_latestRN.phl[942]";
+connectAttr "living_room_latestRN.phl[943]" "lambert8SG.dsm" -na;
+connectAttr "groupId45.id" "living_room_latestRN.phl[944]";
+connectAttr "lambert8SG.mwc" "living_room_latestRN.phl[945]";
 connectAttr "living_room_latestRN.phl[946]" "lambert2SG.dsm" -na;
-connectAttr "groupId38.id" "living_room_latestRN.phl[947]";
-connectAttr "lambert2SG.mwc" "living_room_latestRN.phl[948]";
-connectAttr "living_room_latestRN.phl[949]" "lambert8SG.dsm" -na;
-connectAttr "groupId44.id" "living_room_latestRN.phl[950]";
-connectAttr "lambert8SG.mwc" "living_room_latestRN.phl[951]";
-connectAttr "living_room_latestRN.phl[952]" "lambert2SG.dsm" -na;
-connectAttr "groupId39.id" "living_room_latestRN.phl[953]";
+connectAttr "groupId41.id" "living_room_latestRN.phl[947]";
+connectAttr "living_room_latestRN.phl[948]" "lambert2SG.dsm" -na;
+connectAttr "groupId38.id" "living_room_latestRN.phl[949]";
+connectAttr "lambert2SG.mwc" "living_room_latestRN.phl[950]";
+connectAttr "living_room_latestRN.phl[951]" "lambert8SG.dsm" -na;
+connectAttr "groupId44.id" "living_room_latestRN.phl[952]";
+connectAttr "lambert8SG.mwc" "living_room_latestRN.phl[953]";
 connectAttr "living_room_latestRN.phl[954]" "lambert2SG.dsm" -na;
-connectAttr "groupId36.id" "living_room_latestRN.phl[955]";
-connectAttr "lambert2SG.mwc" "living_room_latestRN.phl[956]";
-connectAttr "living_room_latestRN.phl[957]" "lambert8SG.dsm" -na;
-connectAttr "groupId43.id" "living_room_latestRN.phl[958]";
-connectAttr "lambert8SG.mwc" "living_room_latestRN.phl[959]";
-connectAttr "living_room_latestRN.phl[960]" "lambert2SG.dsm" -na;
-connectAttr "groupId37.id" "living_room_latestRN.phl[961]";
-connectAttr "living_room_latestRN.phl[962]" "lambert15SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[963]" "lambert6SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[964]" "lambert7SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[965]" "lambert7SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[966]" "lambert15SG.dsm" -na;
+connectAttr "groupId39.id" "living_room_latestRN.phl[955]";
+connectAttr "living_room_latestRN.phl[956]" "lambert2SG.dsm" -na;
+connectAttr "groupId36.id" "living_room_latestRN.phl[957]";
+connectAttr "lambert2SG.mwc" "living_room_latestRN.phl[958]";
+connectAttr "living_room_latestRN.phl[959]" "lambert8SG.dsm" -na;
+connectAttr "groupId43.id" "living_room_latestRN.phl[960]";
+connectAttr "lambert8SG.mwc" "living_room_latestRN.phl[961]";
+connectAttr "living_room_latestRN.phl[962]" "lambert2SG.dsm" -na;
+connectAttr "groupId37.id" "living_room_latestRN.phl[963]";
+connectAttr "living_room_latestRN.phl[964]" "lambert15SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[965]" "lambert6SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[966]" "lambert7SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[967]" "lambert7SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[968]" "lambert7SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[968]" "lambert15SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[969]" "lambert7SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[970]" "lambert7SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[971]" "lambert7SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[972]" "lambert15SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[973]" "lambert15SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[972]" "lambert7SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[973]" "lambert7SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[974]" "lambert15SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[975]" "lambert15SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[976]" "lambert15SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[977]" "lambert15SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[978]" "lambert8SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[978]" "lambert15SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[979]" "lambert15SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[980]" "lambert15SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[981]" "lambert7SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[982]" "lambert7SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[980]" "lambert8SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[981]" "lambert15SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[982]" "lambert15SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[983]" "lambert7SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[984]" "lambert7SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[985]" "lambert8SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[986]" "lambert15SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[987]" "lambert15SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[985]" "lambert7SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[986]" "lambert7SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[987]" "lambert8SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[988]" "lambert15SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[989]" "lambert15SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[990]" "lambert15SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[991]" "lambert6SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[992]" ":initialShadingGroup.dsm" -na;
-connectAttr "groupId82.id" "living_room_latestRN.phl[993]";
-connectAttr ":initialShadingGroup.mwc" "living_room_latestRN.phl[994]";
-connectAttr "living_room_latestRN.phl[995]" "lambert12SG.dsm" -na;
-connectAttr "groupId84.id" "living_room_latestRN.phl[996]";
-connectAttr "lambert12SG.mwc" "living_room_latestRN.phl[997]";
-connectAttr "living_room_latestRN.phl[998]" "Walls.dsm" -na;
-connectAttr "groupId85.id" "living_room_latestRN.phl[999]";
-connectAttr "Walls.mwc" "living_room_latestRN.phl[1000]";
-connectAttr "living_room_latestRN.phl[1001]" "lambert13SG.dsm" -na;
-connectAttr "groupId86.id" "living_room_latestRN.phl[1002]";
-connectAttr "lambert13SG.mwc" "living_room_latestRN.phl[1003]";
-connectAttr "living_room_latestRN.phl[1004]" "lambert20SG.dsm" -na;
-connectAttr "groupId133.id" "living_room_latestRN.phl[1005]";
-connectAttr "lambert20SG.mwc" "living_room_latestRN.phl[1006]";
-connectAttr "living_room_latestRN.phl[1007]" ":initialShadingGroup.dsm" -na;
-connectAttr "groupId83.id" "living_room_latestRN.phl[1008]";
-connectAttr "living_room_latestRN.phl[1009]" "lambert19SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1010]" "lambert19SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[991]" "lambert15SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[992]" "lambert15SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[993]" "lambert6SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[994]" ":initialShadingGroup.dsm" -na;
+connectAttr "groupId82.id" "living_room_latestRN.phl[995]";
+connectAttr ":initialShadingGroup.mwc" "living_room_latestRN.phl[996]";
+connectAttr "living_room_latestRN.phl[997]" "lambert12SG.dsm" -na;
+connectAttr "groupId84.id" "living_room_latestRN.phl[998]";
+connectAttr "lambert12SG.mwc" "living_room_latestRN.phl[999]";
+connectAttr "living_room_latestRN.phl[1000]" "Walls.dsm" -na;
+connectAttr "groupId85.id" "living_room_latestRN.phl[1001]";
+connectAttr "Walls.mwc" "living_room_latestRN.phl[1002]";
+connectAttr "living_room_latestRN.phl[1003]" "lambert13SG.dsm" -na;
+connectAttr "groupId86.id" "living_room_latestRN.phl[1004]";
+connectAttr "lambert13SG.mwc" "living_room_latestRN.phl[1005]";
+connectAttr "living_room_latestRN.phl[1006]" "lambert20SG.dsm" -na;
+connectAttr "groupId133.id" "living_room_latestRN.phl[1007]";
+connectAttr "lambert20SG.mwc" "living_room_latestRN.phl[1008]";
+connectAttr "living_room_latestRN.phl[1009]" ":initialShadingGroup.dsm" -na;
+connectAttr "groupId83.id" "living_room_latestRN.phl[1010]";
 connectAttr "living_room_latestRN.phl[1011]" "lambert19SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1012]" "lambert19SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1013]" "lambert18SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1014]" "lambert6SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1015]" "lambert6SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1013]" "lambert19SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1014]" "lambert19SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1015]" "lambert18SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1016]" "lambert6SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1017]" "lambert16SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1018]" "lambert16SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1019]" "lambert6SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1020]" "lambert6SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1017]" "lambert6SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1018]" "lambert6SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1019]" "lambert16SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1020]" "lambert16SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1021]" "lambert6SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1022]" "lambert6SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1023]" "lambert6SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1024]" "lambert6SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1025]" "lambert6SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1026]" "lambert15SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1027]" "lambert15SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1028]" "lambert6SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1029]" "lambert6SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1026]" "lambert6SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1027]" "lambert6SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1028]" "lambert15SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1029]" "lambert15SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1030]" "lambert6SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1031]" "lambert6SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1032]" "lambert6SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1033]" "lambert15SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1034]" "lambert16SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1035]" "lambert17SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1036]" "lambert17SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1033]" "lambert6SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1034]" "lambert6SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1035]" "lambert15SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1036]" "lambert16SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1037]" "lambert17SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1038]" "lambert7SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1039]" "lambert7SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1038]" "lambert17SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1039]" "lambert17SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1040]" "lambert7SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1041]" "lambert7SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1042]" "lambert7SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1043]" "lambert7SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1044]" "lambert7SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1045]" "lambert7SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1046]" "lambert6SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1047]" "lambert6SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1046]" "lambert7SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1047]" "lambert7SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1048]" "lambert6SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1049]" "lambert6SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1050]" "lambert15SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1051]" "lambert2SG.dsm" -na;
-connectAttr "groupId54.id" "living_room_latestRN.phl[1052]";
-connectAttr "lambert2SG.mwc" "living_room_latestRN.phl[1053]";
-connectAttr "living_room_latestRN.phl[1054]" "lambert8SG.dsm" -na;
-connectAttr "groupId74.id" "living_room_latestRN.phl[1055]";
-connectAttr "lambert8SG.mwc" "living_room_latestRN.phl[1056]";
-connectAttr "living_room_latestRN.phl[1057]" "lambert2SG.dsm" -na;
-connectAttr "groupId55.id" "living_room_latestRN.phl[1058]";
+connectAttr "living_room_latestRN.phl[1050]" "lambert6SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1051]" "lambert6SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1052]" "lambert15SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1053]" "lambert2SG.dsm" -na;
+connectAttr "groupId54.id" "living_room_latestRN.phl[1054]";
+connectAttr "lambert2SG.mwc" "living_room_latestRN.phl[1055]";
+connectAttr "living_room_latestRN.phl[1056]" "lambert8SG.dsm" -na;
+connectAttr "groupId74.id" "living_room_latestRN.phl[1057]";
+connectAttr "lambert8SG.mwc" "living_room_latestRN.phl[1058]";
 connectAttr "living_room_latestRN.phl[1059]" "lambert2SG.dsm" -na;
-connectAttr "groupId56.id" "living_room_latestRN.phl[1060]";
-connectAttr "lambert2SG.mwc" "living_room_latestRN.phl[1061]";
-connectAttr "living_room_latestRN.phl[1062]" "lambert8SG.dsm" -na;
-connectAttr "groupId75.id" "living_room_latestRN.phl[1063]";
-connectAttr "lambert8SG.mwc" "living_room_latestRN.phl[1064]";
-connectAttr "living_room_latestRN.phl[1065]" "lambert2SG.dsm" -na;
-connectAttr "groupId57.id" "living_room_latestRN.phl[1066]";
+connectAttr "groupId55.id" "living_room_latestRN.phl[1060]";
+connectAttr "living_room_latestRN.phl[1061]" "lambert2SG.dsm" -na;
+connectAttr "groupId56.id" "living_room_latestRN.phl[1062]";
+connectAttr "lambert2SG.mwc" "living_room_latestRN.phl[1063]";
+connectAttr "living_room_latestRN.phl[1064]" "lambert8SG.dsm" -na;
+connectAttr "groupId75.id" "living_room_latestRN.phl[1065]";
+connectAttr "lambert8SG.mwc" "living_room_latestRN.phl[1066]";
 connectAttr "living_room_latestRN.phl[1067]" "lambert2SG.dsm" -na;
-connectAttr "groupId52.id" "living_room_latestRN.phl[1068]";
-connectAttr "lambert2SG.mwc" "living_room_latestRN.phl[1069]";
-connectAttr "living_room_latestRN.phl[1070]" "lambert8SG.dsm" -na;
-connectAttr "groupId73.id" "living_room_latestRN.phl[1071]";
-connectAttr "lambert8SG.mwc" "living_room_latestRN.phl[1072]";
-connectAttr "living_room_latestRN.phl[1073]" "lambert2SG.dsm" -na;
-connectAttr "groupId53.id" "living_room_latestRN.phl[1074]";
-connectAttr "living_room_latestRN.phl[1075]" "FloorBorad.dsm" -na;
-connectAttr "living_room_latestRN.phl[1076]" "lambert14SG.dsm" -na;
+connectAttr "groupId57.id" "living_room_latestRN.phl[1068]";
+connectAttr "living_room_latestRN.phl[1069]" "lambert2SG.dsm" -na;
+connectAttr "groupId52.id" "living_room_latestRN.phl[1070]";
+connectAttr "lambert2SG.mwc" "living_room_latestRN.phl[1071]";
+connectAttr "living_room_latestRN.phl[1072]" "lambert8SG.dsm" -na;
+connectAttr "groupId73.id" "living_room_latestRN.phl[1073]";
+connectAttr "lambert8SG.mwc" "living_room_latestRN.phl[1074]";
+connectAttr "living_room_latestRN.phl[1075]" "lambert2SG.dsm" -na;
+connectAttr "groupId53.id" "living_room_latestRN.phl[1076]";
 connectAttr "living_room_latestRN.phl[1077]" "FloorBorad.dsm" -na;
 connectAttr "living_room_latestRN.phl[1078]" "lambert14SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1079]" "FloorBorad.dsm" -na;
 connectAttr "living_room_latestRN.phl[1080]" "lambert14SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1081]" "FloorBorad.dsm" -na;
 connectAttr "living_room_latestRN.phl[1082]" "lambert14SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1083]" ":initialShadingGroup.dsm" -na;
-connectAttr "groupId134.id" "living_room_latestRN.phl[1084]";
-connectAttr ":initialShadingGroup.mwc" "living_room_latestRN.phl[1085]";
-connectAttr "living_room_latestRN.phl[1086]" "lambert13SG.dsm" -na;
-connectAttr "groupId136.id" "living_room_latestRN.phl[1087]";
-connectAttr "lambert13SG.mwc" "living_room_latestRN.phl[1088]";
-connectAttr "living_room_latestRN.phl[1089]" ":initialShadingGroup.dsm" -na;
-connectAttr "groupId135.id" "living_room_latestRN.phl[1090]";
-connectAttr "living_room_latestRN.phl[1091]" "FloorBorad.dsm" -na;
-connectAttr "living_room_latestRN.phl[1092]" "lambert14SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1093]" "FloorBorad.dsm" -na;
-connectAttr "living_room_latestRN.phl[1094]" "lambert14SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1083]" "FloorBorad.dsm" -na;
+connectAttr "living_room_latestRN.phl[1084]" "lambert14SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1085]" ":initialShadingGroup.dsm" -na;
+connectAttr "groupId134.id" "living_room_latestRN.phl[1086]";
+connectAttr ":initialShadingGroup.mwc" "living_room_latestRN.phl[1087]";
+connectAttr "living_room_latestRN.phl[1088]" "lambert13SG.dsm" -na;
+connectAttr "groupId136.id" "living_room_latestRN.phl[1089]";
+connectAttr "lambert13SG.mwc" "living_room_latestRN.phl[1090]";
+connectAttr "living_room_latestRN.phl[1091]" ":initialShadingGroup.dsm" -na;
+connectAttr "groupId135.id" "living_room_latestRN.phl[1092]";
+connectAttr "living_room_latestRN.phl[1093]" "lambert13SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1094]" "lambert13SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1095]" "FloorBorad.dsm" -na;
 connectAttr "living_room_latestRN.phl[1096]" "lambert14SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1097]" "FloorBorad.dsm" -na;
@@ -8188,225 +8590,225 @@ connectAttr "living_room_latestRN.phl[1103]" "FloorBorad.dsm" -na;
 connectAttr "living_room_latestRN.phl[1104]" "lambert14SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1105]" "FloorBorad.dsm" -na;
 connectAttr "living_room_latestRN.phl[1106]" "lambert14SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1107]" "lambert16SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1108]" "lambert17SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1109]" "SeatCushions.dsm" -na;
-connectAttr "groupId98.id" "living_room_latestRN.phl[1110]";
-connectAttr "SeatCushions.mwc" "living_room_latestRN.phl[1111]";
-connectAttr "living_room_latestRN.phl[1112]" "WoodWindowSeat.dsm" -na;
-connectAttr "groupId102.id" "living_room_latestRN.phl[1113]";
-connectAttr "WoodWindowSeat.mwc" "living_room_latestRN.phl[1114]";
-connectAttr "living_room_latestRN.phl[1115]" "lambert18SG.dsm" -na;
-connectAttr "groupId122.id" "living_room_latestRN.phl[1116]";
-connectAttr "lambert18SG.mwc" "living_room_latestRN.phl[1117]";
-connectAttr "living_room_latestRN.phl[1118]" "lambert2SG.dsm" -na;
-connectAttr "groupId129.id" "living_room_latestRN.phl[1119]";
-connectAttr "lambert2SG.mwc" "living_room_latestRN.phl[1120]";
-connectAttr "living_room_latestRN.phl[1121]" ":initialShadingGroup.dsm" -na;
-connectAttr "groupId123.id" "living_room_latestRN.phl[1122]";
-connectAttr "living_room_latestRN.phl[1123]" "lambert2SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1124]" "WoodWindowSeat.dsm" -na;
-connectAttr "groupId103.id" "living_room_latestRN.phl[1125]";
-connectAttr "WoodWindowSeat.mwc" "living_room_latestRN.phl[1126]";
+connectAttr "living_room_latestRN.phl[1107]" "FloorBorad.dsm" -na;
+connectAttr "living_room_latestRN.phl[1108]" "lambert14SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1109]" "FloorBorad.dsm" -na;
+connectAttr "living_room_latestRN.phl[1110]" "lambert14SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1111]" "lambert16SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1112]" "lambert17SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1113]" "SeatCushions.dsm" -na;
+connectAttr "groupId98.id" "living_room_latestRN.phl[1114]";
+connectAttr "SeatCushions.mwc" "living_room_latestRN.phl[1115]";
+connectAttr "living_room_latestRN.phl[1116]" "WoodWindowSeat.dsm" -na;
+connectAttr "groupId102.id" "living_room_latestRN.phl[1117]";
+connectAttr "WoodWindowSeat.mwc" "living_room_latestRN.phl[1118]";
+connectAttr "living_room_latestRN.phl[1119]" "lambert18SG.dsm" -na;
+connectAttr "groupId122.id" "living_room_latestRN.phl[1120]";
+connectAttr "lambert18SG.mwc" "living_room_latestRN.phl[1121]";
+connectAttr "living_room_latestRN.phl[1122]" "lambert2SG.dsm" -na;
+connectAttr "groupId129.id" "living_room_latestRN.phl[1123]";
+connectAttr "lambert2SG.mwc" "living_room_latestRN.phl[1124]";
+connectAttr "living_room_latestRN.phl[1125]" ":initialShadingGroup.dsm" -na;
+connectAttr "groupId123.id" "living_room_latestRN.phl[1126]";
 connectAttr "living_room_latestRN.phl[1127]" "lambert2SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1128]" "WoodWindowSeat.dsm" -na;
-connectAttr "groupId104.id" "living_room_latestRN.phl[1129]";
+connectAttr "groupId103.id" "living_room_latestRN.phl[1129]";
 connectAttr "WoodWindowSeat.mwc" "living_room_latestRN.phl[1130]";
-connectAttr "living_room_latestRN.phl[1131]" "SeatCushions.dsm" -na;
-connectAttr "groupId99.id" "living_room_latestRN.phl[1132]";
-connectAttr "SeatCushions.mwc" "living_room_latestRN.phl[1133]";
-connectAttr "living_room_latestRN.phl[1134]" "WoodWindowSeat.dsm" -na;
-connectAttr "groupId105.id" "living_room_latestRN.phl[1135]";
-connectAttr "WoodWindowSeat.mwc" "living_room_latestRN.phl[1136]";
-connectAttr "living_room_latestRN.phl[1137]" "lambert18SG.dsm" -na;
-connectAttr "groupId120.id" "living_room_latestRN.phl[1138]";
-connectAttr "lambert18SG.mwc" "living_room_latestRN.phl[1139]";
-connectAttr "living_room_latestRN.phl[1140]" "lambert2SG.dsm" -na;
-connectAttr "groupId128.id" "living_room_latestRN.phl[1141]";
-connectAttr "lambert2SG.mwc" "living_room_latestRN.phl[1142]";
-connectAttr "living_room_latestRN.phl[1143]" ":initialShadingGroup.dsm" -na;
-connectAttr "groupId121.id" "living_room_latestRN.phl[1144]";
-connectAttr "living_room_latestRN.phl[1145]" "lambert2SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1146]" "WoodWindowSeat.dsm" -na;
-connectAttr "groupId106.id" "living_room_latestRN.phl[1147]";
-connectAttr "WoodWindowSeat.mwc" "living_room_latestRN.phl[1148]";
+connectAttr "living_room_latestRN.phl[1131]" "lambert2SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1132]" "WoodWindowSeat.dsm" -na;
+connectAttr "groupId104.id" "living_room_latestRN.phl[1133]";
+connectAttr "WoodWindowSeat.mwc" "living_room_latestRN.phl[1134]";
+connectAttr "living_room_latestRN.phl[1135]" "SeatCushions.dsm" -na;
+connectAttr "groupId99.id" "living_room_latestRN.phl[1136]";
+connectAttr "SeatCushions.mwc" "living_room_latestRN.phl[1137]";
+connectAttr "living_room_latestRN.phl[1138]" "WoodWindowSeat.dsm" -na;
+connectAttr "groupId105.id" "living_room_latestRN.phl[1139]";
+connectAttr "WoodWindowSeat.mwc" "living_room_latestRN.phl[1140]";
+connectAttr "living_room_latestRN.phl[1141]" "lambert18SG.dsm" -na;
+connectAttr "groupId120.id" "living_room_latestRN.phl[1142]";
+connectAttr "lambert18SG.mwc" "living_room_latestRN.phl[1143]";
+connectAttr "living_room_latestRN.phl[1144]" "lambert2SG.dsm" -na;
+connectAttr "groupId128.id" "living_room_latestRN.phl[1145]";
+connectAttr "lambert2SG.mwc" "living_room_latestRN.phl[1146]";
+connectAttr "living_room_latestRN.phl[1147]" ":initialShadingGroup.dsm" -na;
+connectAttr "groupId121.id" "living_room_latestRN.phl[1148]";
 connectAttr "living_room_latestRN.phl[1149]" "lambert2SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1150]" "WoodWindowSeat.dsm" -na;
-connectAttr "groupId107.id" "living_room_latestRN.phl[1151]";
+connectAttr "groupId106.id" "living_room_latestRN.phl[1151]";
 connectAttr "WoodWindowSeat.mwc" "living_room_latestRN.phl[1152]";
-connectAttr "living_room_latestRN.phl[1153]" "lambert18SG.dsm" -na;
-connectAttr "lambert18SG.mwc" "living_room_latestRN.phl[1154]";
-connectAttr "living_room_latestRN.phl[1155]" "SeatCushions.dsm" -na;
-connectAttr "groupId101.id" "living_room_latestRN.phl[1156]";
-connectAttr "SeatCushions.mwc" "living_room_latestRN.phl[1157]";
-connectAttr "living_room_latestRN.phl[1158]" "WoodWindowSeat.dsm" -na;
-connectAttr "groupId108.id" "living_room_latestRN.phl[1159]";
-connectAttr "WoodWindowSeat.mwc" "living_room_latestRN.phl[1160]";
-connectAttr "living_room_latestRN.phl[1161]" "lambert2SG.dsm" -na;
-connectAttr "groupId127.id" "living_room_latestRN.phl[1162]";
-connectAttr "lambert2SG.mwc" "living_room_latestRN.phl[1163]";
-connectAttr "living_room_latestRN.phl[1164]" "lambert18SG.dsm" -na;
-connectAttr "lambert18SG.mwc" "living_room_latestRN.phl[1165]";
-connectAttr "living_room_latestRN.phl[1166]" "SeatCushions.dsm" -na;
-connectAttr "groupId100.id" "living_room_latestRN.phl[1167]";
-connectAttr "SeatCushions.mwc" "living_room_latestRN.phl[1168]";
-connectAttr "living_room_latestRN.phl[1169]" "WoodWindowSeat.dsm" -na;
-connectAttr "groupId109.id" "living_room_latestRN.phl[1170]";
-connectAttr "WoodWindowSeat.mwc" "living_room_latestRN.phl[1171]";
-connectAttr "living_room_latestRN.phl[1172]" "lambert2SG.dsm" -na;
-connectAttr "groupId126.id" "living_room_latestRN.phl[1173]";
-connectAttr "lambert2SG.mwc" "living_room_latestRN.phl[1174]";
-connectAttr "living_room_latestRN.phl[1175]" "lambert2SG.dsm" -na;
-connectAttr "groupId89.id" "living_room_latestRN.phl[1176]";
-connectAttr "lambert2SG.mwc" "living_room_latestRN.phl[1177]";
-connectAttr "living_room_latestRN.phl[1178]" "lambert18SG.dsm" -na;
-connectAttr "groupId93.id" "living_room_latestRN.phl[1179]";
-connectAttr "lambert18SG.mwc" "living_room_latestRN.phl[1180]";
-connectAttr "living_room_latestRN.phl[1181]" "SeatCushions.dsm" -na;
-connectAttr "groupId94.id" "living_room_latestRN.phl[1182]";
-connectAttr "SeatCushions.mwc" "living_room_latestRN.phl[1183]";
-connectAttr "living_room_latestRN.phl[1184]" "WoodWindowSeat.dsm" -na;
-connectAttr "groupId110.id" "living_room_latestRN.phl[1185]";
-connectAttr "WoodWindowSeat.mwc" "living_room_latestRN.phl[1186]";
-connectAttr "living_room_latestRN.phl[1187]" ":initialShadingGroup.dsm" -na;
-connectAttr "groupId90.id" "living_room_latestRN.phl[1188]";
-connectAttr "living_room_latestRN.phl[1189]" "lambert2SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1190]" "WoodWindowSeat.dsm" -na;
-connectAttr "groupId111.id" "living_room_latestRN.phl[1191]";
-connectAttr "WoodWindowSeat.mwc" "living_room_latestRN.phl[1192]";
+connectAttr "living_room_latestRN.phl[1153]" "lambert2SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1154]" "WoodWindowSeat.dsm" -na;
+connectAttr "groupId107.id" "living_room_latestRN.phl[1155]";
+connectAttr "WoodWindowSeat.mwc" "living_room_latestRN.phl[1156]";
+connectAttr "living_room_latestRN.phl[1157]" "lambert18SG.dsm" -na;
+connectAttr "lambert18SG.mwc" "living_room_latestRN.phl[1158]";
+connectAttr "living_room_latestRN.phl[1159]" "SeatCushions.dsm" -na;
+connectAttr "groupId101.id" "living_room_latestRN.phl[1160]";
+connectAttr "SeatCushions.mwc" "living_room_latestRN.phl[1161]";
+connectAttr "living_room_latestRN.phl[1162]" "WoodWindowSeat.dsm" -na;
+connectAttr "groupId108.id" "living_room_latestRN.phl[1163]";
+connectAttr "WoodWindowSeat.mwc" "living_room_latestRN.phl[1164]";
+connectAttr "living_room_latestRN.phl[1165]" "lambert2SG.dsm" -na;
+connectAttr "groupId127.id" "living_room_latestRN.phl[1166]";
+connectAttr "lambert2SG.mwc" "living_room_latestRN.phl[1167]";
+connectAttr "living_room_latestRN.phl[1168]" "lambert18SG.dsm" -na;
+connectAttr "lambert18SG.mwc" "living_room_latestRN.phl[1169]";
+connectAttr "living_room_latestRN.phl[1170]" "SeatCushions.dsm" -na;
+connectAttr "groupId100.id" "living_room_latestRN.phl[1171]";
+connectAttr "SeatCushions.mwc" "living_room_latestRN.phl[1172]";
+connectAttr "living_room_latestRN.phl[1173]" "WoodWindowSeat.dsm" -na;
+connectAttr "groupId109.id" "living_room_latestRN.phl[1174]";
+connectAttr "WoodWindowSeat.mwc" "living_room_latestRN.phl[1175]";
+connectAttr "living_room_latestRN.phl[1176]" "lambert2SG.dsm" -na;
+connectAttr "groupId126.id" "living_room_latestRN.phl[1177]";
+connectAttr "lambert2SG.mwc" "living_room_latestRN.phl[1178]";
+connectAttr "living_room_latestRN.phl[1179]" "lambert2SG.dsm" -na;
+connectAttr "groupId89.id" "living_room_latestRN.phl[1180]";
+connectAttr "lambert2SG.mwc" "living_room_latestRN.phl[1181]";
+connectAttr "living_room_latestRN.phl[1182]" "lambert18SG.dsm" -na;
+connectAttr "groupId93.id" "living_room_latestRN.phl[1183]";
+connectAttr "lambert18SG.mwc" "living_room_latestRN.phl[1184]";
+connectAttr "living_room_latestRN.phl[1185]" "SeatCushions.dsm" -na;
+connectAttr "groupId94.id" "living_room_latestRN.phl[1186]";
+connectAttr "SeatCushions.mwc" "living_room_latestRN.phl[1187]";
+connectAttr "living_room_latestRN.phl[1188]" "WoodWindowSeat.dsm" -na;
+connectAttr "groupId110.id" "living_room_latestRN.phl[1189]";
+connectAttr "WoodWindowSeat.mwc" "living_room_latestRN.phl[1190]";
+connectAttr "living_room_latestRN.phl[1191]" ":initialShadingGroup.dsm" -na;
+connectAttr "groupId90.id" "living_room_latestRN.phl[1192]";
 connectAttr "living_room_latestRN.phl[1193]" "lambert2SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1194]" "WoodWindowSeat.dsm" -na;
-connectAttr "groupId112.id" "living_room_latestRN.phl[1195]";
+connectAttr "groupId111.id" "living_room_latestRN.phl[1195]";
 connectAttr "WoodWindowSeat.mwc" "living_room_latestRN.phl[1196]";
-connectAttr "living_room_latestRN.phl[1197]" "SeatCushions.dsm" -na;
-connectAttr "groupId96.id" "living_room_latestRN.phl[1198]";
-connectAttr "SeatCushions.mwc" "living_room_latestRN.phl[1199]";
-connectAttr "living_room_latestRN.phl[1200]" "WoodWindowSeat.dsm" -na;
-connectAttr "groupId113.id" "living_room_latestRN.phl[1201]";
-connectAttr "WoodWindowSeat.mwc" "living_room_latestRN.phl[1202]";
-connectAttr "living_room_latestRN.phl[1203]" "lambert18SG.dsm" -na;
-connectAttr "groupId118.id" "living_room_latestRN.phl[1204]";
-connectAttr "lambert18SG.mwc" "living_room_latestRN.phl[1205]";
-connectAttr "living_room_latestRN.phl[1206]" "lambert2SG.dsm" -na;
-connectAttr "groupId125.id" "living_room_latestRN.phl[1207]";
-connectAttr "lambert2SG.mwc" "living_room_latestRN.phl[1208]";
-connectAttr "living_room_latestRN.phl[1209]" ":initialShadingGroup.dsm" -na;
-connectAttr "groupId119.id" "living_room_latestRN.phl[1210]";
-connectAttr "living_room_latestRN.phl[1211]" "SeatCushions.dsm" -na;
-connectAttr "groupId97.id" "living_room_latestRN.phl[1212]";
-connectAttr "SeatCushions.mwc" "living_room_latestRN.phl[1213]";
-connectAttr "living_room_latestRN.phl[1214]" "WoodWindowSeat.dsm" -na;
-connectAttr "groupId114.id" "living_room_latestRN.phl[1215]";
-connectAttr "WoodWindowSeat.mwc" "living_room_latestRN.phl[1216]";
-connectAttr "living_room_latestRN.phl[1217]" "lambert2SG.dsm" -na;
-connectAttr "groupId130.id" "living_room_latestRN.phl[1218]";
-connectAttr "lambert2SG.mwc" "living_room_latestRN.phl[1219]";
-connectAttr "living_room_latestRN.phl[1220]" "lambert18SG.dsm" -na;
-connectAttr "groupId132.id" "living_room_latestRN.phl[1221]";
-connectAttr "lambert18SG.mwc" "living_room_latestRN.phl[1222]";
-connectAttr "living_room_latestRN.phl[1223]" "lambert2SG.dsm" -na;
-connectAttr "groupId131.id" "living_room_latestRN.phl[1224]";
-connectAttr "living_room_latestRN.phl[1225]" "lambert2SG.dsm" -na;
-connectAttr "groupId87.id" "living_room_latestRN.phl[1226]";
-connectAttr "lambert2SG.mwc" "living_room_latestRN.phl[1227]";
-connectAttr "living_room_latestRN.phl[1228]" "lambert2SG.dsm" -na;
-connectAttr "groupId92.id" "living_room_latestRN.phl[1229]";
-connectAttr "lambert2SG.mwc" "living_room_latestRN.phl[1230]";
-connectAttr "living_room_latestRN.phl[1231]" "WoodWindowSeat.dsm" -na;
-connectAttr "groupId115.id" "living_room_latestRN.phl[1232]";
-connectAttr "WoodWindowSeat.mwc" "living_room_latestRN.phl[1233]";
-connectAttr "living_room_latestRN.phl[1234]" "lambert2SG.dsm" -na;
-connectAttr "groupId88.id" "living_room_latestRN.phl[1235]";
-connectAttr "living_room_latestRN.phl[1236]" "lambert18SG.dsm" -na;
-connectAttr "lambert18SG.mwc" "living_room_latestRN.phl[1237]";
-connectAttr "living_room_latestRN.phl[1238]" "lambert18SG.dsm" -na;
-connectAttr "groupId91.id" "living_room_latestRN.phl[1239]";
-connectAttr "lambert18SG.mwc" "living_room_latestRN.phl[1240]";
-connectAttr "living_room_latestRN.phl[1241]" "SeatCushions.dsm" -na;
-connectAttr "groupId95.id" "living_room_latestRN.phl[1242]";
-connectAttr "SeatCushions.mwc" "living_room_latestRN.phl[1243]";
-connectAttr "living_room_latestRN.phl[1244]" "WoodWindowSeat.dsm" -na;
-connectAttr "groupId116.id" "living_room_latestRN.phl[1245]";
-connectAttr "WoodWindowSeat.mwc" "living_room_latestRN.phl[1246]";
-connectAttr "living_room_latestRN.phl[1247]" "lambert2SG.dsm" -na;
-connectAttr "groupId124.id" "living_room_latestRN.phl[1248]";
-connectAttr "lambert2SG.mwc" "living_room_latestRN.phl[1249]";
-connectAttr "living_room_latestRN.phl[1250]" "lambert2SG.dsm" -na;
-connectAttr "lambert2SG.mwc" "living_room_latestRN.phl[1251]";
-connectAttr "living_room_latestRN.phl[1252]" "WoodWindowSeat.dsm" -na;
-connectAttr "groupId117.id" "living_room_latestRN.phl[1253]";
-connectAttr "WoodWindowSeat.mwc" "living_room_latestRN.phl[1254]";
-connectAttr "living_room_latestRN.phl[1255]" "lambert11SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1256]" "lambert11SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1257]" "lambert11SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1258]" "lambert16SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1259]" "lambert28SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1260]" "lambert28SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1261]" "blinn2SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1262]" "lambert32SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1263]" "lambert21SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1264]" "lambert21SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1265]" "lambert21SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1266]" "lambert21SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1197]" "lambert2SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1198]" "WoodWindowSeat.dsm" -na;
+connectAttr "groupId112.id" "living_room_latestRN.phl[1199]";
+connectAttr "WoodWindowSeat.mwc" "living_room_latestRN.phl[1200]";
+connectAttr "living_room_latestRN.phl[1201]" "SeatCushions.dsm" -na;
+connectAttr "groupId96.id" "living_room_latestRN.phl[1202]";
+connectAttr "SeatCushions.mwc" "living_room_latestRN.phl[1203]";
+connectAttr "living_room_latestRN.phl[1204]" "WoodWindowSeat.dsm" -na;
+connectAttr "groupId113.id" "living_room_latestRN.phl[1205]";
+connectAttr "WoodWindowSeat.mwc" "living_room_latestRN.phl[1206]";
+connectAttr "living_room_latestRN.phl[1207]" "lambert18SG.dsm" -na;
+connectAttr "groupId118.id" "living_room_latestRN.phl[1208]";
+connectAttr "lambert18SG.mwc" "living_room_latestRN.phl[1209]";
+connectAttr "living_room_latestRN.phl[1210]" "lambert2SG.dsm" -na;
+connectAttr "groupId125.id" "living_room_latestRN.phl[1211]";
+connectAttr "lambert2SG.mwc" "living_room_latestRN.phl[1212]";
+connectAttr "living_room_latestRN.phl[1213]" ":initialShadingGroup.dsm" -na;
+connectAttr "groupId119.id" "living_room_latestRN.phl[1214]";
+connectAttr "living_room_latestRN.phl[1215]" "SeatCushions.dsm" -na;
+connectAttr "groupId97.id" "living_room_latestRN.phl[1216]";
+connectAttr "SeatCushions.mwc" "living_room_latestRN.phl[1217]";
+connectAttr "living_room_latestRN.phl[1218]" "WoodWindowSeat.dsm" -na;
+connectAttr "groupId114.id" "living_room_latestRN.phl[1219]";
+connectAttr "WoodWindowSeat.mwc" "living_room_latestRN.phl[1220]";
+connectAttr "living_room_latestRN.phl[1221]" "lambert2SG.dsm" -na;
+connectAttr "groupId130.id" "living_room_latestRN.phl[1222]";
+connectAttr "lambert2SG.mwc" "living_room_latestRN.phl[1223]";
+connectAttr "living_room_latestRN.phl[1224]" "lambert18SG.dsm" -na;
+connectAttr "groupId132.id" "living_room_latestRN.phl[1225]";
+connectAttr "lambert18SG.mwc" "living_room_latestRN.phl[1226]";
+connectAttr "living_room_latestRN.phl[1227]" "lambert2SG.dsm" -na;
+connectAttr "groupId131.id" "living_room_latestRN.phl[1228]";
+connectAttr "living_room_latestRN.phl[1229]" "lambert2SG.dsm" -na;
+connectAttr "groupId87.id" "living_room_latestRN.phl[1230]";
+connectAttr "lambert2SG.mwc" "living_room_latestRN.phl[1231]";
+connectAttr "living_room_latestRN.phl[1232]" "lambert2SG.dsm" -na;
+connectAttr "groupId92.id" "living_room_latestRN.phl[1233]";
+connectAttr "lambert2SG.mwc" "living_room_latestRN.phl[1234]";
+connectAttr "living_room_latestRN.phl[1235]" "WoodWindowSeat.dsm" -na;
+connectAttr "groupId115.id" "living_room_latestRN.phl[1236]";
+connectAttr "WoodWindowSeat.mwc" "living_room_latestRN.phl[1237]";
+connectAttr "living_room_latestRN.phl[1238]" "lambert2SG.dsm" -na;
+connectAttr "groupId88.id" "living_room_latestRN.phl[1239]";
+connectAttr "living_room_latestRN.phl[1240]" "lambert18SG.dsm" -na;
+connectAttr "lambert18SG.mwc" "living_room_latestRN.phl[1241]";
+connectAttr "living_room_latestRN.phl[1242]" "lambert18SG.dsm" -na;
+connectAttr "groupId91.id" "living_room_latestRN.phl[1243]";
+connectAttr "lambert18SG.mwc" "living_room_latestRN.phl[1244]";
+connectAttr "living_room_latestRN.phl[1245]" "SeatCushions.dsm" -na;
+connectAttr "groupId95.id" "living_room_latestRN.phl[1246]";
+connectAttr "SeatCushions.mwc" "living_room_latestRN.phl[1247]";
+connectAttr "living_room_latestRN.phl[1248]" "WoodWindowSeat.dsm" -na;
+connectAttr "groupId116.id" "living_room_latestRN.phl[1249]";
+connectAttr "WoodWindowSeat.mwc" "living_room_latestRN.phl[1250]";
+connectAttr "living_room_latestRN.phl[1251]" "lambert2SG.dsm" -na;
+connectAttr "groupId124.id" "living_room_latestRN.phl[1252]";
+connectAttr "lambert2SG.mwc" "living_room_latestRN.phl[1253]";
+connectAttr "living_room_latestRN.phl[1254]" "lambert2SG.dsm" -na;
+connectAttr "lambert2SG.mwc" "living_room_latestRN.phl[1255]";
+connectAttr "living_room_latestRN.phl[1256]" "WoodWindowSeat.dsm" -na;
+connectAttr "groupId117.id" "living_room_latestRN.phl[1257]";
+connectAttr "WoodWindowSeat.mwc" "living_room_latestRN.phl[1258]";
+connectAttr "living_room_latestRN.phl[1259]" "lambert11SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1260]" "lambert11SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1261]" "lambert11SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1262]" "lambert16SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1263]" "lambert28SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1264]" "lambert28SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1265]" "blinn2SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1266]" "lambert32SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1267]" "lambert21SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1268]" "lambert21SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1269]" "lambert21SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1270]" "lambert24SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1271]" "lambert25SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1272]" "lambert26SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1273]" "lambert25SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1274]" "lambert25SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1275]" "lambert24SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1276]" "lambert24SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1277]" "lambert24SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1278]" "lambert24SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1279]" "blinn1SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1280]" "lambert27SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1270]" "lambert21SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1271]" "lambert21SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1272]" "lambert21SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1273]" "lambert21SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1274]" "lambert24SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1275]" "lambert25SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1276]" "lambert26SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1277]" "lambert25SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1278]" "lambert25SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1279]" "lambert24SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1280]" "lambert24SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1281]" "lambert24SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1282]" "lambert26SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1283]" "lambert21SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1284]" "lambert21SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1285]" "lambert21SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1286]" "lambert21SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1282]" "lambert24SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1283]" "blinn1SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1284]" "lambert27SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1285]" "lambert24SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1286]" "lambert26SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1287]" "lambert21SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1288]" "lambert21SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1289]" "lambert23SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1290]" "lambert22SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1291]" "lambert22SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1292]" "lambert30SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1289]" "lambert21SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1290]" "lambert21SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1291]" "lambert21SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1292]" "lambert21SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1293]" "lambert23SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1294]" "lambert30SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1294]" "lambert22SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1295]" "lambert22SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1296]" "lambert29SG.dsm" -na;
-connectAttr "coffee_table1_translateX.o" "living_room_latestRN.phl[1297]";
-connectAttr "coffee_table1_translateY.o" "living_room_latestRN.phl[1298]";
-connectAttr "coffee_table1_translateZ.o" "living_room_latestRN.phl[1299]";
-connectAttr "living_room_latestRN.phl[1300]" "lambert2SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1301]" ":initialShadingGroup.dsm" -na;
-connectAttr "groupId7.id" "living_room_latestRN.phl[1302]";
-connectAttr ":initialShadingGroup.mwc" "living_room_latestRN.phl[1303]";
-connectAttr "living_room_latestRN.phl[1304]" "lambert3SG.dsm" -na;
-connectAttr "groupId22.id" "living_room_latestRN.phl[1305]";
-connectAttr "lambert3SG.mwc" "living_room_latestRN.phl[1306]";
-connectAttr "living_room_latestRN.phl[1307]" ":initialShadingGroup.dsm" -na;
-connectAttr "groupId8.id" "living_room_latestRN.phl[1308]";
-connectAttr "living_room_latestRN.phl[1309]" "lambert2SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1310]" "lambert7SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1311]" "lambert6SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1312]" "lambert7SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1313]" "lambert6SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1314]" "lambert6SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1315]" "lambert7SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1316]" "lambert6SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1317]" "lambert7SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1296]" "lambert30SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1297]" "lambert23SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1298]" "lambert30SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1299]" "lambert22SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1300]" "lambert29SG.dsm" -na;
+connectAttr "coffee_table1_translateX.o" "living_room_latestRN.phl[1301]";
+connectAttr "coffee_table1_translateY.o" "living_room_latestRN.phl[1302]";
+connectAttr "coffee_table1_translateZ.o" "living_room_latestRN.phl[1303]";
+connectAttr "living_room_latestRN.phl[1304]" "lambert2SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1305]" ":initialShadingGroup.dsm" -na;
+connectAttr "groupId7.id" "living_room_latestRN.phl[1306]";
+connectAttr ":initialShadingGroup.mwc" "living_room_latestRN.phl[1307]";
+connectAttr "living_room_latestRN.phl[1308]" "lambert3SG.dsm" -na;
+connectAttr "groupId22.id" "living_room_latestRN.phl[1309]";
+connectAttr "lambert3SG.mwc" "living_room_latestRN.phl[1310]";
+connectAttr "living_room_latestRN.phl[1311]" ":initialShadingGroup.dsm" -na;
+connectAttr "groupId8.id" "living_room_latestRN.phl[1312]";
+connectAttr "living_room_latestRN.phl[1313]" "lambert2SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1314]" "lambert15SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1315]" "lambert6SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1316]" "lambert15SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1317]" "lambert6SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1318]" "lambert6SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1319]" "lambert7SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1320]" "lambert2SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1321]" "lambert4SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1322]" "lambert2SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1323]" "lambert2SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1319]" "lambert15SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1320]" "lambert6SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1321]" "lambert15SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1322]" "lambert6SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1323]" "lambert15SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1324]" "lambert2SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1325]" "lambert2SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1325]" "lambert4SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1326]" "lambert2SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1327]" "lambert2SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1328]" "lambert2SG.dsm" -na;
@@ -8415,16 +8817,16 @@ connectAttr "living_room_latestRN.phl[1330]" "lambert2SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1331]" "lambert2SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1332]" "lambert2SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1333]" "lambert2SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1334]" "lambert5SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1334]" "lambert2SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1335]" "lambert2SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1336]" "lambert2SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1337]" "lambert2SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1338]" "lambert2SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1339]" "lambert4SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1338]" "lambert5SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1339]" "lambert2SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1340]" "lambert2SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1341]" "lambert2SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1342]" "lambert2SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1343]" "lambert2SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1343]" "lambert4SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1344]" "lambert2SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1345]" "lambert2SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1346]" "lambert2SG.dsm" -na;
@@ -8433,16 +8835,16 @@ connectAttr "living_room_latestRN.phl[1348]" "lambert2SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1349]" "lambert2SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1350]" "lambert2SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1351]" "lambert2SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1352]" "lambert5SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1352]" "lambert2SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1353]" "lambert2SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1354]" "lambert2SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1355]" "lambert2SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1356]" "lambert2SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1357]" "lambert4SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1356]" "lambert5SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1357]" "lambert2SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1358]" "lambert2SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1359]" "lambert2SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1360]" "lambert2SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1361]" "lambert2SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1361]" "lambert4SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1362]" "lambert2SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1363]" "lambert2SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1364]" "lambert2SG.dsm" -na;
@@ -8451,81 +8853,39 @@ connectAttr "living_room_latestRN.phl[1366]" "lambert2SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1367]" "lambert2SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1368]" "lambert2SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1369]" "lambert2SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1370]" "lambert5SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1370]" "lambert2SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1371]" "lambert2SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1372]" "lambert2SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[1373]" "lambert2SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[1374]" ":initialShadingGroup.dsm" -na;
-connectAttr "groupId15.id" "living_room_latestRN.phl[1375]";
-connectAttr ":initialShadingGroup.mwc" "living_room_latestRN.phl[1376]";
-connectAttr "living_room_latestRN.phl[1377]" "lambert3SG.dsm" -na;
-connectAttr "groupId26.id" "living_room_latestRN.phl[1378]";
-connectAttr "lambert3SG.mwc" "living_room_latestRN.phl[1379]";
-connectAttr "living_room_latestRN.phl[1380]" ":initialShadingGroup.dsm" -na;
-connectAttr "groupId16.id" "living_room_latestRN.phl[1381]";
-connectAttr "living_room_latestRN.phl[1382]" ":initialShadingGroup.dsm" -na;
-connectAttr "groupId1.id" "living_room_latestRN.phl[1383]";
-connectAttr ":initialShadingGroup.mwc" "living_room_latestRN.phl[1384]";
-connectAttr "living_room_latestRN.phl[1385]" "lambert3SG.dsm" -na;
-connectAttr "groupId19.id" "living_room_latestRN.phl[1386]";
-connectAttr "lambert3SG.mwc" "living_room_latestRN.phl[1387]";
-connectAttr "living_room_latestRN.phl[1388]" ":initialShadingGroup.dsm" -na;
-connectAttr "groupId2.id" "living_room_latestRN.phl[1389]";
-connectAttr "living_room_latestRN.phl[1390]" "groupParts9.ig";
-connectAttr "living_room_latestRN.phl[1391]" "groupParts8.ig";
-connectAttr "living_room_latestRN.phl[1392]" "groupParts7.ig";
-connectAttr "living_room_latestRN.phl[1393]" "groupParts6.ig";
-connectAttr "living_room_latestRN.phl[1394]" "groupParts5.ig";
-connectAttr "living_room_latestRN.phl[1395]" "groupParts4.ig";
-connectAttr "living_room_latestRN.phl[1396]" "groupParts3.ig";
-connectAttr "living_room_latestRN.phl[1397]" "groupParts2.ig";
-connectAttr "living_room_latestRN.phl[1398]" "groupParts1.ig";
-connectAttr "groupParts16.og" "living_room_latestRN.phl[603]";
-connectAttr "living_room_latestRN.phl[604]" "lambert2SG.dsm" -na;
-connectAttr "groupId64.id" "living_room_latestRN.phl[605]";
-connectAttr "lambert2SG.mwc" "living_room_latestRN.phl[606]";
-connectAttr "living_room_latestRN.phl[607]" "lambert8SG.dsm" -na;
-connectAttr "groupId79.id" "living_room_latestRN.phl[608]";
-connectAttr "lambert8SG.mwc" "living_room_latestRN.phl[609]";
-connectAttr "living_room_latestRN.phl[610]" "lambert2SG.dsm" -na;
-connectAttr "groupId65.id" "living_room_latestRN.phl[611]";
-connectAttr "living_room_latestRN.phl[612]" "lambert2SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[613]" "lambert2SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[614]" "lambert2SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[687]" "lambert31SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[688]" "lambert31SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[689]" "lambert21SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[690]" "lambert21SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[691]" "lambert21SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[692]" "lambert21SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[693]" "lambert21SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[694]" "lambert21SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[695]" "lambert21SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[696]" "lambert21SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[697]" "lambert21SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[698]" "lambert21SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[699]" "lambert21SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[700]" "lambert21SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[701]" "lambert21SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[702]" "lambert21SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[703]" "lambert21SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[704]" "lambert21SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[705]" "lambert21SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[706]" "lambert21SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[707]" "lambert21SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[708]" "lambert21SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[709]" "lambert21SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[710]" "lambert21SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[711]" "lambert21SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[712]" "lambert21SG.dsm" -na;
-connectAttr "polyAutoProj2.out" "living_room_latestRN.phl[713]";
-connectAttr "living_room_latestRN.phl[714]" "polyAutoProj2.mp";
-connectAttr "living_room_latestRN.phl[715]" "lambert21SG.dsm" -na;
-connectAttr "polyAutoProj1.out" "living_room_latestRN.phl[716]";
-connectAttr "living_room_latestRN.phl[717]" "polyAutoProj1.mp";
-connectAttr "living_room_latestRN.phl[718]" "lambert21SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[719]" "lambert21SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[720]" "lambert21SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1374]" "lambert5SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1375]" "lambert2SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1376]" "lambert2SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1377]" "lambert2SG.dsm" -na;
+connectAttr "living_room_latestRN.phl[1378]" ":initialShadingGroup.dsm" -na;
+connectAttr "groupId15.id" "living_room_latestRN.phl[1379]";
+connectAttr ":initialShadingGroup.mwc" "living_room_latestRN.phl[1380]";
+connectAttr "living_room_latestRN.phl[1381]" "lambert3SG.dsm" -na;
+connectAttr "groupId26.id" "living_room_latestRN.phl[1382]";
+connectAttr "lambert3SG.mwc" "living_room_latestRN.phl[1383]";
+connectAttr "living_room_latestRN.phl[1384]" ":initialShadingGroup.dsm" -na;
+connectAttr "groupId16.id" "living_room_latestRN.phl[1385]";
+connectAttr "living_room_latestRN.phl[1386]" ":initialShadingGroup.dsm" -na;
+connectAttr "groupId1.id" "living_room_latestRN.phl[1387]";
+connectAttr ":initialShadingGroup.mwc" "living_room_latestRN.phl[1388]";
+connectAttr "living_room_latestRN.phl[1389]" "lambert3SG.dsm" -na;
+connectAttr "groupId19.id" "living_room_latestRN.phl[1390]";
+connectAttr "lambert3SG.mwc" "living_room_latestRN.phl[1391]";
+connectAttr "living_room_latestRN.phl[1392]" ":initialShadingGroup.dsm" -na;
+connectAttr "groupId2.id" "living_room_latestRN.phl[1393]";
+connectAttr "living_room_latestRN.phl[1394]" "groupParts9.ig";
+connectAttr "living_room_latestRN.phl[1395]" "groupParts8.ig";
+connectAttr "living_room_latestRN.phl[1396]" "groupParts7.ig";
+connectAttr "living_room_latestRN.phl[1397]" "groupParts6.ig";
+connectAttr "living_room_latestRN.phl[1398]" "groupParts5.ig";
+connectAttr "living_room_latestRN.phl[1399]" "groupParts4.ig";
+connectAttr "living_room_latestRN.phl[1400]" "groupParts3.ig";
+connectAttr "living_room_latestRN.phl[1401]" "groupParts2.ig";
+connectAttr "living_room_latestRN.phl[1402]" "groupParts1.ig";
 connectAttr "groupParts18.og" "living_room_latestRN.phl[579]";
 connectAttr "living_room_latestRN.phl[580]" "lambert2SG.dsm" -na;
 connectAttr "groupId68.id" "living_room_latestRN.phl[581]";
@@ -8538,66 +8898,6 @@ connectAttr "groupId69.id" "living_room_latestRN.phl[587]";
 connectAttr "living_room_latestRN.phl[588]" "lambert2SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[589]" "lambert2SG.dsm" -na;
 connectAttr "living_room_latestRN.phl[590]" "lambert2SG.dsm" -na;
-connectAttr "groupParts15.og" "living_room_latestRN.phl[615]";
-connectAttr "living_room_latestRN.phl[616]" "lambert2SG.dsm" -na;
-connectAttr "groupId62.id" "living_room_latestRN.phl[617]";
-connectAttr "lambert2SG.mwc" "living_room_latestRN.phl[618]";
-connectAttr "living_room_latestRN.phl[619]" "lambert8SG.dsm" -na;
-connectAttr "groupId78.id" "living_room_latestRN.phl[620]";
-connectAttr "lambert8SG.mwc" "living_room_latestRN.phl[621]";
-connectAttr "living_room_latestRN.phl[622]" "lambert2SG.dsm" -na;
-connectAttr "groupId63.id" "living_room_latestRN.phl[623]";
-connectAttr "living_room_latestRN.phl[624]" "lambert2SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[625]" "lambert2SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[626]" "lambert2SG.dsm" -na;
-connectAttr "groupParts10.og" "living_room_latestRN.phl[675]";
-connectAttr "living_room_latestRN.phl[676]" "lambert2SG.dsm" -na;
-connectAttr "groupId46.id" "living_room_latestRN.phl[677]";
-connectAttr "lambert2SG.mwc" "living_room_latestRN.phl[678]";
-connectAttr "living_room_latestRN.phl[679]" "lambert8SG.dsm" -na;
-connectAttr "groupId70.id" "living_room_latestRN.phl[680]";
-connectAttr "lambert8SG.mwc" "living_room_latestRN.phl[681]";
-connectAttr "living_room_latestRN.phl[682]" "lambert2SG.dsm" -na;
-connectAttr "groupId47.id" "living_room_latestRN.phl[683]";
-connectAttr "living_room_latestRN.phl[684]" "lambert2SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[685]" "lambert2SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[686]" "lambert2SG.dsm" -na;
-connectAttr "groupParts11.og" "living_room_latestRN.phl[663]";
-connectAttr "living_room_latestRN.phl[664]" "lambert2SG.dsm" -na;
-connectAttr "groupId48.id" "living_room_latestRN.phl[665]";
-connectAttr "lambert2SG.mwc" "living_room_latestRN.phl[666]";
-connectAttr "living_room_latestRN.phl[667]" "lambert8SG.dsm" -na;
-connectAttr "groupId71.id" "living_room_latestRN.phl[668]";
-connectAttr "lambert8SG.mwc" "living_room_latestRN.phl[669]";
-connectAttr "living_room_latestRN.phl[670]" "lambert2SG.dsm" -na;
-connectAttr "groupId49.id" "living_room_latestRN.phl[671]";
-connectAttr "living_room_latestRN.phl[672]" "lambert2SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[673]" "lambert2SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[674]" "lambert2SG.dsm" -na;
-connectAttr "groupParts12.og" "living_room_latestRN.phl[651]";
-connectAttr "living_room_latestRN.phl[652]" "lambert2SG.dsm" -na;
-connectAttr "groupId50.id" "living_room_latestRN.phl[653]";
-connectAttr "lambert2SG.mwc" "living_room_latestRN.phl[654]";
-connectAttr "living_room_latestRN.phl[655]" "lambert8SG.dsm" -na;
-connectAttr "groupId72.id" "living_room_latestRN.phl[656]";
-connectAttr "lambert8SG.mwc" "living_room_latestRN.phl[657]";
-connectAttr "living_room_latestRN.phl[658]" "lambert2SG.dsm" -na;
-connectAttr "groupId51.id" "living_room_latestRN.phl[659]";
-connectAttr "living_room_latestRN.phl[660]" "lambert2SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[661]" "lambert2SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[662]" "lambert2SG.dsm" -na;
-connectAttr "groupParts14.og" "living_room_latestRN.phl[627]";
-connectAttr "living_room_latestRN.phl[628]" "lambert2SG.dsm" -na;
-connectAttr "groupId60.id" "living_room_latestRN.phl[629]";
-connectAttr "lambert2SG.mwc" "living_room_latestRN.phl[630]";
-connectAttr "living_room_latestRN.phl[631]" "lambert8SG.dsm" -na;
-connectAttr "groupId77.id" "living_room_latestRN.phl[632]";
-connectAttr "lambert8SG.mwc" "living_room_latestRN.phl[633]";
-connectAttr "living_room_latestRN.phl[634]" "lambert2SG.dsm" -na;
-connectAttr "groupId61.id" "living_room_latestRN.phl[635]";
-connectAttr "living_room_latestRN.phl[636]" "lambert2SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[637]" "lambert2SG.dsm" -na;
-connectAttr "living_room_latestRN.phl[638]" "lambert2SG.dsm" -na;
 connectAttr "groupParts17.og" "living_room_latestRN.phl[591]";
 connectAttr "living_room_latestRN.phl[592]" "lambert2SG.dsm" -na;
 connectAttr "groupId66.id" "living_room_latestRN.phl[593]";
@@ -9157,6 +9457,8 @@ connectAttr "place2dTexture8.vt3" "file8.vt3";
 connectAttr "place2dTexture8.vc1" "file8.vc1";
 connectAttr "place2dTexture8.o" "file8.uv";
 connectAttr "place2dTexture8.ofs" "file8.fs";
+connectAttr "hyperView1.msg" "nodeEditorPanel1Info.b[0]";
+connectAttr "hyperLayout1.msg" "hyperView1.hl";
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert3SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert4SG.pa" ":renderPartition.st" -na;
@@ -9190,40 +9492,6 @@ connectAttr "lambert30SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert31SG.pa" ":renderPartition.st" -na;
 connectAttr "blinn2SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert32SG.pa" ":renderPartition.st" -na;
-connectAttr "living_room_latestRN.phl[249]" ":initialShadingGroup.dsm" -na;
-connectAttr "living_room_latestRN.phl[255]" ":initialShadingGroup.dsm" -na;
-connectAttr "living_room_latestRN.phl[257]" ":initialShadingGroup.dsm" -na;
-connectAttr "living_room_latestRN.phl[263]" ":initialShadingGroup.dsm" -na;
-connectAttr "groupId1.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId2.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId5.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId6.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId7.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId8.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId9.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId10.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId11.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId12.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId13.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId14.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId15.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId16.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId28.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId29.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId30.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId31.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId82.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId83.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId89.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId90.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId118.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId119.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId120.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId121.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId122.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId123.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId134.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId135.msg" ":initialShadingGroup.gn" -na;
 connectAttr "Wood.msg" ":defaultShaderList1.s" -na;
 connectAttr "MarbleCounterTops.msg" ":defaultShaderList1.s" -na;
 connectAttr "StoolCusions.msg" ":defaultShaderList1.s" -na;
@@ -9256,14 +9524,6 @@ connectAttr "bedroom_pen_cup.msg" ":defaultShaderList1.s" -na;
 connectAttr "bedroom_bed.msg" ":defaultShaderList1.s" -na;
 connectAttr "bedroom_ball.msg" ":defaultShaderList1.s" -na;
 connectAttr "PosterBedroom.msg" ":defaultShaderList1.s" -na;
-connectAttr "file1.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file3f.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file4.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file5.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file6.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file7.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file8.msg" ":defaultTextureList1.tx" -na;
 connectAttr "place2dTexture1.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "place2dTexture2.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "place2dTexture3.msg" ":defaultRenderUtilityList1.u" -na;
@@ -9273,4 +9533,49 @@ connectAttr "place2dTexture6.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "place2dTexture7.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "place2dTexture8.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
+connectAttr "file1.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file2.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file3f.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file4.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file5.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file6.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file7.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file8.msg" ":defaultTextureList1.tx" -na;
+connectAttr "groupId1.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId2.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId5.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId6.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId7.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId8.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId9.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId10.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId11.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId12.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId13.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId14.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId15.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId16.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId28.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId29.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId30.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId31.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId82.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId83.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId89.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId90.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId118.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId119.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId120.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId121.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId122.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId123.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId134.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId135.msg" ":initialShadingGroup.gn" -na;
+connectAttr "living_room_latestRN.phl[249]" ":initialShadingGroup.dsm" -na;
+connectAttr "living_room_latestRN.phl[255]" ":initialShadingGroup.dsm" -na;
+connectAttr "living_room_latestRN.phl[257]" ":initialShadingGroup.dsm" -na;
+connectAttr "living_room_latestRN.phl[263]" ":initialShadingGroup.dsm" -na;
+dataStructure -fmt "raw" -as "name=externalContentTable:string=node:string=key:string=upath:uint32=upathcrc:string=rpath:string=roles";
+applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"living_room_latestRN\" \"\" \"/Users/AshleyTheMagnificant/GitHub/Bandits/maya//assets/sets/livingroom/living_room_latest.ma\" 3585505969 \"/Users/AshleyTheMagnificant/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\" \"FileRef\"\n1\n\"file1\" \"fileTextureName\" \"/Users/AshleyTheMagnificant/GitHub/Bandits/maya/sourceimages/CoffeeTable.jpg\" 3435385141 \"/Users/AshleyTheMagnificant/GitHub/Bandits/maya/sourceimages/CoffeeTable.jpg\" \"sourceImages\"\n2\n\"file2\" \"fileTextureName\" \"/Users/AshleyTheMagnificant/GitHub/Bandits/maya/sourceimages/Frame_James_Dan.jpg\" 3315949797 \"/Users/AshleyTheMagnificant/GitHub/Bandits/maya/sourceimages/Frame_James_Dan.jpg\" \"sourceImages\"\n3\n\"file3f\" \"fileTextureName\" \"/Users/AshleyTheMagnificant/GitHub/Bandits/maya/sourceimages/FloorBoard_02.jpg\" 612512450 \"/Users/AshleyTheMagnificant/GitHub/Bandits/maya/sourceimages/FloorBoard_02.jpg\" \"sourceImages\"\n4\n\"file4\" \"fileTextureName\" \"/Users/AshleyTheMagnificant/GitHub/Bandits/maya/sourceimages/Wall.jpg\" 621883896 \"/Users/AshleyTheMagnificant/GitHub/Bandits/maya/sourceimages/Wall.jpg\" \"sourceImages\"\n5\n\"file5\" \"fileTextureName\" \"/Users/AshleyTheMagnificant/GitHub/Bandits/maya/sourceimages/Mug_yellow.jpg\" 3828745312 \"/Users/AshleyTheMagnificant/GitHub/Bandits/maya/sourceimages/Mug_yellow.jpg\" \"sourceImages\"\n6\n\"file6\" \"fileTextureName\" \"/Users/AshleyTheMagnificant/GitHub/Bandits/maya/sourceimages/tile.jpg\" 1813477467 \"/Users/AshleyTheMagnificant/GitHub/Bandits/maya/sourceimages/tile.jpg\" \"sourceImages\"\n7\n\"file7\" \"fileTextureName\" \"/Users/AshleyTheMagnificant/GitHub/Bandits/maya/sourceimages/bedroom_bookshelf.png\" 1071825086 \"/Users/AshleyTheMagnificant/GitHub/Bandits/maya/sourceimages/bedroom_bookshelf.png\" \"sourceImages\"\n8\n\"file8\" \"fileTextureName\" \"/Users/AshleyTheMagnificant/GitHub/Bandits/maya/sourceimages/SpaceDrawing01.jpg\" 2141153516 \"/Users/AshleyTheMagnificant/GitHub/Bandits/maya/sourceimages/SpaceDrawing01.jpg\" \"sourceImages\"\nendStream\nendChannel\nendAssociations\n" 
+		-scn;
 // End of livingroom_shading_latest.ma

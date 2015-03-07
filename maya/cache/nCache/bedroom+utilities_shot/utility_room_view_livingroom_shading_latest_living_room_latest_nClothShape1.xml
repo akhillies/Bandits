@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <Autodesk_Cache_File>
   <cacheType Type="OneFilePerFrame" Format="mcx"/>
-  <time Range="250-57500"/>
+  <time Range="250-90000"/>
   <cacheTimePerFrame TimePerFrame="250"/>
   <cacheVersion Version="2.0"/>
   <extra>X:/documents/GitHub/Bandits/maya/shots/body/bedroom+utilities_shot.ma</extra>
   <extra>maya 2015</extra>
   <extra>AkhilBatra</extra>
   <extra>NCloth Info for utility_room_view:livingroom_shading_latest:living_room_latest:nClothShape1:</extra>
-  <extra>Passive Colliders:  utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:pCube1 utility_room_view:bike_rig:rightWheel utility_room_view:bike_rig:leftWheel utility_room_view:bike_rig:frontWheel utility_room_view:bike_rig:left utility_room_view:bike_rig:right utility_room_view:bike_rig:frame</extra>
-  <extra>Constraints:  utility_room_view:livingroom_shading_latest:living_room_latest:dynamicConstraint1</extra>
+  <extra>Passive Colliders:  utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:pCube1 utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface362 utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface363 utility_room_view:livingroom_shading_latest:living_room_latest:bed_latest1:polySurface361 utility_room_view:bike_rig:rightWheel utility_room_view:bike_rig:leftWheel utility_room_view:bike_rig:frontWheel utility_room_view:bike_rig:left utility_room_view:bike_rig:right utility_room_view:bike_rig:frame utility_room_view:smarty_latest:polySurface6 utility_room_view:smarty_latest:smarty_008_fixed_rig_:glassFrame utility_room_view:smarty_latest:smarty_008_fixed_rig_:glassR utility_room_view:smarty_latest:smarty_008_fixed_rig_:glassL</extra>
+  <extra>Constraints:  utility_room_view:livingroom_shading_latest:living_room_latest:dynamicConstraint2</extra>
   <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nClothShape1.depthSort=0</extra>
   <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nClothShape1.isDynamic=1</extra>
   <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nClothShape1.currentTime=1</extra>
@@ -41,7 +41,7 @@
   <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nClothShape1.airPushDistance=0</extra>
   <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nClothShape1.airPushVorticity=0</extra>
   <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nClothShape1.pushOut=0</extra>
-  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nClothShape1.pushOutRadius=0.5306655169</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nClothShape1.pushOutRadius=0.1995899081</extra>
   <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nClothShape1.crossoverPush=0</extra>
   <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nClothShape1.trappedCheck=0</extra>
   <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nClothShape1.forceField=0</extra>
@@ -107,22 +107,22 @@
   <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nClothShape1.drag=0.05000000075</extra>
   <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nClothShape1.tangentialDrag=0</extra>
   <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nClothShape1.lifespan=1</extra>
-  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nComponent2.componentType=2</extra>
-  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nComponent2.elements=0</extra>
-  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nComponent2.strength=1</extra>
-  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nComponent2.glueStrength=1</extra>
-  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nComponent2.weight=1</extra>
-  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nComponent2.tangentStrength=0.5</extra>
-  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:dynamicConstraint1.visibility=1</extra>
-  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:dynamicConstraint1.translateX=0</extra>
-  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:dynamicConstraint1.translateY=0</extra>
-  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:dynamicConstraint1.translateZ=0</extra>
-  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:dynamicConstraint1.rotateX=0</extra>
-  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:dynamicConstraint1.rotateY=0</extra>
-  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:dynamicConstraint1.rotateZ=0</extra>
-  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:dynamicConstraint1.scaleX=1</extra>
-  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:dynamicConstraint1.scaleY=1</extra>
-  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:dynamicConstraint1.scaleZ=1</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nComponent3.componentType=2</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nComponent3.elements=0</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nComponent3.strength=1</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nComponent3.glueStrength=1</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nComponent3.weight=1</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nComponent3.tangentStrength=0.5</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:dynamicConstraint2.visibility=1</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:dynamicConstraint2.translateX=0</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:dynamicConstraint2.translateY=0</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:dynamicConstraint2.translateZ=0</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:dynamicConstraint2.rotateX=0</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:dynamicConstraint2.rotateY=0</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:dynamicConstraint2.rotateZ=0</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:dynamicConstraint2.scaleX=1</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:dynamicConstraint2.scaleY=1</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:dynamicConstraint2.scaleZ=1</extra>
   <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.visibility=1</extra>
   <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.translateX=0</extra>
   <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.translateY=0</extra>
@@ -138,7 +138,7 @@
   <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.frameJumpLimit=1</extra>
   <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.enable=1</extra>
   <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.useTransform=1</extra>
-  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.gravity=18.62068939</extra>
+  <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.gravity=50.34482574</extra>
   <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.gravityDirectionX=0</extra>
   <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.gravityDirectionY=-1</extra>
   <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.gravityDirectionZ=0</extra>
@@ -165,6 +165,6 @@
   <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.timeScale=1</extra>
   <extra>utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.spaceScale=1</extra>
   <Channels>
-    <channel0 ChannelName="utility_room_view:livingroom_shading_latest:living_room_latest:nClothShape1" ChannelType="FloatVectorArray" ChannelInterpretation="positions" SamplingType="Regular" SamplingRate="250" StartTime="250" EndTime="57500"/>
+    <channel0 ChannelName="utility_room_view:livingroom_shading_latest:living_room_latest:nClothShape1" ChannelType="FloatVectorArray" ChannelInterpretation="positions" SamplingType="Regular" SamplingRate="250" StartTime="250" EndTime="90000"/>
   </Channels>
 </Autodesk_Cache_File>

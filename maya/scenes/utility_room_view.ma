@@ -1,6 +1,6 @@
 //Maya ASCII 2015 scene
 //Name: utility_room_view.ma
-//Last modified: Fri, Feb 27, 2015 01:06:15 AM
+//Last modified: Fri, Mar 06, 2015 09:18:04 PM
 //Codeset: 1252
 file -rdi 1 -ns "livingroom_shading_latest" -rfn "livingroom_shading_latestRN"
 		 -op "v=0;p=17;f=0" "X:/documents/GitHub/Bandits/maya//assets/sets/livingroom_shading/livingroom_shading_latest.ma";
@@ -24,8 +24,6 @@ file -rdi 3 -ns "armchair_latest" -rfn "livingroom_shading_latest:living_room_la
 		 "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya//assets/sets/livingroom/additions/sofa/armchair_latest.ma";
 file -rdi 3 -ns "armchair_latest1" -rfn "livingroom_shading_latest:living_room_latest:armchair_latestRN1"
 		 "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya//assets/sets/livingroom/additions/sofa/armchair_latest.ma";
-file -rdi 3 -ns "desk_latest" -rfn "livingroom_shading_latest:living_room_latest:bedroom_updated_layout:desk_latestRN"
-		 "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya//assets/sets/bedroom/additions/desk_latest.ma";
 file -rdi 3 -ns "taller_window_four_squares_latest6" -rfn "livingroom_shading_latest:living_room_latest:taller_window_four_squares_latestRN2"
 		 "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya//assets/sets/livingroom/additions/windows/taller_window_four_squares_latest.ma";
 file -rdi 3 -ns "taller_window_four_squares_latest7" -rfn "livingroom_shading_latest:living_room_latest:taller_window_four_squares_latestRN3"
@@ -42,6 +40,10 @@ file -rdi 3 -ns "bed_latest1" -rfn "livingroom_shading_latest:living_room_latest
 		 "/Users/Amy/Desktop/cnm190/Bandits/maya//assets/sets/bedroom/additions/bed_latest.ma";
 file -rdi 3 -ns "resurrected_staircase" -rfn "livingroom_shading_latest:living_room_latest:resurrected_staircaseRN"
 		 "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya//assets/sets/livingroom/additions/staircase/resurrected_staircase.ma";
+file -rdi 3 -ns "chair_2" -dr 1 -rfn "livingroom_shading_latest:living_room_latest:chair_2RN"
+		 "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya//assets/sets/bedroom/additions/chair_2.ma";
+file -rdi 3 -ns "desk_latest" -dr 1 -rfn "livingroom_shading_latest:living_room_latest:desk_latestRN"
+		 "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya//assets/sets/bedroom/additions/desk_latest.ma";
 file -rdi 1 -ns "light_setup_004" -rfn "light_setup_004RN" -op "v=0;p=17;f=0"
 		 "X:/documents/GitHub/Bandits/maya//assets/sets/livingroom/versions/light_setup_004.ma";
 file -rdi 1 -ns "bedroom_lights_06" -rfn "bedroom_lights_06RN" -op "v=0;p=17;f=0"
@@ -52,7 +54,6 @@ file -rdi 2 -ns "key_latest" -rfn "pig_latest:key_latestRN" "/Users/AkhilBatra/D
 file -rdi 1 -ns "smarty_latest" -rfn "smarty_latestRN" -op "v=0;p=17;f=0" "X:/documents/GitHub/Bandits/maya//assets/characters/smarty/smarty_latest.ma";
 file -rdi 1 -ns "bike_rig" -rfn "bike_rigRN" -op "v=0;p=17;f=0" "X:/documents/GitHub/Bandits/maya//assets/characters/smarty/bike_rig.ma";
 file -rdi 1 -ns "sneaks_latest" -rfn "sneaks_latestRN" -op "v=0;p=17;f=0" "X:/documents/GitHub/Bandits/maya//assets/characters/sneaks/sneaks_latest.ma";
-file -rdi 1 -ns "tuffs_latest" -rfn "tuffs_latestRN" -op "v=0;p=17;f=0" "X:/documents/GitHub/Bandits/maya//assets/characters/tuffs/tuffs_latest.ma";
 file -r -ns "livingroom_shading_latest" -dr 1 -rfn "livingroom_shading_latestRN"
 		 -op "v=0;p=17;f=0" "X:/documents/GitHub/Bandits/maya//assets/sets/livingroom_shading/livingroom_shading_latest.ma";
 file -r -ns "light_setup_004" -dr 1 -rfn "light_setup_004RN" -op "v=0;p=17;f=0" "X:/documents/GitHub/Bandits/maya//assets/sets/livingroom/versions/light_setup_004.ma";
@@ -63,7 +64,6 @@ file -r -ns "pig_latest" -dr 1 -rfn "pig_latestRN" -op "v=0;p=17;f=0" "X:/docume
 file -r -ns "smarty_latest" -dr 1 -rfn "smarty_latestRN" -op "v=0;p=17;f=0" "X:/documents/GitHub/Bandits/maya//assets/characters/smarty/smarty_latest.ma";
 file -r -ns "bike_rig" -dr 1 -rfn "bike_rigRN" -op "v=0;p=17;f=0" "X:/documents/GitHub/Bandits/maya//assets/characters/smarty/bike_rig.ma";
 file -r -ns "sneaks_latest" -dr 1 -rfn "sneaks_latestRN" -op "v=0;p=17;f=0" "X:/documents/GitHub/Bandits/maya//assets/characters/sneaks/sneaks_latest.ma";
-file -r -ns "tuffs_latest" -dr 1 -rfn "tuffs_latestRN" -op "v=0;p=17;f=0" "X:/documents/GitHub/Bandits/maya//assets/characters/tuffs/tuffs_latest.ma";
 requires maya "2015";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOptions" -nodeType "mentalrayGlobals"
 		 -nodeType "mentalrayItemsList" -dataType "byteArray" "Mayatomr" "2015.0 - 3.12.1.18 ";
@@ -302,8 +302,8 @@ createNode mentalrayOptions -s -n "miDefaultOptions";
 createNode mentalrayFramebuffer -s -n "miDefaultFramebuffer";
 	setAttr ".dat" 2;
 createNode lightLinker -s -n "lightLinker1";
-	setAttr -s 497 ".lnk";
-	setAttr -s 500 ".slnk";
+	setAttr -s 513 ".lnk";
+	setAttr -s 516 ".slnk";
 createNode displayLayerManager -n "layerManager";
 createNode displayLayer -n "defaultLayer";
 createNode renderLayerManager -n "renderLayerManager";
@@ -319,9 +319,9 @@ createNode reference -n "livingroom_shading_latestRN";
 		"livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest1RN" 
 		0
 		"livingroom_shading_latest:living_room_latest:sofa_latestRN" 0
+		"livingroom_shading_latest:living_room_latestRN" 0
 		"livingroom_shading_latest:living_room_latest:taller_window_four_squares_latestRN" 
 		0
-		"livingroom_shading_latest:living_room_latestRN" 0
 		"livingroom_shading_latest:living_room_latest:taller_window_four_squares_latestRN3" 
 		0
 		"livingroom_shading_latest:living_room_latest:cat_robotRN" 0
@@ -339,9 +339,14 @@ createNode reference -n "livingroom_shading_latestRN";
 		"livingroom_shading_latest:living_room_latest:cube_cushionRN" 0
 		"livingroom_shading_latest:living_room_latest:taller_window_four_squares_latestRN4" 
 		0
+		"livingroom_shading_latest:living_room_latest:armchair_latestRN1" 0
 		"livingroom_shading_latest:living_room_latest:bedroom_updated_layout:desk_latestRN" 
 		0
-		"livingroom_shading_latest:living_room_latest:armchair_latestRN1" 0
+		"livingroom_shading_latest:living_room_latestRN" 2
+		2 "|livingroom_shading_latest:living_room_latest:nRigid1|livingroom_shading_latest:living_room_latest:nRigidShape1" 
+		"cacheWidth" " 120"
+		2 "|livingroom_shading_latest:living_room_latest:nCloth1|livingroom_shading_latest:living_room_latest:nClothShape1" 
+		"cacheWidth" " 120"
 		"livingroom_shading_latest:living_room_latest:telescopeRN" 20
 		2 "|livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_" 
 		"translate" " -type \"double3\" 0 2169.506103515625 0"
@@ -619,6 +624,7 @@ createNode mentalrayOptions -s -n "PreviewImrRayTracyOn";
 	setAttr ".maxr" 3;
 	setAttr ".shrd" 1;
 createNode reference -n "light_setup_004RN";
+	setAttr ".fn[0]" -type "string" "X:/documents/GitHub/Bandits/maya//assets/sets/livingroom/versions/light_setup_004.ma";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"light_setup_004RN"
 		"light_setup_004RN" 0;
@@ -718,17 +724,17 @@ createNode reference -n "sneaks_latestRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"sneaks_latestRN"
 		"sneaks_latestRN" 0
-		"sneaks_latestRN" 2
+		"sneaks_latestRN" 7
 		2 "|sneaks_latest:sneaksmesh:polySurface1|sneaks_latest:blink|sneaks_latest:blinkShape" 
 		"dispResolution" " 3"
 		2 "|sneaks_latest:sneaksmesh:polySurface1|sneaks_latest:blink|sneaks_latest:blinkShape" 
-		"displaySmoothMesh" " 2";
-	setAttr ".ptag" -type "string" "";
-lockNode -l 1 ;
-createNode reference -n "tuffs_latestRN";
-	setAttr ".ed" -type "dataReferenceEdits" 
-		"tuffs_latestRN"
-		"tuffs_latestRN" 0;
+		"displaySmoothMesh" " 2"
+		2 "sneaks_latest:sneakio_layer" "visibility" " 1"
+		2 "sneaks_latest:sneaksmesh:sneakio_layer" "visibility" " 1"
+		2 "sneaks_latest:sneaks_normal_face:sneaksmesh:sneakio_layer" "visibility" 
+		" 1"
+		2 "sneaks_latest:sneaks17:sneakio_layer" "visibility" " 1"
+		2 "sneaks_latest:sneaks17:sneaksmesh:sneakio_layer" "visibility" " 1";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode script -n "uiConfigurationScriptNode";
@@ -807,31 +813,30 @@ select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
 select -ne :renderPartition;
-	setAttr -s 499 ".st";
+	setAttr -s 432 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 316 ".s";
+	setAttr -s 174 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 433 ".u";
+	setAttr -s 388 ".u";
 select -ne :defaultRenderingList1;
-	setAttr -s 31 ".r";
+	setAttr -s 29 ".r";
 select -ne :lightList1;
-	setAttr -s 18 ".l";
+	setAttr -s 19 ".l";
 select -ne :defaultTextureList1;
-	setAttr -s 225 ".tx";
+	setAttr -s 180 ".tx";
 select -ne :initialShadingGroup;
-	setAttr -s 651 ".dsm";
+	setAttr -s 503 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 217 ".gn";
+	setAttr -s 96 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
-select -ne :initialMaterialInfo;
 select -ne :defaultResolution;
 	setAttr ".pa" 1;
 select -ne :defaultLightSet;
-	setAttr -s 18 ".dsm";
+	setAttr -s 19 ".dsm";
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
@@ -845,7 +850,7 @@ select -ne :characterPartition;
 select -ne :defaultHardwareRenderGlobals;
 	setAttr ".res" -type "string" "ntsc_4d 646 485 1.333";
 select -ne :ikSystem;
-	setAttr -s 8 ".sol";
+	setAttr -s 6 ".sol";
 connectAttr "defaultFurGlobals.rogl" "pig_latestRN.phl[1]";
 connectAttr ":mentalrayGlobals.msg" ":mentalrayItemsList.glb";
 connectAttr ":miDefaultOptions.msg" ":mentalrayItemsList.opt" -na;
@@ -861,6 +866,6 @@ connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr ":defaultRenderGlobals.rcb" "defaultFurGlobals.cb";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 dataStructure -fmt "raw" -as "name=externalContentTable:string=node:string=key:string=upath:uint32=upathcrc:string=rpath:string=roles";
-applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"livingroom_shading_latestRN\" \"\" \"X:/documents/GitHub/Bandits/maya//assets/sets/livingroom_shading/livingroom_shading_latest.ma\" 3758780077 \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom_shading/livingroom_shading_latest.ma\" \"FileRef\"\n1\n\"light_setup_004RN\" \"\" \"X:/documents/GitHub/Bandits/maya//assets/sets/livingroom/versions/light_setup_004.ma\" 1735552185 \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/versions/light_setup_004.ma\" \"FileRef\"\n2\n\"bedroom_lights_06RN\" \"\" \"X:/documents/GitHub/Bandits/maya//assets/sets/bedroom/bedroom_lights_06.ma\" 619937996 \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/bedroom_lights_06.ma\" \"FileRef\"\n3\n\"undies_latestRN\" \"\" \"X:/documents/GitHub/Bandits/maya//assets/props/undies/undies_latest.ma\" 3603748164 \"X:/documents/GitHub/Bandits/maya/assets/props/undies/undies_latest.ma\" \"FileRef\"\n4\n\"pig_latestRN\" \"\" \"X:/documents/GitHub/Bandits/maya//assets/characters/pig/pig_latest.ma\" 672977679 \"X:/documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\" \"FileRef\"\n5\n\"smarty_latestRN\" \"\" \"X:/documents/GitHub/Bandits/maya//assets/characters/smarty/smarty_latest.ma\" 1115229329 \"X:/documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\" \"FileRef\"\n6\n\"bike_rigRN\" \"\" \"X:/documents/GitHub/Bandits/maya//assets/characters/smarty/bike_rig.ma\" 483276133 \"X:/documents/GitHub/Bandits/maya/assets/characters/smarty/bike_rig.ma\" \"FileRef\"\n7\n\"sneaks_latestRN\" \"\" \"X:/documents/GitHub/Bandits/maya//assets/characters/sneaks/sneaks_latest.ma\" 4193267377 \"X:/documents/GitHub/Bandits/maya/assets/characters/sneaks/sneaks_latest.ma\" \"FileRef\"\n8\n\"tuffs_latestRN\" \"\" \"X:/documents/GitHub/Bandits/maya//assets/characters/tuffs/tuffs_latest.ma\" 3888614028 \"X:/documents/GitHub/Bandits/maya/assets/characters/tuffs/tuffs_latest.ma\" \"FileRef\"\nendStream\nendChannel\nendAssociations\n" 
+applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"livingroom_shading_latestRN\" \"\" \"X:/documents/GitHub/Bandits/maya//assets/sets/livingroom_shading/livingroom_shading_latest.ma\" 3758780077 \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom_shading/livingroom_shading_latest.ma\" \"FileRef\"\n1\n\"light_setup_004RN\" \"\" \"X:/documents/GitHub/Bandits/maya//assets/sets/livingroom/versions/light_setup_004.ma\" 1735552185 \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/versions/light_setup_004.ma\" \"FileRef\"\n2\n\"bedroom_lights_06RN\" \"\" \"X:/documents/GitHub/Bandits/maya//assets/sets/bedroom/bedroom_lights_06.ma\" 619937996 \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/bedroom_lights_06.ma\" \"FileRef\"\n3\n\"undies_latestRN\" \"\" \"X:/documents/GitHub/Bandits/maya//assets/props/undies/undies_latest.ma\" 3603748164 \"X:/documents/GitHub/Bandits/maya/assets/props/undies/undies_latest.ma\" \"FileRef\"\n4\n\"pig_latestRN\" \"\" \"X:/documents/GitHub/Bandits/maya//assets/characters/pig/pig_latest.ma\" 672977679 \"X:/documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\" \"FileRef\"\n5\n\"smarty_latestRN\" \"\" \"X:/documents/GitHub/Bandits/maya//assets/characters/smarty/smarty_latest.ma\" 1115229329 \"X:/documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\" \"FileRef\"\n6\n\"bike_rigRN\" \"\" \"X:/documents/GitHub/Bandits/maya//assets/characters/smarty/bike_rig.ma\" 483276133 \"X:/documents/GitHub/Bandits/maya/assets/characters/smarty/bike_rig.ma\" \"FileRef\"\n7\n\"sneaks_latestRN\" \"\" \"X:/documents/GitHub/Bandits/maya//assets/characters/sneaks/sneaks_latest.ma\" 4193267377 \"X:/documents/GitHub/Bandits/maya/assets/characters/sneaks/sneaks_latest.ma\" \"FileRef\"\nendStream\nendChannel\nendAssociations\n" 
 		-scn;
 // End of utility_room_view.ma

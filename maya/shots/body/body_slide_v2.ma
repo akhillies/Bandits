@@ -1,6 +1,6 @@
 //Maya ASCII 2013 scene
 //Name: body_slide_v2.ma
-//Last modified: Sun, Mar 08, 2015 03:57:43 PM
+//Last modified: Sun, Mar 08, 2015 05:39:42 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "living_room_latest" -rfn "living_room_latestRN" "/Users/scai/Bandits/maya//assets/sets/livingroom_shading/livingroom_shading_latest.ma";
 file -rdi 2 -ns "living_room_latest" -rfn "living_room_latest:living_room_latestRN"
@@ -64,9 +64,9 @@ fileInfo "osv" "Mac OS X 10.9.2";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -177.49834649952632 1.1994685650763173 16.326363384678764 ;
-	setAttr ".r" -type "double3" 7.2000000000001041 21.599999999999998 0 ;
-	setAttr ".rpt" -type "double3" 1.6923417390555958e-14 -1.8526082402958654e-14 -1.3767359271817894e-13 ;
+	setAttr ".t" -type "double3" -189.74687603326328 3.9434688994466098 17.60736523221615 ;
+	setAttr ".r" -type "double3" 0 -11.200000000000044 0 ;
+	setAttr ".rpt" -type "double3" 1.6923417390555958e-14 -1.8526082402958657e-14 -1.3767359271817894e-13 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
@@ -750,7 +750,7 @@ createNode renderLayer -n "defaultRenderLayer";
 	setAttr ".g" yes;
 createNode reference -n "living_room_latestRN";
 	setAttr ".fn[0]" -type "string" "/Users/scai/Bandits/maya//assets/sets/livingroom/living_room_latest.ma";
-	setAttr -s 4775 ".phl";
+	setAttr -s 4776 ".phl";
 	setAttr ".phl[312]" 0;
 	setAttr ".phl[314]" 0;
 	setAttr ".phl[316]" 0;
@@ -3048,22 +3048,23 @@ createNode reference -n "living_room_latestRN";
 	setAttr ".phl[5986]" 0;
 	setAttr ".phl[5988]" 0;
 	setAttr ".phl[5990]" 0;
-	setAttr ".phl[6101]" 0;
-	setAttr ".phl[6102]" 0;
-	setAttr ".phl[6103]" 0;
-	setAttr ".phl[6104]" 0;
-	setAttr ".phl[6105]" 0;
-	setAttr ".phl[6106]" 0;
-	setAttr ".phl[6107]" 0;
-	setAttr ".phl[6108]" 0;
-	setAttr ".phl[6109]" 0;
-	setAttr ".phl[6110]" 0;
-	setAttr ".phl[6111]" 0;
-	setAttr ".phl[6112]" 0;
-	setAttr ".phl[6113]" 0;
+	setAttr ".phl[6114]" 0;
+	setAttr ".phl[6115]" 0;
+	setAttr ".phl[6116]" 0;
+	setAttr ".phl[6117]" 0;
+	setAttr ".phl[6118]" 0;
+	setAttr ".phl[6119]" 0;
+	setAttr ".phl[6120]" 0;
+	setAttr ".phl[6121]" 0;
+	setAttr ".phl[6122]" 0;
+	setAttr ".phl[6123]" 0;
+	setAttr ".phl[6124]" 0;
+	setAttr ".phl[6125]" 0;
+	setAttr ".phl[6126]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"living_room_latestRN"
 		"living_room_latest:living_room_latest:cube_cushionRN" 0
+		"living_room_latest:living_room_latest:armchair_latestRN" 0
 		"living_room_latest:armchair_latestRN" 33
 		0 "|living_room_latest:armchair_latest:armchair_frame" "|LR" "-s -r "
 		1 |LR|living_room_latest:armchair_latest:armchair_frame|living_room_latest:armchair_latest:armchair_frameShape 
@@ -3138,7 +3139,6 @@ createNode reference -n "living_room_latestRN";
 		5 0 "living_room_latestRN" "|LR|living_room_latest:armchair_latest:armchair_frame|living_room_latest:armchair_latest:armchair_cushion|living_room_latest:armchair_latest:armchair_cushionShape.instObjGroups" 
 		"living_room_latest:armchair_latest:lambert7SG.dagSetMembers" "living_room_latestRN.placeHolderList[5598]" 
 		"living_room_latestRN.placeHolderList[5599]" ""
-		"living_room_latest:living_room_latest:armchair_latestRN" 0
 		"living_room_latest:living_room_latest:telescopeRN" 0
 		"living_room_latest:living_room_latest:taller_window_four_squares_latestRN" 0
 		
@@ -3427,18 +3427,16 @@ createNode reference -n "living_room_latestRN";
 		5 0 "living_room_latestRN" "|LR|living_room_latest:taller_window_four_squares_latest:taller_window|living_room_latest:taller_window_four_squares_latest:polySurface5|living_room_latest:taller_window_four_squares_latest:transform2|living_room_latest:taller_window_four_squares_latest:polySurfaceShape6.worldMatrix" 
 		"living_room_latest:taller_window_four_squares_latest:polyChipOff2.manipMatrix" "living_room_latestRN.placeHolderList[5341]" 
 		"living_room_latestRN.placeHolderList[5342]" ""
+		"living_room_latest:living_room_latest:taller_window_four_squares_latestRN4" 0
+		
 		"living_room_latest:living_room_latestRN" 2
 		3 "living_room_latest:living_room_latest:nonselectablelayer.drawInfo" "|living_room_latest:living_room_latest:coffee_table.drawOverride" 
 		""
 		5 4 "living_room_latestRN" "|living_room_latest:living_room_latest:coffee_table.drawOverride" 
 		"living_room_latestRN.placeHolderList[6049]" ""
-		"living_room_latest:living_room_latest:taller_window_four_squares_latestRN4" 0
-		
 		"living_room_latest:living_room_latest:taller_window_four_squares_latestRN3" 0
 		
 		"living_room_latest:living_room_latest:taller_window_four_squares_latestRN2" 0
-		
-		"living_room_latest:living_room_latest:taller_window_four_squares_latestRN1" 0
 		
 		"living_room_latest:taller_window_four_squares_latestRN1" 107
 		0 "|living_room_latest:taller_window_four_squares_latest1:taller_window" 
@@ -3727,6 +3725,8 @@ createNode reference -n "living_room_latestRN";
 		"living_room_latest:taller_window_four_squares_latest1:polyChipOff2.manipMatrix" 
 		"living_room_latestRN.placeHolderList[5387]" "living_room_latestRN.placeHolderList[5388]" 
 		""
+		"living_room_latest:living_room_latest:taller_window_four_squares_latestRN1" 0
+		
 		"living_room_latest:living_room_latest:armchair_latestRN1" 0
 		"living_room_latest:armchair_latestRN1" 33
 		0 "|living_room_latest:armchair_latest1:armchair_frame" "|LR" "-s -r "
@@ -4301,7 +4301,7 @@ createNode reference -n "living_room_latestRN";
 		"living_room_latestRN.placeHolderList[5571]" "living_room_latestRN.placeHolderList[5572]" 
 		""
 		"living_room_latest:living_room_latest:resurrected_staircaseRN" 0
-		"living_room_latestRN" 9962
+		"living_room_latestRN" 9963
 		0 "|living_room_latest:pCylinder3" "|LR" "-s -r "
 		0 "|living_room_latest:group" "|LR" "-s -r "
 		0 "|living_room_latest:curveDaisySmall" "|LR" "-s -r "
@@ -28340,6 +28340,8 @@ createNode reference -n "living_room_latestRN";
 		"living_room_latestRN.placeHolderList[6087]" ""
 		5 4 "living_room_latestRN" "|living_room_latest:living_room_latest:living_room_latestRNfosterParent1.drawOverride" 
 		"living_room_latestRN.placeHolderList[6100]" ""
+		5 4 "living_room_latestRN" "|living_room_latest:living_room_latest:living_room_latestRNfosterParent1.drawOverride" 
+		"living_room_latestRN.placeHolderList[6113]" ""
 		"living_room_latest:living_room_latest:bed_latestRN" 0
 		"living_room_latest:taller_window_four_squares_latest1RN" 107
 		0 "|living_room_latest:taller_window_four_squares_latest2:taller_window" 
@@ -28630,10 +28632,8 @@ createNode reference -n "living_room_latestRN";
 		""
 		"living_room_latest:living_room_latest:taller_window_four_squares_latest1RN" 0
 		
-		"living_room_latest:living_room_latest:bedroom_updated_layout:desk_latestRN" 0
-		
 		"living_room_latest:bedroom_updated_layout:desk_latestRN" 0
-		"living_room_latest:living_room_latest:taller_window_four_squares_latest2RN" 0
+		"living_room_latest:living_room_latest:bedroom_updated_layout:desk_latestRN" 0
 		
 		"living_room_latest:taller_window_four_squares_latest2RN" 107
 		0 "|living_room_latest:taller_window_four_squares_latest3:taller_window" 
@@ -28922,7 +28922,7 @@ createNode reference -n "living_room_latestRN";
 		"living_room_latest:taller_window_four_squares_latest3:polyChipOff2.manipMatrix" 
 		"living_room_latestRN.placeHolderList[5479]" "living_room_latestRN.placeHolderList[5480]" 
 		""
-		"living_room_latest:living_room_latest:taller_window_four_squares_latest3RN" 0
+		"living_room_latest:living_room_latest:taller_window_four_squares_latest2RN" 0
 		
 		"living_room_latest:taller_window_four_squares_latest3RN" 107
 		0 "|living_room_latest:taller_window_four_squares_latest4:taller_window" 
@@ -29211,6 +29211,8 @@ createNode reference -n "living_room_latestRN";
 		"living_room_latest:taller_window_four_squares_latest4:polyChipOff2.manipMatrix" 
 		"living_room_latestRN.placeHolderList[5525]" "living_room_latestRN.placeHolderList[5526]" 
 		""
+		"living_room_latest:living_room_latest:taller_window_four_squares_latest3RN" 0
+		
 		"living_room_latest:living_room_latest:desk_latestRN" 0
 		"living_room_latest:armchair_latest1RN1" 33
 		0 "|living_room_latest:armchair_latest3:armchair_frame" "|LR" "-s -r "
@@ -29290,8 +29292,8 @@ createNode reference -n "living_room_latestRN";
 		"living_room_latest:armchair_latest3:lambert7SG.dagSetMembers" "living_room_latestRN.placeHolderList[326]" 
 		"living_room_latestRN.placeHolderList[327]" "living_room_latest:armchair_latest3:lambert7SG.dsm"
 		
-		"living_room_latest:bedroom_updated_layout:chairRN" 0
 		"living_room_latest:living_room_latest:bedroom_updated_layout:chairRN" 0
+		"living_room_latest:bedroom_updated_layout:chairRN" 0
 		"living_room_latest:armchair_latest1RN" 33
 		0 "|living_room_latest:armchair_latest2:armchair_frame" "|LR" "-s -r "
 		1 |LR|living_room_latest:armchair_latest2:armchair_frame|living_room_latest:armchair_latest2:armchair_frameShape 
@@ -29390,37 +29392,37 @@ createNode reference -n "living_room_latestRN";
 		"displayType" " 0"
 		2 "living_room_latest:living_room_latest:bedroom_updated_layout:nonselectablelayer" 
 		"visibility" " 0"
-		3 "living_room_latest:living_room_latest:nonselectablelayer.drawInfo" "|living_room_latest:living_room_latest:mug.drawOverride" 
-		""
 		3 "living_room_latest:living_room_latest:nonselectablelayer.drawInfo" "|living_room_latest:living_room_latest:tissue_box1.drawOverride" 
 		""
+		3 "living_room_latest:living_room_latest:nonselectablelayer.drawInfo" "|living_room_latest:living_room_latest:mug.drawOverride" 
+		""
 		5 4 "living_room_latestRN" "|living_room_latest:living_room_latest:mug.drawOverride" 
-		"living_room_latestRN.placeHolderList[6101]" ""
+		"living_room_latestRN.placeHolderList[6114]" ""
 		5 4 "living_room_latestRN" "|living_room_latest:living_room_latest:tissue_box1.drawOverride" 
-		"living_room_latestRN.placeHolderList[6102]" ""
+		"living_room_latestRN.placeHolderList[6115]" ""
 		5 4 "living_room_latestRN" "|living_room_latest:living_room_latest:vase_flowers:daisySmall4MeshGroup|living_room_latest:living_room_latest:vase_flowers:daisySmall4Main.drawOverride" 
-		"living_room_latestRN.placeHolderList[6103]" ""
+		"living_room_latestRN.placeHolderList[6116]" ""
 		5 0 "living_room_latestRN" "living_room_latest:living_room_latest:bedroom_updated_layout:nonselectablelayer.drawInfo" 
 		"|living_room_latest:living_room_latest:vase_flowers:daisySmall4MeshGroup|living_room_latest:living_room_latest:vase_flowers:daisySmall4Main|living_room_latest:living_room_latest:vase_flowers:daisySmall1Main.drawOverride" 
-		"living_room_latestRN.placeHolderList[6104]" "living_room_latestRN.placeHolderList[6105]" 
+		"living_room_latestRN.placeHolderList[6117]" "living_room_latestRN.placeHolderList[6118]" 
 		""
 		5 4 "living_room_latestRN" "|living_room_latest:living_room_latest:vase_flowers:daisySmall4MeshGroup|living_room_latest:living_room_latest:vase_flowers:daisySmall4Main|living_room_latest:living_room_latest:vase_flowers:daisySmall1Leaf.drawOverride" 
-		"living_room_latestRN.placeHolderList[6106]" ""
+		"living_room_latestRN.placeHolderList[6119]" ""
 		5 4 "living_room_latestRN" "|living_room_latest:living_room_latest:vase_flowers:daisySmall4MeshGroup|living_room_latest:living_room_latest:vase_flowers:daisySmall4Main|living_room_latest:living_room_latest:vase_flowers:daisySmall2Main.drawOverride" 
-		"living_room_latestRN.placeHolderList[6107]" ""
+		"living_room_latestRN.placeHolderList[6120]" ""
 		5 0 "living_room_latestRN" "living_room_latest:living_room_latest:bedroom_updated_layout:nonselectablelayer.drawInfo" 
 		"|living_room_latest:living_room_latest:vase_flowers:daisySmall4MeshGroup|living_room_latest:living_room_latest:vase_flowers:daisySmall4Main|living_room_latest:living_room_latest:vase_flowers:daisySmall4Leaf.drawOverride" 
-		"living_room_latestRN.placeHolderList[6108]" "living_room_latestRN.placeHolderList[6109]" 
+		"living_room_latestRN.placeHolderList[6121]" "living_room_latestRN.placeHolderList[6122]" 
 		""
 		5 4 "living_room_latestRN" "|living_room_latest:living_room_latest:vase_flowers:pCylinder8.drawOverride" 
-		"living_room_latestRN.placeHolderList[6110]" ""
+		"living_room_latestRN.placeHolderList[6123]" ""
 		5 4 "living_room_latestRN" "|living_room_latest:living_room_latest:cat_robotRNfosterParent1.drawOverride" 
-		"living_room_latestRN.placeHolderList[6111]" ""
+		"living_room_latestRN.placeHolderList[6124]" ""
 		5 4 "living_room_latestRN" "|living_room_latest:living_room_latest:resurrected_staircaseRNfosterParent2.drawOverride" 
-		"living_room_latestRN.placeHolderList[6112]" ""
+		"living_room_latestRN.placeHolderList[6125]" ""
 		"living_room_latestRN" 1
 		5 4 "living_room_latestRN" "|living_room_latest:living_room_latest:living_room_latestRNfosterParent1.drawOverride" 
-		"living_room_latestRN.placeHolderList[6113]" ""
+		"living_room_latestRN.placeHolderList[6126]" ""
 		"living_room_latest:living_room_latest:telescopeRN" 20
 		2 "|living_room_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_" 
 		"translate" " -type \"double3\" 0 2169.506104 0"
@@ -30240,14 +30242,14 @@ createNode reference -n "smartyRN";
 		
 		2 "|smarty:bike:individualBikeParts|smarty:bike:insideBikeObjects|smarty:bike:bike5_4_wheelframes:handleBars|smarty:bike:bike5_4_wheelframes:handleBarRight|smarty:bike:transform1|smarty:bike:bike5_4_wheelframes:handleBarRightShape" 
 		"furNameSpace" " -type \"string\" \"bike\""
+		"smartyRN" 1
+		2 "smarty:layer1" "displayOrder" " 6"
 		"smarty:NewSmarty_024RN" 3
 		2 "smarty:NewSmarty_024:smarty_008_fixed_rig_:TorsoAndHead" "displayOrder" 
 		" 4"
 		2 "smarty:NewSmarty_024:smarty_008_fixed_rig_:Ear" "displayOrder" " 5"
 		2 "smarty:NewSmarty_024:smarty_008_fixed_rig_:smarty" "displayOrder" " 6"
 		
-		"smartyRN" 1
-		2 "smarty:layer1" "displayOrder" " 6"
 		"smarty:bikeRN" 25
 		2 "|smarty:bike:bike_ctrl|smarty:bike:wholeBike" "visibility" " -av 1"
 		2 "|smarty:bike:bike_ctrl|smarty:bike:wholeBike" "translate" " -type \"double3\" -230.065272 0 -3.507728"
@@ -31378,7 +31380,7 @@ createNode reference -n "pig_latestRN1";
 		2 "|PIG:PIG|PIG:controller_main01|PIG:head_control" "rotateX" " -av"
 		2 "|PIG:PIG|PIG:controller_main01|PIG:head_control" "rotateY" " -av"
 		2 "|PIG:PIG|PIG:controller_main01|PIG:shoulders_rotation_ctrl01" "translate" 
-		" -type \"double3\" 0 0.844791 -0.636356"
+		" -type \"double3\" 0 0.219116 -0.636356"
 		2 "|PIG:PIG|PIG:controller_main01|PIG:shoulders_rotation_ctrl01" "translateY" 
 		" -av"
 		2 "|PIG:PIG|PIG:controller_main01|PIG:shoulders_rotation_ctrl01" "translateX" 
@@ -31421,7 +31423,7 @@ createNode reference -n "pig_latestRN1";
 		
 		2 "|PIG:PIG|PIG:controller_main01|PIG:locator_R_knee01" "translate" " -type \"double3\" 0 0.977375 2.590915"
 		
-		2 "|PIG:PIG|PIG:controller_main01|PIG:hip_rotation_ctrl01" "translate" " -type \"double3\" 0 -4.921458 0"
+		2 "|PIG:PIG|PIG:controller_main01|PIG:hip_rotation_ctrl01" "translate" " -type \"double3\" 0 -6.372787 0"
 		
 		2 "|PIG:PIG|PIG:controller_main01|PIG:hip_rotation_ctrl01" "translateZ" " -av"
 		
@@ -31429,7 +31431,7 @@ createNode reference -n "pig_latestRN1";
 		
 		2 "|PIG:PIG|PIG:controller_main01|PIG:hip_rotation_ctrl01" "translateY" " -av"
 		
-		2 "|PIG:PIG|PIG:controller_main01|PIG:hip_rotation_ctrl01" "rotate" " -type \"double3\" 0 0 0"
+		2 "|PIG:PIG|PIG:controller_main01|PIG:hip_rotation_ctrl01" "rotate" " -type \"double3\" -86.715798 0 0"
 		
 		2 "|PIG:PIG|PIG:controller_main01|PIG:hip_rotation_ctrl01" "rotateZ" " -av"
 		
@@ -31442,9 +31444,9 @@ createNode reference -n "pig_latestRN1";
 		2 "|PIG:PIG|PIG:controller_main01|PIG:hip_rotation_ctrl01" "blendParent1" 
 		" -k 1 0"
 		2 "|PIG:PIG|PIG:controller_main01|PIG:hip_rotation_ctrl01|PIG:tail_controllers_01|PIG:splineiK_tail01" 
-		"translate" " -type \"double3\" -0.0359393 9.836448 -13.843238"
+		"translate" " -type \"double3\" -0.03767 13.642526 -6.508533"
 		2 "|PIG:PIG|PIG:controller_main01|PIG:hip_rotation_ctrl01|PIG:tail_controllers_01|PIG:splineiK_tail01" 
-		"rotate" " -type \"double3\" 90.095765 48.417214 90.108166"
+		"rotate" " -type \"double3\" 90.011014 6.106476 90.087065"
 		2 "|PIG:PIG|PIG:controller_main01|PIG:back_flex_ctrl01" "translate" " -type \"double3\" 0 0 0"
 		
 		2 "|PIG:PIG|PIG:controller_main01|PIG:back_flex_ctrl01" "translateY" " -av"
@@ -31463,7 +31465,7 @@ createNode reference -n "pig_latestRN1";
 		2 "|PIG:PIG|PIG:controller_main01|PIG:stretchr_ctrl01" "scale" " -type \"double3\" 1 1 1"
 		
 		2 "|PIG:PIG|PIG:controller_main01|PIG:stretchr_ctrl01|PIG:controller_L_backfoot01" 
-		"translate" " -type \"double3\" 0 4.62351 2.590915"
+		"translate" " -type \"double3\" 0 5.437343 4.362062"
 		2 "|PIG:PIG|PIG:controller_main01|PIG:stretchr_ctrl01|PIG:controller_L_backfoot01" 
 		"translateX" " -av"
 		2 "|PIG:PIG|PIG:controller_main01|PIG:stretchr_ctrl01|PIG:controller_L_backfoot01" 
@@ -31479,7 +31481,7 @@ createNode reference -n "pig_latestRN1";
 		2 "|PIG:PIG|PIG:controller_main01|PIG:stretchr_ctrl01|PIG:controller_L_backfoot01" 
 		"rotateZ" " -av"
 		2 "|PIG:PIG|PIG:controller_main01|PIG:stretchr_ctrl01|PIG:controller_R_backfoot01" 
-		"translate" " -type \"double3\" 0 4.62351 2.590915"
+		"translate" " -type \"double3\" 0 5.437343 4.362062"
 		2 "|PIG:PIG|PIG:controller_main01|PIG:stretchr_ctrl01|PIG:controller_R_backfoot01" 
 		"translateX" " -av"
 		2 "|PIG:PIG|PIG:controller_main01|PIG:stretchr_ctrl01|PIG:controller_R_backfoot01" 
@@ -31495,7 +31497,7 @@ createNode reference -n "pig_latestRN1";
 		2 "|PIG:PIG|PIG:controller_main01|PIG:stretchr_ctrl01|PIG:controller_R_backfoot01" 
 		"rotateZ" " -av"
 		2 "|PIG:PIG|PIG:controller_main01|PIG:stretchf_ctrl01" "visibility" " 1"
-		2 "|PIG:PIG|PIG:controller_main01|PIG:stretchf_ctrl01" "translate" " -type \"double3\" 0 0.844791 -0.663731"
+		2 "|PIG:PIG|PIG:controller_main01|PIG:stretchf_ctrl01" "translate" " -type \"double3\" 0 0.219116 -0.663731"
 		
 		2 "|PIG:PIG|PIG:controller_main01|PIG:stretchf_ctrl01" "translateY" " -av"
 		
@@ -31506,7 +31508,7 @@ createNode reference -n "pig_latestRN1";
 		2 "|PIG:PIG|PIG:controller_main01|PIG:stretchf_ctrl01" "scale" " -type \"double3\" 1 1 1"
 		
 		2 "|PIG:PIG|PIG:controller_main01|PIG:stretchf_ctrl01|PIG:controller_L_frontfoot01" 
-		"translate" " -type \"double3\" 0 0 3.348802"
+		"translate" " -type \"double3\" 0 -3.433826 4.966438"
 		2 "|PIG:PIG|PIG:controller_main01|PIG:stretchf_ctrl01|PIG:controller_L_frontfoot01" 
 		"translateX" " -av"
 		2 "|PIG:PIG|PIG:controller_main01|PIG:stretchf_ctrl01|PIG:controller_L_frontfoot01" 
@@ -31524,7 +31526,7 @@ createNode reference -n "pig_latestRN1";
 		2 "|PIG:PIG|PIG:controller_main01|PIG:stretchf_ctrl01|PIG:controller_L_frontfoot01" 
 		"scale" " -type \"double3\" 1 1 1"
 		2 "|PIG:PIG|PIG:controller_main01|PIG:stretchf_ctrl01|PIG:controller_R_frontfoot01" 
-		"translate" " -type \"double3\" 0 -0.442492 3.348802"
+		"translate" " -type \"double3\" 0 -3.876318 4.966438"
 		2 "|PIG:PIG|PIG:controller_main01|PIG:stretchf_ctrl01|PIG:controller_R_frontfoot01" 
 		"translateX" " -av"
 		2 "|PIG:PIG|PIG:controller_main01|PIG:stretchf_ctrl01|PIG:controller_R_frontfoot01" 
@@ -31542,7 +31544,7 @@ createNode reference -n "pig_latestRN1";
 		2 "|PIG:PIG|PIG:controller_main01|PIG:stretchf_ctrl01|PIG:controller_R_frontfoot01" 
 		"scale" " -type \"double3\" 1 1 1"
 		2 "|PIG:PIG|PIG:flexi_joint_systems|PIG:vertebrae_flexi_spine01|PIG:PigSkin002:vertebrae_flexi_global01|PIG:PigSkin002:vertebrae_flexi_grp_anim_end01|PIG:PigSkin002:vertebrae_flexi_anim_end01" 
-		"translate" " -type \"double3\" 0 -2.361916 0"
+		"translate" " -type \"double3\" 0 -2.760692 0"
 		2 "|PIG:PIG|PIG:flexi_joint_systems|PIG:vertebrae_flexi_spine01|PIG:PigSkin002:vertebrae_flexi_global01|PIG:PigSkin002:vertebrae_flexi_grp_anim_end01|PIG:PigSkin002:vertebrae_flexi_anim_end01" 
 		"translateZ" " -av"
 		2 "|PIG:PIG|PIG:flexi_joint_systems|PIG:vertebrae_flexi_spine01|PIG:PigSkin002:vertebrae_flexi_global01|PIG:PigSkin002:vertebrae_flexi_grp_anim_end01|PIG:PigSkin002:vertebrae_flexi_anim_end01" 
@@ -31571,6 +31573,8 @@ createNode reference -n "pig_latestRN1";
 		"|PIG:PIG|PIG:controller_main01|PIG:hip_rotation_ctrl01.rotateY" ""
 		3 "|PIG:PIG|PIG:controller_main01|PIG:hip_rotation_ctrl01|PIG:hip_rotation_ctrl01_parentConstraint1.constraintRotateZ" 
 		"|PIG:PIG|PIG:controller_main01|PIG:hip_rotation_ctrl01.rotateZ" ""
+		3 ":defaultRenderGlobals.rendercallback" "PIG:defaultFurGlobals.callback" 
+		""
 		3 "|PIG:PIG|PIG:controller_main01|PIG:shoulders_rotation_ctrl01|PIG:shoulders_rotation_ctrl01_parentConstraint1.constraintTranslateX" 
 		"|PIG:PIG|PIG:controller_main01|PIG:shoulders_rotation_ctrl01.translateX" ""
 		3 "|PIG:PIG|PIG:controller_main01|PIG:shoulders_rotation_ctrl01|PIG:shoulders_rotation_ctrl01_parentConstraint1.constraintTranslateY" 
@@ -31583,8 +31587,6 @@ createNode reference -n "pig_latestRN1";
 		"|PIG:PIG|PIG:controller_main01|PIG:shoulders_rotation_ctrl01.rotateY" ""
 		3 "|PIG:PIG|PIG:controller_main01|PIG:shoulders_rotation_ctrl01|PIG:shoulders_rotation_ctrl01_parentConstraint1.constraintRotateZ" 
 		"|PIG:PIG|PIG:controller_main01|PIG:shoulders_rotation_ctrl01.rotateZ" ""
-		3 ":defaultRenderGlobals.rendercallback" "PIG:defaultFurGlobals.callback" 
-		""
 		5 4 "pig_latestRN1" "|PIG:PIG|PIG:controller_main01.translateX" "pig_latestRN1.placeHolderList[1]" 
 		""
 		5 4 "pig_latestRN1" "|PIG:PIG|PIG:controller_main01.translateY" "pig_latestRN1.placeHolderList[2]" 
@@ -31808,11 +31810,13 @@ createNode animCurveTL -n "PIG:controller_L_backfoot01_translateX1";
 createNode animCurveTL -n "PIG:controller_L_backfoot01_translateY1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  22 5.674637656052699 38 4.6235104554933253;
+	setAttr -s 3 ".ktv[0:2]"  22 5.674637656052699 38 4.6235104554933253
+		 42 5.4373425805616948;
 createNode animCurveTL -n "PIG:controller_L_backfoot01_translateZ1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  22 4.3599451946610035 38 2.5909152621300016;
+	setAttr -s 3 ".ktv[0:2]"  22 4.3599451946610035 38 2.5909152621300016
+		 42 4.3620619738689843;
 createNode animCurveTL -n "PIG:controller_R_backfoot01_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
@@ -31820,11 +31824,13 @@ createNode animCurveTL -n "PIG:controller_R_backfoot01_translateX";
 createNode animCurveTL -n "PIG:controller_R_backfoot01_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  22 5.674637656052699 38 4.6235104554933253;
+	setAttr -s 3 ".ktv[0:2]"  22 5.674637656052699 38 4.6235104554933253
+		 42 5.4373425805616948;
 createNode animCurveTL -n "PIG:controller_R_backfoot01_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  22 4.3599451946610035 38 2.5909152621300016;
+	setAttr -s 3 ".ktv[0:2]"  22 4.3599451946610035 38 2.5909152621300016
+		 42 4.3620619738689843;
 createNode animCurveTA -n "PIG:controller_R_backfoot01_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
@@ -31876,11 +31882,11 @@ createNode animCurveTU -n "PIG:controller_L_backfoot01_scaleZ";
 createNode animCurveTL -n "PIG:controller_L_frontfoot01_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  16 3.3488023642626503;
+	setAttr -s 2 ".ktv[0:1]"  16 3.3488023642626503 42 4.9664378836372745;
 createNode animCurveTA -n "PIG:controller_L_frontfoot01_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  16 -10.836539125414761;
+	setAttr ".ktv[0]"  16 -10.83653912541476;
 createNode animCurveTA -n "PIG:controller_L_frontfoot01_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
@@ -31888,7 +31894,7 @@ createNode animCurveTA -n "PIG:controller_L_frontfoot01_rotateY";
 createNode animCurveTA -n "PIG:controller_L_frontfoot01_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  16 -29.743750465565398;
+	setAttr ".ktv[0]"  16 -29.743750465565402;
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -32139,17 +32145,17 @@ select -ne :characterPartition;
 	setAttr -s 2 ".st";
 select -ne :ikSystem;
 	setAttr -s 4 ".sol";
-connectAttr "invisible_LR.di" "living_room_latestRN.phl[6101]";
-connectAttr "invisible_LR.di" "living_room_latestRN.phl[6102]";
-connectAttr "invisible_LR.di" "living_room_latestRN.phl[6103]";
-connectAttr "living_room_latestRN.phl[6104]" "living_room_latestRN.phl[6105]";
-connectAttr "invisible_LR.di" "living_room_latestRN.phl[6106]";
-connectAttr "invisible_LR.di" "living_room_latestRN.phl[6107]";
-connectAttr "living_room_latestRN.phl[6108]" "living_room_latestRN.phl[6109]";
-connectAttr "invisible_LR.di" "living_room_latestRN.phl[6110]";
-connectAttr "invisible_LR.di" "living_room_latestRN.phl[6111]";
-connectAttr "invisible_LR.di" "living_room_latestRN.phl[6112]";
-connectAttr "invisible_LR.di" "living_room_latestRN.phl[6113]";
+connectAttr "invisible_LR.di" "living_room_latestRN.phl[6114]";
+connectAttr "invisible_LR.di" "living_room_latestRN.phl[6115]";
+connectAttr "invisible_LR.di" "living_room_latestRN.phl[6116]";
+connectAttr "living_room_latestRN.phl[6117]" "living_room_latestRN.phl[6118]";
+connectAttr "invisible_LR.di" "living_room_latestRN.phl[6119]";
+connectAttr "invisible_LR.di" "living_room_latestRN.phl[6120]";
+connectAttr "living_room_latestRN.phl[6121]" "living_room_latestRN.phl[6122]";
+connectAttr "invisible_LR.di" "living_room_latestRN.phl[6123]";
+connectAttr "invisible_LR.di" "living_room_latestRN.phl[6124]";
+connectAttr "invisible_LR.di" "living_room_latestRN.phl[6125]";
+connectAttr "invisible_LR.di" "living_room_latestRN.phl[6126]";
 connectAttr "smarty:bike:bike_ctrl_translateX.o" "smartyRN.phl[16]";
 connectAttr "smarty:bike:bike_ctrl_translateY.o" "smartyRN.phl[17]";
 connectAttr "smarty:bike:bike_ctrl_translateZ.o" "smartyRN.phl[18]";
@@ -34537,6 +34543,7 @@ connectAttr "invisible_LR.di" "living_room_latestRN.phl[6061]";
 connectAttr "invisible_LR.di" "living_room_latestRN.phl[6074]";
 connectAttr "invisible_LR.di" "living_room_latestRN.phl[6087]";
 connectAttr "invisible_LR.di" "living_room_latestRN.phl[6100]";
+connectAttr "invisible_LR.di" "living_room_latestRN.phl[6113]";
 connectAttr "sharedReferenceNode.sr" "living_room_latestRN.sr";
 connectAttr ":defaultRenderGlobals.rcb" "defaultFurGlobals.cb";
 connectAttr "layerManager.dli[1]" "LR_layer.id";

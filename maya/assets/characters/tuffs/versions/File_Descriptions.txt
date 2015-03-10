@@ -1,3 +1,0 @@
-Tuffs006: rigged and skinned Tuffs
-
-Tuffs007: I orient constrained the hand controllers to the wrist joints, fixing a mesh screwup and making for better rotation. Also has better skinning.

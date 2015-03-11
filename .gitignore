@@ -3,3 +3,4 @@
 maya/images/**
 maya/movies/**
 maya/cache/**
+*.mcx

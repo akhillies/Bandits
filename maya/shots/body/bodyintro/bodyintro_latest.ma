@@ -1,6 +1,6 @@
 //Maya ASCII 2015 scene
 //Name: bodyintro_latest.ma
-//Last modified: Tue, Mar 10, 2015 02:55:29 PM
+//Last modified: Tue, Mar 10, 2015 04:30:47 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "utility_room_view" -rfn "utility_room_viewRN" -op "v=0;p=17;f=0"
 		 "X:/documents/GitHub/Bandits/maya//scenes/utility_room_view.ma";
@@ -76,19 +76,19 @@ fileInfo "osv" "Mac OS X 10.9.2";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -40.638644876215956 25.404188489907991 86.635482866475854 ;
-	setAttr ".r" -type "double3" -35.138352730495058 -0.20000000000226817 1.2424117416441818e-17 ;
-	setAttr ".rp" -type "double3" 1.4210854715202004e-14 1.4210854715202004e-14 -7.1054273576010019e-15 ;
-	setAttr ".rpt" -type "double3" 4.0666784122775214e-15 -5.9998970783882689e-15 -5.4823679037918875e-15 ;
+	setAttr ".t" -type "double3" -243.58712087949547 174.59943909413886 268.91788465779393 ;
+	setAttr ".r" -type "double3" -43.53835273049507 -31.400000000003338 -5.5893943716351902e-15 ;
+	setAttr ".rp" -type "double3" 0 0 -5.6843418860808015e-14 ;
+	setAttr ".rpt" -type "double3" 3.0813633716559499e-14 -4.0086555382508579e-14 2.5851797812380689e-14 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 21.133594357586645;
+	setAttr ".coi" 260.16052782585285;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -47.388402596025529 3.6025380443769324 70.381510543051917 ;
+	setAttr ".tp" -type "double3" -145.32790209521528 -4.6095320176560914 107.94344309770904 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	setAttr ".v" no;
@@ -162,14 +162,14 @@ createNode nRigid -n "nRigidShape1" -p "nRigid1";
 	setAttr -k off ".mxc";
 	setAttr -k off ".lod";
 	setAttr -k off ".inh";
-	setAttr ".cts" 173;
+	setAttr ".cts" 330;
 	setAttr -k off ".stf";
 	setAttr -k off ".igs";
 	setAttr -k off ".ecfh";
 	setAttr -k off ".tgs";
 	setAttr -k off ".gsm";
 	setAttr -k off ".chd";
-	setAttr ".chw" 360;
+	setAttr ".chw" 330;
 	setAttr -k off ".trd";
 	setAttr -k off ".prt";
 	setAttr ".thss" 0.014980650506913662;
@@ -212,14 +212,14 @@ createNode nRigid -n "nRigidShape2" -p "nRigid2";
 	setAttr -k off ".mxc";
 	setAttr -k off ".lod";
 	setAttr -k off ".inh";
-	setAttr ".cts" 173;
+	setAttr ".cts" 330;
 	setAttr -k off ".stf";
 	setAttr -k off ".igs";
 	setAttr -k off ".ecfh";
 	setAttr -k off ".tgs";
 	setAttr -k off ".gsm";
 	setAttr -k off ".chd";
-	setAttr ".chw" 360;
+	setAttr ".chw" 330;
 	setAttr -k off ".trd";
 	setAttr -k off ".prt";
 	setAttr ".thss" 0.014980649575591087;
@@ -262,14 +262,14 @@ createNode nRigid -n "nRigidShape3" -p "nRigid3";
 	setAttr -k off ".mxc";
 	setAttr -k off ".lod";
 	setAttr -k off ".inh";
-	setAttr ".cts" 173;
+	setAttr ".cts" 330;
 	setAttr -k off ".stf";
 	setAttr -k off ".igs";
 	setAttr -k off ".ecfh";
 	setAttr -k off ".tgs";
 	setAttr -k off ".gsm";
 	setAttr -k off ".chd";
-	setAttr ".chw" 360;
+	setAttr ".chw" 330;
 	setAttr -k off ".trd";
 	setAttr -k off ".prt";
 	setAttr ".thss" 0.015785308554768562;
@@ -312,14 +312,14 @@ createNode nRigid -n "nRigidShape4" -p "nRigid4";
 	setAttr -k off ".mxc";
 	setAttr -k off ".lod";
 	setAttr -k off ".inh";
-	setAttr ".cts" 173;
+	setAttr ".cts" 330;
 	setAttr -k off ".stf";
 	setAttr -k off ".igs";
 	setAttr -k off ".ecfh";
 	setAttr -k off ".tgs";
 	setAttr -k off ".gsm";
 	setAttr -k off ".chd";
-	setAttr ".chw" 360;
+	setAttr ".chw" 330;
 	setAttr -k off ".trd";
 	setAttr -k off ".prt";
 	setAttr ".thss" 0.016124805435538292;
@@ -362,14 +362,14 @@ createNode nRigid -n "nRigidShape5" -p "nRigid5";
 	setAttr -k off ".mxc";
 	setAttr -k off ".lod";
 	setAttr -k off ".inh";
-	setAttr ".cts" 173;
+	setAttr ".cts" 330;
 	setAttr -k off ".stf";
 	setAttr -k off ".igs";
 	setAttr -k off ".ecfh";
 	setAttr -k off ".tgs";
 	setAttr -k off ".gsm";
 	setAttr -k off ".chd";
-	setAttr ".chw" 360;
+	setAttr ".chw" 330;
 	setAttr -k off ".trd";
 	setAttr -k off ".prt";
 	setAttr ".thss" 0.015956033021211624;
@@ -412,14 +412,14 @@ createNode nRigid -n "nRigidShape6" -p "nRigid6";
 	setAttr -k off ".mxc";
 	setAttr -k off ".lod";
 	setAttr -k off ".inh";
-	setAttr ".cts" 173;
+	setAttr ".cts" 330;
 	setAttr -k off ".stf";
 	setAttr -k off ".igs";
 	setAttr -k off ".ecfh";
 	setAttr -k off ".tgs";
 	setAttr -k off ".gsm";
 	setAttr -k off ".chd";
-	setAttr ".chw" 360;
+	setAttr ".chw" 330;
 	setAttr -k off ".trd";
 	setAttr -k off ".prt";
 	setAttr ".thss" 0.02714138850569725;
@@ -462,14 +462,14 @@ createNode nRigid -n "nRigidShape7" -p "nRigid7";
 	setAttr -k off ".mxc";
 	setAttr -k off ".lod";
 	setAttr -k off ".inh";
-	setAttr ".cts" 173;
+	setAttr ".cts" 330;
 	setAttr -k off ".stf";
 	setAttr -k off ".igs";
 	setAttr -k off ".ecfh";
 	setAttr -k off ".tgs";
 	setAttr -k off ".gsm";
 	setAttr -k off ".chd";
-	setAttr ".chw" 360;
+	setAttr ".chw" 330;
 	setAttr -k off ".trd";
 	setAttr -k off ".prt";
 	setAttr ".thss" 0.019823253154754639;
@@ -512,14 +512,14 @@ createNode nRigid -n "nRigidShape8" -p "nRigid8";
 	setAttr -k off ".mxc";
 	setAttr -k off ".lod";
 	setAttr -k off ".inh";
-	setAttr ".cts" 173;
+	setAttr ".cts" 330;
 	setAttr -k off ".stf";
 	setAttr -k off ".igs";
 	setAttr -k off ".ecfh";
 	setAttr -k off ".tgs";
 	setAttr -k off ".gsm";
 	setAttr -k off ".chd";
-	setAttr ".chw" 360;
+	setAttr ".chw" 330;
 	setAttr -k off ".trd";
 	setAttr -k off ".prt";
 	setAttr ".thss" 0.013308268971741199;
@@ -562,14 +562,14 @@ createNode nRigid -n "nRigidShape9" -p "nRigid9";
 	setAttr -k off ".mxc";
 	setAttr -k off ".lod";
 	setAttr -k off ".inh";
-	setAttr ".cts" 173;
+	setAttr ".cts" 330;
 	setAttr -k off ".stf";
 	setAttr -k off ".igs";
 	setAttr -k off ".ecfh";
 	setAttr -k off ".tgs";
 	setAttr -k off ".gsm";
 	setAttr -k off ".chd";
-	setAttr ".chw" 360;
+	setAttr ".chw" 330;
 	setAttr -k off ".trd";
 	setAttr -k off ".prt";
 	setAttr ".thss" 0.0049148965626955032;
@@ -612,14 +612,14 @@ createNode nRigid -n "nRigidShape10" -p "nRigid10";
 	setAttr -k off ".mxc";
 	setAttr -k off ".lod";
 	setAttr -k off ".inh";
-	setAttr ".cts" 173;
+	setAttr ".cts" 330;
 	setAttr -k off ".stf";
 	setAttr -k off ".igs";
 	setAttr -k off ".ecfh";
 	setAttr -k off ".tgs";
 	setAttr -k off ".gsm";
 	setAttr -k off ".chd";
-	setAttr ".chw" 360;
+	setAttr ".chw" 330;
 	setAttr -k off ".trd";
 	setAttr -k off ".prt";
 	setAttr ".thss" 0.0049148965626955032;
@@ -660,7 +660,7 @@ createNode parentConstraint -n "global_ctrl_parentConstraint1" -p "utility_room_
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -4.9555423168764667 0.32750445826755481 -0.24902694208419862 ;
 	setAttr ".tg[0].tor" -type "double3" 0 89.999999999999986 0 ;
-	setAttr ".lr" -type "double3" 0 -76.604186090287868 0 ;
+	setAttr ".lr" -type "double3" 0 -58.491259037105344 0 ;
 	setAttr ".rst" -type "double3" 10.079817474578334 11.003304021572831 6.0439861158264634 ;
 	setAttr ".rsrr" -type "double3" 0 89.999999999999986 0 ;
 	setAttr -k on ".w0";
@@ -833,7 +833,7 @@ createNode renderLayerManager -n "renderLayerManager";
 createNode renderLayer -n "defaultRenderLayer";
 	setAttr ".g" yes;
 createNode reference -n "utility_room_viewRN";
-	setAttr -s 558 ".phl";
+	setAttr -s 560 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -1392,6 +1392,8 @@ createNode reference -n "utility_room_viewRN";
 	setAttr ".phl[556]" 0;
 	setAttr ".phl[557]" 0;
 	setAttr ".phl[558]" 0;
+	setAttr ".phl[559]" 0;
+	setAttr ".phl[560]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"utility_room_viewRN"
 		"utility_room_view:livingroom_shading_latest:living_room_latest:bed_latestRN" 
@@ -1405,14 +1407,14 @@ createNode reference -n "utility_room_viewRN";
 		"utility_room_view:bedroom_lights_06RN" 0
 		"utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest3RN" 
 		0
-		"utility_room_view:pig_latestRN" 0
 		"utility_room_view:livingroom_shading_latest:living_room_latest:telescopeRN" 0
 		
+		"utility_room_view:pig_latestRN" 0
 		"utility_room_view:bike_rigRN" 0
 		"utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latestRN" 
 		0
-		"utility_room_view:pig_latest:key_latestRN" 0
 		"utility_room_view:lighting_latestRN" 0
+		"utility_room_view:pig_latest:key_latestRN" 0
 		"utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest1RN" 
 		0
 		"utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latestRN" 
@@ -1643,12 +1645,6 @@ createNode reference -n "utility_room_viewRN";
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |utility_room_view:livingroom_shading_latest:living_room_latest:utilities_shelves|utility_room_view:livingroom_shading_latest:living_room_latest:pasted__pCube21|utility_room_view:livingroom_shading_latest:living_room_latest:pasted__pCubeShape21 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:utilities_shelves|utility_room_view:livingroom_shading_latest:living_room_latest:pasted__polySurface6|utility_room_view:livingroom_shading_latest:living_room_latest:pasted__polySurfaceShape6 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:utilities_shelves|utility_room_view:livingroom_shading_latest:living_room_latest:pasted__polySurface6|utility_room_view:livingroom_shading_latest:living_room_latest:pasted__polySurfaceShape6 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:utilities_shelves|utility_room_view:livingroom_shading_latest:living_room_latest:pasted__polySurface6|utility_room_view:livingroom_shading_latest:living_room_latest:pasted__polySurfaceShape6 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |utility_room_view:livingroom_shading_latest:living_room_latest:utilities_shelves|utility_room_view:livingroom_shading_latest:living_room_latest:pasted__pCube285|utility_room_view:livingroom_shading_latest:living_room_latest:pasted__pCubeShape285 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
 		1 |utility_room_view:livingroom_shading_latest:living_room_latest:utilities_shelves|utility_room_view:livingroom_shading_latest:living_room_latest:pasted__pCube285|utility_room_view:livingroom_shading_latest:living_room_latest:pasted__pCubeShape285 
@@ -1714,6 +1710,12 @@ createNode reference -n "utility_room_viewRN";
 		1 |utility_room_view:livingroom_shading_latest:living_room_latest:utilities_shelves|utility_room_view:livingroom_shading_latest:living_room_latest:pasted__pCylinder52|utility_room_view:livingroom_shading_latest:living_room_latest:pasted__pCylinderShape52 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |utility_room_view:livingroom_shading_latest:living_room_latest:utilities_shelves|utility_room_view:livingroom_shading_latest:living_room_latest:pasted__pCylinder52|utility_room_view:livingroom_shading_latest:living_room_latest:pasted__pCylinderShape52 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:stove_metal|utility_room_view:livingroom_shading_latest:living_room_latest:pasted__polySurface6|utility_room_view:livingroom_shading_latest:living_room_latest:pasted__polySurfaceShape6 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:stove_metal|utility_room_view:livingroom_shading_latest:living_room_latest:pasted__polySurface6|utility_room_view:livingroom_shading_latest:living_room_latest:pasted__polySurfaceShape6 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:stove_metal|utility_room_view:livingroom_shading_latest:living_room_latest:pasted__polySurface6|utility_room_view:livingroom_shading_latest:living_room_latest:pasted__polySurfaceShape6 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |utility_room_view:livingroom_shading_latest:living_room_latest:oven|utility_room_view:livingroom_shading_latest:living_room_latest:pasted__pCube162|utility_room_view:livingroom_shading_latest:living_room_latest:pasted__polySurfaceShape4 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
@@ -3150,12 +3152,12 @@ createNode reference -n "utility_room_viewRN";
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |utility_room_view:sneaks_latest:sneaks_normal_face:sneaksmesh:polySurface1|utility_room_view:sneaks_latest:nose|utility_room_view:sneaks_latest:noseShape 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		2 "|utility_room_view:sneaks_latest:controller_root" "translate" " -type \"double3\" -41.00027614820058375 3.78817223614862408 -120.26550859129839921"
+		2 "|utility_room_view:sneaks_latest:controller_root" "translate" " -type \"double3\" -41.92089318141212573 3.78817223614862408 -116.30207239807364772"
 		
 		2 "|utility_room_view:sneaks_latest:controller_root" "translateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root" "translateY" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root" "translateZ" " -av"
-		2 "|utility_room_view:sneaks_latest:controller_root" "rotate" " -type \"double3\" -47.46191666644929796 154.30361472300197079 0"
+		2 "|utility_room_view:sneaks_latest:controller_root" "rotate" " -type \"double3\" -47.46191666644927665 65.79237016270569427 0"
 		
 		2 "|utility_room_view:sneaks_latest:controller_root" "rotateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root" "rotateY" " -av"
@@ -3170,7 +3172,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG" 
 		"translateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG" 
-		"rotate" " -type \"double3\" -12.04896682851352452 2.81722791581735565 -4.08858283215629381"
+		"rotate" " -type \"double3\" -37.0952108373541023 2.81722791581737031 -4.08858283215630447"
 		
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG" 
 		"rotateX" " -av"
@@ -3211,7 +3213,8 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine1" 
 		"rotateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder" 
-		"translate" " -type \"double3\" 0 0 0"
+		"translate" " -type \"double3\" -1.47708272180955857 -1.83131317205583599 1.28777107610806651"
+		
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder" 
 		"translateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder" 
@@ -3219,7 +3222,8 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder" 
 		"translateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder" 
-		"rotate" " -type \"double3\" 0 0 0"
+		"rotate" " -type \"double3\" 19.25840147009365211 12.16720972471150297 0.46042383089121169"
+		
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder" 
 		"rotateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder" 
@@ -3227,7 +3231,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder" 
 		"rotateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head" 
-		"translate" " -type \"double3\" 0.56676023990662405 -1.19244462475834978 1.58777819762353234"
+		"translate" " -type \"double3\" -1.45636760455067105 -2.67697545102235468 2.56838371058319659"
 		
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head" 
 		"translateX" " -av"
@@ -3236,7 +3240,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head" 
 		"translateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head" 
-		"rotate" " -type \"double3\" 70.1977565186128345 4.22651744355809456 8.65631023010018374"
+		"rotate" " -type \"double3\" 78.13036728083292815 4.22651744355812653 8.65631023010014999"
 		
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head" 
 		"rotateX" " -av"
@@ -3311,7 +3315,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:Sneakio002:Bandana|utility_room_view:sneaks_latest:Sneakio002:BandanaShape" 
 		"furNameSpace" " -type \"string\" \"sneaks_latest\""
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg" 
-		"translate" " -type \"double3\" 0.5016008609974324 -0.015618167063917547 -1.17286760636993481"
+		"translate" " -type \"double3\" -1.27810437930710186 -2.47333649780966347 1.0822234132541988"
 		
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg" 
 		"translateX" " -av"
@@ -3326,7 +3330,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm" 
 		"visibility" " -av 1"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm" 
-		"translate" " -type \"double3\" -1.23840044487469481 -0.25154624919219953 1.17750487805724302"
+		"translate" " -type \"double3\" -2.94988149448663695 4.58529691300233733 8.26170310310272704"
 		
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm" 
 		"translateX" " -av"
@@ -3335,7 +3339,8 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm" 
 		"translateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm" 
-		"rotate" " -type \"double3\" 0 0 0"
+		"rotate" " -type \"double3\" 55.51749175886265419 53.14972790750012166 -34.35893569965937644"
+		
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm" 
 		"rotateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm" 
@@ -3353,7 +3358,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1" 
 		"visibility" " -av 1"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1" 
-		"translate" " -type \"double3\" 0.44911781610655238 -0.48042627090775297 -1.41648911962955393"
+		"translate" " -type \"double3\" -1.28730352766351164 -3.83871770973817172 1.51874951502911282"
 		
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1" 
 		"translateX" " -av"
@@ -3389,7 +3394,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm" 
 		"visibility" " -av 1"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm" 
-		"translate" " -type \"double3\" 0.6054403910882763 -0.76226950613108557 2.1407198848002138"
+		"translate" " -type \"double3\" 0.19074667027272604 3.9066129381175041 9.30389151047089591"
 		
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm" 
 		"translateX" " -av"
@@ -3398,7 +3403,8 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm" 
 		"translateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm" 
-		"rotate" " -type \"double3\" 0 0 0"
+		"rotate" " -type \"double3\" 10.89115507392817861 -63.07043092029028486 77.82169783374999383"
+		
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm" 
 		"rotateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm" 
@@ -3572,905 +3578,905 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:sneaks_normal_face:sneaksmesh:polySurface1|utility_room_view:sneaks_latest:nose|utility_room_view:sneaks_latest:noseShape" 
 		"furNameSpace" " -type \"string\" \"sneaks_latest\""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root.translateX" 
-		"utility_room_viewRN.placeHolderList[98]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root.translateY" 
-		"utility_room_viewRN.placeHolderList[99]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root.translateZ" 
 		"utility_room_viewRN.placeHolderList[100]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root.translateY" 
 		"utility_room_viewRN.placeHolderList[101]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root.translateZ" 
 		"utility_room_viewRN.placeHolderList[102]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root.rotateX" 
 		"utility_room_viewRN.placeHolderList[103]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root.rotateY" 
 		"utility_room_viewRN.placeHolderList[104]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root.rotateZ" 
 		"utility_room_viewRN.placeHolderList[105]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root.visibility" 
 		"utility_room_viewRN.placeHolderList[106]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root.scaleX" 
 		"utility_room_viewRN.placeHolderList[107]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root.scaleY" 
 		"utility_room_viewRN.placeHolderList[108]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root.scaleZ" 
 		"utility_room_viewRN.placeHolderList[109]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG.translateX" 
 		"utility_room_viewRN.placeHolderList[110]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG.translateY" 
 		"utility_room_viewRN.placeHolderList[111]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG.translateZ" 
 		"utility_room_viewRN.placeHolderList[112]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG.rotateX" 
 		"utility_room_viewRN.placeHolderList[113]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG.rotateY" 
 		"utility_room_viewRN.placeHolderList[114]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG.rotateZ" 
 		"utility_room_viewRN.placeHolderList[115]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG.scaleX" 
 		"utility_room_viewRN.placeHolderList[116]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG.scaleY" 
 		"utility_room_viewRN.placeHolderList[117]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine3.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG.scaleZ" 
 		"utility_room_viewRN.placeHolderList[118]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine3.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG.visibility" 
 		"utility_room_viewRN.placeHolderList[119]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine3.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine3.translateX" 
 		"utility_room_viewRN.placeHolderList[120]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine3.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine3.translateY" 
 		"utility_room_viewRN.placeHolderList[121]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine3.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine3.translateZ" 
 		"utility_room_viewRN.placeHolderList[122]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine3.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine3.rotateX" 
 		"utility_room_viewRN.placeHolderList[123]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine3.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine3.rotateY" 
 		"utility_room_viewRN.placeHolderList[124]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine3.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine3.rotateZ" 
 		"utility_room_viewRN.placeHolderList[125]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine3.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine3.scaleX" 
 		"utility_room_viewRN.placeHolderList[126]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine3.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine3.scaleY" 
 		"utility_room_viewRN.placeHolderList[127]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine2.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine3.scaleZ" 
 		"utility_room_viewRN.placeHolderList[128]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine2.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine3.visibility" 
 		"utility_room_viewRN.placeHolderList[129]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine2.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine2.translateX" 
 		"utility_room_viewRN.placeHolderList[130]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine2.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine2.translateY" 
 		"utility_room_viewRN.placeHolderList[131]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine2.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine2.translateZ" 
 		"utility_room_viewRN.placeHolderList[132]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine2.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine2.rotateX" 
 		"utility_room_viewRN.placeHolderList[133]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine2.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine2.rotateY" 
 		"utility_room_viewRN.placeHolderList[134]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine2.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine2.rotateZ" 
 		"utility_room_viewRN.placeHolderList[135]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine2.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine2.scaleX" 
 		"utility_room_viewRN.placeHolderList[136]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine2.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine2.scaleY" 
 		"utility_room_viewRN.placeHolderList[137]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine1.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine2.scaleZ" 
 		"utility_room_viewRN.placeHolderList[138]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine1.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine2.visibility" 
 		"utility_room_viewRN.placeHolderList[139]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine1.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine1.translateX" 
 		"utility_room_viewRN.placeHolderList[140]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine1.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine1.translateY" 
 		"utility_room_viewRN.placeHolderList[141]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine1.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine1.translateZ" 
 		"utility_room_viewRN.placeHolderList[142]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine1.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine1.rotateX" 
 		"utility_room_viewRN.placeHolderList[143]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine1.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine1.rotateY" 
 		"utility_room_viewRN.placeHolderList[144]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine1.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine1.rotateZ" 
 		"utility_room_viewRN.placeHolderList[145]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine1.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine1.scaleX" 
 		"utility_room_viewRN.placeHolderList[146]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine1.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine1.scaleY" 
 		"utility_room_viewRN.placeHolderList[147]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine1.scaleZ" 
 		"utility_room_viewRN.placeHolderList[148]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine1.visibility" 
 		"utility_room_viewRN.placeHolderList[149]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder.translateX" 
 		"utility_room_viewRN.placeHolderList[150]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder.translateY" 
 		"utility_room_viewRN.placeHolderList[151]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder.translateZ" 
 		"utility_room_viewRN.placeHolderList[152]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder.rotateX" 
 		"utility_room_viewRN.placeHolderList[153]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder.rotateY" 
 		"utility_room_viewRN.placeHolderList[154]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder.rotateZ" 
 		"utility_room_viewRN.placeHolderList[155]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder.scaleX" 
 		"utility_room_viewRN.placeHolderList[156]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder.scaleY" 
 		"utility_room_viewRN.placeHolderList[157]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder.scaleZ" 
 		"utility_room_viewRN.placeHolderList[158]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder.visibility" 
 		"utility_room_viewRN.placeHolderList[159]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head.translateX" 
 		"utility_room_viewRN.placeHolderList[160]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head.translateY" 
 		"utility_room_viewRN.placeHolderList[161]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head.translateZ" 
 		"utility_room_viewRN.placeHolderList[162]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head.rotateX" 
 		"utility_room_viewRN.placeHolderList[163]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head.rotateY" 
 		"utility_room_viewRN.placeHolderList[164]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head.rotateZ" 
 		"utility_room_viewRN.placeHolderList[165]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head.scaleX" 
 		"utility_room_viewRN.placeHolderList[166]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head.scaleY" 
 		"utility_room_viewRN.placeHolderList[167]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head.scaleZ" 
 		"utility_room_viewRN.placeHolderList[168]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head.visibility" 
 		"utility_room_viewRN.placeHolderList[169]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3.translateX" 
 		"utility_room_viewRN.placeHolderList[170]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3.translateY" 
 		"utility_room_viewRN.placeHolderList[171]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3.translateZ" 
 		"utility_room_viewRN.placeHolderList[172]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3.visibility" 
 		"utility_room_viewRN.placeHolderList[173]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3.rotateX" 
 		"utility_room_viewRN.placeHolderList[174]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3.rotateY" 
 		"utility_room_viewRN.placeHolderList[175]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3.rotateZ" 
 		"utility_room_viewRN.placeHolderList[176]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3.scaleX" 
 		"utility_room_viewRN.placeHolderList[177]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle2.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3.scaleY" 
 		"utility_room_viewRN.placeHolderList[178]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle2.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3.scaleZ" 
 		"utility_room_viewRN.placeHolderList[179]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle2.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle2.translateX" 
 		"utility_room_viewRN.placeHolderList[180]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle2.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle2.translateY" 
 		"utility_room_viewRN.placeHolderList[181]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle2.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle2.translateZ" 
 		"utility_room_viewRN.placeHolderList[182]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle2.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle2.visibility" 
 		"utility_room_viewRN.placeHolderList[183]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle2.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle2.rotateX" 
 		"utility_room_viewRN.placeHolderList[184]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle2.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle2.rotateY" 
 		"utility_room_viewRN.placeHolderList[185]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle2.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle2.rotateZ" 
 		"utility_room_viewRN.placeHolderList[186]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle2.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle2.scaleX" 
 		"utility_room_viewRN.placeHolderList[187]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle1.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle2.scaleY" 
 		"utility_room_viewRN.placeHolderList[188]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle1.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle2.scaleZ" 
 		"utility_room_viewRN.placeHolderList[189]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle1.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle1.translateX" 
 		"utility_room_viewRN.placeHolderList[190]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle1.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle1.translateY" 
 		"utility_room_viewRN.placeHolderList[191]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle1.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle1.translateZ" 
 		"utility_room_viewRN.placeHolderList[192]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle1.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle1.visibility" 
 		"utility_room_viewRN.placeHolderList[193]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle1.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle1.rotateX" 
 		"utility_room_viewRN.placeHolderList[194]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle1.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle1.rotateY" 
 		"utility_room_viewRN.placeHolderList[195]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle1.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle1.rotateZ" 
 		"utility_room_viewRN.placeHolderList[196]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle1.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle1.scaleX" 
 		"utility_room_viewRN.placeHolderList[197]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_hip.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle1.scaleY" 
 		"utility_room_viewRN.placeHolderList[198]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_hip.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle1.scaleZ" 
 		"utility_room_viewRN.placeHolderList[199]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_hip.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_hip.translateX" 
 		"utility_room_viewRN.placeHolderList[200]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_hip.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_hip.translateY" 
 		"utility_room_viewRN.placeHolderList[201]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_hip.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_hip.translateZ" 
 		"utility_room_viewRN.placeHolderList[202]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_hip.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_hip.rotateX" 
 		"utility_room_viewRN.placeHolderList[203]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_hip.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_hip.rotateY" 
 		"utility_room_viewRN.placeHolderList[204]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_hip.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_hip.rotateZ" 
 		"utility_room_viewRN.placeHolderList[205]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_hip.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_hip.scaleX" 
 		"utility_room_viewRN.placeHolderList[206]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_hip.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_hip.scaleY" 
 		"utility_room_viewRN.placeHolderList[207]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_hip.scaleZ" 
 		"utility_room_viewRN.placeHolderList[208]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_hip.visibility" 
 		"utility_room_viewRN.placeHolderList[209]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase.translateX" 
 		"utility_room_viewRN.placeHolderList[210]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase.translateY" 
 		"utility_room_viewRN.placeHolderList[211]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase.translateZ" 
 		"utility_room_viewRN.placeHolderList[212]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase.rotateX" 
 		"utility_room_viewRN.placeHolderList[213]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase.rotateY" 
 		"utility_room_viewRN.placeHolderList[214]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase.rotateZ" 
 		"utility_room_viewRN.placeHolderList[215]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase.scaleX" 
 		"utility_room_viewRN.placeHolderList[216]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase.scaleY" 
 		"utility_room_viewRN.placeHolderList[217]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase.scaleZ" 
 		"utility_room_viewRN.placeHolderList[218]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase.visibility" 
 		"utility_room_viewRN.placeHolderList[219]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2.translateX" 
 		"utility_room_viewRN.placeHolderList[220]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2.translateY" 
 		"utility_room_viewRN.placeHolderList[221]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2.translateZ" 
 		"utility_room_viewRN.placeHolderList[222]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2.rotateX" 
 		"utility_room_viewRN.placeHolderList[223]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2.rotateY" 
 		"utility_room_viewRN.placeHolderList[224]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2.rotateZ" 
 		"utility_room_viewRN.placeHolderList[225]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2.scaleX" 
 		"utility_room_viewRN.placeHolderList[226]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2.scaleY" 
 		"utility_room_viewRN.placeHolderList[227]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2.scaleZ" 
 		"utility_room_viewRN.placeHolderList[228]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2.visibility" 
 		"utility_room_viewRN.placeHolderList[229]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3.translateX" 
 		"utility_room_viewRN.placeHolderList[230]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3.translateY" 
 		"utility_room_viewRN.placeHolderList[231]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3.translateZ" 
 		"utility_room_viewRN.placeHolderList[232]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3.rotateX" 
 		"utility_room_viewRN.placeHolderList[233]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3.rotateY" 
 		"utility_room_viewRN.placeHolderList[234]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3.rotateZ" 
 		"utility_room_viewRN.placeHolderList[235]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3.scaleX" 
 		"utility_room_viewRN.placeHolderList[236]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3.scaleY" 
 		"utility_room_viewRN.placeHolderList[237]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3.scaleZ" 
 		"utility_room_viewRN.placeHolderList[238]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3.visibility" 
 		"utility_room_viewRN.placeHolderList[239]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4.translateX" 
 		"utility_room_viewRN.placeHolderList[240]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4.translateY" 
 		"utility_room_viewRN.placeHolderList[241]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4.translateZ" 
 		"utility_room_viewRN.placeHolderList[242]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4.rotateX" 
 		"utility_room_viewRN.placeHolderList[243]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4.rotateY" 
 		"utility_room_viewRN.placeHolderList[244]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4.rotateZ" 
 		"utility_room_viewRN.placeHolderList[245]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4.scaleX" 
 		"utility_room_viewRN.placeHolderList[246]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4.scaleY" 
 		"utility_room_viewRN.placeHolderList[247]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4.scaleZ" 
 		"utility_room_viewRN.placeHolderList[248]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4.visibility" 
 		"utility_room_viewRN.placeHolderList[249]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip.translateX" 
 		"utility_room_viewRN.placeHolderList[250]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip.translateY" 
 		"utility_room_viewRN.placeHolderList[251]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip.translateZ" 
 		"utility_room_viewRN.placeHolderList[252]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip.rotateX" 
 		"utility_room_viewRN.placeHolderList[253]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip.rotateY" 
 		"utility_room_viewRN.placeHolderList[254]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip.rotateZ" 
 		"utility_room_viewRN.placeHolderList[255]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip.scaleX" 
 		"utility_room_viewRN.placeHolderList[256]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip.scaleY" 
 		"utility_room_viewRN.placeHolderList[257]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip.scaleZ" 
 		"utility_room_viewRN.placeHolderList[258]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip.visibility" 
 		"utility_room_viewRN.placeHolderList[259]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg.translateX" 
 		"utility_room_viewRN.placeHolderList[260]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg.translateY" 
 		"utility_room_viewRN.placeHolderList[261]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg.translateZ" 
 		"utility_room_viewRN.placeHolderList[262]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg.rotateX" 
 		"utility_room_viewRN.placeHolderList[263]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg.rotateY" 
 		"utility_room_viewRN.placeHolderList[264]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg.rotateZ" 
 		"utility_room_viewRN.placeHolderList[265]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg.visibility" 
 		"utility_room_viewRN.placeHolderList[266]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg.scaleX" 
 		"utility_room_viewRN.placeHolderList[267]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:nurbsCircle7.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg.scaleY" 
 		"utility_room_viewRN.placeHolderList[268]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:nurbsCircle7.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg.scaleZ" 
 		"utility_room_viewRN.placeHolderList[269]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:nurbsCircle7.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:nurbsCircle7.translateX" 
 		"utility_room_viewRN.placeHolderList[270]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:nurbsCircle7.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:nurbsCircle7.translateY" 
 		"utility_room_viewRN.placeHolderList[271]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:nurbsCircle7.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:nurbsCircle7.translateZ" 
 		"utility_room_viewRN.placeHolderList[272]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:nurbsCircle7.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:nurbsCircle7.visibility" 
 		"utility_room_viewRN.placeHolderList[273]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:nurbsCircle7.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:nurbsCircle7.rotateX" 
 		"utility_room_viewRN.placeHolderList[274]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:nurbsCircle7.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:nurbsCircle7.rotateY" 
 		"utility_room_viewRN.placeHolderList[275]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:nurbsCircle7.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:nurbsCircle7.rotateZ" 
 		"utility_room_viewRN.placeHolderList[276]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:nurbsCircle7.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:nurbsCircle7.scaleX" 
 		"utility_room_viewRN.placeHolderList[277]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:nurbsCircle7.scaleY" 
 		"utility_room_viewRN.placeHolderList[278]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:nurbsCircle7.scaleZ" 
 		"utility_room_viewRN.placeHolderList[279]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm.visibility" 
 		"utility_room_viewRN.placeHolderList[280]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm.translateX" 
 		"utility_room_viewRN.placeHolderList[281]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm.translateY" 
 		"utility_room_viewRN.placeHolderList[282]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm.translateZ" 
 		"utility_room_viewRN.placeHolderList[283]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm.rotateX" 
 		"utility_room_viewRN.placeHolderList[284]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm.rotateY" 
 		"utility_room_viewRN.placeHolderList[285]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm.rotateZ" 
 		"utility_room_viewRN.placeHolderList[286]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm.scaleX" 
 		"utility_room_viewRN.placeHolderList[287]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm.scaleY" 
 		"utility_room_viewRN.placeHolderList[288]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm.scaleZ" 
 		"utility_room_viewRN.placeHolderList[289]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist.translateX" 
 		"utility_room_viewRN.placeHolderList[290]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist.translateY" 
 		"utility_room_viewRN.placeHolderList[291]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist.translateZ" 
 		"utility_room_viewRN.placeHolderList[292]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist.rotateX" 
 		"utility_room_viewRN.placeHolderList[293]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist.rotateY" 
 		"utility_room_viewRN.placeHolderList[294]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist.rotateZ" 
 		"utility_room_viewRN.placeHolderList[295]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist.scaleX" 
 		"utility_room_viewRN.placeHolderList[296]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist.scaleY" 
 		"utility_room_viewRN.placeHolderList[297]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist.scaleZ" 
 		"utility_room_viewRN.placeHolderList[298]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist.visibility" 
 		"utility_room_viewRN.placeHolderList[299]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6.translateX" 
 		"utility_room_viewRN.placeHolderList[300]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6.translateY" 
 		"utility_room_viewRN.placeHolderList[301]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6.translateZ" 
 		"utility_room_viewRN.placeHolderList[302]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6.visibility" 
 		"utility_room_viewRN.placeHolderList[303]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6.rotateX" 
 		"utility_room_viewRN.placeHolderList[304]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6.rotateY" 
 		"utility_room_viewRN.placeHolderList[305]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6.rotateZ" 
 		"utility_room_viewRN.placeHolderList[306]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6.scaleX" 
 		"utility_room_viewRN.placeHolderList[307]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6.scaleY" 
 		"utility_room_viewRN.placeHolderList[308]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6.scaleZ" 
 		"utility_room_viewRN.placeHolderList[309]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5.translateX" 
 		"utility_room_viewRN.placeHolderList[310]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5.translateY" 
 		"utility_room_viewRN.placeHolderList[311]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5.translateZ" 
 		"utility_room_viewRN.placeHolderList[312]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5.visibility" 
 		"utility_room_viewRN.placeHolderList[313]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5.rotateX" 
 		"utility_room_viewRN.placeHolderList[314]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5.rotateY" 
 		"utility_room_viewRN.placeHolderList[315]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5.rotateZ" 
 		"utility_room_viewRN.placeHolderList[316]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5.scaleX" 
 		"utility_room_viewRN.placeHolderList[317]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5.scaleY" 
 		"utility_room_viewRN.placeHolderList[318]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5.scaleZ" 
 		"utility_room_viewRN.placeHolderList[319]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2.translateX" 
 		"utility_room_viewRN.placeHolderList[320]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2.translateY" 
 		"utility_room_viewRN.placeHolderList[321]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2.translateZ" 
 		"utility_room_viewRN.placeHolderList[322]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2.visibility" 
 		"utility_room_viewRN.placeHolderList[323]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2.rotateX" 
 		"utility_room_viewRN.placeHolderList[324]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2.rotateY" 
 		"utility_room_viewRN.placeHolderList[325]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2.rotateZ" 
 		"utility_room_viewRN.placeHolderList[326]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2.scaleX" 
 		"utility_room_viewRN.placeHolderList[327]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2.scaleY" 
 		"utility_room_viewRN.placeHolderList[328]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2.scaleZ" 
 		"utility_room_viewRN.placeHolderList[329]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3.translateX" 
 		"utility_room_viewRN.placeHolderList[330]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3.translateY" 
 		"utility_room_viewRN.placeHolderList[331]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3.translateZ" 
 		"utility_room_viewRN.placeHolderList[332]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3.visibility" 
 		"utility_room_viewRN.placeHolderList[333]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3.rotateX" 
 		"utility_room_viewRN.placeHolderList[334]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3.rotateY" 
 		"utility_room_viewRN.placeHolderList[335]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3.rotateZ" 
 		"utility_room_viewRN.placeHolderList[336]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3.scaleX" 
 		"utility_room_viewRN.placeHolderList[337]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3.scaleY" 
 		"utility_room_viewRN.placeHolderList[338]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3.scaleZ" 
 		"utility_room_viewRN.placeHolderList[339]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4.translateX" 
 		"utility_room_viewRN.placeHolderList[340]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4.translateY" 
 		"utility_room_viewRN.placeHolderList[341]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4.translateZ" 
 		"utility_room_viewRN.placeHolderList[342]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4.visibility" 
 		"utility_room_viewRN.placeHolderList[343]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4.rotateX" 
 		"utility_room_viewRN.placeHolderList[344]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4.rotateY" 
 		"utility_room_viewRN.placeHolderList[345]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4.rotateZ" 
 		"utility_room_viewRN.placeHolderList[346]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4.scaleX" 
 		"utility_room_viewRN.placeHolderList[347]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve6.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4.scaleY" 
 		"utility_room_viewRN.placeHolderList[348]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve6.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4.scaleZ" 
 		"utility_room_viewRN.placeHolderList[349]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve6.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve6.translateX" 
 		"utility_room_viewRN.placeHolderList[350]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve6.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve6.translateY" 
 		"utility_room_viewRN.placeHolderList[351]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve6.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve6.translateZ" 
 		"utility_room_viewRN.placeHolderList[352]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve6.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve6.visibility" 
 		"utility_room_viewRN.placeHolderList[353]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve6.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve6.rotateX" 
 		"utility_room_viewRN.placeHolderList[354]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve6.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve6.rotateY" 
 		"utility_room_viewRN.placeHolderList[355]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve6.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve6.rotateZ" 
 		"utility_room_viewRN.placeHolderList[356]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve6.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve6.scaleX" 
 		"utility_room_viewRN.placeHolderList[357]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve7.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve6.scaleY" 
 		"utility_room_viewRN.placeHolderList[358]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve7.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve6.scaleZ" 
 		"utility_room_viewRN.placeHolderList[359]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve7.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve7.translateX" 
 		"utility_room_viewRN.placeHolderList[360]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve7.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve7.translateY" 
 		"utility_room_viewRN.placeHolderList[361]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve7.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve7.translateZ" 
 		"utility_room_viewRN.placeHolderList[362]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve7.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve7.visibility" 
 		"utility_room_viewRN.placeHolderList[363]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve7.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve7.rotateX" 
 		"utility_room_viewRN.placeHolderList[364]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve7.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve7.rotateY" 
 		"utility_room_viewRN.placeHolderList[365]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve7.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve7.rotateZ" 
 		"utility_room_viewRN.placeHolderList[366]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve7.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve7.scaleX" 
 		"utility_room_viewRN.placeHolderList[367]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve8.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve7.scaleY" 
 		"utility_room_viewRN.placeHolderList[368]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve8.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve7.scaleZ" 
 		"utility_room_viewRN.placeHolderList[369]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve8.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve8.translateX" 
 		"utility_room_viewRN.placeHolderList[370]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve8.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve8.translateY" 
 		"utility_room_viewRN.placeHolderList[371]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve8.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve8.translateZ" 
 		"utility_room_viewRN.placeHolderList[372]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve8.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve8.visibility" 
 		"utility_room_viewRN.placeHolderList[373]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve8.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve8.rotateX" 
 		"utility_room_viewRN.placeHolderList[374]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve8.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve8.rotateY" 
 		"utility_room_viewRN.placeHolderList[375]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve8.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve8.rotateZ" 
 		"utility_room_viewRN.placeHolderList[376]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve8.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve8.scaleX" 
 		"utility_room_viewRN.placeHolderList[377]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve9.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve8.scaleY" 
 		"utility_room_viewRN.placeHolderList[378]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve9.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve8.scaleZ" 
 		"utility_room_viewRN.placeHolderList[379]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve9.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve9.translateX" 
 		"utility_room_viewRN.placeHolderList[380]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve9.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve9.translateY" 
 		"utility_room_viewRN.placeHolderList[381]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve9.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve9.translateZ" 
 		"utility_room_viewRN.placeHolderList[382]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve9.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve9.visibility" 
 		"utility_room_viewRN.placeHolderList[383]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve9.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve9.rotateX" 
 		"utility_room_viewRN.placeHolderList[384]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve9.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve9.rotateY" 
 		"utility_room_viewRN.placeHolderList[385]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve9.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve9.rotateZ" 
 		"utility_room_viewRN.placeHolderList[386]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve9.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve9.scaleX" 
 		"utility_room_viewRN.placeHolderList[387]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve10.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve9.scaleY" 
 		"utility_room_viewRN.placeHolderList[388]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve10.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve9.scaleZ" 
 		"utility_room_viewRN.placeHolderList[389]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve10.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve10.translateX" 
 		"utility_room_viewRN.placeHolderList[390]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve10.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve10.translateY" 
 		"utility_room_viewRN.placeHolderList[391]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve10.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve10.translateZ" 
 		"utility_room_viewRN.placeHolderList[392]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve10.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve10.visibility" 
 		"utility_room_viewRN.placeHolderList[393]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve10.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve10.rotateX" 
 		"utility_room_viewRN.placeHolderList[394]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve10.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve10.rotateY" 
 		"utility_room_viewRN.placeHolderList[395]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve10.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve10.rotateZ" 
 		"utility_room_viewRN.placeHolderList[396]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve10.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve10.scaleX" 
 		"utility_room_viewRN.placeHolderList[397]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve10.scaleY" 
 		"utility_room_viewRN.placeHolderList[398]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve10.scaleZ" 
 		"utility_room_viewRN.placeHolderList[399]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1.visibility" 
 		"utility_room_viewRN.placeHolderList[400]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1.translateX" 
 		"utility_room_viewRN.placeHolderList[401]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1.translateY" 
 		"utility_room_viewRN.placeHolderList[402]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1.translateZ" 
 		"utility_room_viewRN.placeHolderList[403]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1.rotateX" 
 		"utility_room_viewRN.placeHolderList[404]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1.rotateY" 
 		"utility_room_viewRN.placeHolderList[405]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1.rotateZ" 
 		"utility_room_viewRN.placeHolderList[406]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1.scaleX" 
 		"utility_room_viewRN.placeHolderList[407]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1.scaleY" 
 		"utility_room_viewRN.placeHolderList[408]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1.scaleZ" 
 		"utility_room_viewRN.placeHolderList[409]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8.rotateX" 
 		"utility_room_viewRN.placeHolderList[410]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8.rotateY" 
 		"utility_room_viewRN.placeHolderList[411]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8.rotateZ" 
 		"utility_room_viewRN.placeHolderList[412]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8.translateX" 
 		"utility_room_viewRN.placeHolderList[413]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8.translateY" 
 		"utility_room_viewRN.placeHolderList[414]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8.translateZ" 
 		"utility_room_viewRN.placeHolderList[415]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8.visibility" 
 		"utility_room_viewRN.placeHolderList[416]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8.scaleX" 
 		"utility_room_viewRN.placeHolderList[417]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8.scaleY" 
 		"utility_room_viewRN.placeHolderList[418]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8.scaleZ" 
 		"utility_room_viewRN.placeHolderList[419]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm.visibility" 
 		"utility_room_viewRN.placeHolderList[420]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm.translateX" 
 		"utility_room_viewRN.placeHolderList[421]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm.translateY" 
 		"utility_room_viewRN.placeHolderList[422]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm.translateZ" 
 		"utility_room_viewRN.placeHolderList[423]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm.rotateX" 
 		"utility_room_viewRN.placeHolderList[424]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm.rotateY" 
 		"utility_room_viewRN.placeHolderList[425]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm.rotateZ" 
 		"utility_room_viewRN.placeHolderList[426]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm.scaleX" 
 		"utility_room_viewRN.placeHolderList[427]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm.scaleY" 
 		"utility_room_viewRN.placeHolderList[428]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm.scaleZ" 
 		"utility_room_viewRN.placeHolderList[429]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist.translateX" 
 		"utility_room_viewRN.placeHolderList[430]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist.translateY" 
 		"utility_room_viewRN.placeHolderList[431]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist.translateZ" 
 		"utility_room_viewRN.placeHolderList[432]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist.rotateX" 
 		"utility_room_viewRN.placeHolderList[433]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist.rotateY" 
 		"utility_room_viewRN.placeHolderList[434]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist.rotateZ" 
 		"utility_room_viewRN.placeHolderList[435]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist.scaleX" 
 		"utility_room_viewRN.placeHolderList[436]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist.scaleY" 
 		"utility_room_viewRN.placeHolderList[437]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist.scaleZ" 
 		"utility_room_viewRN.placeHolderList[438]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist.visibility" 
 		"utility_room_viewRN.placeHolderList[439]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1.translateX" 
 		"utility_room_viewRN.placeHolderList[440]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1.translateY" 
 		"utility_room_viewRN.placeHolderList[441]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1.translateZ" 
 		"utility_room_viewRN.placeHolderList[442]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1.visibility" 
 		"utility_room_viewRN.placeHolderList[443]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1.rotateX" 
 		"utility_room_viewRN.placeHolderList[444]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1.rotateY" 
 		"utility_room_viewRN.placeHolderList[445]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1.rotateZ" 
 		"utility_room_viewRN.placeHolderList[446]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1.scaleX" 
 		"utility_room_viewRN.placeHolderList[447]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1.scaleY" 
 		"utility_room_viewRN.placeHolderList[448]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1.scaleZ" 
 		"utility_room_viewRN.placeHolderList[449]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9.translateX" 
 		"utility_room_viewRN.placeHolderList[450]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9.translateY" 
 		"utility_room_viewRN.placeHolderList[451]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9.translateZ" 
 		"utility_room_viewRN.placeHolderList[452]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9.visibility" 
 		"utility_room_viewRN.placeHolderList[453]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9.rotateX" 
 		"utility_room_viewRN.placeHolderList[454]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9.rotateY" 
 		"utility_room_viewRN.placeHolderList[455]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9.rotateZ" 
 		"utility_room_viewRN.placeHolderList[456]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9.scaleX" 
 		"utility_room_viewRN.placeHolderList[457]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9.scaleY" 
 		"utility_room_viewRN.placeHolderList[458]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9.scaleZ" 
 		"utility_room_viewRN.placeHolderList[459]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10.translateX" 
 		"utility_room_viewRN.placeHolderList[460]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10.translateY" 
 		"utility_room_viewRN.placeHolderList[461]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10.translateZ" 
 		"utility_room_viewRN.placeHolderList[462]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10.visibility" 
 		"utility_room_viewRN.placeHolderList[463]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10.rotateX" 
 		"utility_room_viewRN.placeHolderList[464]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10.rotateY" 
 		"utility_room_viewRN.placeHolderList[465]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10.rotateZ" 
 		"utility_room_viewRN.placeHolderList[466]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10.scaleX" 
 		"utility_room_viewRN.placeHolderList[467]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10.scaleY" 
 		"utility_room_viewRN.placeHolderList[468]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10.scaleZ" 
 		"utility_room_viewRN.placeHolderList[469]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11.translateX" 
 		"utility_room_viewRN.placeHolderList[470]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11.translateY" 
 		"utility_room_viewRN.placeHolderList[471]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11.translateZ" 
 		"utility_room_viewRN.placeHolderList[472]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11.visibility" 
 		"utility_room_viewRN.placeHolderList[473]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11.rotateX" 
 		"utility_room_viewRN.placeHolderList[474]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11.rotateY" 
 		"utility_room_viewRN.placeHolderList[475]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11.rotateZ" 
 		"utility_room_viewRN.placeHolderList[476]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11.scaleX" 
 		"utility_room_viewRN.placeHolderList[477]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11.scaleY" 
 		"utility_room_viewRN.placeHolderList[478]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11.scaleZ" 
 		"utility_room_viewRN.placeHolderList[479]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12.translateX" 
 		"utility_room_viewRN.placeHolderList[480]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12.translateY" 
 		"utility_room_viewRN.placeHolderList[481]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12.translateZ" 
 		"utility_room_viewRN.placeHolderList[482]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12.visibility" 
 		"utility_room_viewRN.placeHolderList[483]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12.rotateX" 
 		"utility_room_viewRN.placeHolderList[484]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12.rotateY" 
 		"utility_room_viewRN.placeHolderList[485]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12.rotateZ" 
 		"utility_room_viewRN.placeHolderList[486]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12.scaleX" 
 		"utility_room_viewRN.placeHolderList[487]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve1.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12.scaleY" 
 		"utility_room_viewRN.placeHolderList[488]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve1.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12.scaleZ" 
 		"utility_room_viewRN.placeHolderList[489]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve1.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve1.translateX" 
 		"utility_room_viewRN.placeHolderList[490]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve1.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve1.translateY" 
 		"utility_room_viewRN.placeHolderList[491]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve1.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve1.translateZ" 
 		"utility_room_viewRN.placeHolderList[492]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve1.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve1.visibility" 
 		"utility_room_viewRN.placeHolderList[493]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve1.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve1.rotateX" 
 		"utility_room_viewRN.placeHolderList[494]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve1.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve1.rotateY" 
 		"utility_room_viewRN.placeHolderList[495]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve1.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve1.rotateZ" 
 		"utility_room_viewRN.placeHolderList[496]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve1.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve1.scaleX" 
 		"utility_room_viewRN.placeHolderList[497]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve2.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve1.scaleY" 
 		"utility_room_viewRN.placeHolderList[498]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve2.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve1.scaleZ" 
 		"utility_room_viewRN.placeHolderList[499]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve2.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve2.translateX" 
 		"utility_room_viewRN.placeHolderList[500]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve2.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve2.translateY" 
 		"utility_room_viewRN.placeHolderList[501]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve2.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve2.translateZ" 
 		"utility_room_viewRN.placeHolderList[502]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve2.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve2.visibility" 
 		"utility_room_viewRN.placeHolderList[503]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve2.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve2.rotateX" 
 		"utility_room_viewRN.placeHolderList[504]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve2.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve2.rotateY" 
 		"utility_room_viewRN.placeHolderList[505]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve2.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve2.rotateZ" 
 		"utility_room_viewRN.placeHolderList[506]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve2.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve2.scaleX" 
 		"utility_room_viewRN.placeHolderList[507]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve3.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve2.scaleY" 
 		"utility_room_viewRN.placeHolderList[508]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve3.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve2.scaleZ" 
 		"utility_room_viewRN.placeHolderList[509]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve3.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve3.translateX" 
 		"utility_room_viewRN.placeHolderList[510]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve3.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve3.translateY" 
 		"utility_room_viewRN.placeHolderList[511]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve3.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve3.translateZ" 
 		"utility_room_viewRN.placeHolderList[512]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve3.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve3.visibility" 
 		"utility_room_viewRN.placeHolderList[513]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve3.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve3.rotateX" 
 		"utility_room_viewRN.placeHolderList[514]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve3.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve3.rotateY" 
 		"utility_room_viewRN.placeHolderList[515]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve3.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve3.rotateZ" 
 		"utility_room_viewRN.placeHolderList[516]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve3.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve3.scaleX" 
 		"utility_room_viewRN.placeHolderList[517]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve4.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve3.scaleY" 
 		"utility_room_viewRN.placeHolderList[518]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve4.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve3.scaleZ" 
 		"utility_room_viewRN.placeHolderList[519]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve4.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve4.translateX" 
 		"utility_room_viewRN.placeHolderList[520]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve4.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve4.translateY" 
 		"utility_room_viewRN.placeHolderList[521]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve4.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve4.translateZ" 
 		"utility_room_viewRN.placeHolderList[522]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve4.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve4.visibility" 
 		"utility_room_viewRN.placeHolderList[523]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve4.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve4.rotateX" 
 		"utility_room_viewRN.placeHolderList[524]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve4.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve4.rotateY" 
 		"utility_room_viewRN.placeHolderList[525]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve4.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve4.rotateZ" 
 		"utility_room_viewRN.placeHolderList[526]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve4.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve4.scaleX" 
 		"utility_room_viewRN.placeHolderList[527]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve5.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve4.scaleY" 
 		"utility_room_viewRN.placeHolderList[528]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve5.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve4.scaleZ" 
 		"utility_room_viewRN.placeHolderList[529]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve5.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve5.translateX" 
 		"utility_room_viewRN.placeHolderList[530]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve5.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve5.translateY" 
 		"utility_room_viewRN.placeHolderList[531]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve5.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve5.translateZ" 
 		"utility_room_viewRN.placeHolderList[532]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve5.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve5.visibility" 
 		"utility_room_viewRN.placeHolderList[533]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve5.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve5.rotateX" 
 		"utility_room_viewRN.placeHolderList[534]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve5.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve5.rotateY" 
 		"utility_room_viewRN.placeHolderList[535]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve5.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve5.rotateZ" 
 		"utility_room_viewRN.placeHolderList[536]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve5.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve5.scaleX" 
 		"utility_room_viewRN.placeHolderList[537]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve5.scaleY" 
 		"utility_room_viewRN.placeHolderList[538]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve5.scaleZ" 
 		"utility_room_viewRN.placeHolderList[539]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm.rotateX" 
 		"utility_room_viewRN.placeHolderList[540]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm.rotateY" 
 		"utility_room_viewRN.placeHolderList[541]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm.rotateZ" 
 		"utility_room_viewRN.placeHolderList[542]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm.translateX" 
 		"utility_room_viewRN.placeHolderList[543]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm.translateY" 
 		"utility_room_viewRN.placeHolderList[544]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm.translateZ" 
 		"utility_room_viewRN.placeHolderList[545]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm.visibility" 
 		"utility_room_viewRN.placeHolderList[546]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm.scaleX" 
 		"utility_room_viewRN.placeHolderList[547]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm.scaleY" 
+		"utility_room_viewRN.placeHolderList[548]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm.scaleZ" 
+		"utility_room_viewRN.placeHolderList[549]" ""
 		"utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latestRN1" 
 		42
 		1 |utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest1:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest1:polySurfaceShape1 
@@ -7510,7 +7516,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:pig_latest:Tyrion_Cattister_uv:Tyrion_CattisterRNfosterParent1|utility_room_view:pig_latest:Tyrion_Cattister_uv:Tyrion_Cattister:Tyrion_Cattister_uv:Tyrion_Cattister:pigShapeDeformedDeformed" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
 		2 "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01" 
-		"translate" " -type \"double3\" -30.77382017324934438 2.99907577306755124 65.92356421477163053"
+		"translate" " -type \"double3\" -139.03054169954276631 2.34490812440142005 78.00465152805024616"
 		
 		2 "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01" 
 		"translateX" " -av"
@@ -7519,7 +7525,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01" 
 		"translateZ" " -av"
 		2 "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01" 
-		"rotate" " -type \"double3\" 13.80190320159275963 -82.90241391363943535 0"
+		"rotate" " -type \"double3\" 0 -81.11474496667237588 0"
 		2 "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01" 
 		"rotateX" " -av"
 		2 "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01" 
@@ -7579,10 +7585,10 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:hip_rotation_ctrl01" 
 		"rotateY" " -av"
 		2 "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:splineiK_tail01" 
-		"translate" " -type \"double3\" -0.035711666400032989 9.50684457530559612 -13.33966593474257678"
+		"translate" " -type \"double3\" -0.035711666400104043 9.50684457530555704 -13.33966593474258389"
 		
 		2 "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:splineiK_tail01" 
-		"rotate" " -type \"double3\" 90.07627263522893202 41.80637418714113096 90.0968602587268208"
+		"rotate" " -type \"double3\" 90.07627263522751093 41.80637418714048437 90.09686025872457549"
 		
 		2 "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:flexi_joint_systems|utility_room_view:pig_latest:vertebrae_flexi_spine01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_global01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_surface01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_surface0Shape1" 
 		"surfaceReference" " 1"
@@ -7673,23 +7679,23 @@ createNode reference -n "utility_room_viewRN";
 		2 "utility_room_view:pig_latest:PigSkin002:Tyrion_Cattister_uv:Tyrion_Cattister:furrified_bacon_latest:pigfur" 
 		"furReference" " 1"
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01.translateX" 
-		"utility_room_viewRN.placeHolderList[43]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01.translateY" 
-		"utility_room_viewRN.placeHolderList[44]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01.translateZ" 
 		"utility_room_viewRN.placeHolderList[45]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01.translateY" 
 		"utility_room_viewRN.placeHolderList[46]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01.translateZ" 
 		"utility_room_viewRN.placeHolderList[47]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01.rotateX" 
 		"utility_room_viewRN.placeHolderList[48]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01.rotateY" 
 		"utility_room_viewRN.placeHolderList[49]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01.rotateZ" 
 		"utility_room_viewRN.placeHolderList[50]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01.scaleX" 
 		"utility_room_viewRN.placeHolderList[51]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01.scaleY" 
+		"utility_room_viewRN.placeHolderList[52]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01.scaleZ" 
+		"utility_room_viewRN.placeHolderList[53]" ""
 		"utility_room_view:bike_rigRN" 81
 		1 |utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:rightWheel|utility_room_view:bike_rig:rightWheelShape 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
@@ -7728,12 +7734,12 @@ createNode reference -n "utility_room_viewRN";
 		1 |utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frame|utility_room_view:bike_rig:frameShape 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		2 "|utility_room_view:bike_rig:bike_ctrl" "visibility" " -av 1"
-		2 "|utility_room_view:bike_rig:bike_ctrl" "translate" " -type \"double3\" -49.02767504032909329 -1.3709926508114072 69.93771816276569098"
+		2 "|utility_room_view:bike_rig:bike_ctrl" "translate" " -type \"double3\" -153.01554641603320306 -1.37099265081140276 83.97426724367723239"
 		
 		2 "|utility_room_view:bike_rig:bike_ctrl" "translateX" " -av"
 		2 "|utility_room_view:bike_rig:bike_ctrl" "translateY" " -av"
 		2 "|utility_room_view:bike_rig:bike_ctrl" "translateZ" " -av"
-		2 "|utility_room_view:bike_rig:bike_ctrl" "rotate" " -type \"double3\" 0 -166.60418609028786818 0"
+		2 "|utility_room_view:bike_rig:bike_ctrl" "rotate" " -type \"double3\" 0 -148.4912590371053227 0"
 		
 		2 "|utility_room_view:bike_rig:bike_ctrl" "rotateX" " -av"
 		2 "|utility_room_view:bike_rig:bike_ctrl" "rotateY" " -av"
@@ -7804,51 +7810,51 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frame|utility_room_view:bike_rig:frameShape" 
 		"furNameSpace" " -type \"string\" \"bike_rig\""
 		5 3 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.translate" 
-		"utility_room_viewRN.placeHolderList[75]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.translateX" 
-		"utility_room_viewRN.placeHolderList[76]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.translateY" 
 		"utility_room_viewRN.placeHolderList[77]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.translateX" 
 		"utility_room_viewRN.placeHolderList[78]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.translateY" 
 		"utility_room_viewRN.placeHolderList[79]" ""
-		5 3 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.rotate" 
+		5 4 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.translateZ" 
 		"utility_room_viewRN.placeHolderList[80]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.visibility" 
 		"utility_room_viewRN.placeHolderList[81]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.rotateY" 
+		5 3 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.rotate" 
 		"utility_room_viewRN.placeHolderList[82]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.rotateX" 
 		"utility_room_viewRN.placeHolderList[83]" ""
-		5 3 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.scale" 
+		5 4 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.rotateY" 
 		"utility_room_viewRN.placeHolderList[84]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.rotateZ" 
 		"utility_room_viewRN.placeHolderList[85]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.scaleY" 
+		5 3 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.scale" 
 		"utility_room_viewRN.placeHolderList[86]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.scaleX" 
 		"utility_room_viewRN.placeHolderList[87]" ""
-		5 3 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.rotatePivot" 
+		5 4 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.scaleY" 
 		"utility_room_viewRN.placeHolderList[88]" ""
-		5 3 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.rotatePivotTranslate" 
+		5 4 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.scaleZ" 
 		"utility_room_viewRN.placeHolderList[89]" ""
-		5 3 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.rotateOrder" 
+		5 3 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.rotatePivot" 
 		"utility_room_viewRN.placeHolderList[90]" ""
-		5 3 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.parentMatrix" 
+		5 3 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.rotatePivotTranslate" 
 		"utility_room_viewRN.placeHolderList[91]" ""
-		5 3 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:rightWheel|utility_room_view:bike_rig:rightWheelShape.worldMesh" 
+		5 3 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.rotateOrder" 
 		"utility_room_viewRN.placeHolderList[92]" ""
-		5 3 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:leftWheel|utility_room_view:bike_rig:leftWheelShape.worldMesh" 
+		5 3 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.parentMatrix" 
 		"utility_room_viewRN.placeHolderList[93]" ""
-		5 3 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frontWheel|utility_room_view:bike_rig:frontWheelShape.worldMesh" 
+		5 3 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:rightWheel|utility_room_view:bike_rig:rightWheelShape.worldMesh" 
 		"utility_room_viewRN.placeHolderList[94]" ""
-		5 3 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:polySurface13|utility_room_view:bike_rig:left|utility_room_view:bike_rig:leftShape.worldMesh" 
+		5 3 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:leftWheel|utility_room_view:bike_rig:leftWheelShape.worldMesh" 
 		"utility_room_viewRN.placeHolderList[95]" ""
-		5 3 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:polySurface13|utility_room_view:bike_rig:right|utility_room_view:bike_rig:rightShape.worldMesh" 
+		5 3 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frontWheel|utility_room_view:bike_rig:frontWheelShape.worldMesh" 
 		"utility_room_viewRN.placeHolderList[96]" ""
-		5 3 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frame|utility_room_view:bike_rig:frameShape.worldMesh" 
+		5 3 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:polySurface13|utility_room_view:bike_rig:left|utility_room_view:bike_rig:leftShape.worldMesh" 
 		"utility_room_viewRN.placeHolderList[97]" ""
+		5 3 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:polySurface13|utility_room_view:bike_rig:right|utility_room_view:bike_rig:rightShape.worldMesh" 
+		"utility_room_viewRN.placeHolderList[98]" ""
+		5 3 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frame|utility_room_view:bike_rig:frameShape.worldMesh" 
+		"utility_room_viewRN.placeHolderList[99]" ""
 		"utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latestRN" 
 		24
 		1 |utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest:armchair_frame|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest:armchair_frameShape 
@@ -8850,17 +8856,17 @@ createNode reference -n "utility_room_viewRN";
 		1 |utility_room_view:undies_latest:undies|utility_room_view:undies_latest:undiesShape 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		2 "|utility_room_view:undies_latest:undies" "visibility" " -av 1"
-		2 "|utility_room_view:undies_latest:undies" "translate" " -type \"double3\" -39.27717759761129912 7.61052682395277813 -126.30026562811538327"
+		2 "|utility_room_view:undies_latest:undies" "translate" " -type \"double3\" -39.45494935688221005 9.11481863989416219 -114.84520139372747849"
 		
 		2 "|utility_room_view:undies_latest:undies" "translateX" " -av"
 		2 "|utility_room_view:undies_latest:undies" "translateY" " -av"
 		2 "|utility_room_view:undies_latest:undies" "translateZ" " -av"
-		2 "|utility_room_view:undies_latest:undies" "rotate" " -type \"double3\" 72.1104958930198876 -20.69800248145315535 -175.46464548145317508"
+		2 "|utility_room_view:undies_latest:undies" "rotate" " -type \"double3\" 19.19345639360545874 -18.66243632717346657 -378.2683788200924937"
 		
 		2 "|utility_room_view:undies_latest:undies" "rotateX" " -av"
 		2 "|utility_room_view:undies_latest:undies" "rotateY" " -av"
 		2 "|utility_room_view:undies_latest:undies" "rotateZ" " -av"
-		2 "|utility_room_view:undies_latest:undies" "scale" " -type \"double3\" 0.32224291508156777 0.32224291508156777 0.32224291508156777"
+		2 "|utility_room_view:undies_latest:undies" "scale" " -type \"double3\" 0.20063018378286684 0.3794429449486893 0.58505011068475421"
 		
 		2 "|utility_room_view:undies_latest:undies" "scaleX" " -av"
 		2 "|utility_room_view:undies_latest:undies" "scaleY" " -av"
@@ -8875,29 +8881,29 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:undies_latest:undies|utility_room_view:undies_latest:undiesShape" 
 		"furNameSpace" " -type \"string\" \"undies_latest\""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_latest:undies.visibility" 
-		"utility_room_viewRN.placeHolderList[31]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:undies_latest:undies.translateX" 
-		"utility_room_viewRN.placeHolderList[32]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:undies_latest:undies.translateY" 
 		"utility_room_viewRN.placeHolderList[33]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:undies_latest:undies.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:undies_latest:undies.translateX" 
 		"utility_room_viewRN.placeHolderList[34]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:undies_latest:undies.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:undies_latest:undies.translateY" 
 		"utility_room_viewRN.placeHolderList[35]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:undies_latest:undies.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:undies_latest:undies.translateZ" 
 		"utility_room_viewRN.placeHolderList[36]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:undies_latest:undies.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:undies_latest:undies.rotateX" 
 		"utility_room_viewRN.placeHolderList[37]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:undies_latest:undies.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:undies_latest:undies.rotateY" 
 		"utility_room_viewRN.placeHolderList[38]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:undies_latest:undies.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:undies_latest:undies.rotateZ" 
 		"utility_room_viewRN.placeHolderList[39]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:undies_latest:undies.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:undies_latest:undies.scaleX" 
 		"utility_room_viewRN.placeHolderList[40]" ""
-		5 3 "utility_room_viewRN" "|utility_room_view:undies_latest:undies|utility_room_view:undies_latest:undiesShape.worldMesh" 
+		5 4 "utility_room_viewRN" "|utility_room_view:undies_latest:undies.scaleY" 
 		"utility_room_viewRN.placeHolderList[41]" ""
-		5 4 "utility_room_viewRN" "utility_room_view:undies_latest:lambert3SG.dagSetMembers" 
+		5 4 "utility_room_viewRN" "|utility_room_view:undies_latest:undies.scaleZ" 
 		"utility_room_viewRN.placeHolderList[42]" ""
+		5 3 "utility_room_viewRN" "|utility_room_view:undies_latest:undies|utility_room_view:undies_latest:undiesShape.worldMesh" 
+		"utility_room_viewRN.placeHolderList[43]" ""
+		5 4 "utility_room_viewRN" "utility_room_view:undies_latest:lambert3SG.dagSetMembers" 
+		"utility_room_viewRN.placeHolderList[44]" ""
 		"utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest4RN" 
 		42
 		1 |utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest5:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest5:polySurfaceShape1 
@@ -8995,12 +9001,12 @@ createNode reference -n "utility_room_viewRN";
 		1 utility_room_view:defaultFurGlobals "furGlobalReference" "fgrf" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
 		
 		2 "|utility_room_view:at_dryer" "visibility" " -av 1"
-		2 "|utility_room_view:at_dryer" "translate" " -type \"double3\" -35.20583648876574046 4.36765240236762331 73.08376222586186088"
+		2 "|utility_room_view:at_dryer" "translate" " -type \"double3\" -129.32330419224678053 3.93341151683805723 106.24470438068891553"
 		
 		2 "|utility_room_view:at_dryer" "translateX" " -av"
 		2 "|utility_room_view:at_dryer" "translateY" " -av"
 		2 "|utility_room_view:at_dryer" "translateZ" " -av"
-		2 "|utility_room_view:at_dryer" "rotate" " -type \"double3\" -4.51265780492727497 -1.37965412917835839 0.023302220924152"
+		2 "|utility_room_view:at_dryer" "rotate" " -type \"double3\" -0.54608521346857986 28.13693577080437791 -0.023220468017016618"
 		
 		2 "|utility_room_view:at_dryer" "rotateX" " -av"
 		2 "|utility_room_view:at_dryer" "rotateY" " -av"
@@ -9024,7 +9030,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:at_dryer|utility_room_view:at_dryerShape" "farClipPlane" 
 		" 10000"
 		2 "|utility_room_view:at_dryer|utility_room_view:at_dryerShape" "centerOfInterest" 
-		" 16.29719061183590512"
+		" 23.49651289616499383"
 		2 "|utility_room_view:at_dryer|utility_room_view:at_dryerShape" "tumblePivot" 
 		" -type \"double3\" -146.96475850083967885 3.61177824258661406 79.27419366558942215"
 		
@@ -9041,28 +9047,28 @@ createNode reference -n "utility_room_viewRN";
 		2 "utility_room_view:defaultFurGlobals" "furGlobalReference" " 1"
 		3 ":defaultRenderGlobals.rendercallback" "utility_room_view:defaultFurGlobals.callback" 
 		""
-		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.visibility" "utility_room_viewRN.placeHolderList[548]" 
+		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.visibility" "utility_room_viewRN.placeHolderList[550]" 
 		""
-		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.translateX" "utility_room_viewRN.placeHolderList[549]" 
+		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.translateX" "utility_room_viewRN.placeHolderList[551]" 
 		""
-		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.translateY" "utility_room_viewRN.placeHolderList[550]" 
+		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.translateY" "utility_room_viewRN.placeHolderList[552]" 
 		""
-		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.translateZ" "utility_room_viewRN.placeHolderList[551]" 
+		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.translateZ" "utility_room_viewRN.placeHolderList[553]" 
 		""
-		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.rotateX" "utility_room_viewRN.placeHolderList[552]" 
+		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.rotateX" "utility_room_viewRN.placeHolderList[554]" 
 		""
-		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.rotateY" "utility_room_viewRN.placeHolderList[553]" 
+		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.rotateY" "utility_room_viewRN.placeHolderList[555]" 
 		""
-		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.rotateZ" "utility_room_viewRN.placeHolderList[554]" 
+		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.rotateZ" "utility_room_viewRN.placeHolderList[556]" 
 		""
-		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.scaleX" "utility_room_viewRN.placeHolderList[555]" 
+		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.scaleX" "utility_room_viewRN.placeHolderList[557]" 
 		""
-		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.scaleY" "utility_room_viewRN.placeHolderList[556]" 
+		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.scaleY" "utility_room_viewRN.placeHolderList[558]" 
 		""
-		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.scaleZ" "utility_room_viewRN.placeHolderList[557]" 
+		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.scaleZ" "utility_room_viewRN.placeHolderList[559]" 
 		""
 		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer|utility_room_view:at_dryerShape.focalLength" 
-		"utility_room_viewRN.placeHolderList[558]" ""
+		"utility_room_viewRN.placeHolderList[560]" ""
 		"utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latestRN4" 
 		42
 		1 |utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest8:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest8:polySurfaceShape1 
@@ -9156,7 +9162,7 @@ createNode reference -n "utility_room_viewRN";
 		
 		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest8:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest8:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest8:taller_windowShape" 
 		"furNameSpace" " -type \"string\" \"taller_window_four_squares_latest8\""
-		"utility_room_view:livingroom_shading_latest:living_room_latestRN" 4227
+		"utility_room_view:livingroom_shading_latest:living_room_latestRN" 4232
 		1 |utility_room_view:livingroom_shading_latest:living_room_latest:crown_molding|utility_room_view:livingroom_shading_latest:living_room_latest:crown_unit_1|utility_room_view:livingroom_shading_latest:living_room_latest:crown_unit_Shape1 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
 		1 |utility_room_view:livingroom_shading_latest:living_room_latest:crown_molding|utility_room_view:livingroom_shading_latest:living_room_latest:crown_unit_1|utility_room_view:livingroom_shading_latest:living_room_latest:crown_unit_Shape1 
@@ -16448,7 +16454,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1" 
 		"gravity" " 54.482757568359375"
 		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:nRigid1|utility_room_view:livingroom_shading_latest:living_room_latest:nRigidShape1" 
-		"cacheWidth" " 360"
+		"cacheWidth" " 330"
 		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:coffee_table1|utility_room_view:livingroom_shading_latest:living_room_latest:coffee_table1Shape" 
 		"surfaceReference" " 1"
 		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:coffee_table1|utility_room_view:livingroom_shading_latest:living_room_latest:coffee_table1Shape" 
@@ -17983,15 +17989,21 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:pPlane1|utility_room_view:livingroom_shading_latest:living_room_latest:outputCloth1" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:nCloth1|utility_room_view:livingroom_shading_latest:living_room_latest:nClothShape1" 
-		"cacheWidth" " 360"
+		"cacheWidth" " 330"
 		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:nCloth1|utility_room_view:livingroom_shading_latest:living_room_latest:nClothShape1" 
 		"playFromCache" " 0"
 		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:nRigid2|utility_room_view:livingroom_shading_latest:living_room_latest:nRigidShape2" 
-		"cacheWidth" " 360"
+		"cacheWidth" " 330"
 		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:nRigid3|utility_room_view:livingroom_shading_latest:living_room_latest:nRigidShape3" 
-		"cacheWidth" " 360"
+		"cacheWidth" " 330"
 		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:nRigid4|utility_room_view:livingroom_shading_latest:living_room_latest:nRigidShape4" 
-		"cacheWidth" " 360"
+		"cacheWidth" " 330"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:nCloth2|utility_room_view:livingroom_shading_latest:living_room_latest:nClothShape2" 
+		"cacheWidth" " 330"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:nRigid5|utility_room_view:livingroom_shading_latest:living_room_latest:nRigidShape5" 
+		"cacheWidth" " 330"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:nRigid6|utility_room_view:livingroom_shading_latest:living_room_latest:nRigidShape6" 
+		"cacheWidth" " 330"
 		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:resurrected_staircaseRNfosterParent2|utility_room_view:livingroom_shading_latest:living_room_latest:pCubeShape279" 
 		"surfaceReference" " 1"
 		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:resurrected_staircaseRNfosterParent2|utility_room_view:livingroom_shading_latest:living_room_latest:pCubeShape279" 
@@ -18308,6 +18320,10 @@ createNode reference -n "utility_room_viewRN";
 		"utility_room_viewRN.placeHolderList[29]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:livingroom_shading_latest:living_room_latest:nucleus1.startFrame" 
 		"utility_room_viewRN.placeHolderList[30]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:livingroom_shading_latest:living_room_latest:nCloth2|utility_room_view:livingroom_shading_latest:living_room_latest:nClothShape2.positions" 
+		"utility_room_viewRN.placeHolderList[31]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:livingroom_shading_latest:living_room_latest:nCloth2|utility_room_view:livingroom_shading_latest:living_room_latest:nClothShape2.playFromCache" 
+		"utility_room_viewRN.placeHolderList[32]" ""
 		"utility_room_view:smarty_latestRN" 98
 		0 "|utility_room_viewRNfosterParent1|global_ctrl_parentConstraint1" "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl" 
 		"-s -r "
@@ -18378,7 +18394,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:Smarty|utility_room_view:smarty_latest:polySurface6|utility_room_view:smarty_latest:polySurfaceShape4Orig" 
 		"furNameSpace" " -type \"string\" \"smarty_latest\""
 		2 "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl" 
-		"translate" " -type \"double3\" -47.74951686976350373 11.11995685446179749 68.75655161857135056"
+		"translate" " -type \"double3\" -151.84206059188585414 11.11995685446180104 82.49874768312950835"
 		
 		2 "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl" 
 		"translateX" " -av"
@@ -18387,7 +18403,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl" 
 		"translateZ" " -av"
 		2 "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl" 
-		"rotate" " -type \"double3\" 0 -76.60418609028786818 0"
+		"rotate" " -type \"double3\" 0 -58.49125903710534402 0"
 		2 "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl" 
 		"rotateX" " -av"
 		2 "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl" 
@@ -18461,7 +18477,8 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:rootJ|utility_room_view:smarty_latest:backj|utility_room_view:smarty_latest:chestJ|utility_room_view:smarty_latest:smarty_008_fixed_rig_:bowTie|utility_room_view:smarty_latest:smarty_008_fixed_rig_:bowTieShape" 
 		"furNameSpace" " -type \"string\" \"smarty_latest\""
 		2 "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:cog_ctrl|utility_room_view:smarty_latest:back_ctrl|utility_room_view:smarty_latest:chest_ctrl|utility_room_view:smarty_latest:head_ctrl" 
-		"rotate" " -type \"double3\" 0 0 0"
+		"rotate" " -type \"double3\" 2.9933290420171077 -38.15520719344298328 -4.59963744795441798"
+		
 		2 "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:cog_ctrl|utility_room_view:smarty_latest:back_ctrl|utility_room_view:smarty_latest:chest_ctrl|utility_room_view:smarty_latest:head_ctrl" 
 		"rotateX" " -av"
 		2 "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:cog_ctrl|utility_room_view:smarty_latest:back_ctrl|utility_room_view:smarty_latest:chest_ctrl|utility_room_view:smarty_latest:head_ctrl" 
@@ -18469,51 +18486,51 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:cog_ctrl|utility_room_view:smarty_latest:back_ctrl|utility_room_view:smarty_latest:chest_ctrl|utility_room_view:smarty_latest:head_ctrl" 
 		"rotateZ" " -av"
 		5 3 "utility_room_viewRN" "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:Smarty|utility_room_view:smarty_latest:polySurface6|utility_room_view:smarty_latest:polySurfaceShape4.worldMesh" 
-		"utility_room_viewRN.placeHolderList[52]" ""
-		5 3 "utility_room_viewRN" "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl.blendParent1" 
-		"utility_room_viewRN.placeHolderList[53]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl.blendParent1" 
 		"utility_room_viewRN.placeHolderList[54]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl.translateX" 
+		5 3 "utility_room_viewRN" "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl.blendParent1" 
 		"utility_room_viewRN.placeHolderList[55]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl.blendParent1" 
 		"utility_room_viewRN.placeHolderList[56]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl.translateX" 
 		"utility_room_viewRN.placeHolderList[57]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl.translateY" 
 		"utility_room_viewRN.placeHolderList[58]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl.translateZ" 
 		"utility_room_viewRN.placeHolderList[59]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl.rotateX" 
 		"utility_room_viewRN.placeHolderList[60]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl.rotateY" 
 		"utility_room_viewRN.placeHolderList[61]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl.rotateZ" 
 		"utility_room_viewRN.placeHolderList[62]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl.scaleX" 
 		"utility_room_viewRN.placeHolderList[63]" ""
-		5 3 "utility_room_viewRN" "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl.rotatePivot" 
+		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl.scaleY" 
 		"utility_room_viewRN.placeHolderList[64]" ""
-		5 3 "utility_room_viewRN" "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl.rotatePivotTranslate" 
+		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl.scaleZ" 
 		"utility_room_viewRN.placeHolderList[65]" ""
-		5 3 "utility_room_viewRN" "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl.rotateOrder" 
+		5 3 "utility_room_viewRN" "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl.rotatePivot" 
 		"utility_room_viewRN.placeHolderList[66]" ""
-		5 3 "utility_room_viewRN" "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl.rotateOrder" 
+		5 3 "utility_room_viewRN" "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl.rotatePivotTranslate" 
 		"utility_room_viewRN.placeHolderList[67]" ""
-		5 3 "utility_room_viewRN" "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl.parentInverseMatrix" 
+		5 3 "utility_room_viewRN" "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl.rotateOrder" 
 		"utility_room_viewRN.placeHolderList[68]" ""
-		5 3 "utility_room_viewRN" "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:rootJ|utility_room_view:smarty_latest:backj|utility_room_view:smarty_latest:chestJ|utility_room_view:smarty_latest:neckJ|utility_room_view:smarty_latest:smarty_008_fixed_rig_:Glasses|utility_room_view:smarty_latest:smarty_008_fixed_rig_:glassFrame|utility_room_view:smarty_latest:smarty_008_fixed_rig_:glassFrameShape.worldMesh" 
+		5 3 "utility_room_viewRN" "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl.rotateOrder" 
 		"utility_room_viewRN.placeHolderList[69]" ""
-		5 3 "utility_room_viewRN" "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:rootJ|utility_room_view:smarty_latest:backj|utility_room_view:smarty_latest:chestJ|utility_room_view:smarty_latest:neckJ|utility_room_view:smarty_latest:smarty_008_fixed_rig_:Glasses|utility_room_view:smarty_latest:smarty_008_fixed_rig_:glassFrame|utility_room_view:smarty_latest:smarty_008_fixed_rig_:Glasses|utility_room_view:smarty_latest:smarty_008_fixed_rig_:glass|utility_room_view:smarty_latest:smarty_008_fixed_rig_:glassR|utility_room_view:smarty_latest:smarty_008_fixed_rig_:glassRShape.worldMesh" 
+		5 3 "utility_room_viewRN" "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl.parentInverseMatrix" 
 		"utility_room_viewRN.placeHolderList[70]" ""
-		5 3 "utility_room_viewRN" "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:rootJ|utility_room_view:smarty_latest:backj|utility_room_view:smarty_latest:chestJ|utility_room_view:smarty_latest:neckJ|utility_room_view:smarty_latest:smarty_008_fixed_rig_:Glasses|utility_room_view:smarty_latest:smarty_008_fixed_rig_:glassFrame|utility_room_view:smarty_latest:smarty_008_fixed_rig_:Glasses|utility_room_view:smarty_latest:smarty_008_fixed_rig_:glass|utility_room_view:smarty_latest:smarty_008_fixed_rig_:glassL|utility_room_view:smarty_latest:smarty_008_fixed_rig_:glassLShape.worldMesh" 
+		5 3 "utility_room_viewRN" "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:rootJ|utility_room_view:smarty_latest:backj|utility_room_view:smarty_latest:chestJ|utility_room_view:smarty_latest:neckJ|utility_room_view:smarty_latest:smarty_008_fixed_rig_:Glasses|utility_room_view:smarty_latest:smarty_008_fixed_rig_:glassFrame|utility_room_view:smarty_latest:smarty_008_fixed_rig_:glassFrameShape.worldMesh" 
 		"utility_room_viewRN.placeHolderList[71]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:cog_ctrl|utility_room_view:smarty_latest:back_ctrl|utility_room_view:smarty_latest:chest_ctrl|utility_room_view:smarty_latest:head_ctrl.rotateX" 
+		5 3 "utility_room_viewRN" "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:rootJ|utility_room_view:smarty_latest:backj|utility_room_view:smarty_latest:chestJ|utility_room_view:smarty_latest:neckJ|utility_room_view:smarty_latest:smarty_008_fixed_rig_:Glasses|utility_room_view:smarty_latest:smarty_008_fixed_rig_:glassFrame|utility_room_view:smarty_latest:smarty_008_fixed_rig_:Glasses|utility_room_view:smarty_latest:smarty_008_fixed_rig_:glass|utility_room_view:smarty_latest:smarty_008_fixed_rig_:glassR|utility_room_view:smarty_latest:smarty_008_fixed_rig_:glassRShape.worldMesh" 
 		"utility_room_viewRN.placeHolderList[72]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:cog_ctrl|utility_room_view:smarty_latest:back_ctrl|utility_room_view:smarty_latest:chest_ctrl|utility_room_view:smarty_latest:head_ctrl.rotateY" 
+		5 3 "utility_room_viewRN" "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:rootJ|utility_room_view:smarty_latest:backj|utility_room_view:smarty_latest:chestJ|utility_room_view:smarty_latest:neckJ|utility_room_view:smarty_latest:smarty_008_fixed_rig_:Glasses|utility_room_view:smarty_latest:smarty_008_fixed_rig_:glassFrame|utility_room_view:smarty_latest:smarty_008_fixed_rig_:Glasses|utility_room_view:smarty_latest:smarty_008_fixed_rig_:glass|utility_room_view:smarty_latest:smarty_008_fixed_rig_:glassL|utility_room_view:smarty_latest:smarty_008_fixed_rig_:glassLShape.worldMesh" 
 		"utility_room_viewRN.placeHolderList[73]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:cog_ctrl|utility_room_view:smarty_latest:back_ctrl|utility_room_view:smarty_latest:chest_ctrl|utility_room_view:smarty_latest:head_ctrl.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:cog_ctrl|utility_room_view:smarty_latest:back_ctrl|utility_room_view:smarty_latest:chest_ctrl|utility_room_view:smarty_latest:head_ctrl.rotateX" 
 		"utility_room_viewRN.placeHolderList[74]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:cog_ctrl|utility_room_view:smarty_latest:back_ctrl|utility_room_view:smarty_latest:chest_ctrl|utility_room_view:smarty_latest:head_ctrl.rotateY" 
+		"utility_room_viewRN.placeHolderList[75]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:cog_ctrl|utility_room_view:smarty_latest:back_ctrl|utility_room_view:smarty_latest:chest_ctrl|utility_room_view:smarty_latest:head_ctrl.rotateZ" 
+		"utility_room_viewRN.placeHolderList[76]" ""
 		"utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latestRN2" 
 		42
 		1 |utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape1 
@@ -18955,109 +18972,107 @@ createNode FurGlobals -n "defaultFurGlobals";
 createNode animCurveTL -n "at_dryer_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 17 ".ktv[0:16]"  1 11.213762510074645 15 11.257165287055672
+	setAttr -s 16 ".ktv[0:15]"  1 11.213762510074645 15 11.257165287055672
 		 30 11.321 40 11.444 50 11.7 60 11.016345694805578 70 11.7 71 2.3222789377601862 90 -1.3885306072460453
-		 120 -21.856214740923811 145 -39.561099851001856 175 -34.87391466736559 190 -34.87391466736559
-		 215 -38.984412912634454 310 -38.984412912634454 320 -25.697247574868282 360 -141.35131444009272;
-	setAttr -s 17 ".kit[6:16]"  2 2 18 18 18 2 2 2 
-		2 18 18;
-	setAttr -s 17 ".kot[6:16]"  2 2 18 18 18 2 2 2 
-		2 18 18;
+		 120 -21.856214740923811 145 -39.561099851001856 170 -34.87391466736559 180 -38.984412912634454
+		 280 -38.984412912634454 290 -25.697247574868282 330 -129.32330419224678;
+	setAttr -s 16 ".kit[6:15]"  2 2 18 18 18 2 2 2 
+		18 18;
+	setAttr -s 16 ".kot[6:15]"  2 2 18 18 18 2 2 2 
+		18 18;
 createNode animCurveTL -n "at_dryer_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 17 ".ktv[0:16]"  1 1.7270802316599094 15 1.9752929233319829
+	setAttr -s 16 ".ktv[0:15]"  1 1.7270802316599094 15 1.9752929233319829
 		 30 0.058 40 0.546 50 2.3202881135501232 60 1.7664504213358452 70 1.705 71 2.2971472420893484
-		 90 1.6917244736871546 120 2.0275243276123707 145 2.64493830569022 175 4.4929398594725889
-		 190 4.4929398594725889 215 9.9179730908932058 310 9.9179730908932058 320 5.6202249660053756
-		 360 3.9162435374455904;
-	setAttr -s 17 ".kit[6:16]"  2 2 18 18 18 2 2 2 
-		2 18 18;
-	setAttr -s 17 ".kot[6:16]"  2 2 18 18 18 2 2 2 
-		2 18 18;
+		 90 1.6917244736871546 120 2.0275243276123707 145 2.64493830569022 170 4.4929398594725889
+		 180 9.9179730908932058 280 9.9179730908932058 290 5.6202249660053756 330 3.9334115168380572;
+	setAttr -s 16 ".kit[6:15]"  2 2 18 18 18 2 2 2 
+		18 18;
+	setAttr -s 16 ".kot[6:15]"  2 2 18 18 18 2 2 2 
+		18 18;
 createNode animCurveTL -n "at_dryer_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 17 ".ktv[0:16]"  1 16.62547465778162 15 15.075089032161829
+	setAttr -s 16 ".ktv[0:15]"  1 16.62547465778162 15 15.075089032161829
 		 30 53.623 40 71.468 50 81.277 60 81.276549536816304 70 81.277 71 72.035664599800043
-		 90 71.772655046452428 120 72.96782283622818 145 76.20906990794181 175 72.84557735654208
-		 190 72.84557735654208 215 -89.917159956238052 310 -89.917159956238052 320 75.670661053244615
-		 360 106.49126886202535;
-	setAttr -s 17 ".kit[7:16]"  2 18 18 18 2 2 2 2 
-		18 18;
-	setAttr -s 17 ".kot[7:16]"  2 18 18 18 2 2 2 2 
-		18 18;
+		 90 71.772655046452428 120 72.96782283622818 145 76.20906990794181 170 72.84557735654208
+		 180 -89.917159956238052 280 -89.917159956238052 290 75.670661053244615 330 106.24470438068892;
+	setAttr -s 16 ".kit[7:15]"  2 18 18 18 2 2 2 18 
+		18;
+	setAttr -s 16 ".kot[7:15]"  2 18 18 18 2 2 2 18 
+		18;
 createNode animCurveTU -n "at_dryer_visibility";
-	setAttr ".tan" 2;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 17 ".ktv[0:16]"  1 1 15 1 30 1 40 1 50 1 60 1 70 1 71 1 90 1
-		 120 1 145 1 175 1 190 1 215 1 310 1 320 1 360 1;
-	setAttr -s 17 ".kit[0:16]"  9 9 9 9 9 9 2 2 
-		9 9 9 2 2 2 2 9 9;
-	setAttr -s 17 ".kot[0:16]"  5 5 5 5 5 5 2 2 
-		5 5 5 2 2 2 2 5 5;
+	setAttr -s 16 ".ktv[0:15]"  1 1 15 1 30 1 40 1 50 1 60 1 70 1 71 1 90 1
+		 120 1 145 1 170 1 180 1 280 1 290 1 330 1;
+	setAttr -s 16 ".kit[6:15]"  2 2 9 9 9 2 2 2 
+		9 9;
+	setAttr -s 16 ".kot[0:15]"  5 5 5 5 5 5 2 2 
+		5 5 5 2 2 2 5 5;
 createNode animCurveTA -n "at_dryer_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 17 ".ktv[0:16]"  1 0 15 3.23 30 3.0000000000000004 40 2.0965541071604994
+	setAttr -s 16 ".ktv[0:15]"  1 0 15 3.23 30 3.0000000000000004 40 2.0965541071604994
 		 50 -0.42000000000000004 60 -0.42000000000000004 70 -0.42000000000000004 71 -4.7218630451341701
-		 90 -4.7218630451341701 120 -4.7218630451341701 145 -4.6829846400176427 175 -4.5002166379176254
-		 190 -4.5002166379176254 215 -4.7825509038126954 310 -4.7825509038126954 320 0 360 -0.60947002958726748;
-	setAttr -s 17 ".kit[6:16]"  2 2 18 18 18 2 2 2 
-		2 18 18;
-	setAttr -s 17 ".kot[6:16]"  2 2 18 18 18 2 2 2 
-		2 18 18;
+		 90 -4.7218630451341701 120 -4.7218630451341701 145 -4.6829846400176427 170 -4.5002166379176254
+		 180 -4.7825509038126954 280 -4.7825509038126954 290 0 330 -0.54608521346857986;
+	setAttr -s 16 ".kit[6:15]"  2 2 18 18 18 2 2 2 
+		18 18;
+	setAttr -s 16 ".kot[6:15]"  2 2 18 18 18 2 2 2 
+		18 18;
 createNode animCurveTA -n "at_dryer_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 17 ".ktv[0:16]"  1 0 15 -0.8 30 0 40 -0.18500000000000011
+	setAttr -s 16 ".ktv[0:15]"  1 0 15 -0.8 30 0 40 -0.18500000000000011
 		 50 0 60 0 70 0 71 -66.775514853547008 90 -66.775514853547008 120 -66.775514853547008
-		 145 -58.241803094640119 175 2.8167556363304391 190 2.8167556363304391 215 3.8558525300967967
-		 310 3.8558525300967967 320 56.246268988324459 360 24.874249154745808;
-	setAttr -s 17 ".kit[6:16]"  2 2 18 18 18 2 2 2 
-		2 18 18;
-	setAttr -s 17 ".kot[6:16]"  2 2 18 18 18 2 2 2 
-		2 18 18;
+		 145 -58.241803094640119 170 2.8167556363304391 180 3.8558525300967967 280 3.8558525300967967
+		 290 56.246268988324459 330 28.136935770804378;
+	setAttr -s 16 ".kit[6:15]"  2 2 18 18 18 2 2 2 
+		18 18;
+	setAttr -s 16 ".kot[6:15]"  2 2 18 18 18 2 2 2 
+		18 18;
 createNode animCurveTA -n "at_dryer_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 17 ".ktv[0:16]"  1 0 15 0 30 0 40 0 50 0 60 0 70 0 71 8.4927575659967083
-		 90 8.4927575659967083 120 8.4927575659967083 145 6.9188059923179015 175 -0.48036544131605696
-		 190 -0.48036544131605696 215 0.20309090070636235 310 0.20309090070636235 320 0 360 -0.023407729559653884;
-	setAttr -s 17 ".kit[6:16]"  2 2 18 18 18 2 2 2 
-		2 18 18;
-	setAttr -s 17 ".kot[6:16]"  2 2 18 18 18 2 2 2 
-		2 18 18;
+	setAttr -s 16 ".ktv[0:15]"  1 0 15 0 30 0 40 0 50 0 60 0 70 0 71 8.4927575659967083
+		 90 8.4927575659967083 120 8.4927575659967083 145 6.9188059923179015 170 -0.48036544131605696
+		 180 0.20309090070636235 280 0.20309090070636235 290 0 330 -0.023220468017016618;
+	setAttr -s 16 ".kit[6:15]"  2 2 18 18 18 2 2 2 
+		18 18;
+	setAttr -s 16 ".kot[6:15]"  2 2 18 18 18 2 2 2 
+		18 18;
 createNode animCurveTU -n "at_dryer_scaleX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 17 ".ktv[0:16]"  1 2.372 15 2.372 30 2.372 40 2.372 50 2.372
-		 60 2.372 70 2.372 71 2.372 90 2.372 120 2.372 145 2.372 175 2.372 190 2.372 215 2.372
-		 310 2.372 320 2.372 360 2.372;
-	setAttr -s 17 ".kit[6:16]"  2 2 18 18 18 2 2 2 
-		2 18 18;
-	setAttr -s 17 ".kot[6:16]"  2 2 18 18 18 2 2 2 
-		2 18 18;
+	setAttr -s 16 ".ktv[0:15]"  1 2.372 15 2.372 30 2.372 40 2.372 50 2.372
+		 60 2.372 70 2.372 71 2.372 90 2.372 120 2.372 145 2.372 170 2.372 180 2.372 280 2.372
+		 290 2.372 330 2.372;
+	setAttr -s 16 ".kit[6:15]"  2 2 18 18 18 2 2 2 
+		18 18;
+	setAttr -s 16 ".kot[6:15]"  2 2 18 18 18 2 2 2 
+		18 18;
 createNode animCurveTU -n "at_dryer_scaleY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 17 ".ktv[0:16]"  1 2.372 15 2.372 30 2.372 40 2.372 50 2.372
-		 60 2.372 70 2.372 71 2.372 90 2.372 120 2.372 145 2.372 175 2.372 190 2.372 215 2.372
-		 310 2.372 320 2.372 360 2.372;
-	setAttr -s 17 ".kit[6:16]"  2 2 18 18 18 2 2 2 
-		2 18 18;
-	setAttr -s 17 ".kot[6:16]"  2 2 18 18 18 2 2 2 
-		2 18 18;
+	setAttr -s 16 ".ktv[0:15]"  1 2.372 15 2.372 30 2.372 40 2.372 50 2.372
+		 60 2.372 70 2.372 71 2.372 90 2.372 120 2.372 145 2.372 170 2.372 180 2.372 280 2.372
+		 290 2.372 330 2.372;
+	setAttr -s 16 ".kit[6:15]"  2 2 18 18 18 2 2 2 
+		18 18;
+	setAttr -s 16 ".kot[6:15]"  2 2 18 18 18 2 2 2 
+		18 18;
 createNode animCurveTU -n "at_dryer_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 17 ".ktv[0:16]"  1 2.372 15 2.372 30 2.372 40 2.372 50 2.372
-		 60 2.372 70 2.372 71 2.372 90 2.372 120 2.372 145 2.372 175 2.372 190 2.372 215 2.372
-		 310 2.372 320 2.372 360 2.372;
-	setAttr -s 17 ".kit[6:16]"  2 2 18 18 18 2 2 2 
-		2 18 18;
-	setAttr -s 17 ".kot[6:16]"  2 2 18 18 18 2 2 2 
-		2 18 18;
+	setAttr -s 16 ".ktv[0:15]"  1 2.372 15 2.372 30 2.372 40 2.372 50 2.372
+		 60 2.372 70 2.372 71 2.372 90 2.372 120 2.372 145 2.372 170 2.372 180 2.372 280 2.372
+		 290 2.372 330 2.372;
+	setAttr -s 16 ".kit[6:15]"  2 2 18 18 18 2 2 2 
+		18 18;
+	setAttr -s 16 ".kot[6:15]"  2 2 18 18 18 2 2 2 
+		18 18;
 createNode animCurveTU -n "at_dryerShape_focalLength";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
@@ -19092,49 +19107,46 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `outlinerPanel -unParent -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            outlinerEditor -e \n                -docTag \"isolOutln_fromSeln\" \n                -showShapes 0\n                -showReferenceNodes 1\n                -showReferenceMembers 1\n                -showAttributes 0\n                -showConnected 0\n                -showAnimCurvesOnly 0\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 1\n                -showAssets 1\n                -showContainedOnly 1\n                -showPublishedAsConnected 0\n                -showContainerContents 1\n                -ignoreDagHierarchy 0\n                -expandConnections 0\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 1\n                -showLeafs 1\n"
 		+ "                -showNumericAttrsOnly 0\n                -highlightActive 1\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"defaultSetFilter\" \n                -showSetMembers 1\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 0\n"
 		+ "                -ignoreHiddenAttribute 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n"
-		+ "            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\tif ($useSceneConfig) {\n"
-		+ "\t\toutlinerPanel -e -to $panelName;\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"graphEditor\" -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n"
-		+ "                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n"
-		+ "                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1.25\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n"
-		+ "                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n"
-		+ "                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n"
-		+ "                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1.25\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dopeSheetPanel\" -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n"
-		+ "                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n"
-		+ "                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n"
-		+ "            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n"
-		+ "                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n"
-		+ "                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"clipEditorPanel\" -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n"
-		+ "                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"sequenceEditorPanel\" -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels `;\n"
-		+ "\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n"
-		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperGraphPanel\" -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n"
-		+ "                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n"
-		+ "                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" == $panelName) {\n"
-		+ "\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperShadePanel\" -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"visorPanel\" -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n"
-		+ "\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -keyReleaseCommand \"nodeEdKeyReleaseCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n"
-		+ "                -extendToShapes 1\n                $editorName;;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -keyReleaseCommand \"nodeEdKeyReleaseCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n"
-		+ "                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"createNodePanel\" -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Texture Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"polyTexturePlacementPanel\" -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels `;\n"
-		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"renderWindowPanel\" -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"blendShapePanel\" (localizedPanelLabel(\"Blend Shape\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\tblendShapePanel -unParent -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels ;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n"
-		+ "\t\tblendShapePanel -edit -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynRelEdPanel\" -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"relationshipPanel\" -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels `;\n"
-		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"referenceEditorPanel\" -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"componentEditorPanel\" -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels `;\n"
-		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynPaintScriptedPanelType\" -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"scriptEditorPanel\" -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels `;\n"
-		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"Stereo\" -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels `;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n"
-		+ "                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n"
-		+ "                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n"
-		+ "                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n"
-		+ "                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n"
-		+ "                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n"
-		+ "                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n"
-		+ "\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"vertical2\\\" -ps 1 71 100 -ps 2 29 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Top View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n"
+		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"graphEditor\" -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n"
+		+ "                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n"
+		+ "                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1.25\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n"
+		+ "                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n"
+		+ "            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1.25\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n"
+		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dopeSheetPanel\" -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n"
+		+ "                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n"
+		+ "                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n"
+		+ "                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n"
+		+ "                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n"
+		+ "                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"clipEditorPanel\" -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"sequenceEditorPanel\" -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n"
+		+ "                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n"
+		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperGraphPanel\" -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n"
+		+ "                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n"
+		+ "                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperShadePanel\" -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"visorPanel\" -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n"
+		+ "                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -keyReleaseCommand \"nodeEdKeyReleaseCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -keyReleaseCommand \"nodeEdKeyReleaseCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"createNodePanel\" -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Texture Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"polyTexturePlacementPanel\" -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"renderWindowPanel\" -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"blendShapePanel\" (localizedPanelLabel(\"Blend Shape\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\tblendShapePanel -unParent -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels ;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tblendShapePanel -edit -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynRelEdPanel\" -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"relationshipPanel\" -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"referenceEditorPanel\" -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"componentEditorPanel\" -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynPaintScriptedPanelType\" -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"scriptEditorPanel\" -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"Stereo\" -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels `;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n"
+		+ "                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n"
+		+ "                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n"
+		+ "                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n"
+		+ "                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n"
+		+ "                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n"
+		+ "                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n"
+		+ "\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Top View\")) \n\t\t\t\t\t\"modelPanel\"\n"
 		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"utility_room_view:at_dryer\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 0\\n    -polymeshes 1\\n    -subdivSurfaces 0\\n    -planes 0\\n    -lights 0\\n    -cameras 0\\n    -controlVertices 0\\n    -hulls 0\\n    -grid 1\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 0\\n    -dynamics 0\\n    -particleInstancers 0\\n    -fluids 0\\n    -hairSystems 0\\n    -follicles 0\\n    -nCloths 0\\n    -nParticles 0\\n    -nRigids 0\\n    -dynamicConstraints 0\\n    -locators 0\\n    -manipulators 1\\n    -pluginShapes 0\\n    -dimensions 0\\n    -handles 0\\n    -pivots 0\\n    -textures 0\\n    -strokes 0\\n    -motionTrails 0\\n    -clipGhosts 0\\n    -greasePencils 0\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
 		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"utility_room_view:at_dryer\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 0\\n    -polymeshes 1\\n    -subdivSurfaces 0\\n    -planes 0\\n    -lights 0\\n    -cameras 0\\n    -controlVertices 0\\n    -hulls 0\\n    -grid 1\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 0\\n    -dynamics 0\\n    -particleInstancers 0\\n    -fluids 0\\n    -hairSystems 0\\n    -follicles 0\\n    -nCloths 0\\n    -nParticles 0\\n    -nRigids 0\\n    -dynamicConstraints 0\\n    -locators 0\\n    -manipulators 1\\n    -pluginShapes 0\\n    -dimensions 0\\n    -handles 0\\n    -pivots 0\\n    -textures 0\\n    -strokes 0\\n    -motionTrails 0\\n    -clipGhosts 0\\n    -greasePencils 0\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
-		+ "\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        setFocus `paneLayout -q -p1 $gMainPane`;\n        sceneUIReplacement -deleteRemaining;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
-	setAttr ".b" -type "string" "playbackOptions -min 1 -max 360 -ast 1 -aet 450 ";
+	setAttr ".b" -type "string" "playbackOptions -min 1 -max 330 -ast 1 -aet 330 ";
 	setAttr ".st" 6;
 createNode animCurveTL -n "global_ctrl_translateX";
 	setAttr ".tan" 18;
@@ -19179,82 +19191,103 @@ createNode animCurveTU -n "global_ctrl_scaleZ";
 createNode animCurveTL -n "bike_ctrl_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 11.146554903618034 30 11.708124050991238
+	setAttr -s 14 ".ktv[0:13]"  1 11.146554903618034 30 11.708124050991238
 		 45 11.147 53 11.884638908527057 60 11.146554903618034 80 13.065415915914715 100 7.0236800974827869
-		 110 -3.8748108027075627 190 -53.791697454933626 320 -57.417613300654416 360 -162.14257735513894;
-	setAttr -s 11 ".kit[5:10]"  2 18 18 18 18 18;
-	setAttr -s 11 ".kot[5:10]"  2 18 18 18 18 18;
+		 115 -3.8748108027075627 150 -34.814224996622926 160 -46.501075630954539 170 -59.832286718151735
+		 180 -63.334699837643605 285 -57.417613300654416 330 -153.0155464160332;
+	setAttr -s 14 ".kit[5:13]"  2 18 18 18 18 18 18 18 
+		18;
+	setAttr -s 14 ".kot[5:13]"  2 18 18 18 18 18 18 18 
+		18;
 createNode animCurveTL -n "bike_ctrl_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 -1.517224425633183 30 -1.517224425633183
+	setAttr -s 14 ".ktv[0:13]"  1 -1.517224425633183 30 -1.517224425633183
 		 45 -0.060266136759341116 53 -0.86148499614607532 60 -1.517224425633183 80 -1.3709926508114134
-		 100 -1.3709926508114132 110 -1.3709926508114127 190 -1.3709926508114065 320 -1.3709926508114028
-		 360 -1.3709926508114028;
-	setAttr -s 11 ".kit[5:10]"  2 18 18 18 18 18;
-	setAttr -s 11 ".kot[5:10]"  2 18 18 18 18 18;
+		 100 -1.3709926508114132 115 -1.3709926508114127 150 -1.3709926508114099 160 -1.3709926508114094
+		 170 -1.3709926508114081 180 -1.3709926508114065 285 -1.3709926508114028 330 -1.3709926508114028;
+	setAttr -s 14 ".kit[5:13]"  2 18 18 18 18 18 18 18 
+		18;
+	setAttr -s 14 ".kot[5:13]"  2 18 18 18 18 18 18 18 
+		18;
 createNode animCurveTL -n "bike_ctrl_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 7.0937915042433044 30 7.0937915042433044
+	setAttr -s 14 ".ktv[0:13]"  1 7.0937915042433044 30 7.0937915042433044
 		 45 13.295930152888268 53 35.821980447580941 60 55.532274455437005 80 65.392493403607972
-		 100 66.683910810733835 110 67.622774027449779 190 70.119427846130804 320 65.932535036179729
-		 360 85.696767330098027;
-	setAttr -s 11 ".kit[2:10]"  2 18 2 18 18 18 18 18 
-		18;
-	setAttr -s 11 ".kot[2:10]"  2 18 2 18 18 18 18 18 
-		18;
+		 100 66.683910810733835 115 67.622774027449779 150 69.126480712392691 160 69.468877872057163
+		 170 69.876898142135062 180 70.119427846130804 285 65.932535036179729 330 83.974267243677232;
+	setAttr -s 14 ".kit[2:13]"  2 18 2 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 14 ".kot[2:13]"  2 18 2 18 18 18 18 18 
+		18 18 18 18;
 createNode animCurveTU -n "bike_ctrl_visibility";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 1 30 1 45 1 53 1 60 1 80 1 100 1 110 1
-		 190 1 320 1 360 1;
-	setAttr -s 11 ".kit[5:10]"  2 9 9 9 9 9;
-	setAttr -s 11 ".kot[0:10]"  5 5 5 5 5 2 5 5 
-		5 5 5;
+	setAttr -s 14 ".ktv[0:13]"  1 1 30 1 45 1 53 1 60 1 80 1 100 1 115 1
+		 150 1 160 1 170 1 180 1 285 1 330 1;
+	setAttr -s 14 ".kit[5:13]"  2 9 9 9 9 9 9 9 
+		9;
+	setAttr -s 14 ".kot[0:13]"  5 5 5 5 5 2 5 5 
+		5 5 5 5 5 5;
 createNode animCurveTA -n "bike_ctrl_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 0 30 0 45 -120.91671527467395 53 -54.421501627858511
-		 60 0 80 -26.553510353191609 100 -9.9575694210063439 110 0 190 0 320 0 360 0;
-	setAttr -s 11 ".kit[5:10]"  2 18 18 18 18 18;
-	setAttr -s 11 ".kot[5:10]"  2 18 18 18 18 18;
+	setAttr -s 14 ".ktv[0:13]"  1 0 30 0 45 -120.91671527467395 53 -54.421501627858511
+		 60 0 80 -26.553510353191609 100 -9.9575694210063439 115 0 150 0 160 0 170 0 180 0
+		 285 0 330 0;
+	setAttr -s 14 ".kit[5:13]"  2 18 18 18 18 18 18 18 
+		18;
+	setAttr -s 14 ".kot[5:13]"  2 18 18 18 18 18 18 18 
+		18;
 createNode animCurveTA -n "bike_ctrl_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 -90 30 -90 45 -45.924066012102962 53 -65.125583882503278
-		 60 -90 80 -134.46461064851349 100 -157.83987104211107 110 -171.86503420570196 190 -165.0694229197087
-		 320 -157.03353231743489 360 -147.85107352288966;
-	setAttr -s 11 ".kit[5:10]"  2 18 18 18 18 18;
-	setAttr -s 11 ".kot[5:10]"  2 18 18 18 18 18;
+	setAttr -s 14 ".ktv[0:13]"  1 -90 30 -90 45 -45.924066012102962 53 -65.125583882503278
+		 60 -90 80 -134.46461064851349 100 -157.83987104211107 115 -171.86503420570196 150 -169.50487813670813
+		 160 -168.45805885958177 170 -166.59813049098321 180 -165.0694229197087 285 -157.03353231743489
+		 330 -148.49125903710532;
+	setAttr -s 14 ".kit[5:13]"  2 18 18 18 18 18 18 18 
+		18;
+	setAttr -s 14 ".kot[5:13]"  2 18 18 18 18 18 18 18 
+		18;
 createNode animCurveTA -n "bike_ctrl_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 0 30 0 45 129.81506978919779 53 58.426421986448922
-		 60 0 80 7.9288225396818506 100 2.9733093155398191 110 0 190 0 320 0 360 0;
-	setAttr -s 11 ".kit[5:10]"  2 18 18 18 18 18;
-	setAttr -s 11 ".kot[5:10]"  2 18 18 18 18 18;
+	setAttr -s 14 ".ktv[0:13]"  1 0 30 0 45 129.81506978919779 53 58.426421986448922
+		 60 0 80 7.9288225396818506 100 2.9733093155398191 115 0 150 0 160 0 170 0 180 0 285 0
+		 330 0;
+	setAttr -s 14 ".kit[5:13]"  2 18 18 18 18 18 18 18 
+		18;
+	setAttr -s 14 ".kot[5:13]"  2 18 18 18 18 18 18 18 
+		18;
 createNode animCurveTU -n "bike_ctrl_scaleX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 0.2 30 0.2 45 0.2 53 0.2 60 0.2 80 0.2
-		 100 0.2 110 0.2 190 0.2 320 0.2 360 0.2;
-	setAttr -s 11 ".kit[5:10]"  2 18 18 18 18 18;
-	setAttr -s 11 ".kot[5:10]"  2 18 18 18 18 18;
+	setAttr -s 14 ".ktv[0:13]"  1 0.2 30 0.2 45 0.2 53 0.2 60 0.2 80 0.2
+		 100 0.2 115 0.2 150 0.2 160 0.2 170 0.2 180 0.2 285 0.2 330 0.2;
+	setAttr -s 14 ".kit[5:13]"  2 18 18 18 18 18 18 18 
+		18;
+	setAttr -s 14 ".kot[5:13]"  2 18 18 18 18 18 18 18 
+		18;
 createNode animCurveTU -n "bike_ctrl_scaleY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 0.2 30 0.2 45 0.2 53 0.2 60 0.2 80 0.2
-		 100 0.2 110 0.2 190 0.2 320 0.2 360 0.2;
-	setAttr -s 11 ".kit[5:10]"  2 18 18 18 18 18;
-	setAttr -s 11 ".kot[5:10]"  2 18 18 18 18 18;
+	setAttr -s 14 ".ktv[0:13]"  1 0.2 30 0.2 45 0.2 53 0.2 60 0.2 80 0.2
+		 100 0.2 115 0.2 150 0.2 160 0.2 170 0.2 180 0.2 285 0.2 330 0.2;
+	setAttr -s 14 ".kit[5:13]"  2 18 18 18 18 18 18 18 
+		18;
+	setAttr -s 14 ".kot[5:13]"  2 18 18 18 18 18 18 18 
+		18;
 createNode animCurveTU -n "bike_ctrl_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 0.2 30 0.2 45 0.2 53 0.2 60 0.2 80 0.2
-		 100 0.2 110 0.2 190 0.2 320 0.2 360 0.2;
-	setAttr -s 11 ".kit[5:10]"  2 18 18 18 18 18;
-	setAttr -s 11 ".kot[5:10]"  2 18 18 18 18 18;
+	setAttr -s 14 ".ktv[0:13]"  1 0.2 30 0.2 45 0.2 53 0.2 60 0.2 80 0.2
+		 100 0.2 115 0.2 150 0.2 160 0.2 170 0.2 180 0.2 285 0.2 330 0.2;
+	setAttr -s 14 ".kit[5:13]"  2 18 18 18 18 18 18 18 
+		18;
+	setAttr -s 14 ".kot[5:13]"  2 18 18 18 18 18 18 18 
+		18;
 createNode pairBlend -n "pairBlend1";
 createNode animCurveTU -n "global_ctrl_blendParent1";
 	setAttr ".tan" 18;
@@ -19263,75 +19296,80 @@ createNode animCurveTU -n "global_ctrl_blendParent1";
 createNode animCurveTA -n "controller_main01_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  65 -24.451252221310266 90 18.562385510636151
-		 100 -12.075816874173853 115 23.863068077304639 125 -18.236938619646185 145 22.493483463127724
-		 200 0 320 0 360 0;
-	setAttr -s 9 ".kit[6:8]"  2 18 18;
-	setAttr -s 9 ".kot[6:8]"  2 18 18;
+	setAttr -s 13 ".ktv[0:12]"  65 -24.451252221310266 90 18.562385510636151
+		 100 -12.075816874173853 115 23.863068077304639 125 -18.236938619646185 140 22.493483463127724
+		 150 -16.586828948398708 160 16.965336228839615 170 -15.366694497216006 180 -12.521007952300915
+		 200 0 285 0 330 0;
+	setAttr -s 13 ".kit[10:12]"  2 18 18;
+	setAttr -s 13 ".kot[10:12]"  2 18 18;
 createNode animCurveTA -n "controller_main01_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  65 7.8727933853439183 90 -49.929345946957291
-		 100 -85.608772490104229 115 -91.023591058104628 125 -91.023780509706455 145 -91.023791619493466
-		 200 -70.005970664558518 320 -66.610178193881595 360 -82.499540907122352;
-	setAttr -s 9 ".kit[6:8]"  2 18 18;
-	setAttr -s 9 ".kot[6:8]"  2 18 18;
+	setAttr -s 13 ".ktv[0:12]"  65 7.8727933853439183 90 -49.929345946957291
+		 100 -85.608772490104229 115 -91.023591058104628 125 -91.023780509706455 140 -91.023791619493466
+		 150 -88.646802909815705 160 -84.188495511072716 170 -79.74577993457342 180 -76.366273564575479
+		 200 -70.005970664558518 285 -66.610178193881595 330 -81.114744966672376;
+	setAttr -s 13 ".kit[10:12]"  2 18 18;
+	setAttr -s 13 ".kot[10:12]"  2 18 18;
 createNode animCurveTA -n "controller_main01_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  65 0 90 0 100 0 115 0 125 0 145 0 200 0
-		 320 0 360 0;
-	setAttr -s 9 ".kit[6:8]"  2 18 18;
-	setAttr -s 9 ".kot[6:8]"  2 18 18;
+	setAttr -s 13 ".ktv[0:12]"  65 0 90 0 100 0 115 0 125 0 140 0 150 0
+		 160 0 170 8.9333381845371316e-15 180 6.6172856508802006e-15 200 0 285 0 330 0;
+	setAttr -s 13 ".kit[10:12]"  2 18 18;
+	setAttr -s 13 ".kot[10:12]"  2 18 18;
 createNode animCurveTL -n "controller_main01_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  65 28.635437639962859 90 28.349822528749606
-		 100 18.624296478885526 115 10.246366203661658 125 -2.398084243633555 145 -12.856010682257796
-		 200 -48.493738216332225 320 -44.159860832731233 360 -148.08813961267293;
-	setAttr -s 9 ".kit[0:8]"  2 18 18 18 18 18 2 18 
-		18;
-	setAttr -s 9 ".kot[0:8]"  2 18 18 18 18 18 2 18 
-		18;
+	setAttr -s 13 ".ktv[0:12]"  65 28.635437639962859 90 28.349822528749606
+		 100 18.624296478885526 115 10.246366203661658 125 -2.398084243633555 140 -12.856010682257796
+		 150 -24.27529285716448 160 -33.982306268546928 170 -43.266815808804644 180 -55.390149246561663
+		 200 -48.493738216332225 285 -44.159860832731233 330 -139.03054169954277;
+	setAttr -s 13 ".kit[0:12]"  2 18 18 18 18 18 18 18 
+		18 18 2 18 18;
+	setAttr -s 13 ".kot[0:12]"  2 18 18 18 18 18 18 18 
+		18 18 2 18 18;
 createNode animCurveTL -n "controller_main01_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  65 3.3066915480213721 90 3.2140247945373144
-		 100 2.7899746839127344 115 3.4195540296617253 125 3.1491865251043438 145 3.4168487574985593
-		 200 2.3356679261917468 320 2.34490812440142 360 2.34490812440142;
-	setAttr -s 9 ".kit[6:8]"  2 18 18;
-	setAttr -s 9 ".kot[6:8]"  2 18 18;
+	setAttr -s 13 ".ktv[0:12]"  65 3.3066915480213721 90 3.2140247945373144
+		 100 2.7899746839127344 115 3.4195540296617253 125 3.1491865251043438 140 3.4168487574985593
+		 150 3.2945737323269499 160 3.1531524259931412 170 2.574433533322428 180 2.439386008125382
+		 200 2.3356679261917468 285 2.34490812440142 330 2.34490812440142;
+	setAttr -s 13 ".kit[10:12]"  2 18 18;
+	setAttr -s 13 ".kot[10:12]"  2 18 18;
 createNode animCurveTL -n "controller_main01_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  65 60.570728720671838 90 67.851929255946914
-		 100 70.262548891479952 115 69.838249538716326 125 69.774215793673051 145 69.28041261206883
-		 200 61.88650442629497 320 59.570356347752281 360 79.764630818064006;
-	setAttr -s 9 ".kit[0:8]"  2 18 18 18 18 18 2 18 
-		18;
-	setAttr -s 9 ".kot[0:8]"  2 18 18 18 18 18 2 18 
-		18;
+	setAttr -s 13 ".ktv[0:12]"  65 60.570728720671838 90 67.851929255946914
+		 100 70.262548891479952 115 69.838249538716326 125 69.774215793673051 140 69.28041261206883
+		 150 67.867950479637287 160 66.348774087675935 170 64.952734826433115 180 63.889106024264763
+		 200 61.88650442629497 285 59.570356347752281 330 78.004651528050246;
+	setAttr -s 13 ".kit[0:12]"  2 18 18 18 18 18 18 18 
+		18 18 2 18 18;
+	setAttr -s 13 ".kot[0:12]"  2 18 18 18 18 18 18 18 
+		18 18 2 18 18;
 createNode animCurveTU -n "controller_main01_scaleX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  65 0.575 90 0.575 100 0.575 115 0.575 125 0.575
-		 145 0.575 200 0.575 320 0.575 360 0.575;
-	setAttr -s 9 ".kit[6:8]"  2 18 18;
-	setAttr -s 9 ".kot[6:8]"  2 18 18;
+	setAttr -s 13 ".ktv[0:12]"  65 0.575 90 0.575 100 0.575 115 0.575 125 0.575
+		 140 0.575 150 0.575 160 0.575 170 0.575 180 0.575 200 0.575 285 0.575 330 0.575;
+	setAttr -s 13 ".kit[10:12]"  2 18 18;
+	setAttr -s 13 ".kot[10:12]"  2 18 18;
 createNode animCurveTU -n "controller_main01_scaleY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  65 0.575 90 0.575 100 0.575 115 0.575 125 0.575
-		 145 0.575 200 0.575 320 0.575 360 0.575;
-	setAttr -s 9 ".kit[6:8]"  2 18 18;
-	setAttr -s 9 ".kot[6:8]"  2 18 18;
+	setAttr -s 13 ".ktv[0:12]"  65 0.575 90 0.575 100 0.575 115 0.575 125 0.575
+		 140 0.575 150 0.575 160 0.575 170 0.575 180 0.575 200 0.575 285 0.575 330 0.575;
+	setAttr -s 13 ".kit[10:12]"  2 18 18;
+	setAttr -s 13 ".kot[10:12]"  2 18 18;
 createNode animCurveTU -n "controller_main01_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  65 0.575 90 0.575 100 0.575 115 0.575 125 0.575
-		 145 0.575 200 0.575 320 0.575 360 0.575;
-	setAttr -s 9 ".kit[6:8]"  2 18 18;
-	setAttr -s 9 ".kot[6:8]"  2 18 18;
+	setAttr -s 13 ".ktv[0:12]"  65 0.575 90 0.575 100 0.575 115 0.575 125 0.575
+		 140 0.575 150 0.575 160 0.575 170 0.575 180 0.575 200 0.575 285 0.575 330 0.575;
+	setAttr -s 13 ".kit[10:12]"  2 18 18;
+	setAttr -s 13 ".kot[10:12]"  2 18 18;
 createNode animCurveTA -n "head_ctrl_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
@@ -19377,58 +19415,58 @@ createNode cacheFile -n "nRigidShape7Cache1";
 createNode animCurveTU -n "controller_root_scaleX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 0.62054948438636315 230 0.62054948438636315
-		 260 0.62054948438636315;
+	setAttr -s 3 ".ktv[0:2]"  170 0.62054948438636315 200 0.62054948438636315
+		 230 0.62054948438636315;
 createNode animCurveTU -n "controller_root_scaleY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 0.62054948438636315 230 0.62054948438636315
-		 260 0.62054948438636315;
+	setAttr -s 3 ".ktv[0:2]"  170 0.62054948438636315 200 0.62054948438636315
+		 230 0.62054948438636315;
 createNode animCurveTU -n "controller_root_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 0.62054948438636315 230 0.62054948438636315
-		 260 0.62054948438636315;
+	setAttr -s 3 ".ktv[0:2]"  170 0.62054948438636315 200 0.62054948438636315
+		 230 0.62054948438636315;
 createNode animCurveTU -n "controller_root_visibility";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 1 230 1 260 1;
+	setAttr -s 3 ".ktv[0:2]"  170 1 200 1 230 1;
 	setAttr -s 3 ".kot[0:2]"  5 5 5;
 createNode animCurveTL -n "controller_root_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 -41.000276148200584 230 -41.920893181412126
-		 260 -41.920893181412126;
+	setAttr -s 3 ".ktv[0:2]"  170 -41.000276148200584 200 -41.920893181412126
+		 230 -41.920893181412126;
 createNode animCurveTL -n "controller_root_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 3.7881722361486241 230 3.7881722361486241
-		 260 3.7881722361486241;
+	setAttr -s 3 ".ktv[0:2]"  170 3.7881722361486241 200 3.7881722361486241
+		 230 3.7881722361486241;
 createNode animCurveTL -n "controller_root_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 -120.2655085912984 230 -116.30207239807365
-		 260 -116.30207239807365;
+	setAttr -s 3 ".ktv[0:2]"  170 -120.2655085912984 200 -116.30207239807365
+		 230 -116.30207239807365;
 createNode animCurveTA -n "controller_root_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 -47.461916666449298 230 -47.461916666449277
-		 260 -47.461916666449277;
+	setAttr -s 3 ".ktv[0:2]"  170 -47.461916666449298 200 -47.461916666449277
+		 230 -47.461916666449277;
 createNode animCurveTA -n "controller_root_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 154.30361472300197 230 65.792370162705694
-		 260 65.792370162705694;
+	setAttr -s 3 ".ktv[0:2]"  170 154.30361472300197 200 65.792370162705694
+		 230 65.792370162705694;
 createNode animCurveTA -n "controller_root_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 0 230 -7.7566086917236373e-15 260 -7.7566086917236373e-15;
+	setAttr -s 3 ".ktv[0:2]"  170 0 200 0 230 0;
 createNode animCurveTL -n "undies_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  200 -39.277177597611299 230 -38.743761579205298
-		 260 -38.102255045097777 270 -38.076000902142624 280 -38.027874375846515 290 -38.052680637350193
-		 300 -38.052680637350193 305 -39.601713204977791 310 -39.474865415883407 315 -39.45494935688221;
+	setAttr -s 10 ".ktv[0:9]"  170 -39.277177597611299 200 -38.743761579205298
+		 230 -38.102255045097777 240 -38.076000902142624 250 -38.027874375846515 260 -38.052680637350193
+		 270 -38.052680637350193 275 -39.601713204977791 280 -39.474865415883407 285 -39.45494935688221;
 	setAttr -s 10 ".kit[3:9]"  1 1 18 1 18 18 18;
 	setAttr -s 10 ".kot[3:9]"  1 1 18 1 18 18 18;
 	setAttr -s 10 ".kix[3:9]"  1 1 1 0.97597289085388184 1 0.94134014844894409 
@@ -19442,27 +19480,27 @@ createNode animCurveTL -n "undies_translateX";
 createNode animCurveTL -n "undies_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  200 7.6105268239527781 230 2.9820841556313535
-		 260 6.0280086616496389 270 6.2829297776320381 280 5.7883684735874272 290 5.9100010617351852
-		 300 5.9100010617351852 305 9.1148186398941622 310 9.114818639894164 315 9.1148186398941622;
+	setAttr -s 10 ".ktv[0:9]"  170 7.6105268239527781 200 2.9820841556313535
+		 230 6.0280086616496389 240 6.2829297776320381 250 5.7883684735874272 260 5.9100010617351852
+		 270 5.9100010617351852 275 9.1148186398941622 280 9.114818639894164 285 9.1148186398941622;
 	setAttr -s 10 ".kit[0:9]"  1 18 18 1 1 18 1 18 
 		18 18;
 	setAttr -s 10 ".kot[0:9]"  1 18 18 1 1 18 1 18 
 		18 18;
-	setAttr -s 10 ".kix[0:9]"  0.12294238060712814 1 0.39955985546112061 
+	setAttr -s 10 ".kix[0:9]"  0.12294238060712814 1 0.39956033229827881 
 		1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[0:9]"  -0.99241387844085693 0 0.91670709848403931 
+	setAttr -s 10 ".kiy[0:9]"  -0.99241387844085693 0 0.91670686006546021 
 		0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[0:9]"  0.12294235080480576 1 0.39955985546112061 
+	setAttr -s 10 ".kox[0:9]"  0.12294235080480576 1 0.39956033229827881 
 		1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[0:9]"  -0.99241381883621216 0 0.91670709848403931 
+	setAttr -s 10 ".koy[0:9]"  -0.99241381883621216 0 0.91670691967010498 
 		0 0 0 0 0 0 0;
 createNode animCurveTL -n "undies_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  200 -126.30026562811538 230 -115.01805132475477
-		 260 -114.85139815630373 270 -114.30394279785629 280 -114.30394279785629 290 -114.30394279785629
-		 300 -114.30394279785629 305 -114.81925426229608 310 -114.87878665275782 315 -114.84520139372748;
+	setAttr -s 10 ".ktv[0:9]"  170 -126.30026562811538 200 -115.01805132475477
+		 230 -114.85139815630373 240 -114.30394279785629 250 -114.30394279785629 260 -114.30394279785629
+		 270 -114.30394279785629 275 -114.81925426229608 280 -114.87878665275782 285 -114.84520139372748;
 	setAttr -s 10 ".kit[3:9]"  1 1 18 1 18 18 18;
 	setAttr -s 10 ".kot[3:9]"  1 1 18 1 18 18 18;
 	setAttr -s 10 ".kix[3:9]"  1 1 1 1 0.68226426839828491 1 1;
@@ -19472,8 +19510,8 @@ createNode animCurveTL -n "undies_translateZ";
 createNode animCurveTU -n "undies_visibility";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  200 1 230 1 260 1 270 1 280 1 290 1 300 1
-		 305 1 310 1 315 1;
+	setAttr -s 10 ".ktv[0:9]"  170 1 200 1 230 1 240 1 250 1 260 1 270 1
+		 275 1 280 1 285 1;
 	setAttr -s 10 ".kit[0:9]"  9 9 9 1 1 9 1 9 
 		9 9;
 	setAttr -s 10 ".kix[3:9]"  1 1 1 1 1 1 1;
@@ -19481,9 +19519,9 @@ createNode animCurveTU -n "undies_visibility";
 createNode animCurveTA -n "undies_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  200 72.110495893019888 230 -21.387917872910432
-		 260 -21.221116533362643 270 -21.221116533362643 280 -21.221116533362643 290 -21.221116533362643
-		 300 -21.221116533362643 305 19.193456393605459 310 19.193456393605459 315 19.193456393605459;
+	setAttr -s 10 ".ktv[0:9]"  170 72.110495893019888 200 -21.387917872910432
+		 230 -21.221116533362643 240 -21.221116533362643 250 -21.221116533362643 260 -21.221116533362643
+		 270 -21.221116533362643 275 19.193456393605459 280 19.193456393605459 285 19.193456393605459;
 	setAttr -s 10 ".kit[3:9]"  1 1 18 1 18 18 18;
 	setAttr -s 10 ".kot[3:9]"  1 1 18 1 18 18 18;
 	setAttr -s 10 ".kix[3:9]"  1 1 1 1 1 1 1;
@@ -19493,9 +19531,9 @@ createNode animCurveTA -n "undies_rotateX";
 createNode animCurveTA -n "undies_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  200 -20.698002481453155 230 -30.02785726872127
-		 260 -15.478501926485546 270 -15.478501926485546 280 -15.478501926485546 290 -15.478501926485546
-		 300 -15.478501926485546 305 -18.662436327173467 310 -18.662436327173467 315 -18.662436327173467;
+	setAttr -s 10 ".ktv[0:9]"  170 -20.698002481453155 200 -30.02785726872127
+		 230 -15.478501926485546 240 -15.478501926485546 250 -15.478501926485546 260 -15.478501926485546
+		 270 -15.478501926485546 275 -18.662436327173467 280 -18.662436327173467 285 -18.662436327173467;
 	setAttr -s 10 ".kit[0:9]"  1 18 18 1 1 18 1 18 
 		18 18;
 	setAttr -s 10 ".kot[0:9]"  1 18 18 1 1 18 1 18 
@@ -19507,9 +19545,9 @@ createNode animCurveTA -n "undies_rotateY";
 createNode animCurveTA -n "undies_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  200 -175.46464548145318 230 -285.23191172269151
-		 260 -283.713602817565 270 -283.713602817565 280 -283.713602817565 290 -283.713602817565
-		 300 -283.713602817565 305 -378.26837882009249 310 -378.26837882009249 315 -378.26837882009249;
+	setAttr -s 10 ".ktv[0:9]"  170 -175.46464548145318 200 -285.23191172269151
+		 230 -283.713602817565 240 -283.713602817565 250 -283.713602817565 260 -283.713602817565
+		 270 -283.713602817565 275 -378.26837882009249 280 -378.26837882009249 285 -378.26837882009249;
 	setAttr -s 10 ".kit[3:9]"  1 1 18 1 18 18 18;
 	setAttr -s 10 ".kot[3:9]"  1 1 18 1 18 18 18;
 	setAttr -s 10 ".kix[3:9]"  1 1 1 1 1 1 1;
@@ -19519,9 +19557,9 @@ createNode animCurveTA -n "undies_rotateZ";
 createNode animCurveTU -n "undies_scaleX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  200 0.32224291508156777 230 0.32224291508156777
-		 260 0.69633475271179324 270 0.78719735898531085 280 0.68002835233253511 290 0.84780228981960992
-		 300 0.91984918175951202 305 0.19409440080961099 310 0.19372333064492683 315 0.20063018378286684;
+	setAttr -s 10 ".ktv[0:9]"  170 0.32224291508156777 200 0.32224291508156777
+		 230 0.69633475271179324 240 0.78719735898531085 250 0.68002835233253511 260 0.84780228981960992
+		 270 0.91984918175951202 275 0.19409440080961099 280 0.19372333064492683 285 0.20063018378286684;
 	setAttr -s 10 ".kit[3:9]"  1 1 18 1 18 18 18;
 	setAttr -s 10 ".kot[3:9]"  1 1 18 1 18 18 18;
 	setAttr -s 10 ".kix[3:9]"  0.99457353353500366 0.99457353353500366 
@@ -19535,9 +19573,9 @@ createNode animCurveTU -n "undies_scaleX";
 createNode animCurveTU -n "undies_scaleY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  200 0.32224291508156777 230 0.32224291508156777
-		 260 0.3794429449486893 270 0.3794429449486893 280 0.3794429449486893 290 0.3794429449486893
-		 300 0.3794429449486893 305 0.3794429449486893 310 0.3794429449486893 315 0.3794429449486893;
+	setAttr -s 10 ".ktv[0:9]"  170 0.32224291508156777 200 0.32224291508156777
+		 230 0.3794429449486893 240 0.3794429449486893 250 0.3794429449486893 260 0.3794429449486893
+		 270 0.3794429449486893 275 0.3794429449486893 280 0.3794429449486893 285 0.3794429449486893;
 	setAttr -s 10 ".kit[3:9]"  1 1 18 1 18 18 18;
 	setAttr -s 10 ".kot[3:9]"  1 1 18 1 18 18 18;
 	setAttr -s 10 ".kix[3:9]"  1 1 1 1 1 1 1;
@@ -19547,9 +19585,9 @@ createNode animCurveTU -n "undies_scaleY";
 createNode animCurveTU -n "undies_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  200 0.32224291508156777 230 0.58505011068475421
-		 260 0.58505011068475421 270 0.58505011068475421 280 0.58505011068475421 290 0.58505011068475421
-		 300 0.58505011068475421 305 0.58505011068475421 310 0.58505011068475421 315 0.58505011068475421;
+	setAttr -s 10 ".ktv[0:9]"  170 0.32224291508156777 200 0.58505011068475421
+		 230 0.58505011068475421 240 0.58505011068475421 250 0.58505011068475421 260 0.58505011068475421
+		 270 0.58505011068475421 275 0.58505011068475421 280 0.58505011068475421 285 0.58505011068475421;
 	setAttr -s 10 ".kit[3:9]"  1 1 18 1 18 18 18;
 	setAttr -s 10 ".kot[3:9]"  1 1 18 1 18 18 18;
 	setAttr -s 10 ".kix[3:9]"  1 1 1 1 1 1 1;
@@ -19559,23 +19597,23 @@ createNode animCurveTU -n "undies_scaleZ";
 createNode animCurveTL -n "controller_COG_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 -1.0490013416955399 230 -1.0490013416955399
-		 260 -1.0490013416955399;
+	setAttr -s 3 ".ktv[0:2]"  170 -1.0490013416955399 200 -1.0490013416955399
+		 230 -1.0490013416955399;
 createNode animCurveTL -n "controller_COG_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 0.084618508676646248 230 0.084618508676646248
-		 260 0.084618508676646248;
+	setAttr -s 3 ".ktv[0:2]"  170 0.084618508676646248 200 0.084618508676646248
+		 230 0.084618508676646248;
 createNode animCurveTL -n "controller_COG_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 2.4936320363571811 230 2.4936320363571811
-		 260 2.4936320363571811;
+	setAttr -s 3 ".ktv[0:2]"  170 2.4936320363571811 200 2.4936320363571811
+		 230 2.4936320363571811;
 createNode animCurveTL -n "controller_head_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  200 0.56676023990662405 230 -0.83194678939946387
-		 260 -0.83194678939946387 303 -0.83194678939946387 308 -0.83194678939946387 315 -0.83194678939946387;
+	setAttr -s 6 ".ktv[0:5]"  170 0.56676023990662405 200 -0.83194678939946387
+		 230 -0.83194678939946387 273 -0.83194678939946387 278 -0.83194678939946387 285 -1.456367604550671;
 	setAttr -s 6 ".kit[3:5]"  1 18 18;
 	setAttr -s 6 ".kot[3:5]"  1 18 18;
 	setAttr -s 6 ".kix[3:5]"  1 1 1;
@@ -19585,8 +19623,8 @@ createNode animCurveTL -n "controller_head_translateX";
 createNode animCurveTL -n "controller_head_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  200 -1.1924446247583498 230 -3.9085050688500607
-		 260 -3.9085050688500607 303 -3.9085050688500607 308 -3.9085050688500607 315 -3.9085050688500607;
+	setAttr -s 6 ".ktv[0:5]"  170 -1.1924446247583498 200 -3.9085050688500607
+		 230 -3.9085050688500607 273 -3.9085050688500607 278 -3.9085050688500607 285 -2.6769754510223547;
 	setAttr -s 6 ".kit[3:5]"  1 18 18;
 	setAttr -s 6 ".kot[3:5]"  1 18 18;
 	setAttr -s 6 ".kix[3:5]"  1 1 1;
@@ -19596,8 +19634,8 @@ createNode animCurveTL -n "controller_head_translateY";
 createNode animCurveTL -n "controller_head_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  200 1.5877781976235323 230 1.7301821615026243
-		 260 1.7301821615026243 303 1.7301821615026243 308 1.7301821615026243 315 1.7301821615026243;
+	setAttr -s 6 ".ktv[0:5]"  170 1.5877781976235323 200 1.7301821615026243
+		 230 1.7301821615026243 273 1.7301821615026243 278 1.7301821615026243 285 2.5683837105831966;
 	setAttr -s 6 ".kit[3:5]"  1 18 18;
 	setAttr -s 6 ".kot[3:5]"  1 18 18;
 	setAttr -s 6 ".kix[3:5]"  1 1 1;
@@ -19643,75 +19681,75 @@ createNode animCurveTL -n "nurbsCircle2_translateZ";
 createNode animCurveTL -n "controller_hip_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 0 230 0 260 0;
+	setAttr -s 3 ".ktv[0:2]"  170 0 200 0 230 0;
 createNode animCurveTL -n "controller_hip_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 0 230 0 260 0;
+	setAttr -s 3 ".ktv[0:2]"  170 0 200 0 230 0;
 createNode animCurveTL -n "controller_hip_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 0 230 0 260 0;
+	setAttr -s 3 ".ktv[0:2]"  170 0 200 0 230 0;
 createNode animCurveTL -n "controller_shoulder_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 0 230 -1.2922081018947824 260 -1.4770827218095586;
+	setAttr -s 3 ".ktv[0:2]"  170 0 200 -1.2922081018947824 230 -1.4770827218095586;
 createNode animCurveTL -n "controller_shoulder_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 0 230 -2.0404833494458705 260 -1.831313172055836;
+	setAttr -s 3 ".ktv[0:2]"  170 0 200 -2.0404833494458705 230 -1.831313172055836;
 createNode animCurveTL -n "controller_shoulder_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 0 230 -0.88585812666124175 260 1.2877710761080665;
+	setAttr -s 3 ".ktv[0:2]"  170 0 200 -0.88585812666124175 230 1.2877710761080665;
 createNode animCurveTL -n "controller_spine1_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 0 230 0 260 0;
+	setAttr -s 3 ".ktv[0:2]"  170 0 200 0 230 0;
 createNode animCurveTL -n "controller_spine1_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 0 230 0 260 0;
+	setAttr -s 3 ".ktv[0:2]"  170 0 200 0 230 0;
 createNode animCurveTL -n "controller_spine1_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 0 230 0 260 0;
+	setAttr -s 3 ".ktv[0:2]"  170 0 200 0 230 0;
 createNode animCurveTL -n "controller_spine2_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 0 230 0 260 0;
+	setAttr -s 3 ".ktv[0:2]"  170 0 200 0 230 0;
 createNode animCurveTL -n "controller_spine2_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 0 230 0 260 0;
+	setAttr -s 3 ".ktv[0:2]"  170 0 200 0 230 0;
 createNode animCurveTL -n "controller_spine2_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 0 230 0 260 0;
+	setAttr -s 3 ".ktv[0:2]"  170 0 200 0 230 0;
 createNode animCurveTL -n "controller_spine3_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 0 230 0 260 0;
+	setAttr -s 3 ".ktv[0:2]"  170 0 200 0 230 0;
 createNode animCurveTL -n "controller_spine3_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 0 230 0 260 0;
+	setAttr -s 3 ".ktv[0:2]"  170 0 200 0 230 0;
 createNode animCurveTL -n "controller_spine3_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 0 230 0 260 0;
+	setAttr -s 3 ".ktv[0:2]"  170 0 200 0 230 0;
 createNode animCurveTL -n "controller_tailbase_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 0 230 0 260 0;
+	setAttr -s 3 ".ktv[0:2]"  170 0 200 0 230 0;
 createNode animCurveTL -n "controller_tailbase_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 0 230 0 260 0;
+	setAttr -s 3 ".ktv[0:2]"  170 0 200 0 230 0;
 createNode animCurveTL -n "controller_tailbase_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 0 230 0 260 0;
+	setAttr -s 3 ".ktv[0:2]"  170 0 200 0 230 0;
 createNode animCurveTL -n "controller_tail2_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
@@ -19766,21 +19804,21 @@ createNode animCurveTL -n "controller_tailtip_translateZ";
 createNode animCurveTL -n "controller_leftArm_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  200 -1.2384004448746948 230 -2.2188438942986468
-		 260 -2.0646997186097003 270 -1.5905024249803146 280 -1.5905024249803308 290 -2.9498814944866094
-		 300 -2.9498814944866414 305 -2.9498814944866369;
+	setAttr -s 8 ".ktv[0:7]"  170 -1.2384004448746948 200 -2.2188438942986468
+		 230 -2.0646997186097003 240 -1.5905024249803146 250 -1.5905024249803308 260 -2.9498814944866094
+		 270 -2.9498814944866414 275 -2.9498814944866369;
 createNode animCurveTL -n "controller_leftArm_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  200 -0.25154624919219953 230 0.43419449760508588
-		 260 5.2490997825057795 270 5.4381042018352304 280 3.3568093312577489 290 5.6993163916851408
-		 300 6.4589006866706971 305 4.5852969130023373;
+	setAttr -s 8 ".ktv[0:7]"  170 -0.25154624919219953 200 0.43419449760508588
+		 230 5.2490997825057795 240 5.4381042018352304 250 3.3568093312577489 260 5.6993163916851408
+		 270 6.4589006866706971 275 4.5852969130023373;
 createNode animCurveTL -n "controller_leftArm_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  200 1.177504878057243 230 -0.26382039597682061
-		 260 7.9491265668169699 270 9.7152263249661885 280 7.4469202962552625 290 9.4758208791660241
-		 300 10.303656309881307 305 8.261703103102727;
+	setAttr -s 8 ".ktv[0:7]"  170 1.177504878057243 200 -0.26382039597682061
+		 230 7.9491265668169699 240 9.7152263249661885 250 7.4469202962552625 260 9.4758208791660241
+		 270 10.303656309881307 275 8.261703103102727;
 createNode animCurveTL -n "controller_leftWrist_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
@@ -19916,21 +19954,21 @@ createNode animCurveTL -n "nurbsCircle6_translateZ";
 createNode animCurveTL -n "controller_rightArm_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  200 0.6054403910882763 230 0.55133167390473636
-		 260 0.62874144811217614 270 -0.16628779451039882 280 -0.0025488454140803018 290 -0.33557187205312677
-		 300 -0.40820779749277714 305 0.19074667027272604;
+	setAttr -s 8 ".ktv[0:7]"  170 0.6054403910882763 200 0.55133167390473636
+		 230 0.62874144811217614 240 -0.16628779451039882 250 -0.0025488454140803018 260 -0.33557187205312677
+		 270 -0.40820779749277714 275 0.19074667027272604;
 createNode animCurveTL -n "controller_rightArm_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  200 -0.76226950613108557 230 0.58070357719605048
-		 260 5.1720327958287946 270 5.7231650516367267 280 4.6915716224381079 290 5.8062258051509881
-		 300 5.9660449277454122 305 3.9066129381175041;
+	setAttr -s 8 ".ktv[0:7]"  170 -0.76226950613108557 200 0.58070357719605048
+		 230 5.1720327958287946 240 5.7231650516367267 250 4.6915716224381079 260 5.8062258051509881
+		 270 5.9660449277454122 275 3.9066129381175041;
 createNode animCurveTL -n "controller_rightArm_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  200 2.1407198848002138 230 -0.50437230201768568
-		 260 7.8982541928841838 270 9.3407198975535461 280 7.9935394387370557 290 10.04208916604942
-		 300 10.642580596757067 305 9.3038915104708959;
+	setAttr -s 8 ".ktv[0:7]"  170 2.1407198848002138 200 -0.50437230201768568
+		 230 7.8982541928841838 240 9.3407198975535461 250 7.9935394387370557 260 10.04208916604942
+		 270 10.642580596757067 275 9.3038915104708959;
 createNode animCurveTL -n "controller_rightWrist_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
@@ -20070,36 +20108,36 @@ createNode animCurveTL -n "nurbsCircle9_translateZ";
 createNode animCurveTL -n "controller_rightLeg_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 0.5016008609974324 230 -1.2781043793071019
-		 260 -1.2781043793071019;
+	setAttr -s 3 ".ktv[0:2]"  170 0.5016008609974324 200 -1.2781043793071019
+		 230 -1.2781043793071019;
 createNode animCurveTL -n "controller_rightLeg_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 -0.015618167063917547 230 -2.4733364978096635
-		 260 -2.4733364978096635;
+	setAttr -s 3 ".ktv[0:2]"  170 -0.015618167063917547 200 -2.4733364978096635
+		 230 -2.4733364978096635;
 createNode animCurveTL -n "controller_rightLeg_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 -1.1728676063699348 230 1.0822234132541988
-		 260 1.0822234132541988;
+	setAttr -s 3 ".ktv[0:2]"  170 -1.1728676063699348 200 1.0822234132541988
+		 230 1.0822234132541988;
 createNode animCurveTL -n "controller_rightLeg1_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  200 0.44911781610655238 230 -0.89420027014035186
-		 260 -0.89420027014035186 270 -0.89420027014037284 280 -0.89420027014040993 290 -0.89420027014042613
-		 305 -1.2873035276635116;
+	setAttr -s 7 ".ktv[0:6]"  170 0.44911781610655238 200 -0.89420027014035186
+		 230 -0.89420027014035186 240 -0.89420027014037284 250 -0.89420027014040993 260 -0.89420027014042613
+		 275 -1.2873035276635116;
 createNode animCurveTL -n "controller_rightLeg1_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  200 -0.48042627090775297 230 -2.2397853039880125
-		 260 -2.2397853039880125 270 -3.0024802791298435 280 -2.4943709689516491 290 -3.5567019580256303
-		 305 -3.8387177097381717;
+	setAttr -s 7 ".ktv[0:6]"  170 -0.48042627090775297 200 -2.2397853039880125
+		 230 -2.2397853039880125 240 -3.0024802791298435 250 -2.4943709689516491 260 -3.5567019580256303
+		 275 -3.8387177097381717;
 createNode animCurveTL -n "controller_rightLeg1_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  200 -1.4164891196295539 230 4.554663914693192
-		 260 4.554663914693192 270 3.7234382990255197 280 4.2772028942371847 290 3.1194179877984745
-		 305 1.5187495150291128;
+	setAttr -s 7 ".ktv[0:6]"  170 -1.4164891196295539 200 4.554663914693192
+		 230 4.554663914693192 240 3.7234382990255197 250 4.2772028942371847 260 3.1194179877984745
+		 275 1.5187495150291128;
 createNode animCurveTL -n "nurbsCircle8_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
@@ -20127,178 +20165,174 @@ createNode animCurveTL -n "nurbsCircle7_translateZ";
 createNode animCurveTU -n "controller_COG_visibility";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 1 230 1 260 1;
+	setAttr -s 3 ".ktv[0:2]"  170 1 200 1 230 1;
 	setAttr -s 3 ".kot[0:2]"  5 5 5;
 createNode animCurveTA -n "controller_COG_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 -12.048966828513525 230 -37.095210837354102
-		 260 -37.095210837354102;
+	setAttr -s 3 ".ktv[0:2]"  170 -12.048966828513525 200 -37.095210837354102
+		 230 -37.095210837354102;
 createNode animCurveTA -n "controller_COG_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 2.8172279158173557 230 2.8172279158173703
-		 260 2.8172279158173703;
+	setAttr -s 3 ".ktv[0:2]"  170 2.8172279158173557 200 2.8172279158173703
+		 230 2.8172279158173703;
 createNode animCurveTA -n "controller_COG_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 -4.0885828321562938 230 -4.0885828321563045
-		 260 -4.0885828321563045;
+	setAttr -s 3 ".ktv[0:2]"  170 -4.0885828321562938 200 -4.0885828321563045
+		 230 -4.0885828321563045;
 createNode animCurveTU -n "controller_COG_scaleX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 1 230 1 260 1;
+	setAttr -s 3 ".ktv[0:2]"  170 1 200 1 230 1;
 createNode animCurveTU -n "controller_COG_scaleY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 1 230 1 260 1;
+	setAttr -s 3 ".ktv[0:2]"  170 1 200 1 230 1;
 createNode animCurveTU -n "controller_COG_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 1 230 1 260 1;
+	setAttr -s 3 ".ktv[0:2]"  170 1 200 1 230 1;
 createNode animCurveTU -n "controller_spine3_visibility";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 1 230 1 260 1;
+	setAttr -s 3 ".ktv[0:2]"  170 1 200 1 230 1;
 	setAttr -s 3 ".kot[0:2]"  5 5 5;
 createNode animCurveTA -n "controller_spine3_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 0 230 0 260 0;
+	setAttr -s 3 ".ktv[0:2]"  170 0 200 0 230 0;
 createNode animCurveTA -n "controller_spine3_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 0 230 0 260 0;
+	setAttr -s 3 ".ktv[0:2]"  170 0 200 0 230 0;
 createNode animCurveTA -n "controller_spine3_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 0 230 0 260 0;
+	setAttr -s 3 ".ktv[0:2]"  170 0 200 0 230 0;
 createNode animCurveTU -n "controller_spine3_scaleX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 1 230 1 260 1;
+	setAttr -s 3 ".ktv[0:2]"  170 1 200 1 230 1;
 createNode animCurveTU -n "controller_spine3_scaleY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 1 230 1 260 1;
+	setAttr -s 3 ".ktv[0:2]"  170 1 200 1 230 1;
 createNode animCurveTU -n "controller_spine3_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 1 230 1 260 1;
+	setAttr -s 3 ".ktv[0:2]"  170 1 200 1 230 1;
 createNode animCurveTU -n "controller_spine2_visibility";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 1 230 1 260 1;
+	setAttr -s 3 ".ktv[0:2]"  170 1 200 1 230 1;
 	setAttr -s 3 ".kot[0:2]"  5 5 5;
 createNode animCurveTA -n "controller_spine2_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 0 230 0 260 0;
+	setAttr -s 3 ".ktv[0:2]"  170 0 200 0 230 0;
 createNode animCurveTA -n "controller_spine2_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 0 230 0 260 0;
+	setAttr -s 3 ".ktv[0:2]"  170 0 200 0 230 0;
 createNode animCurveTA -n "controller_spine2_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 0 230 0 260 0;
+	setAttr -s 3 ".ktv[0:2]"  170 0 200 0 230 0;
 createNode animCurveTU -n "controller_spine2_scaleX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 1 230 1 260 1;
+	setAttr -s 3 ".ktv[0:2]"  170 1 200 1 230 1;
 createNode animCurveTU -n "controller_spine2_scaleY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 1 230 1 260 1;
+	setAttr -s 3 ".ktv[0:2]"  170 1 200 1 230 1;
 createNode animCurveTU -n "controller_spine2_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 1 230 1 260 1;
+	setAttr -s 3 ".ktv[0:2]"  170 1 200 1 230 1;
 createNode animCurveTU -n "controller_spine1_visibility";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 1 230 1 260 1;
+	setAttr -s 3 ".ktv[0:2]"  170 1 200 1 230 1;
 	setAttr -s 3 ".kot[0:2]"  5 5 5;
 createNode animCurveTA -n "controller_spine1_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 0 230 0 260 0;
+	setAttr -s 3 ".ktv[0:2]"  170 0 200 0 230 0;
 createNode animCurveTA -n "controller_spine1_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 0 230 0 260 0;
+	setAttr -s 3 ".ktv[0:2]"  170 0 200 0 230 0;
 createNode animCurveTA -n "controller_spine1_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 0 230 0 260 0;
+	setAttr -s 3 ".ktv[0:2]"  170 0 200 0 230 0;
 createNode animCurveTU -n "controller_spine1_scaleX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 1 230 1 260 1;
+	setAttr -s 3 ".ktv[0:2]"  170 1 200 1 230 1;
 createNode animCurveTU -n "controller_spine1_scaleY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 1 230 1 260 1;
+	setAttr -s 3 ".ktv[0:2]"  170 1 200 1 230 1;
 createNode animCurveTU -n "controller_spine1_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 1 230 1 260 1;
+	setAttr -s 3 ".ktv[0:2]"  170 1 200 1 230 1;
 createNode animCurveTU -n "controller_shoulder_visibility";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 1 230 1 260 1;
+	setAttr -s 3 ".ktv[0:2]"  170 1 200 1 230 1;
 	setAttr -s 3 ".kot[0:2]"  5 5 5;
 createNode animCurveTA -n "controller_shoulder_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 0 230 19.258401470093652 260 19.258401470093652;
+	setAttr -s 3 ".ktv[0:2]"  170 0 200 19.258401470093652 230 19.258401470093652;
 createNode animCurveTA -n "controller_shoulder_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 0 230 12.167209724711503 260 12.167209724711503;
+	setAttr -s 3 ".ktv[0:2]"  170 0 200 12.167209724711503 230 12.167209724711503;
 createNode animCurveTA -n "controller_shoulder_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 0 230 0.46042383089121169 260 0.46042383089121169;
+	setAttr -s 3 ".ktv[0:2]"  170 0 200 0.46042383089121169 230 0.46042383089121169;
 createNode animCurveTU -n "controller_shoulder_scaleX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 1 230 1 260 1;
+	setAttr -s 3 ".ktv[0:2]"  170 1 200 1 230 1;
 createNode animCurveTU -n "controller_shoulder_scaleY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 1 230 1 260 1;
+	setAttr -s 3 ".ktv[0:2]"  170 1 200 1 230 1;
 createNode animCurveTU -n "controller_shoulder_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 1 230 1 260 1;
+	setAttr -s 3 ".ktv[0:2]"  170 1 200 1 230 1;
 createNode animCurveTU -n "controller_head_visibility";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  200 1 230 1 260 1 303 1 308 1 315 1;
+	setAttr -s 6 ".ktv[0:5]"  170 1 200 1 230 1 273 1 278 1 285 1;
 	setAttr -s 6 ".kit[0:5]"  9 9 9 1 9 9;
 	setAttr -s 6 ".kix[3:5]"  1 1 1;
 	setAttr -s 6 ".kiy[3:5]"  0 0 0;
 createNode animCurveTA -n "controller_head_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  200 70.197756518612834 230 102.93417437291417
-		 260 59.135506951971415 303 59.135506951971415 308 38.569933093135191 315 22.282582439402237;
+	setAttr -s 6 ".ktv[0:5]"  170 70.197756518612834 200 102.93417437291417
+		 230 59.135506951971415 273 59.135506951971415 278 38.569933093135191 285 78.130367280832928;
 	setAttr -s 6 ".kit[3:5]"  1 18 18;
 	setAttr -s 6 ".kot[3:5]"  1 18 18;
-	setAttr -s 6 ".kix[3:5]"  0.8952329158782959 0.52809560298919678 
-		1;
-	setAttr -s 6 ".kiy[3:5]"  -0.44559836387634277 -0.84918493032455444 
-		0;
-	setAttr -s 6 ".kox[3:5]"  0.89523297548294067 0.52809560298919678 
-		1;
-	setAttr -s 6 ".koy[3:5]"  -0.44559836387634277 -0.84918493032455444 
-		0;
+	setAttr -s 6 ".kix[3:5]"  0.8952329158782959 1 1;
+	setAttr -s 6 ".kiy[3:5]"  -0.44559836387634277 0 0;
+	setAttr -s 6 ".kox[3:5]"  0.89523297548294067 1 1;
+	setAttr -s 6 ".koy[3:5]"  -0.44559836387634277 0 0;
 createNode animCurveTA -n "controller_head_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  200 4.2265174435580946 230 4.2265174435580963
-		 260 4.2265174435581025 303 4.2265174435581025 308 4.2265174435581159 315 4.226517443558123;
+	setAttr -s 6 ".ktv[0:5]"  170 4.2265174435580946 200 4.2265174435580963
+		 230 4.2265174435581025 273 4.2265174435581025 278 4.2265174435581159 285 4.2265174435581265;
 	setAttr -s 6 ".kit[3:5]"  1 18 18;
 	setAttr -s 6 ".kot[3:5]"  1 18 18;
 	setAttr -s 6 ".kix[3:5]"  1 1 1;
@@ -20308,8 +20342,8 @@ createNode animCurveTA -n "controller_head_rotateY";
 createNode animCurveTA -n "controller_head_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  200 8.6563102301001837 230 8.6563102301001766
-		 260 8.6563102301001589 303 8.6563102301001589 308 8.65631023010015 315 8.65631023010015;
+	setAttr -s 6 ".ktv[0:5]"  170 8.6563102301001837 200 8.6563102301001766
+		 230 8.6563102301001589 273 8.6563102301001589 278 8.65631023010015 285 8.65631023010015;
 	setAttr -s 6 ".kit[3:5]"  1 18 18;
 	setAttr -s 6 ".kot[3:5]"  1 18 18;
 	setAttr -s 6 ".kix[3:5]"  1 1 1;
@@ -20319,7 +20353,7 @@ createNode animCurveTA -n "controller_head_rotateZ";
 createNode animCurveTU -n "controller_head_scaleX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  200 1 230 1 260 1 303 1 308 1 315 1;
+	setAttr -s 6 ".ktv[0:5]"  170 1 200 1 230 1 273 1 278 1 285 1;
 	setAttr -s 6 ".kit[3:5]"  1 18 18;
 	setAttr -s 6 ".kot[3:5]"  1 18 18;
 	setAttr -s 6 ".kix[3:5]"  1 1 1;
@@ -20329,7 +20363,7 @@ createNode animCurveTU -n "controller_head_scaleX";
 createNode animCurveTU -n "controller_head_scaleY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  200 1 230 1 260 1 303 1 308 1 315 1;
+	setAttr -s 6 ".ktv[0:5]"  170 1 200 1 230 1 273 1 278 1 285 1;
 	setAttr -s 6 ".kit[3:5]"  1 18 18;
 	setAttr -s 6 ".kot[3:5]"  1 18 18;
 	setAttr -s 6 ".kix[3:5]"  1 1 1;
@@ -20339,7 +20373,7 @@ createNode animCurveTU -n "controller_head_scaleY";
 createNode animCurveTU -n "controller_head_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  200 1 230 1 260 1 303 1 308 1 315 1;
+	setAttr -s 6 ".ktv[0:5]"  170 1 200 1 230 1 273 1 278 1 285 1;
 	setAttr -s 6 ".kit[3:5]"  1 18 18;
 	setAttr -s 6 ".kot[3:5]"  1 18 18;
 	setAttr -s 6 ".kix[3:5]"  1 1 1;
@@ -20436,61 +20470,61 @@ createNode animCurveTU -n "nurbsCircle1_scaleZ";
 createNode animCurveTU -n "controller_hip_visibility";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 1 230 1 260 1;
+	setAttr -s 3 ".ktv[0:2]"  170 1 200 1 230 1;
 	setAttr -s 3 ".kot[0:2]"  5 5 5;
 createNode animCurveTA -n "controller_hip_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 0 230 0 260 0;
+	setAttr -s 3 ".ktv[0:2]"  170 0 200 0 230 0;
 createNode animCurveTA -n "controller_hip_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 0 230 0 260 0;
+	setAttr -s 3 ".ktv[0:2]"  170 0 200 0 230 0;
 createNode animCurveTA -n "controller_hip_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 0 230 0 260 0;
+	setAttr -s 3 ".ktv[0:2]"  170 0 200 0 230 0;
 createNode animCurveTU -n "controller_hip_scaleX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 1 230 1 260 1;
+	setAttr -s 3 ".ktv[0:2]"  170 1 200 1 230 1;
 createNode animCurveTU -n "controller_hip_scaleY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 1 230 1 260 1;
+	setAttr -s 3 ".ktv[0:2]"  170 1 200 1 230 1;
 createNode animCurveTU -n "controller_hip_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 1 230 1 260 1;
+	setAttr -s 3 ".ktv[0:2]"  170 1 200 1 230 1;
 createNode animCurveTU -n "controller_tailbase_visibility";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 1 230 1 260 1;
+	setAttr -s 3 ".ktv[0:2]"  170 1 200 1 230 1;
 	setAttr -s 3 ".kot[0:2]"  5 5 5;
 createNode animCurveTA -n "controller_tailbase_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 0 230 0 260 0;
+	setAttr -s 3 ".ktv[0:2]"  170 0 200 0 230 0;
 createNode animCurveTA -n "controller_tailbase_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 0 230 0 260 0;
+	setAttr -s 3 ".ktv[0:2]"  170 0 200 0 230 0;
 createNode animCurveTA -n "controller_tailbase_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 0 230 0 260 0;
+	setAttr -s 3 ".ktv[0:2]"  170 0 200 0 230 0;
 createNode animCurveTU -n "controller_tailbase_scaleX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 1 230 1 260 1;
+	setAttr -s 3 ".ktv[0:2]"  170 1 200 1 230 1;
 createNode animCurveTU -n "controller_tailbase_scaleY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 1 230 1 260 1;
+	setAttr -s 3 ".ktv[0:2]"  170 1 200 1 230 1;
 createNode animCurveTU -n "controller_tailbase_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 1 230 1 260 1;
+	setAttr -s 3 ".ktv[0:2]"  170 1 200 1 230 1;
 createNode animCurveTU -n "controller_tail2_visibility";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
@@ -20610,33 +20644,33 @@ createNode animCurveTU -n "controller_tailtip_scaleZ";
 createNode animCurveTU -n "controller_rightLeg_visibility";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 1 230 1 260 1;
+	setAttr -s 3 ".ktv[0:2]"  170 1 200 1 230 1;
 	setAttr -s 3 ".kot[0:2]"  5 5 5;
 createNode animCurveTA -n "controller_rightLeg_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 34.026001752342836 230 34.026001752342836
-		 260 34.026001752342836;
+	setAttr -s 3 ".ktv[0:2]"  170 34.026001752342836 200 34.026001752342836
+		 230 34.026001752342836;
 createNode animCurveTA -n "controller_rightLeg_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 0 230 0 260 0;
+	setAttr -s 3 ".ktv[0:2]"  170 0 200 0 230 0;
 createNode animCurveTA -n "controller_rightLeg_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 0 230 0 260 0;
+	setAttr -s 3 ".ktv[0:2]"  170 0 200 0 230 0;
 createNode animCurveTU -n "controller_rightLeg_scaleX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 1 230 1 260 1;
+	setAttr -s 3 ".ktv[0:2]"  170 1 200 1 230 1;
 createNode animCurveTU -n "controller_rightLeg_scaleY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 1 230 1 260 1;
+	setAttr -s 3 ".ktv[0:2]"  170 1 200 1 230 1;
 createNode animCurveTU -n "controller_rightLeg_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  200 1 230 1 260 1;
+	setAttr -s 3 ".ktv[0:2]"  170 1 200 1 230 1;
 createNode animCurveTU -n "nurbsCircle7_visibility";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
@@ -20669,42 +20703,42 @@ createNode animCurveTU -n "nurbsCircle7_scaleZ";
 createNode animCurveTU -n "controller_leftArm_visibility";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  200 1 230 1 260 1 270 1 280 1 290 1 300 1
-		 305 1;
+	setAttr -s 8 ".ktv[0:7]"  170 1 200 1 230 1 240 1 250 1 260 1 270 1
+		 275 1;
 	setAttr -s 8 ".kot[0:7]"  5 5 5 5 5 5 5 5;
 createNode animCurveTA -n "controller_leftArm_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  200 0 230 58.286750915490373 260 55.517491758862654
-		 270 55.517491758862654 280 55.517491758862654 290 55.517491758862654 300 55.517491758862654
-		 305 55.517491758862654;
+	setAttr -s 8 ".ktv[0:7]"  170 0 200 58.286750915490373 230 55.517491758862654
+		 240 55.517491758862654 250 55.517491758862654 260 55.517491758862654 270 55.517491758862654
+		 275 55.517491758862654;
 createNode animCurveTA -n "controller_leftArm_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  200 0 230 56.236785017158553 260 53.149727907500122
-		 270 53.149727907500122 280 53.149727907500122 290 53.149727907500122 300 53.149727907500122
-		 305 53.149727907500122;
+	setAttr -s 8 ".ktv[0:7]"  170 0 200 56.236785017158553 230 53.149727907500122
+		 240 53.149727907500122 250 53.149727907500122 260 53.149727907500122 270 53.149727907500122
+		 275 53.149727907500122;
 createNode animCurveTA -n "controller_leftArm_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  200 0 230 -27.190134687384429 260 -34.358935699659376
-		 270 -34.358935699659376 280 -34.358935699659376 290 -34.358935699659376 300 -34.358935699659376
-		 305 -34.358935699659376;
+	setAttr -s 8 ".ktv[0:7]"  170 0 200 -27.190134687384429 230 -34.358935699659376
+		 240 -34.358935699659376 250 -34.358935699659376 260 -34.358935699659376 270 -34.358935699659376
+		 275 -34.358935699659376;
 createNode animCurveTU -n "controller_leftArm_scaleX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  200 1 230 1 260 1 270 1 280 1 290 1 300 1
-		 305 1;
+	setAttr -s 8 ".ktv[0:7]"  170 1 200 1 230 1 240 1 250 1 260 1 270 1
+		 275 1;
 createNode animCurveTU -n "controller_leftArm_scaleY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  200 1 230 1 260 1 270 1 280 1 290 1 300 1
-		 305 1;
+	setAttr -s 8 ".ktv[0:7]"  170 1 200 1 230 1 240 1 250 1 260 1 270 1
+		 275 1;
 createNode animCurveTU -n "controller_leftArm_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  200 1 230 1 260 1 270 1 280 1 290 1 300 1
-		 305 1;
+	setAttr -s 8 ".ktv[0:7]"  170 1 200 1 230 1 240 1 250 1 260 1 270 1
+		 275 1;
 createNode animCurveTU -n "controller_leftWrist_visibility";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
@@ -21027,38 +21061,38 @@ createNode animCurveTU -n "curve10_scaleZ";
 createNode animCurveTU -n "controller_rightLeg1_visibility";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  200 1 230 1 260 1 270 1 280 1 290 1 305 1;
+	setAttr -s 7 ".ktv[0:6]"  170 1 200 1 230 1 240 1 250 1 260 1 275 1;
 	setAttr -s 7 ".kot[0:6]"  5 5 5 5 5 5 5;
 createNode animCurveTA -n "controller_rightLeg1_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  200 34.558289617974452 230 34.558289617974452
-		 260 34.558289617974452 270 34.558289617974452 280 34.558289617974452 290 34.558289617974452
-		 305 34.558289617974452;
+	setAttr -s 7 ".ktv[0:6]"  170 34.558289617974452 200 34.558289617974452
+		 230 34.558289617974452 240 34.558289617974452 250 34.558289617974452 260 34.558289617974452
+		 275 34.558289617974452;
 createNode animCurveTA -n "controller_rightLeg1_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  200 -12.235089856403793 230 -12.235089856403793
-		 260 -12.235089856403793 270 -12.235089856403793 280 -12.235089856403793 290 -12.235089856403793
-		 305 -12.235089856403793;
+	setAttr -s 7 ".ktv[0:6]"  170 -12.235089856403793 200 -12.235089856403793
+		 230 -12.235089856403793 240 -12.235089856403793 250 -12.235089856403793 260 -12.235089856403793
+		 275 -12.235089856403793;
 createNode animCurveTA -n "controller_rightLeg1_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  200 7.7027897147754514 230 7.7027897147754514
-		 260 7.7027897147754514 270 7.7027897147754514 280 7.7027897147754514 290 7.7027897147754514
-		 305 7.7027897147754514;
+	setAttr -s 7 ".ktv[0:6]"  170 7.7027897147754514 200 7.7027897147754514
+		 230 7.7027897147754514 240 7.7027897147754514 250 7.7027897147754514 260 7.7027897147754514
+		 275 7.7027897147754514;
 createNode animCurveTU -n "controller_rightLeg1_scaleX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  200 1 230 1 260 1 270 1 280 1 290 1 305 1;
+	setAttr -s 7 ".ktv[0:6]"  170 1 200 1 230 1 240 1 250 1 260 1 275 1;
 createNode animCurveTU -n "controller_rightLeg1_scaleY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  200 1 230 1 260 1 270 1 280 1 290 1 305 1;
+	setAttr -s 7 ".ktv[0:6]"  170 1 200 1 230 1 240 1 250 1 260 1 275 1;
 createNode animCurveTU -n "controller_rightLeg1_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  200 1 230 1 260 1 270 1 280 1 290 1 305 1;
+	setAttr -s 7 ".ktv[0:6]"  170 1 200 1 230 1 240 1 250 1 260 1 275 1;
 createNode animCurveTU -n "nurbsCircle8_visibility";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
@@ -21091,42 +21125,42 @@ createNode animCurveTU -n "nurbsCircle8_scaleZ";
 createNode animCurveTU -n "controller_rightArm_visibility";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  200 1 230 1 260 1 270 1 280 1 290 1 300 1
-		 305 1;
+	setAttr -s 8 ".ktv[0:7]"  170 1 200 1 230 1 240 1 250 1 260 1 270 1
+		 275 1;
 	setAttr -s 8 ".kot[0:7]"  5 5 5 5 5 5 5 5;
 createNode animCurveTA -n "controller_rightArm_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  200 0 230 -23.571604089883071 260 10.891155073928179
-		 270 10.891155073928179 280 10.891155073928179 290 10.891155073928179 300 10.891155073928179
-		 305 10.891155073928179;
+	setAttr -s 8 ".ktv[0:7]"  170 0 200 -23.571604089883071 230 10.891155073928179
+		 240 10.891155073928179 250 10.891155073928179 260 10.891155073928179 270 10.891155073928179
+		 275 10.891155073928179;
 createNode animCurveTA -n "controller_rightArm_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  200 0 230 -60.972858913945331 260 -63.070430920290285
-		 270 -63.070430920290285 280 -63.070430920290285 290 -63.070430920290285 300 -63.070430920290285
-		 305 -63.070430920290285;
+	setAttr -s 8 ".ktv[0:7]"  170 0 200 -60.972858913945331 230 -63.070430920290285
+		 240 -63.070430920290285 250 -63.070430920290285 260 -63.070430920290285 270 -63.070430920290285
+		 275 -63.070430920290285;
 createNode animCurveTA -n "controller_rightArm_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  200 0 230 116.5180734651814 260 77.821697833749994
-		 270 77.821697833749994 280 77.821697833749994 290 77.821697833749994 300 77.821697833749994
-		 305 77.821697833749994;
+	setAttr -s 8 ".ktv[0:7]"  170 0 200 116.5180734651814 230 77.821697833749994
+		 240 77.821697833749994 250 77.821697833749994 260 77.821697833749994 270 77.821697833749994
+		 275 77.821697833749994;
 createNode animCurveTU -n "controller_rightArm_scaleX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  200 1 230 1 260 1 270 1 280 1 290 1 300 1
-		 305 1;
+	setAttr -s 8 ".ktv[0:7]"  170 1 200 1 230 1 240 1 250 1 260 1 270 1
+		 275 1;
 createNode animCurveTU -n "controller_rightArm_scaleY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  200 1 230 1 260 1 270 1 280 1 290 1 300 1
-		 305 1;
+	setAttr -s 8 ".ktv[0:7]"  170 1 200 1 230 1 240 1 250 1 260 1 270 1
+		 275 1;
 createNode animCurveTU -n "controller_rightArm_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  200 1 230 1 260 1 270 1 280 1 290 1 300 1
-		 305 1;
+	setAttr -s 8 ".ktv[0:7]"  170 1 200 1 230 1 240 1 250 1 260 1 270 1
+		 275 1;
 createNode animCurveTU -n "controller_rightWrist_visibility";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
@@ -21520,10 +21554,19 @@ createNode cacheFile -n "utility_room_view_livingroom_shading_latest_living_room
 createNode reference -n "sharedReferenceNode";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"sharedReferenceNode";
+createNode cacheFile -n "utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1";
+	setAttr ".cn" -type "string" "utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2";
+	setAttr ".cp" -type "string" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//cache/nCache/bodyintro_latest/";
+	setAttr ".ch[0]" -type "string" "utility_room_view:livingroom_shading_latest:living_room_latest:nClothShape2";
+	setAttr ".os" 1;
+	setAttr ".oe" 360;
+	setAttr ".ss" 1;
+	setAttr ".se" 360;
+	setAttr ".sf" 1;
 select -ne :time1;
 	setAttr ".ihi" 0;
-	setAttr ".o" 173;
-	setAttr ".unw" 173;
+	setAttr ".o" 330;
+	setAttr ".unw" 330;
 select -ne :sequenceManager1;
 	setAttr ".o" 450;
 select -ne :renderPartition;
@@ -21542,7 +21585,7 @@ select -ne :lightList1;
 select -ne :defaultTextureList1;
 	setAttr -s 180 ".tx";
 select -ne :initialShadingGroup;
-	setAttr -s 439 ".dsm";
+	setAttr -s 440 ".dsm";
 	setAttr ".ro" yes;
 	setAttr -s 92 ".gn";
 select -ne :initialParticleSE;
@@ -21554,12 +21597,14 @@ select -ne :defaultRenderGlobals;
 	setAttr ".imfkey" -type "string" "png";
 	setAttr ".an" yes;
 	setAttr ".fs" 1;
-	setAttr ".ef" 360;
+	setAttr ".ef" 330;
 	setAttr ".sef" yes;
 	setAttr ".ep" 3;
 	setAttr ".pff" yes;
 	setAttr ".peie" 2;
 select -ne :defaultResolution;
+	setAttr ".w" 1920;
+	setAttr ".h" 1080;
 	setAttr ".pa" 1;
 	setAttr ".dar" 1.7777777910232544;
 select -ne :defaultLightSet;
@@ -21579,518 +21624,518 @@ select -ne :defaultHardwareRenderGlobals;
 	setAttr ".res" -type "string" "ntsc_4d 646 485 1.333";
 select -ne :ikSystem;
 	setAttr -s 6 ".sol";
-connectAttr "controller_root_translateX.o" "utility_room_viewRN.phl[98]";
-connectAttr "controller_root_translateY.o" "utility_room_viewRN.phl[99]";
-connectAttr "controller_root_translateZ.o" "utility_room_viewRN.phl[100]";
-connectAttr "controller_root_rotateX.o" "utility_room_viewRN.phl[101]";
-connectAttr "controller_root_rotateY.o" "utility_room_viewRN.phl[102]";
-connectAttr "controller_root_rotateZ.o" "utility_room_viewRN.phl[103]";
-connectAttr "controller_root_visibility.o" "utility_room_viewRN.phl[104]";
-connectAttr "controller_root_scaleX.o" "utility_room_viewRN.phl[105]";
-connectAttr "controller_root_scaleY.o" "utility_room_viewRN.phl[106]";
-connectAttr "controller_root_scaleZ.o" "utility_room_viewRN.phl[107]";
-connectAttr "controller_COG_translateX.o" "utility_room_viewRN.phl[108]";
-connectAttr "controller_COG_translateY.o" "utility_room_viewRN.phl[109]";
-connectAttr "controller_COG_translateZ.o" "utility_room_viewRN.phl[110]";
-connectAttr "controller_COG_rotateX.o" "utility_room_viewRN.phl[111]";
-connectAttr "controller_COG_rotateY.o" "utility_room_viewRN.phl[112]";
-connectAttr "controller_COG_rotateZ.o" "utility_room_viewRN.phl[113]";
-connectAttr "controller_COG_scaleX.o" "utility_room_viewRN.phl[114]";
-connectAttr "controller_COG_scaleY.o" "utility_room_viewRN.phl[115]";
-connectAttr "controller_COG_scaleZ.o" "utility_room_viewRN.phl[116]";
-connectAttr "controller_COG_visibility.o" "utility_room_viewRN.phl[117]";
-connectAttr "controller_spine3_translateX.o" "utility_room_viewRN.phl[118]";
-connectAttr "controller_spine3_translateY.o" "utility_room_viewRN.phl[119]";
-connectAttr "controller_spine3_translateZ.o" "utility_room_viewRN.phl[120]";
-connectAttr "controller_spine3_rotateX.o" "utility_room_viewRN.phl[121]";
-connectAttr "controller_spine3_rotateY.o" "utility_room_viewRN.phl[122]";
-connectAttr "controller_spine3_rotateZ.o" "utility_room_viewRN.phl[123]";
-connectAttr "controller_spine3_scaleX.o" "utility_room_viewRN.phl[124]";
-connectAttr "controller_spine3_scaleY.o" "utility_room_viewRN.phl[125]";
-connectAttr "controller_spine3_scaleZ.o" "utility_room_viewRN.phl[126]";
-connectAttr "controller_spine3_visibility.o" "utility_room_viewRN.phl[127]";
-connectAttr "controller_spine2_translateX.o" "utility_room_viewRN.phl[128]";
-connectAttr "controller_spine2_translateY.o" "utility_room_viewRN.phl[129]";
-connectAttr "controller_spine2_translateZ.o" "utility_room_viewRN.phl[130]";
-connectAttr "controller_spine2_rotateX.o" "utility_room_viewRN.phl[131]";
-connectAttr "controller_spine2_rotateY.o" "utility_room_viewRN.phl[132]";
-connectAttr "controller_spine2_rotateZ.o" "utility_room_viewRN.phl[133]";
-connectAttr "controller_spine2_scaleX.o" "utility_room_viewRN.phl[134]";
-connectAttr "controller_spine2_scaleY.o" "utility_room_viewRN.phl[135]";
-connectAttr "controller_spine2_scaleZ.o" "utility_room_viewRN.phl[136]";
-connectAttr "controller_spine2_visibility.o" "utility_room_viewRN.phl[137]";
-connectAttr "controller_spine1_translateX.o" "utility_room_viewRN.phl[138]";
-connectAttr "controller_spine1_translateY.o" "utility_room_viewRN.phl[139]";
-connectAttr "controller_spine1_translateZ.o" "utility_room_viewRN.phl[140]";
-connectAttr "controller_spine1_rotateX.o" "utility_room_viewRN.phl[141]";
-connectAttr "controller_spine1_rotateY.o" "utility_room_viewRN.phl[142]";
-connectAttr "controller_spine1_rotateZ.o" "utility_room_viewRN.phl[143]";
-connectAttr "controller_spine1_scaleX.o" "utility_room_viewRN.phl[144]";
-connectAttr "controller_spine1_scaleY.o" "utility_room_viewRN.phl[145]";
-connectAttr "controller_spine1_scaleZ.o" "utility_room_viewRN.phl[146]";
-connectAttr "controller_spine1_visibility.o" "utility_room_viewRN.phl[147]";
-connectAttr "controller_shoulder_translateX.o" "utility_room_viewRN.phl[148]";
-connectAttr "controller_shoulder_translateY.o" "utility_room_viewRN.phl[149]";
-connectAttr "controller_shoulder_translateZ.o" "utility_room_viewRN.phl[150]";
-connectAttr "controller_shoulder_rotateX.o" "utility_room_viewRN.phl[151]";
-connectAttr "controller_shoulder_rotateY.o" "utility_room_viewRN.phl[152]";
-connectAttr "controller_shoulder_rotateZ.o" "utility_room_viewRN.phl[153]";
-connectAttr "controller_shoulder_scaleX.o" "utility_room_viewRN.phl[154]";
-connectAttr "controller_shoulder_scaleY.o" "utility_room_viewRN.phl[155]";
-connectAttr "controller_shoulder_scaleZ.o" "utility_room_viewRN.phl[156]";
-connectAttr "controller_shoulder_visibility.o" "utility_room_viewRN.phl[157]";
-connectAttr "controller_head_translateX.o" "utility_room_viewRN.phl[158]";
-connectAttr "controller_head_translateY.o" "utility_room_viewRN.phl[159]";
-connectAttr "controller_head_translateZ.o" "utility_room_viewRN.phl[160]";
-connectAttr "controller_head_rotateX.o" "utility_room_viewRN.phl[161]";
-connectAttr "controller_head_rotateY.o" "utility_room_viewRN.phl[162]";
-connectAttr "controller_head_rotateZ.o" "utility_room_viewRN.phl[163]";
-connectAttr "controller_head_scaleX.o" "utility_room_viewRN.phl[164]";
-connectAttr "controller_head_scaleY.o" "utility_room_viewRN.phl[165]";
-connectAttr "controller_head_scaleZ.o" "utility_room_viewRN.phl[166]";
-connectAttr "controller_head_visibility.o" "utility_room_viewRN.phl[167]";
-connectAttr "nurbsCircle3_translateX.o" "utility_room_viewRN.phl[168]";
-connectAttr "nurbsCircle3_translateY.o" "utility_room_viewRN.phl[169]";
-connectAttr "nurbsCircle3_translateZ.o" "utility_room_viewRN.phl[170]";
-connectAttr "nurbsCircle3_visibility.o" "utility_room_viewRN.phl[171]";
-connectAttr "nurbsCircle3_rotateX.o" "utility_room_viewRN.phl[172]";
-connectAttr "nurbsCircle3_rotateY.o" "utility_room_viewRN.phl[173]";
-connectAttr "nurbsCircle3_rotateZ.o" "utility_room_viewRN.phl[174]";
-connectAttr "nurbsCircle3_scaleX.o" "utility_room_viewRN.phl[175]";
-connectAttr "nurbsCircle3_scaleY.o" "utility_room_viewRN.phl[176]";
-connectAttr "nurbsCircle3_scaleZ.o" "utility_room_viewRN.phl[177]";
-connectAttr "nurbsCircle2_translateX.o" "utility_room_viewRN.phl[178]";
-connectAttr "nurbsCircle2_translateY.o" "utility_room_viewRN.phl[179]";
-connectAttr "nurbsCircle2_translateZ.o" "utility_room_viewRN.phl[180]";
-connectAttr "nurbsCircle2_visibility.o" "utility_room_viewRN.phl[181]";
-connectAttr "nurbsCircle2_rotateX.o" "utility_room_viewRN.phl[182]";
-connectAttr "nurbsCircle2_rotateY.o" "utility_room_viewRN.phl[183]";
-connectAttr "nurbsCircle2_rotateZ.o" "utility_room_viewRN.phl[184]";
-connectAttr "nurbsCircle2_scaleX.o" "utility_room_viewRN.phl[185]";
-connectAttr "nurbsCircle2_scaleY.o" "utility_room_viewRN.phl[186]";
-connectAttr "nurbsCircle2_scaleZ.o" "utility_room_viewRN.phl[187]";
-connectAttr "nurbsCircle1_translateX.o" "utility_room_viewRN.phl[188]";
-connectAttr "nurbsCircle1_translateY.o" "utility_room_viewRN.phl[189]";
-connectAttr "nurbsCircle1_translateZ.o" "utility_room_viewRN.phl[190]";
-connectAttr "nurbsCircle1_visibility.o" "utility_room_viewRN.phl[191]";
-connectAttr "nurbsCircle1_rotateX.o" "utility_room_viewRN.phl[192]";
-connectAttr "nurbsCircle1_rotateY.o" "utility_room_viewRN.phl[193]";
-connectAttr "nurbsCircle1_rotateZ.o" "utility_room_viewRN.phl[194]";
-connectAttr "nurbsCircle1_scaleX.o" "utility_room_viewRN.phl[195]";
-connectAttr "nurbsCircle1_scaleY.o" "utility_room_viewRN.phl[196]";
-connectAttr "nurbsCircle1_scaleZ.o" "utility_room_viewRN.phl[197]";
-connectAttr "controller_hip_translateX.o" "utility_room_viewRN.phl[198]";
-connectAttr "controller_hip_translateY.o" "utility_room_viewRN.phl[199]";
-connectAttr "controller_hip_translateZ.o" "utility_room_viewRN.phl[200]";
-connectAttr "controller_hip_rotateX.o" "utility_room_viewRN.phl[201]";
-connectAttr "controller_hip_rotateY.o" "utility_room_viewRN.phl[202]";
-connectAttr "controller_hip_rotateZ.o" "utility_room_viewRN.phl[203]";
-connectAttr "controller_hip_scaleX.o" "utility_room_viewRN.phl[204]";
-connectAttr "controller_hip_scaleY.o" "utility_room_viewRN.phl[205]";
-connectAttr "controller_hip_scaleZ.o" "utility_room_viewRN.phl[206]";
-connectAttr "controller_hip_visibility.o" "utility_room_viewRN.phl[207]";
-connectAttr "controller_tailbase_translateX.o" "utility_room_viewRN.phl[208]";
-connectAttr "controller_tailbase_translateY.o" "utility_room_viewRN.phl[209]";
-connectAttr "controller_tailbase_translateZ.o" "utility_room_viewRN.phl[210]";
-connectAttr "controller_tailbase_rotateX.o" "utility_room_viewRN.phl[211]";
-connectAttr "controller_tailbase_rotateY.o" "utility_room_viewRN.phl[212]";
-connectAttr "controller_tailbase_rotateZ.o" "utility_room_viewRN.phl[213]";
-connectAttr "controller_tailbase_scaleX.o" "utility_room_viewRN.phl[214]";
-connectAttr "controller_tailbase_scaleY.o" "utility_room_viewRN.phl[215]";
-connectAttr "controller_tailbase_scaleZ.o" "utility_room_viewRN.phl[216]";
-connectAttr "controller_tailbase_visibility.o" "utility_room_viewRN.phl[217]";
-connectAttr "controller_tail2_translateX.o" "utility_room_viewRN.phl[218]";
-connectAttr "controller_tail2_translateY.o" "utility_room_viewRN.phl[219]";
-connectAttr "controller_tail2_translateZ.o" "utility_room_viewRN.phl[220]";
-connectAttr "controller_tail2_rotateX.o" "utility_room_viewRN.phl[221]";
-connectAttr "controller_tail2_rotateY.o" "utility_room_viewRN.phl[222]";
-connectAttr "controller_tail2_rotateZ.o" "utility_room_viewRN.phl[223]";
-connectAttr "controller_tail2_scaleX.o" "utility_room_viewRN.phl[224]";
-connectAttr "controller_tail2_scaleY.o" "utility_room_viewRN.phl[225]";
-connectAttr "controller_tail2_scaleZ.o" "utility_room_viewRN.phl[226]";
-connectAttr "controller_tail2_visibility.o" "utility_room_viewRN.phl[227]";
-connectAttr "controller_tail3_translateX.o" "utility_room_viewRN.phl[228]";
-connectAttr "controller_tail3_translateY.o" "utility_room_viewRN.phl[229]";
-connectAttr "controller_tail3_translateZ.o" "utility_room_viewRN.phl[230]";
-connectAttr "controller_tail3_rotateX.o" "utility_room_viewRN.phl[231]";
-connectAttr "controller_tail3_rotateY.o" "utility_room_viewRN.phl[232]";
-connectAttr "controller_tail3_rotateZ.o" "utility_room_viewRN.phl[233]";
-connectAttr "controller_tail3_scaleX.o" "utility_room_viewRN.phl[234]";
-connectAttr "controller_tail3_scaleY.o" "utility_room_viewRN.phl[235]";
-connectAttr "controller_tail3_scaleZ.o" "utility_room_viewRN.phl[236]";
-connectAttr "controller_tail3_visibility.o" "utility_room_viewRN.phl[237]";
-connectAttr "controller_tail4_translateX.o" "utility_room_viewRN.phl[238]";
-connectAttr "controller_tail4_translateY.o" "utility_room_viewRN.phl[239]";
-connectAttr "controller_tail4_translateZ.o" "utility_room_viewRN.phl[240]";
-connectAttr "controller_tail4_rotateX.o" "utility_room_viewRN.phl[241]";
-connectAttr "controller_tail4_rotateY.o" "utility_room_viewRN.phl[242]";
-connectAttr "controller_tail4_rotateZ.o" "utility_room_viewRN.phl[243]";
-connectAttr "controller_tail4_scaleX.o" "utility_room_viewRN.phl[244]";
-connectAttr "controller_tail4_scaleY.o" "utility_room_viewRN.phl[245]";
-connectAttr "controller_tail4_scaleZ.o" "utility_room_viewRN.phl[246]";
-connectAttr "controller_tail4_visibility.o" "utility_room_viewRN.phl[247]";
-connectAttr "controller_tailtip_translateX.o" "utility_room_viewRN.phl[248]";
-connectAttr "controller_tailtip_translateY.o" "utility_room_viewRN.phl[249]";
-connectAttr "controller_tailtip_translateZ.o" "utility_room_viewRN.phl[250]";
-connectAttr "controller_tailtip_rotateX.o" "utility_room_viewRN.phl[251]";
-connectAttr "controller_tailtip_rotateY.o" "utility_room_viewRN.phl[252]";
-connectAttr "controller_tailtip_rotateZ.o" "utility_room_viewRN.phl[253]";
-connectAttr "controller_tailtip_scaleX.o" "utility_room_viewRN.phl[254]";
-connectAttr "controller_tailtip_scaleY.o" "utility_room_viewRN.phl[255]";
-connectAttr "controller_tailtip_scaleZ.o" "utility_room_viewRN.phl[256]";
-connectAttr "controller_tailtip_visibility.o" "utility_room_viewRN.phl[257]";
-connectAttr "controller_rightLeg_translateX.o" "utility_room_viewRN.phl[258]";
-connectAttr "controller_rightLeg_translateY.o" "utility_room_viewRN.phl[259]";
-connectAttr "controller_rightLeg_translateZ.o" "utility_room_viewRN.phl[260]";
-connectAttr "controller_rightLeg_rotateX.o" "utility_room_viewRN.phl[261]";
-connectAttr "controller_rightLeg_rotateY.o" "utility_room_viewRN.phl[262]";
-connectAttr "controller_rightLeg_rotateZ.o" "utility_room_viewRN.phl[263]";
-connectAttr "controller_rightLeg_visibility.o" "utility_room_viewRN.phl[264]";
-connectAttr "controller_rightLeg_scaleX.o" "utility_room_viewRN.phl[265]";
-connectAttr "controller_rightLeg_scaleY.o" "utility_room_viewRN.phl[266]";
-connectAttr "controller_rightLeg_scaleZ.o" "utility_room_viewRN.phl[267]";
-connectAttr "nurbsCircle7_translateX.o" "utility_room_viewRN.phl[268]";
-connectAttr "nurbsCircle7_translateY.o" "utility_room_viewRN.phl[269]";
-connectAttr "nurbsCircle7_translateZ.o" "utility_room_viewRN.phl[270]";
-connectAttr "nurbsCircle7_visibility.o" "utility_room_viewRN.phl[271]";
-connectAttr "nurbsCircle7_rotateX.o" "utility_room_viewRN.phl[272]";
-connectAttr "nurbsCircle7_rotateY.o" "utility_room_viewRN.phl[273]";
-connectAttr "nurbsCircle7_rotateZ.o" "utility_room_viewRN.phl[274]";
-connectAttr "nurbsCircle7_scaleX.o" "utility_room_viewRN.phl[275]";
-connectAttr "nurbsCircle7_scaleY.o" "utility_room_viewRN.phl[276]";
-connectAttr "nurbsCircle7_scaleZ.o" "utility_room_viewRN.phl[277]";
-connectAttr "controller_leftArm_visibility.o" "utility_room_viewRN.phl[278]";
-connectAttr "controller_leftArm_translateX.o" "utility_room_viewRN.phl[279]";
-connectAttr "controller_leftArm_translateY.o" "utility_room_viewRN.phl[280]";
-connectAttr "controller_leftArm_translateZ.o" "utility_room_viewRN.phl[281]";
-connectAttr "controller_leftArm_rotateX.o" "utility_room_viewRN.phl[282]";
-connectAttr "controller_leftArm_rotateY.o" "utility_room_viewRN.phl[283]";
-connectAttr "controller_leftArm_rotateZ.o" "utility_room_viewRN.phl[284]";
-connectAttr "controller_leftArm_scaleX.o" "utility_room_viewRN.phl[285]";
-connectAttr "controller_leftArm_scaleY.o" "utility_room_viewRN.phl[286]";
-connectAttr "controller_leftArm_scaleZ.o" "utility_room_viewRN.phl[287]";
-connectAttr "controller_leftWrist_translateX.o" "utility_room_viewRN.phl[288]";
-connectAttr "controller_leftWrist_translateY.o" "utility_room_viewRN.phl[289]";
-connectAttr "controller_leftWrist_translateZ.o" "utility_room_viewRN.phl[290]";
-connectAttr "controller_leftWrist_rotateX.o" "utility_room_viewRN.phl[291]";
-connectAttr "controller_leftWrist_rotateY.o" "utility_room_viewRN.phl[292]";
-connectAttr "controller_leftWrist_rotateZ.o" "utility_room_viewRN.phl[293]";
-connectAttr "controller_leftWrist_scaleX.o" "utility_room_viewRN.phl[294]";
-connectAttr "controller_leftWrist_scaleY.o" "utility_room_viewRN.phl[295]";
-connectAttr "controller_leftWrist_scaleZ.o" "utility_room_viewRN.phl[296]";
-connectAttr "controller_leftWrist_visibility.o" "utility_room_viewRN.phl[297]";
-connectAttr "nurbsCircle6_translateX.o" "utility_room_viewRN.phl[298]";
-connectAttr "nurbsCircle6_translateY.o" "utility_room_viewRN.phl[299]";
-connectAttr "nurbsCircle6_translateZ.o" "utility_room_viewRN.phl[300]";
-connectAttr "nurbsCircle6_visibility.o" "utility_room_viewRN.phl[301]";
-connectAttr "nurbsCircle6_rotateX.o" "utility_room_viewRN.phl[302]";
-connectAttr "nurbsCircle6_rotateY.o" "utility_room_viewRN.phl[303]";
-connectAttr "nurbsCircle6_rotateZ.o" "utility_room_viewRN.phl[304]";
-connectAttr "nurbsCircle6_scaleX.o" "utility_room_viewRN.phl[305]";
-connectAttr "nurbsCircle6_scaleY.o" "utility_room_viewRN.phl[306]";
-connectAttr "nurbsCircle6_scaleZ.o" "utility_room_viewRN.phl[307]";
-connectAttr "nurbsCircle5_translateX.o" "utility_room_viewRN.phl[308]";
-connectAttr "nurbsCircle5_translateY.o" "utility_room_viewRN.phl[309]";
-connectAttr "nurbsCircle5_translateZ.o" "utility_room_viewRN.phl[310]";
-connectAttr "nurbsCircle5_visibility.o" "utility_room_viewRN.phl[311]";
-connectAttr "nurbsCircle5_rotateX.o" "utility_room_viewRN.phl[312]";
-connectAttr "nurbsCircle5_rotateY.o" "utility_room_viewRN.phl[313]";
-connectAttr "nurbsCircle5_rotateZ.o" "utility_room_viewRN.phl[314]";
-connectAttr "nurbsCircle5_scaleX.o" "utility_room_viewRN.phl[315]";
-connectAttr "nurbsCircle5_scaleY.o" "utility_room_viewRN.phl[316]";
-connectAttr "nurbsCircle5_scaleZ.o" "utility_room_viewRN.phl[317]";
-connectAttr "nurbsCircle2_translateX1.o" "utility_room_viewRN.phl[318]";
-connectAttr "nurbsCircle2_translateY1.o" "utility_room_viewRN.phl[319]";
-connectAttr "nurbsCircle2_translateZ1.o" "utility_room_viewRN.phl[320]";
-connectAttr "nurbsCircle2_visibility1.o" "utility_room_viewRN.phl[321]";
-connectAttr "nurbsCircle2_rotateX1.o" "utility_room_viewRN.phl[322]";
-connectAttr "nurbsCircle2_rotateY1.o" "utility_room_viewRN.phl[323]";
-connectAttr "nurbsCircle2_rotateZ1.o" "utility_room_viewRN.phl[324]";
-connectAttr "nurbsCircle2_scaleX1.o" "utility_room_viewRN.phl[325]";
-connectAttr "nurbsCircle2_scaleY1.o" "utility_room_viewRN.phl[326]";
-connectAttr "nurbsCircle2_scaleZ1.o" "utility_room_viewRN.phl[327]";
-connectAttr "nurbsCircle3_translateX1.o" "utility_room_viewRN.phl[328]";
-connectAttr "nurbsCircle3_translateY1.o" "utility_room_viewRN.phl[329]";
-connectAttr "nurbsCircle3_translateZ1.o" "utility_room_viewRN.phl[330]";
-connectAttr "nurbsCircle3_visibility1.o" "utility_room_viewRN.phl[331]";
-connectAttr "nurbsCircle3_rotateX1.o" "utility_room_viewRN.phl[332]";
-connectAttr "nurbsCircle3_rotateY1.o" "utility_room_viewRN.phl[333]";
-connectAttr "nurbsCircle3_rotateZ1.o" "utility_room_viewRN.phl[334]";
-connectAttr "nurbsCircle3_scaleX1.o" "utility_room_viewRN.phl[335]";
-connectAttr "nurbsCircle3_scaleY1.o" "utility_room_viewRN.phl[336]";
-connectAttr "nurbsCircle3_scaleZ1.o" "utility_room_viewRN.phl[337]";
-connectAttr "nurbsCircle4_translateX.o" "utility_room_viewRN.phl[338]";
-connectAttr "nurbsCircle4_translateY.o" "utility_room_viewRN.phl[339]";
-connectAttr "nurbsCircle4_translateZ.o" "utility_room_viewRN.phl[340]";
-connectAttr "nurbsCircle4_visibility.o" "utility_room_viewRN.phl[341]";
-connectAttr "nurbsCircle4_rotateX.o" "utility_room_viewRN.phl[342]";
-connectAttr "nurbsCircle4_rotateY.o" "utility_room_viewRN.phl[343]";
-connectAttr "nurbsCircle4_rotateZ.o" "utility_room_viewRN.phl[344]";
-connectAttr "nurbsCircle4_scaleX.o" "utility_room_viewRN.phl[345]";
-connectAttr "nurbsCircle4_scaleY.o" "utility_room_viewRN.phl[346]";
-connectAttr "nurbsCircle4_scaleZ.o" "utility_room_viewRN.phl[347]";
-connectAttr "curve6_translateX.o" "utility_room_viewRN.phl[348]";
-connectAttr "curve6_translateY.o" "utility_room_viewRN.phl[349]";
-connectAttr "curve6_translateZ.o" "utility_room_viewRN.phl[350]";
-connectAttr "curve6_visibility.o" "utility_room_viewRN.phl[351]";
-connectAttr "curve6_rotateX.o" "utility_room_viewRN.phl[352]";
-connectAttr "curve6_rotateY.o" "utility_room_viewRN.phl[353]";
-connectAttr "curve6_rotateZ.o" "utility_room_viewRN.phl[354]";
-connectAttr "curve6_scaleX.o" "utility_room_viewRN.phl[355]";
-connectAttr "curve6_scaleY.o" "utility_room_viewRN.phl[356]";
-connectAttr "curve6_scaleZ.o" "utility_room_viewRN.phl[357]";
-connectAttr "curve7_translateX.o" "utility_room_viewRN.phl[358]";
-connectAttr "curve7_translateY.o" "utility_room_viewRN.phl[359]";
-connectAttr "curve7_translateZ.o" "utility_room_viewRN.phl[360]";
-connectAttr "curve7_visibility.o" "utility_room_viewRN.phl[361]";
-connectAttr "curve7_rotateX.o" "utility_room_viewRN.phl[362]";
-connectAttr "curve7_rotateY.o" "utility_room_viewRN.phl[363]";
-connectAttr "curve7_rotateZ.o" "utility_room_viewRN.phl[364]";
-connectAttr "curve7_scaleX.o" "utility_room_viewRN.phl[365]";
-connectAttr "curve7_scaleY.o" "utility_room_viewRN.phl[366]";
-connectAttr "curve7_scaleZ.o" "utility_room_viewRN.phl[367]";
-connectAttr "curve8_translateX.o" "utility_room_viewRN.phl[368]";
-connectAttr "curve8_translateY.o" "utility_room_viewRN.phl[369]";
-connectAttr "curve8_translateZ.o" "utility_room_viewRN.phl[370]";
-connectAttr "curve8_visibility.o" "utility_room_viewRN.phl[371]";
-connectAttr "curve8_rotateX.o" "utility_room_viewRN.phl[372]";
-connectAttr "curve8_rotateY.o" "utility_room_viewRN.phl[373]";
-connectAttr "curve8_rotateZ.o" "utility_room_viewRN.phl[374]";
-connectAttr "curve8_scaleX.o" "utility_room_viewRN.phl[375]";
-connectAttr "curve8_scaleY.o" "utility_room_viewRN.phl[376]";
-connectAttr "curve8_scaleZ.o" "utility_room_viewRN.phl[377]";
-connectAttr "curve9_translateX.o" "utility_room_viewRN.phl[378]";
-connectAttr "curve9_translateY.o" "utility_room_viewRN.phl[379]";
-connectAttr "curve9_translateZ.o" "utility_room_viewRN.phl[380]";
-connectAttr "curve9_visibility.o" "utility_room_viewRN.phl[381]";
-connectAttr "curve9_rotateX.o" "utility_room_viewRN.phl[382]";
-connectAttr "curve9_rotateY.o" "utility_room_viewRN.phl[383]";
-connectAttr "curve9_rotateZ.o" "utility_room_viewRN.phl[384]";
-connectAttr "curve9_scaleX.o" "utility_room_viewRN.phl[385]";
-connectAttr "curve9_scaleY.o" "utility_room_viewRN.phl[386]";
-connectAttr "curve9_scaleZ.o" "utility_room_viewRN.phl[387]";
-connectAttr "curve10_translateX.o" "utility_room_viewRN.phl[388]";
-connectAttr "curve10_translateY.o" "utility_room_viewRN.phl[389]";
-connectAttr "curve10_translateZ.o" "utility_room_viewRN.phl[390]";
-connectAttr "curve10_visibility.o" "utility_room_viewRN.phl[391]";
-connectAttr "curve10_rotateX.o" "utility_room_viewRN.phl[392]";
-connectAttr "curve10_rotateY.o" "utility_room_viewRN.phl[393]";
-connectAttr "curve10_rotateZ.o" "utility_room_viewRN.phl[394]";
-connectAttr "curve10_scaleX.o" "utility_room_viewRN.phl[395]";
-connectAttr "curve10_scaleY.o" "utility_room_viewRN.phl[396]";
-connectAttr "curve10_scaleZ.o" "utility_room_viewRN.phl[397]";
-connectAttr "controller_rightLeg1_visibility.o" "utility_room_viewRN.phl[398]";
-connectAttr "controller_rightLeg1_translateX.o" "utility_room_viewRN.phl[399]";
-connectAttr "controller_rightLeg1_translateY.o" "utility_room_viewRN.phl[400]";
-connectAttr "controller_rightLeg1_translateZ.o" "utility_room_viewRN.phl[401]";
-connectAttr "controller_rightLeg1_rotateX.o" "utility_room_viewRN.phl[402]";
-connectAttr "controller_rightLeg1_rotateY.o" "utility_room_viewRN.phl[403]";
-connectAttr "controller_rightLeg1_rotateZ.o" "utility_room_viewRN.phl[404]";
-connectAttr "controller_rightLeg1_scaleX.o" "utility_room_viewRN.phl[405]";
-connectAttr "controller_rightLeg1_scaleY.o" "utility_room_viewRN.phl[406]";
-connectAttr "controller_rightLeg1_scaleZ.o" "utility_room_viewRN.phl[407]";
-connectAttr "nurbsCircle8_rotateX.o" "utility_room_viewRN.phl[408]";
-connectAttr "nurbsCircle8_rotateY.o" "utility_room_viewRN.phl[409]";
-connectAttr "nurbsCircle8_rotateZ.o" "utility_room_viewRN.phl[410]";
-connectAttr "nurbsCircle8_translateX.o" "utility_room_viewRN.phl[411]";
-connectAttr "nurbsCircle8_translateY.o" "utility_room_viewRN.phl[412]";
-connectAttr "nurbsCircle8_translateZ.o" "utility_room_viewRN.phl[413]";
-connectAttr "nurbsCircle8_visibility.o" "utility_room_viewRN.phl[414]";
-connectAttr "nurbsCircle8_scaleX.o" "utility_room_viewRN.phl[415]";
-connectAttr "nurbsCircle8_scaleY.o" "utility_room_viewRN.phl[416]";
-connectAttr "nurbsCircle8_scaleZ.o" "utility_room_viewRN.phl[417]";
-connectAttr "controller_rightArm_visibility.o" "utility_room_viewRN.phl[418]";
-connectAttr "controller_rightArm_translateX.o" "utility_room_viewRN.phl[419]";
-connectAttr "controller_rightArm_translateY.o" "utility_room_viewRN.phl[420]";
-connectAttr "controller_rightArm_translateZ.o" "utility_room_viewRN.phl[421]";
-connectAttr "controller_rightArm_rotateX.o" "utility_room_viewRN.phl[422]";
-connectAttr "controller_rightArm_rotateY.o" "utility_room_viewRN.phl[423]";
-connectAttr "controller_rightArm_rotateZ.o" "utility_room_viewRN.phl[424]";
-connectAttr "controller_rightArm_scaleX.o" "utility_room_viewRN.phl[425]";
-connectAttr "controller_rightArm_scaleY.o" "utility_room_viewRN.phl[426]";
-connectAttr "controller_rightArm_scaleZ.o" "utility_room_viewRN.phl[427]";
-connectAttr "controller_rightWrist_translateX.o" "utility_room_viewRN.phl[428]";
-connectAttr "controller_rightWrist_translateY.o" "utility_room_viewRN.phl[429]";
-connectAttr "controller_rightWrist_translateZ.o" "utility_room_viewRN.phl[430]";
-connectAttr "controller_rightWrist_rotateX.o" "utility_room_viewRN.phl[431]";
-connectAttr "controller_rightWrist_rotateY.o" "utility_room_viewRN.phl[432]";
-connectAttr "controller_rightWrist_rotateZ.o" "utility_room_viewRN.phl[433]";
-connectAttr "controller_rightWrist_scaleX.o" "utility_room_viewRN.phl[434]";
-connectAttr "controller_rightWrist_scaleY.o" "utility_room_viewRN.phl[435]";
-connectAttr "controller_rightWrist_scaleZ.o" "utility_room_viewRN.phl[436]";
-connectAttr "controller_rightWrist_visibility.o" "utility_room_viewRN.phl[437]";
-connectAttr "nurbsCircle1_translateX1.o" "utility_room_viewRN.phl[438]";
-connectAttr "nurbsCircle1_translateY1.o" "utility_room_viewRN.phl[439]";
-connectAttr "nurbsCircle1_translateZ1.o" "utility_room_viewRN.phl[440]";
-connectAttr "nurbsCircle1_visibility1.o" "utility_room_viewRN.phl[441]";
-connectAttr "nurbsCircle1_rotateX1.o" "utility_room_viewRN.phl[442]";
-connectAttr "nurbsCircle1_rotateY1.o" "utility_room_viewRN.phl[443]";
-connectAttr "nurbsCircle1_rotateZ1.o" "utility_room_viewRN.phl[444]";
-connectAttr "nurbsCircle1_scaleX1.o" "utility_room_viewRN.phl[445]";
-connectAttr "nurbsCircle1_scaleY1.o" "utility_room_viewRN.phl[446]";
-connectAttr "nurbsCircle1_scaleZ1.o" "utility_room_viewRN.phl[447]";
-connectAttr "nurbsCircle9_translateX.o" "utility_room_viewRN.phl[448]";
-connectAttr "nurbsCircle9_translateY.o" "utility_room_viewRN.phl[449]";
-connectAttr "nurbsCircle9_translateZ.o" "utility_room_viewRN.phl[450]";
-connectAttr "nurbsCircle9_visibility.o" "utility_room_viewRN.phl[451]";
-connectAttr "nurbsCircle9_rotateX.o" "utility_room_viewRN.phl[452]";
-connectAttr "nurbsCircle9_rotateY.o" "utility_room_viewRN.phl[453]";
-connectAttr "nurbsCircle9_rotateZ.o" "utility_room_viewRN.phl[454]";
-connectAttr "nurbsCircle9_scaleX.o" "utility_room_viewRN.phl[455]";
-connectAttr "nurbsCircle9_scaleY.o" "utility_room_viewRN.phl[456]";
-connectAttr "nurbsCircle9_scaleZ.o" "utility_room_viewRN.phl[457]";
-connectAttr "nurbsCircle10_translateX.o" "utility_room_viewRN.phl[458]";
-connectAttr "nurbsCircle10_translateY.o" "utility_room_viewRN.phl[459]";
-connectAttr "nurbsCircle10_translateZ.o" "utility_room_viewRN.phl[460]";
-connectAttr "nurbsCircle10_visibility.o" "utility_room_viewRN.phl[461]";
-connectAttr "nurbsCircle10_rotateX.o" "utility_room_viewRN.phl[462]";
-connectAttr "nurbsCircle10_rotateY.o" "utility_room_viewRN.phl[463]";
-connectAttr "nurbsCircle10_rotateZ.o" "utility_room_viewRN.phl[464]";
-connectAttr "nurbsCircle10_scaleX.o" "utility_room_viewRN.phl[465]";
-connectAttr "nurbsCircle10_scaleY.o" "utility_room_viewRN.phl[466]";
-connectAttr "nurbsCircle10_scaleZ.o" "utility_room_viewRN.phl[467]";
-connectAttr "nurbsCircle11_translateX.o" "utility_room_viewRN.phl[468]";
-connectAttr "nurbsCircle11_translateY.o" "utility_room_viewRN.phl[469]";
-connectAttr "nurbsCircle11_translateZ.o" "utility_room_viewRN.phl[470]";
-connectAttr "nurbsCircle11_visibility.o" "utility_room_viewRN.phl[471]";
-connectAttr "nurbsCircle11_rotateX.o" "utility_room_viewRN.phl[472]";
-connectAttr "nurbsCircle11_rotateY.o" "utility_room_viewRN.phl[473]";
-connectAttr "nurbsCircle11_rotateZ.o" "utility_room_viewRN.phl[474]";
-connectAttr "nurbsCircle11_scaleX.o" "utility_room_viewRN.phl[475]";
-connectAttr "nurbsCircle11_scaleY.o" "utility_room_viewRN.phl[476]";
-connectAttr "nurbsCircle11_scaleZ.o" "utility_room_viewRN.phl[477]";
-connectAttr "nurbsCircle12_translateX.o" "utility_room_viewRN.phl[478]";
-connectAttr "nurbsCircle12_translateY.o" "utility_room_viewRN.phl[479]";
-connectAttr "nurbsCircle12_translateZ.o" "utility_room_viewRN.phl[480]";
-connectAttr "nurbsCircle12_visibility.o" "utility_room_viewRN.phl[481]";
-connectAttr "nurbsCircle12_rotateX.o" "utility_room_viewRN.phl[482]";
-connectAttr "nurbsCircle12_rotateY.o" "utility_room_viewRN.phl[483]";
-connectAttr "nurbsCircle12_rotateZ.o" "utility_room_viewRN.phl[484]";
-connectAttr "nurbsCircle12_scaleX.o" "utility_room_viewRN.phl[485]";
-connectAttr "nurbsCircle12_scaleY.o" "utility_room_viewRN.phl[486]";
-connectAttr "nurbsCircle12_scaleZ.o" "utility_room_viewRN.phl[487]";
-connectAttr "curve1_translateX.o" "utility_room_viewRN.phl[488]";
-connectAttr "curve1_translateY.o" "utility_room_viewRN.phl[489]";
-connectAttr "curve1_translateZ.o" "utility_room_viewRN.phl[490]";
-connectAttr "curve1_visibility.o" "utility_room_viewRN.phl[491]";
-connectAttr "curve1_rotateX.o" "utility_room_viewRN.phl[492]";
-connectAttr "curve1_rotateY.o" "utility_room_viewRN.phl[493]";
-connectAttr "curve1_rotateZ.o" "utility_room_viewRN.phl[494]";
-connectAttr "curve1_scaleX.o" "utility_room_viewRN.phl[495]";
-connectAttr "curve1_scaleY.o" "utility_room_viewRN.phl[496]";
-connectAttr "curve1_scaleZ.o" "utility_room_viewRN.phl[497]";
-connectAttr "curve2_translateX.o" "utility_room_viewRN.phl[498]";
-connectAttr "curve2_translateY.o" "utility_room_viewRN.phl[499]";
-connectAttr "curve2_translateZ.o" "utility_room_viewRN.phl[500]";
-connectAttr "curve2_visibility.o" "utility_room_viewRN.phl[501]";
-connectAttr "curve2_rotateX.o" "utility_room_viewRN.phl[502]";
-connectAttr "curve2_rotateY.o" "utility_room_viewRN.phl[503]";
-connectAttr "curve2_rotateZ.o" "utility_room_viewRN.phl[504]";
-connectAttr "curve2_scaleX.o" "utility_room_viewRN.phl[505]";
-connectAttr "curve2_scaleY.o" "utility_room_viewRN.phl[506]";
-connectAttr "curve2_scaleZ.o" "utility_room_viewRN.phl[507]";
-connectAttr "curve3_translateX.o" "utility_room_viewRN.phl[508]";
-connectAttr "curve3_translateY.o" "utility_room_viewRN.phl[509]";
-connectAttr "curve3_translateZ.o" "utility_room_viewRN.phl[510]";
-connectAttr "curve3_visibility.o" "utility_room_viewRN.phl[511]";
-connectAttr "curve3_rotateX.o" "utility_room_viewRN.phl[512]";
-connectAttr "curve3_rotateY.o" "utility_room_viewRN.phl[513]";
-connectAttr "curve3_rotateZ.o" "utility_room_viewRN.phl[514]";
-connectAttr "curve3_scaleX.o" "utility_room_viewRN.phl[515]";
-connectAttr "curve3_scaleY.o" "utility_room_viewRN.phl[516]";
-connectAttr "curve3_scaleZ.o" "utility_room_viewRN.phl[517]";
-connectAttr "curve4_translateX.o" "utility_room_viewRN.phl[518]";
-connectAttr "curve4_translateY.o" "utility_room_viewRN.phl[519]";
-connectAttr "curve4_translateZ.o" "utility_room_viewRN.phl[520]";
-connectAttr "curve4_visibility.o" "utility_room_viewRN.phl[521]";
-connectAttr "curve4_rotateX.o" "utility_room_viewRN.phl[522]";
-connectAttr "curve4_rotateY.o" "utility_room_viewRN.phl[523]";
-connectAttr "curve4_rotateZ.o" "utility_room_viewRN.phl[524]";
-connectAttr "curve4_scaleX.o" "utility_room_viewRN.phl[525]";
-connectAttr "curve4_scaleY.o" "utility_room_viewRN.phl[526]";
-connectAttr "curve4_scaleZ.o" "utility_room_viewRN.phl[527]";
-connectAttr "curve5_translateX.o" "utility_room_viewRN.phl[528]";
-connectAttr "curve5_translateY.o" "utility_room_viewRN.phl[529]";
-connectAttr "curve5_translateZ.o" "utility_room_viewRN.phl[530]";
-connectAttr "curve5_visibility.o" "utility_room_viewRN.phl[531]";
-connectAttr "curve5_rotateX.o" "utility_room_viewRN.phl[532]";
-connectAttr "curve5_rotateY.o" "utility_room_viewRN.phl[533]";
-connectAttr "curve5_rotateZ.o" "utility_room_viewRN.phl[534]";
-connectAttr "curve5_scaleX.o" "utility_room_viewRN.phl[535]";
-connectAttr "curve5_scaleY.o" "utility_room_viewRN.phl[536]";
-connectAttr "curve5_scaleZ.o" "utility_room_viewRN.phl[537]";
-connectAttr "RightArm_rotateX.o" "utility_room_viewRN.phl[538]";
-connectAttr "RightArm_rotateY.o" "utility_room_viewRN.phl[539]";
-connectAttr "RightArm_rotateZ.o" "utility_room_viewRN.phl[540]";
-connectAttr "RightArm_translateX.o" "utility_room_viewRN.phl[541]";
-connectAttr "RightArm_translateY.o" "utility_room_viewRN.phl[542]";
-connectAttr "RightArm_translateZ.o" "utility_room_viewRN.phl[543]";
-connectAttr "RightArm_visibility.o" "utility_room_viewRN.phl[544]";
-connectAttr "RightArm_scaleX.o" "utility_room_viewRN.phl[545]";
-connectAttr "RightArm_scaleY.o" "utility_room_viewRN.phl[546]";
-connectAttr "RightArm_scaleZ.o" "utility_room_viewRN.phl[547]";
-connectAttr "controller_main01_translateX.o" "utility_room_viewRN.phl[43]";
-connectAttr "controller_main01_translateY.o" "utility_room_viewRN.phl[44]";
-connectAttr "controller_main01_translateZ.o" "utility_room_viewRN.phl[45]";
-connectAttr "controller_main01_rotateX.o" "utility_room_viewRN.phl[46]";
-connectAttr "controller_main01_rotateY.o" "utility_room_viewRN.phl[47]";
-connectAttr "controller_main01_rotateZ.o" "utility_room_viewRN.phl[48]";
-connectAttr "controller_main01_scaleX.o" "utility_room_viewRN.phl[49]";
-connectAttr "controller_main01_scaleY.o" "utility_room_viewRN.phl[50]";
-connectAttr "controller_main01_scaleZ.o" "utility_room_viewRN.phl[51]";
-connectAttr "utility_room_viewRN.phl[75]" "global_ctrl_parentConstraint1.tg[0].tt"
+connectAttr "controller_root_translateX.o" "utility_room_viewRN.phl[100]";
+connectAttr "controller_root_translateY.o" "utility_room_viewRN.phl[101]";
+connectAttr "controller_root_translateZ.o" "utility_room_viewRN.phl[102]";
+connectAttr "controller_root_rotateX.o" "utility_room_viewRN.phl[103]";
+connectAttr "controller_root_rotateY.o" "utility_room_viewRN.phl[104]";
+connectAttr "controller_root_rotateZ.o" "utility_room_viewRN.phl[105]";
+connectAttr "controller_root_visibility.o" "utility_room_viewRN.phl[106]";
+connectAttr "controller_root_scaleX.o" "utility_room_viewRN.phl[107]";
+connectAttr "controller_root_scaleY.o" "utility_room_viewRN.phl[108]";
+connectAttr "controller_root_scaleZ.o" "utility_room_viewRN.phl[109]";
+connectAttr "controller_COG_translateX.o" "utility_room_viewRN.phl[110]";
+connectAttr "controller_COG_translateY.o" "utility_room_viewRN.phl[111]";
+connectAttr "controller_COG_translateZ.o" "utility_room_viewRN.phl[112]";
+connectAttr "controller_COG_rotateX.o" "utility_room_viewRN.phl[113]";
+connectAttr "controller_COG_rotateY.o" "utility_room_viewRN.phl[114]";
+connectAttr "controller_COG_rotateZ.o" "utility_room_viewRN.phl[115]";
+connectAttr "controller_COG_scaleX.o" "utility_room_viewRN.phl[116]";
+connectAttr "controller_COG_scaleY.o" "utility_room_viewRN.phl[117]";
+connectAttr "controller_COG_scaleZ.o" "utility_room_viewRN.phl[118]";
+connectAttr "controller_COG_visibility.o" "utility_room_viewRN.phl[119]";
+connectAttr "controller_spine3_translateX.o" "utility_room_viewRN.phl[120]";
+connectAttr "controller_spine3_translateY.o" "utility_room_viewRN.phl[121]";
+connectAttr "controller_spine3_translateZ.o" "utility_room_viewRN.phl[122]";
+connectAttr "controller_spine3_rotateX.o" "utility_room_viewRN.phl[123]";
+connectAttr "controller_spine3_rotateY.o" "utility_room_viewRN.phl[124]";
+connectAttr "controller_spine3_rotateZ.o" "utility_room_viewRN.phl[125]";
+connectAttr "controller_spine3_scaleX.o" "utility_room_viewRN.phl[126]";
+connectAttr "controller_spine3_scaleY.o" "utility_room_viewRN.phl[127]";
+connectAttr "controller_spine3_scaleZ.o" "utility_room_viewRN.phl[128]";
+connectAttr "controller_spine3_visibility.o" "utility_room_viewRN.phl[129]";
+connectAttr "controller_spine2_translateX.o" "utility_room_viewRN.phl[130]";
+connectAttr "controller_spine2_translateY.o" "utility_room_viewRN.phl[131]";
+connectAttr "controller_spine2_translateZ.o" "utility_room_viewRN.phl[132]";
+connectAttr "controller_spine2_rotateX.o" "utility_room_viewRN.phl[133]";
+connectAttr "controller_spine2_rotateY.o" "utility_room_viewRN.phl[134]";
+connectAttr "controller_spine2_rotateZ.o" "utility_room_viewRN.phl[135]";
+connectAttr "controller_spine2_scaleX.o" "utility_room_viewRN.phl[136]";
+connectAttr "controller_spine2_scaleY.o" "utility_room_viewRN.phl[137]";
+connectAttr "controller_spine2_scaleZ.o" "utility_room_viewRN.phl[138]";
+connectAttr "controller_spine2_visibility.o" "utility_room_viewRN.phl[139]";
+connectAttr "controller_spine1_translateX.o" "utility_room_viewRN.phl[140]";
+connectAttr "controller_spine1_translateY.o" "utility_room_viewRN.phl[141]";
+connectAttr "controller_spine1_translateZ.o" "utility_room_viewRN.phl[142]";
+connectAttr "controller_spine1_rotateX.o" "utility_room_viewRN.phl[143]";
+connectAttr "controller_spine1_rotateY.o" "utility_room_viewRN.phl[144]";
+connectAttr "controller_spine1_rotateZ.o" "utility_room_viewRN.phl[145]";
+connectAttr "controller_spine1_scaleX.o" "utility_room_viewRN.phl[146]";
+connectAttr "controller_spine1_scaleY.o" "utility_room_viewRN.phl[147]";
+connectAttr "controller_spine1_scaleZ.o" "utility_room_viewRN.phl[148]";
+connectAttr "controller_spine1_visibility.o" "utility_room_viewRN.phl[149]";
+connectAttr "controller_shoulder_translateX.o" "utility_room_viewRN.phl[150]";
+connectAttr "controller_shoulder_translateY.o" "utility_room_viewRN.phl[151]";
+connectAttr "controller_shoulder_translateZ.o" "utility_room_viewRN.phl[152]";
+connectAttr "controller_shoulder_rotateX.o" "utility_room_viewRN.phl[153]";
+connectAttr "controller_shoulder_rotateY.o" "utility_room_viewRN.phl[154]";
+connectAttr "controller_shoulder_rotateZ.o" "utility_room_viewRN.phl[155]";
+connectAttr "controller_shoulder_scaleX.o" "utility_room_viewRN.phl[156]";
+connectAttr "controller_shoulder_scaleY.o" "utility_room_viewRN.phl[157]";
+connectAttr "controller_shoulder_scaleZ.o" "utility_room_viewRN.phl[158]";
+connectAttr "controller_shoulder_visibility.o" "utility_room_viewRN.phl[159]";
+connectAttr "controller_head_translateX.o" "utility_room_viewRN.phl[160]";
+connectAttr "controller_head_translateY.o" "utility_room_viewRN.phl[161]";
+connectAttr "controller_head_translateZ.o" "utility_room_viewRN.phl[162]";
+connectAttr "controller_head_rotateX.o" "utility_room_viewRN.phl[163]";
+connectAttr "controller_head_rotateY.o" "utility_room_viewRN.phl[164]";
+connectAttr "controller_head_rotateZ.o" "utility_room_viewRN.phl[165]";
+connectAttr "controller_head_scaleX.o" "utility_room_viewRN.phl[166]";
+connectAttr "controller_head_scaleY.o" "utility_room_viewRN.phl[167]";
+connectAttr "controller_head_scaleZ.o" "utility_room_viewRN.phl[168]";
+connectAttr "controller_head_visibility.o" "utility_room_viewRN.phl[169]";
+connectAttr "nurbsCircle3_translateX.o" "utility_room_viewRN.phl[170]";
+connectAttr "nurbsCircle3_translateY.o" "utility_room_viewRN.phl[171]";
+connectAttr "nurbsCircle3_translateZ.o" "utility_room_viewRN.phl[172]";
+connectAttr "nurbsCircle3_visibility.o" "utility_room_viewRN.phl[173]";
+connectAttr "nurbsCircle3_rotateX.o" "utility_room_viewRN.phl[174]";
+connectAttr "nurbsCircle3_rotateY.o" "utility_room_viewRN.phl[175]";
+connectAttr "nurbsCircle3_rotateZ.o" "utility_room_viewRN.phl[176]";
+connectAttr "nurbsCircle3_scaleX.o" "utility_room_viewRN.phl[177]";
+connectAttr "nurbsCircle3_scaleY.o" "utility_room_viewRN.phl[178]";
+connectAttr "nurbsCircle3_scaleZ.o" "utility_room_viewRN.phl[179]";
+connectAttr "nurbsCircle2_translateX.o" "utility_room_viewRN.phl[180]";
+connectAttr "nurbsCircle2_translateY.o" "utility_room_viewRN.phl[181]";
+connectAttr "nurbsCircle2_translateZ.o" "utility_room_viewRN.phl[182]";
+connectAttr "nurbsCircle2_visibility.o" "utility_room_viewRN.phl[183]";
+connectAttr "nurbsCircle2_rotateX.o" "utility_room_viewRN.phl[184]";
+connectAttr "nurbsCircle2_rotateY.o" "utility_room_viewRN.phl[185]";
+connectAttr "nurbsCircle2_rotateZ.o" "utility_room_viewRN.phl[186]";
+connectAttr "nurbsCircle2_scaleX.o" "utility_room_viewRN.phl[187]";
+connectAttr "nurbsCircle2_scaleY.o" "utility_room_viewRN.phl[188]";
+connectAttr "nurbsCircle2_scaleZ.o" "utility_room_viewRN.phl[189]";
+connectAttr "nurbsCircle1_translateX.o" "utility_room_viewRN.phl[190]";
+connectAttr "nurbsCircle1_translateY.o" "utility_room_viewRN.phl[191]";
+connectAttr "nurbsCircle1_translateZ.o" "utility_room_viewRN.phl[192]";
+connectAttr "nurbsCircle1_visibility.o" "utility_room_viewRN.phl[193]";
+connectAttr "nurbsCircle1_rotateX.o" "utility_room_viewRN.phl[194]";
+connectAttr "nurbsCircle1_rotateY.o" "utility_room_viewRN.phl[195]";
+connectAttr "nurbsCircle1_rotateZ.o" "utility_room_viewRN.phl[196]";
+connectAttr "nurbsCircle1_scaleX.o" "utility_room_viewRN.phl[197]";
+connectAttr "nurbsCircle1_scaleY.o" "utility_room_viewRN.phl[198]";
+connectAttr "nurbsCircle1_scaleZ.o" "utility_room_viewRN.phl[199]";
+connectAttr "controller_hip_translateX.o" "utility_room_viewRN.phl[200]";
+connectAttr "controller_hip_translateY.o" "utility_room_viewRN.phl[201]";
+connectAttr "controller_hip_translateZ.o" "utility_room_viewRN.phl[202]";
+connectAttr "controller_hip_rotateX.o" "utility_room_viewRN.phl[203]";
+connectAttr "controller_hip_rotateY.o" "utility_room_viewRN.phl[204]";
+connectAttr "controller_hip_rotateZ.o" "utility_room_viewRN.phl[205]";
+connectAttr "controller_hip_scaleX.o" "utility_room_viewRN.phl[206]";
+connectAttr "controller_hip_scaleY.o" "utility_room_viewRN.phl[207]";
+connectAttr "controller_hip_scaleZ.o" "utility_room_viewRN.phl[208]";
+connectAttr "controller_hip_visibility.o" "utility_room_viewRN.phl[209]";
+connectAttr "controller_tailbase_translateX.o" "utility_room_viewRN.phl[210]";
+connectAttr "controller_tailbase_translateY.o" "utility_room_viewRN.phl[211]";
+connectAttr "controller_tailbase_translateZ.o" "utility_room_viewRN.phl[212]";
+connectAttr "controller_tailbase_rotateX.o" "utility_room_viewRN.phl[213]";
+connectAttr "controller_tailbase_rotateY.o" "utility_room_viewRN.phl[214]";
+connectAttr "controller_tailbase_rotateZ.o" "utility_room_viewRN.phl[215]";
+connectAttr "controller_tailbase_scaleX.o" "utility_room_viewRN.phl[216]";
+connectAttr "controller_tailbase_scaleY.o" "utility_room_viewRN.phl[217]";
+connectAttr "controller_tailbase_scaleZ.o" "utility_room_viewRN.phl[218]";
+connectAttr "controller_tailbase_visibility.o" "utility_room_viewRN.phl[219]";
+connectAttr "controller_tail2_translateX.o" "utility_room_viewRN.phl[220]";
+connectAttr "controller_tail2_translateY.o" "utility_room_viewRN.phl[221]";
+connectAttr "controller_tail2_translateZ.o" "utility_room_viewRN.phl[222]";
+connectAttr "controller_tail2_rotateX.o" "utility_room_viewRN.phl[223]";
+connectAttr "controller_tail2_rotateY.o" "utility_room_viewRN.phl[224]";
+connectAttr "controller_tail2_rotateZ.o" "utility_room_viewRN.phl[225]";
+connectAttr "controller_tail2_scaleX.o" "utility_room_viewRN.phl[226]";
+connectAttr "controller_tail2_scaleY.o" "utility_room_viewRN.phl[227]";
+connectAttr "controller_tail2_scaleZ.o" "utility_room_viewRN.phl[228]";
+connectAttr "controller_tail2_visibility.o" "utility_room_viewRN.phl[229]";
+connectAttr "controller_tail3_translateX.o" "utility_room_viewRN.phl[230]";
+connectAttr "controller_tail3_translateY.o" "utility_room_viewRN.phl[231]";
+connectAttr "controller_tail3_translateZ.o" "utility_room_viewRN.phl[232]";
+connectAttr "controller_tail3_rotateX.o" "utility_room_viewRN.phl[233]";
+connectAttr "controller_tail3_rotateY.o" "utility_room_viewRN.phl[234]";
+connectAttr "controller_tail3_rotateZ.o" "utility_room_viewRN.phl[235]";
+connectAttr "controller_tail3_scaleX.o" "utility_room_viewRN.phl[236]";
+connectAttr "controller_tail3_scaleY.o" "utility_room_viewRN.phl[237]";
+connectAttr "controller_tail3_scaleZ.o" "utility_room_viewRN.phl[238]";
+connectAttr "controller_tail3_visibility.o" "utility_room_viewRN.phl[239]";
+connectAttr "controller_tail4_translateX.o" "utility_room_viewRN.phl[240]";
+connectAttr "controller_tail4_translateY.o" "utility_room_viewRN.phl[241]";
+connectAttr "controller_tail4_translateZ.o" "utility_room_viewRN.phl[242]";
+connectAttr "controller_tail4_rotateX.o" "utility_room_viewRN.phl[243]";
+connectAttr "controller_tail4_rotateY.o" "utility_room_viewRN.phl[244]";
+connectAttr "controller_tail4_rotateZ.o" "utility_room_viewRN.phl[245]";
+connectAttr "controller_tail4_scaleX.o" "utility_room_viewRN.phl[246]";
+connectAttr "controller_tail4_scaleY.o" "utility_room_viewRN.phl[247]";
+connectAttr "controller_tail4_scaleZ.o" "utility_room_viewRN.phl[248]";
+connectAttr "controller_tail4_visibility.o" "utility_room_viewRN.phl[249]";
+connectAttr "controller_tailtip_translateX.o" "utility_room_viewRN.phl[250]";
+connectAttr "controller_tailtip_translateY.o" "utility_room_viewRN.phl[251]";
+connectAttr "controller_tailtip_translateZ.o" "utility_room_viewRN.phl[252]";
+connectAttr "controller_tailtip_rotateX.o" "utility_room_viewRN.phl[253]";
+connectAttr "controller_tailtip_rotateY.o" "utility_room_viewRN.phl[254]";
+connectAttr "controller_tailtip_rotateZ.o" "utility_room_viewRN.phl[255]";
+connectAttr "controller_tailtip_scaleX.o" "utility_room_viewRN.phl[256]";
+connectAttr "controller_tailtip_scaleY.o" "utility_room_viewRN.phl[257]";
+connectAttr "controller_tailtip_scaleZ.o" "utility_room_viewRN.phl[258]";
+connectAttr "controller_tailtip_visibility.o" "utility_room_viewRN.phl[259]";
+connectAttr "controller_rightLeg_translateX.o" "utility_room_viewRN.phl[260]";
+connectAttr "controller_rightLeg_translateY.o" "utility_room_viewRN.phl[261]";
+connectAttr "controller_rightLeg_translateZ.o" "utility_room_viewRN.phl[262]";
+connectAttr "controller_rightLeg_rotateX.o" "utility_room_viewRN.phl[263]";
+connectAttr "controller_rightLeg_rotateY.o" "utility_room_viewRN.phl[264]";
+connectAttr "controller_rightLeg_rotateZ.o" "utility_room_viewRN.phl[265]";
+connectAttr "controller_rightLeg_visibility.o" "utility_room_viewRN.phl[266]";
+connectAttr "controller_rightLeg_scaleX.o" "utility_room_viewRN.phl[267]";
+connectAttr "controller_rightLeg_scaleY.o" "utility_room_viewRN.phl[268]";
+connectAttr "controller_rightLeg_scaleZ.o" "utility_room_viewRN.phl[269]";
+connectAttr "nurbsCircle7_translateX.o" "utility_room_viewRN.phl[270]";
+connectAttr "nurbsCircle7_translateY.o" "utility_room_viewRN.phl[271]";
+connectAttr "nurbsCircle7_translateZ.o" "utility_room_viewRN.phl[272]";
+connectAttr "nurbsCircle7_visibility.o" "utility_room_viewRN.phl[273]";
+connectAttr "nurbsCircle7_rotateX.o" "utility_room_viewRN.phl[274]";
+connectAttr "nurbsCircle7_rotateY.o" "utility_room_viewRN.phl[275]";
+connectAttr "nurbsCircle7_rotateZ.o" "utility_room_viewRN.phl[276]";
+connectAttr "nurbsCircle7_scaleX.o" "utility_room_viewRN.phl[277]";
+connectAttr "nurbsCircle7_scaleY.o" "utility_room_viewRN.phl[278]";
+connectAttr "nurbsCircle7_scaleZ.o" "utility_room_viewRN.phl[279]";
+connectAttr "controller_leftArm_visibility.o" "utility_room_viewRN.phl[280]";
+connectAttr "controller_leftArm_translateX.o" "utility_room_viewRN.phl[281]";
+connectAttr "controller_leftArm_translateY.o" "utility_room_viewRN.phl[282]";
+connectAttr "controller_leftArm_translateZ.o" "utility_room_viewRN.phl[283]";
+connectAttr "controller_leftArm_rotateX.o" "utility_room_viewRN.phl[284]";
+connectAttr "controller_leftArm_rotateY.o" "utility_room_viewRN.phl[285]";
+connectAttr "controller_leftArm_rotateZ.o" "utility_room_viewRN.phl[286]";
+connectAttr "controller_leftArm_scaleX.o" "utility_room_viewRN.phl[287]";
+connectAttr "controller_leftArm_scaleY.o" "utility_room_viewRN.phl[288]";
+connectAttr "controller_leftArm_scaleZ.o" "utility_room_viewRN.phl[289]";
+connectAttr "controller_leftWrist_translateX.o" "utility_room_viewRN.phl[290]";
+connectAttr "controller_leftWrist_translateY.o" "utility_room_viewRN.phl[291]";
+connectAttr "controller_leftWrist_translateZ.o" "utility_room_viewRN.phl[292]";
+connectAttr "controller_leftWrist_rotateX.o" "utility_room_viewRN.phl[293]";
+connectAttr "controller_leftWrist_rotateY.o" "utility_room_viewRN.phl[294]";
+connectAttr "controller_leftWrist_rotateZ.o" "utility_room_viewRN.phl[295]";
+connectAttr "controller_leftWrist_scaleX.o" "utility_room_viewRN.phl[296]";
+connectAttr "controller_leftWrist_scaleY.o" "utility_room_viewRN.phl[297]";
+connectAttr "controller_leftWrist_scaleZ.o" "utility_room_viewRN.phl[298]";
+connectAttr "controller_leftWrist_visibility.o" "utility_room_viewRN.phl[299]";
+connectAttr "nurbsCircle6_translateX.o" "utility_room_viewRN.phl[300]";
+connectAttr "nurbsCircle6_translateY.o" "utility_room_viewRN.phl[301]";
+connectAttr "nurbsCircle6_translateZ.o" "utility_room_viewRN.phl[302]";
+connectAttr "nurbsCircle6_visibility.o" "utility_room_viewRN.phl[303]";
+connectAttr "nurbsCircle6_rotateX.o" "utility_room_viewRN.phl[304]";
+connectAttr "nurbsCircle6_rotateY.o" "utility_room_viewRN.phl[305]";
+connectAttr "nurbsCircle6_rotateZ.o" "utility_room_viewRN.phl[306]";
+connectAttr "nurbsCircle6_scaleX.o" "utility_room_viewRN.phl[307]";
+connectAttr "nurbsCircle6_scaleY.o" "utility_room_viewRN.phl[308]";
+connectAttr "nurbsCircle6_scaleZ.o" "utility_room_viewRN.phl[309]";
+connectAttr "nurbsCircle5_translateX.o" "utility_room_viewRN.phl[310]";
+connectAttr "nurbsCircle5_translateY.o" "utility_room_viewRN.phl[311]";
+connectAttr "nurbsCircle5_translateZ.o" "utility_room_viewRN.phl[312]";
+connectAttr "nurbsCircle5_visibility.o" "utility_room_viewRN.phl[313]";
+connectAttr "nurbsCircle5_rotateX.o" "utility_room_viewRN.phl[314]";
+connectAttr "nurbsCircle5_rotateY.o" "utility_room_viewRN.phl[315]";
+connectAttr "nurbsCircle5_rotateZ.o" "utility_room_viewRN.phl[316]";
+connectAttr "nurbsCircle5_scaleX.o" "utility_room_viewRN.phl[317]";
+connectAttr "nurbsCircle5_scaleY.o" "utility_room_viewRN.phl[318]";
+connectAttr "nurbsCircle5_scaleZ.o" "utility_room_viewRN.phl[319]";
+connectAttr "nurbsCircle2_translateX1.o" "utility_room_viewRN.phl[320]";
+connectAttr "nurbsCircle2_translateY1.o" "utility_room_viewRN.phl[321]";
+connectAttr "nurbsCircle2_translateZ1.o" "utility_room_viewRN.phl[322]";
+connectAttr "nurbsCircle2_visibility1.o" "utility_room_viewRN.phl[323]";
+connectAttr "nurbsCircle2_rotateX1.o" "utility_room_viewRN.phl[324]";
+connectAttr "nurbsCircle2_rotateY1.o" "utility_room_viewRN.phl[325]";
+connectAttr "nurbsCircle2_rotateZ1.o" "utility_room_viewRN.phl[326]";
+connectAttr "nurbsCircle2_scaleX1.o" "utility_room_viewRN.phl[327]";
+connectAttr "nurbsCircle2_scaleY1.o" "utility_room_viewRN.phl[328]";
+connectAttr "nurbsCircle2_scaleZ1.o" "utility_room_viewRN.phl[329]";
+connectAttr "nurbsCircle3_translateX1.o" "utility_room_viewRN.phl[330]";
+connectAttr "nurbsCircle3_translateY1.o" "utility_room_viewRN.phl[331]";
+connectAttr "nurbsCircle3_translateZ1.o" "utility_room_viewRN.phl[332]";
+connectAttr "nurbsCircle3_visibility1.o" "utility_room_viewRN.phl[333]";
+connectAttr "nurbsCircle3_rotateX1.o" "utility_room_viewRN.phl[334]";
+connectAttr "nurbsCircle3_rotateY1.o" "utility_room_viewRN.phl[335]";
+connectAttr "nurbsCircle3_rotateZ1.o" "utility_room_viewRN.phl[336]";
+connectAttr "nurbsCircle3_scaleX1.o" "utility_room_viewRN.phl[337]";
+connectAttr "nurbsCircle3_scaleY1.o" "utility_room_viewRN.phl[338]";
+connectAttr "nurbsCircle3_scaleZ1.o" "utility_room_viewRN.phl[339]";
+connectAttr "nurbsCircle4_translateX.o" "utility_room_viewRN.phl[340]";
+connectAttr "nurbsCircle4_translateY.o" "utility_room_viewRN.phl[341]";
+connectAttr "nurbsCircle4_translateZ.o" "utility_room_viewRN.phl[342]";
+connectAttr "nurbsCircle4_visibility.o" "utility_room_viewRN.phl[343]";
+connectAttr "nurbsCircle4_rotateX.o" "utility_room_viewRN.phl[344]";
+connectAttr "nurbsCircle4_rotateY.o" "utility_room_viewRN.phl[345]";
+connectAttr "nurbsCircle4_rotateZ.o" "utility_room_viewRN.phl[346]";
+connectAttr "nurbsCircle4_scaleX.o" "utility_room_viewRN.phl[347]";
+connectAttr "nurbsCircle4_scaleY.o" "utility_room_viewRN.phl[348]";
+connectAttr "nurbsCircle4_scaleZ.o" "utility_room_viewRN.phl[349]";
+connectAttr "curve6_translateX.o" "utility_room_viewRN.phl[350]";
+connectAttr "curve6_translateY.o" "utility_room_viewRN.phl[351]";
+connectAttr "curve6_translateZ.o" "utility_room_viewRN.phl[352]";
+connectAttr "curve6_visibility.o" "utility_room_viewRN.phl[353]";
+connectAttr "curve6_rotateX.o" "utility_room_viewRN.phl[354]";
+connectAttr "curve6_rotateY.o" "utility_room_viewRN.phl[355]";
+connectAttr "curve6_rotateZ.o" "utility_room_viewRN.phl[356]";
+connectAttr "curve6_scaleX.o" "utility_room_viewRN.phl[357]";
+connectAttr "curve6_scaleY.o" "utility_room_viewRN.phl[358]";
+connectAttr "curve6_scaleZ.o" "utility_room_viewRN.phl[359]";
+connectAttr "curve7_translateX.o" "utility_room_viewRN.phl[360]";
+connectAttr "curve7_translateY.o" "utility_room_viewRN.phl[361]";
+connectAttr "curve7_translateZ.o" "utility_room_viewRN.phl[362]";
+connectAttr "curve7_visibility.o" "utility_room_viewRN.phl[363]";
+connectAttr "curve7_rotateX.o" "utility_room_viewRN.phl[364]";
+connectAttr "curve7_rotateY.o" "utility_room_viewRN.phl[365]";
+connectAttr "curve7_rotateZ.o" "utility_room_viewRN.phl[366]";
+connectAttr "curve7_scaleX.o" "utility_room_viewRN.phl[367]";
+connectAttr "curve7_scaleY.o" "utility_room_viewRN.phl[368]";
+connectAttr "curve7_scaleZ.o" "utility_room_viewRN.phl[369]";
+connectAttr "curve8_translateX.o" "utility_room_viewRN.phl[370]";
+connectAttr "curve8_translateY.o" "utility_room_viewRN.phl[371]";
+connectAttr "curve8_translateZ.o" "utility_room_viewRN.phl[372]";
+connectAttr "curve8_visibility.o" "utility_room_viewRN.phl[373]";
+connectAttr "curve8_rotateX.o" "utility_room_viewRN.phl[374]";
+connectAttr "curve8_rotateY.o" "utility_room_viewRN.phl[375]";
+connectAttr "curve8_rotateZ.o" "utility_room_viewRN.phl[376]";
+connectAttr "curve8_scaleX.o" "utility_room_viewRN.phl[377]";
+connectAttr "curve8_scaleY.o" "utility_room_viewRN.phl[378]";
+connectAttr "curve8_scaleZ.o" "utility_room_viewRN.phl[379]";
+connectAttr "curve9_translateX.o" "utility_room_viewRN.phl[380]";
+connectAttr "curve9_translateY.o" "utility_room_viewRN.phl[381]";
+connectAttr "curve9_translateZ.o" "utility_room_viewRN.phl[382]";
+connectAttr "curve9_visibility.o" "utility_room_viewRN.phl[383]";
+connectAttr "curve9_rotateX.o" "utility_room_viewRN.phl[384]";
+connectAttr "curve9_rotateY.o" "utility_room_viewRN.phl[385]";
+connectAttr "curve9_rotateZ.o" "utility_room_viewRN.phl[386]";
+connectAttr "curve9_scaleX.o" "utility_room_viewRN.phl[387]";
+connectAttr "curve9_scaleY.o" "utility_room_viewRN.phl[388]";
+connectAttr "curve9_scaleZ.o" "utility_room_viewRN.phl[389]";
+connectAttr "curve10_translateX.o" "utility_room_viewRN.phl[390]";
+connectAttr "curve10_translateY.o" "utility_room_viewRN.phl[391]";
+connectAttr "curve10_translateZ.o" "utility_room_viewRN.phl[392]";
+connectAttr "curve10_visibility.o" "utility_room_viewRN.phl[393]";
+connectAttr "curve10_rotateX.o" "utility_room_viewRN.phl[394]";
+connectAttr "curve10_rotateY.o" "utility_room_viewRN.phl[395]";
+connectAttr "curve10_rotateZ.o" "utility_room_viewRN.phl[396]";
+connectAttr "curve10_scaleX.o" "utility_room_viewRN.phl[397]";
+connectAttr "curve10_scaleY.o" "utility_room_viewRN.phl[398]";
+connectAttr "curve10_scaleZ.o" "utility_room_viewRN.phl[399]";
+connectAttr "controller_rightLeg1_visibility.o" "utility_room_viewRN.phl[400]";
+connectAttr "controller_rightLeg1_translateX.o" "utility_room_viewRN.phl[401]";
+connectAttr "controller_rightLeg1_translateY.o" "utility_room_viewRN.phl[402]";
+connectAttr "controller_rightLeg1_translateZ.o" "utility_room_viewRN.phl[403]";
+connectAttr "controller_rightLeg1_rotateX.o" "utility_room_viewRN.phl[404]";
+connectAttr "controller_rightLeg1_rotateY.o" "utility_room_viewRN.phl[405]";
+connectAttr "controller_rightLeg1_rotateZ.o" "utility_room_viewRN.phl[406]";
+connectAttr "controller_rightLeg1_scaleX.o" "utility_room_viewRN.phl[407]";
+connectAttr "controller_rightLeg1_scaleY.o" "utility_room_viewRN.phl[408]";
+connectAttr "controller_rightLeg1_scaleZ.o" "utility_room_viewRN.phl[409]";
+connectAttr "nurbsCircle8_rotateX.o" "utility_room_viewRN.phl[410]";
+connectAttr "nurbsCircle8_rotateY.o" "utility_room_viewRN.phl[411]";
+connectAttr "nurbsCircle8_rotateZ.o" "utility_room_viewRN.phl[412]";
+connectAttr "nurbsCircle8_translateX.o" "utility_room_viewRN.phl[413]";
+connectAttr "nurbsCircle8_translateY.o" "utility_room_viewRN.phl[414]";
+connectAttr "nurbsCircle8_translateZ.o" "utility_room_viewRN.phl[415]";
+connectAttr "nurbsCircle8_visibility.o" "utility_room_viewRN.phl[416]";
+connectAttr "nurbsCircle8_scaleX.o" "utility_room_viewRN.phl[417]";
+connectAttr "nurbsCircle8_scaleY.o" "utility_room_viewRN.phl[418]";
+connectAttr "nurbsCircle8_scaleZ.o" "utility_room_viewRN.phl[419]";
+connectAttr "controller_rightArm_visibility.o" "utility_room_viewRN.phl[420]";
+connectAttr "controller_rightArm_translateX.o" "utility_room_viewRN.phl[421]";
+connectAttr "controller_rightArm_translateY.o" "utility_room_viewRN.phl[422]";
+connectAttr "controller_rightArm_translateZ.o" "utility_room_viewRN.phl[423]";
+connectAttr "controller_rightArm_rotateX.o" "utility_room_viewRN.phl[424]";
+connectAttr "controller_rightArm_rotateY.o" "utility_room_viewRN.phl[425]";
+connectAttr "controller_rightArm_rotateZ.o" "utility_room_viewRN.phl[426]";
+connectAttr "controller_rightArm_scaleX.o" "utility_room_viewRN.phl[427]";
+connectAttr "controller_rightArm_scaleY.o" "utility_room_viewRN.phl[428]";
+connectAttr "controller_rightArm_scaleZ.o" "utility_room_viewRN.phl[429]";
+connectAttr "controller_rightWrist_translateX.o" "utility_room_viewRN.phl[430]";
+connectAttr "controller_rightWrist_translateY.o" "utility_room_viewRN.phl[431]";
+connectAttr "controller_rightWrist_translateZ.o" "utility_room_viewRN.phl[432]";
+connectAttr "controller_rightWrist_rotateX.o" "utility_room_viewRN.phl[433]";
+connectAttr "controller_rightWrist_rotateY.o" "utility_room_viewRN.phl[434]";
+connectAttr "controller_rightWrist_rotateZ.o" "utility_room_viewRN.phl[435]";
+connectAttr "controller_rightWrist_scaleX.o" "utility_room_viewRN.phl[436]";
+connectAttr "controller_rightWrist_scaleY.o" "utility_room_viewRN.phl[437]";
+connectAttr "controller_rightWrist_scaleZ.o" "utility_room_viewRN.phl[438]";
+connectAttr "controller_rightWrist_visibility.o" "utility_room_viewRN.phl[439]";
+connectAttr "nurbsCircle1_translateX1.o" "utility_room_viewRN.phl[440]";
+connectAttr "nurbsCircle1_translateY1.o" "utility_room_viewRN.phl[441]";
+connectAttr "nurbsCircle1_translateZ1.o" "utility_room_viewRN.phl[442]";
+connectAttr "nurbsCircle1_visibility1.o" "utility_room_viewRN.phl[443]";
+connectAttr "nurbsCircle1_rotateX1.o" "utility_room_viewRN.phl[444]";
+connectAttr "nurbsCircle1_rotateY1.o" "utility_room_viewRN.phl[445]";
+connectAttr "nurbsCircle1_rotateZ1.o" "utility_room_viewRN.phl[446]";
+connectAttr "nurbsCircle1_scaleX1.o" "utility_room_viewRN.phl[447]";
+connectAttr "nurbsCircle1_scaleY1.o" "utility_room_viewRN.phl[448]";
+connectAttr "nurbsCircle1_scaleZ1.o" "utility_room_viewRN.phl[449]";
+connectAttr "nurbsCircle9_translateX.o" "utility_room_viewRN.phl[450]";
+connectAttr "nurbsCircle9_translateY.o" "utility_room_viewRN.phl[451]";
+connectAttr "nurbsCircle9_translateZ.o" "utility_room_viewRN.phl[452]";
+connectAttr "nurbsCircle9_visibility.o" "utility_room_viewRN.phl[453]";
+connectAttr "nurbsCircle9_rotateX.o" "utility_room_viewRN.phl[454]";
+connectAttr "nurbsCircle9_rotateY.o" "utility_room_viewRN.phl[455]";
+connectAttr "nurbsCircle9_rotateZ.o" "utility_room_viewRN.phl[456]";
+connectAttr "nurbsCircle9_scaleX.o" "utility_room_viewRN.phl[457]";
+connectAttr "nurbsCircle9_scaleY.o" "utility_room_viewRN.phl[458]";
+connectAttr "nurbsCircle9_scaleZ.o" "utility_room_viewRN.phl[459]";
+connectAttr "nurbsCircle10_translateX.o" "utility_room_viewRN.phl[460]";
+connectAttr "nurbsCircle10_translateY.o" "utility_room_viewRN.phl[461]";
+connectAttr "nurbsCircle10_translateZ.o" "utility_room_viewRN.phl[462]";
+connectAttr "nurbsCircle10_visibility.o" "utility_room_viewRN.phl[463]";
+connectAttr "nurbsCircle10_rotateX.o" "utility_room_viewRN.phl[464]";
+connectAttr "nurbsCircle10_rotateY.o" "utility_room_viewRN.phl[465]";
+connectAttr "nurbsCircle10_rotateZ.o" "utility_room_viewRN.phl[466]";
+connectAttr "nurbsCircle10_scaleX.o" "utility_room_viewRN.phl[467]";
+connectAttr "nurbsCircle10_scaleY.o" "utility_room_viewRN.phl[468]";
+connectAttr "nurbsCircle10_scaleZ.o" "utility_room_viewRN.phl[469]";
+connectAttr "nurbsCircle11_translateX.o" "utility_room_viewRN.phl[470]";
+connectAttr "nurbsCircle11_translateY.o" "utility_room_viewRN.phl[471]";
+connectAttr "nurbsCircle11_translateZ.o" "utility_room_viewRN.phl[472]";
+connectAttr "nurbsCircle11_visibility.o" "utility_room_viewRN.phl[473]";
+connectAttr "nurbsCircle11_rotateX.o" "utility_room_viewRN.phl[474]";
+connectAttr "nurbsCircle11_rotateY.o" "utility_room_viewRN.phl[475]";
+connectAttr "nurbsCircle11_rotateZ.o" "utility_room_viewRN.phl[476]";
+connectAttr "nurbsCircle11_scaleX.o" "utility_room_viewRN.phl[477]";
+connectAttr "nurbsCircle11_scaleY.o" "utility_room_viewRN.phl[478]";
+connectAttr "nurbsCircle11_scaleZ.o" "utility_room_viewRN.phl[479]";
+connectAttr "nurbsCircle12_translateX.o" "utility_room_viewRN.phl[480]";
+connectAttr "nurbsCircle12_translateY.o" "utility_room_viewRN.phl[481]";
+connectAttr "nurbsCircle12_translateZ.o" "utility_room_viewRN.phl[482]";
+connectAttr "nurbsCircle12_visibility.o" "utility_room_viewRN.phl[483]";
+connectAttr "nurbsCircle12_rotateX.o" "utility_room_viewRN.phl[484]";
+connectAttr "nurbsCircle12_rotateY.o" "utility_room_viewRN.phl[485]";
+connectAttr "nurbsCircle12_rotateZ.o" "utility_room_viewRN.phl[486]";
+connectAttr "nurbsCircle12_scaleX.o" "utility_room_viewRN.phl[487]";
+connectAttr "nurbsCircle12_scaleY.o" "utility_room_viewRN.phl[488]";
+connectAttr "nurbsCircle12_scaleZ.o" "utility_room_viewRN.phl[489]";
+connectAttr "curve1_translateX.o" "utility_room_viewRN.phl[490]";
+connectAttr "curve1_translateY.o" "utility_room_viewRN.phl[491]";
+connectAttr "curve1_translateZ.o" "utility_room_viewRN.phl[492]";
+connectAttr "curve1_visibility.o" "utility_room_viewRN.phl[493]";
+connectAttr "curve1_rotateX.o" "utility_room_viewRN.phl[494]";
+connectAttr "curve1_rotateY.o" "utility_room_viewRN.phl[495]";
+connectAttr "curve1_rotateZ.o" "utility_room_viewRN.phl[496]";
+connectAttr "curve1_scaleX.o" "utility_room_viewRN.phl[497]";
+connectAttr "curve1_scaleY.o" "utility_room_viewRN.phl[498]";
+connectAttr "curve1_scaleZ.o" "utility_room_viewRN.phl[499]";
+connectAttr "curve2_translateX.o" "utility_room_viewRN.phl[500]";
+connectAttr "curve2_translateY.o" "utility_room_viewRN.phl[501]";
+connectAttr "curve2_translateZ.o" "utility_room_viewRN.phl[502]";
+connectAttr "curve2_visibility.o" "utility_room_viewRN.phl[503]";
+connectAttr "curve2_rotateX.o" "utility_room_viewRN.phl[504]";
+connectAttr "curve2_rotateY.o" "utility_room_viewRN.phl[505]";
+connectAttr "curve2_rotateZ.o" "utility_room_viewRN.phl[506]";
+connectAttr "curve2_scaleX.o" "utility_room_viewRN.phl[507]";
+connectAttr "curve2_scaleY.o" "utility_room_viewRN.phl[508]";
+connectAttr "curve2_scaleZ.o" "utility_room_viewRN.phl[509]";
+connectAttr "curve3_translateX.o" "utility_room_viewRN.phl[510]";
+connectAttr "curve3_translateY.o" "utility_room_viewRN.phl[511]";
+connectAttr "curve3_translateZ.o" "utility_room_viewRN.phl[512]";
+connectAttr "curve3_visibility.o" "utility_room_viewRN.phl[513]";
+connectAttr "curve3_rotateX.o" "utility_room_viewRN.phl[514]";
+connectAttr "curve3_rotateY.o" "utility_room_viewRN.phl[515]";
+connectAttr "curve3_rotateZ.o" "utility_room_viewRN.phl[516]";
+connectAttr "curve3_scaleX.o" "utility_room_viewRN.phl[517]";
+connectAttr "curve3_scaleY.o" "utility_room_viewRN.phl[518]";
+connectAttr "curve3_scaleZ.o" "utility_room_viewRN.phl[519]";
+connectAttr "curve4_translateX.o" "utility_room_viewRN.phl[520]";
+connectAttr "curve4_translateY.o" "utility_room_viewRN.phl[521]";
+connectAttr "curve4_translateZ.o" "utility_room_viewRN.phl[522]";
+connectAttr "curve4_visibility.o" "utility_room_viewRN.phl[523]";
+connectAttr "curve4_rotateX.o" "utility_room_viewRN.phl[524]";
+connectAttr "curve4_rotateY.o" "utility_room_viewRN.phl[525]";
+connectAttr "curve4_rotateZ.o" "utility_room_viewRN.phl[526]";
+connectAttr "curve4_scaleX.o" "utility_room_viewRN.phl[527]";
+connectAttr "curve4_scaleY.o" "utility_room_viewRN.phl[528]";
+connectAttr "curve4_scaleZ.o" "utility_room_viewRN.phl[529]";
+connectAttr "curve5_translateX.o" "utility_room_viewRN.phl[530]";
+connectAttr "curve5_translateY.o" "utility_room_viewRN.phl[531]";
+connectAttr "curve5_translateZ.o" "utility_room_viewRN.phl[532]";
+connectAttr "curve5_visibility.o" "utility_room_viewRN.phl[533]";
+connectAttr "curve5_rotateX.o" "utility_room_viewRN.phl[534]";
+connectAttr "curve5_rotateY.o" "utility_room_viewRN.phl[535]";
+connectAttr "curve5_rotateZ.o" "utility_room_viewRN.phl[536]";
+connectAttr "curve5_scaleX.o" "utility_room_viewRN.phl[537]";
+connectAttr "curve5_scaleY.o" "utility_room_viewRN.phl[538]";
+connectAttr "curve5_scaleZ.o" "utility_room_viewRN.phl[539]";
+connectAttr "RightArm_rotateX.o" "utility_room_viewRN.phl[540]";
+connectAttr "RightArm_rotateY.o" "utility_room_viewRN.phl[541]";
+connectAttr "RightArm_rotateZ.o" "utility_room_viewRN.phl[542]";
+connectAttr "RightArm_translateX.o" "utility_room_viewRN.phl[543]";
+connectAttr "RightArm_translateY.o" "utility_room_viewRN.phl[544]";
+connectAttr "RightArm_translateZ.o" "utility_room_viewRN.phl[545]";
+connectAttr "RightArm_visibility.o" "utility_room_viewRN.phl[546]";
+connectAttr "RightArm_scaleX.o" "utility_room_viewRN.phl[547]";
+connectAttr "RightArm_scaleY.o" "utility_room_viewRN.phl[548]";
+connectAttr "RightArm_scaleZ.o" "utility_room_viewRN.phl[549]";
+connectAttr "controller_main01_translateX.o" "utility_room_viewRN.phl[45]";
+connectAttr "controller_main01_translateY.o" "utility_room_viewRN.phl[46]";
+connectAttr "controller_main01_translateZ.o" "utility_room_viewRN.phl[47]";
+connectAttr "controller_main01_rotateX.o" "utility_room_viewRN.phl[48]";
+connectAttr "controller_main01_rotateY.o" "utility_room_viewRN.phl[49]";
+connectAttr "controller_main01_rotateZ.o" "utility_room_viewRN.phl[50]";
+connectAttr "controller_main01_scaleX.o" "utility_room_viewRN.phl[51]";
+connectAttr "controller_main01_scaleY.o" "utility_room_viewRN.phl[52]";
+connectAttr "controller_main01_scaleZ.o" "utility_room_viewRN.phl[53]";
+connectAttr "utility_room_viewRN.phl[77]" "global_ctrl_parentConstraint1.tg[0].tt"
 		;
-connectAttr "bike_ctrl_translateX.o" "utility_room_viewRN.phl[76]";
-connectAttr "bike_ctrl_translateY.o" "utility_room_viewRN.phl[77]";
-connectAttr "bike_ctrl_translateZ.o" "utility_room_viewRN.phl[78]";
-connectAttr "bike_ctrl_visibility.o" "utility_room_viewRN.phl[79]";
-connectAttr "utility_room_viewRN.phl[80]" "global_ctrl_parentConstraint1.tg[0].tr"
+connectAttr "bike_ctrl_translateX.o" "utility_room_viewRN.phl[78]";
+connectAttr "bike_ctrl_translateY.o" "utility_room_viewRN.phl[79]";
+connectAttr "bike_ctrl_translateZ.o" "utility_room_viewRN.phl[80]";
+connectAttr "bike_ctrl_visibility.o" "utility_room_viewRN.phl[81]";
+connectAttr "utility_room_viewRN.phl[82]" "global_ctrl_parentConstraint1.tg[0].tr"
 		;
-connectAttr "bike_ctrl_rotateX.o" "utility_room_viewRN.phl[81]";
-connectAttr "bike_ctrl_rotateY.o" "utility_room_viewRN.phl[82]";
-connectAttr "bike_ctrl_rotateZ.o" "utility_room_viewRN.phl[83]";
-connectAttr "utility_room_viewRN.phl[84]" "global_ctrl_parentConstraint1.tg[0].ts"
+connectAttr "bike_ctrl_rotateX.o" "utility_room_viewRN.phl[83]";
+connectAttr "bike_ctrl_rotateY.o" "utility_room_viewRN.phl[84]";
+connectAttr "bike_ctrl_rotateZ.o" "utility_room_viewRN.phl[85]";
+connectAttr "utility_room_viewRN.phl[86]" "global_ctrl_parentConstraint1.tg[0].ts"
 		;
-connectAttr "bike_ctrl_scaleX.o" "utility_room_viewRN.phl[85]";
-connectAttr "bike_ctrl_scaleY.o" "utility_room_viewRN.phl[86]";
-connectAttr "bike_ctrl_scaleZ.o" "utility_room_viewRN.phl[87]";
-connectAttr "utility_room_viewRN.phl[88]" "global_ctrl_parentConstraint1.tg[0].trp"
+connectAttr "bike_ctrl_scaleX.o" "utility_room_viewRN.phl[87]";
+connectAttr "bike_ctrl_scaleY.o" "utility_room_viewRN.phl[88]";
+connectAttr "bike_ctrl_scaleZ.o" "utility_room_viewRN.phl[89]";
+connectAttr "utility_room_viewRN.phl[90]" "global_ctrl_parentConstraint1.tg[0].trp"
 		;
-connectAttr "utility_room_viewRN.phl[89]" "global_ctrl_parentConstraint1.tg[0].trt"
+connectAttr "utility_room_viewRN.phl[91]" "global_ctrl_parentConstraint1.tg[0].trt"
 		;
-connectAttr "utility_room_viewRN.phl[90]" "global_ctrl_parentConstraint1.tg[0].tro"
+connectAttr "utility_room_viewRN.phl[92]" "global_ctrl_parentConstraint1.tg[0].tro"
 		;
-connectAttr "utility_room_viewRN.phl[91]" "global_ctrl_parentConstraint1.tg[0].tpm"
+connectAttr "utility_room_viewRN.phl[93]" "global_ctrl_parentConstraint1.tg[0].tpm"
 		;
-connectAttr "utility_room_viewRN.phl[92]" "nRigidShape1.imsh";
-connectAttr "utility_room_viewRN.phl[93]" "nRigidShape2.imsh";
-connectAttr "utility_room_viewRN.phl[94]" "nRigidShape3.imsh";
-connectAttr "utility_room_viewRN.phl[95]" "nRigidShape4.imsh";
-connectAttr "utility_room_viewRN.phl[96]" "nRigidShape5.imsh";
-connectAttr "utility_room_viewRN.phl[97]" "nRigidShape6.imsh";
-connectAttr "undies_visibility.o" "utility_room_viewRN.phl[31]";
-connectAttr "undies_translateX.o" "utility_room_viewRN.phl[32]";
-connectAttr "undies_translateY.o" "utility_room_viewRN.phl[33]";
-connectAttr "undies_translateZ.o" "utility_room_viewRN.phl[34]";
-connectAttr "undies_rotateX.o" "utility_room_viewRN.phl[35]";
-connectAttr "undies_rotateY.o" "utility_room_viewRN.phl[36]";
-connectAttr "undies_rotateZ.o" "utility_room_viewRN.phl[37]";
-connectAttr "undies_scaleX.o" "utility_room_viewRN.phl[38]";
-connectAttr "undies_scaleY.o" "utility_room_viewRN.phl[39]";
-connectAttr "undies_scaleZ.o" "utility_room_viewRN.phl[40]";
-connectAttr "utility_room_viewRN.phl[41]" "undiesShapeDeformed.i";
-connectAttr "undiesShapeDeformed.iog" "utility_room_viewRN.phl[42]";
-connectAttr "at_dryer_visibility.o" "utility_room_viewRN.phl[548]";
-connectAttr "at_dryer_translateX.o" "utility_room_viewRN.phl[549]";
-connectAttr "at_dryer_translateY.o" "utility_room_viewRN.phl[550]";
-connectAttr "at_dryer_translateZ.o" "utility_room_viewRN.phl[551]";
-connectAttr "at_dryer_rotateX.o" "utility_room_viewRN.phl[552]";
-connectAttr "at_dryer_rotateY.o" "utility_room_viewRN.phl[553]";
-connectAttr "at_dryer_rotateZ.o" "utility_room_viewRN.phl[554]";
-connectAttr "at_dryer_scaleX.o" "utility_room_viewRN.phl[555]";
-connectAttr "at_dryer_scaleY.o" "utility_room_viewRN.phl[556]";
-connectAttr "at_dryer_scaleZ.o" "utility_room_viewRN.phl[557]";
-connectAttr "at_dryerShape_focalLength.o" "utility_room_viewRN.phl[558]";
+connectAttr "utility_room_viewRN.phl[94]" "nRigidShape1.imsh";
+connectAttr "utility_room_viewRN.phl[95]" "nRigidShape2.imsh";
+connectAttr "utility_room_viewRN.phl[96]" "nRigidShape3.imsh";
+connectAttr "utility_room_viewRN.phl[97]" "nRigidShape4.imsh";
+connectAttr "utility_room_viewRN.phl[98]" "nRigidShape5.imsh";
+connectAttr "utility_room_viewRN.phl[99]" "nRigidShape6.imsh";
+connectAttr "undies_visibility.o" "utility_room_viewRN.phl[33]";
+connectAttr "undies_translateX.o" "utility_room_viewRN.phl[34]";
+connectAttr "undies_translateY.o" "utility_room_viewRN.phl[35]";
+connectAttr "undies_translateZ.o" "utility_room_viewRN.phl[36]";
+connectAttr "undies_rotateX.o" "utility_room_viewRN.phl[37]";
+connectAttr "undies_rotateY.o" "utility_room_viewRN.phl[38]";
+connectAttr "undies_rotateZ.o" "utility_room_viewRN.phl[39]";
+connectAttr "undies_scaleX.o" "utility_room_viewRN.phl[40]";
+connectAttr "undies_scaleY.o" "utility_room_viewRN.phl[41]";
+connectAttr "undies_scaleZ.o" "utility_room_viewRN.phl[42]";
+connectAttr "utility_room_viewRN.phl[43]" "undiesShapeDeformed.i";
+connectAttr "undiesShapeDeformed.iog" "utility_room_viewRN.phl[44]";
+connectAttr "at_dryer_visibility.o" "utility_room_viewRN.phl[550]";
+connectAttr "at_dryer_translateX.o" "utility_room_viewRN.phl[551]";
+connectAttr "at_dryer_translateY.o" "utility_room_viewRN.phl[552]";
+connectAttr "at_dryer_translateZ.o" "utility_room_viewRN.phl[553]";
+connectAttr "at_dryer_rotateX.o" "utility_room_viewRN.phl[554]";
+connectAttr "at_dryer_rotateY.o" "utility_room_viewRN.phl[555]";
+connectAttr "at_dryer_rotateZ.o" "utility_room_viewRN.phl[556]";
+connectAttr "at_dryer_scaleX.o" "utility_room_viewRN.phl[557]";
+connectAttr "at_dryer_scaleY.o" "utility_room_viewRN.phl[558]";
+connectAttr "at_dryer_scaleZ.o" "utility_room_viewRN.phl[559]";
+connectAttr "at_dryerShape_focalLength.o" "utility_room_viewRN.phl[560]";
 connectAttr "nRigidShape1.cust" "utility_room_viewRN.phl[1]";
 connectAttr "nRigidShape2.cust" "utility_room_viewRN.phl[2]";
 connectAttr "nRigidShape3.cust" "utility_room_viewRN.phl[3]";
@@ -22121,29 +22166,33 @@ connectAttr "utility_room_viewRN.phl[27]" "nRigidShape7.stf";
 connectAttr "utility_room_viewRN.phl[28]" "nRigidShape8.stf";
 connectAttr "utility_room_viewRN.phl[29]" "nRigidShape9.stf";
 connectAttr "utility_room_viewRN.phl[30]" "nRigidShape10.stf";
-connectAttr "utility_room_viewRN.phl[52]" "nRigidShape7.imsh";
-connectAttr "utility_room_viewRN.phl[53]" "pairBlend1.w";
-connectAttr "global_ctrl_blendParent1.o" "utility_room_viewRN.phl[54]";
-connectAttr "pairBlend1.otx" "utility_room_viewRN.phl[55]";
-connectAttr "pairBlend1.oty" "utility_room_viewRN.phl[56]";
-connectAttr "pairBlend1.otz" "utility_room_viewRN.phl[57]";
-connectAttr "pairBlend1.orx" "utility_room_viewRN.phl[58]";
-connectAttr "pairBlend1.ory" "utility_room_viewRN.phl[59]";
-connectAttr "pairBlend1.orz" "utility_room_viewRN.phl[60]";
-connectAttr "global_ctrl_scaleX.o" "utility_room_viewRN.phl[61]";
-connectAttr "global_ctrl_scaleY.o" "utility_room_viewRN.phl[62]";
-connectAttr "global_ctrl_scaleZ.o" "utility_room_viewRN.phl[63]";
-connectAttr "utility_room_viewRN.phl[64]" "global_ctrl_parentConstraint1.crp";
-connectAttr "utility_room_viewRN.phl[65]" "global_ctrl_parentConstraint1.crt";
-connectAttr "utility_room_viewRN.phl[66]" "pairBlend1.ro";
-connectAttr "utility_room_viewRN.phl[67]" "global_ctrl_parentConstraint1.cro";
-connectAttr "utility_room_viewRN.phl[68]" "global_ctrl_parentConstraint1.cpim";
-connectAttr "utility_room_viewRN.phl[69]" "nRigidShape8.imsh";
-connectAttr "utility_room_viewRN.phl[70]" "nRigidShape9.imsh";
-connectAttr "utility_room_viewRN.phl[71]" "nRigidShape10.imsh";
-connectAttr "head_ctrl_rotateX.o" "utility_room_viewRN.phl[72]";
-connectAttr "head_ctrl_rotateY.o" "utility_room_viewRN.phl[73]";
-connectAttr "head_ctrl_rotateZ.o" "utility_room_viewRN.phl[74]";
+connectAttr "utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1.ocd[0]" "utility_room_viewRN.phl[31]"
+		;
+connectAttr "utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1.ir" "utility_room_viewRN.phl[32]"
+		;
+connectAttr "utility_room_viewRN.phl[54]" "nRigidShape7.imsh";
+connectAttr "utility_room_viewRN.phl[55]" "pairBlend1.w";
+connectAttr "global_ctrl_blendParent1.o" "utility_room_viewRN.phl[56]";
+connectAttr "pairBlend1.otx" "utility_room_viewRN.phl[57]";
+connectAttr "pairBlend1.oty" "utility_room_viewRN.phl[58]";
+connectAttr "pairBlend1.otz" "utility_room_viewRN.phl[59]";
+connectAttr "pairBlend1.orx" "utility_room_viewRN.phl[60]";
+connectAttr "pairBlend1.ory" "utility_room_viewRN.phl[61]";
+connectAttr "pairBlend1.orz" "utility_room_viewRN.phl[62]";
+connectAttr "global_ctrl_scaleX.o" "utility_room_viewRN.phl[63]";
+connectAttr "global_ctrl_scaleY.o" "utility_room_viewRN.phl[64]";
+connectAttr "global_ctrl_scaleZ.o" "utility_room_viewRN.phl[65]";
+connectAttr "utility_room_viewRN.phl[66]" "global_ctrl_parentConstraint1.crp";
+connectAttr "utility_room_viewRN.phl[67]" "global_ctrl_parentConstraint1.crt";
+connectAttr "utility_room_viewRN.phl[68]" "global_ctrl_parentConstraint1.cro";
+connectAttr "utility_room_viewRN.phl[69]" "pairBlend1.ro";
+connectAttr "utility_room_viewRN.phl[70]" "global_ctrl_parentConstraint1.cpim";
+connectAttr "utility_room_viewRN.phl[71]" "nRigidShape8.imsh";
+connectAttr "utility_room_viewRN.phl[72]" "nRigidShape9.imsh";
+connectAttr "utility_room_viewRN.phl[73]" "nRigidShape10.imsh";
+connectAttr "head_ctrl_rotateX.o" "utility_room_viewRN.phl[74]";
+connectAttr "head_ctrl_rotateY.o" "utility_room_viewRN.phl[75]";
+connectAttr "head_ctrl_rotateZ.o" "utility_room_viewRN.phl[76]";
 connectAttr ":time1.o" "nRigidShape1.cti";
 connectAttr ":time1.o" "nRigidShape2.cti";
 connectAttr ":time1.o" "nRigidShape3.cti";
@@ -22187,8 +22236,10 @@ connectAttr "global_ctrl_parentConstraint1.crz" "pairBlend1.irz2";
 connectAttr ":time1.o" "nRigidShape7Cache1.tim";
 connectAttr ":time1.o" "utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape1Cache2.tim"
 		;
+connectAttr ":time1.o" "utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1.tim"
+		;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 dataStructure -fmt "raw" -as "name=externalContentTable:string=node:string=key:string=upath:uint32=upathcrc:string=rpath:string=roles";
-applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"utility_room_viewRN\" \"\" \"X:/documents/GitHub/Bandits/maya//scenes/utility_room_view.ma\" 3882268200 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/scenes/utility_room_view.ma\" \"FileRef\"\nendStream\nendChannel\nendAssociations\n" 
+applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"utility_room_viewRN\" \"\" \"X:/documents/GitHub/Bandits/maya//scenes/utility_room_view.ma\" 3882268200 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/scenes/utility_room_view.ma\" \"FileRef\"\n1\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-360\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame360.mcx\" 998982645 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame360.mcx\" \"diskCache\"\n2\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-359\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame359.mcx\" 2953794346 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame359.mcx\" \"diskCache\"\n3\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-357\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame357.mcx\" 255847755 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame357.mcx\" \"diskCache\"\n4\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-355\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame355.mcx\" 1979694635 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame355.mcx\" \"diskCache\"\n5\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-354\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame354.mcx\" 1218418587 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame354.mcx\" \"diskCache\"\n6\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-352\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame352.mcx\" 3353305659 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame352.mcx\" \"diskCache\"\n7\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-351\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame351.mcx\" 2155813099 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame351.mcx\" \"diskCache\"\n8\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-350\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame350.mcx\" 3172938075 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame350.mcx\" \"diskCache\"\n9\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-348\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame348.mcx\" 1177790783 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame348.mcx\" \"diskCache\"\n10\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-345\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame345.mcx\" 3198381454 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame345.mcx\" \"diskCache\"\n11\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-344\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame344.mcx\" 2210612286 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame344.mcx\" \"diskCache\"\n12\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-343\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame343.mcx\" 836999214 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame343.mcx\" \"diskCache\"\n13\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-342\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame342.mcx\" 209957278 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame342.mcx\" \"diskCache\"\n14\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-338\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame338.mcx\" 1530304903 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame338.mcx\" \"diskCache\"\n15\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-337\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame337.mcx\" 3647344214 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame337.mcx\" \"diskCache\"\n16\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-335\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame335.mcx\" 2745589046 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame335.mcx\" \"diskCache\"\n17\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-334\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame334.mcx\" 2663806086 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame334.mcx\" \"diskCache\"\n18\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-333\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame333.mcx\" 753313942 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame333.mcx\" \"diskCache\"\n19\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-331\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame331.mcx\" 1445395446 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame331.mcx\" \"diskCache\"\n20\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-330\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame330.mcx\" 1799803462 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame330.mcx\" \"diskCache\"\n21\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-329\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame329.mcx\" 2903139218 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame329.mcx\" \"diskCache\"\n22\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-325\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame325.mcx\" 1761250963 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame325.mcx\" \"diskCache\"\n23\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-323\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame323.mcx\" 3887758131 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame323.mcx\" \"diskCache\"\n24\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-321\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame321.mcx\" 2642028627 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame321.mcx\" \"diskCache\"\n25\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-318\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame318.mcx\" 385759372 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame318.mcx\" \"diskCache\"\n26\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-317\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame317.mcx\" 2494476125 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame317.mcx\" \"diskCache\"\n27\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-316\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame316.mcx\" 2848884461 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame316.mcx\" \"diskCache\"\n28\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-315\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame315.mcx\" 4000250941 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame315.mcx\" \"diskCache\"\n29\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-314\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame314.mcx\" 3540964749 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame314.mcx\" \"diskCache\"\n30\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-311\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame311.mcx\" 468605693 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame311.mcx\" \"diskCache\"\n31\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-310\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame310.mcx\" 646869837 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame310.mcx\" \"diskCache\"\n32\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-309\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame309.mcx\" 3770860185 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame309.mcx\" \"diskCache\"\n33\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-307\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame307.mcx\" 1609727224 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame307.mcx\" \"diskCache\"\n34\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-306\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame306.mcx\" 1653757256 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame306.mcx\" \"diskCache\"\n35\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-322\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame322.mcx\" 3671741059 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame322.mcx\" \"diskCache\"\n36\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-305\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame305.mcx\" 624045976 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame305.mcx\" \"diskCache\"\n37\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-304\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame304.mcx\" 408028712 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame304.mcx\" \"diskCache\"\n38\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-299\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame299.mcx\" 1639618789 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame299.mcx\" \"diskCache\"\n39\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-294\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame294.mcx\" 2569690196 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame294.mcx\" \"diskCache\"\n40\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-292\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame292.mcx\" 376089076 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame292.mcx\" \"diskCache\"\n41\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-290\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame290.mcx\" 1823144596 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame290.mcx\" \"diskCache\"\n42\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-289\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame289.mcx\" 2867219264 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame289.mcx\" \"diskCache\"\n43\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-288\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame288.mcx\" 2542166768 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame288.mcx\" \"diskCache\"\n44\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-287\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame287.mcx\" 366408993 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame287.mcx\" \"diskCache\"\n45\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-328\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame328.mcx\" 2422884898 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame328.mcx\" \"diskCache\"\n46\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-283\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame283.mcx\" 3763753953 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame283.mcx\" \"diskCache\"\n47\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-281\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame281.mcx\" 2593521793 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame281.mcx\" \"diskCache\"\n48\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-282\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame282.mcx\" 3711334993 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame282.mcx\" \"diskCache\"\n49\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-280\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame280.mcx\" 2817927473 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame280.mcx\" \"diskCache\"\n50\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-279\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame279.mcx\" 1538324885 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame279.mcx\" \"diskCache\"\n51\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-293\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame293.mcx\" 722108484 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame293.mcx\" \"diskCache\"\n52\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-276\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame276.mcx\" 3655364164 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame276.mcx\" \"diskCache\"\n53\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-274\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame274.mcx\" 2736799012 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame274.mcx\" \"diskCache\"\n54\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-273\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame273.mcx\" 285270324 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame273.mcx\" \"diskCache\"\n55\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-272\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame272.mcx\" 744540292 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame272.mcx\" \"diskCache\"\n56\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-270\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame270.mcx\" 1453366244 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame270.mcx\" \"diskCache\"\n57\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-266\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame266.mcx\" 314359265 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame266.mcx\" \"diskCache\"\n58\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-265\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame265.mcx\" 1427949361 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame265.mcx\" \"diskCache\"\n59\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-296\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame296.mcx\" 3823767348 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame296.mcx\" \"diskCache\"\n60\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-264\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame264.mcx\" 1753017985 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame264.mcx\" \"diskCache\"\n61\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-263\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame263.mcx\" 3663475345 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame263.mcx\" \"diskCache\"\n62\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-262\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame262.mcx\" 3879476001 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame262.mcx\" \"diskCache\"\n63\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-261\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame261.mcx\" 2694603249 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame261.mcx\" \"diskCache\"\n64\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-260\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame260.mcx\" 2650556481 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame260.mcx\" \"diskCache\"\n65\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-259\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame259.mcx\" 376985758 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame259.mcx\" \"diskCache\"\n66\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-258\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame258.mcx\" 723022126 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame258.mcx\" \"diskCache\"\n67\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-256\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame256.mcx\" 2485702479 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame256.mcx\" \"diskCache\"\n68\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-358\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame358.mcx\" 2372893338 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame358.mcx\" \"diskCache\"\n69\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-252\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame252.mcx\" 1638427023 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame252.mcx\" \"diskCache\"\n70\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-251\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame251.mcx\" 638063455 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame251.mcx\" \"diskCache\"\n71\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-250\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame250.mcx\" 459815663 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame250.mcx\" \"diskCache\"\n72\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-246\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame246.mcx\" 1601445098 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame246.mcx\" \"diskCache\"\n73\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-245\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame245.mcx\" 416572986 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame245.mcx\" \"diskCache\"\n74\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-244\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame244.mcx\" 632573834 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame244.mcx\" \"diskCache\"\n75\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-242\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame242.mcx\" 2868165162 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame242.mcx\" \"diskCache\"\n76\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-238\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame238.mcx\" 4248932915 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame238.mcx\" \"diskCache\"\n77\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-236\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame236.mcx\" 1114713170 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame236.mcx\" \"diskCache\"\n78\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-298\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame298.mcx\" 1557836117 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame298.mcx\" \"diskCache\"\n79\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-235\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame235.mcx\" 97605250 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame235.mcx\" \"diskCache\"\n80\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-285\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame285.mcx\" 1863755329 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame285.mcx\" \"diskCache\"\n81\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-249\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame249.mcx\" 3710159675 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame249.mcx\" \"diskCache\"\n82\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-234\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame234.mcx\" 951156530 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame234.mcx\" \"diskCache\"\n83\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-231\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame231.mcx\" 4031901762 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame231.mcx\" \"diskCache\"\n84\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-228\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame228.mcx\" 907886998 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame228.mcx\" \"diskCache\"\n85\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-227\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame227.mcx\" 3025000007 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame227.mcx\" \"diskCache\"\n86\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-223\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame223.mcx\" 1103982727 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame223.mcx\" \"diskCache\"\n87\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-222\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame222.mcx\" 2091735351 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame222.mcx\" \"diskCache\"\n88\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-241\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame241.mcx\" 3981754618 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame241.mcx\" \"diskCache\"\n89\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-218\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame218.mcx\" 2961781560 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame218.mcx\" \"diskCache\"\n90\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-216\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame216.mcx\" 263818585 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame216.mcx\" \"diskCache\"\n91\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-356\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame356.mcx\" 845137147 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame356.mcx\" \"diskCache\"\n92\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-219\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame219.mcx\" 2380864136 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame219.mcx\" \"diskCache\"\n93\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-213\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame213.mcx\" 3344499241 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame213.mcx\" \"diskCache\"\n94\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-211\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame211.mcx\" 3180941641 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame211.mcx\" \"diskCache\"\n95\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-295\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame295.mcx\" 2756343268 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame295.mcx\" \"diskCache\"\n96\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-210\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame210.mcx\" 2163833081 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame210.mcx\" \"diskCache\"\n97\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-209\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame209.mcx\" 1186318637 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame209.mcx\" \"diskCache\"\n98\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-312\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame312.mcx\" 1548623917 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame312.mcx\" \"diskCache\"\n99\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-207\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame207.mcx\" 4186273612 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame207.mcx\" \"diskCache\"\n100\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-233\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame233.mcx\" 2324800290 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame233.mcx\" \"diskCache\"\n101\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-226\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame226.mcx\" 2301493239 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame226.mcx\" \"diskCache\"\n102\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-269\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame269.mcx\" 2431396400 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame269.mcx\" \"diskCache\"\n103\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-200\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame200.mcx\" 1269148508 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame200.mcx\" \"diskCache\"\n104\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-199\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame199.mcx\" 1347584632 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame199.mcx\" \"diskCache\"\n105\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-198\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame198.mcx\" 1832037320 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame198.mcx\" \"diskCache\"\n106\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-243\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame243.mcx\" 2543096730 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame243.mcx\" \"diskCache\"\n107\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-313\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame313.mcx\" 1630407069 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame313.mcx\" \"diskCache\"\n108\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-194\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame194.mcx\" 2831304393 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame194.mcx\" \"diskCache\"\n109\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-239\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame239.mcx\" 3223436163 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame239.mcx\" \"diskCache\"\n110\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-247\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame247.mcx\" 1645491546 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame247.mcx\" \"diskCache\"\n111\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-193\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame193.mcx\" 451058393 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame193.mcx\" \"diskCache\"\n112\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-191\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame191.mcx\" 1612892601 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame191.mcx\" \"diskCache\"\n113\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-190\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame190.mcx\" 1564663817 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame190.mcx\" \"diskCache\"\n114\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-183\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame183.mcx\" 3518908796 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame183.mcx\" \"diskCache\"\n115\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-181\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame181.mcx\" 2877168156 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame181.mcx\" \"diskCache\"\n116\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-180\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame180.mcx\" 2518561708 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame180.mcx\" \"diskCache\"\n117\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-177\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame177.mcx\" 3580386665 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame177.mcx\" \"diskCache\"\n118\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-176\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame176.mcx\" 3892868313 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame176.mcx\" \"diskCache\"\n119\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-248\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame248.mcx\" 3762594443 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame248.mcx\" \"diskCache\"\n120\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-175\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame175.mcx\" 2947026441 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame175.mcx\" \"diskCache\"\n121\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-170\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame170.mcx\" 1732804985 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame170.mcx\" \"diskCache\"\n122\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-169\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame169.mcx\" 2701406381 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame169.mcx\" \"diskCache\"\n123\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-168\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame168.mcx\" 2623805725 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame168.mcx\" \"diskCache\"\n124\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-167\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame167.mcx\" 506760908 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame167.mcx\" \"diskCache\"\n125\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-327\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame327.mcx\" 305847795 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame327.mcx\" \"diskCache\"\n126\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-166\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame166.mcx\" 592750460 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame166.mcx\" \"diskCache\"\n127\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-163\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame163.mcx\" 3954452492 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame163.mcx\" \"diskCache\"\n128\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-160\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame160.mcx\" 2887013084 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame160.mcx\" \"diskCache\"\n129\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-173\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame173.mcx\" 552139689 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame173.mcx\" \"diskCache\"\n130\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-157\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame157.mcx\" 2560687202 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame157.mcx\" \"diskCache\"\n131\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-284\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame284.mcx\" 1383501809 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame284.mcx\" \"diskCache\"\n132\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-156\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame156.mcx\" 2780878290 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame156.mcx\" \"diskCache\"\n133\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-154\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame154.mcx\" 3741353650 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame154.mcx\" \"diskCache\"\n134\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-229\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame229.mcx\" 192768038 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame229.mcx\" \"diskCache\"\n135\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-214\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame214.mcx\" 1970921017 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame214.mcx\" \"diskCache\"\n136\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-153\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame153.mcx\" 1830836898 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame153.mcx\" \"diskCache\"\n137\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-204\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame204.mcx\" 3190099356 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame204.mcx\" \"diskCache\"\n138\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-206\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame206.mcx\" 3303366396 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame206.mcx\" \"diskCache\"\n139\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-152\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame152.mcx\" 1346401042 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame152.mcx\" \"diskCache\"\n140\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-149\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame149.mcx\" 3972829606 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame149.mcx\" \"diskCache\"\n141\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-147\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame147.mcx\" 1409036231 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame147.mcx\" \"diskCache\"\n142\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-303\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame303.mcx\" 2859653688 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame303.mcx\" \"diskCache\"\n143\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-202\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame202.mcx\" 828766268 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame202.mcx\" \"diskCache\"\n144\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-146\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame146.mcx\" 1855719031 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame146.mcx\" \"diskCache\"\n145\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-144\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame144.mcx\" 341595415 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame144.mcx\" \"diskCache\"\n146\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-140\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame140.mcx\" 3789353943 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame140.mcx\" \"diskCache\"\n147\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-158\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame158.mcx\" 451963827 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame158.mcx\" \"diskCache\"\n148\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-139\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame139.mcx\" 4056523038 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame139.mcx\" \"diskCache\"\n149\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-138\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame138.mcx\" 3433662638 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame138.mcx\" \"diskCache\"\n150\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-275\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame275.mcx\" 2654999700 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame275.mcx\" \"diskCache\"\n151\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-137\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame137.mcx\" 1324949375 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame137.mcx\" \"diskCache\"\n152\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-136\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame136.mcx\" 1939420879 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame136.mcx\" \"diskCache\"\n153\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-135\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame135.mcx\" 876170271 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame135.mcx\" \"diskCache\"\n154\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-349\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame349.mcx\" 2069069967 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame349.mcx\" \"diskCache\"\n155\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-133\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame133.mcx\" 3145316799 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame133.mcx\" \"diskCache\"\n156\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-132\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame132.mcx\" 2249822223 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame132.mcx\" \"diskCache\"\n157\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-131\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame131.mcx\" 3250186975 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame131.mcx\" \"diskCache\"\n158\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-215\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame215.mcx\" 1209661321 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame215.mcx\" \"diskCache\"\n159\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-237\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame237.mcx\" 2131822050 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame237.mcx\" \"diskCache\"\n160\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-346\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame346.mcx\" 4177729374 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame346.mcx\" \"diskCache\"\n161\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-129\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame129.mcx\" 982872763 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame129.mcx\" \"diskCache\"\n162\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-179\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame179.mcx\" 1784210184 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame179.mcx\" \"diskCache\"\n163\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-123\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame123.mcx\" 1881500186 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame123.mcx\" \"diskCache\"\n164\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-119\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame119.mcx\" 3154182165 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame119.mcx\" \"diskCache\"\n165\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-203\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame203.mcx\" 201707916 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame203.mcx\" \"diskCache\"\n166\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-114\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame114.mcx\" 1150403748 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame114.mcx\" \"diskCache\"\n167\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-113\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame113.mcx\" 4138801332 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame113.mcx\" \"diskCache\"\n168\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-162\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame162.mcx\" 3604218300 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame162.mcx\" \"diskCache\"\n169\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-112\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame112.mcx\" 3419484420 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame112.mcx\" \"diskCache\"\n170\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-201\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame201.mcx\" 1992655596 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame201.mcx\" \"diskCache\"\n171\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-353\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame353.mcx\" 4206840715 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame353.mcx\" \"diskCache\"\n172\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-107\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame107.mcx\" 3362614737 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame107.mcx\" \"diskCache\"\n173\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-286\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame286.mcx\" 683072657 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame286.mcx\" \"diskCache\"\n174\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-108\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame108.mcx\" 1245575680 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame108.mcx\" \"diskCache\"\n175\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-105\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame105.mcx\" 2997698225 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame105.mcx\" \"diskCache\"\n176\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-104\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame104.mcx\" 2412582657 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame104.mcx\" \"diskCache\"\n177\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-100\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame100.mcx\" 2051912129 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame100.mcx\" \"diskCache\"\n178\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-99\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame99.mcx\" 524160670 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame99.mcx\" \"diskCache\"\n179\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-97\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame97.mcx\" 2685317375 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame97.mcx\" \"diskCache\"\n180\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-142\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame142.mcx\" 2602344631 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame142.mcx\" \"diskCache\"\n181\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-111\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame111.mcx\" 2356235220 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame111.mcx\" \"diskCache\"\n182\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-94\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame94.mcx\" 3886991919 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame94.mcx\" \"diskCache\"\n183\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-192\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame192.mcx\" 662877033 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame192.mcx\" \"diskCache\"\n184\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-115\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame115.mcx\" 2045898004 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame115.mcx\" \"diskCache\"\n185\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-217\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame217.mcx\" 853124329 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame217.mcx\" \"diskCache\"\n186\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-308\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame308.mcx\" 3718441769 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame308.mcx\" \"diskCache\"\n187\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-93\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame93.mcx\" 1435375167 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame93.mcx\" \"diskCache\"\n188\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-182\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame182.mcx\" 3973996748 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame182.mcx\" \"diskCache\"\n189\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-254\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame254.mcx\" 4008221743 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame254.mcx\" \"diskCache\"\n190\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-92\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame92.mcx\" 1760444303 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame92.mcx\" \"diskCache\"\n191\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-125\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame125.mcx\" 4284850106 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame125.mcx\" \"diskCache\"\n192\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-106\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame106.mcx\" 4111287393 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame106.mcx\" \"diskCache\"\n193\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-195\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame195.mcx\" 2510450553 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame195.mcx\" \"diskCache\"\n194\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-90\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame90.mcx\" 305032431 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame90.mcx\" \"diskCache\"\n195\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-178\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame178.mcx\" 1463339704 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame178.mcx\" \"diskCache\"\n196\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-89\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame89.mcx\" 3563248955 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame89.mcx\" \"diskCache\"\n197\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-332\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame332.mcx\" 294027558 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame332.mcx\" \"diskCache\"\n198\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-88\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame88.mcx\" 3909285003 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame88.mcx\" \"diskCache\"\n199\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-87\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame87.mcx\" 1800561498 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame87.mcx\" \"diskCache\"\n200\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-86\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame86.mcx\" 1446136554 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame86.mcx\" \"diskCache\"\n201\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-82\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame82.mcx\" 2746412074 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame82.mcx\" \"diskCache\"\n202\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-95\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame95.mcx\" 3670991775 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame95.mcx\" \"diskCache\"\n203\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-81\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame81.mcx\" 3826423546 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame81.mcx\" \"diskCache\"\n204\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-155\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame155.mcx\" 3797987074 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame155.mcx\" \"diskCache\"\n205\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-80\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame80.mcx\" 3648175946 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame80.mcx\" \"diskCache\"\n206\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-347\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame347.mcx\" 3294838510 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame347.mcx\" \"diskCache\"\n207\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-103\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame103.mcx\" 1038994193 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame103.mcx\" \"diskCache\"\n208\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-300\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame300.mcx\" 3990003944 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame300.mcx\" \"diskCache\"\n209\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-78\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame78.mcx\" 408176222 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame78.mcx\" \"diskCache\"\n210\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-187\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame187.mcx\" 608104380 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame187.mcx\" \"diskCache\"\n211\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-77\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame77.mcx\" 2584007055 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame77.mcx\" \"diskCache\"\n212\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-118\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame118.mcx\" 2170628517 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame118.mcx\" \"diskCache\"\n213\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-79\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame79.mcx\" 624193518 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame79.mcx\" \"diskCache\"\n214\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-76\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame76.mcx\" 2808412223 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame76.mcx\" \"diskCache\"\n215\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-75\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame75.mcx\" 3770974959 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame75.mcx\" \"diskCache\"\n216\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-165\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame165.mcx\" 1693769132 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame165.mcx\" \"diskCache\"\n217\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-101\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame101.mcx\" 1194170481 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame101.mcx\" \"diskCache\"\n218\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-96\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame96.mcx\" 2641271119 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame96.mcx\" \"diskCache\"\n219\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-70\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame70.mcx\" 673451423 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame70.mcx\" \"diskCache\"\n220\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-69\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame69.mcx\" 3999841355 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame69.mcx\" \"diskCache\"\n221\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-302\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame302.mcx\" 2534601608 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame302.mcx\" \"diskCache\"\n222\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-67\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame67.mcx\" 1364722218 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame67.mcx\" \"diskCache\"\n223\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-102\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame102.mcx\" 9298593 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame102.mcx\" \"diskCache\"\n224\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-116\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame116.mcx\" 1045534660 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame116.mcx\" \"diskCache\"\n225\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-232\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame232.mcx\" 3086060178 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame232.mcx\" \"diskCache\"\n226\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-65\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame65.mcx\" 731402570 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame65.mcx\" \"diskCache\"\n227\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-64\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame64.mcx\" 385382650 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame64.mcx\" \"diskCache\"\n228\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-253\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame253.mcx\" 1556627519 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame253.mcx\" \"diskCache\"\n229\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-68\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame68.mcx\" 3540555259 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame68.mcx\" \"diskCache\"\n230\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-148\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame148.mcx\" 3517757462 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame148.mcx\" \"diskCache\"\n231\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-58\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame58.mcx\" 1436346197 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame58.mcx\" \"diskCache\"\n232\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-57\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame57.mcx\" 3620499588 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame57.mcx\" \"diskCache\"\n233\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-54\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame54.mcx\" 2422999636 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame54.mcx\" \"diskCache\"\n234\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-277\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame277.mcx\" 3833612276 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame277.mcx\" \"diskCache\"\n235\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-84\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame84.mcx\" 754063754 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame84.mcx\" \"diskCache\"\n236\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-71\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame71.mcx\" 356787247 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame71.mcx\" \"diskCache\"\n237\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-53\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame53.mcx\" 575460932 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame53.mcx\" \"diskCache\"\n238\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-52\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame52.mcx\" 523042804 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame52.mcx\" \"diskCache\"\n239\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-49\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame49.mcx\" 2745179456 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame49.mcx\" \"diskCache\"\n240\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-208\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame208.mcx\" 2077614237 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame208.mcx\" \"diskCache\"\n241\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-172\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame172.mcx\" 495505945 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame172.mcx\" \"diskCache\"\n242\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-63\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame63.mcx\" 2765661418 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame63.mcx\" \"diskCache\"\n243\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-171\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame171.mcx\" 1512614089 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame171.mcx\" \"diskCache\"\n244\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-47\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame47.mcx\" 479240993 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame47.mcx\" \"diskCache\"\n245\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-186\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame186.mcx\" 425641484 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame186.mcx\" \"diskCache\"\n246\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-319\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame319.mcx\" 731779388 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame319.mcx\" \"diskCache\"\n247\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-48\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame48.mcx\" 2663396592 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame48.mcx\" \"diskCache\"\n248\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-44\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame44.mcx\" 1529928177 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame44.mcx\" \"diskCache\"\n249\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-66\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame66.mcx\" 1815620506 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame66.mcx\" \"diskCache\"\n250\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-43\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame43.mcx\" 3910141409 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame43.mcx\" \"diskCache\"\n251\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-42\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame42.mcx\" 3564121169 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame42.mcx\" \"diskCache\"\n252\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-130\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame130.mcx\" 4242129775 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame130.mcx\" \"diskCache\"\n253\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-184\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame184.mcx\" 1671337324 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame184.mcx\" \"diskCache\"\n254\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-268\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame268.mcx\" 2911634304 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame268.mcx\" \"diskCache\"\n255\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-74\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame74.mcx\" 3718556511 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame74.mcx\" \"diskCache\"\n256\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-35\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame35.mcx\" 2069217529 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame35.mcx\" \"diskCache\"\n257\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-34\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame34.mcx\" 1177938249 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame34.mcx\" \"diskCache\"\n258\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-267\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame267.mcx\" 802985041 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame267.mcx\" \"diskCache\"\n259\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-73\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame73.mcx\" 1870952271 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame73.mcx\" \"diskCache\"\n260\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-59\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame59.mcx\" 1761398501 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame59.mcx\" \"diskCache\"\n261\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-33\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame33.mcx\" 4095030617 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame33.mcx\" \"diskCache\"\n262\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-32\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame32.mcx\" 3379895529 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame32.mcx\" \"diskCache\"\n263\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-141\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame141.mcx\" 3703364199 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame141.mcx\" \"diskCache\"\n264\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-83\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame83.mcx\" 2664613274 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame83.mcx\" \"diskCache\"\n265\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-196\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame196.mcx\" 3523351977 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame196.mcx\" \"diskCache\"\n266\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-56\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame56.mcx\" 3937163572 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame56.mcx\" \"diskCache\"\n267\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-341\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame341.mcx\" 1260637006 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame341.mcx\" \"diskCache\"\n268\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-257\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame257.mcx\" 2840127231 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame257.mcx\" \"diskCache\"\n269\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-110\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame110.mcx\" 2970706532 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame110.mcx\" \"diskCache\"\n270\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-30\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame30.mcx\" 3015004041 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame30.mcx\" \"diskCache\"\n271\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-45\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame45.mcx\" 1716580417 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame45.mcx\" \"diskCache\"\n272\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-205\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame205.mcx\" 2202346540 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame205.mcx\" \"diskCache\"\n273\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-98\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame98.mcx\" 576595758 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame98.mcx\" \"diskCache\"\n274\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-27\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame27.mcx\" 3402186812 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame27.mcx\" \"diskCache\"\n275\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-39\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame39.mcx\" 3198496248 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame39.mcx\" \"diskCache\"\n276\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-185\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame185.mcx\" 1593752796 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame185.mcx\" \"diskCache\"\n277\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-62\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame62.mcx\" 2579008858 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame62.mcx\" \"diskCache\"\n278\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-124\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame124.mcx\" 3255154186 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame124.mcx\" \"diskCache\"\n279\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-225\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame225.mcx\" 3465381159 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame225.mcx\" \"diskCache\"\n280\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-301\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame301.mcx\" 3501361496 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame301.mcx\" \"diskCache\"\n281\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-25\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame25.mcx\" 2953384796 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame25.mcx\" \"diskCache\"\n282\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-240\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame240.mcx\" 3493128522 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame240.mcx\" \"diskCache\"\n283\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-29\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame29.mcx\" 1979317853 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame29.mcx\" \"diskCache\"\n284\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-61\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame61.mcx\" 3726178186 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame61.mcx\" \"diskCache\"\n285\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-324\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame324.mcx\" 1436198691 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame324.mcx\" \"diskCache\"\n286\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-24\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame24.mcx\" 2372483820 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame24.mcx\" \"diskCache\"\n287\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-46\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame46.mcx\" 569412241 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame46.mcx\" \"diskCache\"\n288\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-21\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame21.mcx\" 1166652828 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame21.mcx\" \"diskCache\"\n289\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-60\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame60.mcx\" 3816349242 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame60.mcx\" \"diskCache\"\n290\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-161\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame161.mcx\" 2440330092 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame161.mcx\" \"diskCache\"\n291\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-189\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame189.mcx\" 2601406941 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame189.mcx\" \"diskCache\"\n292\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-19\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame19.mcx\" 4084042995 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame19.mcx\" \"diskCache\"\n293\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-41\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame41.mcx\" 2479904385 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame41.mcx\" \"diskCache\"\n294\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-18\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame18.mcx\" 3457000771 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame18.mcx\" \"diskCache\"\n295\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-16\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame16.mcx\" 1899830050 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame16.mcx\" \"diskCache\"\n296\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-13\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame13.mcx\" 3118306386 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame13.mcx\" \"diskCache\"\n297\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-150\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame150.mcx\" 713039986 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame150.mcx\" \"diskCache\"\n298\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-134\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame134.mcx\" 156853679 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame134.mcx\" \"diskCache\"\n299\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-17\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame17.mcx\" 1281176210 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame17.mcx\" \"diskCache\"\n300\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-12\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame12.mcx\" 2227027426 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame12.mcx\" \"diskCache\"\n301\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-164\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame164.mcx\" 1502934044 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame164.mcx\" \"diskCache\"\n302\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-14\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame14.mcx\" 201148482 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame14.mcx\" \"diskCache\"\n303\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-278\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame278.mcx\" 1724960805 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame278.mcx\" \"diskCache\"\n304\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-188\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame188.mcx\" 2792257645 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame188.mcx\" \"diskCache\"\n305\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-15\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame15.mcx\" 916283890 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame15.mcx\" \"diskCache\"\n306\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-11\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame11.mcx\" 3273508658 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame11.mcx\" \"diskCache\"\n307\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-220\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame220.mcx\" 107809367 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame220.mcx\" \"diskCache\"\n308\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-339\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame339.mcx\" 1716957239 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame339.mcx\" \"diskCache\"\n309\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-9\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame9.mcx\" 1075001424 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame9.mcx\" \"diskCache\"\n310\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-8\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame8.mcx\" 2104693216 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame8.mcx\" \"diskCache\"\n311\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-122\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame122.mcx\" 1296384938 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame122.mcx\" \"diskCache\"\n312\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-212\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame212.mcx\" 4198050713 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame212.mcx\" \"diskCache\"\n313\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-23\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame23.mcx\" 1061807868 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame23.mcx\" \"diskCache\"\n314\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-291\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame291.mcx\" 1372246820 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame291.mcx\" \"diskCache\"\n315\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-37\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame37.mcx\" 26579865 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame37.mcx\" \"diskCache\"\n316\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-91\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame91.mcx\" 793658719 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame91.mcx\" \"diskCache\"\n317\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-7\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame7.mcx\" 4280518193 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame7.mcx\" \"diskCache\"\n318\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-145\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame145.mcx\" 691829927 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame145.mcx\" \"diskCache\"\n319\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-271\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame271.mcx\" 1807790676 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame271.mcx\" \"diskCache\"\n320\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-6\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame6.mcx\" 3259215745 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame6.mcx\" \"diskCache\"\n321\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-20\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame20.mcx\" 2028575788 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame20.mcx\" \"diskCache\"\n322\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-297\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame297.mcx\" 3733595780 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame297.mcx\" \"diskCache\"\n323\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-72\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame72.mcx\" 1390698239 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame72.mcx\" \"diskCache\"\n324\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-340\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame340.mcx\" 1984160510 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame340.mcx\" \"diskCache\"\n325\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-326\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame326.mcx\" 794489923 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame326.mcx\" \"diskCache\"\n326\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-31\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame31.mcx\" 2396350009 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame31.mcx\" \"diskCache\"\n327\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-10\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame10.mcx\" 4269665922 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame10.mcx\" \"diskCache\"\n328\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-55\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame55.mcx\" 2903253988 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame55.mcx\" \"diskCache\"\n329\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-255\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame255.mcx\" 3548951967 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame255.mcx\" \"diskCache\"\n330\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-127\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame127.mcx\" 2242235610 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame127.mcx\" \"diskCache\"\n331\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-109\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame109.mcx\" 2002637744 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame109.mcx\" \"diskCache\"\n332\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-4\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame4.mcx\" 3095657697 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame4.mcx\" \"diskCache\"\n333\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-320\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame320.mcx\" 2686058979 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame320.mcx\" \"diskCache\"\n334\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-85\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame85.mcx\" 294793274 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame85.mcx\" \"diskCache\"\n335\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-151\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame151.mcx\" 400558530 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame151.mcx\" \"diskCache\"\n336\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-128\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame128.mcx\" 133520139 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame128.mcx\" \"diskCache\"\n337\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-22\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame22.mcx\" 36294476 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame22.mcx\" \"diskCache\"\n338\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-117\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame117.mcx\" 53591668 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame117.mcx\" \"diskCache\"\n339\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-51\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame51.mcx\" 1485604132 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame51.mcx\" \"diskCache\"\n340\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-5\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame5.mcx\" 2246301009 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame5.mcx\" \"diskCache\"\n341\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-40\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame40.mcx\" 2930802481 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame40.mcx\" \"diskCache\"\n342\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-174\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame174.mcx\" 2462590905 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame174.mcx\" \"diskCache\"\n343\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-224\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame224.mcx\" 4092439703 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame224.mcx\" \"diskCache\"\n344\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-50\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame50.mcx\" 1710009492 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame50.mcx\" \"diskCache\"\n345\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-159\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame159.mcx\" 663765507 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame159.mcx\" \"diskCache\"\n346\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-26\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame26.mcx\" 4155074956 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame26.mcx\" \"diskCache\"\n347\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-3\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame3.mcx\" 178462961 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame3.mcx\" \"diskCache\"\n348\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-38\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame38.mcx\" 2210726984 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame38.mcx\" \"diskCache\"\n349\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-120\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame120.mcx\" 931467466 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame120.mcx\" \"diskCache\"\n350\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-143\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame143.mcx\" 2793179399 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame143.mcx\" \"diskCache\"\n351\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-221\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame221.mcx\" 990716903 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame221.mcx\" \"diskCache\"\n352\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-230\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame230.mcx\" 3442596338 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame230.mcx\" \"diskCache\"\n353\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-36\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame36.mcx\" 1022736937 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame36.mcx\" \"diskCache\"\n354\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-126\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame126.mcx\" 3099977066 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame126.mcx\" \"diskCache\"\n355\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-2\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame2.mcx\" 935528769 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame2.mcx\" \"diskCache\"\n356\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-1\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame1.mcx\" 1885565841 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame1.mcx\" \"diskCache\"\n357\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-28\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame28.mcx\" 1218041837 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame28.mcx\" \"diskCache\"\n358\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-197\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame197.mcx\" 4016192537 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame197.mcx\" \"diskCache\"\n359\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-description\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2.xml\" 3275202432 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2.xml\" \"diskCache\"\n360\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-336\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame336.mcx\" 3825608678 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame336.mcx\" \"diskCache\"\n361\n\"utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1\" \"cache-data-121\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame121.mcx\" 182794618 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/cache/nCache/bodyintro_latest/utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Frame121.mcx\" \"diskCache\"\nendStream\nendChannel\nendAssociations\n" 
 		-scn;
 // End of bodyintro_latest.ma

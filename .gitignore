@@ -4,3 +4,5 @@ maya/images/**
 maya/movies/**
 maya/cache/**
 *.mcx
+maya/renderman/**
+maya/renderData/**

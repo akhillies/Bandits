@@ -1,6 +1,6 @@
 //Maya ASCII 2013 scene
 //Name: jump_out_window_011.ma
-//Last modified: Sun, Mar 15, 2015 01:43:52 PM
+//Last modified: Mon, Mar 16, 2015 10:53:29 AM
 //Codeset: UTF-8
 file -rdi 1 -ns "sneaks_latest" -rfn "sneaks_latestRN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya//assets/characters/sneaks/sneaks_latest.ma";
 file -rdi 1 -ns "tuffs_latest" -rfn "tuffs_latestRN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya//assets/characters/tuffs/tuffs_latest.ma";
@@ -67,6 +67,7 @@ file -r -ns "smarty_latest" -dr 1 -rfn "smarty_latestRN" "/Users/alyyassin/Docum
 file -r -ns "livingroom_shading_latest" -dr 1 -rfn "livingroom_shading_latestRN"
 		 "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya//assets/sets/livingroom_shading/livingroom_shading_latest.ma";
 requires maya "2013";
+requires "Mayatomr" "2013.0 - 3.10.1.9 ";
 requires "stereoCamera" "10.0";
 requires "RenderMan_for_Maya" "5.0";
 currentUnit -l centimeter -a degree -t film;
@@ -78,13 +79,13 @@ fileInfo "osv" "Mac OS X 10.9.1";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -193.79226511570801 19.462298512037332 53.211858757808081 ;
-	setAttr ".r" -type "double3" -4.5383527296249424 60.199999999996763 -7.9998021296905847e-16 ;
+	setAttr ".t" -type "double3" -219.67361467018395 18.595500981087433 54.716086783267215 ;
+	setAttr ".r" -type "double3" -11.738352729622816 42.599999999994495 -1.080208961941553e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 56.20335543652935;
+	setAttr ".coi" 52.588290991279621;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -136,7 +137,7 @@ createNode camera -n "cameraShape1" -p "camera1";
 	setAttr -k off ".v";
 	setAttr ".cap" -type "double2" 1.41732 0.94488 ;
 	setAttr ".ff" 0;
-	setAttr ".coi" 73.131775709377536;
+	setAttr ".coi" 66.661293746819922;
 	setAttr ".ow" 30;
 	setAttr ".imn" -type "string" "camera1";
 	setAttr ".den" -type "string" "camera1_depth";
@@ -19204,8 +19205,8 @@ createNode RenderMan -s -n "rmanSBMakePtexGlobals";
 	setAttr ".rman__param__ptxmake___outputfile" -type "string" "[passinfo this filename]";
 	setAttr ".nt" -type "string" "pass:command";
 createNode lightLinker -s -n "lightLinker1";
-	setAttr -s 325 ".lnk";
-	setAttr -s 325 ".slnk";
+	setAttr -s 409 ".lnk";
+	setAttr -s 409 ".slnk";
 createNode displayLayerManager -n "layerManager";
 	setAttr -s 2 ".dli[1]"  1;
 	setAttr -s 2 ".dli";
@@ -19218,13 +19219,19 @@ createNode mentalrayItemsList -s -n "mentalrayItemsList";
 createNode mentalrayGlobals -s -n "mentalrayGlobals";
 	addAttr -ci true -h true -sn "sunAndSkyShader" -ln "sunAndSkyShader" -at "message";
 	setAttr ".rvb" 3;
-	setAttr ".ivb" 0;
+	setAttr ".ivb" no;
 createNode mentalrayOptions -s -n "miDefaultOptions";
 	addAttr -ci true -m -sn "stringOptions" -ln "stringOptions" -at "compound" -nc 
 		3;
 	addAttr -ci true -sn "name" -ln "name" -dt "string" -p "stringOptions";
 	addAttr -ci true -sn "value" -ln "value" -dt "string" -p "stringOptions";
 	addAttr -ci true -sn "type" -ln "type" -dt "string" -p "stringOptions";
+	setAttr ".minsp" -1;
+	setAttr ".maxsp" 1;
+	setAttr ".fil" 1;
+	setAttr ".rflr" 2;
+	setAttr ".rfrr" 2;
+	setAttr ".maxr" 4;
 	setAttr -s 48 ".stringOptions";
 	setAttr ".stringOptions[0].name" -type "string" "rast motion factor";
 	setAttr ".stringOptions[0].value" -type "string" "1.0";
@@ -19370,86 +19377,51 @@ createNode mentalrayOptions -s -n "miDefaultOptions";
 	setAttr ".stringOptions[47].name" -type "string" "environment lighting scale";
 	setAttr ".stringOptions[47].value" -type "string" "1.0 1.0 1.0";
 	setAttr ".stringOptions[47].type" -type "string" "color";
-	setAttr ".splck" 1;
-	setAttr ".minsp" -1;
-	setAttr ".maxsp" 1;
-	setAttr ".fil" 1;
-	setAttr ".rflr" 2;
-	setAttr ".rfrr" 2;
-	setAttr ".maxr" 4;
-	setAttr ".shrd" 2;
 createNode mentalrayFramebuffer -s -n "miDefaultFramebuffer";
-	setAttr ".dat" 2;
 createNode animLayer -s -n "BaseAnimation";
 	setAttr -s 3 ".cdly";
 	setAttr -s 3 ".chsl";
 	setAttr ".ovrd" yes;
 createNode mentalrayOptions -s -n "miContourPreset";
-	setAttr ".splck" 1;
-	setAttr ".fil" 0;
-	setAttr ".rflr" 1;
-	setAttr ".rfrr" 1;
-	setAttr ".maxr" 1;
-	setAttr ".shrd" 2;
 createNode mentalrayOptions -s -n "Draft";
-	setAttr ".splck" 1;
-	setAttr ".fil" 0;
-	setAttr ".rflr" 1;
-	setAttr ".rfrr" 1;
 	setAttr ".maxr" 2;
-	setAttr ".shrd" 2;
 createNode mentalrayOptions -s -n "DraftMotionBlur";
-	setAttr ".splck" 1;
-	setAttr ".fil" 0;
-	setAttr ".rflr" 1;
-	setAttr ".rfrr" 1;
 	setAttr ".maxr" 2;
-	setAttr ".shrd" 2;
 	setAttr ".mb" 1;
 	setAttr ".tconr" 1;
 	setAttr ".tcong" 1;
 	setAttr ".tconb" 1;
 	setAttr ".tcona" 1;
 createNode mentalrayOptions -s -n "DraftRapidMotion";
-	setAttr ".splck" 1;
-	setAttr ".fil" 0;
 	setAttr ".scan" 3;
 	setAttr ".rapc" 1;
 	setAttr ".raps" 0.25;
-	setAttr ".rflr" 1;
-	setAttr ".rfrr" 1;
 	setAttr ".maxr" 2;
-	setAttr ".shrd" 2;
 	setAttr ".mb" 1;
 	setAttr ".tconr" 1;
 	setAttr ".tcong" 1;
 	setAttr ".tconb" 1;
 	setAttr ".tcona" 1;
 createNode mentalrayOptions -s -n "Preview";
-	setAttr ".splck" 1;
 	setAttr ".minsp" -1;
 	setAttr ".maxsp" 1;
 	setAttr ".fil" 1;
 	setAttr ".rflr" 2;
 	setAttr ".rfrr" 2;
 	setAttr ".maxr" 4;
-	setAttr ".shrd" 2;
 createNode mentalrayOptions -s -n "PreviewMotionblur";
-	setAttr ".splck" 1;
 	setAttr ".minsp" -1;
 	setAttr ".maxsp" 1;
 	setAttr ".fil" 1;
 	setAttr ".rflr" 2;
 	setAttr ".rfrr" 2;
 	setAttr ".maxr" 4;
-	setAttr ".shrd" 2;
 	setAttr ".mb" 1;
 	setAttr ".tconr" 0.5;
 	setAttr ".tcong" 0.5;
 	setAttr ".tconb" 0.5;
 	setAttr ".tcona" 0.5;
 createNode mentalrayOptions -s -n "PreviewRapidMotion";
-	setAttr ".splck" 1;
 	setAttr ".minsp" -1;
 	setAttr ".maxsp" 1;
 	setAttr ".fil" 1;
@@ -19458,392 +19430,399 @@ createNode mentalrayOptions -s -n "PreviewRapidMotion";
 	setAttr ".rflr" 2;
 	setAttr ".rfrr" 2;
 	setAttr ".maxr" 4;
-	setAttr ".shrd" 2;
 	setAttr ".mb" 1;
 	setAttr ".tconr" 0.5;
 	setAttr ".tcong" 0.5;
 	setAttr ".tconb" 0.5;
 	setAttr ".tcona" 0.5;
 createNode mentalrayOptions -s -n "PreviewCaustics";
-	setAttr ".splck" 1;
 	setAttr ".minsp" -1;
 	setAttr ".maxsp" 1;
 	setAttr ".fil" 1;
 	setAttr ".rflr" 2;
 	setAttr ".rfrr" 2;
 	setAttr ".maxr" 4;
-	setAttr ".shrd" 2;
-	setAttr ".ca" 1;
+	setAttr ".ca" yes;
 	setAttr ".cc" 1;
 	setAttr ".cr" 1;
 createNode mentalrayOptions -s -n "PreviewGlobalIllum";
-	setAttr ".splck" 1;
 	setAttr ".minsp" -1;
 	setAttr ".maxsp" 1;
 	setAttr ".fil" 1;
 	setAttr ".rflr" 2;
 	setAttr ".rfrr" 2;
 	setAttr ".maxr" 4;
-	setAttr ".shrd" 2;
-	setAttr ".gi" 1;
+	setAttr ".gi" yes;
 	setAttr ".gc" 1;
 	setAttr ".gr" 1;
 createNode mentalrayOptions -s -n "PreviewFinalGather";
-	setAttr ".splck" 1;
 	setAttr ".minsp" -1;
 	setAttr ".maxsp" 1;
 	setAttr ".fil" 1;
 	setAttr ".rflr" 2;
 	setAttr ".rfrr" 2;
 	setAttr ".maxr" 4;
-	setAttr ".shrd" 2;
-	setAttr ".fg" 1;
+	setAttr ".fg" yes;
 createNode mentalrayOptions -s -n "Production";
-	setAttr ".splck" 1;
 	setAttr ".minsp" 0;
 	setAttr ".maxsp" 2;
-	setAttr ".fil" 0;
 	setAttr ".rflr" 10;
 	setAttr ".rfrr" 10;
 	setAttr ".maxr" 20;
-	setAttr ".shrd" 2;
 createNode mentalrayOptions -s -n "ProductionMotionblur";
-	setAttr ".splck" 1;
 	setAttr ".minsp" 0;
 	setAttr ".maxsp" 2;
-	setAttr ".fil" 0;
 	setAttr ".rflr" 10;
 	setAttr ".rfrr" 10;
 	setAttr ".maxr" 20;
-	setAttr ".shrd" 2;
 	setAttr ".mb" 2;
 createNode mentalrayOptions -s -n "ProductionRapidMotion";
-	setAttr ".splck" 1;
 	setAttr ".minsp" 0;
 	setAttr ".maxsp" 2;
-	setAttr ".fil" 0;
 	setAttr ".scan" 3;
 	setAttr ".rapc" 8;
 	setAttr ".raps" 2;
 	setAttr ".rflr" 10;
 	setAttr ".rfrr" 10;
 	setAttr ".maxr" 20;
-	setAttr ".shrd" 2;
 	setAttr ".mb" 2;
 createNode mentalrayOptions -s -n "ProductionFineTrace";
 	setAttr ".conr" 0.019999999552965164;
 	setAttr ".cong" 0.019999999552965164;
 	setAttr ".conb" 0.019999999552965164;
-	setAttr ".splck" 1;
 	setAttr ".minsp" 1;
 	setAttr ".maxsp" 2;
 	setAttr ".fil" 1;
 	setAttr ".filw" 0.75;
 	setAttr ".filh" 0.75;
-	setAttr ".jit" 1;
-	setAttr ".rflr" 1;
-	setAttr ".rfrr" 1;
-	setAttr ".maxr" 1;
-	setAttr ".shrd" 2;
+	setAttr ".jit" yes;
 createNode mentalrayOptions -s -n "ProductionRapidFur";
 	setAttr ".conr" 0.039999999105930328;
-	setAttr ".cong" 0.029999999329447743;
+	setAttr ".cong" 0.029999999329447746;
 	setAttr ".conb" 0.070000000298023224;
-	setAttr ".splck" 1;
 	setAttr ".minsp" 0;
 	setAttr ".maxsp" 2;
 	setAttr ".fil" 1;
 	setAttr ".filw" 1.1449999809265137;
 	setAttr ".filh" 1.1449999809265137;
-	setAttr ".jit" 1;
+	setAttr ".jit" yes;
 	setAttr ".scan" 3;
 	setAttr ".rapc" 3;
 	setAttr ".raps" 0.25;
-	setAttr ".ray" 0;
-	setAttr ".rflr" 1;
-	setAttr ".rfrr" 1;
-	setAttr ".maxr" 1;
-	setAttr ".shrd" 2;
+	setAttr ".ray" no;
 	setAttr ".shmth" 3;
 	setAttr ".shmap" 3;
-	setAttr ".mbsm" 0;
+	setAttr ".mbsm" no;
 	setAttr ".bism" 0.019999999552965164;
 createNode mentalrayOptions -s -n "ProductionRapidHair";
 	setAttr ".conr" 0.039999999105930328;
-	setAttr ".cong" 0.029999999329447743;
+	setAttr ".cong" 0.029999999329447746;
 	setAttr ".conb" 0.070000000298023224;
-	setAttr ".splck" 1;
 	setAttr ".minsp" 0;
 	setAttr ".maxsp" 2;
 	setAttr ".fil" 1;
 	setAttr ".filw" 1.1449999809265137;
 	setAttr ".filh" 1.1449999809265137;
-	setAttr ".jit" 1;
+	setAttr ".jit" yes;
 	setAttr ".scan" 3;
 	setAttr ".rapc" 6;
-	setAttr ".ray" 0;
-	setAttr ".rflr" 1;
-	setAttr ".rfrr" 1;
-	setAttr ".maxr" 1;
-	setAttr ".shrd" 2;
+	setAttr ".ray" no;
 	setAttr ".shmth" 3;
 	setAttr ".shmap" 3;
-	setAttr ".mbsm" 0;
+	setAttr ".mbsm" no;
 	setAttr ".bism" 0.019999999552965164;
 createNode mentalrayOptions -s -n "PreviewImrRayTracyOff";
-	setAttr ".splck" 1;
 	setAttr ".minsp" 0;
 	setAttr ".fil" 1;
 	setAttr ".scan" 1;
-	setAttr ".ray" 0;
-	setAttr ".rflr" 1;
-	setAttr ".rfrr" 1;
-	setAttr ".maxr" 1;
-	setAttr ".shrd" 2;
+	setAttr ".ray" no;
 createNode mentalrayOptions -s -n "PreviewImrRayTracyOn";
-	setAttr ".splck" 1;
 	setAttr ".minsp" 0;
 	setAttr ".fil" 1;
 	setAttr ".scan" 1;
-	setAttr ".rflr" 1;
 	setAttr ".rfrr" 2;
 	setAttr ".maxr" 3;
 	setAttr ".shrd" 1;
 createNode reference -n "sneaks_latestRN";
 	setAttr -s 221 ".phl";
-	setAttr ".phl[1]" 0;
-	setAttr ".phl[2]" 0;
-	setAttr ".phl[3]" 0;
-	setAttr ".phl[4]" 0;
-	setAttr ".phl[5]" 0;
-	setAttr ".phl[6]" 0;
-	setAttr ".phl[7]" 0;
-	setAttr ".phl[8]" 0;
-	setAttr ".phl[9]" 0;
-	setAttr ".phl[10]" 0;
-	setAttr ".phl[11]" 0;
-	setAttr ".phl[12]" 0;
-	setAttr ".phl[13]" 0;
-	setAttr ".phl[14]" 0;
-	setAttr ".phl[15]" 0;
-	setAttr ".phl[16]" 0;
-	setAttr ".phl[17]" 0;
-	setAttr ".phl[18]" 0;
-	setAttr ".phl[19]" 0;
-	setAttr ".phl[20]" 0;
-	setAttr ".phl[21]" 0;
-	setAttr ".phl[22]" 0;
-	setAttr ".phl[23]" 0;
-	setAttr ".phl[24]" 0;
-	setAttr ".phl[25]" 0;
-	setAttr ".phl[26]" 0;
-	setAttr ".phl[27]" 0;
-	setAttr ".phl[28]" 0;
-	setAttr ".phl[29]" 0;
-	setAttr ".phl[30]" 0;
-	setAttr ".phl[31]" 0;
-	setAttr ".phl[32]" 0;
-	setAttr ".phl[33]" 0;
-	setAttr ".phl[34]" 0;
-	setAttr ".phl[35]" 0;
-	setAttr ".phl[36]" 0;
-	setAttr ".phl[37]" 0;
-	setAttr ".phl[38]" 0;
-	setAttr ".phl[39]" 0;
-	setAttr ".phl[40]" 0;
-	setAttr ".phl[41]" 0;
-	setAttr ".phl[42]" 0;
-	setAttr ".phl[43]" 0;
-	setAttr ".phl[44]" 0;
-	setAttr ".phl[45]" 0;
-	setAttr ".phl[46]" 0;
-	setAttr ".phl[47]" 0;
-	setAttr ".phl[48]" 0;
-	setAttr ".phl[49]" 0;
-	setAttr ".phl[50]" 0;
-	setAttr ".phl[51]" 0;
-	setAttr ".phl[52]" 0;
-	setAttr ".phl[53]" 0;
-	setAttr ".phl[54]" 0;
-	setAttr ".phl[55]" 0;
-	setAttr ".phl[56]" 0;
-	setAttr ".phl[57]" 0;
-	setAttr ".phl[58]" 0;
-	setAttr ".phl[59]" 0;
-	setAttr ".phl[60]" 0;
-	setAttr ".phl[61]" 0;
-	setAttr ".phl[62]" 0;
-	setAttr ".phl[63]" 0;
-	setAttr ".phl[64]" 0;
-	setAttr ".phl[65]" 0;
-	setAttr ".phl[66]" 0;
-	setAttr ".phl[67]" 0;
-	setAttr ".phl[68]" 0;
-	setAttr ".phl[69]" 0;
-	setAttr ".phl[70]" 0;
-	setAttr ".phl[71]" 0;
-	setAttr ".phl[72]" 0;
-	setAttr ".phl[73]" 0;
-	setAttr ".phl[74]" 0;
-	setAttr ".phl[75]" 0;
-	setAttr ".phl[76]" 0;
-	setAttr ".phl[77]" 0;
-	setAttr ".phl[78]" 0;
-	setAttr ".phl[79]" 0;
-	setAttr ".phl[80]" 0;
-	setAttr ".phl[81]" 0;
-	setAttr ".phl[82]" 0;
-	setAttr ".phl[83]" 0;
-	setAttr ".phl[84]" 0;
-	setAttr ".phl[85]" 0;
-	setAttr ".phl[86]" 0;
-	setAttr ".phl[87]" 0;
-	setAttr ".phl[88]" 0;
-	setAttr ".phl[89]" 0;
-	setAttr ".phl[90]" 0;
-	setAttr ".phl[91]" 0;
-	setAttr ".phl[92]" 0;
-	setAttr ".phl[93]" 0;
-	setAttr ".phl[94]" 0;
-	setAttr ".phl[95]" 0;
-	setAttr ".phl[96]" 0;
-	setAttr ".phl[97]" 0;
-	setAttr ".phl[98]" 0;
-	setAttr ".phl[99]" 0;
-	setAttr ".phl[100]" 0;
-	setAttr ".phl[101]" 0;
-	setAttr ".phl[102]" 0;
-	setAttr ".phl[103]" 0;
-	setAttr ".phl[104]" 0;
-	setAttr ".phl[105]" 0;
-	setAttr ".phl[106]" 0;
-	setAttr ".phl[107]" 0;
-	setAttr ".phl[108]" 0;
-	setAttr ".phl[109]" 0;
-	setAttr ".phl[110]" 0;
-	setAttr ".phl[111]" 0;
-	setAttr ".phl[112]" 0;
-	setAttr ".phl[113]" 0;
-	setAttr ".phl[114]" 0;
-	setAttr ".phl[115]" 0;
-	setAttr ".phl[116]" 0;
-	setAttr ".phl[117]" 0;
-	setAttr ".phl[118]" 0;
-	setAttr ".phl[119]" 0;
-	setAttr ".phl[120]" 0;
-	setAttr ".phl[121]" 0;
-	setAttr ".phl[122]" 0;
-	setAttr ".phl[123]" 0;
-	setAttr ".phl[124]" 0;
-	setAttr ".phl[125]" 0;
-	setAttr ".phl[126]" 0;
-	setAttr ".phl[127]" 0;
-	setAttr ".phl[128]" 0;
-	setAttr ".phl[129]" 0;
-	setAttr ".phl[130]" 0;
-	setAttr ".phl[131]" 0;
-	setAttr ".phl[132]" 0;
-	setAttr ".phl[133]" 0;
-	setAttr ".phl[134]" 0;
-	setAttr ".phl[135]" 0;
-	setAttr ".phl[136]" 0;
-	setAttr ".phl[137]" 0;
-	setAttr ".phl[138]" 0;
-	setAttr ".phl[139]" 0;
-	setAttr ".phl[140]" 0;
-	setAttr ".phl[141]" 0;
-	setAttr ".phl[142]" 0;
-	setAttr ".phl[143]" 0;
-	setAttr ".phl[144]" 0;
-	setAttr ".phl[145]" 0;
-	setAttr ".phl[146]" 0;
-	setAttr ".phl[147]" 0;
-	setAttr ".phl[148]" 0;
-	setAttr ".phl[149]" 0;
-	setAttr ".phl[150]" 0;
-	setAttr ".phl[151]" 0;
-	setAttr ".phl[152]" 0;
-	setAttr ".phl[153]" 0;
-	setAttr ".phl[154]" 0;
-	setAttr ".phl[155]" 0;
-	setAttr ".phl[156]" 0;
-	setAttr ".phl[157]" 0;
-	setAttr ".phl[158]" 0;
-	setAttr ".phl[159]" 0;
-	setAttr ".phl[160]" 0;
-	setAttr ".phl[161]" 0;
-	setAttr ".phl[162]" 0;
-	setAttr ".phl[163]" 0;
-	setAttr ".phl[164]" 0;
-	setAttr ".phl[165]" 0;
-	setAttr ".phl[166]" 0;
-	setAttr ".phl[167]" 0;
-	setAttr ".phl[168]" 0;
-	setAttr ".phl[169]" 0;
-	setAttr ".phl[170]" 0;
-	setAttr ".phl[171]" 0;
-	setAttr ".phl[172]" 0;
-	setAttr ".phl[173]" 0;
-	setAttr ".phl[174]" 0;
-	setAttr ".phl[175]" 0;
-	setAttr ".phl[176]" 0;
-	setAttr ".phl[177]" 0;
-	setAttr ".phl[178]" 0;
-	setAttr ".phl[179]" 0;
-	setAttr ".phl[180]" 0;
-	setAttr ".phl[181]" 0;
-	setAttr ".phl[182]" 0;
-	setAttr ".phl[183]" 0;
-	setAttr ".phl[184]" 0;
-	setAttr ".phl[185]" 0;
-	setAttr ".phl[186]" 0;
-	setAttr ".phl[187]" 0;
-	setAttr ".phl[188]" 0;
-	setAttr ".phl[189]" 0;
-	setAttr ".phl[190]" 0;
-	setAttr ".phl[191]" 0;
-	setAttr ".phl[192]" 0;
-	setAttr ".phl[193]" 0;
-	setAttr ".phl[194]" 0;
-	setAttr ".phl[195]" 0;
-	setAttr ".phl[196]" 0;
-	setAttr ".phl[197]" 0;
-	setAttr ".phl[198]" 0;
-	setAttr ".phl[199]" 0;
-	setAttr ".phl[200]" 0;
-	setAttr ".phl[201]" 0;
-	setAttr ".phl[202]" 0;
-	setAttr ".phl[203]" 0;
-	setAttr ".phl[204]" 0;
-	setAttr ".phl[205]" 0;
-	setAttr ".phl[206]" 0;
-	setAttr ".phl[207]" 0;
-	setAttr ".phl[208]" 0;
-	setAttr ".phl[209]" 0;
-	setAttr ".phl[210]" 0;
-	setAttr ".phl[211]" 0;
 	setAttr ".phl[212]" 0;
-	setAttr ".phl[213]" 0;
 	setAttr ".phl[214]" 0;
-	setAttr ".phl[215]" 0;
 	setAttr ".phl[216]" 0;
-	setAttr ".phl[217]" 0;
 	setAttr ".phl[218]" 0;
-	setAttr ".phl[219]" 0;
 	setAttr ".phl[220]" 0;
 	setAttr ".phl[221]" 0;
+	setAttr ".phl[222]" 0;
+	setAttr ".phl[223]" 0;
+	setAttr ".phl[224]" 0;
+	setAttr ".phl[225]" 0;
+	setAttr ".phl[226]" 0;
+	setAttr ".phl[227]" 0;
+	setAttr ".phl[228]" 0;
+	setAttr ".phl[229]" 0;
+	setAttr ".phl[230]" 0;
+	setAttr ".phl[231]" 0;
+	setAttr ".phl[232]" 0;
+	setAttr ".phl[233]" 0;
+	setAttr ".phl[234]" 0;
+	setAttr ".phl[235]" 0;
+	setAttr ".phl[236]" 0;
+	setAttr ".phl[237]" 0;
+	setAttr ".phl[238]" 0;
+	setAttr ".phl[239]" 0;
+	setAttr ".phl[240]" 0;
+	setAttr ".phl[241]" 0;
+	setAttr ".phl[242]" 0;
+	setAttr ".phl[243]" 0;
+	setAttr ".phl[244]" 0;
+	setAttr ".phl[245]" 0;
+	setAttr ".phl[246]" 0;
+	setAttr ".phl[247]" 0;
+	setAttr ".phl[248]" 0;
+	setAttr ".phl[249]" 0;
+	setAttr ".phl[250]" 0;
+	setAttr ".phl[251]" 0;
+	setAttr ".phl[252]" 0;
+	setAttr ".phl[253]" 0;
+	setAttr ".phl[254]" 0;
+	setAttr ".phl[255]" 0;
+	setAttr ".phl[256]" 0;
+	setAttr ".phl[257]" 0;
+	setAttr ".phl[258]" 0;
+	setAttr ".phl[259]" 0;
+	setAttr ".phl[260]" 0;
+	setAttr ".phl[261]" 0;
+	setAttr ".phl[262]" 0;
+	setAttr ".phl[263]" 0;
+	setAttr ".phl[264]" 0;
+	setAttr ".phl[265]" 0;
+	setAttr ".phl[266]" 0;
+	setAttr ".phl[267]" 0;
+	setAttr ".phl[268]" 0;
+	setAttr ".phl[269]" 0;
+	setAttr ".phl[270]" 0;
+	setAttr ".phl[271]" 0;
+	setAttr ".phl[272]" 0;
+	setAttr ".phl[273]" 0;
+	setAttr ".phl[274]" 0;
+	setAttr ".phl[275]" 0;
+	setAttr ".phl[276]" 0;
+	setAttr ".phl[277]" 0;
+	setAttr ".phl[278]" 0;
+	setAttr ".phl[279]" 0;
+	setAttr ".phl[280]" 0;
+	setAttr ".phl[281]" 0;
+	setAttr ".phl[282]" 0;
+	setAttr ".phl[283]" 0;
+	setAttr ".phl[284]" 0;
+	setAttr ".phl[285]" 0;
+	setAttr ".phl[286]" 0;
+	setAttr ".phl[287]" 0;
+	setAttr ".phl[288]" 0;
+	setAttr ".phl[289]" 0;
+	setAttr ".phl[290]" 0;
+	setAttr ".phl[291]" 0;
+	setAttr ".phl[292]" 0;
+	setAttr ".phl[293]" 0;
+	setAttr ".phl[294]" 0;
+	setAttr ".phl[295]" 0;
+	setAttr ".phl[296]" 0;
+	setAttr ".phl[297]" 0;
+	setAttr ".phl[298]" 0;
+	setAttr ".phl[299]" 0;
+	setAttr ".phl[300]" 0;
+	setAttr ".phl[301]" 0;
+	setAttr ".phl[302]" 0;
+	setAttr ".phl[303]" 0;
+	setAttr ".phl[304]" 0;
+	setAttr ".phl[305]" 0;
+	setAttr ".phl[306]" 0;
+	setAttr ".phl[307]" 0;
+	setAttr ".phl[308]" 0;
+	setAttr ".phl[309]" 0;
+	setAttr ".phl[310]" 0;
+	setAttr ".phl[311]" 0;
+	setAttr ".phl[312]" 0;
+	setAttr ".phl[313]" 0;
+	setAttr ".phl[314]" 0;
+	setAttr ".phl[315]" 0;
+	setAttr ".phl[316]" 0;
+	setAttr ".phl[317]" 0;
+	setAttr ".phl[318]" 0;
+	setAttr ".phl[319]" 0;
+	setAttr ".phl[320]" 0;
+	setAttr ".phl[321]" 0;
+	setAttr ".phl[322]" 0;
+	setAttr ".phl[323]" 0;
+	setAttr ".phl[324]" 0;
+	setAttr ".phl[325]" 0;
+	setAttr ".phl[326]" 0;
+	setAttr ".phl[327]" 0;
+	setAttr ".phl[328]" 0;
+	setAttr ".phl[329]" 0;
+	setAttr ".phl[330]" 0;
+	setAttr ".phl[331]" 0;
+	setAttr ".phl[332]" 0;
+	setAttr ".phl[333]" 0;
+	setAttr ".phl[334]" 0;
+	setAttr ".phl[335]" 0;
+	setAttr ".phl[336]" 0;
+	setAttr ".phl[337]" 0;
+	setAttr ".phl[338]" 0;
+	setAttr ".phl[339]" 0;
+	setAttr ".phl[340]" 0;
+	setAttr ".phl[341]" 0;
+	setAttr ".phl[342]" 0;
+	setAttr ".phl[343]" 0;
+	setAttr ".phl[344]" 0;
+	setAttr ".phl[345]" 0;
+	setAttr ".phl[346]" 0;
+	setAttr ".phl[347]" 0;
+	setAttr ".phl[348]" 0;
+	setAttr ".phl[349]" 0;
+	setAttr ".phl[350]" 0;
+	setAttr ".phl[351]" 0;
+	setAttr ".phl[352]" 0;
+	setAttr ".phl[353]" 0;
+	setAttr ".phl[354]" 0;
+	setAttr ".phl[355]" 0;
+	setAttr ".phl[356]" 0;
+	setAttr ".phl[357]" 0;
+	setAttr ".phl[358]" 0;
+	setAttr ".phl[359]" 0;
+	setAttr ".phl[360]" 0;
+	setAttr ".phl[361]" 0;
+	setAttr ".phl[362]" 0;
+	setAttr ".phl[363]" 0;
+	setAttr ".phl[364]" 0;
+	setAttr ".phl[365]" 0;
+	setAttr ".phl[366]" 0;
+	setAttr ".phl[367]" 0;
+	setAttr ".phl[368]" 0;
+	setAttr ".phl[369]" 0;
+	setAttr ".phl[370]" 0;
+	setAttr ".phl[371]" 0;
+	setAttr ".phl[372]" 0;
+	setAttr ".phl[373]" 0;
+	setAttr ".phl[374]" 0;
+	setAttr ".phl[375]" 0;
+	setAttr ".phl[376]" 0;
+	setAttr ".phl[377]" 0;
+	setAttr ".phl[378]" 0;
+	setAttr ".phl[379]" 0;
+	setAttr ".phl[380]" 0;
+	setAttr ".phl[381]" 0;
+	setAttr ".phl[382]" 0;
+	setAttr ".phl[383]" 0;
+	setAttr ".phl[384]" 0;
+	setAttr ".phl[385]" 0;
+	setAttr ".phl[386]" 0;
+	setAttr ".phl[387]" 0;
+	setAttr ".phl[388]" 0;
+	setAttr ".phl[389]" 0;
+	setAttr ".phl[390]" 0;
+	setAttr ".phl[391]" 0;
+	setAttr ".phl[392]" 0;
+	setAttr ".phl[393]" 0;
+	setAttr ".phl[394]" 0;
+	setAttr ".phl[395]" 0;
+	setAttr ".phl[396]" 0;
+	setAttr ".phl[397]" 0;
+	setAttr ".phl[398]" 0;
+	setAttr ".phl[399]" 0;
+	setAttr ".phl[400]" 0;
+	setAttr ".phl[401]" 0;
+	setAttr ".phl[402]" 0;
+	setAttr ".phl[403]" 0;
+	setAttr ".phl[404]" 0;
+	setAttr ".phl[405]" 0;
+	setAttr ".phl[406]" 0;
+	setAttr ".phl[407]" 0;
+	setAttr ".phl[408]" 0;
+	setAttr ".phl[409]" 0;
+	setAttr ".phl[410]" 0;
+	setAttr ".phl[411]" 0;
+	setAttr ".phl[412]" 0;
+	setAttr ".phl[413]" 0;
+	setAttr ".phl[414]" 0;
+	setAttr ".phl[415]" 0;
+	setAttr ".phl[416]" 0;
+	setAttr ".phl[417]" 0;
+	setAttr ".phl[418]" 0;
+	setAttr ".phl[419]" 0;
+	setAttr ".phl[420]" 0;
+	setAttr ".phl[421]" 0;
+	setAttr ".phl[422]" 0;
+	setAttr ".phl[423]" 0;
+	setAttr ".phl[424]" 0;
+	setAttr ".phl[425]" 0;
+	setAttr ".phl[426]" 0;
+	setAttr ".phl[427]" 0;
+	setAttr ".phl[428]" 0;
+	setAttr ".phl[429]" 0;
+	setAttr ".phl[430]" 0;
+	setAttr ".phl[431]" 0;
+	setAttr ".phl[432]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"sneaks_latestRN"
-		"sneaks_latestRN" 1
+		"sneaks_latestRN" 21
 		2 "sneaks_latest:skinCluster1" "lw[0:62]" " -s 63 0 0 0"
-		"sneaks_latestRN" 354
+		2 "sneaks_latest:skinCluster1" "lw[0:62]" " -s 63 0 0 0"
+		2 "sneaks_latest:bindPose2" "worldMatrix" " -s 64"
+		2 "sneaks_latest:skinCluster1" "lw[0:62]" " -s 63 0 0 0"
+		3 "|sneaks_latest:sneaks_normal_face:sneaksmesh:polySurface1|sneaks_latest:sneaks_normal_face:transform1|sneaks_latest:sneaks_normal_face:sneaksmesh:polySurfaceShape1.instObjGroups.objectGroups[0]" 
+		"sneaks_latest:sneaks_normal_face:sneaksmesh:Sneakio002:lambert4SG.dagSetMembers" 
+		"-na"
+		3 "|sneaks_latest:sneaks_normal_face:sneaksmesh:polySurface1|sneaks_latest:sneaks_normal_face:polySurface1|sneaks_latest:sneaks_normal_face:transform2|sneaks_latest:sneaks_normal_face:polySurfaceShape2.instObjGroups.objectGroups[0]" 
+		"sneaks_latest:sneaks_normal_face:sneaksmesh:Sneakio002:lambert4SG.dagSetMembers" 
+		"-na"
+		3 "|sneaks_latest:sneaks_normal_face:sneaksmesh:polySurface1|sneaks_latest:sneaks_normal_face:main|sneaks_latest:sneaks_normal_face:transform3|sneaks_latest:sneaks_normal_face:mainShape.instObjGroups.objectGroups[0]" 
+		"sneaks_latest:sneaks_normal_face:sneaksmesh:Sneakio002:lambert4SG.dagSetMembers" 
+		"-na"
+		3 "|sneaks_latest:sneaks_normal_face:sneaksmesh:polySurface1|sneaks_latest:ears|sneaks_latest:earsShape.instObjGroups.objectGroups[0]" 
+		"sneaks_latest:sneaks_normal_face:sneaksmesh:Sneakio002:lambert4SG.dagSetMembers" 
+		"-na"
+		3 "|sneaks_latest:controller_root|sneaks_latest:spine|sneaks_latest:Spine2|sneaks_latest:Spine3|sneaks_latest:Spine4|sneaks_latest:Shoulder|sneaks_latest:leftArm1|sneaks_latest:leftElbow1|sneaks_latest:leftwrist1|sneaks_latest:leftFingerJunction1|sneaks_latest:leftpinky1|sneaks_latest:joint25|sneaks_latest:joint26.message" 
+		"sneaks_latest:bindPose2.members[51]" ""
+		3 "sneaks_latest:bindPose2.members[50]" "sneaks_latest:bindPose2.parents[51]" 
+		""
+		3 "|sneaks_latest:controller_root|sneaks_latest:spine|sneaks_latest:Spine2|sneaks_latest:Spine3|sneaks_latest:Spine4|sneaks_latest:Shoulder|sneaks_latest:leftArm1|sneaks_latest:leftElbow1|sneaks_latest:leftwrist1|sneaks_latest:leftFingerJunction1|sneaks_latest:leftpinky1|sneaks_latest:joint25|sneaks_latest:joint26.bindPose" 
+		"sneaks_latest:bindPose2.worldMatrix[51]" ""
+		3 "|sneaks_latest:controller_root|sneaks_latest:spine|sneaks_latest:Spine2|sneaks_latest:Spine3|sneaks_latest:Spine4|sneaks_latest:Shoulder|sneaks_latest:leftArm1|sneaks_latest:leftElbow1|sneaks_latest:leftwrist1|sneaks_latest:leftFingerJunction1|sneaks_latest:leftring1|sneaks_latest:joint27|sneaks_latest:joint28.message" 
+		"sneaks_latest:bindPose2.members[54]" ""
+		3 "sneaks_latest:bindPose2.members[53]" "sneaks_latest:bindPose2.parents[54]" 
+		""
+		3 "|sneaks_latest:controller_root|sneaks_latest:spine|sneaks_latest:Spine2|sneaks_latest:Spine3|sneaks_latest:Spine4|sneaks_latest:Shoulder|sneaks_latest:leftArm1|sneaks_latest:leftElbow1|sneaks_latest:leftwrist1|sneaks_latest:leftFingerJunction1|sneaks_latest:leftring1|sneaks_latest:joint27|sneaks_latest:joint28.bindPose" 
+		"sneaks_latest:bindPose2.worldMatrix[54]" ""
+		3 "|sneaks_latest:controller_root|sneaks_latest:spine|sneaks_latest:Spine2|sneaks_latest:Spine3|sneaks_latest:Spine4|sneaks_latest:Shoulder|sneaks_latest:leftArm1|sneaks_latest:leftElbow1|sneaks_latest:leftwrist1|sneaks_latest:leftFingerJunction1|sneaks_latest:leftmiddle1|sneaks_latest:joint29|sneaks_latest:joint30.message" 
+		"sneaks_latest:bindPose2.members[57]" ""
+		3 "sneaks_latest:bindPose2.members[56]" "sneaks_latest:bindPose2.parents[57]" 
+		""
+		3 "|sneaks_latest:controller_root|sneaks_latest:spine|sneaks_latest:Spine2|sneaks_latest:Spine3|sneaks_latest:Spine4|sneaks_latest:Shoulder|sneaks_latest:leftArm1|sneaks_latest:leftElbow1|sneaks_latest:leftwrist1|sneaks_latest:leftFingerJunction1|sneaks_latest:leftmiddle1|sneaks_latest:joint29|sneaks_latest:joint30.bindPose" 
+		"sneaks_latest:bindPose2.worldMatrix[57]" ""
+		5 0 "sneaks_latestRN" "|sneaks_latest:sneaks_normal_face:sneaksmesh:polySurface1|sneaks_latest:sneaks_normal_face:transform1|sneaks_latest:sneaks_normal_face:sneaksmesh:polySurfaceShape1.instObjGroups.objectGroups[0]" 
+		"sneaks_latest:sneaks17:sneaksmesh:Sneakio002:lambert4SG.dagSetMembers" "sneaks_latestRN.placeHolderList[212]" 
+		"sneaks_latestRN.placeHolderList[213]" "sneaks_latest:sneaks_normal_face:sneaksmesh:Sneakio002:lambert4SG.dsm"
+		
+		5 0 "sneaks_latestRN" "|sneaks_latest:sneaks_normal_face:sneaksmesh:polySurface1|sneaks_latest:sneaks_normal_face:polySurface1|sneaks_latest:sneaks_normal_face:transform2|sneaks_latest:sneaks_normal_face:polySurfaceShape2.instObjGroups.objectGroups[0]" 
+		"sneaks_latest:sneaks17:sneaksmesh:Sneakio002:lambert4SG.dagSetMembers" "sneaks_latestRN.placeHolderList[214]" 
+		"sneaks_latestRN.placeHolderList[215]" "sneaks_latest:sneaks_normal_face:sneaksmesh:Sneakio002:lambert4SG.dsm"
+		
+		5 0 "sneaks_latestRN" "|sneaks_latest:sneaks_normal_face:sneaksmesh:polySurface1|sneaks_latest:sneaks_normal_face:main|sneaks_latest:sneaks_normal_face:transform3|sneaks_latest:sneaks_normal_face:mainShape.instObjGroups.objectGroups[0]" 
+		"sneaks_latest:sneaks17:sneaksmesh:Sneakio002:lambert4SG.dagSetMembers" "sneaks_latestRN.placeHolderList[216]" 
+		"sneaks_latestRN.placeHolderList[217]" "sneaks_latest:sneaks_normal_face:sneaksmesh:Sneakio002:lambert4SG.dsm"
+		
+		5 0 "sneaks_latestRN" "|sneaks_latest:sneaks_normal_face:sneaksmesh:polySurface1|sneaks_latest:ears|sneaks_latest:earsShape.instObjGroups.objectGroups[0]" 
+		"sneaks_latest:sneaks17:sneaksmesh:Sneakio002:lambert4SG.dagSetMembers" "sneaks_latestRN.placeHolderList[218]" 
+		"sneaks_latestRN.placeHolderList[219]" "sneaks_latest:sneaks_normal_face:sneaksmesh:Sneakio002:lambert4SG.dsm"
+		
+		"sneaks_latestRN" 336
 		2 "|sneaks_latest:controller_root" "visibility" " -av 1"
-		2 "|sneaks_latest:controller_root" "translate" " -type \"double3\" -246.093845 21.271176 25.196"
+		2 "|sneaks_latest:controller_root" "translate" " -type \"double3\" -262.173541 2.708726 25.196"
 		
 		2 "|sneaks_latest:controller_root" "translateX" " -av"
 		2 "|sneaks_latest:controller_root" "translateY" " -av"
 		2 "|sneaks_latest:controller_root" "translateZ" " -av"
-		2 "|sneaks_latest:controller_root" "rotate" " -type \"double3\" -39.082831 90 0"
+		2 "|sneaks_latest:controller_root" "rotate" " -type \"double3\" -124.345453 90 0"
 		
 		2 "|sneaks_latest:controller_root" "rotateX" " -av"
 		2 "|sneaks_latest:controller_root" "rotateY" " -av"
@@ -19918,7 +19897,7 @@ createNode reference -n "sneaks_latestRN";
 		2 "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_head" 
 		"translateZ" " -av"
 		2 "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_head" 
-		"rotate" " -type \"double3\" 29.64992 0 0"
+		"rotate" " -type \"double3\" 49.883505 0 0"
 		2 "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_head" 
 		"rotateX" " -av"
 		2 "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_head" 
@@ -19990,7 +19969,7 @@ createNode reference -n "sneaks_latestRN";
 		2 "|sneaks_latest:controller_root|sneaks_latest:controller_leftArm|sneaks_latest:LeftArm" 
 		"translateZ" " -av"
 		2 "|sneaks_latest:controller_root|sneaks_latest:spine|sneaks_latest:Spine2|sneaks_latest:Spine3|sneaks_latest:Spine4|sneaks_latest:Shoulder|sneaks_latest:Neck" 
-		"rotate" " -type \"double3\" 33.413218 1.859366 0.855769"
+		"rotate" " -type \"double3\" 53.625545 0.923279 0.863293"
 		2 "|sneaks_latest:controller_root|sneaks_latest:spine|sneaks_latest:Spine2|sneaks_latest:Spine3|sneaks_latest:Spine4|sneaks_latest:Shoulder|sneaks_latest:Neck" 
 		"rotateX" " -av"
 		2 "|sneaks_latest:controller_root|sneaks_latest:spine|sneaks_latest:Spine2|sneaks_latest:Spine3|sneaks_latest:Spine4|sneaks_latest:Shoulder|sneaks_latest:Neck" 
@@ -20031,7 +20010,7 @@ createNode reference -n "sneaks_latestRN";
 		"translateY" " -av"
 		2 "|sneaks_latest:controller_root|sneaks_latest:controller_rightArm|sneaks_latest:RightArm" 
 		"translateZ" " -av"
-		2 "sneaks_latest:blendShape1" "w[0:8]" " -s 9 0 0.183486 0.486239 0.220183 0 0 0 1 0"
+		2 "sneaks_latest:blendShape1" "w[0:13]" " -s 14 0 0.183486 0.486239 0.220183 0 0 0 1 0 0 0 0 0 0"
 		
 		2 "sneaks_latest:blendShape1" "weight" " -s 9"
 		2 "sneaks_latest:blendShape1" "weight[0]" " -av"
@@ -20047,7 +20026,9 @@ createNode reference -n "sneaks_latestRN";
 		2 "sneaks_latest:skinCluster1" "matrix" " -s 63"
 		2 "sneaks_latest:skinCluster1" "lw[0:62]" " -s 63 0 0 0"
 		2 "sneaks_latest:skinCluster1" "lockWeights" " -s 60"
-		2 "sneaks_latest:bindPose2" "worldMatrix" " -s 64"
+		3 "|sneaks_latest:sneaks_normal_face:sneaksmesh:polySurface1|sneaks_latest:nose|sneaks_latest:noseShape.instObjGroups.objectGroups[0]" 
+		"sneaks_latest:sneaks_normal_face:sneaksmesh:Sneakio002:lambert4SG.dagSetMembers" 
+		"-na"
 		3 "|sneaks_latest:controller_root|sneaks_latest:spine|sneaks_latest:Spine2|sneaks_latest:Spine3|sneaks_latest:Spine4|sneaks_latest:Shoulder|sneaks_latest:leftArm1|sneaks_latest:leftElbow1|sneaks_latest:leftwrist1|sneaks_latest:leftFingerJunction1|sneaks_latest:leftpinky1|sneaks_latest:joint25|sneaks_latest:joint26.worldMatrix" 
 		"sneaks_latest:skinCluster1.matrix[50]" ""
 		3 "|sneaks_latest:controller_root|sneaks_latest:spine|sneaks_latest:Spine2|sneaks_latest:Spine3|sneaks_latest:Spine4|sneaks_latest:Shoulder|sneaks_latest:leftArm1|sneaks_latest:leftElbow1|sneaks_latest:leftwrist1|sneaks_latest:leftFingerJunction1|sneaks_latest:leftpinky1|sneaks_latest:joint25|sneaks_latest:joint26.lockInfluenceWeights" 
@@ -20060,480 +20041,432 @@ createNode reference -n "sneaks_latestRN";
 		"sneaks_latest:skinCluster1.matrix[56]" ""
 		3 "|sneaks_latest:controller_root|sneaks_latest:spine|sneaks_latest:Spine2|sneaks_latest:Spine3|sneaks_latest:Spine4|sneaks_latest:Shoulder|sneaks_latest:leftArm1|sneaks_latest:leftElbow1|sneaks_latest:leftwrist1|sneaks_latest:leftFingerJunction1|sneaks_latest:leftmiddle1|sneaks_latest:joint29|sneaks_latest:joint30.lockInfluenceWeights" 
 		"sneaks_latest:skinCluster1.lockWeights[56]" ""
-		3 "|sneaks_latest:sneaks_normal_face:sneaksmesh:polySurface1|sneaks_latest:sneaks_normal_face:transform1|sneaks_latest:sneaks_normal_face:sneaksmesh:polySurfaceShape1.instObjGroups.objectGroups[0]" 
-		"sneaks_latest:sneaks_normal_face:sneaksmesh:Sneakio002:lambert4SG.dagSetMembers" 
-		"-na"
-		3 "|sneaks_latest:sneaks_normal_face:sneaksmesh:polySurface1|sneaks_latest:sneaks_normal_face:polySurface1|sneaks_latest:sneaks_normal_face:transform2|sneaks_latest:sneaks_normal_face:polySurfaceShape2.instObjGroups.objectGroups[0]" 
-		"sneaks_latest:sneaks_normal_face:sneaksmesh:Sneakio002:lambert4SG.dagSetMembers" 
-		"-na"
-		3 "|sneaks_latest:sneaks_normal_face:sneaksmesh:polySurface1|sneaks_latest:sneaks_normal_face:main|sneaks_latest:sneaks_normal_face:transform3|sneaks_latest:sneaks_normal_face:mainShape.instObjGroups.objectGroups[0]" 
-		"sneaks_latest:sneaks_normal_face:sneaksmesh:Sneakio002:lambert4SG.dagSetMembers" 
-		"-na"
-		3 "|sneaks_latest:sneaks_normal_face:sneaksmesh:polySurface1|sneaks_latest:ears|sneaks_latest:earsShape.instObjGroups.objectGroups[0]" 
-		"sneaks_latest:sneaks_normal_face:sneaksmesh:Sneakio002:lambert4SG.dagSetMembers" 
-		"-na"
-		3 "|sneaks_latest:sneaks_normal_face:sneaksmesh:polySurface1|sneaks_latest:nose|sneaks_latest:noseShape.instObjGroups.objectGroups[0]" 
-		"sneaks_latest:sneaks_normal_face:sneaksmesh:Sneakio002:lambert4SG.dagSetMembers" 
-		"-na"
-		3 "|sneaks_latest:controller_root|sneaks_latest:spine|sneaks_latest:Spine2|sneaks_latest:Spine3|sneaks_latest:Spine4|sneaks_latest:Shoulder|sneaks_latest:leftArm1|sneaks_latest:leftElbow1|sneaks_latest:leftwrist1|sneaks_latest:leftFingerJunction1|sneaks_latest:leftpinky1|sneaks_latest:joint25|sneaks_latest:joint26.message" 
-		"sneaks_latest:bindPose2.members[51]" ""
-		3 "sneaks_latest:bindPose2.members[50]" "sneaks_latest:bindPose2.parents[51]" 
+		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root.visibility" "sneaks_latestRN.placeHolderList[220]" 
 		""
-		3 "|sneaks_latest:controller_root|sneaks_latest:spine|sneaks_latest:Spine2|sneaks_latest:Spine3|sneaks_latest:Spine4|sneaks_latest:Shoulder|sneaks_latest:leftArm1|sneaks_latest:leftElbow1|sneaks_latest:leftwrist1|sneaks_latest:leftFingerJunction1|sneaks_latest:leftpinky1|sneaks_latest:joint25|sneaks_latest:joint26.bindPose" 
-		"sneaks_latest:bindPose2.worldMatrix[51]" ""
-		3 "|sneaks_latest:controller_root|sneaks_latest:spine|sneaks_latest:Spine2|sneaks_latest:Spine3|sneaks_latest:Spine4|sneaks_latest:Shoulder|sneaks_latest:leftArm1|sneaks_latest:leftElbow1|sneaks_latest:leftwrist1|sneaks_latest:leftFingerJunction1|sneaks_latest:leftring1|sneaks_latest:joint27|sneaks_latest:joint28.message" 
-		"sneaks_latest:bindPose2.members[54]" ""
-		3 "sneaks_latest:bindPose2.members[53]" "sneaks_latest:bindPose2.parents[54]" 
+		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root.translateX" "sneaks_latestRN.placeHolderList[221]" 
 		""
-		3 "|sneaks_latest:controller_root|sneaks_latest:spine|sneaks_latest:Spine2|sneaks_latest:Spine3|sneaks_latest:Spine4|sneaks_latest:Shoulder|sneaks_latest:leftArm1|sneaks_latest:leftElbow1|sneaks_latest:leftwrist1|sneaks_latest:leftFingerJunction1|sneaks_latest:leftring1|sneaks_latest:joint27|sneaks_latest:joint28.bindPose" 
-		"sneaks_latest:bindPose2.worldMatrix[54]" ""
-		3 "|sneaks_latest:controller_root|sneaks_latest:spine|sneaks_latest:Spine2|sneaks_latest:Spine3|sneaks_latest:Spine4|sneaks_latest:Shoulder|sneaks_latest:leftArm1|sneaks_latest:leftElbow1|sneaks_latest:leftwrist1|sneaks_latest:leftFingerJunction1|sneaks_latest:leftmiddle1|sneaks_latest:joint29|sneaks_latest:joint30.message" 
-		"sneaks_latest:bindPose2.members[57]" ""
-		3 "sneaks_latest:bindPose2.members[56]" "sneaks_latest:bindPose2.parents[57]" 
+		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root.translateY" "sneaks_latestRN.placeHolderList[222]" 
 		""
-		3 "|sneaks_latest:controller_root|sneaks_latest:spine|sneaks_latest:Spine2|sneaks_latest:Spine3|sneaks_latest:Spine4|sneaks_latest:Shoulder|sneaks_latest:leftArm1|sneaks_latest:leftElbow1|sneaks_latest:leftwrist1|sneaks_latest:leftFingerJunction1|sneaks_latest:leftmiddle1|sneaks_latest:joint29|sneaks_latest:joint30.bindPose" 
-		"sneaks_latest:bindPose2.worldMatrix[57]" ""
-		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root.visibility" "sneaks_latestRN.placeHolderList[1]" 
+		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root.translateZ" "sneaks_latestRN.placeHolderList[223]" 
 		""
-		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root.translateX" "sneaks_latestRN.placeHolderList[2]" 
+		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root.rotateX" "sneaks_latestRN.placeHolderList[224]" 
 		""
-		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root.translateY" "sneaks_latestRN.placeHolderList[3]" 
+		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root.rotateY" "sneaks_latestRN.placeHolderList[225]" 
 		""
-		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root.translateZ" "sneaks_latestRN.placeHolderList[4]" 
+		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root.rotateZ" "sneaks_latestRN.placeHolderList[226]" 
 		""
-		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root.rotateX" "sneaks_latestRN.placeHolderList[5]" 
+		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root.scaleX" "sneaks_latestRN.placeHolderList[227]" 
 		""
-		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root.rotateY" "sneaks_latestRN.placeHolderList[6]" 
+		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root.scaleY" "sneaks_latestRN.placeHolderList[228]" 
 		""
-		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root.rotateZ" "sneaks_latestRN.placeHolderList[7]" 
-		""
-		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root.scaleX" "sneaks_latestRN.placeHolderList[8]" 
-		""
-		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root.scaleY" "sneaks_latestRN.placeHolderList[9]" 
-		""
-		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root.scaleZ" "sneaks_latestRN.placeHolderList[10]" 
+		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root.scaleZ" "sneaks_latestRN.placeHolderList[229]" 
 		""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG.translateX" 
-		"sneaks_latestRN.placeHolderList[11]" ""
+		"sneaks_latestRN.placeHolderList[230]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG.translateY" 
-		"sneaks_latestRN.placeHolderList[12]" ""
+		"sneaks_latestRN.placeHolderList[231]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG.translateZ" 
-		"sneaks_latestRN.placeHolderList[13]" ""
+		"sneaks_latestRN.placeHolderList[232]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG.rotateX" 
-		"sneaks_latestRN.placeHolderList[14]" ""
+		"sneaks_latestRN.placeHolderList[233]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG.rotateY" 
-		"sneaks_latestRN.placeHolderList[15]" ""
+		"sneaks_latestRN.placeHolderList[234]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG.rotateZ" 
-		"sneaks_latestRN.placeHolderList[16]" ""
+		"sneaks_latestRN.placeHolderList[235]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG.scaleX" 
-		"sneaks_latestRN.placeHolderList[17]" ""
+		"sneaks_latestRN.placeHolderList[236]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG.scaleY" 
-		"sneaks_latestRN.placeHolderList[18]" ""
+		"sneaks_latestRN.placeHolderList[237]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG.scaleZ" 
-		"sneaks_latestRN.placeHolderList[19]" ""
+		"sneaks_latestRN.placeHolderList[238]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG.visibility" 
-		"sneaks_latestRN.placeHolderList[20]" ""
+		"sneaks_latestRN.placeHolderList[239]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_spine3.translateX" 
-		"sneaks_latestRN.placeHolderList[21]" ""
+		"sneaks_latestRN.placeHolderList[240]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_spine3.translateY" 
-		"sneaks_latestRN.placeHolderList[22]" ""
+		"sneaks_latestRN.placeHolderList[241]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_spine3.translateZ" 
-		"sneaks_latestRN.placeHolderList[23]" ""
+		"sneaks_latestRN.placeHolderList[242]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_spine3.rotateX" 
-		"sneaks_latestRN.placeHolderList[24]" ""
+		"sneaks_latestRN.placeHolderList[243]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_spine3.rotateY" 
-		"sneaks_latestRN.placeHolderList[25]" ""
+		"sneaks_latestRN.placeHolderList[244]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_spine3.rotateZ" 
-		"sneaks_latestRN.placeHolderList[26]" ""
+		"sneaks_latestRN.placeHolderList[245]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_spine3.scaleX" 
-		"sneaks_latestRN.placeHolderList[27]" ""
+		"sneaks_latestRN.placeHolderList[246]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_spine3.scaleY" 
-		"sneaks_latestRN.placeHolderList[28]" ""
+		"sneaks_latestRN.placeHolderList[247]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_spine3.scaleZ" 
-		"sneaks_latestRN.placeHolderList[29]" ""
+		"sneaks_latestRN.placeHolderList[248]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_spine3.visibility" 
-		"sneaks_latestRN.placeHolderList[30]" ""
+		"sneaks_latestRN.placeHolderList[249]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_spine2.translateX" 
-		"sneaks_latestRN.placeHolderList[31]" ""
+		"sneaks_latestRN.placeHolderList[250]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_spine2.translateY" 
-		"sneaks_latestRN.placeHolderList[32]" ""
+		"sneaks_latestRN.placeHolderList[251]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_spine2.translateZ" 
-		"sneaks_latestRN.placeHolderList[33]" ""
+		"sneaks_latestRN.placeHolderList[252]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_spine2.rotateX" 
-		"sneaks_latestRN.placeHolderList[34]" ""
+		"sneaks_latestRN.placeHolderList[253]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_spine2.rotateY" 
-		"sneaks_latestRN.placeHolderList[35]" ""
+		"sneaks_latestRN.placeHolderList[254]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_spine2.rotateZ" 
-		"sneaks_latestRN.placeHolderList[36]" ""
+		"sneaks_latestRN.placeHolderList[255]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_spine2.scaleX" 
-		"sneaks_latestRN.placeHolderList[37]" ""
+		"sneaks_latestRN.placeHolderList[256]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_spine2.scaleY" 
-		"sneaks_latestRN.placeHolderList[38]" ""
+		"sneaks_latestRN.placeHolderList[257]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_spine2.scaleZ" 
-		"sneaks_latestRN.placeHolderList[39]" ""
+		"sneaks_latestRN.placeHolderList[258]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_spine2.visibility" 
-		"sneaks_latestRN.placeHolderList[40]" ""
+		"sneaks_latestRN.placeHolderList[259]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_spine1.translateX" 
-		"sneaks_latestRN.placeHolderList[41]" ""
+		"sneaks_latestRN.placeHolderList[260]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_spine1.translateY" 
-		"sneaks_latestRN.placeHolderList[42]" ""
+		"sneaks_latestRN.placeHolderList[261]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_spine1.translateZ" 
-		"sneaks_latestRN.placeHolderList[43]" ""
+		"sneaks_latestRN.placeHolderList[262]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_spine1.rotateX" 
-		"sneaks_latestRN.placeHolderList[44]" ""
+		"sneaks_latestRN.placeHolderList[263]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_spine1.rotateY" 
-		"sneaks_latestRN.placeHolderList[45]" ""
+		"sneaks_latestRN.placeHolderList[264]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_spine1.rotateZ" 
-		"sneaks_latestRN.placeHolderList[46]" ""
+		"sneaks_latestRN.placeHolderList[265]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_spine1.scaleX" 
-		"sneaks_latestRN.placeHolderList[47]" ""
+		"sneaks_latestRN.placeHolderList[266]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_spine1.scaleY" 
-		"sneaks_latestRN.placeHolderList[48]" ""
+		"sneaks_latestRN.placeHolderList[267]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_spine1.scaleZ" 
-		"sneaks_latestRN.placeHolderList[49]" ""
+		"sneaks_latestRN.placeHolderList[268]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_spine1.visibility" 
-		"sneaks_latestRN.placeHolderList[50]" ""
+		"sneaks_latestRN.placeHolderList[269]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_shoulder.translateX" 
-		"sneaks_latestRN.placeHolderList[51]" ""
+		"sneaks_latestRN.placeHolderList[270]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_shoulder.translateY" 
-		"sneaks_latestRN.placeHolderList[52]" ""
+		"sneaks_latestRN.placeHolderList[271]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_shoulder.translateZ" 
-		"sneaks_latestRN.placeHolderList[53]" ""
+		"sneaks_latestRN.placeHolderList[272]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_shoulder.rotateX" 
-		"sneaks_latestRN.placeHolderList[54]" ""
+		"sneaks_latestRN.placeHolderList[273]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_shoulder.rotateY" 
-		"sneaks_latestRN.placeHolderList[55]" ""
+		"sneaks_latestRN.placeHolderList[274]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_shoulder.rotateZ" 
-		"sneaks_latestRN.placeHolderList[56]" ""
+		"sneaks_latestRN.placeHolderList[275]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_shoulder.scaleX" 
-		"sneaks_latestRN.placeHolderList[57]" ""
+		"sneaks_latestRN.placeHolderList[276]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_shoulder.scaleY" 
-		"sneaks_latestRN.placeHolderList[58]" ""
+		"sneaks_latestRN.placeHolderList[277]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_shoulder.scaleZ" 
-		"sneaks_latestRN.placeHolderList[59]" ""
+		"sneaks_latestRN.placeHolderList[278]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_shoulder.visibility" 
-		"sneaks_latestRN.placeHolderList[60]" ""
+		"sneaks_latestRN.placeHolderList[279]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_head.translateX" 
-		"sneaks_latestRN.placeHolderList[61]" ""
+		"sneaks_latestRN.placeHolderList[280]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_head.translateY" 
-		"sneaks_latestRN.placeHolderList[62]" ""
+		"sneaks_latestRN.placeHolderList[281]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_head.translateZ" 
-		"sneaks_latestRN.placeHolderList[63]" ""
+		"sneaks_latestRN.placeHolderList[282]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_head.rotateX" 
-		"sneaks_latestRN.placeHolderList[64]" ""
+		"sneaks_latestRN.placeHolderList[283]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_head.rotateY" 
-		"sneaks_latestRN.placeHolderList[65]" ""
+		"sneaks_latestRN.placeHolderList[284]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_head.rotateZ" 
-		"sneaks_latestRN.placeHolderList[66]" ""
+		"sneaks_latestRN.placeHolderList[285]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_head.scaleX" 
-		"sneaks_latestRN.placeHolderList[67]" ""
+		"sneaks_latestRN.placeHolderList[286]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_head.scaleY" 
-		"sneaks_latestRN.placeHolderList[68]" ""
+		"sneaks_latestRN.placeHolderList[287]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_head.scaleZ" 
-		"sneaks_latestRN.placeHolderList[69]" ""
+		"sneaks_latestRN.placeHolderList[288]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_head.visibility" 
-		"sneaks_latestRN.placeHolderList[70]" ""
+		"sneaks_latestRN.placeHolderList[289]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_hip.translateX" 
-		"sneaks_latestRN.placeHolderList[71]" ""
+		"sneaks_latestRN.placeHolderList[290]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_hip.translateY" 
-		"sneaks_latestRN.placeHolderList[72]" ""
+		"sneaks_latestRN.placeHolderList[291]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_hip.translateZ" 
-		"sneaks_latestRN.placeHolderList[73]" ""
+		"sneaks_latestRN.placeHolderList[292]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_hip.rotateX" 
-		"sneaks_latestRN.placeHolderList[74]" ""
+		"sneaks_latestRN.placeHolderList[293]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_hip.rotateY" 
-		"sneaks_latestRN.placeHolderList[75]" ""
+		"sneaks_latestRN.placeHolderList[294]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_hip.rotateZ" 
-		"sneaks_latestRN.placeHolderList[76]" ""
+		"sneaks_latestRN.placeHolderList[295]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_hip.scaleX" 
-		"sneaks_latestRN.placeHolderList[77]" ""
+		"sneaks_latestRN.placeHolderList[296]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_hip.scaleY" 
-		"sneaks_latestRN.placeHolderList[78]" ""
+		"sneaks_latestRN.placeHolderList[297]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_hip.scaleZ" 
-		"sneaks_latestRN.placeHolderList[79]" ""
+		"sneaks_latestRN.placeHolderList[298]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_hip.visibility" 
-		"sneaks_latestRN.placeHolderList[80]" ""
+		"sneaks_latestRN.placeHolderList[299]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_tailbase.translateX" 
-		"sneaks_latestRN.placeHolderList[81]" ""
+		"sneaks_latestRN.placeHolderList[300]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_tailbase.translateY" 
-		"sneaks_latestRN.placeHolderList[82]" ""
+		"sneaks_latestRN.placeHolderList[301]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_tailbase.translateZ" 
-		"sneaks_latestRN.placeHolderList[83]" ""
+		"sneaks_latestRN.placeHolderList[302]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_tailbase.rotateX" 
-		"sneaks_latestRN.placeHolderList[84]" ""
+		"sneaks_latestRN.placeHolderList[303]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_tailbase.rotateY" 
-		"sneaks_latestRN.placeHolderList[85]" ""
+		"sneaks_latestRN.placeHolderList[304]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_tailbase.rotateZ" 
-		"sneaks_latestRN.placeHolderList[86]" ""
+		"sneaks_latestRN.placeHolderList[305]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_tailbase.scaleX" 
-		"sneaks_latestRN.placeHolderList[87]" ""
+		"sneaks_latestRN.placeHolderList[306]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_tailbase.scaleY" 
-		"sneaks_latestRN.placeHolderList[88]" ""
+		"sneaks_latestRN.placeHolderList[307]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_tailbase.scaleZ" 
-		"sneaks_latestRN.placeHolderList[89]" ""
+		"sneaks_latestRN.placeHolderList[308]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_tailbase.visibility" 
-		"sneaks_latestRN.placeHolderList[90]" ""
+		"sneaks_latestRN.placeHolderList[309]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_tailbase|sneaks_latest:controller_tail2.translateX" 
-		"sneaks_latestRN.placeHolderList[91]" ""
+		"sneaks_latestRN.placeHolderList[310]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_tailbase|sneaks_latest:controller_tail2.translateY" 
-		"sneaks_latestRN.placeHolderList[92]" ""
+		"sneaks_latestRN.placeHolderList[311]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_tailbase|sneaks_latest:controller_tail2.translateZ" 
-		"sneaks_latestRN.placeHolderList[93]" ""
+		"sneaks_latestRN.placeHolderList[312]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_tailbase|sneaks_latest:controller_tail2.rotateX" 
-		"sneaks_latestRN.placeHolderList[94]" ""
+		"sneaks_latestRN.placeHolderList[313]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_tailbase|sneaks_latest:controller_tail2.rotateY" 
-		"sneaks_latestRN.placeHolderList[95]" ""
+		"sneaks_latestRN.placeHolderList[314]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_tailbase|sneaks_latest:controller_tail2.rotateZ" 
-		"sneaks_latestRN.placeHolderList[96]" ""
+		"sneaks_latestRN.placeHolderList[315]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_tailbase|sneaks_latest:controller_tail2.scaleX" 
-		"sneaks_latestRN.placeHolderList[97]" ""
+		"sneaks_latestRN.placeHolderList[316]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_tailbase|sneaks_latest:controller_tail2.scaleY" 
-		"sneaks_latestRN.placeHolderList[98]" ""
+		"sneaks_latestRN.placeHolderList[317]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_tailbase|sneaks_latest:controller_tail2.scaleZ" 
-		"sneaks_latestRN.placeHolderList[99]" ""
+		"sneaks_latestRN.placeHolderList[318]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_tailbase|sneaks_latest:controller_tail2.visibility" 
-		"sneaks_latestRN.placeHolderList[100]" ""
+		"sneaks_latestRN.placeHolderList[319]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_tailbase|sneaks_latest:controller_tail2|sneaks_latest:controller_tail3.translateX" 
-		"sneaks_latestRN.placeHolderList[101]" ""
+		"sneaks_latestRN.placeHolderList[320]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_tailbase|sneaks_latest:controller_tail2|sneaks_latest:controller_tail3.translateY" 
-		"sneaks_latestRN.placeHolderList[102]" ""
+		"sneaks_latestRN.placeHolderList[321]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_tailbase|sneaks_latest:controller_tail2|sneaks_latest:controller_tail3.translateZ" 
-		"sneaks_latestRN.placeHolderList[103]" ""
+		"sneaks_latestRN.placeHolderList[322]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_tailbase|sneaks_latest:controller_tail2|sneaks_latest:controller_tail3.rotateX" 
-		"sneaks_latestRN.placeHolderList[104]" ""
+		"sneaks_latestRN.placeHolderList[323]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_tailbase|sneaks_latest:controller_tail2|sneaks_latest:controller_tail3.rotateY" 
-		"sneaks_latestRN.placeHolderList[105]" ""
+		"sneaks_latestRN.placeHolderList[324]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_tailbase|sneaks_latest:controller_tail2|sneaks_latest:controller_tail3.rotateZ" 
-		"sneaks_latestRN.placeHolderList[106]" ""
+		"sneaks_latestRN.placeHolderList[325]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_tailbase|sneaks_latest:controller_tail2|sneaks_latest:controller_tail3.scaleX" 
-		"sneaks_latestRN.placeHolderList[107]" ""
+		"sneaks_latestRN.placeHolderList[326]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_tailbase|sneaks_latest:controller_tail2|sneaks_latest:controller_tail3.scaleY" 
-		"sneaks_latestRN.placeHolderList[108]" ""
+		"sneaks_latestRN.placeHolderList[327]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_tailbase|sneaks_latest:controller_tail2|sneaks_latest:controller_tail3.scaleZ" 
-		"sneaks_latestRN.placeHolderList[109]" ""
+		"sneaks_latestRN.placeHolderList[328]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_tailbase|sneaks_latest:controller_tail2|sneaks_latest:controller_tail3.visibility" 
-		"sneaks_latestRN.placeHolderList[110]" ""
+		"sneaks_latestRN.placeHolderList[329]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_tailbase|sneaks_latest:controller_tail2|sneaks_latest:controller_tail3|sneaks_latest:controller_tail4.translateX" 
-		"sneaks_latestRN.placeHolderList[111]" ""
+		"sneaks_latestRN.placeHolderList[330]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_tailbase|sneaks_latest:controller_tail2|sneaks_latest:controller_tail3|sneaks_latest:controller_tail4.translateY" 
-		"sneaks_latestRN.placeHolderList[112]" ""
+		"sneaks_latestRN.placeHolderList[331]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_tailbase|sneaks_latest:controller_tail2|sneaks_latest:controller_tail3|sneaks_latest:controller_tail4.translateZ" 
-		"sneaks_latestRN.placeHolderList[113]" ""
+		"sneaks_latestRN.placeHolderList[332]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_tailbase|sneaks_latest:controller_tail2|sneaks_latest:controller_tail3|sneaks_latest:controller_tail4.rotateX" 
-		"sneaks_latestRN.placeHolderList[114]" ""
+		"sneaks_latestRN.placeHolderList[333]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_tailbase|sneaks_latest:controller_tail2|sneaks_latest:controller_tail3|sneaks_latest:controller_tail4.rotateY" 
-		"sneaks_latestRN.placeHolderList[115]" ""
+		"sneaks_latestRN.placeHolderList[334]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_tailbase|sneaks_latest:controller_tail2|sneaks_latest:controller_tail3|sneaks_latest:controller_tail4.rotateZ" 
-		"sneaks_latestRN.placeHolderList[116]" ""
+		"sneaks_latestRN.placeHolderList[335]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_tailbase|sneaks_latest:controller_tail2|sneaks_latest:controller_tail3|sneaks_latest:controller_tail4.scaleX" 
-		"sneaks_latestRN.placeHolderList[117]" ""
+		"sneaks_latestRN.placeHolderList[336]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_tailbase|sneaks_latest:controller_tail2|sneaks_latest:controller_tail3|sneaks_latest:controller_tail4.scaleY" 
-		"sneaks_latestRN.placeHolderList[118]" ""
+		"sneaks_latestRN.placeHolderList[337]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_tailbase|sneaks_latest:controller_tail2|sneaks_latest:controller_tail3|sneaks_latest:controller_tail4.scaleZ" 
-		"sneaks_latestRN.placeHolderList[119]" ""
+		"sneaks_latestRN.placeHolderList[338]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_COG|sneaks_latest:controller_tailbase|sneaks_latest:controller_tail2|sneaks_latest:controller_tail3|sneaks_latest:controller_tail4.visibility" 
-		"sneaks_latestRN.placeHolderList[120]" ""
+		"sneaks_latestRN.placeHolderList[339]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightLeg.translateX" 
-		"sneaks_latestRN.placeHolderList[121]" ""
+		"sneaks_latestRN.placeHolderList[340]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightLeg.translateY" 
-		"sneaks_latestRN.placeHolderList[122]" ""
+		"sneaks_latestRN.placeHolderList[341]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightLeg.translateZ" 
-		"sneaks_latestRN.placeHolderList[123]" ""
+		"sneaks_latestRN.placeHolderList[342]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightLeg.rotateX" 
-		"sneaks_latestRN.placeHolderList[124]" ""
+		"sneaks_latestRN.placeHolderList[343]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightLeg.rotateY" 
-		"sneaks_latestRN.placeHolderList[125]" ""
+		"sneaks_latestRN.placeHolderList[344]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightLeg.rotateZ" 
-		"sneaks_latestRN.placeHolderList[126]" ""
+		"sneaks_latestRN.placeHolderList[345]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightLeg.visibility" 
-		"sneaks_latestRN.placeHolderList[127]" ""
+		"sneaks_latestRN.placeHolderList[346]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightLeg.scaleX" 
-		"sneaks_latestRN.placeHolderList[128]" ""
+		"sneaks_latestRN.placeHolderList[347]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightLeg.scaleY" 
-		"sneaks_latestRN.placeHolderList[129]" ""
+		"sneaks_latestRN.placeHolderList[348]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightLeg.scaleZ" 
-		"sneaks_latestRN.placeHolderList[130]" ""
+		"sneaks_latestRN.placeHolderList[349]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightLeg|sneaks_latest:RightLeg.rotateX" 
-		"sneaks_latestRN.placeHolderList[131]" ""
+		"sneaks_latestRN.placeHolderList[350]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightLeg|sneaks_latest:RightLeg.rotateY" 
-		"sneaks_latestRN.placeHolderList[132]" ""
+		"sneaks_latestRN.placeHolderList[351]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightLeg|sneaks_latest:RightLeg.rotateZ" 
-		"sneaks_latestRN.placeHolderList[133]" ""
+		"sneaks_latestRN.placeHolderList[352]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightLeg|sneaks_latest:RightLeg.translateX" 
-		"sneaks_latestRN.placeHolderList[134]" ""
+		"sneaks_latestRN.placeHolderList[353]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightLeg|sneaks_latest:RightLeg.translateY" 
-		"sneaks_latestRN.placeHolderList[135]" ""
+		"sneaks_latestRN.placeHolderList[354]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightLeg|sneaks_latest:RightLeg.translateZ" 
-		"sneaks_latestRN.placeHolderList[136]" ""
+		"sneaks_latestRN.placeHolderList[355]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightLeg|sneaks_latest:RightLeg.visibility" 
-		"sneaks_latestRN.placeHolderList[137]" ""
+		"sneaks_latestRN.placeHolderList[356]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightLeg|sneaks_latest:RightLeg.scaleX" 
-		"sneaks_latestRN.placeHolderList[138]" ""
+		"sneaks_latestRN.placeHolderList[357]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightLeg|sneaks_latest:RightLeg.scaleY" 
-		"sneaks_latestRN.placeHolderList[139]" ""
+		"sneaks_latestRN.placeHolderList[358]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightLeg|sneaks_latest:RightLeg.scaleZ" 
-		"sneaks_latestRN.placeHolderList[140]" ""
+		"sneaks_latestRN.placeHolderList[359]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_leftArm.translateX" 
-		"sneaks_latestRN.placeHolderList[141]" ""
+		"sneaks_latestRN.placeHolderList[360]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_leftArm.translateY" 
-		"sneaks_latestRN.placeHolderList[142]" ""
+		"sneaks_latestRN.placeHolderList[361]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_leftArm.translateZ" 
-		"sneaks_latestRN.placeHolderList[143]" ""
+		"sneaks_latestRN.placeHolderList[362]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_leftArm.rotateX" 
-		"sneaks_latestRN.placeHolderList[144]" ""
+		"sneaks_latestRN.placeHolderList[363]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_leftArm.rotateY" 
-		"sneaks_latestRN.placeHolderList[145]" ""
+		"sneaks_latestRN.placeHolderList[364]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_leftArm.rotateZ" 
-		"sneaks_latestRN.placeHolderList[146]" ""
+		"sneaks_latestRN.placeHolderList[365]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_leftArm.visibility" 
-		"sneaks_latestRN.placeHolderList[147]" ""
+		"sneaks_latestRN.placeHolderList[366]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_leftArm.scaleX" 
-		"sneaks_latestRN.placeHolderList[148]" ""
+		"sneaks_latestRN.placeHolderList[367]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_leftArm.scaleY" 
-		"sneaks_latestRN.placeHolderList[149]" ""
+		"sneaks_latestRN.placeHolderList[368]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_leftArm.scaleZ" 
-		"sneaks_latestRN.placeHolderList[150]" ""
+		"sneaks_latestRN.placeHolderList[369]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_leftArm|sneaks_latest:LeftArm.rotateX" 
-		"sneaks_latestRN.placeHolderList[151]" ""
+		"sneaks_latestRN.placeHolderList[370]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_leftArm|sneaks_latest:LeftArm.rotateY" 
-		"sneaks_latestRN.placeHolderList[152]" ""
+		"sneaks_latestRN.placeHolderList[371]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_leftArm|sneaks_latest:LeftArm.rotateZ" 
-		"sneaks_latestRN.placeHolderList[153]" ""
+		"sneaks_latestRN.placeHolderList[372]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_leftArm|sneaks_latest:LeftArm.translateX" 
-		"sneaks_latestRN.placeHolderList[154]" ""
+		"sneaks_latestRN.placeHolderList[373]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_leftArm|sneaks_latest:LeftArm.translateY" 
-		"sneaks_latestRN.placeHolderList[155]" ""
+		"sneaks_latestRN.placeHolderList[374]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_leftArm|sneaks_latest:LeftArm.translateZ" 
-		"sneaks_latestRN.placeHolderList[156]" ""
+		"sneaks_latestRN.placeHolderList[375]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_leftArm|sneaks_latest:LeftArm.visibility" 
-		"sneaks_latestRN.placeHolderList[157]" ""
+		"sneaks_latestRN.placeHolderList[376]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_leftArm|sneaks_latest:LeftArm.scaleX" 
-		"sneaks_latestRN.placeHolderList[158]" ""
+		"sneaks_latestRN.placeHolderList[377]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_leftArm|sneaks_latest:LeftArm.scaleY" 
-		"sneaks_latestRN.placeHolderList[159]" ""
+		"sneaks_latestRN.placeHolderList[378]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_leftArm|sneaks_latest:LeftArm.scaleZ" 
-		"sneaks_latestRN.placeHolderList[160]" ""
+		"sneaks_latestRN.placeHolderList[379]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightLeg1.translateX" 
-		"sneaks_latestRN.placeHolderList[161]" ""
+		"sneaks_latestRN.placeHolderList[380]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightLeg1.translateY" 
-		"sneaks_latestRN.placeHolderList[162]" ""
+		"sneaks_latestRN.placeHolderList[381]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightLeg1.translateZ" 
-		"sneaks_latestRN.placeHolderList[163]" ""
+		"sneaks_latestRN.placeHolderList[382]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightLeg1.visibility" 
-		"sneaks_latestRN.placeHolderList[164]" ""
+		"sneaks_latestRN.placeHolderList[383]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightLeg1.rotateX" 
-		"sneaks_latestRN.placeHolderList[165]" ""
+		"sneaks_latestRN.placeHolderList[384]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightLeg1.rotateY" 
-		"sneaks_latestRN.placeHolderList[166]" ""
+		"sneaks_latestRN.placeHolderList[385]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightLeg1.rotateZ" 
-		"sneaks_latestRN.placeHolderList[167]" ""
+		"sneaks_latestRN.placeHolderList[386]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightLeg1.scaleX" 
-		"sneaks_latestRN.placeHolderList[168]" ""
+		"sneaks_latestRN.placeHolderList[387]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightLeg1.scaleY" 
-		"sneaks_latestRN.placeHolderList[169]" ""
+		"sneaks_latestRN.placeHolderList[388]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightLeg1.scaleZ" 
-		"sneaks_latestRN.placeHolderList[170]" ""
+		"sneaks_latestRN.placeHolderList[389]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightLeg1|sneaks_latest:LeftLeg.rotateX" 
-		"sneaks_latestRN.placeHolderList[171]" ""
+		"sneaks_latestRN.placeHolderList[390]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightLeg1|sneaks_latest:LeftLeg.rotateY" 
-		"sneaks_latestRN.placeHolderList[172]" ""
+		"sneaks_latestRN.placeHolderList[391]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightLeg1|sneaks_latest:LeftLeg.rotateZ" 
-		"sneaks_latestRN.placeHolderList[173]" ""
+		"sneaks_latestRN.placeHolderList[392]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightLeg1|sneaks_latest:LeftLeg.translateX" 
-		"sneaks_latestRN.placeHolderList[174]" ""
+		"sneaks_latestRN.placeHolderList[393]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightLeg1|sneaks_latest:LeftLeg.translateY" 
-		"sneaks_latestRN.placeHolderList[175]" ""
+		"sneaks_latestRN.placeHolderList[394]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightLeg1|sneaks_latest:LeftLeg.translateZ" 
-		"sneaks_latestRN.placeHolderList[176]" ""
+		"sneaks_latestRN.placeHolderList[395]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightLeg1|sneaks_latest:LeftLeg.visibility" 
-		"sneaks_latestRN.placeHolderList[177]" ""
+		"sneaks_latestRN.placeHolderList[396]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightLeg1|sneaks_latest:LeftLeg.scaleX" 
-		"sneaks_latestRN.placeHolderList[178]" ""
+		"sneaks_latestRN.placeHolderList[397]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightLeg1|sneaks_latest:LeftLeg.scaleY" 
-		"sneaks_latestRN.placeHolderList[179]" ""
+		"sneaks_latestRN.placeHolderList[398]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightLeg1|sneaks_latest:LeftLeg.scaleZ" 
-		"sneaks_latestRN.placeHolderList[180]" ""
+		"sneaks_latestRN.placeHolderList[399]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightArm.translateX" 
-		"sneaks_latestRN.placeHolderList[181]" ""
+		"sneaks_latestRN.placeHolderList[400]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightArm.translateY" 
-		"sneaks_latestRN.placeHolderList[182]" ""
+		"sneaks_latestRN.placeHolderList[401]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightArm.translateZ" 
-		"sneaks_latestRN.placeHolderList[183]" ""
+		"sneaks_latestRN.placeHolderList[402]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightArm.rotateX" 
-		"sneaks_latestRN.placeHolderList[184]" ""
+		"sneaks_latestRN.placeHolderList[403]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightArm.rotateY" 
-		"sneaks_latestRN.placeHolderList[185]" ""
+		"sneaks_latestRN.placeHolderList[404]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightArm.rotateZ" 
-		"sneaks_latestRN.placeHolderList[186]" ""
+		"sneaks_latestRN.placeHolderList[405]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightArm.visibility" 
-		"sneaks_latestRN.placeHolderList[187]" ""
+		"sneaks_latestRN.placeHolderList[406]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightArm.scaleX" 
-		"sneaks_latestRN.placeHolderList[188]" ""
+		"sneaks_latestRN.placeHolderList[407]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightArm.scaleY" 
-		"sneaks_latestRN.placeHolderList[189]" ""
+		"sneaks_latestRN.placeHolderList[408]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightArm.scaleZ" 
-		"sneaks_latestRN.placeHolderList[190]" ""
+		"sneaks_latestRN.placeHolderList[409]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightArm|sneaks_latest:RightArm.rotateX" 
-		"sneaks_latestRN.placeHolderList[191]" ""
+		"sneaks_latestRN.placeHolderList[410]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightArm|sneaks_latest:RightArm.rotateY" 
-		"sneaks_latestRN.placeHolderList[192]" ""
+		"sneaks_latestRN.placeHolderList[411]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightArm|sneaks_latest:RightArm.rotateZ" 
-		"sneaks_latestRN.placeHolderList[193]" ""
+		"sneaks_latestRN.placeHolderList[412]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightArm|sneaks_latest:RightArm.translateX" 
-		"sneaks_latestRN.placeHolderList[194]" ""
+		"sneaks_latestRN.placeHolderList[413]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightArm|sneaks_latest:RightArm.translateY" 
-		"sneaks_latestRN.placeHolderList[195]" ""
+		"sneaks_latestRN.placeHolderList[414]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightArm|sneaks_latest:RightArm.translateZ" 
-		"sneaks_latestRN.placeHolderList[196]" ""
+		"sneaks_latestRN.placeHolderList[415]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightArm|sneaks_latest:RightArm.visibility" 
-		"sneaks_latestRN.placeHolderList[197]" ""
+		"sneaks_latestRN.placeHolderList[416]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightArm|sneaks_latest:RightArm.scaleX" 
-		"sneaks_latestRN.placeHolderList[198]" ""
+		"sneaks_latestRN.placeHolderList[417]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightArm|sneaks_latest:RightArm.scaleY" 
-		"sneaks_latestRN.placeHolderList[199]" ""
+		"sneaks_latestRN.placeHolderList[418]" ""
 		5 4 "sneaks_latestRN" "|sneaks_latest:controller_root|sneaks_latest:controller_rightArm|sneaks_latest:RightArm.scaleZ" 
-		"sneaks_latestRN.placeHolderList[200]" ""
-		5 2 "sneaks_latestRN" "sneaks_latest:lambert3SG.dagSetMembers" "sneaks_latestRN.placeHolderList[201]" 
+		"sneaks_latestRN.placeHolderList[419]" ""
+		5 2 "sneaks_latestRN" "sneaks_latest:lambert3SG.dagSetMembers" "sneaks_latestRN.placeHolderList[420]" 
 		"tuffs_latest:lambert4SG.dsm"
-		5 2 "sneaks_latestRN" "sneaks_latest:lambert3SG.dagSetMembers" "sneaks_latestRN.placeHolderList[202]" 
+		5 2 "sneaks_latestRN" "sneaks_latest:lambert3SG.dagSetMembers" "sneaks_latestRN.placeHolderList[421]" 
 		"tuffs_latest:lambert4SG.dsm"
-		5 4 "sneaks_latestRN" "sneaks_latest:blendShape1.weight[0]" "sneaks_latestRN.placeHolderList[203]" 
-		""
-		5 4 "sneaks_latestRN" "sneaks_latest:blendShape1.weight[1]" "sneaks_latestRN.placeHolderList[204]" 
-		""
-		5 4 "sneaks_latestRN" "sneaks_latest:blendShape1.weight[2]" "sneaks_latestRN.placeHolderList[205]" 
-		""
-		5 4 "sneaks_latestRN" "sneaks_latest:blendShape1.weight[3]" "sneaks_latestRN.placeHolderList[206]" 
-		""
-		5 4 "sneaks_latestRN" "sneaks_latest:blendShape1.weight[4]" "sneaks_latestRN.placeHolderList[207]" 
-		""
-		5 4 "sneaks_latestRN" "sneaks_latest:blendShape1.weight[5]" "sneaks_latestRN.placeHolderList[208]" 
-		""
-		5 4 "sneaks_latestRN" "sneaks_latest:blendShape1.weight[6]" "sneaks_latestRN.placeHolderList[209]" 
-		""
-		5 4 "sneaks_latestRN" "sneaks_latest:blendShape1.weight[7]" "sneaks_latestRN.placeHolderList[210]" 
-		""
-		5 4 "sneaks_latestRN" "sneaks_latest:blendShape1.weight[8]" "sneaks_latestRN.placeHolderList[211]" 
-		""
-		5 0 "sneaks_latestRN" "|sneaks_latest:sneaks_normal_face:sneaksmesh:polySurface1|sneaks_latest:sneaks_normal_face:transform1|sneaks_latest:sneaks_normal_face:sneaksmesh:polySurfaceShape1.instObjGroups.objectGroups[0]" 
-		"sneaks_latest:sneaks17:sneaksmesh:Sneakio002:lambert4SG.dagSetMembers" "sneaks_latestRN.placeHolderList[212]" 
-		"sneaks_latestRN.placeHolderList[213]" "sneaks_latest:sneaks_normal_face:sneaksmesh:Sneakio002:lambert4SG.dsm"
-		
-		5 0 "sneaks_latestRN" "|sneaks_latest:sneaks_normal_face:sneaksmesh:polySurface1|sneaks_latest:sneaks_normal_face:polySurface1|sneaks_latest:sneaks_normal_face:transform2|sneaks_latest:sneaks_normal_face:polySurfaceShape2.instObjGroups.objectGroups[0]" 
-		"sneaks_latest:sneaks17:sneaksmesh:Sneakio002:lambert4SG.dagSetMembers" "sneaks_latestRN.placeHolderList[214]" 
-		"sneaks_latestRN.placeHolderList[215]" "sneaks_latest:sneaks_normal_face:sneaksmesh:Sneakio002:lambert4SG.dsm"
-		
-		5 0 "sneaks_latestRN" "|sneaks_latest:sneaks_normal_face:sneaksmesh:polySurface1|sneaks_latest:sneaks_normal_face:main|sneaks_latest:sneaks_normal_face:transform3|sneaks_latest:sneaks_normal_face:mainShape.instObjGroups.objectGroups[0]" 
-		"sneaks_latest:sneaks17:sneaksmesh:Sneakio002:lambert4SG.dagSetMembers" "sneaks_latestRN.placeHolderList[216]" 
-		"sneaks_latestRN.placeHolderList[217]" "sneaks_latest:sneaks_normal_face:sneaksmesh:Sneakio002:lambert4SG.dsm"
-		
-		5 0 "sneaks_latestRN" "|sneaks_latest:sneaks_normal_face:sneaksmesh:polySurface1|sneaks_latest:ears|sneaks_latest:earsShape.instObjGroups.objectGroups[0]" 
-		"sneaks_latest:sneaks17:sneaksmesh:Sneakio002:lambert4SG.dagSetMembers" "sneaks_latestRN.placeHolderList[218]" 
-		"sneaks_latestRN.placeHolderList[219]" "sneaks_latest:sneaks_normal_face:sneaksmesh:Sneakio002:lambert4SG.dsm"
-		
 		5 0 "sneaks_latestRN" "|sneaks_latest:sneaks_normal_face:sneaksmesh:polySurface1|sneaks_latest:nose|sneaks_latest:noseShape.instObjGroups.objectGroups[0]" 
-		"sneaks_latest:sneaks17:sneaksmesh:Sneakio002:lambert4SG.dagSetMembers" "sneaks_latestRN.placeHolderList[220]" 
-		"sneaks_latestRN.placeHolderList[221]" "sneaks_latest:sneaks_normal_face:sneaksmesh:Sneakio002:lambert4SG.dsm";
+		"sneaks_latest:sneaks17:sneaksmesh:Sneakio002:lambert4SG.dagSetMembers" "sneaks_latestRN.placeHolderList[422]" 
+		"sneaks_latestRN.placeHolderList[423]" "sneaks_latest:sneaks_normal_face:sneaksmesh:Sneakio002:lambert4SG.dsm"
+		
+		5 4 "sneaks_latestRN" "sneaks_latest:blendShape1.weight[0]" "sneaks_latestRN.placeHolderList[424]" 
+		""
+		5 4 "sneaks_latestRN" "sneaks_latest:blendShape1.weight[1]" "sneaks_latestRN.placeHolderList[425]" 
+		""
+		5 4 "sneaks_latestRN" "sneaks_latest:blendShape1.weight[2]" "sneaks_latestRN.placeHolderList[426]" 
+		""
+		5 4 "sneaks_latestRN" "sneaks_latest:blendShape1.weight[3]" "sneaks_latestRN.placeHolderList[427]" 
+		""
+		5 4 "sneaks_latestRN" "sneaks_latest:blendShape1.weight[4]" "sneaks_latestRN.placeHolderList[428]" 
+		""
+		5 4 "sneaks_latestRN" "sneaks_latest:blendShape1.weight[5]" "sneaks_latestRN.placeHolderList[429]" 
+		""
+		5 4 "sneaks_latestRN" "sneaks_latest:blendShape1.weight[6]" "sneaks_latestRN.placeHolderList[430]" 
+		""
+		5 4 "sneaks_latestRN" "sneaks_latest:blendShape1.weight[7]" "sneaks_latestRN.placeHolderList[431]" 
+		""
+		5 4 "sneaks_latestRN" "sneaks_latest:blendShape1.weight[8]" "sneaks_latestRN.placeHolderList[432]" 
+		"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "tuffs_latestRN";
@@ -20742,15 +20675,17 @@ createNode reference -n "tuffs_latestRN";
 	setAttr ".phl[202]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"tuffs_latestRN"
-		"tuffs_latestRN" 1
+		"tuffs_latestRN" 3
+		2 "tuffs_latest:skinCluster1" "lw[0:62]" " -s 63 0 0 0 0 0 0 0 0 0"
+		2 "tuffs_latest:skinCluster1" "lw[0:62]" " -s 63 0 0 0 0 0 0 0 0 0"
 		2 "tuffs_latest:skinCluster1" "lw[0:62]" " -s 63 0 0 0 0 0 0 0 0 0"
 		"tuffs_latestRN" 315
-		2 "|tuffs_latest:controller_root" "translate" " -type \"double3\" -255.072286 13.82928 23.77"
+		2 "|tuffs_latest:controller_root" "translate" " -type \"double3\" -261.398117 5.77831 23.77"
 		
 		2 "|tuffs_latest:controller_root" "translateX" " -av"
 		2 "|tuffs_latest:controller_root" "translateY" " -av"
 		2 "|tuffs_latest:controller_root" "translateZ" " -av"
-		2 "|tuffs_latest:controller_root" "rotate" " -type \"double3\" -105.271592 90 0"
+		2 "|tuffs_latest:controller_root" "rotate" " -type \"double3\" -180.475991 90 0"
 		
 		2 "|tuffs_latest:controller_root" "rotateX" " -av"
 		2 "|tuffs_latest:controller_root" "rotateY" " -av"
@@ -20788,7 +20723,7 @@ createNode reference -n "tuffs_latestRN";
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_COG|tuffs_latest:controller_head" 
 		"rotateX" " -av"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_leftArm" "translate" 
-		" -type \"double3\" -4.870224 -7.32552 6.572215"
+		" -type \"double3\" -4.870224 -7.907711 4.911796"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_leftArm" "translateX" 
 		" -av"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_leftArm" "translateY" 
@@ -20814,7 +20749,7 @@ createNode reference -n "tuffs_latestRN";
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_leftArm|tuffs_latest:LeftArm" 
 		"translateZ" " -av"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightArm" "translate" 
-		" -type \"double3\" 1.96185 -7.426586 7.755247"
+		" -type \"double3\" 1.96185 -8.008776 6.047863"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightArm" "translateX" 
 		" -av"
 		2 "|tuffs_latest:controller_root|tuffs_latest:controller_rightArm" "translateY" 
@@ -20866,6 +20801,10 @@ createNode reference -n "tuffs_latestRN";
 		2 "tuffs_latest:skinCluster1" "lw[0:62]" " -s 63 0 0 0 0 0 0 0 0 0"
 		2 "tuffs_latest:skinCluster1" "lockWeights" " -s 54"
 		2 "tuffs_latest:bindPose2" "worldMatrix" " -s 64"
+		3 "|tuffs_latest:controller_root|tuffs_latest:controller_COG|tuffs_latest:controller_head|tuffs_latest:pSphere1|tuffs_latest:pSphereShape1.instObjGroups" 
+		"tuffs_latest:lambert4SG.dagSetMembers" "-na"
+		3 "|tuffs_latest:controller_root|tuffs_latest:controller_COG|tuffs_latest:controller_head|tuffs_latest:pSphere2|tuffs_latest:pSphereShape2.instObjGroups" 
+		"tuffs_latest:lambert4SG.dagSetMembers" "-na"
 		3 "|tuffs_latest:controller_root|tuffs_latest:spine|tuffs_latest:Spine2|tuffs_latest:Spine3|tuffs_latest:Spine4|tuffs_latest:Shoulder|tuffs_latest:leftArm|tuffs_latest:leftElbow|tuffs_latest:leftpalm|tuffs_latest:leftFingerJunction|tuffs_latest:leftpinky|tuffs_latest:leftjoint11|tuffs_latest:leftjoint12.message" 
 		"tuffs_latest:bindPose2.members[32]" ""
 		3 "tuffs_latest:bindPose2.members[31]" "tuffs_latest:bindPose2.parents[32]" 
@@ -20956,10 +20895,6 @@ createNode reference -n "tuffs_latestRN";
 		"tuffs_latest:skinCluster1.matrix[62]" ""
 		3 "|tuffs_latest:controller_root|tuffs_latest:spine|tuffs_latest:Spine2|tuffs_latest:Spine3|tuffs_latest:Spine4|tuffs_latest:Shoulder|tuffs_latest:rightArm|tuffs_latest:rightElbow|tuffs_latest:rightPalm|tuffs_latest:rightFingerJunction|tuffs_latest:rightthumb|tuffs_latest:rightjoint23|tuffs_latest:rightjoint24.lockInfluenceWeights" 
 		"tuffs_latest:skinCluster1.lockWeights[62]" ""
-		3 "|tuffs_latest:controller_root|tuffs_latest:controller_COG|tuffs_latest:controller_head|tuffs_latest:pSphere1|tuffs_latest:pSphereShape1.instObjGroups" 
-		"tuffs_latest:lambert4SG.dagSetMembers" "-na"
-		3 "|tuffs_latest:controller_root|tuffs_latest:controller_COG|tuffs_latest:controller_head|tuffs_latest:pSphere2|tuffs_latest:pSphereShape2.instObjGroups" 
-		"tuffs_latest:lambert4SG.dagSetMembers" "-na"
 		5 1 "tuffs_latestRN" "|tuffs_latest:controller_root|tuffs_latest:controller_COG|tuffs_latest:controller_head|tuffs_latest:pSphere1|tuffs_latest:pSphereShape1.instObjGroups" 
 		"tuffs_latestRN.placeHolderList[1]" "tuffs_latest:lambert4SG.dsm"
 		5 1 "tuffs_latestRN" "|tuffs_latest:controller_root|tuffs_latest:controller_COG|tuffs_latest:controller_head|tuffs_latest:pSphere2|tuffs_latest:pSphereShape2.instObjGroups" 
@@ -21426,7 +21361,13 @@ createNode reference -n "smarty_latestRN";
 	setAttr ".phl[56]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"smarty_latestRN"
-		"smarty_latestRN" 3
+		"smarty_latestRN" 9
+		2 "smarty_latest:skinCluster1" "lw[15:16]" " 0 0"
+		2 "smarty_latest:skinCluster1" "lw[47:48]" " 0 0"
+		2 "smarty_latest:bindPose1" "g[0:73]" " -s 74 1 1 1"
+		2 "smarty_latest:skinCluster1" "lw[15:16]" " 0 0"
+		2 "smarty_latest:skinCluster1" "lw[47:48]" " 0 0"
+		2 "smarty_latest:bindPose1" "g[0:73]" " -s 74 1 1 1"
 		2 "smarty_latest:skinCluster1" "lw[15:16]" " 0 0"
 		2 "smarty_latest:skinCluster1" "lw[47:48]" " 0 0"
 		2 "smarty_latest:bindPose1" "g[0:73]" " -s 74 1 1 1"
@@ -21696,12 +21637,12 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -shadows 0\n                $editorName;\nmodelEditor -e -viewSelected 0 $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n"
 		+ "            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 8192\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n"
 		+ "            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n"
-		+ "            -motionTrails 1\n            -clipGhosts 1\n            -shadows 0\n            $editorName;\nmodelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n"
-		+ "                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 8192\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"base_OpenGL_Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n"
-		+ "                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n"
-		+ "                -locators 1\n                -manipulators 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -shadows 0\n                $editorName;\nmodelEditor -e -viewSelected 0 $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n"
-		+ "            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 8192\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n"
-		+ "            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -shadows 0\n            $editorName;\n"
+		+ "            -motionTrails 1\n            -clipGhosts 1\n            -shadows 0\n            $editorName;\nmodelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"camera1\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n"
+		+ "                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 1\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 8192\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"base_OpenGL_Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n"
+		+ "                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 0\n                -nurbsSurfaces 0\n                -polymeshes 1\n                -subdivSurfaces 0\n                -planes 0\n                -lights 0\n                -cameras 0\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 0\n                -joints 0\n                -ikHandles 0\n                -deformers 0\n                -dynamics 0\n                -fluids 0\n                -hairSystems 0\n                -follicles 0\n                -nCloths 0\n                -nParticles 0\n                -nRigids 0\n                -dynamicConstraints 0\n"
+		+ "                -locators 0\n                -manipulators 1\n                -dimensions 0\n                -handles 0\n                -pivots 0\n                -textures 0\n                -strokes 0\n                -motionTrails 0\n                -clipGhosts 0\n                -shadows 0\n                $editorName;\nmodelEditor -e -viewSelected 0 $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"camera1\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n"
+		+ "            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 8192\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n"
+		+ "            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 0\n            -nurbsSurfaces 0\n            -polymeshes 1\n            -subdivSurfaces 0\n            -planes 0\n            -lights 0\n            -cameras 0\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 0\n            -joints 0\n            -ikHandles 0\n            -deformers 0\n            -dynamics 0\n            -fluids 0\n            -hairSystems 0\n            -follicles 0\n            -nCloths 0\n            -nParticles 0\n            -nRigids 0\n            -dynamicConstraints 0\n            -locators 0\n            -manipulators 1\n            -dimensions 0\n            -handles 0\n            -pivots 0\n            -textures 0\n            -strokes 0\n            -motionTrails 0\n            -clipGhosts 0\n            -shadows 0\n            $editorName;\n"
 		+ "modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `outlinerPanel -unParent -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            outlinerEditor -e \n                -docTag \"isolOutln_fromSeln\" \n                -showShapes 0\n                -showReferenceNodes 1\n                -showReferenceMembers 1\n                -showAttributes 0\n                -showConnected 0\n                -showAnimCurvesOnly 0\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 1\n                -showAssets 1\n                -showContainedOnly 1\n                -showPublishedAsConnected 0\n                -showContainerContents 1\n"
 		+ "                -ignoreDagHierarchy 0\n                -expandConnections 0\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 0\n                -highlightActive 1\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"defaultSetFilter\" \n                -showSetMembers 1\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n"
 		+ "                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n"
@@ -21731,15 +21672,15 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"relationshipPanel\" -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"referenceEditorPanel\" -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels `;\n"
 		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"componentEditorPanel\" -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynPaintScriptedPanelType\" -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels `;\n"
 		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"scriptEditorPanel\" -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"Stereo\" -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels `;\nstring $editorName = ($panelName+\"Editor\");\n"
-		+ "            stereoCameraView -e \n                -camera \"camera1\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 8192\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n"
-		+ "                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n"
-		+ "                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                $editorName;\nstereoCameraView -e -viewSelected 0 $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"camera1\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 8192\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n"
+		+ "            stereoCameraView -e \n                -editorChanged \"updateModelPanelBar\" \n                -camera \"camera1\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 8192\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n"
 		+ "                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n"
-		+ "                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                $editorName;\nstereoCameraView -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n"
-		+ "\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 8192\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 8192\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
+		+ "                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                $editorName;\nstereoCameraView -e -viewSelected 0 $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -editorChanged \"updateModelPanelBar\" \n                -camera \"camera1\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 8192\n                -fogging 0\n                -fogSource \"fragment\" \n"
+		+ "                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n"
+		+ "                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                $editorName;\nstereoCameraView -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"camera1\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 8192\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 0\\n    -polymeshes 1\\n    -subdivSurfaces 0\\n    -planes 0\\n    -lights 0\\n    -cameras 0\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 0\\n    -dynamics 0\\n    -fluids 0\\n    -hairSystems 0\\n    -follicles 0\\n    -nCloths 0\\n    -nParticles 0\\n    -nRigids 0\\n    -dynamicConstraints 0\\n    -locators 0\\n    -manipulators 1\\n    -dimensions 0\\n    -handles 0\\n    -pivots 0\\n    -textures 0\\n    -strokes 0\\n    -motionTrails 0\\n    -clipGhosts 0\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"camera1\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 8192\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 0\\n    -polymeshes 1\\n    -subdivSurfaces 0\\n    -planes 0\\n    -lights 0\\n    -cameras 0\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 0\\n    -dynamics 0\\n    -fluids 0\\n    -hairSystems 0\\n    -follicles 0\\n    -nCloths 0\\n    -nParticles 0\\n    -nRigids 0\\n    -dynamicConstraints 0\\n    -locators 0\\n    -manipulators 1\\n    -dimensions 0\\n    -handles 0\\n    -pivots 0\\n    -textures 0\\n    -strokes 0\\n    -motionTrails 0\\n    -clipGhosts 0\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        setFocus `paneLayout -q -p1 $gMainPane`;\n        sceneUIReplacement -deleteRemaining;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 100 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -22148,7 +22089,7 @@ createNode animCurveTA -n "sneaks_latest:controller_head_rotateX";
 		 23 -52.620396719695478 27 -3.5488715584300041 28 -3.5488715584300041 32 -36.668609571775349
 		 34 -34.894205729798543 37 7.4794361306303507 40 7.4794361306303507 44 8.1290421180906058
 		 47 15.738464183419353 48 9.4163345554399491 57 9.4163345554399491 76 9.4163345554399491
-		 78 5.7048913382364672 80 0.54083985058543138 82 5.0891788774562183 84 4.3528505645384383
+		 78 5.7048913382364672 80 0.54083985058543138 82 5.0891788774562192 84 4.3528505645384392
 		 90 9.4163345554399491 98 9.4163345554399491 100 49.883505343345661;
 	setAttr -s 22 ".kit[8:21]"  1 18 1 18 18 18 18 18 
 		18 18 18 18 18 18;
@@ -22167,7 +22108,7 @@ createNode animCurveTA -n "sneaks_latest:controller_head_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 22 ".ktv[0:21]"  15 0 17 0 19 0 23 0 27 0 28 0 32 0 34 0
 		 37 22.600675536842463 40 22.600675536842463 44 37.007782011889141 47 0 48 0 57 0
-		 76 0 78 -46.90295590535203 80 52.189658586704489 82 -34.341321489992396 84 30.391082438732656
+		 76 0 78 -46.90295590535203 80 52.189658586704496 82 -34.341321489992396 84 30.391082438732656
 		 90 0 98 0 100 0;
 	setAttr -s 22 ".kit[8:21]"  1 18 1 18 18 18 18 18 
 		18 18 18 18 18 18;
@@ -22239,7 +22180,7 @@ createNode animCurveTL -n "sneaks_latest:controller_COG_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 10 ".ktv[0:9]"  17 0 20 0 25 0 28 0 34 0 37 0.27085866319113167
-		 40 0.17492698392710002 44 0.13411524450431161 46 0 90 0;
+		 40 0.17492698392710002 44 0.13411524450431159 46 0 90 0;
 	setAttr -s 10 ".kit[5:9]"  1 18 1 18 18;
 	setAttr -s 10 ".kot[5:9]"  1 18 1 18 18;
 	setAttr -s 10 ".kix[5:9]"  1 0.90542954206466675 1 1 1;
@@ -22287,7 +22228,7 @@ createNode animCurveTA -n "sneaks_latest:controller_COG_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 10 ".ktv[0:9]"  17 17.468016 20 20.942506577234251 25 8.2459054726149859
-		 28 12.631261143076015 34 12.631261143076015 37 16.249320422555275 40 15.633437735727535
+		 28 12.631261143076015 34 12.631261143076015 37 16.249320422555275 40 15.633437735727538
 		 44 14.481432019621719 46 4.4851570006646719 90 4.4851570006646719;
 	setAttr -s 10 ".kit[5:9]"  1 18 1 18 18;
 	setAttr -s 10 ".kot[5:9]"  1 18 1 18 18;
@@ -22608,27 +22549,27 @@ createNode animCurveTL -n "tuffs_latest:controller_COG_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 13 ".ktv[0:12]"  32 0 35 0 37 -1.0633277122918851e-14 44 1.9701983146616189e-16
-		 45 0 47 2.2616673035549293e-14 48 2.2616673035549293e-14 52 2.2616673035549293e-14
+		 45 0 47 1.5057707761505686e-14 49 1.5057707761505686e-14 52 2.2616673035549293e-14
 		 60 2.2463758346415189e-14 79 2.2463758346415189e-14 80 2.2463758346415189e-14 87 2.9569185704016203e-14
 		 90 2.9569185704016203e-14;
 createNode animCurveTL -n "tuffs_latest:controller_COG_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 13 ".ktv[0:12]"  32 0 35 -2.664342176793959 37 -0.94831399355213841
-		 44 -2.8270059548251059 45 -3.1520863714911682 47 -0.58943295562910414 48 -0.58943295562910414
+		 44 -2.8270059548251059 45 -3.1520863714911682 47 -1.5642699120085206 49 -2.9276188466285489
 		 52 -0.58943295562910414 60 -3.8477728565064826 79 -3.8477728565064826 80 0 87 -2.433326607861058
 		 90 -5.6937205938711193;
 createNode animCurveTL -n "tuffs_latest:controller_COG_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 13 ".ktv[0:12]"  32 0 35 -2.0305362386509209 37 2.237736293264069
-		 44 -0.8872984395756045 45 -0.88729843957566501 47 -0.035788729646440504 48 -0.035788729646440504
+		 44 -0.8872984395756045 45 -0.88729843957566501 47 -0.035788729646500976 49 -0.035788729646500976
 		 52 -0.035788729646440504 60 2.2556202172043975 79 2.2556202172043975 80 0 87 3.4780648238713394
 		 90 5.3634865831673846;
 createNode animCurveTU -n "tuffs_latest:controller_COG_visibility";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  32 1 35 1 37 1 44 1 45 1 47 1 48 1 52 1
+	setAttr -s 13 ".ktv[0:12]"  32 1 35 1 37 1 44 1 45 1 47 1 49 1 52 1
 		 60 1 79 1 80 1 87 1 90 1;
 	setAttr -s 13 ".kot[0:12]"  5 5 5 5 5 5 5 5 
 		5 5 5 5 5;
@@ -22636,32 +22577,32 @@ createNode animCurveTA -n "tuffs_latest:controller_COG_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 13 ".ktv[0:12]"  32 0 35 6.2145953071477154 37 5.4303130402446431
-		 44 0 45 0 47 -15.073219368733069 48 -15.073219368733069 52 -25.253892746194833 60 -25.253892746194833
+		 44 0 45 0 47 -15.073219368733069 49 -21.254360896501545 52 -25.253892746194833 60 -25.253892746194833
 		 79 -25.253892746194833 80 0 87 8.3243148973599244 90 8.3243148973599244;
 createNode animCurveTA -n "tuffs_latest:controller_COG_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  32 0 35 0 37 0 44 0 45 0 47 0 48 0 52 0
+	setAttr -s 13 ".ktv[0:12]"  32 0 35 0 37 0 44 0 45 0 47 0 49 0 52 0
 		 60 0 79 0 80 0 87 0 90 0;
 createNode animCurveTA -n "tuffs_latest:controller_COG_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  32 0 35 0 37 0 44 0 45 0 47 0 48 0 52 0
+	setAttr -s 13 ".ktv[0:12]"  32 0 35 0 37 0 44 0 45 0 47 0 49 0 52 0
 		 60 0 79 0 80 0 87 0 90 0;
 createNode animCurveTU -n "tuffs_latest:controller_COG_scaleX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  32 1 35 1 37 1 44 1 45 1 47 1 48 1 52 1
+	setAttr -s 13 ".ktv[0:12]"  32 1 35 1 37 1 44 1 45 1 47 1 49 1 52 1
 		 60 1 79 1 80 1 87 1 90 1;
 createNode animCurveTU -n "tuffs_latest:controller_COG_scaleY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  32 1 35 1 37 1 44 1 45 1 47 1 48 1 52 1
+	setAttr -s 13 ".ktv[0:12]"  32 1 35 1 37 1 44 1 45 1 47 1 49 1 52 1
 		 60 1 79 1 80 1 87 1 90 1;
 createNode animCurveTU -n "tuffs_latest:controller_COG_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  32 1 35 1 37 1 44 1 45 1 47 1 48 1 52 1
+	setAttr -s 13 ".ktv[0:12]"  32 1 35 1 37 1 44 1 45 1 47 1 49 1 52 1
 		 60 1 79 1 80 1 87 1 90 1;
 createNode animCurveTL -n "tuffs_latest:controller_leftLeg_translateX";
 	setAttr ".tan" 18;
@@ -24467,7 +24408,7 @@ createNode animCurveTL -n "sneaks_latest:controller_spine1_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 10 ".ktv[0:9]"  34 0 37 0 40 0 44 0 46 0 48 -3.1720657846432927e-15
-		 58 -3.1720657846432927e-15 76 1.8825035031216802e-14 79 2.33152935550481e-14 90 -3.1720657846432927e-15;
+		 58 -3.1720657846432927e-15 76 1.8825035031216799e-14 79 2.3315293555048103e-14 90 -3.1720657846432927e-15;
 	setAttr -s 10 ".kit[1:9]"  1 18 1 18 18 18 18 18 
 		18;
 	setAttr -s 10 ".kot[1:9]"  1 18 1 18 18 18 18 18 
@@ -24650,8 +24591,8 @@ createNode animCurveTA -n "sneaks_latest:controller_hip_rotateX";
 createNode animCurveTA -n "sneaks_latest:controller_hip_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  34 0 37 7.8357585991896581 40 7.8357585991896581
-		 44 7.8357585991896581 46 0 90 0;
+	setAttr -s 6 ".ktv[0:5]"  34 0 37 7.8357585991896572 40 7.8357585991896572
+		 44 7.8357585991896572 46 0 90 0;
 	setAttr -s 6 ".kit[1:5]"  1 18 1 18 18;
 	setAttr -s 6 ".kot[1:5]"  1 18 1 18 18;
 	setAttr -s 6 ".kix[1:5]"  1 1 1 1 1;
@@ -25131,7 +25072,7 @@ createNode partition -n "mtorPartition";
 	addAttr -ci true -sn "rd" -ln "rlfData" -dt "string";
 	setAttr ".sr" -type "string" "";
 createNode reference -n "livingroom_shading_latestRN";
-	setAttr -s 116 ".phl";
+	setAttr -s 136 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[5]" 0;
 	setAttr ".phl[9]" 0;
@@ -25227,6 +25168,26 @@ createNode reference -n "livingroom_shading_latestRN";
 	setAttr ".phl[186]" 0;
 	setAttr ".phl[187]" 0;
 	setAttr ".phl[188]" 0;
+	setAttr ".phl[189]" 0;
+	setAttr ".phl[190]" 0;
+	setAttr ".phl[191]" 0;
+	setAttr ".phl[192]" 0;
+	setAttr ".phl[193]" 0;
+	setAttr ".phl[194]" 0;
+	setAttr ".phl[195]" 0;
+	setAttr ".phl[196]" 0;
+	setAttr ".phl[197]" 0;
+	setAttr ".phl[198]" 0;
+	setAttr ".phl[199]" 0;
+	setAttr ".phl[200]" 0;
+	setAttr ".phl[201]" 0;
+	setAttr ".phl[202]" 0;
+	setAttr ".phl[203]" 0;
+	setAttr ".phl[204]" 0;
+	setAttr ".phl[205]" 0;
+	setAttr ".phl[206]" 0;
+	setAttr ".phl[207]" 0;
+	setAttr ".phl[208]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"livingroom_shading_latestRN"
 		"livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest4RN" 
@@ -26347,45 +26308,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"livingroom_shading_latest:living_room_latest:hookahRN" 0
 		"livingroom_shading_latestRN" 0
 		"livingroom_shading_latest:living_room_latest:sofa_latestRN" 0
-		"livingroom_shading_latest:living_room_latest:armchair_latestRN1" 11
-		2 "|livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame" 
-		"translate" " -type \"double3\" 0 0 14.954146"
-		3 "|livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_1|livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_Shape1.instObjGroups" 
-		"livingroom_shading_latest:living_room_latest:armchair_latest1:lambert5SG.dagSetMembers" 
-		"-na"
-		3 "|livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_2|livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_Shape2.instObjGroups" 
-		"livingroom_shading_latest:living_room_latest:armchair_latest1:lambert8SG.dagSetMembers" 
-		"-na"
-		5 1 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_1|livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_Shape1.instObjGroups" 
-		"livingroom_shading_latestRN.placeHolderList[134]" "livingroom_shading_latest:living_room_latest:armchair_latest1:lambert5SG.dsm"
-		
-		5 1 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_2|livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_Shape2.instObjGroups" 
-		"livingroom_shading_latestRN.placeHolderList[136]" "livingroom_shading_latest:living_room_latest:armchair_latest1:lambert8SG.dsm"
-		
-		5 0 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:armchair_latestRN1fosterParent1|livingroom_shading_latest:living_room_latest:armchair_pillow_3|livingroom_shading_latest:living_room_latest:armchair_pillow_Shape3.instObjGroups" 
-		"livingroom_shading_latest:living_room_latest:armchair_latest1:lambert5SG.dagSetMembers" 
-		"livingroom_shading_latestRN.placeHolderList[143]" "livingroom_shading_latestRN.placeHolderList[144]" 
-		""
-		5 0 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:armchair_latestRN1fosterParent1|livingroom_shading_latest:living_room_latest:armchair_pillow_4|livingroom_shading_latest:living_room_latest:armchair_pillow_Shape4.instObjGroups" 
-		"livingroom_shading_latest:living_room_latest:armchair_latest1:lambert5SG.dagSetMembers" 
-		"livingroom_shading_latestRN.placeHolderList[145]" "livingroom_shading_latestRN.placeHolderList[146]" 
-		""
-		5 0 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:armchair_latestRN1fosterParent1|livingroom_shading_latest:living_room_latest:armchair_pillow_2|livingroom_shading_latest:living_room_latest:armchair_pillow_Shape2.instObjGroups" 
-		"livingroom_shading_latest:living_room_latest:armchair_latest1:lambert5SG.dagSetMembers" 
-		"livingroom_shading_latestRN.placeHolderList[147]" "livingroom_shading_latestRN.placeHolderList[148]" 
-		""
-		5 0 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:armchair_latestRN1fosterParent1|livingroom_shading_latest:living_room_latest:armchair_pillow_1|livingroom_shading_latest:living_room_latest:armchair_pillow_Shape1.instObjGroups" 
-		"livingroom_shading_latest:living_room_latest:armchair_latest1:lambert5SG.dagSetMembers" 
-		"livingroom_shading_latestRN.placeHolderList[149]" "livingroom_shading_latestRN.placeHolderList[150]" 
-		""
-		5 0 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:armchair_latestRN1fosterParent1|livingroom_shading_latest:living_room_latest:armchair_pillow_6|livingroom_shading_latest:living_room_latest:armchair_pillow_Shape6.instObjGroups" 
-		"livingroom_shading_latest:living_room_latest:armchair_latest1:lambert5SG.dagSetMembers" 
-		"livingroom_shading_latestRN.placeHolderList[151]" "livingroom_shading_latestRN.placeHolderList[152]" 
-		""
-		5 0 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:armchair_latestRN1fosterParent1|livingroom_shading_latest:living_room_latest:armchair_pillow_5|livingroom_shading_latest:living_room_latest:armchair_pillow_Shape5.instObjGroups" 
-		"livingroom_shading_latest:living_room_latest:armchair_latest1:lambert5SG.dagSetMembers" 
-		"livingroom_shading_latestRN.placeHolderList[153]" "livingroom_shading_latestRN.placeHolderList[154]" 
-		""
 		"livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest4RN" 
 		4
 		3 "|livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest5:taller_window|livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest5:transform1|livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest5:taller_windowShape.instObjGroups.objectGroups[1]" 
@@ -26401,6 +26323,9 @@ createNode reference -n "livingroom_shading_latestRN";
 		5 0 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest5:taller_window|livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest5:transform1|livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest5:taller_windowShape.instObjGroups.objectGroups[1]" 
 		"livingroom_shading_latest:lambert10SG.dagSetMembers" "livingroom_shading_latestRN.placeHolderList[131]" 
 		"livingroom_shading_latestRN.placeHolderList[132]" "livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest5:window:lambert2SG.dsm"
+		
+		"livingroom_shading_latest:living_room_latest:pipeRN" 1
+		2 "|livingroom_shading_latest:living_room_latest:pipe:Mesh" "translate" " -type \"double3\" -210.057595 -7.023141 27.994959"
 		
 		"livingroom_shading_latest:living_room_latest:armchair_latestRN" 6
 		2 "|livingroom_shading_latest:living_room_latest:armchair_latest:armchair_frame" 
@@ -26420,21 +26345,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		5 2 "livingroom_shading_latestRN" "livingroom_shading_latest:living_room_latest:armchair_latest:lambert8SG.dagSetMembers" 
 		"livingroom_shading_latestRN.placeHolderList[141]" "livingroom_shading_latest:living_room_latest:sofa_latest:lambert15SG.dsm"
 		
-		"livingroom_shading_latestRN" 7
-		5 4 "livingroom_shading_latestRN" "livingroom_shading_latest:lambert2SG.dagSetMembers" 
-		"livingroom_shading_latestRN.placeHolderList[182]" ""
-		5 4 "livingroom_shading_latestRN" "livingroom_shading_latest:lambert2SG.groupNodes" 
-		"livingroom_shading_latestRN.placeHolderList[183]" ""
-		5 4 "livingroom_shading_latestRN" "livingroom_shading_latest:lambert6SG.groupNodes" 
-		"livingroom_shading_latestRN.placeHolderList[184]" ""
-		5 4 "livingroom_shading_latestRN" "livingroom_shading_latest:lambert6SG.groupNodes" 
-		"livingroom_shading_latestRN.placeHolderList[185]" ""
-		5 4 "livingroom_shading_latestRN" "livingroom_shading_latest:lambert8SG.dagSetMembers" 
-		"livingroom_shading_latestRN.placeHolderList[186]" ""
-		5 3 "livingroom_shading_latestRN" "livingroom_shading_latest:lambert8SG.memberWireframeColor" 
-		"livingroom_shading_latestRN.placeHolderList[187]" ""
-		5 4 "livingroom_shading_latestRN" "livingroom_shading_latest:lambert8SG.groupNodes" 
-		"livingroom_shading_latestRN.placeHolderList[188]" ""
 		"livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest1RN" 
 		4
 		3 "|livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest2:taller_window|livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest2:transform1|livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest2:taller_windowShape.instObjGroups.objectGroups[1]" 
@@ -26483,7 +26393,7 @@ createNode reference -n "livingroom_shading_latestRN";
 		"livingroom_shading_latest:lambert10SG.dagSetMembers" "livingroom_shading_latestRN.placeHolderList[123]" 
 		"livingroom_shading_latestRN.placeHolderList[124]" "livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest3:window:lambert2SG.dsm"
 		
-		"livingroom_shading_latest:living_room_latestRN" 96
+		"livingroom_shading_latest:living_room_latestRN" 134
 		0 "|livingroom_shading_latestRNfosterParent1|exit_window_1Shape1" "|livingroom_shading_latest:living_room_latest:exit_window_4" 
 		"-s -r "
 		2 "|livingroom_shading_latest:living_room_latest:_UNKNOWN_REF_NODE_fosterParent1|livingroom_shading_latest:living_room_latest:imagePlane1|livingroom_shading_latest:living_room_latest:imagePlaneShape1" 
@@ -26552,9 +26462,23 @@ createNode reference -n "livingroom_shading_latestRN";
 		"instObjGroups.objectGroups[2].objectGrpCompList" " -type \"componentList\" 4 \"f[16:21]\" \"f[36]\" \"f[44]\" \"f[52:57]\""
 		
 		2 "|livingroom_shading_latest:living_room_latest:tissue_box1" "translate" 
-		" -type \"double3\" 0 0 11.147672"
+		" -type \"double3\" 0 -10.482067 11.725597"
 		2 "|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4MeshGroup|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4Main" 
-		"translate" " -type \"double3\" 0 0 10.438715"
+		"translate" " -type \"double3\" 0 0 16.225848"
+		2 "|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4MeshGroup|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4Main|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall1Main" 
+		"translate" " -type \"double3\" 0 0 5.787133"
+		2 "|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4MeshGroup|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4Main|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall1Leaf" 
+		"translate" " -type \"double3\" 0 0 5.787133"
+		2 "|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4MeshGroup|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4Main|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall2Main" 
+		"translate" " -type \"double3\" 0 0 5.787133"
+		2 "|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4MeshGroup|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4Main|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall2Leaf" 
+		"translate" " -type \"double3\" 0 0 5.787133"
+		2 "|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4MeshGroup|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4Main|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall3Main" 
+		"translate" " -type \"double3\" 0 0 5.787133"
+		2 "|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4MeshGroup|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4Main|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall3Leaf" 
+		"translate" " -type \"double3\" 0 0 5.787133"
+		2 "|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4MeshGroup|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4Main|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4Leaf" 
+		"translate" " -type \"double3\" 0 0 5.787133"
 		2 "|livingroom_shading_latest:living_room_latest:vase_flowers:pCylinder8" 
 		"translate" " -type \"double3\" 0 0 14.226191"
 		2 "|livingroom_shading_latest:living_room_latest:nRigid1|livingroom_shading_latest:living_room_latest:nRigidShape1" 
@@ -26584,7 +26508,7 @@ createNode reference -n "livingroom_shading_latestRN";
 		2 "|livingroom_shading_latest:living_room_latest:armchair_latestRNfosterParent1|livingroom_shading_latest:living_room_latest:armchair_cushion" 
 		"visibility" " 1"
 		2 "|livingroom_shading_latest:living_room_latest:armchair_latestRNfosterParent1|livingroom_shading_latest:living_room_latest:armchair_cushion" 
-		"translate" " -type \"double3\" 0 0 -28.923202"
+		"translate" " -type \"double3\" -2.957254 -0.119598 -29.95953"
 		2 "|livingroom_shading_latest:living_room_latest:armchair_latestRNfosterParent1|livingroom_shading_latest:living_room_latest:armchair_cushion" 
 		"translateX" " -av"
 		2 "|livingroom_shading_latest:living_room_latest:armchair_latestRNfosterParent1|livingroom_shading_latest:living_room_latest:armchair_cushion" 
@@ -26596,9 +26520,31 @@ createNode reference -n "livingroom_shading_latestRN";
 		2 "|livingroom_shading_latest:living_room_latest:armchair_latestRNfosterParent1|livingroom_shading_latest:living_room_latest:armchair_cushion" 
 		"scale" " -type \"double3\" 1 1 1"
 		2 "|livingroom_shading_latest:living_room_latest:armchair_latestRN1fosterParent1|livingroom_shading_latest:living_room_latest:armchair_pillow_1" 
-		"translate" " -type \"double3\" 0 0 -14.820634"
+		"translate" " -type \"double3\" -2.701579 -1.830311 -14.820634"
+		2 "|livingroom_shading_latest:living_room_latest:armchair_latestRN1fosterParent1|livingroom_shading_latest:living_room_latest:armchair_pillow_1" 
+		"translateX" " -av"
+		2 "|livingroom_shading_latest:living_room_latest:armchair_latestRN1fosterParent1|livingroom_shading_latest:living_room_latest:armchair_pillow_1" 
+		"translateY" " -av"
+		2 "|livingroom_shading_latest:living_room_latest:armchair_latestRN1fosterParent1|livingroom_shading_latest:living_room_latest:armchair_pillow_1" 
+		"rotate" " -type \"double3\" 0 0 158.738805"
+		2 "|livingroom_shading_latest:living_room_latest:armchair_latestRN1fosterParent1|livingroom_shading_latest:living_room_latest:armchair_pillow_1" 
+		"rotateZ" " -av"
 		2 "|livingroom_shading_latest:living_room_latest:armchair_latestRN1fosterParent1|livingroom_shading_latest:living_room_latest:armchair_pillow_2" 
-		"translate" " -type \"double3\" 0 0 -14.820634"
+		"translate" " -type \"double3\" 2.527232 -0.738718 -14.006946"
+		2 "|livingroom_shading_latest:living_room_latest:armchair_latestRN1fosterParent1|livingroom_shading_latest:living_room_latest:armchair_pillow_2" 
+		"translateX" " -av"
+		2 "|livingroom_shading_latest:living_room_latest:armchair_latestRN1fosterParent1|livingroom_shading_latest:living_room_latest:armchair_pillow_2" 
+		"translateY" " -av"
+		2 "|livingroom_shading_latest:living_room_latest:armchair_latestRN1fosterParent1|livingroom_shading_latest:living_room_latest:armchair_pillow_2" 
+		"translateZ" " -av"
+		2 "|livingroom_shading_latest:living_room_latest:armchair_latestRN1fosterParent1|livingroom_shading_latest:living_room_latest:armchair_pillow_2" 
+		"rotate" " -type \"double3\" 11.665829 7.35073 -131.39025"
+		2 "|livingroom_shading_latest:living_room_latest:armchair_latestRN1fosterParent1|livingroom_shading_latest:living_room_latest:armchair_pillow_2" 
+		"rotateX" " -av"
+		2 "|livingroom_shading_latest:living_room_latest:armchair_latestRN1fosterParent1|livingroom_shading_latest:living_room_latest:armchair_pillow_2" 
+		"rotateY" " -av"
+		2 "|livingroom_shading_latest:living_room_latest:armchair_latestRN1fosterParent1|livingroom_shading_latest:living_room_latest:armchair_pillow_2" 
+		"rotateZ" " -av"
 		2 "|livingroom_shading_latest:living_room_latest:armchair_latestRN1fosterParent1|livingroom_shading_latest:living_room_latest:armchair_pillow_3" 
 		"translate" " -type \"double3\" 0 0 -14.820634"
 		2 "|livingroom_shading_latest:living_room_latest:armchair_latestRN1fosterParent1|livingroom_shading_latest:living_room_latest:armchair_pillow_4" 
@@ -26607,30 +26553,26 @@ createNode reference -n "livingroom_shading_latestRN";
 		"translate" " -type \"double3\" 0 0 -14.820634"
 		2 "|livingroom_shading_latest:living_room_latest:armchair_latestRN1fosterParent1|livingroom_shading_latest:living_room_latest:armchair_pillow_6" 
 		"translate" " -type \"double3\" 0 0 -14.820634"
-		3 "|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4MeshGroup|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4Main|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall2Flower|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall2FlowerShape.instObjGroups" 
-		"livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall2FlowerShaderSG.dagSetMembers" 
+		3 "|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4MeshGroup|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4Main|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall3Flower|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall3FlowerShape.instObjGroups" 
+		"livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall3FlowerShaderSG.dagSetMembers" 
 		"-na"
-		3 "|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4MeshGroup|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4Main|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall3Main|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall3MainShape.instObjGroups" 
-		"livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall3ShaderSG.dagSetMembers" 
-		"-na"
-		3 "|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4MeshGroup|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4Main|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall1Flower|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall1FlowerShape.instObjGroups" 
-		"livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall1FlowerShaderSG.dagSetMembers" 
+		3 "|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4MeshGroup|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4Main|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4Flower|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4FlowerShape.instObjGroups" 
+		"livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4FlowerShaderSG.dagSetMembers" 
 		"-na"
 		3 "|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4MeshGroup|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4Main|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall1Main|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall1MainShape.instObjGroups" 
 		"livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall1ShaderSG.dagSetMembers" 
 		"-na"
-		3 "livingroom_shading_latest:living_room_latest:nonselectablelayer.drawInfo" 
-		"|livingroom_shading_latest:living_room_latest:coffee_table1.drawOverride" ""
-		3 "|livingroom_shading_latest:living_room_latest:frying_pan|livingroom_shading_latest:living_room_latest:pasted__pCube167|livingroom_shading_latest:living_room_latest:pasted__pCubeShape167.instObjGroups" 
-		"livingroom_shading_latest:lambert6SG.dagSetMembers" "-na"
-		3 "livingroom_shading_latest:living_room_latest:pasted__lambert24SG.memberWireframeColor" 
-		"|livingroom_shading_latest:living_room_latest:frying_pan|livingroom_shading_latest:living_room_latest:pasted__pCube167|livingroom_shading_latest:living_room_latest:pasted__pCubeShape167.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
+		3 "|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4MeshGroup|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4Main|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall2Leaf|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall2LeafShape.instObjGroups" 
+		"livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall2LeafShaderSG.dagSetMembers" 
+		"-na"
+		3 "|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4MeshGroup|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4Main|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall1Flower|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall1FlowerShape.instObjGroups" 
+		"livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall1FlowerShaderSG.dagSetMembers" 
+		"-na"
 		3 "|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4MeshGroup|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4Main|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall3Leaf|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall3LeafShape.instObjGroups" 
 		"livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall3LeafShaderSG.dagSetMembers" 
 		"-na"
-		3 "|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4MeshGroup|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4Main|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4Flower|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4FlowerShape.instObjGroups" 
-		"livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4FlowerShaderSG.dagSetMembers" 
+		3 "|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4MeshGroup|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4Main|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall3Main|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall3MainShape.instObjGroups" 
+		"livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall3ShaderSG.dagSetMembers" 
 		"-na"
 		3 "|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4MeshGroup|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4Main|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall2Main|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall2MainShape.instObjGroups" 
 		"livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall2ShaderSG.dagSetMembers" 
@@ -26641,14 +26583,18 @@ createNode reference -n "livingroom_shading_latestRN";
 		3 "|livingroom_shading_latest:living_room_latest:frying_pan|livingroom_shading_latest:living_room_latest:pasted__pCube167|livingroom_shading_latest:living_room_latest:pasted__pCubeShape167.compInstObjGroups.compObjectGroups[0]" 
 		"livingroom_shading_latest:living_room_latest:pasted__lambert24SG.dagSetMembers" 
 		"-na"
-		3 "|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4MeshGroup|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4Main|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall2Leaf|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall2LeafShape.instObjGroups" 
-		"livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall2LeafShaderSG.dagSetMembers" 
-		"-na"
-		3 "|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4MeshGroup|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4Main|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall3Flower|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall3FlowerShape.instObjGroups" 
-		"livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall3FlowerShaderSG.dagSetMembers" 
-		"-na"
 		3 "|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4MeshGroup|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4Main|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall1Leaf|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall1LeafShape.instObjGroups" 
 		"livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall1LeafShaderSG.dagSetMembers" 
+		"-na"
+		3 "|livingroom_shading_latest:living_room_latest:frying_pan|livingroom_shading_latest:living_room_latest:pasted__pCube167|livingroom_shading_latest:living_room_latest:pasted__pCubeShape167.instObjGroups" 
+		"livingroom_shading_latest:lambert6SG.dagSetMembers" "-na"
+		3 "livingroom_shading_latest:living_room_latest:pasted__lambert24SG.memberWireframeColor" 
+		"|livingroom_shading_latest:living_room_latest:frying_pan|livingroom_shading_latest:living_room_latest:pasted__pCube167|livingroom_shading_latest:living_room_latest:pasted__pCubeShape167.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "livingroom_shading_latest:living_room_latest:nonselectablelayer.drawInfo" 
+		"|livingroom_shading_latest:living_room_latest:coffee_table1.drawOverride" ""
+		3 "|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4MeshGroup|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall4Main|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall2Flower|livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall2FlowerShape.instObjGroups" 
+		"livingroom_shading_latest:living_room_latest:vase_flowers:daisySmall2FlowerShaderSG.dagSetMembers" 
 		"-na"
 		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:exit_window_4|livingroom_shading_latest:living_room_latest:exit_window_1Shape4.instObjGroups.objectGroups[0]" 
 		"livingroom_shading_latestRN.placeHolderList[155]" ""
@@ -26700,8 +26646,48 @@ createNode reference -n "livingroom_shading_latestRN";
 		"livingroom_shading_latestRN.placeHolderList[179]" ""
 		5 4 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:coffee_table1.scaleZ" 
 		"livingroom_shading_latestRN.placeHolderList[180]" ""
+		5 4 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:armchair_latestRN1fosterParent1|livingroom_shading_latest:living_room_latest:armchair_pillow_1.translateX" 
+		"livingroom_shading_latestRN.placeHolderList[181]" ""
+		5 4 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:armchair_latestRN1fosterParent1|livingroom_shading_latest:living_room_latest:armchair_pillow_1.translateY" 
+		"livingroom_shading_latestRN.placeHolderList[182]" ""
+		5 4 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:armchair_latestRN1fosterParent1|livingroom_shading_latest:living_room_latest:armchair_pillow_1.translateZ" 
+		"livingroom_shading_latestRN.placeHolderList[183]" ""
+		5 4 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:armchair_latestRN1fosterParent1|livingroom_shading_latest:living_room_latest:armchair_pillow_1.rotateX" 
+		"livingroom_shading_latestRN.placeHolderList[184]" ""
+		5 4 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:armchair_latestRN1fosterParent1|livingroom_shading_latest:living_room_latest:armchair_pillow_1.rotateY" 
+		"livingroom_shading_latestRN.placeHolderList[185]" ""
+		5 4 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:armchair_latestRN1fosterParent1|livingroom_shading_latest:living_room_latest:armchair_pillow_1.rotateZ" 
+		"livingroom_shading_latestRN.placeHolderList[186]" ""
+		5 4 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:armchair_latestRN1fosterParent1|livingroom_shading_latest:living_room_latest:armchair_pillow_1.visibility" 
+		"livingroom_shading_latestRN.placeHolderList[187]" ""
+		5 4 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:armchair_latestRN1fosterParent1|livingroom_shading_latest:living_room_latest:armchair_pillow_1.scaleX" 
+		"livingroom_shading_latestRN.placeHolderList[188]" ""
+		5 4 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:armchair_latestRN1fosterParent1|livingroom_shading_latest:living_room_latest:armchair_pillow_1.scaleY" 
+		"livingroom_shading_latestRN.placeHolderList[189]" ""
+		5 4 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:armchair_latestRN1fosterParent1|livingroom_shading_latest:living_room_latest:armchair_pillow_1.scaleZ" 
+		"livingroom_shading_latestRN.placeHolderList[190]" ""
+		5 4 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:armchair_latestRN1fosterParent1|livingroom_shading_latest:living_room_latest:armchair_pillow_2.translateX" 
+		"livingroom_shading_latestRN.placeHolderList[191]" ""
+		5 4 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:armchair_latestRN1fosterParent1|livingroom_shading_latest:living_room_latest:armchair_pillow_2.translateY" 
+		"livingroom_shading_latestRN.placeHolderList[192]" ""
+		5 4 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:armchair_latestRN1fosterParent1|livingroom_shading_latest:living_room_latest:armchair_pillow_2.translateZ" 
+		"livingroom_shading_latestRN.placeHolderList[193]" ""
+		5 4 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:armchair_latestRN1fosterParent1|livingroom_shading_latest:living_room_latest:armchair_pillow_2.rotateX" 
+		"livingroom_shading_latestRN.placeHolderList[194]" ""
+		5 4 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:armchair_latestRN1fosterParent1|livingroom_shading_latest:living_room_latest:armchair_pillow_2.rotateY" 
+		"livingroom_shading_latestRN.placeHolderList[195]" ""
+		5 4 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:armchair_latestRN1fosterParent1|livingroom_shading_latest:living_room_latest:armchair_pillow_2.rotateZ" 
+		"livingroom_shading_latestRN.placeHolderList[196]" ""
+		5 4 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:armchair_latestRN1fosterParent1|livingroom_shading_latest:living_room_latest:armchair_pillow_2.visibility" 
+		"livingroom_shading_latestRN.placeHolderList[197]" ""
+		5 4 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:armchair_latestRN1fosterParent1|livingroom_shading_latest:living_room_latest:armchair_pillow_2.scaleX" 
+		"livingroom_shading_latestRN.placeHolderList[198]" ""
+		5 4 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:armchair_latestRN1fosterParent1|livingroom_shading_latest:living_room_latest:armchair_pillow_2.scaleY" 
+		"livingroom_shading_latestRN.placeHolderList[199]" ""
+		5 4 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:armchair_latestRN1fosterParent1|livingroom_shading_latest:living_room_latest:armchair_pillow_2.scaleZ" 
+		"livingroom_shading_latestRN.placeHolderList[200]" ""
 		5 3 "livingroom_shading_latestRN" "livingroom_shading_latest:living_room_latest:nonselectablelayer.drawInfo" 
-		"livingroom_shading_latestRN.placeHolderList[181]" "livingroom_shading_latest:living_room_latest:coffee_table1.do"
+		"livingroom_shading_latestRN.placeHolderList[201]" "livingroom_shading_latest:living_room_latest:coffee_table1.do"
 		
 		"livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest3RN" 
 		4
@@ -26719,6 +26705,81 @@ createNode reference -n "livingroom_shading_latestRN";
 		"livingroom_shading_latest:lambert10SG.dagSetMembers" "livingroom_shading_latestRN.placeHolderList[127]" 
 		"livingroom_shading_latestRN.placeHolderList[128]" "livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest4:window:lambert2SG.dsm"
 		
+		"livingroom_shading_latest:living_room_latest:taller_window_four_squares_latestRN1" 
+		4
+		3 "|livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest1:taller_window|livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest1:transform1|livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest1:taller_windowShape.instObjGroups.objectGroups[1]" 
+		"livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest1:window:lambert2SG.dagSetMembers" 
+		"-na"
+		3 "|livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest1:taller_window|livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest1:polySurface5|livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest1:transform2|livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest1:polySurfaceShape6.instObjGroups.objectGroups[1]" 
+		"livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest1:window:lambert2SG.dagSetMembers" 
+		"-na"
+		5 0 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest1:taller_window|livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest1:polySurface5|livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest1:transform2|livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest1:polySurfaceShape6.instObjGroups.objectGroups[1]" 
+		"livingroom_shading_latest:lambert10SG.dagSetMembers" "livingroom_shading_latestRN.placeHolderList[113]" 
+		"livingroom_shading_latestRN.placeHolderList[114]" "livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest1:window:lambert2SG.dsm"
+		
+		5 0 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest1:taller_window|livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest1:transform1|livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest1:taller_windowShape.instObjGroups.objectGroups[1]" 
+		"livingroom_shading_latest:lambert10SG.dagSetMembers" "livingroom_shading_latestRN.placeHolderList[115]" 
+		"livingroom_shading_latestRN.placeHolderList[116]" "livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest1:window:lambert2SG.dsm"
+		
+		"livingroom_shading_latest:living_room_latest:armchair_latestRN1" 11
+		2 "|livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame" 
+		"translate" " -type \"double3\" 0 0 14.954146"
+		3 "|livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_2|livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_Shape2.instObjGroups" 
+		"livingroom_shading_latest:living_room_latest:armchair_latest1:lambert8SG.dagSetMembers" 
+		"-na"
+		3 "|livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_1|livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_Shape1.instObjGroups" 
+		"livingroom_shading_latest:living_room_latest:armchair_latest1:lambert5SG.dagSetMembers" 
+		"-na"
+		5 1 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_1|livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_Shape1.instObjGroups" 
+		"livingroom_shading_latestRN.placeHolderList[134]" "livingroom_shading_latest:living_room_latest:armchair_latest1:lambert5SG.dsm"
+		
+		5 1 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_2|livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_Shape2.instObjGroups" 
+		"livingroom_shading_latestRN.placeHolderList[136]" "livingroom_shading_latest:living_room_latest:armchair_latest1:lambert8SG.dsm"
+		
+		5 0 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:armchair_latestRN1fosterParent1|livingroom_shading_latest:living_room_latest:armchair_pillow_3|livingroom_shading_latest:living_room_latest:armchair_pillow_Shape3.instObjGroups" 
+		"livingroom_shading_latest:living_room_latest:armchair_latest1:lambert5SG.dagSetMembers" 
+		"livingroom_shading_latestRN.placeHolderList[143]" "livingroom_shading_latestRN.placeHolderList[144]" 
+		""
+		5 0 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:armchair_latestRN1fosterParent1|livingroom_shading_latest:living_room_latest:armchair_pillow_4|livingroom_shading_latest:living_room_latest:armchair_pillow_Shape4.instObjGroups" 
+		"livingroom_shading_latest:living_room_latest:armchair_latest1:lambert5SG.dagSetMembers" 
+		"livingroom_shading_latestRN.placeHolderList[145]" "livingroom_shading_latestRN.placeHolderList[146]" 
+		""
+		5 0 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:armchair_latestRN1fosterParent1|livingroom_shading_latest:living_room_latest:armchair_pillow_2|livingroom_shading_latest:living_room_latest:armchair_pillow_Shape2.instObjGroups" 
+		"livingroom_shading_latest:living_room_latest:armchair_latest1:lambert5SG.dagSetMembers" 
+		"livingroom_shading_latestRN.placeHolderList[147]" "livingroom_shading_latestRN.placeHolderList[148]" 
+		""
+		5 0 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:armchair_latestRN1fosterParent1|livingroom_shading_latest:living_room_latest:armchair_pillow_1|livingroom_shading_latest:living_room_latest:armchair_pillow_Shape1.instObjGroups" 
+		"livingroom_shading_latest:living_room_latest:armchair_latest1:lambert5SG.dagSetMembers" 
+		"livingroom_shading_latestRN.placeHolderList[149]" "livingroom_shading_latestRN.placeHolderList[150]" 
+		""
+		5 0 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:armchair_latestRN1fosterParent1|livingroom_shading_latest:living_room_latest:armchair_pillow_6|livingroom_shading_latest:living_room_latest:armchair_pillow_Shape6.instObjGroups" 
+		"livingroom_shading_latest:living_room_latest:armchair_latest1:lambert5SG.dagSetMembers" 
+		"livingroom_shading_latestRN.placeHolderList[151]" "livingroom_shading_latestRN.placeHolderList[152]" 
+		""
+		5 0 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:armchair_latestRN1fosterParent1|livingroom_shading_latest:living_room_latest:armchair_pillow_5|livingroom_shading_latest:living_room_latest:armchair_pillow_Shape5.instObjGroups" 
+		"livingroom_shading_latest:living_room_latest:armchair_latest1:lambert5SG.dagSetMembers" 
+		"livingroom_shading_latestRN.placeHolderList[153]" "livingroom_shading_latestRN.placeHolderList[154]" 
+		""
+		"livingroom_shading_latest:living_room_latest:celloAndStandRN" 1
+		2 "|livingroom_shading_latest:living_room_latest:celloAndStand:Mesh" "translate" 
+		" -type \"double3\" 0 -15.322798 0"
+		"livingroom_shading_latestRN" 8
+		2 "|livingroom_shading_latest:OtherGarden_001:pPlane1" "translate" " -type \"double3\" -264.986331 -16.992698 18.376205"
+		
+		5 4 "livingroom_shading_latestRN" "livingroom_shading_latest:lambert2SG.dagSetMembers" 
+		"livingroom_shading_latestRN.placeHolderList[202]" ""
+		5 4 "livingroom_shading_latestRN" "livingroom_shading_latest:lambert2SG.groupNodes" 
+		"livingroom_shading_latestRN.placeHolderList[203]" ""
+		5 4 "livingroom_shading_latestRN" "livingroom_shading_latest:lambert6SG.groupNodes" 
+		"livingroom_shading_latestRN.placeHolderList[204]" ""
+		5 4 "livingroom_shading_latestRN" "livingroom_shading_latest:lambert6SG.groupNodes" 
+		"livingroom_shading_latestRN.placeHolderList[205]" ""
+		5 4 "livingroom_shading_latestRN" "livingroom_shading_latest:lambert8SG.dagSetMembers" 
+		"livingroom_shading_latestRN.placeHolderList[206]" ""
+		5 3 "livingroom_shading_latestRN" "livingroom_shading_latest:lambert8SG.memberWireframeColor" 
+		"livingroom_shading_latestRN.placeHolderList[207]" ""
+		5 4 "livingroom_shading_latestRN" "livingroom_shading_latest:lambert8SG.groupNodes" 
+		"livingroom_shading_latestRN.placeHolderList[208]" ""
 		"livingroom_shading_latest:living_room_latest:sofa_latestRN" 6
 		3 "|livingroom_shading_latest:living_room_latest:sofa_latest:sofa_frame|livingroom_shading_latest:living_room_latest:sofa_latest:pillow_5|livingroom_shading_latest:living_room_latest:sofa_latest:pillow_Shape5.instObjGroups" 
 		"livingroom_shading_latest:living_room_latest:sofa_latest:lambert15SG.dagSetMembers" 
@@ -26736,23 +26797,7 @@ createNode reference -n "livingroom_shading_latestRN";
 		"livingroom_shading_latestRN.placeHolderList[140]" "livingroom_shading_latest:living_room_latest:sofa_latest:lambert15SG.dsm"
 		
 		5 1 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:sofa_latest:sofa_frame|livingroom_shading_latest:living_room_latest:sofa_latest:pillow_1|livingroom_shading_latest:living_room_latest:sofa_latest:pillow_Shape1.instObjGroups" 
-		"livingroom_shading_latestRN.placeHolderList[142]" "livingroom_shading_latest:living_room_latest:sofa_latest:lambert15SG.dsm"
-		
-		"livingroom_shading_latest:living_room_latest:taller_window_four_squares_latestRN1" 
-		4
-		3 "|livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest1:taller_window|livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest1:transform1|livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest1:taller_windowShape.instObjGroups.objectGroups[1]" 
-		"livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest1:window:lambert2SG.dagSetMembers" 
-		"-na"
-		3 "|livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest1:taller_window|livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest1:polySurface5|livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest1:transform2|livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest1:polySurfaceShape6.instObjGroups.objectGroups[1]" 
-		"livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest1:window:lambert2SG.dagSetMembers" 
-		"-na"
-		5 0 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest1:taller_window|livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest1:polySurface5|livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest1:transform2|livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest1:polySurfaceShape6.instObjGroups.objectGroups[1]" 
-		"livingroom_shading_latest:lambert10SG.dagSetMembers" "livingroom_shading_latestRN.placeHolderList[113]" 
-		"livingroom_shading_latestRN.placeHolderList[114]" "livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest1:window:lambert2SG.dsm"
-		
-		5 0 "livingroom_shading_latestRN" "|livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest1:taller_window|livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest1:transform1|livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest1:taller_windowShape.instObjGroups.objectGroups[1]" 
-		"livingroom_shading_latest:lambert10SG.dagSetMembers" "livingroom_shading_latestRN.placeHolderList[115]" 
-		"livingroom_shading_latestRN.placeHolderList[116]" "livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest1:window:lambert2SG.dsm";
+		"livingroom_shading_latestRN.placeHolderList[142]" "livingroom_shading_latest:living_room_latest:sofa_latest:lambert15SG.dsm";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode groupId -n "groupId1";
@@ -27680,8 +27725,8 @@ createNode animCurveTU -n "blendShape1_ears";
 createNode animCurveTU -n "blendShape1_nose";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  28 0 34 0.63302749395370483 40 0.63302749395370483
-		 90 0.63302749395370483 95 0;
+	setAttr -s 6 ".ktv[0:5]"  28 0 34 0.63302749395370483 40 0.63302749395370483
+		 71 0 90 0.63302749395370483 95 0;
 createNode animCurveTU -n "blendShape1_neutral";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
@@ -28058,15 +28103,15 @@ createNode displayLayer -n "layer1";
 createNode animCurveTL -n "camera1_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -190.72983589606832;
+	setAttr ".ktv[0]"  1 -201.55752259310782;
 createNode animCurveTL -n "camera1_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 7.6209413829005044;
+	setAttr ".ktv[0]"  1 7.852422052255398;
 createNode animCurveTL -n "camera1_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 56.011425992863359;
+	setAttr ".ktv[0]"  1 48.866740234511497;
 createNode animCurveTU -n "camera1_visibility";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
@@ -28075,15 +28120,15 @@ createNode animCurveTU -n "camera1_visibility";
 createNode animCurveTA -n "camera1_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 3.0790254113697917;
+	setAttr ".ktv[0]"  1 2.4735131077866712;
 createNode animCurveTA -n "camera1_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 54.634197543821834;
+	setAttr ".ktv[0]"  1 52.63420021275337;
 createNode animCurveTA -n "camera1_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0.095858892179900387;
+	setAttr ".ktv[0]"  1 0.091419445391423382;
 createNode animCurveTU -n "camera1_scaleX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
@@ -28096,19 +28141,111 @@ createNode animCurveTU -n "camera1_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  1 1;
+createNode animCurveTL -n "livingroom_shading_latest:living_room_latest:armchair_pillow_1_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  60 0 63 -0.28596228000394008 66 -1.6209557025024133
+		 69 -2.7015786467628677 73 -2.7015786467628677;
+createNode animCurveTL -n "livingroom_shading_latest:living_room_latest:armchair_pillow_1_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  60 0 63 0.52309290838573852 66 0.78144738820862292
+		 69 -0.063029317929268691 73 -1.8303106665432567;
+createNode animCurveTL -n "livingroom_shading_latest:living_room_latest:armchair_pillow_1_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  60 -14.820634 63 -14.820634 66 -14.820634
+		 69 -14.820634 73 -14.820634;
+createNode animCurveTL -n "livingroom_shading_latest:living_room_latest:armchair_pillow_2_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  60 0 62 0.33349961083666813 82 0.33349961083666813
+		 84 2.5272315679458757;
+createNode animCurveTL -n "livingroom_shading_latest:living_room_latest:armchair_pillow_2_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  60 0 62 0.05964394992483335 82 0.05964394992483335
+		 84 -0.73871793438272171;
+createNode animCurveTL -n "livingroom_shading_latest:living_room_latest:armchair_pillow_2_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  60 -14.820634 62 -14.443933797643847 82 -14.443933797643847
+		 84 -14.006945911210364;
+createNode animCurveTU -n "livingroom_shading_latest:living_room_latest:armchair_pillow_2_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  60 1 62 1 82 1 84 1;
+	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
+createNode animCurveTA -n "livingroom_shading_latest:living_room_latest:armchair_pillow_2_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  60 0 62 -5.7303253014773929 82 -5.7303253014773929
+		 84 11.665828911766804;
+createNode animCurveTA -n "livingroom_shading_latest:living_room_latest:armchair_pillow_2_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  60 0 62 7.9399591209729579 82 7.9399591209729579
+		 84 7.3507302637034631;
+createNode animCurveTA -n "livingroom_shading_latest:living_room_latest:armchair_pillow_2_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  60 0 62 13.540286716227325 82 13.540286716227325
+		 84 -131.39024965768286;
+createNode animCurveTU -n "livingroom_shading_latest:living_room_latest:armchair_pillow_2_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  60 1 62 1 82 1 84 1;
+createNode animCurveTU -n "livingroom_shading_latest:living_room_latest:armchair_pillow_2_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  60 1 62 1 82 1 84 1;
+createNode animCurveTU -n "livingroom_shading_latest:living_room_latest:armchair_pillow_2_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  60 1 62 1 82 1 84 1;
+createNode animCurveTU -n "livingroom_shading_latest:living_room_latest:armchair_pillow_1_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  60 1 63 1 66 1 69 1 73 1;
+	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+createNode animCurveTA -n "livingroom_shading_latest:living_room_latest:armchair_pillow_1_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  60 0 63 0 66 0 69 0 73 0;
+createNode animCurveTA -n "livingroom_shading_latest:living_room_latest:armchair_pillow_1_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  60 0 63 0 66 0 69 0 73 0;
+createNode animCurveTA -n "livingroom_shading_latest:living_room_latest:armchair_pillow_1_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  60 0 63 28.664363871956201 66 65.559310286307351
+		 69 104.7203015740714 73 158.73880509317519;
+createNode animCurveTU -n "livingroom_shading_latest:living_room_latest:armchair_pillow_1_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  60 1 63 1 66 1 69 1 73 1;
+createNode animCurveTU -n "livingroom_shading_latest:living_room_latest:armchair_pillow_1_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  60 1 63 1 66 1 69 1 73 1;
+createNode animCurveTU -n "livingroom_shading_latest:living_room_latest:armchair_pillow_1_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  60 1 63 1 66 1 69 1 73 1;
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr ".o" 99;
-	setAttr ".unw" 99;
+	setAttr ".o" 107;
+	setAttr ".unw" 107;
 select -ne :renderPartition;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 325 ".st";
+	setAttr -s 409 ".st";
 	setAttr -cb on ".an";
 	setAttr -cb on ".pt";
 select -ne :initialShadingGroup;
@@ -28116,7 +28253,7 @@ select -ne :initialShadingGroup;
 	setAttr -cb on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 236 ".dsm";
+	setAttr -s 237 ".dsm";
 	setAttr -k on ".mwc";
 	setAttr -cb on ".an";
 	setAttr -cb on ".il";
@@ -28126,6 +28263,15 @@ select -ne :initialShadingGroup;
 	setAttr -cb on ".epo";
 	setAttr ".ro" yes;
 	setAttr -s 88 ".gn";
+	setAttr -cb on ".mimt";
+	setAttr -cb on ".miop";
+	setAttr -cb on ".mise";
+	setAttr -cb on ".mism";
+	setAttr -cb on ".mice";
+	setAttr -av -cb on ".micc";
+	setAttr -cb on ".mica";
+	setAttr -cb on ".micw";
+	setAttr -cb on ".mirw";
 select -ne :initialParticleSE;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -28139,18 +28285,27 @@ select -ne :initialParticleSE;
 	setAttr -cb on ".fo";
 	setAttr -cb on ".epo";
 	setAttr ".ro" yes;
+	setAttr -cb on ".mimt";
+	setAttr -cb on ".miop";
+	setAttr -cb on ".mise";
+	setAttr -cb on ".mism";
+	setAttr -cb on ".mice";
+	setAttr -cb on ".micc";
+	setAttr -cb on ".mica";
+	setAttr -cb on ".micw";
+	setAttr -cb on ".mirw";
 select -ne :defaultShaderList1;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 123 ".s";
+	setAttr -s 207 ".s";
 select -ne :defaultTextureList1;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 150 ".tx";
+	setAttr -s 200 ".tx";
 select -ne :postProcessList1;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -28162,7 +28317,7 @@ select -ne :defaultRenderUtilityList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 149 ".u";
+	setAttr -s 199 ".u";
 select -ne :defaultRenderingList1;
 	setAttr -s 22 ".r";
 select -ne :renderGlobalsList1;
@@ -28171,17 +28326,70 @@ select -ne :renderGlobalsList1;
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
 select -ne :defaultRenderGlobals;
+	setAttr -k on ".cch";
+	setAttr -k on ".nds";
+	setAttr -k on ".clip";
+	setAttr -k on ".edm";
 	setAttr ".ren" -type "string" "mayaHardware";
+	setAttr -av -k on ".esr";
+	setAttr -k on ".ors";
 	setAttr ".outf" 32;
+	setAttr -k on ".gama";
 	setAttr ".an" yes;
 	setAttr ".ef" 110;
+	setAttr -k on ".be";
+	setAttr -k on ".fec";
+	setAttr -k on ".ofc";
 	setAttr ".pff" yes;
 	setAttr ".peie" 2;
+	setAttr -k on ".comp";
+	setAttr -k on ".cth";
+	setAttr -k on ".soll";
+	setAttr -k on ".rd";
+	setAttr -k on ".lp";
+	setAttr -k on ".sp";
+	setAttr -k on ".shs";
+	setAttr -k on ".lpr";
+	setAttr -k on ".mm";
+	setAttr -k on ".npu";
+	setAttr -k on ".itf";
+	setAttr -k on ".shp";
+	setAttr -k on ".uf";
+	setAttr -k on ".oi";
+	setAttr -k on ".rut";
+	setAttr -k on ".mbf";
+	setAttr -k on ".afp";
+	setAttr -k on ".pfb";
+	setAttr -k on ".bll";
+	setAttr -k on ".bls";
+	setAttr -k on ".smv";
+	setAttr -k on ".ubc";
+	setAttr -k on ".mbc";
+	setAttr -k on ".udbx";
+	setAttr -k on ".smc";
+	setAttr -k on ".kmv";
+	setAttr -k on ".rlen";
+	setAttr -av -k on ".frts";
+	setAttr -k on ".tlwd";
+	setAttr -k on ".tlht";
+	setAttr -k on ".jfc";
 select -ne :defaultResolution;
-	setAttr ".w" 1920;
-	setAttr ".h" 1080;
-	setAttr ".pa" 1;
-	setAttr ".dar" 1.7769999504089355;
+	setAttr -av -k on ".cch";
+	setAttr -k on ".ihi";
+	setAttr -av -k on ".nds";
+	setAttr -k on ".bnm";
+	setAttr -av ".w" 1920;
+	setAttr -av ".h" 1080;
+	setAttr -av -k on ".pa" 1;
+	setAttr -av -k on ".al";
+	setAttr -av ".dar" 1.7769999504089355;
+	setAttr -av -k on ".ldar";
+	setAttr -k on ".dpi";
+	setAttr -av -k on ".off";
+	setAttr -av -k on ".fld";
+	setAttr -av -k on ".zsl";
+	setAttr -k on ".isu";
+	setAttr -k on ".pdu";
 select -ne :defaultLightSet;
 	setAttr -k on ".cch";
 	setAttr -k on ".ihi";
@@ -28268,328 +28476,330 @@ select -ne :defaultHardwareRenderGlobals;
 	setAttr -cb on ".sd";
 select -ne :ikSystem;
 	setAttr -s 6 ".sol";
-connectAttr "sneaks_latest:controller_root_visibility.o" "sneaks_latestRN.phl[1]"
+connectAttr "sneaks_latest:controller_root_visibility.o" "sneaks_latestRN.phl[220]"
 		;
-connectAttr "sneaks_latest:controller_root_translateX.o" "sneaks_latestRN.phl[2]"
+connectAttr "sneaks_latest:controller_root_translateX.o" "sneaks_latestRN.phl[221]"
 		;
-connectAttr "sneaks_latest:controller_root_translateY.o" "sneaks_latestRN.phl[3]"
+connectAttr "sneaks_latest:controller_root_translateY.o" "sneaks_latestRN.phl[222]"
 		;
-connectAttr "sneaks_latest:controller_root_translateZ.o" "sneaks_latestRN.phl[4]"
+connectAttr "sneaks_latest:controller_root_translateZ.o" "sneaks_latestRN.phl[223]"
 		;
-connectAttr "sneaks_latest:controller_root_rotateX.o" "sneaks_latestRN.phl[5]";
-connectAttr "sneaks_latest:controller_root_rotateY.o" "sneaks_latestRN.phl[6]";
-connectAttr "sneaks_latest:controller_root_rotateZ.o" "sneaks_latestRN.phl[7]";
-connectAttr "sneaks_latest:controller_root_scaleX.o" "sneaks_latestRN.phl[8]";
-connectAttr "sneaks_latest:controller_root_scaleY.o" "sneaks_latestRN.phl[9]";
-connectAttr "sneaks_latest:controller_root_scaleZ.o" "sneaks_latestRN.phl[10]";
-connectAttr "sneaks_latest:controller_COG_translateX.o" "sneaks_latestRN.phl[11]"
+connectAttr "sneaks_latest:controller_root_rotateX.o" "sneaks_latestRN.phl[224]"
 		;
-connectAttr "sneaks_latest:controller_COG_translateY.o" "sneaks_latestRN.phl[12]"
+connectAttr "sneaks_latest:controller_root_rotateY.o" "sneaks_latestRN.phl[225]"
 		;
-connectAttr "sneaks_latest:controller_COG_translateZ.o" "sneaks_latestRN.phl[13]"
+connectAttr "sneaks_latest:controller_root_rotateZ.o" "sneaks_latestRN.phl[226]"
 		;
-connectAttr "sneaks_latest:controller_COG_rotateX.o" "sneaks_latestRN.phl[14]";
-connectAttr "sneaks_latest:controller_COG_rotateY.o" "sneaks_latestRN.phl[15]";
-connectAttr "sneaks_latest:controller_COG_rotateZ.o" "sneaks_latestRN.phl[16]";
-connectAttr "sneaks_latest:controller_COG_scaleX.o" "sneaks_latestRN.phl[17]";
-connectAttr "sneaks_latest:controller_COG_scaleY.o" "sneaks_latestRN.phl[18]";
-connectAttr "sneaks_latest:controller_COG_scaleZ.o" "sneaks_latestRN.phl[19]";
-connectAttr "sneaks_latest:controller_COG_visibility.o" "sneaks_latestRN.phl[20]"
+connectAttr "sneaks_latest:controller_root_scaleX.o" "sneaks_latestRN.phl[227]";
+connectAttr "sneaks_latest:controller_root_scaleY.o" "sneaks_latestRN.phl[228]";
+connectAttr "sneaks_latest:controller_root_scaleZ.o" "sneaks_latestRN.phl[229]";
+connectAttr "sneaks_latest:controller_COG_translateX.o" "sneaks_latestRN.phl[230]"
 		;
-connectAttr "sneaks_latest:controller_spine3_translateX.o" "sneaks_latestRN.phl[21]"
+connectAttr "sneaks_latest:controller_COG_translateY.o" "sneaks_latestRN.phl[231]"
 		;
-connectAttr "sneaks_latest:controller_spine3_translateY.o" "sneaks_latestRN.phl[22]"
+connectAttr "sneaks_latest:controller_COG_translateZ.o" "sneaks_latestRN.phl[232]"
 		;
-connectAttr "sneaks_latest:controller_spine3_translateZ.o" "sneaks_latestRN.phl[23]"
+connectAttr "sneaks_latest:controller_COG_rotateX.o" "sneaks_latestRN.phl[233]";
+connectAttr "sneaks_latest:controller_COG_rotateY.o" "sneaks_latestRN.phl[234]";
+connectAttr "sneaks_latest:controller_COG_rotateZ.o" "sneaks_latestRN.phl[235]";
+connectAttr "sneaks_latest:controller_COG_scaleX.o" "sneaks_latestRN.phl[236]";
+connectAttr "sneaks_latest:controller_COG_scaleY.o" "sneaks_latestRN.phl[237]";
+connectAttr "sneaks_latest:controller_COG_scaleZ.o" "sneaks_latestRN.phl[238]";
+connectAttr "sneaks_latest:controller_COG_visibility.o" "sneaks_latestRN.phl[239]"
 		;
-connectAttr "sneaks_latest:controller_spine3_rotateX.o" "sneaks_latestRN.phl[24]"
+connectAttr "sneaks_latest:controller_spine3_translateX.o" "sneaks_latestRN.phl[240]"
 		;
-connectAttr "sneaks_latest:controller_spine3_rotateY.o" "sneaks_latestRN.phl[25]"
+connectAttr "sneaks_latest:controller_spine3_translateY.o" "sneaks_latestRN.phl[241]"
 		;
-connectAttr "sneaks_latest:controller_spine3_rotateZ.o" "sneaks_latestRN.phl[26]"
+connectAttr "sneaks_latest:controller_spine3_translateZ.o" "sneaks_latestRN.phl[242]"
 		;
-connectAttr "sneaks_latest:controller_spine3_scaleX.o" "sneaks_latestRN.phl[27]"
+connectAttr "sneaks_latest:controller_spine3_rotateX.o" "sneaks_latestRN.phl[243]"
 		;
-connectAttr "sneaks_latest:controller_spine3_scaleY.o" "sneaks_latestRN.phl[28]"
+connectAttr "sneaks_latest:controller_spine3_rotateY.o" "sneaks_latestRN.phl[244]"
 		;
-connectAttr "sneaks_latest:controller_spine3_scaleZ.o" "sneaks_latestRN.phl[29]"
+connectAttr "sneaks_latest:controller_spine3_rotateZ.o" "sneaks_latestRN.phl[245]"
 		;
-connectAttr "sneaks_latest:controller_spine3_visibility.o" "sneaks_latestRN.phl[30]"
+connectAttr "sneaks_latest:controller_spine3_scaleX.o" "sneaks_latestRN.phl[246]"
 		;
-connectAttr "sneaks_latest:controller_spine2_translateX.o" "sneaks_latestRN.phl[31]"
+connectAttr "sneaks_latest:controller_spine3_scaleY.o" "sneaks_latestRN.phl[247]"
 		;
-connectAttr "sneaks_latest:controller_spine2_translateY.o" "sneaks_latestRN.phl[32]"
+connectAttr "sneaks_latest:controller_spine3_scaleZ.o" "sneaks_latestRN.phl[248]"
 		;
-connectAttr "sneaks_latest:controller_spine2_translateZ.o" "sneaks_latestRN.phl[33]"
+connectAttr "sneaks_latest:controller_spine3_visibility.o" "sneaks_latestRN.phl[249]"
 		;
-connectAttr "sneaks_latest:controller_spine2_rotateX.o" "sneaks_latestRN.phl[34]"
+connectAttr "sneaks_latest:controller_spine2_translateX.o" "sneaks_latestRN.phl[250]"
 		;
-connectAttr "sneaks_latest:controller_spine2_rotateY.o" "sneaks_latestRN.phl[35]"
+connectAttr "sneaks_latest:controller_spine2_translateY.o" "sneaks_latestRN.phl[251]"
 		;
-connectAttr "sneaks_latest:controller_spine2_rotateZ.o" "sneaks_latestRN.phl[36]"
+connectAttr "sneaks_latest:controller_spine2_translateZ.o" "sneaks_latestRN.phl[252]"
 		;
-connectAttr "sneaks_latest:controller_spine2_scaleX.o" "sneaks_latestRN.phl[37]"
+connectAttr "sneaks_latest:controller_spine2_rotateX.o" "sneaks_latestRN.phl[253]"
 		;
-connectAttr "sneaks_latest:controller_spine2_scaleY.o" "sneaks_latestRN.phl[38]"
+connectAttr "sneaks_latest:controller_spine2_rotateY.o" "sneaks_latestRN.phl[254]"
 		;
-connectAttr "sneaks_latest:controller_spine2_scaleZ.o" "sneaks_latestRN.phl[39]"
+connectAttr "sneaks_latest:controller_spine2_rotateZ.o" "sneaks_latestRN.phl[255]"
 		;
-connectAttr "sneaks_latest:controller_spine2_visibility.o" "sneaks_latestRN.phl[40]"
+connectAttr "sneaks_latest:controller_spine2_scaleX.o" "sneaks_latestRN.phl[256]"
 		;
-connectAttr "sneaks_latest:controller_spine1_translateX.o" "sneaks_latestRN.phl[41]"
+connectAttr "sneaks_latest:controller_spine2_scaleY.o" "sneaks_latestRN.phl[257]"
 		;
-connectAttr "sneaks_latest:controller_spine1_translateY.o" "sneaks_latestRN.phl[42]"
+connectAttr "sneaks_latest:controller_spine2_scaleZ.o" "sneaks_latestRN.phl[258]"
 		;
-connectAttr "sneaks_latest:controller_spine1_translateZ.o" "sneaks_latestRN.phl[43]"
+connectAttr "sneaks_latest:controller_spine2_visibility.o" "sneaks_latestRN.phl[259]"
 		;
-connectAttr "sneaks_latest:controller_spine1_rotateX.o" "sneaks_latestRN.phl[44]"
+connectAttr "sneaks_latest:controller_spine1_translateX.o" "sneaks_latestRN.phl[260]"
 		;
-connectAttr "sneaks_latest:controller_spine1_rotateY.o" "sneaks_latestRN.phl[45]"
+connectAttr "sneaks_latest:controller_spine1_translateY.o" "sneaks_latestRN.phl[261]"
 		;
-connectAttr "sneaks_latest:controller_spine1_rotateZ.o" "sneaks_latestRN.phl[46]"
+connectAttr "sneaks_latest:controller_spine1_translateZ.o" "sneaks_latestRN.phl[262]"
 		;
-connectAttr "sneaks_latest:controller_spine1_scaleX.o" "sneaks_latestRN.phl[47]"
+connectAttr "sneaks_latest:controller_spine1_rotateX.o" "sneaks_latestRN.phl[263]"
 		;
-connectAttr "sneaks_latest:controller_spine1_scaleY.o" "sneaks_latestRN.phl[48]"
+connectAttr "sneaks_latest:controller_spine1_rotateY.o" "sneaks_latestRN.phl[264]"
 		;
-connectAttr "sneaks_latest:controller_spine1_scaleZ.o" "sneaks_latestRN.phl[49]"
+connectAttr "sneaks_latest:controller_spine1_rotateZ.o" "sneaks_latestRN.phl[265]"
 		;
-connectAttr "sneaks_latest:controller_spine1_visibility.o" "sneaks_latestRN.phl[50]"
+connectAttr "sneaks_latest:controller_spine1_scaleX.o" "sneaks_latestRN.phl[266]"
 		;
-connectAttr "sneaks_latest:controller_shoulder_translateX.o" "sneaks_latestRN.phl[51]"
+connectAttr "sneaks_latest:controller_spine1_scaleY.o" "sneaks_latestRN.phl[267]"
 		;
-connectAttr "sneaks_latest:controller_shoulder_translateY.o" "sneaks_latestRN.phl[52]"
+connectAttr "sneaks_latest:controller_spine1_scaleZ.o" "sneaks_latestRN.phl[268]"
 		;
-connectAttr "sneaks_latest:controller_shoulder_translateZ.o" "sneaks_latestRN.phl[53]"
+connectAttr "sneaks_latest:controller_spine1_visibility.o" "sneaks_latestRN.phl[269]"
 		;
-connectAttr "sneaks_latest:controller_shoulder_rotateX.o" "sneaks_latestRN.phl[54]"
+connectAttr "sneaks_latest:controller_shoulder_translateX.o" "sneaks_latestRN.phl[270]"
 		;
-connectAttr "sneaks_latest:controller_shoulder_rotateY.o" "sneaks_latestRN.phl[55]"
+connectAttr "sneaks_latest:controller_shoulder_translateY.o" "sneaks_latestRN.phl[271]"
 		;
-connectAttr "sneaks_latest:controller_shoulder_rotateZ.o" "sneaks_latestRN.phl[56]"
+connectAttr "sneaks_latest:controller_shoulder_translateZ.o" "sneaks_latestRN.phl[272]"
 		;
-connectAttr "sneaks_latest:controller_shoulder_scaleX.o" "sneaks_latestRN.phl[57]"
+connectAttr "sneaks_latest:controller_shoulder_rotateX.o" "sneaks_latestRN.phl[273]"
 		;
-connectAttr "sneaks_latest:controller_shoulder_scaleY.o" "sneaks_latestRN.phl[58]"
+connectAttr "sneaks_latest:controller_shoulder_rotateY.o" "sneaks_latestRN.phl[274]"
 		;
-connectAttr "sneaks_latest:controller_shoulder_scaleZ.o" "sneaks_latestRN.phl[59]"
+connectAttr "sneaks_latest:controller_shoulder_rotateZ.o" "sneaks_latestRN.phl[275]"
 		;
-connectAttr "sneaks_latest:controller_shoulder_visibility.o" "sneaks_latestRN.phl[60]"
+connectAttr "sneaks_latest:controller_shoulder_scaleX.o" "sneaks_latestRN.phl[276]"
 		;
-connectAttr "sneaks_latest:controller_head_translateX.o" "sneaks_latestRN.phl[61]"
+connectAttr "sneaks_latest:controller_shoulder_scaleY.o" "sneaks_latestRN.phl[277]"
 		;
-connectAttr "sneaks_latest:controller_head_translateY.o" "sneaks_latestRN.phl[62]"
+connectAttr "sneaks_latest:controller_shoulder_scaleZ.o" "sneaks_latestRN.phl[278]"
 		;
-connectAttr "sneaks_latest:controller_head_translateZ.o" "sneaks_latestRN.phl[63]"
+connectAttr "sneaks_latest:controller_shoulder_visibility.o" "sneaks_latestRN.phl[279]"
 		;
-connectAttr "sneaks_latest:controller_head_rotateX.o" "sneaks_latestRN.phl[64]";
-connectAttr "sneaks_latest:controller_head_rotateY.o" "sneaks_latestRN.phl[65]";
-connectAttr "sneaks_latest:controller_head_rotateZ.o" "sneaks_latestRN.phl[66]";
-connectAttr "sneaks_latest:controller_head_scaleX.o" "sneaks_latestRN.phl[67]";
-connectAttr "sneaks_latest:controller_head_scaleY.o" "sneaks_latestRN.phl[68]";
-connectAttr "sneaks_latest:controller_head_scaleZ.o" "sneaks_latestRN.phl[69]";
-connectAttr "sneaks_latest:controller_head_visibility.o" "sneaks_latestRN.phl[70]"
+connectAttr "sneaks_latest:controller_head_translateX.o" "sneaks_latestRN.phl[280]"
 		;
-connectAttr "sneaks_latest:controller_hip_translateX.o" "sneaks_latestRN.phl[71]"
+connectAttr "sneaks_latest:controller_head_translateY.o" "sneaks_latestRN.phl[281]"
 		;
-connectAttr "sneaks_latest:controller_hip_translateY.o" "sneaks_latestRN.phl[72]"
+connectAttr "sneaks_latest:controller_head_translateZ.o" "sneaks_latestRN.phl[282]"
 		;
-connectAttr "sneaks_latest:controller_hip_translateZ.o" "sneaks_latestRN.phl[73]"
+connectAttr "sneaks_latest:controller_head_rotateX.o" "sneaks_latestRN.phl[283]"
 		;
-connectAttr "sneaks_latest:controller_hip_rotateX.o" "sneaks_latestRN.phl[74]";
-connectAttr "sneaks_latest:controller_hip_rotateY.o" "sneaks_latestRN.phl[75]";
-connectAttr "sneaks_latest:controller_hip_rotateZ.o" "sneaks_latestRN.phl[76]";
-connectAttr "sneaks_latest:controller_hip_scaleX.o" "sneaks_latestRN.phl[77]";
-connectAttr "sneaks_latest:controller_hip_scaleY.o" "sneaks_latestRN.phl[78]";
-connectAttr "sneaks_latest:controller_hip_scaleZ.o" "sneaks_latestRN.phl[79]";
-connectAttr "sneaks_latest:controller_hip_visibility.o" "sneaks_latestRN.phl[80]"
+connectAttr "sneaks_latest:controller_head_rotateY.o" "sneaks_latestRN.phl[284]"
 		;
-connectAttr "sneaks_latest:controller_tailbase_translateX.o" "sneaks_latestRN.phl[81]"
+connectAttr "sneaks_latest:controller_head_rotateZ.o" "sneaks_latestRN.phl[285]"
 		;
-connectAttr "sneaks_latest:controller_tailbase_translateY.o" "sneaks_latestRN.phl[82]"
+connectAttr "sneaks_latest:controller_head_scaleX.o" "sneaks_latestRN.phl[286]";
+connectAttr "sneaks_latest:controller_head_scaleY.o" "sneaks_latestRN.phl[287]";
+connectAttr "sneaks_latest:controller_head_scaleZ.o" "sneaks_latestRN.phl[288]";
+connectAttr "sneaks_latest:controller_head_visibility.o" "sneaks_latestRN.phl[289]"
 		;
-connectAttr "sneaks_latest:controller_tailbase_translateZ.o" "sneaks_latestRN.phl[83]"
+connectAttr "sneaks_latest:controller_hip_translateX.o" "sneaks_latestRN.phl[290]"
 		;
-connectAttr "sneaks_latest:controller_tailbase_rotateX.o" "sneaks_latestRN.phl[84]"
+connectAttr "sneaks_latest:controller_hip_translateY.o" "sneaks_latestRN.phl[291]"
 		;
-connectAttr "sneaks_latest:controller_tailbase_rotateY.o" "sneaks_latestRN.phl[85]"
+connectAttr "sneaks_latest:controller_hip_translateZ.o" "sneaks_latestRN.phl[292]"
 		;
-connectAttr "sneaks_latest:controller_tailbase_rotateZ.o" "sneaks_latestRN.phl[86]"
+connectAttr "sneaks_latest:controller_hip_rotateX.o" "sneaks_latestRN.phl[293]";
+connectAttr "sneaks_latest:controller_hip_rotateY.o" "sneaks_latestRN.phl[294]";
+connectAttr "sneaks_latest:controller_hip_rotateZ.o" "sneaks_latestRN.phl[295]";
+connectAttr "sneaks_latest:controller_hip_scaleX.o" "sneaks_latestRN.phl[296]";
+connectAttr "sneaks_latest:controller_hip_scaleY.o" "sneaks_latestRN.phl[297]";
+connectAttr "sneaks_latest:controller_hip_scaleZ.o" "sneaks_latestRN.phl[298]";
+connectAttr "sneaks_latest:controller_hip_visibility.o" "sneaks_latestRN.phl[299]"
 		;
-connectAttr "sneaks_latest:controller_tailbase_scaleX.o" "sneaks_latestRN.phl[87]"
+connectAttr "sneaks_latest:controller_tailbase_translateX.o" "sneaks_latestRN.phl[300]"
 		;
-connectAttr "sneaks_latest:controller_tailbase_scaleY.o" "sneaks_latestRN.phl[88]"
+connectAttr "sneaks_latest:controller_tailbase_translateY.o" "sneaks_latestRN.phl[301]"
 		;
-connectAttr "sneaks_latest:controller_tailbase_scaleZ.o" "sneaks_latestRN.phl[89]"
+connectAttr "sneaks_latest:controller_tailbase_translateZ.o" "sneaks_latestRN.phl[302]"
 		;
-connectAttr "sneaks_latest:controller_tailbase_visibility.o" "sneaks_latestRN.phl[90]"
+connectAttr "sneaks_latest:controller_tailbase_rotateX.o" "sneaks_latestRN.phl[303]"
 		;
-connectAttr "controller_tail2_translateX.o" "sneaks_latestRN.phl[91]";
-connectAttr "controller_tail2_translateY.o" "sneaks_latestRN.phl[92]";
-connectAttr "controller_tail2_translateZ.o" "sneaks_latestRN.phl[93]";
-connectAttr "controller_tail2_rotateX.o" "sneaks_latestRN.phl[94]";
-connectAttr "controller_tail2_rotateY.o" "sneaks_latestRN.phl[95]";
-connectAttr "controller_tail2_rotateZ.o" "sneaks_latestRN.phl[96]";
-connectAttr "controller_tail2_scaleX.o" "sneaks_latestRN.phl[97]";
-connectAttr "controller_tail2_scaleY.o" "sneaks_latestRN.phl[98]";
-connectAttr "controller_tail2_scaleZ.o" "sneaks_latestRN.phl[99]";
-connectAttr "controller_tail2_visibility.o" "sneaks_latestRN.phl[100]";
-connectAttr "controller_tail3_translateX.o" "sneaks_latestRN.phl[101]";
-connectAttr "controller_tail3_translateY.o" "sneaks_latestRN.phl[102]";
-connectAttr "controller_tail3_translateZ.o" "sneaks_latestRN.phl[103]";
-connectAttr "controller_tail3_rotateX.o" "sneaks_latestRN.phl[104]";
-connectAttr "controller_tail3_rotateY.o" "sneaks_latestRN.phl[105]";
-connectAttr "controller_tail3_rotateZ.o" "sneaks_latestRN.phl[106]";
-connectAttr "controller_tail3_scaleX.o" "sneaks_latestRN.phl[107]";
-connectAttr "controller_tail3_scaleY.o" "sneaks_latestRN.phl[108]";
-connectAttr "controller_tail3_scaleZ.o" "sneaks_latestRN.phl[109]";
-connectAttr "controller_tail3_visibility.o" "sneaks_latestRN.phl[110]";
-connectAttr "controller_tail4_translateX.o" "sneaks_latestRN.phl[111]";
-connectAttr "controller_tail4_translateY.o" "sneaks_latestRN.phl[112]";
-connectAttr "controller_tail4_translateZ.o" "sneaks_latestRN.phl[113]";
-connectAttr "controller_tail4_rotateX.o" "sneaks_latestRN.phl[114]";
-connectAttr "controller_tail4_rotateY.o" "sneaks_latestRN.phl[115]";
-connectAttr "controller_tail4_rotateZ.o" "sneaks_latestRN.phl[116]";
-connectAttr "controller_tail4_scaleX.o" "sneaks_latestRN.phl[117]";
-connectAttr "controller_tail4_scaleY.o" "sneaks_latestRN.phl[118]";
-connectAttr "controller_tail4_scaleZ.o" "sneaks_latestRN.phl[119]";
-connectAttr "controller_tail4_visibility.o" "sneaks_latestRN.phl[120]";
-connectAttr "sneaks_latest:controller_rightLeg_translateX.o" "sneaks_latestRN.phl[121]"
+connectAttr "sneaks_latest:controller_tailbase_rotateY.o" "sneaks_latestRN.phl[304]"
 		;
-connectAttr "sneaks_latest:controller_rightLeg_translateY.o" "sneaks_latestRN.phl[122]"
+connectAttr "sneaks_latest:controller_tailbase_rotateZ.o" "sneaks_latestRN.phl[305]"
 		;
-connectAttr "sneaks_latest:controller_rightLeg_translateZ.o" "sneaks_latestRN.phl[123]"
+connectAttr "sneaks_latest:controller_tailbase_scaleX.o" "sneaks_latestRN.phl[306]"
 		;
-connectAttr "sneaks_latest:controller_rightLeg_rotateX.o" "sneaks_latestRN.phl[124]"
+connectAttr "sneaks_latest:controller_tailbase_scaleY.o" "sneaks_latestRN.phl[307]"
 		;
-connectAttr "sneaks_latest:controller_rightLeg_rotateY.o" "sneaks_latestRN.phl[125]"
+connectAttr "sneaks_latest:controller_tailbase_scaleZ.o" "sneaks_latestRN.phl[308]"
 		;
-connectAttr "sneaks_latest:controller_rightLeg_rotateZ.o" "sneaks_latestRN.phl[126]"
+connectAttr "sneaks_latest:controller_tailbase_visibility.o" "sneaks_latestRN.phl[309]"
 		;
-connectAttr "sneaks_latest:controller_rightLeg_visibility.o" "sneaks_latestRN.phl[127]"
+connectAttr "controller_tail2_translateX.o" "sneaks_latestRN.phl[310]";
+connectAttr "controller_tail2_translateY.o" "sneaks_latestRN.phl[311]";
+connectAttr "controller_tail2_translateZ.o" "sneaks_latestRN.phl[312]";
+connectAttr "controller_tail2_rotateX.o" "sneaks_latestRN.phl[313]";
+connectAttr "controller_tail2_rotateY.o" "sneaks_latestRN.phl[314]";
+connectAttr "controller_tail2_rotateZ.o" "sneaks_latestRN.phl[315]";
+connectAttr "controller_tail2_scaleX.o" "sneaks_latestRN.phl[316]";
+connectAttr "controller_tail2_scaleY.o" "sneaks_latestRN.phl[317]";
+connectAttr "controller_tail2_scaleZ.o" "sneaks_latestRN.phl[318]";
+connectAttr "controller_tail2_visibility.o" "sneaks_latestRN.phl[319]";
+connectAttr "controller_tail3_translateX.o" "sneaks_latestRN.phl[320]";
+connectAttr "controller_tail3_translateY.o" "sneaks_latestRN.phl[321]";
+connectAttr "controller_tail3_translateZ.o" "sneaks_latestRN.phl[322]";
+connectAttr "controller_tail3_rotateX.o" "sneaks_latestRN.phl[323]";
+connectAttr "controller_tail3_rotateY.o" "sneaks_latestRN.phl[324]";
+connectAttr "controller_tail3_rotateZ.o" "sneaks_latestRN.phl[325]";
+connectAttr "controller_tail3_scaleX.o" "sneaks_latestRN.phl[326]";
+connectAttr "controller_tail3_scaleY.o" "sneaks_latestRN.phl[327]";
+connectAttr "controller_tail3_scaleZ.o" "sneaks_latestRN.phl[328]";
+connectAttr "controller_tail3_visibility.o" "sneaks_latestRN.phl[329]";
+connectAttr "controller_tail4_translateX.o" "sneaks_latestRN.phl[330]";
+connectAttr "controller_tail4_translateY.o" "sneaks_latestRN.phl[331]";
+connectAttr "controller_tail4_translateZ.o" "sneaks_latestRN.phl[332]";
+connectAttr "controller_tail4_rotateX.o" "sneaks_latestRN.phl[333]";
+connectAttr "controller_tail4_rotateY.o" "sneaks_latestRN.phl[334]";
+connectAttr "controller_tail4_rotateZ.o" "sneaks_latestRN.phl[335]";
+connectAttr "controller_tail4_scaleX.o" "sneaks_latestRN.phl[336]";
+connectAttr "controller_tail4_scaleY.o" "sneaks_latestRN.phl[337]";
+connectAttr "controller_tail4_scaleZ.o" "sneaks_latestRN.phl[338]";
+connectAttr "controller_tail4_visibility.o" "sneaks_latestRN.phl[339]";
+connectAttr "sneaks_latest:controller_rightLeg_translateX.o" "sneaks_latestRN.phl[340]"
 		;
-connectAttr "sneaks_latest:controller_rightLeg_scaleX.o" "sneaks_latestRN.phl[128]"
+connectAttr "sneaks_latest:controller_rightLeg_translateY.o" "sneaks_latestRN.phl[341]"
 		;
-connectAttr "sneaks_latest:controller_rightLeg_scaleY.o" "sneaks_latestRN.phl[129]"
+connectAttr "sneaks_latest:controller_rightLeg_translateZ.o" "sneaks_latestRN.phl[342]"
 		;
-connectAttr "sneaks_latest:controller_rightLeg_scaleZ.o" "sneaks_latestRN.phl[130]"
+connectAttr "sneaks_latest:controller_rightLeg_rotateX.o" "sneaks_latestRN.phl[343]"
 		;
-connectAttr "RightLeg_rotateX.o" "sneaks_latestRN.phl[131]";
-connectAttr "RightLeg_rotateY.o" "sneaks_latestRN.phl[132]";
-connectAttr "RightLeg_rotateZ.o" "sneaks_latestRN.phl[133]";
-connectAttr "RightLeg_translateX.o" "sneaks_latestRN.phl[134]";
-connectAttr "RightLeg_translateY.o" "sneaks_latestRN.phl[135]";
-connectAttr "RightLeg_translateZ.o" "sneaks_latestRN.phl[136]";
-connectAttr "RightLeg_visibility.o" "sneaks_latestRN.phl[137]";
-connectAttr "RightLeg_scaleX.o" "sneaks_latestRN.phl[138]";
-connectAttr "RightLeg_scaleY.o" "sneaks_latestRN.phl[139]";
-connectAttr "RightLeg_scaleZ.o" "sneaks_latestRN.phl[140]";
-connectAttr "sneaks_latest:controller_leftArm_translateX.o" "sneaks_latestRN.phl[141]"
+connectAttr "sneaks_latest:controller_rightLeg_rotateY.o" "sneaks_latestRN.phl[344]"
 		;
-connectAttr "sneaks_latest:controller_leftArm_translateY.o" "sneaks_latestRN.phl[142]"
+connectAttr "sneaks_latest:controller_rightLeg_rotateZ.o" "sneaks_latestRN.phl[345]"
 		;
-connectAttr "sneaks_latest:controller_leftArm_translateZ.o" "sneaks_latestRN.phl[143]"
+connectAttr "sneaks_latest:controller_rightLeg_visibility.o" "sneaks_latestRN.phl[346]"
 		;
-connectAttr "sneaks_latest:controller_leftArm_rotateX.o" "sneaks_latestRN.phl[144]"
+connectAttr "sneaks_latest:controller_rightLeg_scaleX.o" "sneaks_latestRN.phl[347]"
 		;
-connectAttr "sneaks_latest:controller_leftArm_rotateY.o" "sneaks_latestRN.phl[145]"
+connectAttr "sneaks_latest:controller_rightLeg_scaleY.o" "sneaks_latestRN.phl[348]"
 		;
-connectAttr "sneaks_latest:controller_leftArm_rotateZ.o" "sneaks_latestRN.phl[146]"
+connectAttr "sneaks_latest:controller_rightLeg_scaleZ.o" "sneaks_latestRN.phl[349]"
 		;
-connectAttr "sneaks_latest:controller_leftArm_visibility.o" "sneaks_latestRN.phl[147]"
+connectAttr "RightLeg_rotateX.o" "sneaks_latestRN.phl[350]";
+connectAttr "RightLeg_rotateY.o" "sneaks_latestRN.phl[351]";
+connectAttr "RightLeg_rotateZ.o" "sneaks_latestRN.phl[352]";
+connectAttr "RightLeg_translateX.o" "sneaks_latestRN.phl[353]";
+connectAttr "RightLeg_translateY.o" "sneaks_latestRN.phl[354]";
+connectAttr "RightLeg_translateZ.o" "sneaks_latestRN.phl[355]";
+connectAttr "RightLeg_visibility.o" "sneaks_latestRN.phl[356]";
+connectAttr "RightLeg_scaleX.o" "sneaks_latestRN.phl[357]";
+connectAttr "RightLeg_scaleY.o" "sneaks_latestRN.phl[358]";
+connectAttr "RightLeg_scaleZ.o" "sneaks_latestRN.phl[359]";
+connectAttr "sneaks_latest:controller_leftArm_translateX.o" "sneaks_latestRN.phl[360]"
 		;
-connectAttr "sneaks_latest:controller_leftArm_scaleX.o" "sneaks_latestRN.phl[148]"
+connectAttr "sneaks_latest:controller_leftArm_translateY.o" "sneaks_latestRN.phl[361]"
 		;
-connectAttr "sneaks_latest:controller_leftArm_scaleY.o" "sneaks_latestRN.phl[149]"
+connectAttr "sneaks_latest:controller_leftArm_translateZ.o" "sneaks_latestRN.phl[362]"
 		;
-connectAttr "sneaks_latest:controller_leftArm_scaleZ.o" "sneaks_latestRN.phl[150]"
+connectAttr "sneaks_latest:controller_leftArm_rotateX.o" "sneaks_latestRN.phl[363]"
 		;
-connectAttr "sneaks_latest:LeftArm_rotateX.o" "sneaks_latestRN.phl[151]";
-connectAttr "sneaks_latest:LeftArm_rotateY.o" "sneaks_latestRN.phl[152]";
-connectAttr "sneaks_latest:LeftArm_rotateZ.o" "sneaks_latestRN.phl[153]";
-connectAttr "sneaks_latest:LeftArm_translateX.o" "sneaks_latestRN.phl[154]";
-connectAttr "sneaks_latest:LeftArm_translateY.o" "sneaks_latestRN.phl[155]";
-connectAttr "sneaks_latest:LeftArm_translateZ.o" "sneaks_latestRN.phl[156]";
-connectAttr "sneaks_latest:LeftArm_visibility.o" "sneaks_latestRN.phl[157]";
-connectAttr "sneaks_latest:LeftArm_scaleX.o" "sneaks_latestRN.phl[158]";
-connectAttr "sneaks_latest:LeftArm_scaleY.o" "sneaks_latestRN.phl[159]";
-connectAttr "sneaks_latest:LeftArm_scaleZ.o" "sneaks_latestRN.phl[160]";
-connectAttr "sneaks_latest:controller_rightLeg1_translateX.o" "sneaks_latestRN.phl[161]"
+connectAttr "sneaks_latest:controller_leftArm_rotateY.o" "sneaks_latestRN.phl[364]"
 		;
-connectAttr "sneaks_latest:controller_rightLeg1_translateY.o" "sneaks_latestRN.phl[162]"
+connectAttr "sneaks_latest:controller_leftArm_rotateZ.o" "sneaks_latestRN.phl[365]"
 		;
-connectAttr "sneaks_latest:controller_rightLeg1_translateZ.o" "sneaks_latestRN.phl[163]"
+connectAttr "sneaks_latest:controller_leftArm_visibility.o" "sneaks_latestRN.phl[366]"
 		;
-connectAttr "sneaks_latest:controller_rightLeg1_visibility.o" "sneaks_latestRN.phl[164]"
+connectAttr "sneaks_latest:controller_leftArm_scaleX.o" "sneaks_latestRN.phl[367]"
 		;
-connectAttr "sneaks_latest:controller_rightLeg1_rotateX.o" "sneaks_latestRN.phl[165]"
+connectAttr "sneaks_latest:controller_leftArm_scaleY.o" "sneaks_latestRN.phl[368]"
 		;
-connectAttr "sneaks_latest:controller_rightLeg1_rotateY.o" "sneaks_latestRN.phl[166]"
+connectAttr "sneaks_latest:controller_leftArm_scaleZ.o" "sneaks_latestRN.phl[369]"
 		;
-connectAttr "sneaks_latest:controller_rightLeg1_rotateZ.o" "sneaks_latestRN.phl[167]"
+connectAttr "sneaks_latest:LeftArm_rotateX.o" "sneaks_latestRN.phl[370]";
+connectAttr "sneaks_latest:LeftArm_rotateY.o" "sneaks_latestRN.phl[371]";
+connectAttr "sneaks_latest:LeftArm_rotateZ.o" "sneaks_latestRN.phl[372]";
+connectAttr "sneaks_latest:LeftArm_translateX.o" "sneaks_latestRN.phl[373]";
+connectAttr "sneaks_latest:LeftArm_translateY.o" "sneaks_latestRN.phl[374]";
+connectAttr "sneaks_latest:LeftArm_translateZ.o" "sneaks_latestRN.phl[375]";
+connectAttr "sneaks_latest:LeftArm_visibility.o" "sneaks_latestRN.phl[376]";
+connectAttr "sneaks_latest:LeftArm_scaleX.o" "sneaks_latestRN.phl[377]";
+connectAttr "sneaks_latest:LeftArm_scaleY.o" "sneaks_latestRN.phl[378]";
+connectAttr "sneaks_latest:LeftArm_scaleZ.o" "sneaks_latestRN.phl[379]";
+connectAttr "sneaks_latest:controller_rightLeg1_translateX.o" "sneaks_latestRN.phl[380]"
 		;
-connectAttr "sneaks_latest:controller_rightLeg1_scaleX.o" "sneaks_latestRN.phl[168]"
+connectAttr "sneaks_latest:controller_rightLeg1_translateY.o" "sneaks_latestRN.phl[381]"
 		;
-connectAttr "sneaks_latest:controller_rightLeg1_scaleY.o" "sneaks_latestRN.phl[169]"
+connectAttr "sneaks_latest:controller_rightLeg1_translateZ.o" "sneaks_latestRN.phl[382]"
 		;
-connectAttr "sneaks_latest:controller_rightLeg1_scaleZ.o" "sneaks_latestRN.phl[170]"
+connectAttr "sneaks_latest:controller_rightLeg1_visibility.o" "sneaks_latestRN.phl[383]"
 		;
-connectAttr "LeftLeg_rotateX.o" "sneaks_latestRN.phl[171]";
-connectAttr "LeftLeg_rotateY.o" "sneaks_latestRN.phl[172]";
-connectAttr "LeftLeg_rotateZ.o" "sneaks_latestRN.phl[173]";
-connectAttr "LeftLeg_translateX.o" "sneaks_latestRN.phl[174]";
-connectAttr "LeftLeg_translateY.o" "sneaks_latestRN.phl[175]";
-connectAttr "LeftLeg_translateZ.o" "sneaks_latestRN.phl[176]";
-connectAttr "LeftLeg_visibility.o" "sneaks_latestRN.phl[177]";
-connectAttr "LeftLeg_scaleX.o" "sneaks_latestRN.phl[178]";
-connectAttr "LeftLeg_scaleY.o" "sneaks_latestRN.phl[179]";
-connectAttr "LeftLeg_scaleZ.o" "sneaks_latestRN.phl[180]";
-connectAttr "sneaks_latest:controller_rightArm_translateX.o" "sneaks_latestRN.phl[181]"
+connectAttr "sneaks_latest:controller_rightLeg1_rotateX.o" "sneaks_latestRN.phl[384]"
 		;
-connectAttr "sneaks_latest:controller_rightArm_translateY.o" "sneaks_latestRN.phl[182]"
+connectAttr "sneaks_latest:controller_rightLeg1_rotateY.o" "sneaks_latestRN.phl[385]"
 		;
-connectAttr "sneaks_latest:controller_rightArm_translateZ.o" "sneaks_latestRN.phl[183]"
+connectAttr "sneaks_latest:controller_rightLeg1_rotateZ.o" "sneaks_latestRN.phl[386]"
 		;
-connectAttr "sneaks_latest:controller_rightArm_rotateX.o" "sneaks_latestRN.phl[184]"
+connectAttr "sneaks_latest:controller_rightLeg1_scaleX.o" "sneaks_latestRN.phl[387]"
 		;
-connectAttr "sneaks_latest:controller_rightArm_rotateY.o" "sneaks_latestRN.phl[185]"
+connectAttr "sneaks_latest:controller_rightLeg1_scaleY.o" "sneaks_latestRN.phl[388]"
 		;
-connectAttr "sneaks_latest:controller_rightArm_rotateZ.o" "sneaks_latestRN.phl[186]"
+connectAttr "sneaks_latest:controller_rightLeg1_scaleZ.o" "sneaks_latestRN.phl[389]"
 		;
-connectAttr "sneaks_latest:controller_rightArm_visibility.o" "sneaks_latestRN.phl[187]"
+connectAttr "LeftLeg_rotateX.o" "sneaks_latestRN.phl[390]";
+connectAttr "LeftLeg_rotateY.o" "sneaks_latestRN.phl[391]";
+connectAttr "LeftLeg_rotateZ.o" "sneaks_latestRN.phl[392]";
+connectAttr "LeftLeg_translateX.o" "sneaks_latestRN.phl[393]";
+connectAttr "LeftLeg_translateY.o" "sneaks_latestRN.phl[394]";
+connectAttr "LeftLeg_translateZ.o" "sneaks_latestRN.phl[395]";
+connectAttr "LeftLeg_visibility.o" "sneaks_latestRN.phl[396]";
+connectAttr "LeftLeg_scaleX.o" "sneaks_latestRN.phl[397]";
+connectAttr "LeftLeg_scaleY.o" "sneaks_latestRN.phl[398]";
+connectAttr "LeftLeg_scaleZ.o" "sneaks_latestRN.phl[399]";
+connectAttr "sneaks_latest:controller_rightArm_translateX.o" "sneaks_latestRN.phl[400]"
 		;
-connectAttr "sneaks_latest:controller_rightArm_scaleX.o" "sneaks_latestRN.phl[188]"
+connectAttr "sneaks_latest:controller_rightArm_translateY.o" "sneaks_latestRN.phl[401]"
 		;
-connectAttr "sneaks_latest:controller_rightArm_scaleY.o" "sneaks_latestRN.phl[189]"
+connectAttr "sneaks_latest:controller_rightArm_translateZ.o" "sneaks_latestRN.phl[402]"
 		;
-connectAttr "sneaks_latest:controller_rightArm_scaleZ.o" "sneaks_latestRN.phl[190]"
+connectAttr "sneaks_latest:controller_rightArm_rotateX.o" "sneaks_latestRN.phl[403]"
 		;
-connectAttr "sneaks_latest:RightArm_rotateX.o" "sneaks_latestRN.phl[191]";
-connectAttr "sneaks_latest:RightArm_rotateY.o" "sneaks_latestRN.phl[192]";
-connectAttr "sneaks_latest:RightArm_rotateZ.o" "sneaks_latestRN.phl[193]";
-connectAttr "sneaks_latest:RightArm_translateX.o" "sneaks_latestRN.phl[194]";
-connectAttr "sneaks_latest:RightArm_translateY.o" "sneaks_latestRN.phl[195]";
-connectAttr "sneaks_latest:RightArm_translateZ.o" "sneaks_latestRN.phl[196]";
-connectAttr "sneaks_latest:RightArm_visibility.o" "sneaks_latestRN.phl[197]";
-connectAttr "sneaks_latest:RightArm_scaleX.o" "sneaks_latestRN.phl[198]";
-connectAttr "sneaks_latest:RightArm_scaleY.o" "sneaks_latestRN.phl[199]";
-connectAttr "sneaks_latest:RightArm_scaleZ.o" "sneaks_latestRN.phl[200]";
-connectAttr "tuffs_latestRN.phl[1]" "sneaks_latestRN.phl[201]";
-connectAttr "tuffs_latestRN.phl[2]" "sneaks_latestRN.phl[202]";
-connectAttr "blendShape1_neutral.o" "sneaks_latestRN.phl[203]";
-connectAttr "blendShape1_super_angry.o" "sneaks_latestRN.phl[204]";
-connectAttr "blendShape1_slightly_angry.o" "sneaks_latestRN.phl[205]";
-connectAttr "blendShape1_smile1.o" "sneaks_latestRN.phl[206]";
-connectAttr "blendShape1_pervy.o" "sneaks_latestRN.phl[207]";
-connectAttr "blendShape1_smile.o" "sneaks_latestRN.phl[208]";
-connectAttr "blendShape1_blink.o" "sneaks_latestRN.phl[209]";
-connectAttr "blendShape1_ears.o" "sneaks_latestRN.phl[210]";
-connectAttr "blendShape1_nose.o" "sneaks_latestRN.phl[211]";
-connectAttr "sneaks_latestRN.phl[212]" "sneaks_latestRN.phl[213]";
-connectAttr "sneaks_latestRN.phl[214]" "sneaks_latestRN.phl[215]";
-connectAttr "sneaks_latestRN.phl[216]" "sneaks_latestRN.phl[217]";
-connectAttr "sneaks_latestRN.phl[218]" "sneaks_latestRN.phl[219]";
-connectAttr "sneaks_latestRN.phl[220]" "sneaks_latestRN.phl[221]";
+connectAttr "sneaks_latest:controller_rightArm_rotateY.o" "sneaks_latestRN.phl[404]"
+		;
+connectAttr "sneaks_latest:controller_rightArm_rotateZ.o" "sneaks_latestRN.phl[405]"
+		;
+connectAttr "sneaks_latest:controller_rightArm_visibility.o" "sneaks_latestRN.phl[406]"
+		;
+connectAttr "sneaks_latest:controller_rightArm_scaleX.o" "sneaks_latestRN.phl[407]"
+		;
+connectAttr "sneaks_latest:controller_rightArm_scaleY.o" "sneaks_latestRN.phl[408]"
+		;
+connectAttr "sneaks_latest:controller_rightArm_scaleZ.o" "sneaks_latestRN.phl[409]"
+		;
+connectAttr "sneaks_latest:RightArm_rotateX.o" "sneaks_latestRN.phl[410]";
+connectAttr "sneaks_latest:RightArm_rotateY.o" "sneaks_latestRN.phl[411]";
+connectAttr "sneaks_latest:RightArm_rotateZ.o" "sneaks_latestRN.phl[412]";
+connectAttr "sneaks_latest:RightArm_translateX.o" "sneaks_latestRN.phl[413]";
+connectAttr "sneaks_latest:RightArm_translateY.o" "sneaks_latestRN.phl[414]";
+connectAttr "sneaks_latest:RightArm_translateZ.o" "sneaks_latestRN.phl[415]";
+connectAttr "sneaks_latest:RightArm_visibility.o" "sneaks_latestRN.phl[416]";
+connectAttr "sneaks_latest:RightArm_scaleX.o" "sneaks_latestRN.phl[417]";
+connectAttr "sneaks_latest:RightArm_scaleY.o" "sneaks_latestRN.phl[418]";
+connectAttr "sneaks_latest:RightArm_scaleZ.o" "sneaks_latestRN.phl[419]";
+connectAttr "tuffs_latestRN.phl[1]" "sneaks_latestRN.phl[420]";
+connectAttr "tuffs_latestRN.phl[2]" "sneaks_latestRN.phl[421]";
+connectAttr "sneaks_latestRN.phl[422]" "sneaks_latestRN.phl[423]";
+connectAttr "blendShape1_neutral.o" "sneaks_latestRN.phl[424]";
+connectAttr "blendShape1_super_angry.o" "sneaks_latestRN.phl[425]";
+connectAttr "blendShape1_slightly_angry.o" "sneaks_latestRN.phl[426]";
+connectAttr "blendShape1_smile1.o" "sneaks_latestRN.phl[427]";
+connectAttr "blendShape1_pervy.o" "sneaks_latestRN.phl[428]";
+connectAttr "blendShape1_smile.o" "sneaks_latestRN.phl[429]";
+connectAttr "blendShape1_blink.o" "sneaks_latestRN.phl[430]";
+connectAttr "blendShape1_ears.o" "sneaks_latestRN.phl[431]";
+connectAttr "blendShape1_nose.o" "sneaks_latestRN.phl[432]";
 connectAttr "tuffs_latest:controller_root_translateX.o" "tuffs_latestRN.phl[3]";
 connectAttr "tuffs_latest:controller_root_translateY.o" "tuffs_latestRN.phl[4]";
 connectAttr "tuffs_latest:controller_root_translateZ.o" "tuffs_latestRN.phl[5]";
@@ -28945,18 +29155,6 @@ connectAttr "smarty_latest:leftArm_ctrl_rotateZ.o" "smarty_latestRN.phl[53]";
 connectAttr "smarty_latest:leftArm_ctrl_translateX.o" "smarty_latestRN.phl[54]";
 connectAttr "smarty_latest:leftArm_ctrl_translateY.o" "smarty_latestRN.phl[55]";
 connectAttr "smarty_latest:leftArm_ctrl_translateZ.o" "smarty_latestRN.phl[56]";
-connectAttr "livingroom_shading_latestRN.phl[143]" "livingroom_shading_latestRN.phl[144]"
-		;
-connectAttr "livingroom_shading_latestRN.phl[145]" "livingroom_shading_latestRN.phl[146]"
-		;
-connectAttr "livingroom_shading_latestRN.phl[147]" "livingroom_shading_latestRN.phl[148]"
-		;
-connectAttr "livingroom_shading_latestRN.phl[149]" "livingroom_shading_latestRN.phl[150]"
-		;
-connectAttr "livingroom_shading_latestRN.phl[151]" "livingroom_shading_latestRN.phl[152]"
-		;
-connectAttr "livingroom_shading_latestRN.phl[153]" "livingroom_shading_latestRN.phl[154]"
-		;
 connectAttr "livingroom_shading_latestRN.phl[129]" "livingroom_shading_latestRN.phl[130]"
 		;
 connectAttr "livingroom_shading_latestRN.phl[131]" "livingroom_shading_latestRN.phl[132]"
@@ -28971,16 +29169,6 @@ connectAttr "livingroom_shading_latestRN.phl[140]" "livingroom_shading_latestRN.
 		;
 connectAttr "livingroom_shading_latestRN.phl[142]" "livingroom_shading_latestRN.phl[141]"
 		;
-connectAttr "exit_window_1Shape9.ciog.cog[1]" "livingroom_shading_latestRN.phl[182]"
-		;
-connectAttr "groupId8.msg" "livingroom_shading_latestRN.phl[183]";
-connectAttr "groupId5.msg" "livingroom_shading_latestRN.phl[184]";
-connectAttr "groupId6.msg" "livingroom_shading_latestRN.phl[185]";
-connectAttr "exit_window_1Shape9.iog.og[1]" "livingroom_shading_latestRN.phl[186]"
-		;
-connectAttr "livingroom_shading_latestRN.phl[187]" "exit_window_1Shape9.iog.og[1].gco"
-		;
-connectAttr "groupId7.msg" "livingroom_shading_latestRN.phl[188]";
 connectAttr "livingroom_shading_latestRN.phl[117]" "livingroom_shading_latestRN.phl[118]"
 		;
 connectAttr "livingroom_shading_latestRN.phl[119]" "livingroom_shading_latestRN.phl[120]"
@@ -29020,7 +29208,47 @@ connectAttr "coffee_table1_rotateZ.o" "livingroom_shading_latestRN.phl[177]";
 connectAttr "coffee_table1_scaleX.o" "livingroom_shading_latestRN.phl[178]";
 connectAttr "coffee_table1_scaleY.o" "livingroom_shading_latestRN.phl[179]";
 connectAttr "coffee_table1_scaleZ.o" "livingroom_shading_latestRN.phl[180]";
-connectAttr "livingroom_shading_latestRN.phl[181]" "exit_window_9.do";
+connectAttr "livingroom_shading_latest:living_room_latest:armchair_pillow_1_translateX.o" "livingroom_shading_latestRN.phl[181]"
+		;
+connectAttr "livingroom_shading_latest:living_room_latest:armchair_pillow_1_translateY.o" "livingroom_shading_latestRN.phl[182]"
+		;
+connectAttr "livingroom_shading_latest:living_room_latest:armchair_pillow_1_translateZ.o" "livingroom_shading_latestRN.phl[183]"
+		;
+connectAttr "livingroom_shading_latest:living_room_latest:armchair_pillow_1_rotateX.o" "livingroom_shading_latestRN.phl[184]"
+		;
+connectAttr "livingroom_shading_latest:living_room_latest:armchair_pillow_1_rotateY.o" "livingroom_shading_latestRN.phl[185]"
+		;
+connectAttr "livingroom_shading_latest:living_room_latest:armchair_pillow_1_rotateZ.o" "livingroom_shading_latestRN.phl[186]"
+		;
+connectAttr "livingroom_shading_latest:living_room_latest:armchair_pillow_1_visibility.o" "livingroom_shading_latestRN.phl[187]"
+		;
+connectAttr "livingroom_shading_latest:living_room_latest:armchair_pillow_1_scaleX.o" "livingroom_shading_latestRN.phl[188]"
+		;
+connectAttr "livingroom_shading_latest:living_room_latest:armchair_pillow_1_scaleY.o" "livingroom_shading_latestRN.phl[189]"
+		;
+connectAttr "livingroom_shading_latest:living_room_latest:armchair_pillow_1_scaleZ.o" "livingroom_shading_latestRN.phl[190]"
+		;
+connectAttr "livingroom_shading_latest:living_room_latest:armchair_pillow_2_translateX.o" "livingroom_shading_latestRN.phl[191]"
+		;
+connectAttr "livingroom_shading_latest:living_room_latest:armchair_pillow_2_translateY.o" "livingroom_shading_latestRN.phl[192]"
+		;
+connectAttr "livingroom_shading_latest:living_room_latest:armchair_pillow_2_translateZ.o" "livingroom_shading_latestRN.phl[193]"
+		;
+connectAttr "livingroom_shading_latest:living_room_latest:armchair_pillow_2_rotateX.o" "livingroom_shading_latestRN.phl[194]"
+		;
+connectAttr "livingroom_shading_latest:living_room_latest:armchair_pillow_2_rotateY.o" "livingroom_shading_latestRN.phl[195]"
+		;
+connectAttr "livingroom_shading_latest:living_room_latest:armchair_pillow_2_rotateZ.o" "livingroom_shading_latestRN.phl[196]"
+		;
+connectAttr "livingroom_shading_latest:living_room_latest:armchair_pillow_2_visibility.o" "livingroom_shading_latestRN.phl[197]"
+		;
+connectAttr "livingroom_shading_latest:living_room_latest:armchair_pillow_2_scaleX.o" "livingroom_shading_latestRN.phl[198]"
+		;
+connectAttr "livingroom_shading_latest:living_room_latest:armchair_pillow_2_scaleY.o" "livingroom_shading_latestRN.phl[199]"
+		;
+connectAttr "livingroom_shading_latest:living_room_latest:armchair_pillow_2_scaleZ.o" "livingroom_shading_latestRN.phl[200]"
+		;
+connectAttr "livingroom_shading_latestRN.phl[201]" "exit_window_9.do";
 connectAttr "livingroom_shading_latestRN.phl[125]" "livingroom_shading_latestRN.phl[126]"
 		;
 connectAttr "livingroom_shading_latestRN.phl[127]" "livingroom_shading_latestRN.phl[128]"
@@ -29029,6 +29257,28 @@ connectAttr "livingroom_shading_latestRN.phl[113]" "livingroom_shading_latestRN.
 		;
 connectAttr "livingroom_shading_latestRN.phl[115]" "livingroom_shading_latestRN.phl[116]"
 		;
+connectAttr "livingroom_shading_latestRN.phl[143]" "livingroom_shading_latestRN.phl[144]"
+		;
+connectAttr "livingroom_shading_latestRN.phl[145]" "livingroom_shading_latestRN.phl[146]"
+		;
+connectAttr "livingroom_shading_latestRN.phl[147]" "livingroom_shading_latestRN.phl[148]"
+		;
+connectAttr "livingroom_shading_latestRN.phl[149]" "livingroom_shading_latestRN.phl[150]"
+		;
+connectAttr "livingroom_shading_latestRN.phl[151]" "livingroom_shading_latestRN.phl[152]"
+		;
+connectAttr "livingroom_shading_latestRN.phl[153]" "livingroom_shading_latestRN.phl[154]"
+		;
+connectAttr "exit_window_1Shape9.ciog.cog[1]" "livingroom_shading_latestRN.phl[202]"
+		;
+connectAttr "groupId8.msg" "livingroom_shading_latestRN.phl[203]";
+connectAttr "groupId5.msg" "livingroom_shading_latestRN.phl[204]";
+connectAttr "groupId6.msg" "livingroom_shading_latestRN.phl[205]";
+connectAttr "exit_window_1Shape9.iog.og[1]" "livingroom_shading_latestRN.phl[206]"
+		;
+connectAttr "livingroom_shading_latestRN.phl[207]" "exit_window_1Shape9.iog.og[1].gco"
+		;
+connectAttr "groupId7.msg" "livingroom_shading_latestRN.phl[208]";
 connectAttr "camera1_translateX.o" "camera1.tx";
 connectAttr "camera1_translateY.o" "camera1.ty";
 connectAttr "camera1_translateZ.o" "camera1.tz";
@@ -29164,6 +29414,10 @@ relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":default
 relationship "shadowLink" ":lightLinker1" "bike_rig:lambert3SG.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
+connectAttr "sneaks_latestRN.phl[212]" "sneaks_latestRN.phl[213]";
+connectAttr "sneaks_latestRN.phl[214]" "sneaks_latestRN.phl[215]";
+connectAttr "sneaks_latestRN.phl[216]" "sneaks_latestRN.phl[217]";
+connectAttr "sneaks_latestRN.phl[218]" "sneaks_latestRN.phl[219]";
 connectAttr "hyperView1.msg" "nodeEditorPanel1Info.b[0]";
 connectAttr "hyperLayout1.msg" "hyperView1.hl";
 connectAttr "uiConfigurationScriptNode.msg" "hyperLayout1.hyp[0].dn";

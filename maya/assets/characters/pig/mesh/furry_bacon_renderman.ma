@@ -1,6 +1,6 @@
 //Maya ASCII 2015 scene
 //Name: furry_bacon_renderman.ma
-//Last modified: Tue, Mar 17, 2015 01:42:14 AM
+//Last modified: Tue, Mar 17, 2015 06:15:29 PM
 //Codeset: 1252
 requires maya "2015";
 requires -nodeType "RenderMan" -nodeType "PxrLMDiffuse" -nodeType "PxrHSL" -nodeType "RMSGeoAreaLight"
@@ -25223,11 +25223,11 @@ createNode place2dTexture -n "place2dTexture13";
 createNode noise -n "noise2";
 	setAttr ".ail" yes;
 	setAttr ".dc" -type "float3" 0.51282519 0.51282519 0.51282519 ;
-	setAttr ".a" 0.059999998658895493;
+	setAttr ".a" 0.029999999329447746;
 	setAttr ".fq" 1000;
-	setAttr ".nty" 4;
+	setAttr ".nty" 0;
 createNode place2dTexture -n "place2dTexture14";
-	setAttr ".re" -type "float2" 1 0.30000001 ;
+	setAttr ".re" -type "float2" 1 0.33333001 ;
 createNode displacementShader -n "displacementShader1";
 createNode remapValue -n "remapValue1";
 	setAttr ".omn" -0.5;

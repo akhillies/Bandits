@@ -1,6 +1,6 @@
 //Maya ASCII 2015 scene
-//Name: smarty_initial_living_room.ma
-//Last modified: Sat, Mar 21, 2015 02:53:45 AM
+//Name: smarty_initial_living_room.0001.ma
+//Last modified: Sat, Mar 21, 2015 01:58:19 AM
 //Codeset: 1252
 file -rdi 1 -rpr "livingroom_shading_latest" -rfn "livingroom_shading_latestRN"
 		 "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/sets/livingroom_shading/livingroom_shading_latest.ma";
@@ -61,16 +61,19 @@ file -rdi 2 -ns "NewSmarty_024" -rfn "smartybike_NewSmarty_024RN" "assets/charac
 file -rdi 2 -ns "bike" -rfn "smartybike_bikeRN" "/Users/scai/Bandits/maya//assets/props/bike_rig.ma";
 file -rdi 1 -rpr "pig_latest" -rfn "pig_latestRN" "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/pig/pig_latest.ma";
 file -rdi 2 -ns "key_latest" -rfn "pig_latest_key_latestRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/props/keys/key_latest.ma";
+file -rdi 1 -rpr "light_setup_004" -rfn "light_setup_004RN" "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/sets/livingroom/versions/light_setup_004.ma";
 file -r -rpr "livingroom_shading_latest" -dr 1 -rfn "livingroom_shading_latestRN"
 		 "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/sets/livingroom_shading/livingroom_shading_latest.ma";
 file -r -rpr "smartybike" -dr 1 -rfn "smartybikeRN" "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/smarty/smartybike.ma";
 file -r -rpr "pig_latest" -dr 1 -rfn "pig_latestRN" "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/pig/pig_latest.ma";
+file -r -rpr "light_setup_004" -dr 1 -rfn "light_setup_004RN" "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/sets/livingroom/versions/light_setup_004.ma";
 requires maya "2015";
 requires -nodeType "FurGlobals" "Fur" "2015";
 requires "stereoCamera" "10.0";
 requires "Mayatomr" "2013.0 - 3.10.1.4 ";
 requires "FurryBall_2013" "4.8.3522";
 currentUnit -l centimeter -a degree -t ntsc;
+fileInfo "exportedFrom" "C:/Users/Saurabh/Documents/GitHub/Bandits/maya/scenes/smarty_initial_living_room.ma";
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2015";
 fileInfo "version" "2015";
@@ -79,16 +82,17 @@ fileInfo "osv" "Microsoft Windows 8 Home Premium Edition, 64-bit  (Build 9200)\n
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -191.25512479277643 5.3250037429173478 92.317331496890603 ;
-	setAttr ".r" -type "double3" -368.7383527292281 -422.19999999991182 -1.7048916104974203e-015 ;
+	setAttr ".t" -type "double3" -185.76001275245488 0.66421452249601365 80.602175835450282 ;
+	setAttr ".r" -type "double3" -357.93835272958387 -444.9999999999207 -2.2807982735442568e-015 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
+	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 24.895415895222413;
+	setAttr ".coi" 15.565814836237513;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -166.8726153874486 -0.069923976560336776 82.541421671469621 ;
+	setAttr ".tp" -type "double3" -167.45385905465861 0.89087098321456426 83.942642761558943 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	setAttr ".v" no;
@@ -667,7 +671,7 @@ createNode parentConstraint -n "pCube1_parentConstraint1" -p "soap_bottle:pCube1
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -1.9143392402977355 3.4278491431761609 1.2155404468240931 ;
 	setAttr ".tg[0].tor" -type "double3" 40.556709600796331 264.07117242826388 7.254831445038656 ;
-	setAttr ".lr" -type "double3" 56.772328166367096 59.047822483063932 9.7753755136589504 ;
+	setAttr ".lr" -type "double3" 56.04529860647736 55.66193980516924 9.2486004406458964 ;
 	setAttr ".rst" -type "double3" -152.70818153980684 4.1576995341036165 93.927535937583443 ;
 	setAttr ".rsrr" -type "double3" 47.60841223045297 12.429099969978544 -0.7653316792623317 ;
 	setAttr -k on ".w0";
@@ -19215,7 +19219,6 @@ createNode parentConstraint -n "undies_parentConstraint1" -p "undies_latest:undi
 createNode transform -n "camera3";
 createNode camera -n "cameraShape3" -p "camera3";
 	setAttr -k off ".v";
-	setAttr ".rnd" no;
 	setAttr ".ovr" 1.3;
 	setAttr ".fl" 92.179488515815677;
 	setAttr ".coi" 2.7086430403079138;
@@ -19355,10 +19358,10 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\tif ($useSceneConfig) {\n\t\toutlinerPanel -e -to $panelName;\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n"
 		+ "\t\t\t$panelName = `scriptedPanel -unParent  -type \"graphEditor\" -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n"
 		+ "                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n"
-		+ "\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1.25\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -clipTime \"on\" \n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 2\n                -classicMode 1\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1.25\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -clipTime \"on\" \n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 1\n                -classicMode 1\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n"
 		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n"
 		+ "                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n"
-		+ "            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1.25\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -clipTime \"on\" \n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 2\n                -classicMode 1\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\tif ($useSceneConfig) {\n\t\tscriptedPanel -e -to $panelName;\n"
+		+ "            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1.25\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -clipTime \"on\" \n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 1\n                -classicMode 1\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\tif ($useSceneConfig) {\n\t\tscriptedPanel -e -to $panelName;\n"
 		+ "\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dopeSheetPanel\" -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n"
 		+ "                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n"
 		+ "                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n"
@@ -19729,17 +19732,17 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:pCylinder7|living_room_latest:cat_robot:polySurfaceShape5 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:pCylinder16|living_room_latest:cat_robot:polySurfaceShape4 
+		1 |living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:pCylinder16|living_room_latest:cat_robot:polySurfaceShape4 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:pCylinder16|living_room_latest:cat_robot:polySurfaceShape4 
+		1 |living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:pCylinder16|living_room_latest:cat_robot:polySurfaceShape4 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:pCylinder16|living_room_latest:cat_robot:polySurfaceShape4 
+		1 |living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:pCylinder16|living_room_latest:cat_robot:polySurfaceShape4 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:bot1|living_room_latest:cat_robot:polySurfaceShape3 
+		1 |living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:bot1|living_room_latest:cat_robot:polySurfaceShape3 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:bot1|living_room_latest:cat_robot:polySurfaceShape3 
+		1 |living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:bot1|living_room_latest:cat_robot:polySurfaceShape3 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:bot1|living_room_latest:cat_robot:polySurfaceShape3 
+		1 |living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:bot1|living_room_latest:cat_robot:polySurfaceShape3 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		2 "|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:pCylinder13|living_room_latest:cat_robot:polySurfaceShape2" 
 		"surfaceReference" " 1"
@@ -20483,7 +20486,7 @@ createNode reference -n "livingroom_shading_latestRN";
 		"living_room_latest:armchair_latestRN" 0
 		"living_room_latest:taller_window_four_squares_latestRN" 0
 		"living_room_latest:armchair_latestRN1" 0
-		"livingroom_shading_latest_living_room_latestRN" 1649
+		"livingroom_shading_latest_living_room_latestRN" 1700
 		1 |living_room_latest:bed_pillow|living_room_latest:bed_pillowShape "VisibleInIndirect" 
 		"VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		1 |living_room_latest:bed_mattress|living_room_latest:bed_mattressShape "VisibleInIndirect" 
@@ -21416,6 +21419,12 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:oven|living_room_latest:pasted__pCube162|living_room_latest:pasted__polySurfaceShape4 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:stove_metal|living_room_latest:pasted__polySurface6|living_room_latest:pasted__polySurfaceShape6 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:stove_metal|living_room_latest:pasted__polySurface6|living_room_latest:pasted__polySurfaceShape6 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:stove_metal|living_room_latest:pasted__polySurface6|living_room_latest:pasted__polySurfaceShape6 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:pCube179|living_room_latest:pCubeShape179 "VisibleInIndirect" 
 		"VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		1 |living_room_latest:pCube179|living_room_latest:pCubeShape179 "surfaceReference" 
@@ -22008,6 +22017,12 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_8|living_room_latest:polySurfaceShape2 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:vent_door|living_room_latest:polySurfaceShape1 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:vent_door|living_room_latest:polySurfaceShape1 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:vent_door|living_room_latest:polySurfaceShape1 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_9|living_room_latest:polySurfaceShape7 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_9|living_room_latest:polySurfaceShape7 
@@ -22020,17 +22035,35 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_12|living_room_latest:polySurfaceShape10 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_11|living_room_latest:polySurfaceShape9 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_11|living_room_latest:polySurfaceShape9 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_11|living_room_latest:polySurfaceShape9 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_10|living_room_latest:polySurfaceShape8 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_10|living_room_latest:polySurfaceShape8 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_10|living_room_latest:polySurfaceShape8 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_7|living_room_latest:polySurfaceShape1 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_7|living_room_latest:polySurfaceShape1 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_7|living_room_latest:polySurfaceShape1 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_1|living_room_latest:polySurfaceShape8 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_1|living_room_latest:polySurfaceShape8 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_1|living_room_latest:polySurfaceShape8 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_5|living_room_latest:polySurfaceShape9 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_5|living_room_latest:polySurfaceShape9 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_5|living_room_latest:polySurfaceShape9 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_6|living_room_latest:polySurfaceShape10 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
@@ -22151,6 +22184,12 @@ createNode reference -n "livingroom_shading_latestRN";
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube7|living_room_latest:polySurfaceShape2 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube7|living_room_latest:polySurfaceShape2 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube5|living_room_latest:polySurfaceShape12 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube5|living_room_latest:polySurfaceShape12 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube5|living_room_latest:polySurfaceShape12 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube4|living_room_latest:polySurfaceShape13 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
@@ -22233,11 +22272,83 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:oven|living_room_latest:pasted__pCube162|living_room_latest:pasted__polySurfaceShape4 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:oven|living_room_latest:pasted__pCylinder19|living_room_latest:pasted__pCylinderShape19 
+		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
+		
+		1 |living_room_latest:oven|living_room_latest:pasted__pCylinder19|living_room_latest:pasted__pCylinderShape19 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:oven|living_room_latest:pasted__pCylinder19|living_room_latest:pasted__pCylinderShape19 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:oven|living_room_latest:pasted__pCylinder19|living_room_latest:pasted__pCylinderShape19 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:oven|living_room_latest:pasted__pCylinder18|living_room_latest:pasted__pCylinderShape18 
+		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
+		
+		1 |living_room_latest:oven|living_room_latest:pasted__pCylinder18|living_room_latest:pasted__pCylinderShape18 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:oven|living_room_latest:pasted__pCylinder18|living_room_latest:pasted__pCylinderShape18 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:oven|living_room_latest:pasted__pCylinder18|living_room_latest:pasted__pCylinderShape18 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:oven|living_room_latest:pasted__polySurface7|living_room_latest:pasted__polySurfaceShape7 
+		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
+		
+		1 |living_room_latest:oven|living_room_latest:pasted__polySurface7|living_room_latest:pasted__polySurfaceShape7 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:oven|living_room_latest:pasted__polySurface7|living_room_latest:pasted__polySurfaceShape7 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:oven|living_room_latest:pasted__polySurface7|living_room_latest:pasted__polySurfaceShape7 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:oven|living_room_latest:pasted__pPlane4|living_room_latest:pasted__pPlaneShape4 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
 		1 |living_room_latest:oven|living_room_latest:pasted__pPlane4|living_room_latest:pasted__pPlaneShape4 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:oven|living_room_latest:pasted__pPlane4|living_room_latest:pasted__pPlaneShape4 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:boiler|living_room_latest:pasted__pCylinder12|living_room_latest:pasted__pCylinderShape12 
+		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
+		
+		1 |living_room_latest:boiler|living_room_latest:pasted__pCylinder12|living_room_latest:pasted__pCylinderShape12 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:boiler|living_room_latest:pasted__pCylinder12|living_room_latest:pasted__pCylinderShape12 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:boiler|living_room_latest:pasted__pCylinder12|living_room_latest:pasted__pCylinderShape12 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:stove_metal|living_room_latest:pasted__polySurface5|living_room_latest:pasted__polySurfaceShape5 
+		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
+		
+		1 |living_room_latest:stove_metal|living_room_latest:pasted__polySurface5|living_room_latest:pasted__polySurfaceShape5 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:stove_metal|living_room_latest:pasted__polySurface5|living_room_latest:pasted__polySurfaceShape5 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:stove_metal|living_room_latest:pasted__polySurface5|living_room_latest:pasted__polySurfaceShape5 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:stove_metal|living_room_latest:pasted__polySurface6|living_room_latest:pasted__polySurfaceShape6 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:stove_metal|living_room_latest:pasted__polySurface6|living_room_latest:pasted__polySurfaceShape6 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:stove_metal|living_room_latest:pasted__polySurface6|living_room_latest:pasted__polySurfaceShape6 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:stove_metal|living_room_latest:pasted__polySurface6|living_room_latest:pasted__polySurfaceShape6 
+		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
+		
+		1 |living_room_latest:stove_metal|living_room_latest:pasted__pCylinder11|living_room_latest:pasted__pCylinderShape11 
+		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
+		
+		1 |living_room_latest:stove_metal|living_room_latest:pasted__pCylinder11|living_room_latest:pasted__pCylinderShape11 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:stove_metal|living_room_latest:pasted__pCylinder11|living_room_latest:pasted__pCylinderShape11 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:stove_metal|living_room_latest:pasted__pCylinder11|living_room_latest:pasted__pCylinderShape11 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:stove_metal|living_room_latest:pasted__pCylinder11|living_room_latest:pasted__pCylinder10|living_room_latest:pasted__pCylinderShape10 
+		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
+		
+		1 |living_room_latest:stove_metal|living_room_latest:pasted__pCylinder11|living_room_latest:pasted__pCylinder10|living_room_latest:pasted__pCylinderShape10 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:stove_metal|living_room_latest:pasted__pCylinder11|living_room_latest:pasted__pCylinder10|living_room_latest:pasted__pCylinderShape10 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:stove_metal|living_room_latest:pasted__pCylinder11|living_room_latest:pasted__pCylinder10|living_room_latest:pasted__pCylinderShape10 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:side_table:pCube92|living_room_latest:side_table:pCube2|living_room_latest:side_table:polySurfaceShape10 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
@@ -22257,6 +22368,9 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:tissue_box1|living_room_latest:tissue|living_room_latest:tissueShape 
+		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
+		
 		1 |living_room_latest:pCube223|living_room_latest:polySurfaceShape305 "surfaceReference" 
 		"sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
 		1 |living_room_latest:pCube223|living_room_latest:polySurfaceShape305 "referenceFile" 
@@ -22318,117 +22432,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		" -ci 1 -min 0 -max 1 -at \"bool\""
 		1 living_room_latest:vase_flowers:multiplyDivide12 "compressColor" "compressColor" 
 		" -ci 1 -dv 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:stove_metal|living_room_latest:pasted__polySurface6|living_room_latest:pasted__polySurfaceShape6 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:stove_metal|living_room_latest:pasted__polySurface6|living_room_latest:pasted__polySurfaceShape6 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:stove_metal|living_room_latest:pasted__polySurface6|living_room_latest:pasted__polySurfaceShape6 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:polySurface9|living_room_latest:polySurfaceShape9 "surfaceReference" 
-		"sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:polySurface9|living_room_latest:polySurfaceShape9 "referenceFile" 
-		"reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:polySurface9|living_room_latest:polySurfaceShape9 "furNameSpace" 
-		"fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:fridge|living_room_latest:polySurface12|living_room_latest:polySurfaceShape12 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:fridge|living_room_latest:polySurface12|living_room_latest:polySurfaceShape12 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:fridge|living_room_latest:polySurface12|living_room_latest:polySurfaceShape12 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:oven|living_room_latest:pasted__pCylinder19|living_room_latest:pasted__pCylinderShape19 
-		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
-		
-		1 |living_room_latest:oven|living_room_latest:pasted__pCylinder19|living_room_latest:pasted__pCylinderShape19 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:oven|living_room_latest:pasted__pCylinder19|living_room_latest:pasted__pCylinderShape19 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:oven|living_room_latest:pasted__pCylinder19|living_room_latest:pasted__pCylinderShape19 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:oven|living_room_latest:pasted__pCylinder18|living_room_latest:pasted__pCylinderShape18 
-		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
-		
-		1 |living_room_latest:oven|living_room_latest:pasted__pCylinder18|living_room_latest:pasted__pCylinderShape18 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:oven|living_room_latest:pasted__pCylinder18|living_room_latest:pasted__pCylinderShape18 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:oven|living_room_latest:pasted__pCylinder18|living_room_latest:pasted__pCylinderShape18 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:oven|living_room_latest:pasted__polySurface7|living_room_latest:pasted__polySurfaceShape7 
-		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
-		
-		1 |living_room_latest:oven|living_room_latest:pasted__polySurface7|living_room_latest:pasted__polySurfaceShape7 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:oven|living_room_latest:pasted__polySurface7|living_room_latest:pasted__polySurfaceShape7 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:oven|living_room_latest:pasted__polySurface7|living_room_latest:pasted__polySurfaceShape7 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:boiler|living_room_latest:pasted__pCylinder12|living_room_latest:pasted__pCylinderShape12 
-		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
-		
-		1 |living_room_latest:boiler|living_room_latest:pasted__pCylinder12|living_room_latest:pasted__pCylinderShape12 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:boiler|living_room_latest:pasted__pCylinder12|living_room_latest:pasted__pCylinderShape12 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:boiler|living_room_latest:pasted__pCylinder12|living_room_latest:pasted__pCylinderShape12 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:stove_metal|living_room_latest:pasted__polySurface5|living_room_latest:pasted__polySurfaceShape5 
-		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
-		
-		1 |living_room_latest:stove_metal|living_room_latest:pasted__polySurface5|living_room_latest:pasted__polySurfaceShape5 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:stove_metal|living_room_latest:pasted__polySurface5|living_room_latest:pasted__polySurfaceShape5 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:stove_metal|living_room_latest:pasted__polySurface5|living_room_latest:pasted__polySurfaceShape5 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:stove_metal|living_room_latest:pasted__polySurface6|living_room_latest:pasted__polySurfaceShape6 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:stove_metal|living_room_latest:pasted__polySurface6|living_room_latest:pasted__polySurfaceShape6 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:stove_metal|living_room_latest:pasted__polySurface6|living_room_latest:pasted__polySurfaceShape6 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:stove_metal|living_room_latest:pasted__polySurface6|living_room_latest:pasted__polySurfaceShape6 
-		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
-		
-		1 |living_room_latest:stove_metal|living_room_latest:pasted__pCylinder11|living_room_latest:pasted__pCylinderShape11 
-		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
-		
-		1 |living_room_latest:stove_metal|living_room_latest:pasted__pCylinder11|living_room_latest:pasted__pCylinderShape11 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:stove_metal|living_room_latest:pasted__pCylinder11|living_room_latest:pasted__pCylinderShape11 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:stove_metal|living_room_latest:pasted__pCylinder11|living_room_latest:pasted__pCylinderShape11 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:stove_metal|living_room_latest:pasted__pCylinder11|living_room_latest:pasted__pCylinder10|living_room_latest:pasted__pCylinderShape10 
-		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
-		
-		1 |living_room_latest:stove_metal|living_room_latest:pasted__pCylinder11|living_room_latest:pasted__pCylinder10|living_room_latest:pasted__pCylinderShape10 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:stove_metal|living_room_latest:pasted__pCylinder11|living_room_latest:pasted__pCylinder10|living_room_latest:pasted__pCylinderShape10 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:stove_metal|living_room_latest:pasted__pCylinder11|living_room_latest:pasted__pCylinder10|living_room_latest:pasted__pCylinderShape10 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:tissue_box1|living_room_latest:tissue|living_room_latest:tissueShape 
-		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
-		
-		1 |living_room_latest:polySurface9|living_room_latest:polySurfaceShape9 "surfaceReference" 
-		"sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:polySurface9|living_room_latest:polySurfaceShape9 "referenceFile" 
-		"reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:polySurface9|living_room_latest:polySurfaceShape9 "furNameSpace" 
-		"fns" " -ci 1 -h 1 -dt \"string\""
 		2 "|living_room_latest:bed_pillow|living_room_latest:bed_pillowShape" "VisibleInIndirect" 
 		" 1"
 		2 "|living_room_latest:bed_mattress|living_room_latest:bed_mattressShape" 
@@ -23652,10 +23655,31 @@ createNode reference -n "livingroom_shading_latestRN";
 		" -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:pCube213|living_room_latest:pCubeShape213" "VisibleInIndirect" 
 		" 1"
+		2 "|living_room_latest:pCube213|living_room_latest:pCubeShape213" "surfaceReference" 
+		" 1"
+		2 "|living_room_latest:pCube213|living_room_latest:pCubeShape213" "referenceFile" 
+		" -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:pCube213|living_room_latest:pCubeShape213" "furNameSpace" 
+		" -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:pCube214|living_room_latest:pCubeShape214" "VisibleInIndirect" 
 		" 1"
+		2 "|living_room_latest:pCube214|living_room_latest:pCubeShape214" "surfaceReference" 
+		" 1"
+		2 "|living_room_latest:pCube214|living_room_latest:pCubeShape214" "referenceFile" 
+		" -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:pCube214|living_room_latest:pCubeShape214" "furNameSpace" 
+		" -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:pCube215|living_room_latest:pCubeShape215" "VisibleInIndirect" 
 		" 1"
+		2 "|living_room_latest:pCube215|living_room_latest:pCubeShape215" "surfaceReference" 
+		" 1"
+		2 "|living_room_latest:pCube215|living_room_latest:pCubeShape215" "referenceFile" 
+		" -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:pCube215|living_room_latest:pCubeShape215" "furNameSpace" 
+		" -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:pCube215|living_room_latest:polySurfaceShape307" "surfaceReference" 
 		" 1"
 		2 "|living_room_latest:pCube215|living_room_latest:polySurfaceShape307" "referenceFile" 
@@ -23665,6 +23689,13 @@ createNode reference -n "livingroom_shading_latestRN";
 		" -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:pCube216|living_room_latest:pCubeShape216" "VisibleInIndirect" 
 		" 1"
+		2 "|living_room_latest:pCube216|living_room_latest:pCubeShape216" "surfaceReference" 
+		" 1"
+		2 "|living_room_latest:pCube216|living_room_latest:pCubeShape216" "referenceFile" 
+		" -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:pCube216|living_room_latest:pCubeShape216" "furNameSpace" 
+		" -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:pCube216|living_room_latest:polySurfaceShape307" "surfaceReference" 
 		" 1"
 		2 "|living_room_latest:pCube216|living_room_latest:polySurfaceShape307" "referenceFile" 
@@ -23674,6 +23705,13 @@ createNode reference -n "livingroom_shading_latestRN";
 		" -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:pCube217|living_room_latest:pCubeShape217" "VisibleInIndirect" 
 		" 1"
+		2 "|living_room_latest:pCube217|living_room_latest:pCubeShape217" "surfaceReference" 
+		" 1"
+		2 "|living_room_latest:pCube217|living_room_latest:pCubeShape217" "referenceFile" 
+		" -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:pCube217|living_room_latest:pCubeShape217" "furNameSpace" 
+		" -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:pCube217|living_room_latest:polySurfaceShape306" "surfaceReference" 
 		" 1"
 		2 "|living_room_latest:pCube217|living_room_latest:polySurfaceShape306" "referenceFile" 
@@ -23683,6 +23721,13 @@ createNode reference -n "livingroom_shading_latestRN";
 		" -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:pCube218|living_room_latest:pCubeShape218" "VisibleInIndirect" 
 		" 1"
+		2 "|living_room_latest:pCube218|living_room_latest:pCubeShape218" "surfaceReference" 
+		" 1"
+		2 "|living_room_latest:pCube218|living_room_latest:pCubeShape218" "referenceFile" 
+		" -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:pCube218|living_room_latest:pCubeShape218" "furNameSpace" 
+		" -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:pCube218|living_room_latest:polySurfaceShape306" "surfaceReference" 
 		" 1"
 		2 "|living_room_latest:pCube218|living_room_latest:polySurfaceShape306" "referenceFile" 
@@ -23692,26 +23737,103 @@ createNode reference -n "livingroom_shading_latestRN";
 		" -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:pCube219|living_room_latest:pCubeShape219" "VisibleInIndirect" 
 		" 1"
+		2 "|living_room_latest:pCube219|living_room_latest:pCubeShape219" "surfaceReference" 
+		" 1"
+		2 "|living_room_latest:pCube219|living_room_latest:pCubeShape219" "referenceFile" 
+		" -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:pCube219|living_room_latest:pCubeShape219" "furNameSpace" 
+		" -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:pCube220|living_room_latest:pCubeShape220" "VisibleInIndirect" 
 		" 1"
+		2 "|living_room_latest:pCube220|living_room_latest:pCubeShape220" "surfaceReference" 
+		" 1"
+		2 "|living_room_latest:pCube220|living_room_latest:pCubeShape220" "referenceFile" 
+		" -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:pCube220|living_room_latest:pCubeShape220" "furNameSpace" 
+		" -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:pCube221|living_room_latest:pCubeShape221" "VisibleInIndirect" 
 		" 1"
+		2 "|living_room_latest:pCube221|living_room_latest:pCubeShape221" "surfaceReference" 
+		" 1"
+		2 "|living_room_latest:pCube221|living_room_latest:pCubeShape221" "referenceFile" 
+		" -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:pCube221|living_room_latest:pCubeShape221" "furNameSpace" 
+		" -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:pCube222|living_room_latest:pCubeShape222" "VisibleInIndirect" 
 		" 1"
+		2 "|living_room_latest:pCube222|living_room_latest:pCubeShape222" "surfaceReference" 
+		" 1"
+		2 "|living_room_latest:pCube222|living_room_latest:pCubeShape222" "referenceFile" 
+		" -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:pCube222|living_room_latest:pCubeShape222" "furNameSpace" 
+		" -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:pTorus4|living_room_latest:pTorusShape4" "VisibleInIndirect" 
 		" 1"
+		2 "|living_room_latest:pTorus4|living_room_latest:pTorusShape4" "surfaceReference" 
+		" 1"
+		2 "|living_room_latest:pTorus4|living_room_latest:pTorusShape4" "referenceFile" 
+		" -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:pTorus4|living_room_latest:pTorusShape4" "furNameSpace" 
+		" -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:pCube224|living_room_latest:pCubeShape224" "VisibleInIndirect" 
 		" 1"
+		2 "|living_room_latest:pCube224|living_room_latest:pCubeShape224" "surfaceReference" 
+		" 1"
+		2 "|living_room_latest:pCube224|living_room_latest:pCubeShape224" "referenceFile" 
+		" -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:pCube224|living_room_latest:pCubeShape224" "furNameSpace" 
+		" -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:pCube225|living_room_latest:pCubeShape225" "VisibleInIndirect" 
 		" 1"
+		2 "|living_room_latest:pCube225|living_room_latest:pCubeShape225" "surfaceReference" 
+		" 1"
+		2 "|living_room_latest:pCube225|living_room_latest:pCubeShape225" "referenceFile" 
+		" -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:pCube225|living_room_latest:pCubeShape225" "furNameSpace" 
+		" -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:pCube226|living_room_latest:pCubeShape226" "VisibleInIndirect" 
 		" 1"
+		2 "|living_room_latest:pCube226|living_room_latest:pCubeShape226" "surfaceReference" 
+		" 1"
+		2 "|living_room_latest:pCube226|living_room_latest:pCubeShape226" "referenceFile" 
+		" -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:pCube226|living_room_latest:pCubeShape226" "furNameSpace" 
+		" -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:pCube227|living_room_latest:pCubeShape227" "VisibleInIndirect" 
 		" 1"
+		2 "|living_room_latest:pCube227|living_room_latest:pCubeShape227" "surfaceReference" 
+		" 1"
+		2 "|living_room_latest:pCube227|living_room_latest:pCubeShape227" "referenceFile" 
+		" -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:pCube227|living_room_latest:pCubeShape227" "furNameSpace" 
+		" -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:pCube228|living_room_latest:pCubeShape228" "VisibleInIndirect" 
 		" 1"
+		2 "|living_room_latest:pCube228|living_room_latest:pCubeShape228" "surfaceReference" 
+		" 1"
+		2 "|living_room_latest:pCube228|living_room_latest:pCubeShape228" "referenceFile" 
+		" -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:pCube228|living_room_latest:pCubeShape228" "furNameSpace" 
+		" -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:pCube229|living_room_latest:pCubeShape229" "VisibleInIndirect" 
 		" 1"
+		2 "|living_room_latest:pCube229|living_room_latest:pCubeShape229" "surfaceReference" 
+		" 1"
+		2 "|living_room_latest:pCube229|living_room_latest:pCubeShape229" "referenceFile" 
+		" -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:pCube229|living_room_latest:pCubeShape229" "furNameSpace" 
+		" -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:pCube229|living_room_latest:polySurfaceShape308" "surfaceReference" 
 		" 1"
 		2 "|living_room_latest:pCube229|living_room_latest:polySurfaceShape308" "referenceFile" 
@@ -24167,7 +24289,79 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		2 "|living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:transform1|living_room_latest:taller_window_four_squares_latest8:taller_windowShape" 
 		"furNameSpace" " -type \"string\" \"taller_window_four_squares_latest8\""
-		"living_room_latest:resurrected_staircaseRN" 1260
+		"living_room_latest:resurrected_staircaseRN" 1296
+		0 "|resurrected_staircaseRNfosterParent1|fosterParent72" "|living_room_latest:resurrected_staircase:staircase|living_room_latest:resurrected_staircase:pCube112|living_room_latest:resurrected_staircase:pCube87" 
+		"-s -r "
+		0 "|resurrected_staircaseRNfosterParent1|fosterParent71" "|living_room_latest:resurrected_staircase:staircase|living_room_latest:resurrected_staircase:pCube112|living_room_latest:resurrected_staircase:pCube89" 
+		"-s -r "
+		0 "|resurrected_staircaseRNfosterParent1|fosterParent70" "|living_room_latest:resurrected_staircase:staircase|living_room_latest:resurrected_staircase:pCube112|living_room_latest:resurrected_staircase:pCube107" 
+		"-s -r "
+		0 "|resurrected_staircaseRNfosterParent1|fosterParent69" "|living_room_latest:resurrected_staircase:staircase|living_room_latest:resurrected_staircase:pCube114|living_room_latest:resurrected_staircase:pCube87" 
+		"-s -r "
+		0 "|resurrected_staircaseRNfosterParent1|fosterParent68" "|living_room_latest:resurrected_staircase:staircase|living_room_latest:resurrected_staircase:pCube114|living_room_latest:resurrected_staircase:pCube89" 
+		"-s -r "
+		0 "|resurrected_staircaseRNfosterParent1|fosterParent67" "|living_room_latest:resurrected_staircase:staircase|living_room_latest:resurrected_staircase:pCube114|living_room_latest:resurrected_staircase:pCube107" 
+		"-s -r "
+		0 "|resurrected_staircaseRNfosterParent1|fosterParent66" "|living_room_latest:resurrected_staircase:staircase|living_room_latest:resurrected_staircase:pCube116|living_room_latest:resurrected_staircase:pCube87" 
+		"-s -r "
+		0 "|resurrected_staircaseRNfosterParent1|fosterParent65" "|living_room_latest:resurrected_staircase:staircase|living_room_latest:resurrected_staircase:pCube116|living_room_latest:resurrected_staircase:pCube89" 
+		"-s -r "
+		0 "|resurrected_staircaseRNfosterParent1|fosterParent64" "|living_room_latest:resurrected_staircase:staircase|living_room_latest:resurrected_staircase:pCube116|living_room_latest:resurrected_staircase:pCube107" 
+		"-s -r "
+		0 "|resurrected_staircaseRNfosterParent1|fosterParent63" "|living_room_latest:resurrected_staircase:staircase|living_room_latest:resurrected_staircase:pCube118|living_room_latest:resurrected_staircase:pCube87" 
+		"-s -r "
+		0 "|resurrected_staircaseRNfosterParent1|fosterParent62" "|living_room_latest:resurrected_staircase:staircase|living_room_latest:resurrected_staircase:pCube118|living_room_latest:resurrected_staircase:pCube89" 
+		"-s -r "
+		0 "|resurrected_staircaseRNfosterParent1|fosterParent61" "|living_room_latest:resurrected_staircase:staircase|living_room_latest:resurrected_staircase:pCube118|living_room_latest:resurrected_staircase:pCube107" 
+		"-s -r "
+		0 "|resurrected_staircaseRNfosterParent1|fosterParent60" "|living_room_latest:resurrected_staircase:staircase|living_room_latest:resurrected_staircase:pCube120|living_room_latest:resurrected_staircase:pCube87" 
+		"-s -r "
+		0 "|resurrected_staircaseRNfosterParent1|fosterParent59" "|living_room_latest:resurrected_staircase:staircase|living_room_latest:resurrected_staircase:pCube120|living_room_latest:resurrected_staircase:pCube89" 
+		"-s -r "
+		0 "|resurrected_staircaseRNfosterParent1|fosterParent58" "|living_room_latest:resurrected_staircase:staircase|living_room_latest:resurrected_staircase:pCube120|living_room_latest:resurrected_staircase:pCube107" 
+		"-s -r "
+		0 "|resurrected_staircaseRNfosterParent1|fosterParent57" "|living_room_latest:resurrected_staircase:staircase|living_room_latest:resurrected_staircase:pCube122|living_room_latest:resurrected_staircase:pCube87" 
+		"-s -r "
+		0 "|resurrected_staircaseRNfosterParent1|fosterParent56" "|living_room_latest:resurrected_staircase:staircase|living_room_latest:resurrected_staircase:pCube122|living_room_latest:resurrected_staircase:pCube89" 
+		"-s -r "
+		0 "|resurrected_staircaseRNfosterParent1|fosterParent55" "|living_room_latest:resurrected_staircase:staircase|living_room_latest:resurrected_staircase:pCube122|living_room_latest:resurrected_staircase:pCube107" 
+		"-s -r "
+		0 "|resurrected_staircaseRNfosterParent1|fosterParent54" "|living_room_latest:resurrected_staircase:staircase|living_room_latest:resurrected_staircase:pCube124|living_room_latest:resurrected_staircase:pCube87" 
+		"-s -r "
+		0 "|resurrected_staircaseRNfosterParent1|fosterParent53" "|living_room_latest:resurrected_staircase:staircase|living_room_latest:resurrected_staircase:pCube124|living_room_latest:resurrected_staircase:pCube89" 
+		"-s -r "
+		0 "|resurrected_staircaseRNfosterParent1|fosterParent52" "|living_room_latest:resurrected_staircase:staircase|living_room_latest:resurrected_staircase:pCube124|living_room_latest:resurrected_staircase:pCube107" 
+		"-s -r "
+		0 "|resurrected_staircaseRNfosterParent1|fosterParent51" "|living_room_latest:resurrected_staircase:staircase|living_room_latest:resurrected_staircase:pCube126|living_room_latest:resurrected_staircase:pCube87" 
+		"-s -r "
+		0 "|resurrected_staircaseRNfosterParent1|fosterParent50" "|living_room_latest:resurrected_staircase:staircase|living_room_latest:resurrected_staircase:pCube126|living_room_latest:resurrected_staircase:pCube89" 
+		"-s -r "
+		0 "|resurrected_staircaseRNfosterParent1|fosterParent49" "|living_room_latest:resurrected_staircase:staircase|living_room_latest:resurrected_staircase:pCube126|living_room_latest:resurrected_staircase:pCube107" 
+		"-s -r "
+		0 "|resurrected_staircaseRNfosterParent1|fosterParent48" "|living_room_latest:resurrected_staircase:staircase|living_room_latest:resurrected_staircase:pCube129|living_room_latest:resurrected_staircase:pCube87" 
+		"-s -r "
+		0 "|resurrected_staircaseRNfosterParent1|fosterParent47" "|living_room_latest:resurrected_staircase:staircase|living_room_latest:resurrected_staircase:pCube129|living_room_latest:resurrected_staircase:pCube89" 
+		"-s -r "
+		0 "|resurrected_staircaseRNfosterParent1|fosterParent46" "|living_room_latest:resurrected_staircase:staircase|living_room_latest:resurrected_staircase:pCube129|living_room_latest:resurrected_staircase:pCube107" 
+		"-s -r "
+		0 "|resurrected_staircaseRNfosterParent1|fosterParent45" "|living_room_latest:resurrected_staircase:staircase|living_room_latest:resurrected_staircase:pCube131|living_room_latest:resurrected_staircase:pCube87" 
+		"-s -r "
+		0 "|resurrected_staircaseRNfosterParent1|fosterParent44" "|living_room_latest:resurrected_staircase:staircase|living_room_latest:resurrected_staircase:pCube131|living_room_latest:resurrected_staircase:pCube89" 
+		"-s -r "
+		0 "|resurrected_staircaseRNfosterParent1|fosterParent43" "|living_room_latest:resurrected_staircase:staircase|living_room_latest:resurrected_staircase:pCube131|living_room_latest:resurrected_staircase:pCube107" 
+		"-s -r "
+		0 "|resurrected_staircaseRNfosterParent1|fosterParent42" "|living_room_latest:resurrected_staircase:staircase|living_room_latest:resurrected_staircase:pCube133|living_room_latest:resurrected_staircase:pCube87" 
+		"-s -r "
+		0 "|resurrected_staircaseRNfosterParent1|fosterParent41" "|living_room_latest:resurrected_staircase:staircase|living_room_latest:resurrected_staircase:pCube133|living_room_latest:resurrected_staircase:pCube89" 
+		"-s -r "
+		0 "|resurrected_staircaseRNfosterParent1|fosterParent40" "|living_room_latest:resurrected_staircase:staircase|living_room_latest:resurrected_staircase:pCube133|living_room_latest:resurrected_staircase:pCube107" 
+		"-s -r "
+		0 "|resurrected_staircaseRNfosterParent1|fosterParent39" "|living_room_latest:resurrected_staircase:staircase|living_room_latest:resurrected_staircase:pCube135|living_room_latest:resurrected_staircase:pCube87" 
+		"-s -r "
+		0 "|resurrected_staircaseRNfosterParent1|fosterParent38" "|living_room_latest:resurrected_staircase:staircase|living_room_latest:resurrected_staircase:pCube135|living_room_latest:resurrected_staircase:pCube89" 
+		"-s -r "
+		0 "|resurrected_staircaseRNfosterParent1|fosterParent37" "|living_room_latest:resurrected_staircase:staircase|living_room_latest:resurrected_staircase:pCube135|living_room_latest:resurrected_staircase:pCube107" 
+		"-s -r "
 		1 |living_room_latest:resurrected_staircase:staircase|living_room_latest:resurrected_staircase:pCube109|living_room_latest:resurrected_staircase:pCubeShape109 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
 		1 |living_room_latest:resurrected_staircase:staircase|living_room_latest:resurrected_staircase:pCube109|living_room_latest:resurrected_staircase:pCubeShape109 
@@ -27010,156 +27204,214 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		2 "|living_room_latest:taller_window_four_squares_latest5:taller_window|living_room_latest:taller_window_four_squares_latest5:transform1|living_room_latest:taller_window_four_squares_latest5:taller_windowShape" 
 		"furNameSpace" " -type \"string\" \"taller_window_four_squares_latest5\""
-		"living_room_latest:cat_robotRN" 186
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform13|living_room_latest:cat_robot:pCylinderShape1 
+		"living_room_latest:cat_robotRN" 215
+		0 "|cat_robotRNfosterParent1|fosterParent36" "|living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:pCylinder1" 
+		"-s -r "
+		0 "|cat_robotRNfosterParent1|fosterParent35" "|living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:pCylinder2" 
+		"-s -r "
+		0 "|cat_robotRNfosterParent1|fosterParent34" "|living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:torso" 
+		"-s -r "
+		0 "|cat_robotRNfosterParent1|fosterParent33" "|living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:pCylinder15" 
+		"-s -r "
+		0 "|cat_robotRNfosterParent1|fosterParent32" "|living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:pSphere6" 
+		"-s -r "
+		0 "|cat_robotRNfosterParent1|fosterParent31" "|living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:pCylinder12" 
+		"-s -r "
+		0 "|cat_robotRNfosterParent1|fosterParent30" "|living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:pCylinder13" 
+		"-s -r "
+		0 "|cat_robotRNfosterParent1|fosterParent29" "|living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:head" 
+		"-s -r "
+		0 "|cat_robotRNfosterParent1|fosterParent28" "|living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:head1" 
+		"-s -r "
+		0 "|cat_robotRNfosterParent1|fosterParent27" "|living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:left_ear" 
+		"-s -r "
+		0 "|cat_robotRNfosterParent1|fosterParent26" "|living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:right_ear" 
+		"-s -r "
+		0 "|cat_robotRNfosterParent1|fosterParent25" "|living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:pCylinder5" 
+		"-s -r "
+		0 "|cat_robotRNfosterParent1|fosterParent24" "|living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:pSphere2" 
+		"-s -r "
+		0 "|cat_robotRNfosterParent1|fosterParent23" "|living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:pSphere4" 
+		"-s -r "
+		0 "|cat_robotRNfosterParent1|fosterParent22" "|living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:pCylinder6" 
+		"-s -r "
+		0 "|cat_robotRNfosterParent1|fosterParent21" "|living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:pSphere1" 
+		"-s -r "
+		0 "|cat_robotRNfosterParent1|fosterParent20" "|living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:pCylinder4" 
+		"-s -r "
+		0 "|cat_robotRNfosterParent1|fosterParent19" "|living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:pSphere3" 
+		"-s -r "
+		0 "|cat_robotRNfosterParent1|fosterParent18" "|living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:pCylinder7" 
+		"-s -r "
+		0 "|cat_robotRNfosterParent1|fosterParent17" "|living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:pCylinder14" 
+		"-s -r "
+		0 "|cat_robotRNfosterParent1|fosterParent16" "|living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:bot" 
+		"-s -r "
+		0 "|cat_robotRNfosterParent1|fosterParent15" "|living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:top" 
+		"-s -r "
+		0 "|cat_robotRNfosterParent1|fosterParent14" "|living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:pCylinder8" 
+		"-s -r "
+		0 "|cat_robotRNfosterParent1|fosterParent13" "|living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:pSphere5" 
+		"-s -r "
+		0 "|cat_robotRNfosterParent1|fosterParent12" "|living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:pCylinder16" 
+		"-s -r "
+		0 "|cat_robotRNfosterParent1|fosterParent11" "|living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:bot1" 
+		"-s -r "
+		0 "|cat_robotRNfosterParent1|fosterParent10" "|living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:top1" 
+		"-s -r "
+		0 "|cat_robotRNfosterParent1|fosterParent9" "|living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:pCylinder17" 
+		"-s -r "
+		0 "|cat_robotRNfosterParent1|fosterParent8" "|living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:pSphere7" 
+		"-s -r "
+		1 |living_room_latest:transform13|living_room_latest:cat_robot:pCylinderShape1 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform13|living_room_latest:cat_robot:pCylinderShape1 
+		1 |living_room_latest:transform13|living_room_latest:cat_robot:pCylinderShape1 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform13|living_room_latest:cat_robot:pCylinderShape1 
+		1 |living_room_latest:transform13|living_room_latest:cat_robot:pCylinderShape1 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform14|living_room_latest:cat_robot:pCylinderShape2 
+		1 |living_room_latest:transform14|living_room_latest:cat_robot:pCylinderShape2 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform14|living_room_latest:cat_robot:pCylinderShape2 
+		1 |living_room_latest:transform14|living_room_latest:cat_robot:pCylinderShape2 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform14|living_room_latest:cat_robot:pCylinderShape2 
+		1 |living_room_latest:transform14|living_room_latest:cat_robot:pCylinderShape2 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform15|living_room_latest:cat_robot:torsoShape 
+		1 |living_room_latest:transform15|living_room_latest:cat_robot:torsoShape 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform15|living_room_latest:cat_robot:torsoShape 
+		1 |living_room_latest:transform15|living_room_latest:cat_robot:torsoShape 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform15|living_room_latest:cat_robot:torsoShape 
+		1 |living_room_latest:transform15|living_room_latest:cat_robot:torsoShape 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform22|living_room_latest:cat_robot:pCylinderShape15 
+		1 |living_room_latest:transform22|living_room_latest:cat_robot:pCylinderShape15 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform22|living_room_latest:cat_robot:pCylinderShape15 
+		1 |living_room_latest:transform22|living_room_latest:cat_robot:pCylinderShape15 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform22|living_room_latest:cat_robot:pCylinderShape15 
+		1 |living_room_latest:transform22|living_room_latest:cat_robot:pCylinderShape15 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform21|living_room_latest:cat_robot:pSphereShape6 
+		1 |living_room_latest:transform21|living_room_latest:cat_robot:pSphereShape6 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform21|living_room_latest:cat_robot:pSphereShape6 
+		1 |living_room_latest:transform21|living_room_latest:cat_robot:pSphereShape6 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform21|living_room_latest:cat_robot:pSphereShape6 
+		1 |living_room_latest:transform21|living_room_latest:cat_robot:pSphereShape6 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform20|living_room_latest:cat_robot:pCylinderShape12 
+		1 |living_room_latest:transform20|living_room_latest:cat_robot:pCylinderShape12 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform20|living_room_latest:cat_robot:pCylinderShape12 
+		1 |living_room_latest:transform20|living_room_latest:cat_robot:pCylinderShape12 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform20|living_room_latest:cat_robot:pCylinderShape12 
+		1 |living_room_latest:transform20|living_room_latest:cat_robot:pCylinderShape12 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform19|living_room_latest:cat_robot:pCylinderShape13 
+		1 |living_room_latest:transform19|living_room_latest:cat_robot:pCylinderShape13 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform19|living_room_latest:cat_robot:pCylinderShape13 
+		1 |living_room_latest:transform19|living_room_latest:cat_robot:pCylinderShape13 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform19|living_room_latest:cat_robot:pCylinderShape13 
+		1 |living_room_latest:transform19|living_room_latest:cat_robot:pCylinderShape13 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform18|living_room_latest:cat_robot:headShape 
+		1 |living_room_latest:transform18|living_room_latest:cat_robot:headShape 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform18|living_room_latest:cat_robot:headShape 
+		1 |living_room_latest:transform18|living_room_latest:cat_robot:headShape 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform18|living_room_latest:cat_robot:headShape 
+		1 |living_room_latest:transform18|living_room_latest:cat_robot:headShape 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform17|living_room_latest:cat_robot:head1Shape 
+		1 |living_room_latest:transform17|living_room_latest:cat_robot:head1Shape 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform17|living_room_latest:cat_robot:head1Shape 
+		1 |living_room_latest:transform17|living_room_latest:cat_robot:head1Shape 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform17|living_room_latest:cat_robot:head1Shape 
+		1 |living_room_latest:transform17|living_room_latest:cat_robot:head1Shape 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform16|living_room_latest:cat_robot:left_earShape 
+		1 |living_room_latest:transform16|living_room_latest:cat_robot:left_earShape 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform16|living_room_latest:cat_robot:left_earShape 
+		1 |living_room_latest:transform16|living_room_latest:cat_robot:left_earShape 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform16|living_room_latest:cat_robot:left_earShape 
+		1 |living_room_latest:transform16|living_room_latest:cat_robot:left_earShape 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform12|living_room_latest:cat_robot:right_earShape 
+		1 |living_room_latest:transform12|living_room_latest:cat_robot:right_earShape 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform12|living_room_latest:cat_robot:right_earShape 
+		1 |living_room_latest:transform12|living_room_latest:cat_robot:right_earShape 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform12|living_room_latest:cat_robot:right_earShape 
+		1 |living_room_latest:transform12|living_room_latest:cat_robot:right_earShape 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform11|living_room_latest:cat_robot:pCylinderShape5 
+		1 |living_room_latest:transform11|living_room_latest:cat_robot:pCylinderShape5 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform11|living_room_latest:cat_robot:pCylinderShape5 
+		1 |living_room_latest:transform11|living_room_latest:cat_robot:pCylinderShape5 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform11|living_room_latest:cat_robot:pCylinderShape5 
+		1 |living_room_latest:transform11|living_room_latest:cat_robot:pCylinderShape5 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform10|living_room_latest:cat_robot:pSphereShape2 
+		1 |living_room_latest:transform10|living_room_latest:cat_robot:pSphereShape2 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform10|living_room_latest:cat_robot:pSphereShape2 
+		1 |living_room_latest:transform10|living_room_latest:cat_robot:pSphereShape2 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform10|living_room_latest:cat_robot:pSphereShape2 
+		1 |living_room_latest:transform10|living_room_latest:cat_robot:pSphereShape2 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform24|living_room_latest:cat_robot:pSphereShape4 
+		1 |living_room_latest:transform24|living_room_latest:cat_robot:pSphereShape4 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform24|living_room_latest:cat_robot:pSphereShape4 
+		1 |living_room_latest:transform24|living_room_latest:cat_robot:pSphereShape4 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform24|living_room_latest:cat_robot:pSphereShape4 
+		1 |living_room_latest:transform24|living_room_latest:cat_robot:pSphereShape4 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform9|living_room_latest:cat_robot:pCylinderShape6 
+		1 |living_room_latest:transform9|living_room_latest:cat_robot:pCylinderShape6 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform9|living_room_latest:cat_robot:pCylinderShape6 
+		1 |living_room_latest:transform9|living_room_latest:cat_robot:pCylinderShape6 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform9|living_room_latest:cat_robot:pCylinderShape6 
+		1 |living_room_latest:transform9|living_room_latest:cat_robot:pCylinderShape6 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform8|living_room_latest:cat_robot:pSphereShape1 
+		1 |living_room_latest:transform8|living_room_latest:cat_robot:pSphereShape1 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform8|living_room_latest:cat_robot:pSphereShape1 
+		1 |living_room_latest:transform8|living_room_latest:cat_robot:pSphereShape1 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform8|living_room_latest:cat_robot:pSphereShape1 
+		1 |living_room_latest:transform8|living_room_latest:cat_robot:pSphereShape1 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform23|living_room_latest:cat_robot:pCylinderShape4 
+		1 |living_room_latest:transform23|living_room_latest:cat_robot:pCylinderShape4 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform23|living_room_latest:cat_robot:pCylinderShape4 
+		1 |living_room_latest:transform23|living_room_latest:cat_robot:pCylinderShape4 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform23|living_room_latest:cat_robot:pCylinderShape4 
+		1 |living_room_latest:transform23|living_room_latest:cat_robot:pCylinderShape4 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform25|living_room_latest:cat_robot:pSphereShape3 
+		1 |living_room_latest:transform25|living_room_latest:cat_robot:pSphereShape3 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform25|living_room_latest:cat_robot:pSphereShape3 
+		1 |living_room_latest:transform25|living_room_latest:cat_robot:pSphereShape3 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform25|living_room_latest:cat_robot:pSphereShape3 
+		1 |living_room_latest:transform25|living_room_latest:cat_robot:pSphereShape3 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform7|living_room_latest:cat_robot:pCylinderShape7 
+		1 |living_room_latest:transform7|living_room_latest:cat_robot:pCylinderShape7 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform7|living_room_latest:cat_robot:pCylinderShape7 
+		1 |living_room_latest:transform7|living_room_latest:cat_robot:pCylinderShape7 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform7|living_room_latest:cat_robot:pCylinderShape7 
+		1 |living_room_latest:transform7|living_room_latest:cat_robot:pCylinderShape7 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform4|living_room_latest:cat_robot:pCylinderShape14 
+		1 |living_room_latest:transform4|living_room_latest:cat_robot:pCylinderShape14 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform4|living_room_latest:cat_robot:pCylinderShape14 
+		1 |living_room_latest:transform4|living_room_latest:cat_robot:pCylinderShape14 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform4|living_room_latest:cat_robot:pCylinderShape14 
+		1 |living_room_latest:transform4|living_room_latest:cat_robot:pCylinderShape14 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform5|living_room_latest:cat_robot:botShape 
+		1 |living_room_latest:transform5|living_room_latest:cat_robot:botShape "surfaceReference" 
+		"sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:transform5|living_room_latest:cat_robot:botShape "referenceFile" 
+		"reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:transform5|living_room_latest:cat_robot:botShape "furNameSpace" 
+		"fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:transform6|living_room_latest:cat_robot:topShape "surfaceReference" 
+		"sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:transform6|living_room_latest:cat_robot:topShape "referenceFile" 
+		"reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:transform6|living_room_latest:cat_robot:topShape "furNameSpace" 
+		"fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:transform29|living_room_latest:cat_robot:pCylinderShape8 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform5|living_room_latest:cat_robot:botShape 
+		1 |living_room_latest:transform29|living_room_latest:cat_robot:pCylinderShape8 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform5|living_room_latest:cat_robot:botShape 
+		1 |living_room_latest:transform29|living_room_latest:cat_robot:pCylinderShape8 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform6|living_room_latest:cat_robot:topShape 
+		1 |living_room_latest:transform26|living_room_latest:cat_robot:pSphereShape5 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform6|living_room_latest:cat_robot:topShape 
+		1 |living_room_latest:transform26|living_room_latest:cat_robot:pSphereShape5 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform6|living_room_latest:cat_robot:topShape 
+		1 |living_room_latest:transform26|living_room_latest:cat_robot:pSphereShape5 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform29|living_room_latest:cat_robot:pCylinderShape8 
+		1 |living_room_latest:transform3|living_room_latest:cat_robot:pCylinderShape16 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform29|living_room_latest:cat_robot:pCylinderShape8 
+		1 |living_room_latest:transform3|living_room_latest:cat_robot:pCylinderShape16 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform29|living_room_latest:cat_robot:pCylinderShape8 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform26|living_room_latest:cat_robot:pSphereShape5 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform26|living_room_latest:cat_robot:pSphereShape5 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform26|living_room_latest:cat_robot:pSphereShape5 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform3|living_room_latest:cat_robot:pCylinderShape16 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform3|living_room_latest:cat_robot:pCylinderShape16 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform3|living_room_latest:cat_robot:pCylinderShape16 
+		1 |living_room_latest:transform3|living_room_latest:cat_robot:pCylinderShape16 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:pCylinder16|living_room_latest:cat_robot:polySurfaceShape4 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
@@ -27167,210 +27419,210 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:pCylinder16|living_room_latest:cat_robot:polySurfaceShape4 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform1|living_room_latest:cat_robot:bot1Shape 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform1|living_room_latest:cat_robot:bot1Shape 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform1|living_room_latest:cat_robot:bot1Shape 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:transform1|living_room_latest:cat_robot:bot1Shape "surfaceReference" 
+		"sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:transform1|living_room_latest:cat_robot:bot1Shape "referenceFile" 
+		"reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:transform1|living_room_latest:cat_robot:bot1Shape "furNameSpace" 
+		"fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:bot1|living_room_latest:cat_robot:polySurfaceShape3 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
 		1 |living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:bot1|living_room_latest:cat_robot:polySurfaceShape3 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:bot1|living_room_latest:cat_robot:polySurfaceShape3 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform2|living_room_latest:cat_robot:top1Shape 
+		1 |living_room_latest:transform2|living_room_latest:cat_robot:top1Shape "surfaceReference" 
+		"sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:transform2|living_room_latest:cat_robot:top1Shape "referenceFile" 
+		"reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:transform2|living_room_latest:cat_robot:top1Shape "furNameSpace" 
+		"fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:transform27|living_room_latest:cat_robot:pCylinderShape17 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform2|living_room_latest:cat_robot:top1Shape 
+		1 |living_room_latest:transform27|living_room_latest:cat_robot:pCylinderShape17 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform2|living_room_latest:cat_robot:top1Shape 
+		1 |living_room_latest:transform27|living_room_latest:cat_robot:pCylinderShape17 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform27|living_room_latest:cat_robot:pCylinderShape17 
+		1 |living_room_latest:transform28|living_room_latest:cat_robot:pSphereShape7 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform27|living_room_latest:cat_robot:pCylinderShape17 
+		1 |living_room_latest:transform28|living_room_latest:cat_robot:pSphereShape7 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform27|living_room_latest:cat_robot:pCylinderShape17 
+		1 |living_room_latest:transform28|living_room_latest:cat_robot:pSphereShape7 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform28|living_room_latest:cat_robot:pSphereShape7 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform28|living_room_latest:cat_robot:pSphereShape7 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform28|living_room_latest:cat_robot:pSphereShape7 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform13|living_room_latest:cat_robot:pCylinderShape1" 
+		2 "|living_room_latest:transform13|living_room_latest:cat_robot:pCylinderShape1" 
 		"surfaceReference" " 1"
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform13|living_room_latest:cat_robot:pCylinderShape1" 
+		2 "|living_room_latest:transform13|living_room_latest:cat_robot:pCylinderShape1" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
 		
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform13|living_room_latest:cat_robot:pCylinderShape1" 
+		2 "|living_room_latest:transform13|living_room_latest:cat_robot:pCylinderShape1" 
 		"furNameSpace" " -type \"string\" \"cat_robot\""
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform14|living_room_latest:cat_robot:pCylinderShape2" 
+		2 "|living_room_latest:transform14|living_room_latest:cat_robot:pCylinderShape2" 
 		"surfaceReference" " 1"
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform14|living_room_latest:cat_robot:pCylinderShape2" 
+		2 "|living_room_latest:transform14|living_room_latest:cat_robot:pCylinderShape2" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
 		
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform14|living_room_latest:cat_robot:pCylinderShape2" 
+		2 "|living_room_latest:transform14|living_room_latest:cat_robot:pCylinderShape2" 
 		"furNameSpace" " -type \"string\" \"cat_robot\""
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform15|living_room_latest:cat_robot:torsoShape" 
+		2 "|living_room_latest:transform15|living_room_latest:cat_robot:torsoShape" 
 		"surfaceReference" " 1"
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform15|living_room_latest:cat_robot:torsoShape" 
+		2 "|living_room_latest:transform15|living_room_latest:cat_robot:torsoShape" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
 		
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform15|living_room_latest:cat_robot:torsoShape" 
+		2 "|living_room_latest:transform15|living_room_latest:cat_robot:torsoShape" 
 		"furNameSpace" " -type \"string\" \"cat_robot\""
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform22|living_room_latest:cat_robot:pCylinderShape15" 
+		2 "|living_room_latest:transform22|living_room_latest:cat_robot:pCylinderShape15" 
 		"surfaceReference" " 1"
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform22|living_room_latest:cat_robot:pCylinderShape15" 
+		2 "|living_room_latest:transform22|living_room_latest:cat_robot:pCylinderShape15" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
 		
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform22|living_room_latest:cat_robot:pCylinderShape15" 
+		2 "|living_room_latest:transform22|living_room_latest:cat_robot:pCylinderShape15" 
 		"furNameSpace" " -type \"string\" \"cat_robot\""
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform21|living_room_latest:cat_robot:pSphereShape6" 
+		2 "|living_room_latest:transform21|living_room_latest:cat_robot:pSphereShape6" 
 		"surfaceReference" " 1"
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform21|living_room_latest:cat_robot:pSphereShape6" 
+		2 "|living_room_latest:transform21|living_room_latest:cat_robot:pSphereShape6" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
 		
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform21|living_room_latest:cat_robot:pSphereShape6" 
+		2 "|living_room_latest:transform21|living_room_latest:cat_robot:pSphereShape6" 
 		"furNameSpace" " -type \"string\" \"cat_robot\""
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform20|living_room_latest:cat_robot:pCylinderShape12" 
+		2 "|living_room_latest:transform20|living_room_latest:cat_robot:pCylinderShape12" 
 		"surfaceReference" " 1"
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform20|living_room_latest:cat_robot:pCylinderShape12" 
+		2 "|living_room_latest:transform20|living_room_latest:cat_robot:pCylinderShape12" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
 		
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform20|living_room_latest:cat_robot:pCylinderShape12" 
+		2 "|living_room_latest:transform20|living_room_latest:cat_robot:pCylinderShape12" 
 		"furNameSpace" " -type \"string\" \"cat_robot\""
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform19|living_room_latest:cat_robot:pCylinderShape13" 
+		2 "|living_room_latest:transform19|living_room_latest:cat_robot:pCylinderShape13" 
 		"surfaceReference" " 1"
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform19|living_room_latest:cat_robot:pCylinderShape13" 
+		2 "|living_room_latest:transform19|living_room_latest:cat_robot:pCylinderShape13" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
 		
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform19|living_room_latest:cat_robot:pCylinderShape13" 
+		2 "|living_room_latest:transform19|living_room_latest:cat_robot:pCylinderShape13" 
 		"furNameSpace" " -type \"string\" \"cat_robot\""
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform18|living_room_latest:cat_robot:headShape" 
+		2 "|living_room_latest:transform18|living_room_latest:cat_robot:headShape" 
 		"surfaceReference" " 1"
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform18|living_room_latest:cat_robot:headShape" 
+		2 "|living_room_latest:transform18|living_room_latest:cat_robot:headShape" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
 		
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform18|living_room_latest:cat_robot:headShape" 
+		2 "|living_room_latest:transform18|living_room_latest:cat_robot:headShape" 
 		"furNameSpace" " -type \"string\" \"cat_robot\""
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform17|living_room_latest:cat_robot:head1Shape" 
+		2 "|living_room_latest:transform17|living_room_latest:cat_robot:head1Shape" 
 		"surfaceReference" " 1"
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform17|living_room_latest:cat_robot:head1Shape" 
+		2 "|living_room_latest:transform17|living_room_latest:cat_robot:head1Shape" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
 		
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform17|living_room_latest:cat_robot:head1Shape" 
+		2 "|living_room_latest:transform17|living_room_latest:cat_robot:head1Shape" 
 		"furNameSpace" " -type \"string\" \"cat_robot\""
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform16|living_room_latest:cat_robot:left_earShape" 
+		2 "|living_room_latest:transform16|living_room_latest:cat_robot:left_earShape" 
 		"surfaceReference" " 1"
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform16|living_room_latest:cat_robot:left_earShape" 
+		2 "|living_room_latest:transform16|living_room_latest:cat_robot:left_earShape" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
 		
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform16|living_room_latest:cat_robot:left_earShape" 
+		2 "|living_room_latest:transform16|living_room_latest:cat_robot:left_earShape" 
 		"furNameSpace" " -type \"string\" \"cat_robot\""
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform12|living_room_latest:cat_robot:right_earShape" 
+		2 "|living_room_latest:transform12|living_room_latest:cat_robot:right_earShape" 
 		"surfaceReference" " 1"
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform12|living_room_latest:cat_robot:right_earShape" 
+		2 "|living_room_latest:transform12|living_room_latest:cat_robot:right_earShape" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
 		
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform12|living_room_latest:cat_robot:right_earShape" 
+		2 "|living_room_latest:transform12|living_room_latest:cat_robot:right_earShape" 
 		"furNameSpace" " -type \"string\" \"cat_robot\""
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform11|living_room_latest:cat_robot:pCylinderShape5" 
+		2 "|living_room_latest:transform11|living_room_latest:cat_robot:pCylinderShape5" 
 		"surfaceReference" " 1"
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform11|living_room_latest:cat_robot:pCylinderShape5" 
+		2 "|living_room_latest:transform11|living_room_latest:cat_robot:pCylinderShape5" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
 		
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform11|living_room_latest:cat_robot:pCylinderShape5" 
+		2 "|living_room_latest:transform11|living_room_latest:cat_robot:pCylinderShape5" 
 		"furNameSpace" " -type \"string\" \"cat_robot\""
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform10|living_room_latest:cat_robot:pSphereShape2" 
+		2 "|living_room_latest:transform10|living_room_latest:cat_robot:pSphereShape2" 
 		"surfaceReference" " 1"
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform10|living_room_latest:cat_robot:pSphereShape2" 
+		2 "|living_room_latest:transform10|living_room_latest:cat_robot:pSphereShape2" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
 		
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform10|living_room_latest:cat_robot:pSphereShape2" 
+		2 "|living_room_latest:transform10|living_room_latest:cat_robot:pSphereShape2" 
 		"furNameSpace" " -type \"string\" \"cat_robot\""
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform24|living_room_latest:cat_robot:pSphereShape4" 
+		2 "|living_room_latest:transform24|living_room_latest:cat_robot:pSphereShape4" 
 		"surfaceReference" " 1"
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform24|living_room_latest:cat_robot:pSphereShape4" 
+		2 "|living_room_latest:transform24|living_room_latest:cat_robot:pSphereShape4" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
 		
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform24|living_room_latest:cat_robot:pSphereShape4" 
+		2 "|living_room_latest:transform24|living_room_latest:cat_robot:pSphereShape4" 
 		"furNameSpace" " -type \"string\" \"cat_robot\""
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform9|living_room_latest:cat_robot:pCylinderShape6" 
+		2 "|living_room_latest:transform9|living_room_latest:cat_robot:pCylinderShape6" 
 		"surfaceReference" " 1"
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform9|living_room_latest:cat_robot:pCylinderShape6" 
+		2 "|living_room_latest:transform9|living_room_latest:cat_robot:pCylinderShape6" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
 		
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform9|living_room_latest:cat_robot:pCylinderShape6" 
+		2 "|living_room_latest:transform9|living_room_latest:cat_robot:pCylinderShape6" 
 		"furNameSpace" " -type \"string\" \"cat_robot\""
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform8|living_room_latest:cat_robot:pSphereShape1" 
+		2 "|living_room_latest:transform8|living_room_latest:cat_robot:pSphereShape1" 
 		"surfaceReference" " 1"
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform8|living_room_latest:cat_robot:pSphereShape1" 
+		2 "|living_room_latest:transform8|living_room_latest:cat_robot:pSphereShape1" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
 		
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform8|living_room_latest:cat_robot:pSphereShape1" 
+		2 "|living_room_latest:transform8|living_room_latest:cat_robot:pSphereShape1" 
 		"furNameSpace" " -type \"string\" \"cat_robot\""
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform23|living_room_latest:cat_robot:pCylinderShape4" 
+		2 "|living_room_latest:transform23|living_room_latest:cat_robot:pCylinderShape4" 
 		"surfaceReference" " 1"
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform23|living_room_latest:cat_robot:pCylinderShape4" 
+		2 "|living_room_latest:transform23|living_room_latest:cat_robot:pCylinderShape4" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
 		
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform23|living_room_latest:cat_robot:pCylinderShape4" 
+		2 "|living_room_latest:transform23|living_room_latest:cat_robot:pCylinderShape4" 
 		"furNameSpace" " -type \"string\" \"cat_robot\""
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform25|living_room_latest:cat_robot:pSphereShape3" 
+		2 "|living_room_latest:transform25|living_room_latest:cat_robot:pSphereShape3" 
 		"surfaceReference" " 1"
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform25|living_room_latest:cat_robot:pSphereShape3" 
+		2 "|living_room_latest:transform25|living_room_latest:cat_robot:pSphereShape3" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
 		
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform25|living_room_latest:cat_robot:pSphereShape3" 
+		2 "|living_room_latest:transform25|living_room_latest:cat_robot:pSphereShape3" 
 		"furNameSpace" " -type \"string\" \"cat_robot\""
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform7|living_room_latest:cat_robot:pCylinderShape7" 
+		2 "|living_room_latest:transform7|living_room_latest:cat_robot:pCylinderShape7" 
 		"surfaceReference" " 1"
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform7|living_room_latest:cat_robot:pCylinderShape7" 
+		2 "|living_room_latest:transform7|living_room_latest:cat_robot:pCylinderShape7" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
 		
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform7|living_room_latest:cat_robot:pCylinderShape7" 
+		2 "|living_room_latest:transform7|living_room_latest:cat_robot:pCylinderShape7" 
 		"furNameSpace" " -type \"string\" \"cat_robot\""
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform4|living_room_latest:cat_robot:pCylinderShape14" 
+		2 "|living_room_latest:transform4|living_room_latest:cat_robot:pCylinderShape14" 
 		"surfaceReference" " 1"
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform4|living_room_latest:cat_robot:pCylinderShape14" 
+		2 "|living_room_latest:transform4|living_room_latest:cat_robot:pCylinderShape14" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
 		
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform4|living_room_latest:cat_robot:pCylinderShape14" 
+		2 "|living_room_latest:transform4|living_room_latest:cat_robot:pCylinderShape14" 
 		"furNameSpace" " -type \"string\" \"cat_robot\""
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform5|living_room_latest:cat_robot:botShape" 
+		2 "|living_room_latest:transform5|living_room_latest:cat_robot:botShape" 
 		"surfaceReference" " 1"
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform5|living_room_latest:cat_robot:botShape" 
+		2 "|living_room_latest:transform5|living_room_latest:cat_robot:botShape" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
 		
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform5|living_room_latest:cat_robot:botShape" 
+		2 "|living_room_latest:transform5|living_room_latest:cat_robot:botShape" 
 		"furNameSpace" " -type \"string\" \"cat_robot\""
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform6|living_room_latest:cat_robot:topShape" 
+		2 "|living_room_latest:transform6|living_room_latest:cat_robot:topShape" 
 		"surfaceReference" " 1"
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform6|living_room_latest:cat_robot:topShape" 
+		2 "|living_room_latest:transform6|living_room_latest:cat_robot:topShape" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
 		
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform6|living_room_latest:cat_robot:topShape" 
+		2 "|living_room_latest:transform6|living_room_latest:cat_robot:topShape" 
 		"furNameSpace" " -type \"string\" \"cat_robot\""
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform29|living_room_latest:cat_robot:pCylinderShape8" 
+		2 "|living_room_latest:transform29|living_room_latest:cat_robot:pCylinderShape8" 
 		"surfaceReference" " 1"
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform29|living_room_latest:cat_robot:pCylinderShape8" 
+		2 "|living_room_latest:transform29|living_room_latest:cat_robot:pCylinderShape8" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
 		
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform29|living_room_latest:cat_robot:pCylinderShape8" 
+		2 "|living_room_latest:transform29|living_room_latest:cat_robot:pCylinderShape8" 
 		"furNameSpace" " -type \"string\" \"cat_robot\""
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform26|living_room_latest:cat_robot:pSphereShape5" 
+		2 "|living_room_latest:transform26|living_room_latest:cat_robot:pSphereShape5" 
 		"surfaceReference" " 1"
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform26|living_room_latest:cat_robot:pSphereShape5" 
+		2 "|living_room_latest:transform26|living_room_latest:cat_robot:pSphereShape5" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
 		
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform26|living_room_latest:cat_robot:pSphereShape5" 
+		2 "|living_room_latest:transform26|living_room_latest:cat_robot:pSphereShape5" 
 		"furNameSpace" " -type \"string\" \"cat_robot\""
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform3|living_room_latest:cat_robot:pCylinderShape16" 
+		2 "|living_room_latest:transform3|living_room_latest:cat_robot:pCylinderShape16" 
 		"surfaceReference" " 1"
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform3|living_room_latest:cat_robot:pCylinderShape16" 
+		2 "|living_room_latest:transform3|living_room_latest:cat_robot:pCylinderShape16" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
 		
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform3|living_room_latest:cat_robot:pCylinderShape16" 
+		2 "|living_room_latest:transform3|living_room_latest:cat_robot:pCylinderShape16" 
 		"furNameSpace" " -type \"string\" \"cat_robot\""
 		2 "|living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:pCylinder16|living_room_latest:cat_robot:polySurfaceShape4" 
 		"surfaceReference" " 1"
@@ -27379,12 +27631,12 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		2 "|living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:pCylinder16|living_room_latest:cat_robot:polySurfaceShape4" 
 		"furNameSpace" " -type \"string\" \"cat_robot\""
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform1|living_room_latest:cat_robot:bot1Shape" 
+		2 "|living_room_latest:transform1|living_room_latest:cat_robot:bot1Shape" 
 		"surfaceReference" " 1"
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform1|living_room_latest:cat_robot:bot1Shape" 
+		2 "|living_room_latest:transform1|living_room_latest:cat_robot:bot1Shape" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
 		
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform1|living_room_latest:cat_robot:bot1Shape" 
+		2 "|living_room_latest:transform1|living_room_latest:cat_robot:bot1Shape" 
 		"furNameSpace" " -type \"string\" \"cat_robot\""
 		2 "|living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:bot1|living_room_latest:cat_robot:polySurfaceShape3" 
 		"surfaceReference" " 1"
@@ -27393,26 +27645,26 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		2 "|living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:bot1|living_room_latest:cat_robot:polySurfaceShape3" 
 		"furNameSpace" " -type \"string\" \"cat_robot\""
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform2|living_room_latest:cat_robot:top1Shape" 
+		2 "|living_room_latest:transform2|living_room_latest:cat_robot:top1Shape" 
 		"surfaceReference" " 1"
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform2|living_room_latest:cat_robot:top1Shape" 
+		2 "|living_room_latest:transform2|living_room_latest:cat_robot:top1Shape" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
 		
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform2|living_room_latest:cat_robot:top1Shape" 
+		2 "|living_room_latest:transform2|living_room_latest:cat_robot:top1Shape" 
 		"furNameSpace" " -type \"string\" \"cat_robot\""
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform27|living_room_latest:cat_robot:pCylinderShape17" 
+		2 "|living_room_latest:transform27|living_room_latest:cat_robot:pCylinderShape17" 
 		"surfaceReference" " 1"
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform27|living_room_latest:cat_robot:pCylinderShape17" 
+		2 "|living_room_latest:transform27|living_room_latest:cat_robot:pCylinderShape17" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
 		
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform27|living_room_latest:cat_robot:pCylinderShape17" 
+		2 "|living_room_latest:transform27|living_room_latest:cat_robot:pCylinderShape17" 
 		"furNameSpace" " -type \"string\" \"cat_robot\""
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform28|living_room_latest:cat_robot:pSphereShape7" 
+		2 "|living_room_latest:transform28|living_room_latest:cat_robot:pSphereShape7" 
 		"surfaceReference" " 1"
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform28|living_room_latest:cat_robot:pSphereShape7" 
+		2 "|living_room_latest:transform28|living_room_latest:cat_robot:pSphereShape7" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
 		
-		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform28|living_room_latest:cat_robot:pSphereShape7" 
+		2 "|living_room_latest:transform28|living_room_latest:cat_robot:pSphereShape7" 
 		"furNameSpace" " -type \"string\" \"cat_robot\""
 		"living_room_latest:taller_window_four_squares_latest3RN" 50
 		1 |living_room_latest:taller_window_four_squares_latest4:taller_window|living_room_latest:taller_window_four_squares_latest4:polySurfaceShape1 
@@ -29518,7 +29770,9 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		2 "|living_room_latest:cube_cushion:pCube1|living_room_latest:cube_cushion:pCubeShape1" 
 		"furNameSpace" " -type \"string\" \"cube_cushion\""
-		"living_room_latest:armchair_latestRN" 62
+		"living_room_latest:armchair_latestRN" 63
+		0 "|armchair_latestRNfosterParent1|fosterParent1" "|living_room_latest:armchair_latest:armchair_frame" 
+		"-s -r "
 		1 |living_room_latest:armchair_latest:armchair_frame|living_room_latest:armchair_latest:armchair_frameShape 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
@@ -29754,7 +30008,19 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		2 "|living_room_latest:taller_window_four_squares_latest:taller_window|living_room_latest:taller_window_four_squares_latest:transform1|living_room_latest:taller_window_four_squares_latest:taller_windowShape" 
 		"furNameSpace" " -type \"string\" \"taller_window_four_squares_latest\""
-		"living_room_latest:armchair_latestRN1" 62
+		"living_room_latest:armchair_latestRN1" 68
+		0 "|armchair_latestRN1fosterParent1|fosterParent7" "|living_room_latest:armchair_latest1:armchair_frame" 
+		"-s -r "
+		0 "|armchair_latestRN1fosterParent1|fosterParent6" "|living_room_latest:armchair_latest1:armchair_frame" 
+		"-s -r "
+		0 "|armchair_latestRN1fosterParent1|fosterParent5" "|living_room_latest:armchair_latest1:armchair_frame" 
+		"-s -r "
+		0 "|armchair_latestRN1fosterParent1|fosterParent4" "|living_room_latest:armchair_latest1:armchair_frame" 
+		"-s -r "
+		0 "|armchair_latestRN1fosterParent1|fosterParent3" "|living_room_latest:armchair_latest1:armchair_frame" 
+		"-s -r "
+		0 "|armchair_latestRN1fosterParent1|fosterParent2" "|living_room_latest:armchair_latest1:armchair_frame" 
+		"-s -r "
 		1 |living_room_latest:armchair_latest1:armchair_frame|living_room_latest:armchair_latest1:armchair_frameShape 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
@@ -30287,14 +30553,14 @@ createNode reference -n "livingroom_shading_latestRN";
 		1 |living_room_latest:fridge|living_room_latest:polySurface11|living_room_latest:polySurfaceShape11 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:fridge|living_room_latest:polySurface12|living_room_latest:polySurfaceShape12 
+		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
+		
+		1 |living_room_latest:fridge|living_room_latest:polySurface12|living_room_latest:polySurfaceShape12 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
 		1 |living_room_latest:fridge|living_room_latest:polySurface12|living_room_latest:polySurfaceShape12 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:fridge|living_room_latest:polySurface12|living_room_latest:polySurfaceShape12 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:fridge|living_room_latest:polySurface12|living_room_latest:polySurfaceShape12 
-		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
-		
 		1 |living_room_latest:door_1|living_room_latest:door_Shape1 "VisibleInIndirect" 
 		"VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		1 |living_room_latest:door_1|living_room_latest:door_Shape1 "surfaceReference" 
@@ -34287,264 +34553,264 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:polySurface89|living_room_latest:polySurfaceShape336 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:armchair_latestRNfosterParent1|living_room_latest:armchair_cushion|living_room_latest:armchair_cushionShape 
+		1 |living_room_latest:armchair_cushion|living_room_latest:armchair_cushionShape 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:armchair_latestRNfosterParent1|living_room_latest:armchair_cushion|living_room_latest:armchair_cushionShape 
+		1 |living_room_latest:armchair_cushion|living_room_latest:armchair_cushionShape 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:armchair_latestRNfosterParent1|living_room_latest:armchair_cushion|living_room_latest:armchair_cushionShape 
+		1 |living_room_latest:armchair_cushion|living_room_latest:armchair_cushionShape 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:armchair_latestRN1fosterParent1|living_room_latest:armchair_pillow_1|living_room_latest:armchair_pillow_Shape1 
+		1 |living_room_latest:armchair_pillow_1|living_room_latest:armchair_pillow_Shape1 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:armchair_latestRN1fosterParent1|living_room_latest:armchair_pillow_1|living_room_latest:armchair_pillow_Shape1 
+		1 |living_room_latest:armchair_pillow_1|living_room_latest:armchair_pillow_Shape1 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:armchair_latestRN1fosterParent1|living_room_latest:armchair_pillow_1|living_room_latest:armchair_pillow_Shape1 
+		1 |living_room_latest:armchair_pillow_1|living_room_latest:armchair_pillow_Shape1 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:armchair_latestRN1fosterParent1|living_room_latest:armchair_pillow_2|living_room_latest:armchair_pillow_Shape2 
+		1 |living_room_latest:armchair_pillow_2|living_room_latest:armchair_pillow_Shape2 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:armchair_latestRN1fosterParent1|living_room_latest:armchair_pillow_2|living_room_latest:armchair_pillow_Shape2 
+		1 |living_room_latest:armchair_pillow_2|living_room_latest:armchair_pillow_Shape2 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:armchair_latestRN1fosterParent1|living_room_latest:armchair_pillow_2|living_room_latest:armchair_pillow_Shape2 
+		1 |living_room_latest:armchair_pillow_2|living_room_latest:armchair_pillow_Shape2 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:armchair_latestRN1fosterParent1|living_room_latest:armchair_pillow_3|living_room_latest:armchair_pillow_Shape3 
+		1 |living_room_latest:armchair_pillow_3|living_room_latest:armchair_pillow_Shape3 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:armchair_latestRN1fosterParent1|living_room_latest:armchair_pillow_3|living_room_latest:armchair_pillow_Shape3 
+		1 |living_room_latest:armchair_pillow_3|living_room_latest:armchair_pillow_Shape3 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:armchair_latestRN1fosterParent1|living_room_latest:armchair_pillow_3|living_room_latest:armchair_pillow_Shape3 
+		1 |living_room_latest:armchair_pillow_3|living_room_latest:armchair_pillow_Shape3 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:armchair_latestRN1fosterParent1|living_room_latest:armchair_pillow_4|living_room_latest:armchair_pillow_Shape4 
+		1 |living_room_latest:armchair_pillow_4|living_room_latest:armchair_pillow_Shape4 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:armchair_latestRN1fosterParent1|living_room_latest:armchair_pillow_4|living_room_latest:armchair_pillow_Shape4 
+		1 |living_room_latest:armchair_pillow_4|living_room_latest:armchair_pillow_Shape4 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:armchair_latestRN1fosterParent1|living_room_latest:armchair_pillow_4|living_room_latest:armchair_pillow_Shape4 
+		1 |living_room_latest:armchair_pillow_4|living_room_latest:armchair_pillow_Shape4 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:armchair_latestRN1fosterParent1|living_room_latest:armchair_pillow_5|living_room_latest:armchair_pillow_Shape5 
+		1 |living_room_latest:armchair_pillow_5|living_room_latest:armchair_pillow_Shape5 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:armchair_latestRN1fosterParent1|living_room_latest:armchair_pillow_5|living_room_latest:armchair_pillow_Shape5 
+		1 |living_room_latest:armchair_pillow_5|living_room_latest:armchair_pillow_Shape5 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:armchair_latestRN1fosterParent1|living_room_latest:armchair_pillow_5|living_room_latest:armchair_pillow_Shape5 
+		1 |living_room_latest:armchair_pillow_5|living_room_latest:armchair_pillow_Shape5 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:armchair_latestRN1fosterParent1|living_room_latest:armchair_pillow_6|living_room_latest:armchair_pillow_Shape6 
+		1 |living_room_latest:armchair_pillow_6|living_room_latest:armchair_pillow_Shape6 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:armchair_latestRN1fosterParent1|living_room_latest:armchair_pillow_6|living_room_latest:armchair_pillow_Shape6 
+		1 |living_room_latest:armchair_pillow_6|living_room_latest:armchair_pillow_Shape6 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:armchair_latestRN1fosterParent1|living_room_latest:armchair_pillow_6|living_room_latest:armchair_pillow_Shape6 
+		1 |living_room_latest:armchair_pillow_6|living_room_latest:armchair_pillow_Shape6 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape279 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape279 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape279 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape278 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape278 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape278 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape277 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape277 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape277 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape247 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape247 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape247 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape246 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape246 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape246 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape245 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape245 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape245 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape249 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape249 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape249 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape248 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape248 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape248 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape253 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape253 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape253 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape252 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape252 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape252 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape251 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape251 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape251 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape250 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape250 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape250 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape256 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape256 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape256 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape255 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape255 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape255 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape254 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape254 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape254 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape257 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape257 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape257 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape258 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape258 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape258 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape259 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape259 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape259 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape262 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape262 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape262 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape261 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape261 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape261 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape260 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape260 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape260 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape265 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape265 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape265 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape264 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape264 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape264 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape263 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape263 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape263 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape268 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape268 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape268 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape267 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape267 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape267 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape266 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape266 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape266 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape271 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape271 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape271 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape270 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape270 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape270 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape269 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape269 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape269 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape243 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape243 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape243 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape273 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape273 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape273 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape272 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape272 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape272 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape275 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape275 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape275 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape274 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape274 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape274 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape244 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape244 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape244 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:pCubeShape279 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape279 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape279 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape278 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape278 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape278 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape277 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape277 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape277 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape247 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape247 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape247 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape246 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape246 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape246 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape245 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape245 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape245 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape249 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape249 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape249 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape248 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape248 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape248 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape253 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape253 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape253 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape252 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape252 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape252 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape251 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape251 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape251 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape250 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape250 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape250 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape256 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape256 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape256 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape255 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape255 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape255 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape254 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape254 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape254 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape257 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape257 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape257 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape258 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape258 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape258 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape259 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape259 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape259 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape262 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape262 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape262 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape261 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape261 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape261 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape260 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape260 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape260 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape265 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape265 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape265 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape264 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape264 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape264 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape263 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape263 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape263 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape268 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape268 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape268 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape267 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape267 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape267 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape266 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape266 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape266 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape271 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape271 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape271 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape270 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape270 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape270 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape269 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape269 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape269 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape243 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape243 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape243 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape273 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape273 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape273 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape272 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape272 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape272 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape275 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape275 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape275 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape274 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape274 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape274 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape244 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape244 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape244 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
 		1 living_room_latest:pasted__file18 "proceduralTexDefaultRes" "proceduralTexDefaultRes" 
 		" -ci 1 -dv 512 -min 256 -max 4096 -smn 8 -smx 8192 -at \"short\""
 		1 living_room_latest:pasted__file18 "proceduralTexMaxRes" "proceduralTexMaxRes" 
@@ -35200,14 +35466,14 @@ createNode reference -n "livingroom_shading_latestRN";
 		2 "|living_room_latest:fridge|living_room_latest:polySurface11|living_room_latest:polySurfaceShape11" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:fridge|living_room_latest:polySurface12|living_room_latest:polySurfaceShape12" 
+		"VisibleInIndirect" " 1"
+		2 "|living_room_latest:fridge|living_room_latest:polySurface12|living_room_latest:polySurfaceShape12" 
 		"surfaceReference" " 1"
 		2 "|living_room_latest:fridge|living_room_latest:polySurface12|living_room_latest:polySurfaceShape12" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
 		2 "|living_room_latest:fridge|living_room_latest:polySurface12|living_room_latest:polySurfaceShape12" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:fridge|living_room_latest:polySurface12|living_room_latest:polySurfaceShape12" 
-		"VisibleInIndirect" " 1"
 		2 "|living_room_latest:door_1|living_room_latest:door_Shape1" "VisibleInIndirect" 
 		" 1"
 		2 "|living_room_latest:door_1|living_room_latest:door_Shape1" "surfaceReference" 
@@ -39581,307 +39847,235 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		2 "|living_room_latest:polySurface89|living_room_latest:polySurfaceShape336" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:armchair_latestRNfosterParent1|living_room_latest:armchair_cushion|living_room_latest:armchair_cushionShape" 
+		2 "|living_room_latest:armchair_cushion|living_room_latest:armchair_cushionShape" 
 		"surfaceReference" " 1"
-		2 "|living_room_latest:armchair_latestRNfosterParent1|living_room_latest:armchair_cushion|living_room_latest:armchair_cushionShape" 
+		2 "|living_room_latest:armchair_cushion|living_room_latest:armchair_cushionShape" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
-		2 "|living_room_latest:armchair_latestRNfosterParent1|living_room_latest:armchair_cushion|living_room_latest:armchair_cushionShape" 
+		2 "|living_room_latest:armchair_cushion|living_room_latest:armchair_cushionShape" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:armchair_latestRN1fosterParent1|living_room_latest:armchair_pillow_1|living_room_latest:armchair_pillow_Shape1" 
+		2 "|living_room_latest:armchair_pillow_1|living_room_latest:armchair_pillow_Shape1" 
 		"surfaceReference" " 1"
-		2 "|living_room_latest:armchair_latestRN1fosterParent1|living_room_latest:armchair_pillow_1|living_room_latest:armchair_pillow_Shape1" 
+		2 "|living_room_latest:armchair_pillow_1|living_room_latest:armchair_pillow_Shape1" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
-		2 "|living_room_latest:armchair_latestRN1fosterParent1|living_room_latest:armchair_pillow_1|living_room_latest:armchair_pillow_Shape1" 
+		2 "|living_room_latest:armchair_pillow_1|living_room_latest:armchair_pillow_Shape1" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:armchair_latestRN1fosterParent1|living_room_latest:armchair_pillow_2|living_room_latest:armchair_pillow_Shape2" 
+		2 "|living_room_latest:armchair_pillow_2|living_room_latest:armchair_pillow_Shape2" 
 		"surfaceReference" " 1"
-		2 "|living_room_latest:armchair_latestRN1fosterParent1|living_room_latest:armchair_pillow_2|living_room_latest:armchair_pillow_Shape2" 
+		2 "|living_room_latest:armchair_pillow_2|living_room_latest:armchair_pillow_Shape2" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
-		2 "|living_room_latest:armchair_latestRN1fosterParent1|living_room_latest:armchair_pillow_2|living_room_latest:armchair_pillow_Shape2" 
+		2 "|living_room_latest:armchair_pillow_2|living_room_latest:armchair_pillow_Shape2" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:armchair_latestRN1fosterParent1|living_room_latest:armchair_pillow_3|living_room_latest:armchair_pillow_Shape3" 
+		2 "|living_room_latest:armchair_pillow_3|living_room_latest:armchair_pillow_Shape3" 
 		"surfaceReference" " 1"
-		2 "|living_room_latest:armchair_latestRN1fosterParent1|living_room_latest:armchair_pillow_3|living_room_latest:armchair_pillow_Shape3" 
+		2 "|living_room_latest:armchair_pillow_3|living_room_latest:armchair_pillow_Shape3" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
-		2 "|living_room_latest:armchair_latestRN1fosterParent1|living_room_latest:armchair_pillow_3|living_room_latest:armchair_pillow_Shape3" 
+		2 "|living_room_latest:armchair_pillow_3|living_room_latest:armchair_pillow_Shape3" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:armchair_latestRN1fosterParent1|living_room_latest:armchair_pillow_4|living_room_latest:armchair_pillow_Shape4" 
+		2 "|living_room_latest:armchair_pillow_4|living_room_latest:armchair_pillow_Shape4" 
 		"surfaceReference" " 1"
-		2 "|living_room_latest:armchair_latestRN1fosterParent1|living_room_latest:armchair_pillow_4|living_room_latest:armchair_pillow_Shape4" 
+		2 "|living_room_latest:armchair_pillow_4|living_room_latest:armchair_pillow_Shape4" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
-		2 "|living_room_latest:armchair_latestRN1fosterParent1|living_room_latest:armchair_pillow_4|living_room_latest:armchair_pillow_Shape4" 
+		2 "|living_room_latest:armchair_pillow_4|living_room_latest:armchair_pillow_Shape4" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:armchair_latestRN1fosterParent1|living_room_latest:armchair_pillow_5|living_room_latest:armchair_pillow_Shape5" 
+		2 "|living_room_latest:armchair_pillow_5|living_room_latest:armchair_pillow_Shape5" 
 		"surfaceReference" " 1"
-		2 "|living_room_latest:armchair_latestRN1fosterParent1|living_room_latest:armchair_pillow_5|living_room_latest:armchair_pillow_Shape5" 
+		2 "|living_room_latest:armchair_pillow_5|living_room_latest:armchair_pillow_Shape5" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
-		2 "|living_room_latest:armchair_latestRN1fosterParent1|living_room_latest:armchair_pillow_5|living_room_latest:armchair_pillow_Shape5" 
+		2 "|living_room_latest:armchair_pillow_5|living_room_latest:armchair_pillow_Shape5" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:armchair_latestRN1fosterParent1|living_room_latest:armchair_pillow_6|living_room_latest:armchair_pillow_Shape6" 
+		2 "|living_room_latest:armchair_pillow_6|living_room_latest:armchair_pillow_Shape6" 
 		"surfaceReference" " 1"
-		2 "|living_room_latest:armchair_latestRN1fosterParent1|living_room_latest:armchair_pillow_6|living_room_latest:armchair_pillow_Shape6" 
+		2 "|living_room_latest:armchair_pillow_6|living_room_latest:armchair_pillow_Shape6" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
-		2 "|living_room_latest:armchair_latestRN1fosterParent1|living_room_latest:armchair_pillow_6|living_room_latest:armchair_pillow_Shape6" 
+		2 "|living_room_latest:armchair_pillow_6|living_room_latest:armchair_pillow_Shape6" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape279" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape279" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		2 "|living_room_latest:pCubeShape279" "surfaceReference" " 1"
+		2 "|living_room_latest:pCubeShape279" "referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape279" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape278" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape278" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		2 "|living_room_latest:pCubeShape279" "furNameSpace" " -type \"string\" \"living_room_latest\""
 		
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape278" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape277" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape277" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		2 "|living_room_latest:pCubeShape278" "surfaceReference" " 1"
+		2 "|living_room_latest:pCubeShape278" "referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape277" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape247" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape247" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		2 "|living_room_latest:pCubeShape278" "furNameSpace" " -type \"string\" \"living_room_latest\""
 		
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape247" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape246" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape246" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		2 "|living_room_latest:pCubeShape277" "surfaceReference" " 1"
+		2 "|living_room_latest:pCubeShape277" "referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape246" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape245" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape245" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		2 "|living_room_latest:pCubeShape277" "furNameSpace" " -type \"string\" \"living_room_latest\""
 		
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape245" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape249" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape249" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		2 "|living_room_latest:pCubeShape247" "surfaceReference" " 1"
+		2 "|living_room_latest:pCubeShape247" "referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape249" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape248" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape248" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		2 "|living_room_latest:pCubeShape247" "furNameSpace" " -type \"string\" \"living_room_latest\""
 		
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape248" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape253" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape253" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		2 "|living_room_latest:pCubeShape246" "surfaceReference" " 1"
+		2 "|living_room_latest:pCubeShape246" "referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape253" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape252" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape252" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		2 "|living_room_latest:pCubeShape246" "furNameSpace" " -type \"string\" \"living_room_latest\""
 		
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape252" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape251" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape251" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		2 "|living_room_latest:pCubeShape245" "surfaceReference" " 1"
+		2 "|living_room_latest:pCubeShape245" "referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape251" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape250" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape250" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		2 "|living_room_latest:pCubeShape245" "furNameSpace" " -type \"string\" \"living_room_latest\""
 		
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape250" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape256" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape256" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		2 "|living_room_latest:pCubeShape249" "surfaceReference" " 1"
+		2 "|living_room_latest:pCubeShape249" "referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape256" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape255" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape255" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		2 "|living_room_latest:pCubeShape249" "furNameSpace" " -type \"string\" \"living_room_latest\""
 		
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape255" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape254" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape254" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		2 "|living_room_latest:pCubeShape248" "surfaceReference" " 1"
+		2 "|living_room_latest:pCubeShape248" "referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape254" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape257" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape257" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		2 "|living_room_latest:pCubeShape248" "furNameSpace" " -type \"string\" \"living_room_latest\""
 		
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape257" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape258" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape258" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		2 "|living_room_latest:pCubeShape253" "surfaceReference" " 1"
+		2 "|living_room_latest:pCubeShape253" "referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape258" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape259" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape259" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		2 "|living_room_latest:pCubeShape253" "furNameSpace" " -type \"string\" \"living_room_latest\""
 		
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape259" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape262" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape262" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		2 "|living_room_latest:pCubeShape252" "surfaceReference" " 1"
+		2 "|living_room_latest:pCubeShape252" "referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape262" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape261" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape261" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		2 "|living_room_latest:pCubeShape252" "furNameSpace" " -type \"string\" \"living_room_latest\""
 		
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape261" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape260" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape260" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		2 "|living_room_latest:pCubeShape251" "surfaceReference" " 1"
+		2 "|living_room_latest:pCubeShape251" "referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape260" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape265" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape265" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		2 "|living_room_latest:pCubeShape251" "furNameSpace" " -type \"string\" \"living_room_latest\""
 		
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape265" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape264" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape264" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		2 "|living_room_latest:pCubeShape250" "surfaceReference" " 1"
+		2 "|living_room_latest:pCubeShape250" "referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape264" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape263" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape263" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		2 "|living_room_latest:pCubeShape250" "furNameSpace" " -type \"string\" \"living_room_latest\""
 		
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape263" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape268" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape268" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		2 "|living_room_latest:pCubeShape256" "surfaceReference" " 1"
+		2 "|living_room_latest:pCubeShape256" "referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape268" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape267" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape267" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		2 "|living_room_latest:pCubeShape256" "furNameSpace" " -type \"string\" \"living_room_latest\""
 		
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape267" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape266" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape266" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		2 "|living_room_latest:pCubeShape255" "surfaceReference" " 1"
+		2 "|living_room_latest:pCubeShape255" "referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape266" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape271" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape271" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		2 "|living_room_latest:pCubeShape255" "furNameSpace" " -type \"string\" \"living_room_latest\""
 		
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape271" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape270" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape270" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		2 "|living_room_latest:pCubeShape254" "surfaceReference" " 1"
+		2 "|living_room_latest:pCubeShape254" "referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape270" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape269" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape269" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		2 "|living_room_latest:pCubeShape254" "furNameSpace" " -type \"string\" \"living_room_latest\""
 		
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape269" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape243" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape243" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		2 "|living_room_latest:pCubeShape257" "surfaceReference" " 1"
+		2 "|living_room_latest:pCubeShape257" "referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape243" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape273" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape273" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		2 "|living_room_latest:pCubeShape257" "furNameSpace" " -type \"string\" \"living_room_latest\""
 		
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape273" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape272" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape272" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		2 "|living_room_latest:pCubeShape258" "surfaceReference" " 1"
+		2 "|living_room_latest:pCubeShape258" "referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape272" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape275" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape275" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		2 "|living_room_latest:pCubeShape258" "furNameSpace" " -type \"string\" \"living_room_latest\""
 		
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape275" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape274" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape274" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		2 "|living_room_latest:pCubeShape259" "surfaceReference" " 1"
+		2 "|living_room_latest:pCubeShape259" "referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape274" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape244" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape244" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		2 "|living_room_latest:pCubeShape259" "furNameSpace" " -type \"string\" \"living_room_latest\""
 		
-		2 "|living_room_latest:resurrected_staircaseRNfosterParent1|living_room_latest:pCubeShape244" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|living_room_latest:pCubeShape262" "surfaceReference" " 1"
+		2 "|living_room_latest:pCubeShape262" "referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:pCubeShape262" "furNameSpace" " -type \"string\" \"living_room_latest\""
+		
+		2 "|living_room_latest:pCubeShape261" "surfaceReference" " 1"
+		2 "|living_room_latest:pCubeShape261" "referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:pCubeShape261" "furNameSpace" " -type \"string\" \"living_room_latest\""
+		
+		2 "|living_room_latest:pCubeShape260" "surfaceReference" " 1"
+		2 "|living_room_latest:pCubeShape260" "referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:pCubeShape260" "furNameSpace" " -type \"string\" \"living_room_latest\""
+		
+		2 "|living_room_latest:pCubeShape265" "surfaceReference" " 1"
+		2 "|living_room_latest:pCubeShape265" "referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:pCubeShape265" "furNameSpace" " -type \"string\" \"living_room_latest\""
+		
+		2 "|living_room_latest:pCubeShape264" "surfaceReference" " 1"
+		2 "|living_room_latest:pCubeShape264" "referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:pCubeShape264" "furNameSpace" " -type \"string\" \"living_room_latest\""
+		
+		2 "|living_room_latest:pCubeShape263" "surfaceReference" " 1"
+		2 "|living_room_latest:pCubeShape263" "referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:pCubeShape263" "furNameSpace" " -type \"string\" \"living_room_latest\""
+		
+		2 "|living_room_latest:pCubeShape268" "surfaceReference" " 1"
+		2 "|living_room_latest:pCubeShape268" "referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:pCubeShape268" "furNameSpace" " -type \"string\" \"living_room_latest\""
+		
+		2 "|living_room_latest:pCubeShape267" "surfaceReference" " 1"
+		2 "|living_room_latest:pCubeShape267" "referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:pCubeShape267" "furNameSpace" " -type \"string\" \"living_room_latest\""
+		
+		2 "|living_room_latest:pCubeShape266" "surfaceReference" " 1"
+		2 "|living_room_latest:pCubeShape266" "referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:pCubeShape266" "furNameSpace" " -type \"string\" \"living_room_latest\""
+		
+		2 "|living_room_latest:pCubeShape271" "surfaceReference" " 1"
+		2 "|living_room_latest:pCubeShape271" "referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:pCubeShape271" "furNameSpace" " -type \"string\" \"living_room_latest\""
+		
+		2 "|living_room_latest:pCubeShape270" "surfaceReference" " 1"
+		2 "|living_room_latest:pCubeShape270" "referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:pCubeShape270" "furNameSpace" " -type \"string\" \"living_room_latest\""
+		
+		2 "|living_room_latest:pCubeShape269" "surfaceReference" " 1"
+		2 "|living_room_latest:pCubeShape269" "referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:pCubeShape269" "furNameSpace" " -type \"string\" \"living_room_latest\""
+		
+		2 "|living_room_latest:pCubeShape243" "surfaceReference" " 1"
+		2 "|living_room_latest:pCubeShape243" "referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:pCubeShape243" "furNameSpace" " -type \"string\" \"living_room_latest\""
+		
+		2 "|living_room_latest:pCubeShape273" "surfaceReference" " 1"
+		2 "|living_room_latest:pCubeShape273" "referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:pCubeShape273" "furNameSpace" " -type \"string\" \"living_room_latest\""
+		
+		2 "|living_room_latest:pCubeShape272" "surfaceReference" " 1"
+		2 "|living_room_latest:pCubeShape272" "referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:pCubeShape272" "furNameSpace" " -type \"string\" \"living_room_latest\""
+		
+		2 "|living_room_latest:pCubeShape275" "surfaceReference" " 1"
+		2 "|living_room_latest:pCubeShape275" "referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:pCubeShape275" "furNameSpace" " -type \"string\" \"living_room_latest\""
+		
+		2 "|living_room_latest:pCubeShape274" "surfaceReference" " 1"
+		2 "|living_room_latest:pCubeShape274" "referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:pCubeShape274" "furNameSpace" " -type \"string\" \"living_room_latest\""
+		
+		2 "|living_room_latest:pCubeShape244" "surfaceReference" " 1"
+		2 "|living_room_latest:pCubeShape244" "referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:pCubeShape244" "furNameSpace" " -type \"string\" \"living_room_latest\""
+		
 		2 "living_room_latest:pasted__file18" "proceduralTexDefaultRes" " 512"
 		2 "living_room_latest:pasted__file18" "proceduralTexMaxRes" " 1024"
 		2 "living_room_latest:pasted__file18" "ReduceTextureInCuda" " 1"
@@ -40598,7 +40792,9 @@ createNode reference -n "smartybikeRN";
 		2 "smartybike_defaultFurGlobals" "furGlobalReference" " 1"
 		3 ":defaultRenderGlobals.rendercallback" "smartybike_defaultFurGlobals.callback" 
 		""
-		"smartybike_NewSmarty_024RN" 492
+		"smartybike_NewSmarty_024RN" 493
+		0 "|smartybike_NewSmarty_024RNfosterParent1|fosterParent73" "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" 
+		"-s -r "
 		1 |NewSmarty_024:SmartyRig|NewSmarty_024:Smarty|NewSmarty_024:polySurface6|NewSmarty_024:polySurfaceShape4 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
@@ -41070,7 +41266,7 @@ createNode reference -n "smartybikeRN";
 		
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:Smarty|NewSmarty_024:polySurface6|NewSmarty_024:polySurfaceShape4Orig" 
 		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" "translate" " -type \"double3\" -195.10509328394082 11.121544367282532 62.141068567410926"
+		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" "translate" " -type \"double3\" -196.29772104599411 11.121580274302051 61.591595922759815"
 		
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" "translateX" " -av"
 		
@@ -41078,7 +41274,7 @@ createNode reference -n "smartybikeRN";
 		
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" "translateZ" " -av"
 		
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" "rotate" " -type \"double3\" -12.377211029378893 -115.30811605193229 13.644381735199271"
+		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" "rotate" " -type \"double3\" -11.048363336445528 -118.66301749369515 12.545373049994179"
 		
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" "rotateX" " -av"
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" "rotateY" " -av"
@@ -41194,7 +41390,7 @@ createNode reference -n "smartybikeRN";
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:tongue:pPlane1|NewSmarty_024:tongue:pPlaneShape1" 
 		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rightLeg_ik" 
-		"translate" " -type \"double3\" -2.233211292986693 -9.9748973102823992 1.3446827995203809"
+		"translate" " -type \"double3\" -2.233211292986693 -9.974897310282385 1.3446827995202673"
 		
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rightLeg_ik" 
 		"translateX" " -av"
@@ -41203,7 +41399,7 @@ createNode reference -n "smartybikeRN";
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rightLeg_ik" 
 		"translateZ" " -av"
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:leftLeg_ik" 
-		"translate" " -type \"double3\" 2.0746780938945704 -9.9748837915002841 1.3446808565263477"
+		"translate" " -type \"double3\" 2.0746780938946841 -9.9748837915002699 1.3446808565263477"
 		
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:leftLeg_ik" 
 		"translateX" " -av"
@@ -41212,7 +41408,7 @@ createNode reference -n "smartybikeRN";
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:leftLeg_ik" 
 		"translateZ" " -av"
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rightArm_ik" 
-		"translate" " -type \"double3\" -3.6566274601312787 -2.383918322878209 5.1006420311372498"
+		"translate" " -type \"double3\" -3.656627460131165 -2.383918322878209 5.1006420311373635"
 		
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rightArm_ik" 
 		"translateX" " -av"
@@ -41692,7 +41888,7 @@ createNode reference -n "smartybikeRN";
 		1 |bike:bike_ctrl|bike:wholeBike|bike:frame|bike:frameShape "VisibleInIndirect" 
 		"VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		2 "|bike:bike_ctrl" "visibility" " 1"
-		2 "|bike:bike_ctrl" "translate" " -type \"double3\" -196.00030266093995 -1.0120543847395378 62.879900454894099"
+		2 "|bike:bike_ctrl" "translate" " -type \"double3\" -197.17683915123635 -1.0120543847395378 62.296559532050246"
 		
 		2 "|bike:bike_ctrl" "translateZ" " -av"
 		2 "|bike:bike_ctrl" "scale" " -type \"double3\" 0.4 0.4 0.4"
@@ -43336,7 +43532,7 @@ createNode animCurveTU -n "bike:bike_ctrl_scaleZ";
 		 333.75 0.8 335 0.8 336.25 0.8 337.5 0.8 338.75 0.8 340 0.8 341.25 0.8 342.5 0.8 343.75 0.8
 		 345 0.8 346.25 0.8 347.5 0.8 348.75 0.8 350 0.8 351.25 0.8 352.5 0.8;
 createNode reference -n "pig_latestRN";
-	setAttr -s 99 ".phl";
+	setAttr -s 42 ".phl";
 	setAttr ".phl[27]" 0;
 	setAttr ".phl[28]" 0;
 	setAttr ".phl[29]" 0;
@@ -43379,63 +43575,6 @@ createNode reference -n "pig_latestRN";
 	setAttr ".phl[66]" 0;
 	setAttr ".phl[67]" 0;
 	setAttr ".phl[68]" 0;
-	setAttr ".phl[69]" 0;
-	setAttr ".phl[70]" 0;
-	setAttr ".phl[71]" 0;
-	setAttr ".phl[72]" 0;
-	setAttr ".phl[73]" 0;
-	setAttr ".phl[74]" 0;
-	setAttr ".phl[75]" 0;
-	setAttr ".phl[76]" 0;
-	setAttr ".phl[77]" 0;
-	setAttr ".phl[78]" 0;
-	setAttr ".phl[79]" 0;
-	setAttr ".phl[80]" 0;
-	setAttr ".phl[81]" 0;
-	setAttr ".phl[82]" 0;
-	setAttr ".phl[83]" 0;
-	setAttr ".phl[84]" 0;
-	setAttr ".phl[85]" 0;
-	setAttr ".phl[86]" 0;
-	setAttr ".phl[87]" 0;
-	setAttr ".phl[88]" 0;
-	setAttr ".phl[89]" 0;
-	setAttr ".phl[90]" 0;
-	setAttr ".phl[91]" 0;
-	setAttr ".phl[92]" 0;
-	setAttr ".phl[93]" 0;
-	setAttr ".phl[94]" 0;
-	setAttr ".phl[95]" 0;
-	setAttr ".phl[96]" 0;
-	setAttr ".phl[97]" 0;
-	setAttr ".phl[98]" 0;
-	setAttr ".phl[99]" 0;
-	setAttr ".phl[100]" 0;
-	setAttr ".phl[101]" 0;
-	setAttr ".phl[102]" 0;
-	setAttr ".phl[103]" 0;
-	setAttr ".phl[104]" 0;
-	setAttr ".phl[105]" 0;
-	setAttr ".phl[106]" 0;
-	setAttr ".phl[107]" 0;
-	setAttr ".phl[108]" 0;
-	setAttr ".phl[109]" 0;
-	setAttr ".phl[110]" 0;
-	setAttr ".phl[111]" 0;
-	setAttr ".phl[112]" 0;
-	setAttr ".phl[113]" 0;
-	setAttr ".phl[114]" 0;
-	setAttr ".phl[115]" 0;
-	setAttr ".phl[116]" 0;
-	setAttr ".phl[117]" 0;
-	setAttr ".phl[118]" 0;
-	setAttr ".phl[119]" 0;
-	setAttr ".phl[120]" 0;
-	setAttr ".phl[121]" 0;
-	setAttr ".phl[122]" 0;
-	setAttr ".phl[123]" 0;
-	setAttr ".phl[124]" 0;
-	setAttr ".phl[125]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"pig_latestRN"
 		"pig_latest_key_latestRN" 0
@@ -43489,7 +43628,7 @@ createNode reference -n "pig_latestRN";
 		
 		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_pPyramid2|pig_latest_colorClip_control|pig_latest_key_control|key_latest:Obj_000003|key_latest:Obj_000003Shape" 
 		"furNameSpace" " -type \"string\" \"key_latest\""
-		"pig_latestRN" 289
+		"pig_latestRN" 194
 		1 |pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye|pig_latest_pig_right_eyeShape 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
@@ -43585,7 +43724,7 @@ createNode reference -n "pig_latestRN";
 		
 		2 "|pig_latest_Tyrion_CattisterRNfosterParent1|pig_latest_pigShapeDeformedDeformed" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_PIG|pig_latest_controller_main01" "translate" " -type \"double3\" -170.52345957407789 2.6167227327401634 82.185895720402797"
+		2 "|pig_latest_PIG|pig_latest_controller_main01" "translate" " -type \"double3\" -172.02068206237411 2.6058854200794515 81.319880241596678"
 		
 		2 "|pig_latest_PIG|pig_latest_controller_main01" "translateX" " -av"
 		2 "|pig_latest_PIG|pig_latest_controller_main01" "translateY" " -av"
@@ -43617,62 +43756,6 @@ createNode reference -n "pig_latestRN";
 		"furNameSpace" " -type \"string\" \"pig_latest\""
 		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye|pig_latest_pig_left_eyeShape" 
 		"VisibleInIndirect" " 1"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_back_flex_ctrl01" 
-		"translate" " -type \"double3\" 0 -0.63974173259781453 0"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_back_flex_ctrl01" 
-		"translateY" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01" 
-		"translate" " -type \"double3\" 0 0.65621799563478933 0"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01" 
-		"translateX" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01" 
-		"translateY" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01" 
-		"translateZ" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01" 
-		"translate" " -type \"double3\" 0.43795676828441155 1.137771029181557 2.10819597462699"
-		
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01" 
-		"translateX" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01" 
-		"translateY" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01" 
-		"translateZ" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01" 
-		"rotate" " -type \"double3\" 2.0129938587237772 -0.70182144058288465 -13.627236557621474"
-		
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01" 
-		"rotateX" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01" 
-		"rotateY" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01" 
-		"rotateZ" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01" 
-		"scale" " -type \"double3\" 1 1 1"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01" 
-		"scaleX" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01" 
-		"scaleY" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01" 
-		"scaleZ" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01" 
-		"translate" " -type \"double3\" -0.20970461542645272 0.93193926076298084 -2.4090740862717017"
-		
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01" 
-		"translateX" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01" 
-		"translateY" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01" 
-		"translateZ" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01" 
-		"rotate" " -type \"double3\" 34.709369309991459 -6.8794019765260837 9.7544123161406731"
-		
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01" 
-		"rotateX" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01" 
-		"rotateY" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01" 
-		"rotateZ" " -av"
 		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01" 
@@ -43690,53 +43773,28 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01" 
 		"rotateZ" " -av"
 		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_splineiK_tail01" 
-		"translate" " -type \"double3\" -0.035967073131303103 9.5059198349387781 -13.15474090458882"
+		"translate" " -type \"double3\" -0.035710211473883653 9.5068445759301206 -13.339666052354843"
 		
 		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_splineiK_tail01" 
-		"rotate" " -type \"double3\" 90.071775019862841 39.76005317930926 90.094752779401773"
-		
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01" 
-		"translate" " -type \"double3\" 0 0.11587191240421769 -0.0013556080319793726"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01" 
-		"translateX" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01" 
-		"translateY" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01" 
-		"translateZ" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01" 
-		"translate" " -type \"double3\" -0.088656037489092024 0.13515413961460071 -1.0179668964259154"
+		"rotate" " -type \"double3\" 90.07627265191104 41.806374187118941 90.096860269845607"
 		
 		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01" 
-		"translateX" " -av"
+		"translate" " -type \"double3\" -0.023375438322842838 0.38333988727402218 -2.245424304276713"
+		
 		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01" 
 		"translateY" " -av"
 		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01" 
+		"translateX" " -av"
+		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01" 
 		"translateZ" " -av"
 		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01" 
-		"rotate" " -type \"double3\" 26.624279071648097 0.53036307076170519 -5.1491333915016533"
+		"rotate" " -type \"double3\" 53.276607976917788 0.39322113318877772 -3.8176641046096083"
 		
 		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01" 
 		"rotateX" " -av"
 		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01" 
 		"rotateY" " -av"
 		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01" 
-		"rotateZ" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01" 
-		"translate" " -type \"double3\" -0.15061673324410019 1.6114188323748164 1.9991527317567561"
-		
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01" 
-		"translateX" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01" 
-		"translateY" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01" 
-		"translateZ" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01" 
-		"rotate" " -type \"double3\" 36.151840959743566 0 0"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01" 
-		"rotateX" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01" 
-		"rotateY" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01" 
 		"rotateZ" " -av"
 		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01" 
 		"rotate" " -type \"double3\" 0 0 0"
@@ -43749,7 +43807,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01" 
 		"blendParent1" " -k 1"
 		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control" 
-		"rotate" " -type \"double3\" 0.82861412735190532 0 0"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control" 
 		"rotateX" " -av"
 		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control" 
@@ -43903,196 +43961,82 @@ createNode reference -n "pig_latestRN";
 		"pig_latestRN.placeHolderList[37]" ""
 		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01.rotateZ" 
 		"pig_latestRN.placeHolderList[38]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_back_flex_ctrl01.translateX" 
-		"pig_latestRN.placeHolderList[39]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_back_flex_ctrl01.translateY" 
-		"pig_latestRN.placeHolderList[40]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_back_flex_ctrl01.translateZ" 
-		"pig_latestRN.placeHolderList[41]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_back_flex_ctrl01.rotateX" 
-		"pig_latestRN.placeHolderList[42]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_back_flex_ctrl01.rotateY" 
-		"pig_latestRN.placeHolderList[43]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_back_flex_ctrl01.rotateZ" 
-		"pig_latestRN.placeHolderList[44]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_back_flex_ctrl01.scaleX" 
-		"pig_latestRN.placeHolderList[45]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_back_flex_ctrl01.scaleY" 
-		"pig_latestRN.placeHolderList[46]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_back_flex_ctrl01.scaleZ" 
-		"pig_latestRN.placeHolderList[47]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_back_flex_ctrl01.visibility" 
-		"pig_latestRN.placeHolderList[48]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01.translateX" 
-		"pig_latestRN.placeHolderList[49]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01.translateY" 
-		"pig_latestRN.placeHolderList[50]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01.translateZ" 
-		"pig_latestRN.placeHolderList[51]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01.visibility" 
-		"pig_latestRN.placeHolderList[52]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01.rotateX" 
-		"pig_latestRN.placeHolderList[53]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01.rotateY" 
-		"pig_latestRN.placeHolderList[54]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01.rotateZ" 
-		"pig_latestRN.placeHolderList[55]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01.scaleX" 
-		"pig_latestRN.placeHolderList[56]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01.scaleY" 
-		"pig_latestRN.placeHolderList[57]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01.scaleZ" 
-		"pig_latestRN.placeHolderList[58]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01.rotateX" 
-		"pig_latestRN.placeHolderList[59]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01.rotateY" 
-		"pig_latestRN.placeHolderList[60]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01.rotateZ" 
-		"pig_latestRN.placeHolderList[61]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01.translateX" 
-		"pig_latestRN.placeHolderList[62]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01.translateY" 
-		"pig_latestRN.placeHolderList[63]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01.translateZ" 
-		"pig_latestRN.placeHolderList[64]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01.scaleX" 
-		"pig_latestRN.placeHolderList[65]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01.scaleY" 
-		"pig_latestRN.placeHolderList[66]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01.scaleZ" 
-		"pig_latestRN.placeHolderList[67]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01.rotateX" 
-		"pig_latestRN.placeHolderList[68]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01.rotateY" 
-		"pig_latestRN.placeHolderList[69]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01.rotateZ" 
-		"pig_latestRN.placeHolderList[70]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01.translateX" 
-		"pig_latestRN.placeHolderList[71]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01.translateY" 
-		"pig_latestRN.placeHolderList[72]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01.translateZ" 
-		"pig_latestRN.placeHolderList[73]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01.scaleX" 
-		"pig_latestRN.placeHolderList[74]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01.scaleY" 
-		"pig_latestRN.placeHolderList[75]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01.scaleZ" 
-		"pig_latestRN.placeHolderList[76]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01.translateX" 
-		"pig_latestRN.placeHolderList[77]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01.translateY" 
-		"pig_latestRN.placeHolderList[78]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01.translateZ" 
-		"pig_latestRN.placeHolderList[79]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01.rotateX" 
-		"pig_latestRN.placeHolderList[80]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01.rotateY" 
-		"pig_latestRN.placeHolderList[81]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01.rotateZ" 
-		"pig_latestRN.placeHolderList[82]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01.scaleX" 
-		"pig_latestRN.placeHolderList[83]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01.scaleY" 
-		"pig_latestRN.placeHolderList[84]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01.scaleZ" 
-		"pig_latestRN.placeHolderList[85]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01.visibility" 
-		"pig_latestRN.placeHolderList[86]" ""
 		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01.rotateX" 
-		"pig_latestRN.placeHolderList[87]" ""
+		"pig_latestRN.placeHolderList[39]" ""
 		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01.rotateY" 
-		"pig_latestRN.placeHolderList[88]" ""
+		"pig_latestRN.placeHolderList[40]" ""
 		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01.rotateZ" 
-		"pig_latestRN.placeHolderList[89]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01.translateX" 
-		"pig_latestRN.placeHolderList[90]" ""
+		"pig_latestRN.placeHolderList[41]" ""
 		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01.translateY" 
-		"pig_latestRN.placeHolderList[91]" ""
+		"pig_latestRN.placeHolderList[42]" ""
+		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01.translateX" 
+		"pig_latestRN.placeHolderList[43]" ""
 		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01.translateZ" 
-		"pig_latestRN.placeHolderList[92]" ""
+		"pig_latestRN.placeHolderList[44]" ""
 		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01.scaleX" 
-		"pig_latestRN.placeHolderList[93]" ""
+		"pig_latestRN.placeHolderList[45]" ""
 		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01.scaleY" 
-		"pig_latestRN.placeHolderList[94]" ""
+		"pig_latestRN.placeHolderList[46]" ""
 		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01.scaleZ" 
-		"pig_latestRN.placeHolderList[95]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01.rotateX" 
-		"pig_latestRN.placeHolderList[96]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01.rotateY" 
-		"pig_latestRN.placeHolderList[97]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01.rotateZ" 
-		"pig_latestRN.placeHolderList[98]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01.translateX" 
-		"pig_latestRN.placeHolderList[99]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01.translateY" 
-		"pig_latestRN.placeHolderList[100]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01.translateZ" 
-		"pig_latestRN.placeHolderList[101]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01.scaleX" 
-		"pig_latestRN.placeHolderList[102]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01.scaleY" 
-		"pig_latestRN.placeHolderList[103]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01.scaleZ" 
-		"pig_latestRN.placeHolderList[104]" ""
+		"pig_latestRN.placeHolderList[47]" ""
 		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.translateY" 
-		"pig_latestRN.placeHolderList[105]" ""
+		"pig_latestRN.placeHolderList[48]" ""
 		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.translateX" 
-		"pig_latestRN.placeHolderList[106]" ""
+		"pig_latestRN.placeHolderList[49]" ""
 		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.translateZ" 
-		"pig_latestRN.placeHolderList[107]" ""
+		"pig_latestRN.placeHolderList[50]" ""
 		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.rotateX" 
-		"pig_latestRN.placeHolderList[108]" ""
+		"pig_latestRN.placeHolderList[51]" ""
 		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.rotateY" 
-		"pig_latestRN.placeHolderList[109]" ""
+		"pig_latestRN.placeHolderList[52]" ""
 		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.rotateZ" 
-		"pig_latestRN.placeHolderList[110]" ""
+		"pig_latestRN.placeHolderList[53]" ""
 		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.scaleX" 
-		"pig_latestRN.placeHolderList[111]" ""
+		"pig_latestRN.placeHolderList[54]" ""
 		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.scaleY" 
-		"pig_latestRN.placeHolderList[112]" ""
+		"pig_latestRN.placeHolderList[55]" ""
 		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.scaleZ" 
-		"pig_latestRN.placeHolderList[113]" ""
+		"pig_latestRN.placeHolderList[56]" ""
 		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.blendParent1" 
-		"pig_latestRN.placeHolderList[114]" ""
+		"pig_latestRN.placeHolderList[57]" ""
 		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.blendParent1" 
-		"pig_latestRN.placeHolderList[115]" ""
+		"pig_latestRN.placeHolderList[58]" ""
 		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control.translateX" 
-		"pig_latestRN.placeHolderList[116]" ""
+		"pig_latestRN.placeHolderList[59]" ""
 		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control.translateY" 
-		"pig_latestRN.placeHolderList[117]" ""
+		"pig_latestRN.placeHolderList[60]" ""
 		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control.translateZ" 
-		"pig_latestRN.placeHolderList[118]" ""
+		"pig_latestRN.placeHolderList[61]" ""
 		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control.rotateX" 
-		"pig_latestRN.placeHolderList[119]" ""
+		"pig_latestRN.placeHolderList[62]" ""
 		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control.rotateY" 
-		"pig_latestRN.placeHolderList[120]" ""
+		"pig_latestRN.placeHolderList[63]" ""
 		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control.rotateZ" 
-		"pig_latestRN.placeHolderList[121]" ""
+		"pig_latestRN.placeHolderList[64]" ""
 		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control.scaleX" 
-		"pig_latestRN.placeHolderList[122]" ""
+		"pig_latestRN.placeHolderList[65]" ""
 		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control.scaleY" 
-		"pig_latestRN.placeHolderList[123]" ""
+		"pig_latestRN.placeHolderList[66]" ""
 		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control.scaleZ" 
-		"pig_latestRN.placeHolderList[124]" ""
-		5 4 "pig_latestRN" "pig_latest_defaultFurGlobals.furNodeList" "pig_latestRN.placeHolderList[125]" 
+		"pig_latestRN.placeHolderList[67]" ""
+		5 4 "pig_latestRN" "pig_latest_defaultFurGlobals.furNodeList" "pig_latestRN.placeHolderList[68]" 
 		"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode animCurveTL -n "pig_latest_controller_main01_translateX1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  1.25 -118.42825103584128 78 -181.77090925422465
+	setAttr -s 12 ".ktv[0:11]"  1.25 -118.42825103584128 77.5 -181.77090925422465
 		 110 -208.65650570305215 142.5 -206.73436973171081 170 -198.7528551572764 175 -198.12904807267165
 		 255 -197.81926877528841 260 -197.81926877528841 267.5 -197.81926877528841 276.25 -197.81926877528841
 		 281.25 -197.81926877528841 287.5 -197.81926877528841;
 createNode animCurveTL -n "pig_latest_controller_main01_translateY1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  1.25 2.4020810722533645 78 2.4020810722533645
-		 110 2.4020810722533645 142.5 2.4020810722533645 170 2.4020810722533645 175 11.057453358478522
-		 255 13.616604527096495 260 13.616604527096495 267.5 17.571025128873202 276.25 14.54927815915455
-		 281.25 10.280023102108576 287.5 2.5512694139663417;
+	setAttr -s 12 ".ktv[0:11]"  1.25 2.6058854200794515 77.5 2.6058854200794515
+		 110 2.6058854200794515 142.5 2.6058854200794515 170 2.6058854200794515 175 11.26125770630461
+		 255 13.820408874922583 260 13.820408874922583 267.5 17.774829476699288 276.25 14.753082506980638
+		 281.25 10.483827449934662 287.5 2.7550737617924286;
 	setAttr -s 12 ".kit[4:11]"  1 18 18 18 18 18 18 18;
 	setAttr -s 12 ".kot[3:11]"  1 18 18 18 18 18 18 18 
 		18;
@@ -44108,28 +44052,28 @@ createNode animCurveTL -n "pig_latest_controller_main01_translateY1";
 createNode animCurveTL -n "pig_latest_controller_main01_translateZ1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  1.25 108.45101816042344 78 75.336223649472373
+	setAttr -s 12 ".ktv[0:11]"  1.25 108.45101816042344 77.5 75.336223649472373
 		 110 48.934504442473632 142.5 34.919192400208992 170 32.371900514751218 175 36.307912520148754
 		 255 40.540781357146365 260 41.371491286766776 267.5 50.883765156588545 276.25 52.625783777812103
 		 281.25 59.659087500975403 287.5 61.96693332214835;
 createNode animCurveTA -n "pig_latest_controller_main01_rotateX1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  1.25 0 78 0 110 0 142.5 0 170 0 175 -29.442865689705094
+	setAttr -s 12 ".ktv[0:11]"  1.25 0 77.5 0 110 0 142.5 0 170 0 175 -29.442865689705094
 		 255 -29.450523202609045 260 76.362065238610711 267.5 145.4024532290681 276.25 179.81702341514341
 		 281.25 253.25998905717705 287.5 358.29174504302472;
 createNode animCurveTA -n "pig_latest_controller_main01_rotateY1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  1.25 -130.80325669790534 78 -130.80325669790534
+	setAttr -s 12 ".ktv[0:11]"  1.25 -130.80325669790534 77.5 -130.80325669790534
 		 110 -181.21281057655759 142.5 -266.43659420607179 170 -355.68796613209179 175 -355.68796613209179
 		 255 -355.68796613209179 260 -355.68796613209179 267.5 -355.68796613209179 276.25 -355.68796613209179
 		 281.25 -355.68796613209179 287.5 -355.68796613209179;
 createNode animCurveTA -n "pig_latest_controller_main01_rotateZ1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  1.25 0 78 0 110 0 142.5 0 170 0 175 0 255 0
-		 260 0 267.5 0 276.25 0 281.25 0 287.5 0;
+	setAttr -s 12 ".ktv[0:11]"  1.25 0 77.5 0 110 0 142.5 0 170 0 175 0
+		 255 0 260 0 267.5 0 276.25 0 281.25 0 287.5 0;
 createNode animCurveTU -n "camera3_scaleX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
@@ -44208,91 +44152,49 @@ lockNode -l 1 ;
 createNode animCurveTA -n "pig_latest_head_control_rotateX1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  60 -3.9390228073706841 62 5.710599868449898
-		 65 -3.9375924055179876 67 5.5948206602217985 70 -3.936162006734599 171.25 0 175 49.75523568111138
-		 246.25 60.067417764300821 282.5 0 288.75 0 296.25 0 305 0;
-	setAttr -s 12 ".kit[0:11]"  16 16 16 16 16 18 18 18 
-		18 18 18 18;
-	setAttr -s 12 ".kot[0:11]"  16 16 16 16 16 18 18 18 
-		18 18 18 18;
+	setAttr -s 7 ".ktv[0:6]"  171.25 0 175 49.75523568111138 246.25 60.067417764300821
+		 282.5 0 288.75 0 296.25 0 305 0;
 createNode animCurveTA -n "pig_latest_head_control_rotateY1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  60 0 62 0 65 0 67 0 70 0 171.25 0 175 0
-		 246.25 0 282.5 0 288.75 73.779652531300798 296.25 -64.188995547858568 305 74.012856634102178;
-	setAttr -s 12 ".kit[0:11]"  16 16 16 16 16 18 18 18 
-		18 18 18 18;
-	setAttr -s 12 ".kot[0:11]"  16 16 16 16 16 18 18 18 
-		18 18 18 18;
+	setAttr -s 7 ".ktv[0:6]"  171.25 0 175 0 246.25 0 282.5 0 288.75 73.779652531300798
+		 296.25 -64.188995547858568 305 74.012856634102178;
 createNode animCurveTA -n "pig_latest_head_control_rotateZ1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  60 0 62 0 65 0 67 0 70 0 171.25 0 175 0
-		 246.25 0 282.5 0 288.75 0 296.25 0 305 0;
-	setAttr -s 12 ".kit[0:11]"  16 16 16 16 16 18 18 18 
-		18 18 18 18;
-	setAttr -s 12 ".kot[0:11]"  16 16 16 16 16 18 18 18 
-		18 18 18 18;
+	setAttr -s 7 ".ktv[0:6]"  171.25 0 175 0 246.25 0 282.5 0 288.75 0
+		 296.25 0 305 0;
 createNode animCurveTL -n "pig_latest_head_control_translateX1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  60 -1.6819878823071122e-014 62 -1.6819878823071122e-014
-		 65 -1.6819878823071122e-014 67 -1.6819878823071122e-014 70 -1.6819878823071122e-014
-		 171.25 -1.6819878823071122e-014 175 0 246.25 -1.6819878823071122e-014 282.5 -1.6819878823071122e-014
-		 288.75 0 296.25 0 305 0;
-	setAttr -s 12 ".kit[0:11]"  16 16 16 16 16 18 18 18 
-		18 18 18 18;
-	setAttr -s 12 ".kot[0:11]"  16 16 16 16 16 18 18 18 
-		18 18 18 18;
+	setAttr -s 7 ".ktv[0:6]"  171.25 -1.6819878823071122e-014 175 0 246.25 -1.6819878823071122e-014
+		 282.5 -1.6819878823071122e-014 288.75 0 296.25 0 305 0;
 createNode animCurveTL -n "pig_latest_head_control_translateY1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  60 -1.5987211554602254e-014 62 -1.5987211554602254e-014
-		 65 -1.5987211554602254e-014 67 -1.5987211554602254e-014 70 -1.5987211554602254e-014
-		 171.25 -1.5987211554602254e-014 175 0 246.25 -1.5987211554602254e-014 282.5 -1.5987211554602254e-014
-		 288.75 0 296.25 0 305 0;
-	setAttr -s 12 ".kit[0:11]"  16 16 16 16 16 18 18 18 
-		18 18 18 18;
-	setAttr -s 12 ".kot[0:11]"  16 16 16 16 16 18 18 18 
-		18 18 18 18;
+	setAttr -s 7 ".ktv[0:6]"  171.25 -1.5987211554602254e-014 175 0 246.25 -1.5987211554602254e-014
+		 282.5 -1.5987211554602254e-014 288.75 0 296.25 0 305 0;
 createNode animCurveTL -n "pig_latest_head_control_translateZ1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  60 0.026019667912326128 62 0.026019667912326128
-		 65 0.026019667912326128 67 0.026019667912326128 70 0.026019667912326128 171.25 0.026019667912326128
-		 175 0.026019667912326128 246.25 0.026019667912326128 282.5 0.026019667912326128 288.75 0.026019667912326128
+	setAttr -s 7 ".ktv[0:6]"  171.25 0.026019667912326128 175 0.026019667912326128
+		 246.25 0.026019667912326128 282.5 0.026019667912326128 288.75 0.026019667912326128
 		 296.25 0.026019667912326128 305 0.026019667912326128;
-	setAttr -s 12 ".kit[0:11]"  16 16 16 16 16 18 18 18 
-		18 18 18 18;
-	setAttr -s 12 ".kot[0:11]"  16 16 16 16 16 18 18 18 
-		18 18 18 18;
 createNode animCurveTU -n "pig_latest_head_control_scaleX1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  60 1 62 1 65 1 67 1 70 1 171.25 1 175 1
-		 246.25 1 282.5 1 288.75 1 296.25 1 305 1;
-	setAttr -s 12 ".kit[0:11]"  16 16 16 16 16 18 18 18 
-		18 18 18 18;
-	setAttr -s 12 ".kot[0:11]"  16 16 16 16 16 18 18 18 
-		18 18 18 18;
+	setAttr -s 7 ".ktv[0:6]"  171.25 1 175 1 246.25 1 282.5 1 288.75 1
+		 296.25 1 305 1;
 createNode animCurveTU -n "pig_latest_head_control_scaleY1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  60 1 62 1 65 1 67 1 70 1 171.25 1 175 1
-		 246.25 1 282.5 1 288.75 1 296.25 1 305 1;
-	setAttr -s 12 ".kit[0:11]"  16 16 16 16 16 18 18 18 
-		18 18 18 18;
-	setAttr -s 12 ".kot[0:11]"  16 16 16 16 16 18 18 18 
-		18 18 18 18;
+	setAttr -s 7 ".ktv[0:6]"  171.25 1 175 1 246.25 1 282.5 1 288.75 1
+		 296.25 1 305 1;
 createNode animCurveTU -n "pig_latest_head_control_scaleZ1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  60 1 62 1 65 1 67 1 70 1 171.25 1 175 1
-		 246.25 1 282.5 1 288.75 1 296.25 1 305 1;
-	setAttr -s 12 ".kit[0:11]"  16 16 16 16 16 18 18 18 
-		18 18 18 18;
-	setAttr -s 12 ".kot[0:11]"  16 16 16 16 16 18 18 18 
-		18 18 18 18;
+	setAttr -s 7 ".ktv[0:6]"  171.25 1 175 1 246.25 1 282.5 1 288.75 1
+		 296.25 1 305 1;
 createNode pairBlend -n "pairBlend3";
 createNode animCurveTL -n "pairBlend3_inTranslateX1";
 	setAttr ".tan" 18;
@@ -44563,336 +44465,48 @@ createNode materialInfo -n "materialInfo5";
 createNode animCurveTL -n "pig_latest_controller_L_frontfoot01_translateX1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  60 -0.060772805284029299 62 -0.61135274114587479
-		 65 -0.21273428052806848 67 -0.023375438322842838 70 -0.060772805284029299 72 -0.61135274114587479
-		 75 -0.21273428052806848 77 -0.023375438322842838 80 -0.060772805284029299;
+	setAttr -s 5 ".ktv[0:4]"  60 -0.060772805284029299 62 -0.61135274114587479
+		 65 -0.21273428052806848 67 -0.023375438322842838 70 -0.060772805284029299;
 createNode animCurveTL -n "pig_latest_controller_L_frontfoot01_translateY1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  60 1.5840424787206184 62 1.6182890204429974
-		 65 -0.089225722351618103 67 0.52686081185224154 70 1.5840424787206184 72 1.6182890204429974
-		 75 -0.089225722351618103 77 0.52686081185224154 80 1.5840424787206184;
+	setAttr -s 5 ".ktv[0:4]"  60 1.5840424787206184 62 1.6182890204429974
+		 65 0.11607096323220358 67 0.38333988727402218 70 1.5840424787206184;
 createNode animCurveTL -n "pig_latest_controller_L_frontfoot01_translateZ1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  60 0.5079005506640758 62 4.0001872551657964
-		 65 0.83405077148630946 67 -2.245424304276713 70 0.5079005506640758 72 4.0001872551657964
-		 75 0.83405077148630946 77 -2.245424304276713 80 0.5079005506640758;
+	setAttr -s 5 ".ktv[0:4]"  60 0.5079005506640758 62 4.0001872551657964
+		 65 0.83405077148630946 67 -2.245424304276713 70 0.5079005506640758;
 createNode animCurveTA -n "pig_latest_controller_L_frontfoot01_rotateX1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  60 34.915509054118061 62 34.915509054118061
-		 65 -0.028049833621583375 67 53.276607976917788 70 34.915509054118061 72 34.915509054118061
-		 75 -0.028049833621583375 77 53.276607976917788 80 34.915509054118061;
+	setAttr -s 5 ".ktv[0:4]"  60 34.915509054118061 62 34.915509054118061
+		 65 -0.028049833621583375 67 53.276607976917788 70 34.915509054118061;
 createNode animCurveTA -n "pig_latest_controller_L_frontfoot01_rotateY1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  60 0 62 0 65 0.60682273640243323 67 0.39322113318877772
-		 70 0 72 0 75 0.60682273640243323 77 0.39322113318877772 80 0;
+	setAttr -s 5 ".ktv[0:4]"  60 0 62 0 65 0.60682273640243323 67 0.39322113318877772
+		 70 0;
 createNode animCurveTA -n "pig_latest_controller_L_frontfoot01_rotateZ1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  60 0 62 0 65 -5.8914569515580313 67 -3.8176641046096083
-		 70 0 72 0 75 -5.8914569515580313 77 -3.8176641046096083 80 0;
+	setAttr -s 5 ".ktv[0:4]"  60 0 62 0 65 -5.8914569515580313 67 -3.8176641046096083
+		 70 0;
 createNode animCurveTU -n "pig_latest_controller_L_frontfoot01_scaleX1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  60 1 62 1 65 1 67 1 70 1 72 1 75 1 77 1
-		 80 1;
+	setAttr -s 5 ".ktv[0:4]"  60 1 62 1 65 1 67 1 70 1;
 createNode animCurveTU -n "pig_latest_controller_L_frontfoot01_scaleY1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  60 1 62 1 65 1 67 1 70 1 72 1 75 1 77 1
-		 80 1;
+	setAttr -s 5 ".ktv[0:4]"  60 1 62 1 65 1 67 1 70 1;
 createNode animCurveTU -n "pig_latest_controller_L_frontfoot01_scaleZ1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  60 1 62 1 65 1 67 1 70 1 72 1 75 1 77 1
-		 80 1;
-createNode animCurveTA -n "pig_latest_controller_L_backfoot01_rotateX";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  60 -6.4976103488303503 62 64.353594224499346
-		 65 40.892178121549804 67 -27.664403506463703 70 -6.4976103488303503 72 64.353594224499346
-		 75 40.892178121549804 77 -27.664403506463703 80 -6.4976103488303503;
-createNode animCurveTA -n "pig_latest_controller_L_backfoot01_rotateY";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  60 -12.41108270310923 62 -12.411082703109239
-		 65 0.98624143189988089 67 -3.7296166636233168 70 -12.41108270310923 72 -12.411082703109239
-		 75 0.98624143189988089 77 -3.7296166636233168 80 -12.41108270310923;
-createNode animCurveTA -n "pig_latest_controller_L_backfoot01_rotateZ";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  60 -3.1949393887780033 62 -3.1949393887779998
-		 65 -15.131206159520499 67 -10.929640256219127 70 -3.1949393887780033 72 -3.1949393887779998
-		 75 -15.131206159520499 77 -10.929640256219127 80 -3.1949393887780033;
-createNode animCurveTL -n "pig_latest_controller_L_backfoot01_translateX1";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  60 1.0165309957895452 62 1.713075732333557
-		 65 0.49760177307506503 67 0.378311763493758 70 1.0165309957895452 72 1.713075732333557
-		 75 0.49760177307506503 77 0.378311763493758 80 1.0165309957895452;
-createNode animCurveTL -n "pig_latest_controller_L_backfoot01_translateY1";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  60 -0.080684626553945316 62 1.6388862997149733
-		 65 1.3502840098653541 67 0.8600451847845616 70 -0.080684626553945316 72 1.6388862997149733
-		 75 1.3502840098653541 77 0.8600451847845616 80 -0.080684626553945316;
-createNode animCurveTL -n "pig_latest_controller_L_backfoot01_translateZ1";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  60 -0.54464274773240107 62 -3.8393614840118602
-		 65 -0.24022721163969474 67 3.7024400756687652 70 -0.54464274773240107 72 -3.8393614840118602
-		 75 -0.24022721163969474 77 3.7024400756687652 80 -0.54464274773240107;
-createNode animCurveTU -n "pig_latest_controller_L_backfoot01_scaleX";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  60 1 62 1 65 1 67 1 70 1 72 1 75 1 77 1
-		 80 1;
-createNode animCurveTU -n "pig_latest_controller_L_backfoot01_scaleY";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  60 1 62 1 65 1 67 1 70 1 72 1 75 1 77 1
-		 80 1;
-createNode animCurveTU -n "pig_latest_controller_L_backfoot01_scaleZ";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  60 1 62 1 65 1 67 1 70 1 72 1 75 1 77 1
-		 80 1;
-createNode animCurveTL -n "pig_latest_controller_R_backfoot01_translateX";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  60 -0.43374374625756351 62 -0.24821198907682598
-		 65 -0.36488287485080245 67 -0.054526356002103066 70 -0.43374374625756351 72 -0.24821198907682598
-		 75 -0.36488287485080245 77 -0.054526356002103066 80 -0.43374374625756351;
-createNode animCurveTL -n "pig_latest_controller_R_backfoot01_translateY";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  60 1.538336270354443 62 1.0532659652900032
-		 65 -0.080756473234219472 67 1.9446349947601811 70 1.538336270354443 72 1.0532659652900032
-		 75 -0.080756473234219472 77 1.9446349947601811 80 1.538336270354443;
-createNode animCurveTL -n "pig_latest_controller_R_backfoot01_translateZ";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  60 0.0085795928833685298 62 3.3590734980679051
-		 65 -0.2086041160087504 67 -3.8851252114552519 70 0.0085795928833685298 72 3.3590734980679051
-		 75 -0.2086041160087504 77 -3.8851252114552519 80 0.0085795928833685298;
-createNode animCurveTA -n "pig_latest_controller_R_backfoot01_rotateX";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  60 26.598166034588559 62 14.53889038200861
-		 65 -7.6612199921841091 67 77.079958612167019 70 26.598166034588559 72 14.53889038200861
-		 75 -7.6612199921841091 77 77.079958612167019 80 26.598166034588559;
-createNode animCurveTA -n "pig_latest_controller_R_backfoot01_rotateY";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  60 -0.81133175600238017 62 -0.81133175600238028
-		 65 -0.81133175600238072 67 -12.947472197049786 70 -0.81133175600238017 72 -0.81133175600238028
-		 75 -0.81133175600238072 77 -12.947472197049786 80 -0.81133175600238017;
-createNode animCurveTA -n "pig_latest_controller_R_backfoot01_rotateZ";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  60 2.7507690214947211 62 2.7507690214947229
-		 65 2.7507690214947256 67 16.75805561078662 70 2.7507690214947211 72 2.7507690214947229
-		 75 2.7507690214947256 77 16.75805561078662 80 2.7507690214947211;
-createNode animCurveTU -n "pig_latest_controller_R_backfoot01_scaleX";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  60 1 62 1 65 1 67 1 70 1 72 1 75 1 77 1
-		 80 1;
-createNode animCurveTU -n "pig_latest_controller_R_backfoot01_scaleY";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  60 1 62 1 65 1 67 1 70 1 72 1 75 1 77 1
-		 80 1;
-createNode animCurveTU -n "pig_latest_controller_R_backfoot01_scaleZ";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  60 1 62 1 65 1 67 1 70 1 72 1 75 1 77 1
-		 80 1;
-createNode animCurveTL -n "pig_latest_controller_R_frontfoot01_translateX1";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  60 3.2300092926152106e-014 62 -0.1145355796482358
-		 65 1.3592233899261182e-014 67 -0.30123346648821403 70 3.2300092926152106e-014 72 -0.1145355796482358
-		 75 1.3592233899261182e-014 77 -0.30123346648821403 80 3.2300092926152106e-014;
-createNode animCurveTL -n "pig_latest_controller_R_frontfoot01_translateY1";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  60 -0.12372489154703584 62 0.56204562720443629
-		 65 1.6943029581077407 67 1.5285347066418919 70 -0.12372489154703584 72 0.56204562720443629
-		 75 1.6943029581077407 77 1.5285347066418919 80 -0.12372489154703584;
-createNode animCurveTL -n "pig_latest_controller_R_frontfoot01_translateZ1";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  60 0.027375275944398231 62 -1.61395394008537
-		 65 0.027375275944414381 67 3.463214095801928 70 0.027375275944398231 72 -1.61395394008537
-		 75 0.027375275944414381 77 3.463214095801928 80 0.027375275944398231;
-createNode animCurveTA -n "pig_latest_controller_R_frontfoot01_rotateX1";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  60 0 62 65.581768290890452 65 43.502787639290865
-		 67 28.189806390260486 70 0 72 65.581768290890452 75 43.502787639290865 77 28.189806390260486
-		 80 0;
-createNode animCurveTA -n "pig_latest_controller_R_frontfoot01_rotateY1";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  60 0 62 -12.543735474392463 65 0 67 0 70 0
-		 72 -12.543735474392463 75 0 77 0 80 0;
-createNode animCurveTA -n "pig_latest_controller_R_frontfoot01_rotateZ1";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  60 0 62 -9.0725760248806804 65 0 67 0 70 0
-		 72 -9.0725760248806804 75 0 77 0 80 0;
-createNode animCurveTU -n "pig_latest_controller_R_frontfoot01_scaleX1";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  60 1 62 1 65 1 67 1 70 1 72 1 75 1 77 1
-		 80 1;
-createNode animCurveTU -n "pig_latest_controller_R_frontfoot01_scaleY1";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  60 1 62 1 65 1 67 1 70 1 72 1 75 1 77 1
-		 80 1;
-createNode animCurveTU -n "pig_latest_controller_R_frontfoot01_scaleZ1";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  60 1 62 1 65 1 67 1 70 1 72 1 75 1 77 1
-		 80 1;
-createNode animCurveTL -n "pig_latest_controller_main01_translateY2";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  60 2.3774373240932354 62 2.8357558134864296
-		 65 2.3774373240932354 67 2.856008141387091 70 2.3774373240932354 72 2.8357558134864296
-		 75 2.3774373240932354 77 2.856008141387091 80 2.3774373240932354;
-createNode animCurveTU -n "pig_latest_stretchr_ctrl01_visibility";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  60 1 65 1 70 1;
-	setAttr -s 3 ".kot[0:2]"  5 5 5;
-createNode animCurveTL -n "pig_latest_stretchr_ctrl01_translateX";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  60 0 65 1.3592233899261182e-014 70 0;
-createNode animCurveTL -n "pig_latest_stretchr_ctrl01_translateY";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  60 0 65 0.73238615584239886 70 0;
-createNode animCurveTL -n "pig_latest_stretchr_ctrl01_translateZ";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  60 0 65 5.3565764516857902e-014 70 0;
-createNode animCurveTA -n "pig_latest_stretchr_ctrl01_rotateX";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  60 0 65 0 70 0;
-createNode animCurveTA -n "pig_latest_stretchr_ctrl01_rotateY";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  60 0 65 0 70 0;
-createNode animCurveTA -n "pig_latest_stretchr_ctrl01_rotateZ";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  60 0 65 0 70 0;
-createNode animCurveTU -n "pig_latest_stretchr_ctrl01_scaleX";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  60 1 65 1 70 1;
-createNode animCurveTU -n "pig_latest_stretchr_ctrl01_scaleY";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  60 1 65 1 70 1;
-createNode animCurveTU -n "pig_latest_stretchr_ctrl01_scaleZ";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  60 1 65 1 70 1;
-createNode animCurveTL -n "pig_latest_stretchf_ctrl01_translateX";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  60 0 65 -5.6123577080672777e-014 70 0;
-createNode animCurveTL -n "pig_latest_stretchf_ctrl01_translateY";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  60 0 65 0.12932133080827868 70 0;
-createNode animCurveTL -n "pig_latest_stretchf_ctrl01_translateZ";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  60 -0.0013556080320227841 65 -0.0013556080319743339
-		 70 -0.0013556080320227841;
-createNode animCurveTU -n "pig_latest_stretchf_ctrl01_visibility";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  60 1 65 1 70 1;
-	setAttr -s 3 ".kot[0:2]"  5 5 5;
-createNode animCurveTA -n "pig_latest_stretchf_ctrl01_rotateX";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  60 0 65 0 70 0;
-createNode animCurveTA -n "pig_latest_stretchf_ctrl01_rotateY";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  60 0 65 0 70 0;
-createNode animCurveTA -n "pig_latest_stretchf_ctrl01_rotateZ";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  60 0 65 0 70 0;
-createNode animCurveTU -n "pig_latest_stretchf_ctrl01_scaleX";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  60 1 65 1 70 1;
-createNode animCurveTU -n "pig_latest_stretchf_ctrl01_scaleY";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  60 1 65 1 70 1;
-createNode animCurveTU -n "pig_latest_stretchf_ctrl01_scaleZ";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  60 1 65 1 70 1;
-createNode animCurveTL -n "pig_latest_back_flex_ctrl01_translateX";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  60 0 65 0 70 0;
-createNode animCurveTL -n "pig_latest_back_flex_ctrl01_translateY";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  60 0 65 -0.71399746941720377 70 0;
-createNode animCurveTL -n "pig_latest_back_flex_ctrl01_translateZ";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  60 0 65 0 70 0;
-createNode animCurveTU -n "pig_latest_back_flex_ctrl01_visibility";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  60 1 65 1 70 1;
-	setAttr -s 3 ".kot[0:2]"  5 5 5;
-createNode animCurveTA -n "pig_latest_back_flex_ctrl01_rotateX";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  60 0 65 0 70 0;
-createNode animCurveTA -n "pig_latest_back_flex_ctrl01_rotateY";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  60 0 65 0 70 0;
-createNode animCurveTA -n "pig_latest_back_flex_ctrl01_rotateZ";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  60 0 65 0 70 0;
-createNode animCurveTU -n "pig_latest_back_flex_ctrl01_scaleX";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  60 1 65 1 70 1;
-createNode animCurveTU -n "pig_latest_back_flex_ctrl01_scaleY";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  60 1 65 1 70 1;
-createNode animCurveTU -n "pig_latest_back_flex_ctrl01_scaleZ";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  60 1 65 1 70 1;
+	setAttr -s 5 ".ktv[0:4]"  60 1 62 1 65 1 67 1 70 1;
 select -ne :time1;
-	setAttr ".o" 66;
-	setAttr ".unw" 66;
+	setAttr ".o" 67;
+	setAttr ".unw" 67;
 select -ne :renderPartition;
 	setAttr -s 413 ".st";
 select -ne :renderGlobalsList1;
@@ -44904,6 +44518,8 @@ select -ne :defaultRenderUtilityList1;
 	setAttr -s 351 ".u";
 select -ne :defaultRenderingList1;
 	setAttr -s 28 ".r";
+select -ne :lightList1;
+	setAttr -s 16 ".l";
 select -ne :defaultTextureList1;
 	setAttr -s 143 ".tx";
 select -ne :initialShadingGroup;
@@ -44914,16 +44530,17 @@ select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :defaultRenderGlobals;
 	setAttr ".mcfr" 30;
-	setAttr ".ren" -type "string" "mayaHardware2";
 	setAttr ".outf" 32;
 	setAttr ".an" yes;
-	setAttr ".fs" 60;
-	setAttr ".ef" 80;
+	setAttr ".fs" 151.25;
+	setAttr ".ef" 300;
 	setAttr ".ep" 1;
 	setAttr ".pff" yes;
 select -ne :defaultResolution;
 	setAttr ".pa" 1;
 	setAttr ".dar" 1.7777777910232544;
+select -ne :defaultLightSet;
+	setAttr -s 16 ".dsm";
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 512;
 	setAttr ".btrs" 1024;
@@ -45033,138 +44650,54 @@ connectAttr "smartybikeRN.phl[25]" "pCube1_parentConstraint1.tg[0].trt";
 connectAttr "smartybikeRN.phl[26]" "pCube1_parentConstraint1.tg[0].tro";
 connectAttr "smartybikeRN.phl[27]" "pCube1_parentConstraint1.tg[0].tpm";
 connectAttr "pig_latest_controller_main01_translateX1.o" "pig_latestRN.phl[33]";
-connectAttr "pig_latest_controller_main01_translateY2.o" "pig_latestRN.phl[34]";
+connectAttr "pig_latest_controller_main01_translateY1.o" "pig_latestRN.phl[34]";
 connectAttr "pig_latest_controller_main01_translateZ1.o" "pig_latestRN.phl[35]";
 connectAttr "pig_latest_controller_main01_rotateX1.o" "pig_latestRN.phl[36]";
 connectAttr "pig_latest_controller_main01_rotateY1.o" "pig_latestRN.phl[37]";
 connectAttr "pig_latest_controller_main01_rotateZ1.o" "pig_latestRN.phl[38]";
-connectAttr "pig_latest_back_flex_ctrl01_translateX.o" "pig_latestRN.phl[39]";
-connectAttr "pig_latest_back_flex_ctrl01_translateY.o" "pig_latestRN.phl[40]";
-connectAttr "pig_latest_back_flex_ctrl01_translateZ.o" "pig_latestRN.phl[41]";
-connectAttr "pig_latest_back_flex_ctrl01_rotateX.o" "pig_latestRN.phl[42]";
-connectAttr "pig_latest_back_flex_ctrl01_rotateY.o" "pig_latestRN.phl[43]";
-connectAttr "pig_latest_back_flex_ctrl01_rotateZ.o" "pig_latestRN.phl[44]";
-connectAttr "pig_latest_back_flex_ctrl01_scaleX.o" "pig_latestRN.phl[45]";
-connectAttr "pig_latest_back_flex_ctrl01_scaleY.o" "pig_latestRN.phl[46]";
-connectAttr "pig_latest_back_flex_ctrl01_scaleZ.o" "pig_latestRN.phl[47]";
-connectAttr "pig_latest_back_flex_ctrl01_visibility.o" "pig_latestRN.phl[48]";
-connectAttr "pig_latest_stretchr_ctrl01_translateX.o" "pig_latestRN.phl[49]";
-connectAttr "pig_latest_stretchr_ctrl01_translateY.o" "pig_latestRN.phl[50]";
-connectAttr "pig_latest_stretchr_ctrl01_translateZ.o" "pig_latestRN.phl[51]";
-connectAttr "pig_latest_stretchr_ctrl01_visibility.o" "pig_latestRN.phl[52]";
-connectAttr "pig_latest_stretchr_ctrl01_rotateX.o" "pig_latestRN.phl[53]";
-connectAttr "pig_latest_stretchr_ctrl01_rotateY.o" "pig_latestRN.phl[54]";
-connectAttr "pig_latest_stretchr_ctrl01_rotateZ.o" "pig_latestRN.phl[55]";
-connectAttr "pig_latest_stretchr_ctrl01_scaleX.o" "pig_latestRN.phl[56]";
-connectAttr "pig_latest_stretchr_ctrl01_scaleY.o" "pig_latestRN.phl[57]";
-connectAttr "pig_latest_stretchr_ctrl01_scaleZ.o" "pig_latestRN.phl[58]";
-connectAttr "pig_latest_controller_L_backfoot01_rotateX.o" "pig_latestRN.phl[59]"
+connectAttr "pig_latest_controller_L_frontfoot01_rotateX1.o" "pig_latestRN.phl[39]"
 		;
-connectAttr "pig_latest_controller_L_backfoot01_rotateY.o" "pig_latestRN.phl[60]"
+connectAttr "pig_latest_controller_L_frontfoot01_rotateY1.o" "pig_latestRN.phl[40]"
 		;
-connectAttr "pig_latest_controller_L_backfoot01_rotateZ.o" "pig_latestRN.phl[61]"
+connectAttr "pig_latest_controller_L_frontfoot01_rotateZ1.o" "pig_latestRN.phl[41]"
 		;
-connectAttr "pig_latest_controller_L_backfoot01_translateX1.o" "pig_latestRN.phl[62]"
+connectAttr "pig_latest_controller_L_frontfoot01_translateY1.o" "pig_latestRN.phl[42]"
 		;
-connectAttr "pig_latest_controller_L_backfoot01_translateY1.o" "pig_latestRN.phl[63]"
+connectAttr "pig_latest_controller_L_frontfoot01_translateX1.o" "pig_latestRN.phl[43]"
 		;
-connectAttr "pig_latest_controller_L_backfoot01_translateZ1.o" "pig_latestRN.phl[64]"
+connectAttr "pig_latest_controller_L_frontfoot01_translateZ1.o" "pig_latestRN.phl[44]"
 		;
-connectAttr "pig_latest_controller_L_backfoot01_scaleX.o" "pig_latestRN.phl[65]"
+connectAttr "pig_latest_controller_L_frontfoot01_scaleX1.o" "pig_latestRN.phl[45]"
 		;
-connectAttr "pig_latest_controller_L_backfoot01_scaleY.o" "pig_latestRN.phl[66]"
+connectAttr "pig_latest_controller_L_frontfoot01_scaleY1.o" "pig_latestRN.phl[46]"
 		;
-connectAttr "pig_latest_controller_L_backfoot01_scaleZ.o" "pig_latestRN.phl[67]"
+connectAttr "pig_latest_controller_L_frontfoot01_scaleZ1.o" "pig_latestRN.phl[47]"
 		;
-connectAttr "pig_latest_controller_R_backfoot01_rotateX.o" "pig_latestRN.phl[68]"
+connectAttr "pairBlend3.oty" "pig_latestRN.phl[48]";
+connectAttr "pairBlend3.otx" "pig_latestRN.phl[49]";
+connectAttr "pairBlend3.otz" "pig_latestRN.phl[50]";
+connectAttr "pairBlend3.orx" "pig_latestRN.phl[51]";
+connectAttr "pairBlend3.ory" "pig_latestRN.phl[52]";
+connectAttr "pairBlend3.orz" "pig_latestRN.phl[53]";
+connectAttr "pig_latest_shoulders_rotation_ctrl01_scaleX1.o" "pig_latestRN.phl[54]"
 		;
-connectAttr "pig_latest_controller_R_backfoot01_rotateY.o" "pig_latestRN.phl[69]"
+connectAttr "pig_latest_shoulders_rotation_ctrl01_scaleY1.o" "pig_latestRN.phl[55]"
 		;
-connectAttr "pig_latest_controller_R_backfoot01_rotateZ.o" "pig_latestRN.phl[70]"
+connectAttr "pig_latest_shoulders_rotation_ctrl01_scaleZ1.o" "pig_latestRN.phl[56]"
 		;
-connectAttr "pig_latest_controller_R_backfoot01_translateX.o" "pig_latestRN.phl[71]"
+connectAttr "pig_latestRN.phl[57]" "pairBlend3.w";
+connectAttr "pig_latest_shoulders_rotation_ctrl01_blendParent1.o" "pig_latestRN.phl[58]"
 		;
-connectAttr "pig_latest_controller_R_backfoot01_translateY.o" "pig_latestRN.phl[72]"
-		;
-connectAttr "pig_latest_controller_R_backfoot01_translateZ.o" "pig_latestRN.phl[73]"
-		;
-connectAttr "pig_latest_controller_R_backfoot01_scaleX.o" "pig_latestRN.phl[74]"
-		;
-connectAttr "pig_latest_controller_R_backfoot01_scaleY.o" "pig_latestRN.phl[75]"
-		;
-connectAttr "pig_latest_controller_R_backfoot01_scaleZ.o" "pig_latestRN.phl[76]"
-		;
-connectAttr "pig_latest_stretchf_ctrl01_translateX.o" "pig_latestRN.phl[77]";
-connectAttr "pig_latest_stretchf_ctrl01_translateY.o" "pig_latestRN.phl[78]";
-connectAttr "pig_latest_stretchf_ctrl01_translateZ.o" "pig_latestRN.phl[79]";
-connectAttr "pig_latest_stretchf_ctrl01_rotateX.o" "pig_latestRN.phl[80]";
-connectAttr "pig_latest_stretchf_ctrl01_rotateY.o" "pig_latestRN.phl[81]";
-connectAttr "pig_latest_stretchf_ctrl01_rotateZ.o" "pig_latestRN.phl[82]";
-connectAttr "pig_latest_stretchf_ctrl01_scaleX.o" "pig_latestRN.phl[83]";
-connectAttr "pig_latest_stretchf_ctrl01_scaleY.o" "pig_latestRN.phl[84]";
-connectAttr "pig_latest_stretchf_ctrl01_scaleZ.o" "pig_latestRN.phl[85]";
-connectAttr "pig_latest_stretchf_ctrl01_visibility.o" "pig_latestRN.phl[86]";
-connectAttr "pig_latest_controller_L_frontfoot01_rotateX1.o" "pig_latestRN.phl[87]"
-		;
-connectAttr "pig_latest_controller_L_frontfoot01_rotateY1.o" "pig_latestRN.phl[88]"
-		;
-connectAttr "pig_latest_controller_L_frontfoot01_rotateZ1.o" "pig_latestRN.phl[89]"
-		;
-connectAttr "pig_latest_controller_L_frontfoot01_translateX1.o" "pig_latestRN.phl[90]"
-		;
-connectAttr "pig_latest_controller_L_frontfoot01_translateY1.o" "pig_latestRN.phl[91]"
-		;
-connectAttr "pig_latest_controller_L_frontfoot01_translateZ1.o" "pig_latestRN.phl[92]"
-		;
-connectAttr "pig_latest_controller_L_frontfoot01_scaleX1.o" "pig_latestRN.phl[93]"
-		;
-connectAttr "pig_latest_controller_L_frontfoot01_scaleY1.o" "pig_latestRN.phl[94]"
-		;
-connectAttr "pig_latest_controller_L_frontfoot01_scaleZ1.o" "pig_latestRN.phl[95]"
-		;
-connectAttr "pig_latest_controller_R_frontfoot01_rotateX1.o" "pig_latestRN.phl[96]"
-		;
-connectAttr "pig_latest_controller_R_frontfoot01_rotateY1.o" "pig_latestRN.phl[97]"
-		;
-connectAttr "pig_latest_controller_R_frontfoot01_rotateZ1.o" "pig_latestRN.phl[98]"
-		;
-connectAttr "pig_latest_controller_R_frontfoot01_translateX1.o" "pig_latestRN.phl[99]"
-		;
-connectAttr "pig_latest_controller_R_frontfoot01_translateY1.o" "pig_latestRN.phl[100]"
-		;
-connectAttr "pig_latest_controller_R_frontfoot01_translateZ1.o" "pig_latestRN.phl[101]"
-		;
-connectAttr "pig_latest_controller_R_frontfoot01_scaleX1.o" "pig_latestRN.phl[102]"
-		;
-connectAttr "pig_latest_controller_R_frontfoot01_scaleY1.o" "pig_latestRN.phl[103]"
-		;
-connectAttr "pig_latest_controller_R_frontfoot01_scaleZ1.o" "pig_latestRN.phl[104]"
-		;
-connectAttr "pairBlend3.oty" "pig_latestRN.phl[105]";
-connectAttr "pairBlend3.otx" "pig_latestRN.phl[106]";
-connectAttr "pairBlend3.otz" "pig_latestRN.phl[107]";
-connectAttr "pairBlend3.orx" "pig_latestRN.phl[108]";
-connectAttr "pairBlend3.ory" "pig_latestRN.phl[109]";
-connectAttr "pairBlend3.orz" "pig_latestRN.phl[110]";
-connectAttr "pig_latest_shoulders_rotation_ctrl01_scaleX1.o" "pig_latestRN.phl[111]"
-		;
-connectAttr "pig_latest_shoulders_rotation_ctrl01_scaleY1.o" "pig_latestRN.phl[112]"
-		;
-connectAttr "pig_latest_shoulders_rotation_ctrl01_scaleZ1.o" "pig_latestRN.phl[113]"
-		;
-connectAttr "pig_latestRN.phl[114]" "pairBlend3.w";
-connectAttr "pig_latest_shoulders_rotation_ctrl01_blendParent1.o" "pig_latestRN.phl[115]"
-		;
-connectAttr "pig_latest_head_control_translateX1.o" "pig_latestRN.phl[116]";
-connectAttr "pig_latest_head_control_translateY1.o" "pig_latestRN.phl[117]";
-connectAttr "pig_latest_head_control_translateZ1.o" "pig_latestRN.phl[118]";
-connectAttr "pig_latest_head_control_rotateX1.o" "pig_latestRN.phl[119]";
-connectAttr "pig_latest_head_control_rotateY1.o" "pig_latestRN.phl[120]";
-connectAttr "pig_latest_head_control_rotateZ1.o" "pig_latestRN.phl[121]";
-connectAttr "pig_latest_head_control_scaleX1.o" "pig_latestRN.phl[122]";
-connectAttr "pig_latest_head_control_scaleY1.o" "pig_latestRN.phl[123]";
-connectAttr "pig_latest_head_control_scaleZ1.o" "pig_latestRN.phl[124]";
-connectAttr "defaultFurGlobals.rogl" "pig_latestRN.phl[125]";
+connectAttr "pig_latest_head_control_translateX1.o" "pig_latestRN.phl[59]";
+connectAttr "pig_latest_head_control_translateY1.o" "pig_latestRN.phl[60]";
+connectAttr "pig_latest_head_control_translateZ1.o" "pig_latestRN.phl[61]";
+connectAttr "pig_latest_head_control_rotateX1.o" "pig_latestRN.phl[62]";
+connectAttr "pig_latest_head_control_rotateY1.o" "pig_latestRN.phl[63]";
+connectAttr "pig_latest_head_control_rotateZ1.o" "pig_latestRN.phl[64]";
+connectAttr "pig_latest_head_control_scaleX1.o" "pig_latestRN.phl[65]";
+connectAttr "pig_latest_head_control_scaleY1.o" "pig_latestRN.phl[66]";
+connectAttr "pig_latest_head_control_scaleZ1.o" "pig_latestRN.phl[67]";
+connectAttr "defaultFurGlobals.rogl" "pig_latestRN.phl[68]";
 connectAttr "soap_bottle:imagePlaneShape1.msg" ":sideShape.ip" -na;
 connectAttr "camera1_translateX.o" "camera1.tx";
 connectAttr "camera1_translateY.o" "camera1.ty";
@@ -45413,6 +44946,6 @@ connectAttr "undies_latest:file1.msg" ":defaultTextureList1.tx" -na;
 connectAttr "wood1.msg" ":defaultTextureList1.tx" -na;
 connectAttr "pCylinderShape8.iog" ":initialShadingGroup.dsm" -na;
 dataStructure -fmt "raw" -as "name=externalContentTable:string=node:string=key:string=upath:uint32=upathcrc:string=rpath:string=roles";
-applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"livingroom_shading_latestRN\" \"\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/sets/livingroom_shading/livingroom_shading_latest.ma\" 2081054145 \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom_shading/livingroom_shading_latest.ma\" \"FileRef\"\n1\n\"smartybikeRN\" \"\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/smarty/smartybike.ma\" 2677305362 \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smartybike.ma\" \"FileRef\"\n2\n\"pig_latestRN\" \"\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/pig/pig_latest.ma\" 3104522739 \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\" \"FileRef\"\n3\n\"|soap_bottle:_UNKNOWN_REF_NODE_fosterParent1|soap_bottle:imagePlane1|soap_bottle:imagePlaneShape1\" \"imageName\" \"/Users/KristenCurry/Desktop/imgres.jpg\" 1103782025 \"\" \"sourceImages\"\n4\n\"undies_latest:file1\" \"fileTextureName\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/props/undies/undie_pattern.jpg\" 110585401 \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/props/undies/undie_pattern.jpg\" \"sourceImages\"\nendStream\nendChannel\nendAssociations\n" 
+applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"livingroom_shading_latestRN\" \"\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/sets/livingroom_shading/livingroom_shading_latest.ma\" 2081054145 \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom_shading/livingroom_shading_latest.ma\" \"FileRef\"\n1\n\"smartybikeRN\" \"\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/smarty/smartybike.ma\" 2677305362 \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smartybike.ma\" \"FileRef\"\n2\n\"pig_latestRN\" \"\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/pig/pig_latest.ma\" 3104522739 \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\" \"FileRef\"\n3\n\"light_setup_004RN\" \"\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/sets/livingroom/versions/light_setup_004.ma\" 1358796440 \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/set_lighting/lighting_latest.ma\" \"FileRef\"\n4\n\"|soap_bottle:_UNKNOWN_REF_NODE_fosterParent1|soap_bottle:imagePlane1|soap_bottle:imagePlaneShape1\" \"imageName\" \"/Users/KristenCurry/Desktop/imgres.jpg\" 1103782025 \"\" \"sourceImages\"\n5\n\"undies_latest:file1\" \"fileTextureName\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/props/undies/undie_pattern.jpg\" 110585401 \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/props/undies/undie_pattern.jpg\" \"sourceImages\"\nendStream\nendChannel\nendAssociations\n" 
 		-scn;
-// End of smarty_initial_living_room.ma
+// End of smarty_initial_living_room.0001.ma

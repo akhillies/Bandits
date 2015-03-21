@@ -1,7 +1,7 @@
 //Maya ASCII 2015 scene
 //Name: utility_room_view.ma
-//Last modified: Mon, Mar 16, 2015 02:57:19 AM
-//Codeset: 1252
+//Last modified: Tue, Mar 17, 2015 09:01:07 PM
+//Codeset: UTF-8
 file -rdi 1 -ns "livingroom_shading_latest" -rfn "livingroom_shading_latestRN"
 		 -op "v=0;p=17;f=0" "X:/documents/GitHub/Bandits/maya//assets/sets/livingroom_shading/livingroom_shading_latest.ma";
 file -rdi 2 -ns "living_room_latest" -rfn "livingroom_shading_latest:living_room_latestRN"
@@ -58,45 +58,44 @@ file -rdi 3 -ns "vinegarBottle" -dr 1 -rfn "livingroom_shading_latest:living_roo
 		 -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/sets/livingroom/additions/vinegarBottle.ma";
 file -rdi 3 -ns "sword" -dr 1 -rfn "livingroom_shading_latest:living_room_latest:swordRN"
 		 -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/sets/bedroom/additions/sword.ma";
-file -rdi 1 -ns "undies_latest" -rfn "undies_latestRN" -op "v=0;p=17;f=0" "X:/documents/GitHub/Bandits/maya//assets/props/undies/undies_latest.ma";
 file -rdi 1 -ns "pig_latest" -rfn "pig_latestRN" -op "v=0;p=17;f=0" "X:/documents/GitHub/Bandits/maya//assets/characters/pig/pig_latest.ma";
 file -rdi 2 -ns "key_latest" -rfn "pig_latest:key_latestRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/props/keys/key_latest.ma";
 file -rdi 1 -ns "smarty_latest" -rfn "smarty_latestRN" -op "v=0;p=17;f=0" "X:/documents/GitHub/Bandits/maya//assets/characters/smarty/smarty_latest.ma";
 file -rdi 1 -ns "bike_rig" -rfn "bike_rigRN" -op "v=0;p=17;f=0" "X:/documents/GitHub/Bandits/maya//assets/characters/smarty/bike_rig.ma";
 file -rdi 1 -ns "sneaks_latest" -rfn "sneaks_latestRN" -op "v=0;p=17;f=0" "X:/documents/GitHub/Bandits/maya//assets/characters/sneaks/sneaks_latest.ma";
 file -rdi 1 -ns "lighting_latest" -rfn "lighting_latestRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/sets/set_lighting/lighting_latest.ma";
+file -rdi 1 -ns "undies_full" -rfn "undies_fullRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/props/undies/undies_full.ma";
 file -r -ns "livingroom_shading_latest" -dr 1 -rfn "livingroom_shading_latestRN"
 		 -op "v=0;p=17;f=0" "X:/documents/GitHub/Bandits/maya//assets/sets/livingroom_shading/livingroom_shading_latest.ma";
-file -r -ns "undies_latest" -dr 1 -rfn "undies_latestRN" -op "v=0;p=17;f=0" "X:/documents/GitHub/Bandits/maya//assets/props/undies/undies_latest.ma";
 file -r -ns "pig_latest" -dr 1 -rfn "pig_latestRN" -op "v=0;p=17;f=0" "X:/documents/GitHub/Bandits/maya//assets/characters/pig/pig_latest.ma";
 file -r -ns "smarty_latest" -dr 1 -rfn "smarty_latestRN" -op "v=0;p=17;f=0" "X:/documents/GitHub/Bandits/maya//assets/characters/smarty/smarty_latest.ma";
 file -r -ns "bike_rig" -dr 1 -rfn "bike_rigRN" -op "v=0;p=17;f=0" "X:/documents/GitHub/Bandits/maya//assets/characters/smarty/bike_rig.ma";
 file -r -ns "sneaks_latest" -dr 1 -rfn "sneaks_latestRN" -op "v=0;p=17;f=0" "X:/documents/GitHub/Bandits/maya//assets/characters/sneaks/sneaks_latest.ma";
 file -r -ns "lighting_latest" -dr 1 -rfn "lighting_latestRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/sets/set_lighting/lighting_latest.ma";
+file -r -ns "undies_full" -dr 1 -rfn "undies_fullRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/props/undies/undies_full.ma";
 requires maya "2015";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOptions" -nodeType "mentalrayGlobals"
 		 -nodeType "mentalrayItemsList" -dataType "byteArray" "Mayatomr" "2015.0 - 3.12.1.18 ";
 requires -nodeType "FurGlobals" "Fur" "2015";
-requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2015";
 fileInfo "version" "2015";
 fileInfo "cutIdentifier" "201410051530-933320";
-fileInfo "osv" "Microsoft Windows 8 Business Edition, 64-bit  (Build 9200)\n";
+fileInfo "osv" "Mac OS X 10.9.2";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -2.7971753590481989 16.647247278700071 39.509071600627848 ;
-	setAttr ".r" -type "double3" -32.138352729607007 -8.2000000000000703 -4.0167597762809739e-016 ;
+	setAttr ".t" -type "double3" -1.4831212963365612 20.755482287878039 25.078171547662183 ;
+	setAttr ".r" -type "double3" -10.538352729606844 -12.200000000000514 -2.0337777271021609e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
-	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 23.160537539506599;
+	setAttr ".fl" 34.999999999999986;
+	setAttr ".coi" 36.902145101829262;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 0 4.3266401588916779 20.09801935380256 ;
+	setAttr ".tp" -type "double3" 0 0.52982636913657188 -1.7881393432617188e-07 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	setAttr ".v" no;
@@ -149,44 +148,6 @@ createNode camera -n "at_dryerShape" -p "at_dryer";
 	setAttr ".imn" -type "string" "camera1";
 	setAttr ".den" -type "string" "camera1_depth";
 	setAttr ".man" -type "string" "camera1_mask";
-createNode transform -n "ffd1Lattice";
-	setAttr ".t" -type "double3" 0 4.3266401588916779 20.09801935380256 ;
-	setAttr ".s" -type "double3" 15.534595489501953 6.7982034087181091 0.89049971103668213 ;
-createNode lattice -n "ffd1LatticeShape" -p "ffd1Lattice";
-	setAttr -k off ".v";
-	setAttr ".sd" 5;
-	setAttr ".td" 2;
-	setAttr ".ud" 4;
-	setAttr ".cc" -type "lattice" 5 2 4 40 -0.5 -0.5 -0.5 -0.25 -0.5
-		 -0.5 0 -0.5 -0.5 0.25 -0.5 -0.5 0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.25 0.5 -0.5 0 0.5
-		 -0.5 0.25 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.16666666666666669 -0.25 -0.5 -0.16666666666666669 0
-		 -0.5 -0.16666666666666669 0.25 -0.5 -0.16666666666666669 0.5 -0.5 -0.16666666666666669 -0.5
-		 0.5 -0.16666666666666669 -0.25 0.5 -0.16666666666666669 0 0.5 -0.16666666666666669 0.25
-		 0.5 -0.16666666666666669 0.5 0.5 -0.16666666666666669 -0.5 -0.5 0.16666666666666663 -0.25
-		 -0.5 0.16666666666666663 0 -0.5 0.16666666666666663 0.25 -0.5 0.16666666666666663 0.5
-		 -0.5 0.16666666666666663 -0.5 0.5 0.16666666666666663 -0.25 0.5 0.16666666666666663 0
-		 0.5 0.16666666666666663 0.25 0.5 0.16666666666666663 0.5 0.5 0.16666666666666663 -0.5
-		 -0.5 0.49999999999999994 -0.25 -0.5 0.49999999999999994 0 -0.5 0.49999999999999994 0.25
-		 -0.5 0.49999999999999994 0.5 -0.5 0.49999999999999994 -0.5 0.5 0.49999999999999994 -0.25
-		 0.5 0.49999999999999994 0 0.5 0.49999999999999994 0.25 0.5 0.49999999999999994 0.5
-		 0.5 0.49999999999999994 ;
-createNode transform -n "ffd1Base";
-	setAttr ".t" -type "double3" 0 4.3266401588916779 20.09801935380256 ;
-	setAttr ".s" -type "double3" 15.534595489501953 6.7982034087181091 0.89049971103668213 ;
-createNode baseLattice -n "ffd1BaseShape" -p "ffd1Base";
-	setAttr ".ihi" 0;
-	setAttr -k off ".v";
-createNode fosterParent -n "undies_latestRNfosterParent1";
-createNode mesh -n "undiesShapeDeformed" -p "undies_latestRNfosterParent1";
-	setAttr -k off ".v";
-	setAttr -s 4 ".iog[0].og";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
 createNode mentalrayItemsList -s -n "mentalrayItemsList";
 	setAttr -s 3 ".opt";
 createNode mentalrayGlobals -s -n "mentalrayGlobals";
@@ -350,8 +311,8 @@ createNode mentalrayOptions -s -n "miDefaultOptions";
 createNode mentalrayFramebuffer -s -n "miDefaultFramebuffer";
 	setAttr ".dat" 2;
 createNode lightLinker -s -n "lightLinker1";
-	setAttr -s 425 ".lnk";
-	setAttr -s 425 ".slnk";
+	setAttr -s 524 ".lnk";
+	setAttr -s 524 ".slnk";
 createNode displayLayerManager -n "layerManager";
 createNode displayLayer -n "defaultLayer";
 createNode renderLayerManager -n "renderLayerManager";
@@ -390,7 +351,7 @@ createNode reference -n "livingroom_shading_latestRN";
 		"livingroom_shading_latest:living_room_latest:bedroom_updated_layout:desk_latestRN" 
 		0
 		"livingroom_shading_latest:living_room_latest:armchair_latestRN1" 0
-		"livingroom_shading_latest:living_room_latestRN" 8
+		"livingroom_shading_latest:living_room_latestRN" 16
 		2 "|livingroom_shading_latest:living_room_latest:nRigid1|livingroom_shading_latest:living_room_latest:nRigidShape1" 
 		"cacheWidth" " 120"
 		2 "|livingroom_shading_latest:living_room_latest:nCloth1|livingroom_shading_latest:living_room_latest:nClothShape1" 
@@ -407,7 +368,23 @@ createNode reference -n "livingroom_shading_latestRN";
 		"cacheWidth" " 120"
 		2 "|livingroom_shading_latest:living_room_latest:nRigid6|livingroom_shading_latest:living_room_latest:nRigidShape6" 
 		"cacheWidth" " 120"
-		"livingroom_shading_latest:living_room_latest:telescopeRN" 20
+		2 "|livingroom_shading_latest:living_room_latest:nRigid1|livingroom_shading_latest:living_room_latest:nRigidShape1" 
+		"cacheWidth" " 120"
+		2 "|livingroom_shading_latest:living_room_latest:nCloth1|livingroom_shading_latest:living_room_latest:nClothShape1" 
+		"cacheWidth" " 120"
+		2 "|livingroom_shading_latest:living_room_latest:nRigid2|livingroom_shading_latest:living_room_latest:nRigidShape2" 
+		"cacheWidth" " 120"
+		2 "|livingroom_shading_latest:living_room_latest:nRigid3|livingroom_shading_latest:living_room_latest:nRigidShape3" 
+		"cacheWidth" " 120"
+		2 "|livingroom_shading_latest:living_room_latest:nRigid4|livingroom_shading_latest:living_room_latest:nRigidShape4" 
+		"cacheWidth" " 120"
+		2 "|livingroom_shading_latest:living_room_latest:nCloth2|livingroom_shading_latest:living_room_latest:nClothShape2" 
+		"cacheWidth" " 120"
+		2 "|livingroom_shading_latest:living_room_latest:nRigid5|livingroom_shading_latest:living_room_latest:nRigidShape5" 
+		"cacheWidth" " 120"
+		2 "|livingroom_shading_latest:living_room_latest:nRigid6|livingroom_shading_latest:living_room_latest:nRigidShape6" 
+		"cacheWidth" " 120"
+		"livingroom_shading_latest:living_room_latest:telescopeRN" 40
 		2 "|livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_" 
 		"translate" " -type \"double3\" 0 2169.506103515625 0"
 		2 "|livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_" 
@@ -417,7 +394,7 @@ createNode reference -n "livingroom_shading_latestRN";
 		2 "|livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_" 
 		"translateZ" " -av"
 		2 "|livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|livingroom_shading_latest:living_room_latest:telescope:Object02" 
-		"translate" " -type \"double3\" 1.0936300754547119 496.37063598632812 -28.757314682006836"
+		"translate" " -type \"double3\" 1.09363007545471191 496.370635986328125 -28.75731468200683594"
 		
 		2 "|livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|livingroom_shading_latest:living_room_latest:telescope:Object02" 
 		"translateX" " -av"
@@ -426,7 +403,7 @@ createNode reference -n "livingroom_shading_latestRN";
 		2 "|livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|livingroom_shading_latest:living_room_latest:telescope:Object02" 
 		"translateZ" " -av"
 		2 "|livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|livingroom_shading_latest:living_room_latest:telescope:Object02FBXASC046Object03" 
-		"translate" " -type \"double3\" -132.75840759277344 496.37063598632812 -271.658447265625"
+		"translate" " -type \"double3\" -132.7584075927734375 496.370635986328125 -271.658447265625"
 		
 		2 "|livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|livingroom_shading_latest:living_room_latest:telescope:Object02FBXASC046Object03" 
 		"translateX" " -av"
@@ -435,7 +412,7 @@ createNode reference -n "livingroom_shading_latestRN";
 		2 "|livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|livingroom_shading_latest:living_room_latest:telescope:Object02FBXASC046Object03" 
 		"translateZ" " -av"
 		2 "|livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|livingroom_shading_latest:living_room_latest:telescope:Object02FBXASC046Object04" 
-		"translate" " -type \"double3\" 134.15425109863281 496.37063598632812 -270.25698852539062"
+		"translate" " -type \"double3\" 134.1542510986328125 496.370635986328125 -270.256988525390625"
 		
 		2 "|livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|livingroom_shading_latest:living_room_latest:telescope:Object02FBXASC046Object04" 
 		"translateX" " -av"
@@ -444,7 +421,51 @@ createNode reference -n "livingroom_shading_latestRN";
 		2 "|livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|livingroom_shading_latest:living_room_latest:telescope:Object02FBXASC046Object04" 
 		"translateZ" " -av"
 		2 "|livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|livingroom_shading_latest:living_room_latest:telescope:Line04" 
-		"translate" " -type \"double3\" 3.3914475440979004 787.89642333984375 -217.28875732421875"
+		"translate" " -type \"double3\" 3.39144754409790039 787.89642333984375 -217.28875732421875"
+		
+		2 "|livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|livingroom_shading_latest:living_room_latest:telescope:Line04" 
+		"translateY" " -av"
+		2 "|livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|livingroom_shading_latest:living_room_latest:telescope:Line04" 
+		"translateZ" " -av"
+		2 "|livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|livingroom_shading_latest:living_room_latest:telescope:Line04" 
+		"translateX" " -av"
+		2 "|livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_" 
+		"translate" " -type \"double3\" 0 2169.506103515625 0"
+		2 "|livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_" 
+		"translateY" " -av"
+		2 "|livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_" 
+		"translateX" " -av"
+		2 "|livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_" 
+		"translateZ" " -av"
+		2 "|livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|livingroom_shading_latest:living_room_latest:telescope:Object02" 
+		"translate" " -type \"double3\" 1.09363007545471191 496.370635986328125 -28.75731468200683594"
+		
+		2 "|livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|livingroom_shading_latest:living_room_latest:telescope:Object02" 
+		"translateX" " -av"
+		2 "|livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|livingroom_shading_latest:living_room_latest:telescope:Object02" 
+		"translateY" " -av"
+		2 "|livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|livingroom_shading_latest:living_room_latest:telescope:Object02" 
+		"translateZ" " -av"
+		2 "|livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|livingroom_shading_latest:living_room_latest:telescope:Object02FBXASC046Object03" 
+		"translate" " -type \"double3\" -132.7584075927734375 496.370635986328125 -271.658447265625"
+		
+		2 "|livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|livingroom_shading_latest:living_room_latest:telescope:Object02FBXASC046Object03" 
+		"translateX" " -av"
+		2 "|livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|livingroom_shading_latest:living_room_latest:telescope:Object02FBXASC046Object03" 
+		"translateY" " -av"
+		2 "|livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|livingroom_shading_latest:living_room_latest:telescope:Object02FBXASC046Object03" 
+		"translateZ" " -av"
+		2 "|livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|livingroom_shading_latest:living_room_latest:telescope:Object02FBXASC046Object04" 
+		"translate" " -type \"double3\" 134.1542510986328125 496.370635986328125 -270.256988525390625"
+		
+		2 "|livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|livingroom_shading_latest:living_room_latest:telescope:Object02FBXASC046Object04" 
+		"translateX" " -av"
+		2 "|livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|livingroom_shading_latest:living_room_latest:telescope:Object02FBXASC046Object04" 
+		"translateY" " -av"
+		2 "|livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|livingroom_shading_latest:living_room_latest:telescope:Object02FBXASC046Object04" 
+		"translateZ" " -av"
+		2 "|livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|livingroom_shading_latest:living_room_latest:telescope:Line04" 
+		"translate" " -type \"double3\" 3.39144754409790039 787.89642333984375 -217.28875732421875"
 		
 		2 "|livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|livingroom_shading_latest:living_room_latest:telescope:Line04" 
 		"translateY" " -av"
@@ -455,8 +476,8 @@ createNode reference -n "livingroom_shading_latestRN";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode animLayer -s -n "BaseAnimation";
-	setAttr -s 3 ".cdly";
-	setAttr -s 3 ".chsl";
+	setAttr -s 6 ".cdly";
+	setAttr -s 6 ".chsl";
 	setAttr ".ovrd" yes;
 createNode mentalrayOptions -s -n "miContourPreset";
 	setAttr ".splck" yes;
@@ -690,49 +711,38 @@ createNode reference -n "light_setup_004RN";
 		"light_setup_004RN" 0;
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "undies_latestRN";
+createNode reference -n "pig_latestRN";
 	setAttr -s 2 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"undies_latestRN"
-		"undies_latestRN" 0
-		"undies_latestRN" 8
-		0 "|undies_latestRNfosterParent1|undiesShapeDeformed" "|undies_latest:undies" 
-		"-s -r "
-		2 "|undies_latest:undies" "translate" " -type \"double3\" 0 0 20.926608614380715"
-		
-		2 "|undies_latest:undies" "scale" " -type \"double3\" 1 1 1"
-		2 "|undies_latest:undies" "rotatePivot" " -type \"double3\" 0 4.3266401588916779 -0.82858926057815552"
-		
-		2 "|undies_latest:undies" "scalePivot" " -type \"double3\" 0 4.3266401588916779 -0.82858926057815552"
-		
-		2 "|undies_latest:undies|undies_latest:undiesShape" "intermediateObject" 
-		" 1"
-		5 3 "undies_latestRN" "|undies_latest:undies|undies_latest:undiesShape.worldMesh" 
-		"undies_latestRN.placeHolderList[1]" ""
-		5 4 "undies_latestRN" "undies_latest:lambert3SG.dagSetMembers" "undies_latestRN.placeHolderList[2]" 
-		"";
-	setAttr ".ptag" -type "string" "";
-lockNode -l 1 ;
-createNode reference -n "pig_latestRN";
-	setAttr ".phl[1]" 0;
-	setAttr ".ed" -type "dataReferenceEdits" 
 		"pig_latestRN"
 		"pig_latest:key_latestRN" 0
 		"pig_latestRN" 0
-		"pig_latestRN" 5
+		"pig_latestRN" 10
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:splineiK_tail01" 
-		"translate" " -type \"double3\" -0.035711666399980746 9.5068445753056103 -13.339665934742582"
+		"translate" " -type \"double3\" -0.035711666399985978 9.50684457530559968 -13.33966593474259277"
 		
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:splineiK_tail01" 
-		"rotate" " -type \"double3\" 90.07627263522788 41.806374187140683 90.096860258725172"
+		"rotate" " -type \"double3\" 90.07627263522788041 41.80637418714099596 90.09686025872517234"
+		
+		2 "|pig_latest:PIG|pig_latest:flexi_joint_systems|pig_latest:vertebrae_flexi_spine01|pig_latest:PigSkin002:vertebrae_flexi_global01|pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01|pig_latest:PigSkin002:vertebrae_flexi_anim_end01" 
+		"followMid" " -av -k 1 0"
+		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:splineiK_tail01" 
+		"translate" " -type \"double3\" -0.035711666399985978 9.50684457530559968 -13.33966593474259277"
+		
+		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:splineiK_tail01" 
+		"rotate" " -type \"double3\" 90.07627263522788041 41.80637418714099596 90.09686025872517234"
 		
 		2 "|pig_latest:PIG|pig_latest:flexi_joint_systems|pig_latest:vertebrae_flexi_spine01|pig_latest:PigSkin002:vertebrae_flexi_global01|pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01|pig_latest:PigSkin002:vertebrae_flexi_anim_end01" 
 		"followMid" " -av -k 1 0"
 		3 ":defaultRenderGlobals.rendercallback" "pig_latest:defaultFurGlobals.callback" 
 		""
+		3 ":defaultRenderGlobals.rendercallback" "pig_latest:defaultFurGlobals.callback" 
+		""
 		5 4 "pig_latestRN" "pig_latest:defaultFurGlobals.furNodeList" "pig_latestRN.placeHolderList[1]" 
+		""
+		5 4 "pig_latestRN" "pig_latest:defaultFurGlobals.furNodeList" "pig_latestRN.placeHolderList[2]" 
 		"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
@@ -779,7 +789,7 @@ createNode FurGlobals -n "defaultFurGlobals";
 	addAttr -s false -ci true -sn "rogl" -ln "referencedFurGlobals" -at "message";
 	setAttr ".av" 2;
 	setAttr ".rep" -type "string" "renderData/fur/furEqualMap/utility_room_view";
-	setAttr ".pjl" -type "string" "X:/documents/GitHub/Bandits/maya";
+	setAttr ".pjl" -type "string" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya";
 createNode reference -n "smarty_latestRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"smarty_latestRN"
@@ -793,7 +803,7 @@ createNode reference -n "bike_rigRN";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "sneaks_latestRN";
-	setAttr ".fn[0]" -type "string" "X:/documents/GitHub/Bandits/maya//assets/characters/sneaks/sneaks_latest.ma";
+	setAttr ".fn[0]" -type "string" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/characters/sneaks/sneaks_latest.ma";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"sneaks_latestRN"
 		"sneaks_latestRN" 6
@@ -805,7 +815,23 @@ createNode reference -n "sneaks_latestRN";
 		" 1"
 		2 "sneaks_latest:sneaks17:sneakio_layer" "visibility" " 1"
 		2 "sneaks_latest:sneaks17:sneaksmesh:sneakio_layer" "visibility" " 1"
-		"sneaks_latestRN" 8
+		"sneaks_latestRN" 16
+		2 "|sneaks_latest:sneaksmesh:polySurface1|sneaks_latest:neutral" "visibility" 
+		" 0"
+		2 "|sneaks_latest:sneaksmesh:polySurface1|sneaks_latest:smile" "visibility" 
+		" 0"
+		2 "|sneaks_latest:sneaksmesh:polySurface1|sneaks_latest:pervy" "visibility" 
+		" 0"
+		2 "|sneaks_latest:sneaksmesh:polySurface1|sneaks_latest:super_angry" "visibility" 
+		" 0"
+		2 "|sneaks_latest:sneaksmesh:polySurface1|sneaks_latest:slightly_angry" "visibility" 
+		" 0"
+		2 "|sneaks_latest:sneaks_normal_face2:polySurface10|sneaks_latest:blink" 
+		"visibility" " 0"
+		2 "|sneaks_latest:sneaks_normal_face2:polySurface10|sneaks_latest:blink|sneaks_latest:blinkShape" 
+		"dispResolution" " 3"
+		2 "|sneaks_latest:sneaks_normal_face2:polySurface10|sneaks_latest:blink|sneaks_latest:blinkShape" 
+		"displaySmoothMesh" " 2"
 		2 "|sneaks_latest:sneaksmesh:polySurface1|sneaks_latest:neutral" "visibility" 
 		" 0"
 		2 "|sneaks_latest:sneaksmesh:polySurface1|sneaks_latest:smile" "visibility" 
@@ -901,49 +927,44 @@ createNode reference -n "lighting_latestRN";
 		"lighting_latestRN" 0;
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode ffd -n "ffd1";
-	setAttr ".lo" yes;
-	setAttr ".ot" 1;
-	setAttr ".ofd" 0;
-createNode tweak -n "tweak1";
-createNode objectSet -n "ffd1Set";
-	setAttr ".ihi" 0;
-	setAttr ".vo" yes;
-createNode groupId -n "ffd1GroupId";
-	setAttr ".ihi" 0;
-createNode groupParts -n "ffd1GroupParts";
-	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 1 "vtx[*]";
-createNode objectSet -n "tweakSet1";
-	setAttr ".ihi" 0;
-	setAttr ".vo" yes;
-createNode groupId -n "groupId2";
-	setAttr ".ihi" 0;
-createNode groupParts -n "groupParts2";
-	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 1 "vtx[*]";
+createNode reference -n "undies_fullRN";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"undies_fullRN"
+		"undies_fullRN" 0
+		"undies_fullRN" 5
+		2 "|undies_full:undies" "translate" " -type \"double3\" 0 13.22129548212866545 0"
+		
+		2 "|undies_full:undies" "scale" " -type \"double3\" 4.46739350216346676 4.46739350216346676 4.46739350216346676"
+		
+		2 "|undies_full:undies" "rotatePivot" " -type \"double3\" 0 2.36694287875558373 -7.9883220830502517e-07"
+		
+		2 "|undies_full:undies" "scalePivot" " -type \"double3\" 0 0.52982636913657188 -1.7881393432617188e-07"
+		
+		2 "|undies_full:undies" "scalePivotTranslate" " -type \"double3\" 0 1.83711650961901185 -6.2001827397885329e-07";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
 select -ne :renderPartition;
-	setAttr -s 425 ".st";
+	setAttr -s 523 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 218 ".s";
+	setAttr -s 226 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 397 ".u";
+	setAttr -s 413 ".u";
 select -ne :defaultRenderingList1;
 	setAttr -s 29 ".r";
 select -ne :lightList1;
 	setAttr -s 16 ".l";
 select -ne :defaultTextureList1;
-	setAttr -s 190 ".tx";
+	setAttr -s 206 ".tx";
 select -ne :initialShadingGroup;
-	setAttr -s 442 ".dsm";
+	setAttr -s 443 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 92 ".gn";
+	setAttr -s 93 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :defaultResolution;
@@ -964,15 +985,8 @@ select -ne :defaultHardwareRenderGlobals;
 	setAttr ".res" -type "string" "ntsc_4d 646 485 1.333";
 select -ne :ikSystem;
 	setAttr -s 7 ".sol";
-connectAttr "undies_latestRN.phl[1]" "groupParts2.ig";
-connectAttr "undiesShapeDeformed.iog" "undies_latestRN.phl[2]";
 connectAttr "defaultFurGlobals.rogl" "pig_latestRN.phl[1]";
-connectAttr "ffd1GroupId.id" "undiesShapeDeformed.iog.og[3].gid";
-connectAttr "ffd1Set.mwc" "undiesShapeDeformed.iog.og[3].gco";
-connectAttr "groupId2.id" "undiesShapeDeformed.iog.og[4].gid";
-connectAttr "tweakSet1.mwc" "undiesShapeDeformed.iog.og[4].gco";
-connectAttr "ffd1.og[0]" "undiesShapeDeformed.i";
-connectAttr "tweak1.vl[0].vt[0]" "undiesShapeDeformed.twl";
+connectAttr "defaultFurGlobals.rogl" "pig_latestRN.phl[2]";
 connectAttr ":mentalrayGlobals.msg" ":mentalrayItemsList.glb";
 connectAttr ":miDefaultOptions.msg" ":mentalrayItemsList.opt" -na;
 connectAttr ":miDefaultFramebuffer.msg" ":mentalrayItemsList.fb" -na;
@@ -984,26 +998,9 @@ relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defau
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
-connectAttr "undies_latestRNfosterParent1.msg" "undies_latestRN.fp";
 connectAttr ":defaultRenderGlobals.rcb" "defaultFurGlobals.cb";
-connectAttr "ffd1GroupParts.og" "ffd1.ip[0].ig";
-connectAttr "ffd1GroupId.id" "ffd1.ip[0].gi";
-connectAttr "ffd1LatticeShape.wm" "ffd1.dlm";
-connectAttr "ffd1LatticeShape.lo" "ffd1.dlp";
-connectAttr "ffd1BaseShape.wm" "ffd1.blm";
-connectAttr "groupParts2.og" "tweak1.ip[0].ig";
-connectAttr "groupId2.id" "tweak1.ip[0].gi";
-connectAttr "ffd1GroupId.msg" "ffd1Set.gn" -na;
-connectAttr "undiesShapeDeformed.iog.og[3]" "ffd1Set.dsm" -na;
-connectAttr "ffd1.msg" "ffd1Set.ub[0]";
-connectAttr "tweak1.og[0]" "ffd1GroupParts.ig";
-connectAttr "ffd1GroupId.id" "ffd1GroupParts.gi";
-connectAttr "groupId2.msg" "tweakSet1.gn" -na;
-connectAttr "undiesShapeDeformed.iog.og[4]" "tweakSet1.dsm" -na;
-connectAttr "tweak1.msg" "tweakSet1.ub[0]";
-connectAttr "groupId2.id" "groupParts2.gi";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 dataStructure -fmt "raw" -as "name=externalContentTable:string=node:string=key:string=upath:uint32=upathcrc:string=rpath:string=roles";
-applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"livingroom_shading_latestRN\" \"\" \"X:/documents/GitHub/Bandits/maya//assets/sets/livingroom_shading/livingroom_shading_latest.ma\" 3758780077 \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom_shading/livingroom_shading_latest.ma\" \"FileRef\"\n1\n\"undies_latestRN\" \"\" \"X:/documents/GitHub/Bandits/maya//assets/props/undies/undies_latest.ma\" 3603748164 \"X:/documents/GitHub/Bandits/maya/assets/props/undies/undies_latest.ma\" \"FileRef\"\n2\n\"pig_latestRN\" \"\" \"X:/documents/GitHub/Bandits/maya//assets/characters/pig/pig_latest.ma\" 672977679 \"X:/documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\" \"FileRef\"\n3\n\"smarty_latestRN\" \"\" \"X:/documents/GitHub/Bandits/maya//assets/characters/smarty/smarty_latest.ma\" 1115229329 \"X:/documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\" \"FileRef\"\n4\n\"bike_rigRN\" \"\" \"X:/documents/GitHub/Bandits/maya//assets/characters/smarty/bike_rig.ma\" 483276133 \"X:/documents/GitHub/Bandits/maya/assets/characters/smarty/bike_rig.ma\" \"FileRef\"\n5\n\"sneaks_latestRN\" \"\" \"X:/documents/GitHub/Bandits/maya//assets/characters/sneaks/sneaks_latest.ma\" 4193267377 \"X:/documents/GitHub/Bandits/maya/assets/characters/sneaks/sneaks_latest.ma\" \"FileRef\"\n6\n\"lighting_latestRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/sets/set_lighting/lighting_latest.ma\" 1486645550 \"X:/documents/GitHub/Bandits/maya/assets/sets/set_lighting/lighting_latest.ma\" \"FileRef\"\nendStream\nendChannel\nendAssociations\n" 
+applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"livingroom_shading_latestRN\" \"\" \"X:/documents/GitHub/Bandits/maya//assets/sets/livingroom_shading/livingroom_shading_latest.ma\" 3758780077 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/sets/livingroom_shading/livingroom_shading_latest.ma\" \"FileRef\"\n1\n\"pig_latestRN\" \"\" \"X:/documents/GitHub/Bandits/maya//assets/characters/pig/pig_latest.ma\" 672977679 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/characters/pig/pig_latest.ma\" \"FileRef\"\n2\n\"smarty_latestRN\" \"\" \"X:/documents/GitHub/Bandits/maya//assets/characters/smarty/smarty_latest.ma\" 1115229329 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/characters/smarty/smarty_latest.ma\" \"FileRef\"\n3\n\"bike_rigRN\" \"\" \"X:/documents/GitHub/Bandits/maya//assets/characters/smarty/bike_rig.ma\" 483276133 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/characters/smarty/bike_rig.ma\" \"FileRef\"\n4\n\"sneaks_latestRN\" \"\" \"X:/documents/GitHub/Bandits/maya//assets/characters/sneaks/sneaks_latest.ma\" 4193267377 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/characters/sneaks/sneaks_latest.ma\" \"FileRef\"\n5\n\"lighting_latestRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/sets/set_lighting/lighting_latest.ma\" 1486645550 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/sets/set_lighting/lighting_latest.ma\" \"FileRef\"\n6\n\"undies_fullRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/props/undies/undies_full.ma\" 3949992776 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/props/undies/undies_full.ma\" \"FileRef\"\nendStream\nendChannel\nendAssociations\n" 
 		-scn;
 // End of utility_room_view.ma

@@ -1,6 +1,6 @@
 //Maya ASCII 2015 scene
 //Name: smarty_under_table.ma
-//Last modified: Wed, Mar 11, 2015 02:14:23 AM
+//Last modified: Sat, Mar 21, 2015 03:19:30 PM
 //Codeset: 1252
 file -rdi 1 -rpr "livingroom_shading_latest" -rfn "livingroom_shading_latestRN"
 		 "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/sets/livingroom_shading/livingroom_shading_latest.ma";
@@ -38,6 +38,24 @@ file -rdi 3 -ns "resurrected_staircase" -rfn "living_room_latest:resurrected_sta
 file -rdi 3 -ns "chair_2" -dr 1 -rfn "living_room_latest:chair_2RN" "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya//assets/sets/bedroom/additions/chair_2.ma";
 file -rdi 3 -ns "desk_latest" -dr 1 -rfn "living_room_latest:desk_latestRN"
 		 "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya//assets/sets/bedroom/additions/desk_latest.ma";
+file -rdi 3 -ns "servingCup" -dr 1 -rfn "living_room_latest:servingCupRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/sets/livingroom/additions/servingCup.ma";
+file -rdi 3 -ns "servingCup1" -dr 1 -rfn "living_room_latest:servingCupRN1"
+		 "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/sets/livingroom/additions/servingCup.ma";
+file -rdi 3 -ns "vinegarBottle" -dr 1 -rfn "living_room_latest:vinegarBottleRN"
+		 "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/sets/livingroom/additions/vinegarBottle.ma";
+file -rdi 3 -ns "sword" -dr 1 -rfn "living_room_latest:swordRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/sets/bedroom/additions/sword.ma";
+file -rdi 3 -ns "outlet" -dr 1 -rfn "living_room_latest:outletRN" "/Users/Amy/Desktop/cnm190/Bandits/maya//assets/sets/livingroom/additions/outlet.ma";
+file -rdi 3 -ns "wireplug_straightened" -dr 1 -rfn "living_room_latest:wireplug_straightenedRN"
+		 "/Users/Amy/Desktop/cnm190/Bandits/maya//assets/sets/livingroom/additions/wireplug_straightened.ma";
+file -rdi 3 -ns "wireplug_straightened1" -dr 1 -rfn "living_room_latest:wireplug_straightenedRN1"
+		 "/Users/Amy/Desktop/cnm190/Bandits/maya//assets/sets/livingroom/additions/wireplug_straightened.ma";
+file -rdi 3 -ns "backpack" -dr 1 -rfn "living_room_latest:backpackRN" "/Users/Amy/Desktop/cnm190/Bandits/maya//assets/sets/livingroom/additions/backpack.ma";
+file -rdi 3 -ns "pottedplant" -dr 1 -rfn "living_room_latest:pottedplantRN"
+		 "/Users/Amy/Desktop/cnm190/Bandits/maya//assets/sets/livingroom/additions/pottedplant.ma";
+file -rdi 3 -ns "waterboiler" -dr 1 -rfn "living_room_latest:waterboilerRN"
+		 "/Users/Amy/Desktop/cnm190/Bandits/maya//assets/sets/livingroom/additions/waterboiler.ma";
+file -rdi 3 -ns "wireplug_straightened2" -dr 1 -rfn "living_room_latest:wireplug_straightenedRN2"
+		 "/Users/Amy/Desktop/cnm190/Bandits/maya//assets/sets/livingroom/additions/wireplug_straightened.ma";
 file -rdi 1 -rpr "smartybike" -rfn "smartybikeRN" "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/smarty/smartybike.ma";
 file -rdi 2 -ns "NewSmarty_024" -rfn "smartybike_NewSmarty_024RN" "assets/characters/smarty/smarty_latest.ma";
 file -rdi 2 -ns "bike" -rfn "smartybike_bikeRN" "/Users/scai/Bandits/maya//assets/props/bike_rig.ma";
@@ -45,41 +63,38 @@ file -rdi 1 -rpr "sneaks_latest" -rfn "sneaks_latestRN" "C:/Users/Saurabh/Docume
 file -rdi 1 -rpr "tuffs_latest" -rfn "tuffs_latestRN" "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/tuffs/tuffs_latest.ma";
 file -rdi 1 -rpr "pig_latest" -rfn "pig_latestRN" "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/pig/pig_latest.ma";
 file -rdi 2 -ns "key_latest" -rfn "pig_latest_key_latestRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/props/keys/key_latest.ma";
-file -rdi 1 -rpr "light_setup_004" -rfn "light_setup_004RN" "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/sets/livingroom/versions/light_setup_004.ma";
 file -r -rpr "livingroom_shading_latest" -dr 1 -rfn "livingroom_shading_latestRN"
 		 "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/sets/livingroom_shading/livingroom_shading_latest.ma";
 file -r -rpr "smartybike" -dr 1 -rfn "smartybikeRN" "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/smarty/smartybike.ma";
 file -r -rpr "sneaks_latest" -dr 1 -rfn "sneaks_latestRN" "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/sneaks/versions/sneaks17.ma";
 file -r -rpr "tuffs_latest" -dr 1 -rfn "tuffs_latestRN" "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/tuffs/tuffs_latest.ma";
 file -r -rpr "pig_latest" -dr 1 -rfn "pig_latestRN" "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/pig/pig_latest.ma";
-file -r -rpr "light_setup_004" -dr 1 -rfn "light_setup_004RN" "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/sets/livingroom/versions/light_setup_004.ma";
 requires maya "2015";
+requires -nodeType "RenderMan" "RenderMan_for_Maya" "5.5";
+requires -nodeType "FurGlobals" "Fur" "2015";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOptions" -nodeType "mentalrayGlobals"
 		 -nodeType "mentalrayItemsList" -dataType "byteArray" "Mayatomr" "2015.0 - 3.12.1.16 ";
-requires -nodeType "FurGlobals" "Fur" "2015";
-requires "stereoCamera" "10.0";
 requires "FurryBall_2013" "4.8.3522";
-requires "Fur" "2013 x64";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2015";
 fileInfo "version" "2015";
-fileInfo "cutIdentifier" "201405190330-916664";
-fileInfo "osv" "Microsoft Windows 8 Business Edition, 64-bit  (Build 9200)\n";
+fileInfo "cutIdentifier" "201402282131-909040";
+fileInfo "osv" "Microsoft Windows 8 Home Premium Edition, 64-bit  (Build 9200)\n";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -197.16033075338765 4.5368910674819345 65.306474213947155 ;
-	setAttr ".r" -type "double3" -9.9383527296674039 -5.3999999999848018 0 ;
+	setAttr ".t" -type "double3" -185.57977223069716 17.729733147403145 59.464404662240845 ;
+	setAttr ".r" -type "double3" -20.738352729667461 45.000000000015255 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 3.9644152047865218;
+	setAttr ".coi" 19.215237608395977;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -196.79284482289376 3.8526786907158028 61.418879143686929 ;
+	setAttr ".tp" -type "double3" -198.28664286584501 10.925599575042725 46.757534027099609 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	setAttr ".v" no;
@@ -148,520 +163,6 @@ createNode imagePlane -n "soap_bottle:imagePlaneShape1" -p "soap_bottle:imagePla
 	setAttr ".ic" -type "double3" -200 0 -2.2226664952995633e-014 ;
 	setAttr ".w" 30;
 	setAttr ".h" 30;
-createNode transform -n "soap_bottle:pCube1";
-	setAttr ".s" -type "double3" 0.030870639037615517 0.1051665587821991 0.1051665587821991 ;
-createNode mesh -n "soap_bottle:pCubeShape1" -p "soap_bottle:pCube1";
-	addAttr -ci true -sn "VisibleInIndirect" -ln "VisibleInIndirect" -dv 1 -min 0 -max 
-		1 -smn 0 -smx 1 -at "bool";
-	addAttr -ci true -h true -sn "sref" -ln "surfaceReference" -min 0 -max 1 -at "bool";
-	addAttr -ci true -h true -sn "reff" -ln "referenceFile" -dt "string";
-	addAttr -ci true -h true -sn "fns" -ln "furNameSpace" -dt "string";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".sdt" 0;
-	setAttr ".ugsdt" no;
-	setAttr -s 473 ".pt";
-	setAttr ".pt[0]" -type "float3" 6.2474132 0 -0.13232009 ;
-	setAttr ".pt[1]" -type "float3" 4.2164168 0 -0.55609375 ;
-	setAttr ".pt[2]" -type "float3" 2.8284521 0 -0.68045986 ;
-	setAttr ".pt[3]" -type "float3" 0.11156386 0 -0.41732544 ;
-	setAttr ".pt[4]" -type "float3" 0.53019881 0 -0.58385205 ;
-	setAttr ".pt[5]" -type "float3" 0.51661092 0 -0.9567709 ;
-	setAttr ".pt[6]" -type "float3" 0.4901787 0 -0.41479379 ;
-	setAttr ".pt[7]" -type "float3" -0.3019135 -1.976197e-014 -0.44430783 ;
-	setAttr ".pt[8]" -type "float3" -0.64644068 -6.8833828e-014 -0.34622252 ;
-	setAttr ".pt[9]" -type "float3" -0.54471034 -6.17284e-014 -0.27227056 ;
-	setAttr ".pt[10]" -type "float3" -0.35209602 -2.0428104e-014 -0.28069413 ;
-	setAttr ".pt[11]" -type "float3" -0.35209602 2.0428104e-014 -0.26911899 ;
-	setAttr ".pt[12]" -type "float3" -0.27543229 6.0396133e-014 -0.15070549 ;
-	setAttr ".pt[13]" -type "float3" 0.20221072 7.4606987e-014 -0.14577724 ;
-	setAttr ".pt[14]" -type "float3" 0.63113534 2.1316282e-014 -0.25468904 ;
-	setAttr ".pt[15]" -type "float3" 0.68529165 0 -0.36675575 ;
-	setAttr ".pt[16]" -type "float3" -6.2474132 0 -0.13232009 ;
-	setAttr ".pt[17]" -type "float3" -4.2164168 0 -0.55609375 ;
-	setAttr ".pt[18]" -type "float3" -2.8284521 0 -0.68045986 ;
-	setAttr ".pt[19]" -type "float3" -0.11156386 0 -0.41732544 ;
-	setAttr ".pt[20]" -type "float3" -0.53019881 0 -0.58385205 ;
-	setAttr ".pt[21]" -type "float3" -0.51661092 0 -0.9567709 ;
-	setAttr ".pt[22]" -type "float3" -0.49017876 0 -0.41479379 ;
-	setAttr ".pt[23]" -type "float3" 0.30191359 -2.0761171e-014 -0.41343749 ;
-	setAttr ".pt[24]" -type "float3" 0.64644045 -7.1054274e-014 -0.24524146 ;
-	setAttr ".pt[25]" -type "float3" 0.54471046 -6.3060668e-014 -0.1352849 ;
-	setAttr ".pt[26]" -type "float3" 0.35209596 -2.1316282e-014 -0.14239377 ;
-	setAttr ".pt[27]" -type "float3" 0.35209587 2.0428104e-014 -0.14239377 ;
-	setAttr ".pt[28]" -type "float3" 0.27543229 6.2172489e-014 -0.14189175 ;
-	setAttr ".pt[29]" -type "float3" -0.20221096 7.4606987e-014 -0.25647548 ;
-	setAttr ".pt[30]" -type "float3" -0.63113534 2.1316282e-014 -0.32759732 ;
-	setAttr ".pt[31]" -type "float3" -0.68529165 0 -0.39989555 ;
-	setAttr ".pt[32]" -type "float3" -6.2474132 0 -0.088213533 ;
-	setAttr ".pt[33]" -type "float3" -4.2164178 0 -0.43100181 ;
-	setAttr ".pt[34]" -type "float3" -2.8635633 0 -0.45364025 ;
-	setAttr ".pt[35]" -type "float3" 0.6917789 0 0 ;
-	setAttr ".pt[36]" -type "float3" 0.6917789 0 0 ;
-	setAttr ".pt[37]" -type "float3" 0.19530571 0 -0.51745033 ;
-	setAttr ".pt[38]" -type "float3" 0.26075065 0 0 ;
-	setAttr ".pt[39]" -type "float3" 1.5946323 -1.3433699e-014 0.025609981 ;
-	setAttr ".pt[40]" -type "float3" 2.5054052 -4.9626969e-014 0.13839725 ;
-	setAttr ".pt[41]" -type "float3" 2.838464 -4.3520743e-014 0.20217575 ;
-	setAttr ".pt[42]" -type "float3" 3.0343461 -1.3322676e-014 0.1761871 ;
-	setAttr ".pt[43]" -type "float3" 3.0343475 1.2434498e-014 0.1761871 ;
-	setAttr ".pt[44]" -type "float3" 2.8384647 3.907985e-014 0.17875604 ;
-	setAttr ".pt[45]" -type "float3" 1.6536648 4.6185278e-014 0.12890324 ;
-	setAttr ".pt[46]" -type "float3" 0.26075065 1.0658141e-014 0.080496289 ;
-	setAttr ".pt[47]" -type "float3" -0.68529165 0 -0.35092297 ;
-	setAttr ".pt[48]" -type "float3" -6.2474132 0 -0.044106767 ;
-	setAttr ".pt[49]" -type "float3" -4.2164178 0 -0.21550091 ;
-	setAttr ".pt[50]" -type "float3" -2.8360457 0 -0.22682013 ;
-	setAttr ".pt[51]" -type "float3" 1.0406315 0 0 ;
-	setAttr ".pt[52]" -type "float3" 1.0406315 0 0 ;
-	setAttr ".pt[53]" -type "float3" 0.29375133 0 -0.25872517 ;
-	setAttr ".pt[54]" -type "float3" 0.55666393 0 0 ;
-	setAttr ".pt[55]" -type "float3" 2.4578679 0 0 ;
-	setAttr ".pt[56]" -type "float3" 3.7681692 -7.327472e-015 0.010815427 ;
-	setAttr ".pt[57]" -type "float3" 4.2838883 -9.3258734e-015 0.021472305 ;
-	setAttr ".pt[58]" -type "float3" 4.5661259 -1.7763568e-015 0.012490717 ;
-	setAttr ".pt[59]" -type "float3" 4.5661259 1.7763568e-015 0.012490717 ;
-	setAttr ".pt[60]" -type "float3" 4.2838869 7.1054274e-015 0.013277339 ;
-	setAttr ".pt[61]" -type "float3" 2.6027358 7.1054274e-015 0.0074712941 ;
-	setAttr ".pt[62]" -type "float3" 0.55666411 0 0.0021444466 ;
-	setAttr ".pt[63]" -type "float3" -0.68529165 0 -0.18024239 ;
-	setAttr ".pt[64]" -type "float3" -6.2474132 0 -9.7074687e-017 ;
-	setAttr ".pt[65]" -type "float3" -4.2164173 0 -6.595034e-016 ;
-	setAttr ".pt[66]" -type "float3" -2.820044 0 -5.7461831e-016 ;
-	setAttr ".pt[67]" -type "float3" 1.0406315 0 0 ;
-	setAttr ".pt[68]" -type "float3" 1.0406315 0 0 ;
-	setAttr ".pt[69]" -type "float3" 0.30170897 0 -3.3528494e-016 ;
-	setAttr ".pt[70]" -type "float3" 0.55666393 0 0 ;
-	setAttr ".pt[71]" -type "float3" 2.4578679 0 0 ;
-	setAttr ".pt[72]" -type "float3" 3.768168 2.3841858e-007 0 ;
-	setAttr ".pt[73]" -type "float3" 4.2838869 2.3841858e-007 0 ;
-	setAttr ".pt[74]" -type "float3" 4.5661259 0 0 ;
-	setAttr ".pt[75]" -type "float3" 4.5661259 0 0 ;
-	setAttr ".pt[76]" -type "float3" 4.2838869 0 0 ;
-	setAttr ".pt[77]" -type "float3" 2.6027358 0 0 ;
-	setAttr ".pt[78]" -type "float3" 0.55666411 0 0 ;
-	setAttr ".pt[79]" -type "float3" -0.68529165 0 1.7000772e-016 ;
-	setAttr ".pt[80]" -type "float3" -6.2474132 0 0.044106767 ;
-	setAttr ".pt[81]" -type "float3" -4.2164178 0 0.21550091 ;
-	setAttr ".pt[82]" -type "float3" -2.8360457 0 0.22682013 ;
-	setAttr ".pt[83]" -type "float3" 1.0406315 0 0 ;
-	setAttr ".pt[84]" -type "float3" 1.0406315 0 0 ;
-	setAttr ".pt[85]" -type "float3" 0.29375133 0 0.25872517 ;
-	setAttr ".pt[86]" -type "float3" 0.55666393 0 0 ;
-	setAttr ".pt[87]" -type "float3" 2.4578679 0 0 ;
-	setAttr ".pt[88]" -type "float3" 3.768168 2.3841858e-007 -0.010815427 ;
-	setAttr ".pt[89]" -type "float3" 4.2838869 2.3841858e-007 -0.021472305 ;
-	setAttr ".pt[90]" -type "float3" 4.5661259 0 -0.012490717 ;
-	setAttr ".pt[91]" -type "float3" 4.5661259 0 -0.012490717 ;
-	setAttr ".pt[92]" -type "float3" 4.2838869 0 -0.013277339 ;
-	setAttr ".pt[93]" -type "float3" 2.6027358 0 -0.0074712941 ;
-	setAttr ".pt[94]" -type "float3" 0.55666411 0 0 ;
-	setAttr ".pt[95]" -type "float3" -0.68529165 0 0.18024239 ;
-	setAttr ".pt[96]" -type "float3" -6.2474132 0 0.088213533 ;
-	setAttr ".pt[97]" -type "float3" -4.2164178 0 0.43100181 ;
-	setAttr ".pt[98]" -type "float3" -2.8635633 0 0.45364025 ;
-	setAttr ".pt[99]" -type "float3" 0.6917789 0 0 ;
-	setAttr ".pt[100]" -type "float3" 0.6917789 0 0 ;
-	setAttr ".pt[101]" -type "float3" 0.19530571 0 0.51745033 ;
-	setAttr ".pt[102]" -type "float3" 0.26075065 0 0 ;
-	setAttr ".pt[103]" -type "float3" 1.5946323 -2.1094237e-015 -0.025609981 ;
-	setAttr ".pt[104]" -type "float3" 2.5054052 -2.0650148e-014 -0.13839725 ;
-	setAttr ".pt[105]" -type "float3" 2.8384655 -1.9984014e-014 -0.20217575 ;
-	setAttr ".pt[106]" -type "float3" 3.0343475 -5.3290705e-015 -0.1761871 ;
-	setAttr ".pt[107]" -type "float3" 3.0343461 5.3290705e-015 -0.1761871 ;
-	setAttr ".pt[108]" -type "float3" 2.8384647 1.7763568e-014 -0.17875604 ;
-	setAttr ".pt[109]" -type "float3" 1.6536648 2.1316282e-014 -0.12890324 ;
-	setAttr ".pt[110]" -type "float3" 0.26075065 3.5527137e-015 -0.022760581 ;
-	setAttr ".pt[111]" -type "float3" -0.68529165 0 0.36048478 ;
-	setAttr ".pt[112]" -type "float3" -6.2474132 0 0.13232009 ;
-	setAttr ".pt[113]" -type "float3" -4.2164168 0 0.55609375 ;
-	setAttr ".pt[114]" -type "float3" -2.8284521 0 0.68045986 ;
-	setAttr ".pt[115]" -type "float3" -0.11156386 0 0.41732544 ;
-	setAttr ".pt[116]" -type "float3" -0.53019881 0 0.58385205 ;
-	setAttr ".pt[117]" -type "float3" -0.51661092 0 0.9567709 ;
-	setAttr ".pt[118]" -type "float3" -0.49017876 0 0.41479379 ;
-	setAttr ".pt[119]" -type "float3" 0.30191359 -7.327472e-015 0.41343749 ;
-	setAttr ".pt[120]" -type "float3" 0.64644045 -4.2188475e-014 0.24524146 ;
-	setAttr ".pt[121]" -type "float3" 0.54470998 -4.0412118e-014 0.1352849 ;
-	setAttr ".pt[122]" -type "float3" 0.35209578 -1.3322676e-014 0.14239377 ;
-	setAttr ".pt[123]" -type "float3" 0.35209569 1.4210855e-014 0.14239377 ;
-	setAttr ".pt[124]" -type "float3" 0.27543229 4.0856207e-014 0.14189175 ;
-	setAttr ".pt[125]" -type "float3" -0.20221096 4.9737992e-014 0.25647548 ;
-	setAttr ".pt[126]" -type "float3" -0.63113534 8.8817842e-015 0.43897709 ;
-	setAttr ".pt[127]" -type "float3" -0.68529165 0 0.44504151 ;
-	setAttr ".pt[128]" -type "float3" 6.2474132 0 0.13232009 ;
-	setAttr ".pt[129]" -type "float3" 4.2164168 0 0.55609375 ;
-	setAttr ".pt[130]" -type "float3" 2.8284521 0 0.68045986 ;
-	setAttr ".pt[131]" -type "float3" 0.11156386 0 0.41732544 ;
-	setAttr ".pt[132]" -type "float3" 0.53019881 0 0.58385205 ;
-	setAttr ".pt[133]" -type "float3" 0.51661092 0 0.9567709 ;
-	setAttr ".pt[134]" -type "float3" 0.4901787 0 0.41479379 ;
-	setAttr ".pt[135]" -type "float3" -0.3019135 -1.976197e-014 0.41562441 ;
-	setAttr ".pt[136]" -type "float3" -0.64644068 -6.8833828e-014 0.25216678 ;
-	setAttr ".pt[137]" -type "float3" -0.54471034 -6.17284e-014 0.14434828 ;
-	setAttr ".pt[138]" -type "float3" -0.35209602 -2.0428104e-014 0.15193346 ;
-	setAttr ".pt[139]" -type "float3" -0.35209602 2.0428104e-014 0.15193346 ;
-	setAttr ".pt[140]" -type "float3" -0.27543229 6.0396133e-014 0.15070549 ;
-	setAttr ".pt[141]" -type "float3" 0.20221072 7.4606987e-014 0.26225346 ;
-	setAttr ".pt[142]" -type "float3" 0.63113534 2.1316282e-014 0.44057721 ;
-	setAttr ".pt[143]" -type "float3" 0.68529165 0 0.44504151 ;
-	setAttr ".pt[144]" -type "float3" 6.2474132 0 0.088213533 ;
-	setAttr ".pt[145]" -type "float3" 4.2164178 0 0.43100181 ;
-	setAttr ".pt[146]" -type "float3" 2.8635633 0 0.45364025 ;
-	setAttr ".pt[147]" -type "float3" -0.6917789 0 0 ;
-	setAttr ".pt[148]" -type "float3" -0.6917789 0 0 ;
-	setAttr ".pt[149]" -type "float3" -0.19530571 0 0.51745033 ;
-	setAttr ".pt[150]" -type "float3" -0.26075071 0 0 ;
-	setAttr ".pt[151]" -type "float3" -1.5946325 -1.1435297e-014 -0.023479879 ;
-	setAttr ".pt[152]" -type "float3" -2.5054054 -4.6629367e-014 -0.13107169 ;
-	setAttr ".pt[153]" -type "float3" -2.8384643 -4.1300297e-014 -0.19217193 ;
-	setAttr ".pt[154]" -type "float3" -3.0343466 -1.1546319e-014 -0.1667314 ;
-	setAttr ".pt[155]" -type "float3" -3.0343475 1.2434498e-014 -0.1667314 ;
-	setAttr ".pt[156]" -type "float3" -2.838465 3.5527137e-014 -0.16958806 ;
-	setAttr ".pt[157]" -type "float3" -1.6536651 4.4408921e-014 -0.12314144 ;
-	setAttr ".pt[158]" -type "float3" -0.26075068 1.0658141e-014 -0.021630853 ;
-	setAttr ".pt[159]" -type "float3" 0.68529165 0 0.36048478 ;
-	setAttr ".pt[160]" -type "float3" 6.2474132 0 0.044106767 ;
-	setAttr ".pt[161]" -type "float3" 4.2164178 0 0.21550091 ;
-	setAttr ".pt[162]" -type "float3" 2.8360457 0 0.22682013 ;
-	setAttr ".pt[163]" -type "float3" -1.0406315 0 0 ;
-	setAttr ".pt[164]" -type "float3" -1.0406315 0 0 ;
-	setAttr ".pt[165]" -type "float3" -0.29375142 0 0.25872517 ;
-	setAttr ".pt[166]" -type "float3" -0.55666411 0 0 ;
-	setAttr ".pt[167]" -type "float3" -2.4578669 0 0 ;
-	setAttr ".pt[168]" -type "float3" -3.7681682 -6.6613381e-015 -0.0093191452 ;
-	setAttr ".pt[169]" -type "float3" -4.2838874 -8.437695e-015 -0.019040816 ;
-	setAttr ".pt[170]" -type "float3" -4.5661259 -8.8817842e-016 -0.010815427 ;
-	setAttr ".pt[171]" -type "float3" -4.5661249 1.7763568e-015 -0.010815427 ;
-	setAttr ".pt[172]" -type "float3" -4.2838874 3.5527137e-015 -0.011474586 ;
-	setAttr ".pt[173]" -type "float3" -2.6027367 3.5527137e-015 -0.0065610893 ;
-	setAttr ".pt[174]" -type "float3" -0.55666417 0 0 ;
-	setAttr ".pt[175]" -type "float3" 0.68529165 0 0.18024239 ;
-	setAttr ".pt[176]" -type "float3" 6.2474132 0 -3.8546807e-018 ;
-	setAttr ".pt[177]" -type "float3" 4.2164173 0 -2.0404031e-016 ;
-	setAttr ".pt[178]" -type "float3" 2.820044 0 -9.5232159e-017 ;
-	setAttr ".pt[179]" -type "float3" -1.0406315 0 0 ;
-	setAttr ".pt[180]" -type "float3" -1.0406315 0 0 ;
-	setAttr ".pt[181]" -type "float3" -0.30170897 0 8.674074e-017 ;
-	setAttr ".pt[182]" -type "float3" -0.55666411 0 0 ;
-	setAttr ".pt[183]" -type "float3" -2.4578669 0 0 ;
-	setAttr ".pt[184]" -type "float3" -3.7681682 0 0 ;
-	setAttr ".pt[185]" -type "float3" -4.2838874 0 0 ;
-	setAttr ".pt[186]" -type "float3" -4.5661259 0 0 ;
-	setAttr ".pt[187]" -type "float3" -4.5661249 0 0 ;
-	setAttr ".pt[188]" -type "float3" -4.2838874 0 0 ;
-	setAttr ".pt[189]" -type "float3" -2.6027367 0 0 ;
-	setAttr ".pt[190]" -type "float3" -0.55666417 0 0 ;
-	setAttr ".pt[191]" -type "float3" 0.68529165 0 4.6401428e-016 ;
-	setAttr ".pt[192]" -type "float3" 6.2474132 0 -0.044106767 ;
-	setAttr ".pt[193]" -type "float3" 4.2164178 0 -0.21550091 ;
-	setAttr ".pt[194]" -type "float3" 2.8360457 0 -0.22682013 ;
-	setAttr ".pt[195]" -type "float3" -1.0406315 0 0 ;
-	setAttr ".pt[196]" -type "float3" -1.0406315 0 0 ;
-	setAttr ".pt[197]" -type "float3" -0.29375142 0 -0.25872517 ;
-	setAttr ".pt[198]" -type "float3" -0.55666411 0 0 ;
-	setAttr ".pt[199]" -type "float3" -2.4578669 0 0 ;
-	setAttr ".pt[200]" -type "float3" -3.7681682 -6.6613381e-015 0.00018196866 ;
-	setAttr ".pt[201]" -type "float3" -4.2838874 -8.437695e-015 0.0020681885 ;
-	setAttr ".pt[202]" -type "float3" -4.5661259 -8.8817842e-016 0.00018196866 ;
-	setAttr ".pt[203]" -type "float3" -4.5661249 1.7763568e-015 0.0032157418 ;
-	setAttr ".pt[204]" -type "float3" -4.2838874 3.5527137e-015 0.011474586 ;
-	setAttr ".pt[205]" -type "float3" -2.6027367 3.5527137e-015 0.016103033 ;
-	setAttr ".pt[206]" -type "float3" -0.55666417 0 0.009511237 ;
-	setAttr ".pt[207]" -type "float3" 0.68529165 0 -0.18024239 ;
-	setAttr ".pt[208]" -type "float3" 6.2474132 0 -0.088213533 ;
-	setAttr ".pt[209]" -type "float3" 4.2164178 0 -0.43100181 ;
-	setAttr ".pt[210]" -type "float3" 2.8635633 0 -0.45364025 ;
-	setAttr ".pt[211]" -type "float3" -0.6917789 0 0 ;
-	setAttr ".pt[212]" -type "float3" -0.6917789 0 0 ;
-	setAttr ".pt[213]" -type "float3" -0.19530571 0 -0.51745033 ;
-	setAttr ".pt[214]" -type "float3" -0.26075071 0 0 ;
-	setAttr ".pt[215]" -type "float3" -1.5946325 -1.1435297e-014 0.003889082 ;
-	setAttr ".pt[216]" -type "float3" -2.5054054 -4.6629367e-014 0.057552245 ;
-	setAttr ".pt[217]" -type "float3" -2.8384643 -4.1300297e-014 0.092430532 ;
-	setAttr ".pt[218]" -type "float3" -3.0343466 -1.1546319e-014 0.076044872 ;
-	setAttr ".pt[219]" -type "float3" -3.0343475 1.2434498e-014 0.10705094 ;
-	setAttr ".pt[220]" -type "float3" -2.838465 3.5527137e-014 0.16958806 ;
-	setAttr ".pt[221]" -type "float3" -1.6536651 4.4408921e-014 0.18513799 ;
-	setAttr ".pt[222]" -type "float3" -0.26075068 1.0658141e-014 0.13446473 ;
-	setAttr ".pt[223]" -type "float3" 0.68529165 0 -0.33699965 ;
-	setAttr ".pt[224]" -type "float3" -4.2094941 0 -0.48527864 ;
-	setAttr ".pt[225]" -type "float3" -4.2144542 0 -0.43190825 ;
-	setAttr ".pt[226]" -type "float3" -4.2023706 0 -0.21595412 ;
-	setAttr ".pt[227]" -type "float3" -4.194109 0 -6.1177468e-016 ;
-	setAttr ".pt[228]" -type "float3" -4.2023706 0 0.21595412 ;
-	setAttr ".pt[229]" -type "float3" -4.2144542 0 0.43190825 ;
-	setAttr ".pt[230]" -type "float3" -4.2094941 0 0.48527864 ;
-	setAttr ".pt[231]" -type "float3" 4.2094941 0 0.48527864 ;
-	setAttr ".pt[232]" -type "float3" 4.2144542 0 0.43190825 ;
-	setAttr ".pt[233]" -type "float3" 4.2023706 0 0.21595412 ;
-	setAttr ".pt[234]" -type "float3" 4.194109 0 -1.5535397e-016 ;
-	setAttr ".pt[235]" -type "float3" 4.2023706 0 -0.21595412 ;
-	setAttr ".pt[236]" -type "float3" 4.2144542 0 -0.43190825 ;
-	setAttr ".pt[237]" -type "float3" 4.2094941 0 -0.48527864 ;
-	setAttr ".pt[238]" -type "float3" -5.1026754 0 -0.4800922 ;
-	setAttr ".pt[239]" -type "float3" -5.103385 0 -0.42729241 ;
-	setAttr ".pt[240]" -type "float3" -5.1015806 0 -0.2136462 ;
-	setAttr ".pt[241]" -type "float3" -5.0999641 0 -6.0713861e-016 ;
-	setAttr ".pt[242]" -type "float3" -5.1015806 0 0.2136462 ;
-	setAttr ".pt[243]" -type "float3" -5.103385 0 0.42729241 ;
-	setAttr ".pt[244]" -type "float3" -5.1026754 0 0.4800922 ;
-	setAttr ".pt[245]" -type "float3" 5.1026754 0 0.4800922 ;
-	setAttr ".pt[246]" -type "float3" 5.103385 0 0.42729241 ;
-	setAttr ".pt[247]" -type "float3" 5.1015806 0 0.2136462 ;
-	setAttr ".pt[248]" -type "float3" 5.0999641 0 -1.5559572e-016 ;
-	setAttr ".pt[249]" -type "float3" 5.1015806 0 -0.2136462 ;
-	setAttr ".pt[250]" -type "float3" 5.103385 0 -0.42729241 ;
-	setAttr ".pt[251]" -type "float3" 5.1026754 0 -0.4800922 ;
-	setAttr ".pt[252]" -type "float3" -5.2284884 0 -0.070276327 ;
-	setAttr ".pt[253]" -type "float3" -5.2284889 0 -0.054468036 ;
-	setAttr ".pt[254]" -type "float3" -5.228488 0 -0.031725891 ;
-	setAttr ".pt[255]" -type "float3" -5.2284889 0 -9.4204212e-017 ;
-	setAttr ".pt[256]" -type "float3" -5.228488 0 0.031725895 ;
-	setAttr ".pt[257]" -type "float3" -5.2284889 0 0.054468036 ;
-	setAttr ".pt[258]" -type "float3" -5.2284884 0 0.070276387 ;
-	setAttr ".pt[259]" -type "float3" 5.2284884 0 0.070276387 ;
-	setAttr ".pt[260]" -type "float3" 5.2284889 0 0.054468036 ;
-	setAttr ".pt[261]" -type "float3" 5.228488 0 0.031725895 ;
-	setAttr ".pt[262]" -type "float3" 5.2284889 0 -2.7151079e-017 ;
-	setAttr ".pt[263]" -type "float3" 5.228488 0 -0.031725891 ;
-	setAttr ".pt[264]" -type "float3" 5.2284889 0 -0.054468036 ;
-	setAttr ".pt[265]" -type "float3" 5.2284884 0 -0.070276327 ;
-	setAttr ".pt[266]" -type "float3" -5.2284889 0 -0.069275253 ;
-	setAttr ".pt[267]" -type "float3" -5.2284894 0 -0.15716511 ;
-	setAttr ".pt[268]" -type "float3" -5.2284889 0 -0.031725891 ;
-	setAttr ".pt[269]" -type "float3" -5.2284889 0 -9.8357386e-017 ;
-	setAttr ".pt[270]" -type "float3" -5.2284889 0 0.031725895 ;
-	setAttr ".pt[271]" -type "float3" -5.2284894 0 0.15716511 ;
-	setAttr ".pt[272]" -type "float3" -5.2284889 0 0.070244692 ;
-	setAttr ".pt[273]" -type "float3" 5.2284889 0 0.070244692 ;
-	setAttr ".pt[274]" -type "float3" 5.2284894 0 0.15716511 ;
-	setAttr ".pt[275]" -type "float3" 5.2284889 0 0.031725895 ;
-	setAttr ".pt[276]" -type "float3" 5.2284889 0 -3.1304293e-017 ;
-	setAttr ".pt[277]" -type "float3" 5.2284889 0 -0.031725891 ;
-	setAttr ".pt[278]" -type "float3" 5.2284894 0 -0.15716511 ;
-	setAttr ".pt[279]" -type "float3" 5.2284889 0 -0.069275253 ;
-	setAttr ".pt[280]" -type "float3" -4.3050199 0 0.1345333 ;
-	setAttr ".pt[281]" -type "float3" -4.3050199 0 0.089689292 ;
-	setAttr ".pt[282]" -type "float3" -4.3050199 0 0.044844657 ;
-	setAttr ".pt[283]" -type "float3" -4.3050194 0 1.7467393e-016 ;
-	setAttr ".pt[284]" -type "float3" -4.3050199 0 -0.044844646 ;
-	setAttr ".pt[285]" -type "float3" -4.3050199 0 -0.089689292 ;
-	setAttr ".pt[286]" -type "float3" -4.3050199 0 -0.1345333 ;
-	setAttr ".pt[287]" -type "float3" 4.3050199 0 -0.1345333 ;
-	setAttr ".pt[288]" -type "float3" 4.3050199 0 -0.089689292 ;
-	setAttr ".pt[289]" -type "float3" 4.3050199 0 -0.044844646 ;
-	setAttr ".pt[290]" -type "float3" 4.3050194 0 7.9894953e-017 ;
-	setAttr ".pt[291]" -type "float3" 4.3050199 0 0.044844657 ;
-	setAttr ".pt[292]" -type "float3" 4.3050199 0 0.089689292 ;
-	setAttr ".pt[293]" -type "float3" 4.3050199 0 0.1345333 ;
-	setAttr ".pt[294]" -type "float3" -4.2086344 0 -0.5553236 ;
-	setAttr ".pt[295]" -type "float3" -4.2125874 0 -0.43100181 ;
-	setAttr ".pt[296]" -type "float3" -4.2082257 0 -0.21550091 ;
-	setAttr ".pt[297]" -type "float3" -4.2047887 0 -6.1361788e-016 ;
-	setAttr ".pt[298]" -type "float3" -4.2082257 0 0.21550091 ;
-	setAttr ".pt[299]" -type "float3" -4.2125874 0 0.43100181 ;
-	setAttr ".pt[300]" -type "float3" -4.2086344 0 0.5553236 ;
-	setAttr ".pt[301]" -type "float3" 4.2086344 0 0.5553236 ;
-	setAttr ".pt[302]" -type "float3" 4.2125874 0 0.43100181 ;
-	setAttr ".pt[303]" -type "float3" 4.2082257 0 0.21550091 ;
-	setAttr ".pt[304]" -type "float3" 4.2047887 0 -1.5815504e-016 ;
-	setAttr ".pt[305]" -type "float3" 4.2082257 0 -0.21550091 ;
-	setAttr ".pt[306]" -type "float3" 4.2125874 0 -0.43100181 ;
-	setAttr ".pt[307]" -type "float3" 4.2086344 0 -0.5553236 ;
-	setAttr ".pt[308]" -type "float3" -5.7136784 0 -0.17502131 ;
-	setAttr ".pt[309]" -type "float3" -5.7136784 0 -0.11668094 ;
-	setAttr ".pt[310]" -type "float3" -5.7136784 0 -0.058340471 ;
-	setAttr ".pt[311]" -type "float3" -5.7136784 0 -1.7538797e-016 ;
-	setAttr ".pt[312]" -type "float3" -5.7136784 0 0.058340471 ;
-	setAttr ".pt[313]" -type "float3" -5.7136784 0 0.11668094 ;
-	setAttr ".pt[314]" -type "float3" -5.7136784 0 0.17502131 ;
-	setAttr ".pt[315]" -type "float3" 5.7136784 0 0.17502131 ;
-	setAttr ".pt[316]" -type "float3" 5.7136784 0 0.11668094 ;
-	setAttr ".pt[317]" -type "float3" 5.7136784 0 0.058340471 ;
-	setAttr ".pt[318]" -type "float3" 5.7136784 0 -5.2084893e-017 ;
-	setAttr ".pt[319]" -type "float3" 5.7136784 0 -0.058340471 ;
-	setAttr ".pt[320]" -type "float3" 5.7136784 0 -0.11668094 ;
-	setAttr ".pt[321]" -type "float3" 5.7136784 0 -0.17502131 ;
-	setAttr ".pt[322]" -type "float3" 3.4409926 0 -0.17502131 ;
-	setAttr ".pt[323]" -type "float3" 3.7624276 0 -0.13232009 ;
-	setAttr ".pt[324]" -type "float3" 3.9650168 0.21315119 -0.12332809 ;
-	setAttr ".pt[325]" -type "float3" 3.9650168 0.21315119 -0.061664045 ;
-	setAttr ".pt[326]" -type "float3" 3.9650168 0.26151535 -3.504669e-017 ;
-	setAttr ".pt[327]" -type "float3" 3.9650168 0.21315119 0.061664045 ;
-	setAttr ".pt[328]" -type "float3" 3.9650168 0.21315119 0.12332809 ;
-	setAttr ".pt[329]" -type "float3" 3.7624276 0 0.13232009 ;
-	setAttr ".pt[330]" -type "float3" 3.4409926 0 0.17502131 ;
-	setAttr ".pt[331]" -type "float3" 2.5926466 0 -0.1345333 ;
-	setAttr ".pt[332]" -type "float3" 3.1487937 0 0.070244692 ;
-	setAttr ".pt[333]" -type "float3" 3.1487932 0 0.070276387 ;
-	setAttr ".pt[334]" -type "float3" 2.5392861 0 0.55609375 ;
-	setAttr ".pt[335]" -type "float3" 2.538703 0 0.5553236 ;
-	setAttr ".pt[336]" -type "float3" 3.0738683 0 0.4800922 ;
-	setAttr ".pt[337]" -type "float3" 2.5472341 0 0.48527864 ;
-	setAttr ".pt[338]" -type "float3" 1.7373371 0 0.68045986 ;
-	setAttr ".pt[339]" -type "float3" -0.25352308 0 0 ;
-	setAttr ".pt[340]" -type "float3" -0.018411504 0 0 ;
-	setAttr ".pt[341]" -type "float3" -0.07406278 0 0.59540707 ;
-	setAttr ".pt[342]" -type "float3" -0.061055392 0 0 ;
-	setAttr ".pt[343]" -type "float3" -0.40940416 -2.5868196e-014 -0.064636551 ;
-	setAttr ".pt[344]" -type "float3" -0.54040003 -7.8492768e-014 -0.29662991 ;
-	setAttr ".pt[345]" -type "float3" -0.43460399 -6.7057471e-014 -0.44372994 ;
-	setAttr ".pt[346]" -type "float3" -0.31592256 -2.220446e-014 -0.46704665 ;
-	setAttr ".pt[347]" -type "float3" -0.31592256 2.3092639e-014 -0.46704665 ;
-	setAttr ".pt[348]" -type "float3" -0.29267874 6.750156e-014 -0.46704665 ;
-	setAttr ".pt[349]" -type "float3" -0.12503481 7.8159701e-014 -0.33003929 ;
-	setAttr ".pt[350]" -type "float3" 1.687539e-014 2.4868996e-014 -0.069557115 ;
-	setAttr ".pt[356]" -type "float3" 0 0 0.038081631 ;
-	setAttr ".pt[357]" -type "float3" 0 0 0.1061743 ;
-	setAttr ".pt[358]" -type "float3" 1.687539e-014 2.4868996e-014 0.29316556 ;
-	setAttr ".pt[359]" -type "float3" -0.12503481 7.8159701e-014 0.46704665 ;
-	setAttr ".pt[360]" -type "float3" -0.29267874 6.750156e-014 0.46704665 ;
-	setAttr ".pt[361]" -type "float3" -0.31592256 2.3092639e-014 0.39502299 ;
-	setAttr ".pt[362]" -type "float3" -0.31592256 -2.220446e-014 0.39502299 ;
-	setAttr ".pt[363]" -type "float3" -0.43460396 -6.7057471e-014 0.37204903 ;
-	setAttr ".pt[364]" -type "float3" -0.54040003 -7.8492768e-014 0.24071482 ;
-	setAttr ".pt[365]" -type "float3" -0.40940416 -2.5868196e-014 0.04518738 ;
-	setAttr ".pt[366]" -type "float3" -0.061055392 0 0 ;
-	setAttr ".pt[367]" -type "float3" -0.07406278 0 -0.59540707 ;
-	setAttr ".pt[368]" -type "float3" -0.018411504 0 0 ;
-	setAttr ".pt[369]" -type "float3" -0.25352308 0 0 ;
-	setAttr ".pt[370]" -type "float3" 1.7373371 0 -0.68045986 ;
-	setAttr ".pt[371]" -type "float3" 2.5472341 0 -0.48527864 ;
-	setAttr ".pt[372]" -type "float3" 3.0738683 0 -0.4800922 ;
-	setAttr ".pt[373]" -type "float3" 2.538703 0 -0.5553236 ;
-	setAttr ".pt[374]" -type "float3" 2.5392861 0 -0.55609375 ;
-	setAttr ".pt[375]" -type "float3" 3.1487932 0 -0.070276327 ;
-	setAttr ".pt[376]" -type "float3" 3.1487937 0 -0.069275253 ;
-	setAttr ".pt[377]" -type "float3" 2.5926466 0 0.1345333 ;
-	setAttr ".pt[378]" -type "float3" -4.2109942 0 -0.13232009 ;
-	setAttr ".pt[379]" -type "float3" -4.4135833 0.21315119 -0.12332809 ;
-	setAttr ".pt[380]" -type "float3" -4.4135833 0.21315119 -0.061664045 ;
-	setAttr ".pt[381]" -type "float3" -4.4135833 0.26151535 -1.1821359e-016 ;
-	setAttr ".pt[382]" -type "float3" -4.4135833 0.21315119 0.061664045 ;
-	setAttr ".pt[383]" -type "float3" -4.4135833 0.21315119 0.12332809 ;
-	setAttr ".pt[384]" -type "float3" -4.2109942 0 0.13232009 ;
-	setAttr ".pt[385]" -type "float3" -3.8512371 0 0.17502131 ;
-	setAttr ".pt[386]" -type "float3" -2.9017477 0 -0.1345333 ;
-	setAttr ".pt[387]" -type "float3" -3.5242007 0 0.070244692 ;
-	setAttr ".pt[388]" -type "float3" -3.5242009 0 0.070276387 ;
-	setAttr ".pt[389]" -type "float3" -2.8420262 0 0.55609375 ;
-	setAttr ".pt[390]" -type "float3" -2.8409019 0 0.55532354 ;
-	setAttr ".pt[391]" -type "float3" -3.4403431 0 0.4800922 ;
-	setAttr ".pt[392]" -type "float3" -2.8487365 0 0.48527864 ;
-	setAttr ".pt[393]" -type "float3" -1.9376032 0 0.68045986 ;
-	setAttr ".pt[394]" -type "float3" 0.30576611 0 0 ;
-	setAttr ".pt[395]" -type "float3" 0.02469912 0 0 ;
-	setAttr ".pt[396]" -type "float3" 0.093070447 0 0.59540707 ;
-	setAttr ".pt[397]" -type "float3" 0.073957443 0 0 ;
-	setAttr ".pt[398]" -type "float3" 0.47529635 -1.6542323e-014 -0.064636551 ;
-	setAttr ".pt[399]" -type "float3" 0.62525153 -6.0729199e-014 -0.29662991 ;
-	setAttr ".pt[400]" -type "float3" 0.50807285 -5.4178884e-014 -0.44372994 ;
-	setAttr ".pt[401]" -type "float3" 0.37242043 -1.7763568e-014 -0.46704665 ;
-	setAttr ".pt[402]" -type "float3" 0.3724204 1.8651747e-014 -0.46704665 ;
-	setAttr ".pt[403]" -type "float3" 0.34408155 5.3290705e-014 -0.46704665 ;
-	setAttr ".pt[404]" -type "float3" 0.14832847 6.3948846e-014 -0.33003929 ;
-	setAttr ".pt[405]" -type "float3" 0.0026694706 1.7763568e-014 -0.069557115 ;
-	setAttr ".pt[411]" -type "float3" 0 0 0.024981434 ;
-	setAttr ".pt[412]" -type "float3" 0 0 0.079040706 ;
-	setAttr ".pt[413]" -type "float3" 0.0026694706 2.4868996e-014 0.23844799 ;
-	setAttr ".pt[414]" -type "float3" 0.14832847 7.8159701e-014 0.38545084 ;
-	setAttr ".pt[415]" -type "float3" 0.34408152 6.750156e-014 0.46704665 ;
-	setAttr ".pt[416]" -type "float3" 0.3724204 2.3092639e-014 0.46704665 ;
-	setAttr ".pt[417]" -type "float3" 0.37242049 -2.220446e-014 0.46704665 ;
-	setAttr ".pt[418]" -type "float3" 0.50807267 -6.7057471e-014 0.44372994 ;
-	setAttr ".pt[419]" -type "float3" 0.62525171 -7.8492768e-014 0.29662991 ;
-	setAttr ".pt[420]" -type "float3" 0.47529635 -2.5868196e-014 0.064636551 ;
-	setAttr ".pt[421]" -type "float3" 0.073957443 0 0 ;
-	setAttr ".pt[422]" -type "float3" 0.093070447 0 -0.59540707 ;
-	setAttr ".pt[423]" -type "float3" 0.02469912 0 0 ;
-	setAttr ".pt[424]" -type "float3" 0.30576611 0 0 ;
-	setAttr ".pt[425]" -type "float3" -1.9376032 0 -0.68045986 ;
-	setAttr ".pt[426]" -type "float3" -2.8487365 0 -0.48527864 ;
-	setAttr ".pt[427]" -type "float3" -3.4403431 0 -0.4800922 ;
-	setAttr ".pt[428]" -type "float3" -2.8409019 0 -0.55532354 ;
-	setAttr ".pt[429]" -type "float3" -2.8420262 0 -0.55609375 ;
-	setAttr ".pt[430]" -type "float3" -3.5242009 0 -0.070276327 ;
-	setAttr ".pt[431]" -type "float3" -3.5242007 0 -0.069275253 ;
-	setAttr ".pt[432]" -type "float3" -2.9017477 0 0.1345333 ;
-	setAttr ".pt[433]" -type "float3" -3.8512371 0 -0.17502131 ;
-	setAttr ".pt[434]" -type "float3" -0.013221036 0 -0.17502128 ;
-	setAttr ".pt[435]" -type "float3" -0.014456061 0 -0.13232009 ;
-	setAttr ".pt[436]" -type "float3" -0.003793478 0.21315119 -0.12332809 ;
-	setAttr ".pt[437]" -type "float3" -0.003793478 0.21315119 -0.061664045 ;
-	setAttr ".pt[438]" -type "float3" -0.014456061 -0.075066634 -5.0572519e-017 ;
-	setAttr ".pt[439]" -type "float3" -0.003793478 0.21315119 0.061664045 ;
-	setAttr ".pt[440]" -type "float3" -0.003793478 0.21315119 0.12332809 ;
-	setAttr ".pt[441]" -type "float3" -0.014456061 0 0.13232009 ;
-	setAttr ".pt[442]" -type "float3" -0.013221036 0 0.17502131 ;
-	setAttr ".pt[443]" -type "float3" -0.0099614989 0 -0.1345333 ;
-	setAttr ".pt[444]" -type "float3" -0.012098341 0 0.070244692 ;
-	setAttr ".pt[445]" -type "float3" -0.012098341 0 0.070276387 ;
-	setAttr ".pt[446]" -type "float3" -0.009756485 0 0.55609375 ;
-	setAttr ".pt[447]" -type "float3" -0.0097564841 0 0.55532354 ;
-	setAttr ".pt[448]" -type "float3" -0.011810468 0 0.4800922 ;
-	setAttr ".pt[449]" -type "float3" -0.0098214746 0 0.48527864 ;
-	setAttr ".pt[450]" -type "float3" -0.0068121399 0 0.68045986 ;
-	setAttr ".pt[451]" -type "float3" 0.0002361245 0 0 ;
-	setAttr ".pt[453]" -type "float3" 1.4453412e-005 0 0.59540707 ;
-	setAttr ".pt[454]" -type "float3" 3.2728414e-005 0 0 ;
-	setAttr ".pt[455]" -type "float3" 0.00080345233 -2.5868196e-014 -0.064636551 ;
-	setAttr ".pt[456]" -type "float3" 0.0011422879 -7.8492768e-014 -0.29662991 ;
-	setAttr ".pt[457]" -type "float3" 0.00080344849 -6.7057471e-014 -0.44372994 ;
-	setAttr ".pt[458]" -type "float3" 0.00049264712 -2.220446e-014 -0.46704665 ;
-	setAttr ".pt[459]" -type "float3" 0.00049263914 2.3092639e-014 -0.46704665 ;
-	setAttr ".pt[460]" -type "float3" 0.00048039723 6.750156e-014 -0.46704665 ;
-	setAttr ".pt[461]" -type "float3" 0.00013814178 7.8159701e-014 -0.33003929 ;
-	setAttr ".pt[462]" -type "float3" 1.047773e-015 2.4868996e-014 -0.069557115 ;
-	setAttr ".pt[468]" -type "float3" 0 0 0.038081631 ;
-	setAttr ".pt[469]" -type "float3" 0 0 0.1061743 ;
-	setAttr ".pt[470]" -type "float3" 1.047773e-015 2.4868996e-014 0.29316553 ;
-	setAttr ".pt[471]" -type "float3" 0.00013814178 7.8159701e-014 0.46704665 ;
-	setAttr ".pt[472]" -type "float3" 0.00048039728 6.750156e-014 0.46704665 ;
-	setAttr ".pt[473]" -type "float3" 0.00049263949 2.3092639e-014 0.46704665 ;
-	setAttr ".pt[474]" -type "float3" 0.00049264712 -2.220446e-014 0.46704665 ;
-	setAttr ".pt[475]" -type "float3" 0.00080344867 -6.7057471e-014 0.44372994 ;
-	setAttr ".pt[476]" -type "float3" 0.001142288 -7.8492768e-014 0.29662979 ;
-	setAttr ".pt[477]" -type "float3" 0.00080345233 -2.5868196e-014 0.064636551 ;
-	setAttr ".pt[478]" -type "float3" 3.2728414e-005 0 0 ;
-	setAttr ".pt[479]" -type "float3" 1.4453412e-005 0 -0.59540701 ;
-	setAttr ".pt[481]" -type "float3" 0.0002361245 0 0 ;
-	setAttr ".pt[482]" -type "float3" -0.0068121399 0 -0.68045986 ;
-	setAttr ".pt[483]" -type "float3" -0.0098214746 0 -0.48527864 ;
-	setAttr ".pt[484]" -type "float3" -0.011810302 0 -0.4800922 ;
-	setAttr ".pt[485]" -type "float3" -0.009756349 0 -0.55532354 ;
-	setAttr ".pt[486]" -type "float3" -0.009756485 0 -0.55609375 ;
-	setAttr ".pt[487]" -type "float3" -0.012098341 0 -0.070276327 ;
-	setAttr ".pt[488]" -type "float3" -0.012098341 0 -0.069275253 ;
-	setAttr ".pt[489]" -type "float3" -0.0099614989 0 0.1345333 ;
-	setAttr ".dr" 3;
-	setAttr ".dsm" 2;
-createNode parentConstraint -n "pCube1_parentConstraint1" -p "soap_bottle:pCube1";
-	addAttr -ci true -k true -sn "w0" -ln "wholeBikeW0" -dv 1 -min 0 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr ".tg[0].tot" -type "double3" -1.9143392402977355 3.4278491431761609 1.2155404468240931 ;
-	setAttr ".tg[0].tor" -type "double3" 40.556709600796331 264.07117242826388 7.254831445038656 ;
-	setAttr ".lr" -type "double3" 47.313715123701733 14.455428447203399 -1.5350383972461321 ;
-	setAttr ".rst" -type "double3" -152.70818153980684 4.1576995341036165 93.927535937583443 ;
-	setAttr ".rsrr" -type "double3" 47.60841223045297 12.429099969978544 -0.7653316792623317 ;
-	setAttr -k on ".w0";
 createNode transform -n "group1";
 	setAttr ".rp" -type "double3" -198.45883178710935 10.925599575042725 46.757534027099609 ;
 	setAttr ".sp" -type "double3" -198.45883178710935 10.925599575042725 46.757534027099609 ;
@@ -23437,9 +22938,3480 @@ createNode mesh -n "coffee_tableShape" -p "coffee_table";
 	setAttr ".dsm" 2;
 	setAttr ".reff" -type "string" "C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma";
 	setAttr ".fns" -type "string" "living_room_latest";
+createNode RenderMan -s -n "renderManRISGlobals";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__toropt___renderDataCleanupJob" -ln "rman__toropt___renderDataCleanupJob" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___shaderCleanupJob" -ln "rman__toropt___shaderCleanupJob" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___textureCleanupJob" -ln "rman__toropt___textureCleanupJob" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___ribCleanupJob" -ln "rman__toropt___ribCleanupJob" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___ribFlatten" -ln "rman__toropt___ribFlatten" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___renderDataCleanupFrame" -ln "rman__toropt___renderDataCleanupFrame" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___textureCleanupFrame" -ln "rman__toropt___textureCleanupFrame" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___ribCleanupFrame" -ln "rman__toropt___ribCleanupFrame" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__toropt___primaryCamera" -ln "rman__toropt___primaryCamera" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__toropt___enableRenderLayers" -ln "rman__toropt___enableRenderLayers" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__toropt___renderLayer" -ln "rman__toropt___renderLayer" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__toropt___motionBlurType" -ln "rman__toropt___motionBlurType" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__toropt___shutterAngle" -ln "rman__toropt___shutterAngle" 
+		-dv -1 -at "float";
+	addAttr -ci true -h true -sn "rman__toropt___shutterTiming" -ln "rman__toropt___shutterTiming" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__toropt___cacheCrew" -ln "rman__toropt___cacheCrew" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__toropt___renumber" -ln "rman__toropt___renumber" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___renumberStart" -ln "rman__toropt___renumberStart" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___renumberBy" -ln "rman__toropt___renumberBy" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___lazyRibGen" -ln "rman__toropt___lazyRibGen" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___lazyRender" -ln "rman__toropt___lazyRender" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___bakeMode" -ln "rman__toropt___bakeMode" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___furChunkSize" -ln "rman__toropt___furChunkSize" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___enableRifs" -ln "rman__torattr___enableRifs" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___nativeShadingSupport" -ln "rman__toropt___nativeShadingSupport" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___motionSamples" -ln "rman__torattr___motionSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___referenceFrame" -ln "rman__torattr___referenceFrame" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___motionBlur" -ln "rman__torattr___motionBlur" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___mapResolution" -ln "rman__torattr___mapResolution" 
+		-at "long2" -nc 2;
+	addAttr -ci true -k true -sn "rman__torattr___mapResolution0" -ln "rman__torattr___mapResolution0" 
+		-dv -1 -at "long" -p "rman__torattr___mapResolution";
+	addAttr -ci true -k true -sn "rman__torattr___mapResolution1" -ln "rman__torattr___mapResolution1" 
+		-dv -1 -at "long" -p "rman__torattr___mapResolution";
+	addAttr -ci true -k true -sn "rman__torattr___depthOfField" -ln "rman__torattr___depthOfField" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___cameraBlur" -ln "rman__torattr___cameraBlur" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___frontPlane" -ln "rman__torattr___frontPlane" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___backPlane" -ln "rman__torattr___backPlane" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passCommand" -ln "rman__torattr___passCommand" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___crop" -ln "rman__torattr___crop" -dv 
+		-1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passExtFormat" -ln "rman__torattr___passExtFormat" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___passNameFormat" -ln "rman__torattr___passNameFormat" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___previewPass" -ln "rman__torattr___previewPass" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___defaultDisplacementShader" -ln "rman__torattr___defaultDisplacementShader" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___defaultAtmosphereShader" -ln "rman__torattr___defaultAtmosphereShader" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___defaultInteriorShader" -ln "rman__torattr___defaultInteriorShader" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___outputSurfaceShaders" -ln "rman__torattr___outputSurfaceShaders" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___outputDisplacementShaders" -ln "rman__torattr___outputDisplacementShaders" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___outputLightShaders" -ln "rman__torattr___outputLightShaders" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___outputVolumeShaders" -ln "rman__torattr___outputVolumeShaders" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___outputImagerShaders" -ln "rman__torattr___outputImagerShaders" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__toropt___preFrameScript" -ln "rman__toropt___preFrameScript" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__toropt___postFrameScript" -ln "rman__toropt___postFrameScript" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___preRenderScript" -ln "rman__torattr___preRenderScript" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___postRenderScript" -ln "rman__torattr___postRenderScript" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___defaultRiOptionsScript" -ln "rman__torattr___defaultRiOptionsScript" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___defaultRiAttributesScript" -ln "rman__torattr___defaultRiAttributesScript" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___renderBeginScript" -ln "rman__torattr___renderBeginScript" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___transformBeginScript" -ln "rman__torattr___transformBeginScript" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___transformEndScript" -ln "rman__torattr___transformEndScript" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___postTransformScript" -ln "rman__torattr___postTransformScript" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___preShapeScript" -ln "rman__torattr___preShapeScript" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___postShapeScript" -ln "rman__torattr___postShapeScript" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___cacheShapeScript" -ln "rman__torattr___cacheShapeScript" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___bakeChannels" -ln "rman__torattr___bakeChannels" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___bakeCrew" -ln "rman__torattr___bakeCrew" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___bakeOutputFile" -ln "rman__torattr___bakeOutputFile" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___customShadingGroup" -ln "rman__torattr___customShadingGroup" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___shaderBindingStrength" -ln "rman__torattr___shaderBindingStrength" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___enableObjectInstancing" -ln "rman__torattr___enableObjectInstancing" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___impliedSSBakeMode" -ln "rman__torattr___impliedSSBakeMode" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__toropt___JOBSTYLE" -ln "rman__toropt___JOBSTYLE" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___deformationBlurStyle" -ln "rman__torattr___deformationBlurStyle" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___deformationBlurScale" -ln "rman__torattr___deformationBlurScale" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__torattr___enableMfcProcPrim" -ln "rman__torattr___enableMfcProcPrim" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___linearizeColors" -ln "rman__torattr___linearizeColors" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___rayTracing" -ln "rman__torattr___rayTracing" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___referenceCamera" -ln "rman__torattr___referenceCamera" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__toropt___enableRIS" -ln "rman__toropt___enableRIS" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___defaultSurfaceShader" -ln "rman__torattr___defaultSurfaceShader" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__trace_maxdepth" -ln "rman__riopt__trace_maxdepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt___PixelVariance" -ln "rman__riopt___PixelVariance" 
+		-dv -1 -at "float";
+	addAttr -ci true -h true -sn "rman__riopt__bucket_order" -ln "rman__riopt__bucket_order" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize" -ln "rman__riopt__limits_bucketsize" 
+		-at "long2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize0" -ln "rman__riopt__limits_bucketsize0" 
+		-dv -1 -at "long" -p "rman__riopt__limits_bucketsize";
+	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize1" -ln "rman__riopt__limits_bucketsize1" 
+		-dv -1 -at "long" -p "rman__riopt__limits_bucketsize";
+	addAttr -ci true -k true -sn "rman__riopt__limits_gridsize" -ln "rman__riopt__limits_gridsize" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__trace_decimationrate" -ln "rman__riopt__trace_decimationrate" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__limits_threads" -ln "rman__riopt__limits_threads" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Camera_shutteropening" -ln "rman__riopt__Camera_shutteropening" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Camera_shutteropening0" -ln "rman__riopt__Camera_shutteropening0" 
+		-dv -1 -at "float" -p "rman__riopt__Camera_shutteropening";
+	addAttr -ci true -k true -sn "rman__riopt__Camera_shutteropening1" -ln "rman__riopt__Camera_shutteropening1" 
+		-dv -1 -at "float" -p "rman__riopt__Camera_shutteropening";
+	addAttr -ci true -k true -sn "rman__riopt__Format_resolution" -ln "rman__riopt__Format_resolution" 
+		-at "long2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Format_resolution0" -ln "rman__riopt__Format_resolution0" 
+		-dv -1 -at "long" -p "rman__riopt__Format_resolution";
+	addAttr -ci true -k true -sn "rman__riopt__Format_resolution1" -ln "rman__riopt__Format_resolution1" 
+		-dv -1 -at "long" -p "rman__riopt__Format_resolution";
+	addAttr -ci true -k true -sn "rman__riopt__Format_pixelaspectratio" -ln "rman__riopt__Format_pixelaspectratio" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__hair_minwidth" -ln "rman__riopt__hair_minwidth" 
+		-dv -1 -at "float";
+	addAttr -ci true -h true -sn "rman__riopt__rib_compression" -ln "rman__riopt__rib_compression" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__rib_format" -ln "rman__riopt__rib_format" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__rib_precision" -ln "rman__riopt__rib_precision" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__statistics_level" -ln "rman__riopt__statistics_level" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__statistics_filename" -ln "rman__riopt__statistics_filename" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__statistics_xmlfilename" -ln "rman__riopt__statistics_xmlfilename" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Projection_name" -ln "rman__riopt__Projection_name" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Projection2_name" -ln "rman__riopt__Projection2_name" 
+		-dt "string";
+	addAttr -ci true -uac -k true -sn "rman__riopt__limits_zthreshold" -ln "rman__riopt__limits_zthreshold" 
+		-at "float3" -nc 3;
+	addAttr -ci true -k true -sn "rman__riopt__limits_zthresholdr" -ln "rman__riopt__limits_zthresholdR" 
+		-dv -1 -at "float" -p "rman__riopt__limits_zthreshold";
+	addAttr -ci true -k true -sn "rman__riopt__limits_zthresholdg" -ln "rman__riopt__limits_zthresholdG" 
+		-dv -1 -at "float" -p "rman__riopt__limits_zthreshold";
+	addAttr -ci true -k true -sn "rman__riopt__limits_zthresholdb" -ln "rman__riopt__limits_zthresholdB" 
+		-dv -1 -at "float" -p "rman__riopt__limits_zthreshold";
+	addAttr -ci true -uac -k true -sn "rman__riopt__limits_othreshold" -ln "rman__riopt__limits_othreshold" 
+		-at "float3" -nc 3;
+	addAttr -ci true -k true -sn "rman__riopt__limits_othresholdr" -ln "rman__riopt__limits_othresholdR" 
+		-dv -1 -at "float" -p "rman__riopt__limits_othreshold";
+	addAttr -ci true -k true -sn "rman__riopt__limits_othresholdg" -ln "rman__riopt__limits_othresholdG" 
+		-dv -1 -at "float" -p "rman__riopt__limits_othreshold";
+	addAttr -ci true -k true -sn "rman__riopt__limits_othresholdb" -ln "rman__riopt__limits_othresholdB" 
+		-dv -1 -at "float" -p "rman__riopt__limits_othreshold";
+	addAttr -ci true -k true -sn "rman__riopt__limits_texturememory" -ln "rman__riopt__limits_texturememory" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__limits_geocachememory" -ln "rman__riopt__limits_geocachememory" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__limits_proceduralmemory" -ln "rman__riopt__limits_proceduralmemory" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__limits_deepshadowtiles" -ln "rman__riopt__limits_deepshadowtiles" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__limits_deepshadowmemory" -ln "rman__riopt__limits_deepshadowmemory" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__limits_radiositycachememory" -ln "rman__riopt__limits_radiositycachememory" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__limits_brickmemory" -ln "rman__riopt__limits_brickmemory" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Hider_name" -ln "rman__riopt__Hider_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Hider_minsamples" -ln "rman__riopt__Hider_minsamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Hider_maxsamples" -ln "rman__riopt__Hider_maxsamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Integrator_name" -ln "rman__riopt__Integrator_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riattr__trace_maxdiffusedepth" -ln "rman__riattr__trace_maxdiffusedepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__trace_maxspeculardepth" -ln "rman__riattr__trace_maxspeculardepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__trace_samplemotion" -ln "rman__riattr__trace_samplemotion" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riattr__dice_referencecamera" -ln "rman__riattr__dice_referencecamera" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riattr__dice_minlength" -ln "rman__riattr__dice_minlength" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riattr___ShadingRate" -ln "rman__riattr___ShadingRate" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riattr__trace_autobias" -ln "rman__riattr__trace_autobias" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riattr__trace_bias" -ln "rman__riattr__trace_bias" 
+		-dv -1 -at "float";
+	addAttr -ci true -h true -sn "rman__riattr__displacementbound_coordinatesystem" 
+		-ln "rman__riattr__displacementbound_coordinatesystem" -dt "string";
+	addAttr -ci true -k true -sn "rman__riattr__displacementbound_sphere" -ln "rman__riattr__displacementbound_sphere" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riattr__trace_displacements" -ln "rman__riattr__trace_displacements" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Projection_fov" -ln "rman__riopt__Projection_fov" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Projection_hsweep" -ln "rman__riopt__Projection_hsweep" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Projection_vsweep" -ln "rman__riopt__Projection_vsweep" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Projection_minor" -ln "rman__riopt__Projection_minor" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Projection2_angle" -ln "rman__riopt__Projection2_angle" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Hider_adaptall" -ln "rman__riopt__Hider_adaptall" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Hider_integrationmode" -ln "rman__riopt__Hider_integrationmode" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Hider_incremental" -ln "rman__riopt__Hider_incremental" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_mergePaths" -ln "rman__riopt__Integrator_mergePaths" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_mergeRadiusScale" -ln "rman__riopt__Integrator_mergeRadiusScale" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_timeRadius" -ln "rman__riopt__Integrator_timeRadius" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_reduceRadius" -ln "rman__riopt__Integrator_reduceRadius" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_connectPaths" -ln "rman__riopt__Integrator_connectPaths" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_maxPathLength" -ln "rman__riopt__Integrator_maxPathLength" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Integrator_sampleMode" -ln "rman__riopt__Integrator_sampleMode" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numLightSamples" -ln "rman__riopt__Integrator_numLightSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numBxdfSamples" -ln "rman__riopt__Integrator_numBxdfSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numIndirectSamples" -ln "rman__riopt__Integrator_numIndirectSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numDiffuseSamples" -ln "rman__riopt__Integrator_numDiffuseSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numSpecularSamples" -ln "rman__riopt__Integrator_numSpecularSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numSubsurfaceSamples" -ln "rman__riopt__Integrator_numSubsurfaceSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numRefractionSamples" -ln "rman__riopt__Integrator_numRefractionSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_rouletteDepth" -ln "rman__riopt__Integrator_rouletteDepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_rouletteThreshold" -ln "rman__riopt__Integrator_rouletteThreshold" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_clampDepth" -ln "rman__riopt__Integrator_clampDepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_clampLuminance" -ln "rman__riopt__Integrator_clampLuminance" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_allowCaustics" -ln "rman__riopt__Integrator_allowCaustics" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numSamples" -ln "rman__riopt__Integrator_numSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Integrator_viewchannel" -ln "rman__riopt__Integrator_viewchannel" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__EnvLight" -ln "rman__EnvLight" -dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:job";
+	setAttr ".rman__torattr___class" -type "string" "RISJob";
+	setAttr ".rman__torattr___task" -type "string" "job";
+	setAttr -k on ".rman__toropt___renderDataCleanupJob" 0;
+	setAttr -k on ".rman__toropt___shaderCleanupJob" 0;
+	setAttr -k on ".rman__toropt___textureCleanupJob" 0;
+	setAttr -k on ".rman__toropt___ribCleanupJob" 0;
+	setAttr -k on ".rman__toropt___ribFlatten" 0;
+	setAttr -k on ".rman__toropt___renderDataCleanupFrame" 0;
+	setAttr -k on ".rman__toropt___textureCleanupFrame" 0;
+	setAttr -k on ".rman__toropt___ribCleanupFrame" 0;
+	setAttr ".rman__toropt___primaryCamera" -type "string" "";
+	setAttr -k on ".rman__toropt___enableRenderLayers" 0;
+	setAttr ".rman__toropt___renderLayer" -type "string" "";
+	setAttr ".rman__toropt___motionBlurType" -type "string" "frame";
+	setAttr -k on ".rman__toropt___shutterAngle" 80;
+	setAttr ".rman__toropt___shutterTiming" -type "string" "frameOpen";
+	setAttr ".rman__toropt___cacheCrew" -type "string" "";
+	setAttr -k on ".rman__toropt___renumber" 0;
+	setAttr -k on ".rman__toropt___renumberStart" 0;
+	setAttr -k on ".rman__toropt___renumberBy" 1;
+	setAttr -k on ".rman__toropt___lazyRibGen" 0;
+	setAttr -k on ".rman__toropt___lazyRender" 0;
+	setAttr -k on ".rman__toropt___bakeMode" 0;
+	setAttr -k on ".rman__toropt___furChunkSize" 10000;
+	setAttr -k on ".rman__torattr___enableRifs" 1;
+	setAttr -k on ".rman__toropt___nativeShadingSupport" 0;
+	setAttr -k on ".rman__torattr___motionSamples" 2;
+	setAttr -k on ".rman__torattr___referenceFrame" 0;
+	setAttr -k on ".rman__torattr___motionBlur" 0;
+	setAttr -k on ".rman__torattr___mapResolution" -type "long2" 0 0 ;
+	setAttr -k on ".rman__torattr___depthOfField" 0;
+	setAttr -k on ".rman__torattr___cameraBlur" 0;
+	setAttr -k on ".rman__torattr___frontPlane" 0;
+	setAttr -k on ".rman__torattr___backPlane" 0;
+	setAttr ".rman__torattr___passCommand" -type "string" "";
+	setAttr -k on ".rman__torattr___crop" 0;
+	setAttr ".rman__torattr___passExtFormat" -type "string" "";
+	setAttr ".rman__torattr___passNameFormat" -type "string" "";
+	setAttr -k on ".rman__torattr___previewPass" 0;
+	setAttr ".rman__torattr___defaultDisplacementShader" -type "string" "";
+	setAttr ".rman__torattr___defaultAtmosphereShader" -type "string" "";
+	setAttr ".rman__torattr___defaultInteriorShader" -type "string" "";
+	setAttr -k on ".rman__torattr___outputSurfaceShaders" 1;
+	setAttr -k on ".rman__torattr___outputDisplacementShaders" 1;
+	setAttr -k on ".rman__torattr___outputLightShaders" 1;
+	setAttr -k on ".rman__torattr___outputVolumeShaders" 1;
+	setAttr -k on ".rman__torattr___outputImagerShaders" 1;
+	setAttr ".rman__toropt___preFrameScript" -type "string" "";
+	setAttr ".rman__toropt___postFrameScript" -type "string" "";
+	setAttr ".rman__torattr___preRenderScript" -type "string" "";
+	setAttr ".rman__torattr___postRenderScript" -type "string" "";
+	setAttr ".rman__torattr___defaultRiOptionsScript" -type "string" "";
+	setAttr ".rman__torattr___defaultRiAttributesScript" -type "string" "";
+	setAttr ".rman__torattr___renderBeginScript" -type "string" "rmanTimeStampScript";
+	setAttr ".rman__torattr___transformBeginScript" -type "string" "";
+	setAttr ".rman__torattr___transformEndScript" -type "string" "";
+	setAttr ".rman__torattr___postTransformScript" -type "string" "";
+	setAttr ".rman__torattr___preShapeScript" -type "string" "";
+	setAttr ".rman__torattr___postShapeScript" -type "string" "";
+	setAttr ".rman__torattr___cacheShapeScript" -type "string" "";
+	setAttr ".rman__torattr___bakeChannels" -type "string" "";
+	setAttr ".rman__torattr___bakeCrew" -type "string" "";
+	setAttr ".rman__torattr___bakeOutputFile" -type "string" "";
+	setAttr ".rman__torattr___customShadingGroup" -type "string" "";
+	setAttr -k on ".rman__torattr___shaderBindingStrength" 1;
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr -k on ".rman__torattr___enableObjectInstancing" 1;
+	setAttr ".rman__torattr___impliedSSBakeMode" -type "string" "SSDiffuse";
+	setAttr ".rman__toropt___JOBSTYLE" -type "string" "";
+	setAttr ".rman__torattr___deformationBlurStyle" -type "string" "none";
+	setAttr -k on ".rman__torattr___deformationBlurScale" 1;
+	setAttr -k on ".rman__torattr___enableMfcProcPrim" 0;
+	setAttr -k on ".rman__torattr___linearizeColors" 1;
+	setAttr -k on ".rman__torattr___rayTracing" 1;
+	setAttr ".rman__torattr___referenceCamera" -type "string" "";
+	setAttr -k on ".rman__toropt___enableRIS" 1;
+	setAttr ".rman__torattr___defaultSurfaceShader" -type "string" "PxrDiffuse";
+	setAttr -k on ".rman__riopt__trace_maxdepth" 10;
+	setAttr -k on ".rman__riopt___PixelVariance" 9.9999997473787516e-005;
+	setAttr ".rman__riopt__bucket_order" -type "string" "horizontal";
+	setAttr -k on ".rman__riopt__limits_bucketsize" -type "long2" 16 16 ;
+	setAttr -k on ".rman__riopt__limits_gridsize" 256;
+	setAttr -k on ".rman__riopt__trace_decimationrate" 1;
+	setAttr -k on ".rman__riopt__limits_threads" 0;
+	setAttr -k on ".rman__riopt__Camera_shutteropening" -type "float2" 0 1 ;
+	setAttr -k on ".rman__riopt__Format_resolution" -type "long2" 640 480 ;
+	setAttr -k on ".rman__riopt__Format_pixelaspectratio" 1;
+	setAttr -k on ".rman__riopt__hair_minwidth" 0.5;
+	setAttr ".rman__riopt__rib_compression" -type "string" "none";
+	setAttr ".rman__riopt__rib_format" -type "string" "ascii";
+	setAttr ".rman__riopt__rib_precision" -type "string" "6";
+	setAttr -k on ".rman__riopt__statistics_level" 1;
+	setAttr ".rman__riopt__statistics_filename" -type "string" "stdout";
+	setAttr ".rman__riopt__statistics_xmlfilename" -type "string" "[AssetRef -cls rmanstat]";
+	setAttr ".rman__riopt__Projection_name" -type "string" "";
+	setAttr ".rman__riopt__Projection2_name" -type "string" "";
+	setAttr -k on ".rman__riopt__limits_zthreshold" -type "float3" 0.99599999 0.99599999 
+		0.99599999 ;
+	setAttr -k on ".rman__riopt__limits_othreshold" -type "float3" 0.99599999 0.99599999 
+		0.99599999 ;
+	setAttr -k on ".rman__riopt__limits_texturememory" 2097152;
+	setAttr -k on ".rman__riopt__limits_geocachememory" 2097152;
+	setAttr -k on ".rman__riopt__limits_proceduralmemory" 0;
+	setAttr -k on ".rman__riopt__limits_deepshadowtiles" 1000;
+	setAttr -k on ".rman__riopt__limits_deepshadowmemory" 102400;
+	setAttr -k on ".rman__riopt__limits_radiositycachememory" 102400;
+	setAttr -k on ".rman__riopt__limits_brickmemory" 10240;
+	setAttr ".rman__riopt__Hider_name" -type "string" "raytrace";
+	setAttr -k on ".rman__riopt__Hider_minsamples" 0;
+	setAttr -k on ".rman__riopt__Hider_maxsamples" 256;
+	setAttr ".rman__riopt__Integrator_name" -type "string" "PxrPathTracer";
+	setAttr -k on ".rman__riattr__trace_maxdiffusedepth" 1;
+	setAttr -k on ".rman__riattr__trace_maxspeculardepth" 2;
+	setAttr -k on ".rman__riattr__trace_samplemotion" 1;
+	setAttr ".rman__riattr__dice_referencecamera" -type "string" "worldcamera";
+	setAttr -k on ".rman__riattr___ShadingRate" 1;
+	setAttr -k on ".rman__riattr__trace_autobias" 1;
+	setAttr -k on ".rman__riattr__trace_bias" 0.0010000000474974513;
+	setAttr ".rman__riattr__displacementbound_coordinatesystem" -type "string" "shader";
+	setAttr -k on ".rman__riattr__displacementbound_sphere" 0;
+	setAttr -k on ".rman__riattr__trace_displacements" 1;
+	setAttr -k on ".rman__riopt__Projection_fov" 90;
+	setAttr -k on ".rman__riopt__Projection_hsweep" 360;
+	setAttr -k on ".rman__riopt__Projection_vsweep" 180;
+	setAttr -k on ".rman__riopt__Projection_minor" 0.25;
+	setAttr -k on ".rman__riopt__Projection2_angle" 90;
+	setAttr -k on ".rman__riopt__Hider_adaptall" 0;
+	setAttr ".rman__riopt__Hider_integrationmode" -type "string" "path";
+	setAttr -k on ".rman__riopt__Hider_incremental" 1;
+	setAttr -k on ".rman__riopt__Integrator_mergePaths" 1;
+	setAttr -k on ".rman__riopt__Integrator_mergeRadiusScale" 5;
+	setAttr -k on ".rman__riopt__Integrator_timeRadius" 1;
+	setAttr -k on ".rman__riopt__Integrator_reduceRadius" 1;
+	setAttr -k on ".rman__riopt__Integrator_connectPaths" 1;
+	setAttr -k on ".rman__riopt__Integrator_maxPathLength" 10;
+	setAttr ".rman__riopt__Integrator_sampleMode" -type "string" "bxdf";
+	setAttr -k on ".rman__riopt__Integrator_numLightSamples" 8;
+	setAttr -k on ".rman__riopt__Integrator_numBxdfSamples" 8;
+	setAttr -k on ".rman__riopt__Integrator_numIndirectSamples" 1;
+	setAttr -k on ".rman__riopt__Integrator_numDiffuseSamples" 1;
+	setAttr -k on ".rman__riopt__Integrator_numSpecularSamples" 1;
+	setAttr -k on ".rman__riopt__Integrator_numSubsurfaceSamples" 1;
+	setAttr -k on ".rman__riopt__Integrator_numRefractionSamples" 1;
+	setAttr -k on ".rman__riopt__Integrator_rouletteDepth" 4;
+	setAttr -k on ".rman__riopt__Integrator_rouletteThreshold" 0.20000000298023224;
+	setAttr -k on ".rman__riopt__Integrator_clampDepth" 2;
+	setAttr -k on ".rman__riopt__Integrator_clampLuminance" 10;
+	setAttr -k on ".rman__riopt__Integrator_allowCaustics" 0;
+	setAttr -k on ".rman__riopt__Integrator_numSamples" 4;
+	setAttr ".rman__riopt__Integrator_viewchannel" -type "string" "Nn";
+	setAttr ".rman__EnvLight" -type "string" "";
+	setAttr -s 19 ".p";
+createNode RenderMan -s -n "rmanFinalGlobals";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passLayer" -ln "rman__torattr___passLayer" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___camera" -ln "rman__torattr___camera" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___crew" -ln "rman__torattr___crew" -dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___flavor" -ln "rman__torattr___flavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___cameraFlavor" -ln "rman__torattr___cameraFlavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___lightcrew" -ln "rman__torattr___lightcrew" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___depthOfField" -ln "rman__torattr___depthOfField" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindow" -ln "rman__riopt___CropWindow" 
+		-at "compound" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX" -ln "rman__riopt___CropWindowX" 
+		-at "float2" -p "rman__riopt___CropWindow" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX0" -ln "rman__riopt___CropWindowX0" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowX";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX1" -ln "rman__riopt___CropWindowX1" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowX";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY" -ln "rman__riopt___CropWindowY" 
+		-at "float2" -p "rman__riopt___CropWindow" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY0" -ln "rman__riopt___CropWindowY0" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowY";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY1" -ln "rman__riopt___CropWindowY1" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowY";
+	addAttr -ci true -h true -sn "rman__riopt__photon_lifetime" -ln "rman__riopt__photon_lifetime" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__photon_emit" -ln "rman__riopt__photon_emit" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riattr__photon_causticmap" -ln "rman__riattr__photon_causticmap" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riattr__photon_globalmap" -ln "rman__riattr__photon_globalmap" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:render";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Final";
+	setAttr ".rman__torattr___task" -type "string" "render";
+	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Images";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr ".rman__torattr___passLayer" -type "string" "";
+	setAttr ".rman__torattr___camera" -type "string" "";
+	setAttr ".rman__torattr___crew" -type "string" "";
+	setAttr ".rman__torattr___flavor" -type "string" "";
+	setAttr ".rman__torattr___cameraFlavor" -type "string" "";
+	setAttr ".rman__torattr___lightcrew" -type "string" "";
+	setAttr -k on ".rman__torattr___depthOfField" 1;
+	setAttr -k on ".rman__riopt___CropWindowX" -type "float2" 0 1 ;
+	setAttr -k on ".rman__riopt___CropWindowY" -type "float2" 0 1 ;
+	setAttr ".rman__riopt__photon_lifetime" -type "string" "transient";
+	setAttr -k on ".rman__riopt__photon_emit" 0;
+	setAttr ".rman__riattr__photon_causticmap" -type "string" "";
+	setAttr ".rman__riattr__photon_globalmap" -type "string" "";
+createNode RenderMan -s -n "rmanFinalOutputGlobals0";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___primaryDisplay" -ln "rman__torattr___primaryDisplay" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___dspyID" -ln "rman__torattr___dspyID" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___dspyGetChannelsFromCamera" -ln "rman__torattr___dspyGetChannelsFromCamera" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Display_name" -ln "rman__riopt__Display_name" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_type" -ln "rman__riopt__Display_type" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_mode" -ln "rman__riopt__Display_mode" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_filter" -ln "rman__riopt__Display_filter" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth" -ln "rman__riopt__Display_filterwidth" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth0" -ln "rman__riopt__Display_filterwidth0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth1" -ln "rman__riopt__Display_filterwidth1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantize" -ln "rman__riopt__Display_quantize" 
+		-at "compound" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX" -ln "rman__riopt__Display_quantizeX" 
+		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX0" -ln "rman__riopt__Display_quantizeX0" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX1" -ln "rman__riopt__Display_quantizeX1" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY" -ln "rman__riopt__Display_quantizeY" 
+		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY0" -ln "rman__riopt__Display_quantizeY0" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY1" -ln "rman__riopt__Display_quantizeY1" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_dither" -ln "rman__riopt__Display_dither" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure" -ln "rman__riopt__Display_exposure" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure0" -ln "rman__riopt__Display_exposure0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure1" -ln "rman__riopt__Display_exposure1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap" -ln "rman__riopt__Display_remap" 
+		-at "float3" -nc 3;
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap0" -ln "rman__riopt__Display_remap0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap1" -ln "rman__riopt__Display_remap1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap2" -ln "rman__riopt__Display_remap2" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:display";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Primary";
+	setAttr ".rman__torattr___task" -type "string" "display";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr -k on ".rman__torattr___primaryDisplay" 1;
+	setAttr ".rman__torattr___dspyID" -type "string" "";
+	setAttr -k on ".rman__torattr___dspyGetChannelsFromCamera" 1;
+	setAttr ".rman__riopt__Display_name" -type "string" "[passinfo this filename]";
+	setAttr ".rman__riopt__Display_type" -type "string" "openexr";
+	setAttr ".rman__riopt__Display_mode" -type "string" "rgba";
+	setAttr ".rman__riopt__Display_filter" -type "string" "gaussian";
+	setAttr -k on ".rman__riopt__Display_filterwidth" -type "float2" 2 2 ;
+	setAttr -k on ".rman__riopt__Display_quantizeX" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_quantizeY" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_dither" 0;
+	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
+	setAttr -k on ".rman__riopt__Display_remap" -type "float3" 0 0 0 ;
+createNode RenderMan -s -n "rmanPreviewGlobals";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___previewPass" -ln "rman__torattr___previewPass" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___rayTracing" -ln "rman__torattr___rayTracing" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___motionBlur" -ln "rman__torattr___motionBlur" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passLayer" -ln "rman__torattr___passLayer" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___camera" -ln "rman__torattr___camera" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___crew" -ln "rman__torattr___crew" -dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___flavor" -ln "rman__torattr___flavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___cameraFlavor" -ln "rman__torattr___cameraFlavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___lightcrew" -ln "rman__torattr___lightcrew" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___depthOfField" -ln "rman__torattr___depthOfField" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passNameFormat" -ln "rman__torattr___passNameFormat" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt___PixelSamples" -ln "rman__riopt___PixelSamples" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___PixelSamples0" -ln "rman__riopt___PixelSamples0" 
+		-dv -1 -at "float" -p "rman__riopt___PixelSamples";
+	addAttr -ci true -k true -sn "rman__riopt___PixelSamples1" -ln "rman__riopt___PixelSamples1" 
+		-dv -1 -at "float" -p "rman__riopt___PixelSamples";
+	addAttr -ci true -k true -sn "rman__riopt__Hider_minsamples" -ln "rman__riopt__Hider_minsamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Hider_maxsamples" -ln "rman__riopt__Hider_maxsamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__trace_maxdepth" -ln "rman__riopt__trace_maxdepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__shading_directlightingsamples" -ln "rman__riopt__shading_directlightingsamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindow" -ln "rman__riopt___CropWindow" 
+		-at "compound" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX" -ln "rman__riopt___CropWindowX" 
+		-at "float2" -p "rman__riopt___CropWindow" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX0" -ln "rman__riopt___CropWindowX0" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowX";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX1" -ln "rman__riopt___CropWindowX1" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowX";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY" -ln "rman__riopt___CropWindowY" 
+		-at "float2" -p "rman__riopt___CropWindow" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY0" -ln "rman__riopt___CropWindowY0" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowY";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY1" -ln "rman__riopt___CropWindowY1" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowY";
+	addAttr -ci true -h true -sn "rman__riopt__photon_lifetime" -ln "rman__riopt__photon_lifetime" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__photon_emit" -ln "rman__riopt__photon_emit" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr___ShadingRate" -ln "rman__riattr___ShadingRate" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riattr__trace_maxspeculardepth" -ln "rman__riattr__trace_maxspeculardepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__trace_maxdiffusedepth" -ln "rman__riattr__trace_maxdiffusedepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riattr__photon_causticmap" -ln "rman__riattr__photon_causticmap" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riattr__photon_globalmap" -ln "rman__riattr__photon_globalmap" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:render";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Preview";
+	setAttr ".rman__torattr___task" -type "string" "render";
+	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Images";
+	setAttr -k on ".rman__torattr___previewPass" 1;
+	setAttr -k on ".rman__torattr___rayTracing" 1;
+	setAttr -k on ".rman__torattr___motionBlur" 1;
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr ".rman__torattr___passLayer" -type "string" "";
+	setAttr ".rman__torattr___camera" -type "string" "";
+	setAttr ".rman__torattr___crew" -type "string" "";
+	setAttr ".rman__torattr___flavor" -type "string" "";
+	setAttr ".rman__torattr___cameraFlavor" -type "string" "";
+	setAttr ".rman__torattr___lightcrew" -type "string" "";
+	setAttr -k on ".rman__torattr___depthOfField" 1;
+	setAttr ".rman__torattr___passNameFormat" -type "string" "";
+	setAttr -k on ".rman__riopt___PixelSamples" -type "float2" 3 3 ;
+	setAttr -k on ".rman__riopt__Hider_minsamples" 0;
+	setAttr -k on ".rman__riopt__Hider_maxsamples" 4;
+	setAttr -k on ".rman__riopt__trace_maxdepth" 4;
+	setAttr -k on ".rman__riopt__shading_directlightingsamples" 50;
+	setAttr -k on ".rman__riopt___CropWindowX" -type "float2" 0 1 ;
+	setAttr -k on ".rman__riopt___CropWindowY" -type "float2" 0 1 ;
+	setAttr ".rman__riopt__photon_lifetime" -type "string" "transient";
+	setAttr -k on ".rman__riopt__photon_emit" 0;
+	setAttr -k on ".rman__riattr___ShadingRate" 5;
+	setAttr -k on ".rman__riattr__trace_maxspeculardepth" 2;
+	setAttr -k on ".rman__riattr__trace_maxdiffusedepth" 1;
+	setAttr ".rman__riattr__photon_causticmap" -type "string" "";
+	setAttr ".rman__riattr__photon_globalmap" -type "string" "";
+createNode RenderMan -s -n "rmanPreviewOutputGlobals0";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___primaryDisplay" -ln "rman__torattr___primaryDisplay" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___dspyID" -ln "rman__torattr___dspyID" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___dspyGetChannelsFromCamera" -ln "rman__torattr___dspyGetChannelsFromCamera" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Display_name" -ln "rman__riopt__Display_name" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_type" -ln "rman__riopt__Display_type" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_mode" -ln "rman__riopt__Display_mode" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_filter" -ln "rman__riopt__Display_filter" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth" -ln "rman__riopt__Display_filterwidth" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth0" -ln "rman__riopt__Display_filterwidth0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth1" -ln "rman__riopt__Display_filterwidth1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantize" -ln "rman__riopt__Display_quantize" 
+		-at "compound" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX" -ln "rman__riopt__Display_quantizeX" 
+		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX0" -ln "rman__riopt__Display_quantizeX0" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX1" -ln "rman__riopt__Display_quantizeX1" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY" -ln "rman__riopt__Display_quantizeY" 
+		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY0" -ln "rman__riopt__Display_quantizeY0" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY1" -ln "rman__riopt__Display_quantizeY1" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_dither" -ln "rman__riopt__Display_dither" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure" -ln "rman__riopt__Display_exposure" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure0" -ln "rman__riopt__Display_exposure0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure1" -ln "rman__riopt__Display_exposure1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap" -ln "rman__riopt__Display_remap" 
+		-at "float3" -nc 3;
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap0" -ln "rman__riopt__Display_remap0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap1" -ln "rman__riopt__Display_remap1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap2" -ln "rman__riopt__Display_remap2" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:display";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Primary";
+	setAttr ".rman__torattr___task" -type "string" "display";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr -k on ".rman__torattr___primaryDisplay" 1;
+	setAttr ".rman__torattr___dspyID" -type "string" "";
+	setAttr -k on ".rman__torattr___dspyGetChannelsFromCamera" 1;
+	setAttr ".rman__riopt__Display_name" -type "string" "[passinfo this filename]";
+	setAttr ".rman__riopt__Display_type" -type "string" "openexr";
+	setAttr ".rman__riopt__Display_mode" -type "string" "rgba";
+	setAttr ".rman__riopt__Display_filter" -type "string" "gaussian";
+	setAttr -k on ".rman__riopt__Display_filterwidth" -type "float2" 2 2 ;
+	setAttr -k on ".rman__riopt__Display_quantizeX" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_quantizeY" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_dither" 0;
+	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
+	setAttr -k on ".rman__riopt__Display_remap" -type "float3" 0 0 0 ;
+createNode RenderMan -s -n "rmanRerenderGlobals";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___previewPass" -ln "rman__torattr___previewPass" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___motionBlur" -ln "rman__torattr___motionBlur" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passLayer" -ln "rman__torattr___passLayer" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___camera" -ln "rman__torattr___camera" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___crew" -ln "rman__torattr___crew" -dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___flavor" -ln "rman__torattr___flavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___cameraFlavor" -ln "rman__torattr___cameraFlavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___lightcrew" -ln "rman__torattr___lightcrew" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___depthOfField" -ln "rman__torattr___depthOfField" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passNameFormat" -ln "rman__torattr___passNameFormat" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__shading_directlightingsamples" -ln "rman__riopt__shading_directlightingsamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__bucket_order" -ln "rman__riopt__bucket_order" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize" -ln "rman__riopt__limits_bucketsize" 
+		-at "long2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize0" -ln "rman__riopt__limits_bucketsize0" 
+		-dv -1 -at "long" -p "rman__riopt__limits_bucketsize";
+	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize1" -ln "rman__riopt__limits_bucketsize1" 
+		-dv -1 -at "long" -p "rman__riopt__limits_bucketsize";
+	addAttr -ci true -k true -sn "rman__riopt___PixelVariance" -ln "rman__riopt___PixelVariance" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__trace_maxdepth" -ln "rman__riopt__trace_maxdepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt___PixelSamples" -ln "rman__riopt___PixelSamples" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___PixelSamples0" -ln "rman__riopt___PixelSamples0" 
+		-dv -1 -at "float" -p "rman__riopt___PixelSamples";
+	addAttr -ci true -k true -sn "rman__riopt___PixelSamples1" -ln "rman__riopt___PixelSamples1" 
+		-dv -1 -at "float" -p "rman__riopt___PixelSamples";
+	addAttr -ci true -h true -sn "rman__riopt__Hider_name" -ln "rman__riopt__Hider_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Hider_minsamples" -ln "rman__riopt__Hider_minsamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Hider_maxsamples" -ln "rman__riopt__Hider_maxsamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindow" -ln "rman__riopt___CropWindow" 
+		-at "compound" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX" -ln "rman__riopt___CropWindowX" 
+		-at "float2" -p "rman__riopt___CropWindow" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX0" -ln "rman__riopt___CropWindowX0" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowX";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX1" -ln "rman__riopt___CropWindowX1" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowX";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY" -ln "rman__riopt___CropWindowY" 
+		-at "float2" -p "rman__riopt___CropWindow" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY0" -ln "rman__riopt___CropWindowY0" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowY";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY1" -ln "rman__riopt___CropWindowY1" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowY";
+	addAttr -ci true -h true -sn "rman__riopt__photon_lifetime" -ln "rman__riopt__photon_lifetime" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__photon_emit" -ln "rman__riopt__photon_emit" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__trace_maxspeculardepth" -ln "rman__riattr__trace_maxspeculardepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__trace_maxdiffusedepth" -ln "rman__riattr__trace_maxdiffusedepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__trace_displacements" -ln "rman__riattr__trace_displacements" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr___ShadingRate" -ln "rman__riattr___ShadingRate" 
+		-dv -1 -at "float";
+	addAttr -ci true -h true -sn "rman__riattr__photon_causticmap" -ln "rman__riattr__photon_causticmap" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riattr__photon_globalmap" -ln "rman__riattr__photon_globalmap" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Hider_integrationmode" -ln "rman__riopt__Hider_integrationmode" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:render";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Rerender";
+	setAttr ".rman__torattr___task" -type "string" "render";
+	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Images";
+	setAttr -k on ".rman__torattr___previewPass" 1;
+	setAttr -k on ".rman__torattr___motionBlur" 0;
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr ".rman__torattr___passLayer" -type "string" "";
+	setAttr ".rman__torattr___camera" -type "string" "";
+	setAttr ".rman__torattr___crew" -type "string" "";
+	setAttr ".rman__torattr___flavor" -type "string" "";
+	setAttr ".rman__torattr___cameraFlavor" -type "string" "";
+	setAttr ".rman__torattr___lightcrew" -type "string" "";
+	setAttr -k on ".rman__torattr___depthOfField" 1;
+	setAttr ".rman__torattr___passNameFormat" -type "string" "";
+	setAttr -k on ".rman__riopt__shading_directlightingsamples" 4;
+	setAttr ".rman__riopt__bucket_order" -type "string" "spiral";
+	setAttr -k on ".rman__riopt__limits_bucketsize" -type "long2" 16 16 ;
+	setAttr -k on ".rman__riopt___PixelVariance" 0.0099999997764825821;
+	setAttr -k on ".rman__riopt__trace_maxdepth" 4;
+	setAttr -k on ".rman__riopt___PixelSamples" -type "float2" 2 2 ;
+	setAttr ".rman__riopt__Hider_name" -type "string" "raytrace";
+	setAttr -k on ".rman__riopt__Hider_minsamples" 0;
+	setAttr -k on ".rman__riopt__Hider_maxsamples" 4;
+	setAttr -k on ".rman__riopt___CropWindowX" -type "float2" 0 1 ;
+	setAttr -k on ".rman__riopt___CropWindowY" -type "float2" 0 1 ;
+	setAttr ".rman__riopt__photon_lifetime" -type "string" "transient";
+	setAttr -k on ".rman__riopt__photon_emit" 0;
+	setAttr -k on ".rman__riattr__trace_maxspeculardepth" 2;
+	setAttr -k on ".rman__riattr__trace_maxdiffusedepth" 1;
+	setAttr -k on ".rman__riattr__trace_displacements" 1;
+	setAttr -k on ".rman__riattr___ShadingRate" 5;
+	setAttr ".rman__riattr__photon_causticmap" -type "string" "";
+	setAttr ".rman__riattr__photon_globalmap" -type "string" "";
+	setAttr ".rman__riopt__Hider_integrationmode" -type "string" "path";
+createNode RenderMan -s -n "rmanRerenderOutputGlobals0";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___primaryDisplay" -ln "rman__torattr___primaryDisplay" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___dspyID" -ln "rman__torattr___dspyID" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___dspyGetChannelsFromCamera" -ln "rman__torattr___dspyGetChannelsFromCamera" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Display_name" -ln "rman__riopt__Display_name" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_type" -ln "rman__riopt__Display_type" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_mode" -ln "rman__riopt__Display_mode" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_filter" -ln "rman__riopt__Display_filter" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth" -ln "rman__riopt__Display_filterwidth" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth0" -ln "rman__riopt__Display_filterwidth0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth1" -ln "rman__riopt__Display_filterwidth1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantize" -ln "rman__riopt__Display_quantize" 
+		-at "compound" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX" -ln "rman__riopt__Display_quantizeX" 
+		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX0" -ln "rman__riopt__Display_quantizeX0" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX1" -ln "rman__riopt__Display_quantizeX1" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY" -ln "rman__riopt__Display_quantizeY" 
+		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY0" -ln "rman__riopt__Display_quantizeY0" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY1" -ln "rman__riopt__Display_quantizeY1" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_dither" -ln "rman__riopt__Display_dither" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure" -ln "rman__riopt__Display_exposure" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure0" -ln "rman__riopt__Display_exposure0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure1" -ln "rman__riopt__Display_exposure1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap" -ln "rman__riopt__Display_remap" 
+		-at "float3" -nc 3;
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap0" -ln "rman__riopt__Display_remap0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap1" -ln "rman__riopt__Display_remap1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap2" -ln "rman__riopt__Display_remap2" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:display";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "PrimaryRerender";
+	setAttr ".rman__torattr___task" -type "string" "display";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr -k on ".rman__torattr___primaryDisplay" 1;
+	setAttr ".rman__torattr___dspyID" -type "string" "";
+	setAttr -k on ".rman__torattr___dspyGetChannelsFromCamera" 1;
+	setAttr ".rman__riopt__Display_name" -type "string" "[passinfo this filename]";
+	setAttr ".rman__riopt__Display_type" -type "string" "openexr";
+	setAttr ".rman__riopt__Display_mode" -type "string" "rgba";
+	setAttr ".rman__riopt__Display_filter" -type "string" "gaussian";
+	setAttr -k on ".rman__riopt__Display_filterwidth" -type "float2" 2 2 ;
+	setAttr -k on ".rman__riopt__Display_quantizeX" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_quantizeY" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_dither" 0;
+	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
+	setAttr -k on ".rman__riopt__Display_remap" -type "float3" 0 0 0 ;
+createNode RenderMan -s -n "rmanReyesRerenderGlobals";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___previewPass" -ln "rman__torattr___previewPass" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___motionBlur" -ln "rman__torattr___motionBlur" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passLayer" -ln "rman__torattr___passLayer" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___camera" -ln "rman__torattr___camera" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___crew" -ln "rman__torattr___crew" -dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___flavor" -ln "rman__torattr___flavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___cameraFlavor" -ln "rman__torattr___cameraFlavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___lightcrew" -ln "rman__torattr___lightcrew" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___depthOfField" -ln "rman__torattr___depthOfField" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passNameFormat" -ln "rman__torattr___passNameFormat" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__shading_directlightingsamples" -ln "rman__riopt__shading_directlightingsamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__bucket_order" -ln "rman__riopt__bucket_order" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize" -ln "rman__riopt__limits_bucketsize" 
+		-at "long2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize0" -ln "rman__riopt__limits_bucketsize0" 
+		-dv -1 -at "long" -p "rman__riopt__limits_bucketsize";
+	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize1" -ln "rman__riopt__limits_bucketsize1" 
+		-dv -1 -at "long" -p "rman__riopt__limits_bucketsize";
+	addAttr -ci true -k true -sn "rman__riopt___PixelVariance" -ln "rman__riopt___PixelVariance" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__render_rerenderbake" -ln "rman__riopt__render_rerenderbake" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__render_rerenderbakedbdir" -ln "rman__riopt__render_rerenderbakedbdir" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindow" -ln "rman__riopt___CropWindow" 
+		-at "compound" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX" -ln "rman__riopt___CropWindowX" 
+		-at "float2" -p "rman__riopt___CropWindow" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX0" -ln "rman__riopt___CropWindowX0" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowX";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX1" -ln "rman__riopt___CropWindowX1" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowX";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY" -ln "rman__riopt___CropWindowY" 
+		-at "float2" -p "rman__riopt___CropWindow" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY0" -ln "rman__riopt___CropWindowY0" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowY";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY1" -ln "rman__riopt___CropWindowY1" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowY";
+	addAttr -ci true -h true -sn "rman__riopt__photon_lifetime" -ln "rman__riopt__photon_lifetime" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__photon_emit" -ln "rman__riopt__photon_emit" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__trace_maxspeculardepth" -ln "rman__riattr__trace_maxspeculardepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__trace_maxdiffusedepth" -ln "rman__riattr__trace_maxdiffusedepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__trace_displacements" -ln "rman__riattr__trace_displacements" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riattr__photon_causticmap" -ln "rman__riattr__photon_causticmap" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riattr__photon_globalmap" -ln "rman__riattr__photon_globalmap" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:render";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "ReyesRerender";
+	setAttr ".rman__torattr___task" -type "string" "render";
+	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Images";
+	setAttr -k on ".rman__torattr___previewPass" 1;
+	setAttr -k on ".rman__torattr___motionBlur" 0;
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr ".rman__torattr___passLayer" -type "string" "";
+	setAttr ".rman__torattr___camera" -type "string" "";
+	setAttr ".rman__torattr___crew" -type "string" "";
+	setAttr ".rman__torattr___flavor" -type "string" "";
+	setAttr ".rman__torattr___cameraFlavor" -type "string" "";
+	setAttr ".rman__torattr___lightcrew" -type "string" "";
+	setAttr -k on ".rman__torattr___depthOfField" 1;
+	setAttr ".rman__torattr___passNameFormat" -type "string" "";
+	setAttr -k on ".rman__riopt__shading_directlightingsamples" 50;
+	setAttr ".rman__riopt__bucket_order" -type "string" "spiral";
+	setAttr -k on ".rman__riopt__limits_bucketsize" -type "long2" 16 16 ;
+	setAttr -k on ".rman__riopt___PixelVariance" 0.0099999997764825821;
+	setAttr -k on ".rman__riopt__render_rerenderbake" 1;
+	setAttr ".rman__riopt__render_rerenderbakedbdir" -type "string" "";
+	setAttr -k on ".rman__riopt___CropWindowX" -type "float2" 0 1 ;
+	setAttr -k on ".rman__riopt___CropWindowY" -type "float2" 0 1 ;
+	setAttr ".rman__riopt__photon_lifetime" -type "string" "transient";
+	setAttr -k on ".rman__riopt__photon_emit" 0;
+	setAttr -k on ".rman__riattr__trace_maxspeculardepth" 2;
+	setAttr -k on ".rman__riattr__trace_maxdiffusedepth" 1;
+	setAttr -k on ".rman__riattr__trace_displacements" 1;
+	setAttr ".rman__riattr__photon_causticmap" -type "string" "";
+	setAttr ".rman__riattr__photon_globalmap" -type "string" "";
+createNode RenderMan -s -n "rmanReyesRerenderOutputGlobals0";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___primaryDisplay" -ln "rman__torattr___primaryDisplay" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___dspyID" -ln "rman__torattr___dspyID" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___dspyGetChannelsFromCamera" -ln "rman__torattr___dspyGetChannelsFromCamera" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Display_name" -ln "rman__riopt__Display_name" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_type" -ln "rman__riopt__Display_type" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_mode" -ln "rman__riopt__Display_mode" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_filter" -ln "rman__riopt__Display_filter" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth" -ln "rman__riopt__Display_filterwidth" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth0" -ln "rman__riopt__Display_filterwidth0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth1" -ln "rman__riopt__Display_filterwidth1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantize" -ln "rman__riopt__Display_quantize" 
+		-at "compound" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX" -ln "rman__riopt__Display_quantizeX" 
+		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX0" -ln "rman__riopt__Display_quantizeX0" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX1" -ln "rman__riopt__Display_quantizeX1" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY" -ln "rman__riopt__Display_quantizeY" 
+		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY0" -ln "rman__riopt__Display_quantizeY0" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY1" -ln "rman__riopt__Display_quantizeY1" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_dither" -ln "rman__riopt__Display_dither" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure" -ln "rman__riopt__Display_exposure" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure0" -ln "rman__riopt__Display_exposure0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure1" -ln "rman__riopt__Display_exposure1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap" -ln "rman__riopt__Display_remap" 
+		-at "float3" -nc 3;
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap0" -ln "rman__riopt__Display_remap0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap1" -ln "rman__riopt__Display_remap1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap2" -ln "rman__riopt__Display_remap2" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:display";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Primary";
+	setAttr ".rman__torattr___task" -type "string" "display";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr -k on ".rman__torattr___primaryDisplay" 1;
+	setAttr ".rman__torattr___dspyID" -type "string" "";
+	setAttr -k on ".rman__torattr___dspyGetChannelsFromCamera" 1;
+	setAttr ".rman__riopt__Display_name" -type "string" "[passinfo this filename]";
+	setAttr ".rman__riopt__Display_type" -type "string" "openexr";
+	setAttr ".rman__riopt__Display_mode" -type "string" "rgba";
+	setAttr ".rman__riopt__Display_filter" -type "string" "gaussian";
+	setAttr -k on ".rman__riopt__Display_filterwidth" -type "float2" 2 2 ;
+	setAttr -k on ".rman__riopt__Display_quantizeX" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_quantizeY" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_dither" 0;
+	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
+	setAttr -k on ".rman__riopt__Display_remap" -type "float3" 0 0 0 ;
+createNode RenderMan -s -n "rmanRerenderRISGlobals";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___previewPass" -ln "rman__torattr___previewPass" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___motionBlur" -ln "rman__torattr___motionBlur" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passLayer" -ln "rman__torattr___passLayer" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___camera" -ln "rman__torattr___camera" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___crew" -ln "rman__torattr___crew" -dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___flavor" -ln "rman__torattr___flavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___cameraFlavor" -ln "rman__torattr___cameraFlavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___lightcrew" -ln "rman__torattr___lightcrew" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___depthOfField" -ln "rman__torattr___depthOfField" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passNameFormat" -ln "rman__torattr___passNameFormat" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__shading_directlightingsamples" -ln "rman__riopt__shading_directlightingsamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__bucket_order" -ln "rman__riopt__bucket_order" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize" -ln "rman__riopt__limits_bucketsize" 
+		-at "long2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize0" -ln "rman__riopt__limits_bucketsize0" 
+		-dv -1 -at "long" -p "rman__riopt__limits_bucketsize";
+	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize1" -ln "rman__riopt__limits_bucketsize1" 
+		-dv -1 -at "long" -p "rman__riopt__limits_bucketsize";
+	addAttr -ci true -k true -sn "rman__riopt___PixelVariance" -ln "rman__riopt___PixelVariance" 
+		-dv -1 -at "float";
+	addAttr -ci true -h true -sn "rman__riopt__Hider_name" -ln "rman__riopt__Hider_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Hider_minsamples" -ln "rman__riopt__Hider_minsamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Hider_maxsamples" -ln "rman__riopt__Hider_maxsamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Integrator_name" -ln "rman__riopt__Integrator_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindow" -ln "rman__riopt___CropWindow" 
+		-at "compound" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX" -ln "rman__riopt___CropWindowX" 
+		-at "float2" -p "rman__riopt___CropWindow" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX0" -ln "rman__riopt___CropWindowX0" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowX";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX1" -ln "rman__riopt___CropWindowX1" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowX";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY" -ln "rman__riopt___CropWindowY" 
+		-at "float2" -p "rman__riopt___CropWindow" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY0" -ln "rman__riopt___CropWindowY0" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowY";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY1" -ln "rman__riopt___CropWindowY1" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowY";
+	addAttr -ci true -h true -sn "rman__riopt__photon_lifetime" -ln "rman__riopt__photon_lifetime" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__photon_emit" -ln "rman__riopt__photon_emit" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__trace_maxspeculardepth" -ln "rman__riattr__trace_maxspeculardepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__trace_maxdiffusedepth" -ln "rman__riattr__trace_maxdiffusedepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__trace_displacements" -ln "rman__riattr__trace_displacements" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riattr__photon_causticmap" -ln "rman__riattr__photon_causticmap" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riattr__photon_globalmap" -ln "rman__riattr__photon_globalmap" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Hider_integrationmode" -ln "rman__riopt__Hider_integrationmode" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_mergePaths" -ln "rman__riopt__Integrator_mergePaths" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_mergeRadiusScale" -ln "rman__riopt__Integrator_mergeRadiusScale" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_timeRadius" -ln "rman__riopt__Integrator_timeRadius" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_reduceRadius" -ln "rman__riopt__Integrator_reduceRadius" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_connectPaths" -ln "rman__riopt__Integrator_connectPaths" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_maxPathLength" -ln "rman__riopt__Integrator_maxPathLength" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Integrator_sampleMode" -ln "rman__riopt__Integrator_sampleMode" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numLightSamples" -ln "rman__riopt__Integrator_numLightSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numBxdfSamples" -ln "rman__riopt__Integrator_numBxdfSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numIndirectSamples" -ln "rman__riopt__Integrator_numIndirectSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numDiffuseSamples" -ln "rman__riopt__Integrator_numDiffuseSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numSpecularSamples" -ln "rman__riopt__Integrator_numSpecularSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numSubsurfaceSamples" -ln "rman__riopt__Integrator_numSubsurfaceSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numRefractionSamples" -ln "rman__riopt__Integrator_numRefractionSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_rouletteDepth" -ln "rman__riopt__Integrator_rouletteDepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_rouletteThreshold" -ln "rman__riopt__Integrator_rouletteThreshold" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_clampDepth" -ln "rman__riopt__Integrator_clampDepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_clampLuminance" -ln "rman__riopt__Integrator_clampLuminance" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_allowCaustics" -ln "rman__riopt__Integrator_allowCaustics" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numSamples" -ln "rman__riopt__Integrator_numSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Integrator_viewchannel" -ln "rman__riopt__Integrator_viewchannel" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:render";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "RerenderRIS";
+	setAttr ".rman__torattr___task" -type "string" "render";
+	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Images";
+	setAttr -k on ".rman__torattr___previewPass" 1;
+	setAttr -k on ".rman__torattr___motionBlur" 0;
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr ".rman__torattr___passLayer" -type "string" "";
+	setAttr ".rman__torattr___camera" -type "string" "";
+	setAttr ".rman__torattr___crew" -type "string" "";
+	setAttr ".rman__torattr___flavor" -type "string" "";
+	setAttr ".rman__torattr___cameraFlavor" -type "string" "";
+	setAttr ".rman__torattr___lightcrew" -type "string" "";
+	setAttr -k on ".rman__torattr___depthOfField" 1;
+	setAttr ".rman__torattr___passNameFormat" -type "string" "";
+	setAttr -k on ".rman__riopt__shading_directlightingsamples" 4;
+	setAttr ".rman__riopt__bucket_order" -type "string" "spiral";
+	setAttr -k on ".rman__riopt__limits_bucketsize" -type "long2" 16 16 ;
+	setAttr -k on ".rman__riopt___PixelVariance" 0.0099999997764825821;
+	setAttr ".rman__riopt__Hider_name" -type "string" "raytrace";
+	setAttr -k on ".rman__riopt__Hider_minsamples" 0;
+	setAttr -k on ".rman__riopt__Hider_maxsamples" 16;
+	setAttr ".rman__riopt__Integrator_name" -type "string" "PxrPathTracer";
+	setAttr -k on ".rman__riopt___CropWindowX" -type "float2" 0 1 ;
+	setAttr -k on ".rman__riopt___CropWindowY" -type "float2" 0 1 ;
+	setAttr ".rman__riopt__photon_lifetime" -type "string" "transient";
+	setAttr -k on ".rman__riopt__photon_emit" 0;
+	setAttr -k on ".rman__riattr__trace_maxspeculardepth" 2;
+	setAttr -k on ".rman__riattr__trace_maxdiffusedepth" 1;
+	setAttr -k on ".rman__riattr__trace_displacements" 1;
+	setAttr ".rman__riattr__photon_causticmap" -type "string" "";
+	setAttr ".rman__riattr__photon_globalmap" -type "string" "";
+	setAttr ".rman__riopt__Hider_integrationmode" -type "string" "path";
+	setAttr -k on ".rman__riopt__Integrator_mergePaths" 1;
+	setAttr -k on ".rman__riopt__Integrator_mergeRadiusScale" 5;
+	setAttr -k on ".rman__riopt__Integrator_timeRadius" 1;
+	setAttr -k on ".rman__riopt__Integrator_reduceRadius" 1;
+	setAttr -k on ".rman__riopt__Integrator_connectPaths" 1;
+	setAttr -k on ".rman__riopt__Integrator_maxPathLength" 10;
+	setAttr ".rman__riopt__Integrator_sampleMode" -type "string" "bxdf";
+	setAttr -k on ".rman__riopt__Integrator_numLightSamples" 8;
+	setAttr -k on ".rman__riopt__Integrator_numBxdfSamples" 8;
+	setAttr -k on ".rman__riopt__Integrator_numIndirectSamples" 1;
+	setAttr -k on ".rman__riopt__Integrator_numDiffuseSamples" 1;
+	setAttr -k on ".rman__riopt__Integrator_numSpecularSamples" 1;
+	setAttr -k on ".rman__riopt__Integrator_numSubsurfaceSamples" 1;
+	setAttr -k on ".rman__riopt__Integrator_numRefractionSamples" 1;
+	setAttr -k on ".rman__riopt__Integrator_rouletteDepth" 4;
+	setAttr -k on ".rman__riopt__Integrator_rouletteThreshold" 0.20000000298023224;
+	setAttr -k on ".rman__riopt__Integrator_clampDepth" 2;
+	setAttr -k on ".rman__riopt__Integrator_clampLuminance" 10;
+	setAttr -k on ".rman__riopt__Integrator_allowCaustics" 0;
+	setAttr -k on ".rman__riopt__Integrator_numSamples" 4;
+	setAttr ".rman__riopt__Integrator_viewchannel" -type "string" "Nn";
+createNode RenderMan -s -n "rmanRerenderRISOutputGlobals0";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___primaryDisplay" -ln "rman__torattr___primaryDisplay" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___dspyID" -ln "rman__torattr___dspyID" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___dspyGetChannelsFromCamera" -ln "rman__torattr___dspyGetChannelsFromCamera" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Display_name" -ln "rman__riopt__Display_name" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_type" -ln "rman__riopt__Display_type" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_mode" -ln "rman__riopt__Display_mode" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_filter" -ln "rman__riopt__Display_filter" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth" -ln "rman__riopt__Display_filterwidth" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth0" -ln "rman__riopt__Display_filterwidth0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth1" -ln "rman__riopt__Display_filterwidth1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantize" -ln "rman__riopt__Display_quantize" 
+		-at "compound" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX" -ln "rman__riopt__Display_quantizeX" 
+		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX0" -ln "rman__riopt__Display_quantizeX0" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX1" -ln "rman__riopt__Display_quantizeX1" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY" -ln "rman__riopt__Display_quantizeY" 
+		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY0" -ln "rman__riopt__Display_quantizeY0" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY1" -ln "rman__riopt__Display_quantizeY1" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_dither" -ln "rman__riopt__Display_dither" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure" -ln "rman__riopt__Display_exposure" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure0" -ln "rman__riopt__Display_exposure0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure1" -ln "rman__riopt__Display_exposure1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap" -ln "rman__riopt__Display_remap" 
+		-at "float3" -nc 3;
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap0" -ln "rman__riopt__Display_remap0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap1" -ln "rman__riopt__Display_remap1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap2" -ln "rman__riopt__Display_remap2" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:display";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "PrimaryRerender";
+	setAttr ".rman__torattr___task" -type "string" "display";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr -k on ".rman__torattr___primaryDisplay" 1;
+	setAttr ".rman__torattr___dspyID" -type "string" "";
+	setAttr -k on ".rman__torattr___dspyGetChannelsFromCamera" 1;
+	setAttr ".rman__riopt__Display_name" -type "string" "[passinfo this filename]";
+	setAttr ".rman__riopt__Display_type" -type "string" "openexr";
+	setAttr ".rman__riopt__Display_mode" -type "string" "rgba";
+	setAttr ".rman__riopt__Display_filter" -type "string" "gaussian";
+	setAttr -k on ".rman__riopt__Display_filterwidth" -type "float2" 2 2 ;
+	setAttr -k on ".rman__riopt__Display_quantizeX" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_quantizeY" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_dither" 0;
+	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
+	setAttr -k on ".rman__riopt__Display_remap" -type "float3" 0 0 0 ;
+createNode RenderMan -s -n "rmanDeepShadowGlobals";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___passLayer" -ln "rman__torattr___passLayer" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___camera" -ln "rman__torattr___camera" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___crew" -ln "rman__torattr___crew" -dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___flavor" -ln "rman__torattr___flavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___cameraFlavor" -ln "rman__torattr___cameraFlavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___lightcrew" -ln "rman__torattr___lightcrew" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___motionBlur" -ln "rman__torattr___motionBlur" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___rayTracing" -ln "rman__torattr___rayTracing" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___defaultSurfaceShader" -ln "rman__torattr___defaultSurfaceShader" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___outputSurfaceShaders" -ln "rman__torattr___outputSurfaceShaders" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___outputDisplacementShaders" -ln "rman__torattr___outputDisplacementShaders" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___outputLightShaders" -ln "rman__torattr___outputLightShaders" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___outputVolumeShaders" -ln "rman__torattr___outputVolumeShaders" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___outputImagerShaders" -ln "rman__torattr___outputImagerShaders" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Format_resolution" -ln "rman__riopt__Format_resolution" 
+		-at "long2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Format_resolution0" -ln "rman__riopt__Format_resolution0" 
+		-dv -1 -at "long" -p "rman__riopt__Format_resolution";
+	addAttr -ci true -k true -sn "rman__riopt__Format_resolution1" -ln "rman__riopt__Format_resolution1" 
+		-dv -1 -at "long" -p "rman__riopt__Format_resolution";
+	addAttr -ci true -h true -sn "rman__riopt__Integrator_name" -ln "rman__riopt__Integrator_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt___PixelSamples" -ln "rman__riopt___PixelSamples" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___PixelSamples0" -ln "rman__riopt___PixelSamples0" 
+		-dv -1 -at "float" -p "rman__riopt___PixelSamples";
+	addAttr -ci true -k true -sn "rman__riopt___PixelSamples1" -ln "rman__riopt___PixelSamples1" 
+		-dv -1 -at "float" -p "rman__riopt___PixelSamples";
+	addAttr -ci true -k true -sn "rman__riopt__Format_pixelaspectratio" -ln "rman__riopt__Format_pixelaspectratio" 
+		-dv -1 -at "float";
+	addAttr -ci true -h true -sn "rman__riopt__Hider_name" -ln "rman__riopt__Hider_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__limits_deepshadowerror" -ln "rman__riopt__limits_deepshadowerror" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__limits_deepshadowsimplifyerror" -ln "rman__riopt__limits_deepshadowsimplifyerror" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riattr___ShadingRate" -ln "rman__riattr___ShadingRate" 
+		-dv -1 -at "float";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:render";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "DeepShadow";
+	setAttr ".rman__torattr___task" -type "string" "render";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Maps/Shadow";
+	setAttr ".rman__torattr___passLayer" -type "string" "";
+	setAttr ".rman__torattr___camera" -type "string" "";
+	setAttr ".rman__torattr___crew" -type "string" "";
+	setAttr ".rman__torattr___flavor" -type "string" "";
+	setAttr ".rman__torattr___cameraFlavor" -type "string" "";
+	setAttr ".rman__torattr___lightcrew" -type "string" "";
+	setAttr -k on ".rman__torattr___motionBlur" 0;
+	setAttr -k on ".rman__torattr___rayTracing" 0;
+	setAttr ".rman__torattr___defaultSurfaceShader" -type "string" "null";
+	setAttr -k on ".rman__torattr___outputSurfaceShaders" 1;
+	setAttr -k on ".rman__torattr___outputDisplacementShaders" 1;
+	setAttr -k on ".rman__torattr___outputLightShaders" 0;
+	setAttr -k on ".rman__torattr___outputVolumeShaders" 0;
+	setAttr -k on ".rman__torattr___outputImagerShaders" 0;
+	setAttr -k on ".rman__riopt__Format_resolution" -type "long2" 512 512 ;
+	setAttr ".rman__riopt__Integrator_name" -type "string" "";
+	setAttr -k on ".rman__riopt___PixelSamples" -type "float2" 3 3 ;
+	setAttr -k on ".rman__riopt__Format_pixelaspectratio" 1;
+	setAttr ".rman__riopt__Hider_name" -type "string" "hidden";
+	setAttr -k on ".rman__riopt__limits_deepshadowerror" 0.0099999997764825821;
+	setAttr -k on ".rman__riopt__limits_deepshadowsimplifyerror" 0.0099999997764825821;
+	setAttr -k on ".rman__riattr___ShadingRate" 1;
+	setAttr -s 2 ".d";
+createNode RenderMan -s -n "rmanDeepShadowOutputGlobals0";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___primaryDisplay" -ln "rman__torattr___primaryDisplay" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___dspyID" -ln "rman__torattr___dspyID" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_name" -ln "rman__riopt__Display_name" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_type" -ln "rman__riopt__Display_type" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_mode" -ln "rman__riopt__Display_mode" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:display";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Null";
+	setAttr ".rman__torattr___task" -type "string" "display";
+	setAttr -k on ".rman__torattr___primaryDisplay" 1;
+	setAttr ".rman__torattr___dspyID" -type "string" "";
+	setAttr ".rman__riopt__Display_name" -type "string" "null";
+	setAttr ".rman__riopt__Display_type" -type "string" "null";
+	setAttr ".rman__riopt__Display_mode" -type "string" "z";
+createNode RenderMan -s -n "rmanDeepShadowOutputGlobals1";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___dspyID" -ln "rman__torattr___dspyID" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___primaryDisplay" -ln "rman__torattr___primaryDisplay" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Display_name" -ln "rman__riopt__Display_name" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_type" -ln "rman__riopt__Display_type" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_filter" -ln "rman__riopt__Display_filter" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth" -ln "rman__riopt__Display_filterwidth" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth0" -ln "rman__riopt__Display_filterwidth0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth1" -ln "rman__riopt__Display_filterwidth1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
+	addAttr -ci true -h true -sn "rman__riopt__Display_mode" -ln "rman__riopt__Display_mode" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_volumeinterpretation" -ln "rman__riopt__Display_volumeinterpretation" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:display";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "DeepShadow";
+	setAttr ".rman__torattr___task" -type "string" "display";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr ".rman__torattr___dspyID" -type "string" "";
+	setAttr -k on ".rman__torattr___primaryDisplay" 0;
+	setAttr ".rman__riopt__Display_name" -type "string" "+[passinfo this filename -channel $DSPYCHAN]";
+	setAttr ".rman__riopt__Display_type" -type "string" "deepshad";
+	setAttr ".rman__riopt__Display_filter" -type "string" "box";
+	setAttr -k on ".rman__riopt__Display_filterwidth" -type "float2" 1 1 ;
+	setAttr ".rman__riopt__Display_mode" -type "string" "deepopacity";
+	setAttr ".rman__riopt__Display_volumeinterpretation" -type "string" "discrete";
+createNode RenderMan -s -n "rmanAreaShadowGlobals";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___passLayer" -ln "rman__torattr___passLayer" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___camera" -ln "rman__torattr___camera" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___crew" -ln "rman__torattr___crew" -dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___flavor" -ln "rman__torattr___flavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___cameraFlavor" -ln "rman__torattr___cameraFlavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___lightcrew" -ln "rman__torattr___lightcrew" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___motionBlur" -ln "rman__torattr___motionBlur" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___rayTracing" -ln "rman__torattr___rayTracing" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___defaultSurfaceShader" -ln "rman__torattr___defaultSurfaceShader" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___outputSurfaceShaders" -ln "rman__torattr___outputSurfaceShaders" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___outputDisplacementShaders" -ln "rman__torattr___outputDisplacementShaders" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___outputLightShaders" -ln "rman__torattr___outputLightShaders" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___outputVolumeShaders" -ln "rman__torattr___outputVolumeShaders" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___outputImagerShaders" -ln "rman__torattr___outputImagerShaders" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Format_resolution" -ln "rman__riopt__Format_resolution" 
+		-at "long2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Format_resolution0" -ln "rman__riopt__Format_resolution0" 
+		-dv -1 -at "long" -p "rman__riopt__Format_resolution";
+	addAttr -ci true -k true -sn "rman__riopt__Format_resolution1" -ln "rman__riopt__Format_resolution1" 
+		-dv -1 -at "long" -p "rman__riopt__Format_resolution";
+	addAttr -ci true -h true -sn "rman__riopt__Integrator_name" -ln "rman__riopt__Integrator_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt___PixelSamples" -ln "rman__riopt___PixelSamples" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___PixelSamples0" -ln "rman__riopt___PixelSamples0" 
+		-dv -1 -at "float" -p "rman__riopt___PixelSamples";
+	addAttr -ci true -k true -sn "rman__riopt___PixelSamples1" -ln "rman__riopt___PixelSamples1" 
+		-dv -1 -at "float" -p "rman__riopt___PixelSamples";
+	addAttr -ci true -k true -sn "rman__riopt__Format_pixelaspectratio" -ln "rman__riopt__Format_pixelaspectratio" 
+		-dv -1 -at "float";
+	addAttr -ci true -h true -sn "rman__riopt__Hider_name" -ln "rman__riopt__Hider_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__limits_deepshadowerror" -ln "rman__riopt__limits_deepshadowerror" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__limits_deepshadowsimplifyerror" -ln "rman__riopt__limits_deepshadowsimplifyerror" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riattr___ShadingRate" -ln "rman__riattr___ShadingRate" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riattr__cull_backfacing" -ln "rman__riattr__cull_backfacing" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__cull_hidden" -ln "rman__riattr__cull_hidden" 
+		-dv -1 -at "long";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:render";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "AreaShadow";
+	setAttr ".rman__torattr___task" -type "string" "render";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Maps/Shadow";
+	setAttr ".rman__torattr___passLayer" -type "string" "";
+	setAttr ".rman__torattr___camera" -type "string" "";
+	setAttr ".rman__torattr___crew" -type "string" "";
+	setAttr ".rman__torattr___flavor" -type "string" "";
+	setAttr ".rman__torattr___cameraFlavor" -type "string" "";
+	setAttr ".rman__torattr___lightcrew" -type "string" "";
+	setAttr -k on ".rman__torattr___motionBlur" 0;
+	setAttr -k on ".rman__torattr___rayTracing" 0;
+	setAttr ".rman__torattr___defaultSurfaceShader" -type "string" "null";
+	setAttr -k on ".rman__torattr___outputSurfaceShaders" 1;
+	setAttr -k on ".rman__torattr___outputDisplacementShaders" 1;
+	setAttr -k on ".rman__torattr___outputLightShaders" 0;
+	setAttr -k on ".rman__torattr___outputVolumeShaders" 0;
+	setAttr -k on ".rman__torattr___outputImagerShaders" 0;
+	setAttr -k on ".rman__riopt__Format_resolution" -type "long2" 512 512 ;
+	setAttr ".rman__riopt__Integrator_name" -type "string" "";
+	setAttr -k on ".rman__riopt___PixelSamples" -type "float2" 3 3 ;
+	setAttr -k on ".rman__riopt__Format_pixelaspectratio" 1;
+	setAttr ".rman__riopt__Hider_name" -type "string" "hidden";
+	setAttr -k on ".rman__riopt__limits_deepshadowerror" 0.0099999997764825821;
+	setAttr -k on ".rman__riopt__limits_deepshadowsimplifyerror" 0.0099999997764825821;
+	setAttr -k on ".rman__riattr___ShadingRate" 1;
+	setAttr -k on ".rman__riattr__cull_backfacing" 0;
+	setAttr -k on ".rman__riattr__cull_hidden" 0;
+	setAttr -s 2 ".d";
+createNode RenderMan -s -n "rmanAreaShadowOutputGlobals0";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___primaryDisplay" -ln "rman__torattr___primaryDisplay" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___dspyID" -ln "rman__torattr___dspyID" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_name" -ln "rman__riopt__Display_name" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_type" -ln "rman__riopt__Display_type" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_mode" -ln "rman__riopt__Display_mode" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:display";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Null";
+	setAttr ".rman__torattr___task" -type "string" "display";
+	setAttr -k on ".rman__torattr___primaryDisplay" 1;
+	setAttr ".rman__torattr___dspyID" -type "string" "";
+	setAttr ".rman__riopt__Display_name" -type "string" "null";
+	setAttr ".rman__riopt__Display_type" -type "string" "null";
+	setAttr ".rman__riopt__Display_mode" -type "string" "z";
+createNode RenderMan -s -n "rmanAreaShadowOutputGlobals1";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___dspyID" -ln "rman__torattr___dspyID" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___primaryDisplay" -ln "rman__torattr___primaryDisplay" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Display_name" -ln "rman__riopt__Display_name" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_type" -ln "rman__riopt__Display_type" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_filter" -ln "rman__riopt__Display_filter" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth" -ln "rman__riopt__Display_filterwidth" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth0" -ln "rman__riopt__Display_filterwidth0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth1" -ln "rman__riopt__Display_filterwidth1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
+	addAttr -ci true -uac -k true -sn "rman__riopt__limits_othreshold" -ln "rman__riopt__limits_othreshold" 
+		-at "float3" -nc 3;
+	addAttr -ci true -k true -sn "rman__riopt__limits_othresholdr" -ln "rman__riopt__limits_othresholdR" 
+		-dv -1 -at "float" -p "rman__riopt__limits_othreshold";
+	addAttr -ci true -k true -sn "rman__riopt__limits_othresholdg" -ln "rman__riopt__limits_othresholdG" 
+		-dv -1 -at "float" -p "rman__riopt__limits_othreshold";
+	addAttr -ci true -k true -sn "rman__riopt__limits_othresholdb" -ln "rman__riopt__limits_othresholdB" 
+		-dv -1 -at "float" -p "rman__riopt__limits_othreshold";
+	addAttr -ci true -k true -sn "rman__riopt__limits_deepshadowerror" -ln "rman__riopt__limits_deepshadowerror" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__hair_minwidth" -ln "rman__riopt__hair_minwidth" 
+		-dv -1 -at "float";
+	addAttr -ci true -h true -sn "rman__riopt__Display_mode" -ln "rman__riopt__Display_mode" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Hider_sigma" -ln "rman__riopt__Hider_sigma" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Display_volumeinterpretation" -ln "rman__riopt__Display_volumeinterpretation" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:display";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "AreaShadow";
+	setAttr ".rman__torattr___task" -type "string" "display";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr ".rman__torattr___dspyID" -type "string" "";
+	setAttr -k on ".rman__torattr___primaryDisplay" 0;
+	setAttr ".rman__riopt__Display_name" -type "string" "+[passinfo this filename -channel $DSPYCHAN]";
+	setAttr ".rman__riopt__Display_type" -type "string" "deepshad";
+	setAttr ".rman__riopt__Display_filter" -type "string" "box";
+	setAttr -k on ".rman__riopt__Display_filterwidth" -type "float2" 1 1 ;
+	setAttr -k on ".rman__riopt__limits_othreshold" -type "float3" 9 9 9 ;
+	setAttr -k on ".rman__riopt__limits_deepshadowerror" 0.0099999997764825821;
+	setAttr -k on ".rman__riopt__hair_minwidth" 1;
+	setAttr ".rman__riopt__Display_mode" -type "string" "areashadow";
+	setAttr -k on ".rman__riopt__Hider_sigma" 0;
+	setAttr ".rman__riopt__Display_volumeinterpretation" -type "string" "discrete";
+createNode RenderMan -s -n "rmanShadowGlobals";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___passLayer" -ln "rman__torattr___passLayer" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___camera" -ln "rman__torattr___camera" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___crew" -ln "rman__torattr___crew" -dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___flavor" -ln "rman__torattr___flavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___cameraFlavor" -ln "rman__torattr___cameraFlavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___lightcrew" -ln "rman__torattr___lightcrew" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___motionBlur" -ln "rman__torattr___motionBlur" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___rayTracing" -ln "rman__torattr___rayTracing" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___defaultSurfaceShader" -ln "rman__torattr___defaultSurfaceShader" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___outputSurfaceShaders" -ln "rman__torattr___outputSurfaceShaders" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___outputDisplacementShaders" -ln "rman__torattr___outputDisplacementShaders" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___outputLightShaders" -ln "rman__torattr___outputLightShaders" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___outputVolumeShaders" -ln "rman__torattr___outputVolumeShaders" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___outputImagerShaders" -ln "rman__torattr___outputImagerShaders" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Format_resolution" -ln "rman__riopt__Format_resolution" 
+		-at "long2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Format_resolution0" -ln "rman__riopt__Format_resolution0" 
+		-dv -1 -at "long" -p "rman__riopt__Format_resolution";
+	addAttr -ci true -k true -sn "rman__riopt__Format_resolution1" -ln "rman__riopt__Format_resolution1" 
+		-dv -1 -at "long" -p "rman__riopt__Format_resolution";
+	addAttr -ci true -h true -sn "rman__riopt__Integrator_name" -ln "rman__riopt__Integrator_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt___PixelSamples" -ln "rman__riopt___PixelSamples" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___PixelSamples0" -ln "rman__riopt___PixelSamples0" 
+		-dv -1 -at "float" -p "rman__riopt___PixelSamples";
+	addAttr -ci true -k true -sn "rman__riopt___PixelSamples1" -ln "rman__riopt___PixelSamples1" 
+		-dv -1 -at "float" -p "rman__riopt___PixelSamples";
+	addAttr -ci true -k true -sn "rman__riopt__Format_pixelaspectratio" -ln "rman__riopt__Format_pixelaspectratio" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt___VolumePixelSamples" -ln "rman__riopt___VolumePixelSamples" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___VolumePixelSamples0" -ln "rman__riopt___VolumePixelSamples0" 
+		-dv -1 -at "float" -p "rman__riopt___VolumePixelSamples";
+	addAttr -ci true -k true -sn "rman__riopt___VolumePixelSamples1" -ln "rman__riopt___VolumePixelSamples1" 
+		-dv -1 -at "float" -p "rman__riopt___VolumePixelSamples";
+	addAttr -ci true -uac -k true -sn "rman__riopt__limits_zthreshold" -ln "rman__riopt__limits_zthreshold" 
+		-at "float3" -nc 3;
+	addAttr -ci true -k true -sn "rman__riopt__limits_zthresholdr" -ln "rman__riopt__limits_zthresholdR" 
+		-dv -1 -at "float" -p "rman__riopt__limits_zthreshold";
+	addAttr -ci true -k true -sn "rman__riopt__limits_zthresholdg" -ln "rman__riopt__limits_zthresholdG" 
+		-dv -1 -at "float" -p "rman__riopt__limits_zthreshold";
+	addAttr -ci true -k true -sn "rman__riopt__limits_zthresholdb" -ln "rman__riopt__limits_zthresholdB" 
+		-dv -1 -at "float" -p "rman__riopt__limits_zthreshold";
+	addAttr -ci true -h true -sn "rman__riopt__Hider_name" -ln "rman__riopt__Hider_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riattr___ShadingRate" -ln "rman__riattr___ShadingRate" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Hider_jitter" -ln "rman__riopt__Hider_jitter" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Hider_depthfilter" -ln "rman__riopt__Hider_depthfilter" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:render";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Shadow";
+	setAttr ".rman__torattr___task" -type "string" "render";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Maps/Shadow";
+	setAttr ".rman__torattr___passLayer" -type "string" "";
+	setAttr ".rman__torattr___camera" -type "string" "";
+	setAttr ".rman__torattr___crew" -type "string" "";
+	setAttr ".rman__torattr___flavor" -type "string" "";
+	setAttr ".rman__torattr___cameraFlavor" -type "string" "";
+	setAttr ".rman__torattr___lightcrew" -type "string" "";
+	setAttr -k on ".rman__torattr___motionBlur" 0;
+	setAttr -k on ".rman__torattr___rayTracing" 0;
+	setAttr ".rman__torattr___defaultSurfaceShader" -type "string" "null";
+	setAttr -k on ".rman__torattr___outputSurfaceShaders" 0;
+	setAttr -k on ".rman__torattr___outputDisplacementShaders" 1;
+	setAttr -k on ".rman__torattr___outputLightShaders" 0;
+	setAttr -k on ".rman__torattr___outputVolumeShaders" 0;
+	setAttr -k on ".rman__torattr___outputImagerShaders" 0;
+	setAttr -k on ".rman__riopt__Format_resolution" -type "long2" 512 512 ;
+	setAttr ".rman__riopt__Integrator_name" -type "string" "";
+	setAttr -k on ".rman__riopt___PixelSamples" -type "float2" 1 1 ;
+	setAttr -k on ".rman__riopt__Format_pixelaspectratio" 1;
+	setAttr -k on ".rman__riopt___VolumePixelSamples" -type "float2" 1 1 ;
+	setAttr -k on ".rman__riopt__limits_zthreshold" -type "float3" 0.5 0.5 0.5 ;
+	setAttr ".rman__riopt__Hider_name" -type "string" "hidden";
+	setAttr -k on ".rman__riattr___ShadingRate" 1;
+	setAttr -k on ".rman__riopt__Hider_jitter" 0;
+	setAttr ".rman__riopt__Hider_depthfilter" -type "string" "midpoint";
+createNode RenderMan -s -n "rmanShadowOutputGlobals0";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___primaryDisplay" -ln "rman__torattr___primaryDisplay" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___dspyID" -ln "rman__torattr___dspyID" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_name" -ln "rman__riopt__Display_name" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_type" -ln "rman__riopt__Display_type" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_mode" -ln "rman__riopt__Display_mode" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:display";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "ShadowZ";
+	setAttr ".rman__torattr___task" -type "string" "display";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr -k on ".rman__torattr___primaryDisplay" 1;
+	setAttr ".rman__torattr___dspyID" -type "string" "";
+	setAttr ".rman__riopt__Display_name" -type "string" "[passinfo this filename]";
+	setAttr ".rman__riopt__Display_type" -type "string" "shadow";
+	setAttr ".rman__riopt__Display_mode" -type "string" "z";
+createNode RenderMan -s -n "rmanBakeGlobals";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passLayer" -ln "rman__torattr___passLayer" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___passCommand" -ln "rman__torattr___passCommand" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__param__ptrender_dspy" -ln "rman__param__ptrender_dspy" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__param__ptrender_depth" -ln "rman__param__ptrender_depth" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__param__ptrender_size" -ln "rman__param__ptrender_size" 
+		-at "long2" -nc 2;
+	addAttr -ci true -k true -sn "rman__param__ptrender_size0" -ln "rman__param__ptrender_size0" 
+		-dv -1 -at "long" -p "rman__param__ptrender_size";
+	addAttr -ci true -k true -sn "rman__param__ptrender_size1" -ln "rman__param__ptrender_size1" 
+		-dv -1 -at "long" -p "rman__param__ptrender_size";
+	addAttr -ci true -h true -sn "rman__param__ptrender___inputfile" -ln "rman__param__ptrender___inputfile" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__param__ptrender___channel" -ln "rman__param__ptrender___channel" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__param__ptrender___outputfile" -ln "rman__param__ptrender___outputfile" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:command";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Bake";
+	setAttr ".rman__torattr___task" -type "string" "command";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr ".rman__torattr___passLayer" -type "string" "";
+	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Images";
+	setAttr ".rman__torattr___passCommand" -type "string" "[GetCmdPassCmdList \"\\${RMANTREE}/bin/ptrender\"];[mel rmanBakeAssignNewShadingNetworks]";
+	setAttr ".rman__param__ptrender_dspy" -type "string" "tiff";
+	setAttr ".rman__param__ptrender_depth" -type "string" "short";
+	setAttr -k on ".rman__param__ptrender_size" -type "long2" 512 512 ;
+	setAttr ".rman__param__ptrender___inputfile" -type "string" "[passinfo this/0 filename]";
+	setAttr ".rman__param__ptrender___channel" -type "string" "$BAKECHAN";
+	setAttr ".rman__param__ptrender___outputfile" -type "string" "[passinfo this filename]";
+createNode RenderMan -s -n "rmanBakeRenderGlobals";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passLayer" -ln "rman__torattr___passLayer" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___camera" -ln "rman__torattr___camera" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___crew" -ln "rman__torattr___crew" -dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___flavor" -ln "rman__torattr___flavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___cameraFlavor" -ln "rman__torattr___cameraFlavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___lightcrew" -ln "rman__torattr___lightcrew" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___bakeChannels" -ln "rman__torattr___bakeChannels" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__user_shading_normalmode" -ln "rman__riopt__user_shading_normalmode" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__cull_backfacing" -ln "rman__riattr__cull_backfacing" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__cull_hidden" -ln "rman__riattr__cull_hidden" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__dice_rasterorient" -ln "rman__riattr__dice_rasterorient" 
+		-dv -1 -at "long";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:render";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "BakeRender";
+	setAttr ".rman__torattr___task" -type "string" "render";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr ".rman__torattr___passLayer" -type "string" "";
+	setAttr ".rman__torattr___camera" -type "string" "";
+	setAttr ".rman__torattr___crew" -type "string" "";
+	setAttr ".rman__torattr___flavor" -type "string" "";
+	setAttr ".rman__torattr___cameraFlavor" -type "string" "";
+	setAttr ".rman__torattr___lightcrew" -type "string" "";
+	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Images";
+	setAttr ".rman__torattr___bakeChannels" -type "string" "Ci,";
+	setAttr -k on ".rman__riopt__user_shading_normalmode" 1;
+	setAttr -k on ".rman__riattr__cull_backfacing" 0;
+	setAttr -k on ".rman__riattr__cull_hidden" 0;
+	setAttr -k on ".rman__riattr__dice_rasterorient" 0;
+	setAttr -s 32 ".c";
+createNode RenderMan -s -n "rmanBakeRenderOutputGlobals0";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___primaryDisplay" -ln "rman__torattr___primaryDisplay" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___dspyID" -ln "rman__torattr___dspyID" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_name" -ln "rman__riopt__Display_name" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_type" -ln "rman__riopt__Display_type" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_mode" -ln "rman__riopt__Display_mode" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantize" -ln "rman__riopt__Display_quantize" 
+		-at "compound" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX" -ln "rman__riopt__Display_quantizeX" 
+		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX0" -ln "rman__riopt__Display_quantizeX0" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX1" -ln "rman__riopt__Display_quantizeX1" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY" -ln "rman__riopt__Display_quantizeY" 
+		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY0" -ln "rman__riopt__Display_quantizeY0" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY1" -ln "rman__riopt__Display_quantizeY1" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_dither" -ln "rman__riopt__Display_dither" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure" -ln "rman__riopt__Display_exposure" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure0" -ln "rman__riopt__Display_exposure0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure1" -ln "rman__riopt__Display_exposure1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:display";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "PreviewNull";
+	setAttr ".rman__torattr___task" -type "string" "display";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr -k on ".rman__torattr___primaryDisplay" 1;
+	setAttr ".rman__torattr___dspyID" -type "string" "";
+	setAttr ".rman__riopt__Display_name" -type "string" "_preview";
+	setAttr ".rman__riopt__Display_type" -type "string" "null";
+	setAttr ".rman__riopt__Display_mode" -type "string" "rgba";
+	setAttr -k on ".rman__riopt__Display_quantizeX" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_quantizeY" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_dither" 0;
+	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals0";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Ci";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color Ci";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals1";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "GlowColor";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color GlowColor";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals2";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Rim";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color Rim";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals3";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "SpecularDirectShadow";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color SpecularDirectShadow";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals4";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "SpecularEnvironment";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color SpecularEnvironment";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals5";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__DisplayChannel_quantize" -ln "rman__riopt__DisplayChannel_quantize" 
+		-at "compound" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__DisplayChannel_quantizeX" -ln "rman__riopt__DisplayChannel_quantizeX" 
+		-at "long2" -p "rman__riopt__DisplayChannel_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__DisplayChannel_quantizeX0" -ln "rman__riopt__DisplayChannel_quantizeX0" 
+		-dv -1 -at "long" -p "rman__riopt__DisplayChannel_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__DisplayChannel_quantizeX1" -ln "rman__riopt__DisplayChannel_quantizeX1" 
+		-dv -1 -at "long" -p "rman__riopt__DisplayChannel_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__DisplayChannel_quantizeY" -ln "rman__riopt__DisplayChannel_quantizeY" 
+		-at "long2" -p "rman__riopt__DisplayChannel_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__DisplayChannel_quantizeY0" -ln "rman__riopt__DisplayChannel_quantizeY0" 
+		-dv -1 -at "long" -p "rman__riopt__DisplayChannel_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__DisplayChannel_quantizeY1" -ln "rman__riopt__DisplayChannel_quantizeY1" 
+		-dv -1 -at "long" -p "rman__riopt__DisplayChannel_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_dither" -ln "rman__riopt__Display_dither" 
+		-dv -1 -at "float";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "id";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "float id";
+	setAttr -k on ".rman__riopt__DisplayChannel_quantizeX" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__DisplayChannel_quantizeY" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_dither" 0;
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals6";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "N";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "normal N";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals7";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Ambient";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color Ambient";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals8";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "DiffuseIndirect";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color DiffuseIndirect";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals9";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "DiffuseShadow";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color DiffuseShadow";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals10";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Oi";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color Oi";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals11";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Backscattering";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color Backscattering";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals12";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "DiffuseDirect";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color DiffuseDirect";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals13";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "OcclusionIndirect";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color OcclusionIndirect";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals14";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "SpecularIndirect";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color SpecularIndirect";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals15";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "SpecularShadow";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color SpecularShadow";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals16";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Z";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "float Z";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals17";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Diffuse";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color Diffuse";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals18";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Occlusion";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "float Occlusion";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals19";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "DiffuseColor";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color DiffuseColor";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals20";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Refraction";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color Refraction";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals21";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "DiffuseDirectShadow";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color DiffuseDirectShadow";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals22";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Translucence";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color Translucence";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals23";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "DiffuseEnvironment";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color DiffuseEnvironment";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals24";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Incandescence";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color Incandescence";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals25";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Specular";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color Specular";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals26";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Subsurface";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color Subsurface";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals27";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "wN";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "normal wN";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals28";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "OcclusionDirect";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color OcclusionDirect";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals29";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "SpecularColor";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color SpecularColor";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals30";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "SpecularDirect";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color SpecularDirect";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals31";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "wP";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "point wP";
+createNode RenderMan -s -n "rmanSSMakeBrickmapGlobals";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passLayer" -ln "rman__torattr___passLayer" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___passCommand" -ln "rman__torattr___passCommand" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__param__brickmake_maxerror" -ln "rman__param__brickmake_maxerror" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__param__brickmake_progress" -ln "rman__param__brickmake_progress" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__param__brickmake_omitgeometry" -ln "rman__param__brickmake_omitgeometry" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__param__brickmake___inputfile" -ln "rman__param__brickmake___inputfile" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__param__brickmake___outputfile" -ln "rman__param__brickmake___outputfile" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:command";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "SSMakeBrickmap";
+	setAttr ".rman__torattr___task" -type "string" "command";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr ".rman__torattr___passLayer" -type "string" "";
+	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Maps/Subsurface";
+	setAttr ".rman__torattr___passCommand" -type "string" "[GetCmdPassCmdList \"\\${RMANTREE}/bin/brickmake\"]";
+	setAttr -k on ".rman__param__brickmake_maxerror" 0.0020000000949949026;
+	setAttr -k on ".rman__param__brickmake_progress" 2;
+	setAttr -k on ".rman__param__brickmake_omitgeometry" 1;
+	setAttr ".rman__param__brickmake___inputfile" -type "string" "[passinfo this/0 filename]";
+	setAttr ".rman__param__brickmake___outputfile" -type "string" "[passinfo this filename]";
+createNode RenderMan -s -n "rmanSSDiffuseGlobals";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passLayer" -ln "rman__torattr___passLayer" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___passCommand" -ln "rman__torattr___passCommand" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__param__ptfilter_filter" -ln "rman__param__ptfilter_filter" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__param__ptfilter_albedo" -ln "rman__param__ptfilter_albedo" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__param__ptfilter_diffusemeanfreepath" -ln "rman__param__ptfilter_diffusemeanfreepath" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__param__ptfilter_smooth" -ln "rman__param__ptfilter_smooth" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__param__ptfilter_ior" -ln "rman__param__ptfilter_ior" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__param__ptfilter_maxsolidangle" -ln "rman__param__ptfilter_maxsolidangle" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__param__ptfilter_unitlength" -ln "rman__param__ptfilter_unitlength" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__param__ptfilter_followtopology" -ln "rman__param__ptfilter_followtopology" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__param__ptfilter_progress" -ln "rman__param__ptfilter_progress" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__param__ptfilter_Progress" -ln "rman__param__ptfilter_Progress" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__param__ptfilter_threads" -ln "rman__param__ptfilter_threads" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__param__ptfilter___inputfile" -ln "rman__param__ptfilter___inputfile" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__param__ptfilter___outputfile" -ln "rman__param__ptfilter___outputfile" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:command";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "SSDiffuse";
+	setAttr ".rman__torattr___task" -type "string" "command";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr ".rman__torattr___passLayer" -type "string" "";
+	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Maps/Subsurface";
+	setAttr ".rman__torattr___passCommand" -type "string" "[GetCmdPassCmdList \"\\${RMANTREE}/bin/ptfilter\"]";
+	setAttr ".rman__param__ptfilter_filter" -type "string" "ssdiffusion";
+	setAttr ".rman__param__ptfilter_albedo" -type "string" "fromfile";
+	setAttr ".rman__param__ptfilter_diffusemeanfreepath" -type "string" "fromfile";
+	setAttr -k on ".rman__param__ptfilter_smooth" 1;
+	setAttr -k on ".rman__param__ptfilter_ior" 1.2999999523162842;
+	setAttr -k on ".rman__param__ptfilter_maxsolidangle" 1;
+	setAttr -k on ".rman__param__ptfilter_unitlength" 1;
+	setAttr -k on ".rman__param__ptfilter_followtopology" 1;
+	setAttr -k on ".rman__param__ptfilter_progress" 2;
+	setAttr ".rman__param__ptfilter_Progress" -type "string" "_on";
+	setAttr -k on ".rman__param__ptfilter_threads" 0;
+	setAttr ".rman__param__ptfilter___inputfile" -type "string" "[passinfo this/0 filename]";
+	setAttr ".rman__param__ptfilter___outputfile" -type "string" "[passinfo this filename]";
+createNode RenderMan -s -n "rmanSSRenderGlobals";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passLayer" -ln "rman__torattr___passLayer" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___camera" -ln "rman__torattr___camera" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___crew" -ln "rman__torattr___crew" -dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___flavor" -ln "rman__torattr___flavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___cameraFlavor" -ln "rman__torattr___cameraFlavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___lightcrew" -ln "rman__torattr___lightcrew" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___motionBlur" -ln "rman__torattr___motionBlur" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___rayTracing" -ln "rman__torattr___rayTracing" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__user_shading_normalmode" -ln "rman__riopt__user_shading_normalmode" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt___PixelSamples" -ln "rman__riopt___PixelSamples" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___PixelSamples0" -ln "rman__riopt___PixelSamples0" 
+		-dv -1 -at "float" -p "rman__riopt___PixelSamples";
+	addAttr -ci true -k true -sn "rman__riopt___PixelSamples1" -ln "rman__riopt___PixelSamples1" 
+		-dv -1 -at "float" -p "rman__riopt___PixelSamples";
+	addAttr -ci true -k true -sn "rman__riattr__cull_backfacing" -ln "rman__riattr__cull_backfacing" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__cull_hidden" -ln "rman__riattr__cull_hidden" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__dice_rasterorient" -ln "rman__riattr__dice_rasterorient" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr___ShadingRate" -ln "rman__riattr___ShadingRate" 
+		-dv -1 -at "float";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:render";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "SSRender";
+	setAttr ".rman__torattr___task" -type "string" "render";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr ".rman__torattr___passLayer" -type "string" "";
+	setAttr ".rman__torattr___camera" -type "string" "";
+	setAttr ".rman__torattr___crew" -type "string" "";
+	setAttr ".rman__torattr___flavor" -type "string" "";
+	setAttr ".rman__torattr___cameraFlavor" -type "string" "";
+	setAttr ".rman__torattr___lightcrew" -type "string" "";
+	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Maps/Subsurface";
+	setAttr -k on ".rman__torattr___motionBlur" 0;
+	setAttr -k on ".rman__torattr___rayTracing" 1;
+	setAttr -k on ".rman__riopt__user_shading_normalmode" 1;
+	setAttr -k on ".rman__riopt___PixelSamples" -type "float2" 1 1 ;
+	setAttr -k on ".rman__riattr__cull_backfacing" 0;
+	setAttr -k on ".rman__riattr__cull_hidden" 0;
+	setAttr -k on ".rman__riattr__dice_rasterorient" 0;
+	setAttr -k on ".rman__riattr___ShadingRate" 5;
+	setAttr -s 4 ".c";
+createNode RenderMan -s -n "rmanSSRenderOutputGlobals0";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___primaryDisplay" -ln "rman__torattr___primaryDisplay" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___dspyID" -ln "rman__torattr___dspyID" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_name" -ln "rman__riopt__Display_name" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_type" -ln "rman__riopt__Display_type" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_mode" -ln "rman__riopt__Display_mode" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantize" -ln "rman__riopt__Display_quantize" 
+		-at "compound" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX" -ln "rman__riopt__Display_quantizeX" 
+		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX0" -ln "rman__riopt__Display_quantizeX0" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX1" -ln "rman__riopt__Display_quantizeX1" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY" -ln "rman__riopt__Display_quantizeY" 
+		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY0" -ln "rman__riopt__Display_quantizeY0" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY1" -ln "rman__riopt__Display_quantizeY1" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_dither" -ln "rman__riopt__Display_dither" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure" -ln "rman__riopt__Display_exposure" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure0" -ln "rman__riopt__Display_exposure0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure1" -ln "rman__riopt__Display_exposure1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:display";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "PreviewNull";
+	setAttr ".rman__torattr___task" -type "string" "display";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr -k on ".rman__torattr___primaryDisplay" 1;
+	setAttr ".rman__torattr___dspyID" -type "string" "";
+	setAttr ".rman__riopt__Display_name" -type "string" "_preview";
+	setAttr ".rman__riopt__Display_type" -type "string" "null";
+	setAttr ".rman__riopt__Display_mode" -type "string" "rgba";
+	setAttr -k on ".rman__riopt__Display_quantizeX" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_quantizeY" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_dither" 0;
+	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
+createNode RenderMan -s -n "rmanSSRenderChannelGlobals0";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__DisplayChannel_EliminateDuplicateGrids" 
+		-ln "rman__riopt__DisplayChannel_EliminateDuplicateGrids" -dv -1 -at "long";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "radiance_t";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color _radiance_t";
+	setAttr -k on ".rman__riopt__DisplayChannel_EliminateDuplicateGrids" 1;
+createNode RenderMan -s -n "rmanSSRenderChannelGlobals1";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__DisplayChannel_EliminateDuplicateGrids" 
+		-ln "rman__riopt__DisplayChannel_EliminateDuplicateGrids" -dv -1 -at "long";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "area";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "float _area";
+	setAttr -k on ".rman__riopt__DisplayChannel_EliminateDuplicateGrids" 1;
+createNode RenderMan -s -n "rmanSSRenderChannelGlobals2";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__DisplayChannel_EliminateDuplicateGrids" 
+		-ln "rman__riopt__DisplayChannel_EliminateDuplicateGrids" -dv -1 -at "long";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "albedo";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color _albedo";
+	setAttr -k on ".rman__riopt__DisplayChannel_EliminateDuplicateGrids" 1;
+createNode RenderMan -s -n "rmanSSRenderChannelGlobals3";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__DisplayChannel_EliminateDuplicateGrids" 
+		-ln "rman__riopt__DisplayChannel_EliminateDuplicateGrids" -dv -1 -at "long";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "diffusemeanfreepath";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color _diffusemeanfreepath";
+	setAttr -k on ".rman__riopt__DisplayChannel_EliminateDuplicateGrids" 1;
+createNode RenderMan -s -n "rmanSSOrganizeGlobals";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passLayer" -ln "rman__torattr___passLayer" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___passCommand" -ln "rman__torattr___passCommand" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__param__ptfilter_filter" -ln "rman__param__ptfilter_filter" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__param__ptfilter_partial" -ln "rman__param__ptfilter_partial" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__param__ptfilter_progress" -ln "rman__param__ptfilter_progress" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__param__ptfilter_Progress" -ln "rman__param__ptfilter_Progress" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__param__ptfilter_threads" -ln "rman__param__ptfilter_threads" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__param__ptfilter___inputfile" -ln "rman__param__ptfilter___inputfile" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__param__ptfilter___outputfile" -ln "rman__param__ptfilter___outputfile" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:command";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "SSOrganize";
+	setAttr ".rman__torattr___task" -type "string" "command";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr ".rman__torattr___passLayer" -type "string" "";
+	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Maps/Subsurface";
+	setAttr ".rman__torattr___passCommand" -type "string" "[GetCmdPassCmdList \"\\${RMANTREE}/bin/ptfilter\"]";
+	setAttr ".rman__param__ptfilter_filter" -type "string" "ssdiffusion";
+	setAttr -k on ".rman__param__ptfilter_partial" 1;
+	setAttr -k on ".rman__param__ptfilter_progress" 2;
+	setAttr ".rman__param__ptfilter_Progress" -type "string" "_on";
+	setAttr -k on ".rman__param__ptfilter_threads" 0;
+	setAttr ".rman__param__ptfilter___inputfile" -type "string" "[passinfo this/0 filename]";
+	setAttr ".rman__param__ptfilter___outputfile" -type "string" "[passinfo this filename]";
+createNode RenderMan -s -n "rmanSBMakeBrickmapGlobals";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passLayer" -ln "rman__torattr___passLayer" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___passCommand" -ln "rman__torattr___passCommand" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__param__brickmake_maxerror" -ln "rman__param__brickmake_maxerror" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__param__brickmake_progress" -ln "rman__param__brickmake_progress" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__param__brickmake___inputfile" -ln "rman__param__brickmake___inputfile" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__param__brickmake___outputfile" -ln "rman__param__brickmake___outputfile" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:command";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "SBMakeBrickmap";
+	setAttr ".rman__torattr___task" -type "string" "command";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr ".rman__torattr___passLayer" -type "string" "";
+	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Maps/SlimBake";
+	setAttr ".rman__torattr___passCommand" -type "string" "[GetCmdPassCmdList \"\\${RMANTREE}/bin/brickmake\"]";
+	setAttr -k on ".rman__param__brickmake_maxerror" 0.0040000001899898052;
+	setAttr -k on ".rman__param__brickmake_progress" 2;
+	setAttr ".rman__param__brickmake___inputfile" -type "string" "[passinfo this/0 filename]";
+	setAttr ".rman__param__brickmake___outputfile" -type "string" "[passinfo this filename]";
+createNode RenderMan -s -n "rmanSBRenderGlobals";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passLayer" -ln "rman__torattr___passLayer" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___camera" -ln "rman__torattr___camera" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___crew" -ln "rman__torattr___crew" -dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___flavor" -ln "rman__torattr___flavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___cameraFlavor" -ln "rman__torattr___cameraFlavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___lightcrew" -ln "rman__torattr___lightcrew" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___motionBlur" -ln "rman__torattr___motionBlur" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__user_shading_normalmode" -ln "rman__riopt__user_shading_normalmode" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt___PixelSamples" -ln "rman__riopt___PixelSamples" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___PixelSamples0" -ln "rman__riopt___PixelSamples0" 
+		-dv -1 -at "float" -p "rman__riopt___PixelSamples";
+	addAttr -ci true -k true -sn "rman__riopt___PixelSamples1" -ln "rman__riopt___PixelSamples1" 
+		-dv -1 -at "float" -p "rman__riopt___PixelSamples";
+	addAttr -ci true -k true -sn "rman__riattr__cull_backfacing" -ln "rman__riattr__cull_backfacing" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__cull_hidden" -ln "rman__riattr__cull_hidden" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__dice_rasterorient" -ln "rman__riattr__dice_rasterorient" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr___ShadingRate" -ln "rman__riattr___ShadingRate" 
+		-dv -1 -at "float";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:render";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "SBRender";
+	setAttr ".rman__torattr___task" -type "string" "render";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr ".rman__torattr___passLayer" -type "string" "";
+	setAttr ".rman__torattr___camera" -type "string" "";
+	setAttr ".rman__torattr___crew" -type "string" "";
+	setAttr ".rman__torattr___flavor" -type "string" "";
+	setAttr ".rman__torattr___cameraFlavor" -type "string" "";
+	setAttr ".rman__torattr___lightcrew" -type "string" "";
+	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Maps/SlimBake";
+	setAttr -k on ".rman__torattr___motionBlur" 0;
+	setAttr -k on ".rman__riopt__user_shading_normalmode" 1;
+	setAttr -k on ".rman__riopt___PixelSamples" -type "float2" 1 1 ;
+	setAttr -k on ".rman__riattr__cull_backfacing" 0;
+	setAttr -k on ".rman__riattr__cull_hidden" 0;
+	setAttr -k on ".rman__riattr__dice_rasterorient" 0;
+	setAttr -k on ".rman__riattr___ShadingRate" 1;
+	setAttr -s 6 ".c";
+createNode RenderMan -s -n "rmanSBRenderOutputGlobals0";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___primaryDisplay" -ln "rman__torattr___primaryDisplay" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___dspyID" -ln "rman__torattr___dspyID" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_name" -ln "rman__riopt__Display_name" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_type" -ln "rman__riopt__Display_type" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_mode" -ln "rman__riopt__Display_mode" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantize" -ln "rman__riopt__Display_quantize" 
+		-at "compound" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX" -ln "rman__riopt__Display_quantizeX" 
+		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX0" -ln "rman__riopt__Display_quantizeX0" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX1" -ln "rman__riopt__Display_quantizeX1" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY" -ln "rman__riopt__Display_quantizeY" 
+		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY0" -ln "rman__riopt__Display_quantizeY0" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY1" -ln "rman__riopt__Display_quantizeY1" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_dither" -ln "rman__riopt__Display_dither" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure" -ln "rman__riopt__Display_exposure" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure0" -ln "rman__riopt__Display_exposure0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure1" -ln "rman__riopt__Display_exposure1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:display";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "PreviewNull";
+	setAttr ".rman__torattr___task" -type "string" "display";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr -k on ".rman__torattr___primaryDisplay" 1;
+	setAttr ".rman__torattr___dspyID" -type "string" "";
+	setAttr ".rman__riopt__Display_name" -type "string" "_preview";
+	setAttr ".rman__riopt__Display_type" -type "string" "null";
+	setAttr ".rman__riopt__Display_mode" -type "string" "rgba";
+	setAttr -k on ".rman__riopt__Display_quantizeX" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_quantizeY" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_dither" 0;
+	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
+createNode RenderMan -s -n "rmanSBRenderChannelGlobals0";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__DisplayChannel_EliminateDuplicateGrids" 
+		-ln "rman__riopt__DisplayChannel_EliminateDuplicateGrids" -dv -1 -at "long";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "radiance_t";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color _radiance_t";
+	setAttr -k on ".rman__riopt__DisplayChannel_EliminateDuplicateGrids" 1;
+createNode RenderMan -s -n "rmanSBRenderChannelGlobals1";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__DisplayChannel_EliminateDuplicateGrids" 
+		-ln "rman__riopt__DisplayChannel_EliminateDuplicateGrids" -dv -1 -at "long";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "area";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "float _area";
+	setAttr -k on ".rman__riopt__DisplayChannel_EliminateDuplicateGrids" 1;
+createNode RenderMan -s -n "rmanSBRenderChannelGlobals2";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__DisplayChannel_EliminateDuplicateGrids" 
+		-ln "rman__riopt__DisplayChannel_EliminateDuplicateGrids" -dv -1 -at "long";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "albedo";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color _albedo";
+	setAttr -k on ".rman__riopt__DisplayChannel_EliminateDuplicateGrids" 1;
+createNode RenderMan -s -n "rmanSBRenderChannelGlobals3";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__DisplayChannel_EliminateDuplicateGrids" 
+		-ln "rman__riopt__DisplayChannel_EliminateDuplicateGrids" -dv -1 -at "long";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "diffusemeanfreepath";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color _diffusemeanfreepath";
+	setAttr -k on ".rman__riopt__DisplayChannel_EliminateDuplicateGrids" 1;
+createNode RenderMan -s -n "rmanSBRenderChannelGlobals4";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__DisplayChannel_EliminateDuplicateGrids" 
+		-ln "rman__riopt__DisplayChannel_EliminateDuplicateGrids" -dv -1 -at "long";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "color";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color _color";
+	setAttr -k on ".rman__riopt__DisplayChannel_EliminateDuplicateGrids" 1;
+createNode RenderMan -s -n "rmanSBRenderChannelGlobals5";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__DisplayChannel_EliminateDuplicateGrids" 
+		-ln "rman__riopt__DisplayChannel_EliminateDuplicateGrids" -dv -1 -at "long";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "float";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "float _float";
+	setAttr -k on ".rman__riopt__DisplayChannel_EliminateDuplicateGrids" 1;
+createNode RenderMan -s -n "rmanSBMakePtCloudGlobals";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passLayer" -ln "rman__torattr___passLayer" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___passCommand" -ln "rman__torattr___passCommand" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__param__ptfilter_filter" -ln "rman__param__ptfilter_filter" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__param__ptfilter_progress" -ln "rman__param__ptfilter_progress" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__param__ptfilter_Progress" -ln "rman__param__ptfilter_Progress" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__param__ptfilter_threads" -ln "rman__param__ptfilter_threads" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__param__ptfilter___inputfile" -ln "rman__param__ptfilter___inputfile" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__param__ptfilter___outputfile" -ln "rman__param__ptfilter___outputfile" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:command";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "SBMakePtCloud";
+	setAttr ".rman__torattr___task" -type "string" "command";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr ".rman__torattr___passLayer" -type "string" "";
+	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Maps/SlimBake";
+	setAttr ".rman__torattr___passCommand" -type "string" "[GetCmdPassCmdList \"\\${RMANTREE}/bin/ptfilter\"]";
+	setAttr ".rman__param__ptfilter_filter" -type "string" "none";
+	setAttr -k on ".rman__param__ptfilter_progress" 2;
+	setAttr ".rman__param__ptfilter_Progress" -type "string" "_on";
+	setAttr -k on ".rman__param__ptfilter_threads" 0;
+	setAttr ".rman__param__ptfilter___inputfile" -type "string" "[passinfo this/0 filename]";
+	setAttr ".rman__param__ptfilter___outputfile" -type "string" "[passinfo this filename]";
+createNode RenderMan -s -n "rmanSBPtRenderGlobals";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passLayer" -ln "rman__torattr___passLayer" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___passCommand" -ln "rman__torattr___passCommand" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__param__ptrender_dspy" -ln "rman__param__ptrender_dspy" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__param__ptrender_depth" -ln "rman__param__ptrender_depth" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__param__ptrender_size" -ln "rman__param__ptrender_size" 
+		-at "long2" -nc 2;
+	addAttr -ci true -k true -sn "rman__param__ptrender_size0" -ln "rman__param__ptrender_size0" 
+		-dv -1 -at "long" -p "rman__param__ptrender_size";
+	addAttr -ci true -k true -sn "rman__param__ptrender_size1" -ln "rman__param__ptrender_size1" 
+		-dv -1 -at "long" -p "rman__param__ptrender_size";
+	addAttr -ci true -h true -sn "rman__param__ptrender___inputfile" -ln "rman__param__ptrender___inputfile" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__param__ptrender___channel" -ln "rman__param__ptrender___channel" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__param__ptrender___outputfile" -ln "rman__param__ptrender___outputfile" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:command";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "SBPtRender";
+	setAttr ".rman__torattr___task" -type "string" "command";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr ".rman__torattr___passLayer" -type "string" "";
+	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Maps/SlimBake";
+	setAttr ".rman__torattr___passCommand" -type "string" "[GetCmdPassCmdList \"\\${RMANTREE}/bin/ptrender\"]";
+	setAttr ".rman__param__ptrender_dspy" -type "string" "texture";
+	setAttr ".rman__param__ptrender_depth" -type "string" "float";
+	setAttr -k on ".rman__param__ptrender_size" -type "long2" 512 512 ;
+	setAttr ".rman__param__ptrender___inputfile" -type "string" "[passinfo this/0 filename]";
+	setAttr ".rman__param__ptrender___channel" -type "string" "$BAKECHAN";
+	setAttr ".rman__param__ptrender___outputfile" -type "string" "[passinfo this filename]";
+createNode RenderMan -s -n "rmanSBMakePtexGlobals";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passLayer" -ln "rman__torattr___passLayer" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___passCommand" -ln "rman__torattr___passCommand" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__param__ptxmake_depth" -ln "rman__param__ptxmake_depth" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__param__ptxmake_splat" -ln "rman__param__ptxmake_splat" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__param__ptxmake_geom" -ln "rman__param__ptxmake_geom" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__param__ptxmake___inputfile" -ln "rman__param__ptxmake___inputfile" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__param__ptxmake___channel" -ln "rman__param__ptxmake___channel" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__param__ptxmake___outputfile" -ln "rman__param__ptxmake___outputfile" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:command";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "SBMakePtex";
+	setAttr ".rman__torattr___task" -type "string" "command";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr ".rman__torattr___passLayer" -type "string" "";
+	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Maps/SlimBake";
+	setAttr ".rman__torattr___passCommand" -type "string" "[GetCmdPassCmdList \"\\${RMANTREE}/bin/ptxmake\"]";
+	setAttr ".rman__param__ptxmake_depth" -type "string" "half";
+	setAttr ".rman__param__ptxmake_splat" -type "string" "diffusion";
+	setAttr ".rman__param__ptxmake_geom" -type "string" "quad";
+	setAttr ".rman__param__ptxmake___inputfile" -type "string" "[passinfo this/0 filename]";
+	setAttr ".rman__param__ptxmake___channel" -type "string" "$BAKECHAN";
+	setAttr ".rman__param__ptxmake___outputfile" -type "string" "[passinfo this filename]";
 createNode lightLinker -s -n "lightLinker1";
-	setAttr -s 495 ".lnk";
-	setAttr -s 498 ".slnk";
+	setAttr -s 507 ".lnk";
+	setAttr -s 507 ".slnk";
 createNode displayLayerManager -n "layerManager";
 createNode displayLayer -n "defaultLayer";
 createNode renderLayerManager -n "renderLayerManager";
@@ -23466,52 +26438,52 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n"
 		+ "            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n"
 		+ "            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n"
-		+ "            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"camera3\" \n                -useInteractiveMode 0\n                -displayLights \"all\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n"
+		+ "            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"camera3\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n"
 		+ "                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 1\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"base_OpenGL_Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n"
 		+ "                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n"
 		+ "                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"camera3\" \n            -useInteractiveMode 0\n"
-		+ "            -displayLights \"all\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n"
+		+ "            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n"
 		+ "            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n"
 		+ "            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `outlinerPanel -unParent -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            outlinerEditor -e \n"
 		+ "                -docTag \"isolOutln_fromSeln\" \n                -showShapes 1\n                -showReferenceNodes 1\n                -showReferenceMembers 1\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 0\n                -showMuteInfo 1\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 1\n                -showAssets 1\n                -showContainedOnly 1\n                -showPublishedAsConnected 0\n                -showContainerContents 1\n                -ignoreDagHierarchy 0\n                -expandConnections 0\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 0\n                -highlightActive 1\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 0\n"
 		+ "                -setFilter \"defaultSetFilter\" \n                -showSetMembers 1\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 0\n                -ignoreHiddenAttribute 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 1\n            -showConnected 1\n            -showAnimCurvesOnly 0\n            -showMuteInfo 1\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n"
-		+ "            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"graphEditor\" -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels `;\n"
+		+ "            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\tif ($useSceneConfig) {\n\t\toutlinerPanel -e -to $panelName;\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n"
+		+ "\t\t\t$panelName = `scriptedPanel -unParent  -type \"graphEditor\" -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n"
+		+ "                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n"
+		+ "\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 1\n                -classicMode 1\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n"
 		+ "                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n"
-		+ "                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 1\n                -classicMode 1\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n"
-		+ "                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n"
-		+ "                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n"
-		+ "                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 1\n                -classicMode 1\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dopeSheetPanel\" -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels `;\n"
-		+ "\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n"
-		+ "                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n"
-		+ "                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n"
-		+ "                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n"
-		+ "                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n"
-		+ "                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"clipEditorPanel\" -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n"
-		+ "            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"sequenceEditorPanel\" -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n"
-		+ "                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperGraphPanel\" -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels `;\n"
-		+ "\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n"
-		+ "                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n"
-		+ "                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperShadePanel\" -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
-		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"visorPanel\" -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n"
-		+ "                -defaultPinnedState 0\n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -keyReleaseCommand \"nodeEdKeyReleaseCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;\n\t\t\tif (`objExists nodeEditorPanel1Info`) nodeEditor -e -restoreInfo nodeEditorPanel1Info $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n"
-		+ "            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -keyReleaseCommand \"nodeEdKeyReleaseCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;\n\t\t\tif (`objExists nodeEditorPanel1Info`) nodeEditor -e -restoreInfo nodeEditorPanel1Info $editorName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"createNodePanel\" -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Texture Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"polyTexturePlacementPanel\" -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"renderWindowPanel\" -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"blendShapePanel\" (localizedPanelLabel(\"Blend Shape\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\tblendShapePanel -unParent -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels ;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tblendShapePanel -edit -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n"
-		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynRelEdPanel\" -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"relationshipPanel\" -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"referenceEditorPanel\" -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"componentEditorPanel\" -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynPaintScriptedPanelType\" -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"scriptEditorPanel\" -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"Stereo\" -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels `;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n"
-		+ "                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n"
-		+ "                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n"
-		+ "                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n"
-		+ "                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n"
-		+ "                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n"
-		+ "                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n"
-		+ "        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"camera3\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"all\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"camera3\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"all\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 1\n                -classicMode 1\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n"
+		+ "\t\t\t$panelName = `scriptedPanel -unParent  -type \"dopeSheetPanel\" -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n"
+		+ "                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n"
+		+ "\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n"
+		+ "                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n"
+		+ "                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n"
+		+ "                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"clipEditorPanel\" -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"sequenceEditorPanel\" -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n"
+		+ "                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n"
+		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperGraphPanel\" -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n"
+		+ "                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n"
+		+ "                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperShadePanel\" -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"visorPanel\" -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n"
+		+ "                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -keyReleaseCommand \"nodeEdKeyReleaseCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;\n\t\t\tif (`objExists nodeEditorPanel1Info`) nodeEditor -e -restoreInfo nodeEditorPanel1Info $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -keyReleaseCommand \"nodeEdKeyReleaseCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n"
+		+ "                $editorName;\n\t\t\tif (`objExists nodeEditorPanel1Info`) nodeEditor -e -restoreInfo nodeEditorPanel1Info $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"createNodePanel\" -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Texture Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"polyTexturePlacementPanel\" -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels `;\n"
+		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"renderWindowPanel\" -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"blendShapePanel\" (localizedPanelLabel(\"Blend Shape\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\tblendShapePanel -unParent -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels ;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tblendShapePanel -edit -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynRelEdPanel\" -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"relationshipPanel\" -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels `;\n"
+		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"referenceEditorPanel\" -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"componentEditorPanel\" -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels `;\n"
+		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynPaintScriptedPanelType\" -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"scriptEditorPanel\" -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels `;\n"
+		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"Stereo\" -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels `;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n"
+		+ "                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n"
+		+ "                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n"
+		+ "                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n"
+		+ "                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n"
+		+ "                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n"
+		+ "                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"camera3\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"camera3\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        setFocus `paneLayout -q -p1 $gMainPane`;\n        sceneUIReplacement -deleteRemaining;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -23520,39 +26492,37 @@ createNode script -n "sceneConfigurationScriptNode";
 createNode reference -n "livingroom_shading_latestRN";
 	setAttr -s 34 ".phl";
 	setAttr ".phl[1]" 0;
-	setAttr ".phl[2]" 0;
-	setAttr ".phl[3]" 0;
-	setAttr ".phl[4]" 0;
-	setAttr ".phl[5]" 0;
-	setAttr ".phl[6]" 0;
-	setAttr ".phl[7]" 0;
-	setAttr ".phl[8]" 0;
-	setAttr ".phl[9]" 0;
-	setAttr ".phl[10]" 0;
-	setAttr ".phl[11]" 0;
-	setAttr ".phl[12]" 0;
-	setAttr ".phl[13]" 0;
-	setAttr ".phl[14]" 0;
-	setAttr ".phl[15]" 0;
-	setAttr ".phl[16]" 0;
-	setAttr ".phl[17]" 0;
-	setAttr ".phl[18]" 0;
-	setAttr ".phl[19]" 0;
-	setAttr ".phl[20]" 0;
-	setAttr ".phl[21]" 0;
-	setAttr ".phl[22]" 0;
-	setAttr ".phl[23]" 0;
-	setAttr ".phl[24]" 0;
-	setAttr ".phl[25]" 0;
-	setAttr ".phl[26]" 0;
-	setAttr ".phl[27]" 0;
-	setAttr ".phl[28]" 0;
-	setAttr ".phl[29]" 0;
-	setAttr ".phl[30]" 0;
-	setAttr ".phl[31]" 0;
-	setAttr ".phl[32]" 0;
-	setAttr ".phl[33]" 0;
 	setAttr ".phl[34]" 0;
+	setAttr ".phl[35]" 0;
+	setAttr ".phl[36]" 0;
+	setAttr ".phl[37]" 0;
+	setAttr ".phl[38]" 0;
+	setAttr ".phl[39]" 0;
+	setAttr ".phl[40]" 0;
+	setAttr ".phl[41]" 0;
+	setAttr ".phl[42]" 0;
+	setAttr ".phl[43]" 0;
+	setAttr ".phl[44]" 0;
+	setAttr ".phl[45]" 0;
+	setAttr ".phl[46]" 0;
+	setAttr ".phl[47]" 0;
+	setAttr ".phl[48]" 0;
+	setAttr ".phl[49]" 0;
+	setAttr ".phl[50]" 0;
+	setAttr ".phl[51]" 0;
+	setAttr ".phl[52]" 0;
+	setAttr ".phl[53]" 0;
+	setAttr ".phl[54]" 0;
+	setAttr ".phl[55]" 0;
+	setAttr ".phl[56]" 0;
+	setAttr ".phl[57]" 0;
+	setAttr ".phl[58]" 0;
+	setAttr ".phl[59]" 0;
+	setAttr ".phl[60]" 0;
+	setAttr ".phl[61]" 0;
+	setAttr ".phl[62]" 0;
+	setAttr ".phl[63]" 0;
+	setAttr ".phl[64]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"livingroom_shading_latestRN"
 		"living_room_latest:bedroom_updated_layout:chairRN" 125
@@ -23830,6 +26800,7 @@ createNode reference -n "livingroom_shading_latestRN";
 		"living_room_latest:taller_window_four_squares_latestRN4" 0
 		"living_room_latest:resurrected_staircaseRN" 0
 		"living_room_latest:taller_window_four_squares_latest4RN" 0
+		"living_room_latest:taller_window_four_squares_latest3RN" 0
 		"living_room_latest:cat_robotRN" 30
 		1 |living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:pCylinder13|living_room_latest:cat_robot:polySurfaceShape2 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
@@ -23895,7 +26866,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		2 "|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:pCylinder7|living_room_latest:cat_robot:polySurfaceShape5" 
 		"furNameSpace" " -type \"string\" \"cat_robot\""
-		"living_room_latest:taller_window_four_squares_latest3RN" 0
 		"living_room_latest:bed_latestRN" 0
 		"living_room_latest:taller_window_four_squares_latest2RN" 0
 		"living_room_latest:taller_window_four_squares_latestRN2" 0
@@ -24407,7 +27377,7 @@ createNode reference -n "livingroom_shading_latestRN";
 		2 "|living_room_latest:airplane_003:pCube2|living_room_latest:airplane_003:pCube1|living_room_latest:airplane_003:pCubeShape1" 
 		"furNameSpace" " -type \"string\" \"airplane_003\""
 		"living_room_latest:sofa_latestRN" 0
-		"livingroom_shading_latestRN" 152
+		"livingroom_shading_latestRN" 122
 		1 |livingroom_shading_latest_pPlane1|livingroom_shading_latest_GardenPlane 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
 		1 |livingroom_shading_latest_pPlane1|livingroom_shading_latest_GardenPlane 
@@ -24432,16 +27402,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		1 |livingroom_shading_latest_polySurfaceShape309 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		
-		1 livingroom_shading_latest_file3 "proceduralTexDefaultRes" "proceduralTexDefaultRes" 
-		" -ci 1 -dv 512 -min 256 -max 4096 -smn 8 -smx 8192 -at \"short\""
-		1 livingroom_shading_latest_file3 "proceduralTexMaxRes" "proceduralTexMaxRes" 
-		" -ci 1 -dv 1024 -min 256 -max 4096 -smn 8 -smx 8192 -at \"short\""
-		1 livingroom_shading_latest_file3 "ReduceTextureInCuda" "ReduceTextureInCuda" 
-		" -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
-		1 livingroom_shading_latest_file3 "onlineUpdate" "onlineUpdate" " -ci 1 -min 0 -max 1 -at \"bool\""
-		
-		1 livingroom_shading_latest_file3 "compressColor" "compressColor" " -ci 1 -dv 1 -min 0 -max 1 -at \"bool\""
-		
 		1 livingroom_shading_latest_file5e "proceduralTexDefaultRes" "proceduralTexDefaultRes" 
 		" -ci 1 -dv 512 -min 256 -max 4096 -smn 8 -smx 8192 -at \"short\""
 		1 livingroom_shading_latest_file5e "proceduralTexMaxRes" "proceduralTexMaxRes" 
@@ -24451,26 +27411,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		1 livingroom_shading_latest_file5e "onlineUpdate" "onlineUpdate" " -ci 1 -min 0 -max 1 -at \"bool\""
 		
 		1 livingroom_shading_latest_file5e "compressColor" "compressColor" " -ci 1 -dv 1 -min 0 -max 1 -at \"bool\""
-		
-		1 livingroom_shading_latest_file9 "proceduralTexDefaultRes" "proceduralTexDefaultRes" 
-		" -ci 1 -dv 512 -min 256 -max 4096 -smn 8 -smx 8192 -at \"short\""
-		1 livingroom_shading_latest_file9 "proceduralTexMaxRes" "proceduralTexMaxRes" 
-		" -ci 1 -dv 1024 -min 256 -max 4096 -smn 8 -smx 8192 -at \"short\""
-		1 livingroom_shading_latest_file9 "ReduceTextureInCuda" "ReduceTextureInCuda" 
-		" -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
-		1 livingroom_shading_latest_file9 "onlineUpdate" "onlineUpdate" " -ci 1 -min 0 -max 1 -at \"bool\""
-		
-		1 livingroom_shading_latest_file9 "compressColor" "compressColor" " -ci 1 -dv 1 -min 0 -max 1 -at \"bool\""
-		
-		1 livingroom_shading_latest_file10 "proceduralTexDefaultRes" "proceduralTexDefaultRes" 
-		" -ci 1 -dv 512 -min 256 -max 4096 -smn 8 -smx 8192 -at \"short\""
-		1 livingroom_shading_latest_file10 "proceduralTexMaxRes" "proceduralTexMaxRes" 
-		" -ci 1 -dv 1024 -min 256 -max 4096 -smn 8 -smx 8192 -at \"short\""
-		1 livingroom_shading_latest_file10 "ReduceTextureInCuda" "ReduceTextureInCuda" 
-		" -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
-		1 livingroom_shading_latest_file10 "onlineUpdate" "onlineUpdate" " -ci 1 -min 0 -max 1 -at \"bool\""
-		
-		1 livingroom_shading_latest_file10 "compressColor" "compressColor" " -ci 1 -dv 1 -min 0 -max 1 -at \"bool\""
 		
 		1 livingroom_shading_latest_ramp1 "proceduralTexDefaultRes" "proceduralTexDefaultRes" 
 		" -ci 1 -dv 512 -min 256 -max 4096 -smn 8 -smx 8192 -at \"short\""
@@ -24586,26 +27526,11 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		2 "|livingroom_shading_latest_polySurfaceShape309" "furNameSpace" " -type \"string\" \"livingroom_shading_latest\""
 		
-		2 "livingroom_shading_latest_file3" "proceduralTexDefaultRes" " 512"
-		2 "livingroom_shading_latest_file3" "proceduralTexMaxRes" " 1024"
-		2 "livingroom_shading_latest_file3" "ReduceTextureInCuda" " 1"
-		2 "livingroom_shading_latest_file3" "onlineUpdate" " 0"
-		2 "livingroom_shading_latest_file3" "compressColor" " 1"
 		2 "livingroom_shading_latest_file5e" "proceduralTexDefaultRes" " 512"
 		2 "livingroom_shading_latest_file5e" "proceduralTexMaxRes" " 1024"
 		2 "livingroom_shading_latest_file5e" "ReduceTextureInCuda" " 1"
 		2 "livingroom_shading_latest_file5e" "onlineUpdate" " 0"
 		2 "livingroom_shading_latest_file5e" "compressColor" " 1"
-		2 "livingroom_shading_latest_file9" "proceduralTexDefaultRes" " 512"
-		2 "livingroom_shading_latest_file9" "proceduralTexMaxRes" " 1024"
-		2 "livingroom_shading_latest_file9" "ReduceTextureInCuda" " 1"
-		2 "livingroom_shading_latest_file9" "onlineUpdate" " 0"
-		2 "livingroom_shading_latest_file9" "compressColor" " 1"
-		2 "livingroom_shading_latest_file10" "proceduralTexDefaultRes" " 512"
-		2 "livingroom_shading_latest_file10" "proceduralTexMaxRes" " 1024"
-		2 "livingroom_shading_latest_file10" "ReduceTextureInCuda" " 1"
-		2 "livingroom_shading_latest_file10" "onlineUpdate" " 0"
-		2 "livingroom_shading_latest_file10" "compressColor" " 1"
 		2 "livingroom_shading_latest_ramp1" "proceduralTexDefaultRes" " 512"
 		2 "livingroom_shading_latest_ramp1" "proceduralTexMaxRes" " 1024"
 		2 "livingroom_shading_latest_ramp1" "ReduceTextureInCuda" " 1"
@@ -24655,7 +27580,7 @@ createNode reference -n "livingroom_shading_latestRN";
 		"living_room_latest:armchair_latestRN" 0
 		"living_room_latest:taller_window_four_squares_latestRN" 0
 		"living_room_latest:armchair_latestRN1" 0
-		"livingroom_shading_latest_living_room_latestRN" 1365
+		"livingroom_shading_latest_living_room_latestRN" 1702
 		1 |living_room_latest:bed_pillow|living_room_latest:bed_pillowShape "VisibleInIndirect" 
 		"VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		1 |living_room_latest:bed_mattress|living_room_latest:bed_mattressShape "VisibleInIndirect" 
@@ -24914,12 +27839,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube8|living_room_latest:pCubeShape8 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube8|living_room_latest:pCubeShape8 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube8|living_room_latest:polySurfaceShape1 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube8|living_room_latest:polySurfaceShape1 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube8|living_room_latest:polySurfaceShape1 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCylinder3|living_room_latest:pCylinderShape3 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
@@ -25489,12 +28408,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:utilities_shelves|living_room_latest:pasted__pCube21|living_room_latest:pasted__pCubeShape21 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:utilities_shelves|living_room_latest:pasted__polySurface6|living_room_latest:pasted__polySurfaceShape6 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:utilities_shelves|living_room_latest:pasted__polySurface6|living_room_latest:pasted__polySurfaceShape6 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:utilities_shelves|living_room_latest:pasted__polySurface6|living_room_latest:pasted__polySurfaceShape6 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:utilities_shelves|living_room_latest:pasted__pCube285|living_room_latest:pasted__pCubeShape285 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
@@ -25600,77 +28513,11 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:oven|living_room_latest:pasted__pCube162|living_room_latest:pasted__polySurfaceShape4 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:oven|living_room_latest:pasted__pCylinder19|living_room_latest:pasted__pCylinderShape19 
-		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
-		
-		1 |living_room_latest:oven|living_room_latest:pasted__pCylinder19|living_room_latest:pasted__pCylinderShape19 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:oven|living_room_latest:pasted__pCylinder19|living_room_latest:pasted__pCylinderShape19 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:oven|living_room_latest:pasted__pCylinder19|living_room_latest:pasted__pCylinderShape19 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:oven|living_room_latest:pasted__pCylinder18|living_room_latest:pasted__pCylinderShape18 
-		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
-		
-		1 |living_room_latest:oven|living_room_latest:pasted__pCylinder18|living_room_latest:pasted__pCylinderShape18 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:oven|living_room_latest:pasted__pCylinder18|living_room_latest:pasted__pCylinderShape18 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:oven|living_room_latest:pasted__pCylinder18|living_room_latest:pasted__pCylinderShape18 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:oven|living_room_latest:pasted__polySurface7|living_room_latest:pasted__polySurfaceShape7 
-		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
-		
-		1 |living_room_latest:oven|living_room_latest:pasted__polySurface7|living_room_latest:pasted__polySurfaceShape7 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:oven|living_room_latest:pasted__polySurface7|living_room_latest:pasted__polySurfaceShape7 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:oven|living_room_latest:pasted__polySurface7|living_room_latest:pasted__polySurfaceShape7 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:boiler|living_room_latest:pasted__pCylinder12|living_room_latest:pasted__pCylinderShape12 
-		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
-		
-		1 |living_room_latest:boiler|living_room_latest:pasted__pCylinder12|living_room_latest:pasted__pCylinderShape12 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:boiler|living_room_latest:pasted__pCylinder12|living_room_latest:pasted__pCylinderShape12 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:boiler|living_room_latest:pasted__pCylinder12|living_room_latest:pasted__pCylinderShape12 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:stove_metal|living_room_latest:pasted__polySurface5|living_room_latest:pasted__polySurfaceShape5 
-		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
-		
-		1 |living_room_latest:stove_metal|living_room_latest:pasted__polySurface5|living_room_latest:pasted__polySurfaceShape5 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:stove_metal|living_room_latest:pasted__polySurface5|living_room_latest:pasted__polySurfaceShape5 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:stove_metal|living_room_latest:pasted__polySurface5|living_room_latest:pasted__polySurfaceShape5 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:stove_metal|living_room_latest:pasted__polySurface6|living_room_latest:pasted__polySurfaceShape6 
-		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
-		
 		1 |living_room_latest:stove_metal|living_room_latest:pasted__polySurface6|living_room_latest:pasted__polySurfaceShape6 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
 		1 |living_room_latest:stove_metal|living_room_latest:pasted__polySurface6|living_room_latest:pasted__polySurfaceShape6 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:stove_metal|living_room_latest:pasted__polySurface6|living_room_latest:pasted__polySurfaceShape6 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:stove_metal|living_room_latest:pasted__pCylinder11|living_room_latest:pasted__pCylinderShape11 
-		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
-		
-		1 |living_room_latest:stove_metal|living_room_latest:pasted__pCylinder11|living_room_latest:pasted__pCylinderShape11 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:stove_metal|living_room_latest:pasted__pCylinder11|living_room_latest:pasted__pCylinderShape11 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:stove_metal|living_room_latest:pasted__pCylinder11|living_room_latest:pasted__pCylinderShape11 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:stove_metal|living_room_latest:pasted__pCylinder11|living_room_latest:pasted__pCylinder10|living_room_latest:pasted__pCylinderShape10 
-		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
-		
-		1 |living_room_latest:stove_metal|living_room_latest:pasted__pCylinder11|living_room_latest:pasted__pCylinder10|living_room_latest:pasted__pCylinderShape10 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:stove_metal|living_room_latest:pasted__pCylinder11|living_room_latest:pasted__pCylinder10|living_room_latest:pasted__pCylinderShape10 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:stove_metal|living_room_latest:pasted__pCylinder11|living_room_latest:pasted__pCylinder10|living_room_latest:pasted__pCylinderShape10 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:pCube179|living_room_latest:pCubeShape179 "VisibleInIndirect" 
 		"VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
@@ -26198,9 +29045,487 @@ createNode reference -n "livingroom_shading_latestRN";
 		"reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:pCube229|living_room_latest:polySurfaceShape308 "furNameSpace" 
 		"fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_1|living_room_latest:pasted__polySurfaceShape1 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_1|living_room_latest:pasted__polySurfaceShape1 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_1|living_room_latest:pasted__polySurfaceShape1 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_2|living_room_latest:pasted__polySurfaceShape1 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_2|living_room_latest:pasted__polySurfaceShape1 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_2|living_room_latest:pasted__polySurfaceShape1 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_3|living_room_latest:pasted__polySurfaceShape1 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_3|living_room_latest:pasted__polySurfaceShape1 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_3|living_room_latest:pasted__polySurfaceShape1 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_4|living_room_latest:pasted__polySurfaceShape1 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_4|living_room_latest:pasted__polySurfaceShape1 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_4|living_room_latest:pasted__polySurfaceShape1 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_5|living_room_latest:pasted__polySurfaceShape1 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_5|living_room_latest:pasted__polySurfaceShape1 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_5|living_room_latest:pasted__polySurfaceShape1 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_6|living_room_latest:pasted__polySurfaceShape1 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_6|living_room_latest:pasted__polySurfaceShape1 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_6|living_room_latest:pasted__polySurfaceShape1 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_7|living_room_latest:pasted__polySurfaceShape1 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_7|living_room_latest:pasted__polySurfaceShape1 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_7|living_room_latest:pasted__polySurfaceShape1 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_8|living_room_latest:pasted__polySurfaceShape1 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_8|living_room_latest:pasted__polySurfaceShape1 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_8|living_room_latest:pasted__polySurfaceShape1 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_9|living_room_latest:pasted__polySurfaceShape1 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_9|living_room_latest:pasted__polySurfaceShape1 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_9|living_room_latest:pasted__polySurfaceShape1 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_10|living_room_latest:pasted__polySurfaceShape1 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_10|living_room_latest:pasted__polySurfaceShape1 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_10|living_room_latest:pasted__polySurfaceShape1 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_8|living_room_latest:polySurfaceShape2 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_8|living_room_latest:polySurfaceShape2 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_8|living_room_latest:polySurfaceShape2 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:vent_door|living_room_latest:polySurfaceShape1 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:vent_door|living_room_latest:polySurfaceShape1 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:vent_door|living_room_latest:polySurfaceShape1 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_9|living_room_latest:polySurfaceShape7 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_9|living_room_latest:polySurfaceShape7 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_9|living_room_latest:polySurfaceShape7 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_12|living_room_latest:polySurfaceShape10 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_12|living_room_latest:polySurfaceShape10 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_12|living_room_latest:polySurfaceShape10 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_11|living_room_latest:polySurfaceShape9 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_11|living_room_latest:polySurfaceShape9 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_11|living_room_latest:polySurfaceShape9 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_10|living_room_latest:polySurfaceShape8 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_10|living_room_latest:polySurfaceShape8 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_10|living_room_latest:polySurfaceShape8 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_7|living_room_latest:polySurfaceShape1 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_7|living_room_latest:polySurfaceShape1 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_7|living_room_latest:polySurfaceShape1 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_1|living_room_latest:polySurfaceShape8 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_1|living_room_latest:polySurfaceShape8 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_1|living_room_latest:polySurfaceShape8 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_5|living_room_latest:polySurfaceShape9 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_5|living_room_latest:polySurfaceShape9 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_5|living_room_latest:polySurfaceShape9 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_6|living_room_latest:polySurfaceShape10 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_6|living_room_latest:polySurfaceShape10 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_6|living_room_latest:polySurfaceShape10 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_2|living_room_latest:polySurfaceShape7 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_2|living_room_latest:polySurfaceShape7 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_2|living_room_latest:polySurfaceShape7 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_4|living_room_latest:polySurfaceShape9 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_4|living_room_latest:polySurfaceShape9 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_4|living_room_latest:polySurfaceShape9 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_3|living_room_latest:polySurfaceShape8 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_3|living_room_latest:polySurfaceShape8 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_3|living_room_latest:polySurfaceShape8 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube121|living_room_latest:polySurfaceShape4 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube121|living_room_latest:polySurfaceShape4 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube121|living_room_latest:polySurfaceShape4 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube120|living_room_latest:polySurfaceShape14 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube120|living_room_latest:polySurfaceShape14 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube120|living_room_latest:polySurfaceShape14 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube119|living_room_latest:polySurfaceShape4 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube119|living_room_latest:polySurfaceShape4 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube119|living_room_latest:polySurfaceShape4 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube118|living_room_latest:polySurfaceShape4 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube118|living_room_latest:polySurfaceShape4 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube118|living_room_latest:polySurfaceShape4 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube117|living_room_latest:polySurfaceShape4 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube117|living_room_latest:polySurfaceShape4 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube117|living_room_latest:polySurfaceShape4 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube116|living_room_latest:polySurfaceShape4 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube116|living_room_latest:polySurfaceShape4 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube116|living_room_latest:polySurfaceShape4 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube115|living_room_latest:polySurfaceShape14 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube115|living_room_latest:polySurfaceShape14 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube115|living_room_latest:polySurfaceShape14 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube114|living_room_latest:polySurfaceShape14 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube114|living_room_latest:polySurfaceShape14 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube114|living_room_latest:polySurfaceShape14 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube15|living_room_latest:polySurfaceShape10 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube15|living_room_latest:polySurfaceShape10 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube15|living_room_latest:polySurfaceShape10 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube14|living_room_latest:polySurfaceShape7 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube14|living_room_latest:polySurfaceShape7 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube14|living_room_latest:polySurfaceShape7 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube13|living_room_latest:polySurfaceShape8 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube13|living_room_latest:polySurfaceShape8 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube13|living_room_latest:polySurfaceShape8 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube12|living_room_latest:polySurfaceShape5 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube12|living_room_latest:polySurfaceShape5 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube12|living_room_latest:polySurfaceShape5 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube11|living_room_latest:polySurfaceShape6 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube11|living_room_latest:polySurfaceShape6 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube11|living_room_latest:polySurfaceShape6 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube10|living_room_latest:polySurfaceShape3 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube10|living_room_latest:polySurfaceShape3 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube10|living_room_latest:polySurfaceShape3 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube9|living_room_latest:polySurfaceShape4 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube9|living_room_latest:polySurfaceShape4 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube9|living_room_latest:polySurfaceShape4 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube7|living_room_latest:polySurfaceShape2 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube7|living_room_latest:polySurfaceShape2 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube7|living_room_latest:polySurfaceShape2 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube5|living_room_latest:polySurfaceShape12 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube5|living_room_latest:polySurfaceShape12 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube5|living_room_latest:polySurfaceShape12 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube4|living_room_latest:polySurfaceShape13 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube4|living_room_latest:polySurfaceShape13 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube4|living_room_latest:polySurfaceShape13 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube3|living_room_latest:polySurfaceShape14 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube3|living_room_latest:polySurfaceShape14 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube3|living_room_latest:polySurfaceShape14 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCube319|living_room_latest:pasted__polySurfaceShape46 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCube319|living_room_latest:pasted__polySurfaceShape46 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCube319|living_room_latest:pasted__polySurfaceShape46 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCube321|living_room_latest:pasted__polySurfaceShape46 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCube321|living_room_latest:pasted__polySurfaceShape46 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCube321|living_room_latest:pasted__polySurfaceShape46 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCylinder94|living_room_latest:pasted__polySurfaceShape45 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCylinder94|living_room_latest:pasted__polySurfaceShape45 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCylinder94|living_room_latest:pasted__polySurfaceShape45 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCube316|living_room_latest:pasted__polySurfaceShape46 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCube316|living_room_latest:pasted__polySurfaceShape46 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCube316|living_room_latest:pasted__polySurfaceShape46 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCube315|living_room_latest:pasted__polySurfaceShape46 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCube315|living_room_latest:pasted__polySurfaceShape46 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCube315|living_room_latest:pasted__polySurfaceShape46 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCube314|living_room_latest:pasted__polySurfaceShape46 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCube314|living_room_latest:pasted__polySurfaceShape46 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCube314|living_room_latest:pasted__polySurfaceShape46 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCube318|living_room_latest:pasted__polySurfaceShape46 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCube318|living_room_latest:pasted__polySurfaceShape46 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCube318|living_room_latest:pasted__polySurfaceShape46 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pPipe3|living_room_latest:pasted__polySurfaceShape44 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pPipe3|living_room_latest:pasted__polySurfaceShape44 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pPipe3|living_room_latest:pasted__polySurfaceShape44 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:left_washing_machine|living_room_latest:pasted__pCube309|living_room_latest:pasted__polySurfaceShape46 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:left_washing_machine|living_room_latest:pasted__pCube309|living_room_latest:pasted__polySurfaceShape46 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:left_washing_machine|living_room_latest:pasted__pCube309|living_room_latest:pasted__polySurfaceShape46 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:left_washing_machine|living_room_latest:pasted__pCube308|living_room_latest:pasted__polySurfaceShape46 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:left_washing_machine|living_room_latest:pasted__pCube308|living_room_latest:pasted__polySurfaceShape46 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:left_washing_machine|living_room_latest:pasted__pCube308|living_room_latest:pasted__polySurfaceShape46 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:oven|living_room_latest:pasted__pCube162|living_room_latest:pasted__polySurfaceShape4 
+		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
+		
+		1 |living_room_latest:oven|living_room_latest:pasted__pCube162|living_room_latest:pasted__polySurfaceShape4 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:oven|living_room_latest:pasted__pCube162|living_room_latest:pasted__polySurfaceShape4 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:oven|living_room_latest:pasted__pCube162|living_room_latest:pasted__polySurfaceShape4 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:oven|living_room_latest:pasted__pCylinder19|living_room_latest:pasted__pCylinderShape19 
+		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
+		
+		1 |living_room_latest:oven|living_room_latest:pasted__pCylinder19|living_room_latest:pasted__pCylinderShape19 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:oven|living_room_latest:pasted__pCylinder19|living_room_latest:pasted__pCylinderShape19 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:oven|living_room_latest:pasted__pCylinder19|living_room_latest:pasted__pCylinderShape19 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:oven|living_room_latest:pasted__pCylinder18|living_room_latest:pasted__pCylinderShape18 
+		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
+		
+		1 |living_room_latest:oven|living_room_latest:pasted__pCylinder18|living_room_latest:pasted__pCylinderShape18 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:oven|living_room_latest:pasted__pCylinder18|living_room_latest:pasted__pCylinderShape18 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:oven|living_room_latest:pasted__pCylinder18|living_room_latest:pasted__pCylinderShape18 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:oven|living_room_latest:pasted__polySurface7|living_room_latest:pasted__polySurfaceShape7 
+		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
+		
+		1 |living_room_latest:oven|living_room_latest:pasted__polySurface7|living_room_latest:pasted__polySurfaceShape7 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:oven|living_room_latest:pasted__polySurface7|living_room_latest:pasted__polySurfaceShape7 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:oven|living_room_latest:pasted__polySurface7|living_room_latest:pasted__polySurfaceShape7 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:oven|living_room_latest:pasted__pPlane4|living_room_latest:pasted__pPlaneShape4 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:oven|living_room_latest:pasted__pPlane4|living_room_latest:pasted__pPlaneShape4 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:oven|living_room_latest:pasted__pPlane4|living_room_latest:pasted__pPlaneShape4 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:boiler|living_room_latest:pasted__pCylinder12|living_room_latest:pasted__pCylinderShape12 
+		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
+		
+		1 |living_room_latest:boiler|living_room_latest:pasted__pCylinder12|living_room_latest:pasted__pCylinderShape12 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:boiler|living_room_latest:pasted__pCylinder12|living_room_latest:pasted__pCylinderShape12 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:boiler|living_room_latest:pasted__pCylinder12|living_room_latest:pasted__pCylinderShape12 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:stove_metal|living_room_latest:pasted__polySurface5|living_room_latest:pasted__polySurfaceShape5 
+		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
+		
+		1 |living_room_latest:stove_metal|living_room_latest:pasted__polySurface5|living_room_latest:pasted__polySurfaceShape5 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:stove_metal|living_room_latest:pasted__polySurface5|living_room_latest:pasted__polySurfaceShape5 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:stove_metal|living_room_latest:pasted__polySurface5|living_room_latest:pasted__polySurfaceShape5 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:stove_metal|living_room_latest:pasted__polySurface6|living_room_latest:pasted__polySurfaceShape6 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:stove_metal|living_room_latest:pasted__polySurface6|living_room_latest:pasted__polySurfaceShape6 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:stove_metal|living_room_latest:pasted__polySurface6|living_room_latest:pasted__polySurfaceShape6 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:stove_metal|living_room_latest:pasted__polySurface6|living_room_latest:pasted__polySurfaceShape6 
+		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
+		
+		1 |living_room_latest:stove_metal|living_room_latest:pasted__pCylinder11|living_room_latest:pasted__pCylinderShape11 
+		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
+		
+		1 |living_room_latest:stove_metal|living_room_latest:pasted__pCylinder11|living_room_latest:pasted__pCylinderShape11 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:stove_metal|living_room_latest:pasted__pCylinder11|living_room_latest:pasted__pCylinderShape11 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:stove_metal|living_room_latest:pasted__pCylinder11|living_room_latest:pasted__pCylinderShape11 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:stove_metal|living_room_latest:pasted__pCylinder11|living_room_latest:pasted__pCylinder10|living_room_latest:pasted__pCylinderShape10 
+		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
+		
+		1 |living_room_latest:stove_metal|living_room_latest:pasted__pCylinder11|living_room_latest:pasted__pCylinder10|living_room_latest:pasted__pCylinderShape10 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:stove_metal|living_room_latest:pasted__pCylinder11|living_room_latest:pasted__pCylinder10|living_room_latest:pasted__pCylinderShape10 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:stove_metal|living_room_latest:pasted__pCylinder11|living_room_latest:pasted__pCylinder10|living_room_latest:pasted__pCylinderShape10 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:side_table:pCube92|living_room_latest:side_table:pCube2|living_room_latest:side_table:polySurfaceShape10 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:side_table:pCube92|living_room_latest:side_table:pCube2|living_room_latest:side_table:polySurfaceShape10 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:side_table:pCube92|living_room_latest:side_table:pCube2|living_room_latest:side_table:polySurfaceShape10 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:pCube92|living_room_latest:pCube2|living_room_latest:polySurfaceShape10 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:pCube92|living_room_latest:pCube2|living_room_latest:polySurfaceShape10 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:pCube92|living_room_latest:pCube2|living_room_latest:polySurfaceShape10 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:tissue_box1|living_room_latest:tissue|living_room_latest:tissueShape 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
+		1 |living_room_latest:pCube223|living_room_latest:polySurfaceShape305 "surfaceReference" 
+		"sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:pCube223|living_room_latest:polySurfaceShape305 "referenceFile" 
+		"reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:pCube223|living_room_latest:polySurfaceShape305 "furNameSpace" 
+		"fns" " -ci 1 -h 1 -dt \"string\""
+		1 living_room_latest:pasted__file8 "proceduralTexDefaultRes" "proceduralTexDefaultRes" 
+		" -ci 1 -dv 512 -min 256 -max 4096 -smn 8 -smx 8192 -at \"short\""
+		1 living_room_latest:pasted__file8 "proceduralTexMaxRes" "proceduralTexMaxRes" 
+		" -ci 1 -dv 1024 -min 256 -max 4096 -smn 8 -smx 8192 -at \"short\""
+		1 living_room_latest:pasted__file8 "ReduceTextureInCuda" "ReduceTextureInCuda" 
+		" -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
+		1 living_room_latest:pasted__file8 "onlineUpdate" "onlineUpdate" " -ci 1 -min 0 -max 1 -at \"bool\""
+		
+		1 living_room_latest:pasted__file8 "compressColor" "compressColor" " -ci 1 -dv 1 -min 0 -max 1 -at \"bool\""
+		
+		1 living_room_latest:vase_flowers:ramp10 "proceduralTexDefaultRes" "proceduralTexDefaultRes" 
+		" -ci 1 -dv 512 -min 256 -max 4096 -smn 8 -smx 8192 -at \"short\""
+		1 living_room_latest:vase_flowers:ramp10 "proceduralTexMaxRes" "proceduralTexMaxRes" 
+		" -ci 1 -dv 1024 -min 256 -max 4096 -smn 8 -smx 8192 -at \"short\""
+		1 living_room_latest:vase_flowers:ramp10 "ReduceTextureInCuda" "ReduceTextureInCuda" 
+		" -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
+		1 living_room_latest:vase_flowers:ramp10 "onlineUpdate" "onlineUpdate" " -ci 1 -min 0 -max 1 -at \"bool\""
+		
+		1 living_room_latest:vase_flowers:ramp10 "compressColor" "compressColor" 
+		" -ci 1 -dv 1 -min 0 -max 1 -at \"bool\""
+		1 living_room_latest:vase_flowers:daisySmall4LeafShader "transparencyTexAlpha" 
+		"transparencyTexAlpha" " -ci 1 -min 0 -max 2 -en \"auto check from texture:set to no:set to yes\" -at \"enum\""
+		
+		1 living_room_latest:vase_flowers:ramp11 "proceduralTexDefaultRes" "proceduralTexDefaultRes" 
+		" -ci 1 -dv 512 -min 256 -max 4096 -smn 8 -smx 8192 -at \"short\""
+		1 living_room_latest:vase_flowers:ramp11 "proceduralTexMaxRes" "proceduralTexMaxRes" 
+		" -ci 1 -dv 1024 -min 256 -max 4096 -smn 8 -smx 8192 -at \"short\""
+		1 living_room_latest:vase_flowers:ramp11 "ReduceTextureInCuda" "ReduceTextureInCuda" 
+		" -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
+		1 living_room_latest:vase_flowers:ramp11 "onlineUpdate" "onlineUpdate" " -ci 1 -min 0 -max 1 -at \"bool\""
+		
+		1 living_room_latest:vase_flowers:ramp11 "compressColor" "compressColor" 
+		" -ci 1 -dv 1 -min 0 -max 1 -at \"bool\""
+		1 living_room_latest:vase_flowers:file5 "proceduralTexDefaultRes" "proceduralTexDefaultRes" 
+		" -ci 1 -dv 256 -min 256 -max 4096 -smn 8 -smx 8192 -at \"short\""
+		1 living_room_latest:vase_flowers:file5 "proceduralTexMaxRes" "proceduralTexMaxRes" 
+		" -ci 1 -dv 1024 -min 256 -max 4096 -smn 8 -smx 8192 -at \"short\""
+		1 living_room_latest:vase_flowers:file5 "ReduceTextureInCuda" "ReduceTextureInCuda" 
+		" -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
+		1 living_room_latest:vase_flowers:file5 "onlineUpdate" "onlineUpdate" " -ci 1 -min 0 -max 1 -at \"bool\""
+		
+		1 living_room_latest:vase_flowers:file5 "compressColor" "compressColor" " -ci 1 -dv 1 -min 0 -max 1 -at \"bool\""
+		
+		1 living_room_latest:vase_flowers:multiplyDivide12 "proceduralTexDefaultRes" 
+		"proceduralTexDefaultRes" " -ci 1 -dv 256 -min 256 -max 4096 -smn 8 -smx 8192 -at \"short\""
+		
+		1 living_room_latest:vase_flowers:multiplyDivide12 "proceduralTexMaxRes" 
+		"proceduralTexMaxRes" " -ci 1 -dv 1024 -min 256 -max 4096 -smn 8 -smx 8192 -at \"short\""
+		
+		1 living_room_latest:vase_flowers:multiplyDivide12 "ReduceTextureInCuda" 
+		"ReduceTextureInCuda" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
+		1 living_room_latest:vase_flowers:multiplyDivide12 "onlineUpdate" "onlineUpdate" 
+		" -ci 1 -min 0 -max 1 -at \"bool\""
+		1 living_room_latest:vase_flowers:multiplyDivide12 "compressColor" "compressColor" 
+		" -ci 1 -dv 1 -min 0 -max 1 -at \"bool\""
 		2 "|living_room_latest:bed_pillow|living_room_latest:bed_pillowShape" "VisibleInIndirect" 
 		" 1"
 		2 "|living_room_latest:bed_mattress|living_room_latest:bed_mattressShape" 
@@ -26417,22 +29742,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCube8|living_room_latest:pCubeShape8" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:pCube92|living_room_latest:pCylinder4|living_room_latest:pCylinderShape4" 
-		"VisibleInIndirect" " 1"
-		2 "|living_room_latest:pCube92|living_room_latest:pCylinder4|living_room_latest:pCylinderShape4" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:pCube92|living_room_latest:pCylinder4|living_room_latest:pCylinderShape4" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:pCube92|living_room_latest:pCylinder4|living_room_latest:pCylinderShape4" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCylinder9|living_room_latest:pCylinderShape9" 
 		"VisibleInIndirect" " 1"
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_lower_unit|living_room_latest:pCylinder9|living_room_latest:pCylinderShape9" 
@@ -26510,13 +29819,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube106|living_room_latest:pCubeShape106" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:pCube92|living_room_latest:polySurface4|living_room_latest:polySurfaceShape4" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:pCube92|living_room_latest:polySurface4|living_room_latest:polySurfaceShape4" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:pCube92|living_room_latest:polySurface4|living_room_latest:polySurfaceShape4" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube105|living_room_latest:pCubeShape105" 
 		"VisibleInIndirect" " 1"
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube105|living_room_latest:pCubeShape105" 
@@ -26525,13 +29827,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube105|living_room_latest:pCubeShape105" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:pCube92|living_room_latest:polySurface4|living_room_latest:polySurfaceShape4" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:pCube92|living_room_latest:polySurface4|living_room_latest:polySurfaceShape4" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:pCube92|living_room_latest:polySurface4|living_room_latest:polySurfaceShape4" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCylinder87|living_room_latest:pCylinderShape87" 
 		"VisibleInIndirect" " 1"
@@ -26584,13 +29879,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube101|living_room_latest:pCubeShape101" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:pCube92|living_room_latest:polySurface4|living_room_latest:polySurfaceShape4" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:pCube92|living_room_latest:polySurface4|living_room_latest:polySurfaceShape4" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:pCube92|living_room_latest:polySurface4|living_room_latest:polySurfaceShape4" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCylinder83|living_room_latest:pCylinderShape83" 
 		"VisibleInIndirect" " 1"
@@ -27647,11 +30935,345 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		2 "|living_room_latest:pCube229|living_room_latest:polySurfaceShape308" "furNameSpace" 
 		" -type \"string\" \"living_room_latest\""
+		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_1|living_room_latest:pasted__polySurfaceShape1" 
+		"surfaceReference" " 1"
+		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_1|living_room_latest:pasted__polySurfaceShape1" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_1|living_room_latest:pasted__polySurfaceShape1" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_2|living_room_latest:pasted__polySurfaceShape1" 
+		"surfaceReference" " 1"
+		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_2|living_room_latest:pasted__polySurfaceShape1" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_2|living_room_latest:pasted__polySurfaceShape1" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_3|living_room_latest:pasted__polySurfaceShape1" 
+		"surfaceReference" " 1"
+		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_3|living_room_latest:pasted__polySurfaceShape1" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_3|living_room_latest:pasted__polySurfaceShape1" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_4|living_room_latest:pasted__polySurfaceShape1" 
+		"surfaceReference" " 1"
+		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_4|living_room_latest:pasted__polySurfaceShape1" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_4|living_room_latest:pasted__polySurfaceShape1" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_5|living_room_latest:pasted__polySurfaceShape1" 
+		"surfaceReference" " 1"
+		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_5|living_room_latest:pasted__polySurfaceShape1" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_5|living_room_latest:pasted__polySurfaceShape1" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_6|living_room_latest:pasted__polySurfaceShape1" 
+		"surfaceReference" " 1"
+		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_6|living_room_latest:pasted__polySurfaceShape1" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_6|living_room_latest:pasted__polySurfaceShape1" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_7|living_room_latest:pasted__polySurfaceShape1" 
+		"surfaceReference" " 1"
+		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_7|living_room_latest:pasted__polySurfaceShape1" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_7|living_room_latest:pasted__polySurfaceShape1" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_8|living_room_latest:pasted__polySurfaceShape1" 
+		"surfaceReference" " 1"
+		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_8|living_room_latest:pasted__polySurfaceShape1" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_8|living_room_latest:pasted__polySurfaceShape1" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_9|living_room_latest:pasted__polySurfaceShape1" 
+		"surfaceReference" " 1"
+		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_9|living_room_latest:pasted__polySurfaceShape1" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_9|living_room_latest:pasted__polySurfaceShape1" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_10|living_room_latest:pasted__polySurfaceShape1" 
+		"surfaceReference" " 1"
+		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_10|living_room_latest:pasted__polySurfaceShape1" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_10|living_room_latest:pasted__polySurfaceShape1" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_9|living_room_latest:polySurfaceShape7" 
+		"surfaceReference" " 1"
+		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_9|living_room_latest:polySurfaceShape7" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_9|living_room_latest:polySurfaceShape7" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_12|living_room_latest:polySurfaceShape10" 
+		"surfaceReference" " 1"
+		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_12|living_room_latest:polySurfaceShape10" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_12|living_room_latest:polySurfaceShape10" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_10|living_room_latest:polySurfaceShape8" 
+		"surfaceReference" " 1"
+		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_10|living_room_latest:polySurfaceShape8" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_10|living_room_latest:polySurfaceShape8" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_1|living_room_latest:polySurfaceShape8" 
+		"surfaceReference" " 1"
+		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_1|living_room_latest:polySurfaceShape8" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_1|living_room_latest:polySurfaceShape8" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_6|living_room_latest:polySurfaceShape10" 
+		"surfaceReference" " 1"
+		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_6|living_room_latest:polySurfaceShape10" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_6|living_room_latest:polySurfaceShape10" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_2|living_room_latest:polySurfaceShape7" 
+		"surfaceReference" " 1"
+		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_2|living_room_latest:polySurfaceShape7" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_2|living_room_latest:polySurfaceShape7" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_3|living_room_latest:polySurfaceShape8" 
+		"surfaceReference" " 1"
+		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_3|living_room_latest:polySurfaceShape8" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_3|living_room_latest:polySurfaceShape8" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube120|living_room_latest:polySurfaceShape14" 
+		"surfaceReference" " 1"
+		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube120|living_room_latest:polySurfaceShape14" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube120|living_room_latest:polySurfaceShape14" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube115|living_room_latest:polySurfaceShape14" 
+		"surfaceReference" " 1"
+		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube115|living_room_latest:polySurfaceShape14" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube115|living_room_latest:polySurfaceShape14" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube114|living_room_latest:polySurfaceShape14" 
+		"surfaceReference" " 1"
+		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube114|living_room_latest:polySurfaceShape14" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube114|living_room_latest:polySurfaceShape14" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube15|living_room_latest:polySurfaceShape10" 
+		"surfaceReference" " 1"
+		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube15|living_room_latest:polySurfaceShape10" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube15|living_room_latest:polySurfaceShape10" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube14|living_room_latest:polySurfaceShape7" 
+		"surfaceReference" " 1"
+		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube14|living_room_latest:polySurfaceShape7" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube14|living_room_latest:polySurfaceShape7" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube13|living_room_latest:polySurfaceShape8" 
+		"surfaceReference" " 1"
+		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube13|living_room_latest:polySurfaceShape8" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube13|living_room_latest:polySurfaceShape8" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube12|living_room_latest:polySurfaceShape5" 
+		"surfaceReference" " 1"
+		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube12|living_room_latest:polySurfaceShape5" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube12|living_room_latest:polySurfaceShape5" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube11|living_room_latest:polySurfaceShape6" 
+		"surfaceReference" " 1"
+		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube11|living_room_latest:polySurfaceShape6" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube11|living_room_latest:polySurfaceShape6" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube4|living_room_latest:polySurfaceShape13" 
+		"surfaceReference" " 1"
+		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube4|living_room_latest:polySurfaceShape13" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube4|living_room_latest:polySurfaceShape13" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube3|living_room_latest:polySurfaceShape14" 
+		"surfaceReference" " 1"
+		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube3|living_room_latest:polySurfaceShape14" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube3|living_room_latest:polySurfaceShape14" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube319|living_room_latest:pasted__polySurfaceShape46" 
+		"surfaceReference" " 1"
+		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube319|living_room_latest:pasted__polySurfaceShape46" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube319|living_room_latest:pasted__polySurfaceShape46" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube321|living_room_latest:pasted__polySurfaceShape46" 
+		"surfaceReference" " 1"
+		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube321|living_room_latest:pasted__polySurfaceShape46" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube321|living_room_latest:pasted__polySurfaceShape46" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCylinder94|living_room_latest:pasted__polySurfaceShape45" 
+		"surfaceReference" " 1"
+		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCylinder94|living_room_latest:pasted__polySurfaceShape45" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCylinder94|living_room_latest:pasted__polySurfaceShape45" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube316|living_room_latest:pasted__polySurfaceShape46" 
+		"surfaceReference" " 1"
+		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube316|living_room_latest:pasted__polySurfaceShape46" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube316|living_room_latest:pasted__polySurfaceShape46" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube315|living_room_latest:pasted__polySurfaceShape46" 
+		"surfaceReference" " 1"
+		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube315|living_room_latest:pasted__polySurfaceShape46" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube315|living_room_latest:pasted__polySurfaceShape46" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube314|living_room_latest:pasted__polySurfaceShape46" 
+		"surfaceReference" " 1"
+		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube314|living_room_latest:pasted__polySurfaceShape46" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube314|living_room_latest:pasted__polySurfaceShape46" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube318|living_room_latest:pasted__polySurfaceShape46" 
+		"surfaceReference" " 1"
+		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube318|living_room_latest:pasted__polySurfaceShape46" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube318|living_room_latest:pasted__polySurfaceShape46" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pPipe3|living_room_latest:pasted__polySurfaceShape44" 
+		"surfaceReference" " 1"
+		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pPipe3|living_room_latest:pasted__polySurfaceShape44" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pPipe3|living_room_latest:pasted__polySurfaceShape44" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|living_room_latest:left_washing_machine|living_room_latest:pasted__pCube309|living_room_latest:pasted__polySurfaceShape46" 
+		"surfaceReference" " 1"
+		2 "|living_room_latest:left_washing_machine|living_room_latest:pasted__pCube309|living_room_latest:pasted__polySurfaceShape46" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:left_washing_machine|living_room_latest:pasted__pCube309|living_room_latest:pasted__polySurfaceShape46" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|living_room_latest:left_washing_machine|living_room_latest:pasted__pCube308|living_room_latest:pasted__polySurfaceShape46" 
+		"surfaceReference" " 1"
+		2 "|living_room_latest:left_washing_machine|living_room_latest:pasted__pCube308|living_room_latest:pasted__polySurfaceShape46" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:left_washing_machine|living_room_latest:pasted__pCube308|living_room_latest:pasted__polySurfaceShape46" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|living_room_latest:oven|living_room_latest:pasted__pCube162|living_room_latest:pasted__polySurfaceShape4" 
+		"VisibleInIndirect" " 1"
+		2 "|living_room_latest:oven|living_room_latest:pasted__pCube162|living_room_latest:pasted__polySurfaceShape4" 
+		"surfaceReference" " 1"
+		2 "|living_room_latest:oven|living_room_latest:pasted__pCube162|living_room_latest:pasted__polySurfaceShape4" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:oven|living_room_latest:pasted__pCube162|living_room_latest:pasted__polySurfaceShape4" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|living_room_latest:oven|living_room_latest:pasted__pPlane4|living_room_latest:pasted__pPlaneShape4" 
+		"surfaceReference" " 1"
+		2 "|living_room_latest:oven|living_room_latest:pasted__pPlane4|living_room_latest:pasted__pPlaneShape4" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:oven|living_room_latest:pasted__pPlane4|living_room_latest:pasted__pPlaneShape4" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCube2|living_room_latest:side_table:polySurfaceShape10" 
+		"surfaceReference" " 1"
+		2 "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCube2|living_room_latest:side_table:polySurfaceShape10" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCube2|living_room_latest:side_table:polySurfaceShape10" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|living_room_latest:pCube92|living_room_latest:pCube2|living_room_latest:polySurfaceShape10" 
+		"surfaceReference" " 1"
+		2 "|living_room_latest:pCube92|living_room_latest:pCube2|living_room_latest:polySurfaceShape10" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:pCube92|living_room_latest:pCube2|living_room_latest:polySurfaceShape10" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
+		2 "|living_room_latest:pCube223|living_room_latest:polySurfaceShape305" "surfaceReference" 
+		" 1"
+		2 "|living_room_latest:pCube223|living_room_latest:polySurfaceShape305" "referenceFile" 
+		" -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:pCube223|living_room_latest:polySurfaceShape305" "furNameSpace" 
+		" -type \"string\" \"living_room_latest\""
+		2 "living_room_latest:pasted__file8" "proceduralTexDefaultRes" " 512"
+		2 "living_room_latest:pasted__file8" "proceduralTexMaxRes" " 1024"
+		2 "living_room_latest:pasted__file8" "ReduceTextureInCuda" " 1"
+		2 "living_room_latest:pasted__file8" "onlineUpdate" " 0"
+		2 "living_room_latest:pasted__file8" "compressColor" " 1"
+		2 "living_room_latest:vase_flowers:ramp10" "proceduralTexDefaultRes" " 512"
+		
+		2 "living_room_latest:vase_flowers:ramp10" "proceduralTexMaxRes" " 1024"
+		2 "living_room_latest:vase_flowers:ramp10" "ReduceTextureInCuda" " 1"
+		2 "living_room_latest:vase_flowers:ramp10" "onlineUpdate" " 0"
+		2 "living_room_latest:vase_flowers:ramp10" "compressColor" " 1"
+		2 "living_room_latest:vase_flowers:daisySmall4LeafShader" "transparencyTexAlpha" 
+		" 0"
+		2 "living_room_latest:vase_flowers:ramp11" "proceduralTexDefaultRes" " 512"
+		
+		2 "living_room_latest:vase_flowers:ramp11" "proceduralTexMaxRes" " 1024"
+		2 "living_room_latest:vase_flowers:ramp11" "ReduceTextureInCuda" " 1"
+		2 "living_room_latest:vase_flowers:ramp11" "onlineUpdate" " 0"
+		2 "living_room_latest:vase_flowers:ramp11" "compressColor" " 1"
+		2 "living_room_latest:vase_flowers:file5" "proceduralTexDefaultRes" " 256"
+		
+		2 "living_room_latest:vase_flowers:file5" "proceduralTexMaxRes" " 1024"
+		2 "living_room_latest:vase_flowers:file5" "ReduceTextureInCuda" " 1"
+		2 "living_room_latest:vase_flowers:file5" "onlineUpdate" " 0"
+		2 "living_room_latest:vase_flowers:file5" "compressColor" " 1"
+		2 "living_room_latest:vase_flowers:multiplyDivide12" "proceduralTexDefaultRes" 
+		" 256"
+		2 "living_room_latest:vase_flowers:multiplyDivide12" "proceduralTexMaxRes" 
+		" 1024"
+		2 "living_room_latest:vase_flowers:multiplyDivide12" "ReduceTextureInCuda" 
+		" 1"
+		2 "living_room_latest:vase_flowers:multiplyDivide12" "onlineUpdate" " 0"
+		2 "living_room_latest:vase_flowers:multiplyDivide12" "compressColor" " 1"
+		
 		3 "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape.instObjGroups" 
 		"livingroom_shading_latest_lambert7SG.dagSetMembers" "-na"
 		5 3 "livingroom_shading_latestRN" "|living_room_latest:coffee_table|living_room_latest:coffee_tableShape.instObjGroups" 
 		"livingroom_shading_latestRN.placeHolderList[1]" "livingroom_shading_latest_lambert7SG.dsm"
 		
+		5 4 "livingroom_shading_latestRN" "living_room_latest:vase_flowers:daisySmall4ShaderSG.dagSetMembers" 
+		"livingroom_shading_latestRN.placeHolderList[23]" ""
+		5 4 "livingroom_shading_latestRN" "living_room_latest:vase_flowers:daisySmall4LeafShaderSG.dagSetMembers" 
+		"livingroom_shading_latestRN.placeHolderList[33]" ""
 		"living_room_latest:taller_window_four_squares_latestRN1" 0
 		"living_room_latest:taller_window_four_squares_latestRN4" 50
 		1 |living_room_latest:taller_window_four_squares_latest8:taller_window|living_room_latest:taller_window_four_squares_latest8:polySurfaceShape1 
@@ -28028,11 +31650,11 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform3|living_room_latest:cat_robot:pCylinderShape16 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:pCylinder16|living_room_latest:cat_robot:polySurfaceShape4 
+		1 |living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:pCylinder16|living_room_latest:cat_robot:polySurfaceShape4 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:pCylinder16|living_room_latest:cat_robot:polySurfaceShape4 
+		1 |living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:pCylinder16|living_room_latest:cat_robot:polySurfaceShape4 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:pCylinder16|living_room_latest:cat_robot:polySurfaceShape4 
+		1 |living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:pCylinder16|living_room_latest:cat_robot:polySurfaceShape4 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform1|living_room_latest:cat_robot:bot1Shape 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
@@ -28040,11 +31662,11 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform1|living_room_latest:cat_robot:bot1Shape 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:bot1|living_room_latest:cat_robot:polySurfaceShape3 
+		1 |living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:bot1|living_room_latest:cat_robot:polySurfaceShape3 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:bot1|living_room_latest:cat_robot:polySurfaceShape3 
+		1 |living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:bot1|living_room_latest:cat_robot:polySurfaceShape3 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:bot1|living_room_latest:cat_robot:polySurfaceShape3 
+		1 |living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:bot1|living_room_latest:cat_robot:polySurfaceShape3 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform2|living_room_latest:cat_robot:top1Shape 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
@@ -28239,12 +31861,12 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform3|living_room_latest:cat_robot:pCylinderShape16" 
 		"furNameSpace" " -type \"string\" \"cat_robot\""
-		2 "|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:pCylinder16|living_room_latest:cat_robot:polySurfaceShape4" 
+		2 "|living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:pCylinder16|living_room_latest:cat_robot:polySurfaceShape4" 
 		"surfaceReference" " 1"
-		2 "|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:pCylinder16|living_room_latest:cat_robot:polySurfaceShape4" 
+		2 "|living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:pCylinder16|living_room_latest:cat_robot:polySurfaceShape4" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
 		
-		2 "|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:pCylinder16|living_room_latest:cat_robot:polySurfaceShape4" 
+		2 "|living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:pCylinder16|living_room_latest:cat_robot:polySurfaceShape4" 
 		"furNameSpace" " -type \"string\" \"cat_robot\""
 		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform1|living_room_latest:cat_robot:bot1Shape" 
 		"surfaceReference" " 1"
@@ -28253,12 +31875,12 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform1|living_room_latest:cat_robot:bot1Shape" 
 		"furNameSpace" " -type \"string\" \"cat_robot\""
-		2 "|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:bot1|living_room_latest:cat_robot:polySurfaceShape3" 
+		2 "|living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:bot1|living_room_latest:cat_robot:polySurfaceShape3" 
 		"surfaceReference" " 1"
-		2 "|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:bot1|living_room_latest:cat_robot:polySurfaceShape3" 
+		2 "|living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:bot1|living_room_latest:cat_robot:polySurfaceShape3" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cat_robot.ma\""
 		
-		2 "|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:bot1|living_room_latest:cat_robot:polySurfaceShape3" 
+		2 "|living_room_latest:cat_robot:cat_robot|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:bot1|living_room_latest:cat_robot:polySurfaceShape3" 
 		"furNameSpace" " -type \"string\" \"cat_robot\""
 		2 "|living_room_latest:cat_robotRNfosterParent1|living_room_latest:transform2|living_room_latest:cat_robot:top1Shape" 
 		"surfaceReference" " 1"
@@ -30157,7 +33779,7 @@ createNode reference -n "livingroom_shading_latestRN";
 		2 "living_room_latest:sofa_latest:sofaFile" "ReduceTextureInCuda" " 1"
 		2 "living_room_latest:sofa_latest:sofaFile" "onlineUpdate" " 0"
 		2 "living_room_latest:sofa_latest:sofaFile" "compressColor" " 1"
-		"livingroom_shading_latestRN" 60
+		"livingroom_shading_latestRN" 90
 		1 livingroom_shading_latest_file1 "proceduralTexDefaultRes" "proceduralTexDefaultRes" 
 		" -ci 1 -dv 512 -min 256 -max 4096 -smn 8 -smx 8192 -at \"short\""
 		1 livingroom_shading_latest_file1 "proceduralTexMaxRes" "proceduralTexMaxRes" 
@@ -30218,6 +33840,36 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		1 livingroom_shading_latest_file8 "compressColor" "compressColor" " -ci 1 -dv 1 -min 0 -max 1 -at \"bool\""
 		
+		1 livingroom_shading_latest_file9 "proceduralTexDefaultRes" "proceduralTexDefaultRes" 
+		" -ci 1 -dv 512 -min 256 -max 4096 -smn 8 -smx 8192 -at \"short\""
+		1 livingroom_shading_latest_file9 "proceduralTexMaxRes" "proceduralTexMaxRes" 
+		" -ci 1 -dv 1024 -min 256 -max 4096 -smn 8 -smx 8192 -at \"short\""
+		1 livingroom_shading_latest_file9 "ReduceTextureInCuda" "ReduceTextureInCuda" 
+		" -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
+		1 livingroom_shading_latest_file9 "onlineUpdate" "onlineUpdate" " -ci 1 -min 0 -max 1 -at \"bool\""
+		
+		1 livingroom_shading_latest_file9 "compressColor" "compressColor" " -ci 1 -dv 1 -min 0 -max 1 -at \"bool\""
+		
+		1 livingroom_shading_latest_file10 "proceduralTexDefaultRes" "proceduralTexDefaultRes" 
+		" -ci 1 -dv 512 -min 256 -max 4096 -smn 8 -smx 8192 -at \"short\""
+		1 livingroom_shading_latest_file10 "proceduralTexMaxRes" "proceduralTexMaxRes" 
+		" -ci 1 -dv 1024 -min 256 -max 4096 -smn 8 -smx 8192 -at \"short\""
+		1 livingroom_shading_latest_file10 "ReduceTextureInCuda" "ReduceTextureInCuda" 
+		" -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
+		1 livingroom_shading_latest_file10 "onlineUpdate" "onlineUpdate" " -ci 1 -min 0 -max 1 -at \"bool\""
+		
+		1 livingroom_shading_latest_file10 "compressColor" "compressColor" " -ci 1 -dv 1 -min 0 -max 1 -at \"bool\""
+		
+		1 livingroom_shading_latest_file3 "proceduralTexDefaultRes" "proceduralTexDefaultRes" 
+		" -ci 1 -dv 512 -min 256 -max 4096 -smn 8 -smx 8192 -at \"short\""
+		1 livingroom_shading_latest_file3 "proceduralTexMaxRes" "proceduralTexMaxRes" 
+		" -ci 1 -dv 1024 -min 256 -max 4096 -smn 8 -smx 8192 -at \"short\""
+		1 livingroom_shading_latest_file3 "ReduceTextureInCuda" "ReduceTextureInCuda" 
+		" -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
+		1 livingroom_shading_latest_file3 "onlineUpdate" "onlineUpdate" " -ci 1 -min 0 -max 1 -at \"bool\""
+		
+		1 livingroom_shading_latest_file3 "compressColor" "compressColor" " -ci 1 -dv 1 -min 0 -max 1 -at \"bool\""
+		
 		2 "livingroom_shading_latest_file1" "proceduralTexDefaultRes" " 512"
 		2 "livingroom_shading_latest_file1" "proceduralTexMaxRes" " 1024"
 		2 "livingroom_shading_latest_file1" "ReduceTextureInCuda" " 1"
@@ -30248,6 +33900,21 @@ createNode reference -n "livingroom_shading_latestRN";
 		2 "livingroom_shading_latest_file8" "ReduceTextureInCuda" " 1"
 		2 "livingroom_shading_latest_file8" "onlineUpdate" " 0"
 		2 "livingroom_shading_latest_file8" "compressColor" " 1"
+		2 "livingroom_shading_latest_file9" "proceduralTexDefaultRes" " 512"
+		2 "livingroom_shading_latest_file9" "proceduralTexMaxRes" " 1024"
+		2 "livingroom_shading_latest_file9" "ReduceTextureInCuda" " 1"
+		2 "livingroom_shading_latest_file9" "onlineUpdate" " 0"
+		2 "livingroom_shading_latest_file9" "compressColor" " 1"
+		2 "livingroom_shading_latest_file10" "proceduralTexDefaultRes" " 512"
+		2 "livingroom_shading_latest_file10" "proceduralTexMaxRes" " 1024"
+		2 "livingroom_shading_latest_file10" "ReduceTextureInCuda" " 1"
+		2 "livingroom_shading_latest_file10" "onlineUpdate" " 0"
+		2 "livingroom_shading_latest_file10" "compressColor" " 1"
+		2 "livingroom_shading_latest_file3" "proceduralTexDefaultRes" " 512"
+		2 "livingroom_shading_latest_file3" "proceduralTexMaxRes" " 1024"
+		2 "livingroom_shading_latest_file3" "ReduceTextureInCuda" " 1"
+		2 "livingroom_shading_latest_file3" "onlineUpdate" " 0"
+		2 "livingroom_shading_latest_file3" "compressColor" " 1"
 		"living_room_latest:cube_cushionRN" 6
 		1 |living_room_latest:cube_cushion:pCube1|living_room_latest:cube_cushion:pCubeShape1 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
@@ -30281,23 +33948,23 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:armchair_latest:armchair_frame|living_room_latest:armchair_latest:armchair_cushion|living_room_latest:armchair_latest:armchair_cushionShape 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:armchair_latest:armchair_frame|living_room_latest:armchair_latest:armchair_pillow_2|living_room_latest:armchair_latest:armchair_pillow_Shape2 
+		1 |living_room_latest:armchair_latest:armchair_frame|living_room_latest:armchair_latest:armchair_pillow_1|living_room_latest:armchair_latest:armchair_pillow_Shape1 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
-		1 |living_room_latest:armchair_latest:armchair_frame|living_room_latest:armchair_latest:armchair_pillow_2|living_room_latest:armchair_latest:armchair_pillow_Shape2 
+		1 |living_room_latest:armchair_latest:armchair_frame|living_room_latest:armchair_latest:armchair_pillow_1|living_room_latest:armchair_latest:armchair_pillow_Shape1 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:armchair_latest:armchair_frame|living_room_latest:armchair_latest:armchair_pillow_2|living_room_latest:armchair_latest:armchair_pillow_Shape2 
+		1 |living_room_latest:armchair_latest:armchair_frame|living_room_latest:armchair_latest:armchair_pillow_1|living_room_latest:armchair_latest:armchair_pillow_Shape1 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:armchair_latest:armchair_frame|living_room_latest:armchair_latest:armchair_pillow_2|living_room_latest:armchair_latest:armchair_pillow_Shape2 
+		1 |living_room_latest:armchair_latest:armchair_frame|living_room_latest:armchair_latest:armchair_pillow_1|living_room_latest:armchair_latest:armchair_pillow_Shape1 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:armchair_latest:armchair_frame|living_room_latest:armchair_latest:armchair_pillow_1|living_room_latest:armchair_latest:armchair_pillow_Shape1 
+		1 |living_room_latest:armchair_latest:armchair_frame|living_room_latest:armchair_latest:armchair_pillow_2|living_room_latest:armchair_latest:armchair_pillow_Shape2 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
-		1 |living_room_latest:armchair_latest:armchair_frame|living_room_latest:armchair_latest:armchair_pillow_1|living_room_latest:armchair_latest:armchair_pillow_Shape1 
+		1 |living_room_latest:armchair_latest:armchair_frame|living_room_latest:armchair_latest:armchair_pillow_2|living_room_latest:armchair_latest:armchair_pillow_Shape2 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:armchair_latest:armchair_frame|living_room_latest:armchair_latest:armchair_pillow_1|living_room_latest:armchair_latest:armchair_pillow_Shape1 
+		1 |living_room_latest:armchair_latest:armchair_frame|living_room_latest:armchair_latest:armchair_pillow_2|living_room_latest:armchair_latest:armchair_pillow_Shape2 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:armchair_latest:armchair_frame|living_room_latest:armchair_latest:armchair_pillow_1|living_room_latest:armchair_latest:armchair_pillow_Shape1 
+		1 |living_room_latest:armchair_latest:armchair_frame|living_room_latest:armchair_latest:armchair_pillow_2|living_room_latest:armchair_latest:armchair_pillow_Shape2 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 living_room_latest:armchair_latest:file6 "proceduralTexDefaultRes" "proceduralTexDefaultRes" 
 		" -ci 1 -dv 512 -min 256 -max 4096 -smn 8 -smx 8192 -at \"short\""
@@ -30347,23 +34014,23 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		2 "|living_room_latest:armchair_latest:armchair_frame|living_room_latest:armchair_latest:armchair_cushion|living_room_latest:armchair_latest:armchair_cushionShape" 
 		"furNameSpace" " -type \"string\" \"armchair_latest\""
-		2 "|living_room_latest:armchair_latest:armchair_frame|living_room_latest:armchair_latest:armchair_pillow_2|living_room_latest:armchair_latest:armchair_pillow_Shape2" 
+		2 "|living_room_latest:armchair_latest:armchair_frame|living_room_latest:armchair_latest:armchair_pillow_1|living_room_latest:armchair_latest:armchair_pillow_Shape1" 
 		"VisibleInIndirect" " 1"
-		2 "|living_room_latest:armchair_latest:armchair_frame|living_room_latest:armchair_latest:armchair_pillow_2|living_room_latest:armchair_latest:armchair_pillow_Shape2" 
+		2 "|living_room_latest:armchair_latest:armchair_frame|living_room_latest:armchair_latest:armchair_pillow_1|living_room_latest:armchair_latest:armchair_pillow_Shape1" 
 		"surfaceReference" " 1"
-		2 "|living_room_latest:armchair_latest:armchair_frame|living_room_latest:armchair_latest:armchair_pillow_2|living_room_latest:armchair_latest:armchair_pillow_Shape2" 
+		2 "|living_room_latest:armchair_latest:armchair_frame|living_room_latest:armchair_latest:armchair_pillow_1|living_room_latest:armchair_latest:armchair_pillow_Shape1" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/additions/sofa/armchair_latest.ma\""
 		
-		2 "|living_room_latest:armchair_latest:armchair_frame|living_room_latest:armchair_latest:armchair_pillow_2|living_room_latest:armchair_latest:armchair_pillow_Shape2" 
+		2 "|living_room_latest:armchair_latest:armchair_frame|living_room_latest:armchair_latest:armchair_pillow_1|living_room_latest:armchair_latest:armchair_pillow_Shape1" 
 		"furNameSpace" " -type \"string\" \"armchair_latest\""
-		2 "|living_room_latest:armchair_latest:armchair_frame|living_room_latest:armchair_latest:armchair_pillow_1|living_room_latest:armchair_latest:armchair_pillow_Shape1" 
+		2 "|living_room_latest:armchair_latest:armchair_frame|living_room_latest:armchair_latest:armchair_pillow_2|living_room_latest:armchair_latest:armchair_pillow_Shape2" 
 		"VisibleInIndirect" " 1"
-		2 "|living_room_latest:armchair_latest:armchair_frame|living_room_latest:armchair_latest:armchair_pillow_1|living_room_latest:armchair_latest:armchair_pillow_Shape1" 
+		2 "|living_room_latest:armchair_latest:armchair_frame|living_room_latest:armchair_latest:armchair_pillow_2|living_room_latest:armchair_latest:armchair_pillow_Shape2" 
 		"surfaceReference" " 1"
-		2 "|living_room_latest:armchair_latest:armchair_frame|living_room_latest:armchair_latest:armchair_pillow_1|living_room_latest:armchair_latest:armchair_pillow_Shape1" 
+		2 "|living_room_latest:armchair_latest:armchair_frame|living_room_latest:armchair_latest:armchair_pillow_2|living_room_latest:armchair_latest:armchair_pillow_Shape2" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/additions/sofa/armchair_latest.ma\""
 		
-		2 "|living_room_latest:armchair_latest:armchair_frame|living_room_latest:armchair_latest:armchair_pillow_1|living_room_latest:armchair_latest:armchair_pillow_Shape1" 
+		2 "|living_room_latest:armchair_latest:armchair_frame|living_room_latest:armchair_latest:armchair_pillow_2|living_room_latest:armchair_latest:armchair_pillow_Shape2" 
 		"furNameSpace" " -type \"string\" \"armchair_latest\""
 		2 "living_room_latest:armchair_latest:file6" "proceduralTexDefaultRes" " 512"
 		
@@ -30517,23 +34184,23 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:armchair_latest1:armchair_frame|living_room_latest:armchair_latest1:armchair_cushion|living_room_latest:armchair_latest1:armchair_cushionShape 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:armchair_latest1:armchair_frame|living_room_latest:armchair_latest1:armchair_pillow_2|living_room_latest:armchair_latest1:armchair_pillow_Shape2 
+		1 |living_room_latest:armchair_latest1:armchair_frame|living_room_latest:armchair_latest1:armchair_pillow_1|living_room_latest:armchair_latest1:armchair_pillow_Shape1 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
-		1 |living_room_latest:armchair_latest1:armchair_frame|living_room_latest:armchair_latest1:armchair_pillow_2|living_room_latest:armchair_latest1:armchair_pillow_Shape2 
+		1 |living_room_latest:armchair_latest1:armchair_frame|living_room_latest:armchair_latest1:armchair_pillow_1|living_room_latest:armchair_latest1:armchair_pillow_Shape1 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:armchair_latest1:armchair_frame|living_room_latest:armchair_latest1:armchair_pillow_2|living_room_latest:armchair_latest1:armchair_pillow_Shape2 
+		1 |living_room_latest:armchair_latest1:armchair_frame|living_room_latest:armchair_latest1:armchair_pillow_1|living_room_latest:armchair_latest1:armchair_pillow_Shape1 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:armchair_latest1:armchair_frame|living_room_latest:armchair_latest1:armchair_pillow_2|living_room_latest:armchair_latest1:armchair_pillow_Shape2 
+		1 |living_room_latest:armchair_latest1:armchair_frame|living_room_latest:armchair_latest1:armchair_pillow_1|living_room_latest:armchair_latest1:armchair_pillow_Shape1 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:armchair_latest1:armchair_frame|living_room_latest:armchair_latest1:armchair_pillow_1|living_room_latest:armchair_latest1:armchair_pillow_Shape1 
+		1 |living_room_latest:armchair_latest1:armchair_frame|living_room_latest:armchair_latest1:armchair_pillow_2|living_room_latest:armchair_latest1:armchair_pillow_Shape2 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
-		1 |living_room_latest:armchair_latest1:armchair_frame|living_room_latest:armchair_latest1:armchair_pillow_1|living_room_latest:armchair_latest1:armchair_pillow_Shape1 
+		1 |living_room_latest:armchair_latest1:armchair_frame|living_room_latest:armchair_latest1:armchair_pillow_2|living_room_latest:armchair_latest1:armchair_pillow_Shape2 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:armchair_latest1:armchair_frame|living_room_latest:armchair_latest1:armchair_pillow_1|living_room_latest:armchair_latest1:armchair_pillow_Shape1 
+		1 |living_room_latest:armchair_latest1:armchair_frame|living_room_latest:armchair_latest1:armchair_pillow_2|living_room_latest:armchair_latest1:armchair_pillow_Shape2 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:armchair_latest1:armchair_frame|living_room_latest:armchair_latest1:armchair_pillow_1|living_room_latest:armchair_latest1:armchair_pillow_Shape1 
+		1 |living_room_latest:armchair_latest1:armchair_frame|living_room_latest:armchair_latest1:armchair_pillow_2|living_room_latest:armchair_latest1:armchair_pillow_Shape2 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 living_room_latest:armchair_latest1:file6 "proceduralTexDefaultRes" "proceduralTexDefaultRes" 
 		" -ci 1 -dv 512 -min 256 -max 4096 -smn 8 -smx 8192 -at \"short\""
@@ -30583,23 +34250,23 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		2 "|living_room_latest:armchair_latest1:armchair_frame|living_room_latest:armchair_latest1:armchair_cushion|living_room_latest:armchair_latest1:armchair_cushionShape" 
 		"furNameSpace" " -type \"string\" \"armchair_latest1\""
-		2 "|living_room_latest:armchair_latest1:armchair_frame|living_room_latest:armchair_latest1:armchair_pillow_2|living_room_latest:armchair_latest1:armchair_pillow_Shape2" 
+		2 "|living_room_latest:armchair_latest1:armchair_frame|living_room_latest:armchair_latest1:armchair_pillow_1|living_room_latest:armchair_latest1:armchair_pillow_Shape1" 
 		"VisibleInIndirect" " 1"
-		2 "|living_room_latest:armchair_latest1:armchair_frame|living_room_latest:armchair_latest1:armchair_pillow_2|living_room_latest:armchair_latest1:armchair_pillow_Shape2" 
+		2 "|living_room_latest:armchair_latest1:armchair_frame|living_room_latest:armchair_latest1:armchair_pillow_1|living_room_latest:armchair_latest1:armchair_pillow_Shape1" 
 		"surfaceReference" " 1"
-		2 "|living_room_latest:armchair_latest1:armchair_frame|living_room_latest:armchair_latest1:armchair_pillow_2|living_room_latest:armchair_latest1:armchair_pillow_Shape2" 
+		2 "|living_room_latest:armchair_latest1:armchair_frame|living_room_latest:armchair_latest1:armchair_pillow_1|living_room_latest:armchair_latest1:armchair_pillow_Shape1" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/additions/sofa/armchair_latest.ma{1}\""
 		
-		2 "|living_room_latest:armchair_latest1:armchair_frame|living_room_latest:armchair_latest1:armchair_pillow_2|living_room_latest:armchair_latest1:armchair_pillow_Shape2" 
+		2 "|living_room_latest:armchair_latest1:armchair_frame|living_room_latest:armchair_latest1:armchair_pillow_1|living_room_latest:armchair_latest1:armchair_pillow_Shape1" 
 		"furNameSpace" " -type \"string\" \"armchair_latest1\""
-		2 "|living_room_latest:armchair_latest1:armchair_frame|living_room_latest:armchair_latest1:armchair_pillow_1|living_room_latest:armchair_latest1:armchair_pillow_Shape1" 
+		2 "|living_room_latest:armchair_latest1:armchair_frame|living_room_latest:armchair_latest1:armchair_pillow_2|living_room_latest:armchair_latest1:armchair_pillow_Shape2" 
 		"VisibleInIndirect" " 1"
-		2 "|living_room_latest:armchair_latest1:armchair_frame|living_room_latest:armchair_latest1:armchair_pillow_1|living_room_latest:armchair_latest1:armchair_pillow_Shape1" 
+		2 "|living_room_latest:armchair_latest1:armchair_frame|living_room_latest:armchair_latest1:armchair_pillow_2|living_room_latest:armchair_latest1:armchair_pillow_Shape2" 
 		"surfaceReference" " 1"
-		2 "|living_room_latest:armchair_latest1:armchair_frame|living_room_latest:armchair_latest1:armchair_pillow_1|living_room_latest:armchair_latest1:armchair_pillow_Shape1" 
+		2 "|living_room_latest:armchair_latest1:armchair_frame|living_room_latest:armchair_latest1:armchair_pillow_2|living_room_latest:armchair_latest1:armchair_pillow_Shape2" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/additions/sofa/armchair_latest.ma{1}\""
 		
-		2 "|living_room_latest:armchair_latest1:armchair_frame|living_room_latest:armchair_latest1:armchair_pillow_1|living_room_latest:armchair_latest1:armchair_pillow_Shape1" 
+		2 "|living_room_latest:armchair_latest1:armchair_frame|living_room_latest:armchair_latest1:armchair_pillow_2|living_room_latest:armchair_latest1:armchair_pillow_Shape2" 
 		"furNameSpace" " -type \"string\" \"armchair_latest1\""
 		2 "living_room_latest:armchair_latest1:file6" "proceduralTexDefaultRes" " 512"
 		
@@ -30622,7 +34289,7 @@ createNode reference -n "livingroom_shading_latestRN";
 		2 "living_room_latest:armchair_latest1:file8" "ReduceTextureInCuda" " 1"
 		2 "living_room_latest:armchair_latest1:file8" "onlineUpdate" " 0"
 		2 "living_room_latest:armchair_latest1:file8" "compressColor" " 1"
-		"livingroom_shading_latest_living_room_latestRN" 3177
+		"livingroom_shading_latest_living_room_latestRN" 2779
 		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_1|living_room_latest:crown_unit_Shape1 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
@@ -30631,12 +34298,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_1|living_room_latest:crown_unit_Shape1 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_1|living_room_latest:crown_unit_Shape1 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_1|living_room_latest:pasted__polySurfaceShape1 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_1|living_room_latest:pasted__polySurfaceShape1 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_1|living_room_latest:pasted__polySurfaceShape1 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_2|living_room_latest:crown_unit_Shape2 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
@@ -30647,12 +34308,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_2|living_room_latest:crown_unit_Shape2 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_2|living_room_latest:pasted__polySurfaceShape1 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_2|living_room_latest:pasted__polySurfaceShape1 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_2|living_room_latest:pasted__polySurfaceShape1 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_3|living_room_latest:crown_unit_Shape3 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
@@ -30661,12 +34316,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_3|living_room_latest:crown_unit_Shape3 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_3|living_room_latest:crown_unit_Shape3 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_3|living_room_latest:pasted__polySurfaceShape1 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_3|living_room_latest:pasted__polySurfaceShape1 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_3|living_room_latest:pasted__polySurfaceShape1 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_4|living_room_latest:crown_unit_Shape4 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
@@ -30677,12 +34326,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_4|living_room_latest:crown_unit_Shape4 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_4|living_room_latest:pasted__polySurfaceShape1 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_4|living_room_latest:pasted__polySurfaceShape1 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_4|living_room_latest:pasted__polySurfaceShape1 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_5|living_room_latest:crown_unit_Shape5 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
@@ -30691,12 +34334,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_5|living_room_latest:crown_unit_Shape5 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_5|living_room_latest:crown_unit_Shape5 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_5|living_room_latest:pasted__polySurfaceShape1 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_5|living_room_latest:pasted__polySurfaceShape1 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_5|living_room_latest:pasted__polySurfaceShape1 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_6|living_room_latest:crown_unit_Shape6 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
@@ -30707,12 +34344,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_6|living_room_latest:crown_unit_Shape6 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_6|living_room_latest:pasted__polySurfaceShape1 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_6|living_room_latest:pasted__polySurfaceShape1 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_6|living_room_latest:pasted__polySurfaceShape1 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_7|living_room_latest:crown_unit_Shape7 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
@@ -30721,12 +34352,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_7|living_room_latest:crown_unit_Shape7 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_7|living_room_latest:crown_unit_Shape7 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_7|living_room_latest:pasted__polySurfaceShape1 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_7|living_room_latest:pasted__polySurfaceShape1 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_7|living_room_latest:pasted__polySurfaceShape1 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_8|living_room_latest:crown_unit_Shape8 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
@@ -30737,12 +34362,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_8|living_room_latest:crown_unit_Shape8 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_8|living_room_latest:pasted__polySurfaceShape1 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_8|living_room_latest:pasted__polySurfaceShape1 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_8|living_room_latest:pasted__polySurfaceShape1 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_9|living_room_latest:crown_unit_Shape9 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
@@ -30752,12 +34371,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_9|living_room_latest:crown_unit_Shape9 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_9|living_room_latest:pasted__polySurfaceShape1 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_9|living_room_latest:pasted__polySurfaceShape1 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_9|living_room_latest:pasted__polySurfaceShape1 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_10|living_room_latest:crown_unit_Shape10 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
@@ -30766,12 +34379,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_10|living_room_latest:crown_unit_Shape10 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_10|living_room_latest:crown_unit_Shape10 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_10|living_room_latest:pasted__polySurfaceShape1 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_10|living_room_latest:pasted__polySurfaceShape1 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:crown_molding|living_room_latest:crown_unit_10|living_room_latest:pasted__polySurfaceShape1 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:cabinet|living_room_latest:cabinetShape "VisibleInIndirect" 
 		"VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
@@ -30991,12 +34598,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:fridge|living_room_latest:fridgeShape "furNameSpace" 
 		"fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:fridge|living_room_latest:polySurfaceShape9 "surfaceReference" 
-		"sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:fridge|living_room_latest:polySurfaceShape9 "referenceFile" 
-		"reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:fridge|living_room_latest:polySurfaceShape9 "furNameSpace" 
-		"fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:fridge|living_room_latest:pCube1|living_room_latest:pCubeShape1 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
@@ -31155,12 +34756,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_8|living_room_latest:cabinet_door_Shape8 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_8|living_room_latest:polySurfaceShape2 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_8|living_room_latest:polySurfaceShape2 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_8|living_room_latest:polySurfaceShape2 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_8|living_room_latest:cabinet_door_8_handle|living_room_latest:cabinet_door_8_handleShape 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
@@ -31179,12 +34774,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:vent_door|living_room_latest:vent_doorShape 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:vent_door|living_room_latest:polySurfaceShape1 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:vent_door|living_room_latest:polySurfaceShape1 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:vent_door|living_room_latest:polySurfaceShape1 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_9|living_room_latest:cabinet_door_Shape9 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
@@ -31193,12 +34782,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_9|living_room_latest:cabinet_door_Shape9 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_9|living_room_latest:cabinet_door_Shape9 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_9|living_room_latest:polySurfaceShape7 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_9|living_room_latest:polySurfaceShape7 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_9|living_room_latest:polySurfaceShape7 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_9|living_room_latest:cabinet_door_9_handle|living_room_latest:cabinet_door_9_handleShape 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
@@ -31218,12 +34801,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_12|living_room_latest:cabinet_door_Shape12 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_12|living_room_latest:polySurfaceShape10 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_12|living_room_latest:polySurfaceShape10 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_12|living_room_latest:polySurfaceShape10 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_12|living_room_latest:cabinet_door_12_handle|living_room_latest:cabinet_door_12_handleShape 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
@@ -31241,12 +34818,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_11|living_room_latest:cabinet_door_Shape11 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_11|living_room_latest:cabinet_door_Shape11 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_11|living_room_latest:polySurfaceShape9 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_11|living_room_latest:polySurfaceShape9 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_11|living_room_latest:polySurfaceShape9 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_11|living_room_latest:cabinet_door_11_handle|living_room_latest:cabinet_door_11_handleShape 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
@@ -31266,12 +34837,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_10|living_room_latest:cabinet_door_Shape10 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_10|living_room_latest:polySurfaceShape8 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_10|living_room_latest:polySurfaceShape8 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_10|living_room_latest:polySurfaceShape8 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_10|living_room_latest:cabinet_door_10_handle|living_room_latest:cabinet_door_10_handleShape 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
@@ -31289,12 +34854,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_7|living_room_latest:cabinet_door_Shape7 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_7|living_room_latest:cabinet_door_Shape7 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_7|living_room_latest:polySurfaceShape1 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_7|living_room_latest:polySurfaceShape1 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_7|living_room_latest:polySurfaceShape1 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_7|living_room_latest:cabinet_door_7_handle|living_room_latest:cabinet_door_7_handleShape 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
@@ -31314,12 +34873,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_1|living_room_latest:cabinet_door_Shape1 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_1|living_room_latest:polySurfaceShape8 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_1|living_room_latest:polySurfaceShape8 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_1|living_room_latest:polySurfaceShape8 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_1|living_room_latest:cabinet_door_1_handle|living_room_latest:cabinet_door_1_handleShape 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
@@ -31337,12 +34890,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_5|living_room_latest:cabinet_door_Shape5 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_5|living_room_latest:cabinet_door_Shape5 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_5|living_room_latest:polySurfaceShape9 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_5|living_room_latest:polySurfaceShape9 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_5|living_room_latest:polySurfaceShape9 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_5|living_room_latest:cabinet_door_5_handle|living_room_latest:cabinet_door_5_handleShape 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
@@ -31362,12 +34909,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_6|living_room_latest:cabinet_door_Shape6 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_6|living_room_latest:polySurfaceShape10 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_6|living_room_latest:polySurfaceShape10 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_6|living_room_latest:polySurfaceShape10 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_6|living_room_latest:cabinet_door_6_handle|living_room_latest:cabinet_door_6_handleShape 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
@@ -31385,12 +34926,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_2|living_room_latest:cabinet_door_Shape2 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_2|living_room_latest:cabinet_door_Shape2 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_2|living_room_latest:polySurfaceShape7 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_2|living_room_latest:polySurfaceShape7 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_2|living_room_latest:polySurfaceShape7 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_2|living_room_latest:cabinet_door_2_handle|living_room_latest:cabinet_door_2_handleShape 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
@@ -31428,12 +34963,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_4|living_room_latest:cabinet_door_Shape4 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_4|living_room_latest:polySurfaceShape9 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_4|living_room_latest:polySurfaceShape9 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_4|living_room_latest:polySurfaceShape9 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_4|living_room_latest:cabinet_door_4_handle|living_room_latest:cabinet_door_4_handleShape 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
@@ -31451,12 +34980,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_3|living_room_latest:cabinet_door_Shape3 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_3|living_room_latest:cabinet_door_Shape3 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_3|living_room_latest:polySurfaceShape8 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_3|living_room_latest:polySurfaceShape8 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_3|living_room_latest:polySurfaceShape8 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_3|living_room_latest:cabinet_door_3_handle|living_room_latest:cabinet_door_3_handleShape 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
@@ -31503,12 +35026,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube121|living_room_latest:pCubeShape121 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube121|living_room_latest:polySurfaceShape4 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube121|living_room_latest:polySurfaceShape4 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube121|living_room_latest:polySurfaceShape4 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube120|living_room_latest:pCubeShape120 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
@@ -31517,12 +35034,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube120|living_room_latest:pCubeShape120 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube120|living_room_latest:pCubeShape120 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube120|living_room_latest:polySurfaceShape14 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube120|living_room_latest:polySurfaceShape14 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube120|living_room_latest:polySurfaceShape14 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCylinder97|living_room_latest:pCylinderShape97 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
@@ -31551,12 +35062,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube119|living_room_latest:pCubeShape119 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube119|living_room_latest:polySurfaceShape4 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube119|living_room_latest:polySurfaceShape4 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube119|living_room_latest:polySurfaceShape4 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube118|living_room_latest:pCubeShape118 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
@@ -31565,12 +35070,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube118|living_room_latest:pCubeShape118 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube118|living_room_latest:pCubeShape118 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube118|living_room_latest:polySurfaceShape4 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube118|living_room_latest:polySurfaceShape4 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube118|living_room_latest:polySurfaceShape4 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCylinder95|living_room_latest:pCylinderShape95 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
@@ -31599,12 +35098,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube117|living_room_latest:pCubeShape117 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube117|living_room_latest:polySurfaceShape4 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube117|living_room_latest:polySurfaceShape4 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube117|living_room_latest:polySurfaceShape4 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube116|living_room_latest:pCubeShape116 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
@@ -31613,12 +35106,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube116|living_room_latest:pCubeShape116 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube116|living_room_latest:pCubeShape116 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube116|living_room_latest:polySurfaceShape4 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube116|living_room_latest:polySurfaceShape4 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube116|living_room_latest:polySurfaceShape4 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCylinder93|living_room_latest:pCylinderShape93 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
@@ -31638,12 +35125,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube115|living_room_latest:pCubeShape115 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube115|living_room_latest:polySurfaceShape14 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube115|living_room_latest:polySurfaceShape14 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube115|living_room_latest:polySurfaceShape14 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCylinder92|living_room_latest:pCylinderShape92 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
@@ -31661,12 +35142,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube114|living_room_latest:pCubeShape114 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube114|living_room_latest:pCubeShape114 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube114|living_room_latest:polySurfaceShape14 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube114|living_room_latest:polySurfaceShape14 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube114|living_room_latest:polySurfaceShape14 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube18|living_room_latest:pCubeShape18 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
@@ -31694,12 +35169,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube15|living_room_latest:pCubeShape15 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube15|living_room_latest:pCubeShape15 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube15|living_room_latest:polySurfaceShape10 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube15|living_room_latest:polySurfaceShape10 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube15|living_room_latest:polySurfaceShape10 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCylinder16|living_room_latest:pCylinderShape16 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
@@ -31818,12 +35287,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube14|living_room_latest:pCubeShape14 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube14|living_room_latest:polySurfaceShape7 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube14|living_room_latest:polySurfaceShape7 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube14|living_room_latest:polySurfaceShape7 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube13|living_room_latest:pCubeShape13 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
@@ -31832,12 +35295,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube13|living_room_latest:pCubeShape13 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube13|living_room_latest:pCubeShape13 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube13|living_room_latest:polySurfaceShape8 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube13|living_room_latest:polySurfaceShape8 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube13|living_room_latest:polySurfaceShape8 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube12|living_room_latest:pCubeShape12 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
@@ -31848,12 +35305,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube12|living_room_latest:pCubeShape12 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube12|living_room_latest:polySurfaceShape5 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube12|living_room_latest:polySurfaceShape5 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube12|living_room_latest:polySurfaceShape5 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube11|living_room_latest:pCubeShape11 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
@@ -31862,12 +35313,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube11|living_room_latest:pCubeShape11 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube11|living_room_latest:pCubeShape11 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube11|living_room_latest:polySurfaceShape6 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube11|living_room_latest:polySurfaceShape6 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube11|living_room_latest:polySurfaceShape6 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube10|living_room_latest:pCubeShape10 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
@@ -31878,12 +35323,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube10|living_room_latest:pCubeShape10 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube10|living_room_latest:polySurfaceShape3 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube10|living_room_latest:polySurfaceShape3 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube10|living_room_latest:polySurfaceShape3 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube9|living_room_latest:pCubeShape9 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
@@ -31892,36 +35331,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube9|living_room_latest:pCubeShape9 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube9|living_room_latest:pCubeShape9 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube9|living_room_latest:polySurfaceShape4 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube9|living_room_latest:polySurfaceShape4 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube9|living_room_latest:polySurfaceShape4 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube7|living_room_latest:polySurfaceShape2 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube7|living_room_latest:polySurfaceShape2 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube7|living_room_latest:polySurfaceShape2 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube5|living_room_latest:polySurfaceShape12 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube5|living_room_latest:polySurfaceShape12 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube5|living_room_latest:polySurfaceShape12 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube4|living_room_latest:polySurfaceShape13 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube4|living_room_latest:polySurfaceShape13 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube4|living_room_latest:polySurfaceShape13 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube3|living_room_latest:polySurfaceShape14 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube3|living_room_latest:polySurfaceShape14 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube3|living_room_latest:polySurfaceShape14 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:exit_window_4|living_room_latest:exit_window_1Shape4 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
@@ -32029,12 +35438,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCube319|living_room_latest:pasted__pCubeShape319 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCube319|living_room_latest:pasted__polySurfaceShape46 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCube319|living_room_latest:pasted__polySurfaceShape46 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCube319|living_room_latest:pasted__polySurfaceShape46 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCube321|living_room_latest:pasted__pCubeShape321 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
@@ -32043,12 +35446,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCube321|living_room_latest:pasted__pCubeShape321 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCube321|living_room_latest:pasted__pCubeShape321 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCube321|living_room_latest:pasted__polySurfaceShape46 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCube321|living_room_latest:pasted__polySurfaceShape46 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCube321|living_room_latest:pasted__polySurfaceShape46 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCylinder94|living_room_latest:pasted__pCylinderShape94 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
@@ -32059,12 +35456,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCylinder94|living_room_latest:pasted__pCylinderShape94 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCylinder94|living_room_latest:pasted__polySurfaceShape45 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCylinder94|living_room_latest:pasted__polySurfaceShape45 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCylinder94|living_room_latest:pasted__polySurfaceShape45 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCube316|living_room_latest:pasted__pCubeShape316 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
@@ -32073,12 +35464,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCube316|living_room_latest:pasted__pCubeShape316 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCube316|living_room_latest:pasted__pCubeShape316 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCube316|living_room_latest:pasted__polySurfaceShape46 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCube316|living_room_latest:pasted__polySurfaceShape46 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCube316|living_room_latest:pasted__polySurfaceShape46 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCube315|living_room_latest:pasted__pCubeShape315 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
@@ -32089,12 +35474,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCube315|living_room_latest:pasted__pCubeShape315 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCube315|living_room_latest:pasted__polySurfaceShape46 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCube315|living_room_latest:pasted__polySurfaceShape46 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCube315|living_room_latest:pasted__polySurfaceShape46 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCube314|living_room_latest:pasted__pCubeShape314 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
@@ -32104,12 +35483,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCube314|living_room_latest:pasted__pCubeShape314 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCube314|living_room_latest:pasted__polySurfaceShape46 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCube314|living_room_latest:pasted__polySurfaceShape46 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCube314|living_room_latest:pasted__polySurfaceShape46 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCube318|living_room_latest:pasted__pCubeShape318 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
@@ -32118,12 +35491,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCube318|living_room_latest:pasted__pCubeShape318 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCube318|living_room_latest:pasted__pCubeShape318 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCube318|living_room_latest:pasted__polySurfaceShape46 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCube318|living_room_latest:pasted__polySurfaceShape46 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCube318|living_room_latest:pasted__polySurfaceShape46 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pasted__pTorus2|living_room_latest:pasted__pasted__pTorusShape2 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
@@ -32142,12 +35509,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pPipe3|living_room_latest:pasted__pPipeShape3 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pPipe3|living_room_latest:pasted__pPipeShape3 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pPipe3|living_room_latest:pasted__polySurfaceShape44 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pPipe3|living_room_latest:pasted__polySurfaceShape44 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pPipe3|living_room_latest:pasted__polySurfaceShape44 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:right_washing_machine|living_room_latest:pasted__pCylinder91|living_room_latest:pasted__pCylinderShape91 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
@@ -32230,12 +35591,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:left_washing_machine|living_room_latest:pasted__pCube309|living_room_latest:pasted__pCubeShape309 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:left_washing_machine|living_room_latest:pasted__pCube309|living_room_latest:pasted__polySurfaceShape46 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:left_washing_machine|living_room_latest:pasted__pCube309|living_room_latest:pasted__polySurfaceShape46 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:left_washing_machine|living_room_latest:pasted__pCube309|living_room_latest:pasted__polySurfaceShape46 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:left_washing_machine|living_room_latest:pasted__pCube308|living_room_latest:pasted__pCubeShape308 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
@@ -32244,12 +35599,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		1 |living_room_latest:left_washing_machine|living_room_latest:pasted__pCube308|living_room_latest:pasted__pCubeShape308 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:left_washing_machine|living_room_latest:pasted__pCube308|living_room_latest:pasted__pCubeShape308 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:left_washing_machine|living_room_latest:pasted__pCube308|living_room_latest:pasted__polySurfaceShape46 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:left_washing_machine|living_room_latest:pasted__pCube308|living_room_latest:pasted__polySurfaceShape46 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:left_washing_machine|living_room_latest:pasted__pCube308|living_room_latest:pasted__polySurfaceShape46 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:left_washing_machine|living_room_latest:pasted__pCube277|living_room_latest:pasted__pCubeShape277 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
@@ -32549,15 +35898,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:oven|living_room_latest:pasted__pCube161|living_room_latest:pasted__pCubeShape161 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:oven|living_room_latest:pasted__pCube162|living_room_latest:pasted__polySurfaceShape4 
-		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
-		
-		1 |living_room_latest:oven|living_room_latest:pasted__pCube162|living_room_latest:pasted__polySurfaceShape4 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:oven|living_room_latest:pasted__pCube162|living_room_latest:pasted__polySurfaceShape4 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:oven|living_room_latest:pasted__pCube162|living_room_latest:pasted__polySurfaceShape4 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:oven|living_room_latest:pasted__pCylinder19|living_room_latest:pasted__pCylinderShape19 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
@@ -32602,12 +35942,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		1 |living_room_latest:oven|living_room_latest:pasted__polySurface7|living_room_latest:pasted__polySurfaceShape7 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:oven|living_room_latest:pasted__polySurface7|living_room_latest:pasted__polySurfaceShape7 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:oven|living_room_latest:pasted__pPlane4|living_room_latest:pasted__pPlaneShape4 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:oven|living_room_latest:pasted__pPlane4|living_room_latest:pasted__pPlaneShape4 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:oven|living_room_latest:pasted__pPlane4|living_room_latest:pasted__pPlaneShape4 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:oven|living_room_latest:pasted__pPlane4|living_room_latest:pasted__outputCloth1 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
@@ -32986,12 +36320,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:side_table:pCube92|living_room_latest:side_table:pCube2|living_room_latest:side_table:pCubeShape2 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:side_table:pCube92|living_room_latest:side_table:pCube2|living_room_latest:side_table:polySurfaceShape10 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:side_table:pCube92|living_room_latest:side_table:pCube2|living_room_latest:side_table:polySurfaceShape10 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:side_table:pCube92|living_room_latest:side_table:pCube2|living_room_latest:side_table:polySurfaceShape10 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface1|living_room_latest:side_table:polySurfaceShape1 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
@@ -33063,21 +36391,15 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:pCube92|living_room_latest:pCube2|living_room_latest:pCubeShape2 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:pCube92|living_room_latest:pCube2|living_room_latest:polySurfaceShape10 
+		1 |living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:pCube92|living_room_latest:pCube2|living_room_latest:polySurfaceShape10 
+		1 |living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:pCube92|living_room_latest:pCube2|living_room_latest:polySurfaceShape10 
+		1 |living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
-		1 |living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:pCube92|living_room_latest:polySurface2|living_room_latest:polySurfaceShape2 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
@@ -33696,12 +37018,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:pCube223|living_room_latest:pCubeShape223 "furNameSpace" 
 		"fns" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:pCube223|living_room_latest:polySurfaceShape305 "surfaceReference" 
-		"sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:pCube223|living_room_latest:polySurfaceShape305 "referenceFile" 
-		"reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:pCube223|living_room_latest:polySurfaceShape305 "furNameSpace" 
-		"fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:pPlane1|living_room_latest:pPlaneShape1 "surfaceReference" 
 		"sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
 		1 |living_room_latest:pPlane1|living_room_latest:pPlaneShape1 "referenceFile" 
@@ -33713,6 +37029,12 @@ createNode reference -n "livingroom_shading_latestRN";
 		1 |living_room_latest:pPlane1|living_room_latest:outputCloth1 "referenceFile" 
 		"reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:pPlane1|living_room_latest:outputCloth1 "furNameSpace" 
+		"fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:polySurface9|living_room_latest:polySurfaceShape9 "surfaceReference" 
+		"sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:polySurface9|living_room_latest:polySurfaceShape9 "referenceFile" 
+		"reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:polySurface9|living_room_latest:polySurfaceShape9 "furNameSpace" 
 		"fns" " -ci 1 -h 1 -dt \"string\""
 		1 living_room_latest:pasted__file18 "proceduralTexDefaultRes" "proceduralTexDefaultRes" 
 		" -ci 1 -dv 512 -min 256 -max 4096 -smn 8 -smx 8192 -at \"short\""
@@ -33754,16 +37076,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		1 living_room_latest:pasted__file12 "compressColor" "compressColor" " -ci 1 -dv 1 -min 0 -max 1 -at \"bool\""
 		
-		1 living_room_latest:pasted__file8 "proceduralTexDefaultRes" "proceduralTexDefaultRes" 
-		" -ci 1 -dv 512 -min 256 -max 4096 -smn 8 -smx 8192 -at \"short\""
-		1 living_room_latest:pasted__file8 "proceduralTexMaxRes" "proceduralTexMaxRes" 
-		" -ci 1 -dv 1024 -min 256 -max 4096 -smn 8 -smx 8192 -at \"short\""
-		1 living_room_latest:pasted__file8 "ReduceTextureInCuda" "ReduceTextureInCuda" 
-		" -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
-		1 living_room_latest:pasted__file8 "onlineUpdate" "onlineUpdate" " -ci 1 -min 0 -max 1 -at \"bool\""
-		
-		1 living_room_latest:pasted__file8 "compressColor" "compressColor" " -ci 1 -dv 1 -min 0 -max 1 -at \"bool\""
-		
 		1 living_room_latest:pasted__fractal4 "proceduralTexDefaultRes" "proceduralTexDefaultRes" 
 		" -ci 1 -dv 512 -min 256 -max 4096 -smn 8 -smx 8192 -at \"short\""
 		1 living_room_latest:pasted__fractal4 "proceduralTexMaxRes" "proceduralTexMaxRes" 
@@ -33784,16 +37096,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		1 living_room_latest:pasted__stucco1 "compressColor" "compressColor" " -ci 1 -dv 1 -min 0 -max 1 -at \"bool\""
 		
-		1 living_room_latest:vase_flowers:ramp10 "proceduralTexDefaultRes" "proceduralTexDefaultRes" 
-		" -ci 1 -dv 512 -min 256 -max 4096 -smn 8 -smx 8192 -at \"short\""
-		1 living_room_latest:vase_flowers:ramp10 "proceduralTexMaxRes" "proceduralTexMaxRes" 
-		" -ci 1 -dv 1024 -min 256 -max 4096 -smn 8 -smx 8192 -at \"short\""
-		1 living_room_latest:vase_flowers:ramp10 "ReduceTextureInCuda" "ReduceTextureInCuda" 
-		" -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
-		1 living_room_latest:vase_flowers:ramp10 "onlineUpdate" "onlineUpdate" " -ci 1 -min 0 -max 1 -at \"bool\""
-		
-		1 living_room_latest:vase_flowers:ramp10 "compressColor" "compressColor" 
-		" -ci 1 -dv 1 -min 0 -max 1 -at \"bool\""
 		1 living_room_latest:vase_flowers:ramp1 "proceduralTexDefaultRes" "proceduralTexDefaultRes" 
 		" -ci 1 -dv 512 -min 256 -max 4096 -smn 8 -smx 8192 -at \"short\""
 		1 living_room_latest:vase_flowers:ramp1 "proceduralTexMaxRes" "proceduralTexMaxRes" 
@@ -33956,41 +37258,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		1 living_room_latest:vase_flowers:ramp9 "compressColor" "compressColor" " -ci 1 -dv 1 -min 0 -max 1 -at \"bool\""
 		
-		1 living_room_latest:vase_flowers:daisySmall4LeafShader "transparencyTexAlpha" 
-		"transparencyTexAlpha" " -ci 1 -min 0 -max 2 -en \"auto check from texture:set to no:set to yes\" -at \"enum\""
-		
-		1 living_room_latest:vase_flowers:ramp11 "proceduralTexDefaultRes" "proceduralTexDefaultRes" 
-		" -ci 1 -dv 512 -min 256 -max 4096 -smn 8 -smx 8192 -at \"short\""
-		1 living_room_latest:vase_flowers:ramp11 "proceduralTexMaxRes" "proceduralTexMaxRes" 
-		" -ci 1 -dv 1024 -min 256 -max 4096 -smn 8 -smx 8192 -at \"short\""
-		1 living_room_latest:vase_flowers:ramp11 "ReduceTextureInCuda" "ReduceTextureInCuda" 
-		" -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
-		1 living_room_latest:vase_flowers:ramp11 "onlineUpdate" "onlineUpdate" " -ci 1 -min 0 -max 1 -at \"bool\""
-		
-		1 living_room_latest:vase_flowers:ramp11 "compressColor" "compressColor" 
-		" -ci 1 -dv 1 -min 0 -max 1 -at \"bool\""
-		1 living_room_latest:vase_flowers:file5 "proceduralTexDefaultRes" "proceduralTexDefaultRes" 
-		" -ci 1 -dv 256 -min 256 -max 4096 -smn 8 -smx 8192 -at \"short\""
-		1 living_room_latest:vase_flowers:file5 "proceduralTexMaxRes" "proceduralTexMaxRes" 
-		" -ci 1 -dv 1024 -min 256 -max 4096 -smn 8 -smx 8192 -at \"short\""
-		1 living_room_latest:vase_flowers:file5 "ReduceTextureInCuda" "ReduceTextureInCuda" 
-		" -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
-		1 living_room_latest:vase_flowers:file5 "onlineUpdate" "onlineUpdate" " -ci 1 -min 0 -max 1 -at \"bool\""
-		
-		1 living_room_latest:vase_flowers:file5 "compressColor" "compressColor" " -ci 1 -dv 1 -min 0 -max 1 -at \"bool\""
-		
-		1 living_room_latest:vase_flowers:multiplyDivide12 "proceduralTexDefaultRes" 
-		"proceduralTexDefaultRes" " -ci 1 -dv 256 -min 256 -max 4096 -smn 8 -smx 8192 -at \"short\""
-		
-		1 living_room_latest:vase_flowers:multiplyDivide12 "proceduralTexMaxRes" 
-		"proceduralTexMaxRes" " -ci 1 -dv 1024 -min 256 -max 4096 -smn 8 -smx 8192 -at \"short\""
-		
-		1 living_room_latest:vase_flowers:multiplyDivide12 "ReduceTextureInCuda" 
-		"ReduceTextureInCuda" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
-		1 living_room_latest:vase_flowers:multiplyDivide12 "onlineUpdate" "onlineUpdate" 
-		" -ci 1 -min 0 -max 1 -at \"bool\""
-		1 living_room_latest:vase_flowers:multiplyDivide12 "compressColor" "compressColor" 
-		" -ci 1 -dv 1 -min 0 -max 1 -at \"bool\""
 		1 living_room_latest:vase_flowers:ramp12 "proceduralTexDefaultRes" "proceduralTexDefaultRes" 
 		" -ci 1 -dv 512 -min 256 -max 4096 -smn 8 -smx 8192 -at \"short\""
 		1 living_room_latest:vase_flowers:ramp12 "proceduralTexMaxRes" "proceduralTexMaxRes" 
@@ -34010,13 +37277,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_1|living_room_latest:crown_unit_Shape1" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_1|living_room_latest:pasted__polySurfaceShape1" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_1|living_room_latest:pasted__polySurfaceShape1" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_1|living_room_latest:pasted__polySurfaceShape1" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_2|living_room_latest:crown_unit_Shape2" 
 		"VisibleInIndirect" " 1"
 		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_2|living_room_latest:crown_unit_Shape2" 
@@ -34025,13 +37285,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
 		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_2|living_room_latest:crown_unit_Shape2" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_2|living_room_latest:pasted__polySurfaceShape1" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_2|living_room_latest:pasted__polySurfaceShape1" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_2|living_room_latest:pasted__polySurfaceShape1" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_3|living_room_latest:crown_unit_Shape3" 
 		"VisibleInIndirect" " 1"
@@ -34042,13 +37295,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_3|living_room_latest:crown_unit_Shape3" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_3|living_room_latest:pasted__polySurfaceShape1" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_3|living_room_latest:pasted__polySurfaceShape1" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_3|living_room_latest:pasted__polySurfaceShape1" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_4|living_room_latest:crown_unit_Shape4" 
 		"VisibleInIndirect" " 1"
 		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_4|living_room_latest:crown_unit_Shape4" 
@@ -34057,13 +37303,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
 		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_4|living_room_latest:crown_unit_Shape4" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_4|living_room_latest:pasted__polySurfaceShape1" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_4|living_room_latest:pasted__polySurfaceShape1" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_4|living_room_latest:pasted__polySurfaceShape1" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_5|living_room_latest:crown_unit_Shape5" 
 		"VisibleInIndirect" " 1"
@@ -34074,13 +37313,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_5|living_room_latest:crown_unit_Shape5" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_5|living_room_latest:pasted__polySurfaceShape1" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_5|living_room_latest:pasted__polySurfaceShape1" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_5|living_room_latest:pasted__polySurfaceShape1" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_6|living_room_latest:crown_unit_Shape6" 
 		"VisibleInIndirect" " 1"
 		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_6|living_room_latest:crown_unit_Shape6" 
@@ -34089,13 +37321,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
 		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_6|living_room_latest:crown_unit_Shape6" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_6|living_room_latest:pasted__polySurfaceShape1" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_6|living_room_latest:pasted__polySurfaceShape1" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_6|living_room_latest:pasted__polySurfaceShape1" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_7|living_room_latest:crown_unit_Shape7" 
 		"VisibleInIndirect" " 1"
@@ -34106,13 +37331,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_7|living_room_latest:crown_unit_Shape7" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_7|living_room_latest:pasted__polySurfaceShape1" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_7|living_room_latest:pasted__polySurfaceShape1" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_7|living_room_latest:pasted__polySurfaceShape1" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_8|living_room_latest:crown_unit_Shape8" 
 		"VisibleInIndirect" " 1"
 		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_8|living_room_latest:crown_unit_Shape8" 
@@ -34121,13 +37339,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
 		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_8|living_room_latest:crown_unit_Shape8" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_8|living_room_latest:pasted__polySurfaceShape1" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_8|living_room_latest:pasted__polySurfaceShape1" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_8|living_room_latest:pasted__polySurfaceShape1" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_9|living_room_latest:crown_unit_Shape9" 
 		"VisibleInIndirect" " 1"
@@ -34138,13 +37349,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_9|living_room_latest:crown_unit_Shape9" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_9|living_room_latest:pasted__polySurfaceShape1" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_9|living_room_latest:pasted__polySurfaceShape1" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_9|living_room_latest:pasted__polySurfaceShape1" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_10|living_room_latest:crown_unit_Shape10" 
 		"VisibleInIndirect" " 1"
 		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_10|living_room_latest:crown_unit_Shape10" 
@@ -34153,13 +37357,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
 		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_10|living_room_latest:crown_unit_Shape10" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_10|living_room_latest:pasted__polySurfaceShape1" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_10|living_room_latest:pasted__polySurfaceShape1" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:crown_molding|living_room_latest:crown_unit_10|living_room_latest:pasted__polySurfaceShape1" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:cabinet|living_room_latest:cabinetShape" "VisibleInIndirect" 
 		" 1"
@@ -34385,13 +37582,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		2 "|living_room_latest:fridge|living_room_latest:fridgeShape" "furNameSpace" 
 		" -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:fridge|living_room_latest:polySurfaceShape9" "surfaceReference" 
-		" 1"
-		2 "|living_room_latest:fridge|living_room_latest:polySurfaceShape9" "referenceFile" 
-		" -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:fridge|living_room_latest:polySurfaceShape9" "furNameSpace" 
-		" -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:fridge|living_room_latest:pCube1|living_room_latest:pCubeShape1" 
 		"VisibleInIndirect" " 1"
 		2 "|living_room_latest:fridge|living_room_latest:pCube1|living_room_latest:pCubeShape1" 
@@ -34554,13 +37744,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_8|living_room_latest:cabinet_door_Shape8" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_8|living_room_latest:polySurfaceShape2" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_8|living_room_latest:polySurfaceShape2" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_8|living_room_latest:polySurfaceShape2" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_8|living_room_latest:cabinet_door_8_handle|living_room_latest:cabinet_door_8_handleShape" 
 		"VisibleInIndirect" " 1"
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_8|living_room_latest:cabinet_door_8_handle|living_room_latest:cabinet_door_8_handleShape" 
@@ -34579,13 +37762,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:vent_door|living_room_latest:vent_doorShape" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:vent_door|living_room_latest:polySurfaceShape1" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:vent_door|living_room_latest:polySurfaceShape1" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:vent_door|living_room_latest:polySurfaceShape1" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_9|living_room_latest:cabinet_door_Shape9" 
 		"VisibleInIndirect" " 1"
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_9|living_room_latest:cabinet_door_Shape9" 
@@ -34594,13 +37770,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_9|living_room_latest:cabinet_door_Shape9" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_9|living_room_latest:polySurfaceShape7" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_9|living_room_latest:polySurfaceShape7" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_9|living_room_latest:polySurfaceShape7" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_9|living_room_latest:cabinet_door_9_handle|living_room_latest:cabinet_door_9_handleShape" 
 		"VisibleInIndirect" " 1"
@@ -34620,13 +37789,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_12|living_room_latest:cabinet_door_Shape12" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_12|living_room_latest:polySurfaceShape10" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_12|living_room_latest:polySurfaceShape10" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_12|living_room_latest:polySurfaceShape10" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_12|living_room_latest:cabinet_door_12_handle|living_room_latest:cabinet_door_12_handleShape" 
 		"VisibleInIndirect" " 1"
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_12|living_room_latest:cabinet_door_12_handle|living_room_latest:cabinet_door_12_handleShape" 
@@ -34644,13 +37806,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_11|living_room_latest:cabinet_door_Shape11" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_11|living_room_latest:polySurfaceShape9" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_11|living_room_latest:polySurfaceShape9" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_11|living_room_latest:polySurfaceShape9" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_11|living_room_latest:cabinet_door_11_handle|living_room_latest:cabinet_door_11_handleShape" 
 		"VisibleInIndirect" " 1"
@@ -34670,13 +37825,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_10|living_room_latest:cabinet_door_Shape10" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_10|living_room_latest:polySurfaceShape8" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_10|living_room_latest:polySurfaceShape8" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_10|living_room_latest:polySurfaceShape8" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_10|living_room_latest:cabinet_door_10_handle|living_room_latest:cabinet_door_10_handleShape" 
 		"VisibleInIndirect" " 1"
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_10|living_room_latest:cabinet_door_10_handle|living_room_latest:cabinet_door_10_handleShape" 
@@ -34694,13 +37842,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_7|living_room_latest:cabinet_door_Shape7" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_7|living_room_latest:polySurfaceShape1" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_7|living_room_latest:polySurfaceShape1" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_7|living_room_latest:polySurfaceShape1" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:kitchen_cabinet_upper_unit_1|living_room_latest:cabinet_door_7|living_room_latest:cabinet_door_7_handle|living_room_latest:cabinet_door_7_handleShape" 
 		"VisibleInIndirect" " 1"
@@ -34720,13 +37861,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_1|living_room_latest:cabinet_door_Shape1" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_1|living_room_latest:polySurfaceShape8" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_1|living_room_latest:polySurfaceShape8" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_1|living_room_latest:polySurfaceShape8" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_1|living_room_latest:cabinet_door_1_handle|living_room_latest:cabinet_door_1_handleShape" 
 		"VisibleInIndirect" " 1"
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_1|living_room_latest:cabinet_door_1_handle|living_room_latest:cabinet_door_1_handleShape" 
@@ -34744,13 +37878,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_5|living_room_latest:cabinet_door_Shape5" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_5|living_room_latest:polySurfaceShape9" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_5|living_room_latest:polySurfaceShape9" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_5|living_room_latest:polySurfaceShape9" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_5|living_room_latest:cabinet_door_5_handle|living_room_latest:cabinet_door_5_handleShape" 
 		"VisibleInIndirect" " 1"
@@ -34770,13 +37897,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_6|living_room_latest:cabinet_door_Shape6" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_6|living_room_latest:polySurfaceShape10" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_6|living_room_latest:polySurfaceShape10" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_6|living_room_latest:polySurfaceShape10" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_6|living_room_latest:cabinet_door_6_handle|living_room_latest:cabinet_door_6_handleShape" 
 		"VisibleInIndirect" " 1"
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_6|living_room_latest:cabinet_door_6_handle|living_room_latest:cabinet_door_6_handleShape" 
@@ -34794,13 +37914,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_2|living_room_latest:cabinet_door_Shape2" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_2|living_room_latest:polySurfaceShape7" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_2|living_room_latest:polySurfaceShape7" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_2|living_room_latest:polySurfaceShape7" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_2|living_room_latest:cabinet_door_2_handle|living_room_latest:cabinet_door_2_handleShape" 
 		"VisibleInIndirect" " 1"
@@ -34838,13 +37951,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_4|living_room_latest:cabinet_door_Shape4" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_4|living_room_latest:polySurfaceShape9" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_4|living_room_latest:polySurfaceShape9" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_4|living_room_latest:polySurfaceShape9" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_4|living_room_latest:cabinet_door_4_handle|living_room_latest:cabinet_door_4_handleShape" 
 		"VisibleInIndirect" " 1"
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_4|living_room_latest:cabinet_door_4_handle|living_room_latest:cabinet_door_4_handleShape" 
@@ -34862,13 +37968,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_3|living_room_latest:cabinet_door_Shape3" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_3|living_room_latest:polySurfaceShape8" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_3|living_room_latest:polySurfaceShape8" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_3|living_room_latest:polySurfaceShape8" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:cabinet_door_3|living_room_latest:cabinet_door_3_handle|living_room_latest:cabinet_door_3_handleShape" 
 		"VisibleInIndirect" " 1"
@@ -34915,13 +38014,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube121|living_room_latest:pCubeShape121" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube121|living_room_latest:polySurfaceShape4" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube121|living_room_latest:polySurfaceShape4" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube121|living_room_latest:polySurfaceShape4" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube120|living_room_latest:pCubeShape120" 
 		"VisibleInIndirect" " 1"
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube120|living_room_latest:pCubeShape120" 
@@ -34930,13 +38022,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube120|living_room_latest:pCubeShape120" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube120|living_room_latest:polySurfaceShape14" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube120|living_room_latest:polySurfaceShape14" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube120|living_room_latest:polySurfaceShape14" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCylinder97|living_room_latest:pCylinderShape97" 
 		"VisibleInIndirect" " 1"
@@ -34965,13 +38050,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube119|living_room_latest:pCubeShape119" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube119|living_room_latest:polySurfaceShape4" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube119|living_room_latest:polySurfaceShape4" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube119|living_room_latest:polySurfaceShape4" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube118|living_room_latest:pCubeShape118" 
 		"VisibleInIndirect" " 1"
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube118|living_room_latest:pCubeShape118" 
@@ -34980,13 +38058,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube118|living_room_latest:pCubeShape118" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube118|living_room_latest:polySurfaceShape4" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube118|living_room_latest:polySurfaceShape4" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube118|living_room_latest:polySurfaceShape4" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCylinder95|living_room_latest:pCylinderShape95" 
 		"VisibleInIndirect" " 1"
@@ -35015,13 +38086,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube117|living_room_latest:pCubeShape117" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube117|living_room_latest:polySurfaceShape4" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube117|living_room_latest:polySurfaceShape4" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube117|living_room_latest:polySurfaceShape4" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube116|living_room_latest:pCubeShape116" 
 		"VisibleInIndirect" " 1"
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube116|living_room_latest:pCubeShape116" 
@@ -35030,13 +38094,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube116|living_room_latest:pCubeShape116" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube116|living_room_latest:polySurfaceShape4" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube116|living_room_latest:polySurfaceShape4" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube116|living_room_latest:polySurfaceShape4" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCylinder93|living_room_latest:pCylinderShape93" 
 		"VisibleInIndirect" " 1"
@@ -35056,13 +38113,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube115|living_room_latest:pCubeShape115" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube115|living_room_latest:polySurfaceShape14" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube115|living_room_latest:polySurfaceShape14" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube115|living_room_latest:polySurfaceShape14" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCylinder92|living_room_latest:pCylinderShape92" 
 		"VisibleInIndirect" " 1"
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCylinder92|living_room_latest:pCylinderShape92" 
@@ -35080,13 +38130,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube114|living_room_latest:pCubeShape114" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube114|living_room_latest:polySurfaceShape14" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube114|living_room_latest:polySurfaceShape14" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube114|living_room_latest:polySurfaceShape14" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube18|living_room_latest:pCubeShape18" 
 		"VisibleInIndirect" " 1"
@@ -35114,13 +38157,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube15|living_room_latest:pCubeShape15" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube15|living_room_latest:polySurfaceShape10" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube15|living_room_latest:polySurfaceShape10" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube15|living_room_latest:polySurfaceShape10" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCylinder16|living_room_latest:pCylinderShape16" 
 		"VisibleInIndirect" " 1"
@@ -35239,13 +38275,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube14|living_room_latest:pCubeShape14" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube14|living_room_latest:polySurfaceShape7" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube14|living_room_latest:polySurfaceShape7" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube14|living_room_latest:polySurfaceShape7" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube13|living_room_latest:pCubeShape13" 
 		"VisibleInIndirect" " 1"
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube13|living_room_latest:pCubeShape13" 
@@ -35254,13 +38283,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube13|living_room_latest:pCubeShape13" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube13|living_room_latest:polySurfaceShape8" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube13|living_room_latest:polySurfaceShape8" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube13|living_room_latest:polySurfaceShape8" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube12|living_room_latest:pCubeShape12" 
 		"VisibleInIndirect" " 1"
@@ -35271,13 +38293,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube12|living_room_latest:pCubeShape12" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube12|living_room_latest:polySurfaceShape5" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube12|living_room_latest:polySurfaceShape5" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube12|living_room_latest:polySurfaceShape5" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube11|living_room_latest:pCubeShape11" 
 		"VisibleInIndirect" " 1"
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube11|living_room_latest:pCubeShape11" 
@@ -35286,13 +38301,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube11|living_room_latest:pCubeShape11" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube11|living_room_latest:polySurfaceShape6" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube11|living_room_latest:polySurfaceShape6" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube11|living_room_latest:polySurfaceShape6" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube10|living_room_latest:pCubeShape10" 
 		"VisibleInIndirect" " 1"
@@ -35303,13 +38311,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube10|living_room_latest:pCubeShape10" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube10|living_room_latest:polySurfaceShape3" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube10|living_room_latest:polySurfaceShape3" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube10|living_room_latest:polySurfaceShape3" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube9|living_room_latest:pCubeShape9" 
 		"VisibleInIndirect" " 1"
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube9|living_room_latest:pCubeShape9" 
@@ -35318,41 +38319,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
 		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube9|living_room_latest:pCubeShape9" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube9|living_room_latest:polySurfaceShape4" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube9|living_room_latest:polySurfaceShape4" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube9|living_room_latest:polySurfaceShape4" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube7|living_room_latest:polySurfaceShape2" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube7|living_room_latest:polySurfaceShape2" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube7|living_room_latest:polySurfaceShape2" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube5|living_room_latest:polySurfaceShape12" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube5|living_room_latest:polySurfaceShape12" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube5|living_room_latest:polySurfaceShape12" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube4|living_room_latest:polySurfaceShape13" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube4|living_room_latest:polySurfaceShape13" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube4|living_room_latest:polySurfaceShape13" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube3|living_room_latest:polySurfaceShape14" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube3|living_room_latest:polySurfaceShape14" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:countersinkRNfosterParent1|living_room_latest:pCube3|living_room_latest:polySurfaceShape14" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:exit_window_4|living_room_latest:exit_window_1Shape4" 
 		"VisibleInIndirect" " 1"
@@ -35461,13 +38427,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube319|living_room_latest:pasted__pCubeShape319" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube319|living_room_latest:pasted__polySurfaceShape46" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube319|living_room_latest:pasted__polySurfaceShape46" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube319|living_room_latest:pasted__polySurfaceShape46" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube321|living_room_latest:pasted__pCubeShape321" 
 		"VisibleInIndirect" " 1"
 		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube321|living_room_latest:pasted__pCubeShape321" 
@@ -35476,13 +38435,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
 		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube321|living_room_latest:pasted__pCubeShape321" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube321|living_room_latest:pasted__polySurfaceShape46" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube321|living_room_latest:pasted__polySurfaceShape46" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube321|living_room_latest:pasted__polySurfaceShape46" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCylinder94|living_room_latest:pasted__pCylinderShape94" 
 		"VisibleInIndirect" " 1"
@@ -35493,13 +38445,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCylinder94|living_room_latest:pasted__pCylinderShape94" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCylinder94|living_room_latest:pasted__polySurfaceShape45" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCylinder94|living_room_latest:pasted__polySurfaceShape45" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCylinder94|living_room_latest:pasted__polySurfaceShape45" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube316|living_room_latest:pasted__pCubeShape316" 
 		"VisibleInIndirect" " 1"
 		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube316|living_room_latest:pasted__pCubeShape316" 
@@ -35508,13 +38453,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
 		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube316|living_room_latest:pasted__pCubeShape316" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube316|living_room_latest:pasted__polySurfaceShape46" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube316|living_room_latest:pasted__polySurfaceShape46" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube316|living_room_latest:pasted__polySurfaceShape46" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube315|living_room_latest:pasted__pCubeShape315" 
 		"VisibleInIndirect" " 1"
@@ -35525,13 +38463,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube315|living_room_latest:pasted__pCubeShape315" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube315|living_room_latest:pasted__polySurfaceShape46" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube315|living_room_latest:pasted__polySurfaceShape46" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube315|living_room_latest:pasted__polySurfaceShape46" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube314|living_room_latest:pasted__pCubeShape314" 
 		"VisibleInIndirect" " 1"
 		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube314|living_room_latest:pasted__pCubeShape314" 
@@ -35541,13 +38472,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube314|living_room_latest:pasted__pCubeShape314" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube314|living_room_latest:pasted__polySurfaceShape46" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube314|living_room_latest:pasted__polySurfaceShape46" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube314|living_room_latest:pasted__polySurfaceShape46" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube318|living_room_latest:pasted__pCubeShape318" 
 		"VisibleInIndirect" " 1"
 		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube318|living_room_latest:pasted__pCubeShape318" 
@@ -35556,13 +38480,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
 		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube318|living_room_latest:pasted__pCubeShape318" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube318|living_room_latest:pasted__polySurfaceShape46" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube318|living_room_latest:pasted__polySurfaceShape46" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCube318|living_room_latest:pasted__polySurfaceShape46" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pasted__pTorus2|living_room_latest:pasted__pasted__pTorusShape2" 
 		"VisibleInIndirect" " 1"
@@ -35581,13 +38498,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
 		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pPipe3|living_room_latest:pasted__pPipeShape3" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pPipe3|living_room_latest:pasted__polySurfaceShape44" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pPipe3|living_room_latest:pasted__polySurfaceShape44" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pPipe3|living_room_latest:pasted__polySurfaceShape44" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:right_washing_machine|living_room_latest:pasted__pCylinder91|living_room_latest:pasted__pCylinderShape91" 
 		"VisibleInIndirect" " 1"
@@ -35670,13 +38580,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		2 "|living_room_latest:left_washing_machine|living_room_latest:pasted__pCube309|living_room_latest:pasted__pCubeShape309" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:left_washing_machine|living_room_latest:pasted__pCube309|living_room_latest:pasted__polySurfaceShape46" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:left_washing_machine|living_room_latest:pasted__pCube309|living_room_latest:pasted__polySurfaceShape46" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:left_washing_machine|living_room_latest:pasted__pCube309|living_room_latest:pasted__polySurfaceShape46" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:left_washing_machine|living_room_latest:pasted__pCube308|living_room_latest:pasted__pCubeShape308" 
 		"VisibleInIndirect" " 1"
 		2 "|living_room_latest:left_washing_machine|living_room_latest:pasted__pCube308|living_room_latest:pasted__pCubeShape308" 
@@ -35685,13 +38588,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
 		2 "|living_room_latest:left_washing_machine|living_room_latest:pasted__pCube308|living_room_latest:pasted__pCubeShape308" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:left_washing_machine|living_room_latest:pasted__pCube308|living_room_latest:pasted__polySurfaceShape46" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:left_washing_machine|living_room_latest:pasted__pCube308|living_room_latest:pasted__polySurfaceShape46" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:left_washing_machine|living_room_latest:pasted__pCube308|living_room_latest:pasted__polySurfaceShape46" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:left_washing_machine|living_room_latest:pasted__pCube277|living_room_latest:pasted__pCubeShape277" 
 		"VisibleInIndirect" " 1"
@@ -35810,12 +38706,10 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		2 "|living_room_latest:walls_and_floors|living_room_latest:walls_and_floorsShape" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:mug" "translate" " -type \"double3\" 16.249655567381723 -7.0572000793751331 0"
-		
+		2 "|living_room_latest:mug" "translate" " -type \"double3\" 0 0 0"
 		2 "|living_room_latest:mug" "translateX" " -av"
 		2 "|living_room_latest:mug" "translateY" " -av"
-		2 "|living_room_latest:mug" "rotate" " -type \"double3\" 0 0 -57.508719888850493"
-		
+		2 "|living_room_latest:mug" "rotate" " -type \"double3\" 0 0 0"
 		2 "|living_room_latest:mug" "rotateZ" " -av"
 		2 "|living_room_latest:mug|living_room_latest:mugShape" "VisibleInIndirect" 
 		" 1"
@@ -36004,15 +38898,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		2 "|living_room_latest:oven|living_room_latest:pasted__pCube161|living_room_latest:pasted__pCubeShape161" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:oven|living_room_latest:pasted__pCube162|living_room_latest:pasted__polySurfaceShape4" 
-		"VisibleInIndirect" " 1"
-		2 "|living_room_latest:oven|living_room_latest:pasted__pCube162|living_room_latest:pasted__polySurfaceShape4" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:oven|living_room_latest:pasted__pCube162|living_room_latest:pasted__polySurfaceShape4" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:oven|living_room_latest:pasted__pCube162|living_room_latest:pasted__polySurfaceShape4" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:oven|living_room_latest:pasted__pCylinder19|living_room_latest:pasted__pCylinderShape19" 
 		"VisibleInIndirect" " 1"
 		2 "|living_room_latest:oven|living_room_latest:pasted__pCylinder19|living_room_latest:pasted__pCylinderShape19" 
@@ -36057,13 +38942,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
 		2 "|living_room_latest:oven|living_room_latest:pasted__polySurface7|living_room_latest:pasted__polySurfaceShape7" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:oven|living_room_latest:pasted__pPlane4|living_room_latest:pasted__pPlaneShape4" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:oven|living_room_latest:pasted__pPlane4|living_room_latest:pasted__pPlaneShape4" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:oven|living_room_latest:pasted__pPlane4|living_room_latest:pasted__pPlaneShape4" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:oven|living_room_latest:pasted__pPlane4|living_room_latest:pasted__outputCloth1" 
 		"VisibleInIndirect" " 1"
@@ -36461,13 +39339,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		2 "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCube2|living_room_latest:side_table:pCubeShape2" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCube2|living_room_latest:side_table:polySurfaceShape10" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCube2|living_room_latest:side_table:polySurfaceShape10" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:side_table:pCube92|living_room_latest:side_table:pCube2|living_room_latest:side_table:polySurfaceShape10" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface1|living_room_latest:side_table:polySurfaceShape1" 
 		"VisibleInIndirect" " 1"
 		2 "|living_room_latest:side_table:pCube92|living_room_latest:side_table:polySurface1|living_room_latest:side_table:polySurfaceShape1" 
@@ -36540,22 +39411,15 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		2 "|living_room_latest:pCube92|living_room_latest:pCube2|living_room_latest:pCubeShape2" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:pCube92|living_room_latest:pCube2|living_room_latest:polySurfaceShape10" 
+		2 "|living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1" 
 		"surfaceReference" " 1"
-		2 "|living_room_latest:pCube92|living_room_latest:pCube2|living_room_latest:polySurfaceShape10" 
+		2 "|living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
 		
-		2 "|living_room_latest:pCube92|living_room_latest:pCube2|living_room_latest:polySurfaceShape10" 
+		2 "|living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1" 
 		"VisibleInIndirect" " 1"
-		2 "|living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:pCube92|living_room_latest:polySurface2|living_room_latest:polySurfaceShape2" 
 		"VisibleInIndirect" " 1"
 		2 "|living_room_latest:pCube92|living_room_latest:polySurface2|living_room_latest:polySurfaceShape2" 
@@ -36601,13 +39465,12 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		2 "|living_room_latest:pPipe2|living_room_latest:pPipeShape2" "furNameSpace" 
 		" -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:tissue_box1" "translate" " -type \"double3\" 14.0277858259507 0.18252036682121453 -1.0504649011169531"
+		2 "|living_room_latest:tissue_box1" "translate" " -type \"double3\" 0 0 0"
 		
 		2 "|living_room_latest:tissue_box1" "translateX" " -av"
 		2 "|living_room_latest:tissue_box1" "translateY" " -av"
 		2 "|living_room_latest:tissue_box1" "translateZ" " -av"
-		2 "|living_room_latest:tissue_box1" "rotate" " -type \"double3\" 0 0 -86.912729880861932"
-		
+		2 "|living_room_latest:tissue_box1" "rotate" " -type \"double3\" 0 0 0"
 		2 "|living_room_latest:tissue_box1" "rotateZ" " -av"
 		2 "|living_room_latest:tissue_box1|living_room_latest:tissue_box1Shape" "VisibleInIndirect" 
 		" 1"
@@ -37224,13 +40087,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		2 "|living_room_latest:pCube223|living_room_latest:pCubeShape223" "furNameSpace" 
 		" -type \"string\" \"living_room_latest\""
-		2 "|living_room_latest:pCube223|living_room_latest:polySurfaceShape305" "surfaceReference" 
-		" 1"
-		2 "|living_room_latest:pCube223|living_room_latest:polySurfaceShape305" "referenceFile" 
-		" -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:pCube223|living_room_latest:polySurfaceShape305" "furNameSpace" 
-		" -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:pPlane1|living_room_latest:pPlaneShape1" "surfaceReference" 
 		" 1"
 		2 "|living_room_latest:pPlane1|living_room_latest:pPlaneShape1" "referenceFile" 
@@ -37259,6 +40115,13 @@ createNode reference -n "livingroom_shading_latestRN";
 		" 250"
 		2 "|living_room_latest:nRigid6|living_room_latest:nRigidShape6" "cacheWidth" 
 		" 250"
+		2 "|living_room_latest:polySurface9|living_room_latest:polySurfaceShape9" 
+		"surfaceReference" " 1"
+		2 "|living_room_latest:polySurface9|living_room_latest:polySurfaceShape9" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
+		
+		2 "|living_room_latest:polySurface9|living_room_latest:polySurfaceShape9" 
+		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "living_room_latest:pasted__file18" "proceduralTexDefaultRes" " 512"
 		2 "living_room_latest:pasted__file18" "proceduralTexMaxRes" " 1024"
 		2 "living_room_latest:pasted__file18" "ReduceTextureInCuda" " 1"
@@ -37279,11 +40142,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		2 "living_room_latest:pasted__file12" "ReduceTextureInCuda" " 1"
 		2 "living_room_latest:pasted__file12" "onlineUpdate" " 0"
 		2 "living_room_latest:pasted__file12" "compressColor" " 1"
-		2 "living_room_latest:pasted__file8" "proceduralTexDefaultRes" " 512"
-		2 "living_room_latest:pasted__file8" "proceduralTexMaxRes" " 1024"
-		2 "living_room_latest:pasted__file8" "ReduceTextureInCuda" " 1"
-		2 "living_room_latest:pasted__file8" "onlineUpdate" " 0"
-		2 "living_room_latest:pasted__file8" "compressColor" " 1"
 		2 "living_room_latest:pasted__fractal4" "proceduralTexDefaultRes" " 512"
 		2 "living_room_latest:pasted__fractal4" "proceduralTexMaxRes" " 1024"
 		2 "living_room_latest:pasted__fractal4" "ReduceTextureInCuda" " 1"
@@ -37294,12 +40152,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		2 "living_room_latest:pasted__stucco1" "ReduceTextureInCuda" " 1"
 		2 "living_room_latest:pasted__stucco1" "onlineUpdate" " 0"
 		2 "living_room_latest:pasted__stucco1" "compressColor" " 1"
-		2 "living_room_latest:vase_flowers:ramp10" "proceduralTexDefaultRes" " 512"
-		
-		2 "living_room_latest:vase_flowers:ramp10" "proceduralTexMaxRes" " 1024"
-		2 "living_room_latest:vase_flowers:ramp10" "ReduceTextureInCuda" " 1"
-		2 "living_room_latest:vase_flowers:ramp10" "onlineUpdate" " 0"
-		2 "living_room_latest:vase_flowers:ramp10" "compressColor" " 1"
 		2 "living_room_latest:vase_flowers:ramp1" "proceduralTexDefaultRes" " 512"
 		
 		2 "living_room_latest:vase_flowers:ramp1" "proceduralTexMaxRes" " 1024"
@@ -37402,29 +40254,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		2 "living_room_latest:vase_flowers:ramp9" "ReduceTextureInCuda" " 1"
 		2 "living_room_latest:vase_flowers:ramp9" "onlineUpdate" " 0"
 		2 "living_room_latest:vase_flowers:ramp9" "compressColor" " 1"
-		2 "living_room_latest:vase_flowers:daisySmall4LeafShader" "transparencyTexAlpha" 
-		" 0"
-		2 "living_room_latest:vase_flowers:ramp11" "proceduralTexDefaultRes" " 512"
-		
-		2 "living_room_latest:vase_flowers:ramp11" "proceduralTexMaxRes" " 1024"
-		2 "living_room_latest:vase_flowers:ramp11" "ReduceTextureInCuda" " 1"
-		2 "living_room_latest:vase_flowers:ramp11" "onlineUpdate" " 0"
-		2 "living_room_latest:vase_flowers:ramp11" "compressColor" " 1"
-		2 "living_room_latest:vase_flowers:file5" "proceduralTexDefaultRes" " 256"
-		
-		2 "living_room_latest:vase_flowers:file5" "proceduralTexMaxRes" " 1024"
-		2 "living_room_latest:vase_flowers:file5" "ReduceTextureInCuda" " 1"
-		2 "living_room_latest:vase_flowers:file5" "onlineUpdate" " 0"
-		2 "living_room_latest:vase_flowers:file5" "compressColor" " 1"
-		2 "living_room_latest:vase_flowers:multiplyDivide12" "proceduralTexDefaultRes" 
-		" 256"
-		2 "living_room_latest:vase_flowers:multiplyDivide12" "proceduralTexMaxRes" 
-		" 1024"
-		2 "living_room_latest:vase_flowers:multiplyDivide12" "ReduceTextureInCuda" 
-		" 1"
-		2 "living_room_latest:vase_flowers:multiplyDivide12" "onlineUpdate" " 0"
-		2 "living_room_latest:vase_flowers:multiplyDivide12" "compressColor" " 1"
-		
 		2 "living_room_latest:vase_flowers:ramp12" "proceduralTexDefaultRes" " 512"
 		
 		2 "living_room_latest:vase_flowers:ramp12" "proceduralTexMaxRes" " 1024"
@@ -37432,71 +40261,67 @@ createNode reference -n "livingroom_shading_latestRN";
 		2 "living_room_latest:vase_flowers:ramp12" "onlineUpdate" " 0"
 		2 "living_room_latest:vase_flowers:ramp12" "compressColor" " 1"
 		5 4 "livingroom_shading_latestRN" "|living_room_latest:mug.translateX" 
-		"livingroom_shading_latestRN.placeHolderList[2]" ""
+		"livingroom_shading_latestRN.placeHolderList[34]" ""
 		5 4 "livingroom_shading_latestRN" "|living_room_latest:mug.translateY" 
-		"livingroom_shading_latestRN.placeHolderList[3]" ""
+		"livingroom_shading_latestRN.placeHolderList[35]" ""
 		5 4 "livingroom_shading_latestRN" "|living_room_latest:mug.translateZ" 
-		"livingroom_shading_latestRN.placeHolderList[4]" ""
+		"livingroom_shading_latestRN.placeHolderList[36]" ""
 		5 4 "livingroom_shading_latestRN" "|living_room_latest:mug.rotateX" 
-		"livingroom_shading_latestRN.placeHolderList[5]" ""
+		"livingroom_shading_latestRN.placeHolderList[37]" ""
 		5 4 "livingroom_shading_latestRN" "|living_room_latest:mug.rotateY" 
-		"livingroom_shading_latestRN.placeHolderList[6]" ""
+		"livingroom_shading_latestRN.placeHolderList[38]" ""
 		5 4 "livingroom_shading_latestRN" "|living_room_latest:mug.rotateZ" 
-		"livingroom_shading_latestRN.placeHolderList[7]" ""
+		"livingroom_shading_latestRN.placeHolderList[39]" ""
 		5 4 "livingroom_shading_latestRN" "|living_room_latest:mug.visibility" 
-		"livingroom_shading_latestRN.placeHolderList[8]" ""
-		5 4 "livingroom_shading_latestRN" "|living_room_latest:mug.scaleX" "livingroom_shading_latestRN.placeHolderList[9]" 
+		"livingroom_shading_latestRN.placeHolderList[40]" ""
+		5 4 "livingroom_shading_latestRN" "|living_room_latest:mug.scaleX" "livingroom_shading_latestRN.placeHolderList[41]" 
 		""
-		5 4 "livingroom_shading_latestRN" "|living_room_latest:mug.scaleY" "livingroom_shading_latestRN.placeHolderList[10]" 
+		5 4 "livingroom_shading_latestRN" "|living_room_latest:mug.scaleY" "livingroom_shading_latestRN.placeHolderList[42]" 
 		""
-		5 4 "livingroom_shading_latestRN" "|living_room_latest:mug.scaleZ" "livingroom_shading_latestRN.placeHolderList[11]" 
+		5 4 "livingroom_shading_latestRN" "|living_room_latest:mug.scaleZ" "livingroom_shading_latestRN.placeHolderList[43]" 
 		""
 		5 4 "livingroom_shading_latestRN" "|living_room_latest:tissue_box1.translateX" 
-		"livingroom_shading_latestRN.placeHolderList[12]" ""
+		"livingroom_shading_latestRN.placeHolderList[44]" ""
 		5 4 "livingroom_shading_latestRN" "|living_room_latest:tissue_box1.translateY" 
-		"livingroom_shading_latestRN.placeHolderList[13]" ""
+		"livingroom_shading_latestRN.placeHolderList[45]" ""
 		5 4 "livingroom_shading_latestRN" "|living_room_latest:tissue_box1.translateZ" 
-		"livingroom_shading_latestRN.placeHolderList[14]" ""
+		"livingroom_shading_latestRN.placeHolderList[46]" ""
 		5 4 "livingroom_shading_latestRN" "|living_room_latest:tissue_box1.rotateX" 
-		"livingroom_shading_latestRN.placeHolderList[15]" ""
+		"livingroom_shading_latestRN.placeHolderList[47]" ""
 		5 4 "livingroom_shading_latestRN" "|living_room_latest:tissue_box1.rotateY" 
-		"livingroom_shading_latestRN.placeHolderList[16]" ""
+		"livingroom_shading_latestRN.placeHolderList[48]" ""
 		5 4 "livingroom_shading_latestRN" "|living_room_latest:tissue_box1.rotateZ" 
-		"livingroom_shading_latestRN.placeHolderList[17]" ""
+		"livingroom_shading_latestRN.placeHolderList[49]" ""
 		5 4 "livingroom_shading_latestRN" "|living_room_latest:tissue_box1.visibility" 
-		"livingroom_shading_latestRN.placeHolderList[18]" ""
+		"livingroom_shading_latestRN.placeHolderList[50]" ""
 		5 4 "livingroom_shading_latestRN" "|living_room_latest:tissue_box1.scaleX" 
-		"livingroom_shading_latestRN.placeHolderList[19]" ""
+		"livingroom_shading_latestRN.placeHolderList[51]" ""
 		5 4 "livingroom_shading_latestRN" "|living_room_latest:tissue_box1.scaleY" 
-		"livingroom_shading_latestRN.placeHolderList[20]" ""
+		"livingroom_shading_latestRN.placeHolderList[52]" ""
 		5 4 "livingroom_shading_latestRN" "|living_room_latest:tissue_box1.scaleZ" 
-		"livingroom_shading_latestRN.placeHolderList[21]" ""
+		"livingroom_shading_latestRN.placeHolderList[53]" ""
 		5 3 "livingroom_shading_latestRN" "living_room_latest:nonselectablelayer.drawInfo" 
-		"livingroom_shading_latestRN.placeHolderList[22]" ""
-		5 4 "livingroom_shading_latestRN" "living_room_latest:vase_flowers:daisySmall4ShaderSG.dagSetMembers" 
-		"livingroom_shading_latestRN.placeHolderList[23]" ""
+		"livingroom_shading_latestRN.placeHolderList[54]" ""
 		5 4 "livingroom_shading_latestRN" "living_room_latest:vase_flowers:daisySmall1ShaderSG.dagSetMembers" 
-		"livingroom_shading_latestRN.placeHolderList[24]" ""
+		"livingroom_shading_latestRN.placeHolderList[55]" ""
 		5 4 "livingroom_shading_latestRN" "living_room_latest:vase_flowers:daisySmall1LeafShaderSG.dagSetMembers" 
-		"livingroom_shading_latestRN.placeHolderList[25]" ""
+		"livingroom_shading_latestRN.placeHolderList[56]" ""
 		5 4 "livingroom_shading_latestRN" "living_room_latest:vase_flowers:daisySmall1FlowerShaderSG.dagSetMembers" 
-		"livingroom_shading_latestRN.placeHolderList[26]" ""
+		"livingroom_shading_latestRN.placeHolderList[57]" ""
 		5 4 "livingroom_shading_latestRN" "living_room_latest:vase_flowers:daisySmall2ShaderSG.dagSetMembers" 
-		"livingroom_shading_latestRN.placeHolderList[27]" ""
+		"livingroom_shading_latestRN.placeHolderList[58]" ""
 		5 4 "livingroom_shading_latestRN" "living_room_latest:vase_flowers:daisySmall2LeafShaderSG.dagSetMembers" 
-		"livingroom_shading_latestRN.placeHolderList[28]" ""
+		"livingroom_shading_latestRN.placeHolderList[59]" ""
 		5 4 "livingroom_shading_latestRN" "living_room_latest:vase_flowers:daisySmall2FlowerShaderSG.dagSetMembers" 
-		"livingroom_shading_latestRN.placeHolderList[29]" ""
+		"livingroom_shading_latestRN.placeHolderList[60]" ""
 		5 4 "livingroom_shading_latestRN" "living_room_latest:vase_flowers:daisySmall3ShaderSG.dagSetMembers" 
-		"livingroom_shading_latestRN.placeHolderList[30]" ""
+		"livingroom_shading_latestRN.placeHolderList[61]" ""
 		5 4 "livingroom_shading_latestRN" "living_room_latest:vase_flowers:daisySmall3LeafShaderSG.dagSetMembers" 
-		"livingroom_shading_latestRN.placeHolderList[31]" ""
+		"livingroom_shading_latestRN.placeHolderList[62]" ""
 		5 4 "livingroom_shading_latestRN" "living_room_latest:vase_flowers:daisySmall3FlowerShaderSG.dagSetMembers" 
-		"livingroom_shading_latestRN.placeHolderList[32]" ""
-		5 4 "livingroom_shading_latestRN" "living_room_latest:vase_flowers:daisySmall4LeafShaderSG.dagSetMembers" 
-		"livingroom_shading_latestRN.placeHolderList[33]" ""
+		"livingroom_shading_latestRN.placeHolderList[63]" ""
 		5 4 "livingroom_shading_latestRN" "living_room_latest:vase_flowers:daisySmall4FlowerShaderSG.dagSetMembers" 
-		"livingroom_shading_latestRN.placeHolderList[34]" ""
+		"livingroom_shading_latestRN.placeHolderList[64]" ""
 		"living_room_latest:taller_window_four_squares_latestRN1" 50
 		1 |living_room_latest:taller_window_four_squares_latest1:taller_window|living_room_latest:taller_window_four_squares_latest1:polySurfaceShape1 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
@@ -37616,21 +40441,13 @@ createNode mentalrayItemsList -s -n "mentalrayItemsList";
 createNode mentalrayGlobals -s -n "mentalrayGlobals";
 	addAttr -s false -ci true -h true -sn "sunAndSkyShader" -ln "sunAndSkyShader" -at "message";
 	setAttr ".rvb" 3;
-	setAttr ".ivb" no;
+	setAttr ".ivb" 0;
 createNode mentalrayOptions -s -n "miDefaultOptions";
 	addAttr -ci true -m -sn "stringOptions" -ln "stringOptions" -at "compound" -nc 
 		3;
 	addAttr -ci true -sn "name" -ln "name" -dt "string" -p "stringOptions";
 	addAttr -ci true -sn "value" -ln "value" -dt "string" -p "stringOptions";
 	addAttr -ci true -sn "type" -ln "type" -dt "string" -p "stringOptions";
-	setAttr ".splck" yes;
-	setAttr ".minsp" -1;
-	setAttr ".maxsp" 1;
-	setAttr ".fil" 1;
-	setAttr ".rflr" 2;
-	setAttr ".rfrr" 2;
-	setAttr ".maxr" 4;
-	setAttr ".shrd" 2;
 	setAttr -s 48 ".stringOptions";
 	setAttr ".stringOptions[0].name" -type "string" "rast motion factor";
 	setAttr ".stringOptions[0].value" -type "string" "1.0";
@@ -37776,28 +40593,36 @@ createNode mentalrayOptions -s -n "miDefaultOptions";
 	setAttr ".stringOptions[47].name" -type "string" "environment lighting scale";
 	setAttr ".stringOptions[47].value" -type "string" "1.0 1.0 1.0";
 	setAttr ".stringOptions[47].type" -type "string" "color";
+	setAttr ".splck" 1;
+	setAttr ".minsp" -1;
+	setAttr ".maxsp" 1;
+	setAttr ".fil" 1;
+	setAttr ".rflr" 2;
+	setAttr ".rfrr" 2;
+	setAttr ".maxr" 4;
+	setAttr ".shrd" 2;
 createNode mentalrayFramebuffer -s -n "miDefaultFramebuffer";
 	setAttr ".dat" 2;
 createNode animLayer -s -n "BaseAnimation";
-	setAttr -s 3 ".cdly";
-	setAttr -s 3 ".chsl";
+	setAttr -s 6 ".cdly";
+	setAttr -s 6 ".chsl";
 	setAttr ".ovrd" yes;
 createNode mentalrayOptions -s -n "miContourPreset";
-	setAttr ".splck" yes;
+	setAttr ".splck" 1;
 	setAttr ".fil" 0;
 	setAttr ".rflr" 1;
 	setAttr ".rfrr" 1;
 	setAttr ".maxr" 1;
 	setAttr ".shrd" 2;
 createNode mentalrayOptions -s -n "Draft";
-	setAttr ".splck" yes;
+	setAttr ".splck" 1;
 	setAttr ".fil" 0;
 	setAttr ".rflr" 1;
 	setAttr ".rfrr" 1;
 	setAttr ".maxr" 2;
 	setAttr ".shrd" 2;
 createNode mentalrayOptions -s -n "DraftMotionBlur";
-	setAttr ".splck" yes;
+	setAttr ".splck" 1;
 	setAttr ".fil" 0;
 	setAttr ".rflr" 1;
 	setAttr ".rfrr" 1;
@@ -37809,7 +40634,7 @@ createNode mentalrayOptions -s -n "DraftMotionBlur";
 	setAttr ".tconb" 1;
 	setAttr ".tcona" 1;
 createNode mentalrayOptions -s -n "DraftRapidMotion";
-	setAttr ".splck" yes;
+	setAttr ".splck" 1;
 	setAttr ".fil" 0;
 	setAttr ".scan" 3;
 	setAttr ".rapc" 1;
@@ -37824,7 +40649,7 @@ createNode mentalrayOptions -s -n "DraftRapidMotion";
 	setAttr ".tconb" 1;
 	setAttr ".tcona" 1;
 createNode mentalrayOptions -s -n "Preview";
-	setAttr ".splck" yes;
+	setAttr ".splck" 1;
 	setAttr ".minsp" -1;
 	setAttr ".maxsp" 1;
 	setAttr ".fil" 1;
@@ -37833,7 +40658,7 @@ createNode mentalrayOptions -s -n "Preview";
 	setAttr ".maxr" 4;
 	setAttr ".shrd" 2;
 createNode mentalrayOptions -s -n "PreviewMotionblur";
-	setAttr ".splck" yes;
+	setAttr ".splck" 1;
 	setAttr ".minsp" -1;
 	setAttr ".maxsp" 1;
 	setAttr ".fil" 1;
@@ -37847,7 +40672,7 @@ createNode mentalrayOptions -s -n "PreviewMotionblur";
 	setAttr ".tconb" 0.5;
 	setAttr ".tcona" 0.5;
 createNode mentalrayOptions -s -n "PreviewRapidMotion";
-	setAttr ".splck" yes;
+	setAttr ".splck" 1;
 	setAttr ".minsp" -1;
 	setAttr ".maxsp" 1;
 	setAttr ".fil" 1;
@@ -37863,7 +40688,7 @@ createNode mentalrayOptions -s -n "PreviewRapidMotion";
 	setAttr ".tconb" 0.5;
 	setAttr ".tcona" 0.5;
 createNode mentalrayOptions -s -n "PreviewCaustics";
-	setAttr ".splck" yes;
+	setAttr ".splck" 1;
 	setAttr ".minsp" -1;
 	setAttr ".maxsp" 1;
 	setAttr ".fil" 1;
@@ -37871,11 +40696,11 @@ createNode mentalrayOptions -s -n "PreviewCaustics";
 	setAttr ".rfrr" 2;
 	setAttr ".maxr" 4;
 	setAttr ".shrd" 2;
-	setAttr ".ca" yes;
+	setAttr ".ca" 1;
 	setAttr ".cc" 1;
 	setAttr ".cr" 1;
 createNode mentalrayOptions -s -n "PreviewGlobalIllum";
-	setAttr ".splck" yes;
+	setAttr ".splck" 1;
 	setAttr ".minsp" -1;
 	setAttr ".maxsp" 1;
 	setAttr ".fil" 1;
@@ -37883,11 +40708,11 @@ createNode mentalrayOptions -s -n "PreviewGlobalIllum";
 	setAttr ".rfrr" 2;
 	setAttr ".maxr" 4;
 	setAttr ".shrd" 2;
-	setAttr ".gi" yes;
+	setAttr ".gi" 1;
 	setAttr ".gc" 1;
 	setAttr ".gr" 1;
 createNode mentalrayOptions -s -n "PreviewFinalGather";
-	setAttr ".splck" yes;
+	setAttr ".splck" 1;
 	setAttr ".minsp" -1;
 	setAttr ".maxsp" 1;
 	setAttr ".fil" 1;
@@ -37895,9 +40720,9 @@ createNode mentalrayOptions -s -n "PreviewFinalGather";
 	setAttr ".rfrr" 2;
 	setAttr ".maxr" 4;
 	setAttr ".shrd" 2;
-	setAttr ".fg" yes;
+	setAttr ".fg" 1;
 createNode mentalrayOptions -s -n "Production";
-	setAttr ".splck" yes;
+	setAttr ".splck" 1;
 	setAttr ".minsp" 0;
 	setAttr ".maxsp" 2;
 	setAttr ".fil" 0;
@@ -37906,7 +40731,7 @@ createNode mentalrayOptions -s -n "Production";
 	setAttr ".maxr" 20;
 	setAttr ".shrd" 2;
 createNode mentalrayOptions -s -n "ProductionMotionblur";
-	setAttr ".splck" yes;
+	setAttr ".splck" 1;
 	setAttr ".minsp" 0;
 	setAttr ".maxsp" 2;
 	setAttr ".fil" 0;
@@ -37916,7 +40741,7 @@ createNode mentalrayOptions -s -n "ProductionMotionblur";
 	setAttr ".shrd" 2;
 	setAttr ".mb" 2;
 createNode mentalrayOptions -s -n "ProductionRapidMotion";
-	setAttr ".splck" yes;
+	setAttr ".splck" 1;
 	setAttr ".minsp" 0;
 	setAttr ".maxsp" 2;
 	setAttr ".fil" 0;
@@ -37932,13 +40757,13 @@ createNode mentalrayOptions -s -n "ProductionFineTrace";
 	setAttr ".conr" 0.019999999552965164;
 	setAttr ".cong" 0.019999999552965164;
 	setAttr ".conb" 0.019999999552965164;
-	setAttr ".splck" yes;
+	setAttr ".splck" 1;
 	setAttr ".minsp" 1;
 	setAttr ".maxsp" 2;
 	setAttr ".fil" 1;
 	setAttr ".filw" 0.75;
 	setAttr ".filh" 0.75;
-	setAttr ".jit" yes;
+	setAttr ".jit" 1;
 	setAttr ".rflr" 1;
 	setAttr ".rfrr" 1;
 	setAttr ".maxr" 1;
@@ -37947,59 +40772,59 @@ createNode mentalrayOptions -s -n "ProductionRapidFur";
 	setAttr ".conr" 0.039999999105930328;
 	setAttr ".cong" 0.029999999329447746;
 	setAttr ".conb" 0.070000000298023224;
-	setAttr ".splck" yes;
+	setAttr ".splck" 1;
 	setAttr ".minsp" 0;
 	setAttr ".maxsp" 2;
 	setAttr ".fil" 1;
 	setAttr ".filw" 1.1449999809265137;
 	setAttr ".filh" 1.1449999809265137;
-	setAttr ".jit" yes;
+	setAttr ".jit" 1;
 	setAttr ".scan" 3;
 	setAttr ".rapc" 3;
 	setAttr ".raps" 0.25;
-	setAttr ".ray" no;
+	setAttr ".ray" 0;
 	setAttr ".rflr" 1;
 	setAttr ".rfrr" 1;
 	setAttr ".maxr" 1;
 	setAttr ".shrd" 2;
 	setAttr ".shmth" 3;
 	setAttr ".shmap" 3;
-	setAttr ".mbsm" no;
+	setAttr ".mbsm" 0;
 	setAttr ".bism" 0.019999999552965164;
 createNode mentalrayOptions -s -n "ProductionRapidHair";
 	setAttr ".conr" 0.039999999105930328;
 	setAttr ".cong" 0.029999999329447746;
 	setAttr ".conb" 0.070000000298023224;
-	setAttr ".splck" yes;
+	setAttr ".splck" 1;
 	setAttr ".minsp" 0;
 	setAttr ".maxsp" 2;
 	setAttr ".fil" 1;
 	setAttr ".filw" 1.1449999809265137;
 	setAttr ".filh" 1.1449999809265137;
-	setAttr ".jit" yes;
+	setAttr ".jit" 1;
 	setAttr ".scan" 3;
 	setAttr ".rapc" 6;
-	setAttr ".ray" no;
+	setAttr ".ray" 0;
 	setAttr ".rflr" 1;
 	setAttr ".rfrr" 1;
 	setAttr ".maxr" 1;
 	setAttr ".shrd" 2;
 	setAttr ".shmth" 3;
 	setAttr ".shmap" 3;
-	setAttr ".mbsm" no;
+	setAttr ".mbsm" 0;
 	setAttr ".bism" 0.019999999552965164;
 createNode mentalrayOptions -s -n "PreviewImrRayTracyOff";
-	setAttr ".splck" yes;
+	setAttr ".splck" 1;
 	setAttr ".minsp" 0;
 	setAttr ".fil" 1;
 	setAttr ".scan" 1;
-	setAttr ".ray" no;
+	setAttr ".ray" 0;
 	setAttr ".rflr" 1;
 	setAttr ".rfrr" 1;
 	setAttr ".maxr" 1;
 	setAttr ".shrd" 2;
 createNode mentalrayOptions -s -n "PreviewImrRayTracyOn";
-	setAttr ".splck" yes;
+	setAttr ".splck" 1;
 	setAttr ".minsp" 0;
 	setAttr ".fil" 1;
 	setAttr ".scan" 1;
@@ -38034,19 +40859,19 @@ createNode mentalrayOptions -s -n "FineTrace";
 	setAttr ".conr" 0.019999999552965164;
 	setAttr ".cong" 0.019999999552965164;
 	setAttr ".conb" 0.019999999552965164;
-	setAttr ".splck" yes;
+	setAttr ".splck" 1;
 	setAttr ".minsp" 1;
 	setAttr ".maxsp" 2;
 	setAttr ".fil" 1;
 	setAttr ".filw" 0.75;
 	setAttr ".filh" 0.75;
-	setAttr ".jit" yes;
+	setAttr ".jit" 1;
 	setAttr ".rflr" 1;
 	setAttr ".rfrr" 1;
 	setAttr ".maxr" 1;
 	setAttr ".shrd" 2;
 createNode reference -n "smartybikeRN";
-	setAttr -s 23 ".phl";
+	setAttr -s 16 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -38063,13 +40888,6 @@ createNode reference -n "smartybikeRN";
 	setAttr ".phl[14]" 0;
 	setAttr ".phl[15]" 0;
 	setAttr ".phl[16]" 0;
-	setAttr ".phl[17]" 0;
-	setAttr ".phl[18]" 0;
-	setAttr ".phl[19]" 0;
-	setAttr ".phl[20]" 0;
-	setAttr ".phl[21]" 0;
-	setAttr ".phl[22]" 0;
-	setAttr ".phl[23]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"smartybikeRN"
 		"smartybikeRN" 1
@@ -38203,7 +41021,7 @@ createNode reference -n "smartybikeRN";
 		
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:Smarty|NewSmarty_024:polySurface6|NewSmarty_024:polySurfaceShape4Orig" 
 		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" "translate" " -type \"double3\" -166.90106112457948 11.742279795633483 28.918914383988419"
+		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" "translate" " -type \"double3\" -197.33276981877773 11.746381242005683 58.801705643160965"
 		
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" "translateX" " -av"
 		
@@ -38211,7 +41029,7 @@ createNode reference -n "smartybikeRN";
 		
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" "translateZ" " -av"
 		
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" "rotate" " -type \"double3\" 0.27545822478563847 -159.65820376917063 -0.79236809791172325"
+		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" "rotate" " -type \"double3\" 0.91756509980541978 7.5996368139730146 6.9050724559485994"
 		
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" "rotateX" " -av"
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" "rotateY" " -av"
@@ -38249,7 +41067,7 @@ createNode reference -n "smartybikeRN";
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glassFrame|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glass|NewSmarty_024:smarty_008_fixed_rig_:glassL|NewSmarty_024:smarty_008_fixed_rig_:glassLShape" 
 		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:eye_ctrl" 
-		"translate" " -type \"double3\" 1.9511288420010071 -0.24172229902896239 -1.1203685067861802"
+		"translate" " -type \"double3\" 1.9156650137318088 -0.24172229902896214 -1.1203685067861791"
 		
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:eye_ctrl" 
 		"translateX" " -av"
@@ -38285,7 +41103,7 @@ createNode reference -n "smartybikeRN";
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:smarty_008_fixed_rig_:bowTie|NewSmarty_024:smarty_008_fixed_rig_:bowTieShape" 
 		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl" 
-		"rotate" " -type \"double3\" 1.4082881712018336 25.621707608937324 -3.2060064893649458"
+		"rotate" " -type \"double3\" 0.94355984589933939 17.166667289788677 -2.1480397626828633"
 		
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl" 
 		"rotateX" " -av"
@@ -38294,7 +41112,7 @@ createNode reference -n "smartybikeRN";
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl" 
 		"rotateZ" " -av"
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rightLeg_ik" 
-		"translate" " -type \"double3\" -2.2332112929869203 -9.9748973102823886 1.3446827995202104"
+		"translate" " -type \"double3\" -2.2332112929864656 -9.974897310282385 1.3446827995201251"
 		
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rightLeg_ik" 
 		"translateX" " -av"
@@ -38303,7 +41121,7 @@ createNode reference -n "smartybikeRN";
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rightLeg_ik" 
 		"translateZ" " -av"
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:leftLeg_ik" 
-		"translate" " -type \"double3\" 2.0746780938944567 -9.9748837915002806 1.3446808565261772"
+		"translate" " -type \"double3\" 2.0746780938946841 -9.9748837915002557 1.3446808565260635"
 		
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:leftLeg_ik" 
 		"translateX" " -av"
@@ -38312,7 +41130,7 @@ createNode reference -n "smartybikeRN";
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:leftLeg_ik" 
 		"translateZ" " -av"
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rightArm_ik" 
-		"translate" " -type \"double3\" -3.6566274601313924 -2.383918322878209 5.1006420311371929"
+		"translate" " -type \"double3\" -3.6566274601310513 -2.3839183228781664 5.1006420311371361"
 		
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rightArm_ik" 
 		"translateX" " -av"
@@ -38321,7 +41139,7 @@ createNode reference -n "smartybikeRN";
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rightArm_ik" 
 		"translateZ" " -av"
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:leftArm_ik" 
-		"translate" " -type \"double3\" 3.6422651701391691 -2.3839187642247053 5.1006740279142893"
+		"translate" " -type \"double3\" 3.6422651701392827 -2.3839187642246653 5.1006740279141471"
 		
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:leftArm_ik" 
 		"translateX" " -av"
@@ -38362,7 +41180,7 @@ createNode reference -n "smartybikeRN";
 		"smartybikeRN.placeHolderList[8]" ""
 		5 4 "smartybikeRN" "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl.rotateZ" 
 		"smartybikeRN.placeHolderList[9]" ""
-		"smartybike_bikeRN" 83
+		"smartybike_bikeRN" 76
 		1 |bike:bike_ctrl|bike:wholeBike|bike:rightWheel|bike:rightWheelShape "surfaceReference" 
 		"sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
 		1 |bike:bike_ctrl|bike:wholeBike|bike:rightWheel|bike:rightWheelShape "referenceFile" 
@@ -38413,7 +41231,7 @@ createNode reference -n "smartybikeRN";
 		"fns" " -ci 1 -h 1 -dt \"string\""
 		1 |bike:bike_ctrl|bike:wholeBike|bike:frame|bike:frameShape "VisibleInIndirect" 
 		"VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
-		2 "|bike:bike_ctrl" "translate" " -type \"double3\" -167.40705316865683 -0.39205438473953791 29.303649069474339"
+		2 "|bike:bike_ctrl" "translate" " -type \"double3\" -197.60238584705675 -0.39205438473953791 60.450752219957785"
 		
 		2 "|bike:bike_ctrl" "translateZ" " -av"
 		2 "|bike:bike_ctrl" "rotateOrder" " 0"
@@ -38505,20 +41323,6 @@ createNode reference -n "smartybikeRN";
 		5 4 "smartybikeRN" "|bike:bike_ctrl.rotateZ" "smartybikeRN.placeHolderList[15]" 
 		""
 		5 4 "smartybikeRN" "|bike:bike_ctrl.visibility" "smartybikeRN.placeHolderList[16]" 
-		""
-		5 3 "smartybikeRN" "|bike:bike_ctrl|bike:wholeBike.translate" "smartybikeRN.placeHolderList[17]" 
-		""
-		5 3 "smartybikeRN" "|bike:bike_ctrl|bike:wholeBike.rotate" "smartybikeRN.placeHolderList[18]" 
-		""
-		5 3 "smartybikeRN" "|bike:bike_ctrl|bike:wholeBike.scale" "smartybikeRN.placeHolderList[19]" 
-		""
-		5 3 "smartybikeRN" "|bike:bike_ctrl|bike:wholeBike.rotatePivot" "smartybikeRN.placeHolderList[20]" 
-		""
-		5 3 "smartybikeRN" "|bike:bike_ctrl|bike:wholeBike.rotatePivotTranslate" 
-		"smartybikeRN.placeHolderList[21]" ""
-		5 3 "smartybikeRN" "|bike:bike_ctrl|bike:wholeBike.rotateOrder" "smartybikeRN.placeHolderList[22]" 
-		""
-		5 3 "smartybikeRN" "|bike:bike_ctrl|bike:wholeBike.parentMatrix" "smartybikeRN.placeHolderList[23]" 
 		"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
@@ -38528,9 +41332,9 @@ createNode FurGlobals -n "defaultFurGlobals";
 	addAttr -ci true -h true -sn "fgrf" -ln "furGlobalReference" -min 0 -max 1 -at "bool";
 	setAttr ".av" 2;
 	setAttr ".rep" -type "string" "renderData/fur/furEqualMap/smarty_under_table";
-	setAttr ".pjl" -type "string" "E:/Shithub/Bandits/maya";
+	setAttr ".pjl" -type "string" "C:/Users/Saurabh/Documents/GitHub/Bandits/maya";
 createNode reference -n "sneaks_latestRN";
-	setAttr ".fn[0]" -type "string" "E:/Shithub/Bandits/maya//assets/characters/sneaks/sneaks_latest.ma";
+	setAttr ".fn[0]" -type "string" "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/sneaks/sneaks_latest.ma";
 	setAttr -s 7 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
@@ -38785,27 +41589,7 @@ createNode reference -n "tuffs_latestRN";
 	setAttr ".phl[17]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"tuffs_latestRN"
-		"tuffs_latestRN" 1
-		3 "tuffs_latest_file4.outColor" ":lambert1.color" ""
-		"tuffs_latestRN" 77
-		1 |tuffs_latest_controller_root|tuffs_latest_controller_COG|tuffs_latest_controller_head|tuffs_latest_pSphere2|tuffs_latest_pSphereShape2 
-		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
-		
-		1 |tuffs_latest_controller_root|tuffs_latest_controller_COG|tuffs_latest_controller_head|tuffs_latest_pSphere2|tuffs_latest_pSphereShape2 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |tuffs_latest_controller_root|tuffs_latest_controller_COG|tuffs_latest_controller_head|tuffs_latest_pSphere2|tuffs_latest_pSphereShape2 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |tuffs_latest_controller_root|tuffs_latest_controller_COG|tuffs_latest_controller_head|tuffs_latest_pSphere2|tuffs_latest_pSphereShape2 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |tuffs_latest_controller_root|tuffs_latest_controller_COG|tuffs_latest_controller_head|tuffs_latest_pSphere1|tuffs_latest_pSphereShape1 
-		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
-		
-		1 |tuffs_latest_controller_root|tuffs_latest_controller_COG|tuffs_latest_controller_head|tuffs_latest_pSphere1|tuffs_latest_pSphereShape1 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |tuffs_latest_controller_root|tuffs_latest_controller_COG|tuffs_latest_controller_head|tuffs_latest_pSphere1|tuffs_latest_pSphereShape1 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |tuffs_latest_controller_root|tuffs_latest_controller_COG|tuffs_latest_controller_head|tuffs_latest_pSphere1|tuffs_latest_pSphereShape1 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		"tuffs_latestRN" 8
 		1 |tuffs_latest_tuffs_mesh|tuffs_latest_tuffs_meshShape "VisibleInIndirect" 
 		"VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		1 |tuffs_latest_tuffs_mesh|tuffs_latest_tuffs_meshShape "surfaceReference" 
@@ -38814,6 +41598,34 @@ createNode reference -n "tuffs_latestRN";
 		" -ci 1 -h 1 -dt \"string\""
 		1 |tuffs_latest_tuffs_mesh|tuffs_latest_tuffs_meshShape "furNameSpace" "fns" 
 		" -ci 1 -h 1 -dt \"string\""
+		2 "|tuffs_latest_tuffs_mesh|tuffs_latest_tuffs_meshShape" "VisibleInIndirect" 
+		" 1"
+		2 "|tuffs_latest_tuffs_mesh|tuffs_latest_tuffs_meshShape" "surfaceReference" 
+		" 1"
+		2 "|tuffs_latest_tuffs_mesh|tuffs_latest_tuffs_meshShape" "referenceFile" 
+		" -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/tuffs/tuffs_latest.ma\""
+		
+		2 "|tuffs_latest_tuffs_mesh|tuffs_latest_tuffs_meshShape" "furNameSpace" 
+		" -type \"string\" \"tuffs_latest\""
+		"tuffs_latestRN" 70
+		1 |tuffs_latest_controller_root|tuffs_latest_controller_COG|tuffs_latest_controller_head|tuffs_latest_pSphere2|tuffs_latest_pSphereShape2 
+		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
+		
+		1 |tuffs_latest_controller_root|tuffs_latest_controller_COG|tuffs_latest_controller_head|tuffs_latest_pSphere2|tuffs_latest_pSphereShape2 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |tuffs_latest_controller_root|tuffs_latest_controller_COG|tuffs_latest_controller_head|tuffs_latest_pSphere2|tuffs_latest_pSphereShape2 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |tuffs_latest_controller_root|tuffs_latest_controller_COG|tuffs_latest_controller_head|tuffs_latest_pSphere2|tuffs_latest_pSphereShape2 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |tuffs_latest_controller_root|tuffs_latest_controller_COG|tuffs_latest_controller_head|tuffs_latest_pSphere1|tuffs_latest_pSphereShape1 
+		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
+		
+		1 |tuffs_latest_controller_root|tuffs_latest_controller_COG|tuffs_latest_controller_head|tuffs_latest_pSphere1|tuffs_latest_pSphereShape1 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |tuffs_latest_controller_root|tuffs_latest_controller_COG|tuffs_latest_controller_head|tuffs_latest_pSphere1|tuffs_latest_pSphereShape1 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |tuffs_latest_controller_root|tuffs_latest_controller_COG|tuffs_latest_controller_head|tuffs_latest_pSphere1|tuffs_latest_pSphereShape1 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |tuffs_latest_tuffs_mesh|tuffs_latest_tuffs_meshShapeOrig "surfaceReference" 
 		"sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
 		1 |tuffs_latest_tuffs_mesh|tuffs_latest_tuffs_meshShapeOrig "referenceFile" 
@@ -38877,15 +41689,6 @@ createNode reference -n "tuffs_latestRN";
 		
 		2 "|tuffs_latest_controller_root|tuffs_latest_controller_COG|tuffs_latest_controller_head|tuffs_latest_pSphere1|tuffs_latest_pSphereShape1" 
 		"furNameSpace" " -type \"string\" \"tuffs_latest\""
-		2 "|tuffs_latest_tuffs_mesh|tuffs_latest_tuffs_meshShape" "VisibleInIndirect" 
-		" 1"
-		2 "|tuffs_latest_tuffs_mesh|tuffs_latest_tuffs_meshShape" "surfaceReference" 
-		" 1"
-		2 "|tuffs_latest_tuffs_mesh|tuffs_latest_tuffs_meshShape" "referenceFile" 
-		" -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/tuffs/tuffs_latest.ma\""
-		
-		2 "|tuffs_latest_tuffs_mesh|tuffs_latest_tuffs_meshShape" "furNameSpace" 
-		" -type \"string\" \"tuffs_latest\""
 		2 "|tuffs_latest_tuffs_mesh|tuffs_latest_tuffs_meshShapeOrig" "surfaceReference" 
 		" 1"
 		2 "|tuffs_latest_tuffs_mesh|tuffs_latest_tuffs_meshShapeOrig" "referenceFile" 
@@ -38903,6 +41706,7 @@ createNode reference -n "tuffs_latestRN";
 		2 "tuffs_latest_file5" "ReduceTextureInCuda" " 1"
 		2 "tuffs_latest_file5" "onlineUpdate" " 0"
 		2 "tuffs_latest_file5" "compressColor" " 1"
+		3 "tuffs_latest_file4.outColor" ":lambert1.color" ""
 		5 4 "tuffs_latestRN" "|tuffs_latest_controller_root.translateX" "tuffs_latestRN.placeHolderList[1]" 
 		""
 		5 4 "tuffs_latestRN" "|tuffs_latest_controller_root.translateY" "tuffs_latestRN.placeHolderList[2]" 
@@ -39458,351 +42262,6 @@ createNode animCurveTU -n "bike:wholeBike_scaleZ";
 		 273 1.2129178853685476 273.004 1.2129178853685476 274 1.2129178853685476 274.004 1.2129178853685476
 		 275 1.2129178853685476 276 1.2129178853685476 277 1.2129178853685476 278 1.2129178853685476
 		 279 1.2129178853685476 280 1.2129178853685476;
-createNode polyCube -n "soap_bottle:polyCube1";
-	setAttr ".ax" -type "double3" 1.0000000000000002 0 2.2204460492503131e-016 ;
-	setAttr ".w" 29.819437104551731;
-	setAttr ".h" 14.755213696811866;
-	setAttr ".d" 12.051378726191896;
-	setAttr ".sw" 15;
-	setAttr ".sd" 6;
-	setAttr ".cuv" 4;
-createNode polySplitRing -n "soap_bottle:polySplitRing1";
-	setAttr ".uopa" yes;
-	setAttr ".ics" -type "componentList" 14 "e[1]" "e[16]" "e[31]" "e[46]" "e[61]" "e[76]" "e[91]" "e[106]" "e[121]" "e[136]" "e[151]" "e[166]" "e[181]" "e[196]";
-	setAttr ".ix" -type "matrix" 0.29354045045392124 0 0 0 0 1 0 0 0 0 1 0 7.3776068484059358 -0.1158786415979982 -0.038626213866017306 1;
-	setAttr ".wt" 0.96465921401977539;
-	setAttr ".dr" no;
-	setAttr ".re" 16;
-	setAttr ".sma" 29.999999999999996;
-	setAttr ".p[0]"  0 0 1;
-	setAttr ".fq" yes;
-createNode polyTweak -n "soap_bottle:polyTweak1";
-	setAttr ".uopa" yes;
-	setAttr -s 88 ".tk";
-	setAttr ".tk[0]" -type "float3" 0 0 -3.7244182 ;
-	setAttr ".tk[1]" -type "float3" 0 0 -3.7244182 ;
-	setAttr ".tk[2]" -type "float3" 0 0 -3.7244182 ;
-	setAttr ".tk[3]" -type "float3" 0 0 -1.3751544 ;
-	setAttr ".tk[4]" -type "float3" 0 0.41131729 -0.32055235 ;
-	setAttr ".tk[5]" -type "float3" 0 0 -1.403361 ;
-	setAttr ".tk[6]" -type "float3" 0 0 -1.403361 ;
-	setAttr ".tk[7]" -type "float3" 0 0 -0.88032812 ;
-	setAttr ".tk[8]" -type "float3" 0 0 -0.5730986 ;
-	setAttr ".tk[9]" -type "float3" 0 0 -0.3008247 ;
-	setAttr ".tk[14]" -type "float3" 0 0 -0.53067821 ;
-	setAttr ".tk[15]" -type "float3" 0 0.6058867 -1.066295 ;
-	setAttr ".tk[16]" -type "float3" 0 0 -3.7244182 ;
-	setAttr ".tk[17]" -type "float3" 0 0 -3.7244182 ;
-	setAttr ".tk[18]" -type "float3" 0 0 -3.7244182 ;
-	setAttr ".tk[19]" -type "float3" 0 0 -1.3751544 ;
-	setAttr ".tk[20]" -type "float3" 0 0.41131729 -0.32055235 ;
-	setAttr ".tk[21]" -type "float3" 0 0 -1.403361 ;
-	setAttr ".tk[22]" -type "float3" 0 0 -1.403361 ;
-	setAttr ".tk[23]" -type "float3" 0 0 -0.88032812 ;
-	setAttr ".tk[24]" -type "float3" 0 0 -0.5730986 ;
-	setAttr ".tk[25]" -type "float3" 0 0 -0.3008247 ;
-	setAttr ".tk[30]" -type "float3" 0 0 -0.53067821 ;
-	setAttr ".tk[31]" -type "float3" 0 0.6058867 -1.066295 ;
-	setAttr ".tk[32]" -type "float3" 0 0 -2.4829443 ;
-	setAttr ".tk[33]" -type "float3" 0 0 -2.4829443 ;
-	setAttr ".tk[34]" -type "float3" 0 0 -2.4829443 ;
-	setAttr ".tk[47]" -type "float3" 0 0.26928297 0 ;
-	setAttr ".tk[48]" -type "float3" 0 0 -1.2414721 ;
-	setAttr ".tk[49]" -type "float3" 0 0 -1.2414721 ;
-	setAttr ".tk[50]" -type "float3" 0 0 -1.2414721 ;
-	setAttr ".tk[63]" -type "float3" 0 0.26928297 0 ;
-	setAttr ".tk[64]" -type "float3" 0 0 -2.4298186e-015 ;
-	setAttr ".tk[65]" -type "float3" 0 0 -2.206834e-015 ;
-	setAttr ".tk[66]" -type "float3" 0 0 -1.9838479e-015 ;
-	setAttr ".tk[79]" -type "float3" 0 0.26928297 -8.3266727e-017 ;
-	setAttr ".tk[80]" -type "float3" 0 0 1.2414721 ;
-	setAttr ".tk[81]" -type "float3" 0 0 1.2414721 ;
-	setAttr ".tk[82]" -type "float3" 0 0 1.2414721 ;
-	setAttr ".tk[95]" -type "float3" 0 0.26928297 0 ;
-	setAttr ".tk[96]" -type "float3" 0 0 2.4829443 ;
-	setAttr ".tk[97]" -type "float3" 0 0 2.4829443 ;
-	setAttr ".tk[98]" -type "float3" 0 0 2.4829443 ;
-	setAttr ".tk[111]" -type "float3" 0 0.26928297 0 ;
-	setAttr ".tk[112]" -type "float3" 0 0 3.7244182 ;
-	setAttr ".tk[113]" -type "float3" 0 0 3.7244182 ;
-	setAttr ".tk[114]" -type "float3" 0 0 3.7244182 ;
-	setAttr ".tk[115]" -type "float3" 0 0 1.3751544 ;
-	setAttr ".tk[116]" -type "float3" 0 0.41131729 0.32055235 ;
-	setAttr ".tk[117]" -type "float3" 0 0 1.403361 ;
-	setAttr ".tk[118]" -type "float3" 0 0 1.403361 ;
-	setAttr ".tk[119]" -type "float3" 0 0 0.88032812 ;
-	setAttr ".tk[120]" -type "float3" 0 0 0.5730986 ;
-	setAttr ".tk[121]" -type "float3" 0 0 0.3008247 ;
-	setAttr ".tk[126]" -type "float3" 0 0 0.53067821 ;
-	setAttr ".tk[127]" -type "float3" 0 0.6058867 1.066295 ;
-	setAttr ".tk[128]" -type "float3" 0 0 3.7244182 ;
-	setAttr ".tk[129]" -type "float3" 0 0 3.7244182 ;
-	setAttr ".tk[130]" -type "float3" 0 0 3.7244182 ;
-	setAttr ".tk[131]" -type "float3" 0 0 1.3751544 ;
-	setAttr ".tk[132]" -type "float3" 0 0.41131729 0.32055235 ;
-	setAttr ".tk[133]" -type "float3" 0 0 1.403361 ;
-	setAttr ".tk[134]" -type "float3" 0 0 1.403361 ;
-	setAttr ".tk[135]" -type "float3" 0 0 0.88032812 ;
-	setAttr ".tk[136]" -type "float3" 0 0 0.5730986 ;
-	setAttr ".tk[137]" -type "float3" 0 0 0.3008247 ;
-	setAttr ".tk[142]" -type "float3" 0 0 0.53067821 ;
-	setAttr ".tk[143]" -type "float3" 0 0.6058867 1.066295 ;
-	setAttr ".tk[144]" -type "float3" 0 0 2.4829443 ;
-	setAttr ".tk[145]" -type "float3" 0 0 2.4829443 ;
-	setAttr ".tk[146]" -type "float3" 0 0 2.4829443 ;
-	setAttr ".tk[159]" -type "float3" 0 0.26928297 0 ;
-	setAttr ".tk[160]" -type "float3" 0 0 1.2414721 ;
-	setAttr ".tk[161]" -type "float3" 0 0 1.2414721 ;
-	setAttr ".tk[162]" -type "float3" 0 0 1.2414721 ;
-	setAttr ".tk[175]" -type "float3" 0 0.26928297 0 ;
-	setAttr ".tk[176]" -type "float3" 0 0 -7.7475706e-016 ;
-	setAttr ".tk[177]" -type "float3" 0 0 -5.5177108e-016 ;
-	setAttr ".tk[178]" -type "float3" 0 0 -3.2878516e-016 ;
-	setAttr ".tk[191]" -type "float3" 0 0.26928297 -8.3266727e-017 ;
-	setAttr ".tk[192]" -type "float3" 0 0 -1.2414721 ;
-	setAttr ".tk[193]" -type "float3" 0 0 -1.2414721 ;
-	setAttr ".tk[194]" -type "float3" 0 0 -1.2414721 ;
-	setAttr ".tk[207]" -type "float3" 0 0.26928297 0 ;
-	setAttr ".tk[208]" -type "float3" 0 0 -2.4829443 ;
-	setAttr ".tk[209]" -type "float3" 0 0 -2.4829443 ;
-	setAttr ".tk[210]" -type "float3" 0 0 -2.4829443 ;
-	setAttr ".tk[223]" -type "float3" 0 0.26928297 0 ;
-createNode polySplitRing -n "soap_bottle:polySplitRing2";
-	setAttr ".uopa" yes;
-	setAttr ".ics" -type "componentList" 14 "e[1]" "e[16]" "e[31]" "e[46]" "e[61]" "e[76]" "e[91]" "e[106]" "e[121]" "e[136]" "e[151]" "e[166]" "e[181]" "e[196]";
-	setAttr ".ix" -type "matrix" 0.29354045045392124 0 0 0 0 1 0 0 0 0 1 0 7.3776068484059358 -0.1158786415979982 -0.038626213866017306 1;
-	setAttr ".wt" 0.7934870719909668;
-	setAttr ".dr" no;
-	setAttr ".re" 16;
-	setAttr ".sma" 29.999999999999996;
-	setAttr ".p[0]"  0 0 1;
-	setAttr ".fq" yes;
-createNode polySplitRing -n "soap_bottle:polySplitRing3";
-	setAttr ".uopa" yes;
-	setAttr ".ics" -type "componentList" 14 "e[0]" "e[15]" "e[30]" "e[45]" "e[60]" "e[75]" "e[90]" "e[105]" "e[120]" "e[135]" "e[150]" "e[165]" "e[180]" "e[195]";
-	setAttr ".ix" -type "matrix" 0.29354045045392124 0 0 0 0 1 0 0 0 0 1 0 7.3776068484059358 -0.1158786415979982 -0.038626213866017306 1;
-	setAttr ".wt" 0.96092396974563599;
-	setAttr ".dr" no;
-	setAttr ".re" 15;
-	setAttr ".sma" 29.999999999999996;
-	setAttr ".p[0]"  0 0 1;
-	setAttr ".fq" yes;
-createNode polySplitRing -n "soap_bottle:polySplitRing4";
-	setAttr ".uopa" yes;
-	setAttr ".ics" -type "componentList" 14 "e[0]" "e[15]" "e[30]" "e[45]" "e[60]" "e[75]" "e[90]" "e[105]" "e[120]" "e[135]" "e[150]" "e[165]" "e[180]" "e[195]";
-	setAttr ".ix" -type "matrix" 0.29354045045392124 0 0 0 0 1 0 0 0 0 1 0 7.3776068484059358 -0.1158786415979982 -0.038626213866017306 1;
-	setAttr ".wt" 0.52157938480377197;
-	setAttr ".dr" no;
-	setAttr ".re" 15;
-	setAttr ".sma" 29.999999999999996;
-	setAttr ".p[0]"  0 0 1;
-	setAttr ".fq" yes;
-createNode polySplitRing -n "soap_bottle:polySplitRing5";
-	setAttr ".uopa" yes;
-	setAttr ".ics" -type "componentList" 14 "e[0]" "e[15]" "e[30]" "e[45]" "e[60]" "e[75]" "e[90]" "e[105]" "e[120]" "e[135]" "e[150]" "e[165]" "e[180]" "e[195]";
-	setAttr ".ix" -type "matrix" 0.29354045045392124 0 0 0 0 1 0 0 0 0 1 0 7.3776068484059358 -0.1158786415979982 -0.038626213866017306 1;
-	setAttr ".wt" 0.77068650722503662;
-	setAttr ".dr" no;
-	setAttr ".re" 15;
-	setAttr ".sma" 29.999999999999996;
-	setAttr ".p[0]"  0 0 1;
-	setAttr ".fq" yes;
-createNode polySplitRing -n "soap_bottle:polySplitRing6";
-	setAttr ".uopa" yes;
-	setAttr ".ics" -type "componentList" 14 "e[1]" "e[16]" "e[31]" "e[46]" "e[61]" "e[76]" "e[91]" "e[106]" "e[121]" "e[136]" "e[151]" "e[166]" "e[181]" "e[196]";
-	setAttr ".ix" -type "matrix" 0.29354045045392124 0 0 0 0 1 0 0 0 0 1 0 7.3776068484059358 -0.1158786415979982 -0.038626213866017306 1;
-	setAttr ".wt" 0.97688752412796021;
-	setAttr ".dr" no;
-	setAttr ".re" 16;
-	setAttr ".sma" 29.999999999999996;
-	setAttr ".p[0]"  0 0 1;
-	setAttr ".fq" yes;
-createNode polyTweak -n "soap_bottle:polyTweak2";
-	setAttr ".uopa" yes;
-	setAttr -s 287 ".tk";
-	setAttr ".tk[7:172]" -type "float3"  0 0 -5.9604645e-008 0 0 0 0 0 0 0 0
-		 -5.9604645e-008 0 0 -5.9604645e-008 0 0 -5.9604645e-008 0 0 -5.9604645e-008 0 0 5.9604645e-008
-		 0 0 2.9802322e-008 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -5.9604645e-008
-		 0 0 0 0 0 0 0 0 -5.9604645e-008 0 0 -5.9604645e-008 0 0 -5.9604645e-008 0 0 -5.9604645e-008
-		 0 0 5.9604645e-008 0 0 2.9802322e-008 0 0 -1.4901161e-008 0 0 -1.4901161e-008 0 0
-		 -1.4901161e-008 0 0 2.9802322e-008 0 0 2.9802322e-008 0 0 2.9802322e-008 0 0 2.9802322e-008
-		 0 0 2.9802322e-008 0 0 2.9802322e-008 0 0 2.9802322e-008 0 0 2.9802322e-008 0 0 2.9802322e-008
-		 0 0 2.9802322e-008 0 0 2.9802322e-008 0 0 2.9802322e-008 0 0 2.9802322e-008 0 0 -7.4505806e-009
-		 0 0 -7.4505806e-009 0 0 -7.4505806e-009 0 0 1.4901161e-008 0 0 1.4901161e-008 0 0
-		 1.4901161e-008 0 0 1.4901161e-008 0 0 1.4901161e-008 0 0 1.4901161e-008 0 0 1.4901161e-008
-		 0 0 1.4901161e-008 0 0 1.4901161e-008 0 0 1.4901161e-008 0 0 1.4901161e-008 0 0 1.4901161e-008
-		 0 0 1.4901161e-008 0 0 0 0 0 -1.323489e-023 0 0 1.323489e-023 0 0 2.646978e-023 0
-		 0 -2.646978e-023 0 0 2.646978e-023 0 0 -2.646978e-023 0 0 1.323489e-023 0 0 0 0 0
-		 -1.323489e-023 0 0 -3.3087225e-024 0 0 -4.1359031e-025 0 0 0 0 0 0 0 0 -1.323489e-023
-		 0 0 0 0 0 7.4505806e-009 0 0 7.4505806e-009 0 0 7.4505806e-009 0 0 -1.4901161e-008
-		 0 0 -1.4901161e-008 0 0 -1.4901161e-008 0 0 -1.4901161e-008 0 0 -1.4901161e-008 0
-		 0 -1.4901161e-008 0 0 -1.4901161e-008 0 0 -1.4901161e-008 0 0 -1.4901161e-008 0 0
-		 -1.4901161e-008 0 0 -1.4901161e-008 0 0 -1.4901161e-008 0 0 -1.4901161e-008 0 0 1.4901161e-008
-		 0 0 1.4901161e-008 0 0 1.4901161e-008 0 0 -2.9802322e-008 0 0 -2.9802322e-008 0 0
-		 -2.9802322e-008 0 0 -2.9802322e-008 0 0 -2.9802322e-008 0 0 -2.9802322e-008 0 0 -2.9802322e-008
-		 0 0 -2.9802322e-008 0 0 -2.9802322e-008 0 0 -2.9802322e-008 0 0 -2.9802322e-008 0
-		 0 -2.9802322e-008 0 0 -2.9802322e-008 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-		 0 5.9604645e-008 0 0 0 0 0 0 0 0 5.9604645e-008 0 0 5.9604645e-008 0 0 5.9604645e-008
-		 0 0 5.9604645e-008 0 0 -5.9604645e-008 0 0 -2.9802322e-008 0 0 0 0 0 0 0 0 0 0 0
-		 0 0 0 0 0 0 0 0 0 0 0 0 5.9604645e-008 0 0 0 0 0 0 0 0 5.9604645e-008 0 0 5.9604645e-008
-		 0 0 5.9604645e-008 0 0 5.9604645e-008 0 0 -5.9604645e-008 0 0 -2.9802322e-008 0 0
-		 1.4901161e-008 0 0 1.4901161e-008 0 0 1.4901161e-008 0 0 -2.9802322e-008 0 0 -2.9802322e-008
-		 0 0 -2.9802322e-008 0 0 -2.9802322e-008 0 0 -2.9802322e-008 0 0 -2.9802322e-008 0
-		 0 -2.9802322e-008 0 0 -2.9802322e-008 0 0 -2.9802322e-008 0 0 -2.9802322e-008 0 0
-		 -2.9802322e-008 0 0 -2.9802322e-008 0 0 -2.9802322e-008 0 0 7.4505806e-009 0 0 7.4505806e-009
-		 0 0 7.4505806e-009 0 0 -1.4901161e-008 0 0 -1.4901161e-008 0 0 -1.4901161e-008 0
-		 0 -1.4901161e-008 0 0 -1.4901161e-008 0 0 -1.4901161e-008 0 0 -1.4901161e-008 0 0
-		 -1.4901161e-008 0 0 -1.4901161e-008 0 0 -1.4901161e-008;
-	setAttr ".tk[173:293]" 0 0 -1.4901161e-008 0 0 -1.4901161e-008 0 0 -1.4901161e-008
-		 0 0 -6.6174449e-024 0 0 -3.3087225e-024 0 0 3.3087225e-024 0 0 0 0 0 -1.6543612e-024
-		 0 0 -6.6174449e-024 0 0 -6.6174449e-024 0 0 1.323489e-023 0 0 0 0 0 0 0 0 0 0 0 2.646978e-023
-		 0 0 -2.646978e-023 0 0 2.646978e-023 0 0 0 0 0 -5.2939559e-023 0 0 -7.4505806e-009
-		 0 0 -7.4505806e-009 0 0 -7.4505806e-009 0 0 1.4901161e-008 0 0 1.4901161e-008 0 0
-		 1.4901161e-008 0 0 1.4901161e-008 0 0 1.4901161e-008 0 0 1.4901161e-008 0 0 1.4901161e-008
-		 0 0 1.4901161e-008 0 0 1.4901161e-008 0 0 1.4901161e-008 0 0 1.4901161e-008 0 0 1.4901161e-008
-		 0 0 1.4901161e-008 0 0 -1.4901161e-008 0 0 -1.4901161e-008 0 0 -1.4901161e-008 0
-		 0 2.9802322e-008 0 0 2.9802322e-008 0 0 2.9802322e-008 0 0 2.9802322e-008 0 0 2.9802322e-008
-		 0 0 2.9802322e-008 0 0 2.9802322e-008 0 0 2.9802322e-008 0 0 2.9802322e-008 0 0 2.9802322e-008
-		 0 0 2.9802322e-008 0 0 2.9802322e-008 0 0 2.9802322e-008 0 0 -0.57751226 0 0 -1.4901161e-008
-		 0 0 -7.4505806e-009 0 0 1.323489e-023 0 0 7.4505806e-009 0 0 1.4901161e-008 0 0 0.57751226
-		 0 0 0.57751226 0 0 1.4901161e-008 0 0 7.4505806e-009 0 0 0 0 0 -7.4505806e-009 0
-		 0 -1.4901161e-008 0 0 -0.57751226 0 0 -0.57751226 0 0 -1.4901161e-008 0 0 -7.4505806e-009
-		 0 0 -1.323489e-023 0 0 7.4505806e-009 0 0 1.4901161e-008 0 0 0.57751226 0 0 0.57751226
-		 0 0 1.4901161e-008 0 0 7.4505806e-009 0 0 0 0 0 -7.4505806e-009 0 0 -1.4901161e-008
-		 0 0 -0.57751226 0 0 0 0 0 -1.4901161e-008 0 0 -7.4505806e-009 0 0 1.323489e-023 0
-		 0 7.4505806e-009 0 0 1.4901161e-008 0 0 0 0 0 0 0 0 1.4901161e-008 0 0 7.4505806e-009
-		 0 0 -3.3087225e-024 0 0 -7.4505806e-009 0 0 -1.4901161e-008 0 0 0 0 0 0 0 0 -1.4901161e-008
-		 0 0 -7.4505806e-009 0 0 -2.646978e-023 0 0 7.4505806e-009 0 0 1.4901161e-008 0 0
-		 0 0 0 0 0 0 1.4901161e-008 0 0 7.4505806e-009 0 0 -6.6174449e-024 0 0 -7.4505806e-009
-		 0 0 -1.4901161e-008 0 0 0 0 0 0 0 0 -1.4901161e-008 0 0 -7.4505806e-009 0 0 2.646978e-023
-		 0 0 7.4505806e-009 0 0 1.4901161e-008 0 0 0 0 0 0 0 0 1.4901161e-008 0 0 7.4505806e-009
-		 0 0 0 0 0 -7.4505806e-009 0 0 -1.4901161e-008 0 0 0;
-createNode polySplitRing -n "soap_bottle:polySplitRing7";
-	setAttr ".uopa" yes;
-	setAttr ".ics" -type "componentList" 14 "e[0]" "e[15]" "e[30]" "e[45]" "e[60]" "e[75]" "e[90]" "e[105]" "e[120]" "e[135]" "e[150]" "e[165]" "e[180]" "e[195]";
-	setAttr ".ix" -type "matrix" 0.29354045045392124 0 0 0 0 1 0 0 0 0 1 0 7.3776068484059358 -0.1158786415979982 -0.038626213866017306 1;
-	setAttr ".wt" 0.58196157217025757;
-	setAttr ".dr" no;
-	setAttr ".re" 15;
-	setAttr ".sma" 29.999999999999996;
-	setAttr ".p[0]"  0 0 1;
-	setAttr ".fq" yes;
-createNode polyTweak -n "soap_bottle:polyTweak3";
-	setAttr ".uopa" yes;
-	setAttr -s 64 ".tk";
-	setAttr ".tk[0]" -type "float3" 0 0.064759165 -1.8790762 ;
-	setAttr ".tk[1]" -type "float3" 0 0 -0.32181549 ;
-	setAttr ".tk[16]" -type "float3" 0 0.064759165 -1.8790762 ;
-	setAttr ".tk[17]" -type "float3" 0 0 -0.32181549 ;
-	setAttr ".tk[32]" -type "float3" 0 0.064759165 -1.2527182 ;
-	setAttr ".tk[48]" -type "float3" 0 0.064759165 -0.62635911 ;
-	setAttr ".tk[64]" -type "float3" 0 0.064759165 -2.1712406e-015 ;
-	setAttr ".tk[80]" -type "float3" 0 0.064759165 0.62635911 ;
-	setAttr ".tk[96]" -type "float3" 0 0.064759165 1.2527182 ;
-	setAttr ".tk[112]" -type "float3" 0 0.064759165 1.8790762 ;
-	setAttr ".tk[113]" -type "float3" 0 0 0.32181549 ;
-	setAttr ".tk[128]" -type "float3" 0 0.064759165 1.8790762 ;
-	setAttr ".tk[129]" -type "float3" 0 0 0.32181549 ;
-	setAttr ".tk[144]" -type "float3" 0 0.064759165 1.2527182 ;
-	setAttr ".tk[160]" -type "float3" 0 0.064759165 0.62635911 ;
-	setAttr ".tk[176]" -type "float3" 0 0.064759165 -8.474247e-016 ;
-	setAttr ".tk[192]" -type "float3" 0 0.064759165 -0.62635911 ;
-	setAttr ".tk[208]" -type "float3" 0 0.064759165 -1.2527182 ;
-	setAttr ".tk[252]" -type "float3" 0 0 -1.4090602 ;
-	setAttr ".tk[253]" -type "float3" 0 0 -0.84267139 ;
-	setAttr ".tk[254]" -type "float3" 0 0 -0.36430675 ;
-	setAttr ".tk[255]" -type "float3" 0 0 -1.0307128e-015 ;
-	setAttr ".tk[256]" -type "float3" 0 0 0.36430678 ;
-	setAttr ".tk[257]" -type "float3" 0 0 0.84267139 ;
-	setAttr ".tk[258]" -type "float3" 0 0 1.4090601 ;
-	setAttr ".tk[259]" -type "float3" 0 0 1.4090601 ;
-	setAttr ".tk[260]" -type "float3" 0 0 0.84267139 ;
-	setAttr ".tk[261]" -type "float3" 0 0 0.36430678 ;
-	setAttr ".tk[262]" -type "float3" 0 0 -2.607476e-016 ;
-	setAttr ".tk[263]" -type "float3" 0 0 -0.36430675 ;
-	setAttr ".tk[264]" -type "float3" 0 0 -0.84267139 ;
-	setAttr ".tk[265]" -type "float3" 0 0 -1.4090602 ;
-	setAttr ".tk[266]" -type "float3" 0 0 -1.4217733 ;
-	setAttr ".tk[267]" -type "float3" 0 0 -0.72861356 ;
-	setAttr ".tk[268]" -type "float3" 0 0 -0.36430675 ;
-	setAttr ".tk[269]" -type "float3" 0 0 -1.0784037e-015 ;
-	setAttr ".tk[270]" -type "float3" 0 0 0.36430678 ;
-	setAttr ".tk[271]" -type "float3" 0 0 0.72861356 ;
-	setAttr ".tk[272]" -type "float3" 0 0 1.4094627 ;
-	setAttr ".tk[273]" -type "float3" 0 0 1.4094627 ;
-	setAttr ".tk[274]" -type "float3" 0 0 0.72861356 ;
-	setAttr ".tk[275]" -type "float3" 0 0 0.36430678 ;
-	setAttr ".tk[276]" -type "float3" 0 0 -3.0843813e-016 ;
-	setAttr ".tk[277]" -type "float3" 0 0 -0.36430675 ;
-	setAttr ".tk[278]" -type "float3" 0 0 -0.72861356 ;
-	setAttr ".tk[279]" -type "float3" 0 0 -1.4217733 ;
-	setAttr ".tk[280]" -type "float3" 0 0 -1.0929198 ;
-	setAttr ".tk[281]" -type "float3" 0 0 -0.72861356 ;
-	setAttr ".tk[282]" -type "float3" 0 0 -0.36430675 ;
-	setAttr ".tk[283]" -type "float3" 0 0 -1.0903272e-015 ;
-	setAttr ".tk[284]" -type "float3" 0 0 0.36430678 ;
-	setAttr ".tk[285]" -type "float3" 0 0 0.72861356 ;
-	setAttr ".tk[286]" -type "float3" 0 0 1.0929198 ;
-	setAttr ".tk[287]" -type "float3" 0 0 1.0929198 ;
-	setAttr ".tk[288]" -type "float3" 0 0 0.72861356 ;
-	setAttr ".tk[289]" -type "float3" 0 0 0.36430678 ;
-	setAttr ".tk[290]" -type "float3" 0 0 -3.2036075e-016 ;
-	setAttr ".tk[291]" -type "float3" 0 0 -0.36430675 ;
-	setAttr ".tk[292]" -type "float3" 0 0 -0.72861356 ;
-	setAttr ".tk[293]" -type "float3" 0 0 -1.0929198 ;
-	setAttr ".tk[294]" -type "float3" 0 0 0.23960826 ;
-	setAttr ".tk[300]" -type "float3" 0 0 -0.23960826 ;
-	setAttr ".tk[301]" -type "float3" 0 0 -0.23960826 ;
-	setAttr ".tk[307]" -type "float3" 0 0 0.23960826 ;
-createNode polySplitRing -n "soap_bottle:polySplitRing8";
-	setAttr ".uopa" yes;
-	setAttr ".ics" -type "componentList" 17 "e[210:225]" "e[322:337]" "e[434:443]" "e[458]" "e[471]" "e[486]" "e[499]" "e[514]" "e[527]" "e[542]" "e[555]" "e[570]" "e[583]" "e[598]" "e[611]" "e[626]" "e[639]";
-	setAttr ".ix" -type "matrix" 0.29354045045392124 0 0 0 0 1 0 0 0 0 1 0 7.3776068484059358 -0.1158786415979982 -0.038626213866017306 1;
-	setAttr ".wt" 0.19888114929199219;
-	setAttr ".re" 639;
-	setAttr ".sma" 29.999999999999996;
-	setAttr ".p[0]"  0 0 1;
-	setAttr ".fq" yes;
-createNode polyTweak -n "soap_bottle:polyTweak4";
-	setAttr ".uopa" yes;
-	setAttr -s 18 ".tk";
-	setAttr ".tk[4]" -type "float3" 0 0 0.80112249 ;
-	setAttr ".tk[20]" -type "float3" 0 0 0.80112249 ;
-	setAttr ".tk[116]" -type "float3" 0 0 -0.80112249 ;
-	setAttr ".tk[132]" -type "float3" 0 0 -0.80112249 ;
-	setAttr ".tk[308]" -type "float3" 0 0 -0.075079262 ;
-	setAttr ".tk[309]" -type "float3" 0 0 -0.050052896 ;
-	setAttr ".tk[310]" -type "float3" 0 0 -0.025026448 ;
-	setAttr ".tk[311]" -type "float3" 0 0 -7.6803773e-017 ;
-	setAttr ".tk[312]" -type "float3" 0 0 0.025026448 ;
-	setAttr ".tk[313]" -type "float3" 0 0 0.050052896 ;
-	setAttr ".tk[314]" -type "float3" 0 0 0.075079262 ;
-	setAttr ".tk[315]" -type "float3" 0 0 0.075079262 ;
-	setAttr ".tk[316]" -type "float3" 0 0 0.050052896 ;
-	setAttr ".tk[317]" -type "float3" 0 0 0.025026448 ;
-	setAttr ".tk[318]" -type "float3" 0 0 -2.3910192e-017 ;
-	setAttr ".tk[319]" -type "float3" 0 0 -0.025026448 ;
-	setAttr ".tk[320]" -type "float3" 0 0 -0.050052896 ;
-	setAttr ".tk[321]" -type "float3" 0 0 -0.075079262 ;
-createNode polySplitRing -n "soap_bottle:polySplitRing9";
-	setAttr ".uopa" yes;
-	setAttr ".ics" -type "componentList" 40 "e[322:337]" "e[458]" "e[486]" "e[514]" "e[542]" "e[570]" "e[598]" "e[626]" "e[640:641]" "e[643]" "e[645]" "e[647]" "e[649]" "e[651]" "e[699]" "e[701]" "e[703]" "e[705]" "e[707]" "e[709]" "e[711]" "e[713]" "e[715]" "e[717]" "e[719]" "e[721]" "e[723]" "e[725]" "e[727]" "e[729]" "e[731]" "e[733]" "e[735]" "e[737]" "e[739]" "e[741]" "e[743]" "e[745]" "e[747]" "e[749]";
-	setAttr ".ix" -type "matrix" 0.29354045045392124 0 0 0 0 1 0 0 0 0 1 0 7.3776068484059358 -0.1158786415979982 -0.038626213866017306 1;
-	setAttr ".wt" 0.79655826091766357;
-	setAttr ".dr" no;
-	setAttr ".re" 641;
-	setAttr ".sma" 29.999999999999996;
-	setAttr ".p[0]"  0 0 1;
-	setAttr ".fq" yes;
-createNode polySplitRing -n "soap_bottle:polySplitRing10";
-	setAttr ".uopa" yes;
-	setAttr ".ics" -type "componentList" 55 "e[640:641]" "e[643]" "e[645]" "e[647]" "e[649]" "e[651]" "e[699]" "e[701]" "e[703]" "e[705]" "e[707]" "e[709]" "e[711]" "e[713]" "e[715]" "e[717]" "e[719]" "e[721]" "e[723]" "e[725]" "e[727]" "e[729]" "e[731]" "e[733]" "e[735]" "e[737]" "e[739]" "e[741]" "e[743]" "e[745]" "e[747]" "e[749]" "e[763]" "e[765]" "e[767]" "e[769]" "e[771]" "e[773]" "e[775]" "e[777]" "e[779]" "e[781]" "e[783]" "e[785]" "e[787]" "e[789]" "e[791]" "e[793]" "e[795]" "e[797]" "e[799]" "e[801]" "e[803]" "e[805]" "e[807]";
-	setAttr ".ix" -type "matrix" 0.29354045045392124 0 0 0 0 1 0 0 0 0 1 0 7.3776068484059358 -0.1158786415979982 -0.038626213866017306 1;
-	setAttr ".wt" 0.473684161901474;
-	setAttr ".re" 640;
-	setAttr ".sma" 29.999999999999996;
-	setAttr ".p[0]"  0 0 1;
-	setAttr ".fq" yes;
 createNode phong -n "phong1";
 	setAttr ".c" -type "float3" 0 1 0.79999995 ;
 createNode shadingEngine -n "phong1SG";
@@ -40254,7 +42713,7 @@ createNode file -n "undies_latest:file1";
 		0 -max 1 -smn 0 -smx 1 -at "bool";
 	addAttr -ci true -sn "onlineUpdate" -ln "onlineUpdate" -min 0 -max 1 -at "bool";
 	addAttr -ci true -sn "compressColor" -ln "compressColor" -dv 1 -min 0 -max 1 -at "bool";
-	setAttr ".ftn" -type "string" "E:/Shithub/Bandits/maya//assets/props/undies/undie_pattern.jpg";
+	setAttr ".ftn" -type "string" "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/props/undies/undie_pattern.jpg";
 createNode place2dTexture -n "undies_latest:place2dTexture1";
 createNode hyperGraphInfo -n "undies_latest:nodeEditorPanel1Info";
 createNode hyperView -n "undies_latest:hyperView1";
@@ -40358,12 +42817,12 @@ createNode shadingEngine -n "phong2SG";
 createNode materialInfo -n "materialInfo2";
 createNode hyperGraphInfo -n "nodeEditorPanel1Info";
 createNode hyperView -n "hyperView1";
-	setAttr ".vl" -type "double2" -114.28571428571428 -466.66666666666674 ;
-	setAttr ".vh" -type "double2" 670.23809523809541 30.952380952380956 ;
+	setAttr ".vl" -type "double2" -114.63715391404915 -469.1155248445188 ;
+	setAttr ".vh" -type "double2" 674.40480554331555 31.369359909925024 ;
 	setAttr ".dag" no;
 createNode hyperLayout -n "hyperLayout1";
 	setAttr ".ihi" 0;
-	setAttr -s 4 ".hyp";
+	setAttr -s 5 ".hyp";
 	setAttr ".hyp[0].x" 280.35714721679687;
 	setAttr ".hyp[0].y" -220.23809814453125;
 	setAttr ".hyp[0].nvs" 2144;
@@ -40376,6 +42835,9 @@ createNode hyperLayout -n "hyperLayout1";
 	setAttr ".hyp[3].x" 17.5;
 	setAttr ".hyp[3].y" -382.85714721679687;
 	setAttr ".hyp[3].nvs" 2688;
+	setAttr ".hyp[4].x" 282.27850341796875;
+	setAttr ".hyp[4].y" -394.52383422851562;
+	setAttr ".hyp[4].nvs" 1920;
 	setAttr ".anf" yes;
 createNode furryBallGlobal -n "furryBallGlobal";
 	setAttr -s 2 ".renderNodes";
@@ -40836,32 +43298,6 @@ createNode animCurveTU -n "bike:bike_ctrl_scaleZ";
 		 277 0.8 278 0.8 279 0.8 280 0.8 281 0.8 282 0.8;
 createNode reference -n "pig_latestRN";
 	setAttr -s 33 ".phl";
-	setAttr ".phl[1]" 0;
-	setAttr ".phl[2]" 0;
-	setAttr ".phl[3]" 0;
-	setAttr ".phl[4]" 0;
-	setAttr ".phl[5]" 0;
-	setAttr ".phl[6]" 0;
-	setAttr ".phl[7]" 0;
-	setAttr ".phl[8]" 0;
-	setAttr ".phl[9]" 0;
-	setAttr ".phl[10]" 0;
-	setAttr ".phl[11]" 0;
-	setAttr ".phl[12]" 0;
-	setAttr ".phl[13]" 0;
-	setAttr ".phl[14]" 0;
-	setAttr ".phl[15]" 0;
-	setAttr ".phl[16]" 0;
-	setAttr ".phl[17]" 0;
-	setAttr ".phl[18]" 0;
-	setAttr ".phl[19]" 0;
-	setAttr ".phl[20]" 0;
-	setAttr ".phl[21]" 0;
-	setAttr ".phl[22]" 0;
-	setAttr ".phl[23]" 0;
-	setAttr ".phl[24]" 0;
-	setAttr ".phl[25]" 0;
-	setAttr ".phl[26]" 0;
 	setAttr ".phl[27]" 0;
 	setAttr ".phl[28]" 0;
 	setAttr ".phl[29]" 0;
@@ -40869,44 +43305,100 @@ createNode reference -n "pig_latestRN";
 	setAttr ".phl[31]" 0;
 	setAttr ".phl[32]" 0;
 	setAttr ".phl[33]" 0;
+	setAttr ".phl[34]" 0;
+	setAttr ".phl[35]" 0;
+	setAttr ".phl[36]" 0;
+	setAttr ".phl[37]" 0;
+	setAttr ".phl[38]" 0;
+	setAttr ".phl[39]" 0;
+	setAttr ".phl[40]" 0;
+	setAttr ".phl[41]" 0;
+	setAttr ".phl[42]" 0;
+	setAttr ".phl[43]" 0;
+	setAttr ".phl[44]" 0;
+	setAttr ".phl[45]" 0;
+	setAttr ".phl[46]" 0;
+	setAttr ".phl[47]" 0;
+	setAttr ".phl[48]" 0;
+	setAttr ".phl[49]" 0;
+	setAttr ".phl[50]" 0;
+	setAttr ".phl[51]" 0;
+	setAttr ".phl[52]" 0;
+	setAttr ".phl[53]" 0;
+	setAttr ".phl[54]" 0;
+	setAttr ".phl[55]" 0;
+	setAttr ".phl[56]" 0;
+	setAttr ".phl[57]" 0;
+	setAttr ".phl[58]" 0;
+	setAttr ".phl[59]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"pig_latestRN"
 		"pig_latest_key_latestRN" 0
-		"pig_latestRN" 0
+		"pig_latestRN" 12
+		3 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintTranslateX" 
+		"|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01.translateX" 
+		""
+		3 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintTranslateY" 
+		"|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01.translateY" 
+		""
+		3 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintTranslateZ" 
+		"|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01.translateZ" 
+		""
+		3 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintRotateX" 
+		"|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01.rotateX" 
+		""
+		3 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintRotateY" 
+		"|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01.rotateY" 
+		""
+		3 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintRotateZ" 
+		"|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01.rotateZ" 
+		""
+		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintTranslateY" 
+		"pig_latestRN.placeHolderList[27]" "pig_latest_shoulders_rotation_ctrl01.ty"
+		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintTranslateX" 
+		"pig_latestRN.placeHolderList[28]" "pig_latest_shoulders_rotation_ctrl01.tx"
+		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintTranslateZ" 
+		"pig_latestRN.placeHolderList[29]" "pig_latest_shoulders_rotation_ctrl01.tz"
+		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintRotateX" 
+		"pig_latestRN.placeHolderList[30]" "pig_latest_shoulders_rotation_ctrl01.rx"
+		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintRotateY" 
+		"pig_latestRN.placeHolderList[31]" "pig_latest_shoulders_rotation_ctrl01.ry"
+		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintRotateZ" 
+		"pig_latestRN.placeHolderList[32]" "pig_latest_shoulders_rotation_ctrl01.rz"
 		"pig_latest_key_latestRN" 8
-		1 |pig_latest_PIG|pig_latest_controller_main01|pig_latest_pPyramid2|pig_latest_colorClip_control|pig_latest_key_control|key_latest:Obj_000003|key_latest:Obj_000003Shape 
+		1 |pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_pPyramid2|pig_latest_colorClip_control|pig_latest_key_control|key_latest:Obj_000003|key_latest:Obj_000003Shape 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
-		1 |pig_latest_PIG|pig_latest_controller_main01|pig_latest_pPyramid2|pig_latest_colorClip_control|pig_latest_key_control|key_latest:Obj_000003|key_latest:Obj_000003Shape 
+		1 |pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_pPyramid2|pig_latest_colorClip_control|pig_latest_key_control|key_latest:Obj_000003|key_latest:Obj_000003Shape 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |pig_latest_PIG|pig_latest_controller_main01|pig_latest_pPyramid2|pig_latest_colorClip_control|pig_latest_key_control|key_latest:Obj_000003|key_latest:Obj_000003Shape 
+		1 |pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_pPyramid2|pig_latest_colorClip_control|pig_latest_key_control|key_latest:Obj_000003|key_latest:Obj_000003Shape 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |pig_latest_PIG|pig_latest_controller_main01|pig_latest_pPyramid2|pig_latest_colorClip_control|pig_latest_key_control|key_latest:Obj_000003|key_latest:Obj_000003Shape 
+		1 |pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_pPyramid2|pig_latest_colorClip_control|pig_latest_key_control|key_latest:Obj_000003|key_latest:Obj_000003Shape 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_pPyramid2|pig_latest_colorClip_control|pig_latest_key_control|key_latest:Obj_000003|key_latest:Obj_000003Shape" 
+		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_pPyramid2|pig_latest_colorClip_control|pig_latest_key_control|key_latest:Obj_000003|key_latest:Obj_000003Shape" 
 		"VisibleInIndirect" " 1"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_pPyramid2|pig_latest_colorClip_control|pig_latest_key_control|key_latest:Obj_000003|key_latest:Obj_000003Shape" 
+		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_pPyramid2|pig_latest_colorClip_control|pig_latest_key_control|key_latest:Obj_000003|key_latest:Obj_000003Shape" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_pPyramid2|pig_latest_colorClip_control|pig_latest_key_control|key_latest:Obj_000003|key_latest:Obj_000003Shape" 
+		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_pPyramid2|pig_latest_colorClip_control|pig_latest_key_control|key_latest:Obj_000003|key_latest:Obj_000003Shape" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/props/keys/key_latest.ma\""
 		
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_pPyramid2|pig_latest_colorClip_control|pig_latest_key_control|key_latest:Obj_000003|key_latest:Obj_000003Shape" 
+		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_pPyramid2|pig_latest_colorClip_control|pig_latest_key_control|key_latest:Obj_000003|key_latest:Obj_000003Shape" 
 		"furNameSpace" " -type \"string\" \"key_latest\""
-		"pig_latestRN" 189
-		1 |pig_latest_PIG|pig_latest_controller_main01|pig_latest_pPyramid2|pig_latest_pPyramid1Shape2 
-		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
-		
-		1 |pig_latest_PIG|pig_latest_controller_main01|pig_latest_pPyramid2|pig_latest_colorClip_control|pig_latest_pTorus4|pig_latest_pTorus4Shape 
-		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
-		
+		"pig_latestRN" 177
 		1 |pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye|pig_latest_pig_right_eyeShape 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
 		1 |pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye|pig_latest_pig_left_eyeShape 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
-		1 |pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01 
+		1 |pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01 
 		"blendParent1" "blendParent1" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
+		1 |pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_pPyramid2|pig_latest_pPyramid1Shape2 
+		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
+		
+		1 |pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_pPyramid2|pig_latest_colorClip_control|pig_latest_pTorus4|pig_latest_pTorus4Shape 
+		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
+		
 		1 |pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_pigShapeDeformed 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
@@ -40988,38 +43480,18 @@ createNode reference -n "pig_latestRN";
 		
 		2 "|pig_latest_Tyrion_CattisterRNfosterParent1|pig_latest_pigShapeDeformedDeformed" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_PIG|pig_latest_controller_main01" "translate" " -type \"double3\" -197.81926877528841 2.4153998487489501 61.96693332214835"
+		2 "|pig_latest_PIG|pig_latest_controller_main01" "translate" " -type \"double3\" -197.82353091983015 13.459287003475069 39.725861986475351"
 		
 		2 "|pig_latest_PIG|pig_latest_controller_main01" "translateX" " -av"
 		2 "|pig_latest_PIG|pig_latest_controller_main01" "translateY" " -av"
 		2 "|pig_latest_PIG|pig_latest_controller_main01" "translateZ" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01" "rotate" " -type \"double3\" 358.29174504302472 -355.68796613209179 0"
+		2 "|pig_latest_PIG|pig_latest_controller_main01" "rotate" " -type \"double3\" -29.45045902590719 -355.68796613209179 0"
 		
 		2 "|pig_latest_PIG|pig_latest_controller_main01" "rotateX" " -av"
 		2 "|pig_latest_PIG|pig_latest_controller_main01" "rotateY" " -av"
 		2 "|pig_latest_PIG|pig_latest_controller_main01" "rotateZ" " -av"
 		2 "|pig_latest_PIG|pig_latest_controller_main01" "scale" " -type \"double3\" 0.575 0.575 0.575"
 		
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_pPyramid2" "rotate" 
-		" -type \"double3\" 22.03291 0 0"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_pPyramid2|pig_latest_pPyramid1Shape2" 
-		"surfaceReference" " 1"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_pPyramid2|pig_latest_pPyramid1Shape2" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
-		
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_pPyramid2|pig_latest_pPyramid1Shape2" 
-		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_pPyramid2|pig_latest_pPyramid1Shape2" 
-		"VisibleInIndirect" " 1"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_pPyramid2|pig_latest_colorClip_control|pig_latest_pTorus4|pig_latest_pTorus4Shape" 
-		"surfaceReference" " 1"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_pPyramid2|pig_latest_colorClip_control|pig_latest_pTorus4|pig_latest_pTorus4Shape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
-		
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_pPyramid2|pig_latest_colorClip_control|pig_latest_pTorus4|pig_latest_pTorus4Shape" 
-		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_pPyramid2|pig_latest_colorClip_control|pig_latest_pTorus4|pig_latest_pTorus4Shape" 
-		"VisibleInIndirect" " 1"
 		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_be_head01" 
 		"translate" " -type \"double3\" 3.554766 0.040545699999999997 0"
 		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye|pig_latest_pig_right_eyeShape" 
@@ -41040,46 +43512,66 @@ createNode reference -n "pig_latestRN";
 		"furNameSpace" " -type \"string\" \"pig_latest\""
 		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye|pig_latest_pig_left_eyeShape" 
 		"VisibleInIndirect" " 1"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_head_control" 
-		"rotate" " -type \"double3\" 0 74.012856634102178 0"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_head_control" 
-		"rotateX" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_head_control" 
-		"rotateY" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_head_control" 
-		"rotateZ" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01" 
-		"rotate" " -type \"double3\" 15.400298421462729 0 0"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01" 
-		"rotateX" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01" 
-		"rotateY" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01" 
-		"rotateZ" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01" 
-		"blendParent1" " -k 1"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_hip_rotation_ctrl01" 
+		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01" 
 		"translate" " -type \"double3\" 0 0 0"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_hip_rotation_ctrl01" 
-		"translateZ" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_hip_rotation_ctrl01" 
+		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01" 
 		"translateX" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_hip_rotation_ctrl01" 
+		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01" 
 		"translateY" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_hip_rotation_ctrl01" 
+		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01" 
+		"translateZ" " -av"
+		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01" 
 		"rotate" " -type \"double3\" 0 0 0"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_hip_rotation_ctrl01" 
-		"rotateZ" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_hip_rotation_ctrl01" 
+		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01" 
 		"rotateX" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_hip_rotation_ctrl01" 
+		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01" 
 		"rotateY" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_splineiK_tail01" 
-		"translate" " -type \"double3\" -0.035653279641508114 9.5057334983251707 -13.340298939932737"
+		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01" 
+		"rotateZ" " -av"
+		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_splineiK_tail01" 
+		"translate" " -type \"double3\" -0.035651821458088769 9.5057334980847354 -13.340299109719247"
 		
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_splineiK_tail01" 
-		"rotate" " -type \"double3\" 90.076336746280191 41.81374511959779 90.096242053188178"
+		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_splineiK_tail01" 
+		"rotate" " -type \"double3\" 90.076336763101708 41.813745124436792 90.096242064234318"
 		
+		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01" 
+		"rotate" " -type \"double3\" 15.400298421462729 0 0"
+		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01" 
+		"rotateX" " -av"
+		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01" 
+		"rotateY" " -av"
+		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01" 
+		"rotateZ" " -av"
+		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01" 
+		"blendParent1" " -k 1"
+		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control" 
+		"rotate" " -type \"double3\" 60.055390192206907 0 0"
+		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control" 
+		"rotateX" " -av"
+		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control" 
+		"rotateY" " -av"
+		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control" 
+		"rotateZ" " -av"
+		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_pPyramid2" 
+		"rotate" " -type \"double3\" 22.03291 0 0"
+		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_pPyramid2|pig_latest_pPyramid1Shape2" 
+		"surfaceReference" " 1"
+		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_pPyramid2|pig_latest_pPyramid1Shape2" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		
+		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_pPyramid2|pig_latest_pPyramid1Shape2" 
+		"furNameSpace" " -type \"string\" \"pig_latest\""
+		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_pPyramid2|pig_latest_pPyramid1Shape2" 
+		"VisibleInIndirect" " 1"
+		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_pPyramid2|pig_latest_colorClip_control|pig_latest_pTorus4|pig_latest_pTorus4Shape" 
+		"surfaceReference" " 1"
+		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_pPyramid2|pig_latest_colorClip_control|pig_latest_pTorus4|pig_latest_pTorus4Shape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		
+		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_pPyramid2|pig_latest_colorClip_control|pig_latest_pTorus4|pig_latest_pTorus4Shape" 
+		"furNameSpace" " -type \"string\" \"pig_latest\""
+		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_pPyramid2|pig_latest_colorClip_control|pig_latest_pTorus4|pig_latest_pTorus4Shape" 
+		"VisibleInIndirect" " 1"
 		2 "|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_global01|pig_latest_vertebrae_flexi_surface01|pig_latest_vertebrae_flexi_surface0Shape1" 
 		"surfaceReference" " 1"
 		2 "|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_global01|pig_latest_vertebrae_flexi_surface01|pig_latest_vertebrae_flexi_surface0Shape1" 
@@ -41195,89 +43687,59 @@ createNode reference -n "pig_latestRN";
 		
 		3 ":defaultRenderGlobals.rendercallback" "pig_latest_defaultFurGlobals.callback" 
 		""
-		3 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintTranslateX" 
-		"|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01.translateX" 
-		""
-		3 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintTranslateY" 
-		"|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01.translateY" 
-		""
-		3 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintTranslateZ" 
-		"|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01.translateZ" 
-		""
-		3 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintRotateX" 
-		"|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01.rotateX" 
-		""
-		3 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintRotateY" 
-		"|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01.rotateY" 
-		""
-		3 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintRotateZ" 
-		"|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01.rotateZ" 
-		""
 		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01.translateX" 
-		"pig_latestRN.placeHolderList[1]" ""
+		"pig_latestRN.placeHolderList[33]" ""
 		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01.translateY" 
-		"pig_latestRN.placeHolderList[2]" ""
+		"pig_latestRN.placeHolderList[34]" ""
 		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01.translateZ" 
-		"pig_latestRN.placeHolderList[3]" ""
+		"pig_latestRN.placeHolderList[35]" ""
 		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01.rotateX" 
-		"pig_latestRN.placeHolderList[4]" ""
+		"pig_latestRN.placeHolderList[36]" ""
 		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01.rotateY" 
-		"pig_latestRN.placeHolderList[5]" ""
+		"pig_latestRN.placeHolderList[37]" ""
 		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01.rotateZ" 
-		"pig_latestRN.placeHolderList[6]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_head_control.translateX" 
-		"pig_latestRN.placeHolderList[7]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_head_control.translateY" 
-		"pig_latestRN.placeHolderList[8]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_head_control.translateZ" 
-		"pig_latestRN.placeHolderList[9]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_head_control.rotateX" 
-		"pig_latestRN.placeHolderList[10]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_head_control.rotateY" 
-		"pig_latestRN.placeHolderList[11]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_head_control.rotateZ" 
-		"pig_latestRN.placeHolderList[12]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_head_control.scaleX" 
-		"pig_latestRN.placeHolderList[13]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_head_control.scaleY" 
-		"pig_latestRN.placeHolderList[14]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_head_control.scaleZ" 
-		"pig_latestRN.placeHolderList[15]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01.translateY" 
-		"pig_latestRN.placeHolderList[16]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01.translateX" 
-		"pig_latestRN.placeHolderList[17]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01.translateZ" 
-		"pig_latestRN.placeHolderList[18]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01.rotateX" 
-		"pig_latestRN.placeHolderList[19]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01.rotateY" 
-		"pig_latestRN.placeHolderList[20]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01.rotateZ" 
-		"pig_latestRN.placeHolderList[21]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01.scaleX" 
-		"pig_latestRN.placeHolderList[22]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01.scaleY" 
-		"pig_latestRN.placeHolderList[23]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01.scaleZ" 
-		"pig_latestRN.placeHolderList[24]" ""
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01.blendParent1" 
-		"pig_latestRN.placeHolderList[25]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01.blendParent1" 
-		"pig_latestRN.placeHolderList[26]" ""
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintTranslateY" 
-		"pig_latestRN.placeHolderList[27]" "pig_latest_shoulders_rotation_ctrl01.ty"
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintTranslateX" 
-		"pig_latestRN.placeHolderList[28]" "pig_latest_shoulders_rotation_ctrl01.tx"
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintTranslateZ" 
-		"pig_latestRN.placeHolderList[29]" "pig_latest_shoulders_rotation_ctrl01.tz"
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintRotateX" 
-		"pig_latestRN.placeHolderList[30]" "pig_latest_shoulders_rotation_ctrl01.rx"
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintRotateY" 
-		"pig_latestRN.placeHolderList[31]" "pig_latest_shoulders_rotation_ctrl01.ry"
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintRotateZ" 
-		"pig_latestRN.placeHolderList[32]" "pig_latest_shoulders_rotation_ctrl01.rz"
-		5 4 "pig_latestRN" "pig_latest_defaultFurGlobals.furNodeList" "pig_latestRN.placeHolderList[33]" 
+		"pig_latestRN.placeHolderList[38]" ""
+		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.translateY" 
+		"pig_latestRN.placeHolderList[39]" ""
+		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.translateX" 
+		"pig_latestRN.placeHolderList[40]" ""
+		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.translateZ" 
+		"pig_latestRN.placeHolderList[41]" ""
+		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.rotateX" 
+		"pig_latestRN.placeHolderList[42]" ""
+		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.rotateY" 
+		"pig_latestRN.placeHolderList[43]" ""
+		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.rotateZ" 
+		"pig_latestRN.placeHolderList[44]" ""
+		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.scaleX" 
+		"pig_latestRN.placeHolderList[45]" ""
+		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.scaleY" 
+		"pig_latestRN.placeHolderList[46]" ""
+		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.scaleZ" 
+		"pig_latestRN.placeHolderList[47]" ""
+		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.blendParent1" 
+		"pig_latestRN.placeHolderList[48]" ""
+		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.blendParent1" 
+		"pig_latestRN.placeHolderList[49]" ""
+		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control.translateX" 
+		"pig_latestRN.placeHolderList[50]" ""
+		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control.translateY" 
+		"pig_latestRN.placeHolderList[51]" ""
+		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control.translateZ" 
+		"pig_latestRN.placeHolderList[52]" ""
+		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control.rotateX" 
+		"pig_latestRN.placeHolderList[53]" ""
+		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control.rotateY" 
+		"pig_latestRN.placeHolderList[54]" ""
+		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control.rotateZ" 
+		"pig_latestRN.placeHolderList[55]" ""
+		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control.scaleX" 
+		"pig_latestRN.placeHolderList[56]" ""
+		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control.scaleY" 
+		"pig_latestRN.placeHolderList[57]" ""
+		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control.scaleZ" 
+		"pig_latestRN.placeHolderList[58]" ""
+		5 4 "pig_latestRN" "pig_latest_defaultFurGlobals.furNodeList" "pig_latestRN.placeHolderList[59]" 
 		"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
@@ -41351,8 +43813,8 @@ createNode animCurveTU -n "camera3_scaleZ";
 	setAttr ".ktv[0]"  134 1;
 createNode hyperGraphInfo -n "nodeEditorPanel2Info";
 createNode hyperView -n "hyperView2";
-	setAttr ".vl" -type "double2" -114.28571428571428 -288.09523809523813 ;
-	setAttr ".vh" -type "double2" 441.66666666666674 30.952380952380956 ;
+	setAttr ".vl" -type "double2" -189.58858683917526 -486.40064462802655 ;
+	setAttr ".vh" -type "double2" 1268.5738989343545 128.32919452924574 ;
 	setAttr ".dag" no;
 createNode hyperLayout -n "hyperLayout2";
 	setAttr ".ihi" 0;
@@ -41365,7 +43827,7 @@ createNode animCurveTL -n "group1_translateX";
 createNode animCurveTL -n "group1_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  207 0 209 0 210 -30.530438603428657;
+	setAttr -s 3 ".ktv[0:2]"  207 -1.1730051263549175 209 0 210 -30.530438603428657;
 createNode animCurveTL -n "group1_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
@@ -41390,15 +43852,16 @@ createNode animCurveTA -n "group1_rotateZ";
 createNode animCurveTU -n "group1_scaleX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  207 1 209 7.4595329502395629 210 7.4595329502395629;
+	setAttr -s 3 ".ktv[0:2]"  207 0.6439131428812207 209 7.4595329502395629
+		 210 7.4595329502395629;
 createNode animCurveTU -n "group1_scaleY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  207 1 209 1 210 1;
+	setAttr -s 3 ".ktv[0:2]"  207 0.6439131428812207 209 1 210 1;
 createNode animCurveTU -n "group1_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  207 1 209 1 210 1;
+	setAttr -s 3 ".ktv[0:2]"  207 0.6439131428812207 209 1 210 1;
 createNode phong -n "phong3";
 createNode shadingEngine -n "phong3SG";
 	setAttr ".ihi" 0;
@@ -41576,49 +44039,185 @@ createNode animCurveTA -n "NewSmarty_024:eye_ctrl_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  168 -7.1546958654183227e-014 193 -7.1546958654183227e-014;
+createNode partition -n "mtorPartition";
+	addAttr -s false -ci true -sn "rgcnx" -ln "rgcnx" -at "message";
+	addAttr -ci true -sn "sd" -ln "slimData" -dt "string";
+	addAttr -ci true -sn "sr" -ln "slimRIB" -dt "string";
+	addAttr -ci true -sn "rd" -ln "rlfData" -dt "string";
+	setAttr ".sr" -type "string" "";
 select -ne :time1;
-	setAttr ".o" 250;
-	setAttr ".unw" 250;
+	setAttr -av -k on ".cch";
+	setAttr -cb on ".ihi";
+	setAttr -k on ".nds";
+	setAttr -cb on ".bnm";
+	setAttr ".o" 191;
+	setAttr ".unw" 191;
 select -ne :renderPartition;
-	setAttr -s 497 ".st";
+	setAttr -k on ".cch";
+	setAttr -cb on ".ihi";
+	setAttr -k on ".nds";
+	setAttr -cb on ".bnm";
+	setAttr -s 507 ".st";
+	setAttr -cb on ".an";
+	setAttr -cb on ".pt";
 select -ne :renderGlobalsList1;
+	setAttr -k on ".cch";
+	setAttr -cb on ".ihi";
+	setAttr -k on ".nds";
+	setAttr -cb on ".bnm";
 select -ne :defaultShaderList1;
-	setAttr -s 158 ".s";
+	setAttr -k on ".cch";
+	setAttr -cb on ".ihi";
+	setAttr -k on ".nds";
+	setAttr -cb on ".bnm";
+	setAttr -s 210 ".s";
 select -ne :postProcessList1;
+	setAttr -k on ".cch";
+	setAttr -cb on ".ihi";
+	setAttr -k on ".nds";
+	setAttr -cb on ".bnm";
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 421 ".u";
+	setAttr -k on ".cch";
+	setAttr -cb on ".ihi";
+	setAttr -k on ".nds";
+	setAttr -cb on ".bnm";
+	setAttr -s 403 ".u";
 select -ne :defaultRenderingList1;
 	setAttr -s 30 ".r";
-select -ne :lightList1;
-	setAttr -s 12 ".l";
 select -ne :defaultTextureList1;
-	setAttr -s 212 ".tx";
+	setAttr -k on ".cch";
+	setAttr -cb on ".ihi";
+	setAttr -k on ".nds";
+	setAttr -cb on ".bnm";
+	setAttr -s 195 ".tx";
 select -ne :initialShadingGroup;
-	setAttr -s 441 ".dsm";
+	setAttr -k on ".cch";
+	setAttr -cb on ".ihi";
+	setAttr -av -k on ".nds";
+	setAttr -cb on ".bnm";
+	setAttr -s 458 ".dsm";
+	setAttr -k on ".mwc";
+	setAttr -cb on ".an";
+	setAttr -cb on ".il";
+	setAttr -cb on ".vo";
+	setAttr -cb on ".eo";
+	setAttr -cb on ".fo";
+	setAttr -cb on ".epo";
 	setAttr ".ro" yes;
-	setAttr -s 92 ".gn";
+	setAttr -s 107 ".gn";
 select -ne :initialParticleSE;
+	setAttr -k on ".cch";
+	setAttr -cb on ".ihi";
+	setAttr -k on ".nds";
+	setAttr -cb on ".bnm";
+	setAttr -k on ".mwc";
+	setAttr -cb on ".an";
+	setAttr -cb on ".il";
+	setAttr -cb on ".vo";
+	setAttr -cb on ".eo";
+	setAttr -cb on ".fo";
+	setAttr -cb on ".epo";
 	setAttr ".ro" yes;
+select -ne :initialMaterialInfo;
 select -ne :defaultRenderGlobals;
+	setAttr -k on ".cch";
+	setAttr -k on ".nds";
 	setAttr ".mcfr" 30;
-	setAttr ".ren" -type "string" "mentalRay";
+	setAttr -k on ".clip";
+	setAttr -k on ".edm";
+	setAttr -av -k on ".esr";
+	setAttr -k on ".ors";
 	setAttr ".outf" 32;
+	setAttr -k on ".gama";
 	setAttr ".an" yes;
 	setAttr ".fs" 121;
 	setAttr ".ef" 250;
+	setAttr -k on ".be";
 	setAttr ".ep" 1;
+	setAttr -k on ".fec";
+	setAttr -k on ".ofc";
 	setAttr ".pff" yes;
+	setAttr -k on ".comp";
+	setAttr -k on ".cth";
+	setAttr -k on ".soll";
+	setAttr -k on ".rd";
+	setAttr -k on ".lp";
+	setAttr -k on ".sp";
+	setAttr -k on ".shs";
+	setAttr -k on ".lpr";
+	setAttr -k on ".mm";
+	setAttr -k on ".npu";
+	setAttr -k on ".itf";
+	setAttr -k on ".shp";
+	setAttr -k on ".uf";
+	setAttr -k on ".oi";
+	setAttr -k on ".rut";
+	setAttr -k on ".mbf";
+	setAttr -k on ".afp";
+	setAttr -k on ".pfb";
+	setAttr -k on ".bll";
+	setAttr -k on ".bls";
+	setAttr -k on ".smv";
+	setAttr -k on ".ubc";
+	setAttr -k on ".mbc";
+	setAttr -k on ".udbx";
+	setAttr -k on ".smc";
+	setAttr -k on ".kmv";
+	setAttr -k on ".rlen";
+	setAttr -av -k on ".frts";
+	setAttr -k on ".tlwd";
+	setAttr -k on ".tlht";
+	setAttr -k on ".jfc";
 select -ne :defaultResolution;
-	setAttr ".pa" 1;
-	setAttr ".dar" 1.7777777910232544;
-select -ne :defaultLightSet;
-	setAttr -s 12 ".dsm";
+	setAttr -av -k on ".cch";
+	setAttr -k on ".ihi";
+	setAttr -av -k on ".nds";
+	setAttr -k on ".bnm";
+	setAttr -av ".w";
+	setAttr -av ".h";
+	setAttr -av -k on ".pa" 1;
+	setAttr -av -k on ".al";
+	setAttr -av ".dar" 1.7777777910232544;
+	setAttr -av -k on ".ldar";
+	setAttr -k on ".dpi";
+	setAttr -av -k on ".off";
+	setAttr -av -k on ".fld";
+	setAttr -av -k on ".zsl";
+	setAttr -k on ".isu";
+	setAttr -k on ".pdu";
 select -ne :hardwareRenderGlobals;
+	setAttr -k on ".cch";
+	setAttr -cb on ".ihi";
+	setAttr -k on ".nds";
+	setAttr -cb on ".bnm";
 	setAttr ".ctrs" 512;
 	setAttr ".btrs" 1024;
-	setAttr ".eeaa" yes;
-	setAttr ".mes" 9;
+	setAttr -k off ".fbfm";
+	setAttr -k off -cb on ".ehql";
+	setAttr -k off -cb on ".eams";
+	setAttr -k off ".eeaa" yes;
+	setAttr -k off ".engm";
+	setAttr -k off ".mes" 9;
+	setAttr -k off ".emb";
+	setAttr -av -k off ".mbbf";
+	setAttr -k off ".mbs";
+	setAttr -k off ".trm";
+	setAttr -k off -cb on ".tshc";
+	setAttr -k off ".enpt";
+	setAttr -k off ".clmt";
+	setAttr -k off -cb on ".tcov";
+	setAttr -k off -cb on ".lith";
+	setAttr -k off -cb on ".sobc";
+	setAttr -k off -cb on ".cuth";
+	setAttr -k off -cb on ".hgcd";
+	setAttr -k off -cb on ".hgci";
+	setAttr -k off -cb on ".mgcs";
+	setAttr -k off ".twa";
+	setAttr -k off ".twz";
+	setAttr -k on ".hwcc";
+	setAttr -k on ".hwdp";
+	setAttr -k on ".hwql";
 	setAttr ".hwfr" 30;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 16 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surfaces" "Particles" "Fluids" "Image Planes" "UI:" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Viewport UI"  ;
@@ -41629,62 +44228,94 @@ select -ne :hardwareRenderingGlobals;
 select -ne :characterPartition;
 	setAttr -s 2 ".st";
 select -ne :defaultHardwareRenderGlobals;
+	setAttr -k on ".cch";
+	setAttr -cb on ".ihi";
+	setAttr -k on ".nds";
+	setAttr -cb on ".bnm";
+	setAttr -k on ".rp";
+	setAttr -k on ".cai";
+	setAttr -k on ".coi";
+	setAttr -cb on ".bc";
+	setAttr -av -k on ".bcb";
+	setAttr -av -k on ".bcg";
+	setAttr -av -k on ".bcr";
+	setAttr -k on ".ei";
+	setAttr -k on ".ex";
+	setAttr -av -k on ".es";
+	setAttr -av -k on ".ef";
+	setAttr -av -k on ".bf";
+	setAttr -k on ".fii";
+	setAttr -av -k on ".sf";
+	setAttr -k on ".gr";
+	setAttr -k on ".li";
+	setAttr -k on ".ls";
+	setAttr -k on ".mb";
+	setAttr -k on ".ti";
+	setAttr -k on ".txt";
+	setAttr -k on ".mpr";
+	setAttr -k on ".wzd";
+	setAttr -k on ".if";
 	setAttr ".res" -type "string" "ntsc_4d 646 485 1.333";
+	setAttr -k on ".as";
+	setAttr -k on ".ds";
+	setAttr -k on ".lm";
+	setAttr -k on ".fir";
+	setAttr -k on ".aap";
+	setAttr -k on ".gh";
+	setAttr -cb on ".sd";
 select -ne :ikSystem;
 	setAttr -s 8 ".sol";
-connectAttr "living_room_latest:mug_translateX.o" "livingroom_shading_latestRN.phl[2]"
+connectAttr "living_room_latest:mug_translateX.o" "livingroom_shading_latestRN.phl[34]"
 		;
-connectAttr "living_room_latest:mug_translateY.o" "livingroom_shading_latestRN.phl[3]"
+connectAttr "living_room_latest:mug_translateY.o" "livingroom_shading_latestRN.phl[35]"
 		;
-connectAttr "living_room_latest:mug_translateZ.o" "livingroom_shading_latestRN.phl[4]"
+connectAttr "living_room_latest:mug_translateZ.o" "livingroom_shading_latestRN.phl[36]"
 		;
-connectAttr "living_room_latest:mug_rotateX.o" "livingroom_shading_latestRN.phl[5]"
+connectAttr "living_room_latest:mug_rotateX.o" "livingroom_shading_latestRN.phl[37]"
 		;
-connectAttr "living_room_latest:mug_rotateY.o" "livingroom_shading_latestRN.phl[6]"
+connectAttr "living_room_latest:mug_rotateY.o" "livingroom_shading_latestRN.phl[38]"
 		;
-connectAttr "living_room_latest:mug_rotateZ.o" "livingroom_shading_latestRN.phl[7]"
+connectAttr "living_room_latest:mug_rotateZ.o" "livingroom_shading_latestRN.phl[39]"
 		;
-connectAttr "living_room_latest:mug_visibility.o" "livingroom_shading_latestRN.phl[8]"
+connectAttr "living_room_latest:mug_visibility.o" "livingroom_shading_latestRN.phl[40]"
 		;
-connectAttr "living_room_latest:mug_scaleX.o" "livingroom_shading_latestRN.phl[9]"
+connectAttr "living_room_latest:mug_scaleX.o" "livingroom_shading_latestRN.phl[41]"
 		;
-connectAttr "living_room_latest:mug_scaleY.o" "livingroom_shading_latestRN.phl[10]"
+connectAttr "living_room_latest:mug_scaleY.o" "livingroom_shading_latestRN.phl[42]"
 		;
-connectAttr "living_room_latest:mug_scaleZ.o" "livingroom_shading_latestRN.phl[11]"
+connectAttr "living_room_latest:mug_scaleZ.o" "livingroom_shading_latestRN.phl[43]"
 		;
-connectAttr "living_room_latest:tissue_box1_translateX.o" "livingroom_shading_latestRN.phl[12]"
+connectAttr "living_room_latest:tissue_box1_translateX.o" "livingroom_shading_latestRN.phl[44]"
 		;
-connectAttr "living_room_latest:tissue_box1_translateY.o" "livingroom_shading_latestRN.phl[13]"
+connectAttr "living_room_latest:tissue_box1_translateY.o" "livingroom_shading_latestRN.phl[45]"
 		;
-connectAttr "living_room_latest:tissue_box1_translateZ.o" "livingroom_shading_latestRN.phl[14]"
+connectAttr "living_room_latest:tissue_box1_translateZ.o" "livingroom_shading_latestRN.phl[46]"
 		;
-connectAttr "living_room_latest:tissue_box1_rotateX.o" "livingroom_shading_latestRN.phl[15]"
+connectAttr "living_room_latest:tissue_box1_rotateX.o" "livingroom_shading_latestRN.phl[47]"
 		;
-connectAttr "living_room_latest:tissue_box1_rotateY.o" "livingroom_shading_latestRN.phl[16]"
+connectAttr "living_room_latest:tissue_box1_rotateY.o" "livingroom_shading_latestRN.phl[48]"
 		;
-connectAttr "living_room_latest:tissue_box1_rotateZ.o" "livingroom_shading_latestRN.phl[17]"
+connectAttr "living_room_latest:tissue_box1_rotateZ.o" "livingroom_shading_latestRN.phl[49]"
 		;
-connectAttr "living_room_latest:tissue_box1_visibility.o" "livingroom_shading_latestRN.phl[18]"
+connectAttr "living_room_latest:tissue_box1_visibility.o" "livingroom_shading_latestRN.phl[50]"
 		;
-connectAttr "living_room_latest:tissue_box1_scaleX.o" "livingroom_shading_latestRN.phl[19]"
+connectAttr "living_room_latest:tissue_box1_scaleX.o" "livingroom_shading_latestRN.phl[51]"
 		;
-connectAttr "living_room_latest:tissue_box1_scaleY.o" "livingroom_shading_latestRN.phl[20]"
+connectAttr "living_room_latest:tissue_box1_scaleY.o" "livingroom_shading_latestRN.phl[52]"
 		;
-connectAttr "living_room_latest:tissue_box1_scaleZ.o" "livingroom_shading_latestRN.phl[21]"
+connectAttr "living_room_latest:tissue_box1_scaleZ.o" "livingroom_shading_latestRN.phl[53]"
 		;
-connectAttr "livingroom_shading_latestRN.phl[22]" "coffee_table.do";
-connectAttr "daisySmall4MainShape.iog" "livingroom_shading_latestRN.phl[23]";
-connectAttr "daisySmall1MainShape.iog" "livingroom_shading_latestRN.phl[24]";
-connectAttr "daisySmall1LeafShape.iog" "livingroom_shading_latestRN.phl[25]";
-connectAttr "daisySmall1FlowerShape.iog" "livingroom_shading_latestRN.phl[26]";
-connectAttr "daisySmall2MainShape.iog" "livingroom_shading_latestRN.phl[27]";
-connectAttr "daisySmall2LeafShape.iog" "livingroom_shading_latestRN.phl[28]";
-connectAttr "daisySmall2FlowerShape.iog" "livingroom_shading_latestRN.phl[29]";
-connectAttr "daisySmall3MainShape.iog" "livingroom_shading_latestRN.phl[30]";
-connectAttr "daisySmall3LeafShape.iog" "livingroom_shading_latestRN.phl[31]";
-connectAttr "daisySmall3FlowerShape.iog" "livingroom_shading_latestRN.phl[32]";
-connectAttr "daisySmall4LeafShape.iog" "livingroom_shading_latestRN.phl[33]";
-connectAttr "daisySmall4FlowerShape.iog" "livingroom_shading_latestRN.phl[34]";
+connectAttr "livingroom_shading_latestRN.phl[54]" "coffee_table.do";
+connectAttr "daisySmall1MainShape.iog" "livingroom_shading_latestRN.phl[55]";
+connectAttr "daisySmall1LeafShape.iog" "livingroom_shading_latestRN.phl[56]";
+connectAttr "daisySmall1FlowerShape.iog" "livingroom_shading_latestRN.phl[57]";
+connectAttr "daisySmall2MainShape.iog" "livingroom_shading_latestRN.phl[58]";
+connectAttr "daisySmall2LeafShape.iog" "livingroom_shading_latestRN.phl[59]";
+connectAttr "daisySmall2FlowerShape.iog" "livingroom_shading_latestRN.phl[60]";
+connectAttr "daisySmall3MainShape.iog" "livingroom_shading_latestRN.phl[61]";
+connectAttr "daisySmall3LeafShape.iog" "livingroom_shading_latestRN.phl[62]";
+connectAttr "daisySmall3FlowerShape.iog" "livingroom_shading_latestRN.phl[63]";
+connectAttr "daisySmall4FlowerShape.iog" "livingroom_shading_latestRN.phl[64]";
 connectAttr "NewSmarty_024:eye_ctrl_translateX.o" "smartybikeRN.phl[1]";
 connectAttr "NewSmarty_024:eye_ctrl_translateY.o" "smartybikeRN.phl[2]";
 connectAttr "NewSmarty_024:eye_ctrl_translateZ.o" "smartybikeRN.phl[3]";
@@ -41701,13 +44332,6 @@ connectAttr "bike:bike_ctrl_rotateY.o" "smartybikeRN.phl[13]";
 connectAttr "bike:bike_ctrl_rotateX.o" "smartybikeRN.phl[14]";
 connectAttr "bike:bike_ctrl_rotateZ.o" "smartybikeRN.phl[15]";
 connectAttr "bike:bike_ctrl_visibility.o" "smartybikeRN.phl[16]";
-connectAttr "smartybikeRN.phl[17]" "pCube1_parentConstraint1.tg[0].tt";
-connectAttr "smartybikeRN.phl[18]" "pCube1_parentConstraint1.tg[0].tr";
-connectAttr "smartybikeRN.phl[19]" "pCube1_parentConstraint1.tg[0].ts";
-connectAttr "smartybikeRN.phl[20]" "pCube1_parentConstraint1.tg[0].trp";
-connectAttr "smartybikeRN.phl[21]" "pCube1_parentConstraint1.tg[0].trt";
-connectAttr "smartybikeRN.phl[22]" "pCube1_parentConstraint1.tg[0].tro";
-connectAttr "smartybikeRN.phl[23]" "pCube1_parentConstraint1.tg[0].tpm";
 connectAttr "sneaks_latestRN.phl[1]" "undies_parentConstraint1.tg[0].tt";
 connectAttr "sneaks_latestRN.phl[2]" "undies_parentConstraint1.tg[0].tr";
 connectAttr "sneaks_latestRN.phl[3]" "undies_parentConstraint1.tg[0].tro";
@@ -41736,43 +44360,37 @@ connectAttr "tuffs_latest_controller_head_rotateY.o" "tuffs_latestRN.phl[15]";
 connectAttr "tuffs_latest_controller_head_rotateZ.o" "tuffs_latestRN.phl[16]";
 connectAttr "tuffs_latest_controller_head_visibility.o" "tuffs_latestRN.phl[17]"
 		;
-connectAttr "pig_latest_controller_main01_translateX1.o" "pig_latestRN.phl[1]";
-connectAttr "pig_latest_controller_main01_translateY1.o" "pig_latestRN.phl[2]";
-connectAttr "pig_latest_controller_main01_translateZ1.o" "pig_latestRN.phl[3]";
-connectAttr "pig_latest_controller_main01_rotateX1.o" "pig_latestRN.phl[4]";
-connectAttr "pig_latest_controller_main01_rotateY1.o" "pig_latestRN.phl[5]";
-connectAttr "pig_latest_controller_main01_rotateZ1.o" "pig_latestRN.phl[6]";
-connectAttr "pig_latest_head_control_translateX1.o" "pig_latestRN.phl[7]";
-connectAttr "pig_latest_head_control_translateY1.o" "pig_latestRN.phl[8]";
-connectAttr "pig_latest_head_control_translateZ1.o" "pig_latestRN.phl[9]";
-connectAttr "pig_latest_head_control_rotateX1.o" "pig_latestRN.phl[10]";
-connectAttr "pig_latest_head_control_rotateY1.o" "pig_latestRN.phl[11]";
-connectAttr "pig_latest_head_control_rotateZ1.o" "pig_latestRN.phl[12]";
-connectAttr "pig_latest_head_control_scaleX1.o" "pig_latestRN.phl[13]";
-connectAttr "pig_latest_head_control_scaleY1.o" "pig_latestRN.phl[14]";
-connectAttr "pig_latest_head_control_scaleZ1.o" "pig_latestRN.phl[15]";
-connectAttr "pairBlend3.oty" "pig_latestRN.phl[16]";
-connectAttr "pairBlend3.otx" "pig_latestRN.phl[17]";
-connectAttr "pairBlend3.otz" "pig_latestRN.phl[18]";
-connectAttr "pairBlend3.orx" "pig_latestRN.phl[19]";
-connectAttr "pairBlend3.ory" "pig_latestRN.phl[20]";
-connectAttr "pairBlend3.orz" "pig_latestRN.phl[21]";
-connectAttr "pig_latest_shoulders_rotation_ctrl01_scaleX1.o" "pig_latestRN.phl[22]"
+connectAttr "pig_latest_controller_main01_translateX1.o" "pig_latestRN.phl[33]";
+connectAttr "pig_latest_controller_main01_translateY1.o" "pig_latestRN.phl[34]";
+connectAttr "pig_latest_controller_main01_translateZ1.o" "pig_latestRN.phl[35]";
+connectAttr "pig_latest_controller_main01_rotateX1.o" "pig_latestRN.phl[36]";
+connectAttr "pig_latest_controller_main01_rotateY1.o" "pig_latestRN.phl[37]";
+connectAttr "pig_latest_controller_main01_rotateZ1.o" "pig_latestRN.phl[38]";
+connectAttr "pairBlend3.oty" "pig_latestRN.phl[39]";
+connectAttr "pairBlend3.otx" "pig_latestRN.phl[40]";
+connectAttr "pairBlend3.otz" "pig_latestRN.phl[41]";
+connectAttr "pairBlend3.orx" "pig_latestRN.phl[42]";
+connectAttr "pairBlend3.ory" "pig_latestRN.phl[43]";
+connectAttr "pairBlend3.orz" "pig_latestRN.phl[44]";
+connectAttr "pig_latest_shoulders_rotation_ctrl01_scaleX1.o" "pig_latestRN.phl[45]"
 		;
-connectAttr "pig_latest_shoulders_rotation_ctrl01_scaleY1.o" "pig_latestRN.phl[23]"
+connectAttr "pig_latest_shoulders_rotation_ctrl01_scaleY1.o" "pig_latestRN.phl[46]"
 		;
-connectAttr "pig_latest_shoulders_rotation_ctrl01_scaleZ1.o" "pig_latestRN.phl[24]"
+connectAttr "pig_latest_shoulders_rotation_ctrl01_scaleZ1.o" "pig_latestRN.phl[47]"
 		;
-connectAttr "pig_latestRN.phl[25]" "pairBlend3.w";
-connectAttr "pig_latest_shoulders_rotation_ctrl01_blendParent1.o" "pig_latestRN.phl[26]"
+connectAttr "pig_latestRN.phl[48]" "pairBlend3.w";
+connectAttr "pig_latest_shoulders_rotation_ctrl01_blendParent1.o" "pig_latestRN.phl[49]"
 		;
-connectAttr "pig_latestRN.phl[27]" "pairBlend3.ity2";
-connectAttr "pig_latestRN.phl[28]" "pairBlend3.itx2";
-connectAttr "pig_latestRN.phl[29]" "pairBlend3.itz2";
-connectAttr "pig_latestRN.phl[30]" "pairBlend3.irx2";
-connectAttr "pig_latestRN.phl[31]" "pairBlend3.iry2";
-connectAttr "pig_latestRN.phl[32]" "pairBlend3.irz2";
-connectAttr "defaultFurGlobals.rogl" "pig_latestRN.phl[33]";
+connectAttr "pig_latest_head_control_translateX1.o" "pig_latestRN.phl[50]";
+connectAttr "pig_latest_head_control_translateY1.o" "pig_latestRN.phl[51]";
+connectAttr "pig_latest_head_control_translateZ1.o" "pig_latestRN.phl[52]";
+connectAttr "pig_latest_head_control_rotateX1.o" "pig_latestRN.phl[53]";
+connectAttr "pig_latest_head_control_rotateY1.o" "pig_latestRN.phl[54]";
+connectAttr "pig_latest_head_control_rotateZ1.o" "pig_latestRN.phl[55]";
+connectAttr "pig_latest_head_control_scaleX1.o" "pig_latestRN.phl[56]";
+connectAttr "pig_latest_head_control_scaleY1.o" "pig_latestRN.phl[57]";
+connectAttr "pig_latest_head_control_scaleZ1.o" "pig_latestRN.phl[58]";
+connectAttr "defaultFurGlobals.rogl" "pig_latestRN.phl[59]";
 connectAttr "soap_bottle:imagePlaneShape1.msg" ":sideShape.ip" -na;
 connectAttr "camera1_translateX.o" "camera1.tx";
 connectAttr "camera1_translateY.o" "camera1.ty";
@@ -41784,18 +44402,6 @@ connectAttr "camera1_rotateZ.o" "camera1.rz";
 connectAttr "camera1_scaleX.o" "camera1.sx";
 connectAttr "camera1_scaleY.o" "camera1.sy";
 connectAttr "camera1_scaleZ.o" "camera1.sz";
-connectAttr "pCube1_parentConstraint1.ctx" "soap_bottle:pCube1.tx";
-connectAttr "pCube1_parentConstraint1.cty" "soap_bottle:pCube1.ty";
-connectAttr "pCube1_parentConstraint1.ctz" "soap_bottle:pCube1.tz";
-connectAttr "pCube1_parentConstraint1.crx" "soap_bottle:pCube1.rx";
-connectAttr "pCube1_parentConstraint1.cry" "soap_bottle:pCube1.ry";
-connectAttr "pCube1_parentConstraint1.crz" "soap_bottle:pCube1.rz";
-connectAttr "soap_bottle:polySplitRing10.out" "soap_bottle:pCubeShape1.i";
-connectAttr "pCube1_parentConstraint1.w0" "pCube1_parentConstraint1.tg[0].tw";
-connectAttr "soap_bottle:pCube1.ro" "pCube1_parentConstraint1.cro";
-connectAttr "soap_bottle:pCube1.pim" "pCube1_parentConstraint1.cpim";
-connectAttr "soap_bottle:pCube1.rp" "pCube1_parentConstraint1.crp";
-connectAttr "soap_bottle:pCube1.rpt" "pCube1_parentConstraint1.crt";
 connectAttr "group1_translateX.o" "group1.tx";
 connectAttr "group1_translateY.o" "group1.ty";
 connectAttr "group1_translateZ.o" "group1.tz";
@@ -41837,6 +44443,112 @@ connectAttr "camera3_rotateZ.o" "camera3.rz";
 connectAttr "camera3_scaleX1.o" "camera3.sx";
 connectAttr "camera3_scaleY1.o" "camera3.sy";
 connectAttr "camera3_scaleZ1.o" "camera3.sz";
+connectAttr ":rmanFinalGlobals.msg" ":renderManRISGlobals.p" -na;
+connectAttr ":rmanPreviewGlobals.msg" ":renderManRISGlobals.p" -na;
+connectAttr ":rmanRerenderGlobals.msg" ":renderManRISGlobals.p" -na;
+connectAttr ":rmanReyesRerenderGlobals.msg" ":renderManRISGlobals.p" -na;
+connectAttr ":rmanRerenderRISGlobals.msg" ":renderManRISGlobals.p" -na;
+connectAttr ":rmanDeepShadowGlobals.msg" ":renderManRISGlobals.p" -na;
+connectAttr ":rmanAreaShadowGlobals.msg" ":renderManRISGlobals.p" -na;
+connectAttr ":rmanShadowGlobals.msg" ":renderManRISGlobals.p" -na;
+connectAttr ":rmanBakeGlobals.msg" ":renderManRISGlobals.p" -na;
+connectAttr ":rmanBakeRenderGlobals.msg" ":renderManRISGlobals.p" -na;
+connectAttr ":rmanSSMakeBrickmapGlobals.msg" ":renderManRISGlobals.p" -na;
+connectAttr ":rmanSSDiffuseGlobals.msg" ":renderManRISGlobals.p" -na;
+connectAttr ":rmanSSOrganizeGlobals.msg" ":renderManRISGlobals.p" -na;
+connectAttr ":rmanSSRenderGlobals.msg" ":renderManRISGlobals.p" -na;
+connectAttr ":rmanSBMakeBrickmapGlobals.msg" ":renderManRISGlobals.p" -na;
+connectAttr ":rmanSBMakePtCloudGlobals.msg" ":renderManRISGlobals.p" -na;
+connectAttr ":rmanSBPtRenderGlobals.msg" ":renderManRISGlobals.p" -na;
+connectAttr ":rmanSBRenderGlobals.msg" ":renderManRISGlobals.p" -na;
+connectAttr ":rmanSBMakePtexGlobals.msg" ":renderManRISGlobals.p" -na;
+connectAttr ":rmanFinalOutputGlobals0.msg" ":rmanFinalGlobals.d" -na;
+connectAttr ":rmanPreviewOutputGlobals0.msg" ":rmanPreviewGlobals.d" -na;
+connectAttr ":rmanRerenderOutputGlobals0.msg" ":rmanRerenderGlobals.d" -na;
+connectAttr ":rmanReyesRerenderOutputGlobals0.msg" ":rmanReyesRerenderGlobals.d"
+		 -na;
+connectAttr ":rmanRerenderRISOutputGlobals0.msg" ":rmanRerenderRISGlobals.d" -na
+		;
+connectAttr ":rmanDeepShadowOutputGlobals0.msg" ":rmanDeepShadowGlobals.d" -na;
+connectAttr ":rmanDeepShadowOutputGlobals1.msg" ":rmanDeepShadowGlobals.d" -na;
+connectAttr ":rmanAreaShadowOutputGlobals0.msg" ":rmanAreaShadowGlobals.d" -na;
+connectAttr ":rmanAreaShadowOutputGlobals1.msg" ":rmanAreaShadowGlobals.d" -na;
+connectAttr ":rmanShadowOutputGlobals0.msg" ":rmanShadowGlobals.d" -na;
+connectAttr ":rmanBakeRenderGlobals.msg" ":rmanBakeGlobals.p" -na;
+connectAttr ":rmanBakeRenderOutputGlobals0.msg" ":rmanBakeRenderGlobals.d" -na;
+connectAttr ":rmanBakeRenderChannelGlobals0.msg" ":rmanBakeRenderGlobals.c" -na;
+connectAttr ":rmanBakeRenderChannelGlobals1.msg" ":rmanBakeRenderGlobals.c" -na;
+connectAttr ":rmanBakeRenderChannelGlobals2.msg" ":rmanBakeRenderGlobals.c" -na;
+connectAttr ":rmanBakeRenderChannelGlobals3.msg" ":rmanBakeRenderGlobals.c" -na;
+connectAttr ":rmanBakeRenderChannelGlobals4.msg" ":rmanBakeRenderGlobals.c" -na;
+connectAttr ":rmanBakeRenderChannelGlobals5.msg" ":rmanBakeRenderGlobals.c" -na;
+connectAttr ":rmanBakeRenderChannelGlobals6.msg" ":rmanBakeRenderGlobals.c" -na;
+connectAttr ":rmanBakeRenderChannelGlobals7.msg" ":rmanBakeRenderGlobals.c" -na;
+connectAttr ":rmanBakeRenderChannelGlobals8.msg" ":rmanBakeRenderGlobals.c" -na;
+connectAttr ":rmanBakeRenderChannelGlobals9.msg" ":rmanBakeRenderGlobals.c" -na;
+connectAttr ":rmanBakeRenderChannelGlobals10.msg" ":rmanBakeRenderGlobals.c" -na
+		;
+connectAttr ":rmanBakeRenderChannelGlobals11.msg" ":rmanBakeRenderGlobals.c" -na
+		;
+connectAttr ":rmanBakeRenderChannelGlobals12.msg" ":rmanBakeRenderGlobals.c" -na
+		;
+connectAttr ":rmanBakeRenderChannelGlobals13.msg" ":rmanBakeRenderGlobals.c" -na
+		;
+connectAttr ":rmanBakeRenderChannelGlobals14.msg" ":rmanBakeRenderGlobals.c" -na
+		;
+connectAttr ":rmanBakeRenderChannelGlobals15.msg" ":rmanBakeRenderGlobals.c" -na
+		;
+connectAttr ":rmanBakeRenderChannelGlobals16.msg" ":rmanBakeRenderGlobals.c" -na
+		;
+connectAttr ":rmanBakeRenderChannelGlobals17.msg" ":rmanBakeRenderGlobals.c" -na
+		;
+connectAttr ":rmanBakeRenderChannelGlobals18.msg" ":rmanBakeRenderGlobals.c" -na
+		;
+connectAttr ":rmanBakeRenderChannelGlobals19.msg" ":rmanBakeRenderGlobals.c" -na
+		;
+connectAttr ":rmanBakeRenderChannelGlobals20.msg" ":rmanBakeRenderGlobals.c" -na
+		;
+connectAttr ":rmanBakeRenderChannelGlobals21.msg" ":rmanBakeRenderGlobals.c" -na
+		;
+connectAttr ":rmanBakeRenderChannelGlobals22.msg" ":rmanBakeRenderGlobals.c" -na
+		;
+connectAttr ":rmanBakeRenderChannelGlobals23.msg" ":rmanBakeRenderGlobals.c" -na
+		;
+connectAttr ":rmanBakeRenderChannelGlobals24.msg" ":rmanBakeRenderGlobals.c" -na
+		;
+connectAttr ":rmanBakeRenderChannelGlobals25.msg" ":rmanBakeRenderGlobals.c" -na
+		;
+connectAttr ":rmanBakeRenderChannelGlobals26.msg" ":rmanBakeRenderGlobals.c" -na
+		;
+connectAttr ":rmanBakeRenderChannelGlobals27.msg" ":rmanBakeRenderGlobals.c" -na
+		;
+connectAttr ":rmanBakeRenderChannelGlobals28.msg" ":rmanBakeRenderGlobals.c" -na
+		;
+connectAttr ":rmanBakeRenderChannelGlobals29.msg" ":rmanBakeRenderGlobals.c" -na
+		;
+connectAttr ":rmanBakeRenderChannelGlobals30.msg" ":rmanBakeRenderGlobals.c" -na
+		;
+connectAttr ":rmanBakeRenderChannelGlobals31.msg" ":rmanBakeRenderGlobals.c" -na
+		;
+connectAttr ":rmanSSDiffuseGlobals.msg" ":rmanSSMakeBrickmapGlobals.p" -na;
+connectAttr ":rmanSSRenderGlobals.msg" ":rmanSSDiffuseGlobals.p" -na;
+connectAttr ":rmanSSRenderOutputGlobals0.msg" ":rmanSSRenderGlobals.d" -na;
+connectAttr ":rmanSSRenderChannelGlobals0.msg" ":rmanSSRenderGlobals.c" -na;
+connectAttr ":rmanSSRenderChannelGlobals1.msg" ":rmanSSRenderGlobals.c" -na;
+connectAttr ":rmanSSRenderChannelGlobals2.msg" ":rmanSSRenderGlobals.c" -na;
+connectAttr ":rmanSSRenderChannelGlobals3.msg" ":rmanSSRenderGlobals.c" -na;
+connectAttr ":rmanSSRenderGlobals.msg" ":rmanSSOrganizeGlobals.p" -na;
+connectAttr ":rmanSBRenderGlobals.msg" ":rmanSBMakeBrickmapGlobals.p" -na;
+connectAttr ":rmanSBRenderOutputGlobals0.msg" ":rmanSBRenderGlobals.d" -na;
+connectAttr ":rmanSBRenderChannelGlobals0.msg" ":rmanSBRenderGlobals.c" -na;
+connectAttr ":rmanSBRenderChannelGlobals1.msg" ":rmanSBRenderGlobals.c" -na;
+connectAttr ":rmanSBRenderChannelGlobals2.msg" ":rmanSBRenderGlobals.c" -na;
+connectAttr ":rmanSBRenderChannelGlobals3.msg" ":rmanSBRenderGlobals.c" -na;
+connectAttr ":rmanSBRenderChannelGlobals4.msg" ":rmanSBRenderGlobals.c" -na;
+connectAttr ":rmanSBRenderChannelGlobals5.msg" ":rmanSBRenderGlobals.c" -na;
+connectAttr ":rmanSBRenderGlobals.msg" ":rmanSBMakePtCloudGlobals.p" -na;
+connectAttr ":rmanSBRenderGlobals.msg" ":rmanSBPtRenderGlobals.p" -na;
+connectAttr ":rmanSBRenderGlobals.msg" ":rmanSBMakePtexGlobals.p" -na;
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "phong1SG.message" ":defaultLightSet.message";
@@ -41853,34 +44565,11 @@ relationship "shadowLink" ":lightLinker1" "phong2SG.message" ":defaultLightSet.m
 relationship "shadowLink" ":lightLinker1" "phong3SG.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
+connectAttr "daisySmall4MainShape.iog" "livingroom_shading_latestRN.phl[23]";
+connectAttr "daisySmall4LeafShape.iog" "livingroom_shading_latestRN.phl[33]";
 connectAttr ":defaultRenderGlobals.rcb" "defaultFurGlobals.cb";
 connectAttr "sharedReferenceNode.sr" "sneaks_latestRN.sr";
-connectAttr "soap_bottle:polyTweak1.out" "soap_bottle:polySplitRing1.ip";
-connectAttr "soap_bottle:pCubeShape1.wm" "soap_bottle:polySplitRing1.mp";
-connectAttr "soap_bottle:polyCube1.out" "soap_bottle:polyTweak1.ip";
-connectAttr "soap_bottle:polySplitRing1.out" "soap_bottle:polySplitRing2.ip";
-connectAttr "soap_bottle:pCubeShape1.wm" "soap_bottle:polySplitRing2.mp";
-connectAttr "soap_bottle:polySplitRing2.out" "soap_bottle:polySplitRing3.ip";
-connectAttr "soap_bottle:pCubeShape1.wm" "soap_bottle:polySplitRing3.mp";
-connectAttr "soap_bottle:polySplitRing3.out" "soap_bottle:polySplitRing4.ip";
-connectAttr "soap_bottle:pCubeShape1.wm" "soap_bottle:polySplitRing4.mp";
-connectAttr "soap_bottle:polySplitRing4.out" "soap_bottle:polySplitRing5.ip";
-connectAttr "soap_bottle:pCubeShape1.wm" "soap_bottle:polySplitRing5.mp";
-connectAttr "soap_bottle:polyTweak2.out" "soap_bottle:polySplitRing6.ip";
-connectAttr "soap_bottle:pCubeShape1.wm" "soap_bottle:polySplitRing6.mp";
-connectAttr "soap_bottle:polySplitRing5.out" "soap_bottle:polyTweak2.ip";
-connectAttr "soap_bottle:polyTweak3.out" "soap_bottle:polySplitRing7.ip";
-connectAttr "soap_bottle:pCubeShape1.wm" "soap_bottle:polySplitRing7.mp";
-connectAttr "soap_bottle:polySplitRing6.out" "soap_bottle:polyTweak3.ip";
-connectAttr "soap_bottle:polyTweak4.out" "soap_bottle:polySplitRing8.ip";
-connectAttr "soap_bottle:pCubeShape1.wm" "soap_bottle:polySplitRing8.mp";
-connectAttr "soap_bottle:polySplitRing7.out" "soap_bottle:polyTweak4.ip";
-connectAttr "soap_bottle:polySplitRing8.out" "soap_bottle:polySplitRing9.ip";
-connectAttr "soap_bottle:pCubeShape1.wm" "soap_bottle:polySplitRing9.mp";
-connectAttr "soap_bottle:polySplitRing9.out" "soap_bottle:polySplitRing10.ip";
-connectAttr "soap_bottle:pCubeShape1.wm" "soap_bottle:polySplitRing10.mp";
 connectAttr "phong1.oc" "phong1SG.ss";
-connectAttr "soap_bottle:pCubeShape1.iog" "phong1SG.dsm" -na;
 connectAttr "phong1SG.msg" "materialInfo1.sg";
 connectAttr "phong1.msg" "materialInfo1.m";
 connectAttr "pairBlend2_inTranslateX1.o" "pairBlend2.itx1";
@@ -41928,6 +44617,7 @@ connectAttr "furryBallGlobal.msg" "hyperLayout1.hyp[0].dn";
 connectAttr "furryBallRenderSettingsDefault.msg" "hyperLayout1.hyp[1].dn";
 connectAttr "furryBallGISettings.msg" "hyperLayout1.hyp[2].dn";
 connectAttr "high.msg" "hyperLayout1.hyp[3].dn";
+connectAttr "mtorPartition.msg" "hyperLayout1.hyp[4].dn";
 connectAttr "furryBallRenderSettingsDefault.globalNode" "furryBallGlobal.renderNodes[0]"
 		;
 connectAttr "high.globalNode" "furryBallGlobal.renderNodes[1]";
@@ -41945,12 +44635,19 @@ connectAttr "phong3SG.msg" "materialInfo3.sg";
 connectAttr "phong3.msg" "materialInfo3.m";
 connectAttr "wood1.msg" "materialInfo3.t" -na;
 connectAttr "place3dTexture1.wim" "wood1.pm";
+connectAttr "pig_latestRN.phl[27]" "pairBlend3.ity2";
+connectAttr "pig_latestRN.phl[28]" "pairBlend3.itx2";
+connectAttr "pig_latestRN.phl[29]" "pairBlend3.itz2";
+connectAttr "pig_latestRN.phl[30]" "pairBlend3.irx2";
+connectAttr "pig_latestRN.phl[31]" "pairBlend3.iry2";
+connectAttr "pig_latestRN.phl[32]" "pairBlend3.irz2";
 connectAttr "pairBlend3_inTranslateX1.o" "pairBlend3.itx1";
 connectAttr "pairBlend3_inTranslateY1.o" "pairBlend3.ity1";
 connectAttr "pairBlend3_inTranslateZ1.o" "pairBlend3.itz1";
 connectAttr "pairBlend3_inRotateX1.o" "pairBlend3.irx1";
 connectAttr "pairBlend3_inRotateY1.o" "pairBlend3.iry1";
 connectAttr "pairBlend3_inRotateZ1.o" "pairBlend3.irz1";
+connectAttr ":defaultRenderGlobals.msg" "mtorPartition.rgcnx";
 connectAttr "phong1SG.pa" ":renderPartition.st" -na;
 connectAttr "undies_latest:lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "undies_latest:lambert3SG.pa" ":renderPartition.st" -na;
@@ -41971,6 +44668,6 @@ connectAttr "undies_latest:file1.msg" ":defaultTextureList1.tx" -na;
 connectAttr "wood1.msg" ":defaultTextureList1.tx" -na;
 connectAttr "pCylinderShape8.iog" ":initialShadingGroup.dsm" -na;
 dataStructure -fmt "raw" -as "name=externalContentTable:string=node:string=key:string=upath:uint32=upathcrc:string=rpath:string=roles";
-applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"livingroom_shading_latestRN\" \"\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/sets/livingroom_shading/livingroom_shading_latest.ma\" 2081054145 \"E:/Shithub/Bandits/maya/assets/sets/livingroom_shading/livingroom_shading_latest.ma\" \"FileRef\"\n1\n\"smartybikeRN\" \"\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/smarty/smartybike.ma\" 2677305362 \"E:/Shithub/Bandits/maya/assets/characters/smarty/smartybike.ma\" \"FileRef\"\n2\n\"sneaks_latestRN\" \"\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/sneaks/versions/sneaks17.ma\" 1483682575 \"E:/Shithub/Bandits/maya/assets/characters/sneaks/versions/sneaks17.ma\" \"FileRef\"\n3\n\"tuffs_latestRN\" \"\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/tuffs/tuffs_latest.ma\" 1466656841 \"E:/Shithub/Bandits/maya/assets/characters/tuffs/tuffs_latest.ma\" \"FileRef\"\n4\n\"pig_latestRN\" \"\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/pig/pig_latest.ma\" 3104522739 \"E:/Shithub/Bandits/maya/assets/characters/pig/pig_latest.ma\" \"FileRef\"\n5\n\"light_setup_004RN\" \"\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/sets/livingroom/versions/light_setup_004.ma\" 1358796440 \"E:/Shithub/Bandits/maya/assets/sets/set_lighting/Versions/light_setup_004.ma\" \"FileRef\"\n6\n\"|soap_bottle:_UNKNOWN_REF_NODE_fosterParent1|soap_bottle:imagePlane1|soap_bottle:imagePlaneShape1\" \"imageName\" \"/Users/KristenCurry/Desktop/imgres.jpg\" 1103782025 \"\" \"sourceImages\"\n7\n\"undies_latest:file1\" \"fileTextureName\" \"E:/Shithub/Bandits/maya/assets/props/undies/undie_pattern.jpg\" 4061404508 \"E:/Shithub/Bandits/maya/assets/props/undies/undie_pattern.jpg\" \"sourceImages\"\nendStream\nendChannel\nendAssociations\n" 
+applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"livingroom_shading_latestRN\" \"\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/sets/livingroom_shading/livingroom_shading_latest.ma\" 2081054145 \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom_shading/livingroom_shading_latest.ma\" \"FileRef\"\n1\n\"smartybikeRN\" \"\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/smarty/smartybike.ma\" 2677305362 \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smartybike.ma\" \"FileRef\"\n2\n\"sneaks_latestRN\" \"\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/sneaks/versions/sneaks17.ma\" 1483682575 \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/sneaks/versions/sneaks17.ma\" \"FileRef\"\n3\n\"tuffs_latestRN\" \"\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/tuffs/tuffs_latest.ma\" 1466656841 \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/tuffs/tuffs_latest.ma\" \"FileRef\"\n4\n\"pig_latestRN\" \"\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/pig/pig_latest.ma\" 3104522739 \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\" \"FileRef\"\n5\n\"|soap_bottle:_UNKNOWN_REF_NODE_fosterParent1|soap_bottle:imagePlane1|soap_bottle:imagePlaneShape1\" \"imageName\" \"/Users/KristenCurry/Desktop/imgres.jpg\" 1103782025 \"\" \"sourceImages\"\n6\n\"undies_latest:file1\" \"fileTextureName\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/props/undies/undie_pattern.jpg\" 110585401 \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/props/undies/undie_pattern.jpg\" \"sourceImages\"\nendStream\nendChannel\nendAssociations\n" 
 		-scn;
 // End of smarty_under_table.ma

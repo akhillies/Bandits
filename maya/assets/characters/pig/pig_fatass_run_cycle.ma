@@ -1,6 +1,6 @@
 //Maya ASCII 2015 scene
 //Name: pig_fatass_run_cycle.ma
-//Last modified: Tue, Mar 17, 2015 11:05:44 PM
+//Last modified: Tue, Mar 17, 2015 11:52:33 PM
 //Codeset: 1252
 file -rdi 1 -ns "pig_latest" -rfn "pig_latestRN" -op "v=0;" "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/pig/pig_skinned_2.ma";
 file -rdi 2 -ns "key_latest" -rfn "pig_latest:key_latestRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/props/keys/key_latest.ma";
@@ -20,12 +20,12 @@ fileInfo "osv" "Microsoft Windows 8 Home Premium Edition, 64-bit  (Build 9200)\n
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 12.938495222025283 -0.68587845382281998 11.467254963556632 ;
-	setAttr ".r" -type "double3" 5.0616472725473107 -1034.5999999999399 -5.6621463580832816e-016 ;
+	setAttr ".t" -type "double3" 15.86102678146958 3.4661630831976806 22.363272002399686 ;
+	setAttr ".r" -type "double3" -5.1383527274532099 -1046.1999999998807 2.3921586376378295e-016 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 18.137498043469492;
+	setAttr ".coi" 28.492472900800959;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -772,6 +772,266 @@ createNode RenderMan -s -n "rmanFinalOutputGlobals0";
 	setAttr -k on ".rman__riopt__Display_dither" 0;
 	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
 	setAttr -k on ".rman__riopt__Display_remap" -type "float3" 0 0 0 ;
+createNode RenderMan -s -n "rmanRerenderRISGlobals";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___previewPass" -ln "rman__torattr___previewPass" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___motionBlur" -ln "rman__torattr___motionBlur" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passLayer" -ln "rman__torattr___passLayer" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___camera" -ln "rman__torattr___camera" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___crew" -ln "rman__torattr___crew" -dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___flavor" -ln "rman__torattr___flavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___cameraFlavor" -ln "rman__torattr___cameraFlavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___lightcrew" -ln "rman__torattr___lightcrew" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___depthOfField" -ln "rman__torattr___depthOfField" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passNameFormat" -ln "rman__torattr___passNameFormat" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__shading_directlightingsamples" -ln "rman__riopt__shading_directlightingsamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__bucket_order" -ln "rman__riopt__bucket_order" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize" -ln "rman__riopt__limits_bucketsize" 
+		-at "long2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize0" -ln "rman__riopt__limits_bucketsize0" 
+		-dv -1 -at "long" -p "rman__riopt__limits_bucketsize";
+	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize1" -ln "rman__riopt__limits_bucketsize1" 
+		-dv -1 -at "long" -p "rman__riopt__limits_bucketsize";
+	addAttr -ci true -k true -sn "rman__riopt___PixelVariance" -ln "rman__riopt___PixelVariance" 
+		-dv -1 -at "float";
+	addAttr -ci true -h true -sn "rman__riopt__Hider_name" -ln "rman__riopt__Hider_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Hider_minsamples" -ln "rman__riopt__Hider_minsamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Hider_maxsamples" -ln "rman__riopt__Hider_maxsamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Integrator_name" -ln "rman__riopt__Integrator_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindow" -ln "rman__riopt___CropWindow" 
+		-at "compound" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX" -ln "rman__riopt___CropWindowX" 
+		-at "float2" -p "rman__riopt___CropWindow" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX0" -ln "rman__riopt___CropWindowX0" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowX";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX1" -ln "rman__riopt___CropWindowX1" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowX";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY" -ln "rman__riopt___CropWindowY" 
+		-at "float2" -p "rman__riopt___CropWindow" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY0" -ln "rman__riopt___CropWindowY0" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowY";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY1" -ln "rman__riopt___CropWindowY1" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowY";
+	addAttr -ci true -h true -sn "rman__riopt__photon_lifetime" -ln "rman__riopt__photon_lifetime" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__photon_emit" -ln "rman__riopt__photon_emit" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__trace_maxspeculardepth" -ln "rman__riattr__trace_maxspeculardepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__trace_maxdiffusedepth" -ln "rman__riattr__trace_maxdiffusedepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__trace_displacements" -ln "rman__riattr__trace_displacements" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riattr__photon_causticmap" -ln "rman__riattr__photon_causticmap" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riattr__photon_globalmap" -ln "rman__riattr__photon_globalmap" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Hider_integrationmode" -ln "rman__riopt__Hider_integrationmode" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_mergePaths" -ln "rman__riopt__Integrator_mergePaths" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_mergeRadiusScale" -ln "rman__riopt__Integrator_mergeRadiusScale" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_timeRadius" -ln "rman__riopt__Integrator_timeRadius" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_reduceRadius" -ln "rman__riopt__Integrator_reduceRadius" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_connectPaths" -ln "rman__riopt__Integrator_connectPaths" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_maxPathLength" -ln "rman__riopt__Integrator_maxPathLength" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Integrator_sampleMode" -ln "rman__riopt__Integrator_sampleMode" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numLightSamples" -ln "rman__riopt__Integrator_numLightSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numBxdfSamples" -ln "rman__riopt__Integrator_numBxdfSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numIndirectSamples" -ln "rman__riopt__Integrator_numIndirectSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numDiffuseSamples" -ln "rman__riopt__Integrator_numDiffuseSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numSpecularSamples" -ln "rman__riopt__Integrator_numSpecularSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numSubsurfaceSamples" -ln "rman__riopt__Integrator_numSubsurfaceSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numRefractionSamples" -ln "rman__riopt__Integrator_numRefractionSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_rouletteDepth" -ln "rman__riopt__Integrator_rouletteDepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_rouletteThreshold" -ln "rman__riopt__Integrator_rouletteThreshold" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_clampDepth" -ln "rman__riopt__Integrator_clampDepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_clampLuminance" -ln "rman__riopt__Integrator_clampLuminance" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_allowCaustics" -ln "rman__riopt__Integrator_allowCaustics" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numSamples" -ln "rman__riopt__Integrator_numSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Integrator_viewchannel" -ln "rman__riopt__Integrator_viewchannel" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:render";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "RerenderRIS";
+	setAttr ".rman__torattr___task" -type "string" "render";
+	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Images";
+	setAttr -k on ".rman__torattr___previewPass" 1;
+	setAttr -k on ".rman__torattr___motionBlur" 0;
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr ".rman__torattr___passLayer" -type "string" "";
+	setAttr ".rman__torattr___camera" -type "string" "";
+	setAttr ".rman__torattr___crew" -type "string" "";
+	setAttr ".rman__torattr___flavor" -type "string" "";
+	setAttr ".rman__torattr___cameraFlavor" -type "string" "";
+	setAttr ".rman__torattr___lightcrew" -type "string" "";
+	setAttr -k on ".rman__torattr___depthOfField" 1;
+	setAttr ".rman__torattr___passNameFormat" -type "string" "";
+	setAttr -k on ".rman__riopt__shading_directlightingsamples" 4;
+	setAttr ".rman__riopt__bucket_order" -type "string" "spiral";
+	setAttr -k on ".rman__riopt__limits_bucketsize" -type "long2" 16 16 ;
+	setAttr -k on ".rman__riopt___PixelVariance" 0.0099999997764825821;
+	setAttr ".rman__riopt__Hider_name" -type "string" "raytrace";
+	setAttr -k on ".rman__riopt__Hider_minsamples" 0;
+	setAttr -k on ".rman__riopt__Hider_maxsamples" 16;
+	setAttr ".rman__riopt__Integrator_name" -type "string" "PxrPathTracer";
+	setAttr -k on ".rman__riopt___CropWindowX" -type "float2" 0 1 ;
+	setAttr -k on ".rman__riopt___CropWindowY" -type "float2" 0 1 ;
+	setAttr ".rman__riopt__photon_lifetime" -type "string" "transient";
+	setAttr -k on ".rman__riopt__photon_emit" 0;
+	setAttr -k on ".rman__riattr__trace_maxspeculardepth" 2;
+	setAttr -k on ".rman__riattr__trace_maxdiffusedepth" 1;
+	setAttr -k on ".rman__riattr__trace_displacements" 1;
+	setAttr ".rman__riattr__photon_causticmap" -type "string" "";
+	setAttr ".rman__riattr__photon_globalmap" -type "string" "";
+	setAttr ".rman__riopt__Hider_integrationmode" -type "string" "path";
+	setAttr -k on ".rman__riopt__Integrator_mergePaths" 1;
+	setAttr -k on ".rman__riopt__Integrator_mergeRadiusScale" 5;
+	setAttr -k on ".rman__riopt__Integrator_timeRadius" 1;
+	setAttr -k on ".rman__riopt__Integrator_reduceRadius" 1;
+	setAttr -k on ".rman__riopt__Integrator_connectPaths" 1;
+	setAttr -k on ".rman__riopt__Integrator_maxPathLength" 10;
+	setAttr ".rman__riopt__Integrator_sampleMode" -type "string" "bxdf";
+	setAttr -k on ".rman__riopt__Integrator_numLightSamples" 8;
+	setAttr -k on ".rman__riopt__Integrator_numBxdfSamples" 8;
+	setAttr -k on ".rman__riopt__Integrator_numIndirectSamples" 1;
+	setAttr -k on ".rman__riopt__Integrator_numDiffuseSamples" 1;
+	setAttr -k on ".rman__riopt__Integrator_numSpecularSamples" 1;
+	setAttr -k on ".rman__riopt__Integrator_numSubsurfaceSamples" 1;
+	setAttr -k on ".rman__riopt__Integrator_numRefractionSamples" 1;
+	setAttr -k on ".rman__riopt__Integrator_rouletteDepth" 4;
+	setAttr -k on ".rman__riopt__Integrator_rouletteThreshold" 0.20000000298023224;
+	setAttr -k on ".rman__riopt__Integrator_clampDepth" 2;
+	setAttr -k on ".rman__riopt__Integrator_clampLuminance" 10;
+	setAttr -k on ".rman__riopt__Integrator_allowCaustics" 0;
+	setAttr -k on ".rman__riopt__Integrator_numSamples" 4;
+	setAttr ".rman__riopt__Integrator_viewchannel" -type "string" "Nn";
+createNode RenderMan -s -n "rmanRerenderRISOutputGlobals0";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___primaryDisplay" -ln "rman__torattr___primaryDisplay" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___dspyID" -ln "rman__torattr___dspyID" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___dspyGetChannelsFromCamera" -ln "rman__torattr___dspyGetChannelsFromCamera" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Display_name" -ln "rman__riopt__Display_name" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_type" -ln "rman__riopt__Display_type" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_mode" -ln "rman__riopt__Display_mode" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_filter" -ln "rman__riopt__Display_filter" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth" -ln "rman__riopt__Display_filterwidth" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth0" -ln "rman__riopt__Display_filterwidth0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth1" -ln "rman__riopt__Display_filterwidth1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantize" -ln "rman__riopt__Display_quantize" 
+		-at "compound" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX" -ln "rman__riopt__Display_quantizeX" 
+		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX0" -ln "rman__riopt__Display_quantizeX0" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX1" -ln "rman__riopt__Display_quantizeX1" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY" -ln "rman__riopt__Display_quantizeY" 
+		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY0" -ln "rman__riopt__Display_quantizeY0" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY1" -ln "rman__riopt__Display_quantizeY1" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_dither" -ln "rman__riopt__Display_dither" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure" -ln "rman__riopt__Display_exposure" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure0" -ln "rman__riopt__Display_exposure0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure1" -ln "rman__riopt__Display_exposure1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap" -ln "rman__riopt__Display_remap" 
+		-at "float3" -nc 3;
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap0" -ln "rman__riopt__Display_remap0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap1" -ln "rman__riopt__Display_remap1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap2" -ln "rman__riopt__Display_remap2" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:display";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "PrimaryRerender";
+	setAttr ".rman__torattr___task" -type "string" "display";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr -k on ".rman__torattr___primaryDisplay" 1;
+	setAttr ".rman__torattr___dspyID" -type "string" "";
+	setAttr -k on ".rman__torattr___dspyGetChannelsFromCamera" 1;
+	setAttr ".rman__riopt__Display_name" -type "string" "[passinfo this filename]";
+	setAttr ".rman__riopt__Display_type" -type "string" "openexr";
+	setAttr ".rman__riopt__Display_mode" -type "string" "rgba";
+	setAttr ".rman__riopt__Display_filter" -type "string" "gaussian";
+	setAttr -k on ".rman__riopt__Display_filterwidth" -type "float2" 2 2 ;
+	setAttr -k on ".rman__riopt__Display_quantizeX" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_quantizeY" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_dither" 0;
+	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
+	setAttr -k on ".rman__riopt__Display_remap" -type "float3" 0 0 0 ;
 createNode RenderMan -s -n "rmanPreviewGlobals";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -1340,266 +1600,6 @@ createNode RenderMan -s -n "rmanReyesRerenderOutputGlobals0";
 	setAttr ".nt" -type "string" "settings:display";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Primary";
-	setAttr ".rman__torattr___task" -type "string" "display";
-	setAttr -k on ".rman__torattr___computeBehavior" 1;
-	setAttr -k on ".rman__torattr___primaryDisplay" 1;
-	setAttr ".rman__torattr___dspyID" -type "string" "";
-	setAttr -k on ".rman__torattr___dspyGetChannelsFromCamera" 1;
-	setAttr ".rman__riopt__Display_name" -type "string" "[passinfo this filename]";
-	setAttr ".rman__riopt__Display_type" -type "string" "openexr";
-	setAttr ".rman__riopt__Display_mode" -type "string" "rgba";
-	setAttr ".rman__riopt__Display_filter" -type "string" "gaussian";
-	setAttr -k on ".rman__riopt__Display_filterwidth" -type "float2" 2 2 ;
-	setAttr -k on ".rman__riopt__Display_quantizeX" -type "long2" 0 0 ;
-	setAttr -k on ".rman__riopt__Display_quantizeY" -type "long2" 0 0 ;
-	setAttr -k on ".rman__riopt__Display_dither" 0;
-	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
-	setAttr -k on ".rman__riopt__Display_remap" -type "float3" 0 0 0 ;
-createNode RenderMan -s -n "rmanRerenderRISGlobals";
-	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
-	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__torattr___previewPass" -ln "rman__torattr___previewPass" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__torattr___motionBlur" -ln "rman__torattr___motionBlur" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__torattr___passLayer" -ln "rman__torattr___passLayer" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___camera" -ln "rman__torattr___camera" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___crew" -ln "rman__torattr___crew" -dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___flavor" -ln "rman__torattr___flavor" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___cameraFlavor" -ln "rman__torattr___cameraFlavor" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___lightcrew" -ln "rman__torattr___lightcrew" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__torattr___depthOfField" -ln "rman__torattr___depthOfField" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__torattr___passNameFormat" -ln "rman__torattr___passNameFormat" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt__shading_directlightingsamples" -ln "rman__riopt__shading_directlightingsamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__riopt__bucket_order" -ln "rman__riopt__bucket_order" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize" -ln "rman__riopt__limits_bucketsize" 
-		-at "long2" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize0" -ln "rman__riopt__limits_bucketsize0" 
-		-dv -1 -at "long" -p "rman__riopt__limits_bucketsize";
-	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize1" -ln "rman__riopt__limits_bucketsize1" 
-		-dv -1 -at "long" -p "rman__riopt__limits_bucketsize";
-	addAttr -ci true -k true -sn "rman__riopt___PixelVariance" -ln "rman__riopt___PixelVariance" 
-		-dv -1 -at "float";
-	addAttr -ci true -h true -sn "rman__riopt__Hider_name" -ln "rman__riopt__Hider_name" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt__Hider_minsamples" -ln "rman__riopt__Hider_minsamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Hider_maxsamples" -ln "rman__riopt__Hider_maxsamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__riopt__Integrator_name" -ln "rman__riopt__Integrator_name" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt___CropWindow" -ln "rman__riopt___CropWindow" 
-		-at "compound" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt___CropWindowX" -ln "rman__riopt___CropWindowX" 
-		-at "float2" -p "rman__riopt___CropWindow" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt___CropWindowX0" -ln "rman__riopt___CropWindowX0" 
-		-dv -1 -at "float" -p "rman__riopt___CropWindowX";
-	addAttr -ci true -k true -sn "rman__riopt___CropWindowX1" -ln "rman__riopt___CropWindowX1" 
-		-dv -1 -at "float" -p "rman__riopt___CropWindowX";
-	addAttr -ci true -k true -sn "rman__riopt___CropWindowY" -ln "rman__riopt___CropWindowY" 
-		-at "float2" -p "rman__riopt___CropWindow" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt___CropWindowY0" -ln "rman__riopt___CropWindowY0" 
-		-dv -1 -at "float" -p "rman__riopt___CropWindowY";
-	addAttr -ci true -k true -sn "rman__riopt___CropWindowY1" -ln "rman__riopt___CropWindowY1" 
-		-dv -1 -at "float" -p "rman__riopt___CropWindowY";
-	addAttr -ci true -h true -sn "rman__riopt__photon_lifetime" -ln "rman__riopt__photon_lifetime" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt__photon_emit" -ln "rman__riopt__photon_emit" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riattr__trace_maxspeculardepth" -ln "rman__riattr__trace_maxspeculardepth" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riattr__trace_maxdiffusedepth" -ln "rman__riattr__trace_maxdiffusedepth" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riattr__trace_displacements" -ln "rman__riattr__trace_displacements" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__riattr__photon_causticmap" -ln "rman__riattr__photon_causticmap" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__riattr__photon_globalmap" -ln "rman__riattr__photon_globalmap" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__riopt__Hider_integrationmode" -ln "rman__riopt__Hider_integrationmode" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_mergePaths" -ln "rman__riopt__Integrator_mergePaths" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_mergeRadiusScale" -ln "rman__riopt__Integrator_mergeRadiusScale" 
-		-dv -1 -at "float";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_timeRadius" -ln "rman__riopt__Integrator_timeRadius" 
-		-dv -1 -at "float";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_reduceRadius" -ln "rman__riopt__Integrator_reduceRadius" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_connectPaths" -ln "rman__riopt__Integrator_connectPaths" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_maxPathLength" -ln "rman__riopt__Integrator_maxPathLength" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__riopt__Integrator_sampleMode" -ln "rman__riopt__Integrator_sampleMode" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_numLightSamples" -ln "rman__riopt__Integrator_numLightSamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_numBxdfSamples" -ln "rman__riopt__Integrator_numBxdfSamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_numIndirectSamples" -ln "rman__riopt__Integrator_numIndirectSamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_numDiffuseSamples" -ln "rman__riopt__Integrator_numDiffuseSamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_numSpecularSamples" -ln "rman__riopt__Integrator_numSpecularSamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_numSubsurfaceSamples" -ln "rman__riopt__Integrator_numSubsurfaceSamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_numRefractionSamples" -ln "rman__riopt__Integrator_numRefractionSamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_rouletteDepth" -ln "rman__riopt__Integrator_rouletteDepth" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_rouletteThreshold" -ln "rman__riopt__Integrator_rouletteThreshold" 
-		-dv -1 -at "float";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_clampDepth" -ln "rman__riopt__Integrator_clampDepth" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_clampLuminance" -ln "rman__riopt__Integrator_clampLuminance" 
-		-dv -1 -at "float";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_allowCaustics" -ln "rman__riopt__Integrator_allowCaustics" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_numSamples" -ln "rman__riopt__Integrator_numSamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__riopt__Integrator_viewchannel" -ln "rman__riopt__Integrator_viewchannel" 
-		-dt "string";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "pass:render";
-	setAttr ".t" 1;
-	setAttr ".rman__torattr___class" -type "string" "RerenderRIS";
-	setAttr ".rman__torattr___task" -type "string" "render";
-	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Images";
-	setAttr -k on ".rman__torattr___previewPass" 1;
-	setAttr -k on ".rman__torattr___motionBlur" 0;
-	setAttr -k on ".rman__torattr___computeBehavior" 1;
-	setAttr ".rman__torattr___passLayer" -type "string" "";
-	setAttr ".rman__torattr___camera" -type "string" "";
-	setAttr ".rman__torattr___crew" -type "string" "";
-	setAttr ".rman__torattr___flavor" -type "string" "";
-	setAttr ".rman__torattr___cameraFlavor" -type "string" "";
-	setAttr ".rman__torattr___lightcrew" -type "string" "";
-	setAttr -k on ".rman__torattr___depthOfField" 1;
-	setAttr ".rman__torattr___passNameFormat" -type "string" "";
-	setAttr -k on ".rman__riopt__shading_directlightingsamples" 4;
-	setAttr ".rman__riopt__bucket_order" -type "string" "spiral";
-	setAttr -k on ".rman__riopt__limits_bucketsize" -type "long2" 16 16 ;
-	setAttr -k on ".rman__riopt___PixelVariance" 0.0099999997764825821;
-	setAttr ".rman__riopt__Hider_name" -type "string" "raytrace";
-	setAttr -k on ".rman__riopt__Hider_minsamples" 0;
-	setAttr -k on ".rman__riopt__Hider_maxsamples" 16;
-	setAttr ".rman__riopt__Integrator_name" -type "string" "PxrPathTracer";
-	setAttr -k on ".rman__riopt___CropWindowX" -type "float2" 0 1 ;
-	setAttr -k on ".rman__riopt___CropWindowY" -type "float2" 0 1 ;
-	setAttr ".rman__riopt__photon_lifetime" -type "string" "transient";
-	setAttr -k on ".rman__riopt__photon_emit" 0;
-	setAttr -k on ".rman__riattr__trace_maxspeculardepth" 2;
-	setAttr -k on ".rman__riattr__trace_maxdiffusedepth" 1;
-	setAttr -k on ".rman__riattr__trace_displacements" 1;
-	setAttr ".rman__riattr__photon_causticmap" -type "string" "";
-	setAttr ".rman__riattr__photon_globalmap" -type "string" "";
-	setAttr ".rman__riopt__Hider_integrationmode" -type "string" "path";
-	setAttr -k on ".rman__riopt__Integrator_mergePaths" 1;
-	setAttr -k on ".rman__riopt__Integrator_mergeRadiusScale" 5;
-	setAttr -k on ".rman__riopt__Integrator_timeRadius" 1;
-	setAttr -k on ".rman__riopt__Integrator_reduceRadius" 1;
-	setAttr -k on ".rman__riopt__Integrator_connectPaths" 1;
-	setAttr -k on ".rman__riopt__Integrator_maxPathLength" 10;
-	setAttr ".rman__riopt__Integrator_sampleMode" -type "string" "bxdf";
-	setAttr -k on ".rman__riopt__Integrator_numLightSamples" 8;
-	setAttr -k on ".rman__riopt__Integrator_numBxdfSamples" 8;
-	setAttr -k on ".rman__riopt__Integrator_numIndirectSamples" 1;
-	setAttr -k on ".rman__riopt__Integrator_numDiffuseSamples" 1;
-	setAttr -k on ".rman__riopt__Integrator_numSpecularSamples" 1;
-	setAttr -k on ".rman__riopt__Integrator_numSubsurfaceSamples" 1;
-	setAttr -k on ".rman__riopt__Integrator_numRefractionSamples" 1;
-	setAttr -k on ".rman__riopt__Integrator_rouletteDepth" 4;
-	setAttr -k on ".rman__riopt__Integrator_rouletteThreshold" 0.20000000298023224;
-	setAttr -k on ".rman__riopt__Integrator_clampDepth" 2;
-	setAttr -k on ".rman__riopt__Integrator_clampLuminance" 10;
-	setAttr -k on ".rman__riopt__Integrator_allowCaustics" 0;
-	setAttr -k on ".rman__riopt__Integrator_numSamples" 4;
-	setAttr ".rman__riopt__Integrator_viewchannel" -type "string" "Nn";
-createNode RenderMan -s -n "rmanRerenderRISOutputGlobals0";
-	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
-	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
-	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__torattr___primaryDisplay" -ln "rman__torattr___primaryDisplay" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__torattr___dspyID" -ln "rman__torattr___dspyID" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__torattr___dspyGetChannelsFromCamera" -ln "rman__torattr___dspyGetChannelsFromCamera" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__riopt__Display_name" -ln "rman__riopt__Display_name" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__riopt__Display_type" -ln "rman__riopt__Display_type" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__riopt__Display_mode" -ln "rman__riopt__Display_mode" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__riopt__Display_filter" -ln "rman__riopt__Display_filter" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth" -ln "rman__riopt__Display_filterwidth" 
-		-at "float2" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth0" -ln "rman__riopt__Display_filterwidth0" 
-		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
-	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth1" -ln "rman__riopt__Display_filterwidth1" 
-		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantize" -ln "rman__riopt__Display_quantize" 
-		-at "compound" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX" -ln "rman__riopt__Display_quantizeX" 
-		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX0" -ln "rman__riopt__Display_quantizeX0" 
-		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX1" -ln "rman__riopt__Display_quantizeX1" 
-		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY" -ln "rman__riopt__Display_quantizeY" 
-		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY0" -ln "rman__riopt__Display_quantizeY0" 
-		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY1" -ln "rman__riopt__Display_quantizeY1" 
-		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
-	addAttr -ci true -k true -sn "rman__riopt__Display_dither" -ln "rman__riopt__Display_dither" 
-		-dv -1 -at "float";
-	addAttr -ci true -k true -sn "rman__riopt__Display_exposure" -ln "rman__riopt__Display_exposure" 
-		-at "float2" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt__Display_exposure0" -ln "rman__riopt__Display_exposure0" 
-		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
-	addAttr -ci true -k true -sn "rman__riopt__Display_exposure1" -ln "rman__riopt__Display_exposure1" 
-		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
-	addAttr -ci true -k true -sn "rman__riopt__Display_remap" -ln "rman__riopt__Display_remap" 
-		-at "float3" -nc 3;
-	addAttr -ci true -k true -sn "rman__riopt__Display_remap0" -ln "rman__riopt__Display_remap0" 
-		-dv -1 -at "float" -p "rman__riopt__Display_remap";
-	addAttr -ci true -k true -sn "rman__riopt__Display_remap1" -ln "rman__riopt__Display_remap1" 
-		-dv -1 -at "float" -p "rman__riopt__Display_remap";
-	addAttr -ci true -k true -sn "rman__riopt__Display_remap2" -ln "rman__riopt__Display_remap2" 
-		-dv -1 -at "float" -p "rman__riopt__Display_remap";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:display";
-	setAttr ".t" 1;
-	setAttr ".rman__torattr___class" -type "string" "PrimaryRerender";
 	setAttr ".rman__torattr___task" -type "string" "display";
 	setAttr -k on ".rman__torattr___computeBehavior" 1;
 	setAttr -k on ".rman__torattr___primaryDisplay" 1;
@@ -3611,8 +3611,8 @@ createNode RenderMan -s -n "rmanSBMakePtexGlobals";
 	setAttr ".rman__param__ptxmake___channel" -type "string" "$BAKECHAN";
 	setAttr ".rman__param__ptxmake___outputfile" -type "string" "[passinfo this filename]";
 createNode lightLinker -s -n "lightLinker1";
-	setAttr -s 122 ".lnk";
-	setAttr -s 122 ".slnk";
+	setAttr -s 32 ".lnk";
+	setAttr -s 32 ".slnk";
 createNode displayLayerManager -n "layerManager";
 createNode displayLayer -n "defaultLayer";
 createNode renderLayerManager -n "renderLayerManager";
@@ -3676,10 +3676,8 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"relationshipPanel\" -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"referenceEditorPanel\" -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\tif ($useSceneConfig) {\n\t\tscriptedPanel -e -to $panelName;\n"
 		+ "\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"componentEditorPanel\" -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynPaintScriptedPanelType\" -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"scriptEditorPanel\" -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderManControlsType\" (localizedPanelLabel(\"RenderMan Controls\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"renderManControlsType\" -l (localizedPanelLabel(\"RenderMan Controls\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"RenderMan Controls\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -keyReleaseCommand \"nodeEdKeyReleaseCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n"
-		+ "                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;\n\t\t\tif (`objExists nodeEditorPanel2Info`) nodeEditor -e -restoreInfo nodeEditorPanel2Info $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n"
-		+ "                -keyReleaseCommand \"nodeEdKeyReleaseCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;\n\t\t\tif (`objExists nodeEditorPanel2Info`) nodeEditor -e -restoreInfo nodeEditorPanel2Info $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\tif ($useSceneConfig) {\n\t\tscriptedPanel -e -to $panelName;\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"createNodePanel\" -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n"
-		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\tif ($useSceneConfig) {\n\t\tscriptedPanel -e -to $panelName;\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderManLightingType\" (localizedPanelLabel(\"RenderMan Lighting\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"renderManLightingType\" -l (localizedPanelLabel(\"RenderMan Lighting\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"RenderMan Lighting\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n"
+		+ "\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
 		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        setFocus `paneLayout -q -p1 $gMainPane`;\n        sceneUIReplacement -deleteRemaining;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
@@ -3692,7 +3690,7 @@ createNode reference -n "pig_latestRN";
 	setAttr ".fn[0]" -type "string" "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/pig/pig_skinned_2.ma";
 	setAttr ".fn[1]" -type "string" "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/pig/pig_skinned.ma";
 	setAttr ".fn[2]" -type "string" "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/pig/pig_latest.ma";
-	setAttr -s 544 ".phl";
+	setAttr -s 641 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -4237,6 +4235,103 @@ createNode reference -n "pig_latestRN";
 	setAttr ".phl[542]" 0;
 	setAttr ".phl[543]" 0;
 	setAttr ".phl[544]" 0;
+	setAttr ".phl[545]" 0;
+	setAttr ".phl[546]" 0;
+	setAttr ".phl[547]" 0;
+	setAttr ".phl[548]" 0;
+	setAttr ".phl[549]" 0;
+	setAttr ".phl[550]" 0;
+	setAttr ".phl[551]" 0;
+	setAttr ".phl[552]" 0;
+	setAttr ".phl[553]" 0;
+	setAttr ".phl[554]" 0;
+	setAttr ".phl[555]" 0;
+	setAttr ".phl[556]" 0;
+	setAttr ".phl[557]" 0;
+	setAttr ".phl[558]" 0;
+	setAttr ".phl[559]" 0;
+	setAttr ".phl[560]" 0;
+	setAttr ".phl[561]" 0;
+	setAttr ".phl[562]" 0;
+	setAttr ".phl[563]" 0;
+	setAttr ".phl[564]" 0;
+	setAttr ".phl[565]" 0;
+	setAttr ".phl[566]" 0;
+	setAttr ".phl[567]" 0;
+	setAttr ".phl[568]" 0;
+	setAttr ".phl[569]" 0;
+	setAttr ".phl[570]" 0;
+	setAttr ".phl[571]" 0;
+	setAttr ".phl[572]" 0;
+	setAttr ".phl[573]" 0;
+	setAttr ".phl[574]" 0;
+	setAttr ".phl[575]" 0;
+	setAttr ".phl[576]" 0;
+	setAttr ".phl[577]" 0;
+	setAttr ".phl[578]" 0;
+	setAttr ".phl[579]" 0;
+	setAttr ".phl[580]" 0;
+	setAttr ".phl[581]" 0;
+	setAttr ".phl[582]" 0;
+	setAttr ".phl[583]" 0;
+	setAttr ".phl[584]" 0;
+	setAttr ".phl[585]" 0;
+	setAttr ".phl[586]" 0;
+	setAttr ".phl[587]" 0;
+	setAttr ".phl[588]" 0;
+	setAttr ".phl[589]" 0;
+	setAttr ".phl[590]" 0;
+	setAttr ".phl[591]" 0;
+	setAttr ".phl[592]" 0;
+	setAttr ".phl[593]" 0;
+	setAttr ".phl[594]" 0;
+	setAttr ".phl[595]" 0;
+	setAttr ".phl[596]" 0;
+	setAttr ".phl[597]" 0;
+	setAttr ".phl[598]" 0;
+	setAttr ".phl[599]" 0;
+	setAttr ".phl[600]" 0;
+	setAttr ".phl[601]" 0;
+	setAttr ".phl[602]" 0;
+	setAttr ".phl[603]" 0;
+	setAttr ".phl[604]" 0;
+	setAttr ".phl[605]" 0;
+	setAttr ".phl[606]" 0;
+	setAttr ".phl[607]" 0;
+	setAttr ".phl[608]" 0;
+	setAttr ".phl[609]" 0;
+	setAttr ".phl[610]" 0;
+	setAttr ".phl[611]" 0;
+	setAttr ".phl[612]" 0;
+	setAttr ".phl[613]" 0;
+	setAttr ".phl[614]" 0;
+	setAttr ".phl[615]" 0;
+	setAttr ".phl[616]" 0;
+	setAttr ".phl[617]" 0;
+	setAttr ".phl[618]" 0;
+	setAttr ".phl[619]" 0;
+	setAttr ".phl[620]" 0;
+	setAttr ".phl[621]" 0;
+	setAttr ".phl[622]" 0;
+	setAttr ".phl[623]" 0;
+	setAttr ".phl[624]" 0;
+	setAttr ".phl[625]" 0;
+	setAttr ".phl[626]" 0;
+	setAttr ".phl[627]" 0;
+	setAttr ".phl[628]" 0;
+	setAttr ".phl[629]" 0;
+	setAttr ".phl[630]" 0;
+	setAttr ".phl[631]" 0;
+	setAttr ".phl[632]" 0;
+	setAttr ".phl[633]" 0;
+	setAttr ".phl[634]" 0;
+	setAttr ".phl[635]" 0;
+	setAttr ".phl[636]" 0;
+	setAttr ".phl[637]" 0;
+	setAttr ".phl[638]" 0;
+	setAttr ".phl[639]" 0;
+	setAttr ".phl[640]" 0;
+	setAttr ".phl[641]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"pig_latestRN"
 		"pig_latest:key_latestRN" 3
@@ -4281,7 +4376,7 @@ createNode reference -n "pig_latestRN";
 		
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2|pig_latest:colorClip_control|pig_latest:key_control|pig_latest:key_latest:Obj_000003|pig_latest:key_latest:Obj_000003Shape" 
 		"furNameSpace" " -type \"string\" \"key_latest\""
-		"pig_latestRN" 944
+		"pig_latestRN" 1049
 		0 "|pig_latestRNfosterParent1|tail_2control01_parentConstraint1" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_2control01" 
 		"-s -r "
 		0 "|pig_latestRNfosterParent1|tail_3control01_parentConstraint1" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_3control01" 
@@ -4336,7 +4431,7 @@ createNode reference -n "pig_latestRN";
 		
 		2 "|pig_latest:Tyrion_Cattister_uv:Tyrion_CattisterRNfosterParent1|pig_latest:Tyrion_Cattister_uv:Tyrion_Cattister:Tyrion_Cattister_uv:Tyrion_Cattister:pigShapeDeformedDeformed" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest:PIG|pig_latest:controller_main01" "rotate" " -type \"double3\" -3.5121058443968454 0 -0.16511968496526519"
+		2 "|pig_latest:PIG|pig_latest:controller_main01" "rotate" " -type \"double3\" 0.98860240619645512 0 0.96316135318616081"
 		
 		2 "|pig_latest:PIG|pig_latest:controller_main01" "rotateX" " -av"
 		2 "|pig_latest:PIG|pig_latest:controller_main01" "rotateY" " -av"
@@ -4381,7 +4476,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2|pig_latest:colorClip_control|pig_latest:cat_collar:pTorus4|pig_latest:cat_collar:pTorus4Shape" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2|pig_latest:colorClip_control|pig_latest:key_control" 
-		"rotate" " -type \"double3\" 0 0 -8.7766925857150273"
+		"rotate" " -type \"double3\" 0 0 -49.980417316311915"
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2|pig_latest:colorClip_control|pig_latest:key_control" 
 		"rotateZ" " -av"
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01" "visibility" 
@@ -4410,6 +4505,25 @@ createNode reference -n "pig_latestRN";
 		" -av"
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01" "scaleZ" 
 		" -av"
+		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01|pig_latest:PigSkin002:bind_root01|pig_latest:PigSkin002:bind_head01|pig_latest:PigSkin002:bind_L_ear_a01" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01|pig_latest:PigSkin002:bind_root01|pig_latest:PigSkin002:bind_head01|pig_latest:PigSkin002:bind_L_ear_a01" 
+		"rotateY" " -av"
+		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01|pig_latest:PigSkin002:bind_root01|pig_latest:PigSkin002:bind_head01|pig_latest:PigSkin002:bind_L_ear_a01" 
+		"segmentScaleCompensate" " 1"
+		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01|pig_latest:PigSkin002:bind_root01|pig_latest:PigSkin002:bind_head01|pig_latest:PigSkin002:bind_L_ear_a01|pig_latest:PigSkin002:bind_L_ear_b01|pig_latest:PigSkin002:bind_L_ear_c01" 
+		"translate" " -type \"double3\" 0.5999920499626239 0.05668165053497852 0.1947344619210537"
+		
+		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01|pig_latest:PigSkin002:bind_root01|pig_latest:PigSkin002:bind_head01|pig_latest:PigSkin002:bind_L_ear_a01|pig_latest:PigSkin002:bind_L_ear_b01|pig_latest:PigSkin002:bind_L_ear_c01|pig_latest:PigSkin002:be_L_ear_d01" 
+		"translate" " -type \"double3\" 0.49070760965197274 0.066562592927976588 0.63095602332156031"
+		
+		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01|pig_latest:PigSkin002:bind_root01|pig_latest:PigSkin002:bind_head01|pig_latest:PigSkin002:bind_R_ear_a01" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01|pig_latest:PigSkin002:bind_root01|pig_latest:PigSkin002:bind_head01|pig_latest:PigSkin002:bind_R_ear_a01" 
+		"rotateY" " -av"
+		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01|pig_latest:PigSkin002:bind_root01|pig_latest:PigSkin002:bind_head01|pig_latest:PigSkin002:bind_R_ear_a01|pig_latest:PigSkin002:bind_R_ear_b01|pig_latest:PigSkin002:bind_R_ear_c01|pig_latest:PigSkin002:be_R_ear_d01" 
+		"translate" " -type \"double3\" -0.49070832568718187 -0.066567270267520851 -0.63095999558641935"
+		
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01|pig_latest:PigSkin002:bind_root01|pig_latest:PigSkin002:bind_head01|pig_latest:pig_right_eye|pig_latest:pig_right_eyeShape" 
 		"surfaceReference" " 1"
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01|pig_latest:PigSkin002:bind_root01|pig_latest:PigSkin002:bind_head01|pig_latest:pig_right_eye|pig_latest:pig_right_eyeShape" 
@@ -4431,7 +4545,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:head_control" 
 		"translateX" " -av"
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:head_control" 
-		"rotate" " -type \"double3\" 1.1483929122805085 0 0"
+		"rotate" " -type \"double3\" 0.5097625790338145 0 0"
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:head_control" 
 		"rotateX" " -av"
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:head_control" 
@@ -4447,7 +4561,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:head_control" 
 		"scaleZ" " -av"
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01" 
-		"translate" " -type \"double3\" -0.0014440641591888315 0.15991477047555691 0.1148870989723704"
+		"translate" " -type \"double3\" -0.00064100871940821192 0.12203081189958268 0.11598032925865769"
 		
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01" 
 		"translateY" " -av"
@@ -4473,7 +4587,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01" 
 		"visibility" " -av 1"
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01" 
-		"translate" " -type \"double3\" 1.6893387469953243 -0.29160930514912864 5.7833279392243497"
+		"translate" " -type \"double3\" 1.4546697318858333 -1.19542756474483 6.4433993331736499"
 		
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01" 
 		"translateZ" " -av"
@@ -4492,7 +4606,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01" 
 		"scaleZ" " -av"
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01" 
-		"poleVector" " -type \"double3\" -0.10061740101980976 -2.9809998209418227 -2.1168561477560734"
+		"poleVector" " -type \"double3\" -0.10100669253100647 -2.9620642264986157 -2.11740276289922"
 		
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01" 
 		"poleVectorX" " -av"
@@ -4539,7 +4653,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01" 
 		"visibility" " -av 1"
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01" 
-		"translate" " -type \"double3\" -1.5190137970159883 -1.9991987658957793 3.0012920395576095"
+		"translate" " -type \"double3\" -1.528447205992242 -0.78856395255746747 3.4550896402107956"
 		
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01" 
 		"translateZ" " -av"
@@ -4558,7 +4672,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01" 
 		"scaleZ" " -av"
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01" 
-		"poleVector" " -type \"double3\" 0.0057087782333034021 -3.0604944231533633 -2.1159650442886706"
+		"poleVector" " -type \"double3\" 0.0053194867221069142 -3.0415588287101563 -2.1165116594318172"
 		
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01" 
 		"poleVectorX" " -av"
@@ -4605,7 +4719,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01" 
 		"visibility" " -av 1"
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01" 
-		"translate" " -type \"double3\" 3.2308331600566129 -2.2664510312167003 -5.3774896830113965"
+		"translate" " -type \"double3\" 3.30142466699693 -0.58771977499150063 -6.99930249571735"
 		
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01" 
 		"translateZ" " -av"
@@ -4624,7 +4738,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01" 
 		"scaleZ" " -av"
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01" 
-		"poleVector" " -type \"double3\" 0.0029539411949062178 -3.5677490560063752 2.2599054540357635"
+		"poleVector" " -type \"double3\" -0.026644369803367152 -3.608810242932929 2.3154637533078919"
 		
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01" 
 		"poleVectorX" " -av"
@@ -4671,7 +4785,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01" 
 		"visibility" " -av 1"
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01" 
-		"translate" " -type \"double3\" -2.3256665810405606 1.042764098327823 -5.6994097415091103"
+		"translate" " -type \"double3\" -2.2674940916590893 -2.0549072583992158 -4.3843644546325846"
 		
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01" 
 		"translateZ" " -av"
@@ -4690,7 +4804,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01" 
 		"scaleZ" " -av"
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01" 
-		"poleVector" " -type \"double3\" -0.057194776072762465 -3.4484800408457548 2.6255774732493142"
+		"poleVector" " -type \"double3\" -0.079856155540859231 -3.488476939977196 2.5646042710078412"
 		
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01" 
 		"poleVectorX" " -av"
@@ -4735,7 +4849,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_knee01" 
 		"scaleZ" " -av"
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01" 
-		"translate" " -type \"double3\" 0.10448924278418048 -0.15229713436824976 -0.058817853396885056"
+		"translate" " -type \"double3\" 0.15788550872339074 -0.071208738298772722 -0.05237106661636215"
 		
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01" 
 		"translateZ" " -av"
@@ -4744,7 +4858,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01" 
 		"translateY" " -av"
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01" 
-		"rotate" " -type \"double3\" 0.47795588234748559 -8.0396389866644071 2.6479232518007088"
+		"rotate" " -type \"double3\" 0.47409892625586164 -5.4453522767172542 2.6699837982271331"
 		
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01" 
 		"rotateZ" " -av"
@@ -4790,15 +4904,15 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_1control01" 
 		"blendParent1" " -av -k 1 0"
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:splineiK_tail01" 
-		"translate" " -type \"double3\" -0.58116389553924253 9.5404288956998631 -13.316002150132499"
+		"translate" " -type \"double3\" -0.40726262625312842 9.5036901292963236 -13.326627014775635"
 		
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:splineiK_tail01" 
-		"rotate" " -type \"double3\" 95.479710974504968 42.051004576997862 92.369696469605984"
+		"rotate" " -type \"double3\" 93.732594180122717 42.0755271938677 91.195441221869345"
 		
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:back_flex_ctrl01" 
 		"visibility" " -av 1"
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:back_flex_ctrl01" 
-		"translate" " -type \"double3\" 0 0.2781171631342032 0"
+		"translate" " -type \"double3\" 0 0.75247728758317067 0"
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:back_flex_ctrl01" 
 		"translateX" " -av"
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:back_flex_ctrl01" 
@@ -4824,7 +4938,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01" 
 		"visibility" " -av 1"
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01" 
-		"translate" " -type \"double3\" 0 -0.14130955968676129 0"
+		"translate" " -type \"double3\" 0 -0.062726201823214436 0"
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01" 
 		"translateX" " -av"
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01" 
@@ -4832,7 +4946,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01" 
 		"translateZ" " -av"
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01" 
-		"rotate" " -type \"double3\" 0.47795588234748571 -8.0396389866644054 2.6479232518007083"
+		"rotate" " -type \"double3\" 0.47409892625586153 -5.4453522767172533 2.6699837982271326"
 		
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01" 
 		"rotateX" " -av"
@@ -4849,7 +4963,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01" 
 		"scaleZ" " -av"
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_L_backfoot01" 
-		"translate" " -type \"double3\" 0.1944132658304909 -0.4226281814550028 -0.70753038424074355"
+		"translate" " -type \"double3\" 0.088182779696012376 1.196194033363351 -2.1690780764890372"
 		
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_L_backfoot01" 
 		"translateX" " -av"
@@ -4858,7 +4972,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_L_backfoot01" 
 		"translateZ" " -av"
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_L_backfoot01" 
-		"rotate" " -type \"double3\" 17.964865593814839 6.3874629613739096 5.9664428832549703"
+		"rotate" " -type \"double3\" 11.752717050682 2.5284721069746072 -2.2149704109807895"
 		
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_L_backfoot01" 
 		"rotateX" " -av"
@@ -4867,7 +4981,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_L_backfoot01" 
 		"rotateZ" " -av"
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_R_backfoot01" 
-		"translate" " -type \"double3\" -0.13224849219097295 3.1322421485029386 -0.33163075474130943"
+		"translate" " -type \"double3\" -0.10719805285573553 0.21444011631581927 1.17781388425063"
 		
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_R_backfoot01" 
 		"translateX" " -av"
@@ -4876,7 +4990,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_R_backfoot01" 
 		"translateZ" " -av"
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_R_backfoot01" 
-		"rotate" " -type \"double3\" 20.367419508473048 0 0"
+		"rotate" " -type \"double3\" -13.468581943867694 0 0"
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_R_backfoot01" 
 		"rotateX" " -av"
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_R_backfoot01" 
@@ -4894,7 +5008,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01" 
 		"visibility" " -av 1"
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01" 
-		"translate" " -type \"double3\" 0 0.085554835077154362 -0.0013556080320225121"
+		"translate" " -type \"double3\" 0 0.03797711820698696 -0.0013556080320226633"
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01" 
 		"translateX" " -av"
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01" 
@@ -4902,7 +5016,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01" 
 		"translateZ" " -av"
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01" 
-		"rotate" " -type \"double3\" 0 -4.8504923333451142 0"
+		"rotate" " -type \"double3\" 0 -5.7016256022757217 0"
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01" 
 		"rotateX" " -av"
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01" 
@@ -4918,7 +5032,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01" 
 		"scaleZ" " -av"
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_L_frontfoot01" 
-		"translate" " -type \"double3\" 0 1.3513422686356218 1.7992400714811478"
+		"translate" " -type \"double3\" 0 0.85512550299017676 2.8205520602297289"
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_L_frontfoot01" 
 		"translateX" " -av"
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_L_frontfoot01" 
@@ -4926,7 +5040,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_L_frontfoot01" 
 		"translateZ" " -av"
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_L_frontfoot01" 
-		"rotate" " -type \"double3\" 21.681949550218064 3.3504345097592934 -12.37408634554934"
+		"rotate" " -type \"double3\" -17.885450733365179 3.6264333265476081 -1.3808991423520067"
 		
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_L_frontfoot01" 
 		"rotateX" " -av"
@@ -4943,7 +5057,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_L_frontfoot01" 
 		"scaleZ" " -av"
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_R_frontfoot01" 
-		"translate" " -type \"double3\" 0 -0.37646585877529726 -0.79944033594423503"
+		"translate" " -type \"double3\" 0 0.85496435901012968 -0.54991696310654403"
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_R_frontfoot01" 
 		"translateX" " -av"
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_R_frontfoot01" 
@@ -4951,7 +5065,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_R_frontfoot01" 
 		"translateZ" " -av"
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_R_frontfoot01" 
-		"rotate" " -type \"double3\" 29.978535285323403 0 0"
+		"rotate" " -type \"double3\" 47.73700219481173 0 0"
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_R_frontfoot01" 
 		"rotateX" " -av"
 		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_R_frontfoot01" 
@@ -5030,68 +5144,23 @@ createNode reference -n "pig_latestRN";
 		"furGlobalReference" " 1"
 		2 "pig_latest:PigSkin002:Tyrion_Cattister_uv:Tyrion_Cattister:furrified_bacon_latest:pigfur" 
 		"furReference" " 1"
-		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:hip_rotation_ctrl01_parentConstraint1.constraintRotateZ" 
-		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01.rotateZ" 
+		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_1control01|pig_latest:tail_1control01_parentConstraint1.constraintTranslateX" 
+		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_1control01.translateX" 
 		""
-		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:hip_rotation_ctrl01_parentConstraint1.constraintRotateY" 
-		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01.rotateY" 
+		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_1control01|pig_latest:tail_1control01_parentConstraint1.constraintTranslateY" 
+		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_1control01.translateY" 
 		""
-		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:hip_rotation_ctrl01_parentConstraint1.constraintRotateX" 
-		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01.rotateX" 
+		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_1control01|pig_latest:tail_1control01_parentConstraint1.constraintTranslateZ" 
+		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_1control01.translateZ" 
 		""
-		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:hip_rotation_ctrl01_parentConstraint1.constraintTranslateZ" 
-		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01.translateZ" 
+		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_1control01|pig_latest:tail_1control01_parentConstraint1.constraintRotateX" 
+		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_1control01.rotateX" 
 		""
-		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:hip_rotation_ctrl01_parentConstraint1.constraintTranslateY" 
-		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01.translateY" 
+		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_1control01|pig_latest:tail_1control01_parentConstraint1.constraintRotateY" 
+		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_1control01.rotateY" 
 		""
-		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:hip_rotation_ctrl01_parentConstraint1.constraintTranslateX" 
-		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01.translateX" 
-		""
-		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01|pig_latest:shoulders_rotation_ctrl01_parentConstraint1.constraintRotateZ" 
-		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01.rotateZ" 
-		""
-		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01|pig_latest:shoulders_rotation_ctrl01_parentConstraint1.constraintRotateY" 
-		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01.rotateY" 
-		""
-		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01|pig_latest:shoulders_rotation_ctrl01_parentConstraint1.constraintRotateX" 
-		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01.rotateX" 
-		""
-		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01|pig_latest:shoulders_rotation_ctrl01_parentConstraint1.constraintTranslateZ" 
-		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01.translateZ" 
-		""
-		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01|pig_latest:shoulders_rotation_ctrl01_parentConstraint1.constraintTranslateY" 
-		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01.translateY" 
-		""
-		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01|pig_latest:shoulders_rotation_ctrl01_parentConstraint1.constraintTranslateX" 
-		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01.translateX" 
-		""
-		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01|pig_latest:ikHandle3_poleVectorConstraint1.constraintTranslateZ" 
-		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.poleVectorZ" 
-		""
-		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01|pig_latest:ikHandle3_poleVectorConstraint1.constraintTranslateY" 
-		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.poleVectorY" 
-		""
-		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01|pig_latest:ikHandle3_poleVectorConstraint1.constraintTranslateX" 
-		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.poleVectorX" 
-		""
-		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01|pig_latest:ikHandle3_parentConstraint1.constraintRotateZ" 
-		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.rotateZ" 
-		""
-		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01|pig_latest:ikHandle3_parentConstraint1.constraintRotateY" 
-		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.rotateY" 
-		""
-		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01|pig_latest:ikHandle3_parentConstraint1.constraintRotateX" 
-		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.rotateX" 
-		""
-		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01|pig_latest:ikHandle3_parentConstraint1.constraintTranslateZ" 
-		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.translateZ" 
-		""
-		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01|pig_latest:ikHandle3_parentConstraint1.constraintTranslateY" 
-		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.translateY" 
-		""
-		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01|pig_latest:ikHandle3_parentConstraint1.constraintTranslateX" 
-		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.translateX" 
+		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_1control01|pig_latest:tail_1control01_parentConstraint1.constraintRotateZ" 
+		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_1control01.rotateZ" 
 		""
 		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01|pig_latest:ikHandle4_poleVectorConstraint1.constraintTranslateZ" 
 		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.poleVectorZ" 
@@ -5120,23 +5189,95 @@ createNode reference -n "pig_latestRN";
 		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01|pig_latest:ikHandle4_parentConstraint1.constraintTranslateX" 
 		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.translateX" 
 		""
-		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_1control01|pig_latest:tail_1control01_parentConstraint1.constraintTranslateX" 
-		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_1control01.translateX" 
+		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01|pig_latest:shoulders_rotation_ctrl01_parentConstraint1.constraintRotateZ" 
+		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01.rotateZ" 
 		""
-		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_1control01|pig_latest:tail_1control01_parentConstraint1.constraintTranslateY" 
-		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_1control01.translateY" 
+		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01|pig_latest:shoulders_rotation_ctrl01_parentConstraint1.constraintRotateY" 
+		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01.rotateY" 
 		""
-		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_1control01|pig_latest:tail_1control01_parentConstraint1.constraintTranslateZ" 
-		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_1control01.translateZ" 
+		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01|pig_latest:shoulders_rotation_ctrl01_parentConstraint1.constraintRotateX" 
+		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01.rotateX" 
 		""
-		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_1control01|pig_latest:tail_1control01_parentConstraint1.constraintRotateX" 
-		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_1control01.rotateX" 
+		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01|pig_latest:shoulders_rotation_ctrl01_parentConstraint1.constraintTranslateZ" 
+		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01.translateZ" 
 		""
-		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_1control01|pig_latest:tail_1control01_parentConstraint1.constraintRotateY" 
-		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_1control01.rotateY" 
+		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01|pig_latest:shoulders_rotation_ctrl01_parentConstraint1.constraintTranslateY" 
+		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01.translateY" 
 		""
-		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_1control01|pig_latest:tail_1control01_parentConstraint1.constraintRotateZ" 
-		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_1control01.rotateZ" 
+		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01|pig_latest:shoulders_rotation_ctrl01_parentConstraint1.constraintTranslateX" 
+		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01.translateX" 
+		""
+		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01|pig_latest:ikHandle1_poleVectorConstraint1.constraintTranslateZ" 
+		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.poleVectorZ" 
+		""
+		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01|pig_latest:ikHandle1_poleVectorConstraint1.constraintTranslateY" 
+		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.poleVectorY" 
+		""
+		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01|pig_latest:ikHandle1_poleVectorConstraint1.constraintTranslateX" 
+		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.poleVectorX" 
+		""
+		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01|pig_latest:ikHandle1_parentConstraint1.constraintRotateZ" 
+		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.rotateZ" 
+		""
+		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01|pig_latest:ikHandle1_parentConstraint1.constraintRotateY" 
+		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.rotateY" 
+		""
+		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01|pig_latest:ikHandle1_parentConstraint1.constraintRotateX" 
+		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.rotateX" 
+		""
+		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01|pig_latest:ikHandle1_parentConstraint1.constraintTranslateZ" 
+		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.translateZ" 
+		""
+		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01|pig_latest:ikHandle1_parentConstraint1.constraintTranslateY" 
+		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.translateY" 
+		""
+		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01|pig_latest:ikHandle1_parentConstraint1.constraintTranslateX" 
+		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.translateX" 
+		""
+		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:hip_rotation_ctrl01_parentConstraint1.constraintRotateZ" 
+		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01.rotateZ" 
+		""
+		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:hip_rotation_ctrl01_parentConstraint1.constraintRotateY" 
+		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01.rotateY" 
+		""
+		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:hip_rotation_ctrl01_parentConstraint1.constraintRotateX" 
+		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01.rotateX" 
+		""
+		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:hip_rotation_ctrl01_parentConstraint1.constraintTranslateZ" 
+		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01.translateZ" 
+		""
+		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:hip_rotation_ctrl01_parentConstraint1.constraintTranslateY" 
+		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01.translateY" 
+		""
+		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:hip_rotation_ctrl01_parentConstraint1.constraintTranslateX" 
+		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01.translateX" 
+		""
+		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01|pig_latest:ikHandle3_poleVectorConstraint1.constraintTranslateZ" 
+		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.poleVectorZ" 
+		""
+		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01|pig_latest:ikHandle3_poleVectorConstraint1.constraintTranslateY" 
+		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.poleVectorY" 
+		""
+		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01|pig_latest:ikHandle3_poleVectorConstraint1.constraintTranslateX" 
+		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.poleVectorX" 
+		""
+		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01|pig_latest:ikHandle3_parentConstraint1.constraintRotateZ" 
+		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.rotateZ" 
+		""
+		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01|pig_latest:ikHandle3_parentConstraint1.constraintRotateY" 
+		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.rotateY" 
+		""
+		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01|pig_latest:ikHandle3_parentConstraint1.constraintRotateX" 
+		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.rotateX" 
+		""
+		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01|pig_latest:ikHandle3_parentConstraint1.constraintTranslateZ" 
+		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.translateZ" 
+		""
+		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01|pig_latest:ikHandle3_parentConstraint1.constraintTranslateY" 
+		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.translateY" 
+		""
+		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01|pig_latest:ikHandle3_parentConstraint1.constraintTranslateX" 
+		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.translateX" 
 		""
 		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01|pig_latest:ikHandle2_poleVectorConstraint1.constraintTranslateZ" 
 		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.poleVectorZ" 
@@ -5167,1120 +5308,1287 @@ createNode reference -n "pig_latestRN";
 		""
 		3 ":defaultRenderGlobals.rendercallback" "pig_latest:defaultFurGlobals.callback" 
 		""
-		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01|pig_latest:ikHandle1_poleVectorConstraint1.constraintTranslateZ" 
-		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.poleVectorZ" 
-		""
-		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01|pig_latest:ikHandle1_poleVectorConstraint1.constraintTranslateY" 
-		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.poleVectorY" 
-		""
-		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01|pig_latest:ikHandle1_poleVectorConstraint1.constraintTranslateX" 
-		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.poleVectorX" 
-		""
-		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01|pig_latest:ikHandle1_parentConstraint1.constraintRotateZ" 
-		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.rotateZ" 
-		""
-		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01|pig_latest:ikHandle1_parentConstraint1.constraintRotateY" 
-		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.rotateY" 
-		""
-		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01|pig_latest:ikHandle1_parentConstraint1.constraintRotateX" 
-		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.rotateX" 
-		""
-		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01|pig_latest:ikHandle1_parentConstraint1.constraintTranslateZ" 
-		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.translateZ" 
-		""
-		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01|pig_latest:ikHandle1_parentConstraint1.constraintTranslateY" 
-		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.translateY" 
-		""
-		3 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01|pig_latest:ikHandle1_parentConstraint1.constraintTranslateX" 
-		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.translateX" 
-		""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01.rotateX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01.rotateX" 
 		"pig_latestRN.placeHolderList[1]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01.rotateY" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01.rotateX" 
 		"pig_latestRN.placeHolderList[2]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01.rotateZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01.rotateY" 
 		"pig_latestRN.placeHolderList[3]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01.translateX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01.rotateY" 
 		"pig_latestRN.placeHolderList[4]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01.translateY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01.rotateZ" 
 		"pig_latestRN.placeHolderList[5]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01.translateZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01.rotateZ" 
 		"pig_latestRN.placeHolderList[6]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01.scaleX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01.translateX" 
 		"pig_latestRN.placeHolderList[7]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01.scaleY" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01.translateX" 
 		"pig_latestRN.placeHolderList[8]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01.scaleZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01.translateY" 
 		"pig_latestRN.placeHolderList[9]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2.translateZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01.translateY" 
 		"pig_latestRN.placeHolderList[10]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2.translateZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01.translateZ" 
 		"pig_latestRN.placeHolderList[11]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2.translateY" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01.translateZ" 
 		"pig_latestRN.placeHolderList[12]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2.translateY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01.scaleX" 
 		"pig_latestRN.placeHolderList[13]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2.translateX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01.scaleX" 
 		"pig_latestRN.placeHolderList[14]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2.translateX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01.scaleY" 
 		"pig_latestRN.placeHolderList[15]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2.visibility" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01.scaleY" 
 		"pig_latestRN.placeHolderList[16]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2.visibility" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01.scaleZ" 
 		"pig_latestRN.placeHolderList[17]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2.rotateX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01.scaleZ" 
 		"pig_latestRN.placeHolderList[18]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2.rotateX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2.translateZ" 
 		"pig_latestRN.placeHolderList[19]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2.rotateY" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2.translateZ" 
 		"pig_latestRN.placeHolderList[20]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2.rotateY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2.translateY" 
 		"pig_latestRN.placeHolderList[21]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2.rotateZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2.translateY" 
 		"pig_latestRN.placeHolderList[22]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2.rotateZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2.translateX" 
 		"pig_latestRN.placeHolderList[23]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2.scaleX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2.translateX" 
 		"pig_latestRN.placeHolderList[24]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2.scaleX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2.visibility" 
 		"pig_latestRN.placeHolderList[25]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2.scaleY" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2.visibility" 
 		"pig_latestRN.placeHolderList[26]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2.scaleY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2.rotateX" 
 		"pig_latestRN.placeHolderList[27]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2.scaleZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2.rotateX" 
 		"pig_latestRN.placeHolderList[28]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2.scaleZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2.rotateY" 
 		"pig_latestRN.placeHolderList[29]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2|pig_latest:colorClip_control|pig_latest:key_control.rotateX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2.rotateY" 
 		"pig_latestRN.placeHolderList[30]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2|pig_latest:colorClip_control|pig_latest:key_control.rotateY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2.rotateZ" 
 		"pig_latestRN.placeHolderList[31]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2|pig_latest:colorClip_control|pig_latest:key_control.rotateZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2.rotateZ" 
 		"pig_latestRN.placeHolderList[32]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2|pig_latest:colorClip_control|pig_latest:key_control.visibility" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2.scaleX" 
 		"pig_latestRN.placeHolderList[33]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2|pig_latest:colorClip_control|pig_latest:key_control.translateX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2.scaleX" 
 		"pig_latestRN.placeHolderList[34]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2|pig_latest:colorClip_control|pig_latest:key_control.translateY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2.scaleY" 
 		"pig_latestRN.placeHolderList[35]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2|pig_latest:colorClip_control|pig_latest:key_control.translateZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2.scaleY" 
 		"pig_latestRN.placeHolderList[36]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2|pig_latest:colorClip_control|pig_latest:key_control.scaleX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2.scaleZ" 
 		"pig_latestRN.placeHolderList[37]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2|pig_latest:colorClip_control|pig_latest:key_control.scaleY" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2.scaleZ" 
 		"pig_latestRN.placeHolderList[38]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2|pig_latest:colorClip_control|pig_latest:key_control.scaleZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2|pig_latest:colorClip_control|pig_latest:key_control.rotateX" 
 		"pig_latestRN.placeHolderList[39]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01.visibility" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2|pig_latest:colorClip_control|pig_latest:key_control.rotateX" 
 		"pig_latestRN.placeHolderList[40]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01.visibility" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2|pig_latest:colorClip_control|pig_latest:key_control.rotateY" 
 		"pig_latestRN.placeHolderList[41]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01.translateX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2|pig_latest:colorClip_control|pig_latest:key_control.rotateY" 
 		"pig_latestRN.placeHolderList[42]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01.translateX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2|pig_latest:colorClip_control|pig_latest:key_control.rotateZ" 
 		"pig_latestRN.placeHolderList[43]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01.translateY" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2|pig_latest:colorClip_control|pig_latest:key_control.rotateZ" 
 		"pig_latestRN.placeHolderList[44]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01.translateY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2|pig_latest:colorClip_control|pig_latest:key_control.visibility" 
 		"pig_latestRN.placeHolderList[45]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01.translateZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2|pig_latest:colorClip_control|pig_latest:key_control.visibility" 
 		"pig_latestRN.placeHolderList[46]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01.translateZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2|pig_latest:colorClip_control|pig_latest:key_control.translateX" 
 		"pig_latestRN.placeHolderList[47]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01.rotateX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2|pig_latest:colorClip_control|pig_latest:key_control.translateX" 
 		"pig_latestRN.placeHolderList[48]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01.rotateX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2|pig_latest:colorClip_control|pig_latest:key_control.translateY" 
 		"pig_latestRN.placeHolderList[49]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01.rotateY" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2|pig_latest:colorClip_control|pig_latest:key_control.translateY" 
 		"pig_latestRN.placeHolderList[50]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01.rotateY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2|pig_latest:colorClip_control|pig_latest:key_control.translateZ" 
 		"pig_latestRN.placeHolderList[51]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01.rotateZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2|pig_latest:colorClip_control|pig_latest:key_control.translateZ" 
 		"pig_latestRN.placeHolderList[52]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01.rotateZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2|pig_latest:colorClip_control|pig_latest:key_control.scaleX" 
 		"pig_latestRN.placeHolderList[53]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01.scaleX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2|pig_latest:colorClip_control|pig_latest:key_control.scaleX" 
 		"pig_latestRN.placeHolderList[54]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01.scaleX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2|pig_latest:colorClip_control|pig_latest:key_control.scaleY" 
 		"pig_latestRN.placeHolderList[55]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01.scaleY" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2|pig_latest:colorClip_control|pig_latest:key_control.scaleY" 
 		"pig_latestRN.placeHolderList[56]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01.scaleY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2|pig_latest:colorClip_control|pig_latest:key_control.scaleZ" 
 		"pig_latestRN.placeHolderList[57]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01.scaleZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:cat_collar:diamond:pPyramid2|pig_latest:colorClip_control|pig_latest:key_control.scaleZ" 
 		"pig_latestRN.placeHolderList[58]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01.scaleZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01.visibility" 
 		"pig_latestRN.placeHolderList[59]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:head_control.translateZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01.visibility" 
 		"pig_latestRN.placeHolderList[60]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:head_control.translateZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01.translateX" 
 		"pig_latestRN.placeHolderList[61]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:head_control.translateY" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01.translateX" 
 		"pig_latestRN.placeHolderList[62]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:head_control.translateY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01.translateY" 
 		"pig_latestRN.placeHolderList[63]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:head_control.translateX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01.translateY" 
 		"pig_latestRN.placeHolderList[64]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:head_control.translateX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01.translateZ" 
 		"pig_latestRN.placeHolderList[65]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:head_control.rotateX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01.translateZ" 
 		"pig_latestRN.placeHolderList[66]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:head_control.rotateX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01.rotateX" 
 		"pig_latestRN.placeHolderList[67]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:head_control.rotateY" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01.rotateX" 
 		"pig_latestRN.placeHolderList[68]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:head_control.rotateY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01.rotateY" 
 		"pig_latestRN.placeHolderList[69]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:head_control.rotateZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01.rotateY" 
 		"pig_latestRN.placeHolderList[70]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:head_control.rotateZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01.rotateZ" 
 		"pig_latestRN.placeHolderList[71]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:head_control.scaleX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01.rotateZ" 
 		"pig_latestRN.placeHolderList[72]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:head_control.scaleX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01.scaleX" 
 		"pig_latestRN.placeHolderList[73]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:head_control.scaleY" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01.scaleX" 
 		"pig_latestRN.placeHolderList[74]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:head_control.scaleY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01.scaleY" 
 		"pig_latestRN.placeHolderList[75]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:head_control.scaleZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01.scaleY" 
 		"pig_latestRN.placeHolderList[76]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:head_control.scaleZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01.scaleZ" 
 		"pig_latestRN.placeHolderList[77]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01.translateY" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01.scaleZ" 
 		"pig_latestRN.placeHolderList[78]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01.translateY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01|pig_latest:PigSkin002:bind_root01|pig_latest:PigSkin002:bind_head01|pig_latest:PigSkin002:bind_L_ear_a01.scaleX" 
 		"pig_latestRN.placeHolderList[79]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01.translateX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01|pig_latest:PigSkin002:bind_root01|pig_latest:PigSkin002:bind_head01|pig_latest:PigSkin002:bind_L_ear_a01.scaleX" 
 		"pig_latestRN.placeHolderList[80]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01.translateX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01|pig_latest:PigSkin002:bind_root01|pig_latest:PigSkin002:bind_head01|pig_latest:PigSkin002:bind_L_ear_a01.scaleY" 
 		"pig_latestRN.placeHolderList[81]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01.translateZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01|pig_latest:PigSkin002:bind_root01|pig_latest:PigSkin002:bind_head01|pig_latest:PigSkin002:bind_L_ear_a01.scaleY" 
 		"pig_latestRN.placeHolderList[82]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01.translateZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01|pig_latest:PigSkin002:bind_root01|pig_latest:PigSkin002:bind_head01|pig_latest:PigSkin002:bind_L_ear_a01.scaleZ" 
 		"pig_latestRN.placeHolderList[83]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01.rotateX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01|pig_latest:PigSkin002:bind_root01|pig_latest:PigSkin002:bind_head01|pig_latest:PigSkin002:bind_L_ear_a01.scaleZ" 
 		"pig_latestRN.placeHolderList[84]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01.rotateX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01|pig_latest:PigSkin002:bind_root01|pig_latest:PigSkin002:bind_head01|pig_latest:PigSkin002:bind_L_ear_a01.visibility" 
 		"pig_latestRN.placeHolderList[85]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01.rotateY" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01|pig_latest:PigSkin002:bind_root01|pig_latest:PigSkin002:bind_head01|pig_latest:PigSkin002:bind_L_ear_a01.visibility" 
 		"pig_latestRN.placeHolderList[86]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01.rotateY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01|pig_latest:PigSkin002:bind_root01|pig_latest:PigSkin002:bind_head01|pig_latest:PigSkin002:bind_L_ear_a01.translateX" 
 		"pig_latestRN.placeHolderList[87]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01.rotateZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01|pig_latest:PigSkin002:bind_root01|pig_latest:PigSkin002:bind_head01|pig_latest:PigSkin002:bind_L_ear_a01.translateX" 
 		"pig_latestRN.placeHolderList[88]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01.rotateZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01|pig_latest:PigSkin002:bind_root01|pig_latest:PigSkin002:bind_head01|pig_latest:PigSkin002:bind_L_ear_a01.translateY" 
 		"pig_latestRN.placeHolderList[89]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01.scaleX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01|pig_latest:PigSkin002:bind_root01|pig_latest:PigSkin002:bind_head01|pig_latest:PigSkin002:bind_L_ear_a01.translateY" 
 		"pig_latestRN.placeHolderList[90]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01.scaleX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01|pig_latest:PigSkin002:bind_root01|pig_latest:PigSkin002:bind_head01|pig_latest:PigSkin002:bind_L_ear_a01.translateZ" 
 		"pig_latestRN.placeHolderList[91]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01.scaleY" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01|pig_latest:PigSkin002:bind_root01|pig_latest:PigSkin002:bind_head01|pig_latest:PigSkin002:bind_L_ear_a01.translateZ" 
 		"pig_latestRN.placeHolderList[92]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01.scaleY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01|pig_latest:PigSkin002:bind_root01|pig_latest:PigSkin002:bind_head01|pig_latest:PigSkin002:bind_L_ear_a01.rotateY" 
 		"pig_latestRN.placeHolderList[93]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01.scaleZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01|pig_latest:PigSkin002:bind_root01|pig_latest:PigSkin002:bind_head01|pig_latest:PigSkin002:bind_L_ear_a01.rotateY" 
 		"pig_latestRN.placeHolderList[94]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01.scaleZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01|pig_latest:PigSkin002:bind_root01|pig_latest:PigSkin002:bind_head01|pig_latest:PigSkin002:bind_L_ear_a01.rotateX" 
 		"pig_latestRN.placeHolderList[95]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01.blendThislittlepiggywenttomarket" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01|pig_latest:PigSkin002:bind_root01|pig_latest:PigSkin002:bind_head01|pig_latest:PigSkin002:bind_L_ear_a01.rotateX" 
 		"pig_latestRN.placeHolderList[96]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01.blendThislittlepiggywenttomarket" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01|pig_latest:PigSkin002:bind_root01|pig_latest:PigSkin002:bind_head01|pig_latest:PigSkin002:bind_L_ear_a01.rotateZ" 
 		"pig_latestRN.placeHolderList[97]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01|pig_latest:shoulders_rotation_ctrl01_parentConstraint1.constraintTranslateY" 
-		"pig_latestRN.placeHolderList[98]" "pig_latest:shoulders_rotation_ctrl01.ty"
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01|pig_latest:shoulders_rotation_ctrl01_parentConstraint1.constraintTranslateX" 
-		"pig_latestRN.placeHolderList[99]" "pig_latest:shoulders_rotation_ctrl01.tx"
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01|pig_latest:shoulders_rotation_ctrl01_parentConstraint1.constraintTranslateZ" 
-		"pig_latestRN.placeHolderList[100]" "pig_latest:shoulders_rotation_ctrl01.tz"
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01|pig_latest:shoulders_rotation_ctrl01_parentConstraint1.constraintRotateX" 
-		"pig_latestRN.placeHolderList[101]" "pig_latest:shoulders_rotation_ctrl01.rx"
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01|pig_latest:shoulders_rotation_ctrl01_parentConstraint1.constraintRotateY" 
-		"pig_latestRN.placeHolderList[102]" "pig_latest:shoulders_rotation_ctrl01.ry"
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01|pig_latest:shoulders_rotation_ctrl01_parentConstraint1.constraintRotateZ" 
-		"pig_latestRN.placeHolderList[103]" "pig_latest:shoulders_rotation_ctrl01.rz"
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.translateX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01|pig_latest:PigSkin002:bind_root01|pig_latest:PigSkin002:bind_head01|pig_latest:PigSkin002:bind_L_ear_a01.rotateZ" 
+		"pig_latestRN.placeHolderList[98]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01|pig_latest:PigSkin002:bind_root01|pig_latest:PigSkin002:bind_head01|pig_latest:PigSkin002:bind_R_ear_a01.scaleX" 
+		"pig_latestRN.placeHolderList[99]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01|pig_latest:PigSkin002:bind_root01|pig_latest:PigSkin002:bind_head01|pig_latest:PigSkin002:bind_R_ear_a01.scaleX" 
+		"pig_latestRN.placeHolderList[100]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01|pig_latest:PigSkin002:bind_root01|pig_latest:PigSkin002:bind_head01|pig_latest:PigSkin002:bind_R_ear_a01.scaleY" 
+		"pig_latestRN.placeHolderList[101]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01|pig_latest:PigSkin002:bind_root01|pig_latest:PigSkin002:bind_head01|pig_latest:PigSkin002:bind_R_ear_a01.scaleY" 
+		"pig_latestRN.placeHolderList[102]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01|pig_latest:PigSkin002:bind_root01|pig_latest:PigSkin002:bind_head01|pig_latest:PigSkin002:bind_R_ear_a01.scaleZ" 
+		"pig_latestRN.placeHolderList[103]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01|pig_latest:PigSkin002:bind_root01|pig_latest:PigSkin002:bind_head01|pig_latest:PigSkin002:bind_R_ear_a01.scaleZ" 
 		"pig_latestRN.placeHolderList[104]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.translateX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01|pig_latest:PigSkin002:bind_root01|pig_latest:PigSkin002:bind_head01|pig_latest:PigSkin002:bind_R_ear_a01.visibility" 
 		"pig_latestRN.placeHolderList[105]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.translateY" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01|pig_latest:PigSkin002:bind_root01|pig_latest:PigSkin002:bind_head01|pig_latest:PigSkin002:bind_R_ear_a01.visibility" 
 		"pig_latestRN.placeHolderList[106]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.translateY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01|pig_latest:PigSkin002:bind_root01|pig_latest:PigSkin002:bind_head01|pig_latest:PigSkin002:bind_R_ear_a01.rotateX" 
 		"pig_latestRN.placeHolderList[107]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.translateZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01|pig_latest:PigSkin002:bind_root01|pig_latest:PigSkin002:bind_head01|pig_latest:PigSkin002:bind_R_ear_a01.rotateX" 
 		"pig_latestRN.placeHolderList[108]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.translateZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01|pig_latest:PigSkin002:bind_root01|pig_latest:PigSkin002:bind_head01|pig_latest:PigSkin002:bind_R_ear_a01.rotateY" 
 		"pig_latestRN.placeHolderList[109]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.rotateX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01|pig_latest:PigSkin002:bind_root01|pig_latest:PigSkin002:bind_head01|pig_latest:PigSkin002:bind_R_ear_a01.rotateY" 
 		"pig_latestRN.placeHolderList[110]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.rotateX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01|pig_latest:PigSkin002:bind_root01|pig_latest:PigSkin002:bind_head01|pig_latest:PigSkin002:bind_R_ear_a01.rotateZ" 
 		"pig_latestRN.placeHolderList[111]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.rotateY" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01|pig_latest:PigSkin002:bind_root01|pig_latest:PigSkin002:bind_head01|pig_latest:PigSkin002:bind_R_ear_a01.rotateZ" 
 		"pig_latestRN.placeHolderList[112]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.rotateY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01|pig_latest:PigSkin002:bind_root01|pig_latest:PigSkin002:bind_head01|pig_latest:PigSkin002:bind_R_ear_a01.translateX" 
 		"pig_latestRN.placeHolderList[113]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.rotateZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01|pig_latest:PigSkin002:bind_root01|pig_latest:PigSkin002:bind_head01|pig_latest:PigSkin002:bind_R_ear_a01.translateX" 
 		"pig_latestRN.placeHolderList[114]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.rotateZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01|pig_latest:PigSkin002:bind_root01|pig_latest:PigSkin002:bind_head01|pig_latest:PigSkin002:bind_R_ear_a01.translateY" 
 		"pig_latestRN.placeHolderList[115]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.poleVectorX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01|pig_latest:PigSkin002:bind_root01|pig_latest:PigSkin002:bind_head01|pig_latest:PigSkin002:bind_R_ear_a01.translateY" 
 		"pig_latestRN.placeHolderList[116]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.poleVectorX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01|pig_latest:PigSkin002:bind_root01|pig_latest:PigSkin002:bind_head01|pig_latest:PigSkin002:bind_R_ear_a01.translateZ" 
 		"pig_latestRN.placeHolderList[117]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.poleVectorY" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:Skeleton_01|pig_latest:PigSkin002:bind_root01|pig_latest:PigSkin002:bind_head01|pig_latest:PigSkin002:bind_R_ear_a01.translateZ" 
 		"pig_latestRN.placeHolderList[118]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.poleVectorY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:head_control.translateZ" 
 		"pig_latestRN.placeHolderList[119]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.poleVectorZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:head_control.translateZ" 
 		"pig_latestRN.placeHolderList[120]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.poleVectorZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:head_control.translateY" 
 		"pig_latestRN.placeHolderList[121]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.blendThislittlepiggywenttomarket" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:head_control.translateY" 
 		"pig_latestRN.placeHolderList[122]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.visibility" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:head_control.translateX" 
 		"pig_latestRN.placeHolderList[123]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.visibility" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:head_control.translateX" 
 		"pig_latestRN.placeHolderList[124]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.scaleX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:head_control.rotateX" 
 		"pig_latestRN.placeHolderList[125]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.scaleX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:head_control.rotateX" 
 		"pig_latestRN.placeHolderList[126]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.scaleY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:head_control.rotateY" 
 		"pig_latestRN.placeHolderList[127]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.scaleY" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:head_control.rotateY" 
 		"pig_latestRN.placeHolderList[128]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.scaleZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:head_control.rotateZ" 
 		"pig_latestRN.placeHolderList[129]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.scaleZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:head_control.rotateZ" 
 		"pig_latestRN.placeHolderList[130]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.offset" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:head_control.scaleX" 
 		"pig_latestRN.placeHolderList[131]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.offset" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:head_control.scaleX" 
 		"pig_latestRN.placeHolderList[132]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.roll" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:head_control.scaleY" 
 		"pig_latestRN.placeHolderList[133]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.roll" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:head_control.scaleY" 
 		"pig_latestRN.placeHolderList[134]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.twist" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:head_control.scaleZ" 
 		"pig_latestRN.placeHolderList[135]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.twist" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:head_control.scaleZ" 
 		"pig_latestRN.placeHolderList[136]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.ikBlend" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01.translateY" 
 		"pig_latestRN.placeHolderList[137]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.ikBlend" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01.translateY" 
 		"pig_latestRN.placeHolderList[138]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01|pig_latest:ikHandle4_poleVectorConstraint1.constraintTranslateX" 
-		"pig_latestRN.placeHolderList[139]" "pig_latest:iK_L_frontleg01.pvx"
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01|pig_latest:ikHandle4_poleVectorConstraint1.constraintTranslateY" 
-		"pig_latestRN.placeHolderList[140]" "pig_latest:iK_L_frontleg01.pvy"
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01|pig_latest:ikHandle4_poleVectorConstraint1.constraintTranslateZ" 
-		"pig_latestRN.placeHolderList[141]" "pig_latest:iK_L_frontleg01.pvz"
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01|pig_latest:ikHandle4_parentConstraint1.constraintTranslateX" 
-		"pig_latestRN.placeHolderList[142]" "pig_latest:iK_L_frontleg01.tx"
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01|pig_latest:ikHandle4_parentConstraint1.constraintTranslateY" 
-		"pig_latestRN.placeHolderList[143]" "pig_latest:iK_L_frontleg01.ty"
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01|pig_latest:ikHandle4_parentConstraint1.constraintTranslateZ" 
-		"pig_latestRN.placeHolderList[144]" "pig_latest:iK_L_frontleg01.tz"
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01|pig_latest:ikHandle4_parentConstraint1.constraintRotateX" 
-		"pig_latestRN.placeHolderList[145]" "pig_latest:iK_L_frontleg01.rx"
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01|pig_latest:ikHandle4_parentConstraint1.constraintRotateY" 
-		"pig_latestRN.placeHolderList[146]" "pig_latest:iK_L_frontleg01.ry"
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01|pig_latest:ikHandle4_parentConstraint1.constraintRotateZ" 
-		"pig_latestRN.placeHolderList[147]" "pig_latest:iK_L_frontleg01.rz"
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_elbow01.translateX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01.translateX" 
+		"pig_latestRN.placeHolderList[139]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01.translateX" 
+		"pig_latestRN.placeHolderList[140]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01.translateZ" 
+		"pig_latestRN.placeHolderList[141]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01.translateZ" 
+		"pig_latestRN.placeHolderList[142]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01.rotateX" 
+		"pig_latestRN.placeHolderList[143]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01.rotateX" 
+		"pig_latestRN.placeHolderList[144]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01.rotateY" 
+		"pig_latestRN.placeHolderList[145]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01.rotateY" 
+		"pig_latestRN.placeHolderList[146]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01.rotateZ" 
+		"pig_latestRN.placeHolderList[147]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01.rotateZ" 
 		"pig_latestRN.placeHolderList[148]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_elbow01.translateX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01.scaleX" 
 		"pig_latestRN.placeHolderList[149]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_elbow01.translateY" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01.scaleX" 
 		"pig_latestRN.placeHolderList[150]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_elbow01.translateY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01.scaleY" 
 		"pig_latestRN.placeHolderList[151]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_elbow01.translateZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01.scaleY" 
 		"pig_latestRN.placeHolderList[152]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_elbow01.translateZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01.scaleZ" 
 		"pig_latestRN.placeHolderList[153]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_elbow01.visibility" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01.scaleZ" 
 		"pig_latestRN.placeHolderList[154]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_elbow01.visibility" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01.blendThislittlepiggywenttomarket" 
 		"pig_latestRN.placeHolderList[155]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_elbow01.rotateX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01.blendThislittlepiggywenttomarket" 
 		"pig_latestRN.placeHolderList[156]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_elbow01.rotateX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01.blendThislittlepiggywenttomarket" 
 		"pig_latestRN.placeHolderList[157]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_elbow01.rotateY" 
-		"pig_latestRN.placeHolderList[158]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_elbow01.rotateY" 
-		"pig_latestRN.placeHolderList[159]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_elbow01.rotateZ" 
-		"pig_latestRN.placeHolderList[160]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_elbow01.rotateZ" 
-		"pig_latestRN.placeHolderList[161]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_elbow01.scaleX" 
-		"pig_latestRN.placeHolderList[162]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_elbow01.scaleX" 
-		"pig_latestRN.placeHolderList[163]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_elbow01.scaleY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01|pig_latest:shoulders_rotation_ctrl01_parentConstraint1.constraintTranslateY" 
+		"pig_latestRN.placeHolderList[158]" "pig_latest:shoulders_rotation_ctrl01.ty"
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01|pig_latest:shoulders_rotation_ctrl01_parentConstraint1.constraintTranslateX" 
+		"pig_latestRN.placeHolderList[159]" "pig_latest:shoulders_rotation_ctrl01.tx"
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01|pig_latest:shoulders_rotation_ctrl01_parentConstraint1.constraintTranslateZ" 
+		"pig_latestRN.placeHolderList[160]" "pig_latest:shoulders_rotation_ctrl01.tz"
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01|pig_latest:shoulders_rotation_ctrl01_parentConstraint1.constraintRotateX" 
+		"pig_latestRN.placeHolderList[161]" "pig_latest:shoulders_rotation_ctrl01.rx"
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01|pig_latest:shoulders_rotation_ctrl01_parentConstraint1.constraintRotateY" 
+		"pig_latestRN.placeHolderList[162]" "pig_latest:shoulders_rotation_ctrl01.ry"
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:shoulders_rotation_ctrl01|pig_latest:shoulders_rotation_ctrl01_parentConstraint1.constraintRotateZ" 
+		"pig_latestRN.placeHolderList[163]" "pig_latest:shoulders_rotation_ctrl01.rz"
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.translateX" 
 		"pig_latestRN.placeHolderList[164]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_elbow01.scaleY" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.translateX" 
 		"pig_latestRN.placeHolderList[165]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_elbow01.scaleZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.translateY" 
 		"pig_latestRN.placeHolderList[166]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_elbow01.scaleZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.translateY" 
 		"pig_latestRN.placeHolderList[167]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.poleVectorX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.translateZ" 
 		"pig_latestRN.placeHolderList[168]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.poleVectorX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.translateZ" 
 		"pig_latestRN.placeHolderList[169]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.poleVectorY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.rotateX" 
 		"pig_latestRN.placeHolderList[170]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.poleVectorY" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.rotateX" 
 		"pig_latestRN.placeHolderList[171]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.poleVectorZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.rotateY" 
 		"pig_latestRN.placeHolderList[172]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.poleVectorZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.rotateY" 
 		"pig_latestRN.placeHolderList[173]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.translateX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.rotateZ" 
 		"pig_latestRN.placeHolderList[174]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.translateX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.rotateZ" 
 		"pig_latestRN.placeHolderList[175]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.translateY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.poleVectorX" 
 		"pig_latestRN.placeHolderList[176]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.translateY" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.poleVectorX" 
 		"pig_latestRN.placeHolderList[177]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.translateZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.poleVectorY" 
 		"pig_latestRN.placeHolderList[178]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.translateZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.poleVectorY" 
 		"pig_latestRN.placeHolderList[179]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.rotateX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.poleVectorZ" 
 		"pig_latestRN.placeHolderList[180]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.rotateX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.poleVectorZ" 
 		"pig_latestRN.placeHolderList[181]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.rotateY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.blendThislittlepiggywenttomarket" 
 		"pig_latestRN.placeHolderList[182]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.rotateY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.visibility" 
 		"pig_latestRN.placeHolderList[183]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.rotateZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.visibility" 
 		"pig_latestRN.placeHolderList[184]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.rotateZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.scaleX" 
 		"pig_latestRN.placeHolderList[185]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.blendThislittlepiggywenttomarket" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.scaleX" 
 		"pig_latestRN.placeHolderList[186]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.visibility" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.scaleY" 
 		"pig_latestRN.placeHolderList[187]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.visibility" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.scaleY" 
 		"pig_latestRN.placeHolderList[188]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.scaleX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.scaleZ" 
 		"pig_latestRN.placeHolderList[189]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.scaleX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.scaleZ" 
 		"pig_latestRN.placeHolderList[190]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.scaleY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.offset" 
 		"pig_latestRN.placeHolderList[191]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.scaleY" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.offset" 
 		"pig_latestRN.placeHolderList[192]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.scaleZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.roll" 
 		"pig_latestRN.placeHolderList[193]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.scaleZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.roll" 
 		"pig_latestRN.placeHolderList[194]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.offset" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.twist" 
 		"pig_latestRN.placeHolderList[195]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.offset" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.twist" 
 		"pig_latestRN.placeHolderList[196]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.roll" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.ikBlend" 
 		"pig_latestRN.placeHolderList[197]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.roll" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01.ikBlend" 
 		"pig_latestRN.placeHolderList[198]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.twist" 
-		"pig_latestRN.placeHolderList[199]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.twist" 
-		"pig_latestRN.placeHolderList[200]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.ikBlend" 
-		"pig_latestRN.placeHolderList[201]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.ikBlend" 
-		"pig_latestRN.placeHolderList[202]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01|pig_latest:ikHandle3_poleVectorConstraint1.constraintTranslateX" 
-		"pig_latestRN.placeHolderList[203]" "pig_latest:iK_R_frontleg01.pvx"
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01|pig_latest:ikHandle3_poleVectorConstraint1.constraintTranslateY" 
-		"pig_latestRN.placeHolderList[204]" "pig_latest:iK_R_frontleg01.pvy"
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01|pig_latest:ikHandle3_poleVectorConstraint1.constraintTranslateZ" 
-		"pig_latestRN.placeHolderList[205]" "pig_latest:iK_R_frontleg01.pvz"
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01|pig_latest:ikHandle3_parentConstraint1.constraintTranslateX" 
-		"pig_latestRN.placeHolderList[206]" "pig_latest:iK_R_frontleg01.tx"
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01|pig_latest:ikHandle3_parentConstraint1.constraintTranslateY" 
-		"pig_latestRN.placeHolderList[207]" "pig_latest:iK_R_frontleg01.ty"
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01|pig_latest:ikHandle3_parentConstraint1.constraintTranslateZ" 
-		"pig_latestRN.placeHolderList[208]" "pig_latest:iK_R_frontleg01.tz"
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01|pig_latest:ikHandle3_parentConstraint1.constraintRotateX" 
-		"pig_latestRN.placeHolderList[209]" "pig_latest:iK_R_frontleg01.rx"
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01|pig_latest:ikHandle3_parentConstraint1.constraintRotateY" 
-		"pig_latestRN.placeHolderList[210]" "pig_latest:iK_R_frontleg01.ry"
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01|pig_latest:ikHandle3_parentConstraint1.constraintRotateZ" 
-		"pig_latestRN.placeHolderList[211]" "pig_latest:iK_R_frontleg01.rz"
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_elbow01.translateX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01|pig_latest:ikHandle4_poleVectorConstraint1.constraintTranslateX" 
+		"pig_latestRN.placeHolderList[199]" "pig_latest:iK_L_frontleg01.pvx"
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01|pig_latest:ikHandle4_poleVectorConstraint1.constraintTranslateY" 
+		"pig_latestRN.placeHolderList[200]" "pig_latest:iK_L_frontleg01.pvy"
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01|pig_latest:ikHandle4_poleVectorConstraint1.constraintTranslateZ" 
+		"pig_latestRN.placeHolderList[201]" "pig_latest:iK_L_frontleg01.pvz"
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01|pig_latest:ikHandle4_parentConstraint1.constraintTranslateX" 
+		"pig_latestRN.placeHolderList[202]" "pig_latest:iK_L_frontleg01.tx"
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01|pig_latest:ikHandle4_parentConstraint1.constraintTranslateY" 
+		"pig_latestRN.placeHolderList[203]" "pig_latest:iK_L_frontleg01.ty"
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01|pig_latest:ikHandle4_parentConstraint1.constraintTranslateZ" 
+		"pig_latestRN.placeHolderList[204]" "pig_latest:iK_L_frontleg01.tz"
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01|pig_latest:ikHandle4_parentConstraint1.constraintRotateX" 
+		"pig_latestRN.placeHolderList[205]" "pig_latest:iK_L_frontleg01.rx"
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01|pig_latest:ikHandle4_parentConstraint1.constraintRotateY" 
+		"pig_latestRN.placeHolderList[206]" "pig_latest:iK_L_frontleg01.ry"
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_frontleg01|pig_latest:ikHandle4_parentConstraint1.constraintRotateZ" 
+		"pig_latestRN.placeHolderList[207]" "pig_latest:iK_L_frontleg01.rz"
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_elbow01.translateX" 
+		"pig_latestRN.placeHolderList[208]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_elbow01.translateX" 
+		"pig_latestRN.placeHolderList[209]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_elbow01.translateY" 
+		"pig_latestRN.placeHolderList[210]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_elbow01.translateY" 
+		"pig_latestRN.placeHolderList[211]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_elbow01.translateZ" 
 		"pig_latestRN.placeHolderList[212]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_elbow01.translateX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_elbow01.translateZ" 
 		"pig_latestRN.placeHolderList[213]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_elbow01.translateY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_elbow01.visibility" 
 		"pig_latestRN.placeHolderList[214]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_elbow01.translateY" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_elbow01.visibility" 
 		"pig_latestRN.placeHolderList[215]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_elbow01.translateZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_elbow01.rotateX" 
 		"pig_latestRN.placeHolderList[216]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_elbow01.translateZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_elbow01.rotateX" 
 		"pig_latestRN.placeHolderList[217]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_elbow01.visibility" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_elbow01.rotateY" 
 		"pig_latestRN.placeHolderList[218]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_elbow01.visibility" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_elbow01.rotateY" 
 		"pig_latestRN.placeHolderList[219]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_elbow01.rotateX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_elbow01.rotateZ" 
 		"pig_latestRN.placeHolderList[220]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_elbow01.rotateX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_elbow01.rotateZ" 
 		"pig_latestRN.placeHolderList[221]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_elbow01.rotateY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_elbow01.scaleX" 
 		"pig_latestRN.placeHolderList[222]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_elbow01.rotateY" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_elbow01.scaleX" 
 		"pig_latestRN.placeHolderList[223]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_elbow01.rotateZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_elbow01.scaleY" 
 		"pig_latestRN.placeHolderList[224]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_elbow01.rotateZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_elbow01.scaleY" 
 		"pig_latestRN.placeHolderList[225]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_elbow01.scaleX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_elbow01.scaleZ" 
 		"pig_latestRN.placeHolderList[226]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_elbow01.scaleX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_elbow01.scaleZ" 
 		"pig_latestRN.placeHolderList[227]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_elbow01.scaleY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.poleVectorX" 
 		"pig_latestRN.placeHolderList[228]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_elbow01.scaleY" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.poleVectorX" 
 		"pig_latestRN.placeHolderList[229]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_elbow01.scaleZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.poleVectorY" 
 		"pig_latestRN.placeHolderList[230]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_elbow01.scaleZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.poleVectorY" 
 		"pig_latestRN.placeHolderList[231]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.poleVectorX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.poleVectorZ" 
 		"pig_latestRN.placeHolderList[232]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.poleVectorX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.poleVectorZ" 
 		"pig_latestRN.placeHolderList[233]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.poleVectorY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.translateX" 
 		"pig_latestRN.placeHolderList[234]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.poleVectorY" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.translateX" 
 		"pig_latestRN.placeHolderList[235]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.poleVectorZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.translateY" 
 		"pig_latestRN.placeHolderList[236]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.poleVectorZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.translateY" 
 		"pig_latestRN.placeHolderList[237]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.translateX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.translateZ" 
 		"pig_latestRN.placeHolderList[238]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.translateX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.translateZ" 
 		"pig_latestRN.placeHolderList[239]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.translateY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.rotateX" 
 		"pig_latestRN.placeHolderList[240]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.translateY" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.rotateX" 
 		"pig_latestRN.placeHolderList[241]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.translateZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.rotateY" 
 		"pig_latestRN.placeHolderList[242]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.translateZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.rotateY" 
 		"pig_latestRN.placeHolderList[243]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.rotateX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.rotateZ" 
 		"pig_latestRN.placeHolderList[244]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.rotateX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.rotateZ" 
 		"pig_latestRN.placeHolderList[245]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.rotateY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.blendThislittlepiggywenttomarket" 
 		"pig_latestRN.placeHolderList[246]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.rotateY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.visibility" 
 		"pig_latestRN.placeHolderList[247]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.rotateZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.visibility" 
 		"pig_latestRN.placeHolderList[248]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.rotateZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.scaleX" 
 		"pig_latestRN.placeHolderList[249]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.blendThislittlepiggywenttomarket" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.scaleX" 
 		"pig_latestRN.placeHolderList[250]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.visibility" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.scaleY" 
 		"pig_latestRN.placeHolderList[251]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.visibility" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.scaleY" 
 		"pig_latestRN.placeHolderList[252]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.scaleX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.scaleZ" 
 		"pig_latestRN.placeHolderList[253]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.scaleX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.scaleZ" 
 		"pig_latestRN.placeHolderList[254]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.scaleY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.offset" 
 		"pig_latestRN.placeHolderList[255]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.scaleY" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.offset" 
 		"pig_latestRN.placeHolderList[256]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.scaleZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.roll" 
 		"pig_latestRN.placeHolderList[257]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.scaleZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.roll" 
 		"pig_latestRN.placeHolderList[258]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.offset" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.twist" 
 		"pig_latestRN.placeHolderList[259]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.offset" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.twist" 
 		"pig_latestRN.placeHolderList[260]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.roll" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.ikBlend" 
 		"pig_latestRN.placeHolderList[261]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.roll" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01.ikBlend" 
 		"pig_latestRN.placeHolderList[262]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.twist" 
-		"pig_latestRN.placeHolderList[263]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.twist" 
-		"pig_latestRN.placeHolderList[264]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.ikBlend" 
-		"pig_latestRN.placeHolderList[265]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.ikBlend" 
-		"pig_latestRN.placeHolderList[266]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01|pig_latest:ikHandle2_poleVectorConstraint1.constraintTranslateX" 
-		"pig_latestRN.placeHolderList[267]" "pig_latest:iK_L_backleg01.pvx"
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01|pig_latest:ikHandle2_poleVectorConstraint1.constraintTranslateY" 
-		"pig_latestRN.placeHolderList[268]" "pig_latest:iK_L_backleg01.pvy"
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01|pig_latest:ikHandle2_poleVectorConstraint1.constraintTranslateZ" 
-		"pig_latestRN.placeHolderList[269]" "pig_latest:iK_L_backleg01.pvz"
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01|pig_latest:ikHandle2_parentConstraint1.constraintTranslateX" 
-		"pig_latestRN.placeHolderList[270]" "pig_latest:iK_L_backleg01.tx"
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01|pig_latest:ikHandle2_parentConstraint1.constraintTranslateY" 
-		"pig_latestRN.placeHolderList[271]" "pig_latest:iK_L_backleg01.ty"
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01|pig_latest:ikHandle2_parentConstraint1.constraintTranslateZ" 
-		"pig_latestRN.placeHolderList[272]" "pig_latest:iK_L_backleg01.tz"
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01|pig_latest:ikHandle2_parentConstraint1.constraintRotateX" 
-		"pig_latestRN.placeHolderList[273]" "pig_latest:iK_L_backleg01.rx"
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01|pig_latest:ikHandle2_parentConstraint1.constraintRotateY" 
-		"pig_latestRN.placeHolderList[274]" "pig_latest:iK_L_backleg01.ry"
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01|pig_latest:ikHandle2_parentConstraint1.constraintRotateZ" 
-		"pig_latestRN.placeHolderList[275]" "pig_latest:iK_L_backleg01.rz"
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_knee01.translateX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01|pig_latest:ikHandle3_poleVectorConstraint1.constraintTranslateX" 
+		"pig_latestRN.placeHolderList[263]" "pig_latest:iK_R_frontleg01.pvx"
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01|pig_latest:ikHandle3_poleVectorConstraint1.constraintTranslateY" 
+		"pig_latestRN.placeHolderList[264]" "pig_latest:iK_R_frontleg01.pvy"
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01|pig_latest:ikHandle3_poleVectorConstraint1.constraintTranslateZ" 
+		"pig_latestRN.placeHolderList[265]" "pig_latest:iK_R_frontleg01.pvz"
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01|pig_latest:ikHandle3_parentConstraint1.constraintTranslateX" 
+		"pig_latestRN.placeHolderList[266]" "pig_latest:iK_R_frontleg01.tx"
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01|pig_latest:ikHandle3_parentConstraint1.constraintTranslateY" 
+		"pig_latestRN.placeHolderList[267]" "pig_latest:iK_R_frontleg01.ty"
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01|pig_latest:ikHandle3_parentConstraint1.constraintTranslateZ" 
+		"pig_latestRN.placeHolderList[268]" "pig_latest:iK_R_frontleg01.tz"
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01|pig_latest:ikHandle3_parentConstraint1.constraintRotateX" 
+		"pig_latestRN.placeHolderList[269]" "pig_latest:iK_R_frontleg01.rx"
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01|pig_latest:ikHandle3_parentConstraint1.constraintRotateY" 
+		"pig_latestRN.placeHolderList[270]" "pig_latest:iK_R_frontleg01.ry"
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_frontleg01|pig_latest:ikHandle3_parentConstraint1.constraintRotateZ" 
+		"pig_latestRN.placeHolderList[271]" "pig_latest:iK_R_frontleg01.rz"
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_elbow01.translateX" 
+		"pig_latestRN.placeHolderList[272]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_elbow01.translateX" 
+		"pig_latestRN.placeHolderList[273]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_elbow01.translateY" 
+		"pig_latestRN.placeHolderList[274]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_elbow01.translateY" 
+		"pig_latestRN.placeHolderList[275]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_elbow01.translateZ" 
 		"pig_latestRN.placeHolderList[276]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_knee01.translateX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_elbow01.translateZ" 
 		"pig_latestRN.placeHolderList[277]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_knee01.translateY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_elbow01.visibility" 
 		"pig_latestRN.placeHolderList[278]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_knee01.translateY" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_elbow01.visibility" 
 		"pig_latestRN.placeHolderList[279]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_knee01.translateZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_elbow01.rotateX" 
 		"pig_latestRN.placeHolderList[280]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_knee01.translateZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_elbow01.rotateX" 
 		"pig_latestRN.placeHolderList[281]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_knee01.visibility" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_elbow01.rotateY" 
 		"pig_latestRN.placeHolderList[282]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_knee01.visibility" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_elbow01.rotateY" 
 		"pig_latestRN.placeHolderList[283]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_knee01.rotateX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_elbow01.rotateZ" 
 		"pig_latestRN.placeHolderList[284]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_knee01.rotateX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_elbow01.rotateZ" 
 		"pig_latestRN.placeHolderList[285]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_knee01.rotateY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_elbow01.scaleX" 
 		"pig_latestRN.placeHolderList[286]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_knee01.rotateY" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_elbow01.scaleX" 
 		"pig_latestRN.placeHolderList[287]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_knee01.rotateZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_elbow01.scaleY" 
 		"pig_latestRN.placeHolderList[288]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_knee01.rotateZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_elbow01.scaleY" 
 		"pig_latestRN.placeHolderList[289]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_knee01.scaleX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_elbow01.scaleZ" 
 		"pig_latestRN.placeHolderList[290]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_knee01.scaleX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_elbow01.scaleZ" 
 		"pig_latestRN.placeHolderList[291]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_knee01.scaleY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.poleVectorX" 
 		"pig_latestRN.placeHolderList[292]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_knee01.scaleY" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.poleVectorX" 
 		"pig_latestRN.placeHolderList[293]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_knee01.scaleZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.poleVectorY" 
 		"pig_latestRN.placeHolderList[294]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_knee01.scaleZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.poleVectorY" 
 		"pig_latestRN.placeHolderList[295]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.poleVectorX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.poleVectorZ" 
 		"pig_latestRN.placeHolderList[296]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.poleVectorX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.poleVectorZ" 
 		"pig_latestRN.placeHolderList[297]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.poleVectorY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.translateX" 
 		"pig_latestRN.placeHolderList[298]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.poleVectorY" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.translateX" 
 		"pig_latestRN.placeHolderList[299]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.poleVectorZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.translateY" 
 		"pig_latestRN.placeHolderList[300]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.poleVectorZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.translateY" 
 		"pig_latestRN.placeHolderList[301]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.translateX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.translateZ" 
 		"pig_latestRN.placeHolderList[302]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.translateX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.translateZ" 
 		"pig_latestRN.placeHolderList[303]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.translateY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.rotateX" 
 		"pig_latestRN.placeHolderList[304]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.translateY" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.rotateX" 
 		"pig_latestRN.placeHolderList[305]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.translateZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.rotateY" 
 		"pig_latestRN.placeHolderList[306]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.translateZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.rotateY" 
 		"pig_latestRN.placeHolderList[307]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.rotateX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.rotateZ" 
 		"pig_latestRN.placeHolderList[308]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.rotateX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.rotateZ" 
 		"pig_latestRN.placeHolderList[309]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.rotateY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.blendThislittlepiggywenttomarket" 
 		"pig_latestRN.placeHolderList[310]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.rotateY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.visibility" 
 		"pig_latestRN.placeHolderList[311]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.rotateZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.visibility" 
 		"pig_latestRN.placeHolderList[312]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.rotateZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.scaleX" 
 		"pig_latestRN.placeHolderList[313]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.blendThislittlepiggywenttomarket" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.scaleX" 
 		"pig_latestRN.placeHolderList[314]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.visibility" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.scaleY" 
 		"pig_latestRN.placeHolderList[315]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.visibility" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.scaleY" 
 		"pig_latestRN.placeHolderList[316]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.scaleX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.scaleZ" 
 		"pig_latestRN.placeHolderList[317]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.scaleX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.scaleZ" 
 		"pig_latestRN.placeHolderList[318]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.scaleY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.offset" 
 		"pig_latestRN.placeHolderList[319]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.scaleY" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.offset" 
 		"pig_latestRN.placeHolderList[320]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.scaleZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.roll" 
 		"pig_latestRN.placeHolderList[321]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.scaleZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.roll" 
 		"pig_latestRN.placeHolderList[322]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.offset" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.twist" 
 		"pig_latestRN.placeHolderList[323]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.offset" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.twist" 
 		"pig_latestRN.placeHolderList[324]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.roll" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.ikBlend" 
 		"pig_latestRN.placeHolderList[325]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.roll" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01.ikBlend" 
 		"pig_latestRN.placeHolderList[326]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.twist" 
-		"pig_latestRN.placeHolderList[327]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.twist" 
-		"pig_latestRN.placeHolderList[328]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.ikBlend" 
-		"pig_latestRN.placeHolderList[329]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.ikBlend" 
-		"pig_latestRN.placeHolderList[330]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01|pig_latest:ikHandle1_poleVectorConstraint1.constraintTranslateX" 
-		"pig_latestRN.placeHolderList[331]" "pig_latest:iK_R_backleg01.pvx"
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01|pig_latest:ikHandle1_poleVectorConstraint1.constraintTranslateY" 
-		"pig_latestRN.placeHolderList[332]" "pig_latest:iK_R_backleg01.pvy"
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01|pig_latest:ikHandle1_poleVectorConstraint1.constraintTranslateZ" 
-		"pig_latestRN.placeHolderList[333]" "pig_latest:iK_R_backleg01.pvz"
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01|pig_latest:ikHandle1_parentConstraint1.constraintTranslateX" 
-		"pig_latestRN.placeHolderList[334]" "pig_latest:iK_R_backleg01.tx"
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01|pig_latest:ikHandle1_parentConstraint1.constraintTranslateY" 
-		"pig_latestRN.placeHolderList[335]" "pig_latest:iK_R_backleg01.ty"
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01|pig_latest:ikHandle1_parentConstraint1.constraintTranslateZ" 
-		"pig_latestRN.placeHolderList[336]" "pig_latest:iK_R_backleg01.tz"
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01|pig_latest:ikHandle1_parentConstraint1.constraintRotateX" 
-		"pig_latestRN.placeHolderList[337]" "pig_latest:iK_R_backleg01.rx"
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01|pig_latest:ikHandle1_parentConstraint1.constraintRotateY" 
-		"pig_latestRN.placeHolderList[338]" "pig_latest:iK_R_backleg01.ry"
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01|pig_latest:ikHandle1_parentConstraint1.constraintRotateZ" 
-		"pig_latestRN.placeHolderList[339]" "pig_latest:iK_R_backleg01.rz"
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_knee01.translateX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01|pig_latest:ikHandle2_poleVectorConstraint1.constraintTranslateX" 
+		"pig_latestRN.placeHolderList[327]" "pig_latest:iK_L_backleg01.pvx"
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01|pig_latest:ikHandle2_poleVectorConstraint1.constraintTranslateY" 
+		"pig_latestRN.placeHolderList[328]" "pig_latest:iK_L_backleg01.pvy"
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01|pig_latest:ikHandle2_poleVectorConstraint1.constraintTranslateZ" 
+		"pig_latestRN.placeHolderList[329]" "pig_latest:iK_L_backleg01.pvz"
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01|pig_latest:ikHandle2_parentConstraint1.constraintTranslateX" 
+		"pig_latestRN.placeHolderList[330]" "pig_latest:iK_L_backleg01.tx"
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01|pig_latest:ikHandle2_parentConstraint1.constraintTranslateY" 
+		"pig_latestRN.placeHolderList[331]" "pig_latest:iK_L_backleg01.ty"
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01|pig_latest:ikHandle2_parentConstraint1.constraintTranslateZ" 
+		"pig_latestRN.placeHolderList[332]" "pig_latest:iK_L_backleg01.tz"
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01|pig_latest:ikHandle2_parentConstraint1.constraintRotateX" 
+		"pig_latestRN.placeHolderList[333]" "pig_latest:iK_L_backleg01.rx"
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01|pig_latest:ikHandle2_parentConstraint1.constraintRotateY" 
+		"pig_latestRN.placeHolderList[334]" "pig_latest:iK_L_backleg01.ry"
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_L_backleg01|pig_latest:ikHandle2_parentConstraint1.constraintRotateZ" 
+		"pig_latestRN.placeHolderList[335]" "pig_latest:iK_L_backleg01.rz"
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_knee01.translateX" 
+		"pig_latestRN.placeHolderList[336]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_knee01.translateX" 
+		"pig_latestRN.placeHolderList[337]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_knee01.translateY" 
+		"pig_latestRN.placeHolderList[338]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_knee01.translateY" 
+		"pig_latestRN.placeHolderList[339]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_knee01.translateZ" 
 		"pig_latestRN.placeHolderList[340]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_knee01.translateX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_knee01.translateZ" 
 		"pig_latestRN.placeHolderList[341]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_knee01.translateY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_knee01.visibility" 
 		"pig_latestRN.placeHolderList[342]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_knee01.translateY" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_knee01.visibility" 
 		"pig_latestRN.placeHolderList[343]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_knee01.translateZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_knee01.rotateX" 
 		"pig_latestRN.placeHolderList[344]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_knee01.translateZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_knee01.rotateX" 
 		"pig_latestRN.placeHolderList[345]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_knee01.visibility" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_knee01.rotateY" 
 		"pig_latestRN.placeHolderList[346]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_knee01.visibility" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_knee01.rotateY" 
 		"pig_latestRN.placeHolderList[347]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_knee01.rotateX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_knee01.rotateZ" 
 		"pig_latestRN.placeHolderList[348]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_knee01.rotateX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_knee01.rotateZ" 
 		"pig_latestRN.placeHolderList[349]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_knee01.rotateY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_knee01.scaleX" 
 		"pig_latestRN.placeHolderList[350]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_knee01.rotateY" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_knee01.scaleX" 
 		"pig_latestRN.placeHolderList[351]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_knee01.rotateZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_knee01.scaleY" 
 		"pig_latestRN.placeHolderList[352]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_knee01.rotateZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_knee01.scaleY" 
 		"pig_latestRN.placeHolderList[353]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_knee01.scaleX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_knee01.scaleZ" 
 		"pig_latestRN.placeHolderList[354]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_knee01.scaleX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_L_knee01.scaleZ" 
 		"pig_latestRN.placeHolderList[355]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_knee01.scaleY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.poleVectorX" 
 		"pig_latestRN.placeHolderList[356]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_knee01.scaleY" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.poleVectorX" 
 		"pig_latestRN.placeHolderList[357]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_knee01.scaleZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.poleVectorY" 
 		"pig_latestRN.placeHolderList[358]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_knee01.scaleZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.poleVectorY" 
 		"pig_latestRN.placeHolderList[359]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01.translateZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.poleVectorZ" 
 		"pig_latestRN.placeHolderList[360]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01.translateZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.poleVectorZ" 
 		"pig_latestRN.placeHolderList[361]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01.translateX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.translateX" 
 		"pig_latestRN.placeHolderList[362]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01.translateX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.translateX" 
 		"pig_latestRN.placeHolderList[363]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01.translateY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.translateY" 
 		"pig_latestRN.placeHolderList[364]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01.translateY" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.translateY" 
 		"pig_latestRN.placeHolderList[365]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01.rotateZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.translateZ" 
 		"pig_latestRN.placeHolderList[366]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01.rotateZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.translateZ" 
 		"pig_latestRN.placeHolderList[367]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01.rotateX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.rotateX" 
 		"pig_latestRN.placeHolderList[368]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01.rotateX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.rotateX" 
 		"pig_latestRN.placeHolderList[369]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01.rotateY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.rotateY" 
 		"pig_latestRN.placeHolderList[370]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01.rotateY" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.rotateY" 
 		"pig_latestRN.placeHolderList[371]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01.scaleX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.rotateZ" 
 		"pig_latestRN.placeHolderList[372]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01.scaleX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.rotateZ" 
 		"pig_latestRN.placeHolderList[373]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01.scaleY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.blendThislittlepiggywenttomarket" 
 		"pig_latestRN.placeHolderList[374]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01.scaleY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.visibility" 
 		"pig_latestRN.placeHolderList[375]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01.scaleZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.visibility" 
 		"pig_latestRN.placeHolderList[376]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01.scaleZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.scaleX" 
 		"pig_latestRN.placeHolderList[377]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01.blendThislittlepiggywenttomarket" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.scaleX" 
 		"pig_latestRN.placeHolderList[378]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_1control01.translate" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.scaleY" 
 		"pig_latestRN.placeHolderList[379]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.scaleY" 
+		"pig_latestRN.placeHolderList[380]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.scaleZ" 
+		"pig_latestRN.placeHolderList[381]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.scaleZ" 
+		"pig_latestRN.placeHolderList[382]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.offset" 
+		"pig_latestRN.placeHolderList[383]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.offset" 
+		"pig_latestRN.placeHolderList[384]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.roll" 
+		"pig_latestRN.placeHolderList[385]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.roll" 
+		"pig_latestRN.placeHolderList[386]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.twist" 
+		"pig_latestRN.placeHolderList[387]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.twist" 
+		"pig_latestRN.placeHolderList[388]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.ikBlend" 
+		"pig_latestRN.placeHolderList[389]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01.ikBlend" 
+		"pig_latestRN.placeHolderList[390]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01|pig_latest:ikHandle1_poleVectorConstraint1.constraintTranslateX" 
+		"pig_latestRN.placeHolderList[391]" "pig_latest:iK_R_backleg01.pvx"
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01|pig_latest:ikHandle1_poleVectorConstraint1.constraintTranslateY" 
+		"pig_latestRN.placeHolderList[392]" "pig_latest:iK_R_backleg01.pvy"
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01|pig_latest:ikHandle1_poleVectorConstraint1.constraintTranslateZ" 
+		"pig_latestRN.placeHolderList[393]" "pig_latest:iK_R_backleg01.pvz"
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01|pig_latest:ikHandle1_parentConstraint1.constraintTranslateX" 
+		"pig_latestRN.placeHolderList[394]" "pig_latest:iK_R_backleg01.tx"
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01|pig_latest:ikHandle1_parentConstraint1.constraintTranslateY" 
+		"pig_latestRN.placeHolderList[395]" "pig_latest:iK_R_backleg01.ty"
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01|pig_latest:ikHandle1_parentConstraint1.constraintTranslateZ" 
+		"pig_latestRN.placeHolderList[396]" "pig_latest:iK_R_backleg01.tz"
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01|pig_latest:ikHandle1_parentConstraint1.constraintRotateX" 
+		"pig_latestRN.placeHolderList[397]" "pig_latest:iK_R_backleg01.rx"
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01|pig_latest:ikHandle1_parentConstraint1.constraintRotateY" 
+		"pig_latestRN.placeHolderList[398]" "pig_latest:iK_R_backleg01.ry"
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:iK_R_backleg01|pig_latest:ikHandle1_parentConstraint1.constraintRotateZ" 
+		"pig_latestRN.placeHolderList[399]" "pig_latest:iK_R_backleg01.rz"
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_knee01.translateX" 
+		"pig_latestRN.placeHolderList[400]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_knee01.translateX" 
+		"pig_latestRN.placeHolderList[401]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_knee01.translateY" 
+		"pig_latestRN.placeHolderList[402]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_knee01.translateY" 
+		"pig_latestRN.placeHolderList[403]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_knee01.translateZ" 
+		"pig_latestRN.placeHolderList[404]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_knee01.translateZ" 
+		"pig_latestRN.placeHolderList[405]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_knee01.visibility" 
+		"pig_latestRN.placeHolderList[406]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_knee01.visibility" 
+		"pig_latestRN.placeHolderList[407]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_knee01.rotateX" 
+		"pig_latestRN.placeHolderList[408]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_knee01.rotateX" 
+		"pig_latestRN.placeHolderList[409]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_knee01.rotateY" 
+		"pig_latestRN.placeHolderList[410]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_knee01.rotateY" 
+		"pig_latestRN.placeHolderList[411]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_knee01.rotateZ" 
+		"pig_latestRN.placeHolderList[412]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_knee01.rotateZ" 
+		"pig_latestRN.placeHolderList[413]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_knee01.scaleX" 
+		"pig_latestRN.placeHolderList[414]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_knee01.scaleX" 
+		"pig_latestRN.placeHolderList[415]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_knee01.scaleY" 
+		"pig_latestRN.placeHolderList[416]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_knee01.scaleY" 
+		"pig_latestRN.placeHolderList[417]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_knee01.scaleZ" 
+		"pig_latestRN.placeHolderList[418]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:locator_R_knee01.scaleZ" 
+		"pig_latestRN.placeHolderList[419]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01.translateZ" 
+		"pig_latestRN.placeHolderList[420]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01.translateZ" 
+		"pig_latestRN.placeHolderList[421]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01.translateX" 
+		"pig_latestRN.placeHolderList[422]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01.translateX" 
+		"pig_latestRN.placeHolderList[423]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01.translateY" 
+		"pig_latestRN.placeHolderList[424]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01.translateY" 
+		"pig_latestRN.placeHolderList[425]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01.rotateZ" 
+		"pig_latestRN.placeHolderList[426]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01.rotateZ" 
+		"pig_latestRN.placeHolderList[427]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01.rotateX" 
+		"pig_latestRN.placeHolderList[428]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01.rotateX" 
+		"pig_latestRN.placeHolderList[429]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01.rotateY" 
+		"pig_latestRN.placeHolderList[430]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01.rotateY" 
+		"pig_latestRN.placeHolderList[431]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01.scaleX" 
+		"pig_latestRN.placeHolderList[432]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01.scaleX" 
+		"pig_latestRN.placeHolderList[433]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01.scaleY" 
+		"pig_latestRN.placeHolderList[434]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01.scaleY" 
+		"pig_latestRN.placeHolderList[435]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01.scaleZ" 
+		"pig_latestRN.placeHolderList[436]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01.scaleZ" 
+		"pig_latestRN.placeHolderList[437]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01.blendThislittlepiggywenttomarket" 
+		"pig_latestRN.placeHolderList[438]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01.blendThislittlepiggywenttomarket" 
+		"pig_latestRN.placeHolderList[439]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_1control01.translate" 
+		"pig_latestRN.placeHolderList[440]" ""
 		5 0 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_1control01|pig_latest:tail_1control01_parentConstraint1.constraintTranslateX" 
 		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_1control01.translateX" 
-		"pig_latestRN.placeHolderList[380]" "pig_latestRN.placeHolderList[381]" "pig_latest:tail_1control01.tx"
+		"pig_latestRN.placeHolderList[441]" "pig_latestRN.placeHolderList[442]" "pig_latest:tail_1control01.tx"
 		
 		5 0 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_1control01|pig_latest:tail_1control01_parentConstraint1.constraintTranslateY" 
 		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_1control01.translateY" 
-		"pig_latestRN.placeHolderList[382]" "pig_latestRN.placeHolderList[383]" "pig_latest:tail_1control01.ty"
+		"pig_latestRN.placeHolderList[443]" "pig_latestRN.placeHolderList[444]" "pig_latest:tail_1control01.ty"
 		
 		5 0 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_1control01|pig_latest:tail_1control01_parentConstraint1.constraintTranslateZ" 
 		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_1control01.translateZ" 
-		"pig_latestRN.placeHolderList[384]" "pig_latestRN.placeHolderList[385]" "pig_latest:tail_1control01.tz"
+		"pig_latestRN.placeHolderList[445]" "pig_latestRN.placeHolderList[446]" "pig_latest:tail_1control01.tz"
 		
 		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_1control01.rotate" 
-		"pig_latestRN.placeHolderList[386]" ""
+		"pig_latestRN.placeHolderList[447]" ""
 		5 0 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_1control01|pig_latest:tail_1control01_parentConstraint1.constraintRotateX" 
 		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_1control01.rotateX" 
-		"pig_latestRN.placeHolderList[387]" "pig_latestRN.placeHolderList[388]" "pig_latest:tail_1control01.rx"
+		"pig_latestRN.placeHolderList[448]" "pig_latestRN.placeHolderList[449]" "pig_latest:tail_1control01.rx"
 		
 		5 0 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_1control01|pig_latest:tail_1control01_parentConstraint1.constraintRotateY" 
 		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_1control01.rotateY" 
-		"pig_latestRN.placeHolderList[389]" "pig_latestRN.placeHolderList[390]" "pig_latest:tail_1control01.ry"
+		"pig_latestRN.placeHolderList[450]" "pig_latestRN.placeHolderList[451]" "pig_latest:tail_1control01.ry"
 		
 		5 0 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_1control01|pig_latest:tail_1control01_parentConstraint1.constraintRotateZ" 
 		"|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_1control01.rotateZ" 
-		"pig_latestRN.placeHolderList[391]" "pig_latestRN.placeHolderList[392]" "pig_latest:tail_1control01.rz"
+		"pig_latestRN.placeHolderList[452]" "pig_latestRN.placeHolderList[453]" "pig_latest:tail_1control01.rz"
 		
 		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_1control01.rotateOrder" 
-		"pig_latestRN.placeHolderList[393]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_1control01.rotatePivot" 
-		"pig_latestRN.placeHolderList[394]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_1control01.rotatePivotTranslate" 
-		"pig_latestRN.placeHolderList[395]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_1control01.scale" 
-		"pig_latestRN.placeHolderList[396]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_1control01.parentMatrix" 
-		"pig_latestRN.placeHolderList[397]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_2control01.translate" 
-		"pig_latestRN.placeHolderList[398]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_2control01.translateX" 
-		"pig_latestRN.placeHolderList[399]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_2control01.translateY" 
-		"pig_latestRN.placeHolderList[400]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_2control01.translateZ" 
-		"pig_latestRN.placeHolderList[401]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_2control01.rotatePivot" 
-		"pig_latestRN.placeHolderList[402]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_2control01.rotatePivot" 
-		"pig_latestRN.placeHolderList[403]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_2control01.rotatePivotTranslate" 
-		"pig_latestRN.placeHolderList[404]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_2control01.rotatePivotTranslate" 
-		"pig_latestRN.placeHolderList[405]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_2control01.rotate" 
-		"pig_latestRN.placeHolderList[406]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_2control01.rotateX" 
-		"pig_latestRN.placeHolderList[407]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_2control01.rotateY" 
-		"pig_latestRN.placeHolderList[408]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_2control01.rotateZ" 
-		"pig_latestRN.placeHolderList[409]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_2control01.rotateOrder" 
-		"pig_latestRN.placeHolderList[410]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_2control01.rotateOrder" 
-		"pig_latestRN.placeHolderList[411]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_2control01.scale" 
-		"pig_latestRN.placeHolderList[412]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_2control01.parentMatrix" 
-		"pig_latestRN.placeHolderList[413]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_2control01.parentInverseMatrix" 
-		"pig_latestRN.placeHolderList[414]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_3control01.translate" 
-		"pig_latestRN.placeHolderList[415]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_3control01.translateX" 
-		"pig_latestRN.placeHolderList[416]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_3control01.translateY" 
-		"pig_latestRN.placeHolderList[417]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_3control01.translateZ" 
-		"pig_latestRN.placeHolderList[418]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_3control01.rotatePivot" 
-		"pig_latestRN.placeHolderList[419]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_3control01.rotatePivot" 
-		"pig_latestRN.placeHolderList[420]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_3control01.rotatePivotTranslate" 
-		"pig_latestRN.placeHolderList[421]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_3control01.rotatePivotTranslate" 
-		"pig_latestRN.placeHolderList[422]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_3control01.rotate" 
-		"pig_latestRN.placeHolderList[423]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_3control01.rotateX" 
-		"pig_latestRN.placeHolderList[424]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_3control01.rotateY" 
-		"pig_latestRN.placeHolderList[425]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_3control01.rotateZ" 
-		"pig_latestRN.placeHolderList[426]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_3control01.rotateOrder" 
-		"pig_latestRN.placeHolderList[427]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_3control01.rotateOrder" 
-		"pig_latestRN.placeHolderList[428]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_3control01.scale" 
-		"pig_latestRN.placeHolderList[429]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_3control01.parentMatrix" 
-		"pig_latestRN.placeHolderList[430]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_3control01.parentInverseMatrix" 
-		"pig_latestRN.placeHolderList[431]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_4control01.translateX" 
-		"pig_latestRN.placeHolderList[432]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_4control01.translateY" 
-		"pig_latestRN.placeHolderList[433]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_4control01.translateZ" 
-		"pig_latestRN.placeHolderList[434]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_4control01.rotatePivot" 
-		"pig_latestRN.placeHolderList[435]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_4control01.rotatePivotTranslate" 
-		"pig_latestRN.placeHolderList[436]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_4control01.rotateX" 
-		"pig_latestRN.placeHolderList[437]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_4control01.rotateY" 
-		"pig_latestRN.placeHolderList[438]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_4control01.rotateZ" 
-		"pig_latestRN.placeHolderList[439]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_4control01.rotateOrder" 
-		"pig_latestRN.placeHolderList[440]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_4control01.parentInverseMatrix" 
-		"pig_latestRN.placeHolderList[441]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:hip_rotation_ctrl01_parentConstraint1.constraintTranslateZ" 
-		"pig_latestRN.placeHolderList[442]" "pig_latest:hip_rotation_ctrl01.tz"
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:hip_rotation_ctrl01_parentConstraint1.constraintTranslateX" 
-		"pig_latestRN.placeHolderList[443]" "pig_latest:hip_rotation_ctrl01.tx"
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:hip_rotation_ctrl01_parentConstraint1.constraintTranslateY" 
-		"pig_latestRN.placeHolderList[444]" "pig_latest:hip_rotation_ctrl01.ty"
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:hip_rotation_ctrl01_parentConstraint1.constraintRotateZ" 
-		"pig_latestRN.placeHolderList[445]" "pig_latest:hip_rotation_ctrl01.rz"
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:hip_rotation_ctrl01_parentConstraint1.constraintRotateX" 
-		"pig_latestRN.placeHolderList[446]" "pig_latest:hip_rotation_ctrl01.rx"
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:hip_rotation_ctrl01_parentConstraint1.constraintRotateY" 
-		"pig_latestRN.placeHolderList[447]" "pig_latest:hip_rotation_ctrl01.ry"
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:back_flex_ctrl01.translateX" 
-		"pig_latestRN.placeHolderList[448]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:back_flex_ctrl01.translateX" 
-		"pig_latestRN.placeHolderList[449]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:back_flex_ctrl01.translateY" 
-		"pig_latestRN.placeHolderList[450]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:back_flex_ctrl01.translateY" 
-		"pig_latestRN.placeHolderList[451]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:back_flex_ctrl01.translateZ" 
-		"pig_latestRN.placeHolderList[452]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:back_flex_ctrl01.translateZ" 
-		"pig_latestRN.placeHolderList[453]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:back_flex_ctrl01.rotateX" 
 		"pig_latestRN.placeHolderList[454]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:back_flex_ctrl01.rotateX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_1control01.rotatePivot" 
 		"pig_latestRN.placeHolderList[455]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:back_flex_ctrl01.rotateY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_1control01.rotatePivotTranslate" 
 		"pig_latestRN.placeHolderList[456]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:back_flex_ctrl01.rotateY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_1control01.scale" 
 		"pig_latestRN.placeHolderList[457]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:back_flex_ctrl01.rotateZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_1control01.parentMatrix" 
 		"pig_latestRN.placeHolderList[458]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:back_flex_ctrl01.rotateZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_2control01.translate" 
 		"pig_latestRN.placeHolderList[459]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:back_flex_ctrl01.scaleX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_2control01.translateX" 
 		"pig_latestRN.placeHolderList[460]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:back_flex_ctrl01.scaleX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_2control01.translateY" 
 		"pig_latestRN.placeHolderList[461]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:back_flex_ctrl01.scaleY" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_2control01.translateZ" 
 		"pig_latestRN.placeHolderList[462]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:back_flex_ctrl01.scaleY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_2control01.rotatePivot" 
 		"pig_latestRN.placeHolderList[463]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:back_flex_ctrl01.scaleZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_2control01.rotatePivot" 
 		"pig_latestRN.placeHolderList[464]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:back_flex_ctrl01.scaleZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_2control01.rotatePivotTranslate" 
 		"pig_latestRN.placeHolderList[465]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:back_flex_ctrl01.visibility" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_2control01.rotatePivotTranslate" 
 		"pig_latestRN.placeHolderList[466]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:back_flex_ctrl01.visibility" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_2control01.rotate" 
 		"pig_latestRN.placeHolderList[467]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01.translateX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_2control01.rotateX" 
 		"pig_latestRN.placeHolderList[468]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01.translateX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_2control01.rotateY" 
 		"pig_latestRN.placeHolderList[469]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01.translateY" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_2control01.rotateZ" 
 		"pig_latestRN.placeHolderList[470]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01.translateY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_2control01.rotateOrder" 
 		"pig_latestRN.placeHolderList[471]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01.translateZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_2control01.rotateOrder" 
 		"pig_latestRN.placeHolderList[472]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01.translateZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_2control01.scale" 
 		"pig_latestRN.placeHolderList[473]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01.rotateX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_2control01.parentMatrix" 
 		"pig_latestRN.placeHolderList[474]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01.rotateX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_2control01.parentInverseMatrix" 
 		"pig_latestRN.placeHolderList[475]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01.rotateY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_3control01.translate" 
 		"pig_latestRN.placeHolderList[476]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01.rotateY" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_3control01.translateX" 
 		"pig_latestRN.placeHolderList[477]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01.rotateZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_3control01.translateY" 
 		"pig_latestRN.placeHolderList[478]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01.rotateZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_3control01.translateZ" 
 		"pig_latestRN.placeHolderList[479]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01.scaleX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_3control01.rotatePivot" 
 		"pig_latestRN.placeHolderList[480]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01.scaleX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_3control01.rotatePivot" 
 		"pig_latestRN.placeHolderList[481]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01.scaleY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_3control01.rotatePivotTranslate" 
 		"pig_latestRN.placeHolderList[482]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01.scaleY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_3control01.rotatePivotTranslate" 
 		"pig_latestRN.placeHolderList[483]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01.scaleZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_3control01.rotate" 
 		"pig_latestRN.placeHolderList[484]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01.scaleZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_3control01.rotateX" 
 		"pig_latestRN.placeHolderList[485]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01.visibility" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_3control01.rotateY" 
 		"pig_latestRN.placeHolderList[486]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01.visibility" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_3control01.rotateZ" 
 		"pig_latestRN.placeHolderList[487]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_L_backfoot01.rotateX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_3control01.rotateOrder" 
 		"pig_latestRN.placeHolderList[488]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_L_backfoot01.rotateY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_3control01.rotateOrder" 
 		"pig_latestRN.placeHolderList[489]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_L_backfoot01.rotateZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_3control01.scale" 
 		"pig_latestRN.placeHolderList[490]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_L_backfoot01.translateX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_3control01.parentMatrix" 
 		"pig_latestRN.placeHolderList[491]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_L_backfoot01.translateY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_3control01.parentInverseMatrix" 
 		"pig_latestRN.placeHolderList[492]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_L_backfoot01.translateZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_4control01.translateX" 
 		"pig_latestRN.placeHolderList[493]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_L_backfoot01.scaleX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_4control01.translateY" 
 		"pig_latestRN.placeHolderList[494]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_L_backfoot01.scaleY" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_4control01.translateZ" 
 		"pig_latestRN.placeHolderList[495]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_L_backfoot01.scaleZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_4control01.rotatePivot" 
 		"pig_latestRN.placeHolderList[496]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_R_backfoot01.rotateX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_4control01.rotatePivotTranslate" 
 		"pig_latestRN.placeHolderList[497]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_R_backfoot01.rotateY" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_4control01.rotateX" 
 		"pig_latestRN.placeHolderList[498]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_R_backfoot01.rotateZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_4control01.rotateY" 
 		"pig_latestRN.placeHolderList[499]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_R_backfoot01.translateX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_4control01.rotateZ" 
 		"pig_latestRN.placeHolderList[500]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_R_backfoot01.translateY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_4control01.rotateOrder" 
 		"pig_latestRN.placeHolderList[501]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_R_backfoot01.translateZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:tail_4control01.parentInverseMatrix" 
 		"pig_latestRN.placeHolderList[502]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_R_backfoot01.scaleX" 
-		"pig_latestRN.placeHolderList[503]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_R_backfoot01.scaleY" 
-		"pig_latestRN.placeHolderList[504]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_R_backfoot01.scaleZ" 
-		"pig_latestRN.placeHolderList[505]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01.translateX" 
-		"pig_latestRN.placeHolderList[506]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01.translateX" 
-		"pig_latestRN.placeHolderList[507]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01.translateY" 
-		"pig_latestRN.placeHolderList[508]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01.translateY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:hip_rotation_ctrl01_parentConstraint1.constraintTranslateZ" 
+		"pig_latestRN.placeHolderList[503]" "pig_latest:hip_rotation_ctrl01.tz"
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:hip_rotation_ctrl01_parentConstraint1.constraintTranslateX" 
+		"pig_latestRN.placeHolderList[504]" "pig_latest:hip_rotation_ctrl01.tx"
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:hip_rotation_ctrl01_parentConstraint1.constraintTranslateY" 
+		"pig_latestRN.placeHolderList[505]" "pig_latest:hip_rotation_ctrl01.ty"
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:hip_rotation_ctrl01_parentConstraint1.constraintRotateZ" 
+		"pig_latestRN.placeHolderList[506]" "pig_latest:hip_rotation_ctrl01.rz"
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:hip_rotation_ctrl01_parentConstraint1.constraintRotateX" 
+		"pig_latestRN.placeHolderList[507]" "pig_latest:hip_rotation_ctrl01.rx"
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:hip_rotation_ctrl01|pig_latest:hip_rotation_ctrl01_parentConstraint1.constraintRotateY" 
+		"pig_latestRN.placeHolderList[508]" "pig_latest:hip_rotation_ctrl01.ry"
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:back_flex_ctrl01.translateX" 
 		"pig_latestRN.placeHolderList[509]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01.translateZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:back_flex_ctrl01.translateX" 
 		"pig_latestRN.placeHolderList[510]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01.translateZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:back_flex_ctrl01.translateY" 
 		"pig_latestRN.placeHolderList[511]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01.rotateX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:back_flex_ctrl01.translateY" 
 		"pig_latestRN.placeHolderList[512]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01.rotateX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:back_flex_ctrl01.translateZ" 
 		"pig_latestRN.placeHolderList[513]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01.rotateY" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:back_flex_ctrl01.translateZ" 
 		"pig_latestRN.placeHolderList[514]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01.rotateY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:back_flex_ctrl01.rotateX" 
 		"pig_latestRN.placeHolderList[515]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01.rotateZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:back_flex_ctrl01.rotateX" 
 		"pig_latestRN.placeHolderList[516]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01.rotateZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:back_flex_ctrl01.rotateY" 
 		"pig_latestRN.placeHolderList[517]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01.scaleX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:back_flex_ctrl01.rotateY" 
 		"pig_latestRN.placeHolderList[518]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01.scaleX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:back_flex_ctrl01.rotateZ" 
 		"pig_latestRN.placeHolderList[519]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01.scaleY" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:back_flex_ctrl01.rotateZ" 
 		"pig_latestRN.placeHolderList[520]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01.scaleY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:back_flex_ctrl01.scaleX" 
 		"pig_latestRN.placeHolderList[521]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01.scaleZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:back_flex_ctrl01.scaleX" 
 		"pig_latestRN.placeHolderList[522]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01.scaleZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:back_flex_ctrl01.scaleY" 
 		"pig_latestRN.placeHolderList[523]" ""
-		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01.visibility" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:back_flex_ctrl01.scaleY" 
 		"pig_latestRN.placeHolderList[524]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01.visibility" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:back_flex_ctrl01.scaleZ" 
 		"pig_latestRN.placeHolderList[525]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_L_frontfoot01.rotateX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:back_flex_ctrl01.scaleZ" 
 		"pig_latestRN.placeHolderList[526]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_L_frontfoot01.rotateY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:back_flex_ctrl01.visibility" 
 		"pig_latestRN.placeHolderList[527]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_L_frontfoot01.rotateZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:back_flex_ctrl01.visibility" 
 		"pig_latestRN.placeHolderList[528]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_L_frontfoot01.translateX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01.translateX" 
 		"pig_latestRN.placeHolderList[529]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_L_frontfoot01.translateY" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01.translateX" 
 		"pig_latestRN.placeHolderList[530]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_L_frontfoot01.translateZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01.translateY" 
 		"pig_latestRN.placeHolderList[531]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_L_frontfoot01.scaleX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01.translateY" 
 		"pig_latestRN.placeHolderList[532]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_L_frontfoot01.scaleY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01.translateZ" 
 		"pig_latestRN.placeHolderList[533]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_L_frontfoot01.scaleZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01.translateZ" 
 		"pig_latestRN.placeHolderList[534]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_R_frontfoot01.rotateX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01.rotateX" 
 		"pig_latestRN.placeHolderList[535]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_R_frontfoot01.rotateY" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01.rotateX" 
 		"pig_latestRN.placeHolderList[536]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_R_frontfoot01.rotateZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01.rotateY" 
 		"pig_latestRN.placeHolderList[537]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_R_frontfoot01.translateX" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01.rotateY" 
 		"pig_latestRN.placeHolderList[538]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_R_frontfoot01.translateY" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01.rotateZ" 
 		"pig_latestRN.placeHolderList[539]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_R_frontfoot01.translateZ" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01.rotateZ" 
 		"pig_latestRN.placeHolderList[540]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_R_frontfoot01.scaleX" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01.scaleX" 
 		"pig_latestRN.placeHolderList[541]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_R_frontfoot01.scaleY" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01.scaleX" 
 		"pig_latestRN.placeHolderList[542]" ""
-		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_R_frontfoot01.scaleZ" 
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01.scaleY" 
 		"pig_latestRN.placeHolderList[543]" ""
-		5 4 "pig_latestRN" "pig_latest:defaultFurGlobals.furNodeList" "pig_latestRN.placeHolderList[544]" 
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01.scaleY" 
+		"pig_latestRN.placeHolderList[544]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01.scaleZ" 
+		"pig_latestRN.placeHolderList[545]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01.scaleZ" 
+		"pig_latestRN.placeHolderList[546]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01.visibility" 
+		"pig_latestRN.placeHolderList[547]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01.visibility" 
+		"pig_latestRN.placeHolderList[548]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_L_backfoot01.rotateX" 
+		"pig_latestRN.placeHolderList[549]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_L_backfoot01.rotateX" 
+		"pig_latestRN.placeHolderList[550]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_L_backfoot01.rotateY" 
+		"pig_latestRN.placeHolderList[551]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_L_backfoot01.rotateY" 
+		"pig_latestRN.placeHolderList[552]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_L_backfoot01.rotateZ" 
+		"pig_latestRN.placeHolderList[553]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_L_backfoot01.rotateZ" 
+		"pig_latestRN.placeHolderList[554]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_L_backfoot01.translateX" 
+		"pig_latestRN.placeHolderList[555]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_L_backfoot01.translateX" 
+		"pig_latestRN.placeHolderList[556]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_L_backfoot01.translateY" 
+		"pig_latestRN.placeHolderList[557]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_L_backfoot01.translateY" 
+		"pig_latestRN.placeHolderList[558]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_L_backfoot01.translateZ" 
+		"pig_latestRN.placeHolderList[559]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_L_backfoot01.translateZ" 
+		"pig_latestRN.placeHolderList[560]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_L_backfoot01.scaleX" 
+		"pig_latestRN.placeHolderList[561]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_L_backfoot01.scaleX" 
+		"pig_latestRN.placeHolderList[562]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_L_backfoot01.scaleY" 
+		"pig_latestRN.placeHolderList[563]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_L_backfoot01.scaleY" 
+		"pig_latestRN.placeHolderList[564]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_L_backfoot01.scaleZ" 
+		"pig_latestRN.placeHolderList[565]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_L_backfoot01.scaleZ" 
+		"pig_latestRN.placeHolderList[566]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_R_backfoot01.rotateX" 
+		"pig_latestRN.placeHolderList[567]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_R_backfoot01.rotateX" 
+		"pig_latestRN.placeHolderList[568]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_R_backfoot01.rotateY" 
+		"pig_latestRN.placeHolderList[569]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_R_backfoot01.rotateY" 
+		"pig_latestRN.placeHolderList[570]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_R_backfoot01.rotateZ" 
+		"pig_latestRN.placeHolderList[571]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_R_backfoot01.rotateZ" 
+		"pig_latestRN.placeHolderList[572]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_R_backfoot01.translateX" 
+		"pig_latestRN.placeHolderList[573]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_R_backfoot01.translateX" 
+		"pig_latestRN.placeHolderList[574]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_R_backfoot01.translateY" 
+		"pig_latestRN.placeHolderList[575]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_R_backfoot01.translateY" 
+		"pig_latestRN.placeHolderList[576]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_R_backfoot01.translateZ" 
+		"pig_latestRN.placeHolderList[577]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_R_backfoot01.translateZ" 
+		"pig_latestRN.placeHolderList[578]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_R_backfoot01.scaleX" 
+		"pig_latestRN.placeHolderList[579]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_R_backfoot01.scaleX" 
+		"pig_latestRN.placeHolderList[580]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_R_backfoot01.scaleY" 
+		"pig_latestRN.placeHolderList[581]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_R_backfoot01.scaleY" 
+		"pig_latestRN.placeHolderList[582]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_R_backfoot01.scaleZ" 
+		"pig_latestRN.placeHolderList[583]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:controller_R_backfoot01.scaleZ" 
+		"pig_latestRN.placeHolderList[584]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01.translateX" 
+		"pig_latestRN.placeHolderList[585]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01.translateX" 
+		"pig_latestRN.placeHolderList[586]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01.translateY" 
+		"pig_latestRN.placeHolderList[587]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01.translateY" 
+		"pig_latestRN.placeHolderList[588]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01.translateZ" 
+		"pig_latestRN.placeHolderList[589]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01.translateZ" 
+		"pig_latestRN.placeHolderList[590]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01.rotateX" 
+		"pig_latestRN.placeHolderList[591]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01.rotateX" 
+		"pig_latestRN.placeHolderList[592]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01.rotateY" 
+		"pig_latestRN.placeHolderList[593]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01.rotateY" 
+		"pig_latestRN.placeHolderList[594]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01.rotateZ" 
+		"pig_latestRN.placeHolderList[595]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01.rotateZ" 
+		"pig_latestRN.placeHolderList[596]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01.scaleX" 
+		"pig_latestRN.placeHolderList[597]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01.scaleX" 
+		"pig_latestRN.placeHolderList[598]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01.scaleY" 
+		"pig_latestRN.placeHolderList[599]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01.scaleY" 
+		"pig_latestRN.placeHolderList[600]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01.scaleZ" 
+		"pig_latestRN.placeHolderList[601]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01.scaleZ" 
+		"pig_latestRN.placeHolderList[602]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01.visibility" 
+		"pig_latestRN.placeHolderList[603]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01.visibility" 
+		"pig_latestRN.placeHolderList[604]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_L_frontfoot01.rotateX" 
+		"pig_latestRN.placeHolderList[605]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_L_frontfoot01.rotateX" 
+		"pig_latestRN.placeHolderList[606]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_L_frontfoot01.rotateY" 
+		"pig_latestRN.placeHolderList[607]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_L_frontfoot01.rotateY" 
+		"pig_latestRN.placeHolderList[608]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_L_frontfoot01.rotateZ" 
+		"pig_latestRN.placeHolderList[609]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_L_frontfoot01.rotateZ" 
+		"pig_latestRN.placeHolderList[610]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_L_frontfoot01.translateX" 
+		"pig_latestRN.placeHolderList[611]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_L_frontfoot01.translateX" 
+		"pig_latestRN.placeHolderList[612]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_L_frontfoot01.translateY" 
+		"pig_latestRN.placeHolderList[613]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_L_frontfoot01.translateY" 
+		"pig_latestRN.placeHolderList[614]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_L_frontfoot01.translateZ" 
+		"pig_latestRN.placeHolderList[615]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_L_frontfoot01.translateZ" 
+		"pig_latestRN.placeHolderList[616]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_L_frontfoot01.scaleX" 
+		"pig_latestRN.placeHolderList[617]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_L_frontfoot01.scaleX" 
+		"pig_latestRN.placeHolderList[618]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_L_frontfoot01.scaleY" 
+		"pig_latestRN.placeHolderList[619]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_L_frontfoot01.scaleY" 
+		"pig_latestRN.placeHolderList[620]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_L_frontfoot01.scaleZ" 
+		"pig_latestRN.placeHolderList[621]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_L_frontfoot01.scaleZ" 
+		"pig_latestRN.placeHolderList[622]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_R_frontfoot01.rotateX" 
+		"pig_latestRN.placeHolderList[623]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_R_frontfoot01.rotateX" 
+		"pig_latestRN.placeHolderList[624]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_R_frontfoot01.rotateY" 
+		"pig_latestRN.placeHolderList[625]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_R_frontfoot01.rotateY" 
+		"pig_latestRN.placeHolderList[626]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_R_frontfoot01.rotateZ" 
+		"pig_latestRN.placeHolderList[627]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_R_frontfoot01.rotateZ" 
+		"pig_latestRN.placeHolderList[628]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_R_frontfoot01.translateX" 
+		"pig_latestRN.placeHolderList[629]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_R_frontfoot01.translateX" 
+		"pig_latestRN.placeHolderList[630]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_R_frontfoot01.translateY" 
+		"pig_latestRN.placeHolderList[631]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_R_frontfoot01.translateY" 
+		"pig_latestRN.placeHolderList[632]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_R_frontfoot01.translateZ" 
+		"pig_latestRN.placeHolderList[633]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_R_frontfoot01.translateZ" 
+		"pig_latestRN.placeHolderList[634]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_R_frontfoot01.scaleX" 
+		"pig_latestRN.placeHolderList[635]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_R_frontfoot01.scaleX" 
+		"pig_latestRN.placeHolderList[636]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_R_frontfoot01.scaleY" 
+		"pig_latestRN.placeHolderList[637]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_R_frontfoot01.scaleY" 
+		"pig_latestRN.placeHolderList[638]" ""
+		5 3 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_R_frontfoot01.scaleZ" 
+		"pig_latestRN.placeHolderList[639]" ""
+		5 4 "pig_latestRN" "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:controller_R_frontfoot01.scaleZ" 
+		"pig_latestRN.placeHolderList[640]" ""
+		5 4 "pig_latestRN" "pig_latest:defaultFurGlobals.furNodeList" "pig_latestRN.placeHolderList[641]" 
 		"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
@@ -6715,16 +7023,42 @@ createNode FurGlobals -n "defaultFurGlobals";
 	setAttr ".pjl" -type "string" "C:/Users/Saurabh/Documents/GitHub/Bandits/maya";
 createNode character -n "thislittlepiggywenttomarket";
 	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
-	setAttr -s 185 ".dnsm";
-	setAttr -s 81 ".uv[78:81]"  0.99999999999999989 0.99999999999999989 
-		0.99999999999999989 1;
-	setAttr -s 81 ".uv";
-	setAttr -s 48 ".lv[46:48]"  0.026019667912323463 -1.6875389974302379e-014 
-		0;
-	setAttr -s 48 ".lv";
-	setAttr -s 56 ".av";
-	setAttr -s 56 ".av";
-	setAttr ".am" -type "characterMapping" 179 "pig_latest:stretchf_ctrl01.scaleZ" 
+	setAttr -s 262 ".dnsm";
+	setAttr -s 110 ".uv[1:110]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		0 2.5646042710078412 -3.488476939977196 -0.079856155540859231 0.98333333282846347 
+		0.98333333282846325 0.98333333282846347 1 1 1 1 1 1 0 2.3154637533078919 -3.608810242932929 
+		-0.026644369803367152 0.99999999999999989 0.99999999999999967 0.99999999999999989 
+		1 1 1 1 1 1 0 -2.1165116594318172 -3.0415588287101563 0.0053194867221069142 0.99999999999999956 
+		0.99999999999999967 0.99999999999999956 1 1 1 1 1 1 0 -2.11740276289922 -2.9620642264986157 
+		-0.10100669253100647 0.99999999999999989 0.99999999999999989 0.99999999999999989 
+		1 0.99999999999999989 0.99999999999999989 0.99999999999999989 1 1 1 1 1 1 1 0.99999999999999989 
+		0.99999999999999989 0.99999999999999989 1 0.575 0.575 0.575 1 1.0000000000000002 
+		1.0000000000000002 1.0000000000000002 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 110 ".uv";
+	setAttr -s 72 ".lv[1:72]"  -0.0013556080320226633 0.03797711820698696 
+		5.4344373737714356e-018 1.206764217891138e-016 -0.062726201823214436 -2.3569613630686295e-018 
+		1.0408340893792019e-016 0.75247728758317067 0 -0.05237106661636215 -0.071208738298772722 
+		0.15788550872339074 0 0 0 -4.3843644546325846 -2.0549072583992158 -2.2674940916590893 
+		0 0 0 -6.99930249571735 -0.58771977499150063 3.30142466699693 0 0 0 3.4550896402107956 
+		-0.78856395255746747 -1.528447205992242 0 0 0 6.4433993331736499 -1.19542756474483 
+		1.4546697318858333 0.044785876454489504 0.037977118206971916 0.11490962951355613 
+		0.1168529591060101 0.072065227785074973 0 0 0 0 0.026019667912323463 -1.6875389974302379e-014 
+		0 0 -9.8607613152626476e-032 5.5511151231257815e-017 0 0 0 0.66430636923637776 1.0119429378724871 
+		-1.7609919137248238 0.66430550254100096 1.0119399227003905 1.7609900000000047 0.088182779696012376 
+		1.196194033363351 -2.1690780764890372 -0.10719805285573553 0.21444011631581927 1.17781388425063 
+		0 0.85512550299017676 2.8205520602297289 0 0.85496435901012968 -0.54991696310654403;
+	setAttr -s 72 ".lv";
+	setAttr -s 80 ".av[2:80]"  -5.7016256022757217 0 2.6699837982271326 
+		-5.4453522767172533 0.47409892625586153 0 0 0 2.6699837982271331 -5.4453522767172542 
+		0.47409892625586164 0 0 0 0 0 -177.32730565900349 5.4437033072448875 -59.687259774509926 
+		0 0 0 0 0 -179.52777331533855 2.8949871094923969 94.882495255912517 0 0 0 0 0 -179.00480253792423 
+		4.6645074638949433 57.1216669313146 0 0 0 0 0 176.89845333929946 2.1957778562149142 
+		-60.762696383238342 0 -5.7016256022757235 0 0 0 0.5097625790338145 0 0 0 0 0 0 0.98860240619645512 
+		1.5530052155583578e-018 0.96316135318616081 0 0 -49.980417316311915 0 0 0 0 0 0 11.752717050682 
+		2.5284721069746072 -2.2149704109807895 -13.468581943867694 0 0 -17.885450733365179 
+		3.6264333265476081 -1.3808991423520067 47.73700219481173 0 0;
+	setAttr -s 80 ".av";
+	setAttr ".am" -type "characterMapping" 256 "pig_latest:stretchf_ctrl01.scaleZ" 
 		0 1 "pig_latest:stretchf_ctrl01.scaleY" 0 2 "pig_latest:stretchf_ctrl01.scaleX" 
 		0 3 "pig_latest:stretchf_ctrl01.rotateZ" 2 1 "pig_latest:stretchf_ctrl01.rotateY" 
 		2 2 "pig_latest:stretchf_ctrl01.rotateX" 2 3 "pig_latest:stretchf_ctrl01.translateZ" 
@@ -6814,9 +7148,70 @@ createNode character -n "thislittlepiggywenttomarket";
 		2 54 "pig_latest:cat_collar:diamond:pPyramid2.rotateY" 2 55 "pig_latest:cat_collar:diamond:pPyramid2.rotateX" 
 		2 56 "pig_latest:cat_collar:diamond:pPyramid2.translateZ" 1 46 "pig_latest:cat_collar:diamond:pPyramid2.translateY" 
 		1 47 "pig_latest:cat_collar:diamond:pPyramid2.translateX" 1 48 "pig_latest:cat_collar:diamond:pPyramid2.visibility" 
-		0 81  ;
-	setAttr ".tcs" 8;
-	setAttr ".tce" 18;
+		0 81 "pig_latest:controller_main01.rotateX" 2 57 "pig_latest:controller_main01.rotateY" 
+		2 58 "pig_latest:controller_main01.rotateZ" 2 59 "pig_latest:controller_main01.translateX" 
+		1 49 "pig_latest:controller_main01.translateY" 1 50 "pig_latest:controller_main01.translateZ" 
+		1 51 "pig_latest:controller_main01.scaleX" 0 82 "pig_latest:controller_main01.scaleY" 
+		0 83 "pig_latest:controller_main01.scaleZ" 0 84 "pig_latest:key_control.rotateX" 
+		2 60 "pig_latest:key_control.rotateY" 2 61 "pig_latest:key_control.rotateZ" 
+		2 62 "pig_latest:key_control.visibility" 0 85 "pig_latest:key_control.translateX" 
+		1 52 "pig_latest:key_control.translateY" 1 53 "pig_latest:key_control.translateZ" 
+		1 54 "pig_latest:key_control.scaleX" 0 86 "pig_latest:key_control.scaleY" 
+		0 87 "pig_latest:key_control.scaleZ" 0 88 "pig_latest:PigSkin002:bind_L_ear_a01.scaleX" 
+		0 89 "pig_latest:PigSkin002:bind_L_ear_a01.scaleY" 0 90 "pig_latest:PigSkin002:bind_L_ear_a01.scaleZ" 
+		0 91 "pig_latest:PigSkin002:bind_L_ear_a01.visibility" 0 92 "pig_latest:PigSkin002:bind_L_ear_a01.translateX" 
+		1 55 "pig_latest:PigSkin002:bind_L_ear_a01.translateY" 1 56 "pig_latest:PigSkin002:bind_L_ear_a01.translateZ" 
+		1 57 "pig_latest:PigSkin002:bind_L_ear_a01.rotateY" 2 63 "pig_latest:PigSkin002:bind_L_ear_a01.rotateX" 
+		2 64 "pig_latest:PigSkin002:bind_L_ear_a01.rotateZ" 2 65 "pig_latest:PigSkin002:bind_R_ear_a01.scaleX" 
+		0 93 "pig_latest:PigSkin002:bind_R_ear_a01.scaleY" 0 94 "pig_latest:PigSkin002:bind_R_ear_a01.scaleZ" 
+		0 95 "pig_latest:PigSkin002:bind_R_ear_a01.visibility" 0 96 "pig_latest:PigSkin002:bind_R_ear_a01.rotateX" 
+		2 66 "pig_latest:PigSkin002:bind_R_ear_a01.rotateY" 2 67 "pig_latest:PigSkin002:bind_R_ear_a01.rotateZ" 
+		2 68 "pig_latest:PigSkin002:bind_R_ear_a01.translateX" 1 58 "pig_latest:PigSkin002:bind_R_ear_a01.translateY" 
+		1 59 "pig_latest:PigSkin002:bind_R_ear_a01.translateZ" 1 60 "pig_latest:shoulders_rotation_ctrl01.blendThislittlepiggywenttomarket" 
+		0 97 "pig_latest:hip_rotation_ctrl01.blendThislittlepiggywenttomarket" 0 
+		98 "pig_latest:controller_L_backfoot01.rotateX" 2 69 "pig_latest:controller_L_backfoot01.rotateY" 
+		2 70 "pig_latest:controller_L_backfoot01.rotateZ" 2 71 "pig_latest:controller_L_backfoot01.translateX" 
+		1 61 "pig_latest:controller_L_backfoot01.translateY" 1 62 "pig_latest:controller_L_backfoot01.translateZ" 
+		1 63 "pig_latest:controller_L_backfoot01.scaleX" 0 99 "pig_latest:controller_L_backfoot01.scaleY" 
+		0 100 "pig_latest:controller_L_backfoot01.scaleZ" 0 101 "pig_latest:controller_R_backfoot01.rotateX" 
+		2 72 "pig_latest:controller_R_backfoot01.rotateY" 2 73 "pig_latest:controller_R_backfoot01.rotateZ" 
+		2 74 "pig_latest:controller_R_backfoot01.translateX" 1 64 "pig_latest:controller_R_backfoot01.translateY" 
+		1 65 "pig_latest:controller_R_backfoot01.translateZ" 1 66 "pig_latest:controller_R_backfoot01.scaleX" 
+		0 102 "pig_latest:controller_R_backfoot01.scaleY" 0 103 "pig_latest:controller_R_backfoot01.scaleZ" 
+		0 104 "pig_latest:controller_L_frontfoot01.rotateX" 2 75 "pig_latest:controller_L_frontfoot01.rotateY" 
+		2 76 "pig_latest:controller_L_frontfoot01.rotateZ" 2 77 "pig_latest:controller_L_frontfoot01.translateX" 
+		1 67 "pig_latest:controller_L_frontfoot01.translateY" 1 68 "pig_latest:controller_L_frontfoot01.translateZ" 
+		1 69 "pig_latest:controller_L_frontfoot01.scaleX" 0 105 "pig_latest:controller_L_frontfoot01.scaleY" 
+		0 106 "pig_latest:controller_L_frontfoot01.scaleZ" 0 107 "pig_latest:controller_R_frontfoot01.rotateX" 
+		2 78 "pig_latest:controller_R_frontfoot01.rotateY" 2 79 "pig_latest:controller_R_frontfoot01.rotateZ" 
+		2 80 "pig_latest:controller_R_frontfoot01.translateX" 1 70 "pig_latest:controller_R_frontfoot01.translateY" 
+		1 71 "pig_latest:controller_R_frontfoot01.translateZ" 1 72 "pig_latest:controller_R_frontfoot01.scaleX" 
+		0 108 "pig_latest:controller_R_frontfoot01.scaleY" 0 109 "pig_latest:controller_R_frontfoot01.scaleZ" 
+		0 110  ;
+	setAttr ".cim" -type "Int32Array" 256 0 1 2 3 4 5
+		 6 7 8 9 10 11 12 13 14 15 16 17
+		 18 19 20 21 22 23 24 25 26 27 28 29
+		 30 31 32 33 34 35 36 37 38 39 40 41
+		 42 43 44 45 46 47 48 49 50 51 52 53
+		 54 55 56 57 58 59 60 61 62 63 64 65
+		 66 67 68 69 70 71 72 73 74 75 76 77
+		 78 79 80 81 82 83 84 85 86 87 88 89
+		 90 91 92 93 94 95 96 97 98 99 100 101
+		 102 103 104 105 106 107 108 109 110 111 112 113
+		 114 115 116 117 118 119 120 121 122 123 124 125
+		 126 127 128 129 130 131 132 133 134 135 136 137
+		 138 139 140 141 142 143 144 145 146 147 148 149
+		 150 151 152 153 154 155 156 157 158 159 160 161
+		 162 163 164 165 166 167 168 169 170 171 172 173
+		 174 175 176 177 178 179 180 181 182 183 184 185
+		 186 187 188 189 190 191 192 193 194 195 196 197
+		 198 199 200 201 202 203 204 205 206 207 208 209
+		 210 211 212 213 214 215 216 217 218 219 220 221
+		 222 223 224 225 226 227 228 229 230 231 232 233
+		 234 235 236 237 238 239 240 241 242 243 244 245
+		 246 247 248 249 250 251 252 253 254 255 ;
+	setAttr ".tcs" -2;
+	setAttr ".tce" 10;
 	setAttr ".aal" -type "attributeAlias" {"pig_latest:hip_rotation_ctrl01_rotateZ","angularValues[10]"
 		,"pig_latest:hip_rotation_ctrl01_rotateY","angularValues[11]","pig_latest:hip_rotation_ctrl01_rotateX"
 		,"angularValues[12]","pig_latest:locator_R_knee01_rotateZ","angularValues[13]","pig_latest:locator_R_knee01_rotateY"
@@ -6844,39 +7239,76 @@ createNode character -n "thislittlepiggywenttomarket";
 		,"angularValues[51]","pig_latest:Skeleton_01_rotateY","angularValues[52]","pig_latest:Skeleton_01_rotateX"
 		,"angularValues[53]","pig_latest:cat_collar:diamond:pPyramid2_rotateZ","angularValues[54]"
 		,"pig_latest:cat_collar:diamond:pPyramid2_rotateY","angularValues[55]","pig_latest:cat_collar:diamond:pPyramid2_rotateX"
-		,"angularValues[56]","pig_latest:stretchr_ctrl01_rotateY","angularValues[5]","pig_latest:stretchr_ctrl01_rotateX"
-		,"angularValues[6]","pig_latest:back_flex_ctrl01_rotateZ","angularValues[7]","pig_latest:back_flex_ctrl01_rotateY"
-		,"angularValues[8]","pig_latest:back_flex_ctrl01_rotateX","angularValues[9]","pig_latest:hip_rotation_ctrl01_translateZ"
-		,"linearValues[10]","pig_latest:hip_rotation_ctrl01_translateY","linearValues[11]"
-		,"pig_latest:hip_rotation_ctrl01_translateX","linearValues[12]","pig_latest:locator_R_knee01_translateZ"
-		,"linearValues[13]","pig_latest:locator_R_knee01_translateY","linearValues[14]","pig_latest:locator_R_knee01_translateX"
-		,"linearValues[15]","pig_latest:iK_R_backleg01_translateZ","linearValues[16]","pig_latest:iK_R_backleg01_translateY"
-		,"linearValues[17]","pig_latest:iK_R_backleg01_translateX","linearValues[18]","pig_latest:locator_L_knee01_translateZ"
-		,"linearValues[19]","pig_latest:stretchf_ctrl01_translateZ","linearValues[1]","pig_latest:locator_L_knee01_translateY"
-		,"linearValues[20]","pig_latest:locator_L_knee01_translateX","linearValues[21]","pig_latest:iK_L_backleg01_translateZ"
-		,"linearValues[22]","pig_latest:iK_L_backleg01_translateY","linearValues[23]","pig_latest:iK_L_backleg01_translateX"
-		,"linearValues[24]","pig_latest:locator_R_elbow01_translateZ","linearValues[25]","pig_latest:locator_R_elbow01_translateY"
-		,"linearValues[26]","pig_latest:locator_R_elbow01_translateX","linearValues[27]","pig_latest:iK_R_frontleg01_translateZ"
-		,"linearValues[28]","pig_latest:iK_R_frontleg01_translateY","linearValues[29]","pig_latest:stretchf_ctrl01_translateY"
-		,"linearValues[2]","pig_latest:iK_R_frontleg01_translateX","linearValues[30]","pig_latest:locator_L_elbow01_translateZ"
-		,"linearValues[31]","pig_latest:locator_L_elbow01_translateY","linearValues[32]","pig_latest:locator_L_elbow01_translateX"
-		,"linearValues[33]","pig_latest:iK_L_frontleg01_translateZ","linearValues[34]","pig_latest:iK_L_frontleg01_translateY"
-		,"linearValues[35]","pig_latest:iK_L_frontleg01_translateX","linearValues[36]","pig_latest:shoulders_rotation_ctrl01_translateZ"
-		,"linearValues[37]","pig_latest:shoulders_rotation_ctrl01_translateY","linearValues[38]"
-		,"pig_latest:shoulders_rotation_ctrl01_translateX","linearValues[39]","pig_latest:stretchf_ctrl01_translateX"
-		,"linearValues[3]","pig_latest:head_control_translateZ","linearValues[40]","pig_latest:head_control_translateY"
-		,"linearValues[41]","pig_latest:head_control_translateX","linearValues[42]","pig_latest:Skeleton_01_translateZ"
-		,"linearValues[43]","pig_latest:Skeleton_01_translateY","linearValues[44]","pig_latest:Skeleton_01_translateX"
-		,"linearValues[45]","pig_latest:cat_collar:diamond:pPyramid2_translateZ","linearValues[46]"
-		,"pig_latest:cat_collar:diamond:pPyramid2_translateY","linearValues[47]","pig_latest:cat_collar:diamond:pPyramid2_translateX"
-		,"linearValues[48]","pig_latest:stretchr_ctrl01_translateZ","linearValues[4]","pig_latest:stretchr_ctrl01_translateY"
-		,"linearValues[5]","pig_latest:stretchr_ctrl01_translateX","linearValues[6]","pig_latest:back_flex_ctrl01_translateZ"
+		,"angularValues[56]","pig_latest:controller_main01_rotateX","angularValues[57]","pig_latest:controller_main01_rotateY"
+		,"angularValues[58]","pig_latest:controller_main01_rotateZ","angularValues[59]","pig_latest:stretchr_ctrl01_rotateY"
+		,"angularValues[5]","pig_latest:key_control_rotateX","angularValues[60]","pig_latest:key_control_rotateY"
+		,"angularValues[61]","pig_latest:key_control_rotateZ","angularValues[62]","pig_latest:PigSkin002:bind_L_ear_a01_rotateY"
+		,"angularValues[63]","pig_latest:PigSkin002:bind_L_ear_a01_rotateX","angularValues[64]"
+		,"pig_latest:PigSkin002:bind_L_ear_a01_rotateZ","angularValues[65]","pig_latest:PigSkin002:bind_R_ear_a01_rotateX"
+		,"angularValues[66]","pig_latest:PigSkin002:bind_R_ear_a01_rotateY","angularValues[67]"
+		,"pig_latest:PigSkin002:bind_R_ear_a01_rotateZ","angularValues[68]","pig_latest:controller_L_backfoot01_rotateX"
+		,"angularValues[69]","pig_latest:stretchr_ctrl01_rotateX","angularValues[6]","pig_latest:controller_L_backfoot01_rotateY"
+		,"angularValues[70]","pig_latest:controller_L_backfoot01_rotateZ","angularValues[71]"
+		,"pig_latest:controller_R_backfoot01_rotateX","angularValues[72]","pig_latest:controller_R_backfoot01_rotateY"
+		,"angularValues[73]","pig_latest:controller_R_backfoot01_rotateZ","angularValues[74]"
+		,"pig_latest:controller_L_frontfoot01_rotateX","angularValues[75]","pig_latest:controller_L_frontfoot01_rotateY"
+		,"angularValues[76]","pig_latest:controller_L_frontfoot01_rotateZ","angularValues[77]"
+		,"pig_latest:controller_R_frontfoot01_rotateX","angularValues[78]","pig_latest:controller_R_frontfoot01_rotateY"
+		,"angularValues[79]","pig_latest:back_flex_ctrl01_rotateZ","angularValues[7]","pig_latest:controller_R_frontfoot01_rotateZ"
+		,"angularValues[80]","pig_latest:back_flex_ctrl01_rotateY","angularValues[8]","pig_latest:back_flex_ctrl01_rotateX"
+		,"angularValues[9]","pig_latest:hip_rotation_ctrl01_translateZ","linearValues[10]"
+		,"pig_latest:hip_rotation_ctrl01_translateY","linearValues[11]","pig_latest:hip_rotation_ctrl01_translateX"
+		,"linearValues[12]","pig_latest:locator_R_knee01_translateZ","linearValues[13]","pig_latest:locator_R_knee01_translateY"
+		,"linearValues[14]","pig_latest:locator_R_knee01_translateX","linearValues[15]","pig_latest:iK_R_backleg01_translateZ"
+		,"linearValues[16]","pig_latest:iK_R_backleg01_translateY","linearValues[17]","pig_latest:iK_R_backleg01_translateX"
+		,"linearValues[18]","pig_latest:locator_L_knee01_translateZ","linearValues[19]","pig_latest:stretchf_ctrl01_translateZ"
+		,"linearValues[1]","pig_latest:locator_L_knee01_translateY","linearValues[20]","pig_latest:locator_L_knee01_translateX"
+		,"linearValues[21]","pig_latest:iK_L_backleg01_translateZ","linearValues[22]","pig_latest:iK_L_backleg01_translateY"
+		,"linearValues[23]","pig_latest:iK_L_backleg01_translateX","linearValues[24]","pig_latest:locator_R_elbow01_translateZ"
+		,"linearValues[25]","pig_latest:locator_R_elbow01_translateY","linearValues[26]","pig_latest:locator_R_elbow01_translateX"
+		,"linearValues[27]","pig_latest:iK_R_frontleg01_translateZ","linearValues[28]","pig_latest:iK_R_frontleg01_translateY"
+		,"linearValues[29]","pig_latest:stretchf_ctrl01_translateY","linearValues[2]","pig_latest:iK_R_frontleg01_translateX"
+		,"linearValues[30]","pig_latest:locator_L_elbow01_translateZ","linearValues[31]","pig_latest:locator_L_elbow01_translateY"
+		,"linearValues[32]","pig_latest:locator_L_elbow01_translateX","linearValues[33]","pig_latest:iK_L_frontleg01_translateZ"
+		,"linearValues[34]","pig_latest:iK_L_frontleg01_translateY","linearValues[35]","pig_latest:iK_L_frontleg01_translateX"
+		,"linearValues[36]","pig_latest:shoulders_rotation_ctrl01_translateZ","linearValues[37]"
+		,"pig_latest:shoulders_rotation_ctrl01_translateY","linearValues[38]","pig_latest:shoulders_rotation_ctrl01_translateX"
+		,"linearValues[39]","pig_latest:stretchf_ctrl01_translateX","linearValues[3]","pig_latest:head_control_translateZ"
+		,"linearValues[40]","pig_latest:head_control_translateY","linearValues[41]","pig_latest:head_control_translateX"
+		,"linearValues[42]","pig_latest:Skeleton_01_translateZ","linearValues[43]","pig_latest:Skeleton_01_translateY"
+		,"linearValues[44]","pig_latest:Skeleton_01_translateX","linearValues[45]","pig_latest:cat_collar:diamond:pPyramid2_translateZ"
+		,"linearValues[46]","pig_latest:cat_collar:diamond:pPyramid2_translateY","linearValues[47]"
+		,"pig_latest:cat_collar:diamond:pPyramid2_translateX","linearValues[48]","pig_latest:controller_main01_translateX"
+		,"linearValues[49]","pig_latest:stretchr_ctrl01_translateZ","linearValues[4]","pig_latest:controller_main01_translateY"
+		,"linearValues[50]","pig_latest:controller_main01_translateZ","linearValues[51]","pig_latest:key_control_translateX"
+		,"linearValues[52]","pig_latest:key_control_translateY","linearValues[53]","pig_latest:key_control_translateZ"
+		,"linearValues[54]","pig_latest:PigSkin002:bind_L_ear_a01_translateX","linearValues[55]"
+		,"pig_latest:PigSkin002:bind_L_ear_a01_translateY","linearValues[56]","pig_latest:PigSkin002:bind_L_ear_a01_translateZ"
+		,"linearValues[57]","pig_latest:PigSkin002:bind_R_ear_a01_translateX","linearValues[58]"
+		,"pig_latest:PigSkin002:bind_R_ear_a01_translateY","linearValues[59]","pig_latest:stretchr_ctrl01_translateY"
+		,"linearValues[5]","pig_latest:PigSkin002:bind_R_ear_a01_translateZ","linearValues[60]"
+		,"pig_latest:controller_L_backfoot01_translateX","linearValues[61]","pig_latest:controller_L_backfoot01_translateY"
+		,"linearValues[62]","pig_latest:controller_L_backfoot01_translateZ","linearValues[63]"
+		,"pig_latest:controller_R_backfoot01_translateX","linearValues[64]","pig_latest:controller_R_backfoot01_translateY"
+		,"linearValues[65]","pig_latest:controller_R_backfoot01_translateZ","linearValues[66]"
+		,"pig_latest:controller_L_frontfoot01_translateX","linearValues[67]","pig_latest:controller_L_frontfoot01_translateY"
+		,"linearValues[68]","pig_latest:controller_L_frontfoot01_translateZ","linearValues[69]"
+		,"pig_latest:stretchr_ctrl01_translateX","linearValues[6]","pig_latest:controller_R_frontfoot01_translateX"
+		,"linearValues[70]","pig_latest:controller_R_frontfoot01_translateY","linearValues[71]"
+		,"pig_latest:controller_R_frontfoot01_translateZ","linearValues[72]","pig_latest:back_flex_ctrl01_translateZ"
 		,"linearValues[7]","pig_latest:back_flex_ctrl01_translateY","linearValues[8]","pig_latest:back_flex_ctrl01_translateX"
-		,"linearValues[9]","pig_latest:back_flex_ctrl01_scaleY","unitlessValues[10]","pig_latest:back_flex_ctrl01_scaleX"
-		,"unitlessValues[11]","pig_latest:back_flex_ctrl01_visibility","unitlessValues[12]"
-		,"pig_latest:hip_rotation_ctrl01_scaleZ","unitlessValues[13]","pig_latest:hip_rotation_ctrl01_scaleY"
-		,"unitlessValues[14]","pig_latest:hip_rotation_ctrl01_scaleX","unitlessValues[15]"
-		,"pig_latest:locator_R_knee01_scaleZ","unitlessValues[16]","pig_latest:locator_R_knee01_scaleY"
+		,"linearValues[9]","pig_latest:controller_L_backfoot01_scaleY","unitlessValues[100]"
+		,"pig_latest:controller_L_backfoot01_scaleZ","unitlessValues[101]","pig_latest:controller_R_backfoot01_scaleX"
+		,"unitlessValues[102]","pig_latest:controller_R_backfoot01_scaleY","unitlessValues[103]"
+		,"pig_latest:controller_R_backfoot01_scaleZ","unitlessValues[104]","pig_latest:controller_L_frontfoot01_scaleX"
+		,"unitlessValues[105]","pig_latest:controller_L_frontfoot01_scaleY","unitlessValues[106]"
+		,"pig_latest:controller_L_frontfoot01_scaleZ","unitlessValues[107]","pig_latest:controller_R_frontfoot01_scaleX"
+		,"unitlessValues[108]","pig_latest:controller_R_frontfoot01_scaleY","unitlessValues[109]"
+		,"pig_latest:back_flex_ctrl01_scaleY","unitlessValues[10]","pig_latest:controller_R_frontfoot01_scaleZ"
+		,"unitlessValues[110]","pig_latest:back_flex_ctrl01_scaleX","unitlessValues[11]","pig_latest:back_flex_ctrl01_visibility"
+		,"unitlessValues[12]","pig_latest:hip_rotation_ctrl01_scaleZ","unitlessValues[13]"
+		,"pig_latest:hip_rotation_ctrl01_scaleY","unitlessValues[14]","pig_latest:hip_rotation_ctrl01_scaleX"
+		,"unitlessValues[15]","pig_latest:locator_R_knee01_scaleZ","unitlessValues[16]","pig_latest:locator_R_knee01_scaleY"
 		,"unitlessValues[17]","pig_latest:locator_R_knee01_scaleX","unitlessValues[18]","pig_latest:locator_R_knee01_visibility"
 		,"unitlessValues[19]","pig_latest:stretchf_ctrl01_scaleZ","unitlessValues[1]","pig_latest:iK_R_backleg01_ikBlend"
 		,"unitlessValues[20]","pig_latest:iK_R_backleg01_offset","unitlessValues[21]","pig_latest:iK_R_backleg01_poleVectorZ"
@@ -6918,8 +7350,19 @@ createNode character -n "thislittlepiggywenttomarket";
 		,"unitlessValues[78]","pig_latest:cat_collar:diamond:pPyramid2_scaleY","unitlessValues[79]"
 		,"pig_latest:stretchr_ctrl01_scaleX","unitlessValues[7]","pig_latest:cat_collar:diamond:pPyramid2_scaleX"
 		,"unitlessValues[80]","pig_latest:cat_collar:diamond:pPyramid2_visibility","unitlessValues[81]"
-		,"pig_latest:stretchr_ctrl01_visibility","unitlessValues[8]","pig_latest:back_flex_ctrl01_scaleZ"
-		,"unitlessValues[9]"} ;
+		,"pig_latest:controller_main01_scaleX","unitlessValues[82]","pig_latest:controller_main01_scaleY"
+		,"unitlessValues[83]","pig_latest:controller_main01_scaleZ","unitlessValues[84]","pig_latest:key_control_visibility"
+		,"unitlessValues[85]","pig_latest:key_control_scaleX","unitlessValues[86]","pig_latest:key_control_scaleY"
+		,"unitlessValues[87]","pig_latest:key_control_scaleZ","unitlessValues[88]","pig_latest:PigSkin002:bind_L_ear_a01_scaleX"
+		,"unitlessValues[89]","pig_latest:stretchr_ctrl01_visibility","unitlessValues[8]"
+		,"pig_latest:PigSkin002:bind_L_ear_a01_scaleY","unitlessValues[90]","pig_latest:PigSkin002:bind_L_ear_a01_scaleZ"
+		,"unitlessValues[91]","pig_latest:PigSkin002:bind_L_ear_a01_visibility","unitlessValues[92]"
+		,"pig_latest:PigSkin002:bind_R_ear_a01_scaleX","unitlessValues[93]","pig_latest:PigSkin002:bind_R_ear_a01_scaleY"
+		,"unitlessValues[94]","pig_latest:PigSkin002:bind_R_ear_a01_scaleZ","unitlessValues[95]"
+		,"pig_latest:PigSkin002:bind_R_ear_a01_visibility","unitlessValues[96]","pig_latest:shoulders_rotation_ctrl01_blendThislittlepiggywenttomarket"
+		,"unitlessValues[97]","pig_latest:hip_rotation_ctrl01_blendThislittlepiggywenttomarket"
+		,"unitlessValues[98]","pig_latest:controller_L_backfoot01_scaleX","unitlessValues[99]"
+		,"pig_latest:back_flex_ctrl01_scaleZ","unitlessValues[9]"} ;
 createNode animCurveTU -n "locator_R_knee01_scaleZ";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
@@ -7521,6 +7964,8 @@ createNode partition -n "mtorPartition";
 	setAttr ".sr" -type "string" "";
 createNode hyperGraphInfo -n "nodeEditorPanel1Info";
 createNode hyperView -n "hyperView1";
+	setAttr ".vl" -type "double2" -116.78713830029619 -76.035543403964454 ;
+	setAttr ".vh" -type "double2" 118.57000455684677 73.250170881749881 ;
 	setAttr ".dag" no;
 createNode hyperLayout -n "hyperLayout1";
 	setAttr ".ihi" 0;
@@ -8370,8 +8815,8 @@ createNode animCurveTU -n "key_control_scaleZ";
 		 10 1.0000000000000002;
 createNode hyperGraphInfo -n "nodeEditorPanel2Info";
 createNode hyperView -n "hyperView2";
-	setAttr ".vl" -type "double2" -2147.5209596229774 -1094.5102578271369 ;
-	setAttr ".vh" -type "double2" 1818.9828065232425 577.68213908965095 ;
+	setAttr ".vl" -type "double2" -2147.6190476190468 -1095.3100470957613 ;
+	setAttr ".vh" -type "double2" 1820.2380952380947 577.45290423861843 ;
 	setAttr ".dag" no;
 createNode hyperLayout -n "hyperLayout2";
 	setAttr ".ihi" 0;
@@ -8419,13 +8864,128 @@ createNode animCurveTU -n "controller_main01_scaleZ";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
 	setAttr -s 5 ".ktv[0:4]"  1 0.575 3 0.575 6 0.575 8 0.575 10 0.575;
+createNode animCurveTA -n "bind_L_ear_a01_rotateX";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 0 3 0 7 0 10 0;
+createNode animCurveTA -n "bind_L_ear_a01_rotateY";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 0 3 0 7 -17.749071822414486 10 0;
+createNode animCurveTA -n "bind_L_ear_a01_rotateZ";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 0 3 0 7 0 10 0;
+createNode animCurveTA -n "bind_R_ear_a01_rotateX";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 0 3 0 7 0 10 0;
+createNode animCurveTA -n "bind_R_ear_a01_rotateY";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 0 3 0 7 -17.749071822414486 10 0;
+createNode animCurveTA -n "bind_R_ear_a01_rotateZ";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 0 3 0 7 0 10 0;
+createNode animCurveTU -n "bind_L_ear_a01_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 1 3 1 7 1 10 1;
+	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
+createNode animCurveTL -n "bind_L_ear_a01_translateX";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 0.66430636923637776 3 0.66430636923637776
+		 7 0.66430636923637776 10 0.66430636923637776;
+createNode animCurveTL -n "bind_L_ear_a01_translateY";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 1.0119429378724871 3 1.0119429378724871
+		 7 1.0119429378724871 10 1.0119429378724871;
+createNode animCurveTL -n "bind_L_ear_a01_translateZ";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 -1.7609919137248238 3 -1.7609919137248238
+		 7 -1.7609919137248238 10 -1.7609919137248238;
+createNode animCurveTU -n "bind_L_ear_a01_scaleX";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 1 3 1 7 1 10 1;
+createNode animCurveTU -n "bind_L_ear_a01_scaleY";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 1 3 1 7 1 10 1;
+createNode animCurveTU -n "bind_L_ear_a01_scaleZ";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 1 3 1 7 1 10 1;
+createNode animCurveTU -n "bind_R_ear_a01_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 1 3 1 7 1 10 1;
+	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
+createNode animCurveTL -n "bind_R_ear_a01_translateX";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 0.66430550254100096 3 0.66430550254100096
+		 7 0.66430550254100096 10 0.66430550254100096;
+createNode animCurveTL -n "bind_R_ear_a01_translateY";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 1.0119399227003905 3 1.0119399227003905
+		 7 1.0119399227003905 10 1.0119399227003905;
+createNode animCurveTL -n "bind_R_ear_a01_translateZ";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 1.7609900000000047 3 1.7609900000000047
+		 7 1.7609900000000047 10 1.7609900000000047;
+createNode animCurveTU -n "bind_R_ear_a01_scaleX";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 1 3 1 7 1 10 1;
+createNode animCurveTU -n "bind_R_ear_a01_scaleY";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 1 3 1 7 1 10 1;
+createNode animCurveTU -n "bind_R_ear_a01_scaleZ";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 1 3 1 7 1 10 1;
+createNode clipScheduler -n "thislittlepiggywenttomarketScheduler1";
+	setAttr ".tr[0]"  1;
+	setAttr ".nt" 1;
+createNode clipLibrary -n "thislittlepiggywenttomarketClips1";
+	setAttr -s 204 ".cel[0].cev";
+createNode animClip -n "clip1Source";
+	setAttr ".ihi" 0;
+	setAttr ".ss" -2;
+	setAttr ".se" 10;
+	setAttr ".ci" no;
+createNode animClip -n "clip1";
+	setAttr -s 256 ".ac[0:255]" yes yes yes yes yes yes yes yes yes yes 
+		yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes 
+		yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes 
+		yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes 
+		yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes 
+		yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes 
+		yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes 
+		yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes 
+		yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes 
+		yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes 
+		yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes 
+		yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes 
+		yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes;
+	setAttr ".sf" -2;
+	setAttr ".ss" -2;
+	setAttr ".se" 10;
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr ".o" 8;
-	setAttr ".unw" 8;
+	setAttr ".o" 2;
+	setAttr ".unw" 2;
 select -ne :renderPartition;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -8653,567 +9213,662 @@ select -ne :defaultHardwareRenderGlobals;
 	setAttr -cb on ".sd";
 select -ne :ikSystem;
 	setAttr -s 2 ".sol";
-connectAttr "controller_main01_rotateX.o" "pig_latestRN.phl[1]";
-connectAttr "controller_main01_rotateY.o" "pig_latestRN.phl[2]";
-connectAttr "controller_main01_rotateZ.o" "pig_latestRN.phl[3]";
-connectAttr "controller_main01_translateX.o" "pig_latestRN.phl[4]";
-connectAttr "controller_main01_translateY.o" "pig_latestRN.phl[5]";
-connectAttr "controller_main01_translateZ.o" "pig_latestRN.phl[6]";
-connectAttr "controller_main01_scaleX.o" "pig_latestRN.phl[7]";
-connectAttr "controller_main01_scaleY.o" "pig_latestRN.phl[8]";
-connectAttr "controller_main01_scaleZ.o" "pig_latestRN.phl[9]";
-connectAttr "pig_latestRN.phl[10]" "thislittlepiggywenttomarket.dnsm[181]";
-connectAttr "thislittlepiggywenttomarket.lv[46]" "pig_latestRN.phl[11]";
-connectAttr "pig_latestRN.phl[12]" "thislittlepiggywenttomarket.dnsm[182]";
-connectAttr "thislittlepiggywenttomarket.lv[47]" "pig_latestRN.phl[13]";
-connectAttr "pig_latestRN.phl[14]" "thislittlepiggywenttomarket.dnsm[183]";
-connectAttr "thislittlepiggywenttomarket.lv[48]" "pig_latestRN.phl[15]";
-connectAttr "pig_latestRN.phl[16]" "thislittlepiggywenttomarket.dnsm[184]";
-connectAttr "thislittlepiggywenttomarket.uv[81]" "pig_latestRN.phl[17]";
-connectAttr "pig_latestRN.phl[18]" "thislittlepiggywenttomarket.dnsm[180]";
-connectAttr "thislittlepiggywenttomarket.av[56]" "pig_latestRN.phl[19]";
-connectAttr "pig_latestRN.phl[20]" "thislittlepiggywenttomarket.dnsm[179]";
-connectAttr "thislittlepiggywenttomarket.av[55]" "pig_latestRN.phl[21]";
-connectAttr "pig_latestRN.phl[22]" "thislittlepiggywenttomarket.dnsm[178]";
-connectAttr "thislittlepiggywenttomarket.av[54]" "pig_latestRN.phl[23]";
-connectAttr "pig_latestRN.phl[24]" "thislittlepiggywenttomarket.dnsm[177]";
-connectAttr "thislittlepiggywenttomarket.uv[80]" "pig_latestRN.phl[25]";
-connectAttr "pig_latestRN.phl[26]" "thislittlepiggywenttomarket.dnsm[176]";
-connectAttr "thislittlepiggywenttomarket.uv[79]" "pig_latestRN.phl[27]";
-connectAttr "pig_latestRN.phl[28]" "thislittlepiggywenttomarket.dnsm[175]";
-connectAttr "thislittlepiggywenttomarket.uv[78]" "pig_latestRN.phl[29]";
-connectAttr "key_control_rotateX.o" "pig_latestRN.phl[30]";
-connectAttr "key_control_rotateY.o" "pig_latestRN.phl[31]";
-connectAttr "key_control_rotateZ.o" "pig_latestRN.phl[32]";
-connectAttr "key_control_visibility.o" "pig_latestRN.phl[33]";
-connectAttr "key_control_translateX.o" "pig_latestRN.phl[34]";
-connectAttr "key_control_translateY.o" "pig_latestRN.phl[35]";
-connectAttr "key_control_translateZ.o" "pig_latestRN.phl[36]";
-connectAttr "key_control_scaleX.o" "pig_latestRN.phl[37]";
-connectAttr "key_control_scaleY.o" "pig_latestRN.phl[38]";
-connectAttr "key_control_scaleZ.o" "pig_latestRN.phl[39]";
-connectAttr "pig_latestRN.phl[40]" "thislittlepiggywenttomarket.dnsm[174]";
-connectAttr "thislittlepiggywenttomarket.uv[77]" "pig_latestRN.phl[41]";
-connectAttr "pig_latestRN.phl[42]" "thislittlepiggywenttomarket.dnsm[173]";
-connectAttr "thislittlepiggywenttomarket.lv[45]" "pig_latestRN.phl[43]";
-connectAttr "pig_latestRN.phl[44]" "thislittlepiggywenttomarket.dnsm[172]";
-connectAttr "thislittlepiggywenttomarket.lv[44]" "pig_latestRN.phl[45]";
-connectAttr "pig_latestRN.phl[46]" "thislittlepiggywenttomarket.dnsm[171]";
-connectAttr "thislittlepiggywenttomarket.lv[43]" "pig_latestRN.phl[47]";
-connectAttr "pig_latestRN.phl[48]" "thislittlepiggywenttomarket.dnsm[170]";
-connectAttr "thislittlepiggywenttomarket.av[53]" "pig_latestRN.phl[49]";
-connectAttr "pig_latestRN.phl[50]" "thislittlepiggywenttomarket.dnsm[169]";
-connectAttr "thislittlepiggywenttomarket.av[52]" "pig_latestRN.phl[51]";
-connectAttr "pig_latestRN.phl[52]" "thislittlepiggywenttomarket.dnsm[168]";
-connectAttr "thislittlepiggywenttomarket.av[51]" "pig_latestRN.phl[53]";
-connectAttr "pig_latestRN.phl[54]" "thislittlepiggywenttomarket.dnsm[167]";
-connectAttr "thislittlepiggywenttomarket.uv[76]" "pig_latestRN.phl[55]";
-connectAttr "pig_latestRN.phl[56]" "thislittlepiggywenttomarket.dnsm[166]";
-connectAttr "thislittlepiggywenttomarket.uv[75]" "pig_latestRN.phl[57]";
-connectAttr "pig_latestRN.phl[58]" "thislittlepiggywenttomarket.dnsm[165]";
-connectAttr "thislittlepiggywenttomarket.uv[74]" "pig_latestRN.phl[59]";
-connectAttr "pig_latestRN.phl[60]" "thislittlepiggywenttomarket.dnsm[162]";
-connectAttr "thislittlepiggywenttomarket.lv[40]" "pig_latestRN.phl[61]";
-connectAttr "pig_latestRN.phl[62]" "thislittlepiggywenttomarket.dnsm[163]";
-connectAttr "thislittlepiggywenttomarket.lv[41]" "pig_latestRN.phl[63]";
-connectAttr "pig_latestRN.phl[64]" "thislittlepiggywenttomarket.dnsm[164]";
-connectAttr "thislittlepiggywenttomarket.lv[42]" "pig_latestRN.phl[65]";
-connectAttr "pig_latestRN.phl[66]" "thislittlepiggywenttomarket.dnsm[161]";
-connectAttr "thislittlepiggywenttomarket.av[50]" "pig_latestRN.phl[67]";
-connectAttr "pig_latestRN.phl[68]" "thislittlepiggywenttomarket.dnsm[160]";
-connectAttr "thislittlepiggywenttomarket.av[49]" "pig_latestRN.phl[69]";
-connectAttr "pig_latestRN.phl[70]" "thislittlepiggywenttomarket.dnsm[159]";
-connectAttr "thislittlepiggywenttomarket.av[48]" "pig_latestRN.phl[71]";
-connectAttr "pig_latestRN.phl[72]" "thislittlepiggywenttomarket.dnsm[158]";
-connectAttr "thislittlepiggywenttomarket.uv[73]" "pig_latestRN.phl[73]";
-connectAttr "pig_latestRN.phl[74]" "thislittlepiggywenttomarket.dnsm[157]";
-connectAttr "thislittlepiggywenttomarket.uv[72]" "pig_latestRN.phl[75]";
-connectAttr "pig_latestRN.phl[76]" "thislittlepiggywenttomarket.dnsm[156]";
-connectAttr "thislittlepiggywenttomarket.uv[71]" "pig_latestRN.phl[77]";
-connectAttr "pig_latestRN.phl[78]" "thislittlepiggywenttomarket.dnsm[154]";
-connectAttr "shoulders_rotation_ctrl01_translateY.o" "pig_latestRN.phl[79]";
-connectAttr "pig_latestRN.phl[80]" "thislittlepiggywenttomarket.dnsm[155]";
-connectAttr "shoulders_rotation_ctrl01_translateX.o" "pig_latestRN.phl[81]";
-connectAttr "pig_latestRN.phl[82]" "thislittlepiggywenttomarket.dnsm[153]";
-connectAttr "shoulders_rotation_ctrl01_translateZ.o" "pig_latestRN.phl[83]";
-connectAttr "pig_latestRN.phl[84]" "thislittlepiggywenttomarket.dnsm[152]";
-connectAttr "shoulders_rotation_ctrl01_rotateX.o" "pig_latestRN.phl[85]";
-connectAttr "pig_latestRN.phl[86]" "thislittlepiggywenttomarket.dnsm[151]";
-connectAttr "shoulders_rotation_ctrl01_rotateY.o" "pig_latestRN.phl[87]";
-connectAttr "pig_latestRN.phl[88]" "thislittlepiggywenttomarket.dnsm[150]";
-connectAttr "shoulders_rotation_ctrl01_rotateZ.o" "pig_latestRN.phl[89]";
-connectAttr "pig_latestRN.phl[90]" "thislittlepiggywenttomarket.dnsm[149]";
-connectAttr "thislittlepiggywenttomarket.uv[70]" "pig_latestRN.phl[91]";
-connectAttr "pig_latestRN.phl[92]" "thislittlepiggywenttomarket.dnsm[148]";
-connectAttr "thislittlepiggywenttomarket.uv[69]" "pig_latestRN.phl[93]";
-connectAttr "pig_latestRN.phl[94]" "thislittlepiggywenttomarket.dnsm[147]";
-connectAttr "thislittlepiggywenttomarket.uv[68]" "pig_latestRN.phl[95]";
-connectAttr "pig_latestRN.phl[96]" "pairBlend11.w";
-connectAttr "shoulders_rotation_ctrl01_blendThislittlepiggywenttomarket.o" "pig_latestRN.phl[97]"
+connectAttr "pig_latestRN.phl[1]" "thislittlepiggywenttomarket.dnsm[185]";
+connectAttr "thislittlepiggywenttomarket.av[57]" "pig_latestRN.phl[2]";
+connectAttr "pig_latestRN.phl[3]" "thislittlepiggywenttomarket.dnsm[186]";
+connectAttr "thislittlepiggywenttomarket.av[58]" "pig_latestRN.phl[4]";
+connectAttr "pig_latestRN.phl[5]" "thislittlepiggywenttomarket.dnsm[187]";
+connectAttr "thislittlepiggywenttomarket.av[59]" "pig_latestRN.phl[6]";
+connectAttr "pig_latestRN.phl[7]" "thislittlepiggywenttomarket.dnsm[188]";
+connectAttr "thislittlepiggywenttomarket.lv[49]" "pig_latestRN.phl[8]";
+connectAttr "pig_latestRN.phl[9]" "thislittlepiggywenttomarket.dnsm[189]";
+connectAttr "thislittlepiggywenttomarket.lv[50]" "pig_latestRN.phl[10]";
+connectAttr "pig_latestRN.phl[11]" "thislittlepiggywenttomarket.dnsm[190]";
+connectAttr "thislittlepiggywenttomarket.lv[51]" "pig_latestRN.phl[12]";
+connectAttr "pig_latestRN.phl[13]" "thislittlepiggywenttomarket.dnsm[191]";
+connectAttr "thislittlepiggywenttomarket.uv[82]" "pig_latestRN.phl[14]";
+connectAttr "pig_latestRN.phl[15]" "thislittlepiggywenttomarket.dnsm[192]";
+connectAttr "thislittlepiggywenttomarket.uv[83]" "pig_latestRN.phl[16]";
+connectAttr "pig_latestRN.phl[17]" "thislittlepiggywenttomarket.dnsm[193]";
+connectAttr "thislittlepiggywenttomarket.uv[84]" "pig_latestRN.phl[18]";
+connectAttr "pig_latestRN.phl[19]" "thislittlepiggywenttomarket.dnsm[181]";
+connectAttr "thislittlepiggywenttomarket.lv[46]" "pig_latestRN.phl[20]";
+connectAttr "pig_latestRN.phl[21]" "thislittlepiggywenttomarket.dnsm[182]";
+connectAttr "thislittlepiggywenttomarket.lv[47]" "pig_latestRN.phl[22]";
+connectAttr "pig_latestRN.phl[23]" "thislittlepiggywenttomarket.dnsm[183]";
+connectAttr "thislittlepiggywenttomarket.lv[48]" "pig_latestRN.phl[24]";
+connectAttr "pig_latestRN.phl[25]" "thislittlepiggywenttomarket.dnsm[184]";
+connectAttr "thislittlepiggywenttomarket.uv[81]" "pig_latestRN.phl[26]";
+connectAttr "pig_latestRN.phl[27]" "thislittlepiggywenttomarket.dnsm[180]";
+connectAttr "thislittlepiggywenttomarket.av[56]" "pig_latestRN.phl[28]";
+connectAttr "pig_latestRN.phl[29]" "thislittlepiggywenttomarket.dnsm[179]";
+connectAttr "thislittlepiggywenttomarket.av[55]" "pig_latestRN.phl[30]";
+connectAttr "pig_latestRN.phl[31]" "thislittlepiggywenttomarket.dnsm[178]";
+connectAttr "thislittlepiggywenttomarket.av[54]" "pig_latestRN.phl[32]";
+connectAttr "pig_latestRN.phl[33]" "thislittlepiggywenttomarket.dnsm[177]";
+connectAttr "thislittlepiggywenttomarket.uv[80]" "pig_latestRN.phl[34]";
+connectAttr "pig_latestRN.phl[35]" "thislittlepiggywenttomarket.dnsm[176]";
+connectAttr "thislittlepiggywenttomarket.uv[79]" "pig_latestRN.phl[36]";
+connectAttr "pig_latestRN.phl[37]" "thislittlepiggywenttomarket.dnsm[175]";
+connectAttr "thislittlepiggywenttomarket.uv[78]" "pig_latestRN.phl[38]";
+connectAttr "pig_latestRN.phl[39]" "thislittlepiggywenttomarket.dnsm[194]";
+connectAttr "thislittlepiggywenttomarket.av[60]" "pig_latestRN.phl[40]";
+connectAttr "pig_latestRN.phl[41]" "thislittlepiggywenttomarket.dnsm[195]";
+connectAttr "thislittlepiggywenttomarket.av[61]" "pig_latestRN.phl[42]";
+connectAttr "pig_latestRN.phl[43]" "thislittlepiggywenttomarket.dnsm[196]";
+connectAttr "thislittlepiggywenttomarket.av[62]" "pig_latestRN.phl[44]";
+connectAttr "pig_latestRN.phl[45]" "thislittlepiggywenttomarket.dnsm[197]";
+connectAttr "thislittlepiggywenttomarket.uv[85]" "pig_latestRN.phl[46]";
+connectAttr "pig_latestRN.phl[47]" "thislittlepiggywenttomarket.dnsm[198]";
+connectAttr "thislittlepiggywenttomarket.lv[52]" "pig_latestRN.phl[48]";
+connectAttr "pig_latestRN.phl[49]" "thislittlepiggywenttomarket.dnsm[199]";
+connectAttr "thislittlepiggywenttomarket.lv[53]" "pig_latestRN.phl[50]";
+connectAttr "pig_latestRN.phl[51]" "thislittlepiggywenttomarket.dnsm[200]";
+connectAttr "thislittlepiggywenttomarket.lv[54]" "pig_latestRN.phl[52]";
+connectAttr "pig_latestRN.phl[53]" "thislittlepiggywenttomarket.dnsm[201]";
+connectAttr "thislittlepiggywenttomarket.uv[86]" "pig_latestRN.phl[54]";
+connectAttr "pig_latestRN.phl[55]" "thislittlepiggywenttomarket.dnsm[202]";
+connectAttr "thislittlepiggywenttomarket.uv[87]" "pig_latestRN.phl[56]";
+connectAttr "pig_latestRN.phl[57]" "thislittlepiggywenttomarket.dnsm[203]";
+connectAttr "thislittlepiggywenttomarket.uv[88]" "pig_latestRN.phl[58]";
+connectAttr "pig_latestRN.phl[59]" "thislittlepiggywenttomarket.dnsm[174]";
+connectAttr "thislittlepiggywenttomarket.uv[77]" "pig_latestRN.phl[60]";
+connectAttr "pig_latestRN.phl[61]" "thislittlepiggywenttomarket.dnsm[173]";
+connectAttr "thislittlepiggywenttomarket.lv[45]" "pig_latestRN.phl[62]";
+connectAttr "pig_latestRN.phl[63]" "thislittlepiggywenttomarket.dnsm[172]";
+connectAttr "thislittlepiggywenttomarket.lv[44]" "pig_latestRN.phl[64]";
+connectAttr "pig_latestRN.phl[65]" "thislittlepiggywenttomarket.dnsm[171]";
+connectAttr "thislittlepiggywenttomarket.lv[43]" "pig_latestRN.phl[66]";
+connectAttr "pig_latestRN.phl[67]" "thislittlepiggywenttomarket.dnsm[170]";
+connectAttr "thislittlepiggywenttomarket.av[53]" "pig_latestRN.phl[68]";
+connectAttr "pig_latestRN.phl[69]" "thislittlepiggywenttomarket.dnsm[169]";
+connectAttr "thislittlepiggywenttomarket.av[52]" "pig_latestRN.phl[70]";
+connectAttr "pig_latestRN.phl[71]" "thislittlepiggywenttomarket.dnsm[168]";
+connectAttr "thislittlepiggywenttomarket.av[51]" "pig_latestRN.phl[72]";
+connectAttr "pig_latestRN.phl[73]" "thislittlepiggywenttomarket.dnsm[167]";
+connectAttr "thislittlepiggywenttomarket.uv[76]" "pig_latestRN.phl[74]";
+connectAttr "pig_latestRN.phl[75]" "thislittlepiggywenttomarket.dnsm[166]";
+connectAttr "thislittlepiggywenttomarket.uv[75]" "pig_latestRN.phl[76]";
+connectAttr "pig_latestRN.phl[77]" "thislittlepiggywenttomarket.dnsm[165]";
+connectAttr "thislittlepiggywenttomarket.uv[74]" "pig_latestRN.phl[78]";
+connectAttr "pig_latestRN.phl[79]" "thislittlepiggywenttomarket.dnsm[204]";
+connectAttr "thislittlepiggywenttomarket.uv[89]" "pig_latestRN.phl[80]";
+connectAttr "pig_latestRN.phl[81]" "thislittlepiggywenttomarket.dnsm[205]";
+connectAttr "thislittlepiggywenttomarket.uv[90]" "pig_latestRN.phl[82]";
+connectAttr "pig_latestRN.phl[83]" "thislittlepiggywenttomarket.dnsm[206]";
+connectAttr "thislittlepiggywenttomarket.uv[91]" "pig_latestRN.phl[84]";
+connectAttr "pig_latestRN.phl[85]" "thislittlepiggywenttomarket.dnsm[207]";
+connectAttr "thislittlepiggywenttomarket.uv[92]" "pig_latestRN.phl[86]";
+connectAttr "pig_latestRN.phl[87]" "thislittlepiggywenttomarket.dnsm[208]";
+connectAttr "thislittlepiggywenttomarket.lv[55]" "pig_latestRN.phl[88]";
+connectAttr "pig_latestRN.phl[89]" "thislittlepiggywenttomarket.dnsm[209]";
+connectAttr "thislittlepiggywenttomarket.lv[56]" "pig_latestRN.phl[90]";
+connectAttr "pig_latestRN.phl[91]" "thislittlepiggywenttomarket.dnsm[210]";
+connectAttr "thislittlepiggywenttomarket.lv[57]" "pig_latestRN.phl[92]";
+connectAttr "pig_latestRN.phl[93]" "thislittlepiggywenttomarket.dnsm[211]";
+connectAttr "thislittlepiggywenttomarket.av[63]" "pig_latestRN.phl[94]";
+connectAttr "pig_latestRN.phl[95]" "thislittlepiggywenttomarket.dnsm[212]";
+connectAttr "thislittlepiggywenttomarket.av[64]" "pig_latestRN.phl[96]";
+connectAttr "pig_latestRN.phl[97]" "thislittlepiggywenttomarket.dnsm[213]";
+connectAttr "thislittlepiggywenttomarket.av[65]" "pig_latestRN.phl[98]";
+connectAttr "pig_latestRN.phl[99]" "thislittlepiggywenttomarket.dnsm[214]";
+connectAttr "thislittlepiggywenttomarket.uv[93]" "pig_latestRN.phl[100]";
+connectAttr "pig_latestRN.phl[101]" "thislittlepiggywenttomarket.dnsm[215]";
+connectAttr "thislittlepiggywenttomarket.uv[94]" "pig_latestRN.phl[102]";
+connectAttr "pig_latestRN.phl[103]" "thislittlepiggywenttomarket.dnsm[216]";
+connectAttr "thislittlepiggywenttomarket.uv[95]" "pig_latestRN.phl[104]";
+connectAttr "pig_latestRN.phl[105]" "thislittlepiggywenttomarket.dnsm[217]";
+connectAttr "thislittlepiggywenttomarket.uv[96]" "pig_latestRN.phl[106]";
+connectAttr "pig_latestRN.phl[107]" "thislittlepiggywenttomarket.dnsm[218]";
+connectAttr "thislittlepiggywenttomarket.av[66]" "pig_latestRN.phl[108]";
+connectAttr "pig_latestRN.phl[109]" "thislittlepiggywenttomarket.dnsm[219]";
+connectAttr "thislittlepiggywenttomarket.av[67]" "pig_latestRN.phl[110]";
+connectAttr "pig_latestRN.phl[111]" "thislittlepiggywenttomarket.dnsm[220]";
+connectAttr "thislittlepiggywenttomarket.av[68]" "pig_latestRN.phl[112]";
+connectAttr "pig_latestRN.phl[113]" "thislittlepiggywenttomarket.dnsm[221]";
+connectAttr "thislittlepiggywenttomarket.lv[58]" "pig_latestRN.phl[114]";
+connectAttr "pig_latestRN.phl[115]" "thislittlepiggywenttomarket.dnsm[222]";
+connectAttr "thislittlepiggywenttomarket.lv[59]" "pig_latestRN.phl[116]";
+connectAttr "pig_latestRN.phl[117]" "thislittlepiggywenttomarket.dnsm[223]";
+connectAttr "thislittlepiggywenttomarket.lv[60]" "pig_latestRN.phl[118]";
+connectAttr "pig_latestRN.phl[119]" "thislittlepiggywenttomarket.dnsm[162]";
+connectAttr "thislittlepiggywenttomarket.lv[40]" "pig_latestRN.phl[120]";
+connectAttr "pig_latestRN.phl[121]" "thislittlepiggywenttomarket.dnsm[163]";
+connectAttr "thislittlepiggywenttomarket.lv[41]" "pig_latestRN.phl[122]";
+connectAttr "pig_latestRN.phl[123]" "thislittlepiggywenttomarket.dnsm[164]";
+connectAttr "thislittlepiggywenttomarket.lv[42]" "pig_latestRN.phl[124]";
+connectAttr "pig_latestRN.phl[125]" "thislittlepiggywenttomarket.dnsm[161]";
+connectAttr "thislittlepiggywenttomarket.av[50]" "pig_latestRN.phl[126]";
+connectAttr "pig_latestRN.phl[127]" "thislittlepiggywenttomarket.dnsm[160]";
+connectAttr "thislittlepiggywenttomarket.av[49]" "pig_latestRN.phl[128]";
+connectAttr "pig_latestRN.phl[129]" "thislittlepiggywenttomarket.dnsm[159]";
+connectAttr "thislittlepiggywenttomarket.av[48]" "pig_latestRN.phl[130]";
+connectAttr "pig_latestRN.phl[131]" "thislittlepiggywenttomarket.dnsm[158]";
+connectAttr "thislittlepiggywenttomarket.uv[73]" "pig_latestRN.phl[132]";
+connectAttr "pig_latestRN.phl[133]" "thislittlepiggywenttomarket.dnsm[157]";
+connectAttr "thislittlepiggywenttomarket.uv[72]" "pig_latestRN.phl[134]";
+connectAttr "pig_latestRN.phl[135]" "thislittlepiggywenttomarket.dnsm[156]";
+connectAttr "thislittlepiggywenttomarket.uv[71]" "pig_latestRN.phl[136]";
+connectAttr "pig_latestRN.phl[137]" "thislittlepiggywenttomarket.dnsm[154]";
+connectAttr "shoulders_rotation_ctrl01_translateY.o" "pig_latestRN.phl[138]";
+connectAttr "pig_latestRN.phl[139]" "thislittlepiggywenttomarket.dnsm[155]";
+connectAttr "shoulders_rotation_ctrl01_translateX.o" "pig_latestRN.phl[140]";
+connectAttr "pig_latestRN.phl[141]" "thislittlepiggywenttomarket.dnsm[153]";
+connectAttr "shoulders_rotation_ctrl01_translateZ.o" "pig_latestRN.phl[142]";
+connectAttr "pig_latestRN.phl[143]" "thislittlepiggywenttomarket.dnsm[152]";
+connectAttr "shoulders_rotation_ctrl01_rotateX.o" "pig_latestRN.phl[144]";
+connectAttr "pig_latestRN.phl[145]" "thislittlepiggywenttomarket.dnsm[151]";
+connectAttr "shoulders_rotation_ctrl01_rotateY.o" "pig_latestRN.phl[146]";
+connectAttr "pig_latestRN.phl[147]" "thislittlepiggywenttomarket.dnsm[150]";
+connectAttr "shoulders_rotation_ctrl01_rotateZ.o" "pig_latestRN.phl[148]";
+connectAttr "pig_latestRN.phl[149]" "thislittlepiggywenttomarket.dnsm[149]";
+connectAttr "thislittlepiggywenttomarket.uv[70]" "pig_latestRN.phl[150]";
+connectAttr "pig_latestRN.phl[151]" "thislittlepiggywenttomarket.dnsm[148]";
+connectAttr "thislittlepiggywenttomarket.uv[69]" "pig_latestRN.phl[152]";
+connectAttr "pig_latestRN.phl[153]" "thislittlepiggywenttomarket.dnsm[147]";
+connectAttr "thislittlepiggywenttomarket.uv[68]" "pig_latestRN.phl[154]";
+connectAttr "pig_latestRN.phl[155]" "pairBlend11.w";
+connectAttr "pig_latestRN.phl[156]" "thislittlepiggywenttomarket.dnsm[224]";
+connectAttr "thislittlepiggywenttomarket.uv[97]" "pig_latestRN.phl[157]";
+connectAttr "pig_latestRN.phl[158]" "thislittlepiggywenttomarket.lv[38]";
+connectAttr "pig_latestRN.phl[159]" "thislittlepiggywenttomarket.lv[39]";
+connectAttr "pig_latestRN.phl[160]" "thislittlepiggywenttomarket.lv[37]";
+connectAttr "pig_latestRN.phl[161]" "thislittlepiggywenttomarket.av[47]";
+connectAttr "pig_latestRN.phl[162]" "thislittlepiggywenttomarket.av[46]";
+connectAttr "pig_latestRN.phl[163]" "thislittlepiggywenttomarket.av[45]";
+connectAttr "pig_latestRN.phl[164]" "thislittlepiggywenttomarket.dnsm[145]";
+connectAttr "pairBlend10.otx" "pig_latestRN.phl[165]";
+connectAttr "pig_latestRN.phl[166]" "thislittlepiggywenttomarket.dnsm[144]";
+connectAttr "pairBlend10.oty" "pig_latestRN.phl[167]";
+connectAttr "pig_latestRN.phl[168]" "thislittlepiggywenttomarket.dnsm[143]";
+connectAttr "pairBlend10.otz" "pig_latestRN.phl[169]";
+connectAttr "pig_latestRN.phl[170]" "thislittlepiggywenttomarket.dnsm[142]";
+connectAttr "pairBlend9.orx" "pig_latestRN.phl[171]";
+connectAttr "pig_latestRN.phl[172]" "thislittlepiggywenttomarket.dnsm[141]";
+connectAttr "pairBlend9.ory" "pig_latestRN.phl[173]";
+connectAttr "pig_latestRN.phl[174]" "thislittlepiggywenttomarket.dnsm[140]";
+connectAttr "pairBlend9.orz" "pig_latestRN.phl[175]";
+connectAttr "pig_latestRN.phl[176]" "thislittlepiggywenttomarket.dnsm[136]";
+connectAttr "thislittlepiggywenttomarket.uv[63]" "pig_latestRN.phl[177]";
+connectAttr "pig_latestRN.phl[178]" "thislittlepiggywenttomarket.dnsm[135]";
+connectAttr "thislittlepiggywenttomarket.uv[62]" "pig_latestRN.phl[179]";
+connectAttr "pig_latestRN.phl[180]" "thislittlepiggywenttomarket.dnsm[134]";
+connectAttr "thislittlepiggywenttomarket.uv[61]" "pig_latestRN.phl[181]";
+connectAttr "pig_latestRN.phl[182]" "pairBlend9.w";
+connectAttr "pig_latestRN.phl[183]" "thislittlepiggywenttomarket.dnsm[146]";
+connectAttr "thislittlepiggywenttomarket.uv[67]" "pig_latestRN.phl[184]";
+connectAttr "pig_latestRN.phl[185]" "thislittlepiggywenttomarket.dnsm[139]";
+connectAttr "thislittlepiggywenttomarket.uv[66]" "pig_latestRN.phl[186]";
+connectAttr "pig_latestRN.phl[187]" "thislittlepiggywenttomarket.dnsm[138]";
+connectAttr "thislittlepiggywenttomarket.uv[65]" "pig_latestRN.phl[188]";
+connectAttr "pig_latestRN.phl[189]" "thislittlepiggywenttomarket.dnsm[137]";
+connectAttr "thislittlepiggywenttomarket.uv[64]" "pig_latestRN.phl[190]";
+connectAttr "pig_latestRN.phl[191]" "thislittlepiggywenttomarket.dnsm[133]";
+connectAttr "thislittlepiggywenttomarket.uv[60]" "pig_latestRN.phl[192]";
+connectAttr "pig_latestRN.phl[193]" "thislittlepiggywenttomarket.dnsm[132]";
+connectAttr "thislittlepiggywenttomarket.av[41]" "pig_latestRN.phl[194]";
+connectAttr "pig_latestRN.phl[195]" "thislittlepiggywenttomarket.dnsm[131]";
+connectAttr "thislittlepiggywenttomarket.av[40]" "pig_latestRN.phl[196]";
+connectAttr "pig_latestRN.phl[197]" "thislittlepiggywenttomarket.dnsm[130]";
+connectAttr "thislittlepiggywenttomarket.uv[59]" "pig_latestRN.phl[198]";
+connectAttr "pig_latestRN.phl[199]" "thislittlepiggywenttomarket.uv[63]";
+connectAttr "pig_latestRN.phl[200]" "thislittlepiggywenttomarket.uv[62]";
+connectAttr "pig_latestRN.phl[201]" "thislittlepiggywenttomarket.uv[61]";
+connectAttr "pig_latestRN.phl[202]" "thislittlepiggywenttomarket.lv[36]";
+connectAttr "pig_latestRN.phl[203]" "thislittlepiggywenttomarket.lv[35]";
+connectAttr "pig_latestRN.phl[204]" "thislittlepiggywenttomarket.lv[34]";
+connectAttr "pig_latestRN.phl[205]" "thislittlepiggywenttomarket.av[44]";
+connectAttr "pig_latestRN.phl[206]" "thislittlepiggywenttomarket.av[43]";
+connectAttr "pig_latestRN.phl[207]" "thislittlepiggywenttomarket.av[42]";
+connectAttr "pig_latestRN.phl[208]" "thislittlepiggywenttomarket.dnsm[128]";
+connectAttr "thislittlepiggywenttomarket.lv[33]" "pig_latestRN.phl[209]";
+connectAttr "pig_latestRN.phl[210]" "thislittlepiggywenttomarket.dnsm[127]";
+connectAttr "thislittlepiggywenttomarket.lv[32]" "pig_latestRN.phl[211]";
+connectAttr "pig_latestRN.phl[212]" "thislittlepiggywenttomarket.dnsm[126]";
+connectAttr "thislittlepiggywenttomarket.lv[31]" "pig_latestRN.phl[213]";
+connectAttr "pig_latestRN.phl[214]" "thislittlepiggywenttomarket.dnsm[129]";
+connectAttr "thislittlepiggywenttomarket.uv[58]" "pig_latestRN.phl[215]";
+connectAttr "pig_latestRN.phl[216]" "thislittlepiggywenttomarket.dnsm[125]";
+connectAttr "thislittlepiggywenttomarket.av[39]" "pig_latestRN.phl[217]";
+connectAttr "pig_latestRN.phl[218]" "thislittlepiggywenttomarket.dnsm[124]";
+connectAttr "thislittlepiggywenttomarket.av[38]" "pig_latestRN.phl[219]";
+connectAttr "pig_latestRN.phl[220]" "thislittlepiggywenttomarket.dnsm[123]";
+connectAttr "thislittlepiggywenttomarket.av[37]" "pig_latestRN.phl[221]";
+connectAttr "pig_latestRN.phl[222]" "thislittlepiggywenttomarket.dnsm[122]";
+connectAttr "thislittlepiggywenttomarket.uv[57]" "pig_latestRN.phl[223]";
+connectAttr "pig_latestRN.phl[224]" "thislittlepiggywenttomarket.dnsm[121]";
+connectAttr "thislittlepiggywenttomarket.uv[56]" "pig_latestRN.phl[225]";
+connectAttr "pig_latestRN.phl[226]" "thislittlepiggywenttomarket.dnsm[120]";
+connectAttr "thislittlepiggywenttomarket.uv[55]" "pig_latestRN.phl[227]";
+connectAttr "pig_latestRN.phl[228]" "thislittlepiggywenttomarket.dnsm[109]";
+connectAttr "thislittlepiggywenttomarket.uv[50]" "pig_latestRN.phl[229]";
+connectAttr "pig_latestRN.phl[230]" "thislittlepiggywenttomarket.dnsm[108]";
+connectAttr "thislittlepiggywenttomarket.uv[49]" "pig_latestRN.phl[231]";
+connectAttr "pig_latestRN.phl[232]" "thislittlepiggywenttomarket.dnsm[107]";
+connectAttr "thislittlepiggywenttomarket.uv[48]" "pig_latestRN.phl[233]";
+connectAttr "pig_latestRN.phl[234]" "thislittlepiggywenttomarket.dnsm[118]";
+connectAttr "pairBlend8.otx" "pig_latestRN.phl[235]";
+connectAttr "pig_latestRN.phl[236]" "thislittlepiggywenttomarket.dnsm[117]";
+connectAttr "pairBlend8.oty" "pig_latestRN.phl[237]";
+connectAttr "pig_latestRN.phl[238]" "thislittlepiggywenttomarket.dnsm[116]";
+connectAttr "pairBlend8.otz" "pig_latestRN.phl[239]";
+connectAttr "pig_latestRN.phl[240]" "thislittlepiggywenttomarket.dnsm[115]";
+connectAttr "pairBlend7.orx" "pig_latestRN.phl[241]";
+connectAttr "pig_latestRN.phl[242]" "thislittlepiggywenttomarket.dnsm[114]";
+connectAttr "pairBlend7.ory" "pig_latestRN.phl[243]";
+connectAttr "pig_latestRN.phl[244]" "thislittlepiggywenttomarket.dnsm[113]";
+connectAttr "pairBlend7.orz" "pig_latestRN.phl[245]";
+connectAttr "pig_latestRN.phl[246]" "pairBlend7.w";
+connectAttr "pig_latestRN.phl[247]" "thislittlepiggywenttomarket.dnsm[119]";
+connectAttr "thislittlepiggywenttomarket.uv[54]" "pig_latestRN.phl[248]";
+connectAttr "pig_latestRN.phl[249]" "thislittlepiggywenttomarket.dnsm[112]";
+connectAttr "thislittlepiggywenttomarket.uv[53]" "pig_latestRN.phl[250]";
+connectAttr "pig_latestRN.phl[251]" "thislittlepiggywenttomarket.dnsm[111]";
+connectAttr "thislittlepiggywenttomarket.uv[52]" "pig_latestRN.phl[252]";
+connectAttr "pig_latestRN.phl[253]" "thislittlepiggywenttomarket.dnsm[110]";
+connectAttr "thislittlepiggywenttomarket.uv[51]" "pig_latestRN.phl[254]";
+connectAttr "pig_latestRN.phl[255]" "thislittlepiggywenttomarket.dnsm[106]";
+connectAttr "thislittlepiggywenttomarket.uv[47]" "pig_latestRN.phl[256]";
+connectAttr "pig_latestRN.phl[257]" "thislittlepiggywenttomarket.dnsm[105]";
+connectAttr "thislittlepiggywenttomarket.av[33]" "pig_latestRN.phl[258]";
+connectAttr "pig_latestRN.phl[259]" "thislittlepiggywenttomarket.dnsm[104]";
+connectAttr "thislittlepiggywenttomarket.av[32]" "pig_latestRN.phl[260]";
+connectAttr "pig_latestRN.phl[261]" "thislittlepiggywenttomarket.dnsm[103]";
+connectAttr "thislittlepiggywenttomarket.uv[46]" "pig_latestRN.phl[262]";
+connectAttr "pig_latestRN.phl[263]" "thislittlepiggywenttomarket.uv[50]";
+connectAttr "pig_latestRN.phl[264]" "thislittlepiggywenttomarket.uv[49]";
+connectAttr "pig_latestRN.phl[265]" "thislittlepiggywenttomarket.uv[48]";
+connectAttr "pig_latestRN.phl[266]" "thislittlepiggywenttomarket.lv[30]";
+connectAttr "pig_latestRN.phl[267]" "thislittlepiggywenttomarket.lv[29]";
+connectAttr "pig_latestRN.phl[268]" "thislittlepiggywenttomarket.lv[28]";
+connectAttr "pig_latestRN.phl[269]" "thislittlepiggywenttomarket.av[36]";
+connectAttr "pig_latestRN.phl[270]" "thislittlepiggywenttomarket.av[35]";
+connectAttr "pig_latestRN.phl[271]" "thislittlepiggywenttomarket.av[34]";
+connectAttr "pig_latestRN.phl[272]" "thislittlepiggywenttomarket.dnsm[101]";
+connectAttr "thislittlepiggywenttomarket.lv[27]" "pig_latestRN.phl[273]";
+connectAttr "pig_latestRN.phl[274]" "thislittlepiggywenttomarket.dnsm[100]";
+connectAttr "thislittlepiggywenttomarket.lv[26]" "pig_latestRN.phl[275]";
+connectAttr "pig_latestRN.phl[276]" "thislittlepiggywenttomarket.dnsm[99]";
+connectAttr "thislittlepiggywenttomarket.lv[25]" "pig_latestRN.phl[277]";
+connectAttr "pig_latestRN.phl[278]" "thislittlepiggywenttomarket.dnsm[102]";
+connectAttr "thislittlepiggywenttomarket.uv[45]" "pig_latestRN.phl[279]";
+connectAttr "pig_latestRN.phl[280]" "thislittlepiggywenttomarket.dnsm[98]";
+connectAttr "thislittlepiggywenttomarket.av[31]" "pig_latestRN.phl[281]";
+connectAttr "pig_latestRN.phl[282]" "thislittlepiggywenttomarket.dnsm[97]";
+connectAttr "thislittlepiggywenttomarket.av[30]" "pig_latestRN.phl[283]";
+connectAttr "pig_latestRN.phl[284]" "thislittlepiggywenttomarket.dnsm[96]";
+connectAttr "thislittlepiggywenttomarket.av[29]" "pig_latestRN.phl[285]";
+connectAttr "pig_latestRN.phl[286]" "thislittlepiggywenttomarket.dnsm[95]";
+connectAttr "thislittlepiggywenttomarket.uv[44]" "pig_latestRN.phl[287]";
+connectAttr "pig_latestRN.phl[288]" "thislittlepiggywenttomarket.dnsm[94]";
+connectAttr "thislittlepiggywenttomarket.uv[43]" "pig_latestRN.phl[289]";
+connectAttr "pig_latestRN.phl[290]" "thislittlepiggywenttomarket.dnsm[93]";
+connectAttr "thislittlepiggywenttomarket.uv[42]" "pig_latestRN.phl[291]";
+connectAttr "pig_latestRN.phl[292]" "thislittlepiggywenttomarket.dnsm[82]";
+connectAttr "thislittlepiggywenttomarket.uv[37]" "pig_latestRN.phl[293]";
+connectAttr "pig_latestRN.phl[294]" "thislittlepiggywenttomarket.dnsm[81]";
+connectAttr "thislittlepiggywenttomarket.uv[36]" "pig_latestRN.phl[295]";
+connectAttr "pig_latestRN.phl[296]" "thislittlepiggywenttomarket.dnsm[80]";
+connectAttr "thislittlepiggywenttomarket.uv[35]" "pig_latestRN.phl[297]";
+connectAttr "pig_latestRN.phl[298]" "thislittlepiggywenttomarket.dnsm[91]";
+connectAttr "pairBlend6.otx" "pig_latestRN.phl[299]";
+connectAttr "pig_latestRN.phl[300]" "thislittlepiggywenttomarket.dnsm[90]";
+connectAttr "pairBlend6.oty" "pig_latestRN.phl[301]";
+connectAttr "pig_latestRN.phl[302]" "thislittlepiggywenttomarket.dnsm[89]";
+connectAttr "pairBlend6.otz" "pig_latestRN.phl[303]";
+connectAttr "pig_latestRN.phl[304]" "thislittlepiggywenttomarket.dnsm[88]";
+connectAttr "pairBlend5.orx" "pig_latestRN.phl[305]";
+connectAttr "pig_latestRN.phl[306]" "thislittlepiggywenttomarket.dnsm[87]";
+connectAttr "pairBlend5.ory" "pig_latestRN.phl[307]";
+connectAttr "pig_latestRN.phl[308]" "thislittlepiggywenttomarket.dnsm[86]";
+connectAttr "pairBlend5.orz" "pig_latestRN.phl[309]";
+connectAttr "pig_latestRN.phl[310]" "pairBlend5.w";
+connectAttr "pig_latestRN.phl[311]" "thislittlepiggywenttomarket.dnsm[92]";
+connectAttr "thislittlepiggywenttomarket.uv[41]" "pig_latestRN.phl[312]";
+connectAttr "pig_latestRN.phl[313]" "thislittlepiggywenttomarket.dnsm[85]";
+connectAttr "thislittlepiggywenttomarket.uv[40]" "pig_latestRN.phl[314]";
+connectAttr "pig_latestRN.phl[315]" "thislittlepiggywenttomarket.dnsm[84]";
+connectAttr "thislittlepiggywenttomarket.uv[39]" "pig_latestRN.phl[316]";
+connectAttr "pig_latestRN.phl[317]" "thislittlepiggywenttomarket.dnsm[83]";
+connectAttr "thislittlepiggywenttomarket.uv[38]" "pig_latestRN.phl[318]";
+connectAttr "pig_latestRN.phl[319]" "thislittlepiggywenttomarket.dnsm[79]";
+connectAttr "thislittlepiggywenttomarket.uv[34]" "pig_latestRN.phl[320]";
+connectAttr "pig_latestRN.phl[321]" "thislittlepiggywenttomarket.dnsm[78]";
+connectAttr "thislittlepiggywenttomarket.av[25]" "pig_latestRN.phl[322]";
+connectAttr "pig_latestRN.phl[323]" "thislittlepiggywenttomarket.dnsm[77]";
+connectAttr "thislittlepiggywenttomarket.av[24]" "pig_latestRN.phl[324]";
+connectAttr "pig_latestRN.phl[325]" "thislittlepiggywenttomarket.dnsm[76]";
+connectAttr "thislittlepiggywenttomarket.uv[33]" "pig_latestRN.phl[326]";
+connectAttr "pig_latestRN.phl[327]" "thislittlepiggywenttomarket.uv[37]";
+connectAttr "pig_latestRN.phl[328]" "thislittlepiggywenttomarket.uv[36]";
+connectAttr "pig_latestRN.phl[329]" "thislittlepiggywenttomarket.uv[35]";
+connectAttr "pig_latestRN.phl[330]" "thislittlepiggywenttomarket.lv[24]";
+connectAttr "pig_latestRN.phl[331]" "thislittlepiggywenttomarket.lv[23]";
+connectAttr "pig_latestRN.phl[332]" "thislittlepiggywenttomarket.lv[22]";
+connectAttr "pig_latestRN.phl[333]" "thislittlepiggywenttomarket.av[28]";
+connectAttr "pig_latestRN.phl[334]" "thislittlepiggywenttomarket.av[27]";
+connectAttr "pig_latestRN.phl[335]" "thislittlepiggywenttomarket.av[26]";
+connectAttr "pig_latestRN.phl[336]" "thislittlepiggywenttomarket.dnsm[74]";
+connectAttr "thislittlepiggywenttomarket.lv[21]" "pig_latestRN.phl[337]";
+connectAttr "pig_latestRN.phl[338]" "thislittlepiggywenttomarket.dnsm[73]";
+connectAttr "thislittlepiggywenttomarket.lv[20]" "pig_latestRN.phl[339]";
+connectAttr "pig_latestRN.phl[340]" "thislittlepiggywenttomarket.dnsm[72]";
+connectAttr "thislittlepiggywenttomarket.lv[19]" "pig_latestRN.phl[341]";
+connectAttr "pig_latestRN.phl[342]" "thislittlepiggywenttomarket.dnsm[75]";
+connectAttr "thislittlepiggywenttomarket.uv[32]" "pig_latestRN.phl[343]";
+connectAttr "pig_latestRN.phl[344]" "thislittlepiggywenttomarket.dnsm[71]";
+connectAttr "thislittlepiggywenttomarket.av[23]" "pig_latestRN.phl[345]";
+connectAttr "pig_latestRN.phl[346]" "thislittlepiggywenttomarket.dnsm[70]";
+connectAttr "thislittlepiggywenttomarket.av[22]" "pig_latestRN.phl[347]";
+connectAttr "pig_latestRN.phl[348]" "thislittlepiggywenttomarket.dnsm[69]";
+connectAttr "thislittlepiggywenttomarket.av[21]" "pig_latestRN.phl[349]";
+connectAttr "pig_latestRN.phl[350]" "thislittlepiggywenttomarket.dnsm[68]";
+connectAttr "thislittlepiggywenttomarket.uv[31]" "pig_latestRN.phl[351]";
+connectAttr "pig_latestRN.phl[352]" "thislittlepiggywenttomarket.dnsm[67]";
+connectAttr "thislittlepiggywenttomarket.uv[30]" "pig_latestRN.phl[353]";
+connectAttr "pig_latestRN.phl[354]" "thislittlepiggywenttomarket.dnsm[66]";
+connectAttr "thislittlepiggywenttomarket.uv[29]" "pig_latestRN.phl[355]";
+connectAttr "pig_latestRN.phl[356]" "thislittlepiggywenttomarket.dnsm[55]";
+connectAttr "thislittlepiggywenttomarket.uv[24]" "pig_latestRN.phl[357]";
+connectAttr "pig_latestRN.phl[358]" "thislittlepiggywenttomarket.dnsm[54]";
+connectAttr "thislittlepiggywenttomarket.uv[23]" "pig_latestRN.phl[359]";
+connectAttr "pig_latestRN.phl[360]" "thislittlepiggywenttomarket.dnsm[53]";
+connectAttr "thislittlepiggywenttomarket.uv[22]" "pig_latestRN.phl[361]";
+connectAttr "pig_latestRN.phl[362]" "thislittlepiggywenttomarket.dnsm[64]";
+connectAttr "pairBlend4.otx" "pig_latestRN.phl[363]";
+connectAttr "pig_latestRN.phl[364]" "thislittlepiggywenttomarket.dnsm[63]";
+connectAttr "pairBlend4.oty" "pig_latestRN.phl[365]";
+connectAttr "pig_latestRN.phl[366]" "thislittlepiggywenttomarket.dnsm[62]";
+connectAttr "pairBlend4.otz" "pig_latestRN.phl[367]";
+connectAttr "pig_latestRN.phl[368]" "thislittlepiggywenttomarket.dnsm[61]";
+connectAttr "pairBlend3.orx" "pig_latestRN.phl[369]";
+connectAttr "pig_latestRN.phl[370]" "thislittlepiggywenttomarket.dnsm[60]";
+connectAttr "pairBlend3.ory" "pig_latestRN.phl[371]";
+connectAttr "pig_latestRN.phl[372]" "thislittlepiggywenttomarket.dnsm[59]";
+connectAttr "pairBlend3.orz" "pig_latestRN.phl[373]";
+connectAttr "pig_latestRN.phl[374]" "pairBlend3.w";
+connectAttr "pig_latestRN.phl[375]" "thislittlepiggywenttomarket.dnsm[65]";
+connectAttr "thislittlepiggywenttomarket.uv[28]" "pig_latestRN.phl[376]";
+connectAttr "pig_latestRN.phl[377]" "thislittlepiggywenttomarket.dnsm[58]";
+connectAttr "thislittlepiggywenttomarket.uv[27]" "pig_latestRN.phl[378]";
+connectAttr "pig_latestRN.phl[379]" "thislittlepiggywenttomarket.dnsm[57]";
+connectAttr "thislittlepiggywenttomarket.uv[26]" "pig_latestRN.phl[380]";
+connectAttr "pig_latestRN.phl[381]" "thislittlepiggywenttomarket.dnsm[56]";
+connectAttr "thislittlepiggywenttomarket.uv[25]" "pig_latestRN.phl[382]";
+connectAttr "pig_latestRN.phl[383]" "thislittlepiggywenttomarket.dnsm[52]";
+connectAttr "thislittlepiggywenttomarket.uv[21]" "pig_latestRN.phl[384]";
+connectAttr "pig_latestRN.phl[385]" "thislittlepiggywenttomarket.dnsm[51]";
+connectAttr "thislittlepiggywenttomarket.av[17]" "pig_latestRN.phl[386]";
+connectAttr "pig_latestRN.phl[387]" "thislittlepiggywenttomarket.dnsm[50]";
+connectAttr "thislittlepiggywenttomarket.av[16]" "pig_latestRN.phl[388]";
+connectAttr "pig_latestRN.phl[389]" "thislittlepiggywenttomarket.dnsm[49]";
+connectAttr "thislittlepiggywenttomarket.uv[20]" "pig_latestRN.phl[390]";
+connectAttr "pig_latestRN.phl[391]" "thislittlepiggywenttomarket.uv[24]";
+connectAttr "pig_latestRN.phl[392]" "thislittlepiggywenttomarket.uv[23]";
+connectAttr "pig_latestRN.phl[393]" "thislittlepiggywenttomarket.uv[22]";
+connectAttr "pig_latestRN.phl[394]" "thislittlepiggywenttomarket.lv[18]";
+connectAttr "pig_latestRN.phl[395]" "thislittlepiggywenttomarket.lv[17]";
+connectAttr "pig_latestRN.phl[396]" "thislittlepiggywenttomarket.lv[16]";
+connectAttr "pig_latestRN.phl[397]" "thislittlepiggywenttomarket.av[20]";
+connectAttr "pig_latestRN.phl[398]" "thislittlepiggywenttomarket.av[19]";
+connectAttr "pig_latestRN.phl[399]" "thislittlepiggywenttomarket.av[18]";
+connectAttr "pig_latestRN.phl[400]" "thislittlepiggywenttomarket.dnsm[47]";
+connectAttr "thislittlepiggywenttomarket.lv[15]" "pig_latestRN.phl[401]";
+connectAttr "pig_latestRN.phl[402]" "thislittlepiggywenttomarket.dnsm[46]";
+connectAttr "thislittlepiggywenttomarket.lv[14]" "pig_latestRN.phl[403]";
+connectAttr "pig_latestRN.phl[404]" "thislittlepiggywenttomarket.dnsm[45]";
+connectAttr "thislittlepiggywenttomarket.lv[13]" "pig_latestRN.phl[405]";
+connectAttr "pig_latestRN.phl[406]" "thislittlepiggywenttomarket.dnsm[48]";
+connectAttr "thislittlepiggywenttomarket.uv[19]" "pig_latestRN.phl[407]";
+connectAttr "pig_latestRN.phl[408]" "thislittlepiggywenttomarket.dnsm[44]";
+connectAttr "thislittlepiggywenttomarket.av[15]" "pig_latestRN.phl[409]";
+connectAttr "pig_latestRN.phl[410]" "thislittlepiggywenttomarket.dnsm[43]";
+connectAttr "thislittlepiggywenttomarket.av[14]" "pig_latestRN.phl[411]";
+connectAttr "pig_latestRN.phl[412]" "thislittlepiggywenttomarket.dnsm[42]";
+connectAttr "thislittlepiggywenttomarket.av[13]" "pig_latestRN.phl[413]";
+connectAttr "pig_latestRN.phl[414]" "thislittlepiggywenttomarket.dnsm[41]";
+connectAttr "thislittlepiggywenttomarket.uv[18]" "pig_latestRN.phl[415]";
+connectAttr "pig_latestRN.phl[416]" "thislittlepiggywenttomarket.dnsm[40]";
+connectAttr "thislittlepiggywenttomarket.uv[17]" "pig_latestRN.phl[417]";
+connectAttr "pig_latestRN.phl[418]" "thislittlepiggywenttomarket.dnsm[39]";
+connectAttr "thislittlepiggywenttomarket.uv[16]" "pig_latestRN.phl[419]";
+connectAttr "pig_latestRN.phl[420]" "thislittlepiggywenttomarket.dnsm[36]";
+connectAttr "pairBlend14.otz" "pig_latestRN.phl[421]";
+connectAttr "pig_latestRN.phl[422]" "thislittlepiggywenttomarket.dnsm[38]";
+connectAttr "pairBlend14.otx" "pig_latestRN.phl[423]";
+connectAttr "pig_latestRN.phl[424]" "thislittlepiggywenttomarket.dnsm[37]";
+connectAttr "pairBlend14.oty" "pig_latestRN.phl[425]";
+connectAttr "pig_latestRN.phl[426]" "thislittlepiggywenttomarket.dnsm[33]";
+connectAttr "pairBlend13.orz" "pig_latestRN.phl[427]";
+connectAttr "pig_latestRN.phl[428]" "thislittlepiggywenttomarket.dnsm[35]";
+connectAttr "pairBlend13.orx" "pig_latestRN.phl[429]";
+connectAttr "pig_latestRN.phl[430]" "thislittlepiggywenttomarket.dnsm[34]";
+connectAttr "pairBlend13.ory" "pig_latestRN.phl[431]";
+connectAttr "pig_latestRN.phl[432]" "thislittlepiggywenttomarket.dnsm[32]";
+connectAttr "thislittlepiggywenttomarket.uv[15]" "pig_latestRN.phl[433]";
+connectAttr "pig_latestRN.phl[434]" "thislittlepiggywenttomarket.dnsm[31]";
+connectAttr "thislittlepiggywenttomarket.uv[14]" "pig_latestRN.phl[435]";
+connectAttr "pig_latestRN.phl[436]" "thislittlepiggywenttomarket.dnsm[30]";
+connectAttr "thislittlepiggywenttomarket.uv[13]" "pig_latestRN.phl[437]";
+connectAttr "pig_latestRN.phl[438]" "thislittlepiggywenttomarket.dnsm[225]";
+connectAttr "thislittlepiggywenttomarket.uv[98]" "pig_latestRN.phl[439]";
+connectAttr "pig_latestRN.phl[440]" "tail_2control01_parentConstraint1.tg[0].tt"
 		;
-connectAttr "pig_latestRN.phl[98]" "thislittlepiggywenttomarket.lv[38]";
-connectAttr "pig_latestRN.phl[99]" "thislittlepiggywenttomarket.lv[39]";
-connectAttr "pig_latestRN.phl[100]" "thislittlepiggywenttomarket.lv[37]";
-connectAttr "pig_latestRN.phl[101]" "thislittlepiggywenttomarket.av[47]";
-connectAttr "pig_latestRN.phl[102]" "thislittlepiggywenttomarket.av[46]";
-connectAttr "pig_latestRN.phl[103]" "thislittlepiggywenttomarket.av[45]";
-connectAttr "pig_latestRN.phl[104]" "thislittlepiggywenttomarket.dnsm[145]";
-connectAttr "pairBlend10.otx" "pig_latestRN.phl[105]";
-connectAttr "pig_latestRN.phl[106]" "thislittlepiggywenttomarket.dnsm[144]";
-connectAttr "pairBlend10.oty" "pig_latestRN.phl[107]";
-connectAttr "pig_latestRN.phl[108]" "thislittlepiggywenttomarket.dnsm[143]";
-connectAttr "pairBlend10.otz" "pig_latestRN.phl[109]";
-connectAttr "pig_latestRN.phl[110]" "thislittlepiggywenttomarket.dnsm[142]";
-connectAttr "pairBlend9.orx" "pig_latestRN.phl[111]";
-connectAttr "pig_latestRN.phl[112]" "thislittlepiggywenttomarket.dnsm[141]";
-connectAttr "pairBlend9.ory" "pig_latestRN.phl[113]";
-connectAttr "pig_latestRN.phl[114]" "thislittlepiggywenttomarket.dnsm[140]";
-connectAttr "pairBlend9.orz" "pig_latestRN.phl[115]";
-connectAttr "pig_latestRN.phl[116]" "thislittlepiggywenttomarket.dnsm[136]";
-connectAttr "thislittlepiggywenttomarket.uv[63]" "pig_latestRN.phl[117]";
-connectAttr "pig_latestRN.phl[118]" "thislittlepiggywenttomarket.dnsm[135]";
-connectAttr "thislittlepiggywenttomarket.uv[62]" "pig_latestRN.phl[119]";
-connectAttr "pig_latestRN.phl[120]" "thislittlepiggywenttomarket.dnsm[134]";
-connectAttr "thislittlepiggywenttomarket.uv[61]" "pig_latestRN.phl[121]";
-connectAttr "pig_latestRN.phl[122]" "pairBlend9.w";
-connectAttr "pig_latestRN.phl[123]" "thislittlepiggywenttomarket.dnsm[146]";
-connectAttr "thislittlepiggywenttomarket.uv[67]" "pig_latestRN.phl[124]";
-connectAttr "pig_latestRN.phl[125]" "thislittlepiggywenttomarket.dnsm[139]";
-connectAttr "thislittlepiggywenttomarket.uv[66]" "pig_latestRN.phl[126]";
-connectAttr "pig_latestRN.phl[127]" "thislittlepiggywenttomarket.dnsm[138]";
-connectAttr "thislittlepiggywenttomarket.uv[65]" "pig_latestRN.phl[128]";
-connectAttr "pig_latestRN.phl[129]" "thislittlepiggywenttomarket.dnsm[137]";
-connectAttr "thislittlepiggywenttomarket.uv[64]" "pig_latestRN.phl[130]";
-connectAttr "pig_latestRN.phl[131]" "thislittlepiggywenttomarket.dnsm[133]";
-connectAttr "thislittlepiggywenttomarket.uv[60]" "pig_latestRN.phl[132]";
-connectAttr "pig_latestRN.phl[133]" "thislittlepiggywenttomarket.dnsm[132]";
-connectAttr "thislittlepiggywenttomarket.av[41]" "pig_latestRN.phl[134]";
-connectAttr "pig_latestRN.phl[135]" "thislittlepiggywenttomarket.dnsm[131]";
-connectAttr "thislittlepiggywenttomarket.av[40]" "pig_latestRN.phl[136]";
-connectAttr "pig_latestRN.phl[137]" "thislittlepiggywenttomarket.dnsm[130]";
-connectAttr "thislittlepiggywenttomarket.uv[59]" "pig_latestRN.phl[138]";
-connectAttr "pig_latestRN.phl[139]" "thislittlepiggywenttomarket.uv[63]";
-connectAttr "pig_latestRN.phl[140]" "thislittlepiggywenttomarket.uv[62]";
-connectAttr "pig_latestRN.phl[141]" "thislittlepiggywenttomarket.uv[61]";
-connectAttr "pig_latestRN.phl[142]" "thislittlepiggywenttomarket.lv[36]";
-connectAttr "pig_latestRN.phl[143]" "thislittlepiggywenttomarket.lv[35]";
-connectAttr "pig_latestRN.phl[144]" "thislittlepiggywenttomarket.lv[34]";
-connectAttr "pig_latestRN.phl[145]" "thislittlepiggywenttomarket.av[44]";
-connectAttr "pig_latestRN.phl[146]" "thislittlepiggywenttomarket.av[43]";
-connectAttr "pig_latestRN.phl[147]" "thislittlepiggywenttomarket.av[42]";
-connectAttr "pig_latestRN.phl[148]" "thislittlepiggywenttomarket.dnsm[128]";
-connectAttr "thislittlepiggywenttomarket.lv[33]" "pig_latestRN.phl[149]";
-connectAttr "pig_latestRN.phl[150]" "thislittlepiggywenttomarket.dnsm[127]";
-connectAttr "thislittlepiggywenttomarket.lv[32]" "pig_latestRN.phl[151]";
-connectAttr "pig_latestRN.phl[152]" "thislittlepiggywenttomarket.dnsm[126]";
-connectAttr "thislittlepiggywenttomarket.lv[31]" "pig_latestRN.phl[153]";
-connectAttr "pig_latestRN.phl[154]" "thislittlepiggywenttomarket.dnsm[129]";
-connectAttr "thislittlepiggywenttomarket.uv[58]" "pig_latestRN.phl[155]";
-connectAttr "pig_latestRN.phl[156]" "thislittlepiggywenttomarket.dnsm[125]";
-connectAttr "thislittlepiggywenttomarket.av[39]" "pig_latestRN.phl[157]";
-connectAttr "pig_latestRN.phl[158]" "thislittlepiggywenttomarket.dnsm[124]";
-connectAttr "thislittlepiggywenttomarket.av[38]" "pig_latestRN.phl[159]";
-connectAttr "pig_latestRN.phl[160]" "thislittlepiggywenttomarket.dnsm[123]";
-connectAttr "thislittlepiggywenttomarket.av[37]" "pig_latestRN.phl[161]";
-connectAttr "pig_latestRN.phl[162]" "thislittlepiggywenttomarket.dnsm[122]";
-connectAttr "thislittlepiggywenttomarket.uv[57]" "pig_latestRN.phl[163]";
-connectAttr "pig_latestRN.phl[164]" "thislittlepiggywenttomarket.dnsm[121]";
-connectAttr "thislittlepiggywenttomarket.uv[56]" "pig_latestRN.phl[165]";
-connectAttr "pig_latestRN.phl[166]" "thislittlepiggywenttomarket.dnsm[120]";
-connectAttr "thislittlepiggywenttomarket.uv[55]" "pig_latestRN.phl[167]";
-connectAttr "pig_latestRN.phl[168]" "thislittlepiggywenttomarket.dnsm[109]";
-connectAttr "thislittlepiggywenttomarket.uv[50]" "pig_latestRN.phl[169]";
-connectAttr "pig_latestRN.phl[170]" "thislittlepiggywenttomarket.dnsm[108]";
-connectAttr "thislittlepiggywenttomarket.uv[49]" "pig_latestRN.phl[171]";
-connectAttr "pig_latestRN.phl[172]" "thislittlepiggywenttomarket.dnsm[107]";
-connectAttr "thislittlepiggywenttomarket.uv[48]" "pig_latestRN.phl[173]";
-connectAttr "pig_latestRN.phl[174]" "thislittlepiggywenttomarket.dnsm[118]";
-connectAttr "pairBlend8.otx" "pig_latestRN.phl[175]";
-connectAttr "pig_latestRN.phl[176]" "thislittlepiggywenttomarket.dnsm[117]";
-connectAttr "pairBlend8.oty" "pig_latestRN.phl[177]";
-connectAttr "pig_latestRN.phl[178]" "thislittlepiggywenttomarket.dnsm[116]";
-connectAttr "pairBlend8.otz" "pig_latestRN.phl[179]";
-connectAttr "pig_latestRN.phl[180]" "thislittlepiggywenttomarket.dnsm[115]";
-connectAttr "pairBlend7.orx" "pig_latestRN.phl[181]";
-connectAttr "pig_latestRN.phl[182]" "thislittlepiggywenttomarket.dnsm[114]";
-connectAttr "pairBlend7.ory" "pig_latestRN.phl[183]";
-connectAttr "pig_latestRN.phl[184]" "thislittlepiggywenttomarket.dnsm[113]";
-connectAttr "pairBlend7.orz" "pig_latestRN.phl[185]";
-connectAttr "pig_latestRN.phl[186]" "pairBlend7.w";
-connectAttr "pig_latestRN.phl[187]" "thislittlepiggywenttomarket.dnsm[119]";
-connectAttr "thislittlepiggywenttomarket.uv[54]" "pig_latestRN.phl[188]";
-connectAttr "pig_latestRN.phl[189]" "thislittlepiggywenttomarket.dnsm[112]";
-connectAttr "thislittlepiggywenttomarket.uv[53]" "pig_latestRN.phl[190]";
-connectAttr "pig_latestRN.phl[191]" "thislittlepiggywenttomarket.dnsm[111]";
-connectAttr "thislittlepiggywenttomarket.uv[52]" "pig_latestRN.phl[192]";
-connectAttr "pig_latestRN.phl[193]" "thislittlepiggywenttomarket.dnsm[110]";
-connectAttr "thislittlepiggywenttomarket.uv[51]" "pig_latestRN.phl[194]";
-connectAttr "pig_latestRN.phl[195]" "thislittlepiggywenttomarket.dnsm[106]";
-connectAttr "thislittlepiggywenttomarket.uv[47]" "pig_latestRN.phl[196]";
-connectAttr "pig_latestRN.phl[197]" "thislittlepiggywenttomarket.dnsm[105]";
-connectAttr "thislittlepiggywenttomarket.av[33]" "pig_latestRN.phl[198]";
-connectAttr "pig_latestRN.phl[199]" "thislittlepiggywenttomarket.dnsm[104]";
-connectAttr "thislittlepiggywenttomarket.av[32]" "pig_latestRN.phl[200]";
-connectAttr "pig_latestRN.phl[201]" "thislittlepiggywenttomarket.dnsm[103]";
-connectAttr "thislittlepiggywenttomarket.uv[46]" "pig_latestRN.phl[202]";
-connectAttr "pig_latestRN.phl[203]" "thislittlepiggywenttomarket.uv[50]";
-connectAttr "pig_latestRN.phl[204]" "thislittlepiggywenttomarket.uv[49]";
-connectAttr "pig_latestRN.phl[205]" "thislittlepiggywenttomarket.uv[48]";
-connectAttr "pig_latestRN.phl[206]" "thislittlepiggywenttomarket.lv[30]";
-connectAttr "pig_latestRN.phl[207]" "thislittlepiggywenttomarket.lv[29]";
-connectAttr "pig_latestRN.phl[208]" "thislittlepiggywenttomarket.lv[28]";
-connectAttr "pig_latestRN.phl[209]" "thislittlepiggywenttomarket.av[36]";
-connectAttr "pig_latestRN.phl[210]" "thislittlepiggywenttomarket.av[35]";
-connectAttr "pig_latestRN.phl[211]" "thislittlepiggywenttomarket.av[34]";
-connectAttr "pig_latestRN.phl[212]" "thislittlepiggywenttomarket.dnsm[101]";
-connectAttr "thislittlepiggywenttomarket.lv[27]" "pig_latestRN.phl[213]";
-connectAttr "pig_latestRN.phl[214]" "thislittlepiggywenttomarket.dnsm[100]";
-connectAttr "thislittlepiggywenttomarket.lv[26]" "pig_latestRN.phl[215]";
-connectAttr "pig_latestRN.phl[216]" "thislittlepiggywenttomarket.dnsm[99]";
-connectAttr "thislittlepiggywenttomarket.lv[25]" "pig_latestRN.phl[217]";
-connectAttr "pig_latestRN.phl[218]" "thislittlepiggywenttomarket.dnsm[102]";
-connectAttr "thislittlepiggywenttomarket.uv[45]" "pig_latestRN.phl[219]";
-connectAttr "pig_latestRN.phl[220]" "thislittlepiggywenttomarket.dnsm[98]";
-connectAttr "thislittlepiggywenttomarket.av[31]" "pig_latestRN.phl[221]";
-connectAttr "pig_latestRN.phl[222]" "thislittlepiggywenttomarket.dnsm[97]";
-connectAttr "thislittlepiggywenttomarket.av[30]" "pig_latestRN.phl[223]";
-connectAttr "pig_latestRN.phl[224]" "thislittlepiggywenttomarket.dnsm[96]";
-connectAttr "thislittlepiggywenttomarket.av[29]" "pig_latestRN.phl[225]";
-connectAttr "pig_latestRN.phl[226]" "thislittlepiggywenttomarket.dnsm[95]";
-connectAttr "thislittlepiggywenttomarket.uv[44]" "pig_latestRN.phl[227]";
-connectAttr "pig_latestRN.phl[228]" "thislittlepiggywenttomarket.dnsm[94]";
-connectAttr "thislittlepiggywenttomarket.uv[43]" "pig_latestRN.phl[229]";
-connectAttr "pig_latestRN.phl[230]" "thislittlepiggywenttomarket.dnsm[93]";
-connectAttr "thislittlepiggywenttomarket.uv[42]" "pig_latestRN.phl[231]";
-connectAttr "pig_latestRN.phl[232]" "thislittlepiggywenttomarket.dnsm[82]";
-connectAttr "thislittlepiggywenttomarket.uv[37]" "pig_latestRN.phl[233]";
-connectAttr "pig_latestRN.phl[234]" "thislittlepiggywenttomarket.dnsm[81]";
-connectAttr "thislittlepiggywenttomarket.uv[36]" "pig_latestRN.phl[235]";
-connectAttr "pig_latestRN.phl[236]" "thislittlepiggywenttomarket.dnsm[80]";
-connectAttr "thislittlepiggywenttomarket.uv[35]" "pig_latestRN.phl[237]";
-connectAttr "pig_latestRN.phl[238]" "thislittlepiggywenttomarket.dnsm[91]";
-connectAttr "pairBlend6.otx" "pig_latestRN.phl[239]";
-connectAttr "pig_latestRN.phl[240]" "thislittlepiggywenttomarket.dnsm[90]";
-connectAttr "pairBlend6.oty" "pig_latestRN.phl[241]";
-connectAttr "pig_latestRN.phl[242]" "thislittlepiggywenttomarket.dnsm[89]";
-connectAttr "pairBlend6.otz" "pig_latestRN.phl[243]";
-connectAttr "pig_latestRN.phl[244]" "thislittlepiggywenttomarket.dnsm[88]";
-connectAttr "pairBlend5.orx" "pig_latestRN.phl[245]";
-connectAttr "pig_latestRN.phl[246]" "thislittlepiggywenttomarket.dnsm[87]";
-connectAttr "pairBlend5.ory" "pig_latestRN.phl[247]";
-connectAttr "pig_latestRN.phl[248]" "thislittlepiggywenttomarket.dnsm[86]";
-connectAttr "pairBlend5.orz" "pig_latestRN.phl[249]";
-connectAttr "pig_latestRN.phl[250]" "pairBlend5.w";
-connectAttr "pig_latestRN.phl[251]" "thislittlepiggywenttomarket.dnsm[92]";
-connectAttr "thislittlepiggywenttomarket.uv[41]" "pig_latestRN.phl[252]";
-connectAttr "pig_latestRN.phl[253]" "thislittlepiggywenttomarket.dnsm[85]";
-connectAttr "thislittlepiggywenttomarket.uv[40]" "pig_latestRN.phl[254]";
-connectAttr "pig_latestRN.phl[255]" "thislittlepiggywenttomarket.dnsm[84]";
-connectAttr "thislittlepiggywenttomarket.uv[39]" "pig_latestRN.phl[256]";
-connectAttr "pig_latestRN.phl[257]" "thislittlepiggywenttomarket.dnsm[83]";
-connectAttr "thislittlepiggywenttomarket.uv[38]" "pig_latestRN.phl[258]";
-connectAttr "pig_latestRN.phl[259]" "thislittlepiggywenttomarket.dnsm[79]";
-connectAttr "thislittlepiggywenttomarket.uv[34]" "pig_latestRN.phl[260]";
-connectAttr "pig_latestRN.phl[261]" "thislittlepiggywenttomarket.dnsm[78]";
-connectAttr "thislittlepiggywenttomarket.av[25]" "pig_latestRN.phl[262]";
-connectAttr "pig_latestRN.phl[263]" "thislittlepiggywenttomarket.dnsm[77]";
-connectAttr "thislittlepiggywenttomarket.av[24]" "pig_latestRN.phl[264]";
-connectAttr "pig_latestRN.phl[265]" "thislittlepiggywenttomarket.dnsm[76]";
-connectAttr "thislittlepiggywenttomarket.uv[33]" "pig_latestRN.phl[266]";
-connectAttr "pig_latestRN.phl[267]" "thislittlepiggywenttomarket.uv[37]";
-connectAttr "pig_latestRN.phl[268]" "thislittlepiggywenttomarket.uv[36]";
-connectAttr "pig_latestRN.phl[269]" "thislittlepiggywenttomarket.uv[35]";
-connectAttr "pig_latestRN.phl[270]" "thislittlepiggywenttomarket.lv[24]";
-connectAttr "pig_latestRN.phl[271]" "thislittlepiggywenttomarket.lv[23]";
-connectAttr "pig_latestRN.phl[272]" "thislittlepiggywenttomarket.lv[22]";
-connectAttr "pig_latestRN.phl[273]" "thislittlepiggywenttomarket.av[28]";
-connectAttr "pig_latestRN.phl[274]" "thislittlepiggywenttomarket.av[27]";
-connectAttr "pig_latestRN.phl[275]" "thislittlepiggywenttomarket.av[26]";
-connectAttr "pig_latestRN.phl[276]" "thislittlepiggywenttomarket.dnsm[74]";
-connectAttr "thislittlepiggywenttomarket.lv[21]" "pig_latestRN.phl[277]";
-connectAttr "pig_latestRN.phl[278]" "thislittlepiggywenttomarket.dnsm[73]";
-connectAttr "thislittlepiggywenttomarket.lv[20]" "pig_latestRN.phl[279]";
-connectAttr "pig_latestRN.phl[280]" "thislittlepiggywenttomarket.dnsm[72]";
-connectAttr "thislittlepiggywenttomarket.lv[19]" "pig_latestRN.phl[281]";
-connectAttr "pig_latestRN.phl[282]" "thislittlepiggywenttomarket.dnsm[75]";
-connectAttr "thislittlepiggywenttomarket.uv[32]" "pig_latestRN.phl[283]";
-connectAttr "pig_latestRN.phl[284]" "thislittlepiggywenttomarket.dnsm[71]";
-connectAttr "thislittlepiggywenttomarket.av[23]" "pig_latestRN.phl[285]";
-connectAttr "pig_latestRN.phl[286]" "thislittlepiggywenttomarket.dnsm[70]";
-connectAttr "thislittlepiggywenttomarket.av[22]" "pig_latestRN.phl[287]";
-connectAttr "pig_latestRN.phl[288]" "thislittlepiggywenttomarket.dnsm[69]";
-connectAttr "thislittlepiggywenttomarket.av[21]" "pig_latestRN.phl[289]";
-connectAttr "pig_latestRN.phl[290]" "thislittlepiggywenttomarket.dnsm[68]";
-connectAttr "thislittlepiggywenttomarket.uv[31]" "pig_latestRN.phl[291]";
-connectAttr "pig_latestRN.phl[292]" "thislittlepiggywenttomarket.dnsm[67]";
-connectAttr "thislittlepiggywenttomarket.uv[30]" "pig_latestRN.phl[293]";
-connectAttr "pig_latestRN.phl[294]" "thislittlepiggywenttomarket.dnsm[66]";
-connectAttr "thislittlepiggywenttomarket.uv[29]" "pig_latestRN.phl[295]";
-connectAttr "pig_latestRN.phl[296]" "thislittlepiggywenttomarket.dnsm[55]";
-connectAttr "thislittlepiggywenttomarket.uv[24]" "pig_latestRN.phl[297]";
-connectAttr "pig_latestRN.phl[298]" "thislittlepiggywenttomarket.dnsm[54]";
-connectAttr "thislittlepiggywenttomarket.uv[23]" "pig_latestRN.phl[299]";
-connectAttr "pig_latestRN.phl[300]" "thislittlepiggywenttomarket.dnsm[53]";
-connectAttr "thislittlepiggywenttomarket.uv[22]" "pig_latestRN.phl[301]";
-connectAttr "pig_latestRN.phl[302]" "thislittlepiggywenttomarket.dnsm[64]";
-connectAttr "pairBlend4.otx" "pig_latestRN.phl[303]";
-connectAttr "pig_latestRN.phl[304]" "thislittlepiggywenttomarket.dnsm[63]";
-connectAttr "pairBlend4.oty" "pig_latestRN.phl[305]";
-connectAttr "pig_latestRN.phl[306]" "thislittlepiggywenttomarket.dnsm[62]";
-connectAttr "pairBlend4.otz" "pig_latestRN.phl[307]";
-connectAttr "pig_latestRN.phl[308]" "thislittlepiggywenttomarket.dnsm[61]";
-connectAttr "pairBlend3.orx" "pig_latestRN.phl[309]";
-connectAttr "pig_latestRN.phl[310]" "thislittlepiggywenttomarket.dnsm[60]";
-connectAttr "pairBlend3.ory" "pig_latestRN.phl[311]";
-connectAttr "pig_latestRN.phl[312]" "thislittlepiggywenttomarket.dnsm[59]";
-connectAttr "pairBlend3.orz" "pig_latestRN.phl[313]";
-connectAttr "pig_latestRN.phl[314]" "pairBlend3.w";
-connectAttr "pig_latestRN.phl[315]" "thislittlepiggywenttomarket.dnsm[65]";
-connectAttr "thislittlepiggywenttomarket.uv[28]" "pig_latestRN.phl[316]";
-connectAttr "pig_latestRN.phl[317]" "thislittlepiggywenttomarket.dnsm[58]";
-connectAttr "thislittlepiggywenttomarket.uv[27]" "pig_latestRN.phl[318]";
-connectAttr "pig_latestRN.phl[319]" "thislittlepiggywenttomarket.dnsm[57]";
-connectAttr "thislittlepiggywenttomarket.uv[26]" "pig_latestRN.phl[320]";
-connectAttr "pig_latestRN.phl[321]" "thislittlepiggywenttomarket.dnsm[56]";
-connectAttr "thislittlepiggywenttomarket.uv[25]" "pig_latestRN.phl[322]";
-connectAttr "pig_latestRN.phl[323]" "thislittlepiggywenttomarket.dnsm[52]";
-connectAttr "thislittlepiggywenttomarket.uv[21]" "pig_latestRN.phl[324]";
-connectAttr "pig_latestRN.phl[325]" "thislittlepiggywenttomarket.dnsm[51]";
-connectAttr "thislittlepiggywenttomarket.av[17]" "pig_latestRN.phl[326]";
-connectAttr "pig_latestRN.phl[327]" "thislittlepiggywenttomarket.dnsm[50]";
-connectAttr "thislittlepiggywenttomarket.av[16]" "pig_latestRN.phl[328]";
-connectAttr "pig_latestRN.phl[329]" "thislittlepiggywenttomarket.dnsm[49]";
-connectAttr "thislittlepiggywenttomarket.uv[20]" "pig_latestRN.phl[330]";
-connectAttr "pig_latestRN.phl[331]" "thislittlepiggywenttomarket.uv[24]";
-connectAttr "pig_latestRN.phl[332]" "thislittlepiggywenttomarket.uv[23]";
-connectAttr "pig_latestRN.phl[333]" "thislittlepiggywenttomarket.uv[22]";
-connectAttr "pig_latestRN.phl[334]" "thislittlepiggywenttomarket.lv[18]";
-connectAttr "pig_latestRN.phl[335]" "thislittlepiggywenttomarket.lv[17]";
-connectAttr "pig_latestRN.phl[336]" "thislittlepiggywenttomarket.lv[16]";
-connectAttr "pig_latestRN.phl[337]" "thislittlepiggywenttomarket.av[20]";
-connectAttr "pig_latestRN.phl[338]" "thislittlepiggywenttomarket.av[19]";
-connectAttr "pig_latestRN.phl[339]" "thislittlepiggywenttomarket.av[18]";
-connectAttr "pig_latestRN.phl[340]" "thislittlepiggywenttomarket.dnsm[47]";
-connectAttr "thislittlepiggywenttomarket.lv[15]" "pig_latestRN.phl[341]";
-connectAttr "pig_latestRN.phl[342]" "thislittlepiggywenttomarket.dnsm[46]";
-connectAttr "thislittlepiggywenttomarket.lv[14]" "pig_latestRN.phl[343]";
-connectAttr "pig_latestRN.phl[344]" "thislittlepiggywenttomarket.dnsm[45]";
-connectAttr "thislittlepiggywenttomarket.lv[13]" "pig_latestRN.phl[345]";
-connectAttr "pig_latestRN.phl[346]" "thislittlepiggywenttomarket.dnsm[48]";
-connectAttr "thislittlepiggywenttomarket.uv[19]" "pig_latestRN.phl[347]";
-connectAttr "pig_latestRN.phl[348]" "thislittlepiggywenttomarket.dnsm[44]";
-connectAttr "thislittlepiggywenttomarket.av[15]" "pig_latestRN.phl[349]";
-connectAttr "pig_latestRN.phl[350]" "thislittlepiggywenttomarket.dnsm[43]";
-connectAttr "thislittlepiggywenttomarket.av[14]" "pig_latestRN.phl[351]";
-connectAttr "pig_latestRN.phl[352]" "thislittlepiggywenttomarket.dnsm[42]";
-connectAttr "thislittlepiggywenttomarket.av[13]" "pig_latestRN.phl[353]";
-connectAttr "pig_latestRN.phl[354]" "thislittlepiggywenttomarket.dnsm[41]";
-connectAttr "thislittlepiggywenttomarket.uv[18]" "pig_latestRN.phl[355]";
-connectAttr "pig_latestRN.phl[356]" "thislittlepiggywenttomarket.dnsm[40]";
-connectAttr "thislittlepiggywenttomarket.uv[17]" "pig_latestRN.phl[357]";
-connectAttr "pig_latestRN.phl[358]" "thislittlepiggywenttomarket.dnsm[39]";
-connectAttr "thislittlepiggywenttomarket.uv[16]" "pig_latestRN.phl[359]";
-connectAttr "pig_latestRN.phl[360]" "thislittlepiggywenttomarket.dnsm[36]";
-connectAttr "pairBlend14.otz" "pig_latestRN.phl[361]";
-connectAttr "pig_latestRN.phl[362]" "thislittlepiggywenttomarket.dnsm[38]";
-connectAttr "pairBlend14.otx" "pig_latestRN.phl[363]";
-connectAttr "pig_latestRN.phl[364]" "thislittlepiggywenttomarket.dnsm[37]";
-connectAttr "pairBlend14.oty" "pig_latestRN.phl[365]";
-connectAttr "pig_latestRN.phl[366]" "thislittlepiggywenttomarket.dnsm[33]";
-connectAttr "pairBlend13.orz" "pig_latestRN.phl[367]";
-connectAttr "pig_latestRN.phl[368]" "thislittlepiggywenttomarket.dnsm[35]";
-connectAttr "pairBlend13.orx" "pig_latestRN.phl[369]";
-connectAttr "pig_latestRN.phl[370]" "thislittlepiggywenttomarket.dnsm[34]";
-connectAttr "pairBlend13.ory" "pig_latestRN.phl[371]";
-connectAttr "pig_latestRN.phl[372]" "thislittlepiggywenttomarket.dnsm[32]";
-connectAttr "thislittlepiggywenttomarket.uv[15]" "pig_latestRN.phl[373]";
-connectAttr "pig_latestRN.phl[374]" "thislittlepiggywenttomarket.dnsm[31]";
-connectAttr "thislittlepiggywenttomarket.uv[14]" "pig_latestRN.phl[375]";
-connectAttr "pig_latestRN.phl[376]" "thislittlepiggywenttomarket.dnsm[30]";
-connectAttr "thislittlepiggywenttomarket.uv[13]" "pig_latestRN.phl[377]";
-connectAttr "hip_rotation_ctrl01_blendThislittlepiggywenttomarket.o" "pig_latestRN.phl[378]"
+connectAttr "pig_latestRN.phl[441]" "pig_latestRN.phl[442]";
+connectAttr "pig_latestRN.phl[443]" "pig_latestRN.phl[444]";
+connectAttr "pig_latestRN.phl[445]" "pig_latestRN.phl[446]";
+connectAttr "pig_latestRN.phl[447]" "tail_2control01_parentConstraint1.tg[0].tr"
 		;
-connectAttr "pig_latestRN.phl[379]" "tail_2control01_parentConstraint1.tg[0].tt"
+connectAttr "pig_latestRN.phl[448]" "pig_latestRN.phl[449]";
+connectAttr "pig_latestRN.phl[450]" "pig_latestRN.phl[451]";
+connectAttr "pig_latestRN.phl[452]" "pig_latestRN.phl[453]";
+connectAttr "pig_latestRN.phl[454]" "tail_2control01_parentConstraint1.tg[0].tro"
 		;
-connectAttr "pig_latestRN.phl[380]" "pig_latestRN.phl[381]";
-connectAttr "pig_latestRN.phl[382]" "pig_latestRN.phl[383]";
-connectAttr "pig_latestRN.phl[384]" "pig_latestRN.phl[385]";
-connectAttr "pig_latestRN.phl[386]" "tail_2control01_parentConstraint1.tg[0].tr"
+connectAttr "pig_latestRN.phl[455]" "tail_2control01_parentConstraint1.tg[0].trp"
 		;
-connectAttr "pig_latestRN.phl[387]" "pig_latestRN.phl[388]";
-connectAttr "pig_latestRN.phl[389]" "pig_latestRN.phl[390]";
-connectAttr "pig_latestRN.phl[391]" "pig_latestRN.phl[392]";
-connectAttr "pig_latestRN.phl[393]" "tail_2control01_parentConstraint1.tg[0].tro"
+connectAttr "pig_latestRN.phl[456]" "tail_2control01_parentConstraint1.tg[0].trt"
 		;
-connectAttr "pig_latestRN.phl[394]" "tail_2control01_parentConstraint1.tg[0].trp"
+connectAttr "pig_latestRN.phl[457]" "tail_2control01_parentConstraint1.tg[0].ts"
 		;
-connectAttr "pig_latestRN.phl[395]" "tail_2control01_parentConstraint1.tg[0].trt"
+connectAttr "pig_latestRN.phl[458]" "tail_2control01_parentConstraint1.tg[0].tpm"
 		;
-connectAttr "pig_latestRN.phl[396]" "tail_2control01_parentConstraint1.tg[0].ts"
+connectAttr "pig_latestRN.phl[459]" "tail_3control01_parentConstraint1.tg[0].tt"
 		;
-connectAttr "pig_latestRN.phl[397]" "tail_2control01_parentConstraint1.tg[0].tpm"
+connectAttr "tail_2control01_parentConstraint1.ctx" "pig_latestRN.phl[460]";
+connectAttr "tail_2control01_parentConstraint1.cty" "pig_latestRN.phl[461]";
+connectAttr "tail_2control01_parentConstraint1.ctz" "pig_latestRN.phl[462]";
+connectAttr "pig_latestRN.phl[463]" "tail_2control01_parentConstraint1.crp";
+connectAttr "pig_latestRN.phl[464]" "tail_3control01_parentConstraint1.tg[0].trp"
 		;
-connectAttr "pig_latestRN.phl[398]" "tail_3control01_parentConstraint1.tg[0].tt"
+connectAttr "pig_latestRN.phl[465]" "tail_2control01_parentConstraint1.crt";
+connectAttr "pig_latestRN.phl[466]" "tail_3control01_parentConstraint1.tg[0].trt"
 		;
-connectAttr "tail_2control01_parentConstraint1.ctx" "pig_latestRN.phl[399]";
-connectAttr "tail_2control01_parentConstraint1.cty" "pig_latestRN.phl[400]";
-connectAttr "tail_2control01_parentConstraint1.ctz" "pig_latestRN.phl[401]";
-connectAttr "pig_latestRN.phl[402]" "tail_2control01_parentConstraint1.crp";
-connectAttr "pig_latestRN.phl[403]" "tail_3control01_parentConstraint1.tg[0].trp"
+connectAttr "pig_latestRN.phl[467]" "tail_3control01_parentConstraint1.tg[0].tr"
 		;
-connectAttr "pig_latestRN.phl[404]" "tail_2control01_parentConstraint1.crt";
-connectAttr "pig_latestRN.phl[405]" "tail_3control01_parentConstraint1.tg[0].trt"
+connectAttr "tail_2control01_parentConstraint1.crx" "pig_latestRN.phl[468]";
+connectAttr "tail_2control01_parentConstraint1.cry" "pig_latestRN.phl[469]";
+connectAttr "tail_2control01_parentConstraint1.crz" "pig_latestRN.phl[470]";
+connectAttr "pig_latestRN.phl[471]" "tail_2control01_parentConstraint1.cro";
+connectAttr "pig_latestRN.phl[472]" "tail_3control01_parentConstraint1.tg[0].tro"
 		;
-connectAttr "pig_latestRN.phl[406]" "tail_3control01_parentConstraint1.tg[0].tr"
+connectAttr "pig_latestRN.phl[473]" "tail_3control01_parentConstraint1.tg[0].ts"
 		;
-connectAttr "tail_2control01_parentConstraint1.crx" "pig_latestRN.phl[407]";
-connectAttr "tail_2control01_parentConstraint1.cry" "pig_latestRN.phl[408]";
-connectAttr "tail_2control01_parentConstraint1.crz" "pig_latestRN.phl[409]";
-connectAttr "pig_latestRN.phl[410]" "tail_2control01_parentConstraint1.cro";
-connectAttr "pig_latestRN.phl[411]" "tail_3control01_parentConstraint1.tg[0].tro"
+connectAttr "pig_latestRN.phl[474]" "tail_3control01_parentConstraint1.tg[0].tpm"
 		;
-connectAttr "pig_latestRN.phl[412]" "tail_3control01_parentConstraint1.tg[0].ts"
+connectAttr "pig_latestRN.phl[475]" "tail_2control01_parentConstraint1.cpim";
+connectAttr "pig_latestRN.phl[476]" "tail_4control01_parentConstraint1.tg[0].tt"
 		;
-connectAttr "pig_latestRN.phl[413]" "tail_3control01_parentConstraint1.tg[0].tpm"
+connectAttr "tail_3control01_parentConstraint1.ctx" "pig_latestRN.phl[477]";
+connectAttr "tail_3control01_parentConstraint1.cty" "pig_latestRN.phl[478]";
+connectAttr "tail_3control01_parentConstraint1.ctz" "pig_latestRN.phl[479]";
+connectAttr "pig_latestRN.phl[480]" "tail_3control01_parentConstraint1.crp";
+connectAttr "pig_latestRN.phl[481]" "tail_4control01_parentConstraint1.tg[0].trp"
 		;
-connectAttr "pig_latestRN.phl[414]" "tail_2control01_parentConstraint1.cpim";
-connectAttr "pig_latestRN.phl[415]" "tail_4control01_parentConstraint1.tg[0].tt"
+connectAttr "pig_latestRN.phl[482]" "tail_3control01_parentConstraint1.crt";
+connectAttr "pig_latestRN.phl[483]" "tail_4control01_parentConstraint1.tg[0].trt"
 		;
-connectAttr "tail_3control01_parentConstraint1.ctx" "pig_latestRN.phl[416]";
-connectAttr "tail_3control01_parentConstraint1.cty" "pig_latestRN.phl[417]";
-connectAttr "tail_3control01_parentConstraint1.ctz" "pig_latestRN.phl[418]";
-connectAttr "pig_latestRN.phl[419]" "tail_3control01_parentConstraint1.crp";
-connectAttr "pig_latestRN.phl[420]" "tail_4control01_parentConstraint1.tg[0].trp"
+connectAttr "pig_latestRN.phl[484]" "tail_4control01_parentConstraint1.tg[0].tr"
 		;
-connectAttr "pig_latestRN.phl[421]" "tail_3control01_parentConstraint1.crt";
-connectAttr "pig_latestRN.phl[422]" "tail_4control01_parentConstraint1.tg[0].trt"
+connectAttr "tail_3control01_parentConstraint1.crx" "pig_latestRN.phl[485]";
+connectAttr "tail_3control01_parentConstraint1.cry" "pig_latestRN.phl[486]";
+connectAttr "tail_3control01_parentConstraint1.crz" "pig_latestRN.phl[487]";
+connectAttr "pig_latestRN.phl[488]" "tail_3control01_parentConstraint1.cro";
+connectAttr "pig_latestRN.phl[489]" "tail_4control01_parentConstraint1.tg[0].tro"
 		;
-connectAttr "pig_latestRN.phl[423]" "tail_4control01_parentConstraint1.tg[0].tr"
+connectAttr "pig_latestRN.phl[490]" "tail_4control01_parentConstraint1.tg[0].ts"
 		;
-connectAttr "tail_3control01_parentConstraint1.crx" "pig_latestRN.phl[424]";
-connectAttr "tail_3control01_parentConstraint1.cry" "pig_latestRN.phl[425]";
-connectAttr "tail_3control01_parentConstraint1.crz" "pig_latestRN.phl[426]";
-connectAttr "pig_latestRN.phl[427]" "tail_3control01_parentConstraint1.cro";
-connectAttr "pig_latestRN.phl[428]" "tail_4control01_parentConstraint1.tg[0].tro"
+connectAttr "pig_latestRN.phl[491]" "tail_4control01_parentConstraint1.tg[0].tpm"
 		;
-connectAttr "pig_latestRN.phl[429]" "tail_4control01_parentConstraint1.tg[0].ts"
-		;
-connectAttr "pig_latestRN.phl[430]" "tail_4control01_parentConstraint1.tg[0].tpm"
-		;
-connectAttr "pig_latestRN.phl[431]" "tail_3control01_parentConstraint1.cpim";
-connectAttr "tail_4control01_parentConstraint1.ctx" "pig_latestRN.phl[432]";
-connectAttr "tail_4control01_parentConstraint1.cty" "pig_latestRN.phl[433]";
-connectAttr "tail_4control01_parentConstraint1.ctz" "pig_latestRN.phl[434]";
-connectAttr "pig_latestRN.phl[435]" "tail_4control01_parentConstraint1.crp";
-connectAttr "pig_latestRN.phl[436]" "tail_4control01_parentConstraint1.crt";
-connectAttr "tail_4control01_parentConstraint1.crx" "pig_latestRN.phl[437]";
-connectAttr "tail_4control01_parentConstraint1.cry" "pig_latestRN.phl[438]";
-connectAttr "tail_4control01_parentConstraint1.crz" "pig_latestRN.phl[439]";
-connectAttr "pig_latestRN.phl[440]" "tail_4control01_parentConstraint1.cro";
-connectAttr "pig_latestRN.phl[441]" "tail_4control01_parentConstraint1.cpim";
-connectAttr "pig_latestRN.phl[442]" "thislittlepiggywenttomarket.lv[10]";
-connectAttr "pig_latestRN.phl[443]" "thislittlepiggywenttomarket.lv[12]";
-connectAttr "pig_latestRN.phl[444]" "thislittlepiggywenttomarket.lv[11]";
-connectAttr "pig_latestRN.phl[445]" "thislittlepiggywenttomarket.av[10]";
-connectAttr "pig_latestRN.phl[446]" "thislittlepiggywenttomarket.av[12]";
-connectAttr "pig_latestRN.phl[447]" "thislittlepiggywenttomarket.av[11]";
-connectAttr "pig_latestRN.phl[448]" "thislittlepiggywenttomarket.dnsm[28]";
-connectAttr "thislittlepiggywenttomarket.lv[9]" "pig_latestRN.phl[449]";
-connectAttr "pig_latestRN.phl[450]" "thislittlepiggywenttomarket.dnsm[27]";
-connectAttr "thislittlepiggywenttomarket.lv[8]" "pig_latestRN.phl[451]";
-connectAttr "pig_latestRN.phl[452]" "thislittlepiggywenttomarket.dnsm[26]";
-connectAttr "thislittlepiggywenttomarket.lv[7]" "pig_latestRN.phl[453]";
-connectAttr "pig_latestRN.phl[454]" "thislittlepiggywenttomarket.dnsm[25]";
-connectAttr "thislittlepiggywenttomarket.av[9]" "pig_latestRN.phl[455]";
-connectAttr "pig_latestRN.phl[456]" "thislittlepiggywenttomarket.dnsm[24]";
-connectAttr "thislittlepiggywenttomarket.av[8]" "pig_latestRN.phl[457]";
-connectAttr "pig_latestRN.phl[458]" "thislittlepiggywenttomarket.dnsm[23]";
-connectAttr "thislittlepiggywenttomarket.av[7]" "pig_latestRN.phl[459]";
-connectAttr "pig_latestRN.phl[460]" "thislittlepiggywenttomarket.dnsm[22]";
-connectAttr "thislittlepiggywenttomarket.uv[11]" "pig_latestRN.phl[461]";
-connectAttr "pig_latestRN.phl[462]" "thislittlepiggywenttomarket.dnsm[21]";
-connectAttr "thislittlepiggywenttomarket.uv[10]" "pig_latestRN.phl[463]";
-connectAttr "pig_latestRN.phl[464]" "thislittlepiggywenttomarket.dnsm[20]";
-connectAttr "thislittlepiggywenttomarket.uv[9]" "pig_latestRN.phl[465]";
-connectAttr "pig_latestRN.phl[466]" "thislittlepiggywenttomarket.dnsm[29]";
-connectAttr "thislittlepiggywenttomarket.uv[12]" "pig_latestRN.phl[467]";
-connectAttr "pig_latestRN.phl[468]" "thislittlepiggywenttomarket.dnsm[18]";
-connectAttr "thislittlepiggywenttomarket.lv[6]" "pig_latestRN.phl[469]";
-connectAttr "pig_latestRN.phl[470]" "thislittlepiggywenttomarket.dnsm[17]";
-connectAttr "thislittlepiggywenttomarket.lv[5]" "pig_latestRN.phl[471]";
-connectAttr "pig_latestRN.phl[472]" "thislittlepiggywenttomarket.dnsm[16]";
-connectAttr "thislittlepiggywenttomarket.lv[4]" "pig_latestRN.phl[473]";
-connectAttr "pig_latestRN.phl[474]" "thislittlepiggywenttomarket.dnsm[15]";
-connectAttr "thislittlepiggywenttomarket.av[6]" "pig_latestRN.phl[475]";
-connectAttr "pig_latestRN.phl[476]" "thislittlepiggywenttomarket.dnsm[14]";
-connectAttr "thislittlepiggywenttomarket.av[5]" "pig_latestRN.phl[477]";
-connectAttr "pig_latestRN.phl[478]" "thislittlepiggywenttomarket.dnsm[13]";
-connectAttr "thislittlepiggywenttomarket.av[4]" "pig_latestRN.phl[479]";
-connectAttr "pig_latestRN.phl[480]" "thislittlepiggywenttomarket.dnsm[12]";
-connectAttr "thislittlepiggywenttomarket.uv[7]" "pig_latestRN.phl[481]";
-connectAttr "pig_latestRN.phl[482]" "thislittlepiggywenttomarket.dnsm[11]";
-connectAttr "thislittlepiggywenttomarket.uv[6]" "pig_latestRN.phl[483]";
-connectAttr "pig_latestRN.phl[484]" "thislittlepiggywenttomarket.dnsm[10]";
-connectAttr "thislittlepiggywenttomarket.uv[5]" "pig_latestRN.phl[485]";
-connectAttr "pig_latestRN.phl[486]" "thislittlepiggywenttomarket.dnsm[19]";
-connectAttr "thislittlepiggywenttomarket.uv[8]" "pig_latestRN.phl[487]";
-connectAttr "controller_L_backfoot01_rotateX.o" "pig_latestRN.phl[488]";
-connectAttr "controller_L_backfoot01_rotateY.o" "pig_latestRN.phl[489]";
-connectAttr "controller_L_backfoot01_rotateZ.o" "pig_latestRN.phl[490]";
-connectAttr "controller_L_backfoot01_translateX.o" "pig_latestRN.phl[491]";
-connectAttr "controller_L_backfoot01_translateY.o" "pig_latestRN.phl[492]";
-connectAttr "controller_L_backfoot01_translateZ.o" "pig_latestRN.phl[493]";
-connectAttr "controller_L_backfoot01_scaleX.o" "pig_latestRN.phl[494]";
-connectAttr "controller_L_backfoot01_scaleY.o" "pig_latestRN.phl[495]";
-connectAttr "controller_L_backfoot01_scaleZ.o" "pig_latestRN.phl[496]";
-connectAttr "controller_R_backfoot01_rotateX.o" "pig_latestRN.phl[497]";
-connectAttr "controller_R_backfoot01_rotateY.o" "pig_latestRN.phl[498]";
-connectAttr "controller_R_backfoot01_rotateZ.o" "pig_latestRN.phl[499]";
-connectAttr "controller_R_backfoot01_translateX.o" "pig_latestRN.phl[500]";
-connectAttr "controller_R_backfoot01_translateY.o" "pig_latestRN.phl[501]";
-connectAttr "controller_R_backfoot01_translateZ.o" "pig_latestRN.phl[502]";
-connectAttr "controller_R_backfoot01_scaleX.o" "pig_latestRN.phl[503]";
-connectAttr "controller_R_backfoot01_scaleY.o" "pig_latestRN.phl[504]";
-connectAttr "controller_R_backfoot01_scaleZ.o" "pig_latestRN.phl[505]";
-connectAttr "pig_latestRN.phl[506]" "thislittlepiggywenttomarket.dnsm[8]";
-connectAttr "thislittlepiggywenttomarket.lv[3]" "pig_latestRN.phl[507]";
-connectAttr "pig_latestRN.phl[508]" "thislittlepiggywenttomarket.dnsm[7]";
-connectAttr "thislittlepiggywenttomarket.lv[2]" "pig_latestRN.phl[509]";
-connectAttr "pig_latestRN.phl[510]" "thislittlepiggywenttomarket.dnsm[6]";
-connectAttr "thislittlepiggywenttomarket.lv[1]" "pig_latestRN.phl[511]";
-connectAttr "pig_latestRN.phl[512]" "thislittlepiggywenttomarket.dnsm[5]";
-connectAttr "thislittlepiggywenttomarket.av[3]" "pig_latestRN.phl[513]";
-connectAttr "pig_latestRN.phl[514]" "thislittlepiggywenttomarket.dnsm[4]";
-connectAttr "thislittlepiggywenttomarket.av[2]" "pig_latestRN.phl[515]";
-connectAttr "pig_latestRN.phl[516]" "thislittlepiggywenttomarket.dnsm[3]";
-connectAttr "thislittlepiggywenttomarket.av[1]" "pig_latestRN.phl[517]";
-connectAttr "pig_latestRN.phl[518]" "thislittlepiggywenttomarket.dnsm[2]";
-connectAttr "thislittlepiggywenttomarket.uv[3]" "pig_latestRN.phl[519]";
-connectAttr "pig_latestRN.phl[520]" "thislittlepiggywenttomarket.dnsm[1]";
-connectAttr "thislittlepiggywenttomarket.uv[2]" "pig_latestRN.phl[521]";
-connectAttr "pig_latestRN.phl[522]" "thislittlepiggywenttomarket.dnsm[0]";
-connectAttr "thislittlepiggywenttomarket.uv[1]" "pig_latestRN.phl[523]";
-connectAttr "pig_latestRN.phl[524]" "thislittlepiggywenttomarket.dnsm[9]";
-connectAttr "thislittlepiggywenttomarket.uv[4]" "pig_latestRN.phl[525]";
-connectAttr "controller_L_frontfoot01_rotateX.o" "pig_latestRN.phl[526]";
-connectAttr "controller_L_frontfoot01_rotateY.o" "pig_latestRN.phl[527]";
-connectAttr "controller_L_frontfoot01_rotateZ.o" "pig_latestRN.phl[528]";
-connectAttr "controller_L_frontfoot01_translateX.o" "pig_latestRN.phl[529]";
-connectAttr "controller_L_frontfoot01_translateY.o" "pig_latestRN.phl[530]";
-connectAttr "controller_L_frontfoot01_translateZ.o" "pig_latestRN.phl[531]";
-connectAttr "controller_L_frontfoot01_scaleX.o" "pig_latestRN.phl[532]";
-connectAttr "controller_L_frontfoot01_scaleY.o" "pig_latestRN.phl[533]";
-connectAttr "controller_L_frontfoot01_scaleZ.o" "pig_latestRN.phl[534]";
-connectAttr "controller_R_frontfoot01_rotateX.o" "pig_latestRN.phl[535]";
-connectAttr "controller_R_frontfoot01_rotateY.o" "pig_latestRN.phl[536]";
-connectAttr "controller_R_frontfoot01_rotateZ.o" "pig_latestRN.phl[537]";
-connectAttr "controller_R_frontfoot01_translateX.o" "pig_latestRN.phl[538]";
-connectAttr "controller_R_frontfoot01_translateY.o" "pig_latestRN.phl[539]";
-connectAttr "controller_R_frontfoot01_translateZ.o" "pig_latestRN.phl[540]";
-connectAttr "controller_R_frontfoot01_scaleX.o" "pig_latestRN.phl[541]";
-connectAttr "controller_R_frontfoot01_scaleY.o" "pig_latestRN.phl[542]";
-connectAttr "controller_R_frontfoot01_scaleZ.o" "pig_latestRN.phl[543]";
-connectAttr "defaultFurGlobals.rogl" "pig_latestRN.phl[544]";
+connectAttr "pig_latestRN.phl[492]" "tail_3control01_parentConstraint1.cpim";
+connectAttr "tail_4control01_parentConstraint1.ctx" "pig_latestRN.phl[493]";
+connectAttr "tail_4control01_parentConstraint1.cty" "pig_latestRN.phl[494]";
+connectAttr "tail_4control01_parentConstraint1.ctz" "pig_latestRN.phl[495]";
+connectAttr "pig_latestRN.phl[496]" "tail_4control01_parentConstraint1.crp";
+connectAttr "pig_latestRN.phl[497]" "tail_4control01_parentConstraint1.crt";
+connectAttr "tail_4control01_parentConstraint1.crx" "pig_latestRN.phl[498]";
+connectAttr "tail_4control01_parentConstraint1.cry" "pig_latestRN.phl[499]";
+connectAttr "tail_4control01_parentConstraint1.crz" "pig_latestRN.phl[500]";
+connectAttr "pig_latestRN.phl[501]" "tail_4control01_parentConstraint1.cro";
+connectAttr "pig_latestRN.phl[502]" "tail_4control01_parentConstraint1.cpim";
+connectAttr "pig_latestRN.phl[503]" "thislittlepiggywenttomarket.lv[10]";
+connectAttr "pig_latestRN.phl[504]" "thislittlepiggywenttomarket.lv[12]";
+connectAttr "pig_latestRN.phl[505]" "thislittlepiggywenttomarket.lv[11]";
+connectAttr "pig_latestRN.phl[506]" "thislittlepiggywenttomarket.av[10]";
+connectAttr "pig_latestRN.phl[507]" "thislittlepiggywenttomarket.av[12]";
+connectAttr "pig_latestRN.phl[508]" "thislittlepiggywenttomarket.av[11]";
+connectAttr "pig_latestRN.phl[509]" "thislittlepiggywenttomarket.dnsm[28]";
+connectAttr "thislittlepiggywenttomarket.lv[9]" "pig_latestRN.phl[510]";
+connectAttr "pig_latestRN.phl[511]" "thislittlepiggywenttomarket.dnsm[27]";
+connectAttr "thislittlepiggywenttomarket.lv[8]" "pig_latestRN.phl[512]";
+connectAttr "pig_latestRN.phl[513]" "thislittlepiggywenttomarket.dnsm[26]";
+connectAttr "thislittlepiggywenttomarket.lv[7]" "pig_latestRN.phl[514]";
+connectAttr "pig_latestRN.phl[515]" "thislittlepiggywenttomarket.dnsm[25]";
+connectAttr "thislittlepiggywenttomarket.av[9]" "pig_latestRN.phl[516]";
+connectAttr "pig_latestRN.phl[517]" "thislittlepiggywenttomarket.dnsm[24]";
+connectAttr "thislittlepiggywenttomarket.av[8]" "pig_latestRN.phl[518]";
+connectAttr "pig_latestRN.phl[519]" "thislittlepiggywenttomarket.dnsm[23]";
+connectAttr "thislittlepiggywenttomarket.av[7]" "pig_latestRN.phl[520]";
+connectAttr "pig_latestRN.phl[521]" "thislittlepiggywenttomarket.dnsm[22]";
+connectAttr "thislittlepiggywenttomarket.uv[11]" "pig_latestRN.phl[522]";
+connectAttr "pig_latestRN.phl[523]" "thislittlepiggywenttomarket.dnsm[21]";
+connectAttr "thislittlepiggywenttomarket.uv[10]" "pig_latestRN.phl[524]";
+connectAttr "pig_latestRN.phl[525]" "thislittlepiggywenttomarket.dnsm[20]";
+connectAttr "thislittlepiggywenttomarket.uv[9]" "pig_latestRN.phl[526]";
+connectAttr "pig_latestRN.phl[527]" "thislittlepiggywenttomarket.dnsm[29]";
+connectAttr "thislittlepiggywenttomarket.uv[12]" "pig_latestRN.phl[528]";
+connectAttr "pig_latestRN.phl[529]" "thislittlepiggywenttomarket.dnsm[18]";
+connectAttr "thislittlepiggywenttomarket.lv[6]" "pig_latestRN.phl[530]";
+connectAttr "pig_latestRN.phl[531]" "thislittlepiggywenttomarket.dnsm[17]";
+connectAttr "thislittlepiggywenttomarket.lv[5]" "pig_latestRN.phl[532]";
+connectAttr "pig_latestRN.phl[533]" "thislittlepiggywenttomarket.dnsm[16]";
+connectAttr "thislittlepiggywenttomarket.lv[4]" "pig_latestRN.phl[534]";
+connectAttr "pig_latestRN.phl[535]" "thislittlepiggywenttomarket.dnsm[15]";
+connectAttr "thislittlepiggywenttomarket.av[6]" "pig_latestRN.phl[536]";
+connectAttr "pig_latestRN.phl[537]" "thislittlepiggywenttomarket.dnsm[14]";
+connectAttr "thislittlepiggywenttomarket.av[5]" "pig_latestRN.phl[538]";
+connectAttr "pig_latestRN.phl[539]" "thislittlepiggywenttomarket.dnsm[13]";
+connectAttr "thislittlepiggywenttomarket.av[4]" "pig_latestRN.phl[540]";
+connectAttr "pig_latestRN.phl[541]" "thislittlepiggywenttomarket.dnsm[12]";
+connectAttr "thislittlepiggywenttomarket.uv[7]" "pig_latestRN.phl[542]";
+connectAttr "pig_latestRN.phl[543]" "thislittlepiggywenttomarket.dnsm[11]";
+connectAttr "thislittlepiggywenttomarket.uv[6]" "pig_latestRN.phl[544]";
+connectAttr "pig_latestRN.phl[545]" "thislittlepiggywenttomarket.dnsm[10]";
+connectAttr "thislittlepiggywenttomarket.uv[5]" "pig_latestRN.phl[546]";
+connectAttr "pig_latestRN.phl[547]" "thislittlepiggywenttomarket.dnsm[19]";
+connectAttr "thislittlepiggywenttomarket.uv[8]" "pig_latestRN.phl[548]";
+connectAttr "pig_latestRN.phl[549]" "thislittlepiggywenttomarket.dnsm[226]";
+connectAttr "thislittlepiggywenttomarket.av[69]" "pig_latestRN.phl[550]";
+connectAttr "pig_latestRN.phl[551]" "thislittlepiggywenttomarket.dnsm[227]";
+connectAttr "thislittlepiggywenttomarket.av[70]" "pig_latestRN.phl[552]";
+connectAttr "pig_latestRN.phl[553]" "thislittlepiggywenttomarket.dnsm[228]";
+connectAttr "thislittlepiggywenttomarket.av[71]" "pig_latestRN.phl[554]";
+connectAttr "pig_latestRN.phl[555]" "thislittlepiggywenttomarket.dnsm[229]";
+connectAttr "thislittlepiggywenttomarket.lv[61]" "pig_latestRN.phl[556]";
+connectAttr "pig_latestRN.phl[557]" "thislittlepiggywenttomarket.dnsm[230]";
+connectAttr "thislittlepiggywenttomarket.lv[62]" "pig_latestRN.phl[558]";
+connectAttr "pig_latestRN.phl[559]" "thislittlepiggywenttomarket.dnsm[231]";
+connectAttr "thislittlepiggywenttomarket.lv[63]" "pig_latestRN.phl[560]";
+connectAttr "pig_latestRN.phl[561]" "thislittlepiggywenttomarket.dnsm[232]";
+connectAttr "thislittlepiggywenttomarket.uv[99]" "pig_latestRN.phl[562]";
+connectAttr "pig_latestRN.phl[563]" "thislittlepiggywenttomarket.dnsm[233]";
+connectAttr "thislittlepiggywenttomarket.uv[100]" "pig_latestRN.phl[564]";
+connectAttr "pig_latestRN.phl[565]" "thislittlepiggywenttomarket.dnsm[234]";
+connectAttr "thislittlepiggywenttomarket.uv[101]" "pig_latestRN.phl[566]";
+connectAttr "pig_latestRN.phl[567]" "thislittlepiggywenttomarket.dnsm[235]";
+connectAttr "thislittlepiggywenttomarket.av[72]" "pig_latestRN.phl[568]";
+connectAttr "pig_latestRN.phl[569]" "thislittlepiggywenttomarket.dnsm[236]";
+connectAttr "thislittlepiggywenttomarket.av[73]" "pig_latestRN.phl[570]";
+connectAttr "pig_latestRN.phl[571]" "thislittlepiggywenttomarket.dnsm[237]";
+connectAttr "thislittlepiggywenttomarket.av[74]" "pig_latestRN.phl[572]";
+connectAttr "pig_latestRN.phl[573]" "thislittlepiggywenttomarket.dnsm[238]";
+connectAttr "thislittlepiggywenttomarket.lv[64]" "pig_latestRN.phl[574]";
+connectAttr "pig_latestRN.phl[575]" "thislittlepiggywenttomarket.dnsm[239]";
+connectAttr "thislittlepiggywenttomarket.lv[65]" "pig_latestRN.phl[576]";
+connectAttr "pig_latestRN.phl[577]" "thislittlepiggywenttomarket.dnsm[240]";
+connectAttr "thislittlepiggywenttomarket.lv[66]" "pig_latestRN.phl[578]";
+connectAttr "pig_latestRN.phl[579]" "thislittlepiggywenttomarket.dnsm[241]";
+connectAttr "thislittlepiggywenttomarket.uv[102]" "pig_latestRN.phl[580]";
+connectAttr "pig_latestRN.phl[581]" "thislittlepiggywenttomarket.dnsm[242]";
+connectAttr "thislittlepiggywenttomarket.uv[103]" "pig_latestRN.phl[582]";
+connectAttr "pig_latestRN.phl[583]" "thislittlepiggywenttomarket.dnsm[243]";
+connectAttr "thislittlepiggywenttomarket.uv[104]" "pig_latestRN.phl[584]";
+connectAttr "pig_latestRN.phl[585]" "thislittlepiggywenttomarket.dnsm[8]";
+connectAttr "thislittlepiggywenttomarket.lv[3]" "pig_latestRN.phl[586]";
+connectAttr "pig_latestRN.phl[587]" "thislittlepiggywenttomarket.dnsm[7]";
+connectAttr "thislittlepiggywenttomarket.lv[2]" "pig_latestRN.phl[588]";
+connectAttr "pig_latestRN.phl[589]" "thislittlepiggywenttomarket.dnsm[6]";
+connectAttr "thislittlepiggywenttomarket.lv[1]" "pig_latestRN.phl[590]";
+connectAttr "pig_latestRN.phl[591]" "thislittlepiggywenttomarket.dnsm[5]";
+connectAttr "thislittlepiggywenttomarket.av[3]" "pig_latestRN.phl[592]";
+connectAttr "pig_latestRN.phl[593]" "thislittlepiggywenttomarket.dnsm[4]";
+connectAttr "thislittlepiggywenttomarket.av[2]" "pig_latestRN.phl[594]";
+connectAttr "pig_latestRN.phl[595]" "thislittlepiggywenttomarket.dnsm[3]";
+connectAttr "thislittlepiggywenttomarket.av[1]" "pig_latestRN.phl[596]";
+connectAttr "pig_latestRN.phl[597]" "thislittlepiggywenttomarket.dnsm[2]";
+connectAttr "thislittlepiggywenttomarket.uv[3]" "pig_latestRN.phl[598]";
+connectAttr "pig_latestRN.phl[599]" "thislittlepiggywenttomarket.dnsm[1]";
+connectAttr "thislittlepiggywenttomarket.uv[2]" "pig_latestRN.phl[600]";
+connectAttr "pig_latestRN.phl[601]" "thislittlepiggywenttomarket.dnsm[0]";
+connectAttr "thislittlepiggywenttomarket.uv[1]" "pig_latestRN.phl[602]";
+connectAttr "pig_latestRN.phl[603]" "thislittlepiggywenttomarket.dnsm[9]";
+connectAttr "thislittlepiggywenttomarket.uv[4]" "pig_latestRN.phl[604]";
+connectAttr "pig_latestRN.phl[605]" "thislittlepiggywenttomarket.dnsm[244]";
+connectAttr "thislittlepiggywenttomarket.av[75]" "pig_latestRN.phl[606]";
+connectAttr "pig_latestRN.phl[607]" "thislittlepiggywenttomarket.dnsm[245]";
+connectAttr "thislittlepiggywenttomarket.av[76]" "pig_latestRN.phl[608]";
+connectAttr "pig_latestRN.phl[609]" "thislittlepiggywenttomarket.dnsm[246]";
+connectAttr "thislittlepiggywenttomarket.av[77]" "pig_latestRN.phl[610]";
+connectAttr "pig_latestRN.phl[611]" "thislittlepiggywenttomarket.dnsm[247]";
+connectAttr "thislittlepiggywenttomarket.lv[67]" "pig_latestRN.phl[612]";
+connectAttr "pig_latestRN.phl[613]" "thislittlepiggywenttomarket.dnsm[248]";
+connectAttr "thislittlepiggywenttomarket.lv[68]" "pig_latestRN.phl[614]";
+connectAttr "pig_latestRN.phl[615]" "thislittlepiggywenttomarket.dnsm[249]";
+connectAttr "thislittlepiggywenttomarket.lv[69]" "pig_latestRN.phl[616]";
+connectAttr "pig_latestRN.phl[617]" "thislittlepiggywenttomarket.dnsm[250]";
+connectAttr "thislittlepiggywenttomarket.uv[105]" "pig_latestRN.phl[618]";
+connectAttr "pig_latestRN.phl[619]" "thislittlepiggywenttomarket.dnsm[251]";
+connectAttr "thislittlepiggywenttomarket.uv[106]" "pig_latestRN.phl[620]";
+connectAttr "pig_latestRN.phl[621]" "thislittlepiggywenttomarket.dnsm[252]";
+connectAttr "thislittlepiggywenttomarket.uv[107]" "pig_latestRN.phl[622]";
+connectAttr "pig_latestRN.phl[623]" "thislittlepiggywenttomarket.dnsm[253]";
+connectAttr "thislittlepiggywenttomarket.av[78]" "pig_latestRN.phl[624]";
+connectAttr "pig_latestRN.phl[625]" "thislittlepiggywenttomarket.dnsm[254]";
+connectAttr "thislittlepiggywenttomarket.av[79]" "pig_latestRN.phl[626]";
+connectAttr "pig_latestRN.phl[627]" "thislittlepiggywenttomarket.dnsm[255]";
+connectAttr "thislittlepiggywenttomarket.av[80]" "pig_latestRN.phl[628]";
+connectAttr "pig_latestRN.phl[629]" "thislittlepiggywenttomarket.dnsm[256]";
+connectAttr "thislittlepiggywenttomarket.lv[70]" "pig_latestRN.phl[630]";
+connectAttr "pig_latestRN.phl[631]" "thislittlepiggywenttomarket.dnsm[257]";
+connectAttr "thislittlepiggywenttomarket.lv[71]" "pig_latestRN.phl[632]";
+connectAttr "pig_latestRN.phl[633]" "thislittlepiggywenttomarket.dnsm[258]";
+connectAttr "thislittlepiggywenttomarket.lv[72]" "pig_latestRN.phl[634]";
+connectAttr "pig_latestRN.phl[635]" "thislittlepiggywenttomarket.dnsm[259]";
+connectAttr "thislittlepiggywenttomarket.uv[108]" "pig_latestRN.phl[636]";
+connectAttr "pig_latestRN.phl[637]" "thislittlepiggywenttomarket.dnsm[260]";
+connectAttr "thislittlepiggywenttomarket.uv[109]" "pig_latestRN.phl[638]";
+connectAttr "pig_latestRN.phl[639]" "thislittlepiggywenttomarket.dnsm[261]";
+connectAttr "thislittlepiggywenttomarket.uv[110]" "pig_latestRN.phl[640]";
+connectAttr "defaultFurGlobals.rogl" "pig_latestRN.phl[641]";
 connectAttr "tail_4control01_parentConstraint1.w0" "tail_4control01_parentConstraint1.tg[0].tw"
 		;
 connectAttr "tail_3control01_parentConstraint1.w0" "tail_3control01_parentConstraint1.tg[0].tw"
@@ -9221,10 +9876,10 @@ connectAttr "tail_3control01_parentConstraint1.w0" "tail_3control01_parentConstr
 connectAttr "tail_2control01_parentConstraint1.w0" "tail_2control01_parentConstraint1.tg[0].tw"
 		;
 connectAttr ":rmanFinalGlobals.msg" ":renderManRISGlobals.p" -na;
+connectAttr ":rmanRerenderRISGlobals.msg" ":renderManRISGlobals.p" -na;
 connectAttr ":rmanPreviewGlobals.msg" ":renderManRISGlobals.p" -na;
 connectAttr ":rmanRerenderGlobals.msg" ":renderManRISGlobals.p" -na;
 connectAttr ":rmanReyesRerenderGlobals.msg" ":renderManRISGlobals.p" -na;
-connectAttr ":rmanRerenderRISGlobals.msg" ":renderManRISGlobals.p" -na;
 connectAttr ":rmanDeepShadowGlobals.msg" ":renderManRISGlobals.p" -na;
 connectAttr ":rmanAreaShadowGlobals.msg" ":renderManRISGlobals.p" -na;
 connectAttr ":rmanShadowGlobals.msg" ":renderManRISGlobals.p" -na;
@@ -9240,12 +9895,12 @@ connectAttr ":rmanSBPtRenderGlobals.msg" ":renderManRISGlobals.p" -na;
 connectAttr ":rmanSBRenderGlobals.msg" ":renderManRISGlobals.p" -na;
 connectAttr ":rmanSBMakePtexGlobals.msg" ":renderManRISGlobals.p" -na;
 connectAttr ":rmanFinalOutputGlobals0.msg" ":rmanFinalGlobals.d" -na;
+connectAttr ":rmanRerenderRISOutputGlobals0.msg" ":rmanRerenderRISGlobals.d" -na
+		;
 connectAttr ":rmanPreviewOutputGlobals0.msg" ":rmanPreviewGlobals.d" -na;
 connectAttr ":rmanRerenderOutputGlobals0.msg" ":rmanRerenderGlobals.d" -na;
 connectAttr ":rmanReyesRerenderOutputGlobals0.msg" ":rmanReyesRerenderGlobals.d"
 		 -na;
-connectAttr ":rmanRerenderRISOutputGlobals0.msg" ":rmanRerenderRISGlobals.d" -na
-		;
 connectAttr ":rmanDeepShadowOutputGlobals0.msg" ":rmanDeepShadowGlobals.d" -na;
 connectAttr ":rmanDeepShadowOutputGlobals1.msg" ":rmanDeepShadowGlobals.d" -na;
 connectAttr ":rmanAreaShadowOutputGlobals0.msg" ":rmanAreaShadowGlobals.d" -na;
@@ -9335,153 +9990,8 @@ connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr "pig_latestRNfosterParent1.msg" "pig_latestRN.fp";
 connectAttr "sharedReferenceNode.sr" "pig_latestRN.sr";
 connectAttr ":defaultRenderGlobals.rcb" "defaultFurGlobals.cb";
-connectAttr "stretchf_ctrl01_translateZ.o" "thislittlepiggywenttomarket.lv[1]";
-connectAttr "stretchf_ctrl01_translateY.o" "thislittlepiggywenttomarket.lv[2]";
-connectAttr "stretchf_ctrl01_translateX.o" "thislittlepiggywenttomarket.lv[3]";
-connectAttr "stretchr_ctrl01_translateZ.o" "thislittlepiggywenttomarket.lv[4]";
-connectAttr "stretchr_ctrl01_translateY.o" "thislittlepiggywenttomarket.lv[5]";
-connectAttr "stretchr_ctrl01_translateX.o" "thislittlepiggywenttomarket.lv[6]";
-connectAttr "back_flex_ctrl01_translateZ.o" "thislittlepiggywenttomarket.lv[7]";
-connectAttr "back_flex_ctrl01_translateY.o" "thislittlepiggywenttomarket.lv[8]";
-connectAttr "back_flex_ctrl01_translateX.o" "thislittlepiggywenttomarket.lv[9]";
-connectAttr "locator_R_knee01_translateZ.o" "thislittlepiggywenttomarket.lv[13]"
+connectAttr "thislittlepiggywenttomarketScheduler1.ce" "thislittlepiggywenttomarket.cer"
 		;
-connectAttr "locator_R_knee01_translateY.o" "thislittlepiggywenttomarket.lv[14]"
-		;
-connectAttr "locator_R_knee01_translateX.o" "thislittlepiggywenttomarket.lv[15]"
-		;
-connectAttr "locator_L_knee01_translateZ.o" "thislittlepiggywenttomarket.lv[19]"
-		;
-connectAttr "locator_L_knee01_translateY.o" "thislittlepiggywenttomarket.lv[20]"
-		;
-connectAttr "locator_L_knee01_translateX.o" "thislittlepiggywenttomarket.lv[21]"
-		;
-connectAttr "locator_R_elbow01_translateZ.o" "thislittlepiggywenttomarket.lv[25]"
-		;
-connectAttr "locator_R_elbow01_translateY.o" "thislittlepiggywenttomarket.lv[26]"
-		;
-connectAttr "locator_R_elbow01_translateX.o" "thislittlepiggywenttomarket.lv[27]"
-		;
-connectAttr "locator_L_elbow01_translateZ.o" "thislittlepiggywenttomarket.lv[31]"
-		;
-connectAttr "locator_L_elbow01_translateY.o" "thislittlepiggywenttomarket.lv[32]"
-		;
-connectAttr "locator_L_elbow01_translateX.o" "thislittlepiggywenttomarket.lv[33]"
-		;
-connectAttr "head_control_translateZ.o" "thislittlepiggywenttomarket.lv[40]";
-connectAttr "head_control_translateY.o" "thislittlepiggywenttomarket.lv[41]";
-connectAttr "head_control_translateX.o" "thislittlepiggywenttomarket.lv[42]";
-connectAttr "Skeleton_01_translateZ.o" "thislittlepiggywenttomarket.lv[43]";
-connectAttr "Skeleton_01_translateY.o" "thislittlepiggywenttomarket.lv[44]";
-connectAttr "Skeleton_01_translateX.o" "thislittlepiggywenttomarket.lv[45]";
-connectAttr "stretchf_ctrl01_scaleZ.o" "thislittlepiggywenttomarket.uv[1]";
-connectAttr "stretchf_ctrl01_scaleY.o" "thislittlepiggywenttomarket.uv[2]";
-connectAttr "stretchf_ctrl01_scaleX.o" "thislittlepiggywenttomarket.uv[3]";
-connectAttr "stretchf_ctrl01_visibility.o" "thislittlepiggywenttomarket.uv[4]";
-connectAttr "stretchr_ctrl01_scaleZ.o" "thislittlepiggywenttomarket.uv[5]";
-connectAttr "stretchr_ctrl01_scaleY.o" "thislittlepiggywenttomarket.uv[6]";
-connectAttr "stretchr_ctrl01_scaleX.o" "thislittlepiggywenttomarket.uv[7]";
-connectAttr "stretchr_ctrl01_visibility.o" "thislittlepiggywenttomarket.uv[8]";
-connectAttr "back_flex_ctrl01_scaleZ.o" "thislittlepiggywenttomarket.uv[9]";
-connectAttr "back_flex_ctrl01_scaleY.o" "thislittlepiggywenttomarket.uv[10]";
-connectAttr "back_flex_ctrl01_scaleX.o" "thislittlepiggywenttomarket.uv[11]";
-connectAttr "back_flex_ctrl01_visibility.o" "thislittlepiggywenttomarket.uv[12]"
-		;
-connectAttr "hip_rotation_ctrl01_scaleZ.o" "thislittlepiggywenttomarket.uv[13]";
-connectAttr "hip_rotation_ctrl01_scaleY.o" "thislittlepiggywenttomarket.uv[14]";
-connectAttr "hip_rotation_ctrl01_scaleX.o" "thislittlepiggywenttomarket.uv[15]";
-connectAttr "locator_R_knee01_scaleZ.o" "thislittlepiggywenttomarket.uv[16]";
-connectAttr "locator_R_knee01_scaleY.o" "thislittlepiggywenttomarket.uv[17]";
-connectAttr "locator_R_knee01_scaleX.o" "thislittlepiggywenttomarket.uv[18]";
-connectAttr "locator_R_knee01_visibility.o" "thislittlepiggywenttomarket.uv[19]"
-		;
-connectAttr "iK_R_backleg01_ikBlend.o" "thislittlepiggywenttomarket.uv[20]";
-connectAttr "iK_R_backleg01_offset.o" "thislittlepiggywenttomarket.uv[21]";
-connectAttr "iK_R_backleg01_scaleZ.o" "thislittlepiggywenttomarket.uv[25]";
-connectAttr "iK_R_backleg01_scaleY.o" "thislittlepiggywenttomarket.uv[26]";
-connectAttr "iK_R_backleg01_scaleX.o" "thislittlepiggywenttomarket.uv[27]";
-connectAttr "iK_R_backleg01_visibility.o" "thislittlepiggywenttomarket.uv[28]";
-connectAttr "locator_L_knee01_scaleZ.o" "thislittlepiggywenttomarket.uv[29]";
-connectAttr "locator_L_knee01_scaleY.o" "thislittlepiggywenttomarket.uv[30]";
-connectAttr "locator_L_knee01_scaleX.o" "thislittlepiggywenttomarket.uv[31]";
-connectAttr "locator_L_knee01_visibility.o" "thislittlepiggywenttomarket.uv[32]"
-		;
-connectAttr "iK_L_backleg01_ikBlend.o" "thislittlepiggywenttomarket.uv[33]";
-connectAttr "iK_L_backleg01_offset.o" "thislittlepiggywenttomarket.uv[34]";
-connectAttr "iK_L_backleg01_scaleZ.o" "thislittlepiggywenttomarket.uv[38]";
-connectAttr "iK_L_backleg01_scaleY.o" "thislittlepiggywenttomarket.uv[39]";
-connectAttr "iK_L_backleg01_scaleX.o" "thislittlepiggywenttomarket.uv[40]";
-connectAttr "iK_L_backleg01_visibility.o" "thislittlepiggywenttomarket.uv[41]";
-connectAttr "locator_R_elbow01_scaleZ.o" "thislittlepiggywenttomarket.uv[42]";
-connectAttr "locator_R_elbow01_scaleY.o" "thislittlepiggywenttomarket.uv[43]";
-connectAttr "locator_R_elbow01_scaleX.o" "thislittlepiggywenttomarket.uv[44]";
-connectAttr "locator_R_elbow01_visibility.o" "thislittlepiggywenttomarket.uv[45]"
-		;
-connectAttr "iK_R_frontleg01_ikBlend.o" "thislittlepiggywenttomarket.uv[46]";
-connectAttr "iK_R_frontleg01_offset.o" "thislittlepiggywenttomarket.uv[47]";
-connectAttr "iK_R_frontleg01_scaleZ.o" "thislittlepiggywenttomarket.uv[51]";
-connectAttr "iK_R_frontleg01_scaleY.o" "thislittlepiggywenttomarket.uv[52]";
-connectAttr "iK_R_frontleg01_scaleX.o" "thislittlepiggywenttomarket.uv[53]";
-connectAttr "iK_R_frontleg01_visibility.o" "thislittlepiggywenttomarket.uv[54]";
-connectAttr "locator_L_elbow01_scaleZ.o" "thislittlepiggywenttomarket.uv[55]";
-connectAttr "locator_L_elbow01_scaleY.o" "thislittlepiggywenttomarket.uv[56]";
-connectAttr "locator_L_elbow01_scaleX.o" "thislittlepiggywenttomarket.uv[57]";
-connectAttr "locator_L_elbow01_visibility.o" "thislittlepiggywenttomarket.uv[58]"
-		;
-connectAttr "iK_L_frontleg01_ikBlend.o" "thislittlepiggywenttomarket.uv[59]";
-connectAttr "iK_L_frontleg01_offset.o" "thislittlepiggywenttomarket.uv[60]";
-connectAttr "iK_L_frontleg01_scaleZ.o" "thislittlepiggywenttomarket.uv[64]";
-connectAttr "iK_L_frontleg01_scaleY.o" "thislittlepiggywenttomarket.uv[65]";
-connectAttr "iK_L_frontleg01_scaleX.o" "thislittlepiggywenttomarket.uv[66]";
-connectAttr "iK_L_frontleg01_visibility.o" "thislittlepiggywenttomarket.uv[67]";
-connectAttr "shoulders_rotation_ctrl01_scaleZ.o" "thislittlepiggywenttomarket.uv[68]"
-		;
-connectAttr "shoulders_rotation_ctrl01_scaleY.o" "thislittlepiggywenttomarket.uv[69]"
-		;
-connectAttr "shoulders_rotation_ctrl01_scaleX.o" "thislittlepiggywenttomarket.uv[70]"
-		;
-connectAttr "head_control_scaleZ.o" "thislittlepiggywenttomarket.uv[71]";
-connectAttr "head_control_scaleY.o" "thislittlepiggywenttomarket.uv[72]";
-connectAttr "head_control_scaleX.o" "thislittlepiggywenttomarket.uv[73]";
-connectAttr "Skeleton_01_scaleZ.o" "thislittlepiggywenttomarket.uv[74]";
-connectAttr "Skeleton_01_scaleY.o" "thislittlepiggywenttomarket.uv[75]";
-connectAttr "Skeleton_01_scaleX.o" "thislittlepiggywenttomarket.uv[76]";
-connectAttr "Skeleton_01_visibility.o" "thislittlepiggywenttomarket.uv[77]";
-connectAttr "stretchf_ctrl01_rotateZ.o" "thislittlepiggywenttomarket.av[1]";
-connectAttr "stretchf_ctrl01_rotateY.o" "thislittlepiggywenttomarket.av[2]";
-connectAttr "stretchf_ctrl01_rotateX.o" "thislittlepiggywenttomarket.av[3]";
-connectAttr "stretchr_ctrl01_rotateZ.o" "thislittlepiggywenttomarket.av[4]";
-connectAttr "stretchr_ctrl01_rotateY.o" "thislittlepiggywenttomarket.av[5]";
-connectAttr "stretchr_ctrl01_rotateX.o" "thislittlepiggywenttomarket.av[6]";
-connectAttr "back_flex_ctrl01_rotateZ.o" "thislittlepiggywenttomarket.av[7]";
-connectAttr "back_flex_ctrl01_rotateY.o" "thislittlepiggywenttomarket.av[8]";
-connectAttr "back_flex_ctrl01_rotateX.o" "thislittlepiggywenttomarket.av[9]";
-connectAttr "locator_R_knee01_rotateZ.o" "thislittlepiggywenttomarket.av[13]";
-connectAttr "locator_R_knee01_rotateY.o" "thislittlepiggywenttomarket.av[14]";
-connectAttr "locator_R_knee01_rotateX.o" "thislittlepiggywenttomarket.av[15]";
-connectAttr "iK_R_backleg01_twist.o" "thislittlepiggywenttomarket.av[16]";
-connectAttr "iK_R_backleg01_roll.o" "thislittlepiggywenttomarket.av[17]";
-connectAttr "locator_L_knee01_rotateZ.o" "thislittlepiggywenttomarket.av[21]";
-connectAttr "locator_L_knee01_rotateY.o" "thislittlepiggywenttomarket.av[22]";
-connectAttr "locator_L_knee01_rotateX.o" "thislittlepiggywenttomarket.av[23]";
-connectAttr "iK_L_backleg01_twist.o" "thislittlepiggywenttomarket.av[24]";
-connectAttr "iK_L_backleg01_roll.o" "thislittlepiggywenttomarket.av[25]";
-connectAttr "locator_R_elbow01_rotateZ.o" "thislittlepiggywenttomarket.av[29]";
-connectAttr "locator_R_elbow01_rotateY.o" "thislittlepiggywenttomarket.av[30]";
-connectAttr "locator_R_elbow01_rotateX.o" "thislittlepiggywenttomarket.av[31]";
-connectAttr "iK_R_frontleg01_twist.o" "thislittlepiggywenttomarket.av[32]";
-connectAttr "iK_R_frontleg01_roll.o" "thislittlepiggywenttomarket.av[33]";
-connectAttr "locator_L_elbow01_rotateZ.o" "thislittlepiggywenttomarket.av[37]";
-connectAttr "locator_L_elbow01_rotateY.o" "thislittlepiggywenttomarket.av[38]";
-connectAttr "locator_L_elbow01_rotateX.o" "thislittlepiggywenttomarket.av[39]";
-connectAttr "iK_L_frontleg01_twist.o" "thislittlepiggywenttomarket.av[40]";
-connectAttr "iK_L_frontleg01_roll.o" "thislittlepiggywenttomarket.av[41]";
-connectAttr "head_control_rotateZ.o" "thislittlepiggywenttomarket.av[48]";
-connectAttr "head_control_rotateY.o" "thislittlepiggywenttomarket.av[49]";
-connectAttr "head_control_rotateX.o" "thislittlepiggywenttomarket.av[50]";
-connectAttr "Skeleton_01_rotateZ.o" "thislittlepiggywenttomarket.av[51]";
-connectAttr "Skeleton_01_rotateY.o" "thislittlepiggywenttomarket.av[52]";
-connectAttr "Skeleton_01_rotateX.o" "thislittlepiggywenttomarket.av[53]";
 connectAttr "thislittlepiggywenttomarket.av[20]" "pairBlend3.irx2";
 connectAttr "thislittlepiggywenttomarket.av[19]" "pairBlend3.iry2";
 connectAttr "thislittlepiggywenttomarket.av[18]" "pairBlend3.irz2";
@@ -9562,6 +10072,434 @@ connectAttr ":rmanPreviewGlobals.msg" ":renderManGlobals.p" -na;
 connectAttr ":rmanRerenderGlobals.msg" ":renderManGlobals.p" -na;
 connectAttr "hyperView2.msg" "nodeEditorPanel2Info.b[0]";
 connectAttr "hyperLayout2.msg" "hyperView2.hl";
+connectAttr "thislittlepiggywenttomarketClips1.cf" "thislittlepiggywenttomarketScheduler1.cfr"
+		;
+connectAttr "thislittlepiggywenttomarketClips1.cl[0]" "thislittlepiggywenttomarketScheduler1.cl[0]"
+		;
+connectAttr "clip1.sf" "thislittlepiggywenttomarketScheduler1.st[0]";
+connectAttr "clip1.ss" "thislittlepiggywenttomarketScheduler1.ss[0]";
+connectAttr "clip1.se" "thislittlepiggywenttomarketScheduler1.se[0]";
+connectAttr "clip1.w" "thislittlepiggywenttomarketScheduler1.w[0]";
+connectAttr "clip1.ws" "thislittlepiggywenttomarketScheduler1.ws[0]";
+connectAttr "clip1.ea" "thislittlepiggywenttomarketScheduler1.ea[0]";
+connectAttr "clip1.cb" "thislittlepiggywenttomarketScheduler1.cb[0]";
+connectAttr "clip1.ca" "thislittlepiggywenttomarketScheduler1.ca[0]";
+connectAttr "clip1.sc" "thislittlepiggywenttomarketScheduler1.sc[0]";
+connectAttr "clip1.h" "thislittlepiggywenttomarketScheduler1.h[0]";
+connectAttr "thislittlepiggywenttomarket.am" "thislittlepiggywenttomarketClips1.cd[0].cm"
+		;
+connectAttr "thislittlepiggywenttomarket.cim" "thislittlepiggywenttomarketClips1.cd[0].cim"
+		;
+connectAttr "stretchf_ctrl01_scaleZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[0].cevr"
+		;
+connectAttr "stretchf_ctrl01_scaleY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[1].cevr"
+		;
+connectAttr "stretchf_ctrl01_scaleX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[2].cevr"
+		;
+connectAttr "stretchf_ctrl01_rotateZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[3].cevr"
+		;
+connectAttr "stretchf_ctrl01_rotateY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[4].cevr"
+		;
+connectAttr "stretchf_ctrl01_rotateX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[5].cevr"
+		;
+connectAttr "stretchf_ctrl01_translateZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[6].cevr"
+		;
+connectAttr "stretchf_ctrl01_translateY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[7].cevr"
+		;
+connectAttr "stretchf_ctrl01_translateX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[8].cevr"
+		;
+connectAttr "stretchf_ctrl01_visibility.a" "thislittlepiggywenttomarketClips1.cel[0].cev[9].cevr"
+		;
+connectAttr "stretchr_ctrl01_scaleZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[10].cevr"
+		;
+connectAttr "stretchr_ctrl01_scaleY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[11].cevr"
+		;
+connectAttr "stretchr_ctrl01_scaleX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[12].cevr"
+		;
+connectAttr "stretchr_ctrl01_rotateZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[13].cevr"
+		;
+connectAttr "stretchr_ctrl01_rotateY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[14].cevr"
+		;
+connectAttr "stretchr_ctrl01_rotateX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[15].cevr"
+		;
+connectAttr "stretchr_ctrl01_translateZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[16].cevr"
+		;
+connectAttr "stretchr_ctrl01_translateY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[17].cevr"
+		;
+connectAttr "stretchr_ctrl01_translateX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[18].cevr"
+		;
+connectAttr "stretchr_ctrl01_visibility.a" "thislittlepiggywenttomarketClips1.cel[0].cev[19].cevr"
+		;
+connectAttr "back_flex_ctrl01_scaleZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[20].cevr"
+		;
+connectAttr "back_flex_ctrl01_scaleY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[21].cevr"
+		;
+connectAttr "back_flex_ctrl01_scaleX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[22].cevr"
+		;
+connectAttr "back_flex_ctrl01_rotateZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[23].cevr"
+		;
+connectAttr "back_flex_ctrl01_rotateY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[24].cevr"
+		;
+connectAttr "back_flex_ctrl01_rotateX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[25].cevr"
+		;
+connectAttr "back_flex_ctrl01_translateZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[26].cevr"
+		;
+connectAttr "back_flex_ctrl01_translateY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[27].cevr"
+		;
+connectAttr "back_flex_ctrl01_translateX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[28].cevr"
+		;
+connectAttr "back_flex_ctrl01_visibility.a" "thislittlepiggywenttomarketClips1.cel[0].cev[29].cevr"
+		;
+connectAttr "hip_rotation_ctrl01_scaleZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[30].cevr"
+		;
+connectAttr "hip_rotation_ctrl01_scaleY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[31].cevr"
+		;
+connectAttr "hip_rotation_ctrl01_scaleX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[32].cevr"
+		;
+connectAttr "locator_R_knee01_scaleZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[39].cevr"
+		;
+connectAttr "locator_R_knee01_scaleY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[40].cevr"
+		;
+connectAttr "locator_R_knee01_scaleX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[41].cevr"
+		;
+connectAttr "locator_R_knee01_rotateZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[42].cevr"
+		;
+connectAttr "locator_R_knee01_rotateY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[43].cevr"
+		;
+connectAttr "locator_R_knee01_rotateX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[44].cevr"
+		;
+connectAttr "locator_R_knee01_translateZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[45].cevr"
+		;
+connectAttr "locator_R_knee01_translateY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[46].cevr"
+		;
+connectAttr "locator_R_knee01_translateX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[47].cevr"
+		;
+connectAttr "locator_R_knee01_visibility.a" "thislittlepiggywenttomarketClips1.cel[0].cev[48].cevr"
+		;
+connectAttr "iK_R_backleg01_ikBlend.a" "thislittlepiggywenttomarketClips1.cel[0].cev[49].cevr"
+		;
+connectAttr "iK_R_backleg01_twist.a" "thislittlepiggywenttomarketClips1.cel[0].cev[50].cevr"
+		;
+connectAttr "iK_R_backleg01_roll.a" "thislittlepiggywenttomarketClips1.cel[0].cev[51].cevr"
+		;
+connectAttr "iK_R_backleg01_offset.a" "thislittlepiggywenttomarketClips1.cel[0].cev[52].cevr"
+		;
+connectAttr "iK_R_backleg01_scaleZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[56].cevr"
+		;
+connectAttr "iK_R_backleg01_scaleY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[57].cevr"
+		;
+connectAttr "iK_R_backleg01_scaleX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[58].cevr"
+		;
+connectAttr "iK_R_backleg01_visibility.a" "thislittlepiggywenttomarketClips1.cel[0].cev[65].cevr"
+		;
+connectAttr "locator_L_knee01_scaleZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[66].cevr"
+		;
+connectAttr "locator_L_knee01_scaleY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[67].cevr"
+		;
+connectAttr "locator_L_knee01_scaleX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[68].cevr"
+		;
+connectAttr "locator_L_knee01_rotateZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[69].cevr"
+		;
+connectAttr "locator_L_knee01_rotateY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[70].cevr"
+		;
+connectAttr "locator_L_knee01_rotateX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[71].cevr"
+		;
+connectAttr "locator_L_knee01_translateZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[72].cevr"
+		;
+connectAttr "locator_L_knee01_translateY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[73].cevr"
+		;
+connectAttr "locator_L_knee01_translateX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[74].cevr"
+		;
+connectAttr "locator_L_knee01_visibility.a" "thislittlepiggywenttomarketClips1.cel[0].cev[75].cevr"
+		;
+connectAttr "iK_L_backleg01_ikBlend.a" "thislittlepiggywenttomarketClips1.cel[0].cev[76].cevr"
+		;
+connectAttr "iK_L_backleg01_twist.a" "thislittlepiggywenttomarketClips1.cel[0].cev[77].cevr"
+		;
+connectAttr "iK_L_backleg01_roll.a" "thislittlepiggywenttomarketClips1.cel[0].cev[78].cevr"
+		;
+connectAttr "iK_L_backleg01_offset.a" "thislittlepiggywenttomarketClips1.cel[0].cev[79].cevr"
+		;
+connectAttr "iK_L_backleg01_scaleZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[83].cevr"
+		;
+connectAttr "iK_L_backleg01_scaleY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[84].cevr"
+		;
+connectAttr "iK_L_backleg01_scaleX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[85].cevr"
+		;
+connectAttr "iK_L_backleg01_visibility.a" "thislittlepiggywenttomarketClips1.cel[0].cev[92].cevr"
+		;
+connectAttr "locator_R_elbow01_scaleZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[93].cevr"
+		;
+connectAttr "locator_R_elbow01_scaleY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[94].cevr"
+		;
+connectAttr "locator_R_elbow01_scaleX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[95].cevr"
+		;
+connectAttr "locator_R_elbow01_rotateZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[96].cevr"
+		;
+connectAttr "locator_R_elbow01_rotateY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[97].cevr"
+		;
+connectAttr "locator_R_elbow01_rotateX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[98].cevr"
+		;
+connectAttr "locator_R_elbow01_translateZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[99].cevr"
+		;
+connectAttr "locator_R_elbow01_translateY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[100].cevr"
+		;
+connectAttr "locator_R_elbow01_translateX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[101].cevr"
+		;
+connectAttr "locator_R_elbow01_visibility.a" "thislittlepiggywenttomarketClips1.cel[0].cev[102].cevr"
+		;
+connectAttr "iK_R_frontleg01_ikBlend.a" "thislittlepiggywenttomarketClips1.cel[0].cev[103].cevr"
+		;
+connectAttr "iK_R_frontleg01_twist.a" "thislittlepiggywenttomarketClips1.cel[0].cev[104].cevr"
+		;
+connectAttr "iK_R_frontleg01_roll.a" "thislittlepiggywenttomarketClips1.cel[0].cev[105].cevr"
+		;
+connectAttr "iK_R_frontleg01_offset.a" "thislittlepiggywenttomarketClips1.cel[0].cev[106].cevr"
+		;
+connectAttr "iK_R_frontleg01_scaleZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[110].cevr"
+		;
+connectAttr "iK_R_frontleg01_scaleY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[111].cevr"
+		;
+connectAttr "iK_R_frontleg01_scaleX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[112].cevr"
+		;
+connectAttr "iK_R_frontleg01_visibility.a" "thislittlepiggywenttomarketClips1.cel[0].cev[119].cevr"
+		;
+connectAttr "locator_L_elbow01_scaleZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[120].cevr"
+		;
+connectAttr "locator_L_elbow01_scaleY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[121].cevr"
+		;
+connectAttr "locator_L_elbow01_scaleX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[122].cevr"
+		;
+connectAttr "locator_L_elbow01_rotateZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[123].cevr"
+		;
+connectAttr "locator_L_elbow01_rotateY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[124].cevr"
+		;
+connectAttr "locator_L_elbow01_rotateX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[125].cevr"
+		;
+connectAttr "locator_L_elbow01_translateZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[126].cevr"
+		;
+connectAttr "locator_L_elbow01_translateY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[127].cevr"
+		;
+connectAttr "locator_L_elbow01_translateX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[128].cevr"
+		;
+connectAttr "locator_L_elbow01_visibility.a" "thislittlepiggywenttomarketClips1.cel[0].cev[129].cevr"
+		;
+connectAttr "iK_L_frontleg01_ikBlend.a" "thislittlepiggywenttomarketClips1.cel[0].cev[130].cevr"
+		;
+connectAttr "iK_L_frontleg01_twist.a" "thislittlepiggywenttomarketClips1.cel[0].cev[131].cevr"
+		;
+connectAttr "iK_L_frontleg01_roll.a" "thislittlepiggywenttomarketClips1.cel[0].cev[132].cevr"
+		;
+connectAttr "iK_L_frontleg01_offset.a" "thislittlepiggywenttomarketClips1.cel[0].cev[133].cevr"
+		;
+connectAttr "iK_L_frontleg01_scaleZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[137].cevr"
+		;
+connectAttr "iK_L_frontleg01_scaleY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[138].cevr"
+		;
+connectAttr "iK_L_frontleg01_scaleX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[139].cevr"
+		;
+connectAttr "iK_L_frontleg01_visibility.a" "thislittlepiggywenttomarketClips1.cel[0].cev[146].cevr"
+		;
+connectAttr "shoulders_rotation_ctrl01_scaleZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[147].cevr"
+		;
+connectAttr "shoulders_rotation_ctrl01_scaleY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[148].cevr"
+		;
+connectAttr "shoulders_rotation_ctrl01_scaleX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[149].cevr"
+		;
+connectAttr "head_control_scaleZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[150].cevr"
+		;
+connectAttr "head_control_scaleY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[151].cevr"
+		;
+connectAttr "head_control_scaleX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[152].cevr"
+		;
+connectAttr "head_control_rotateZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[153].cevr"
+		;
+connectAttr "head_control_rotateY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[154].cevr"
+		;
+connectAttr "head_control_rotateX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[155].cevr"
+		;
+connectAttr "head_control_translateZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[156].cevr"
+		;
+connectAttr "head_control_translateY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[157].cevr"
+		;
+connectAttr "head_control_translateX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[158].cevr"
+		;
+connectAttr "Skeleton_01_scaleZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[159].cevr"
+		;
+connectAttr "Skeleton_01_scaleY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[160].cevr"
+		;
+connectAttr "Skeleton_01_scaleX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[161].cevr"
+		;
+connectAttr "Skeleton_01_rotateZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[162].cevr"
+		;
+connectAttr "Skeleton_01_rotateY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[163].cevr"
+		;
+connectAttr "Skeleton_01_rotateX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[164].cevr"
+		;
+connectAttr "Skeleton_01_translateZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[165].cevr"
+		;
+connectAttr "Skeleton_01_translateY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[166].cevr"
+		;
+connectAttr "Skeleton_01_translateX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[167].cevr"
+		;
+connectAttr "Skeleton_01_visibility.a" "thislittlepiggywenttomarketClips1.cel[0].cev[168].cevr"
+		;
+connectAttr "controller_main01_rotateX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[179].cevr"
+		;
+connectAttr "controller_main01_rotateY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[180].cevr"
+		;
+connectAttr "controller_main01_rotateZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[181].cevr"
+		;
+connectAttr "controller_main01_translateX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[182].cevr"
+		;
+connectAttr "controller_main01_translateY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[183].cevr"
+		;
+connectAttr "controller_main01_translateZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[184].cevr"
+		;
+connectAttr "controller_main01_scaleX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[185].cevr"
+		;
+connectAttr "controller_main01_scaleY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[186].cevr"
+		;
+connectAttr "controller_main01_scaleZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[187].cevr"
+		;
+connectAttr "key_control_rotateX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[188].cevr"
+		;
+connectAttr "key_control_rotateY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[189].cevr"
+		;
+connectAttr "key_control_rotateZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[190].cevr"
+		;
+connectAttr "key_control_visibility.a" "thislittlepiggywenttomarketClips1.cel[0].cev[191].cevr"
+		;
+connectAttr "key_control_translateX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[192].cevr"
+		;
+connectAttr "key_control_translateY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[193].cevr"
+		;
+connectAttr "key_control_translateZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[194].cevr"
+		;
+connectAttr "key_control_scaleX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[195].cevr"
+		;
+connectAttr "key_control_scaleY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[196].cevr"
+		;
+connectAttr "key_control_scaleZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[197].cevr"
+		;
+connectAttr "bind_L_ear_a01_scaleX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[198].cevr"
+		;
+connectAttr "bind_L_ear_a01_scaleY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[199].cevr"
+		;
+connectAttr "bind_L_ear_a01_scaleZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[200].cevr"
+		;
+connectAttr "bind_L_ear_a01_visibility.a" "thislittlepiggywenttomarketClips1.cel[0].cev[201].cevr"
+		;
+connectAttr "bind_L_ear_a01_translateX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[202].cevr"
+		;
+connectAttr "bind_L_ear_a01_translateY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[203].cevr"
+		;
+connectAttr "bind_L_ear_a01_translateZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[204].cevr"
+		;
+connectAttr "bind_L_ear_a01_rotateY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[205].cevr"
+		;
+connectAttr "bind_L_ear_a01_rotateX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[206].cevr"
+		;
+connectAttr "bind_L_ear_a01_rotateZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[207].cevr"
+		;
+connectAttr "bind_R_ear_a01_scaleX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[208].cevr"
+		;
+connectAttr "bind_R_ear_a01_scaleY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[209].cevr"
+		;
+connectAttr "bind_R_ear_a01_scaleZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[210].cevr"
+		;
+connectAttr "bind_R_ear_a01_visibility.a" "thislittlepiggywenttomarketClips1.cel[0].cev[211].cevr"
+		;
+connectAttr "bind_R_ear_a01_rotateX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[212].cevr"
+		;
+connectAttr "bind_R_ear_a01_rotateY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[213].cevr"
+		;
+connectAttr "bind_R_ear_a01_rotateZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[214].cevr"
+		;
+connectAttr "bind_R_ear_a01_translateX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[215].cevr"
+		;
+connectAttr "bind_R_ear_a01_translateY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[216].cevr"
+		;
+connectAttr "bind_R_ear_a01_translateZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[217].cevr"
+		;
+connectAttr "shoulders_rotation_ctrl01_blendThislittlepiggywenttomarket.a" "thislittlepiggywenttomarketClips1.cel[0].cev[218].cevr"
+		;
+connectAttr "hip_rotation_ctrl01_blendThislittlepiggywenttomarket.a" "thislittlepiggywenttomarketClips1.cel[0].cev[219].cevr"
+		;
+connectAttr "controller_L_backfoot01_rotateX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[220].cevr"
+		;
+connectAttr "controller_L_backfoot01_rotateY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[221].cevr"
+		;
+connectAttr "controller_L_backfoot01_rotateZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[222].cevr"
+		;
+connectAttr "controller_L_backfoot01_translateX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[223].cevr"
+		;
+connectAttr "controller_L_backfoot01_translateY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[224].cevr"
+		;
+connectAttr "controller_L_backfoot01_translateZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[225].cevr"
+		;
+connectAttr "controller_L_backfoot01_scaleX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[226].cevr"
+		;
+connectAttr "controller_L_backfoot01_scaleY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[227].cevr"
+		;
+connectAttr "controller_L_backfoot01_scaleZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[228].cevr"
+		;
+connectAttr "controller_R_backfoot01_rotateX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[229].cevr"
+		;
+connectAttr "controller_R_backfoot01_rotateY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[230].cevr"
+		;
+connectAttr "controller_R_backfoot01_rotateZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[231].cevr"
+		;
+connectAttr "controller_R_backfoot01_translateX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[232].cevr"
+		;
+connectAttr "controller_R_backfoot01_translateY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[233].cevr"
+		;
+connectAttr "controller_R_backfoot01_translateZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[234].cevr"
+		;
+connectAttr "controller_R_backfoot01_scaleX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[235].cevr"
+		;
+connectAttr "controller_R_backfoot01_scaleY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[236].cevr"
+		;
+connectAttr "controller_R_backfoot01_scaleZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[237].cevr"
+		;
+connectAttr "controller_L_frontfoot01_rotateX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[238].cevr"
+		;
+connectAttr "controller_L_frontfoot01_rotateY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[239].cevr"
+		;
+connectAttr "controller_L_frontfoot01_rotateZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[240].cevr"
+		;
+connectAttr "controller_L_frontfoot01_translateX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[241].cevr"
+		;
+connectAttr "controller_L_frontfoot01_translateY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[242].cevr"
+		;
+connectAttr "controller_L_frontfoot01_translateZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[243].cevr"
+		;
+connectAttr "controller_L_frontfoot01_scaleX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[244].cevr"
+		;
+connectAttr "controller_L_frontfoot01_scaleY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[245].cevr"
+		;
+connectAttr "controller_L_frontfoot01_scaleZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[246].cevr"
+		;
+connectAttr "controller_R_frontfoot01_rotateX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[247].cevr"
+		;
+connectAttr "controller_R_frontfoot01_rotateY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[248].cevr"
+		;
+connectAttr "controller_R_frontfoot01_rotateZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[249].cevr"
+		;
+connectAttr "controller_R_frontfoot01_translateX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[250].cevr"
+		;
+connectAttr "controller_R_frontfoot01_translateY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[251].cevr"
+		;
+connectAttr "controller_R_frontfoot01_translateZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[252].cevr"
+		;
+connectAttr "controller_R_frontfoot01_scaleX.a" "thislittlepiggywenttomarketClips1.cel[0].cev[253].cevr"
+		;
+connectAttr "controller_R_frontfoot01_scaleY.a" "thislittlepiggywenttomarketClips1.cel[0].cev[254].cevr"
+		;
+connectAttr "controller_R_frontfoot01_scaleZ.a" "thislittlepiggywenttomarketClips1.cel[0].cev[255].cevr"
+		;
+connectAttr "clip1Source.cl" "thislittlepiggywenttomarketClips1.sc[0]";
+connectAttr "clip1Source.cl" "clip1.cl";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "RMSGeoAreaLightShape1.ltd" ":lightList1.l" -na;
 connectAttr "RMSGeoAreaLightShape2.ltd" ":lightList1.l" -na;

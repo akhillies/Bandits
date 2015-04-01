@@ -6,4 +6,4 @@ maya/cache/**
 *.mcx
 maya/renderman/**
 maya/renderData/**
-maya/autosaves/**
+maya/autosave/**

@@ -12,7 +12,7 @@ cam="camera1"
 start="1"
 end="100"
 
-while getopts ":f:c:s:e:" opt; do
+while getopts "f:c:s:e:" opt; do
   case $opt in
     f)
       echo "File name: $OPTARG" >&2

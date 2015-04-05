@@ -8,20 +8,7 @@ set cam [lindex $argv 4]
 set startframe [lindex $argv 5]
 set endframe [lindex $argv 6]
 
-spawn ssh -oStrictHostKeyChecking=no -oCheckHostIP=no $usr@$host "
-    /Applications/Autodesk/maya2015/Maya.app/Contents/bin/Render 
-    -r rman 
-    -ris 
-    -rd /home/tmp/cs198-ed/Bandits/frames 
-    -cam '$cam' 
-    -res 960 540 
-    -s $startframe -e $endframe 
-    -im 'frame' 
-    -of 'OpenEXR' 
-    -fnc 'name_#.ext' 
-    -pad 3 
-    -spool 'immediate rib, remote render' 
-    $file"
+spawn ssh -oStrictHostKeyChecking=no -oCheckHostIP=no $usr@$host "/Applications/Autodesk/maya2015/Maya.app/Contents/bin/Render -r rman -ris -rd /home/tmp/cs198-ed/Bandits/frames -cam '$cam' -res 960 540 -s $startframe -e $endframe -im 'frame' -of 'OpenEXR' -fnc 'name_#.ext' -pad 3 -spool 'immediate rib, remote render' $file"
 expect "Password:"
 send "$pw\r" 
 interact > /dev/null;

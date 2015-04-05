@@ -1,6 +1,6 @@
 //Maya ASCII 2015 scene
 //Name: bodyintro_latest.ma
-//Last modified: Thu, Apr 02, 2015 10:21:49 PM
+//Last modified: Sun, Apr 05, 2015 03:47:46 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "utility_room_view" -rfn "utility_room_viewRN" -op "v=0;p=17;f=0"
 		 "X:/documents/GitHub/Bandits/maya//scenes/utility_room_view.ma";
@@ -8905,6 +8905,29 @@ createNode reference -n "utility_room_viewRN";
 		
 		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest4:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest4:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest4:taller_windowShape" 
 		"furNameSpace" " -type \"string\" \"taller_window_four_squares_latest4\""
+		"utility_room_view:pig_latestRN" 11
+		1 |utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:pig_mesh|utility_room_view:pig_latest:pig_body|utility_room_view:pig_latest:pigShapeDeformedOrig 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:pig_mesh|utility_room_view:pig_latest:pig_body|utility_room_view:pig_latest:pigShapeDeformedOrig 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:pig_mesh|utility_room_view:pig_latest:pig_body|utility_room_view:pig_latest:pigShapeDeformedOrig 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		2 "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:pig_mesh|utility_room_view:pig_latest:pig_body|utility_room_view:pig_latest:PigSkin002:Tyrion_Cattister_uv:Tyrion_Cattister:pigShapeDeformed" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:pig_mesh|utility_room_view:pig_latest:pig_body|utility_room_view:pig_latest:PigSkin002:Tyrion_Cattister_uv:Tyrion_Cattister:pigShapeDeformed" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		
+		2 "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:pig_mesh|utility_room_view:pig_latest:pig_body|utility_room_view:pig_latest:PigSkin002:Tyrion_Cattister_uv:Tyrion_Cattister:pigShapeDeformed" 
+		"furNameSpace" " -type \"string\" \"pig_latest\""
+		2 "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:pig_mesh|utility_room_view:pig_latest:pig_body|utility_room_view:pig_latest:pigShapeDeformedOrig" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:pig_mesh|utility_room_view:pig_latest:pig_body|utility_room_view:pig_latest:pigShapeDeformedOrig" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		
+		2 "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:pig_mesh|utility_room_view:pig_latest:pig_body|utility_room_view:pig_latest:pigShapeDeformedOrig" 
+		"furNameSpace" " -type \"string\" \"pig_latest\""
+		2 "utility_room_view:pig_latest:layer1" "visibility" " 1"
+		2 "utility_room_view:pig_latest:layer2" "visibility" " 0"
 		"utility_room_view:livingroom_shading_latest:living_room_latest:telescopeRN" 38
 		
 		1 |utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform4|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02Shape 
@@ -8990,29 +9013,6 @@ createNode reference -n "utility_room_viewRN";
 		
 		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurface1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurfaceShape1" 
 		"furNameSpace" " -type \"string\" \"telescope\""
-		"utility_room_view:pig_latestRN" 11
-		1 |utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:pig_mesh|utility_room_view:pig_latest:pig_body|utility_room_view:pig_latest:pigShapeDeformedOrig 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:pig_mesh|utility_room_view:pig_latest:pig_body|utility_room_view:pig_latest:pigShapeDeformedOrig 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:pig_mesh|utility_room_view:pig_latest:pig_body|utility_room_view:pig_latest:pigShapeDeformedOrig 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		2 "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:pig_mesh|utility_room_view:pig_latest:pig_body|utility_room_view:pig_latest:PigSkin002:Tyrion_Cattister_uv:Tyrion_Cattister:pigShapeDeformed" 
-		"surfaceReference" " 1"
-		2 "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:pig_mesh|utility_room_view:pig_latest:pig_body|utility_room_view:pig_latest:PigSkin002:Tyrion_Cattister_uv:Tyrion_Cattister:pigShapeDeformed" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
-		
-		2 "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:pig_mesh|utility_room_view:pig_latest:pig_body|utility_room_view:pig_latest:PigSkin002:Tyrion_Cattister_uv:Tyrion_Cattister:pigShapeDeformed" 
-		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:pig_mesh|utility_room_view:pig_latest:pig_body|utility_room_view:pig_latest:pigShapeDeformedOrig" 
-		"surfaceReference" " 1"
-		2 "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:pig_mesh|utility_room_view:pig_latest:pig_body|utility_room_view:pig_latest:pigShapeDeformedOrig" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
-		
-		2 "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:pig_mesh|utility_room_view:pig_latest:pig_body|utility_room_view:pig_latest:pigShapeDeformedOrig" 
-		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "utility_room_view:pig_latest:layer1" "visibility" " 1"
-		2 "utility_room_view:pig_latest:layer2" "visibility" " 0"
 		"utility_room_view:bike_rigRN" 0
 		"utility_room_view:house_latestRN" 8
 		2 "|utility_room_view:house_latest:ncloth|utility_room_view:house_latest:nCloth2|utility_room_view:house_latest:nClothShape2" 
@@ -29784,7 +29784,7 @@ select -ne :initialShadingGroup;
 	setAttr -cb on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 865 ".dsm";
+	setAttr -s 868 ".dsm";
 	setAttr -k on ".mwc";
 	setAttr -cb on ".an";
 	setAttr -cb on ".il";
@@ -29793,7 +29793,7 @@ select -ne :initialShadingGroup;
 	setAttr -cb on ".fo";
 	setAttr -cb on ".epo";
 	setAttr ".ro" yes;
-	setAttr -s 224 ".gn";
+	setAttr -s 226 ".gn";
 	setAttr -cb on ".mimt";
 	setAttr -cb on ".miop";
 	setAttr -cb on ".mise";
@@ -29985,7 +29985,7 @@ select -ne :defaultHardwareRenderGlobals;
 	setAttr -k on ".gh";
 	setAttr -cb on ".sd";
 select -ne :ikSystem;
-	setAttr -s 7 ".sol";
+	setAttr -s 6 ".sol";
 connectAttr "utility_room_viewRN.phl[1696]" "global_ctrl_parentConstraint1.tg[0].tt"
 		;
 connectAttr "bike_ctrl_translateX.o" "utility_room_viewRN.phl[1697]";
@@ -30060,8 +30060,8 @@ connectAttr "global_ctrl_scaleY.o" "utility_room_viewRN.phl[1649]";
 connectAttr "global_ctrl_scaleZ.o" "utility_room_viewRN.phl[1650]";
 connectAttr "utility_room_viewRN.phl[1651]" "global_ctrl_parentConstraint1.crp";
 connectAttr "utility_room_viewRN.phl[1652]" "global_ctrl_parentConstraint1.crt";
-connectAttr "utility_room_viewRN.phl[1653]" "pairBlend1.ro";
-connectAttr "utility_room_viewRN.phl[1654]" "global_ctrl_parentConstraint1.cro";
+connectAttr "utility_room_viewRN.phl[1653]" "global_ctrl_parentConstraint1.cro";
+connectAttr "utility_room_viewRN.phl[1654]" "pairBlend1.ro";
 connectAttr "utility_room_viewRN.phl[1655]" "global_ctrl_parentConstraint1.cpim"
 		;
 connectAttr "cog_ctrl_translateX.o" "utility_room_viewRN.phl[1656]";

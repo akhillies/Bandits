@@ -8,7 +8,7 @@ set cam [lindex $argv 4]
 set startframe [lindex $argv 5]
 set endframe [lindex $argv 6]
 
-spawn ssh -oStrictHostKeyChecking=no -oCheckHostIP=no $usr@$host < "./render.sh file cam startframe endframe"
+spawn ssh -oStrictHostKeyChecking=no -oCheckHostIP=no $usr@$host < "/home/cc/cs198/sp15/class/cs198-ed/CNM190/Bandits/slenderman.sh $file $cam $startframe $endframe"
 expect "Password:"
 send "$pw\r" 
 interact > /dev/null;

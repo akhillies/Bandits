@@ -42,5 +42,5 @@ while getopts "f:c:s:e:" opt; do
 done
 
 
-./sshlogin.sh $sshurl $usr $pw "/home/cc/cs198/sp15/class/cs198-ed/CNM190/Bandits/maya/shots/$file" $cam $start $end
+./scripts_for_rman/sshlogin.sh $sshurl $usr $pw "/home/cc/cs198/sp15/class/cs198-ed/CNM190/Bandits/maya/shots/$file" $cam $start $end
 

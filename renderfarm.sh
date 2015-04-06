@@ -4,7 +4,7 @@ sshurl="shay.cs.berkeley.edu";
 usr="cs198-ed";
 pw="saurabhissupersexy";
 
-# -f is file path
+# -f is file path (prepended with **/Bandits/maya/shots/
 # -c is camera
 # -s/-e is frame start/end
 file="pre_title/blockTextTitle/bandits_title_overlay.ma"
@@ -42,5 +42,5 @@ while getopts "f:c:s:e:" opt; do
 done
 
 
-./sshlogin.sh $sshurl $usr $pw "/home/cc/cs198/sp15/class/cs198-ed/CNM190/Bandits/maya/shots/$file" $cam $start $end
+./scripts_for_rman/sshlogin.sh $sshurl $usr $pw "/home/cc/cs198/sp15/class/cs198-ed/CNM190/Bandits/maya/shots/$file" $cam $start $end
 

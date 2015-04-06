@@ -4,7 +4,7 @@ sshurl="shay.cs.berkeley.edu";
 usr="cs198-ed";
 pw="saurabhissupersexy";
 
-# -f is file path
+# -f is file path (prepended with **/Bandits/maya/shots/
 # -c is camera
 # -s/-e is frame start/end
 file="pre_title/blockTextTitle/bandits_title_overlay.ma"

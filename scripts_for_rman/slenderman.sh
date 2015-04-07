@@ -17,7 +17,7 @@ spinner()
 
 fname=$(basename $5 .ma);
 
-printf "==========================================\n\n"
+printf "\n==========================================\n\n"
 git -C $1 fetch --depth=1 &
 spinner $! "Updating github folder:"
 wait
@@ -31,4 +31,4 @@ printf "Rendering:\n\n"
 /Applications/Autodesk/maya2015/Maya.app/Contents/bin/Render -r rman -ris -rd "$4/$fname" -cam $6 -res 960 540 -s $7 -e $8 -im $fname -of 'OpenEXR' -fnc 'name_#.ext' -pad 3 -spool 'immediate rib, remote render' -proj "$1/$2" $1/$2/$3/$5
 wait
 
-printf "\n____________________________________\nRender Farm has started, please wait for email with command to run and transfer all your rendered images to your computer"
+printf "\n==============================================================\nRender Farm has started, please go to shay.cs.berkeley.edu:8888 to see progress.\n\t An email will be sent to the specified email address given with a command to run so you can transder your files over to your computer\n\n\n"

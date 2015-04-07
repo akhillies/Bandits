@@ -11,13 +11,13 @@ spinner()
         sleep $delay
         printf "\b\b\b\b"
     done
-    printf "    \b\b\b\b DONE!\n"
+    printf "    \b\b\b\b DONE!!!\n"
 }
 
-spinner $! "Updating Git:"
-git -C /home/cc/cs198/sp15/class/cs198-ed/CNM190/Bandits/ fetch --depth=1;
-git -C /home/cc/cs198/sp15/class/cs198-ed/CNM190/Bandits/ reset --hard origin/master;
-
+git -C /home/cc/cs198/sp15/class/cs198-ed/CNM190/Bandits/ fetch --depth=1 &
+spinner $! "Updating Git folder:"
+git -C /home/cc/cs198/sp15/class/cs198-ed/CNM190/Bandits/ reset --hard origin/master &
+spinner $! "Running git reset:"
 
 fname=$(basename $1 .ma);
 

@@ -14,10 +14,10 @@ spinner()
     printf "    \b\b\b\b DONE!!!\n"
 }
 
-git -C /home/cc/cs198/sp15/class/cs198-ed/CNM190/Bandits/ fetch --depth=1 &
-spinner $! "Updating Git folder:"
-git -C /home/cc/cs198/sp15/class/cs198-ed/CNM190/Bandits/ reset --hard origin/master &
-spinner $! "Running git reset:"
+#git -C /home/cc/cs198/sp15/class/cs198-ed/CNM190/Bandits/ fetch --depth=1 &
+#spinner $! "Updating Git folder:"
+#git -C /home/cc/cs198/sp15/class/cs198-ed/CNM190/Bandits/ reset --hard origin/master &
+#spinner $! "Running git reset:"
 echo "Rendering"
 fname=$(basename $1 .ma);
 

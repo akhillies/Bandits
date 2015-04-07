@@ -1,4 +1,20 @@
-echo "Updating git:"
+spinner()
+{
+    printf "$2"
+    local pid=$1
+    local delay=0.15
+    local spinstr='|/-\'
+    while [ "$(ps a | awk '{print $1}' | grep $pid)" ]; do
+        local temp=${spinstr#?}
+        printf " %c  " "$spinstr"
+        local spinstr=$temp${spinstr%"$temp"}
+        sleep $delay
+        printf "\b\b\b\b"
+    done
+    printf "    \b\b\b\b DONE!\n"
+}
+
+spinner $! "Updating Git:"
 git -C /home/cc/cs198/sp15/class/cs198-ed/CNM190/Bandits/ fetch --depth=1;
 git -C /home/cc/cs198/sp15/class/cs198-ed/CNM190/Bandits/ reset --hard origin/master;
 

@@ -3,6 +3,11 @@
 sshurl="shay.cs.berkeley.edu";
 usr="cs198-ed";
 pw="saurabhissupersexy";
+gitpath="/home/cc/cs198/sp15/class/cs198-ed/CNM190/Bandits"
+mayaproj="maya"
+renderable="shots"
+scripts="scripts_for_rman"
+tmpfolder="/home/tmp/cs198-ed/Bandits"
 
 # -f is file path (prepended with **/Bandits/maya/shots/
 # -c is camera
@@ -42,5 +47,5 @@ while getopts "f:c:s:e:" opt; do
 done
 
 
-./scripts_for_rman/sshlogin.sh $sshurl $usr $pw "/home/cc/cs198/sp15/class/cs198-ed/CNM190/Bandits/maya/shots/$file" $cam $start $end
+$scripts/sshlogin.sh $sshurl $usr $pw $gitpath $mayaproj $renderable $scripts $tmpfolder $file $cam $start $end
 

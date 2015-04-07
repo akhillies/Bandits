@@ -1,5 +1,7 @@
 #!/bin/sh
+# Call this script from the github folder!!
 
+# set all these for your own use. $gitpath and $tmpfolder need to be an absolute path while the rest are all relative to $gitpath
 sshurl="shay.cs.berkeley.edu";
 usr="cs198-ed";
 pw="saurabhissupersexy";
@@ -9,15 +11,19 @@ renderable="shots"
 scripts="scripts_for_rman"
 tmpfolder="/home/tmp/cs198-ed/Bandits"
 
-# -f is file path (prepended with **/Bandits/maya/shots/
-# -c is camera
-# -s/-e is frame start/end
+
+# default values for render command
 file="pre_title/blockTextTitle/bandits_title_overlay.ma"
 cam="camera1"
 start="1"
 end="100"
 email="qwertyrit@yahoo.com"
 
+
+# -f is file path (prepended with **/Bandits/maya/shots/
+# -c is camera
+# -s/-e is frame start/end
+# -d is email to send command when finished
 while getopts "f:c:s:e:d:" opt; do
   case $opt in
     f)
@@ -50,6 +56,14 @@ while getopts "f:c:s:e:d:" opt; do
       ;;
   esac
 done
+
+
+
+printf "\n\nStarting Renderman Farm:\n"
+printf "\tUsing file: $file\n"
+printf "\tWith camera: $cam\n"
+printf "\tFrom frame $start to frame $end\n"
+printf "\tAnd when done will send to: $email\n\n\n"
 
 
 $scripts/sshlogin.sh $sshurl $usr $pw $gitpath $mayaproj $renderable $scripts $tmpfolder $file $cam $start $end $email

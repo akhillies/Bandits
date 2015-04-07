@@ -16,8 +16,9 @@ file="pre_title/blockTextTitle/bandits_title_overlay.ma"
 cam="camera1"
 start="1"
 end="100"
+email="qwertyrit@yahoo.com"
 
-while getopts "f:c:s:e:" opt; do
+while getopts "f:c:s:e:d:" opt; do
   case $opt in
     f)
       echo "File name: $OPTARG" >&2
@@ -35,6 +36,10 @@ while getopts "f:c:s:e:" opt; do
       echo "End frame: $OPTARG" >&2
       end="$OPTARG"
       ;;
+    d)
+        echo "Email when done: $OPTARG" >&2
+        email="$OPTARG"
+        ;;
     \?)
       echo "Invalid option: -$OPTARG" >&2
       exit 1
@@ -47,5 +52,5 @@ while getopts "f:c:s:e:" opt; do
 done
 
 
-$scripts/sshlogin.sh $sshurl $usr $pw $gitpath $mayaproj $renderable $scripts $tmpfolder $file $cam $start $end
+$scripts/sshlogin.sh $sshurl $usr $pw $gitpath $mayaproj $renderable $scripts $tmpfolder $file $cam $start $end $email
 

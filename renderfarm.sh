@@ -43,9 +43,9 @@ while getopts "f:c:s:e:d:" opt; do
       end="$OPTARG"
       ;;
     d)
-        echo "Email when done: $OPTARG" >&2
-        email="$OPTARG"
-        ;;
+      echo "Email when done: $OPTARG" >&2
+      email="$OPTARG"
+      ;;
     \?)
       echo "Invalid option: -$OPTARG" >&2
       exit 1
@@ -68,3 +68,4 @@ printf "\tAnd when done will send to: $email\n\n\n"
 
 $scripts/sshlogin.sh $sshurl $usr $pw $gitpath $mayaproj $renderable $scripts $tmpfolder $file $cam $start $end $email
 
+printf "\n\n==============================================================\nRender Farm should have started, please go to shay.cs.berkeley.edu:8888 to see progress\n\t An email will be sent to the specified email address given with a command to run so you can transfer the rendered frames to your computer\n\n\n"

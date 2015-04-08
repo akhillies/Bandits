@@ -1,6 +1,6 @@
 //Maya ASCII 2015 scene
 //Name: Smarty_PRMan_Fur_02.ma
-//Last modified: Tue, Apr 07, 2015 10:13:50 PM
+//Last modified: Tue, Apr 07, 2015 10:22:28 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "smarty_latest" -rfn "smarty_latestRN" -op "v=0;" "/Users/AshleyTheMagnificant/GitHub/Bandits/maya//assets/characters/smarty/smarty_latest.ma";
 file -r -ns "smarty_latest" -dr 1 -rfn "smarty_latestRN" -op "v=0;" "/Users/AshleyTheMagnificant/GitHub/Bandits/maya//assets/characters/smarty/smarty_latest.ma";

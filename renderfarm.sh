@@ -58,7 +58,7 @@ while getopts "f:c:s:e:d:" opt; do
 done
 
 
-
+prinf "\n\nMAKE SURE YOU HAVE COMMITTED ALL YOUR REQUIRED FILES!!!!!!\n\n================================================================"
 printf "\n\nStarting Renderman Farm:\n"
 printf "\tUsing file: $file\n"
 printf "\tWith camera: $cam\n"

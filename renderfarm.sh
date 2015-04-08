@@ -27,23 +27,23 @@ email="qwertyrit@yahoo.com"
 while getopts "f:c:s:e:d:" opt; do
   case $opt in
     f)
-      echo "File name: $OPTARG" >&2
+      #echo "File name: $OPTARG" >&2
       file="$OPTARG"
       ;;
     c)
-      echo "Camera name: $OPTARG" >&2
+      #echo "Camera name: $OPTARG" >&2
       cam="$OPTARG"
       ;;
     s)
-      echo "Start frame: $OPTARG" >&2
+      #echo "Start frame: $OPTARG" >&2
       start="$OPTARG"
       ;;
     e)
-      echo "End frame: $OPTARG" >&2
+      #echo "End frame: $OPTARG" >&2
       end="$OPTARG"
       ;;
     d)
-      echo "Email when done: $OPTARG" >&2
+      #echo "Email when done: $OPTARG" >&2
       email="$OPTARG"
       ;;
     \?)
@@ -58,7 +58,7 @@ while getopts "f:c:s:e:d:" opt; do
 done
 
 
-prinf "\n\nMAKE SURE YOU HAVE COMMITTED ALL YOUR REQUIRED FILES!!!!!!\n\n================================================================"
+printf "\n\nMAKE SURE YOU HAVE COMMITTED ALL YOUR REQUIRED FILES!!!!!!\n\n================================================================"
 printf "\n\nStarting Renderman Farm:\n"
 printf "\tUsing file: $file\n"
 printf "\tWith camera: $cam\n"
@@ -68,4 +68,7 @@ printf "\tAnd when done will send to: $email\n\n\n"
 
 $scripts/sshlogin.sh $sshurl $usr $pw $gitpath $mayaproj $renderable $scripts $tmpfolder $file $cam $start $end $email
 
-printf "\n\n==============================================================\nRender Farm should have started, please go to shay.cs.berkeley.edu:8888 to see progress\n\t An email will be sent to the specified email address given with a command to run so you can transfer the rendered frames to your computer\n\n\n"
+#ssh -oStrictHostKeyChecking=no -oCheckHostIP=no $usr@$sshurl "$gitpath/$scripts/slenderman.sh $gitpath $mayaproj $renderable $tmpfolder $file $cam $start $end $email"
+wait
+
+printf "\n\n==============================================================\nRender Farm should have started, please go to shay.cs.berkeley.edu:8888 and login with cs198-ed to see progress\n\t An email will be sent to the specified email address given with a command to run so you can transfer the rendered frames to your computer\n\n\n"

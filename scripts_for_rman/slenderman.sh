@@ -28,4 +28,4 @@ printf "\n=============================================\n\n"
 
 printf "Rendering:\n\n"
 
-/Applications/Autodesk/maya2015/Maya.app/Contents/bin/Render -r rman -ris -rd "$4/$fname" -cam $6 -res 1920 1080 -s $7 -e $8 -im $fname -of 'OpenEXR' -fnc 'name_#.ext' -pad 3 -spool 'immediate rib, remote render' -proj "$1/$2" -postRender 'python("execfile(\"p.py\")")' $1/$2/$3/$5
+/Applications/Autodesk/maya2015/Maya.app/Contents/bin/Render -r rman -ris -rd "$4/$fname" -cam $6 -res 1920 1080 -s $7 -e $8 -im $fname -of 'OpenEXR' -fnc 'name_#.ext' -pad 3 -spool 'immediate rib, remote render' -proj "$1/$2" -postRender 'python("execfile(\"/home/cc/cs198/sp15/class/cs198-ed/p.py\")")' $1/$2/$3/$5

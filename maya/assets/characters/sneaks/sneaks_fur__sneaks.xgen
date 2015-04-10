@@ -2,7 +2,7 @@
 #
 # Version:  /Applications/Autodesk/maya2015/plug-ins/xgen/
 # Author:   CynthiaDiaz
-# Date:     Wed Apr  8 01:21:11 2015
+# Date:     Wed Apr  8 14:14:36 2015
 
 FileVersion 16
 
@@ -28,6 +28,33 @@ Description
 	maxWidthRatio		20.0
 	groom			groom_fur3
 	descriptionId		0
+	endAttrs
+
+SpherePrimitive
+	length			map('${DESC}/groom/length/')
+	width			map('${DESC}/groom/width/')
+	depth			$a=1.0000;#0.05,5.0\n$a
+	offU			map('${DESC}/groom/orient/',0)
+	offV			map('${DESC}/groom/orient/',1)
+	offN			$a=0.0000;#-180.0,180.0\n$a
+	aboutN			$a=0.0000;#-180.0,180.0\n$a
+	iMethod			0
+	regionMap		${DESC}/Region/
+	regionMask		0.0
+	useCache		false
+	liveMode		true
+	_patchNames		
+	_wireNames		
+	cacheFileName		${DESC}/guides.abc
+	twist			$a=0.0000;#-180.0,180.0\n$a
+	endAttrs
+
+PointRenderer
+	percent			100.0
+	startPercent		0.0
+	inCameraOnly		false
+	inCameraMargin		0.0
+	outputDir		${DESC}/Points/
 	endAttrs
 
 RendermanRenderer
@@ -93,8 +120,8 @@ SplinePrimitive
 	bendV[0]		map('${DESC}/groom/bend/',2)
 	fxCVCount		5
 	uniformCVs		true
-	taper			$a=0.0000;#-1.0,1.0\n$a
-	taperStart		$a=0.0000;#0.0,1.0\n$a
+	taper			$a=0.3750;#-1.0,1.0\n$a
+	taperStart		$a=0.0700;#0.0,1.0\n$a
 	displayWidth		true
 	faceCamera		true
 	tubeShade		true
@@ -139,7 +166,7 @@ GLRenderer
 	poly			false
 	culled			false
 	unitCube		false
-	color			map('${DESC}/groom/region/')
+	color			$a=map('${DESC}/paintmaps/color');#3dpaint,10.0\n$a\n
 	guideColor		$a=[1.0,0.4313725,0.0];#color\n$a
 	TEXCOORD3		[ $cWidth, 0, 0 ]  # red channel reserved by XGen
 	TEXCOORD4		

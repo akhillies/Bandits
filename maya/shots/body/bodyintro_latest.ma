@@ -1,7 +1,7 @@
 //Maya ASCII 2015 scene
 //Name: bodyintro_latest.ma
-//Last modified: Wed, Apr 08, 2015 01:11:55 AM
-//Codeset: UTF-8
+//Last modified: Thu, Apr 09, 2015 07:02:03 PM
+//Codeset: 1252
 file -rdi 1 -ns "utility_room_view" -rfn "utility_room_viewRN" -op "v=0;p=17;f=0"
 		 "X:/documents/GitHub/Bandits/maya//scenes/utility_room_view.ma";
 file -rdi 2 -ns "pig_latest" -rfn "utility_room_view:pig_latestRN" -op "v=0;p=17;f=0"
@@ -33,30 +33,32 @@ file -r -ns "utility_room_view" -dr 1 -rfn "utility_room_viewRN" -op "v=0;p=17;f
 requires maya "2015";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOptions" -nodeType "mentalrayGlobals"
 		 -nodeType "mentalrayItemsList" -dataType "byteArray" "Mayatomr" "2015.0 - 3.12.1.18 ";
-requires -nodeType "RenderMan" "RenderMan_for_Maya" "5.5";
 requires -nodeType "FurGlobals" "Fur" "2015";
+requires -nodeType "RenderMan" "RenderMan_for_Maya" "5.5";
+requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t ntsc;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2015";
 fileInfo "version" "2015";
 fileInfo "cutIdentifier" "201410051530-933320";
-fileInfo "osv" "Mac OS X 10.9.2";
+fileInfo "osv" "Microsoft Windows 8 Business Edition, 64-bit  (Build 9200)\n";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1.7964968498954477 3.844916280778417 22.914324391384042 ;
-	setAttr ".r" -type "double3" -6.3383527270491538 -59.399999999804926 -7.8101569514653171e-16 ;
-	setAttr ".rp" -type "double3" -1.4210854715202004e-14 0 0 ;
-	setAttr ".rpt" -type "double3" -7.9188025798957319e-15 -4.8422873060198377e-14 1.7322155825869112e-14 ;
+	setAttr ".t" -type "double3" -41.78497560010625 16.542448296387381 -111.21583024174274 ;
+	setAttr ".r" -type "double3" -30.338352727085638 -85.800000000000935 0 ;
+	setAttr ".rp" -type "double3" -1.4210854715202004e-014 0 0 ;
+	setAttr ".rpt" -type "double3" -7.9188025798957319e-015 -4.8422873060198377e-014 
+		1.7322155825869112e-014 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 11.57536870182839;
+	setAttr ".coi" 6.5300347663632934;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 11.698999643325806 2.5669999122619629 17.058000564575195 ;
+	setAttr ".tp" -type "double3" -42.270181655883789 7.5793014895170927 -116.31026458740234 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	setAttr ".v" no;
@@ -127,10 +129,11 @@ createNode parentConstraint -n "tail_2control01_parentConstraint1" -p "utility_r
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".tg[0].tot" -type "double3" 1.6290676722285684e-17 1.1416307672183175 -1.7546462838769799 ;
-	setAttr ".tg[0].tor" -type "double3" 0 2.3854160110976392e-15 -1.4562654829165989e-17 ;
-	setAttr ".lr" -type "double3" 6.3611093629270335e-15 0 0 ;
-	setAttr ".rst" -type "double3" 0 -1.7763568394002505e-15 0 ;
+	setAttr ".tg[0].tot" -type "double3" 1.6290676722285684e-017 1.1416307672183175 
+		-1.7546462838769799 ;
+	setAttr ".tg[0].tor" -type "double3" 0 2.3854160110976392e-015 -1.4562654829165989e-017 ;
+	setAttr ".lr" -type "double3" 1.2722218725854067e-014 0 0 ;
+	setAttr ".rst" -type "double3" 0 -1.7763568394002505e-015 0 ;
 	setAttr -k on ".w0";
 createNode parentConstraint -n "tail_3control01_parentConstraint1" -p "utility_room_viewRNfosterParent1";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "tail_2control01W0" -dv 1 -min 0 -at "double";
@@ -146,11 +149,11 @@ createNode parentConstraint -n "tail_3control01_parentConstraint1" -p "utility_r
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".tg[0].tot" -type "double3" -7.5823278986472407e-14 1.4499869149123512 
+	setAttr ".tg[0].tot" -type "double3" -7.5823278986472407e-014 1.4499869149123512 
 		-2.126843980456961 ;
-	setAttr ".tg[0].tor" -type "double3" 0 2.3854160110976392e-15 -1.4562654829165989e-17 ;
-	setAttr ".lr" -type "double3" 3.1805546814635168e-15 0 0 ;
-	setAttr ".rst" -type "double3" -7.1054273576010019e-14 0 -7.1054273576010019e-15 ;
+	setAttr ".tg[0].tor" -type "double3" 0 2.3854160110976392e-015 -1.4562654829165989e-017 ;
+	setAttr ".lr" -type "double3" 6.3611093629270335e-015 0 0 ;
+	setAttr ".rst" -type "double3" -7.1054273576010019e-014 0 -7.1054273576010019e-015 ;
 	setAttr -k on ".w0";
 createNode parentConstraint -n "tail_4control01_parentConstraint1" -p "utility_room_viewRNfosterParent1";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "tail_3control01W0" -dv 1 -min 0 -at "double";
@@ -166,9 +169,11 @@ createNode parentConstraint -n "tail_4control01_parentConstraint1" -p "utility_r
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".tg[0].tot" -type "double3" 5.4299924046680542e-14 0.8563280471171506 -1.2729200700390013 ;
-	setAttr ".tg[0].tor" -type "double3" 0 2.3854160110976392e-15 -1.4562654829165989e-17 ;
-	setAttr ".rst" -type "double3" -1.4210854715202004e-14 -1.7763568394002505e-15 -1.7763568394002505e-15 ;
+	setAttr ".tg[0].tot" -type "double3" 5.4299924046680542e-014 0.8563280471171506 
+		-1.2729200700390013 ;
+	setAttr ".tg[0].tor" -type "double3" 0 2.3854160110976392e-015 -1.4562654829165989e-017 ;
+	setAttr ".rst" -type "double3" -1.4210854715202004e-014 -1.7763568394002505e-015 
+		-1.7763568394002505e-015 ;
 	setAttr -k on ".w0";
 createNode parentConstraint -n "global_ctrl_parentConstraint1" -p "utility_room_viewRNfosterParent1";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "bike_ctrlW0" -dv 1 -min 0 -at "double";
@@ -186,10 +191,168 @@ createNode parentConstraint -n "global_ctrl_parentConstraint1" -p "utility_room_
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -4.9555423168764667 0.32750445826755481 -0.24902694208419862 ;
 	setAttr ".tg[0].tor" -type "double3" 0 89.999999999999986 0 ;
-	setAttr ".lr" -type "double3" 0 -58.491259037105344 0 ;
+	setAttr ".lr" -type "double3" 0 -62.762395677270135 0 ;
 	setAttr ".rst" -type "double3" 10.079817474578334 11.003304021572831 6.0439861158264634 ;
 	setAttr ".rsrr" -type "double3" 0 89.999999999999986 0 ;
 	setAttr -k on ".w0";
+createNode mentalrayItemsList -s -n "mentalrayItemsList";
+createNode mentalrayGlobals -s -n "mentalrayGlobals";
+	addAttr -s false -ci true -h true -sn "sunAndSkyShader" -ln "sunAndSkyShader" -at "message";
+	setAttr ".rvb" 3;
+	setAttr ".ivb" no;
+createNode mentalrayOptions -s -n "miDefaultOptions";
+	addAttr -ci true -m -sn "stringOptions" -ln "stringOptions" -at "compound" -nc 
+		3;
+	addAttr -ci true -sn "name" -ln "name" -dt "string" -p "stringOptions";
+	addAttr -ci true -sn "value" -ln "value" -dt "string" -p "stringOptions";
+	addAttr -ci true -sn "type" -ln "type" -dt "string" -p "stringOptions";
+	setAttr ".mst" 3;
+	setAttr -s 48 ".stringOptions";
+	setAttr ".stringOptions[0].name" -type "string" "rast motion factor";
+	setAttr ".stringOptions[0].value" -type "string" "1.0";
+	setAttr ".stringOptions[0].type" -type "string" "scalar";
+	setAttr ".stringOptions[1].name" -type "string" "rast transparency depth";
+	setAttr ".stringOptions[1].value" -type "string" "8";
+	setAttr ".stringOptions[1].type" -type "string" "integer";
+	setAttr ".stringOptions[2].name" -type "string" "rast useopacity";
+	setAttr ".stringOptions[2].value" -type "string" "true";
+	setAttr ".stringOptions[2].type" -type "string" "boolean";
+	setAttr ".stringOptions[3].name" -type "string" "importon";
+	setAttr ".stringOptions[3].value" -type "string" "false";
+	setAttr ".stringOptions[3].type" -type "string" "boolean";
+	setAttr ".stringOptions[4].name" -type "string" "importon density";
+	setAttr ".stringOptions[4].value" -type "string" "1.0";
+	setAttr ".stringOptions[4].type" -type "string" "scalar";
+	setAttr ".stringOptions[5].name" -type "string" "importon merge";
+	setAttr ".stringOptions[5].value" -type "string" "0.0";
+	setAttr ".stringOptions[5].type" -type "string" "scalar";
+	setAttr ".stringOptions[6].name" -type "string" "importon trace depth";
+	setAttr ".stringOptions[6].value" -type "string" "0";
+	setAttr ".stringOptions[6].type" -type "string" "integer";
+	setAttr ".stringOptions[7].name" -type "string" "importon traverse";
+	setAttr ".stringOptions[7].value" -type "string" "true";
+	setAttr ".stringOptions[7].type" -type "string" "boolean";
+	setAttr ".stringOptions[8].name" -type "string" "shadowmap pixel samples";
+	setAttr ".stringOptions[8].value" -type "string" "3";
+	setAttr ".stringOptions[8].type" -type "string" "integer";
+	setAttr ".stringOptions[9].name" -type "string" "ambient occlusion";
+	setAttr ".stringOptions[9].value" -type "string" "false";
+	setAttr ".stringOptions[9].type" -type "string" "boolean";
+	setAttr ".stringOptions[10].name" -type "string" "ambient occlusion rays";
+	setAttr ".stringOptions[10].value" -type "string" "64";
+	setAttr ".stringOptions[10].type" -type "string" "integer";
+	setAttr ".stringOptions[11].name" -type "string" "ambient occlusion cache";
+	setAttr ".stringOptions[11].value" -type "string" "false";
+	setAttr ".stringOptions[11].type" -type "string" "boolean";
+	setAttr ".stringOptions[12].name" -type "string" "ambient occlusion cache density";
+	setAttr ".stringOptions[12].value" -type "string" "1.0";
+	setAttr ".stringOptions[12].type" -type "string" "scalar";
+	setAttr ".stringOptions[13].name" -type "string" "ambient occlusion cache points";
+	setAttr ".stringOptions[13].value" -type "string" "64";
+	setAttr ".stringOptions[13].type" -type "string" "integer";
+	setAttr ".stringOptions[14].name" -type "string" "irradiance particles";
+	setAttr ".stringOptions[14].value" -type "string" "false";
+	setAttr ".stringOptions[14].type" -type "string" "boolean";
+	setAttr ".stringOptions[15].name" -type "string" "irradiance particles rays";
+	setAttr ".stringOptions[15].value" -type "string" "256";
+	setAttr ".stringOptions[15].type" -type "string" "integer";
+	setAttr ".stringOptions[16].name" -type "string" "irradiance particles interpolate";
+	setAttr ".stringOptions[16].value" -type "string" "1";
+	setAttr ".stringOptions[16].type" -type "string" "integer";
+	setAttr ".stringOptions[17].name" -type "string" "irradiance particles interppoints";
+	setAttr ".stringOptions[17].value" -type "string" "64";
+	setAttr ".stringOptions[17].type" -type "string" "integer";
+	setAttr ".stringOptions[18].name" -type "string" "irradiance particles indirect passes";
+	setAttr ".stringOptions[18].value" -type "string" "0";
+	setAttr ".stringOptions[18].type" -type "string" "integer";
+	setAttr ".stringOptions[19].name" -type "string" "irradiance particles scale";
+	setAttr ".stringOptions[19].value" -type "string" "1.0";
+	setAttr ".stringOptions[19].type" -type "string" "scalar";
+	setAttr ".stringOptions[20].name" -type "string" "irradiance particles env";
+	setAttr ".stringOptions[20].value" -type "string" "true";
+	setAttr ".stringOptions[20].type" -type "string" "boolean";
+	setAttr ".stringOptions[21].name" -type "string" "irradiance particles env rays";
+	setAttr ".stringOptions[21].value" -type "string" "256";
+	setAttr ".stringOptions[21].type" -type "string" "integer";
+	setAttr ".stringOptions[22].name" -type "string" "irradiance particles env scale";
+	setAttr ".stringOptions[22].value" -type "string" "1";
+	setAttr ".stringOptions[22].type" -type "string" "integer";
+	setAttr ".stringOptions[23].name" -type "string" "irradiance particles rebuild";
+	setAttr ".stringOptions[23].value" -type "string" "true";
+	setAttr ".stringOptions[23].type" -type "string" "boolean";
+	setAttr ".stringOptions[24].name" -type "string" "irradiance particles file";
+	setAttr ".stringOptions[24].value" -type "string" "";
+	setAttr ".stringOptions[24].type" -type "string" "string";
+	setAttr ".stringOptions[25].name" -type "string" "geom displace motion factor";
+	setAttr ".stringOptions[25].value" -type "string" "1.0";
+	setAttr ".stringOptions[25].type" -type "string" "scalar";
+	setAttr ".stringOptions[26].name" -type "string" "contrast all buffers";
+	setAttr ".stringOptions[26].value" -type "string" "true";
+	setAttr ".stringOptions[26].type" -type "string" "boolean";
+	setAttr ".stringOptions[27].name" -type "string" "finalgather normal tolerance";
+	setAttr ".stringOptions[27].value" -type "string" "25.842";
+	setAttr ".stringOptions[27].type" -type "string" "scalar";
+	setAttr ".stringOptions[28].name" -type "string" "trace camera clip";
+	setAttr ".stringOptions[28].value" -type "string" "false";
+	setAttr ".stringOptions[28].type" -type "string" "boolean";
+	setAttr ".stringOptions[29].name" -type "string" "unified sampling";
+	setAttr ".stringOptions[29].value" -type "string" "true";
+	setAttr ".stringOptions[29].type" -type "string" "boolean";
+	setAttr ".stringOptions[30].name" -type "string" "samples quality";
+	setAttr ".stringOptions[30].value" -type "string" "0.25 0.25 0.25 0.25";
+	setAttr ".stringOptions[30].type" -type "string" "color";
+	setAttr ".stringOptions[31].name" -type "string" "samples min";
+	setAttr ".stringOptions[31].value" -type "string" "1.0";
+	setAttr ".stringOptions[31].type" -type "string" "scalar";
+	setAttr ".stringOptions[32].name" -type "string" "samples max";
+	setAttr ".stringOptions[32].value" -type "string" "100.0";
+	setAttr ".stringOptions[32].type" -type "string" "scalar";
+	setAttr ".stringOptions[33].name" -type "string" "samples error cutoff";
+	setAttr ".stringOptions[33].value" -type "string" "0.0 0.0 0.0 0.0";
+	setAttr ".stringOptions[33].type" -type "string" "color";
+	setAttr ".stringOptions[34].name" -type "string" "samples per object";
+	setAttr ".stringOptions[34].value" -type "string" "false";
+	setAttr ".stringOptions[34].type" -type "string" "boolean";
+	setAttr ".stringOptions[35].name" -type "string" "progressive";
+	setAttr ".stringOptions[35].value" -type "string" "false";
+	setAttr ".stringOptions[35].type" -type "string" "boolean";
+	setAttr ".stringOptions[36].name" -type "string" "progressive max time";
+	setAttr ".stringOptions[36].value" -type "string" "0";
+	setAttr ".stringOptions[36].type" -type "string" "integer";
+	setAttr ".stringOptions[37].name" -type "string" "progressive subsampling size";
+	setAttr ".stringOptions[37].value" -type "string" "4";
+	setAttr ".stringOptions[37].type" -type "string" "integer";
+	setAttr ".stringOptions[38].name" -type "string" "iray";
+	setAttr ".stringOptions[38].value" -type "string" "false";
+	setAttr ".stringOptions[38].type" -type "string" "boolean";
+	setAttr ".stringOptions[39].name" -type "string" "light relative scale";
+	setAttr ".stringOptions[39].value" -type "string" "0.31831";
+	setAttr ".stringOptions[39].type" -type "string" "scalar";
+	setAttr ".stringOptions[40].name" -type "string" "trace camera motion vectors";
+	setAttr ".stringOptions[40].value" -type "string" "false";
+	setAttr ".stringOptions[40].type" -type "string" "boolean";
+	setAttr ".stringOptions[41].name" -type "string" "ray differentials";
+	setAttr ".stringOptions[41].value" -type "string" "true";
+	setAttr ".stringOptions[41].type" -type "string" "boolean";
+	setAttr ".stringOptions[42].name" -type "string" "environment lighting mode";
+	setAttr ".stringOptions[42].value" -type "string" "off";
+	setAttr ".stringOptions[42].type" -type "string" "string";
+	setAttr ".stringOptions[43].name" -type "string" "environment lighting quality";
+	setAttr ".stringOptions[43].value" -type "string" "0.2";
+	setAttr ".stringOptions[43].type" -type "string" "scalar";
+	setAttr ".stringOptions[44].name" -type "string" "environment lighting shadow";
+	setAttr ".stringOptions[44].value" -type "string" "transparent";
+	setAttr ".stringOptions[44].type" -type "string" "string";
+	setAttr ".stringOptions[45].name" -type "string" "environment lighting resolution";
+	setAttr ".stringOptions[45].value" -type "string" "512";
+	setAttr ".stringOptions[45].type" -type "string" "integer";
+	setAttr ".stringOptions[46].name" -type "string" "environment lighting shader samples";
+	setAttr ".stringOptions[46].value" -type "string" "2";
+	setAttr ".stringOptions[46].type" -type "string" "integer";
+	setAttr ".stringOptions[47].name" -type "string" "environment lighting scale";
+	setAttr ".stringOptions[47].value" -type "string" "1.0 1.0 1.0";
+	setAttr ".stringOptions[47].type" -type "string" "color";
+createNode mentalrayFramebuffer -s -n "miDefaultFramebuffer";
 createNode RenderMan -s -n "renderManRISGlobals";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
 		-dt "string";
@@ -522,7 +685,6 @@ createNode RenderMan -s -n "renderManRISGlobals";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:job";
 	setAttr ".rman__torattr___class" -type "string" "RISJob";
 	setAttr ".rman__torattr___task" -type "string" "job";
 	setAttr -k on ".rman__toropt___renderDataCleanupJob" 0;
@@ -676,6 +838,7 @@ createNode RenderMan -s -n "renderManRISGlobals";
 	setAttr ".rman__riopt__Integrator_viewchannel" -type "string" "Nn";
 	setAttr ".rman__EnvLight" -type "string" "";
 	setAttr -s 19 ".p";
+	setAttr ".nt" -type "string" "settings:job";
 createNode RenderMan -s -n "rmanFinalGlobals";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -725,7 +888,6 @@ createNode RenderMan -s -n "rmanFinalGlobals";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "pass:render";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Final";
 	setAttr ".rman__torattr___task" -type "string" "render";
@@ -744,6 +906,7 @@ createNode RenderMan -s -n "rmanFinalGlobals";
 	setAttr -k on ".rman__riopt__photon_emit" 0;
 	setAttr ".rman__riattr__photon_causticmap" -type "string" "";
 	setAttr ".rman__riattr__photon_globalmap" -type "string" "";
+	setAttr ".nt" -type "string" "pass:render";
 createNode RenderMan -s -n "rmanFinalOutputGlobals0";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -806,7 +969,6 @@ createNode RenderMan -s -n "rmanFinalOutputGlobals0";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:display";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Primary";
 	setAttr ".rman__torattr___task" -type "string" "display";
@@ -824,6 +986,7 @@ createNode RenderMan -s -n "rmanFinalOutputGlobals0";
 	setAttr -k on ".rman__riopt__Display_dither" 0;
 	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
 	setAttr -k on ".rman__riopt__Display_remap" -type "float3" 0 0 0 ;
+	setAttr ".nt" -type "string" "settings:display";
 createNode RenderMan -s -n "rmanPreviewGlobals";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -901,7 +1064,6 @@ createNode RenderMan -s -n "rmanPreviewGlobals";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "pass:render";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Preview";
 	setAttr ".rman__torattr___task" -type "string" "render";
@@ -932,6 +1094,7 @@ createNode RenderMan -s -n "rmanPreviewGlobals";
 	setAttr -k on ".rman__riattr__trace_maxdiffusedepth" 1;
 	setAttr ".rman__riattr__photon_causticmap" -type "string" "";
 	setAttr ".rman__riattr__photon_globalmap" -type "string" "";
+	setAttr ".nt" -type "string" "pass:render";
 createNode RenderMan -s -n "rmanPreviewOutputGlobals0";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -994,7 +1157,6 @@ createNode RenderMan -s -n "rmanPreviewOutputGlobals0";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:display";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Primary";
 	setAttr ".rman__torattr___task" -type "string" "display";
@@ -1012,6 +1174,7 @@ createNode RenderMan -s -n "rmanPreviewOutputGlobals0";
 	setAttr -k on ".rman__riopt__Display_dither" 0;
 	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
 	setAttr -k on ".rman__riopt__Display_remap" -type "float3" 0 0 0 ;
+	setAttr ".nt" -type "string" "settings:display";
 createNode RenderMan -s -n "rmanRerenderGlobals";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -1103,7 +1266,6 @@ createNode RenderMan -s -n "rmanRerenderGlobals";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "pass:render";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Rerender";
 	setAttr ".rman__torattr___task" -type "string" "render";
@@ -1139,6 +1301,7 @@ createNode RenderMan -s -n "rmanRerenderGlobals";
 	setAttr ".rman__riattr__photon_causticmap" -type "string" "";
 	setAttr ".rman__riattr__photon_globalmap" -type "string" "";
 	setAttr ".rman__riopt__Hider_integrationmode" -type "string" "path";
+	setAttr ".nt" -type "string" "pass:render";
 createNode RenderMan -s -n "rmanRerenderOutputGlobals0";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -1201,7 +1364,6 @@ createNode RenderMan -s -n "rmanRerenderOutputGlobals0";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:display";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "PrimaryRerender";
 	setAttr ".rman__torattr___task" -type "string" "display";
@@ -1219,6 +1381,7 @@ createNode RenderMan -s -n "rmanRerenderOutputGlobals0";
 	setAttr -k on ".rman__riopt__Display_dither" 0;
 	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
 	setAttr -k on ".rman__riopt__Display_remap" -type "float3" 0 0 0 ;
+	setAttr ".nt" -type "string" "settings:display";
 createNode RenderMan -s -n "rmanReyesRerenderGlobals";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -1296,7 +1459,6 @@ createNode RenderMan -s -n "rmanReyesRerenderGlobals";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "pass:render";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "ReyesRerender";
 	setAttr ".rman__torattr___task" -type "string" "render";
@@ -1327,6 +1489,7 @@ createNode RenderMan -s -n "rmanReyesRerenderGlobals";
 	setAttr -k on ".rman__riattr__trace_displacements" 1;
 	setAttr ".rman__riattr__photon_causticmap" -type "string" "";
 	setAttr ".rman__riattr__photon_globalmap" -type "string" "";
+	setAttr ".nt" -type "string" "pass:render";
 createNode RenderMan -s -n "rmanReyesRerenderOutputGlobals0";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -1389,7 +1552,6 @@ createNode RenderMan -s -n "rmanReyesRerenderOutputGlobals0";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:display";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Primary";
 	setAttr ".rman__torattr___task" -type "string" "display";
@@ -1407,6 +1569,7 @@ createNode RenderMan -s -n "rmanReyesRerenderOutputGlobals0";
 	setAttr -k on ".rman__riopt__Display_dither" 0;
 	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
 	setAttr -k on ".rman__riopt__Display_remap" -type "float3" 0 0 0 ;
+	setAttr ".nt" -type "string" "settings:display";
 createNode RenderMan -s -n "rmanRerenderRISGlobals";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -1532,7 +1695,6 @@ createNode RenderMan -s -n "rmanRerenderRISGlobals";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "pass:render";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "RerenderRIS";
 	setAttr ".rman__torattr___task" -type "string" "render";
@@ -1587,6 +1749,7 @@ createNode RenderMan -s -n "rmanRerenderRISGlobals";
 	setAttr -k on ".rman__riopt__Integrator_allowCaustics" 0;
 	setAttr -k on ".rman__riopt__Integrator_numSamples" 4;
 	setAttr ".rman__riopt__Integrator_viewchannel" -type "string" "Nn";
+	setAttr ".nt" -type "string" "pass:render";
 createNode RenderMan -s -n "rmanRerenderRISOutputGlobals0";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -1649,7 +1812,6 @@ createNode RenderMan -s -n "rmanRerenderRISOutputGlobals0";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:display";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "PrimaryRerender";
 	setAttr ".rman__torattr___task" -type "string" "display";
@@ -1667,6 +1829,7 @@ createNode RenderMan -s -n "rmanRerenderRISOutputGlobals0";
 	setAttr -k on ".rman__riopt__Display_dither" 0;
 	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
 	setAttr -k on ".rman__riopt__Display_remap" -type "float3" 0 0 0 ;
+	setAttr ".nt" -type "string" "settings:display";
 createNode RenderMan -s -n "rmanDeepShadowGlobals";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -1732,7 +1895,6 @@ createNode RenderMan -s -n "rmanDeepShadowGlobals";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "pass:render";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "DeepShadow";
 	setAttr ".rman__torattr___task" -type "string" "render";
@@ -1761,6 +1923,7 @@ createNode RenderMan -s -n "rmanDeepShadowGlobals";
 	setAttr -k on ".rman__riopt__limits_deepshadowsimplifyerror" 0.0099999997764825821;
 	setAttr -k on ".rman__riattr___ShadingRate" 1;
 	setAttr -s 2 ".d";
+	setAttr ".nt" -type "string" "pass:render";
 createNode RenderMan -s -n "rmanDeepShadowOutputGlobals0";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -1781,7 +1944,6 @@ createNode RenderMan -s -n "rmanDeepShadowOutputGlobals0";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:display";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Null";
 	setAttr ".rman__torattr___task" -type "string" "display";
@@ -1790,6 +1952,7 @@ createNode RenderMan -s -n "rmanDeepShadowOutputGlobals0";
 	setAttr ".rman__riopt__Display_name" -type "string" "null";
 	setAttr ".rman__riopt__Display_type" -type "string" "null";
 	setAttr ".rman__riopt__Display_mode" -type "string" "z";
+	setAttr ".nt" -type "string" "settings:display";
 createNode RenderMan -s -n "rmanDeepShadowOutputGlobals1";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -1822,7 +1985,6 @@ createNode RenderMan -s -n "rmanDeepShadowOutputGlobals1";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:display";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "DeepShadow";
 	setAttr ".rman__torattr___task" -type "string" "display";
@@ -1835,6 +1997,7 @@ createNode RenderMan -s -n "rmanDeepShadowOutputGlobals1";
 	setAttr -k on ".rman__riopt__Display_filterwidth" -type "float2" 1 1 ;
 	setAttr ".rman__riopt__Display_mode" -type "string" "deepopacity";
 	setAttr ".rman__riopt__Display_volumeinterpretation" -type "string" "discrete";
+	setAttr ".nt" -type "string" "settings:display";
 createNode RenderMan -s -n "rmanAreaShadowGlobals";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -1904,7 +2067,6 @@ createNode RenderMan -s -n "rmanAreaShadowGlobals";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "pass:render";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "AreaShadow";
 	setAttr ".rman__torattr___task" -type "string" "render";
@@ -1935,6 +2097,7 @@ createNode RenderMan -s -n "rmanAreaShadowGlobals";
 	setAttr -k on ".rman__riattr__cull_backfacing" 0;
 	setAttr -k on ".rman__riattr__cull_hidden" 0;
 	setAttr -s 2 ".d";
+	setAttr ".nt" -type "string" "pass:render";
 createNode RenderMan -s -n "rmanAreaShadowOutputGlobals0";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -1955,7 +2118,6 @@ createNode RenderMan -s -n "rmanAreaShadowOutputGlobals0";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:display";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Null";
 	setAttr ".rman__torattr___task" -type "string" "display";
@@ -1964,6 +2126,7 @@ createNode RenderMan -s -n "rmanAreaShadowOutputGlobals0";
 	setAttr ".rman__riopt__Display_name" -type "string" "null";
 	setAttr ".rman__riopt__Display_type" -type "string" "null";
 	setAttr ".rman__riopt__Display_mode" -type "string" "z";
+	setAttr ".nt" -type "string" "settings:display";
 createNode RenderMan -s -n "rmanAreaShadowOutputGlobals1";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -2010,7 +2173,6 @@ createNode RenderMan -s -n "rmanAreaShadowOutputGlobals1";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:display";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "AreaShadow";
 	setAttr ".rman__torattr___task" -type "string" "display";
@@ -2027,6 +2189,7 @@ createNode RenderMan -s -n "rmanAreaShadowOutputGlobals1";
 	setAttr ".rman__riopt__Display_mode" -type "string" "areashadow";
 	setAttr -k on ".rman__riopt__Hider_sigma" 0;
 	setAttr ".rman__riopt__Display_volumeinterpretation" -type "string" "discrete";
+	setAttr ".nt" -type "string" "settings:display";
 createNode RenderMan -s -n "rmanShadowGlobals";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -2106,7 +2269,6 @@ createNode RenderMan -s -n "rmanShadowGlobals";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "pass:render";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Shadow";
 	setAttr ".rman__torattr___task" -type "string" "render";
@@ -2136,6 +2298,7 @@ createNode RenderMan -s -n "rmanShadowGlobals";
 	setAttr -k on ".rman__riattr___ShadingRate" 1;
 	setAttr -k on ".rman__riopt__Hider_jitter" 0;
 	setAttr ".rman__riopt__Hider_depthfilter" -type "string" "midpoint";
+	setAttr ".nt" -type "string" "pass:render";
 createNode RenderMan -s -n "rmanShadowOutputGlobals0";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -2158,7 +2321,6 @@ createNode RenderMan -s -n "rmanShadowOutputGlobals0";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:display";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "ShadowZ";
 	setAttr ".rman__torattr___task" -type "string" "display";
@@ -2168,6 +2330,7 @@ createNode RenderMan -s -n "rmanShadowOutputGlobals0";
 	setAttr ".rman__riopt__Display_name" -type "string" "[passinfo this filename]";
 	setAttr ".rman__riopt__Display_type" -type "string" "shadow";
 	setAttr ".rman__riopt__Display_mode" -type "string" "z";
+	setAttr ".nt" -type "string" "settings:display";
 createNode RenderMan -s -n "rmanBakeGlobals";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -2202,7 +2365,6 @@ createNode RenderMan -s -n "rmanBakeGlobals";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "pass:command";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Bake";
 	setAttr ".rman__torattr___task" -type "string" "command";
@@ -2216,6 +2378,7 @@ createNode RenderMan -s -n "rmanBakeGlobals";
 	setAttr ".rman__param__ptrender___inputfile" -type "string" "[passinfo this/0 filename]";
 	setAttr ".rman__param__ptrender___channel" -type "string" "$BAKECHAN";
 	setAttr ".rman__param__ptrender___outputfile" -type "string" "[passinfo this filename]";
+	setAttr ".nt" -type "string" "pass:command";
 createNode RenderMan -s -n "rmanBakeRenderGlobals";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -2251,7 +2414,6 @@ createNode RenderMan -s -n "rmanBakeRenderGlobals";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "pass:render";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "BakeRender";
 	setAttr ".rman__torattr___task" -type "string" "render";
@@ -2269,6 +2431,7 @@ createNode RenderMan -s -n "rmanBakeRenderGlobals";
 	setAttr -k on ".rman__riattr__cull_hidden" 0;
 	setAttr -k on ".rman__riattr__dice_rasterorient" 0;
 	setAttr -s 32 ".c";
+	setAttr ".nt" -type "string" "pass:render";
 createNode RenderMan -s -n "rmanBakeRenderOutputGlobals0";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -2313,7 +2476,6 @@ createNode RenderMan -s -n "rmanBakeRenderOutputGlobals0";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:display";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "PreviewNull";
 	setAttr ".rman__torattr___task" -type "string" "display";
@@ -2327,6 +2489,7 @@ createNode RenderMan -s -n "rmanBakeRenderOutputGlobals0";
 	setAttr -k on ".rman__riopt__Display_quantizeY" -type "long2" 0 0 ;
 	setAttr -k on ".rman__riopt__Display_dither" 0;
 	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
+	setAttr ".nt" -type "string" "settings:display";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals0";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -2339,11 +2502,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals0";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Rim";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color Rim";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals1";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -2356,11 +2519,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals1";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "SpecularEnvironment";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color SpecularEnvironment";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals2";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -2373,11 +2536,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals2";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Translucence";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color Translucence";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals3";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -2390,11 +2553,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals3";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Z";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "float Z";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals4";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -2407,11 +2570,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals4";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "DiffuseShadow";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color DiffuseShadow";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals5";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -2424,11 +2587,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals5";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Diffuse";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color Diffuse";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals6";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -2441,11 +2604,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals6";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "DiffuseEnvironment";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color DiffuseEnvironment";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals7";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -2458,11 +2621,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals7";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "DiffuseDirect";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color DiffuseDirect";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals8";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -2491,7 +2654,6 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals8";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "id";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
@@ -2499,6 +2661,7 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals8";
 	setAttr -k on ".rman__riopt__DisplayChannel_quantizeX" -type "long2" 0 0 ;
 	setAttr -k on ".rman__riopt__DisplayChannel_quantizeY" -type "long2" 0 0 ;
 	setAttr -k on ".rman__riopt__Display_dither" 0;
+	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals9";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -2511,11 +2674,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals9";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Ci";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color Ci";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals10";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -2528,11 +2691,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals10";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "wP";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "point wP";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals11";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -2545,11 +2708,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals11";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "SpecularDirectShadow";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color SpecularDirectShadow";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals12";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -2562,11 +2725,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals12";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "DiffuseColor";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color DiffuseColor";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals13";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -2579,11 +2742,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals13";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Occlusion";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "float Occlusion";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals14";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -2596,11 +2759,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals14";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "SpecularShadow";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color SpecularShadow";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals15";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -2613,11 +2776,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals15";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "N";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "normal N";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals16";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -2630,11 +2793,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals16";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Incandescence";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color Incandescence";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals17";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -2647,11 +2810,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals17";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "SpecularDirect";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color SpecularDirect";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals18";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -2664,11 +2827,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals18";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "SpecularColor";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color SpecularColor";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals19";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -2681,11 +2844,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals19";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Oi";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color Oi";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals20";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -2698,11 +2861,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals20";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "OcclusionDirect";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color OcclusionDirect";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals21";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -2715,11 +2878,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals21";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "GlowColor";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color GlowColor";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals22";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -2732,11 +2895,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals22";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "DiffuseDirectShadow";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color DiffuseDirectShadow";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals23";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -2749,11 +2912,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals23";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Subsurface";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color Subsurface";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals24";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -2766,11 +2929,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals24";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Specular";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color Specular";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals25";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -2783,11 +2946,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals25";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Refraction";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color Refraction";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals26";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -2800,11 +2963,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals26";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "DiffuseIndirect";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color DiffuseIndirect";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals27";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -2817,11 +2980,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals27";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Backscattering";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color Backscattering";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals28";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -2834,11 +2997,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals28";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "SpecularIndirect";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color SpecularIndirect";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals29";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -2851,11 +3014,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals29";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Ambient";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color Ambient";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals30";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -2868,11 +3031,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals30";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "wN";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "normal wN";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals31";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -2885,11 +3048,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals31";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "OcclusionIndirect";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color OcclusionIndirect";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanSSMakeBrickmapGlobals";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -2918,7 +3081,6 @@ createNode RenderMan -s -n "rmanSSMakeBrickmapGlobals";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "pass:command";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "SSMakeBrickmap";
 	setAttr ".rman__torattr___task" -type "string" "command";
@@ -2931,6 +3093,7 @@ createNode RenderMan -s -n "rmanSSMakeBrickmapGlobals";
 	setAttr -k on ".rman__param__brickmake_omitgeometry" 1;
 	setAttr ".rman__param__brickmake___inputfile" -type "string" "[passinfo this/0 filename]";
 	setAttr ".rman__param__brickmake___outputfile" -type "string" "[passinfo this filename]";
+	setAttr ".nt" -type "string" "pass:command";
 createNode RenderMan -s -n "rmanSSDiffuseGlobals";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -2975,7 +3138,6 @@ createNode RenderMan -s -n "rmanSSDiffuseGlobals";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "pass:command";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "SSDiffuse";
 	setAttr ".rman__torattr___task" -type "string" "command";
@@ -2996,6 +3158,7 @@ createNode RenderMan -s -n "rmanSSDiffuseGlobals";
 	setAttr -k on ".rman__param__ptfilter_threads" 0;
 	setAttr ".rman__param__ptfilter___inputfile" -type "string" "[passinfo this/0 filename]";
 	setAttr ".rman__param__ptfilter___outputfile" -type "string" "[passinfo this filename]";
+	setAttr ".nt" -type "string" "pass:command";
 createNode RenderMan -s -n "rmanSSRenderGlobals";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -3041,7 +3204,6 @@ createNode RenderMan -s -n "rmanSSRenderGlobals";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "pass:render";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "SSRender";
 	setAttr ".rman__torattr___task" -type "string" "render";
@@ -3062,6 +3224,7 @@ createNode RenderMan -s -n "rmanSSRenderGlobals";
 	setAttr -k on ".rman__riattr__dice_rasterorient" 0;
 	setAttr -k on ".rman__riattr___ShadingRate" 5;
 	setAttr -s 4 ".c";
+	setAttr ".nt" -type "string" "pass:render";
 createNode RenderMan -s -n "rmanSSRenderOutputGlobals0";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -3106,7 +3269,6 @@ createNode RenderMan -s -n "rmanSSRenderOutputGlobals0";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:display";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "PreviewNull";
 	setAttr ".rman__torattr___task" -type "string" "display";
@@ -3120,6 +3282,7 @@ createNode RenderMan -s -n "rmanSSRenderOutputGlobals0";
 	setAttr -k on ".rman__riopt__Display_quantizeY" -type "long2" 0 0 ;
 	setAttr -k on ".rman__riopt__Display_dither" 0;
 	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
+	setAttr ".nt" -type "string" "settings:display";
 createNode RenderMan -s -n "rmanSSRenderChannelGlobals0";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -3134,12 +3297,12 @@ createNode RenderMan -s -n "rmanSSRenderChannelGlobals0";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "diffusemeanfreepath";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color _diffusemeanfreepath";
 	setAttr -k on ".rman__riopt__DisplayChannel_EliminateDuplicateGrids" 1;
+	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanSSRenderChannelGlobals1";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -3154,12 +3317,12 @@ createNode RenderMan -s -n "rmanSSRenderChannelGlobals1";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "area";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "float _area";
 	setAttr -k on ".rman__riopt__DisplayChannel_EliminateDuplicateGrids" 1;
+	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanSSRenderChannelGlobals2";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -3174,12 +3337,12 @@ createNode RenderMan -s -n "rmanSSRenderChannelGlobals2";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "albedo";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color _albedo";
 	setAttr -k on ".rman__riopt__DisplayChannel_EliminateDuplicateGrids" 1;
+	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanSSRenderChannelGlobals3";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -3194,12 +3357,12 @@ createNode RenderMan -s -n "rmanSSRenderChannelGlobals3";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "radiance_t";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color _radiance_t";
 	setAttr -k on ".rman__riopt__DisplayChannel_EliminateDuplicateGrids" 1;
+	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanSSOrganizeGlobals";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -3232,7 +3395,6 @@ createNode RenderMan -s -n "rmanSSOrganizeGlobals";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "pass:command";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "SSOrganize";
 	setAttr ".rman__torattr___task" -type "string" "command";
@@ -3247,6 +3409,7 @@ createNode RenderMan -s -n "rmanSSOrganizeGlobals";
 	setAttr -k on ".rman__param__ptfilter_threads" 0;
 	setAttr ".rman__param__ptfilter___inputfile" -type "string" "[passinfo this/0 filename]";
 	setAttr ".rman__param__ptfilter___outputfile" -type "string" "[passinfo this filename]";
+	setAttr ".nt" -type "string" "pass:command";
 createNode RenderMan -s -n "rmanSBMakeBrickmapGlobals";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -3273,7 +3436,6 @@ createNode RenderMan -s -n "rmanSBMakeBrickmapGlobals";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "pass:command";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "SBMakeBrickmap";
 	setAttr ".rman__torattr___task" -type "string" "command";
@@ -3285,6 +3447,7 @@ createNode RenderMan -s -n "rmanSBMakeBrickmapGlobals";
 	setAttr -k on ".rman__param__brickmake_progress" 2;
 	setAttr ".rman__param__brickmake___inputfile" -type "string" "[passinfo this/0 filename]";
 	setAttr ".rman__param__brickmake___outputfile" -type "string" "[passinfo this filename]";
+	setAttr ".nt" -type "string" "pass:command";
 createNode RenderMan -s -n "rmanSBRenderGlobals";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -3328,7 +3491,6 @@ createNode RenderMan -s -n "rmanSBRenderGlobals";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "pass:render";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "SBRender";
 	setAttr ".rman__torattr___task" -type "string" "render";
@@ -3348,6 +3510,7 @@ createNode RenderMan -s -n "rmanSBRenderGlobals";
 	setAttr -k on ".rman__riattr__dice_rasterorient" 0;
 	setAttr -k on ".rman__riattr___ShadingRate" 1;
 	setAttr -s 6 ".c";
+	setAttr ".nt" -type "string" "pass:render";
 createNode RenderMan -s -n "rmanSBRenderOutputGlobals0";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -3392,7 +3555,6 @@ createNode RenderMan -s -n "rmanSBRenderOutputGlobals0";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:display";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "PreviewNull";
 	setAttr ".rman__torattr___task" -type "string" "display";
@@ -3406,6 +3568,7 @@ createNode RenderMan -s -n "rmanSBRenderOutputGlobals0";
 	setAttr -k on ".rman__riopt__Display_quantizeY" -type "long2" 0 0 ;
 	setAttr -k on ".rman__riopt__Display_dither" 0;
 	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
+	setAttr ".nt" -type "string" "settings:display";
 createNode RenderMan -s -n "rmanSBRenderChannelGlobals0";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -3420,12 +3583,12 @@ createNode RenderMan -s -n "rmanSBRenderChannelGlobals0";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "color";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color _color";
 	setAttr -k on ".rman__riopt__DisplayChannel_EliminateDuplicateGrids" 1;
+	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanSBRenderChannelGlobals1";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -3440,12 +3603,12 @@ createNode RenderMan -s -n "rmanSBRenderChannelGlobals1";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "diffusemeanfreepath";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color _diffusemeanfreepath";
 	setAttr -k on ".rman__riopt__DisplayChannel_EliminateDuplicateGrids" 1;
+	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanSBRenderChannelGlobals2";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -3460,12 +3623,12 @@ createNode RenderMan -s -n "rmanSBRenderChannelGlobals2";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "area";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "float _area";
 	setAttr -k on ".rman__riopt__DisplayChannel_EliminateDuplicateGrids" 1;
+	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanSBRenderChannelGlobals3";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -3480,12 +3643,12 @@ createNode RenderMan -s -n "rmanSBRenderChannelGlobals3";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "float";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "float _float";
 	setAttr -k on ".rman__riopt__DisplayChannel_EliminateDuplicateGrids" 1;
+	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanSBRenderChannelGlobals4";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -3500,12 +3663,12 @@ createNode RenderMan -s -n "rmanSBRenderChannelGlobals4";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "albedo";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color _albedo";
 	setAttr -k on ".rman__riopt__DisplayChannel_EliminateDuplicateGrids" 1;
+	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanSBRenderChannelGlobals5";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -3520,12 +3683,12 @@ createNode RenderMan -s -n "rmanSBRenderChannelGlobals5";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "radiance_t";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color _radiance_t";
 	setAttr -k on ".rman__riopt__DisplayChannel_EliminateDuplicateGrids" 1;
+	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanSBMakePtCloudGlobals";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -3556,7 +3719,6 @@ createNode RenderMan -s -n "rmanSBMakePtCloudGlobals";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "pass:command";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "SBMakePtCloud";
 	setAttr ".rman__torattr___task" -type "string" "command";
@@ -3570,6 +3732,7 @@ createNode RenderMan -s -n "rmanSBMakePtCloudGlobals";
 	setAttr -k on ".rman__param__ptfilter_threads" 0;
 	setAttr ".rman__param__ptfilter___inputfile" -type "string" "[passinfo this/0 filename]";
 	setAttr ".rman__param__ptfilter___outputfile" -type "string" "[passinfo this filename]";
+	setAttr ".nt" -type "string" "pass:command";
 createNode RenderMan -s -n "rmanSBPtRenderGlobals";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -3604,7 +3767,6 @@ createNode RenderMan -s -n "rmanSBPtRenderGlobals";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "pass:command";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "SBPtRender";
 	setAttr ".rman__torattr___task" -type "string" "command";
@@ -3618,6 +3780,7 @@ createNode RenderMan -s -n "rmanSBPtRenderGlobals";
 	setAttr ".rman__param__ptrender___inputfile" -type "string" "[passinfo this/0 filename]";
 	setAttr ".rman__param__ptrender___channel" -type "string" "$BAKECHAN";
 	setAttr ".rman__param__ptrender___outputfile" -type "string" "[passinfo this filename]";
+	setAttr ".nt" -type "string" "pass:command";
 createNode RenderMan -s -n "rmanSBMakePtexGlobals";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -3648,7 +3811,6 @@ createNode RenderMan -s -n "rmanSBMakePtexGlobals";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "pass:command";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "SBMakePtex";
 	setAttr ".rman__torattr___task" -type "string" "command";
@@ -3662,164 +3824,7 @@ createNode RenderMan -s -n "rmanSBMakePtexGlobals";
 	setAttr ".rman__param__ptxmake___inputfile" -type "string" "[passinfo this/0 filename]";
 	setAttr ".rman__param__ptxmake___channel" -type "string" "$BAKECHAN";
 	setAttr ".rman__param__ptxmake___outputfile" -type "string" "[passinfo this filename]";
-createNode mentalrayItemsList -s -n "mentalrayItemsList";
-createNode mentalrayGlobals -s -n "mentalrayGlobals";
-	addAttr -s false -ci true -h true -sn "sunAndSkyShader" -ln "sunAndSkyShader" -at "message";
-	setAttr ".rvb" 3;
-	setAttr ".ivb" no;
-createNode mentalrayOptions -s -n "miDefaultOptions";
-	addAttr -ci true -m -sn "stringOptions" -ln "stringOptions" -at "compound" -nc 
-		3;
-	addAttr -ci true -sn "name" -ln "name" -dt "string" -p "stringOptions";
-	addAttr -ci true -sn "value" -ln "value" -dt "string" -p "stringOptions";
-	addAttr -ci true -sn "type" -ln "type" -dt "string" -p "stringOptions";
-	setAttr ".mst" 3;
-	setAttr -s 48 ".stringOptions";
-	setAttr ".stringOptions[0].name" -type "string" "rast motion factor";
-	setAttr ".stringOptions[0].value" -type "string" "1.0";
-	setAttr ".stringOptions[0].type" -type "string" "scalar";
-	setAttr ".stringOptions[1].name" -type "string" "rast transparency depth";
-	setAttr ".stringOptions[1].value" -type "string" "8";
-	setAttr ".stringOptions[1].type" -type "string" "integer";
-	setAttr ".stringOptions[2].name" -type "string" "rast useopacity";
-	setAttr ".stringOptions[2].value" -type "string" "true";
-	setAttr ".stringOptions[2].type" -type "string" "boolean";
-	setAttr ".stringOptions[3].name" -type "string" "importon";
-	setAttr ".stringOptions[3].value" -type "string" "false";
-	setAttr ".stringOptions[3].type" -type "string" "boolean";
-	setAttr ".stringOptions[4].name" -type "string" "importon density";
-	setAttr ".stringOptions[4].value" -type "string" "1.0";
-	setAttr ".stringOptions[4].type" -type "string" "scalar";
-	setAttr ".stringOptions[5].name" -type "string" "importon merge";
-	setAttr ".stringOptions[5].value" -type "string" "0.0";
-	setAttr ".stringOptions[5].type" -type "string" "scalar";
-	setAttr ".stringOptions[6].name" -type "string" "importon trace depth";
-	setAttr ".stringOptions[6].value" -type "string" "0";
-	setAttr ".stringOptions[6].type" -type "string" "integer";
-	setAttr ".stringOptions[7].name" -type "string" "importon traverse";
-	setAttr ".stringOptions[7].value" -type "string" "true";
-	setAttr ".stringOptions[7].type" -type "string" "boolean";
-	setAttr ".stringOptions[8].name" -type "string" "shadowmap pixel samples";
-	setAttr ".stringOptions[8].value" -type "string" "3";
-	setAttr ".stringOptions[8].type" -type "string" "integer";
-	setAttr ".stringOptions[9].name" -type "string" "ambient occlusion";
-	setAttr ".stringOptions[9].value" -type "string" "false";
-	setAttr ".stringOptions[9].type" -type "string" "boolean";
-	setAttr ".stringOptions[10].name" -type "string" "ambient occlusion rays";
-	setAttr ".stringOptions[10].value" -type "string" "64";
-	setAttr ".stringOptions[10].type" -type "string" "integer";
-	setAttr ".stringOptions[11].name" -type "string" "ambient occlusion cache";
-	setAttr ".stringOptions[11].value" -type "string" "false";
-	setAttr ".stringOptions[11].type" -type "string" "boolean";
-	setAttr ".stringOptions[12].name" -type "string" "ambient occlusion cache density";
-	setAttr ".stringOptions[12].value" -type "string" "1.0";
-	setAttr ".stringOptions[12].type" -type "string" "scalar";
-	setAttr ".stringOptions[13].name" -type "string" "ambient occlusion cache points";
-	setAttr ".stringOptions[13].value" -type "string" "64";
-	setAttr ".stringOptions[13].type" -type "string" "integer";
-	setAttr ".stringOptions[14].name" -type "string" "irradiance particles";
-	setAttr ".stringOptions[14].value" -type "string" "false";
-	setAttr ".stringOptions[14].type" -type "string" "boolean";
-	setAttr ".stringOptions[15].name" -type "string" "irradiance particles rays";
-	setAttr ".stringOptions[15].value" -type "string" "256";
-	setAttr ".stringOptions[15].type" -type "string" "integer";
-	setAttr ".stringOptions[16].name" -type "string" "irradiance particles interpolate";
-	setAttr ".stringOptions[16].value" -type "string" "1";
-	setAttr ".stringOptions[16].type" -type "string" "integer";
-	setAttr ".stringOptions[17].name" -type "string" "irradiance particles interppoints";
-	setAttr ".stringOptions[17].value" -type "string" "64";
-	setAttr ".stringOptions[17].type" -type "string" "integer";
-	setAttr ".stringOptions[18].name" -type "string" "irradiance particles indirect passes";
-	setAttr ".stringOptions[18].value" -type "string" "0";
-	setAttr ".stringOptions[18].type" -type "string" "integer";
-	setAttr ".stringOptions[19].name" -type "string" "irradiance particles scale";
-	setAttr ".stringOptions[19].value" -type "string" "1.0";
-	setAttr ".stringOptions[19].type" -type "string" "scalar";
-	setAttr ".stringOptions[20].name" -type "string" "irradiance particles env";
-	setAttr ".stringOptions[20].value" -type "string" "true";
-	setAttr ".stringOptions[20].type" -type "string" "boolean";
-	setAttr ".stringOptions[21].name" -type "string" "irradiance particles env rays";
-	setAttr ".stringOptions[21].value" -type "string" "256";
-	setAttr ".stringOptions[21].type" -type "string" "integer";
-	setAttr ".stringOptions[22].name" -type "string" "irradiance particles env scale";
-	setAttr ".stringOptions[22].value" -type "string" "1";
-	setAttr ".stringOptions[22].type" -type "string" "integer";
-	setAttr ".stringOptions[23].name" -type "string" "irradiance particles rebuild";
-	setAttr ".stringOptions[23].value" -type "string" "true";
-	setAttr ".stringOptions[23].type" -type "string" "boolean";
-	setAttr ".stringOptions[24].name" -type "string" "irradiance particles file";
-	setAttr ".stringOptions[24].value" -type "string" "";
-	setAttr ".stringOptions[24].type" -type "string" "string";
-	setAttr ".stringOptions[25].name" -type "string" "geom displace motion factor";
-	setAttr ".stringOptions[25].value" -type "string" "1.0";
-	setAttr ".stringOptions[25].type" -type "string" "scalar";
-	setAttr ".stringOptions[26].name" -type "string" "contrast all buffers";
-	setAttr ".stringOptions[26].value" -type "string" "true";
-	setAttr ".stringOptions[26].type" -type "string" "boolean";
-	setAttr ".stringOptions[27].name" -type "string" "finalgather normal tolerance";
-	setAttr ".stringOptions[27].value" -type "string" "25.842";
-	setAttr ".stringOptions[27].type" -type "string" "scalar";
-	setAttr ".stringOptions[28].name" -type "string" "trace camera clip";
-	setAttr ".stringOptions[28].value" -type "string" "false";
-	setAttr ".stringOptions[28].type" -type "string" "boolean";
-	setAttr ".stringOptions[29].name" -type "string" "unified sampling";
-	setAttr ".stringOptions[29].value" -type "string" "true";
-	setAttr ".stringOptions[29].type" -type "string" "boolean";
-	setAttr ".stringOptions[30].name" -type "string" "samples quality";
-	setAttr ".stringOptions[30].value" -type "string" "0.25 0.25 0.25 0.25";
-	setAttr ".stringOptions[30].type" -type "string" "color";
-	setAttr ".stringOptions[31].name" -type "string" "samples min";
-	setAttr ".stringOptions[31].value" -type "string" "1.0";
-	setAttr ".stringOptions[31].type" -type "string" "scalar";
-	setAttr ".stringOptions[32].name" -type "string" "samples max";
-	setAttr ".stringOptions[32].value" -type "string" "100.0";
-	setAttr ".stringOptions[32].type" -type "string" "scalar";
-	setAttr ".stringOptions[33].name" -type "string" "samples error cutoff";
-	setAttr ".stringOptions[33].value" -type "string" "0.0 0.0 0.0 0.0";
-	setAttr ".stringOptions[33].type" -type "string" "color";
-	setAttr ".stringOptions[34].name" -type "string" "samples per object";
-	setAttr ".stringOptions[34].value" -type "string" "false";
-	setAttr ".stringOptions[34].type" -type "string" "boolean";
-	setAttr ".stringOptions[35].name" -type "string" "progressive";
-	setAttr ".stringOptions[35].value" -type "string" "false";
-	setAttr ".stringOptions[35].type" -type "string" "boolean";
-	setAttr ".stringOptions[36].name" -type "string" "progressive max time";
-	setAttr ".stringOptions[36].value" -type "string" "0";
-	setAttr ".stringOptions[36].type" -type "string" "integer";
-	setAttr ".stringOptions[37].name" -type "string" "progressive subsampling size";
-	setAttr ".stringOptions[37].value" -type "string" "4";
-	setAttr ".stringOptions[37].type" -type "string" "integer";
-	setAttr ".stringOptions[38].name" -type "string" "iray";
-	setAttr ".stringOptions[38].value" -type "string" "false";
-	setAttr ".stringOptions[38].type" -type "string" "boolean";
-	setAttr ".stringOptions[39].name" -type "string" "light relative scale";
-	setAttr ".stringOptions[39].value" -type "string" "0.31831";
-	setAttr ".stringOptions[39].type" -type "string" "scalar";
-	setAttr ".stringOptions[40].name" -type "string" "trace camera motion vectors";
-	setAttr ".stringOptions[40].value" -type "string" "false";
-	setAttr ".stringOptions[40].type" -type "string" "boolean";
-	setAttr ".stringOptions[41].name" -type "string" "ray differentials";
-	setAttr ".stringOptions[41].value" -type "string" "true";
-	setAttr ".stringOptions[41].type" -type "string" "boolean";
-	setAttr ".stringOptions[42].name" -type "string" "environment lighting mode";
-	setAttr ".stringOptions[42].value" -type "string" "off";
-	setAttr ".stringOptions[42].type" -type "string" "string";
-	setAttr ".stringOptions[43].name" -type "string" "environment lighting quality";
-	setAttr ".stringOptions[43].value" -type "string" "0.2";
-	setAttr ".stringOptions[43].type" -type "string" "scalar";
-	setAttr ".stringOptions[44].name" -type "string" "environment lighting shadow";
-	setAttr ".stringOptions[44].value" -type "string" "transparent";
-	setAttr ".stringOptions[44].type" -type "string" "string";
-	setAttr ".stringOptions[45].name" -type "string" "environment lighting resolution";
-	setAttr ".stringOptions[45].value" -type "string" "512";
-	setAttr ".stringOptions[45].type" -type "string" "integer";
-	setAttr ".stringOptions[46].name" -type "string" "environment lighting shader samples";
-	setAttr ".stringOptions[46].value" -type "string" "2";
-	setAttr ".stringOptions[46].type" -type "string" "integer";
-	setAttr ".stringOptions[47].name" -type "string" "environment lighting scale";
-	setAttr ".stringOptions[47].value" -type "string" "1.0 1.0 1.0";
-	setAttr ".stringOptions[47].type" -type "string" "color";
-createNode mentalrayFramebuffer -s -n "miDefaultFramebuffer";
+	setAttr ".nt" -type "string" "pass:command";
 createNode lightLinker -s -n "lightLinker1";
 	setAttr -s 1490 ".lnk";
 	setAttr -s 1490 ".slnk";
@@ -3832,8 +3837,8 @@ createNode renderLayerManager -n "renderLayerManager";
 createNode renderLayer -n "defaultRenderLayer";
 	setAttr ".g" yes;
 createNode reference -n "utility_room_viewRN";
-	setAttr ".fn[0]" -type "string" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//scenes/utility_room_view.ma";
-	setAttr -s 960 ".phl";
+	setAttr ".fn[0]" -type "string" "X:/documents/GitHub/Bandits/maya//scenes/utility_room_view.ma";
+	setAttr -s 966 ".phl";
 	setAttr ".phl[77]" 0;
 	setAttr ".phl[1611]" 0;
 	setAttr ".phl[1612]" 0;
@@ -3841,6 +3846,887 @@ createNode reference -n "utility_room_viewRN";
 	setAttr ".phl[1614]" 0;
 	setAttr ".phl[1615]" 0;
 	setAttr ".phl[1616]" 0;
+	setAttr ".phl[2416]" 0;
+	setAttr ".phl[2417]" 0;
+	setAttr ".phl[2418]" 0;
+	setAttr ".phl[2419]" 0;
+	setAttr ".phl[2420]" 0;
+	setAttr ".phl[2421]" 0;
+	setAttr ".phl[2422]" 0;
+	setAttr ".phl[2423]" 0;
+	setAttr ".phl[2424]" 0;
+	setAttr ".phl[2425]" 0;
+	setAttr ".phl[2426]" 0;
+	setAttr ".phl[2427]" 0;
+	setAttr ".phl[2428]" 0;
+	setAttr ".phl[2429]" 0;
+	setAttr ".phl[2430]" 0;
+	setAttr ".phl[2431]" 0;
+	setAttr ".phl[2432]" 0;
+	setAttr ".phl[2433]" 0;
+	setAttr ".phl[2434]" 0;
+	setAttr ".phl[2435]" 0;
+	setAttr ".phl[2436]" 0;
+	setAttr ".phl[2437]" 0;
+	setAttr ".phl[2438]" 0;
+	setAttr ".phl[2439]" 0;
+	setAttr ".phl[2440]" 0;
+	setAttr ".phl[2441]" 0;
+	setAttr ".phl[2442]" 0;
+	setAttr ".phl[2443]" 0;
+	setAttr ".phl[2444]" 0;
+	setAttr ".phl[2445]" 0;
+	setAttr ".phl[2446]" 0;
+	setAttr ".phl[2447]" 0;
+	setAttr ".phl[2448]" 0;
+	setAttr ".phl[2449]" 0;
+	setAttr ".phl[2450]" 0;
+	setAttr ".phl[2451]" 0;
+	setAttr ".phl[2452]" 0;
+	setAttr ".phl[2453]" 0;
+	setAttr ".phl[2454]" 0;
+	setAttr ".phl[2455]" 0;
+	setAttr ".phl[2456]" 0;
+	setAttr ".phl[2457]" 0;
+	setAttr ".phl[2458]" 0;
+	setAttr ".phl[2459]" 0;
+	setAttr ".phl[2460]" 0;
+	setAttr ".phl[2461]" 0;
+	setAttr ".phl[2462]" 0;
+	setAttr ".phl[2463]" 0;
+	setAttr ".phl[2464]" 0;
+	setAttr ".phl[2465]" 0;
+	setAttr ".phl[2466]" 0;
+	setAttr ".phl[2467]" 0;
+	setAttr ".phl[2468]" 0;
+	setAttr ".phl[2469]" 0;
+	setAttr ".phl[2470]" 0;
+	setAttr ".phl[2471]" 0;
+	setAttr ".phl[2472]" 0;
+	setAttr ".phl[2473]" 0;
+	setAttr ".phl[2474]" 0;
+	setAttr ".phl[2475]" 0;
+	setAttr ".phl[2476]" 0;
+	setAttr ".phl[2477]" 0;
+	setAttr ".phl[2478]" 0;
+	setAttr ".phl[2479]" 0;
+	setAttr ".phl[2480]" 0;
+	setAttr ".phl[2481]" 0;
+	setAttr ".phl[2482]" 0;
+	setAttr ".phl[2483]" 0;
+	setAttr ".phl[2484]" 0;
+	setAttr ".phl[2485]" 0;
+	setAttr ".phl[2486]" 0;
+	setAttr ".phl[2487]" 0;
+	setAttr ".phl[2488]" 0;
+	setAttr ".phl[2489]" 0;
+	setAttr ".phl[2490]" 0;
+	setAttr ".phl[2491]" 0;
+	setAttr ".phl[2492]" 0;
+	setAttr ".phl[2493]" 0;
+	setAttr ".phl[2494]" 0;
+	setAttr ".phl[2495]" 0;
+	setAttr ".phl[2496]" 0;
+	setAttr ".phl[2497]" 0;
+	setAttr ".phl[2498]" 0;
+	setAttr ".phl[2499]" 0;
+	setAttr ".phl[2500]" 0;
+	setAttr ".phl[2501]" 0;
+	setAttr ".phl[2502]" 0;
+	setAttr ".phl[2503]" 0;
+	setAttr ".phl[2504]" 0;
+	setAttr ".phl[2505]" 0;
+	setAttr ".phl[2506]" 0;
+	setAttr ".phl[2507]" 0;
+	setAttr ".phl[2508]" 0;
+	setAttr ".phl[2509]" 0;
+	setAttr ".phl[2510]" 0;
+	setAttr ".phl[2511]" 0;
+	setAttr ".phl[2512]" 0;
+	setAttr ".phl[2513]" 0;
+	setAttr ".phl[2514]" 0;
+	setAttr ".phl[2515]" 0;
+	setAttr ".phl[2516]" 0;
+	setAttr ".phl[2517]" 0;
+	setAttr ".phl[2518]" 0;
+	setAttr ".phl[2519]" 0;
+	setAttr ".phl[2520]" 0;
+	setAttr ".phl[2521]" 0;
+	setAttr ".phl[2522]" 0;
+	setAttr ".phl[2523]" 0;
+	setAttr ".phl[2524]" 0;
+	setAttr ".phl[2525]" 0;
+	setAttr ".phl[2526]" 0;
+	setAttr ".phl[2527]" 0;
+	setAttr ".phl[2528]" 0;
+	setAttr ".phl[2529]" 0;
+	setAttr ".phl[2530]" 0;
+	setAttr ".phl[2531]" 0;
+	setAttr ".phl[2532]" 0;
+	setAttr ".phl[2533]" 0;
+	setAttr ".phl[2534]" 0;
+	setAttr ".phl[2535]" 0;
+	setAttr ".phl[2536]" 0;
+	setAttr ".phl[2537]" 0;
+	setAttr ".phl[2538]" 0;
+	setAttr ".phl[2539]" 0;
+	setAttr ".phl[2540]" 0;
+	setAttr ".phl[2541]" 0;
+	setAttr ".phl[2542]" 0;
+	setAttr ".phl[2543]" 0;
+	setAttr ".phl[2544]" 0;
+	setAttr ".phl[2545]" 0;
+	setAttr ".phl[2546]" 0;
+	setAttr ".phl[2547]" 0;
+	setAttr ".phl[2548]" 0;
+	setAttr ".phl[2549]" 0;
+	setAttr ".phl[2550]" 0;
+	setAttr ".phl[2551]" 0;
+	setAttr ".phl[2552]" 0;
+	setAttr ".phl[2553]" 0;
+	setAttr ".phl[2554]" 0;
+	setAttr ".phl[2555]" 0;
+	setAttr ".phl[2556]" 0;
+	setAttr ".phl[2557]" 0;
+	setAttr ".phl[2558]" 0;
+	setAttr ".phl[2559]" 0;
+	setAttr ".phl[2560]" 0;
+	setAttr ".phl[2561]" 0;
+	setAttr ".phl[2562]" 0;
+	setAttr ".phl[2563]" 0;
+	setAttr ".phl[2564]" 0;
+	setAttr ".phl[2565]" 0;
+	setAttr ".phl[2566]" 0;
+	setAttr ".phl[2567]" 0;
+	setAttr ".phl[2568]" 0;
+	setAttr ".phl[2569]" 0;
+	setAttr ".phl[2570]" 0;
+	setAttr ".phl[2571]" 0;
+	setAttr ".phl[2572]" 0;
+	setAttr ".phl[2573]" 0;
+	setAttr ".phl[2574]" 0;
+	setAttr ".phl[2575]" 0;
+	setAttr ".phl[2576]" 0;
+	setAttr ".phl[2577]" 0;
+	setAttr ".phl[2578]" 0;
+	setAttr ".phl[2579]" 0;
+	setAttr ".phl[2580]" 0;
+	setAttr ".phl[2581]" 0;
+	setAttr ".phl[2582]" 0;
+	setAttr ".phl[2583]" 0;
+	setAttr ".phl[2584]" 0;
+	setAttr ".phl[2585]" 0;
+	setAttr ".phl[2586]" 0;
+	setAttr ".phl[2587]" 0;
+	setAttr ".phl[2588]" 0;
+	setAttr ".phl[2589]" 0;
+	setAttr ".phl[2590]" 0;
+	setAttr ".phl[2591]" 0;
+	setAttr ".phl[2592]" 0;
+	setAttr ".phl[2593]" 0;
+	setAttr ".phl[2594]" 0;
+	setAttr ".phl[2595]" 0;
+	setAttr ".phl[2596]" 0;
+	setAttr ".phl[2597]" 0;
+	setAttr ".phl[2598]" 0;
+	setAttr ".phl[2599]" 0;
+	setAttr ".phl[2600]" 0;
+	setAttr ".phl[2601]" 0;
+	setAttr ".phl[2602]" 0;
+	setAttr ".phl[2603]" 0;
+	setAttr ".phl[2604]" 0;
+	setAttr ".phl[2605]" 0;
+	setAttr ".phl[2606]" 0;
+	setAttr ".phl[2607]" 0;
+	setAttr ".phl[2608]" 0;
+	setAttr ".phl[2609]" 0;
+	setAttr ".phl[2610]" 0;
+	setAttr ".phl[2611]" 0;
+	setAttr ".phl[2612]" 0;
+	setAttr ".phl[2613]" 0;
+	setAttr ".phl[2614]" 0;
+	setAttr ".phl[2615]" 0;
+	setAttr ".phl[2616]" 0;
+	setAttr ".phl[2617]" 0;
+	setAttr ".phl[2618]" 0;
+	setAttr ".phl[2619]" 0;
+	setAttr ".phl[2620]" 0;
+	setAttr ".phl[2621]" 0;
+	setAttr ".phl[2622]" 0;
+	setAttr ".phl[2623]" 0;
+	setAttr ".phl[2624]" 0;
+	setAttr ".phl[2625]" 0;
+	setAttr ".phl[2626]" 0;
+	setAttr ".phl[2627]" 0;
+	setAttr ".phl[2628]" 0;
+	setAttr ".phl[2629]" 0;
+	setAttr ".phl[2630]" 0;
+	setAttr ".phl[2631]" 0;
+	setAttr ".phl[2632]" 0;
+	setAttr ".phl[2633]" 0;
+	setAttr ".phl[2634]" 0;
+	setAttr ".phl[2635]" 0;
+	setAttr ".phl[2636]" 0;
+	setAttr ".phl[2637]" 0;
+	setAttr ".phl[2638]" 0;
+	setAttr ".phl[2639]" 0;
+	setAttr ".phl[2640]" 0;
+	setAttr ".phl[2641]" 0;
+	setAttr ".phl[2642]" 0;
+	setAttr ".phl[2643]" 0;
+	setAttr ".phl[2644]" 0;
+	setAttr ".phl[2645]" 0;
+	setAttr ".phl[2646]" 0;
+	setAttr ".phl[2647]" 0;
+	setAttr ".phl[2648]" 0;
+	setAttr ".phl[2649]" 0;
+	setAttr ".phl[2650]" 0;
+	setAttr ".phl[2651]" 0;
+	setAttr ".phl[2652]" 0;
+	setAttr ".phl[2653]" 0;
+	setAttr ".phl[2654]" 0;
+	setAttr ".phl[2655]" 0;
+	setAttr ".phl[2656]" 0;
+	setAttr ".phl[2657]" 0;
+	setAttr ".phl[2658]" 0;
+	setAttr ".phl[2659]" 0;
+	setAttr ".phl[2660]" 0;
+	setAttr ".phl[2661]" 0;
+	setAttr ".phl[2662]" 0;
+	setAttr ".phl[2663]" 0;
+	setAttr ".phl[2664]" 0;
+	setAttr ".phl[2665]" 0;
+	setAttr ".phl[2666]" 0;
+	setAttr ".phl[2667]" 0;
+	setAttr ".phl[2668]" 0;
+	setAttr ".phl[2669]" 0;
+	setAttr ".phl[2670]" 0;
+	setAttr ".phl[2671]" 0;
+	setAttr ".phl[2672]" 0;
+	setAttr ".phl[2673]" 0;
+	setAttr ".phl[2674]" 0;
+	setAttr ".phl[2675]" 0;
+	setAttr ".phl[2676]" 0;
+	setAttr ".phl[2677]" 0;
+	setAttr ".phl[2678]" 0;
+	setAttr ".phl[2679]" 0;
+	setAttr ".phl[2680]" 0;
+	setAttr ".phl[2681]" 0;
+	setAttr ".phl[2682]" 0;
+	setAttr ".phl[2683]" 0;
+	setAttr ".phl[2684]" 0;
+	setAttr ".phl[2685]" 0;
+	setAttr ".phl[2686]" 0;
+	setAttr ".phl[2687]" 0;
+	setAttr ".phl[2688]" 0;
+	setAttr ".phl[2689]" 0;
+	setAttr ".phl[2690]" 0;
+	setAttr ".phl[2691]" 0;
+	setAttr ".phl[2692]" 0;
+	setAttr ".phl[2693]" 0;
+	setAttr ".phl[2694]" 0;
+	setAttr ".phl[2695]" 0;
+	setAttr ".phl[2696]" 0;
+	setAttr ".phl[2697]" 0;
+	setAttr ".phl[2698]" 0;
+	setAttr ".phl[2699]" 0;
+	setAttr ".phl[2700]" 0;
+	setAttr ".phl[2701]" 0;
+	setAttr ".phl[2702]" 0;
+	setAttr ".phl[2703]" 0;
+	setAttr ".phl[2704]" 0;
+	setAttr ".phl[2705]" 0;
+	setAttr ".phl[2706]" 0;
+	setAttr ".phl[2707]" 0;
+	setAttr ".phl[2708]" 0;
+	setAttr ".phl[2709]" 0;
+	setAttr ".phl[2710]" 0;
+	setAttr ".phl[2711]" 0;
+	setAttr ".phl[2712]" 0;
+	setAttr ".phl[2713]" 0;
+	setAttr ".phl[2714]" 0;
+	setAttr ".phl[2715]" 0;
+	setAttr ".phl[2716]" 0;
+	setAttr ".phl[2717]" 0;
+	setAttr ".phl[2718]" 0;
+	setAttr ".phl[2719]" 0;
+	setAttr ".phl[2720]" 0;
+	setAttr ".phl[2721]" 0;
+	setAttr ".phl[2722]" 0;
+	setAttr ".phl[2723]" 0;
+	setAttr ".phl[2724]" 0;
+	setAttr ".phl[2725]" 0;
+	setAttr ".phl[2726]" 0;
+	setAttr ".phl[2727]" 0;
+	setAttr ".phl[2728]" 0;
+	setAttr ".phl[2729]" 0;
+	setAttr ".phl[2730]" 0;
+	setAttr ".phl[2731]" 0;
+	setAttr ".phl[2732]" 0;
+	setAttr ".phl[2733]" 0;
+	setAttr ".phl[2734]" 0;
+	setAttr ".phl[2735]" 0;
+	setAttr ".phl[2736]" 0;
+	setAttr ".phl[2737]" 0;
+	setAttr ".phl[2738]" 0;
+	setAttr ".phl[2739]" 0;
+	setAttr ".phl[2740]" 0;
+	setAttr ".phl[2741]" 0;
+	setAttr ".phl[2742]" 0;
+	setAttr ".phl[2743]" 0;
+	setAttr ".phl[2744]" 0;
+	setAttr ".phl[2745]" 0;
+	setAttr ".phl[2746]" 0;
+	setAttr ".phl[2747]" 0;
+	setAttr ".phl[2748]" 0;
+	setAttr ".phl[2749]" 0;
+	setAttr ".phl[2750]" 0;
+	setAttr ".phl[2751]" 0;
+	setAttr ".phl[2752]" 0;
+	setAttr ".phl[2753]" 0;
+	setAttr ".phl[2754]" 0;
+	setAttr ".phl[2755]" 0;
+	setAttr ".phl[2756]" 0;
+	setAttr ".phl[2757]" 0;
+	setAttr ".phl[2758]" 0;
+	setAttr ".phl[2759]" 0;
+	setAttr ".phl[2760]" 0;
+	setAttr ".phl[2761]" 0;
+	setAttr ".phl[2762]" 0;
+	setAttr ".phl[2763]" 0;
+	setAttr ".phl[2764]" 0;
+	setAttr ".phl[2765]" 0;
+	setAttr ".phl[2766]" 0;
+	setAttr ".phl[2767]" 0;
+	setAttr ".phl[2768]" 0;
+	setAttr ".phl[2769]" 0;
+	setAttr ".phl[2770]" 0;
+	setAttr ".phl[2771]" 0;
+	setAttr ".phl[2772]" 0;
+	setAttr ".phl[2773]" 0;
+	setAttr ".phl[2774]" 0;
+	setAttr ".phl[2775]" 0;
+	setAttr ".phl[2776]" 0;
+	setAttr ".phl[2777]" 0;
+	setAttr ".phl[2778]" 0;
+	setAttr ".phl[2779]" 0;
+	setAttr ".phl[2780]" 0;
+	setAttr ".phl[2781]" 0;
+	setAttr ".phl[2782]" 0;
+	setAttr ".phl[2783]" 0;
+	setAttr ".phl[2784]" 0;
+	setAttr ".phl[2785]" 0;
+	setAttr ".phl[2786]" 0;
+	setAttr ".phl[2787]" 0;
+	setAttr ".phl[2788]" 0;
+	setAttr ".phl[2789]" 0;
+	setAttr ".phl[2790]" 0;
+	setAttr ".phl[2791]" 0;
+	setAttr ".phl[2792]" 0;
+	setAttr ".phl[2793]" 0;
+	setAttr ".phl[2794]" 0;
+	setAttr ".phl[2795]" 0;
+	setAttr ".phl[2796]" 0;
+	setAttr ".phl[2797]" 0;
+	setAttr ".phl[2798]" 0;
+	setAttr ".phl[2799]" 0;
+	setAttr ".phl[2800]" 0;
+	setAttr ".phl[2801]" 0;
+	setAttr ".phl[2802]" 0;
+	setAttr ".phl[2803]" 0;
+	setAttr ".phl[2804]" 0;
+	setAttr ".phl[2805]" 0;
+	setAttr ".phl[2806]" 0;
+	setAttr ".phl[2807]" 0;
+	setAttr ".phl[2808]" 0;
+	setAttr ".phl[2809]" 0;
+	setAttr ".phl[2810]" 0;
+	setAttr ".phl[2811]" 0;
+	setAttr ".phl[2812]" 0;
+	setAttr ".phl[2813]" 0;
+	setAttr ".phl[2814]" 0;
+	setAttr ".phl[2815]" 0;
+	setAttr ".phl[2816]" 0;
+	setAttr ".phl[2817]" 0;
+	setAttr ".phl[2818]" 0;
+	setAttr ".phl[2819]" 0;
+	setAttr ".phl[2820]" 0;
+	setAttr ".phl[2821]" 0;
+	setAttr ".phl[2822]" 0;
+	setAttr ".phl[2823]" 0;
+	setAttr ".phl[2824]" 0;
+	setAttr ".phl[2825]" 0;
+	setAttr ".phl[2826]" 0;
+	setAttr ".phl[2827]" 0;
+	setAttr ".phl[2828]" 0;
+	setAttr ".phl[2829]" 0;
+	setAttr ".phl[2830]" 0;
+	setAttr ".phl[2831]" 0;
+	setAttr ".phl[2832]" 0;
+	setAttr ".phl[2833]" 0;
+	setAttr ".phl[2834]" 0;
+	setAttr ".phl[2835]" 0;
+	setAttr ".phl[2836]" 0;
+	setAttr ".phl[2837]" 0;
+	setAttr ".phl[2838]" 0;
+	setAttr ".phl[2839]" 0;
+	setAttr ".phl[2840]" 0;
+	setAttr ".phl[2841]" 0;
+	setAttr ".phl[2842]" 0;
+	setAttr ".phl[2843]" 0;
+	setAttr ".phl[2844]" 0;
+	setAttr ".phl[2845]" 0;
+	setAttr ".phl[2846]" 0;
+	setAttr ".phl[2847]" 0;
+	setAttr ".phl[2848]" 0;
+	setAttr ".phl[2849]" 0;
+	setAttr ".phl[2850]" 0;
+	setAttr ".phl[2851]" 0;
+	setAttr ".phl[2852]" 0;
+	setAttr ".phl[2853]" 0;
+	setAttr ".phl[2854]" 0;
+	setAttr ".phl[2855]" 0;
+	setAttr ".phl[2856]" 0;
+	setAttr ".phl[2857]" 0;
+	setAttr ".phl[2858]" 0;
+	setAttr ".phl[2859]" 0;
+	setAttr ".phl[2860]" 0;
+	setAttr ".phl[2861]" 0;
+	setAttr ".phl[2862]" 0;
+	setAttr ".phl[2863]" 0;
+	setAttr ".phl[2864]" 0;
+	setAttr ".phl[2865]" 0;
+	setAttr ".phl[2866]" 0;
+	setAttr ".phl[2867]" 0;
+	setAttr ".phl[2868]" 0;
+	setAttr ".phl[2869]" 0;
+	setAttr ".phl[2870]" 0;
+	setAttr ".phl[2871]" 0;
+	setAttr ".phl[2872]" 0;
+	setAttr ".phl[2873]" 0;
+	setAttr ".phl[2874]" 0;
+	setAttr ".phl[2875]" 0;
+	setAttr ".phl[2876]" 0;
+	setAttr ".phl[2877]" 0;
+	setAttr ".phl[2878]" 0;
+	setAttr ".phl[2879]" 0;
+	setAttr ".phl[2880]" 0;
+	setAttr ".phl[2881]" 0;
+	setAttr ".phl[2882]" 0;
+	setAttr ".phl[2883]" 0;
+	setAttr ".phl[2884]" 0;
+	setAttr ".phl[2885]" 0;
+	setAttr ".phl[2886]" 0;
+	setAttr ".phl[2887]" 0;
+	setAttr ".phl[2888]" 0;
+	setAttr ".phl[2889]" 0;
+	setAttr ".phl[2890]" 0;
+	setAttr ".phl[2891]" 0;
+	setAttr ".phl[2892]" 0;
+	setAttr ".phl[2893]" 0;
+	setAttr ".phl[2894]" 0;
+	setAttr ".phl[2895]" 0;
+	setAttr ".phl[2896]" 0;
+	setAttr ".phl[2897]" 0;
+	setAttr ".phl[2898]" 0;
+	setAttr ".phl[2899]" 0;
+	setAttr ".phl[2900]" 0;
+	setAttr ".phl[2901]" 0;
+	setAttr ".phl[2902]" 0;
+	setAttr ".phl[2903]" 0;
+	setAttr ".phl[2904]" 0;
+	setAttr ".phl[2905]" 0;
+	setAttr ".phl[2906]" 0;
+	setAttr ".phl[2907]" 0;
+	setAttr ".phl[2908]" 0;
+	setAttr ".phl[2909]" 0;
+	setAttr ".phl[2910]" 0;
+	setAttr ".phl[2911]" 0;
+	setAttr ".phl[2912]" 0;
+	setAttr ".phl[2913]" 0;
+	setAttr ".phl[2914]" 0;
+	setAttr ".phl[2915]" 0;
+	setAttr ".phl[2916]" 0;
+	setAttr ".phl[2917]" 0;
+	setAttr ".phl[2918]" 0;
+	setAttr ".phl[2919]" 0;
+	setAttr ".phl[2920]" 0;
+	setAttr ".phl[2921]" 0;
+	setAttr ".phl[2922]" 0;
+	setAttr ".phl[2923]" 0;
+	setAttr ".phl[2924]" 0;
+	setAttr ".phl[2925]" 0;
+	setAttr ".phl[2926]" 0;
+	setAttr ".phl[2927]" 0;
+	setAttr ".phl[2928]" 0;
+	setAttr ".phl[2929]" 0;
+	setAttr ".phl[2930]" 0;
+	setAttr ".phl[2931]" 0;
+	setAttr ".phl[2932]" 0;
+	setAttr ".phl[2933]" 0;
+	setAttr ".phl[2934]" 0;
+	setAttr ".phl[2935]" 0;
+	setAttr ".phl[2936]" 0;
+	setAttr ".phl[2937]" 0;
+	setAttr ".phl[2938]" 0;
+	setAttr ".phl[2939]" 0;
+	setAttr ".phl[2940]" 0;
+	setAttr ".phl[2941]" 0;
+	setAttr ".phl[2942]" 0;
+	setAttr ".phl[2943]" 0;
+	setAttr ".phl[2944]" 0;
+	setAttr ".phl[2945]" 0;
+	setAttr ".phl[2946]" 0;
+	setAttr ".phl[2947]" 0;
+	setAttr ".phl[2948]" 0;
+	setAttr ".phl[2949]" 0;
+	setAttr ".phl[2950]" 0;
+	setAttr ".phl[2951]" 0;
+	setAttr ".phl[2952]" 0;
+	setAttr ".phl[2953]" 0;
+	setAttr ".phl[2954]" 0;
+	setAttr ".phl[2955]" 0;
+	setAttr ".phl[2956]" 0;
+	setAttr ".phl[2957]" 0;
+	setAttr ".phl[2958]" 0;
+	setAttr ".phl[2959]" 0;
+	setAttr ".phl[2960]" 0;
+	setAttr ".phl[2961]" 0;
+	setAttr ".phl[2962]" 0;
+	setAttr ".phl[2963]" 0;
+	setAttr ".phl[2964]" 0;
+	setAttr ".phl[2965]" 0;
+	setAttr ".phl[2966]" 0;
+	setAttr ".phl[2967]" 0;
+	setAttr ".phl[2968]" 0;
+	setAttr ".phl[2969]" 0;
+	setAttr ".phl[2970]" 0;
+	setAttr ".phl[2971]" 0;
+	setAttr ".phl[2972]" 0;
+	setAttr ".phl[2973]" 0;
+	setAttr ".phl[2974]" 0;
+	setAttr ".phl[2975]" 0;
+	setAttr ".phl[2976]" 0;
+	setAttr ".phl[2977]" 0;
+	setAttr ".phl[2978]" 0;
+	setAttr ".phl[2979]" 0;
+	setAttr ".phl[2980]" 0;
+	setAttr ".phl[2981]" 0;
+	setAttr ".phl[2982]" 0;
+	setAttr ".phl[2983]" 0;
+	setAttr ".phl[2984]" 0;
+	setAttr ".phl[2985]" 0;
+	setAttr ".phl[2986]" 0;
+	setAttr ".phl[2987]" 0;
+	setAttr ".phl[2988]" 0;
+	setAttr ".phl[2989]" 0;
+	setAttr ".phl[2990]" 0;
+	setAttr ".phl[2991]" 0;
+	setAttr ".phl[2992]" 0;
+	setAttr ".phl[2993]" 0;
+	setAttr ".phl[2994]" 0;
+	setAttr ".phl[2995]" 0;
+	setAttr ".phl[2996]" 0;
+	setAttr ".phl[2997]" 0;
+	setAttr ".phl[2998]" 0;
+	setAttr ".phl[2999]" 0;
+	setAttr ".phl[3000]" 0;
+	setAttr ".phl[3001]" 0;
+	setAttr ".phl[3002]" 0;
+	setAttr ".phl[3003]" 0;
+	setAttr ".phl[3004]" 0;
+	setAttr ".phl[3005]" 0;
+	setAttr ".phl[3006]" 0;
+	setAttr ".phl[3007]" 0;
+	setAttr ".phl[3008]" 0;
+	setAttr ".phl[3009]" 0;
+	setAttr ".phl[3010]" 0;
+	setAttr ".phl[3011]" 0;
+	setAttr ".phl[3012]" 0;
+	setAttr ".phl[3013]" 0;
+	setAttr ".phl[3014]" 0;
+	setAttr ".phl[3015]" 0;
+	setAttr ".phl[3016]" 0;
+	setAttr ".phl[3017]" 0;
+	setAttr ".phl[3018]" 0;
+	setAttr ".phl[3019]" 0;
+	setAttr ".phl[3020]" 0;
+	setAttr ".phl[3021]" 0;
+	setAttr ".phl[3022]" 0;
+	setAttr ".phl[3023]" 0;
+	setAttr ".phl[3024]" 0;
+	setAttr ".phl[3025]" 0;
+	setAttr ".phl[3026]" 0;
+	setAttr ".phl[3027]" 0;
+	setAttr ".phl[3028]" 0;
+	setAttr ".phl[3029]" 0;
+	setAttr ".phl[3030]" 0;
+	setAttr ".phl[3031]" 0;
+	setAttr ".phl[3032]" 0;
+	setAttr ".phl[3033]" 0;
+	setAttr ".phl[3034]" 0;
+	setAttr ".phl[3035]" 0;
+	setAttr ".phl[3036]" 0;
+	setAttr ".phl[3037]" 0;
+	setAttr ".phl[3038]" 0;
+	setAttr ".phl[3039]" 0;
+	setAttr ".phl[3040]" 0;
+	setAttr ".phl[3041]" 0;
+	setAttr ".phl[3042]" 0;
+	setAttr ".phl[3043]" 0;
+	setAttr ".phl[3044]" 0;
+	setAttr ".phl[3045]" 0;
+	setAttr ".phl[3046]" 0;
+	setAttr ".phl[3047]" 0;
+	setAttr ".phl[3048]" 0;
+	setAttr ".phl[3049]" 0;
+	setAttr ".phl[3050]" 0;
+	setAttr ".phl[3051]" 0;
+	setAttr ".phl[3052]" 0;
+	setAttr ".phl[3053]" 0;
+	setAttr ".phl[3054]" 0;
+	setAttr ".phl[3055]" 0;
+	setAttr ".phl[3056]" 0;
+	setAttr ".phl[3057]" 0;
+	setAttr ".phl[3058]" 0;
+	setAttr ".phl[3059]" 0;
+	setAttr ".phl[3060]" 0;
+	setAttr ".phl[3061]" 0;
+	setAttr ".phl[3062]" 0;
+	setAttr ".phl[3063]" 0;
+	setAttr ".phl[3064]" 0;
+	setAttr ".phl[3065]" 0;
+	setAttr ".phl[3066]" 0;
+	setAttr ".phl[3067]" 0;
+	setAttr ".phl[3068]" 0;
+	setAttr ".phl[3069]" 0;
+	setAttr ".phl[3070]" 0;
+	setAttr ".phl[3071]" 0;
+	setAttr ".phl[3072]" 0;
+	setAttr ".phl[3073]" 0;
+	setAttr ".phl[3074]" 0;
+	setAttr ".phl[3075]" 0;
+	setAttr ".phl[3076]" 0;
+	setAttr ".phl[3077]" 0;
+	setAttr ".phl[3078]" 0;
+	setAttr ".phl[3079]" 0;
+	setAttr ".phl[3080]" 0;
+	setAttr ".phl[3081]" 0;
+	setAttr ".phl[3082]" 0;
+	setAttr ".phl[3083]" 0;
+	setAttr ".phl[3084]" 0;
+	setAttr ".phl[3085]" 0;
+	setAttr ".phl[3086]" 0;
+	setAttr ".phl[3087]" 0;
+	setAttr ".phl[3088]" 0;
+	setAttr ".phl[3089]" 0;
+	setAttr ".phl[3090]" 0;
+	setAttr ".phl[3091]" 0;
+	setAttr ".phl[3092]" 0;
+	setAttr ".phl[3093]" 0;
+	setAttr ".phl[3094]" 0;
+	setAttr ".phl[3095]" 0;
+	setAttr ".phl[3096]" 0;
+	setAttr ".phl[3097]" 0;
+	setAttr ".phl[3098]" 0;
+	setAttr ".phl[3099]" 0;
+	setAttr ".phl[3100]" 0;
+	setAttr ".phl[3101]" 0;
+	setAttr ".phl[3102]" 0;
+	setAttr ".phl[3103]" 0;
+	setAttr ".phl[3104]" 0;
+	setAttr ".phl[3105]" 0;
+	setAttr ".phl[3106]" 0;
+	setAttr ".phl[3107]" 0;
+	setAttr ".phl[3108]" 0;
+	setAttr ".phl[3109]" 0;
+	setAttr ".phl[3110]" 0;
+	setAttr ".phl[3111]" 0;
+	setAttr ".phl[3112]" 0;
+	setAttr ".phl[3113]" 0;
+	setAttr ".phl[3114]" 0;
+	setAttr ".phl[3115]" 0;
+	setAttr ".phl[3116]" 0;
+	setAttr ".phl[3117]" 0;
+	setAttr ".phl[3118]" 0;
+	setAttr ".phl[3119]" 0;
+	setAttr ".phl[3120]" 0;
+	setAttr ".phl[3121]" 0;
+	setAttr ".phl[3122]" 0;
+	setAttr ".phl[3123]" 0;
+	setAttr ".phl[3124]" 0;
+	setAttr ".phl[3125]" 0;
+	setAttr ".phl[3126]" 0;
+	setAttr ".phl[3127]" 0;
+	setAttr ".phl[3128]" 0;
+	setAttr ".phl[3129]" 0;
+	setAttr ".phl[3130]" 0;
+	setAttr ".phl[3131]" 0;
+	setAttr ".phl[3132]" 0;
+	setAttr ".phl[3133]" 0;
+	setAttr ".phl[3134]" 0;
+	setAttr ".phl[3135]" 0;
+	setAttr ".phl[3136]" 0;
+	setAttr ".phl[3137]" 0;
+	setAttr ".phl[3138]" 0;
+	setAttr ".phl[3139]" 0;
+	setAttr ".phl[3140]" 0;
+	setAttr ".phl[3141]" 0;
+	setAttr ".phl[3142]" 0;
+	setAttr ".phl[3143]" 0;
+	setAttr ".phl[3144]" 0;
+	setAttr ".phl[3145]" 0;
+	setAttr ".phl[3146]" 0;
+	setAttr ".phl[3147]" 0;
+	setAttr ".phl[3148]" 0;
+	setAttr ".phl[3149]" 0;
+	setAttr ".phl[3150]" 0;
+	setAttr ".phl[3151]" 0;
+	setAttr ".phl[3152]" 0;
+	setAttr ".phl[3153]" 0;
+	setAttr ".phl[3154]" 0;
+	setAttr ".phl[3155]" 0;
+	setAttr ".phl[3156]" 0;
+	setAttr ".phl[3157]" 0;
+	setAttr ".phl[3158]" 0;
+	setAttr ".phl[3159]" 0;
+	setAttr ".phl[3160]" 0;
+	setAttr ".phl[3161]" 0;
+	setAttr ".phl[3162]" 0;
+	setAttr ".phl[3163]" 0;
+	setAttr ".phl[3164]" 0;
+	setAttr ".phl[3165]" 0;
+	setAttr ".phl[3166]" 0;
+	setAttr ".phl[3167]" 0;
+	setAttr ".phl[3168]" 0;
+	setAttr ".phl[3169]" 0;
+	setAttr ".phl[3170]" 0;
+	setAttr ".phl[3171]" 0;
+	setAttr ".phl[3172]" 0;
+	setAttr ".phl[3173]" 0;
+	setAttr ".phl[3174]" 0;
+	setAttr ".phl[3175]" 0;
+	setAttr ".phl[3176]" 0;
+	setAttr ".phl[3177]" 0;
+	setAttr ".phl[3178]" 0;
+	setAttr ".phl[3179]" 0;
+	setAttr ".phl[3180]" 0;
+	setAttr ".phl[3181]" 0;
+	setAttr ".phl[3182]" 0;
+	setAttr ".phl[3183]" 0;
+	setAttr ".phl[3184]" 0;
+	setAttr ".phl[3185]" 0;
+	setAttr ".phl[3186]" 0;
+	setAttr ".phl[3187]" 0;
+	setAttr ".phl[3188]" 0;
+	setAttr ".phl[3189]" 0;
+	setAttr ".phl[3190]" 0;
+	setAttr ".phl[3191]" 0;
+	setAttr ".phl[3192]" 0;
+	setAttr ".phl[3193]" 0;
+	setAttr ".phl[3194]" 0;
+	setAttr ".phl[3195]" 0;
+	setAttr ".phl[3196]" 0;
+	setAttr ".phl[3197]" 0;
+	setAttr ".phl[3198]" 0;
+	setAttr ".phl[3199]" 0;
+	setAttr ".phl[3200]" 0;
+	setAttr ".phl[3201]" 0;
+	setAttr ".phl[3202]" 0;
+	setAttr ".phl[3203]" 0;
+	setAttr ".phl[3204]" 0;
+	setAttr ".phl[3205]" 0;
+	setAttr ".phl[3206]" 0;
+	setAttr ".phl[3207]" 0;
+	setAttr ".phl[3208]" 0;
+	setAttr ".phl[3209]" 0;
+	setAttr ".phl[3210]" 0;
+	setAttr ".phl[3211]" 0;
+	setAttr ".phl[3212]" 0;
+	setAttr ".phl[3213]" 0;
+	setAttr ".phl[3214]" 0;
+	setAttr ".phl[3215]" 0;
+	setAttr ".phl[3216]" 0;
+	setAttr ".phl[3217]" 0;
+	setAttr ".phl[3218]" 0;
+	setAttr ".phl[3219]" 0;
+	setAttr ".phl[3220]" 0;
+	setAttr ".phl[3221]" 0;
+	setAttr ".phl[3222]" 0;
+	setAttr ".phl[3223]" 0;
+	setAttr ".phl[3224]" 0;
+	setAttr ".phl[3225]" 0;
+	setAttr ".phl[3226]" 0;
+	setAttr ".phl[3227]" 0;
+	setAttr ".phl[3228]" 0;
+	setAttr ".phl[3229]" 0;
+	setAttr ".phl[3230]" 0;
+	setAttr ".phl[3231]" 0;
+	setAttr ".phl[3232]" 0;
+	setAttr ".phl[3233]" 0;
+	setAttr ".phl[3234]" 0;
+	setAttr ".phl[3235]" 0;
+	setAttr ".phl[3236]" 0;
+	setAttr ".phl[3237]" 0;
+	setAttr ".phl[3238]" 0;
+	setAttr ".phl[3239]" 0;
+	setAttr ".phl[3240]" 0;
+	setAttr ".phl[3241]" 0;
+	setAttr ".phl[3242]" 0;
+	setAttr ".phl[3243]" 0;
+	setAttr ".phl[3244]" 0;
+	setAttr ".phl[3245]" 0;
+	setAttr ".phl[3246]" 0;
+	setAttr ".phl[3247]" 0;
+	setAttr ".phl[3248]" 0;
+	setAttr ".phl[3249]" 0;
+	setAttr ".phl[3250]" 0;
+	setAttr ".phl[3251]" 0;
+	setAttr ".phl[3252]" 0;
+	setAttr ".phl[3253]" 0;
+	setAttr ".phl[3254]" 0;
+	setAttr ".phl[3255]" 0;
+	setAttr ".phl[3256]" 0;
+	setAttr ".phl[3257]" 0;
+	setAttr ".phl[3258]" 0;
+	setAttr ".phl[3259]" 0;
+	setAttr ".phl[3260]" 0;
+	setAttr ".phl[3261]" 0;
+	setAttr ".phl[3262]" 0;
+	setAttr ".phl[3263]" 0;
+	setAttr ".phl[3264]" 0;
+	setAttr ".phl[3265]" 0;
+	setAttr ".phl[3266]" 0;
+	setAttr ".phl[3267]" 0;
+	setAttr ".phl[3268]" 0;
+	setAttr ".phl[3269]" 0;
+	setAttr ".phl[3270]" 0;
+	setAttr ".phl[3271]" 0;
+	setAttr ".phl[3272]" 0;
+	setAttr ".phl[3273]" 0;
+	setAttr ".phl[3274]" 0;
+	setAttr ".phl[3275]" 0;
+	setAttr ".phl[3276]" 0;
+	setAttr ".phl[3277]" 0;
+	setAttr ".phl[3278]" 0;
+	setAttr ".phl[3279]" 0;
+	setAttr ".phl[3280]" 0;
+	setAttr ".phl[3281]" 0;
+	setAttr ".phl[3282]" 0;
+	setAttr ".phl[3283]" 0;
+	setAttr ".phl[3284]" 0;
+	setAttr ".phl[3285]" 0;
+	setAttr ".phl[3286]" 0;
+	setAttr ".phl[3287]" 0;
+	setAttr ".phl[3288]" 0;
+	setAttr ".phl[3289]" 0;
+	setAttr ".phl[3290]" 0;
+	setAttr ".phl[3291]" 0;
+	setAttr ".phl[3292]" 0;
+	setAttr ".phl[3293]" 0;
+	setAttr ".phl[3294]" 0;
+	setAttr ".phl[3295]" 0;
+	setAttr ".phl[3296]" 0;
 	setAttr ".phl[3297]" 0;
 	setAttr ".phl[3298]" 0;
 	setAttr ".phl[3299]" 0;
@@ -3878,878 +4764,6 @@ createNode reference -n "utility_room_viewRN";
 	setAttr ".phl[3331]" 0;
 	setAttr ".phl[3332]" 0;
 	setAttr ".phl[3333]" 0;
-	setAttr ".phl[3334]" 0;
-	setAttr ".phl[3335]" 0;
-	setAttr ".phl[3336]" 0;
-	setAttr ".phl[3337]" 0;
-	setAttr ".phl[3338]" 0;
-	setAttr ".phl[3339]" 0;
-	setAttr ".phl[3340]" 0;
-	setAttr ".phl[3341]" 0;
-	setAttr ".phl[3342]" 0;
-	setAttr ".phl[3343]" 0;
-	setAttr ".phl[3344]" 0;
-	setAttr ".phl[3345]" 0;
-	setAttr ".phl[3346]" 0;
-	setAttr ".phl[3347]" 0;
-	setAttr ".phl[3348]" 0;
-	setAttr ".phl[3349]" 0;
-	setAttr ".phl[3350]" 0;
-	setAttr ".phl[3351]" 0;
-	setAttr ".phl[3352]" 0;
-	setAttr ".phl[3353]" 0;
-	setAttr ".phl[3354]" 0;
-	setAttr ".phl[3355]" 0;
-	setAttr ".phl[3356]" 0;
-	setAttr ".phl[3357]" 0;
-	setAttr ".phl[3358]" 0;
-	setAttr ".phl[3359]" 0;
-	setAttr ".phl[3360]" 0;
-	setAttr ".phl[3361]" 0;
-	setAttr ".phl[3362]" 0;
-	setAttr ".phl[3363]" 0;
-	setAttr ".phl[3364]" 0;
-	setAttr ".phl[3365]" 0;
-	setAttr ".phl[3366]" 0;
-	setAttr ".phl[3367]" 0;
-	setAttr ".phl[3368]" 0;
-	setAttr ".phl[3369]" 0;
-	setAttr ".phl[3370]" 0;
-	setAttr ".phl[3371]" 0;
-	setAttr ".phl[3372]" 0;
-	setAttr ".phl[3373]" 0;
-	setAttr ".phl[3374]" 0;
-	setAttr ".phl[3375]" 0;
-	setAttr ".phl[3376]" 0;
-	setAttr ".phl[3377]" 0;
-	setAttr ".phl[3378]" 0;
-	setAttr ".phl[3379]" 0;
-	setAttr ".phl[3380]" 0;
-	setAttr ".phl[3381]" 0;
-	setAttr ".phl[3382]" 0;
-	setAttr ".phl[3383]" 0;
-	setAttr ".phl[3384]" 0;
-	setAttr ".phl[3385]" 0;
-	setAttr ".phl[3386]" 0;
-	setAttr ".phl[3387]" 0;
-	setAttr ".phl[3388]" 0;
-	setAttr ".phl[3389]" 0;
-	setAttr ".phl[3390]" 0;
-	setAttr ".phl[3391]" 0;
-	setAttr ".phl[3392]" 0;
-	setAttr ".phl[3393]" 0;
-	setAttr ".phl[3394]" 0;
-	setAttr ".phl[3395]" 0;
-	setAttr ".phl[3396]" 0;
-	setAttr ".phl[3397]" 0;
-	setAttr ".phl[3398]" 0;
-	setAttr ".phl[3399]" 0;
-	setAttr ".phl[3400]" 0;
-	setAttr ".phl[3401]" 0;
-	setAttr ".phl[3402]" 0;
-	setAttr ".phl[3403]" 0;
-	setAttr ".phl[3404]" 0;
-	setAttr ".phl[3405]" 0;
-	setAttr ".phl[3406]" 0;
-	setAttr ".phl[3407]" 0;
-	setAttr ".phl[3408]" 0;
-	setAttr ".phl[3409]" 0;
-	setAttr ".phl[3410]" 0;
-	setAttr ".phl[3411]" 0;
-	setAttr ".phl[3412]" 0;
-	setAttr ".phl[3413]" 0;
-	setAttr ".phl[3414]" 0;
-	setAttr ".phl[3415]" 0;
-	setAttr ".phl[3416]" 0;
-	setAttr ".phl[3417]" 0;
-	setAttr ".phl[3418]" 0;
-	setAttr ".phl[3419]" 0;
-	setAttr ".phl[3420]" 0;
-	setAttr ".phl[3421]" 0;
-	setAttr ".phl[3422]" 0;
-	setAttr ".phl[3423]" 0;
-	setAttr ".phl[3424]" 0;
-	setAttr ".phl[3425]" 0;
-	setAttr ".phl[3426]" 0;
-	setAttr ".phl[3427]" 0;
-	setAttr ".phl[3428]" 0;
-	setAttr ".phl[3429]" 0;
-	setAttr ".phl[3430]" 0;
-	setAttr ".phl[3431]" 0;
-	setAttr ".phl[3432]" 0;
-	setAttr ".phl[3433]" 0;
-	setAttr ".phl[3434]" 0;
-	setAttr ".phl[3435]" 0;
-	setAttr ".phl[3436]" 0;
-	setAttr ".phl[3437]" 0;
-	setAttr ".phl[3438]" 0;
-	setAttr ".phl[3439]" 0;
-	setAttr ".phl[3440]" 0;
-	setAttr ".phl[3441]" 0;
-	setAttr ".phl[3442]" 0;
-	setAttr ".phl[3443]" 0;
-	setAttr ".phl[3444]" 0;
-	setAttr ".phl[3445]" 0;
-	setAttr ".phl[3446]" 0;
-	setAttr ".phl[3447]" 0;
-	setAttr ".phl[3448]" 0;
-	setAttr ".phl[3449]" 0;
-	setAttr ".phl[3450]" 0;
-	setAttr ".phl[3451]" 0;
-	setAttr ".phl[3452]" 0;
-	setAttr ".phl[3453]" 0;
-	setAttr ".phl[3454]" 0;
-	setAttr ".phl[3455]" 0;
-	setAttr ".phl[3456]" 0;
-	setAttr ".phl[3457]" 0;
-	setAttr ".phl[3458]" 0;
-	setAttr ".phl[3459]" 0;
-	setAttr ".phl[3460]" 0;
-	setAttr ".phl[3461]" 0;
-	setAttr ".phl[3462]" 0;
-	setAttr ".phl[3463]" 0;
-	setAttr ".phl[3464]" 0;
-	setAttr ".phl[3465]" 0;
-	setAttr ".phl[3466]" 0;
-	setAttr ".phl[3467]" 0;
-	setAttr ".phl[3468]" 0;
-	setAttr ".phl[3469]" 0;
-	setAttr ".phl[3470]" 0;
-	setAttr ".phl[3471]" 0;
-	setAttr ".phl[3472]" 0;
-	setAttr ".phl[3473]" 0;
-	setAttr ".phl[3474]" 0;
-	setAttr ".phl[3475]" 0;
-	setAttr ".phl[3476]" 0;
-	setAttr ".phl[3477]" 0;
-	setAttr ".phl[3478]" 0;
-	setAttr ".phl[3479]" 0;
-	setAttr ".phl[3480]" 0;
-	setAttr ".phl[3481]" 0;
-	setAttr ".phl[3482]" 0;
-	setAttr ".phl[3483]" 0;
-	setAttr ".phl[3484]" 0;
-	setAttr ".phl[3485]" 0;
-	setAttr ".phl[3486]" 0;
-	setAttr ".phl[3487]" 0;
-	setAttr ".phl[3488]" 0;
-	setAttr ".phl[3489]" 0;
-	setAttr ".phl[3490]" 0;
-	setAttr ".phl[3491]" 0;
-	setAttr ".phl[3492]" 0;
-	setAttr ".phl[3493]" 0;
-	setAttr ".phl[3494]" 0;
-	setAttr ".phl[3495]" 0;
-	setAttr ".phl[3496]" 0;
-	setAttr ".phl[3497]" 0;
-	setAttr ".phl[3498]" 0;
-	setAttr ".phl[3499]" 0;
-	setAttr ".phl[3500]" 0;
-	setAttr ".phl[3501]" 0;
-	setAttr ".phl[3502]" 0;
-	setAttr ".phl[3503]" 0;
-	setAttr ".phl[3504]" 0;
-	setAttr ".phl[3505]" 0;
-	setAttr ".phl[3506]" 0;
-	setAttr ".phl[3507]" 0;
-	setAttr ".phl[3508]" 0;
-	setAttr ".phl[3509]" 0;
-	setAttr ".phl[3510]" 0;
-	setAttr ".phl[3511]" 0;
-	setAttr ".phl[3512]" 0;
-	setAttr ".phl[3513]" 0;
-	setAttr ".phl[3514]" 0;
-	setAttr ".phl[3515]" 0;
-	setAttr ".phl[3516]" 0;
-	setAttr ".phl[3517]" 0;
-	setAttr ".phl[3518]" 0;
-	setAttr ".phl[3519]" 0;
-	setAttr ".phl[3520]" 0;
-	setAttr ".phl[3521]" 0;
-	setAttr ".phl[3522]" 0;
-	setAttr ".phl[3523]" 0;
-	setAttr ".phl[3524]" 0;
-	setAttr ".phl[3525]" 0;
-	setAttr ".phl[3526]" 0;
-	setAttr ".phl[3527]" 0;
-	setAttr ".phl[3528]" 0;
-	setAttr ".phl[3529]" 0;
-	setAttr ".phl[3530]" 0;
-	setAttr ".phl[3531]" 0;
-	setAttr ".phl[3532]" 0;
-	setAttr ".phl[3533]" 0;
-	setAttr ".phl[3534]" 0;
-	setAttr ".phl[3535]" 0;
-	setAttr ".phl[3536]" 0;
-	setAttr ".phl[3537]" 0;
-	setAttr ".phl[3538]" 0;
-	setAttr ".phl[3539]" 0;
-	setAttr ".phl[3540]" 0;
-	setAttr ".phl[3541]" 0;
-	setAttr ".phl[3542]" 0;
-	setAttr ".phl[3543]" 0;
-	setAttr ".phl[3544]" 0;
-	setAttr ".phl[3545]" 0;
-	setAttr ".phl[3546]" 0;
-	setAttr ".phl[3547]" 0;
-	setAttr ".phl[3548]" 0;
-	setAttr ".phl[3549]" 0;
-	setAttr ".phl[3550]" 0;
-	setAttr ".phl[3551]" 0;
-	setAttr ".phl[3552]" 0;
-	setAttr ".phl[3553]" 0;
-	setAttr ".phl[3554]" 0;
-	setAttr ".phl[3555]" 0;
-	setAttr ".phl[3556]" 0;
-	setAttr ".phl[3557]" 0;
-	setAttr ".phl[3558]" 0;
-	setAttr ".phl[3559]" 0;
-	setAttr ".phl[3560]" 0;
-	setAttr ".phl[3561]" 0;
-	setAttr ".phl[3562]" 0;
-	setAttr ".phl[3563]" 0;
-	setAttr ".phl[3564]" 0;
-	setAttr ".phl[3565]" 0;
-	setAttr ".phl[3566]" 0;
-	setAttr ".phl[3567]" 0;
-	setAttr ".phl[3568]" 0;
-	setAttr ".phl[3569]" 0;
-	setAttr ".phl[3570]" 0;
-	setAttr ".phl[3571]" 0;
-	setAttr ".phl[3572]" 0;
-	setAttr ".phl[3573]" 0;
-	setAttr ".phl[3574]" 0;
-	setAttr ".phl[3575]" 0;
-	setAttr ".phl[3576]" 0;
-	setAttr ".phl[3577]" 0;
-	setAttr ".phl[3578]" 0;
-	setAttr ".phl[3579]" 0;
-	setAttr ".phl[3580]" 0;
-	setAttr ".phl[3581]" 0;
-	setAttr ".phl[3582]" 0;
-	setAttr ".phl[3583]" 0;
-	setAttr ".phl[3584]" 0;
-	setAttr ".phl[3585]" 0;
-	setAttr ".phl[3586]" 0;
-	setAttr ".phl[3587]" 0;
-	setAttr ".phl[3588]" 0;
-	setAttr ".phl[3589]" 0;
-	setAttr ".phl[3590]" 0;
-	setAttr ".phl[3591]" 0;
-	setAttr ".phl[3592]" 0;
-	setAttr ".phl[3593]" 0;
-	setAttr ".phl[3594]" 0;
-	setAttr ".phl[3595]" 0;
-	setAttr ".phl[3596]" 0;
-	setAttr ".phl[3597]" 0;
-	setAttr ".phl[3598]" 0;
-	setAttr ".phl[3599]" 0;
-	setAttr ".phl[3600]" 0;
-	setAttr ".phl[3601]" 0;
-	setAttr ".phl[3602]" 0;
-	setAttr ".phl[3603]" 0;
-	setAttr ".phl[3604]" 0;
-	setAttr ".phl[3605]" 0;
-	setAttr ".phl[3606]" 0;
-	setAttr ".phl[3607]" 0;
-	setAttr ".phl[3608]" 0;
-	setAttr ".phl[3609]" 0;
-	setAttr ".phl[3610]" 0;
-	setAttr ".phl[3611]" 0;
-	setAttr ".phl[3612]" 0;
-	setAttr ".phl[3613]" 0;
-	setAttr ".phl[3614]" 0;
-	setAttr ".phl[3615]" 0;
-	setAttr ".phl[3616]" 0;
-	setAttr ".phl[3617]" 0;
-	setAttr ".phl[3618]" 0;
-	setAttr ".phl[3619]" 0;
-	setAttr ".phl[3620]" 0;
-	setAttr ".phl[3621]" 0;
-	setAttr ".phl[3622]" 0;
-	setAttr ".phl[3623]" 0;
-	setAttr ".phl[3624]" 0;
-	setAttr ".phl[3625]" 0;
-	setAttr ".phl[3626]" 0;
-	setAttr ".phl[3627]" 0;
-	setAttr ".phl[3628]" 0;
-	setAttr ".phl[3629]" 0;
-	setAttr ".phl[3630]" 0;
-	setAttr ".phl[3631]" 0;
-	setAttr ".phl[3632]" 0;
-	setAttr ".phl[3633]" 0;
-	setAttr ".phl[3634]" 0;
-	setAttr ".phl[3635]" 0;
-	setAttr ".phl[3636]" 0;
-	setAttr ".phl[3637]" 0;
-	setAttr ".phl[3638]" 0;
-	setAttr ".phl[3639]" 0;
-	setAttr ".phl[3640]" 0;
-	setAttr ".phl[3641]" 0;
-	setAttr ".phl[3642]" 0;
-	setAttr ".phl[3643]" 0;
-	setAttr ".phl[3644]" 0;
-	setAttr ".phl[3645]" 0;
-	setAttr ".phl[3646]" 0;
-	setAttr ".phl[3647]" 0;
-	setAttr ".phl[3648]" 0;
-	setAttr ".phl[3649]" 0;
-	setAttr ".phl[3650]" 0;
-	setAttr ".phl[3651]" 0;
-	setAttr ".phl[3652]" 0;
-	setAttr ".phl[3653]" 0;
-	setAttr ".phl[3654]" 0;
-	setAttr ".phl[3655]" 0;
-	setAttr ".phl[3656]" 0;
-	setAttr ".phl[3657]" 0;
-	setAttr ".phl[3658]" 0;
-	setAttr ".phl[3659]" 0;
-	setAttr ".phl[3660]" 0;
-	setAttr ".phl[3661]" 0;
-	setAttr ".phl[3662]" 0;
-	setAttr ".phl[3663]" 0;
-	setAttr ".phl[3664]" 0;
-	setAttr ".phl[3665]" 0;
-	setAttr ".phl[3666]" 0;
-	setAttr ".phl[3667]" 0;
-	setAttr ".phl[3668]" 0;
-	setAttr ".phl[3669]" 0;
-	setAttr ".phl[3670]" 0;
-	setAttr ".phl[3671]" 0;
-	setAttr ".phl[3672]" 0;
-	setAttr ".phl[3673]" 0;
-	setAttr ".phl[3674]" 0;
-	setAttr ".phl[3675]" 0;
-	setAttr ".phl[3676]" 0;
-	setAttr ".phl[3677]" 0;
-	setAttr ".phl[3678]" 0;
-	setAttr ".phl[3679]" 0;
-	setAttr ".phl[3680]" 0;
-	setAttr ".phl[3681]" 0;
-	setAttr ".phl[3682]" 0;
-	setAttr ".phl[3683]" 0;
-	setAttr ".phl[3684]" 0;
-	setAttr ".phl[3685]" 0;
-	setAttr ".phl[3686]" 0;
-	setAttr ".phl[3687]" 0;
-	setAttr ".phl[3688]" 0;
-	setAttr ".phl[3689]" 0;
-	setAttr ".phl[3690]" 0;
-	setAttr ".phl[3691]" 0;
-	setAttr ".phl[3692]" 0;
-	setAttr ".phl[3693]" 0;
-	setAttr ".phl[3694]" 0;
-	setAttr ".phl[3695]" 0;
-	setAttr ".phl[3696]" 0;
-	setAttr ".phl[3697]" 0;
-	setAttr ".phl[3698]" 0;
-	setAttr ".phl[3699]" 0;
-	setAttr ".phl[3700]" 0;
-	setAttr ".phl[3701]" 0;
-	setAttr ".phl[3702]" 0;
-	setAttr ".phl[3703]" 0;
-	setAttr ".phl[3704]" 0;
-	setAttr ".phl[3705]" 0;
-	setAttr ".phl[3706]" 0;
-	setAttr ".phl[3707]" 0;
-	setAttr ".phl[3708]" 0;
-	setAttr ".phl[3709]" 0;
-	setAttr ".phl[3710]" 0;
-	setAttr ".phl[3711]" 0;
-	setAttr ".phl[3712]" 0;
-	setAttr ".phl[3713]" 0;
-	setAttr ".phl[3714]" 0;
-	setAttr ".phl[3715]" 0;
-	setAttr ".phl[3716]" 0;
-	setAttr ".phl[3717]" 0;
-	setAttr ".phl[3718]" 0;
-	setAttr ".phl[3719]" 0;
-	setAttr ".phl[3720]" 0;
-	setAttr ".phl[3721]" 0;
-	setAttr ".phl[3722]" 0;
-	setAttr ".phl[3723]" 0;
-	setAttr ".phl[3724]" 0;
-	setAttr ".phl[3725]" 0;
-	setAttr ".phl[3726]" 0;
-	setAttr ".phl[3727]" 0;
-	setAttr ".phl[3728]" 0;
-	setAttr ".phl[3729]" 0;
-	setAttr ".phl[3730]" 0;
-	setAttr ".phl[3731]" 0;
-	setAttr ".phl[3732]" 0;
-	setAttr ".phl[3733]" 0;
-	setAttr ".phl[3734]" 0;
-	setAttr ".phl[3735]" 0;
-	setAttr ".phl[3736]" 0;
-	setAttr ".phl[3737]" 0;
-	setAttr ".phl[3738]" 0;
-	setAttr ".phl[3739]" 0;
-	setAttr ".phl[3740]" 0;
-	setAttr ".phl[3741]" 0;
-	setAttr ".phl[3742]" 0;
-	setAttr ".phl[3743]" 0;
-	setAttr ".phl[3744]" 0;
-	setAttr ".phl[3745]" 0;
-	setAttr ".phl[3746]" 0;
-	setAttr ".phl[3747]" 0;
-	setAttr ".phl[3748]" 0;
-	setAttr ".phl[3749]" 0;
-	setAttr ".phl[3750]" 0;
-	setAttr ".phl[3751]" 0;
-	setAttr ".phl[3752]" 0;
-	setAttr ".phl[3753]" 0;
-	setAttr ".phl[3754]" 0;
-	setAttr ".phl[3755]" 0;
-	setAttr ".phl[3756]" 0;
-	setAttr ".phl[3757]" 0;
-	setAttr ".phl[3758]" 0;
-	setAttr ".phl[3759]" 0;
-	setAttr ".phl[3760]" 0;
-	setAttr ".phl[3761]" 0;
-	setAttr ".phl[3762]" 0;
-	setAttr ".phl[3763]" 0;
-	setAttr ".phl[3764]" 0;
-	setAttr ".phl[3765]" 0;
-	setAttr ".phl[3766]" 0;
-	setAttr ".phl[3767]" 0;
-	setAttr ".phl[3768]" 0;
-	setAttr ".phl[3769]" 0;
-	setAttr ".phl[3770]" 0;
-	setAttr ".phl[3771]" 0;
-	setAttr ".phl[3772]" 0;
-	setAttr ".phl[3773]" 0;
-	setAttr ".phl[3774]" 0;
-	setAttr ".phl[3775]" 0;
-	setAttr ".phl[3776]" 0;
-	setAttr ".phl[3777]" 0;
-	setAttr ".phl[3778]" 0;
-	setAttr ".phl[3779]" 0;
-	setAttr ".phl[3780]" 0;
-	setAttr ".phl[3781]" 0;
-	setAttr ".phl[3782]" 0;
-	setAttr ".phl[3783]" 0;
-	setAttr ".phl[3784]" 0;
-	setAttr ".phl[3785]" 0;
-	setAttr ".phl[3786]" 0;
-	setAttr ".phl[3787]" 0;
-	setAttr ".phl[3788]" 0;
-	setAttr ".phl[3789]" 0;
-	setAttr ".phl[3790]" 0;
-	setAttr ".phl[3791]" 0;
-	setAttr ".phl[3792]" 0;
-	setAttr ".phl[3793]" 0;
-	setAttr ".phl[3794]" 0;
-	setAttr ".phl[3795]" 0;
-	setAttr ".phl[3796]" 0;
-	setAttr ".phl[3797]" 0;
-	setAttr ".phl[3798]" 0;
-	setAttr ".phl[3799]" 0;
-	setAttr ".phl[3800]" 0;
-	setAttr ".phl[3801]" 0;
-	setAttr ".phl[3802]" 0;
-	setAttr ".phl[3803]" 0;
-	setAttr ".phl[3804]" 0;
-	setAttr ".phl[3805]" 0;
-	setAttr ".phl[3806]" 0;
-	setAttr ".phl[3807]" 0;
-	setAttr ".phl[3808]" 0;
-	setAttr ".phl[3809]" 0;
-	setAttr ".phl[3810]" 0;
-	setAttr ".phl[3811]" 0;
-	setAttr ".phl[3812]" 0;
-	setAttr ".phl[3813]" 0;
-	setAttr ".phl[3814]" 0;
-	setAttr ".phl[3815]" 0;
-	setAttr ".phl[3816]" 0;
-	setAttr ".phl[3817]" 0;
-	setAttr ".phl[3818]" 0;
-	setAttr ".phl[3819]" 0;
-	setAttr ".phl[3820]" 0;
-	setAttr ".phl[3821]" 0;
-	setAttr ".phl[3822]" 0;
-	setAttr ".phl[3823]" 0;
-	setAttr ".phl[3824]" 0;
-	setAttr ".phl[3825]" 0;
-	setAttr ".phl[3826]" 0;
-	setAttr ".phl[3827]" 0;
-	setAttr ".phl[3828]" 0;
-	setAttr ".phl[3829]" 0;
-	setAttr ".phl[3830]" 0;
-	setAttr ".phl[3831]" 0;
-	setAttr ".phl[3832]" 0;
-	setAttr ".phl[3833]" 0;
-	setAttr ".phl[3834]" 0;
-	setAttr ".phl[3835]" 0;
-	setAttr ".phl[3836]" 0;
-	setAttr ".phl[3837]" 0;
-	setAttr ".phl[3838]" 0;
-	setAttr ".phl[3839]" 0;
-	setAttr ".phl[3840]" 0;
-	setAttr ".phl[3841]" 0;
-	setAttr ".phl[3842]" 0;
-	setAttr ".phl[3843]" 0;
-	setAttr ".phl[3844]" 0;
-	setAttr ".phl[3845]" 0;
-	setAttr ".phl[3846]" 0;
-	setAttr ".phl[3847]" 0;
-	setAttr ".phl[3848]" 0;
-	setAttr ".phl[3849]" 0;
-	setAttr ".phl[3850]" 0;
-	setAttr ".phl[3851]" 0;
-	setAttr ".phl[3852]" 0;
-	setAttr ".phl[3853]" 0;
-	setAttr ".phl[3854]" 0;
-	setAttr ".phl[3855]" 0;
-	setAttr ".phl[3856]" 0;
-	setAttr ".phl[3857]" 0;
-	setAttr ".phl[3858]" 0;
-	setAttr ".phl[3859]" 0;
-	setAttr ".phl[3860]" 0;
-	setAttr ".phl[3861]" 0;
-	setAttr ".phl[3862]" 0;
-	setAttr ".phl[3863]" 0;
-	setAttr ".phl[3864]" 0;
-	setAttr ".phl[3865]" 0;
-	setAttr ".phl[3866]" 0;
-	setAttr ".phl[3867]" 0;
-	setAttr ".phl[3868]" 0;
-	setAttr ".phl[3869]" 0;
-	setAttr ".phl[3870]" 0;
-	setAttr ".phl[3871]" 0;
-	setAttr ".phl[3872]" 0;
-	setAttr ".phl[3873]" 0;
-	setAttr ".phl[3874]" 0;
-	setAttr ".phl[3875]" 0;
-	setAttr ".phl[3876]" 0;
-	setAttr ".phl[3877]" 0;
-	setAttr ".phl[3878]" 0;
-	setAttr ".phl[3879]" 0;
-	setAttr ".phl[3880]" 0;
-	setAttr ".phl[3881]" 0;
-	setAttr ".phl[3882]" 0;
-	setAttr ".phl[3883]" 0;
-	setAttr ".phl[3884]" 0;
-	setAttr ".phl[3885]" 0;
-	setAttr ".phl[3886]" 0;
-	setAttr ".phl[3887]" 0;
-	setAttr ".phl[3888]" 0;
-	setAttr ".phl[3889]" 0;
-	setAttr ".phl[3890]" 0;
-	setAttr ".phl[3891]" 0;
-	setAttr ".phl[3892]" 0;
-	setAttr ".phl[3893]" 0;
-	setAttr ".phl[3894]" 0;
-	setAttr ".phl[3895]" 0;
-	setAttr ".phl[3896]" 0;
-	setAttr ".phl[3897]" 0;
-	setAttr ".phl[3898]" 0;
-	setAttr ".phl[3899]" 0;
-	setAttr ".phl[3900]" 0;
-	setAttr ".phl[3901]" 0;
-	setAttr ".phl[3902]" 0;
-	setAttr ".phl[3903]" 0;
-	setAttr ".phl[3904]" 0;
-	setAttr ".phl[3905]" 0;
-	setAttr ".phl[3906]" 0;
-	setAttr ".phl[3907]" 0;
-	setAttr ".phl[3908]" 0;
-	setAttr ".phl[3909]" 0;
-	setAttr ".phl[3910]" 0;
-	setAttr ".phl[3911]" 0;
-	setAttr ".phl[3912]" 0;
-	setAttr ".phl[3913]" 0;
-	setAttr ".phl[3914]" 0;
-	setAttr ".phl[3915]" 0;
-	setAttr ".phl[3916]" 0;
-	setAttr ".phl[3917]" 0;
-	setAttr ".phl[3918]" 0;
-	setAttr ".phl[3919]" 0;
-	setAttr ".phl[3920]" 0;
-	setAttr ".phl[3921]" 0;
-	setAttr ".phl[3922]" 0;
-	setAttr ".phl[3923]" 0;
-	setAttr ".phl[3924]" 0;
-	setAttr ".phl[3925]" 0;
-	setAttr ".phl[3926]" 0;
-	setAttr ".phl[3927]" 0;
-	setAttr ".phl[3928]" 0;
-	setAttr ".phl[3929]" 0;
-	setAttr ".phl[3930]" 0;
-	setAttr ".phl[3931]" 0;
-	setAttr ".phl[3932]" 0;
-	setAttr ".phl[3933]" 0;
-	setAttr ".phl[3934]" 0;
-	setAttr ".phl[3935]" 0;
-	setAttr ".phl[3936]" 0;
-	setAttr ".phl[3937]" 0;
-	setAttr ".phl[3938]" 0;
-	setAttr ".phl[3939]" 0;
-	setAttr ".phl[3940]" 0;
-	setAttr ".phl[3941]" 0;
-	setAttr ".phl[3942]" 0;
-	setAttr ".phl[3943]" 0;
-	setAttr ".phl[3944]" 0;
-	setAttr ".phl[3945]" 0;
-	setAttr ".phl[3946]" 0;
-	setAttr ".phl[3947]" 0;
-	setAttr ".phl[3948]" 0;
-	setAttr ".phl[3949]" 0;
-	setAttr ".phl[3950]" 0;
-	setAttr ".phl[3951]" 0;
-	setAttr ".phl[3952]" 0;
-	setAttr ".phl[3953]" 0;
-	setAttr ".phl[3954]" 0;
-	setAttr ".phl[3955]" 0;
-	setAttr ".phl[3956]" 0;
-	setAttr ".phl[3957]" 0;
-	setAttr ".phl[3958]" 0;
-	setAttr ".phl[3959]" 0;
-	setAttr ".phl[3960]" 0;
-	setAttr ".phl[3961]" 0;
-	setAttr ".phl[3962]" 0;
-	setAttr ".phl[3963]" 0;
-	setAttr ".phl[3964]" 0;
-	setAttr ".phl[3965]" 0;
-	setAttr ".phl[3966]" 0;
-	setAttr ".phl[3967]" 0;
-	setAttr ".phl[3968]" 0;
-	setAttr ".phl[3969]" 0;
-	setAttr ".phl[3970]" 0;
-	setAttr ".phl[3971]" 0;
-	setAttr ".phl[3972]" 0;
-	setAttr ".phl[3973]" 0;
-	setAttr ".phl[3974]" 0;
-	setAttr ".phl[3975]" 0;
-	setAttr ".phl[3976]" 0;
-	setAttr ".phl[3977]" 0;
-	setAttr ".phl[3978]" 0;
-	setAttr ".phl[3979]" 0;
-	setAttr ".phl[3980]" 0;
-	setAttr ".phl[3981]" 0;
-	setAttr ".phl[3982]" 0;
-	setAttr ".phl[3983]" 0;
-	setAttr ".phl[3984]" 0;
-	setAttr ".phl[3985]" 0;
-	setAttr ".phl[3986]" 0;
-	setAttr ".phl[3987]" 0;
-	setAttr ".phl[3988]" 0;
-	setAttr ".phl[3989]" 0;
-	setAttr ".phl[3990]" 0;
-	setAttr ".phl[3991]" 0;
-	setAttr ".phl[3992]" 0;
-	setAttr ".phl[3993]" 0;
-	setAttr ".phl[3994]" 0;
-	setAttr ".phl[3995]" 0;
-	setAttr ".phl[3996]" 0;
-	setAttr ".phl[3997]" 0;
-	setAttr ".phl[3998]" 0;
-	setAttr ".phl[3999]" 0;
-	setAttr ".phl[4000]" 0;
-	setAttr ".phl[4001]" 0;
-	setAttr ".phl[4002]" 0;
-	setAttr ".phl[4003]" 0;
-	setAttr ".phl[4004]" 0;
-	setAttr ".phl[4005]" 0;
-	setAttr ".phl[4006]" 0;
-	setAttr ".phl[4007]" 0;
-	setAttr ".phl[4008]" 0;
-	setAttr ".phl[4009]" 0;
-	setAttr ".phl[4010]" 0;
-	setAttr ".phl[4011]" 0;
-	setAttr ".phl[4012]" 0;
-	setAttr ".phl[4013]" 0;
-	setAttr ".phl[4014]" 0;
-	setAttr ".phl[4015]" 0;
-	setAttr ".phl[4016]" 0;
-	setAttr ".phl[4017]" 0;
-	setAttr ".phl[4018]" 0;
-	setAttr ".phl[4019]" 0;
-	setAttr ".phl[4020]" 0;
-	setAttr ".phl[4021]" 0;
-	setAttr ".phl[4022]" 0;
-	setAttr ".phl[4023]" 0;
-	setAttr ".phl[4024]" 0;
-	setAttr ".phl[4025]" 0;
-	setAttr ".phl[4026]" 0;
-	setAttr ".phl[4027]" 0;
-	setAttr ".phl[4028]" 0;
-	setAttr ".phl[4029]" 0;
-	setAttr ".phl[4030]" 0;
-	setAttr ".phl[4031]" 0;
-	setAttr ".phl[4032]" 0;
-	setAttr ".phl[4033]" 0;
-	setAttr ".phl[4034]" 0;
-	setAttr ".phl[4035]" 0;
-	setAttr ".phl[4036]" 0;
-	setAttr ".phl[4037]" 0;
-	setAttr ".phl[4038]" 0;
-	setAttr ".phl[4039]" 0;
-	setAttr ".phl[4040]" 0;
-	setAttr ".phl[4041]" 0;
-	setAttr ".phl[4042]" 0;
-	setAttr ".phl[4043]" 0;
-	setAttr ".phl[4044]" 0;
-	setAttr ".phl[4045]" 0;
-	setAttr ".phl[4046]" 0;
-	setAttr ".phl[4047]" 0;
-	setAttr ".phl[4048]" 0;
-	setAttr ".phl[4049]" 0;
-	setAttr ".phl[4050]" 0;
-	setAttr ".phl[4051]" 0;
-	setAttr ".phl[4052]" 0;
-	setAttr ".phl[4053]" 0;
-	setAttr ".phl[4054]" 0;
-	setAttr ".phl[4055]" 0;
-	setAttr ".phl[4056]" 0;
-	setAttr ".phl[4057]" 0;
-	setAttr ".phl[4058]" 0;
-	setAttr ".phl[4059]" 0;
-	setAttr ".phl[4060]" 0;
-	setAttr ".phl[4061]" 0;
-	setAttr ".phl[4062]" 0;
-	setAttr ".phl[4063]" 0;
-	setAttr ".phl[4064]" 0;
-	setAttr ".phl[4065]" 0;
-	setAttr ".phl[4066]" 0;
-	setAttr ".phl[4067]" 0;
-	setAttr ".phl[4068]" 0;
-	setAttr ".phl[4069]" 0;
-	setAttr ".phl[4070]" 0;
-	setAttr ".phl[4071]" 0;
-	setAttr ".phl[4072]" 0;
-	setAttr ".phl[4073]" 0;
-	setAttr ".phl[4074]" 0;
-	setAttr ".phl[4075]" 0;
-	setAttr ".phl[4076]" 0;
-	setAttr ".phl[4077]" 0;
-	setAttr ".phl[4078]" 0;
-	setAttr ".phl[4079]" 0;
-	setAttr ".phl[4080]" 0;
-	setAttr ".phl[4081]" 0;
-	setAttr ".phl[4082]" 0;
-	setAttr ".phl[4083]" 0;
-	setAttr ".phl[4084]" 0;
-	setAttr ".phl[4085]" 0;
-	setAttr ".phl[4086]" 0;
-	setAttr ".phl[4087]" 0;
-	setAttr ".phl[4088]" 0;
-	setAttr ".phl[4089]" 0;
-	setAttr ".phl[4090]" 0;
-	setAttr ".phl[4091]" 0;
-	setAttr ".phl[4092]" 0;
-	setAttr ".phl[4093]" 0;
-	setAttr ".phl[4094]" 0;
-	setAttr ".phl[4095]" 0;
-	setAttr ".phl[4096]" 0;
-	setAttr ".phl[4097]" 0;
-	setAttr ".phl[4098]" 0;
-	setAttr ".phl[4099]" 0;
-	setAttr ".phl[4100]" 0;
-	setAttr ".phl[4101]" 0;
-	setAttr ".phl[4102]" 0;
-	setAttr ".phl[4103]" 0;
-	setAttr ".phl[4104]" 0;
-	setAttr ".phl[4105]" 0;
-	setAttr ".phl[4106]" 0;
-	setAttr ".phl[4107]" 0;
-	setAttr ".phl[4108]" 0;
-	setAttr ".phl[4109]" 0;
-	setAttr ".phl[4110]" 0;
-	setAttr ".phl[4111]" 0;
-	setAttr ".phl[4112]" 0;
-	setAttr ".phl[4113]" 0;
-	setAttr ".phl[4114]" 0;
-	setAttr ".phl[4115]" 0;
-	setAttr ".phl[4116]" 0;
-	setAttr ".phl[4117]" 0;
-	setAttr ".phl[4118]" 0;
-	setAttr ".phl[4119]" 0;
-	setAttr ".phl[4120]" 0;
-	setAttr ".phl[4121]" 0;
-	setAttr ".phl[4122]" 0;
-	setAttr ".phl[4123]" 0;
-	setAttr ".phl[4124]" 0;
-	setAttr ".phl[4125]" 0;
-	setAttr ".phl[4126]" 0;
-	setAttr ".phl[4127]" 0;
-	setAttr ".phl[4128]" 0;
-	setAttr ".phl[4129]" 0;
-	setAttr ".phl[4130]" 0;
-	setAttr ".phl[4131]" 0;
-	setAttr ".phl[4132]" 0;
-	setAttr ".phl[4133]" 0;
-	setAttr ".phl[4134]" 0;
-	setAttr ".phl[4135]" 0;
-	setAttr ".phl[4136]" 0;
-	setAttr ".phl[4137]" 0;
-	setAttr ".phl[4138]" 0;
-	setAttr ".phl[4139]" 0;
-	setAttr ".phl[4140]" 0;
-	setAttr ".phl[4141]" 0;
-	setAttr ".phl[4142]" 0;
-	setAttr ".phl[4143]" 0;
-	setAttr ".phl[4144]" 0;
-	setAttr ".phl[4145]" 0;
-	setAttr ".phl[4146]" 0;
-	setAttr ".phl[4147]" 0;
-	setAttr ".phl[4148]" 0;
-	setAttr ".phl[4149]" 0;
-	setAttr ".phl[4150]" 0;
-	setAttr ".phl[4151]" 0;
-	setAttr ".phl[4152]" 0;
-	setAttr ".phl[4153]" 0;
-	setAttr ".phl[4154]" 0;
-	setAttr ".phl[4155]" 0;
-	setAttr ".phl[4156]" 0;
-	setAttr ".phl[4157]" 0;
-	setAttr ".phl[4158]" 0;
-	setAttr ".phl[4159]" 0;
-	setAttr ".phl[4160]" 0;
-	setAttr ".phl[4161]" 0;
-	setAttr ".phl[4162]" 0;
-	setAttr ".phl[4163]" 0;
-	setAttr ".phl[4164]" 0;
-	setAttr ".phl[4165]" 0;
-	setAttr ".phl[4166]" 0;
-	setAttr ".phl[4167]" 0;
-	setAttr ".phl[4168]" 0;
-	setAttr ".phl[4169]" 0;
-	setAttr ".phl[4170]" 0;
-	setAttr ".phl[4171]" 0;
-	setAttr ".phl[4172]" 0;
-	setAttr ".phl[4173]" 0;
-	setAttr ".phl[4174]" 0;
-	setAttr ".phl[4175]" 0;
-	setAttr ".phl[4176]" 0;
-	setAttr ".phl[4177]" 0;
-	setAttr ".phl[4178]" 0;
-	setAttr ".phl[4179]" 0;
-	setAttr ".phl[4180]" 0;
-	setAttr ".phl[4181]" 0;
-	setAttr ".phl[4182]" 0;
-	setAttr ".phl[4183]" 0;
-	setAttr ".phl[4184]" 0;
-	setAttr ".phl[4185]" 0;
-	setAttr ".phl[4186]" 0;
-	setAttr ".phl[4187]" 0;
-	setAttr ".phl[4188]" 0;
-	setAttr ".phl[4189]" 0;
-	setAttr ".phl[4190]" 0;
-	setAttr ".phl[4191]" 0;
-	setAttr ".phl[4192]" 0;
-	setAttr ".phl[4193]" 0;
-	setAttr ".phl[4194]" 0;
-	setAttr ".phl[4195]" 0;
-	setAttr ".phl[4196]" 0;
-	setAttr ".phl[4197]" 0;
-	setAttr ".phl[4198]" 0;
-	setAttr ".phl[4199]" 0;
-	setAttr ".phl[4200]" 0;
-	setAttr ".phl[4201]" 0;
-	setAttr ".phl[4202]" 0;
-	setAttr ".phl[4203]" 0;
-	setAttr ".phl[4204]" 0;
-	setAttr ".phl[4205]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"utility_room_viewRN"
 		"utility_room_view:livingroom_shading_latest:living_room_latest:bed_latestRN" 
@@ -8980,91 +8994,6 @@ createNode reference -n "utility_room_viewRN";
 		
 		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest4:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest4:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest4:taller_windowShape" 
 		"furNameSpace" " -type \"string\" \"taller_window_four_squares_latest4\""
-		"utility_room_view:livingroom_shading_latest:living_room_latest:telescopeRN" 38
-		
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform4|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02Shape 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform4|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02Shape 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform4|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02Shape 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04Shape 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04Shape 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04Shape 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurface1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurfaceShape1 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurface1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurfaceShape1 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurface1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurfaceShape1 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_" 
-		"translate" " -type \"double3\" 0 2169.506103515625 0"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_" 
-		"translateY" " -av"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_" 
-		"translateX" " -av"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_" 
-		"translateZ" " -av"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02" 
-		"translate" " -type \"double3\" 1.09363007545471191 496.370635986328125 -28.75731468200683594"
-		
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02" 
-		"translateX" " -av"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02" 
-		"translateY" " -av"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02" 
-		"translateZ" " -av"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform4|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02Shape" 
-		"surfaceReference" " 1"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform4|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02Shape" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/telescope.ma\""
-		
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform4|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02Shape" 
-		"furNameSpace" " -type \"string\" \"telescope\""
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02FBXASC046Object03" 
-		"translate" " -type \"double3\" -132.7584075927734375 496.370635986328125 -271.658447265625"
-		
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02FBXASC046Object03" 
-		"translateX" " -av"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02FBXASC046Object03" 
-		"translateY" " -av"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02FBXASC046Object03" 
-		"translateZ" " -av"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02FBXASC046Object04" 
-		"translate" " -type \"double3\" 134.1542510986328125 496.370635986328125 -270.256988525390625"
-		
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02FBXASC046Object04" 
-		"translateX" " -av"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02FBXASC046Object04" 
-		"translateY" " -av"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02FBXASC046Object04" 
-		"translateZ" " -av"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04" 
-		"translate" " -type \"double3\" 3.39144754409790039 787.89642333984375 -217.28875732421875"
-		
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04" 
-		"translateY" " -av"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04" 
-		"translateZ" " -av"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04" 
-		"translateX" " -av"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04Shape" 
-		"surfaceReference" " 1"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04Shape" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/telescope.ma\""
-		
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04Shape" 
-		"furNameSpace" " -type \"string\" \"telescope\""
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurface1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurfaceShape1" 
-		"surfaceReference" " 1"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurface1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurfaceShape1" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/telescope.ma\""
-		
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurface1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurfaceShape1" 
-		"furNameSpace" " -type \"string\" \"telescope\""
 		"utility_room_view:pig_latestRN" 38
 		1 |utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:pig_mesh|utility_room_view:pig_latest:pig_body|utility_room_view:pig_latest:pigShapeDeformedOrig 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
@@ -9153,6 +9082,91 @@ createNode reference -n "utility_room_viewRN";
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_1control01_parentConstraint1.constraintRotateZ" 
 		"utility_room_viewRN.placeHolderList[1616]" "utility_room_view:pig_latest:tail_1control01.rz"
 		
+		"utility_room_view:livingroom_shading_latest:living_room_latest:telescopeRN" 38
+		
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform4|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02Shape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform4|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02Shape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform4|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02Shape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04Shape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04Shape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04Shape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurface1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurfaceShape1 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurface1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurfaceShape1 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurface1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurfaceShape1 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_" 
+		"translate" " -type \"double3\" 0 2169.506103515625 0"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_" 
+		"translateY" " -av"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_" 
+		"translateX" " -av"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_" 
+		"translateZ" " -av"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02" 
+		"translate" " -type \"double3\" 1.09363007545471191 496.370635986328125 -28.75731468200683594"
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02" 
+		"translateX" " -av"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02" 
+		"translateY" " -av"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02" 
+		"translateZ" " -av"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform4|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02Shape" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform4|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02Shape" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/telescope.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform4|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02Shape" 
+		"furNameSpace" " -type \"string\" \"telescope\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02FBXASC046Object03" 
+		"translate" " -type \"double3\" -132.7584075927734375 496.370635986328125 -271.658447265625"
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02FBXASC046Object03" 
+		"translateX" " -av"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02FBXASC046Object03" 
+		"translateY" " -av"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02FBXASC046Object03" 
+		"translateZ" " -av"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02FBXASC046Object04" 
+		"translate" " -type \"double3\" 134.1542510986328125 496.370635986328125 -270.256988525390625"
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02FBXASC046Object04" 
+		"translateX" " -av"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02FBXASC046Object04" 
+		"translateY" " -av"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02FBXASC046Object04" 
+		"translateZ" " -av"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04" 
+		"translate" " -type \"double3\" 3.39144754409790039 787.89642333984375 -217.28875732421875"
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04" 
+		"translateY" " -av"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04" 
+		"translateZ" " -av"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04" 
+		"translateX" " -av"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04Shape" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04Shape" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/telescope.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04Shape" 
+		"furNameSpace" " -type \"string\" \"telescope\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurface1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurfaceShape1" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurface1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurfaceShape1" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/telescope.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurface1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurfaceShape1" 
+		"furNameSpace" " -type \"string\" \"telescope\""
 		"utility_room_view:bike_rigRN" 0
 		"utility_room_view:house_latestRN" 12
 		2 "|utility_room_view:house_latest:ncloth|utility_room_view:house_latest:nCloth2|utility_room_view:house_latest:nClothShape2" 
@@ -10357,7 +10371,7 @@ createNode reference -n "utility_room_viewRN";
 		
 		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest5:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest5:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest5:taller_windowShape" 
 		"furNameSpace" " -type \"string\" \"taller_window_four_squares_latest5\""
-		"utility_room_viewRN" 13
+		"utility_room_viewRN" 27
 		1 |utility_room_view:undies_latestRNfosterParent1|utility_room_view:undiesShapeDeformed 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
 		1 |utility_room_view:undies_latestRNfosterParent1|utility_room_view:undiesShapeDeformed 
@@ -10383,6 +10397,33 @@ createNode reference -n "utility_room_viewRN";
 		"furNameSpace" " -type \"string\" \"utility_room_view\""
 		2 "utility_room_view:undies_latestRN" "fileNames[0]" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/props/undies/undies_latest.ma\""
 		
+		2 "|utility_room_view:nRigid1|utility_room_view:nRigidShape1" "cacheWidth" 
+		" 315"
+		2 "|utility_room_view:nRigid2|utility_room_view:nRigidShape2" "cacheWidth" 
+		" 315"
+		2 "|utility_room_view:nRigid3|utility_room_view:nRigidShape3" "cacheWidth" 
+		" 315"
+		2 "|utility_room_view:nRigid4|utility_room_view:nRigidShape4" "cacheWidth" 
+		" 315"
+		2 "|utility_room_view:nRigid5|utility_room_view:nRigidShape5" "cacheWidth" 
+		" 315"
+		2 "|utility_room_view:nRigid6|utility_room_view:nRigidShape6" "cacheWidth" 
+		" 315"
+		2 "|utility_room_view:nRigid7|utility_room_view:nRigidShape7" "cacheWidth" 
+		" 315"
+		2 "|utility_room_view:nRigid8|utility_room_view:nRigidShape8" "cacheWidth" 
+		" 315"
+		2 "|utility_room_view:nRigid9|utility_room_view:nRigidShape9" "cacheWidth" 
+		" 315"
+		2 "|utility_room_view:nRigid10|utility_room_view:nRigidShape10" "cacheWidth" 
+		" 315"
+		2 "|utility_room_view:nRigid11|utility_room_view:nRigidShape11" "cacheWidth" 
+		" 315"
+		2 "|utility_room_view:nRigid12|utility_room_view:nRigidShape12" "cacheWidth" 
+		" 315"
+		2 "|utility_room_view:nCloth1|utility_room_view:nClothShape1" "cacheWidth" 
+		" 315"
+		2 "utility_room_view:nClothShape1Cache1" "enable" " 1"
 		"utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latestRN4" 
 		42
 		1 |utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest8:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest8:polySurfaceShape1 
@@ -20780,27 +20821,25 @@ createNode reference -n "utility_room_viewRN";
 		
 		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cube_cushion:pCube1|utility_room_view:livingroom_shading_latest:living_room_latest:cube_cushion:pCubeShape1" 
 		"furNameSpace" " -type \"string\" \"cube_cushion\""
-		"utility_room_view:house_latest:bedroom_latestRN" 10
+		"utility_room_view:house_latest:bedroom_latestRN" 9
 		2 "|utility_room_view:house_latest:bedroom_latest:cloth|utility_room_view:house_latest:bedroom_latest:nRigid1|utility_room_view:house_latest:bedroom_latest:nRigidShape1" 
 		"cacheWidth" " 315"
 		2 "|utility_room_view:house_latest:bedroom_latest:nCloth2|utility_room_view:house_latest:bedroom_latest:nClothShape2" 
 		"isDynamic" " 1"
 		2 "|utility_room_view:house_latest:bedroom_latest:nCloth2|utility_room_view:house_latest:bedroom_latest:nClothShape2" 
 		"cacheWidth" " 315"
-		2 "|utility_room_view:house_latest:bedroom_latest:cloth|utility_room_view:house_latest:bedroom_latest:pPlane1" 
-		"scale" " -type \"double3\" 1 1 1.23633197893716651"
-		2 "|utility_room_view:house_latest:bedroom_latest:cloth|utility_room_view:house_latest:bedroom_latest:nCloth1|utility_room_view:house_latest:bedroom_latest:nClothShape1" 
+		2 "|utility_room_view:house_latest:bedroom_latest:cloth|utility_room_view:house_latest:bedroom_latest:nRigid2|utility_room_view:house_latest:bedroom_latest:nRigidShape2" 
 		"cacheWidth" " 315"
+		2 "|utility_room_view:house_latest:bedroom_latest:cloth|utility_room_view:house_latest:bedroom_latest:nRigid3|utility_room_view:house_latest:bedroom_latest:nRigidShape3" 
+		"cacheWidth" " 315"
+		2 "|utility_room_view:house_latest:bedroom_latest:cloth|utility_room_view:house_latest:bedroom_latest:nRigid4|utility_room_view:house_latest:bedroom_latest:nRigidShape4" 
+		"cacheWidth" " 315"
+		2 "utility_room_view:house_latest:bedroom_latest:layer2" "visibility" " 1"
+		
 		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:bedroom_latest:nCloth2|utility_room_view:house_latest:bedroom_latest:nClothShape2.positions" 
 		"utility_room_viewRN.placeHolderList[2414]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:bedroom_latest:nCloth2|utility_room_view:house_latest:bedroom_latest:nClothShape2.playFromCache" 
 		"utility_room_viewRN.placeHolderList[2415]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:bedroom_latest:cloth|utility_room_view:house_latest:bedroom_latest:pPlane1.drawOverride" 
-		"utility_room_viewRN.placeHolderList[3294]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:bedroom_latest:cloth|utility_room_view:house_latest:bedroom_latest:nCloth1|utility_room_view:house_latest:bedroom_latest:nClothShape1.playFromCache" 
-		"utility_room_viewRN.placeHolderList[3295]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:bedroom_latest:cloth|utility_room_view:house_latest:bedroom_latest:nCloth1|utility_room_view:house_latest:bedroom_latest:nClothShape1.positions" 
-		"utility_room_viewRN.placeHolderList[3296]" ""
 		"utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latestRN1" 
 		24
 		1 |utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frameShape 
@@ -20893,12 +20932,12 @@ createNode reference -n "utility_room_viewRN";
 		1 |utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frame|utility_room_view:bike_rig:frameShape 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		2 "|utility_room_view:bike_rig:bike_ctrl" "visibility" " -av 1"
-		2 "|utility_room_view:bike_rig:bike_ctrl" "translate" " -type \"double3\" -153.01554641603320306 -1.37099265081140276 83.97426724367723239"
+		2 "|utility_room_view:bike_rig:bike_ctrl" "translate" " -type \"double3\" -114.85214157758313 -1.3709926508114028 79.424630336352749"
 		
 		2 "|utility_room_view:bike_rig:bike_ctrl" "translateX" " -av"
 		2 "|utility_room_view:bike_rig:bike_ctrl" "translateY" " -av"
 		2 "|utility_room_view:bike_rig:bike_ctrl" "translateZ" " -av"
-		2 "|utility_room_view:bike_rig:bike_ctrl" "rotate" " -type \"double3\" 0 -148.4912590371053227 0"
+		2 "|utility_room_view:bike_rig:bike_ctrl" "rotate" " -type \"double3\" 0 -152.76239567727009 0"
 		
 		2 "|utility_room_view:bike_rig:bike_ctrl" "rotateX" " -av"
 		2 "|utility_room_view:bike_rig:bike_ctrl" "rotateY" " -av"
@@ -20908,9 +20947,9 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:bike_rig:bike_ctrl" "scaleX" " -av"
 		2 "|utility_room_view:bike_rig:bike_ctrl" "scaleY" " -av"
 		2 "|utility_room_view:bike_rig:bike_ctrl" "scaleZ" " -av"
-		2 "|utility_room_view:bike_rig:bike_ctrl" "rotatePivot" " -type \"double3\" 0.30247623153311309 1.89205438473953791 0"
+		2 "|utility_room_view:bike_rig:bike_ctrl" "rotatePivot" " -type \"double3\" 0.30247623153311309 1.8920543847395379 0"
 		
-		2 "|utility_room_view:bike_rig:bike_ctrl" "scalePivot" " -type \"double3\" 0.30247623153311309 1.89205438473953791 0"
+		2 "|utility_room_view:bike_rig:bike_ctrl" "scalePivot" " -type \"double3\" 0.30247623153311309 1.8920543847395379 0"
 		
 		2 "|utility_room_view:bike_rig:bike_ctrl" "scalePivotTranslate" " -type \"double3\" 0 0 0"
 		
@@ -20941,7 +20980,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frontWheel" 
 		"translateZ" " -av"
 		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frontWheel" 
-		"rotate" " -type \"double3\" 0 0 -187.36809815568560111"
+		"rotate" " -type \"double3\" 0 0 78.631340064925965"
 		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frontWheel" 
 		"rotateZ" " -av"
 		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frontWheel" 
@@ -20995,39 +21034,39 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:tire_ctrl" 
 		"translateZ" " 0"
 		5 3 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.translate" 
-		"utility_room_viewRN.placeHolderList[3553]" ""
+		"utility_room_viewRN.placeHolderList[2678]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.translateX" 
-		"utility_room_viewRN.placeHolderList[3554]" ""
+		"utility_room_viewRN.placeHolderList[2679]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.translateY" 
-		"utility_room_viewRN.placeHolderList[3555]" ""
+		"utility_room_viewRN.placeHolderList[2680]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.translateZ" 
-		"utility_room_viewRN.placeHolderList[3556]" ""
+		"utility_room_viewRN.placeHolderList[2681]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.visibility" 
-		"utility_room_viewRN.placeHolderList[3557]" ""
+		"utility_room_viewRN.placeHolderList[2682]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.rotate" 
-		"utility_room_viewRN.placeHolderList[3558]" ""
+		"utility_room_viewRN.placeHolderList[2683]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.rotateX" 
-		"utility_room_viewRN.placeHolderList[3559]" ""
+		"utility_room_viewRN.placeHolderList[2684]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.rotateY" 
-		"utility_room_viewRN.placeHolderList[3560]" ""
+		"utility_room_viewRN.placeHolderList[2685]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3561]" ""
+		"utility_room_viewRN.placeHolderList[2686]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.scale" 
-		"utility_room_viewRN.placeHolderList[3562]" ""
+		"utility_room_viewRN.placeHolderList[2687]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.scaleX" 
-		"utility_room_viewRN.placeHolderList[3563]" ""
+		"utility_room_viewRN.placeHolderList[2688]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.scaleY" 
-		"utility_room_viewRN.placeHolderList[3564]" ""
+		"utility_room_viewRN.placeHolderList[2689]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3565]" ""
+		"utility_room_viewRN.placeHolderList[2690]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.rotatePivot" 
-		"utility_room_viewRN.placeHolderList[3566]" ""
+		"utility_room_viewRN.placeHolderList[2691]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.rotatePivotTranslate" 
-		"utility_room_viewRN.placeHolderList[3567]" ""
+		"utility_room_viewRN.placeHolderList[2692]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.rotateOrder" 
-		"utility_room_viewRN.placeHolderList[3568]" ""
+		"utility_room_viewRN.placeHolderList[2693]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.parentMatrix" 
-		"utility_room_viewRN.placeHolderList[3569]" ""
+		"utility_room_viewRN.placeHolderList[2694]" ""
 		"utility_room_view:house_latestRN" 3
 		2 "|utility_room_view:house_latest:architecture|utility_room_view:house_latest:walls_and_floors|utility_room_view:house_latest:walls_and_floorsShape" 
 		"uvPivot" " -type \"double2\" 0.50661793351173401 0.59122622013092041"
@@ -21036,68 +21075,68 @@ createNode reference -n "utility_room_viewRN";
 		2 "utility_room_view:house_latest:sim" "visibility" " 1"
 		"utility_room_view:house_latest:utilities_latestRN" 31
 		2 "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pTorus2" 
-		"translate" " -type \"double3\" -7.36534175716029438 0 2.52227960828523123"
+		"translate" " -type \"double3\" -7.3653417571602944 0 2.5222796082852312"
 		2 "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pTorus2" 
 		"translateX" " -av"
 		2 "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pTorus2" 
 		"translateZ" " -av"
 		2 "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pTorus2" 
-		"rotate" " -type \"double3\" 0 -160.2724721120108029 0"
+		"rotate" " -type \"double3\" 0 -160.2724721120108 0"
 		2 "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pTorus2" 
 		"rotateY" " -av"
 		2 "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pTorus2|utility_room_view:house_latest:utilities_latest:pasted__pasted__pTorusShape2" 
 		"uvPivot" " -type \"double2\" 0.15000000596046448 0.099999845027923584"
 		2 "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pCylinder7" 
-		"translate" " -type \"double3\" -7.36534175716029438 0 2.52227960828523123"
+		"translate" " -type \"double3\" -7.3653417571602944 0 2.5222796082852312"
 		2 "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pCylinder7" 
 		"translateX" " -av"
 		2 "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pCylinder7" 
 		"translateZ" " -av"
 		2 "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pCylinder7" 
-		"rotate" " -type \"double3\" 0 -160.2724721120108029 0"
+		"rotate" " -type \"double3\" 0 -160.2724721120108 0"
 		2 "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pCylinder7" 
 		"rotateY" " -av"
 		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pTorus2.translateX" 
-		"utility_room_viewRN.placeHolderList[4175]" ""
+		"utility_room_viewRN.placeHolderList[3303]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pTorus2.translateY" 
-		"utility_room_viewRN.placeHolderList[4176]" ""
+		"utility_room_viewRN.placeHolderList[3304]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pTorus2.translateZ" 
-		"utility_room_viewRN.placeHolderList[4177]" ""
+		"utility_room_viewRN.placeHolderList[3305]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pTorus2.rotateX" 
-		"utility_room_viewRN.placeHolderList[4178]" ""
+		"utility_room_viewRN.placeHolderList[3306]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pTorus2.rotateY" 
-		"utility_room_viewRN.placeHolderList[4179]" ""
+		"utility_room_viewRN.placeHolderList[3307]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pTorus2.rotateZ" 
-		"utility_room_viewRN.placeHolderList[4180]" ""
+		"utility_room_viewRN.placeHolderList[3308]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pTorus2.visibility" 
-		"utility_room_viewRN.placeHolderList[4181]" ""
+		"utility_room_viewRN.placeHolderList[3309]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pTorus2.scaleX" 
-		"utility_room_viewRN.placeHolderList[4182]" ""
+		"utility_room_viewRN.placeHolderList[3310]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pTorus2.scaleY" 
-		"utility_room_viewRN.placeHolderList[4183]" ""
+		"utility_room_viewRN.placeHolderList[3311]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pTorus2.scaleZ" 
-		"utility_room_viewRN.placeHolderList[4184]" ""
+		"utility_room_viewRN.placeHolderList[3312]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pCylinder7.translateX" 
-		"utility_room_viewRN.placeHolderList[4185]" ""
+		"utility_room_viewRN.placeHolderList[3313]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pCylinder7.translateY" 
-		"utility_room_viewRN.placeHolderList[4186]" ""
+		"utility_room_viewRN.placeHolderList[3314]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pCylinder7.translateZ" 
-		"utility_room_viewRN.placeHolderList[4187]" ""
+		"utility_room_viewRN.placeHolderList[3315]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pCylinder7.rotateX" 
-		"utility_room_viewRN.placeHolderList[4188]" ""
+		"utility_room_viewRN.placeHolderList[3316]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pCylinder7.rotateY" 
-		"utility_room_viewRN.placeHolderList[4189]" ""
+		"utility_room_viewRN.placeHolderList[3317]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pCylinder7.rotateZ" 
-		"utility_room_viewRN.placeHolderList[4190]" ""
+		"utility_room_viewRN.placeHolderList[3318]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pCylinder7.visibility" 
-		"utility_room_viewRN.placeHolderList[4191]" ""
+		"utility_room_viewRN.placeHolderList[3319]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pCylinder7.scaleX" 
-		"utility_room_viewRN.placeHolderList[4192]" ""
+		"utility_room_viewRN.placeHolderList[3320]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pCylinder7.scaleY" 
-		"utility_room_viewRN.placeHolderList[4193]" ""
+		"utility_room_viewRN.placeHolderList[3321]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pCylinder7.scaleZ" 
-		"utility_room_viewRN.placeHolderList[4194]" ""
-		"utility_room_view:smarty_latestRN" 205
+		"utility_room_viewRN.placeHolderList[3322]" ""
+		"utility_room_view:smarty_latestRN" 214
 		0 "|utility_room_viewRNfosterParent1|global_ctrl_parentConstraint1" "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl" 
 		"-s -r "
 		1 |utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:Smarty|utility_room_view:smarty_latest:polySurface6|utility_room_view:smarty_latest:polySurfaceShape4 
@@ -21197,7 +21236,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:Smarty|utility_room_view:smarty_latest:polySurface6|utility_room_view:smarty_latest:polySurfaceShape4Orig" 
 		"furNameSpace" " -type \"string\" \"smarty_latest\""
 		2 "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl" 
-		"translate" " -type \"double3\" -151.84206059188585414 11.11995685446180104 82.49874768312950835"
+		"translate" " -type \"double3\" -113.64565976719037 11.119956854461801 78.01530103581328"
 		
 		2 "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl" 
 		"translateX" " -av"
@@ -21206,7 +21245,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl" 
 		"translateZ" " -av"
 		2 "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl" 
-		"rotate" " -type \"double3\" 0 -58.49125903710534402 0"
+		"rotate" " -type \"double3\" 0 -62.762395677270135 0"
 		2 "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl" 
 		"rotateX" " -av"
 		2 "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl" 
@@ -21222,11 +21261,11 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl" 
 		"scaleZ" " -av"
 		2 "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl" 
-		"rotatePivot" " -type \"double3\" 0 -10.5333942288801552 1.00000000000000044"
+		"rotatePivot" " -type \"double3\" 0 -10.533394228880155 1.0000000000000004"
 		2 "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl" 
-		"scalePivot" " -type \"double3\" 0 -10.5333942288801552 1.00000000000000044"
+		"scalePivot" " -type \"double3\" 0 -10.533394228880155 1.0000000000000004"
 		2 "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl" 
 		"scalePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl" 
@@ -21280,7 +21319,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:rootJ|utility_room_view:smarty_latest:backj|utility_room_view:smarty_latest:chestJ|utility_room_view:smarty_latest:smarty_008_fixed_rig_:bowTie|utility_room_view:smarty_latest:smarty_008_fixed_rig_:bowTieShape" 
 		"furNameSpace" " -type \"string\" \"smarty_latest\""
 		2 "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:cog_ctrl" 
-		"translate" " -type \"double3\" 0.542410230289605 0.071363698766655229 -1.62162852379221523"
+		"translate" " -type \"double3\" 0.542410230289605 0.071363698766655229 -1.6216285237922152"
 		
 		2 "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:cog_ctrl" 
 		"translateX" " -av"
@@ -21293,6 +21332,12 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:cog_ctrl" 
 		"rotateY" " -av"
 		2 "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:cog_ctrl" 
+		"rotateZ" " -av"
+		2 "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:cog_ctrl|utility_room_view:smarty_latest:Tail_Ctrl1" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:cog_ctrl|utility_room_view:smarty_latest:Tail_Ctrl1" 
+		"rotateX" " -av"
+		2 "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:cog_ctrl|utility_room_view:smarty_latest:Tail_Ctrl1" 
 		"rotateZ" " -av"
 		2 "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:cog_ctrl|utility_room_view:smarty_latest:back_ctrl" 
 		"rotate" " -type \"double3\" 0 0 0"
@@ -21311,7 +21356,8 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:cog_ctrl|utility_room_view:smarty_latest:back_ctrl|utility_room_view:smarty_latest:chest_ctrl" 
 		"rotateZ" " -av"
 		2 "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:cog_ctrl|utility_room_view:smarty_latest:back_ctrl|utility_room_view:smarty_latest:chest_ctrl|utility_room_view:smarty_latest:head_ctrl" 
-		"rotate" " -type \"double3\" -10.65330578429560404 0 0"
+		"rotate" " -type \"double3\" -9.8909705924470774 -2.830619967245978 -0.34123325647959296"
+		
 		2 "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:cog_ctrl|utility_room_view:smarty_latest:back_ctrl|utility_room_view:smarty_latest:chest_ctrl|utility_room_view:smarty_latest:head_ctrl" 
 		"rotateX" " -av"
 		2 "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:cog_ctrl|utility_room_view:smarty_latest:back_ctrl|utility_room_view:smarty_latest:chest_ctrl|utility_room_view:smarty_latest:head_ctrl" 
@@ -21367,7 +21413,7 @@ createNode reference -n "utility_room_viewRN";
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:leftArm_ctrl" 
 		"rotateX" " -av"
-		2 "utility_room_view:smarty_latest:blendShape1" "w[0:18]" " -s 19 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+		2 "utility_room_view:smarty_latest:blendShape1" "w[0:18]" " -s 19 0 0 0 0 0 0 0 0 0 0 0.25926011999999998 0.25926011999999998 0.25926011999999998 0.25926011999999998 0.25926011999999998 0 0 0 0"
 		
 		2 "utility_room_view:smarty_latest:blendShape1" "weight" " -s 19"
 		2 "utility_room_view:smarty_latest:blendShape1" "weight[0]" " -av"
@@ -21391,130 +21437,142 @@ createNode reference -n "utility_room_viewRN";
 		2 "utility_room_view:smarty_latest:blendShape1" "weight[18]" " -av"
 		2 "utility_room_view:smarty_latest:smarty_blendshapes" "visibility" " 0"
 		5 3 "utility_room_viewRN" "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl.blendParent1" 
-		"utility_room_viewRN.placeHolderList[3497]" ""
+		"utility_room_viewRN.placeHolderList[2616]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl.blendParent1" 
-		"utility_room_viewRN.placeHolderList[3498]" ""
+		"utility_room_viewRN.placeHolderList[2617]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl.translateX" 
-		"utility_room_viewRN.placeHolderList[3499]" ""
+		"utility_room_viewRN.placeHolderList[2618]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl.translateY" 
-		"utility_room_viewRN.placeHolderList[3500]" ""
+		"utility_room_viewRN.placeHolderList[2619]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl.translateZ" 
-		"utility_room_viewRN.placeHolderList[3501]" ""
+		"utility_room_viewRN.placeHolderList[2620]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl.rotateX" 
-		"utility_room_viewRN.placeHolderList[3502]" ""
+		"utility_room_viewRN.placeHolderList[2621]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl.rotateY" 
-		"utility_room_viewRN.placeHolderList[3503]" ""
+		"utility_room_viewRN.placeHolderList[2622]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3504]" ""
+		"utility_room_viewRN.placeHolderList[2623]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl.scaleX" 
-		"utility_room_viewRN.placeHolderList[3505]" ""
+		"utility_room_viewRN.placeHolderList[2624]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl.scaleY" 
-		"utility_room_viewRN.placeHolderList[3506]" ""
+		"utility_room_viewRN.placeHolderList[2625]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3507]" ""
+		"utility_room_viewRN.placeHolderList[2626]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl.rotatePivot" 
-		"utility_room_viewRN.placeHolderList[3508]" ""
+		"utility_room_viewRN.placeHolderList[2627]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl.rotatePivotTranslate" 
-		"utility_room_viewRN.placeHolderList[3509]" ""
+		"utility_room_viewRN.placeHolderList[2628]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl.rotateOrder" 
-		"utility_room_viewRN.placeHolderList[3510]" ""
+		"utility_room_viewRN.placeHolderList[2629]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl.rotateOrder" 
-		"utility_room_viewRN.placeHolderList[3511]" ""
+		"utility_room_viewRN.placeHolderList[2630]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl.parentInverseMatrix" 
-		"utility_room_viewRN.placeHolderList[3512]" ""
+		"utility_room_viewRN.placeHolderList[2631]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:cog_ctrl.translateX" 
-		"utility_room_viewRN.placeHolderList[3513]" ""
+		"utility_room_viewRN.placeHolderList[2632]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:cog_ctrl.translateY" 
-		"utility_room_viewRN.placeHolderList[3514]" ""
+		"utility_room_viewRN.placeHolderList[2633]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:cog_ctrl.translateZ" 
-		"utility_room_viewRN.placeHolderList[3515]" ""
+		"utility_room_viewRN.placeHolderList[2634]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:cog_ctrl.rotateX" 
-		"utility_room_viewRN.placeHolderList[3516]" ""
+		"utility_room_viewRN.placeHolderList[2635]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:cog_ctrl.rotateY" 
-		"utility_room_viewRN.placeHolderList[3517]" ""
+		"utility_room_viewRN.placeHolderList[2636]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:cog_ctrl.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3518]" ""
+		"utility_room_viewRN.placeHolderList[2637]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:cog_ctrl|utility_room_view:smarty_latest:Tail_Ctrl1.rotateX" 
+		"utility_room_viewRN.placeHolderList[2638]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:cog_ctrl|utility_room_view:smarty_latest:Tail_Ctrl1.rotateY" 
+		"utility_room_viewRN.placeHolderList[2639]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:cog_ctrl|utility_room_view:smarty_latest:Tail_Ctrl1.rotateZ" 
+		"utility_room_viewRN.placeHolderList[2640]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:cog_ctrl|utility_room_view:smarty_latest:Tail_Ctrl1.translateX" 
+		"utility_room_viewRN.placeHolderList[2641]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:cog_ctrl|utility_room_view:smarty_latest:Tail_Ctrl1.translateY" 
+		"utility_room_viewRN.placeHolderList[2642]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:cog_ctrl|utility_room_view:smarty_latest:Tail_Ctrl1.translateZ" 
+		"utility_room_viewRN.placeHolderList[2643]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:cog_ctrl|utility_room_view:smarty_latest:back_ctrl.rotateX" 
-		"utility_room_viewRN.placeHolderList[3519]" ""
+		"utility_room_viewRN.placeHolderList[2644]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:cog_ctrl|utility_room_view:smarty_latest:back_ctrl.rotateY" 
-		"utility_room_viewRN.placeHolderList[3520]" ""
+		"utility_room_viewRN.placeHolderList[2645]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:cog_ctrl|utility_room_view:smarty_latest:back_ctrl.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3521]" ""
+		"utility_room_viewRN.placeHolderList[2646]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:cog_ctrl|utility_room_view:smarty_latest:back_ctrl|utility_room_view:smarty_latest:chest_ctrl.rotateX" 
-		"utility_room_viewRN.placeHolderList[3522]" ""
+		"utility_room_viewRN.placeHolderList[2647]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:cog_ctrl|utility_room_view:smarty_latest:back_ctrl|utility_room_view:smarty_latest:chest_ctrl.rotateY" 
-		"utility_room_viewRN.placeHolderList[3523]" ""
+		"utility_room_viewRN.placeHolderList[2648]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:cog_ctrl|utility_room_view:smarty_latest:back_ctrl|utility_room_view:smarty_latest:chest_ctrl.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3524]" ""
+		"utility_room_viewRN.placeHolderList[2649]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:cog_ctrl|utility_room_view:smarty_latest:back_ctrl|utility_room_view:smarty_latest:chest_ctrl|utility_room_view:smarty_latest:head_ctrl.rotateX" 
-		"utility_room_viewRN.placeHolderList[3525]" ""
+		"utility_room_viewRN.placeHolderList[2650]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:cog_ctrl|utility_room_view:smarty_latest:back_ctrl|utility_room_view:smarty_latest:chest_ctrl|utility_room_view:smarty_latest:head_ctrl.rotateY" 
-		"utility_room_viewRN.placeHolderList[3526]" ""
+		"utility_room_viewRN.placeHolderList[2651]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:cog_ctrl|utility_room_view:smarty_latest:back_ctrl|utility_room_view:smarty_latest:chest_ctrl|utility_room_view:smarty_latest:head_ctrl.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3527]" ""
+		"utility_room_viewRN.placeHolderList[2652]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:leftArm_ctrl.rotateX" 
-		"utility_room_viewRN.placeHolderList[3528]" ""
+		"utility_room_viewRN.placeHolderList[2653]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:leftArm_ctrl.rotateY" 
-		"utility_room_viewRN.placeHolderList[3529]" ""
+		"utility_room_viewRN.placeHolderList[2654]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:leftArm_ctrl.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3530]" ""
+		"utility_room_viewRN.placeHolderList[2655]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:leftArm_ctrl.translateX" 
-		"utility_room_viewRN.placeHolderList[3531]" ""
+		"utility_room_viewRN.placeHolderList[2656]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:leftArm_ctrl.translateY" 
-		"utility_room_viewRN.placeHolderList[3532]" ""
+		"utility_room_viewRN.placeHolderList[2657]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl|utility_room_view:smarty_latest:leftArm_ctrl.translateZ" 
-		"utility_room_viewRN.placeHolderList[3533]" ""
+		"utility_room_viewRN.placeHolderList[2658]" ""
 		5 4 "utility_room_viewRN" "utility_room_view:smarty_latest:blendShape1.weight[0]" 
-		"utility_room_viewRN.placeHolderList[3534]" ""
+		"utility_room_viewRN.placeHolderList[2659]" ""
 		5 4 "utility_room_viewRN" "utility_room_view:smarty_latest:blendShape1.weight[1]" 
-		"utility_room_viewRN.placeHolderList[3535]" ""
+		"utility_room_viewRN.placeHolderList[2660]" ""
 		5 4 "utility_room_viewRN" "utility_room_view:smarty_latest:blendShape1.weight[2]" 
-		"utility_room_viewRN.placeHolderList[3536]" ""
+		"utility_room_viewRN.placeHolderList[2661]" ""
 		5 4 "utility_room_viewRN" "utility_room_view:smarty_latest:blendShape1.weight[3]" 
-		"utility_room_viewRN.placeHolderList[3537]" ""
+		"utility_room_viewRN.placeHolderList[2662]" ""
 		5 4 "utility_room_viewRN" "utility_room_view:smarty_latest:blendShape1.weight[4]" 
-		"utility_room_viewRN.placeHolderList[3538]" ""
+		"utility_room_viewRN.placeHolderList[2663]" ""
 		5 4 "utility_room_viewRN" "utility_room_view:smarty_latest:blendShape1.weight[5]" 
-		"utility_room_viewRN.placeHolderList[3539]" ""
+		"utility_room_viewRN.placeHolderList[2664]" ""
 		5 4 "utility_room_viewRN" "utility_room_view:smarty_latest:blendShape1.weight[6]" 
-		"utility_room_viewRN.placeHolderList[3540]" ""
+		"utility_room_viewRN.placeHolderList[2665]" ""
 		5 4 "utility_room_viewRN" "utility_room_view:smarty_latest:blendShape1.weight[7]" 
-		"utility_room_viewRN.placeHolderList[3541]" ""
+		"utility_room_viewRN.placeHolderList[2666]" ""
 		5 4 "utility_room_viewRN" "utility_room_view:smarty_latest:blendShape1.weight[8]" 
-		"utility_room_viewRN.placeHolderList[3542]" ""
+		"utility_room_viewRN.placeHolderList[2667]" ""
 		5 4 "utility_room_viewRN" "utility_room_view:smarty_latest:blendShape1.weight[9]" 
-		"utility_room_viewRN.placeHolderList[3543]" ""
+		"utility_room_viewRN.placeHolderList[2668]" ""
 		5 4 "utility_room_viewRN" "utility_room_view:smarty_latest:blendShape1.weight[10]" 
-		"utility_room_viewRN.placeHolderList[3544]" ""
+		"utility_room_viewRN.placeHolderList[2669]" ""
 		5 4 "utility_room_viewRN" "utility_room_view:smarty_latest:blendShape1.weight[11]" 
-		"utility_room_viewRN.placeHolderList[3545]" ""
+		"utility_room_viewRN.placeHolderList[2670]" ""
 		5 4 "utility_room_viewRN" "utility_room_view:smarty_latest:blendShape1.weight[12]" 
-		"utility_room_viewRN.placeHolderList[3546]" ""
+		"utility_room_viewRN.placeHolderList[2671]" ""
 		5 4 "utility_room_viewRN" "utility_room_view:smarty_latest:blendShape1.weight[13]" 
-		"utility_room_viewRN.placeHolderList[3547]" ""
+		"utility_room_viewRN.placeHolderList[2672]" ""
 		5 4 "utility_room_viewRN" "utility_room_view:smarty_latest:blendShape1.weight[14]" 
-		"utility_room_viewRN.placeHolderList[3548]" ""
+		"utility_room_viewRN.placeHolderList[2673]" ""
 		5 4 "utility_room_viewRN" "utility_room_view:smarty_latest:blendShape1.weight[15]" 
-		"utility_room_viewRN.placeHolderList[3549]" ""
+		"utility_room_viewRN.placeHolderList[2674]" ""
 		5 4 "utility_room_viewRN" "utility_room_view:smarty_latest:blendShape1.weight[16]" 
-		"utility_room_viewRN.placeHolderList[3550]" ""
+		"utility_room_viewRN.placeHolderList[2675]" ""
 		5 4 "utility_room_viewRN" "utility_room_view:smarty_latest:blendShape1.weight[17]" 
-		"utility_room_viewRN.placeHolderList[3551]" ""
+		"utility_room_viewRN.placeHolderList[2676]" ""
 		5 4 "utility_room_viewRN" "utility_room_view:smarty_latest:blendShape1.weight[18]" 
-		"utility_room_viewRN.placeHolderList[3552]" ""
+		"utility_room_viewRN.placeHolderList[2677]" ""
 		"utility_room_view:undies_fullRN" 227
 		2 "|utility_room_view:undies_full:undies" "visibility" " -av 1"
-		2 "|utility_room_view:undies_full:undies" "translate" " -type \"double3\" -34.29438115809096388 -0.81264019598083603 -113.24144010353386136"
+		2 "|utility_room_view:undies_full:undies" "translate" " -type \"double3\" -34.294381158090964 -0.81264019598083603 -113.24144010353386"
 		
 		2 "|utility_room_view:undies_full:undies" "translateX" " -av"
 		2 "|utility_room_view:undies_full:undies" "translateY" " -av"
 		2 "|utility_room_view:undies_full:undies" "translateZ" " -av"
-		2 "|utility_room_view:undies_full:undies" "rotate" " -type \"double3\" -17.50863511438000941 -3.11595696845714354 72.72012414516331091"
+		2 "|utility_room_view:undies_full:undies" "rotate" " -type \"double3\" -17.508635114380009 -3.1159569684571435 72.720124145163311"
 		
 		2 "|utility_room_view:undies_full:undies" "rotateX" " -av"
 		2 "|utility_room_view:undies_full:undies" "rotateY" " -av"
 		2 "|utility_room_view:undies_full:undies" "rotateZ" " -av"
-		2 "|utility_room_view:undies_full:undies" "scale" " -type \"double3\" 2.43586383021447705 2.43586383021447705 1.65932300875908911"
+		2 "|utility_room_view:undies_full:undies" "scale" " -type \"double3\" 2.4358638302144771 2.4358638302144771 1.6593230087590891"
 		
 		2 "|utility_room_view:undies_full:undies" "scaleX" " -av"
 		2 "|utility_room_view:undies_full:undies" "scaleY" " -av"
@@ -21534,8 +21592,8 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice" 
 		"rotateZ" " -av"
 		2 "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape" 
-		"cp[0:31]" (" -s 32 -type \"double3\" 0.088199732385170676 -1.51206558087125642 0.12919184107992662 0.47938989779051416 -1.33699865799891171 0.11159423265551988 0.83368606716467419 -1.26135466807621599 0.1116419376992604 0.95702900974574301 -0.78514665779117343 -0.23777928182092836 -0.078835156843275078 -0.55187340390397488 0.049772106802894095 0.28107009992616694 -0.36957292045375995 0.023290998692527931 0.62761454588742782 -0.19450599067300101 0.032374280099538646 0.9197197064052024 -0.27953095773999509 -0.14049829636094521 0.076224859771639591 -1.49753853371222467 0.34523142007956065 0.47915770992103773 -1.30442528520536416 0.32831120074889308 0.83345387929519799 -1.22693039484829369 0.33310671681606863 0.9110961244842638 -0.74570298326504081 0.23377132533772196 -0.081510277388846739 -0.51937929773425473 0.28774721773101797 0.28075869675521714 -0.33699954870042997 0.24000796678590122 0.6273226039304407 -0.1619326168049986 0.23414338709216556 0.95369026800367318 -0.26464117236976265 0.087738581784393282 0.0759223713810131"
-		+ "82 -1.45090669579726295 0.54040520866387998 0.4789255220515613 -1.2718519103903847 0.52338015602089438 0.83322169142572156 -1.19250611928376826 0.53592312083203475 0.91093933312063979 -0.72935414795765707 0.66576184376334024 -0.081837973449246107 -0.48688518053384999 0.45555639241513024 0.28044729104126476 -0.30442617203258787 0.44043763726221341 0.677060353025835 -0.12935924683239336 0.42531888362105241 0.95385703275530864 -0.24683328712582328 0.48550062539328731 0.08750316877674133 -1.41434546897696101 0.75007105781830341 0.4786933341820851 -1.23927854241818558 0.73304600570210554 0.83298950355624513 -1.15808184749152776 0.7463928644435025 0.95667828918584141 -0.76755300635888801 1.13260343790261442 -0.079818240737009397 -0.45439106648890965 0.66464086433224556 0.28013588744245654 -0.27185280499584713 0.64761581207826902 0.67739156325386873 -0.096785875839030699 0.63059076221971944 0.91936898584530791 -0.23048445181891747 0.65834914137188505"
+		"cp[0:31]" (" -s 32 -type \"double3\" 0.088199732385170676 -1.5120655808712564 0.12919184107992662 0.47938989779051416 -1.3369986579989117 0.11159423265551988 0.83368606716467419 -1.261354668076216 0.1116419376992604 0.95702900974574301 -0.78514665779117343 -0.23777928182092836 -0.078835156843275078 -0.55187340390397488 0.049772106802894095 0.28107009992616694 -0.36957292045375995 0.023290998692527931 0.62761454588742782 -0.19450599067300101 0.032374280099538646 0.9197197064052024 -0.27953095773999509 -0.14049829636094521 0.076224859771639591 -1.4975385337122247 0.34523142007956065 0.47915770992103773 -1.3044252852053642 0.32831120074889308 0.83345387929519799 -1.2269303948482937 0.33310671681606863 0.9110961244842638 -0.74570298326504081 0.23377132533772196 -0.081510277388846739 -0.51937929773425473 0.28774721773101797 0.28075869675521714 -0.33699954870042997 0.24000796678590122 0.6273226039304407 -0.1619326168049986 0.23414338709216556 0.95369026800367318 -0.26464117236976265 0.087738581784393282 0.075922371381013182 -1.4"
+		+ "509066957972629 0.54040520866387998 0.4789255220515613 -1.2718519103903847 0.52338015602089438 0.83322169142572156 -1.1925061192837683 0.53592312083203475 0.91093933312063979 -0.72935414795765707 0.66576184376334024 -0.081837973449246107 -0.48688518053384999 0.45555639241513024 0.28044729104126476 -0.30442617203258787 0.44043763726221341 0.677060353025835 -0.12935924683239336 0.42531888362105241 0.95385703275530864 -0.24683328712582328 0.48550062539328731 0.08750316877674133 -1.414345468976961 0.75007105781830341 0.4786933341820851 -1.2392785424181856 0.73304600570210554 0.83298950355624513 -1.1580818474915278 0.7463928644435025 0.95667828918584141 -0.76755300635888801 1.1326034379026144 -0.079818240737009397 -0.45439106648890965 0.66464086433224556 0.28013588744245654 -0.27185280499584713 0.64761581207826902 0.67739156325386873 -0.096785875839030699 0.63059076221971944 0.91936898584530791 -0.23048445181891747 0.65834914137188505"
 		)
 		2 "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape" 
 		"controlPoints" " -s 32"
@@ -21732,224 +21790,224 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape" 
 		"controlPoints[31].zValue" " -av"
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies.visibility" 
-		"utility_room_viewRN.placeHolderList[4066]" ""
+		"utility_room_viewRN.placeHolderList[3191]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies.translateX" 
-		"utility_room_viewRN.placeHolderList[4067]" ""
+		"utility_room_viewRN.placeHolderList[3192]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies.translateY" 
-		"utility_room_viewRN.placeHolderList[4068]" ""
+		"utility_room_viewRN.placeHolderList[3193]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies.translateZ" 
-		"utility_room_viewRN.placeHolderList[4069]" ""
+		"utility_room_viewRN.placeHolderList[3194]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies.rotateX" 
-		"utility_room_viewRN.placeHolderList[4070]" ""
+		"utility_room_viewRN.placeHolderList[3195]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies.rotateY" 
-		"utility_room_viewRN.placeHolderList[4071]" ""
+		"utility_room_viewRN.placeHolderList[3196]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies.rotateZ" 
-		"utility_room_viewRN.placeHolderList[4072]" ""
+		"utility_room_viewRN.placeHolderList[3197]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies.scaleX" 
-		"utility_room_viewRN.placeHolderList[4073]" ""
+		"utility_room_viewRN.placeHolderList[3198]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies.scaleY" 
-		"utility_room_viewRN.placeHolderList[4074]" ""
+		"utility_room_viewRN.placeHolderList[3199]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies.scaleZ" 
-		"utility_room_viewRN.placeHolderList[4075]" ""
+		"utility_room_viewRN.placeHolderList[3200]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice.rotateX" 
-		"utility_room_viewRN.placeHolderList[4076]" ""
+		"utility_room_viewRN.placeHolderList[3201]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice.rotateY" 
-		"utility_room_viewRN.placeHolderList[4077]" ""
+		"utility_room_viewRN.placeHolderList[3202]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice.rotateZ" 
-		"utility_room_viewRN.placeHolderList[4078]" ""
+		"utility_room_viewRN.placeHolderList[3203]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[0].xValue" 
-		"utility_room_viewRN.placeHolderList[4079]" ""
+		"utility_room_viewRN.placeHolderList[3204]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[0].yValue" 
-		"utility_room_viewRN.placeHolderList[4080]" ""
+		"utility_room_viewRN.placeHolderList[3205]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[0].zValue" 
-		"utility_room_viewRN.placeHolderList[4081]" ""
+		"utility_room_viewRN.placeHolderList[3206]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[1].xValue" 
-		"utility_room_viewRN.placeHolderList[4082]" ""
+		"utility_room_viewRN.placeHolderList[3207]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[1].yValue" 
-		"utility_room_viewRN.placeHolderList[4083]" ""
+		"utility_room_viewRN.placeHolderList[3208]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[1].zValue" 
-		"utility_room_viewRN.placeHolderList[4084]" ""
+		"utility_room_viewRN.placeHolderList[3209]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[2].xValue" 
-		"utility_room_viewRN.placeHolderList[4085]" ""
+		"utility_room_viewRN.placeHolderList[3210]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[2].yValue" 
-		"utility_room_viewRN.placeHolderList[4086]" ""
+		"utility_room_viewRN.placeHolderList[3211]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[2].zValue" 
-		"utility_room_viewRN.placeHolderList[4087]" ""
+		"utility_room_viewRN.placeHolderList[3212]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[3].xValue" 
-		"utility_room_viewRN.placeHolderList[4088]" ""
+		"utility_room_viewRN.placeHolderList[3213]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[3].yValue" 
-		"utility_room_viewRN.placeHolderList[4089]" ""
+		"utility_room_viewRN.placeHolderList[3214]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[3].zValue" 
-		"utility_room_viewRN.placeHolderList[4090]" ""
+		"utility_room_viewRN.placeHolderList[3215]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[4].xValue" 
-		"utility_room_viewRN.placeHolderList[4091]" ""
+		"utility_room_viewRN.placeHolderList[3216]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[4].yValue" 
-		"utility_room_viewRN.placeHolderList[4092]" ""
+		"utility_room_viewRN.placeHolderList[3217]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[4].zValue" 
-		"utility_room_viewRN.placeHolderList[4093]" ""
+		"utility_room_viewRN.placeHolderList[3218]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[5].xValue" 
-		"utility_room_viewRN.placeHolderList[4094]" ""
+		"utility_room_viewRN.placeHolderList[3219]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[5].yValue" 
-		"utility_room_viewRN.placeHolderList[4095]" ""
+		"utility_room_viewRN.placeHolderList[3220]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[5].zValue" 
-		"utility_room_viewRN.placeHolderList[4096]" ""
+		"utility_room_viewRN.placeHolderList[3221]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[6].xValue" 
-		"utility_room_viewRN.placeHolderList[4097]" ""
+		"utility_room_viewRN.placeHolderList[3222]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[6].yValue" 
-		"utility_room_viewRN.placeHolderList[4098]" ""
+		"utility_room_viewRN.placeHolderList[3223]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[6].zValue" 
-		"utility_room_viewRN.placeHolderList[4099]" ""
+		"utility_room_viewRN.placeHolderList[3224]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[7].xValue" 
-		"utility_room_viewRN.placeHolderList[4100]" ""
+		"utility_room_viewRN.placeHolderList[3225]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[7].yValue" 
-		"utility_room_viewRN.placeHolderList[4101]" ""
+		"utility_room_viewRN.placeHolderList[3226]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[7].zValue" 
-		"utility_room_viewRN.placeHolderList[4102]" ""
+		"utility_room_viewRN.placeHolderList[3227]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[8].xValue" 
-		"utility_room_viewRN.placeHolderList[4103]" ""
+		"utility_room_viewRN.placeHolderList[3228]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[8].yValue" 
-		"utility_room_viewRN.placeHolderList[4104]" ""
+		"utility_room_viewRN.placeHolderList[3229]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[8].zValue" 
-		"utility_room_viewRN.placeHolderList[4105]" ""
+		"utility_room_viewRN.placeHolderList[3230]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[9].xValue" 
-		"utility_room_viewRN.placeHolderList[4106]" ""
+		"utility_room_viewRN.placeHolderList[3231]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[9].yValue" 
-		"utility_room_viewRN.placeHolderList[4107]" ""
+		"utility_room_viewRN.placeHolderList[3232]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[9].zValue" 
-		"utility_room_viewRN.placeHolderList[4108]" ""
+		"utility_room_viewRN.placeHolderList[3233]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[10].xValue" 
-		"utility_room_viewRN.placeHolderList[4109]" ""
+		"utility_room_viewRN.placeHolderList[3234]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[10].yValue" 
-		"utility_room_viewRN.placeHolderList[4110]" ""
+		"utility_room_viewRN.placeHolderList[3235]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[10].zValue" 
-		"utility_room_viewRN.placeHolderList[4111]" ""
+		"utility_room_viewRN.placeHolderList[3236]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[11].xValue" 
-		"utility_room_viewRN.placeHolderList[4112]" ""
+		"utility_room_viewRN.placeHolderList[3237]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[11].yValue" 
-		"utility_room_viewRN.placeHolderList[4113]" ""
+		"utility_room_viewRN.placeHolderList[3238]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[11].zValue" 
-		"utility_room_viewRN.placeHolderList[4114]" ""
+		"utility_room_viewRN.placeHolderList[3239]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[12].xValue" 
-		"utility_room_viewRN.placeHolderList[4115]" ""
+		"utility_room_viewRN.placeHolderList[3240]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[12].yValue" 
-		"utility_room_viewRN.placeHolderList[4116]" ""
+		"utility_room_viewRN.placeHolderList[3241]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[12].zValue" 
-		"utility_room_viewRN.placeHolderList[4117]" ""
+		"utility_room_viewRN.placeHolderList[3242]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[13].xValue" 
-		"utility_room_viewRN.placeHolderList[4118]" ""
+		"utility_room_viewRN.placeHolderList[3243]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[13].yValue" 
-		"utility_room_viewRN.placeHolderList[4119]" ""
+		"utility_room_viewRN.placeHolderList[3244]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[13].zValue" 
-		"utility_room_viewRN.placeHolderList[4120]" ""
+		"utility_room_viewRN.placeHolderList[3245]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[14].xValue" 
-		"utility_room_viewRN.placeHolderList[4121]" ""
+		"utility_room_viewRN.placeHolderList[3246]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[14].yValue" 
-		"utility_room_viewRN.placeHolderList[4122]" ""
+		"utility_room_viewRN.placeHolderList[3247]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[14].zValue" 
-		"utility_room_viewRN.placeHolderList[4123]" ""
+		"utility_room_viewRN.placeHolderList[3248]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[15].xValue" 
-		"utility_room_viewRN.placeHolderList[4124]" ""
+		"utility_room_viewRN.placeHolderList[3249]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[15].yValue" 
-		"utility_room_viewRN.placeHolderList[4125]" ""
+		"utility_room_viewRN.placeHolderList[3250]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[15].zValue" 
-		"utility_room_viewRN.placeHolderList[4126]" ""
+		"utility_room_viewRN.placeHolderList[3251]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[16].xValue" 
-		"utility_room_viewRN.placeHolderList[4127]" ""
+		"utility_room_viewRN.placeHolderList[3252]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[16].yValue" 
-		"utility_room_viewRN.placeHolderList[4128]" ""
+		"utility_room_viewRN.placeHolderList[3253]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[16].zValue" 
-		"utility_room_viewRN.placeHolderList[4129]" ""
+		"utility_room_viewRN.placeHolderList[3254]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[17].xValue" 
-		"utility_room_viewRN.placeHolderList[4130]" ""
+		"utility_room_viewRN.placeHolderList[3255]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[17].yValue" 
-		"utility_room_viewRN.placeHolderList[4131]" ""
+		"utility_room_viewRN.placeHolderList[3256]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[17].zValue" 
-		"utility_room_viewRN.placeHolderList[4132]" ""
+		"utility_room_viewRN.placeHolderList[3257]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[18].xValue" 
-		"utility_room_viewRN.placeHolderList[4133]" ""
+		"utility_room_viewRN.placeHolderList[3258]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[18].yValue" 
-		"utility_room_viewRN.placeHolderList[4134]" ""
+		"utility_room_viewRN.placeHolderList[3259]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[18].zValue" 
-		"utility_room_viewRN.placeHolderList[4135]" ""
+		"utility_room_viewRN.placeHolderList[3260]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[19].xValue" 
-		"utility_room_viewRN.placeHolderList[4136]" ""
+		"utility_room_viewRN.placeHolderList[3261]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[19].yValue" 
-		"utility_room_viewRN.placeHolderList[4137]" ""
+		"utility_room_viewRN.placeHolderList[3262]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[19].zValue" 
-		"utility_room_viewRN.placeHolderList[4138]" ""
+		"utility_room_viewRN.placeHolderList[3263]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[20].xValue" 
-		"utility_room_viewRN.placeHolderList[4139]" ""
+		"utility_room_viewRN.placeHolderList[3264]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[20].yValue" 
-		"utility_room_viewRN.placeHolderList[4140]" ""
+		"utility_room_viewRN.placeHolderList[3265]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[20].zValue" 
-		"utility_room_viewRN.placeHolderList[4141]" ""
+		"utility_room_viewRN.placeHolderList[3266]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[21].xValue" 
-		"utility_room_viewRN.placeHolderList[4142]" ""
+		"utility_room_viewRN.placeHolderList[3267]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[21].yValue" 
-		"utility_room_viewRN.placeHolderList[4143]" ""
+		"utility_room_viewRN.placeHolderList[3268]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[21].zValue" 
-		"utility_room_viewRN.placeHolderList[4144]" ""
+		"utility_room_viewRN.placeHolderList[3269]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[22].xValue" 
-		"utility_room_viewRN.placeHolderList[4145]" ""
+		"utility_room_viewRN.placeHolderList[3270]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[22].yValue" 
-		"utility_room_viewRN.placeHolderList[4146]" ""
+		"utility_room_viewRN.placeHolderList[3271]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[22].zValue" 
-		"utility_room_viewRN.placeHolderList[4147]" ""
+		"utility_room_viewRN.placeHolderList[3272]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[23].xValue" 
-		"utility_room_viewRN.placeHolderList[4148]" ""
+		"utility_room_viewRN.placeHolderList[3273]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[23].yValue" 
-		"utility_room_viewRN.placeHolderList[4149]" ""
+		"utility_room_viewRN.placeHolderList[3274]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[23].zValue" 
-		"utility_room_viewRN.placeHolderList[4150]" ""
+		"utility_room_viewRN.placeHolderList[3275]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[24].xValue" 
-		"utility_room_viewRN.placeHolderList[4151]" ""
+		"utility_room_viewRN.placeHolderList[3276]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[24].yValue" 
-		"utility_room_viewRN.placeHolderList[4152]" ""
+		"utility_room_viewRN.placeHolderList[3277]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[24].zValue" 
-		"utility_room_viewRN.placeHolderList[4153]" ""
+		"utility_room_viewRN.placeHolderList[3278]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[25].xValue" 
-		"utility_room_viewRN.placeHolderList[4154]" ""
+		"utility_room_viewRN.placeHolderList[3279]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[25].yValue" 
-		"utility_room_viewRN.placeHolderList[4155]" ""
+		"utility_room_viewRN.placeHolderList[3280]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[25].zValue" 
-		"utility_room_viewRN.placeHolderList[4156]" ""
+		"utility_room_viewRN.placeHolderList[3281]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[26].xValue" 
-		"utility_room_viewRN.placeHolderList[4157]" ""
+		"utility_room_viewRN.placeHolderList[3282]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[26].yValue" 
-		"utility_room_viewRN.placeHolderList[4158]" ""
+		"utility_room_viewRN.placeHolderList[3283]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[26].zValue" 
-		"utility_room_viewRN.placeHolderList[4159]" ""
+		"utility_room_viewRN.placeHolderList[3284]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[27].xValue" 
-		"utility_room_viewRN.placeHolderList[4160]" ""
+		"utility_room_viewRN.placeHolderList[3285]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[27].yValue" 
-		"utility_room_viewRN.placeHolderList[4161]" ""
+		"utility_room_viewRN.placeHolderList[3286]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[27].zValue" 
-		"utility_room_viewRN.placeHolderList[4162]" ""
+		"utility_room_viewRN.placeHolderList[3287]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[28].xValue" 
-		"utility_room_viewRN.placeHolderList[4163]" ""
+		"utility_room_viewRN.placeHolderList[3288]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[28].yValue" 
-		"utility_room_viewRN.placeHolderList[4164]" ""
+		"utility_room_viewRN.placeHolderList[3289]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[28].zValue" 
-		"utility_room_viewRN.placeHolderList[4165]" ""
+		"utility_room_viewRN.placeHolderList[3290]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[29].xValue" 
-		"utility_room_viewRN.placeHolderList[4166]" ""
+		"utility_room_viewRN.placeHolderList[3291]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[29].yValue" 
-		"utility_room_viewRN.placeHolderList[4167]" ""
+		"utility_room_viewRN.placeHolderList[3292]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[29].zValue" 
-		"utility_room_viewRN.placeHolderList[4168]" ""
+		"utility_room_viewRN.placeHolderList[3293]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[30].xValue" 
-		"utility_room_viewRN.placeHolderList[4169]" ""
+		"utility_room_viewRN.placeHolderList[3294]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[30].yValue" 
-		"utility_room_viewRN.placeHolderList[4170]" ""
+		"utility_room_viewRN.placeHolderList[3295]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[30].zValue" 
-		"utility_room_viewRN.placeHolderList[4171]" ""
+		"utility_room_viewRN.placeHolderList[3296]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[31].xValue" 
-		"utility_room_viewRN.placeHolderList[4172]" ""
+		"utility_room_viewRN.placeHolderList[3297]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[31].yValue" 
-		"utility_room_viewRN.placeHolderList[4173]" ""
+		"utility_room_viewRN.placeHolderList[3298]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[31].zValue" 
-		"utility_room_viewRN.placeHolderList[4174]" ""
-		"utility_room_view:sneaks_latestRN" 863
+		"utility_room_viewRN.placeHolderList[3299]" ""
+		"utility_room_view:sneaks_latestRN" 883
 		1 |utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:pSphere2|utility_room_view:sneaks_latest:sneaksmesh:pSphereShape2 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
 		1 |utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:pSphere2|utility_room_view:sneaks_latest:sneaksmesh:pSphereShape2 
@@ -22072,12 +22130,12 @@ createNode reference -n "utility_room_viewRN";
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		2 "|utility_room_view:sneaks_latest:controller_root" "visibility" " -av 1"
 		
-		2 "|utility_room_view:sneaks_latest:controller_root" "translate" " -type \"double3\" -39.39843530785336867 1.38196822214476867 -114.61127555377515819"
+		2 "|utility_room_view:sneaks_latest:controller_root" "translate" " -type \"double3\" -39.398435307853369 1.3819682221447687 -114.61127555377516"
 		
 		2 "|utility_room_view:sneaks_latest:controller_root" "translateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root" "translateY" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root" "translateZ" " -av"
-		2 "|utility_room_view:sneaks_latest:controller_root" "rotate" " -type \"double3\" 5.52519858893724347 68.14573632743208975 1.74227199022823109"
+		2 "|utility_room_view:sneaks_latest:controller_root" "rotate" " -type \"double3\" 5.5251985889372435 68.14573632743209 1.7422719902282311"
 		
 		2 "|utility_room_view:sneaks_latest:controller_root" "rotateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root" "rotateY" " -av"
@@ -22090,7 +22148,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG" 
 		"visibility" " -av 1"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG" 
-		"translate" " -type \"double3\" 0.054036212568571863 1.47528520096672611 2.33198182900906215"
+		"translate" " -type \"double3\" 0.054036212568571863 1.4752852009667261 2.3319818290090621"
 		
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG" 
 		"translateX" " -av"
@@ -22099,7 +22157,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG" 
 		"translateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG" 
-		"rotate" " -type \"double3\" -27.24854994065110603 0 0"
+		"rotate" " -type \"double3\" -27.248549940651106 0 0"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG" 
 		"rotateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG" 
@@ -22164,7 +22222,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder" 
 		"translateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder" 
-		"rotate" " -type \"double3\" 11.82316110609703408 0 0"
+		"rotate" " -type \"double3\" 11.823161106097034 0 0"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder" 
 		"rotateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder" 
@@ -22178,7 +22236,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head" 
 		"visibility" " -av 1"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head" 
-		"translate" " -type \"double3\" -0.07689131830882491 -0.37585359687396125 2.58308981930081716"
+		"translate" " -type \"double3\" -0.07689131830882491 -0.37585359687396125 2.5830898193008172"
 		
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head" 
 		"translateX" " -av"
@@ -22187,7 +22245,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head" 
 		"translateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head" 
-		"rotate" " -type \"double3\" 54.95130338346192644 0 0"
+		"rotate" " -type \"double3\" 54.951303383461926 0 0"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head" 
 		"rotateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head" 
@@ -22241,7 +22299,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_hip" 
 		"rotateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase" 
-		"translate" " -type \"double3\" -2.6547367129882633 0.1021463398678483 3.09071218594820163"
+		"translate" " -type \"double3\" -2.6547367129882633 0.1021463398678483 3.0907121859482016"
 		
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase" 
 		"translateX" " -av"
@@ -22250,7 +22308,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase" 
 		"translateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase" 
-		"rotate" " -type \"double3\" -30.24853613952979003 -48.46497039140334806 125.71956389086437866"
+		"rotate" " -type \"double3\" -30.24853613952979 -48.464970391403348 125.71956389086438"
 		
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase" 
 		"rotateX" " -av"
@@ -22268,7 +22326,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2" 
 		"translateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2" 
-		"rotate" " -type \"double3\" 11.67526741695355774 -14.60734240849033583 0"
+		"rotate" " -type \"double3\" 11.675267416953558 -14.607342408490336 0"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2" 
 		"rotateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2" 
@@ -22285,7 +22343,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3" 
 		"translateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3" 
-		"rotate" " -type \"double3\" 107.34547423842880676 1.06838505151015317 83.53422873021581552"
+		"rotate" " -type \"double3\" 107.34547423842881 1.0683850515101532 83.534228730215816"
 		
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3" 
 		"rotateX" " -av"
@@ -22303,7 +22361,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4" 
 		"translateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4" 
-		"rotate" " -type \"double3\" -41.99946280156138556 1.50248587030047798 -42.91783146343499311"
+		"rotate" " -type \"double3\" -41.999462801561386 1.502485870300478 -42.917831463434993"
 		
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4" 
 		"rotateX" " -av"
@@ -22321,7 +22379,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip" 
 		"translateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip" 
-		"rotate" " -type \"double3\" 99.46789235107901561 0.63048419718826387 15.11536685683043757"
+		"rotate" " -type \"double3\" 99.467892351079016 0.63048419718826387 15.115366856830438"
 		
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip" 
 		"rotateX" " -av"
@@ -22339,7 +22397,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg" 
 		"visibility" " -av 1"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg" 
-		"translate" " -type \"double3\" 0.59023429718404963 -1.31569571822548137 0.78002414451235991"
+		"translate" " -type \"double3\" 0.59023429718404963 -1.3156957182254814 0.78002414451235991"
 		
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg" 
 		"translateX" " -av"
@@ -22348,7 +22406,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg" 
 		"translateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg" 
-		"rotate" " -type \"double3\" 33.39252730116696455 0 0"
+		"rotate" " -type \"double3\" 33.392527301166965 0 0"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg" 
 		"rotateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg" 
@@ -22392,7 +22450,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm" 
 		"visibility" " -av 1"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm" 
-		"translate" " -type \"double3\" 0.086969885711147138 3.91744830109112652 3.35751104448182103"
+		"translate" " -type \"double3\" 0.086969885711147138 3.9174483010911265 3.357511044481821"
 		
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm" 
 		"translateX" " -av"
@@ -22401,7 +22459,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm" 
 		"translateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm" 
-		"rotate" " -type \"double3\" 28.36573915054647799 0 0"
+		"rotate" " -type \"double3\" 28.365739150546478 0 0"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm" 
 		"rotateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm" 
@@ -22417,7 +22475,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm" 
 		"scaleZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:LeftArm" 
-		"translate" " -type \"double3\" 4.36314188965036109 -0.0019063579194717613 -9.1065088860257859"
+		"translate" " -type \"double3\" 4.3631418896503611 -0.0019063579194717613 -9.1065088860257859"
 		
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:LeftArm" 
 		"translateX" " -av"
@@ -22432,7 +22490,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1" 
 		"visibility" " -av 1"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1" 
-		"translate" " -type \"double3\" -1.73955370389400943 -3.14539169036424981 -0.42595476762347767"
+		"translate" " -type \"double3\" -1.7395537038940094 -3.1453916903642498 -0.42595476762347767"
 		
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1" 
 		"translateX" " -av"
@@ -22441,7 +22499,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1" 
 		"translateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1" 
-		"rotate" " -type \"double3\" 45.33015480612756676 0.44808172790487649 -1.08906610525301728"
+		"rotate" " -type \"double3\" 45.330154806127567 0.44808172790487649 -1.0890661052530173"
 		
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1" 
 		"rotateX" " -av"
@@ -22469,7 +22527,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8" 
 		"translateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8" 
-		"rotate" " -type \"double3\" -18.15889747446169977 0 0"
+		"rotate" " -type \"double3\" -18.1588974744617 0 0"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8" 
 		"rotateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8" 
@@ -22485,7 +22543,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8" 
 		"scaleZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:LeftLeg" 
-		"translate" " -type \"double3\" 0.80733535198718176 -5.02153334344165536 -2.21312494136737481"
+		"translate" " -type \"double3\" 0.80733535198718176 -5.0215333434416554 -2.2131249413673748"
 		
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:LeftLeg" 
 		"translateX" " -av"
@@ -22496,7 +22554,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm" 
 		"visibility" " -av 1"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm" 
-		"translate" " -type \"double3\" -0.064654390874338441 2.75275119339803576 2.4252925894464088"
+		"translate" " -type \"double3\" -4.6114588368528535 2.928332755912872 4.2404091059167772"
 		
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm" 
 		"translateX" " -av"
@@ -22505,7 +22563,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm" 
 		"translateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm" 
-		"rotate" " -type \"double3\" 27.73986245089000136 0 0"
+		"rotate" " -type \"double3\" 27.739862450890001 0 0"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm" 
 		"rotateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm" 
@@ -22521,7 +22579,8 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm" 
 		"scaleZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist" 
-		"translate" " -type \"double3\" 0 0 0"
+		"translate" " -type \"double3\" 0.21113373404311789 -0.043257815003337093 -0.071087194180858501"
+		
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist" 
 		"translateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist" 
@@ -22529,15 +22588,61 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist" 
 		"translateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist" 
-		"rotate" " -type \"double3\" 0 0 0"
+		"rotate" " -type \"double3\" -5.4992521154230829 -0.74353471261121318 -10.42256083364401"
+		
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist" 
 		"rotateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist" 
 		"rotateY" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist" 
 		"rotateZ" " -av"
+		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1" 
+		"translate" " -type \"double3\" 0.63763723904016434 -0.46739253038123335 0.59797576657230667"
+		
+		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1" 
+		"translateX" " -av"
+		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1" 
+		"translateY" " -av"
+		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1" 
+		"translateZ" " -av"
+		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9" 
+		"translate" " -type \"double3\" 0.83559584743013049 -0.46836054994157572 0.96214832482389201"
+		
+		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9" 
+		"translateX" " -av"
+		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9" 
+		"translateY" " -av"
+		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9" 
+		"translateZ" " -av"
+		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10" 
+		"translate" " -type \"double3\" 0.71815364481559985 -0.10704920506131026 1.3044059323304888"
+		
+		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10" 
+		"translateX" " -av"
+		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10" 
+		"translateY" " -av"
+		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10" 
+		"translateZ" " -av"
+		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11" 
+		"translate" " -type \"double3\" 0.69836623859338454 0.27030300519383155 1.3692836554710821"
+		
+		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11" 
+		"translateX" " -av"
+		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11" 
+		"translateY" " -av"
+		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11" 
+		"translateZ" " -av"
+		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12" 
+		"translate" " -type \"double3\" 0.16338066705719945 -0.14068602948460074 0.72164270065976854"
+		
+		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12" 
+		"translateX" " -av"
+		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12" 
+		"translateY" " -av"
+		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12" 
+		"translateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm" 
-		"translate" " -type \"double3\" -11.23285931753903633 -2.04219608178531065 -8.28337336610676189"
+		"translate" " -type \"double3\" -11.232859317539036 -2.0421960817853106 -8.2833733661067619"
 		
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm" 
 		"translateX" " -av"
@@ -22700,997 +22805,997 @@ createNode reference -n "utility_room_viewRN";
 		2 "utility_room_view:sneaks_latest:sneaks_faces" "visibility" " 0"
 		2 "utility_room_view:sneaks_latest:sneaks_blendshaped" "visibility" " 1"
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root.visibility" 
-		"utility_room_viewRN.placeHolderList[3570]" ""
+		"utility_room_viewRN.placeHolderList[2695]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root.translateX" 
-		"utility_room_viewRN.placeHolderList[3571]" ""
+		"utility_room_viewRN.placeHolderList[2696]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root.translateY" 
-		"utility_room_viewRN.placeHolderList[3572]" ""
+		"utility_room_viewRN.placeHolderList[2697]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root.translateZ" 
-		"utility_room_viewRN.placeHolderList[3573]" ""
+		"utility_room_viewRN.placeHolderList[2698]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root.rotateX" 
-		"utility_room_viewRN.placeHolderList[3574]" ""
+		"utility_room_viewRN.placeHolderList[2699]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root.rotateY" 
-		"utility_room_viewRN.placeHolderList[3575]" ""
+		"utility_room_viewRN.placeHolderList[2700]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3576]" ""
+		"utility_room_viewRN.placeHolderList[2701]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root.scaleX" 
-		"utility_room_viewRN.placeHolderList[3577]" ""
+		"utility_room_viewRN.placeHolderList[2702]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root.scaleY" 
-		"utility_room_viewRN.placeHolderList[3578]" ""
+		"utility_room_viewRN.placeHolderList[2703]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3579]" ""
+		"utility_room_viewRN.placeHolderList[2704]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG.translateX" 
-		"utility_room_viewRN.placeHolderList[3580]" ""
+		"utility_room_viewRN.placeHolderList[2705]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG.translateY" 
-		"utility_room_viewRN.placeHolderList[3581]" ""
+		"utility_room_viewRN.placeHolderList[2706]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG.translateZ" 
-		"utility_room_viewRN.placeHolderList[3582]" ""
+		"utility_room_viewRN.placeHolderList[2707]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG.rotateX" 
-		"utility_room_viewRN.placeHolderList[3583]" ""
+		"utility_room_viewRN.placeHolderList[2708]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG.rotateY" 
-		"utility_room_viewRN.placeHolderList[3584]" ""
+		"utility_room_viewRN.placeHolderList[2709]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3585]" ""
+		"utility_room_viewRN.placeHolderList[2710]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG.scaleX" 
-		"utility_room_viewRN.placeHolderList[3586]" ""
+		"utility_room_viewRN.placeHolderList[2711]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG.scaleY" 
-		"utility_room_viewRN.placeHolderList[3587]" ""
+		"utility_room_viewRN.placeHolderList[2712]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3588]" ""
+		"utility_room_viewRN.placeHolderList[2713]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG.visibility" 
-		"utility_room_viewRN.placeHolderList[3589]" ""
+		"utility_room_viewRN.placeHolderList[2714]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine3.translateX" 
-		"utility_room_viewRN.placeHolderList[3590]" ""
+		"utility_room_viewRN.placeHolderList[2715]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine3.translateY" 
-		"utility_room_viewRN.placeHolderList[3591]" ""
+		"utility_room_viewRN.placeHolderList[2716]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine3.translateZ" 
-		"utility_room_viewRN.placeHolderList[3592]" ""
+		"utility_room_viewRN.placeHolderList[2717]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine3.rotateX" 
-		"utility_room_viewRN.placeHolderList[3593]" ""
+		"utility_room_viewRN.placeHolderList[2718]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine3.rotateY" 
-		"utility_room_viewRN.placeHolderList[3594]" ""
+		"utility_room_viewRN.placeHolderList[2719]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine3.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3595]" ""
+		"utility_room_viewRN.placeHolderList[2720]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine3.scaleX" 
-		"utility_room_viewRN.placeHolderList[3596]" ""
+		"utility_room_viewRN.placeHolderList[2721]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine3.scaleY" 
-		"utility_room_viewRN.placeHolderList[3597]" ""
+		"utility_room_viewRN.placeHolderList[2722]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine3.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3598]" ""
+		"utility_room_viewRN.placeHolderList[2723]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine3.visibility" 
-		"utility_room_viewRN.placeHolderList[3599]" ""
+		"utility_room_viewRN.placeHolderList[2724]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine2.translateX" 
-		"utility_room_viewRN.placeHolderList[3600]" ""
+		"utility_room_viewRN.placeHolderList[2725]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine2.translateY" 
-		"utility_room_viewRN.placeHolderList[3601]" ""
+		"utility_room_viewRN.placeHolderList[2726]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine2.translateZ" 
-		"utility_room_viewRN.placeHolderList[3602]" ""
+		"utility_room_viewRN.placeHolderList[2727]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine2.rotateX" 
-		"utility_room_viewRN.placeHolderList[3603]" ""
+		"utility_room_viewRN.placeHolderList[2728]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine2.rotateY" 
-		"utility_room_viewRN.placeHolderList[3604]" ""
+		"utility_room_viewRN.placeHolderList[2729]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine2.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3605]" ""
+		"utility_room_viewRN.placeHolderList[2730]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine2.scaleX" 
-		"utility_room_viewRN.placeHolderList[3606]" ""
+		"utility_room_viewRN.placeHolderList[2731]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine2.scaleY" 
-		"utility_room_viewRN.placeHolderList[3607]" ""
+		"utility_room_viewRN.placeHolderList[2732]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine2.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3608]" ""
+		"utility_room_viewRN.placeHolderList[2733]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine2.visibility" 
-		"utility_room_viewRN.placeHolderList[3609]" ""
+		"utility_room_viewRN.placeHolderList[2734]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine1.translateX" 
-		"utility_room_viewRN.placeHolderList[3610]" ""
+		"utility_room_viewRN.placeHolderList[2735]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine1.translateY" 
-		"utility_room_viewRN.placeHolderList[3611]" ""
+		"utility_room_viewRN.placeHolderList[2736]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine1.translateZ" 
-		"utility_room_viewRN.placeHolderList[3612]" ""
+		"utility_room_viewRN.placeHolderList[2737]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine1.rotateX" 
-		"utility_room_viewRN.placeHolderList[3613]" ""
+		"utility_room_viewRN.placeHolderList[2738]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine1.rotateY" 
-		"utility_room_viewRN.placeHolderList[3614]" ""
+		"utility_room_viewRN.placeHolderList[2739]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine1.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3615]" ""
+		"utility_room_viewRN.placeHolderList[2740]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine1.scaleX" 
-		"utility_room_viewRN.placeHolderList[3616]" ""
+		"utility_room_viewRN.placeHolderList[2741]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine1.scaleY" 
-		"utility_room_viewRN.placeHolderList[3617]" ""
+		"utility_room_viewRN.placeHolderList[2742]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine1.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3618]" ""
+		"utility_room_viewRN.placeHolderList[2743]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine1.visibility" 
-		"utility_room_viewRN.placeHolderList[3619]" ""
+		"utility_room_viewRN.placeHolderList[2744]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder.translateX" 
-		"utility_room_viewRN.placeHolderList[3620]" ""
+		"utility_room_viewRN.placeHolderList[2745]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder.translateY" 
-		"utility_room_viewRN.placeHolderList[3621]" ""
+		"utility_room_viewRN.placeHolderList[2746]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder.translateZ" 
-		"utility_room_viewRN.placeHolderList[3622]" ""
+		"utility_room_viewRN.placeHolderList[2747]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder.rotateX" 
-		"utility_room_viewRN.placeHolderList[3623]" ""
+		"utility_room_viewRN.placeHolderList[2748]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder.rotateY" 
-		"utility_room_viewRN.placeHolderList[3624]" ""
+		"utility_room_viewRN.placeHolderList[2749]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3625]" ""
+		"utility_room_viewRN.placeHolderList[2750]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder.scaleX" 
-		"utility_room_viewRN.placeHolderList[3626]" ""
+		"utility_room_viewRN.placeHolderList[2751]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder.scaleY" 
-		"utility_room_viewRN.placeHolderList[3627]" ""
+		"utility_room_viewRN.placeHolderList[2752]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3628]" ""
+		"utility_room_viewRN.placeHolderList[2753]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder.visibility" 
-		"utility_room_viewRN.placeHolderList[3629]" ""
+		"utility_room_viewRN.placeHolderList[2754]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head.translateX" 
-		"utility_room_viewRN.placeHolderList[3630]" ""
+		"utility_room_viewRN.placeHolderList[2755]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head.translateY" 
-		"utility_room_viewRN.placeHolderList[3631]" ""
+		"utility_room_viewRN.placeHolderList[2756]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head.translateZ" 
-		"utility_room_viewRN.placeHolderList[3632]" ""
+		"utility_room_viewRN.placeHolderList[2757]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head.rotateX" 
-		"utility_room_viewRN.placeHolderList[3633]" ""
+		"utility_room_viewRN.placeHolderList[2758]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head.rotateY" 
-		"utility_room_viewRN.placeHolderList[3634]" ""
+		"utility_room_viewRN.placeHolderList[2759]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3635]" ""
+		"utility_room_viewRN.placeHolderList[2760]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head.scaleX" 
-		"utility_room_viewRN.placeHolderList[3636]" ""
+		"utility_room_viewRN.placeHolderList[2761]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head.scaleY" 
-		"utility_room_viewRN.placeHolderList[3637]" ""
+		"utility_room_viewRN.placeHolderList[2762]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3638]" ""
+		"utility_room_viewRN.placeHolderList[2763]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head.visibility" 
-		"utility_room_viewRN.placeHolderList[3639]" ""
+		"utility_room_viewRN.placeHolderList[2764]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3.translateX" 
-		"utility_room_viewRN.placeHolderList[3640]" ""
+		"utility_room_viewRN.placeHolderList[2765]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3.translateY" 
-		"utility_room_viewRN.placeHolderList[3641]" ""
+		"utility_room_viewRN.placeHolderList[2766]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3.translateZ" 
-		"utility_room_viewRN.placeHolderList[3642]" ""
+		"utility_room_viewRN.placeHolderList[2767]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3.visibility" 
-		"utility_room_viewRN.placeHolderList[3643]" ""
+		"utility_room_viewRN.placeHolderList[2768]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3.rotateX" 
-		"utility_room_viewRN.placeHolderList[3644]" ""
+		"utility_room_viewRN.placeHolderList[2769]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3.rotateY" 
-		"utility_room_viewRN.placeHolderList[3645]" ""
+		"utility_room_viewRN.placeHolderList[2770]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3646]" ""
+		"utility_room_viewRN.placeHolderList[2771]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3.scaleX" 
-		"utility_room_viewRN.placeHolderList[3647]" ""
+		"utility_room_viewRN.placeHolderList[2772]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3.scaleY" 
-		"utility_room_viewRN.placeHolderList[3648]" ""
+		"utility_room_viewRN.placeHolderList[2773]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3649]" ""
+		"utility_room_viewRN.placeHolderList[2774]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle2.translateX" 
-		"utility_room_viewRN.placeHolderList[3650]" ""
+		"utility_room_viewRN.placeHolderList[2775]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle2.translateY" 
-		"utility_room_viewRN.placeHolderList[3651]" ""
+		"utility_room_viewRN.placeHolderList[2776]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle2.translateZ" 
-		"utility_room_viewRN.placeHolderList[3652]" ""
+		"utility_room_viewRN.placeHolderList[2777]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle2.visibility" 
-		"utility_room_viewRN.placeHolderList[3653]" ""
+		"utility_room_viewRN.placeHolderList[2778]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle2.rotateX" 
-		"utility_room_viewRN.placeHolderList[3654]" ""
+		"utility_room_viewRN.placeHolderList[2779]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle2.rotateY" 
-		"utility_room_viewRN.placeHolderList[3655]" ""
+		"utility_room_viewRN.placeHolderList[2780]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle2.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3656]" ""
+		"utility_room_viewRN.placeHolderList[2781]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle2.scaleX" 
-		"utility_room_viewRN.placeHolderList[3657]" ""
+		"utility_room_viewRN.placeHolderList[2782]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle2.scaleY" 
-		"utility_room_viewRN.placeHolderList[3658]" ""
+		"utility_room_viewRN.placeHolderList[2783]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle2.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3659]" ""
+		"utility_room_viewRN.placeHolderList[2784]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle1.translateX" 
-		"utility_room_viewRN.placeHolderList[3660]" ""
+		"utility_room_viewRN.placeHolderList[2785]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle1.translateY" 
-		"utility_room_viewRN.placeHolderList[3661]" ""
+		"utility_room_viewRN.placeHolderList[2786]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle1.translateZ" 
-		"utility_room_viewRN.placeHolderList[3662]" ""
+		"utility_room_viewRN.placeHolderList[2787]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle1.visibility" 
-		"utility_room_viewRN.placeHolderList[3663]" ""
+		"utility_room_viewRN.placeHolderList[2788]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle1.rotateX" 
-		"utility_room_viewRN.placeHolderList[3664]" ""
+		"utility_room_viewRN.placeHolderList[2789]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle1.rotateY" 
-		"utility_room_viewRN.placeHolderList[3665]" ""
+		"utility_room_viewRN.placeHolderList[2790]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle1.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3666]" ""
+		"utility_room_viewRN.placeHolderList[2791]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle1.scaleX" 
-		"utility_room_viewRN.placeHolderList[3667]" ""
+		"utility_room_viewRN.placeHolderList[2792]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle1.scaleY" 
-		"utility_room_viewRN.placeHolderList[3668]" ""
+		"utility_room_viewRN.placeHolderList[2793]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle1.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3669]" ""
+		"utility_room_viewRN.placeHolderList[2794]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_hip.translateX" 
-		"utility_room_viewRN.placeHolderList[3670]" ""
+		"utility_room_viewRN.placeHolderList[2795]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_hip.translateY" 
-		"utility_room_viewRN.placeHolderList[3671]" ""
+		"utility_room_viewRN.placeHolderList[2796]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_hip.translateZ" 
-		"utility_room_viewRN.placeHolderList[3672]" ""
+		"utility_room_viewRN.placeHolderList[2797]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_hip.rotateX" 
-		"utility_room_viewRN.placeHolderList[3673]" ""
+		"utility_room_viewRN.placeHolderList[2798]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_hip.rotateY" 
-		"utility_room_viewRN.placeHolderList[3674]" ""
+		"utility_room_viewRN.placeHolderList[2799]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_hip.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3675]" ""
+		"utility_room_viewRN.placeHolderList[2800]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_hip.scaleX" 
-		"utility_room_viewRN.placeHolderList[3676]" ""
+		"utility_room_viewRN.placeHolderList[2801]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_hip.scaleY" 
-		"utility_room_viewRN.placeHolderList[3677]" ""
+		"utility_room_viewRN.placeHolderList[2802]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_hip.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3678]" ""
+		"utility_room_viewRN.placeHolderList[2803]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_hip.visibility" 
-		"utility_room_viewRN.placeHolderList[3679]" ""
+		"utility_room_viewRN.placeHolderList[2804]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase.translateX" 
-		"utility_room_viewRN.placeHolderList[3680]" ""
+		"utility_room_viewRN.placeHolderList[2805]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase.translateY" 
-		"utility_room_viewRN.placeHolderList[3681]" ""
+		"utility_room_viewRN.placeHolderList[2806]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase.translateZ" 
-		"utility_room_viewRN.placeHolderList[3682]" ""
+		"utility_room_viewRN.placeHolderList[2807]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase.rotateX" 
-		"utility_room_viewRN.placeHolderList[3683]" ""
+		"utility_room_viewRN.placeHolderList[2808]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase.rotateY" 
-		"utility_room_viewRN.placeHolderList[3684]" ""
+		"utility_room_viewRN.placeHolderList[2809]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3685]" ""
+		"utility_room_viewRN.placeHolderList[2810]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase.scaleX" 
-		"utility_room_viewRN.placeHolderList[3686]" ""
+		"utility_room_viewRN.placeHolderList[2811]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase.scaleY" 
-		"utility_room_viewRN.placeHolderList[3687]" ""
+		"utility_room_viewRN.placeHolderList[2812]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3688]" ""
+		"utility_room_viewRN.placeHolderList[2813]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase.visibility" 
-		"utility_room_viewRN.placeHolderList[3689]" ""
+		"utility_room_viewRN.placeHolderList[2814]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2.translateX" 
-		"utility_room_viewRN.placeHolderList[3690]" ""
+		"utility_room_viewRN.placeHolderList[2815]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2.translateY" 
-		"utility_room_viewRN.placeHolderList[3691]" ""
+		"utility_room_viewRN.placeHolderList[2816]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2.translateZ" 
-		"utility_room_viewRN.placeHolderList[3692]" ""
+		"utility_room_viewRN.placeHolderList[2817]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2.rotateX" 
-		"utility_room_viewRN.placeHolderList[3693]" ""
+		"utility_room_viewRN.placeHolderList[2818]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2.rotateY" 
-		"utility_room_viewRN.placeHolderList[3694]" ""
+		"utility_room_viewRN.placeHolderList[2819]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3695]" ""
+		"utility_room_viewRN.placeHolderList[2820]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2.scaleX" 
-		"utility_room_viewRN.placeHolderList[3696]" ""
+		"utility_room_viewRN.placeHolderList[2821]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2.scaleY" 
-		"utility_room_viewRN.placeHolderList[3697]" ""
+		"utility_room_viewRN.placeHolderList[2822]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3698]" ""
+		"utility_room_viewRN.placeHolderList[2823]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2.visibility" 
-		"utility_room_viewRN.placeHolderList[3699]" ""
+		"utility_room_viewRN.placeHolderList[2824]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3.translateX" 
-		"utility_room_viewRN.placeHolderList[3700]" ""
+		"utility_room_viewRN.placeHolderList[2825]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3.translateY" 
-		"utility_room_viewRN.placeHolderList[3701]" ""
+		"utility_room_viewRN.placeHolderList[2826]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3.translateZ" 
-		"utility_room_viewRN.placeHolderList[3702]" ""
+		"utility_room_viewRN.placeHolderList[2827]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3.rotateX" 
-		"utility_room_viewRN.placeHolderList[3703]" ""
+		"utility_room_viewRN.placeHolderList[2828]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3.rotateY" 
-		"utility_room_viewRN.placeHolderList[3704]" ""
+		"utility_room_viewRN.placeHolderList[2829]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3705]" ""
+		"utility_room_viewRN.placeHolderList[2830]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3.scaleX" 
-		"utility_room_viewRN.placeHolderList[3706]" ""
+		"utility_room_viewRN.placeHolderList[2831]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3.scaleY" 
-		"utility_room_viewRN.placeHolderList[3707]" ""
+		"utility_room_viewRN.placeHolderList[2832]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3708]" ""
+		"utility_room_viewRN.placeHolderList[2833]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3.visibility" 
-		"utility_room_viewRN.placeHolderList[3709]" ""
+		"utility_room_viewRN.placeHolderList[2834]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4.translateX" 
-		"utility_room_viewRN.placeHolderList[3710]" ""
+		"utility_room_viewRN.placeHolderList[2835]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4.translateY" 
-		"utility_room_viewRN.placeHolderList[3711]" ""
+		"utility_room_viewRN.placeHolderList[2836]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4.translateZ" 
-		"utility_room_viewRN.placeHolderList[3712]" ""
+		"utility_room_viewRN.placeHolderList[2837]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4.rotateX" 
-		"utility_room_viewRN.placeHolderList[3713]" ""
+		"utility_room_viewRN.placeHolderList[2838]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4.rotateY" 
-		"utility_room_viewRN.placeHolderList[3714]" ""
+		"utility_room_viewRN.placeHolderList[2839]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3715]" ""
+		"utility_room_viewRN.placeHolderList[2840]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4.scaleX" 
-		"utility_room_viewRN.placeHolderList[3716]" ""
+		"utility_room_viewRN.placeHolderList[2841]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4.scaleY" 
-		"utility_room_viewRN.placeHolderList[3717]" ""
+		"utility_room_viewRN.placeHolderList[2842]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3718]" ""
+		"utility_room_viewRN.placeHolderList[2843]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4.visibility" 
-		"utility_room_viewRN.placeHolderList[3719]" ""
+		"utility_room_viewRN.placeHolderList[2844]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip.translateX" 
-		"utility_room_viewRN.placeHolderList[3720]" ""
+		"utility_room_viewRN.placeHolderList[2845]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip.translateY" 
-		"utility_room_viewRN.placeHolderList[3721]" ""
+		"utility_room_viewRN.placeHolderList[2846]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip.translateZ" 
-		"utility_room_viewRN.placeHolderList[3722]" ""
+		"utility_room_viewRN.placeHolderList[2847]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip.rotateX" 
-		"utility_room_viewRN.placeHolderList[3723]" ""
+		"utility_room_viewRN.placeHolderList[2848]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip.rotateY" 
-		"utility_room_viewRN.placeHolderList[3724]" ""
+		"utility_room_viewRN.placeHolderList[2849]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3725]" ""
+		"utility_room_viewRN.placeHolderList[2850]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip.scaleX" 
-		"utility_room_viewRN.placeHolderList[3726]" ""
+		"utility_room_viewRN.placeHolderList[2851]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip.scaleY" 
-		"utility_room_viewRN.placeHolderList[3727]" ""
+		"utility_room_viewRN.placeHolderList[2852]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3728]" ""
+		"utility_room_viewRN.placeHolderList[2853]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip.visibility" 
-		"utility_room_viewRN.placeHolderList[3729]" ""
+		"utility_room_viewRN.placeHolderList[2854]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg.visibility" 
-		"utility_room_viewRN.placeHolderList[3730]" ""
+		"utility_room_viewRN.placeHolderList[2855]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg.translateX" 
-		"utility_room_viewRN.placeHolderList[3731]" ""
+		"utility_room_viewRN.placeHolderList[2856]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg.translateY" 
-		"utility_room_viewRN.placeHolderList[3732]" ""
+		"utility_room_viewRN.placeHolderList[2857]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg.translateZ" 
-		"utility_room_viewRN.placeHolderList[3733]" ""
+		"utility_room_viewRN.placeHolderList[2858]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg.rotateX" 
-		"utility_room_viewRN.placeHolderList[3734]" ""
+		"utility_room_viewRN.placeHolderList[2859]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg.rotateY" 
-		"utility_room_viewRN.placeHolderList[3735]" ""
+		"utility_room_viewRN.placeHolderList[2860]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3736]" ""
+		"utility_room_viewRN.placeHolderList[2861]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg.scaleX" 
-		"utility_room_viewRN.placeHolderList[3737]" ""
+		"utility_room_viewRN.placeHolderList[2862]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg.scaleY" 
-		"utility_room_viewRN.placeHolderList[3738]" ""
+		"utility_room_viewRN.placeHolderList[2863]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3739]" ""
+		"utility_room_viewRN.placeHolderList[2864]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:nurbsCircle7.translateX" 
-		"utility_room_viewRN.placeHolderList[3740]" ""
+		"utility_room_viewRN.placeHolderList[2865]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:nurbsCircle7.translateY" 
-		"utility_room_viewRN.placeHolderList[3741]" ""
+		"utility_room_viewRN.placeHolderList[2866]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:nurbsCircle7.translateZ" 
-		"utility_room_viewRN.placeHolderList[3742]" ""
+		"utility_room_viewRN.placeHolderList[2867]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:nurbsCircle7.visibility" 
-		"utility_room_viewRN.placeHolderList[3743]" ""
+		"utility_room_viewRN.placeHolderList[2868]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:nurbsCircle7.rotateX" 
-		"utility_room_viewRN.placeHolderList[3744]" ""
+		"utility_room_viewRN.placeHolderList[2869]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:nurbsCircle7.rotateY" 
-		"utility_room_viewRN.placeHolderList[3745]" ""
+		"utility_room_viewRN.placeHolderList[2870]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:nurbsCircle7.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3746]" ""
+		"utility_room_viewRN.placeHolderList[2871]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:nurbsCircle7.scaleX" 
-		"utility_room_viewRN.placeHolderList[3747]" ""
+		"utility_room_viewRN.placeHolderList[2872]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:nurbsCircle7.scaleY" 
-		"utility_room_viewRN.placeHolderList[3748]" ""
+		"utility_room_viewRN.placeHolderList[2873]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:nurbsCircle7.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3749]" ""
+		"utility_room_viewRN.placeHolderList[2874]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:RightLeg.rotateX" 
-		"utility_room_viewRN.placeHolderList[3750]" ""
+		"utility_room_viewRN.placeHolderList[2875]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:RightLeg.rotateY" 
-		"utility_room_viewRN.placeHolderList[3751]" ""
+		"utility_room_viewRN.placeHolderList[2876]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:RightLeg.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3752]" ""
+		"utility_room_viewRN.placeHolderList[2877]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:RightLeg.translateX" 
-		"utility_room_viewRN.placeHolderList[3753]" ""
+		"utility_room_viewRN.placeHolderList[2878]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:RightLeg.translateY" 
-		"utility_room_viewRN.placeHolderList[3754]" ""
+		"utility_room_viewRN.placeHolderList[2879]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:RightLeg.translateZ" 
-		"utility_room_viewRN.placeHolderList[3755]" ""
+		"utility_room_viewRN.placeHolderList[2880]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:RightLeg.visibility" 
-		"utility_room_viewRN.placeHolderList[3756]" ""
+		"utility_room_viewRN.placeHolderList[2881]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:RightLeg.scaleX" 
-		"utility_room_viewRN.placeHolderList[3757]" ""
+		"utility_room_viewRN.placeHolderList[2882]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:RightLeg.scaleY" 
-		"utility_room_viewRN.placeHolderList[3758]" ""
+		"utility_room_viewRN.placeHolderList[2883]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:RightLeg.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3759]" ""
+		"utility_room_viewRN.placeHolderList[2884]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm.visibility" 
-		"utility_room_viewRN.placeHolderList[3760]" ""
+		"utility_room_viewRN.placeHolderList[2885]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm.translateX" 
-		"utility_room_viewRN.placeHolderList[3761]" ""
+		"utility_room_viewRN.placeHolderList[2886]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm.translateY" 
-		"utility_room_viewRN.placeHolderList[3762]" ""
+		"utility_room_viewRN.placeHolderList[2887]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm.translateZ" 
-		"utility_room_viewRN.placeHolderList[3763]" ""
+		"utility_room_viewRN.placeHolderList[2888]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm.rotateX" 
-		"utility_room_viewRN.placeHolderList[3764]" ""
+		"utility_room_viewRN.placeHolderList[2889]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm.rotateY" 
-		"utility_room_viewRN.placeHolderList[3765]" ""
+		"utility_room_viewRN.placeHolderList[2890]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3766]" ""
+		"utility_room_viewRN.placeHolderList[2891]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm.scaleX" 
-		"utility_room_viewRN.placeHolderList[3767]" ""
+		"utility_room_viewRN.placeHolderList[2892]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm.scaleY" 
-		"utility_room_viewRN.placeHolderList[3768]" ""
+		"utility_room_viewRN.placeHolderList[2893]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3769]" ""
+		"utility_room_viewRN.placeHolderList[2894]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist.translateX" 
-		"utility_room_viewRN.placeHolderList[3770]" ""
+		"utility_room_viewRN.placeHolderList[2895]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist.translateY" 
-		"utility_room_viewRN.placeHolderList[3771]" ""
+		"utility_room_viewRN.placeHolderList[2896]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist.translateZ" 
-		"utility_room_viewRN.placeHolderList[3772]" ""
+		"utility_room_viewRN.placeHolderList[2897]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist.rotateX" 
-		"utility_room_viewRN.placeHolderList[3773]" ""
+		"utility_room_viewRN.placeHolderList[2898]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist.rotateY" 
-		"utility_room_viewRN.placeHolderList[3774]" ""
+		"utility_room_viewRN.placeHolderList[2899]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3775]" ""
+		"utility_room_viewRN.placeHolderList[2900]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist.scaleX" 
-		"utility_room_viewRN.placeHolderList[3776]" ""
+		"utility_room_viewRN.placeHolderList[2901]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist.scaleY" 
-		"utility_room_viewRN.placeHolderList[3777]" ""
+		"utility_room_viewRN.placeHolderList[2902]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3778]" ""
+		"utility_room_viewRN.placeHolderList[2903]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist.visibility" 
-		"utility_room_viewRN.placeHolderList[3779]" ""
+		"utility_room_viewRN.placeHolderList[2904]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6.translateX" 
-		"utility_room_viewRN.placeHolderList[3780]" ""
+		"utility_room_viewRN.placeHolderList[2905]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6.translateY" 
-		"utility_room_viewRN.placeHolderList[3781]" ""
+		"utility_room_viewRN.placeHolderList[2906]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6.translateZ" 
-		"utility_room_viewRN.placeHolderList[3782]" ""
+		"utility_room_viewRN.placeHolderList[2907]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6.visibility" 
-		"utility_room_viewRN.placeHolderList[3783]" ""
+		"utility_room_viewRN.placeHolderList[2908]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6.rotateX" 
-		"utility_room_viewRN.placeHolderList[3784]" ""
+		"utility_room_viewRN.placeHolderList[2909]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6.rotateY" 
-		"utility_room_viewRN.placeHolderList[3785]" ""
+		"utility_room_viewRN.placeHolderList[2910]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3786]" ""
+		"utility_room_viewRN.placeHolderList[2911]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6.scaleX" 
-		"utility_room_viewRN.placeHolderList[3787]" ""
+		"utility_room_viewRN.placeHolderList[2912]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6.scaleY" 
-		"utility_room_viewRN.placeHolderList[3788]" ""
+		"utility_room_viewRN.placeHolderList[2913]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3789]" ""
+		"utility_room_viewRN.placeHolderList[2914]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5.translateX" 
-		"utility_room_viewRN.placeHolderList[3790]" ""
+		"utility_room_viewRN.placeHolderList[2915]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5.translateY" 
-		"utility_room_viewRN.placeHolderList[3791]" ""
+		"utility_room_viewRN.placeHolderList[2916]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5.translateZ" 
-		"utility_room_viewRN.placeHolderList[3792]" ""
+		"utility_room_viewRN.placeHolderList[2917]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5.visibility" 
-		"utility_room_viewRN.placeHolderList[3793]" ""
+		"utility_room_viewRN.placeHolderList[2918]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5.rotateX" 
-		"utility_room_viewRN.placeHolderList[3794]" ""
+		"utility_room_viewRN.placeHolderList[2919]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5.rotateY" 
-		"utility_room_viewRN.placeHolderList[3795]" ""
+		"utility_room_viewRN.placeHolderList[2920]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3796]" ""
+		"utility_room_viewRN.placeHolderList[2921]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5.scaleX" 
-		"utility_room_viewRN.placeHolderList[3797]" ""
+		"utility_room_viewRN.placeHolderList[2922]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5.scaleY" 
-		"utility_room_viewRN.placeHolderList[3798]" ""
+		"utility_room_viewRN.placeHolderList[2923]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3799]" ""
+		"utility_room_viewRN.placeHolderList[2924]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2.translateX" 
-		"utility_room_viewRN.placeHolderList[3800]" ""
+		"utility_room_viewRN.placeHolderList[2925]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2.translateY" 
-		"utility_room_viewRN.placeHolderList[3801]" ""
+		"utility_room_viewRN.placeHolderList[2926]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2.translateZ" 
-		"utility_room_viewRN.placeHolderList[3802]" ""
+		"utility_room_viewRN.placeHolderList[2927]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2.visibility" 
-		"utility_room_viewRN.placeHolderList[3803]" ""
+		"utility_room_viewRN.placeHolderList[2928]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2.rotateX" 
-		"utility_room_viewRN.placeHolderList[3804]" ""
+		"utility_room_viewRN.placeHolderList[2929]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2.rotateY" 
-		"utility_room_viewRN.placeHolderList[3805]" ""
+		"utility_room_viewRN.placeHolderList[2930]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3806]" ""
+		"utility_room_viewRN.placeHolderList[2931]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2.scaleX" 
-		"utility_room_viewRN.placeHolderList[3807]" ""
+		"utility_room_viewRN.placeHolderList[2932]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2.scaleY" 
-		"utility_room_viewRN.placeHolderList[3808]" ""
+		"utility_room_viewRN.placeHolderList[2933]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3809]" ""
+		"utility_room_viewRN.placeHolderList[2934]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3.translateX" 
-		"utility_room_viewRN.placeHolderList[3810]" ""
+		"utility_room_viewRN.placeHolderList[2935]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3.translateY" 
-		"utility_room_viewRN.placeHolderList[3811]" ""
+		"utility_room_viewRN.placeHolderList[2936]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3.translateZ" 
-		"utility_room_viewRN.placeHolderList[3812]" ""
+		"utility_room_viewRN.placeHolderList[2937]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3.visibility" 
-		"utility_room_viewRN.placeHolderList[3813]" ""
+		"utility_room_viewRN.placeHolderList[2938]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3.rotateX" 
-		"utility_room_viewRN.placeHolderList[3814]" ""
+		"utility_room_viewRN.placeHolderList[2939]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3.rotateY" 
-		"utility_room_viewRN.placeHolderList[3815]" ""
+		"utility_room_viewRN.placeHolderList[2940]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3816]" ""
+		"utility_room_viewRN.placeHolderList[2941]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3.scaleX" 
-		"utility_room_viewRN.placeHolderList[3817]" ""
+		"utility_room_viewRN.placeHolderList[2942]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3.scaleY" 
-		"utility_room_viewRN.placeHolderList[3818]" ""
+		"utility_room_viewRN.placeHolderList[2943]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3819]" ""
+		"utility_room_viewRN.placeHolderList[2944]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4.translateX" 
-		"utility_room_viewRN.placeHolderList[3820]" ""
+		"utility_room_viewRN.placeHolderList[2945]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4.translateY" 
-		"utility_room_viewRN.placeHolderList[3821]" ""
+		"utility_room_viewRN.placeHolderList[2946]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4.translateZ" 
-		"utility_room_viewRN.placeHolderList[3822]" ""
+		"utility_room_viewRN.placeHolderList[2947]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4.visibility" 
-		"utility_room_viewRN.placeHolderList[3823]" ""
+		"utility_room_viewRN.placeHolderList[2948]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4.rotateX" 
-		"utility_room_viewRN.placeHolderList[3824]" ""
+		"utility_room_viewRN.placeHolderList[2949]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4.rotateY" 
-		"utility_room_viewRN.placeHolderList[3825]" ""
+		"utility_room_viewRN.placeHolderList[2950]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3826]" ""
+		"utility_room_viewRN.placeHolderList[2951]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4.scaleX" 
-		"utility_room_viewRN.placeHolderList[3827]" ""
+		"utility_room_viewRN.placeHolderList[2952]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4.scaleY" 
-		"utility_room_viewRN.placeHolderList[3828]" ""
+		"utility_room_viewRN.placeHolderList[2953]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3829]" ""
+		"utility_room_viewRN.placeHolderList[2954]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve6.translateX" 
-		"utility_room_viewRN.placeHolderList[3830]" ""
+		"utility_room_viewRN.placeHolderList[2955]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve6.translateY" 
-		"utility_room_viewRN.placeHolderList[3831]" ""
+		"utility_room_viewRN.placeHolderList[2956]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve6.translateZ" 
-		"utility_room_viewRN.placeHolderList[3832]" ""
+		"utility_room_viewRN.placeHolderList[2957]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve6.visibility" 
-		"utility_room_viewRN.placeHolderList[3833]" ""
+		"utility_room_viewRN.placeHolderList[2958]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve6.rotateX" 
-		"utility_room_viewRN.placeHolderList[3834]" ""
+		"utility_room_viewRN.placeHolderList[2959]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve6.rotateY" 
-		"utility_room_viewRN.placeHolderList[3835]" ""
+		"utility_room_viewRN.placeHolderList[2960]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve6.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3836]" ""
+		"utility_room_viewRN.placeHolderList[2961]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve6.scaleX" 
-		"utility_room_viewRN.placeHolderList[3837]" ""
+		"utility_room_viewRN.placeHolderList[2962]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve6.scaleY" 
-		"utility_room_viewRN.placeHolderList[3838]" ""
+		"utility_room_viewRN.placeHolderList[2963]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve6.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3839]" ""
+		"utility_room_viewRN.placeHolderList[2964]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve7.translateX" 
-		"utility_room_viewRN.placeHolderList[3840]" ""
+		"utility_room_viewRN.placeHolderList[2965]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve7.translateY" 
-		"utility_room_viewRN.placeHolderList[3841]" ""
+		"utility_room_viewRN.placeHolderList[2966]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve7.translateZ" 
-		"utility_room_viewRN.placeHolderList[3842]" ""
+		"utility_room_viewRN.placeHolderList[2967]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve7.visibility" 
-		"utility_room_viewRN.placeHolderList[3843]" ""
+		"utility_room_viewRN.placeHolderList[2968]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve7.rotateX" 
-		"utility_room_viewRN.placeHolderList[3844]" ""
+		"utility_room_viewRN.placeHolderList[2969]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve7.rotateY" 
-		"utility_room_viewRN.placeHolderList[3845]" ""
+		"utility_room_viewRN.placeHolderList[2970]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve7.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3846]" ""
+		"utility_room_viewRN.placeHolderList[2971]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve7.scaleX" 
-		"utility_room_viewRN.placeHolderList[3847]" ""
+		"utility_room_viewRN.placeHolderList[2972]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve7.scaleY" 
-		"utility_room_viewRN.placeHolderList[3848]" ""
+		"utility_room_viewRN.placeHolderList[2973]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve7.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3849]" ""
+		"utility_room_viewRN.placeHolderList[2974]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve8.translateX" 
-		"utility_room_viewRN.placeHolderList[3850]" ""
+		"utility_room_viewRN.placeHolderList[2975]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve8.translateY" 
-		"utility_room_viewRN.placeHolderList[3851]" ""
+		"utility_room_viewRN.placeHolderList[2976]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve8.translateZ" 
-		"utility_room_viewRN.placeHolderList[3852]" ""
+		"utility_room_viewRN.placeHolderList[2977]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve8.visibility" 
-		"utility_room_viewRN.placeHolderList[3853]" ""
+		"utility_room_viewRN.placeHolderList[2978]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve8.rotateX" 
-		"utility_room_viewRN.placeHolderList[3854]" ""
+		"utility_room_viewRN.placeHolderList[2979]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve8.rotateY" 
-		"utility_room_viewRN.placeHolderList[3855]" ""
+		"utility_room_viewRN.placeHolderList[2980]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve8.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3856]" ""
+		"utility_room_viewRN.placeHolderList[2981]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve8.scaleX" 
-		"utility_room_viewRN.placeHolderList[3857]" ""
+		"utility_room_viewRN.placeHolderList[2982]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve8.scaleY" 
-		"utility_room_viewRN.placeHolderList[3858]" ""
+		"utility_room_viewRN.placeHolderList[2983]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve8.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3859]" ""
+		"utility_room_viewRN.placeHolderList[2984]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve9.translateX" 
-		"utility_room_viewRN.placeHolderList[3860]" ""
+		"utility_room_viewRN.placeHolderList[2985]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve9.translateY" 
-		"utility_room_viewRN.placeHolderList[3861]" ""
+		"utility_room_viewRN.placeHolderList[2986]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve9.translateZ" 
-		"utility_room_viewRN.placeHolderList[3862]" ""
+		"utility_room_viewRN.placeHolderList[2987]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve9.visibility" 
-		"utility_room_viewRN.placeHolderList[3863]" ""
+		"utility_room_viewRN.placeHolderList[2988]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve9.rotateX" 
-		"utility_room_viewRN.placeHolderList[3864]" ""
+		"utility_room_viewRN.placeHolderList[2989]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve9.rotateY" 
-		"utility_room_viewRN.placeHolderList[3865]" ""
+		"utility_room_viewRN.placeHolderList[2990]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve9.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3866]" ""
+		"utility_room_viewRN.placeHolderList[2991]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve9.scaleX" 
-		"utility_room_viewRN.placeHolderList[3867]" ""
+		"utility_room_viewRN.placeHolderList[2992]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve9.scaleY" 
-		"utility_room_viewRN.placeHolderList[3868]" ""
+		"utility_room_viewRN.placeHolderList[2993]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve9.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3869]" ""
+		"utility_room_viewRN.placeHolderList[2994]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve10.translateX" 
-		"utility_room_viewRN.placeHolderList[3870]" ""
+		"utility_room_viewRN.placeHolderList[2995]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve10.translateY" 
-		"utility_room_viewRN.placeHolderList[3871]" ""
+		"utility_room_viewRN.placeHolderList[2996]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve10.translateZ" 
-		"utility_room_viewRN.placeHolderList[3872]" ""
+		"utility_room_viewRN.placeHolderList[2997]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve10.visibility" 
-		"utility_room_viewRN.placeHolderList[3873]" ""
+		"utility_room_viewRN.placeHolderList[2998]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve10.rotateX" 
-		"utility_room_viewRN.placeHolderList[3874]" ""
+		"utility_room_viewRN.placeHolderList[2999]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve10.rotateY" 
-		"utility_room_viewRN.placeHolderList[3875]" ""
+		"utility_room_viewRN.placeHolderList[3000]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve10.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3876]" ""
+		"utility_room_viewRN.placeHolderList[3001]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve10.scaleX" 
-		"utility_room_viewRN.placeHolderList[3877]" ""
+		"utility_room_viewRN.placeHolderList[3002]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve10.scaleY" 
-		"utility_room_viewRN.placeHolderList[3878]" ""
+		"utility_room_viewRN.placeHolderList[3003]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve10.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3879]" ""
+		"utility_room_viewRN.placeHolderList[3004]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:LeftArm.rotateX" 
-		"utility_room_viewRN.placeHolderList[3880]" ""
+		"utility_room_viewRN.placeHolderList[3005]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:LeftArm.rotateY" 
-		"utility_room_viewRN.placeHolderList[3881]" ""
+		"utility_room_viewRN.placeHolderList[3006]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:LeftArm.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3882]" ""
+		"utility_room_viewRN.placeHolderList[3007]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:LeftArm.translateX" 
-		"utility_room_viewRN.placeHolderList[3883]" ""
+		"utility_room_viewRN.placeHolderList[3008]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:LeftArm.translateY" 
-		"utility_room_viewRN.placeHolderList[3884]" ""
+		"utility_room_viewRN.placeHolderList[3009]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:LeftArm.translateZ" 
-		"utility_room_viewRN.placeHolderList[3885]" ""
+		"utility_room_viewRN.placeHolderList[3010]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:LeftArm.visibility" 
-		"utility_room_viewRN.placeHolderList[3886]" ""
+		"utility_room_viewRN.placeHolderList[3011]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:LeftArm.scaleX" 
-		"utility_room_viewRN.placeHolderList[3887]" ""
+		"utility_room_viewRN.placeHolderList[3012]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:LeftArm.scaleY" 
-		"utility_room_viewRN.placeHolderList[3888]" ""
+		"utility_room_viewRN.placeHolderList[3013]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:LeftArm.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3889]" ""
+		"utility_room_viewRN.placeHolderList[3014]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1.visibility" 
-		"utility_room_viewRN.placeHolderList[3890]" ""
+		"utility_room_viewRN.placeHolderList[3015]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1.translateX" 
-		"utility_room_viewRN.placeHolderList[3891]" ""
+		"utility_room_viewRN.placeHolderList[3016]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1.translateY" 
-		"utility_room_viewRN.placeHolderList[3892]" ""
+		"utility_room_viewRN.placeHolderList[3017]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1.translateZ" 
-		"utility_room_viewRN.placeHolderList[3893]" ""
+		"utility_room_viewRN.placeHolderList[3018]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1.rotateX" 
-		"utility_room_viewRN.placeHolderList[3894]" ""
+		"utility_room_viewRN.placeHolderList[3019]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1.rotateY" 
-		"utility_room_viewRN.placeHolderList[3895]" ""
+		"utility_room_viewRN.placeHolderList[3020]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3896]" ""
+		"utility_room_viewRN.placeHolderList[3021]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1.scaleX" 
-		"utility_room_viewRN.placeHolderList[3897]" ""
+		"utility_room_viewRN.placeHolderList[3022]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1.scaleY" 
-		"utility_room_viewRN.placeHolderList[3898]" ""
+		"utility_room_viewRN.placeHolderList[3023]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3899]" ""
+		"utility_room_viewRN.placeHolderList[3024]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8.visibility" 
-		"utility_room_viewRN.placeHolderList[3900]" ""
+		"utility_room_viewRN.placeHolderList[3025]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8.translateX" 
-		"utility_room_viewRN.placeHolderList[3901]" ""
+		"utility_room_viewRN.placeHolderList[3026]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8.translateY" 
-		"utility_room_viewRN.placeHolderList[3902]" ""
+		"utility_room_viewRN.placeHolderList[3027]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8.translateZ" 
-		"utility_room_viewRN.placeHolderList[3903]" ""
+		"utility_room_viewRN.placeHolderList[3028]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8.rotateX" 
-		"utility_room_viewRN.placeHolderList[3904]" ""
+		"utility_room_viewRN.placeHolderList[3029]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8.rotateY" 
-		"utility_room_viewRN.placeHolderList[3905]" ""
+		"utility_room_viewRN.placeHolderList[3030]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3906]" ""
+		"utility_room_viewRN.placeHolderList[3031]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8.scaleX" 
-		"utility_room_viewRN.placeHolderList[3907]" ""
+		"utility_room_viewRN.placeHolderList[3032]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8.scaleY" 
-		"utility_room_viewRN.placeHolderList[3908]" ""
+		"utility_room_viewRN.placeHolderList[3033]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3909]" ""
+		"utility_room_viewRN.placeHolderList[3034]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:LeftLeg.rotateX" 
-		"utility_room_viewRN.placeHolderList[3910]" ""
+		"utility_room_viewRN.placeHolderList[3035]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:LeftLeg.rotateY" 
-		"utility_room_viewRN.placeHolderList[3911]" ""
+		"utility_room_viewRN.placeHolderList[3036]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:LeftLeg.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3912]" ""
+		"utility_room_viewRN.placeHolderList[3037]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:LeftLeg.translateX" 
-		"utility_room_viewRN.placeHolderList[3913]" ""
+		"utility_room_viewRN.placeHolderList[3038]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:LeftLeg.translateY" 
-		"utility_room_viewRN.placeHolderList[3914]" ""
+		"utility_room_viewRN.placeHolderList[3039]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:LeftLeg.translateZ" 
-		"utility_room_viewRN.placeHolderList[3915]" ""
+		"utility_room_viewRN.placeHolderList[3040]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:LeftLeg.visibility" 
-		"utility_room_viewRN.placeHolderList[3916]" ""
+		"utility_room_viewRN.placeHolderList[3041]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:LeftLeg.scaleX" 
-		"utility_room_viewRN.placeHolderList[3917]" ""
+		"utility_room_viewRN.placeHolderList[3042]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:LeftLeg.scaleY" 
-		"utility_room_viewRN.placeHolderList[3918]" ""
+		"utility_room_viewRN.placeHolderList[3043]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:LeftLeg.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3919]" ""
+		"utility_room_viewRN.placeHolderList[3044]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm.visibility" 
-		"utility_room_viewRN.placeHolderList[3920]" ""
+		"utility_room_viewRN.placeHolderList[3045]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm.translateX" 
-		"utility_room_viewRN.placeHolderList[3921]" ""
+		"utility_room_viewRN.placeHolderList[3046]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm.translateY" 
-		"utility_room_viewRN.placeHolderList[3922]" ""
+		"utility_room_viewRN.placeHolderList[3047]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm.translateZ" 
-		"utility_room_viewRN.placeHolderList[3923]" ""
+		"utility_room_viewRN.placeHolderList[3048]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm.rotateX" 
-		"utility_room_viewRN.placeHolderList[3924]" ""
+		"utility_room_viewRN.placeHolderList[3049]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm.rotateY" 
-		"utility_room_viewRN.placeHolderList[3925]" ""
+		"utility_room_viewRN.placeHolderList[3050]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3926]" ""
+		"utility_room_viewRN.placeHolderList[3051]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm.scaleX" 
-		"utility_room_viewRN.placeHolderList[3927]" ""
+		"utility_room_viewRN.placeHolderList[3052]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm.scaleY" 
-		"utility_room_viewRN.placeHolderList[3928]" ""
+		"utility_room_viewRN.placeHolderList[3053]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3929]" ""
+		"utility_room_viewRN.placeHolderList[3054]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist.translateX" 
-		"utility_room_viewRN.placeHolderList[3930]" ""
+		"utility_room_viewRN.placeHolderList[3055]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist.translateY" 
-		"utility_room_viewRN.placeHolderList[3931]" ""
+		"utility_room_viewRN.placeHolderList[3056]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist.translateZ" 
-		"utility_room_viewRN.placeHolderList[3932]" ""
+		"utility_room_viewRN.placeHolderList[3057]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist.rotateX" 
-		"utility_room_viewRN.placeHolderList[3933]" ""
+		"utility_room_viewRN.placeHolderList[3058]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist.rotateY" 
-		"utility_room_viewRN.placeHolderList[3934]" ""
+		"utility_room_viewRN.placeHolderList[3059]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3935]" ""
+		"utility_room_viewRN.placeHolderList[3060]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist.scaleX" 
-		"utility_room_viewRN.placeHolderList[3936]" ""
+		"utility_room_viewRN.placeHolderList[3061]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist.scaleY" 
-		"utility_room_viewRN.placeHolderList[3937]" ""
+		"utility_room_viewRN.placeHolderList[3062]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3938]" ""
+		"utility_room_viewRN.placeHolderList[3063]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist.visibility" 
-		"utility_room_viewRN.placeHolderList[3939]" ""
+		"utility_room_viewRN.placeHolderList[3064]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1.translateX" 
-		"utility_room_viewRN.placeHolderList[3940]" ""
+		"utility_room_viewRN.placeHolderList[3065]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1.translateY" 
-		"utility_room_viewRN.placeHolderList[3941]" ""
+		"utility_room_viewRN.placeHolderList[3066]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1.translateZ" 
-		"utility_room_viewRN.placeHolderList[3942]" ""
+		"utility_room_viewRN.placeHolderList[3067]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1.visibility" 
-		"utility_room_viewRN.placeHolderList[3943]" ""
+		"utility_room_viewRN.placeHolderList[3068]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1.rotateX" 
-		"utility_room_viewRN.placeHolderList[3944]" ""
+		"utility_room_viewRN.placeHolderList[3069]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1.rotateY" 
-		"utility_room_viewRN.placeHolderList[3945]" ""
+		"utility_room_viewRN.placeHolderList[3070]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3946]" ""
+		"utility_room_viewRN.placeHolderList[3071]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1.scaleX" 
-		"utility_room_viewRN.placeHolderList[3947]" ""
+		"utility_room_viewRN.placeHolderList[3072]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1.scaleY" 
-		"utility_room_viewRN.placeHolderList[3948]" ""
+		"utility_room_viewRN.placeHolderList[3073]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3949]" ""
+		"utility_room_viewRN.placeHolderList[3074]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9.translateX" 
-		"utility_room_viewRN.placeHolderList[3950]" ""
+		"utility_room_viewRN.placeHolderList[3075]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9.translateY" 
-		"utility_room_viewRN.placeHolderList[3951]" ""
+		"utility_room_viewRN.placeHolderList[3076]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9.translateZ" 
-		"utility_room_viewRN.placeHolderList[3952]" ""
+		"utility_room_viewRN.placeHolderList[3077]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9.visibility" 
-		"utility_room_viewRN.placeHolderList[3953]" ""
+		"utility_room_viewRN.placeHolderList[3078]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9.rotateX" 
-		"utility_room_viewRN.placeHolderList[3954]" ""
+		"utility_room_viewRN.placeHolderList[3079]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9.rotateY" 
-		"utility_room_viewRN.placeHolderList[3955]" ""
+		"utility_room_viewRN.placeHolderList[3080]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3956]" ""
+		"utility_room_viewRN.placeHolderList[3081]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9.scaleX" 
-		"utility_room_viewRN.placeHolderList[3957]" ""
+		"utility_room_viewRN.placeHolderList[3082]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9.scaleY" 
-		"utility_room_viewRN.placeHolderList[3958]" ""
+		"utility_room_viewRN.placeHolderList[3083]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3959]" ""
+		"utility_room_viewRN.placeHolderList[3084]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10.translateX" 
-		"utility_room_viewRN.placeHolderList[3960]" ""
+		"utility_room_viewRN.placeHolderList[3085]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10.translateY" 
-		"utility_room_viewRN.placeHolderList[3961]" ""
+		"utility_room_viewRN.placeHolderList[3086]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10.translateZ" 
-		"utility_room_viewRN.placeHolderList[3962]" ""
+		"utility_room_viewRN.placeHolderList[3087]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10.visibility" 
-		"utility_room_viewRN.placeHolderList[3963]" ""
+		"utility_room_viewRN.placeHolderList[3088]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10.rotateX" 
-		"utility_room_viewRN.placeHolderList[3964]" ""
+		"utility_room_viewRN.placeHolderList[3089]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10.rotateY" 
-		"utility_room_viewRN.placeHolderList[3965]" ""
+		"utility_room_viewRN.placeHolderList[3090]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3966]" ""
+		"utility_room_viewRN.placeHolderList[3091]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10.scaleX" 
-		"utility_room_viewRN.placeHolderList[3967]" ""
+		"utility_room_viewRN.placeHolderList[3092]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10.scaleY" 
-		"utility_room_viewRN.placeHolderList[3968]" ""
+		"utility_room_viewRN.placeHolderList[3093]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3969]" ""
+		"utility_room_viewRN.placeHolderList[3094]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11.translateX" 
-		"utility_room_viewRN.placeHolderList[3970]" ""
+		"utility_room_viewRN.placeHolderList[3095]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11.translateY" 
-		"utility_room_viewRN.placeHolderList[3971]" ""
+		"utility_room_viewRN.placeHolderList[3096]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11.translateZ" 
-		"utility_room_viewRN.placeHolderList[3972]" ""
+		"utility_room_viewRN.placeHolderList[3097]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11.visibility" 
-		"utility_room_viewRN.placeHolderList[3973]" ""
+		"utility_room_viewRN.placeHolderList[3098]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11.rotateX" 
-		"utility_room_viewRN.placeHolderList[3974]" ""
+		"utility_room_viewRN.placeHolderList[3099]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11.rotateY" 
-		"utility_room_viewRN.placeHolderList[3975]" ""
+		"utility_room_viewRN.placeHolderList[3100]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3976]" ""
+		"utility_room_viewRN.placeHolderList[3101]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11.scaleX" 
-		"utility_room_viewRN.placeHolderList[3977]" ""
+		"utility_room_viewRN.placeHolderList[3102]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11.scaleY" 
-		"utility_room_viewRN.placeHolderList[3978]" ""
+		"utility_room_viewRN.placeHolderList[3103]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3979]" ""
+		"utility_room_viewRN.placeHolderList[3104]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12.translateX" 
-		"utility_room_viewRN.placeHolderList[3980]" ""
+		"utility_room_viewRN.placeHolderList[3105]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12.translateY" 
-		"utility_room_viewRN.placeHolderList[3981]" ""
+		"utility_room_viewRN.placeHolderList[3106]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12.translateZ" 
-		"utility_room_viewRN.placeHolderList[3982]" ""
+		"utility_room_viewRN.placeHolderList[3107]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12.visibility" 
-		"utility_room_viewRN.placeHolderList[3983]" ""
+		"utility_room_viewRN.placeHolderList[3108]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12.rotateX" 
-		"utility_room_viewRN.placeHolderList[3984]" ""
+		"utility_room_viewRN.placeHolderList[3109]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12.rotateY" 
-		"utility_room_viewRN.placeHolderList[3985]" ""
+		"utility_room_viewRN.placeHolderList[3110]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3986]" ""
+		"utility_room_viewRN.placeHolderList[3111]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12.scaleX" 
-		"utility_room_viewRN.placeHolderList[3987]" ""
+		"utility_room_viewRN.placeHolderList[3112]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12.scaleY" 
-		"utility_room_viewRN.placeHolderList[3988]" ""
+		"utility_room_viewRN.placeHolderList[3113]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3989]" ""
+		"utility_room_viewRN.placeHolderList[3114]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve1.translateX" 
-		"utility_room_viewRN.placeHolderList[3990]" ""
+		"utility_room_viewRN.placeHolderList[3115]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve1.translateY" 
-		"utility_room_viewRN.placeHolderList[3991]" ""
+		"utility_room_viewRN.placeHolderList[3116]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve1.translateZ" 
-		"utility_room_viewRN.placeHolderList[3992]" ""
+		"utility_room_viewRN.placeHolderList[3117]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve1.visibility" 
-		"utility_room_viewRN.placeHolderList[3993]" ""
+		"utility_room_viewRN.placeHolderList[3118]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve1.rotateX" 
-		"utility_room_viewRN.placeHolderList[3994]" ""
+		"utility_room_viewRN.placeHolderList[3119]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve1.rotateY" 
-		"utility_room_viewRN.placeHolderList[3995]" ""
+		"utility_room_viewRN.placeHolderList[3120]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve1.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3996]" ""
+		"utility_room_viewRN.placeHolderList[3121]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve1.scaleX" 
-		"utility_room_viewRN.placeHolderList[3997]" ""
+		"utility_room_viewRN.placeHolderList[3122]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve1.scaleY" 
-		"utility_room_viewRN.placeHolderList[3998]" ""
+		"utility_room_viewRN.placeHolderList[3123]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve1.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3999]" ""
+		"utility_room_viewRN.placeHolderList[3124]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve2.translateX" 
-		"utility_room_viewRN.placeHolderList[4000]" ""
+		"utility_room_viewRN.placeHolderList[3125]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve2.translateY" 
-		"utility_room_viewRN.placeHolderList[4001]" ""
+		"utility_room_viewRN.placeHolderList[3126]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve2.translateZ" 
-		"utility_room_viewRN.placeHolderList[4002]" ""
+		"utility_room_viewRN.placeHolderList[3127]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve2.visibility" 
-		"utility_room_viewRN.placeHolderList[4003]" ""
+		"utility_room_viewRN.placeHolderList[3128]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve2.rotateX" 
-		"utility_room_viewRN.placeHolderList[4004]" ""
+		"utility_room_viewRN.placeHolderList[3129]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve2.rotateY" 
-		"utility_room_viewRN.placeHolderList[4005]" ""
+		"utility_room_viewRN.placeHolderList[3130]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve2.rotateZ" 
-		"utility_room_viewRN.placeHolderList[4006]" ""
+		"utility_room_viewRN.placeHolderList[3131]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve2.scaleX" 
-		"utility_room_viewRN.placeHolderList[4007]" ""
+		"utility_room_viewRN.placeHolderList[3132]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve2.scaleY" 
-		"utility_room_viewRN.placeHolderList[4008]" ""
+		"utility_room_viewRN.placeHolderList[3133]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve2.scaleZ" 
-		"utility_room_viewRN.placeHolderList[4009]" ""
+		"utility_room_viewRN.placeHolderList[3134]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve3.translateX" 
-		"utility_room_viewRN.placeHolderList[4010]" ""
+		"utility_room_viewRN.placeHolderList[3135]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve3.translateY" 
-		"utility_room_viewRN.placeHolderList[4011]" ""
+		"utility_room_viewRN.placeHolderList[3136]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve3.translateZ" 
-		"utility_room_viewRN.placeHolderList[4012]" ""
+		"utility_room_viewRN.placeHolderList[3137]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve3.visibility" 
-		"utility_room_viewRN.placeHolderList[4013]" ""
+		"utility_room_viewRN.placeHolderList[3138]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve3.rotateX" 
-		"utility_room_viewRN.placeHolderList[4014]" ""
+		"utility_room_viewRN.placeHolderList[3139]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve3.rotateY" 
-		"utility_room_viewRN.placeHolderList[4015]" ""
+		"utility_room_viewRN.placeHolderList[3140]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve3.rotateZ" 
-		"utility_room_viewRN.placeHolderList[4016]" ""
+		"utility_room_viewRN.placeHolderList[3141]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve3.scaleX" 
-		"utility_room_viewRN.placeHolderList[4017]" ""
+		"utility_room_viewRN.placeHolderList[3142]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve3.scaleY" 
-		"utility_room_viewRN.placeHolderList[4018]" ""
+		"utility_room_viewRN.placeHolderList[3143]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve3.scaleZ" 
-		"utility_room_viewRN.placeHolderList[4019]" ""
+		"utility_room_viewRN.placeHolderList[3144]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve4.translateX" 
-		"utility_room_viewRN.placeHolderList[4020]" ""
+		"utility_room_viewRN.placeHolderList[3145]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve4.translateY" 
-		"utility_room_viewRN.placeHolderList[4021]" ""
+		"utility_room_viewRN.placeHolderList[3146]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve4.translateZ" 
-		"utility_room_viewRN.placeHolderList[4022]" ""
+		"utility_room_viewRN.placeHolderList[3147]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve4.visibility" 
-		"utility_room_viewRN.placeHolderList[4023]" ""
+		"utility_room_viewRN.placeHolderList[3148]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve4.rotateX" 
-		"utility_room_viewRN.placeHolderList[4024]" ""
+		"utility_room_viewRN.placeHolderList[3149]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve4.rotateY" 
-		"utility_room_viewRN.placeHolderList[4025]" ""
+		"utility_room_viewRN.placeHolderList[3150]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve4.rotateZ" 
-		"utility_room_viewRN.placeHolderList[4026]" ""
+		"utility_room_viewRN.placeHolderList[3151]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve4.scaleX" 
-		"utility_room_viewRN.placeHolderList[4027]" ""
+		"utility_room_viewRN.placeHolderList[3152]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve4.scaleY" 
-		"utility_room_viewRN.placeHolderList[4028]" ""
+		"utility_room_viewRN.placeHolderList[3153]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve4.scaleZ" 
-		"utility_room_viewRN.placeHolderList[4029]" ""
+		"utility_room_viewRN.placeHolderList[3154]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve5.translateX" 
-		"utility_room_viewRN.placeHolderList[4030]" ""
+		"utility_room_viewRN.placeHolderList[3155]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve5.translateY" 
-		"utility_room_viewRN.placeHolderList[4031]" ""
+		"utility_room_viewRN.placeHolderList[3156]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve5.translateZ" 
-		"utility_room_viewRN.placeHolderList[4032]" ""
+		"utility_room_viewRN.placeHolderList[3157]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve5.visibility" 
-		"utility_room_viewRN.placeHolderList[4033]" ""
+		"utility_room_viewRN.placeHolderList[3158]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve5.rotateX" 
-		"utility_room_viewRN.placeHolderList[4034]" ""
+		"utility_room_viewRN.placeHolderList[3159]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve5.rotateY" 
-		"utility_room_viewRN.placeHolderList[4035]" ""
+		"utility_room_viewRN.placeHolderList[3160]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve5.rotateZ" 
-		"utility_room_viewRN.placeHolderList[4036]" ""
+		"utility_room_viewRN.placeHolderList[3161]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve5.scaleX" 
-		"utility_room_viewRN.placeHolderList[4037]" ""
+		"utility_room_viewRN.placeHolderList[3162]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve5.scaleY" 
-		"utility_room_viewRN.placeHolderList[4038]" ""
+		"utility_room_viewRN.placeHolderList[3163]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve5.scaleZ" 
-		"utility_room_viewRN.placeHolderList[4039]" ""
+		"utility_room_viewRN.placeHolderList[3164]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm.rotateX" 
-		"utility_room_viewRN.placeHolderList[4040]" ""
+		"utility_room_viewRN.placeHolderList[3165]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm.rotateY" 
-		"utility_room_viewRN.placeHolderList[4041]" ""
+		"utility_room_viewRN.placeHolderList[3166]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm.rotateZ" 
-		"utility_room_viewRN.placeHolderList[4042]" ""
+		"utility_room_viewRN.placeHolderList[3167]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm.translateX" 
-		"utility_room_viewRN.placeHolderList[4043]" ""
+		"utility_room_viewRN.placeHolderList[3168]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm.translateY" 
-		"utility_room_viewRN.placeHolderList[4044]" ""
+		"utility_room_viewRN.placeHolderList[3169]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm.translateZ" 
-		"utility_room_viewRN.placeHolderList[4045]" ""
+		"utility_room_viewRN.placeHolderList[3170]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm.visibility" 
-		"utility_room_viewRN.placeHolderList[4046]" ""
+		"utility_room_viewRN.placeHolderList[3171]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm.scaleX" 
-		"utility_room_viewRN.placeHolderList[4047]" ""
+		"utility_room_viewRN.placeHolderList[3172]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm.scaleY" 
-		"utility_room_viewRN.placeHolderList[4048]" ""
+		"utility_room_viewRN.placeHolderList[3173]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm.scaleZ" 
-		"utility_room_viewRN.placeHolderList[4049]" ""
+		"utility_room_viewRN.placeHolderList[3174]" ""
 		5 4 "utility_room_viewRN" "utility_room_view:sneaks_latest:blendShape1.weight[0]" 
-		"utility_room_viewRN.placeHolderList[4050]" ""
+		"utility_room_viewRN.placeHolderList[3175]" ""
 		5 4 "utility_room_viewRN" "utility_room_view:sneaks_latest:blendShape1.weight[1]" 
-		"utility_room_viewRN.placeHolderList[4051]" ""
+		"utility_room_viewRN.placeHolderList[3176]" ""
 		5 4 "utility_room_viewRN" "utility_room_view:sneaks_latest:blendShape1.weight[2]" 
-		"utility_room_viewRN.placeHolderList[4052]" ""
+		"utility_room_viewRN.placeHolderList[3177]" ""
 		5 4 "utility_room_viewRN" "utility_room_view:sneaks_latest:blendShape1.weight[3]" 
-		"utility_room_viewRN.placeHolderList[4053]" ""
+		"utility_room_viewRN.placeHolderList[3178]" ""
 		5 4 "utility_room_viewRN" "utility_room_view:sneaks_latest:blendShape1.weight[4]" 
-		"utility_room_viewRN.placeHolderList[4054]" ""
+		"utility_room_viewRN.placeHolderList[3179]" ""
 		5 4 "utility_room_viewRN" "utility_room_view:sneaks_latest:blendShape1.weight[5]" 
-		"utility_room_viewRN.placeHolderList[4055]" ""
+		"utility_room_viewRN.placeHolderList[3180]" ""
 		5 4 "utility_room_viewRN" "utility_room_view:sneaks_latest:blendShape1.weight[6]" 
-		"utility_room_viewRN.placeHolderList[4056]" ""
+		"utility_room_viewRN.placeHolderList[3181]" ""
 		5 4 "utility_room_viewRN" "utility_room_view:sneaks_latest:blendShape1.weight[7]" 
-		"utility_room_viewRN.placeHolderList[4057]" ""
+		"utility_room_viewRN.placeHolderList[3182]" ""
 		5 4 "utility_room_viewRN" "utility_room_view:sneaks_latest:blendShape1.weight[8]" 
-		"utility_room_viewRN.placeHolderList[4058]" ""
+		"utility_room_viewRN.placeHolderList[3183]" ""
 		5 4 "utility_room_viewRN" "utility_room_view:sneaks_latest:blendShape1.weight[9]" 
-		"utility_room_viewRN.placeHolderList[4059]" ""
+		"utility_room_viewRN.placeHolderList[3184]" ""
 		5 4 "utility_room_viewRN" "utility_room_view:sneaks_latest:blendShape1.weight[10]" 
-		"utility_room_viewRN.placeHolderList[4060]" ""
+		"utility_room_viewRN.placeHolderList[3185]" ""
 		5 4 "utility_room_viewRN" "utility_room_view:sneaks_latest:blendShape1.weight[11]" 
-		"utility_room_viewRN.placeHolderList[4061]" ""
+		"utility_room_viewRN.placeHolderList[3186]" ""
 		5 4 "utility_room_viewRN" "utility_room_view:sneaks_latest:blendShape1.weight[12]" 
-		"utility_room_viewRN.placeHolderList[4062]" ""
+		"utility_room_viewRN.placeHolderList[3187]" ""
 		5 4 "utility_room_viewRN" "utility_room_view:sneaks_latest:blendShape1.weight[13]" 
-		"utility_room_viewRN.placeHolderList[4063]" ""
+		"utility_room_viewRN.placeHolderList[3188]" ""
 		5 4 "utility_room_viewRN" "utility_room_view:sneaks_latest:blendShape1.weight[14]" 
-		"utility_room_viewRN.placeHolderList[4064]" ""
+		"utility_room_viewRN.placeHolderList[3189]" ""
 		5 4 "utility_room_viewRN" "utility_room_view:sneaks_latest:blendShape1.weight[15]" 
-		"utility_room_viewRN.placeHolderList[4065]" ""
+		"utility_room_viewRN.placeHolderList[3190]" ""
 		"utility_room_view:pig_latest:key_latestRN" 3
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:cat_collar:diamond:pPyramid2|utility_room_view:pig_latest:colorClip_control|utility_room_view:pig_latest:key_control|utility_room_view:pig_latest:key_latest:Obj_000003|utility_room_view:pig_latest:key_latest:Obj_000003Shape" 
 		"surfaceReference" " 1"
@@ -23699,16 +23804,16 @@ createNode reference -n "utility_room_viewRN";
 		
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:cat_collar:diamond:pPyramid2|utility_room_view:pig_latest:colorClip_control|utility_room_view:pig_latest:key_control|utility_room_view:pig_latest:key_latest:Obj_000003|utility_room_view:pig_latest:key_latest:Obj_000003Shape" 
 		"furNameSpace" " -type \"string\" \"key_latest\""
-		"utility_room_viewRN" 54
+		"utility_room_viewRN" 40
 		1 utility_room_view:defaultFurGlobals "furGlobalReference" "fgrf" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
 		
 		2 "|utility_room_view:at_dryer" "visibility" " -av 1"
-		2 "|utility_room_view:at_dryer" "translate" " -type \"double3\" -129.32330419224678053 3.93341151683805723 106.24470438068891553"
+		2 "|utility_room_view:at_dryer" "translate" " -type \"double3\" -78.196414659532067 4.945499586338431 97.638839758897106"
 		
 		2 "|utility_room_view:at_dryer" "translateX" " -av"
 		2 "|utility_room_view:at_dryer" "translateY" " -av"
 		2 "|utility_room_view:at_dryer" "translateZ" " -av"
-		2 "|utility_room_view:at_dryer" "rotate" " -type \"double3\" -0.54608521346857986 28.13693577080437791 -0.023220468017016618"
+		2 "|utility_room_view:at_dryer" "rotate" " -type \"double3\" -0.2184340853874322 45.002535701316411 -0.0092881872068066567"
 		
 		2 "|utility_room_view:at_dryer" "rotateX" " -av"
 		2 "|utility_room_view:at_dryer" "rotateY" " -av"
@@ -23732,10 +23837,9 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:at_dryer|utility_room_view:at_dryerShape" "farClipPlane" 
 		" 10000"
 		2 "|utility_room_view:at_dryer|utility_room_view:at_dryerShape" "centerOfInterest" 
-		" 695.1401842888203646"
+		" 22.725275836392218"
 		2 "|utility_room_view:at_dryer|utility_room_view:at_dryerShape" "tumblePivot" 
-		" -type \"double3\" -225.68931366158909668 35.81473875045776367 1.64020004128892083"
-		
+		" -type \"double3\" -42.270181655883789 7.5793014895170927 -116.31026458740234"
 		2 "|utility_room_view:at_dryer|utility_room_view:at_dryerShape" "displayGateMaskOpacity" 
 		" 0.86029398441314697"
 		2 "|utility_room_view:at_dryer|utility_room_view:at_dryerShape" "displayFilmGate" 
@@ -23744,69 +23848,52 @@ createNode reference -n "utility_room_viewRN";
 		" 1"
 		2 "|utility_room_view:at_dryer|utility_room_view:at_dryerShape" "displayGateMaskColor" 
 		" -type \"float3\" 0 0 0"
-		2 "|utility_room_view:nRigid1|utility_room_view:nRigidShape1" "cacheWidth" 
-		" 315"
-		2 "|utility_room_view:nRigid2|utility_room_view:nRigidShape2" "cacheWidth" 
-		" 315"
-		2 "|utility_room_view:nRigid3|utility_room_view:nRigidShape3" "cacheWidth" 
-		" 315"
-		2 "|utility_room_view:nRigid4|utility_room_view:nRigidShape4" "cacheWidth" 
-		" 315"
-		2 "|utility_room_view:nRigid5|utility_room_view:nRigidShape5" "cacheWidth" 
-		" 315"
-		2 "|utility_room_view:nRigid6|utility_room_view:nRigidShape6" "cacheWidth" 
-		" 315"
-		2 "|utility_room_view:nRigid7|utility_room_view:nRigidShape7" "cacheWidth" 
-		" 315"
-		2 "|utility_room_view:nRigid8|utility_room_view:nRigidShape8" "cacheWidth" 
-		" 315"
-		2 "|utility_room_view:nRigid9|utility_room_view:nRigidShape9" "cacheWidth" 
-		" 315"
-		2 "|utility_room_view:nRigid10|utility_room_view:nRigidShape10" "cacheWidth" 
-		" 315"
-		2 "|utility_room_view:nRigid11|utility_room_view:nRigidShape11" "cacheWidth" 
-		" 315"
-		2 "|utility_room_view:nRigid12|utility_room_view:nRigidShape12" "cacheWidth" 
-		" 315"
-		2 "|utility_room_view:nCloth1|utility_room_view:nClothShape1" "cacheWidth" 
-		" 315"
 		2 "utility_room_view:defaultFurGlobals" "furGlobalReference" " 1"
-		2 "utility_room_view:nClothShape1Cache1" "enable" " 1"
 		3 ":defaultRenderGlobals.rendercallback" "utility_room_view:defaultFurGlobals.callback" 
 		""
-		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.visibility" "utility_room_viewRN.placeHolderList[4195]" 
+		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.visibility" "utility_room_viewRN.placeHolderList[3323]" 
 		""
-		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.translateX" "utility_room_viewRN.placeHolderList[4196]" 
+		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.translateX" "utility_room_viewRN.placeHolderList[3324]" 
 		""
-		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.translateY" "utility_room_viewRN.placeHolderList[4197]" 
+		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.translateY" "utility_room_viewRN.placeHolderList[3325]" 
 		""
-		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.translateZ" "utility_room_viewRN.placeHolderList[4198]" 
+		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.translateZ" "utility_room_viewRN.placeHolderList[3326]" 
 		""
-		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.rotateX" "utility_room_viewRN.placeHolderList[4199]" 
+		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.rotateX" "utility_room_viewRN.placeHolderList[3327]" 
 		""
-		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.rotateY" "utility_room_viewRN.placeHolderList[4200]" 
+		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.rotateY" "utility_room_viewRN.placeHolderList[3328]" 
 		""
-		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.rotateZ" "utility_room_viewRN.placeHolderList[4201]" 
+		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.rotateZ" "utility_room_viewRN.placeHolderList[3329]" 
 		""
-		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.scaleX" "utility_room_viewRN.placeHolderList[4202]" 
+		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.scaleX" "utility_room_viewRN.placeHolderList[3330]" 
 		""
-		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.scaleY" "utility_room_viewRN.placeHolderList[4203]" 
+		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.scaleY" "utility_room_viewRN.placeHolderList[3331]" 
 		""
-		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.scaleZ" "utility_room_viewRN.placeHolderList[4204]" 
+		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.scaleZ" "utility_room_viewRN.placeHolderList[3332]" 
 		""
 		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer|utility_room_view:at_dryerShape.focalLength" 
-		"utility_room_viewRN.placeHolderList[4205]" ""
-		"utility_room_view:house_latest:bedroom_latestRN" 5
-		2 "|utility_room_view:house_latest:bedroom_latest:cloth|utility_room_view:house_latest:bedroom_latest:nRigid2|utility_room_view:house_latest:bedroom_latest:nRigidShape2" 
-		"cacheWidth" " 315"
-		2 "|utility_room_view:house_latest:bedroom_latest:cloth|utility_room_view:house_latest:bedroom_latest:nRigid3|utility_room_view:house_latest:bedroom_latest:nRigidShape3" 
-		"cacheWidth" " 315"
-		2 "|utility_room_view:house_latest:bedroom_latest:cloth|utility_room_view:house_latest:bedroom_latest:nRigid4|utility_room_view:house_latest:bedroom_latest:nRigidShape4" 
-		"cacheWidth" " 315"
+		"utility_room_viewRN.placeHolderList[3333]" ""
+		"utility_room_view:house_latest:bedroom_latestRN" 10
 		2 "|utility_room_view:house_latest:bedroom_latest:cloth|utility_room_view:house_latest:bedroom_latest:nRigid5|utility_room_view:house_latest:bedroom_latest:nRigidShape5" 
 		"cacheWidth" " 315"
-		2 "utility_room_view:house_latest:bedroom_latest:layer2" "visibility" " 1"
+		2 "|utility_room_view:house_latest:bedroom_latest:pPlane1" "scale" " -type \"double3\" 1 1 1.2363319789371665"
 		
+		2 "|utility_room_view:house_latest:bedroom_latest:nCloth1|utility_room_view:house_latest:bedroom_latest:nClothShape1" 
+		"cacheWidth" " 315"
+		2 "|utility_room_view:house_latest:bedroom_latest:nRigid6|utility_room_view:house_latest:bedroom_latest:nRigidShape6" 
+		"cacheWidth" " 315"
+		2 "|utility_room_view:house_latest:bedroom_latest:nRigid7|utility_room_view:house_latest:bedroom_latest:nRigidShape7" 
+		"cacheWidth" " 315"
+		2 "|utility_room_view:house_latest:bedroom_latest:nRigid8|utility_room_view:house_latest:bedroom_latest:nRigidShape8" 
+		"cacheWidth" " 315"
+		2 "|utility_room_view:house_latest:bedroom_latest:nRigid9|utility_room_view:house_latest:bedroom_latest:nRigidShape9" 
+		"cacheWidth" " 315"
+		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:bedroom_latest:pPlane1.drawOverride" 
+		"utility_room_viewRN.placeHolderList[3300]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:bedroom_latest:nCloth1|utility_room_view:house_latest:bedroom_latest:nClothShape1.playFromCache" 
+		"utility_room_viewRN.placeHolderList[3301]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:bedroom_latest:nCloth1|utility_room_view:house_latest:bedroom_latest:nClothShape1.positions" 
+		"utility_room_viewRN.placeHolderList[3302]" ""
 		"utility_room_view:pig_latestRN" 391
 		0 "|utility_room_viewRNfosterParent1|tail_4control01_parentConstraint1" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01|utility_room_view:pig_latest:tail_4control01" 
 		"-s -r "
@@ -23825,7 +23912,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:polySurface4|utility_room_view:pig_latest:polySurface7" 
 		"visibility" " 0"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01" 
-		"translate" " -type \"double3\" -139.03054169954276631 2.33257082102580116 78.00465152805024616"
+		"translate" " -type \"double3\" -101.23076298537629 3.2998453986826104 73.258733134325524"
 		
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01" 
 		"translateX" " -av"
@@ -23834,7 +23921,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01" 
 		"translateZ" " -av"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01" 
-		"rotate" " -type \"double3\" -9.71082093175770922 -81.11474496667237588 0"
+		"rotate" " -type \"double3\" 11.995779028610826 -73.862461580276985 0"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01" 
 		"rotateX" " -av"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01" 
@@ -23866,7 +23953,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:cat_collar:diamond:pPyramid2|utility_room_view:pig_latest:colorClip_control|utility_room_view:pig_latest:cat_collar:pTorus4|utility_room_view:pig_latest:cat_collar:pTorus4Shape" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:Skeleton_01|utility_room_view:pig_latest:PigSkin002:bind_root01|utility_room_view:pig_latest:PigSkin002:bind_head01|utility_room_view:pig_latest:pig_right_eye" 
-		"rotate" " -type \"double3\" 2.5831299381902566 82.87746541529944011 -78.83426881014979415"
+		"rotate" " -type \"double3\" 2.5831299381902566 82.87746541529944 -78.834268810149794"
 		
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:Skeleton_01|utility_room_view:pig_latest:PigSkin002:bind_root01|utility_room_view:pig_latest:PigSkin002:bind_head01|utility_room_view:pig_latest:pig_right_eye" 
 		"rotateX" " -av"
@@ -23882,7 +23969,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:Skeleton_01|utility_room_view:pig_latest:PigSkin002:bind_root01|utility_room_view:pig_latest:PigSkin002:bind_head01|utility_room_view:pig_latest:pig_right_eye|utility_room_view:pig_latest:pig_right_eyeShape" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:Skeleton_01|utility_room_view:pig_latest:PigSkin002:bind_root01|utility_room_view:pig_latest:PigSkin002:bind_head01|utility_room_view:pig_latest:pig_left_eye" 
-		"rotate" " -type \"double3\" 2.5831299381902566 82.87746541529944011 -78.83426881014979415"
+		"rotate" " -type \"double3\" 2.5831299381902566 82.87746541529944 -78.834268810149794"
 		
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:Skeleton_01|utility_room_view:pig_latest:PigSkin002:bind_root01|utility_room_view:pig_latest:PigSkin002:bind_head01|utility_room_view:pig_latest:pig_left_eye" 
 		"rotateX" " -av"
@@ -23907,7 +23994,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01" 
 		"translateZ" " -av"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_L_backfoot01" 
-		"translate" " -type \"double3\" 0.23146854936436267 1.83701970241677914 2.10001362954439941"
+		"translate" " -type \"double3\" -1.075155330732968 3.6653680029277997 -5.8443905876023869"
 		
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_L_backfoot01" 
 		"translateX" " -av"
@@ -23916,7 +24003,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_L_backfoot01" 
 		"translateZ" " -av"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_L_backfoot01" 
-		"rotate" " -type \"double3\" 76.76145255334562023 0 0"
+		"rotate" " -type \"double3\" 124.87984538256512 0 0"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_L_backfoot01" 
 		"rotateX" " -av"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_L_backfoot01" 
@@ -23932,7 +24019,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_L_backfoot01" 
 		"scaleZ" " -av"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_R_backfoot01" 
-		"translate" " -type \"double3\" -0.0062278346012611951 2.07149167720959415 1.71369525470636486"
+		"translate" " -type \"double3\" 0.27685789833876073 2.9240340485257028 -4.7556871575298176"
 		
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_R_backfoot01" 
 		"translateX" " -av"
@@ -23941,7 +24028,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_R_backfoot01" 
 		"translateZ" " -av"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_R_backfoot01" 
-		"rotate" " -type \"double3\" 82.52505382983517279 0 0"
+		"rotate" " -type \"double3\" 108.30021921604015 0 0"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_R_backfoot01" 
 		"rotateX" " -av"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_R_backfoot01" 
@@ -23961,7 +24048,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01" 
 		"translateZ" " -av"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01" 
-		"rotate" " -type \"double3\" 21.53368131570139354 0 0"
+		"rotate" " -type \"double3\" 25.421861839316524 0 0"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01" 
 		"rotateX" " -av"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01" 
@@ -23977,14 +24064,13 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01" 
 		"translateZ" " -av"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01" 
-		"rotate" " -type \"double3\" -37.03926967074634291 0 0"
+		"rotate" " -type \"double3\" -37.039269670746343 0 0"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01" 
 		"rotateX" " -av"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01" 
 		"blendParent1" " -k 1"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01" 
-		"translate" " -type \"double3\" 0.14465919242147388 -0.057833811050889139 0.17976079152267671"
-		
+		"translate" " -type \"double3\" 0 -1.4598730477605102 -0.31436948238920159"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01" 
 		"translateX" " -av"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01" 
@@ -23992,7 +24078,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01" 
 		"translateZ" " -av"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01" 
-		"rotate" " -type \"double3\" 26.51466304844207045 0 0"
+		"rotate" " -type \"double3\" -46.296481482482854 0 0"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01" 
 		"rotateX" " -av"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01" 
@@ -24006,13 +24092,13 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01" 
 		"translateZ" " -av"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:splineiK_tail01" 
-		"translate" " -type \"double3\" 0.15041537984070885 2.1277437635060461 -6.59483225031482423"
+		"translate" " -type \"double3\" -0.064743629638215353 -1.5715893512161763 -4.0773712711067285"
 		
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:splineiK_tail01" 
-		"rotate" " -type \"double3\" 84.71073393381843175 70.65138063542094926 94.88351695458194968"
+		"rotate" " -type \"double3\" -91.592653966272209 33.245548127527506 -90.349647284408306"
 		
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01" 
-		"translate" " -type \"double3\" 0 -0.11907576875095802 0.0027077676157416428"
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01" 
 		"translateX" " -av"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01" 
@@ -24020,7 +24106,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01" 
 		"translateZ" " -av"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_L_frontfoot01" 
-		"translate" " -type \"double3\" 0.61025649934851844 1.07665482243306831 -2.63003755973117936"
+		"translate" " -type \"double3\" -0.22532732563747951 3.4590730512443186 4.7641285975722569"
 		
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_L_frontfoot01" 
 		"translateX" " -av"
@@ -24029,11 +24115,11 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_L_frontfoot01" 
 		"translateZ" " -av"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_L_frontfoot01" 
-		"rotate" " -type \"double3\" 100.75736059416568935 0 0"
+		"rotate" " -type \"double3\" 33.15685693309559 0 0"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_L_frontfoot01" 
 		"rotateX" " -av"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_R_frontfoot01" 
-		"translate" " -type \"double3\" -0.23676421547705304 0.46580117474567678 -0.91030718649723541"
+		"translate" " -type \"double3\" -0.18929049537569206 2.810252277039873 4.1995652248427549"
 		
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_R_frontfoot01" 
 		"translateX" " -av"
@@ -24042,7 +24128,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_R_frontfoot01" 
 		"translateZ" " -av"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_R_frontfoot01" 
-		"rotate" " -type \"double3\" 53.58523195594766975 0 0"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_R_frontfoot01" 
 		"rotateX" " -av"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_R_frontfoot01" 
@@ -24074,7 +24160,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01|utility_room_view:pig_latest:head_control" 
 		"translateZ" " -av"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01|utility_room_view:pig_latest:head_control" 
-		"rotate" " -type \"double3\" 10.09102142797962109 0 0"
+		"rotate" " -type \"double3\" -5.2652601284068528 0 0"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01|utility_room_view:pig_latest:head_control" 
 		"rotateX" " -av"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01|utility_room_view:pig_latest:head_control" 
@@ -24082,7 +24168,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01|utility_room_view:pig_latest:head_control" 
 		"rotateZ" " -av"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01|utility_room_view:pig_latest:head_control" 
-		"scale" " -type \"double3\" 1.00000000000000022 1.00000000000000022 1.00000000000000022"
+		"scale" " -type \"double3\" 1.0000000000000002 1.0000000000000002 1.0000000000000002"
 		
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01|utility_room_view:pig_latest:head_control" 
 		"scaleX" " -av"
@@ -24091,7 +24177,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01|utility_room_view:pig_latest:head_control" 
 		"scaleZ" " -av"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:spine_spline_ctrl" 
-		"translate" " -type \"double3\" 0 3.01286554233095227 0.25300000000000328"
+		"translate" " -type \"double3\" 0 0.076314593084399585 0.25300000000000328"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:spine_spline_ctrl" 
 		"translateX" " -av -k 0 -cb 1"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:spine_spline_ctrl" 
@@ -24113,7 +24199,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:flexi_joint_systems|utility_room_view:pig_latest:vertebrae_flexi_spine01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_global01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_surface01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_surface0Shape1Orig" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:flexi_joint_systems|utility_room_view:pig_latest:vertebrae_flexi_spine01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_global01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_anim_mid01" 
-		"translate" " -type \"double3\" -0.00043978344870367866 -0.1265023679562976 -0.25728332091970563"
+		"translate" " -type \"double3\" -0.00050347191113122691 1.5119965344957034 -0.29454252009542298"
 		
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:flexi_joint_systems|utility_room_view:pig_latest:vertebrae_flexi_spine01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_global01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_anim_mid01" 
 		"translateX" " -av"
@@ -24223,409 +24309,409 @@ createNode reference -n "utility_room_viewRN";
 		"|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01.rotateZ" 
 		""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01.translateX" 
-		"utility_room_viewRN.placeHolderList[3297]" ""
+		"utility_room_viewRN.placeHolderList[2416]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01.translateY" 
-		"utility_room_viewRN.placeHolderList[3298]" ""
+		"utility_room_viewRN.placeHolderList[2417]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01.translateZ" 
-		"utility_room_viewRN.placeHolderList[3299]" ""
+		"utility_room_viewRN.placeHolderList[2418]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01.rotateX" 
-		"utility_room_viewRN.placeHolderList[3300]" ""
+		"utility_room_viewRN.placeHolderList[2419]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01.rotateY" 
-		"utility_room_viewRN.placeHolderList[3301]" ""
+		"utility_room_viewRN.placeHolderList[2420]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3302]" ""
+		"utility_room_viewRN.placeHolderList[2421]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01.scaleX" 
-		"utility_room_viewRN.placeHolderList[3303]" ""
+		"utility_room_viewRN.placeHolderList[2422]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01.scaleY" 
-		"utility_room_viewRN.placeHolderList[3304]" ""
+		"utility_room_viewRN.placeHolderList[2423]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3305]" ""
+		"utility_room_viewRN.placeHolderList[2424]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:Skeleton_01|utility_room_view:pig_latest:PigSkin002:bind_root01|utility_room_view:pig_latest:PigSkin002:bind_head01|utility_room_view:pig_latest:pig_right_eye.rotateX" 
-		"utility_room_viewRN.placeHolderList[3306]" ""
+		"utility_room_viewRN.placeHolderList[2425]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:Skeleton_01|utility_room_view:pig_latest:PigSkin002:bind_root01|utility_room_view:pig_latest:PigSkin002:bind_head01|utility_room_view:pig_latest:pig_right_eye.rotateY" 
-		"utility_room_viewRN.placeHolderList[3307]" ""
+		"utility_room_viewRN.placeHolderList[2426]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:Skeleton_01|utility_room_view:pig_latest:PigSkin002:bind_root01|utility_room_view:pig_latest:PigSkin002:bind_head01|utility_room_view:pig_latest:pig_right_eye.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3308]" ""
+		"utility_room_viewRN.placeHolderList[2427]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:Skeleton_01|utility_room_view:pig_latest:PigSkin002:bind_root01|utility_room_view:pig_latest:PigSkin002:bind_head01|utility_room_view:pig_latest:pig_right_eye.visibility" 
-		"utility_room_viewRN.placeHolderList[3309]" ""
+		"utility_room_viewRN.placeHolderList[2428]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:Skeleton_01|utility_room_view:pig_latest:PigSkin002:bind_root01|utility_room_view:pig_latest:PigSkin002:bind_head01|utility_room_view:pig_latest:pig_right_eye.translateX" 
-		"utility_room_viewRN.placeHolderList[3310]" ""
+		"utility_room_viewRN.placeHolderList[2429]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:Skeleton_01|utility_room_view:pig_latest:PigSkin002:bind_root01|utility_room_view:pig_latest:PigSkin002:bind_head01|utility_room_view:pig_latest:pig_right_eye.translateY" 
-		"utility_room_viewRN.placeHolderList[3311]" ""
+		"utility_room_viewRN.placeHolderList[2430]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:Skeleton_01|utility_room_view:pig_latest:PigSkin002:bind_root01|utility_room_view:pig_latest:PigSkin002:bind_head01|utility_room_view:pig_latest:pig_right_eye.translateZ" 
-		"utility_room_viewRN.placeHolderList[3312]" ""
+		"utility_room_viewRN.placeHolderList[2431]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:Skeleton_01|utility_room_view:pig_latest:PigSkin002:bind_root01|utility_room_view:pig_latest:PigSkin002:bind_head01|utility_room_view:pig_latest:pig_right_eye.scaleX" 
-		"utility_room_viewRN.placeHolderList[3313]" ""
+		"utility_room_viewRN.placeHolderList[2432]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:Skeleton_01|utility_room_view:pig_latest:PigSkin002:bind_root01|utility_room_view:pig_latest:PigSkin002:bind_head01|utility_room_view:pig_latest:pig_right_eye.scaleY" 
-		"utility_room_viewRN.placeHolderList[3314]" ""
+		"utility_room_viewRN.placeHolderList[2433]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:Skeleton_01|utility_room_view:pig_latest:PigSkin002:bind_root01|utility_room_view:pig_latest:PigSkin002:bind_head01|utility_room_view:pig_latest:pig_right_eye.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3315]" ""
+		"utility_room_viewRN.placeHolderList[2434]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:Skeleton_01|utility_room_view:pig_latest:PigSkin002:bind_root01|utility_room_view:pig_latest:PigSkin002:bind_head01|utility_room_view:pig_latest:pig_left_eye.rotateX" 
-		"utility_room_viewRN.placeHolderList[3316]" ""
+		"utility_room_viewRN.placeHolderList[2435]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:Skeleton_01|utility_room_view:pig_latest:PigSkin002:bind_root01|utility_room_view:pig_latest:PigSkin002:bind_head01|utility_room_view:pig_latest:pig_left_eye.rotateY" 
-		"utility_room_viewRN.placeHolderList[3317]" ""
+		"utility_room_viewRN.placeHolderList[2436]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:Skeleton_01|utility_room_view:pig_latest:PigSkin002:bind_root01|utility_room_view:pig_latest:PigSkin002:bind_head01|utility_room_view:pig_latest:pig_left_eye.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3318]" ""
+		"utility_room_viewRN.placeHolderList[2437]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:Skeleton_01|utility_room_view:pig_latest:PigSkin002:bind_root01|utility_room_view:pig_latest:PigSkin002:bind_head01|utility_room_view:pig_latest:pig_left_eye.visibility" 
-		"utility_room_viewRN.placeHolderList[3319]" ""
+		"utility_room_viewRN.placeHolderList[2438]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:Skeleton_01|utility_room_view:pig_latest:PigSkin002:bind_root01|utility_room_view:pig_latest:PigSkin002:bind_head01|utility_room_view:pig_latest:pig_left_eye.translateX" 
-		"utility_room_viewRN.placeHolderList[3320]" ""
+		"utility_room_viewRN.placeHolderList[2439]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:Skeleton_01|utility_room_view:pig_latest:PigSkin002:bind_root01|utility_room_view:pig_latest:PigSkin002:bind_head01|utility_room_view:pig_latest:pig_left_eye.translateY" 
-		"utility_room_viewRN.placeHolderList[3321]" ""
+		"utility_room_viewRN.placeHolderList[2440]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:Skeleton_01|utility_room_view:pig_latest:PigSkin002:bind_root01|utility_room_view:pig_latest:PigSkin002:bind_head01|utility_room_view:pig_latest:pig_left_eye.translateZ" 
-		"utility_room_viewRN.placeHolderList[3322]" ""
+		"utility_room_viewRN.placeHolderList[2441]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:Skeleton_01|utility_room_view:pig_latest:PigSkin002:bind_root01|utility_room_view:pig_latest:PigSkin002:bind_head01|utility_room_view:pig_latest:pig_left_eye.scaleX" 
-		"utility_room_viewRN.placeHolderList[3323]" ""
+		"utility_room_viewRN.placeHolderList[2442]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:Skeleton_01|utility_room_view:pig_latest:PigSkin002:bind_root01|utility_room_view:pig_latest:PigSkin002:bind_head01|utility_room_view:pig_latest:pig_left_eye.scaleY" 
-		"utility_room_viewRN.placeHolderList[3324]" ""
+		"utility_room_viewRN.placeHolderList[2443]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:Skeleton_01|utility_room_view:pig_latest:PigSkin002:bind_root01|utility_room_view:pig_latest:PigSkin002:bind_head01|utility_room_view:pig_latest:pig_left_eye.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3325]" ""
+		"utility_room_viewRN.placeHolderList[2444]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01.translateX" 
-		"utility_room_viewRN.placeHolderList[3326]" ""
+		"utility_room_viewRN.placeHolderList[2445]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01.translateY" 
-		"utility_room_viewRN.placeHolderList[3327]" ""
+		"utility_room_viewRN.placeHolderList[2446]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01.translateZ" 
-		"utility_room_viewRN.placeHolderList[3328]" ""
+		"utility_room_viewRN.placeHolderList[2447]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01.rotateX" 
-		"utility_room_viewRN.placeHolderList[3329]" ""
+		"utility_room_viewRN.placeHolderList[2448]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01.rotateY" 
-		"utility_room_viewRN.placeHolderList[3330]" ""
+		"utility_room_viewRN.placeHolderList[2449]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3331]" ""
+		"utility_room_viewRN.placeHolderList[2450]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01.scaleX" 
-		"utility_room_viewRN.placeHolderList[3332]" ""
+		"utility_room_viewRN.placeHolderList[2451]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01.scaleY" 
-		"utility_room_viewRN.placeHolderList[3333]" ""
+		"utility_room_viewRN.placeHolderList[2452]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3334]" ""
+		"utility_room_viewRN.placeHolderList[2453]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01.visibility" 
-		"utility_room_viewRN.placeHolderList[3335]" ""
+		"utility_room_viewRN.placeHolderList[2454]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_L_backfoot01.rotateX" 
-		"utility_room_viewRN.placeHolderList[3336]" ""
+		"utility_room_viewRN.placeHolderList[2455]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_L_backfoot01.rotateY" 
-		"utility_room_viewRN.placeHolderList[3337]" ""
+		"utility_room_viewRN.placeHolderList[2456]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_L_backfoot01.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3338]" ""
+		"utility_room_viewRN.placeHolderList[2457]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_L_backfoot01.translateX" 
-		"utility_room_viewRN.placeHolderList[3339]" ""
+		"utility_room_viewRN.placeHolderList[2458]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_L_backfoot01.translateY" 
-		"utility_room_viewRN.placeHolderList[3340]" ""
+		"utility_room_viewRN.placeHolderList[2459]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_L_backfoot01.translateZ" 
-		"utility_room_viewRN.placeHolderList[3341]" ""
+		"utility_room_viewRN.placeHolderList[2460]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_L_backfoot01.scaleX" 
-		"utility_room_viewRN.placeHolderList[3342]" ""
+		"utility_room_viewRN.placeHolderList[2461]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_L_backfoot01.scaleY" 
-		"utility_room_viewRN.placeHolderList[3343]" ""
+		"utility_room_viewRN.placeHolderList[2462]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_L_backfoot01.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3344]" ""
+		"utility_room_viewRN.placeHolderList[2463]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_R_backfoot01.rotateX" 
-		"utility_room_viewRN.placeHolderList[3345]" ""
+		"utility_room_viewRN.placeHolderList[2464]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_R_backfoot01.rotateY" 
-		"utility_room_viewRN.placeHolderList[3346]" ""
+		"utility_room_viewRN.placeHolderList[2465]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_R_backfoot01.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3347]" ""
+		"utility_room_viewRN.placeHolderList[2466]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_R_backfoot01.translateX" 
-		"utility_room_viewRN.placeHolderList[3348]" ""
+		"utility_room_viewRN.placeHolderList[2467]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_R_backfoot01.translateY" 
-		"utility_room_viewRN.placeHolderList[3349]" ""
+		"utility_room_viewRN.placeHolderList[2468]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_R_backfoot01.translateZ" 
-		"utility_room_viewRN.placeHolderList[3350]" ""
+		"utility_room_viewRN.placeHolderList[2469]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_R_backfoot01.scaleX" 
-		"utility_room_viewRN.placeHolderList[3351]" ""
+		"utility_room_viewRN.placeHolderList[2470]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_R_backfoot01.scaleY" 
-		"utility_room_viewRN.placeHolderList[3352]" ""
+		"utility_room_viewRN.placeHolderList[2471]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_R_backfoot01.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3353]" ""
+		"utility_room_viewRN.placeHolderList[2472]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01.translateX" 
-		"utility_room_viewRN.placeHolderList[3354]" ""
+		"utility_room_viewRN.placeHolderList[2473]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01.translateY" 
-		"utility_room_viewRN.placeHolderList[3355]" ""
+		"utility_room_viewRN.placeHolderList[2474]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01.translateZ" 
-		"utility_room_viewRN.placeHolderList[3356]" ""
+		"utility_room_viewRN.placeHolderList[2475]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01.rotateX" 
-		"utility_room_viewRN.placeHolderList[3357]" ""
+		"utility_room_viewRN.placeHolderList[2476]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01.rotateY" 
-		"utility_room_viewRN.placeHolderList[3358]" ""
+		"utility_room_viewRN.placeHolderList[2477]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3359]" ""
+		"utility_room_viewRN.placeHolderList[2478]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01.scaleX" 
-		"utility_room_viewRN.placeHolderList[3360]" ""
+		"utility_room_viewRN.placeHolderList[2479]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01.scaleY" 
-		"utility_room_viewRN.placeHolderList[3361]" ""
+		"utility_room_viewRN.placeHolderList[2480]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3362]" ""
+		"utility_room_viewRN.placeHolderList[2481]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01.translate" 
-		"utility_room_viewRN.placeHolderList[3363]" ""
+		"utility_room_viewRN.placeHolderList[2482]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01.translateX" 
-		"utility_room_viewRN.placeHolderList[3364]" ""
+		"utility_room_viewRN.placeHolderList[2483]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01.translateY" 
-		"utility_room_viewRN.placeHolderList[3365]" ""
+		"utility_room_viewRN.placeHolderList[2484]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01.translateZ" 
-		"utility_room_viewRN.placeHolderList[3366]" ""
+		"utility_room_viewRN.placeHolderList[2485]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01.rotatePivot" 
-		"utility_room_viewRN.placeHolderList[3367]" ""
+		"utility_room_viewRN.placeHolderList[2486]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01.rotatePivotTranslate" 
-		"utility_room_viewRN.placeHolderList[3368]" ""
+		"utility_room_viewRN.placeHolderList[2487]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01.rotate" 
-		"utility_room_viewRN.placeHolderList[3369]" ""
+		"utility_room_viewRN.placeHolderList[2488]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01.rotateX" 
-		"utility_room_viewRN.placeHolderList[3370]" ""
+		"utility_room_viewRN.placeHolderList[2489]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01.rotateY" 
-		"utility_room_viewRN.placeHolderList[3371]" ""
+		"utility_room_viewRN.placeHolderList[2490]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3372]" ""
+		"utility_room_viewRN.placeHolderList[2491]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01.rotateOrder" 
-		"utility_room_viewRN.placeHolderList[3373]" ""
+		"utility_room_viewRN.placeHolderList[2492]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01.scale" 
-		"utility_room_viewRN.placeHolderList[3374]" ""
+		"utility_room_viewRN.placeHolderList[2493]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01.scaleX" 
-		"utility_room_viewRN.placeHolderList[3375]" ""
+		"utility_room_viewRN.placeHolderList[2494]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01.scaleY" 
-		"utility_room_viewRN.placeHolderList[3376]" ""
+		"utility_room_viewRN.placeHolderList[2495]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3377]" ""
+		"utility_room_viewRN.placeHolderList[2496]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01.parentMatrix" 
-		"utility_room_viewRN.placeHolderList[3378]" ""
+		"utility_room_viewRN.placeHolderList[2497]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01.blendParent1" 
-		"utility_room_viewRN.placeHolderList[3379]" ""
+		"utility_room_viewRN.placeHolderList[2498]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01.blendParent1" 
-		"utility_room_viewRN.placeHolderList[3380]" ""
+		"utility_room_viewRN.placeHolderList[2499]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01.translate" 
-		"utility_room_viewRN.placeHolderList[3381]" ""
+		"utility_room_viewRN.placeHolderList[2500]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01.translateX" 
-		"utility_room_viewRN.placeHolderList[3382]" ""
+		"utility_room_viewRN.placeHolderList[2501]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01.translateY" 
-		"utility_room_viewRN.placeHolderList[3383]" ""
+		"utility_room_viewRN.placeHolderList[2502]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01.translateZ" 
-		"utility_room_viewRN.placeHolderList[3384]" ""
+		"utility_room_viewRN.placeHolderList[2503]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01.rotatePivot" 
-		"utility_room_viewRN.placeHolderList[3385]" ""
+		"utility_room_viewRN.placeHolderList[2504]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01.rotatePivot" 
-		"utility_room_viewRN.placeHolderList[3386]" ""
+		"utility_room_viewRN.placeHolderList[2505]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01.rotatePivotTranslate" 
-		"utility_room_viewRN.placeHolderList[3387]" ""
+		"utility_room_viewRN.placeHolderList[2506]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01.rotatePivotTranslate" 
-		"utility_room_viewRN.placeHolderList[3388]" ""
+		"utility_room_viewRN.placeHolderList[2507]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01.rotate" 
-		"utility_room_viewRN.placeHolderList[3389]" ""
+		"utility_room_viewRN.placeHolderList[2508]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01.rotateX" 
-		"utility_room_viewRN.placeHolderList[3390]" ""
+		"utility_room_viewRN.placeHolderList[2509]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01.rotateY" 
-		"utility_room_viewRN.placeHolderList[3391]" ""
+		"utility_room_viewRN.placeHolderList[2510]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3392]" ""
+		"utility_room_viewRN.placeHolderList[2511]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01.rotateOrder" 
-		"utility_room_viewRN.placeHolderList[3393]" ""
+		"utility_room_viewRN.placeHolderList[2512]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01.rotateOrder" 
-		"utility_room_viewRN.placeHolderList[3394]" ""
+		"utility_room_viewRN.placeHolderList[2513]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01.scale" 
-		"utility_room_viewRN.placeHolderList[3395]" ""
+		"utility_room_viewRN.placeHolderList[2514]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01.scaleX" 
-		"utility_room_viewRN.placeHolderList[3396]" ""
+		"utility_room_viewRN.placeHolderList[2515]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01.scaleY" 
-		"utility_room_viewRN.placeHolderList[3397]" ""
+		"utility_room_viewRN.placeHolderList[2516]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3398]" ""
+		"utility_room_viewRN.placeHolderList[2517]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01.parentMatrix" 
-		"utility_room_viewRN.placeHolderList[3399]" ""
+		"utility_room_viewRN.placeHolderList[2518]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01.blendParent1" 
-		"utility_room_viewRN.placeHolderList[3400]" ""
+		"utility_room_viewRN.placeHolderList[2519]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01.blendParent1" 
-		"utility_room_viewRN.placeHolderList[3401]" ""
+		"utility_room_viewRN.placeHolderList[2520]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01.parentInverseMatrix" 
-		"utility_room_viewRN.placeHolderList[3402]" ""
+		"utility_room_viewRN.placeHolderList[2521]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01.translate" 
-		"utility_room_viewRN.placeHolderList[3403]" ""
+		"utility_room_viewRN.placeHolderList[2522]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01.translateX" 
-		"utility_room_viewRN.placeHolderList[3404]" ""
+		"utility_room_viewRN.placeHolderList[2523]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01.translateY" 
-		"utility_room_viewRN.placeHolderList[3405]" ""
+		"utility_room_viewRN.placeHolderList[2524]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01.translateZ" 
-		"utility_room_viewRN.placeHolderList[3406]" ""
+		"utility_room_viewRN.placeHolderList[2525]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01.rotatePivot" 
-		"utility_room_viewRN.placeHolderList[3407]" ""
+		"utility_room_viewRN.placeHolderList[2526]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01.rotatePivot" 
-		"utility_room_viewRN.placeHolderList[3408]" ""
+		"utility_room_viewRN.placeHolderList[2527]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01.rotatePivotTranslate" 
-		"utility_room_viewRN.placeHolderList[3409]" ""
+		"utility_room_viewRN.placeHolderList[2528]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01.rotatePivotTranslate" 
-		"utility_room_viewRN.placeHolderList[3410]" ""
+		"utility_room_viewRN.placeHolderList[2529]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01.rotate" 
-		"utility_room_viewRN.placeHolderList[3411]" ""
+		"utility_room_viewRN.placeHolderList[2530]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01.rotateX" 
-		"utility_room_viewRN.placeHolderList[3412]" ""
+		"utility_room_viewRN.placeHolderList[2531]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01.rotateY" 
-		"utility_room_viewRN.placeHolderList[3413]" ""
+		"utility_room_viewRN.placeHolderList[2532]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3414]" ""
+		"utility_room_viewRN.placeHolderList[2533]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01.rotateOrder" 
-		"utility_room_viewRN.placeHolderList[3415]" ""
+		"utility_room_viewRN.placeHolderList[2534]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01.rotateOrder" 
-		"utility_room_viewRN.placeHolderList[3416]" ""
+		"utility_room_viewRN.placeHolderList[2535]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01.scale" 
-		"utility_room_viewRN.placeHolderList[3417]" ""
+		"utility_room_viewRN.placeHolderList[2536]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01.parentMatrix" 
-		"utility_room_viewRN.placeHolderList[3418]" ""
+		"utility_room_viewRN.placeHolderList[2537]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01.parentInverseMatrix" 
-		"utility_room_viewRN.placeHolderList[3419]" ""
+		"utility_room_viewRN.placeHolderList[2538]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01|utility_room_view:pig_latest:tail_4control01.translateX" 
-		"utility_room_viewRN.placeHolderList[3420]" ""
+		"utility_room_viewRN.placeHolderList[2539]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01|utility_room_view:pig_latest:tail_4control01.translateY" 
-		"utility_room_viewRN.placeHolderList[3421]" ""
+		"utility_room_viewRN.placeHolderList[2540]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01|utility_room_view:pig_latest:tail_4control01.translateZ" 
-		"utility_room_viewRN.placeHolderList[3422]" ""
+		"utility_room_viewRN.placeHolderList[2541]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01|utility_room_view:pig_latest:tail_4control01.rotatePivot" 
-		"utility_room_viewRN.placeHolderList[3423]" ""
+		"utility_room_viewRN.placeHolderList[2542]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01|utility_room_view:pig_latest:tail_4control01.rotatePivotTranslate" 
-		"utility_room_viewRN.placeHolderList[3424]" ""
+		"utility_room_viewRN.placeHolderList[2543]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01|utility_room_view:pig_latest:tail_4control01.rotateX" 
-		"utility_room_viewRN.placeHolderList[3425]" ""
+		"utility_room_viewRN.placeHolderList[2544]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01|utility_room_view:pig_latest:tail_4control01.rotateY" 
-		"utility_room_viewRN.placeHolderList[3426]" ""
+		"utility_room_viewRN.placeHolderList[2545]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01|utility_room_view:pig_latest:tail_4control01.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3427]" ""
+		"utility_room_viewRN.placeHolderList[2546]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01|utility_room_view:pig_latest:tail_4control01.rotateOrder" 
-		"utility_room_viewRN.placeHolderList[3428]" ""
+		"utility_room_viewRN.placeHolderList[2547]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01|utility_room_view:pig_latest:tail_4control01.parentInverseMatrix" 
-		"utility_room_viewRN.placeHolderList[3429]" ""
+		"utility_room_viewRN.placeHolderList[2548]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01.translateX" 
-		"utility_room_viewRN.placeHolderList[3430]" ""
+		"utility_room_viewRN.placeHolderList[2549]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01.translateY" 
-		"utility_room_viewRN.placeHolderList[3431]" ""
+		"utility_room_viewRN.placeHolderList[2550]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01.translateZ" 
-		"utility_room_viewRN.placeHolderList[3432]" ""
+		"utility_room_viewRN.placeHolderList[2551]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01.rotateX" 
-		"utility_room_viewRN.placeHolderList[3433]" ""
+		"utility_room_viewRN.placeHolderList[2552]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01.rotateY" 
-		"utility_room_viewRN.placeHolderList[3434]" ""
+		"utility_room_viewRN.placeHolderList[2553]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3435]" ""
+		"utility_room_viewRN.placeHolderList[2554]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01.scaleX" 
-		"utility_room_viewRN.placeHolderList[3436]" ""
+		"utility_room_viewRN.placeHolderList[2555]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01.scaleY" 
-		"utility_room_viewRN.placeHolderList[3437]" ""
+		"utility_room_viewRN.placeHolderList[2556]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3438]" ""
+		"utility_room_viewRN.placeHolderList[2557]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01.visibility" 
-		"utility_room_viewRN.placeHolderList[3439]" ""
+		"utility_room_viewRN.placeHolderList[2558]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_L_frontfoot01.rotateX" 
-		"utility_room_viewRN.placeHolderList[3440]" ""
+		"utility_room_viewRN.placeHolderList[2559]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_L_frontfoot01.rotateY" 
-		"utility_room_viewRN.placeHolderList[3441]" ""
+		"utility_room_viewRN.placeHolderList[2560]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_L_frontfoot01.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3442]" ""
+		"utility_room_viewRN.placeHolderList[2561]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_L_frontfoot01.translateX" 
-		"utility_room_viewRN.placeHolderList[3443]" ""
+		"utility_room_viewRN.placeHolderList[2562]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_L_frontfoot01.translateY" 
-		"utility_room_viewRN.placeHolderList[3444]" ""
+		"utility_room_viewRN.placeHolderList[2563]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_L_frontfoot01.translateZ" 
-		"utility_room_viewRN.placeHolderList[3445]" ""
+		"utility_room_viewRN.placeHolderList[2564]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_L_frontfoot01.scaleX" 
-		"utility_room_viewRN.placeHolderList[3446]" ""
+		"utility_room_viewRN.placeHolderList[2565]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_L_frontfoot01.scaleY" 
-		"utility_room_viewRN.placeHolderList[3447]" ""
+		"utility_room_viewRN.placeHolderList[2566]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_L_frontfoot01.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3448]" ""
+		"utility_room_viewRN.placeHolderList[2567]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_R_frontfoot01.rotateX" 
-		"utility_room_viewRN.placeHolderList[3449]" ""
+		"utility_room_viewRN.placeHolderList[2568]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_R_frontfoot01.rotateY" 
-		"utility_room_viewRN.placeHolderList[3450]" ""
+		"utility_room_viewRN.placeHolderList[2569]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_R_frontfoot01.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3451]" ""
+		"utility_room_viewRN.placeHolderList[2570]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_R_frontfoot01.translateX" 
-		"utility_room_viewRN.placeHolderList[3452]" ""
+		"utility_room_viewRN.placeHolderList[2571]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_R_frontfoot01.translateY" 
-		"utility_room_viewRN.placeHolderList[3453]" ""
+		"utility_room_viewRN.placeHolderList[2572]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_R_frontfoot01.translateZ" 
-		"utility_room_viewRN.placeHolderList[3454]" ""
+		"utility_room_viewRN.placeHolderList[2573]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_R_frontfoot01.scaleX" 
-		"utility_room_viewRN.placeHolderList[3455]" ""
+		"utility_room_viewRN.placeHolderList[2574]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_R_frontfoot01.scaleY" 
-		"utility_room_viewRN.placeHolderList[3456]" ""
+		"utility_room_viewRN.placeHolderList[2575]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_R_frontfoot01.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3457]" ""
+		"utility_room_viewRN.placeHolderList[2576]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01.translateY" 
-		"utility_room_viewRN.placeHolderList[3458]" ""
+		"utility_room_viewRN.placeHolderList[2577]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01.translateX" 
-		"utility_room_viewRN.placeHolderList[3459]" ""
+		"utility_room_viewRN.placeHolderList[2578]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01.translateZ" 
-		"utility_room_viewRN.placeHolderList[3460]" ""
+		"utility_room_viewRN.placeHolderList[2579]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01.rotateX" 
-		"utility_room_viewRN.placeHolderList[3461]" ""
+		"utility_room_viewRN.placeHolderList[2580]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01.rotateY" 
-		"utility_room_viewRN.placeHolderList[3462]" ""
+		"utility_room_viewRN.placeHolderList[2581]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3463]" ""
+		"utility_room_viewRN.placeHolderList[2582]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01.scaleX" 
-		"utility_room_viewRN.placeHolderList[3464]" ""
+		"utility_room_viewRN.placeHolderList[2583]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01.scaleY" 
-		"utility_room_viewRN.placeHolderList[3465]" ""
+		"utility_room_viewRN.placeHolderList[2584]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3466]" ""
+		"utility_room_viewRN.placeHolderList[2585]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01.blendParent1" 
-		"utility_room_viewRN.placeHolderList[3467]" ""
+		"utility_room_viewRN.placeHolderList[2586]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01.blendParent1" 
-		"utility_room_viewRN.placeHolderList[3468]" ""
+		"utility_room_viewRN.placeHolderList[2587]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01_parentConstraint1.constraintTranslateY" 
-		"utility_room_viewRN.placeHolderList[3469]" "utility_room_view:pig_latest:shoulders_rotation_ctrl01.ty"
+		"utility_room_viewRN.placeHolderList[2588]" "utility_room_view:pig_latest:shoulders_rotation_ctrl01.ty"
 		
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01_parentConstraint1.constraintRotateX" 
-		"utility_room_viewRN.placeHolderList[3470]" "utility_room_view:pig_latest:shoulders_rotation_ctrl01.rx"
+		"utility_room_viewRN.placeHolderList[2589]" "utility_room_view:pig_latest:shoulders_rotation_ctrl01.rx"
 		
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01_parentConstraint1.constraintRotateY" 
-		"utility_room_viewRN.placeHolderList[3471]" "utility_room_view:pig_latest:shoulders_rotation_ctrl01.ry"
+		"utility_room_viewRN.placeHolderList[2590]" "utility_room_view:pig_latest:shoulders_rotation_ctrl01.ry"
 		
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01_parentConstraint1.constraintRotateZ" 
-		"utility_room_viewRN.placeHolderList[3472]" "utility_room_view:pig_latest:shoulders_rotation_ctrl01.rz"
+		"utility_room_viewRN.placeHolderList[2591]" "utility_room_view:pig_latest:shoulders_rotation_ctrl01.rz"
 		
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01|utility_room_view:pig_latest:head_control.translateX" 
-		"utility_room_viewRN.placeHolderList[3473]" ""
+		"utility_room_viewRN.placeHolderList[2592]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01|utility_room_view:pig_latest:head_control.translateY" 
-		"utility_room_viewRN.placeHolderList[3474]" ""
+		"utility_room_viewRN.placeHolderList[2593]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01|utility_room_view:pig_latest:head_control.translateZ" 
-		"utility_room_viewRN.placeHolderList[3475]" ""
+		"utility_room_viewRN.placeHolderList[2594]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01|utility_room_view:pig_latest:head_control.rotateX" 
-		"utility_room_viewRN.placeHolderList[3476]" ""
+		"utility_room_viewRN.placeHolderList[2595]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01|utility_room_view:pig_latest:head_control.rotateY" 
-		"utility_room_viewRN.placeHolderList[3477]" ""
+		"utility_room_viewRN.placeHolderList[2596]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01|utility_room_view:pig_latest:head_control.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3478]" ""
+		"utility_room_viewRN.placeHolderList[2597]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01|utility_room_view:pig_latest:head_control.scaleX" 
-		"utility_room_viewRN.placeHolderList[3479]" ""
+		"utility_room_viewRN.placeHolderList[2598]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01|utility_room_view:pig_latest:head_control.scaleY" 
-		"utility_room_viewRN.placeHolderList[3480]" ""
+		"utility_room_viewRN.placeHolderList[2599]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01|utility_room_view:pig_latest:head_control.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3481]" ""
+		"utility_room_viewRN.placeHolderList[2600]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:spine_spline_ctrl.translateX" 
-		"utility_room_viewRN.placeHolderList[3482]" ""
+		"utility_room_viewRN.placeHolderList[2601]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:spine_spline_ctrl.translateZ" 
-		"utility_room_viewRN.placeHolderList[3483]" ""
+		"utility_room_viewRN.placeHolderList[2602]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:spine_spline_ctrl.translateY" 
-		"utility_room_viewRN.placeHolderList[3484]" ""
+		"utility_room_viewRN.placeHolderList[2603]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:spine_spline_ctrl.visibility" 
-		"utility_room_viewRN.placeHolderList[3485]" ""
+		"utility_room_viewRN.placeHolderList[2604]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:flexi_joint_systems|utility_room_view:pig_latest:vertebrae_flexi_spine01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_global01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_anim_mid01.followStart" 
-		"utility_room_viewRN.placeHolderList[3486]" ""
+		"utility_room_viewRN.placeHolderList[2605]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:flexi_joint_systems|utility_room_view:pig_latest:vertebrae_flexi_spine01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_global01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_anim_mid01.translateX" 
-		"utility_room_viewRN.placeHolderList[3487]" ""
+		"utility_room_viewRN.placeHolderList[2606]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:flexi_joint_systems|utility_room_view:pig_latest:vertebrae_flexi_spine01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_global01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_anim_mid01.translateY" 
-		"utility_room_viewRN.placeHolderList[3488]" ""
+		"utility_room_viewRN.placeHolderList[2607]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:flexi_joint_systems|utility_room_view:pig_latest:vertebrae_flexi_spine01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_global01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_anim_mid01.translateZ" 
-		"utility_room_viewRN.placeHolderList[3489]" ""
+		"utility_room_viewRN.placeHolderList[2608]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:flexi_joint_systems|utility_room_view:pig_latest:vertebrae_flexi_spine01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_global01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_anim_mid01.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3490]" ""
+		"utility_room_viewRN.placeHolderList[2609]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:flexi_joint_systems|utility_room_view:pig_latest:vertebrae_flexi_spine01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_global01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_anim_mid01.rotateX" 
-		"utility_room_viewRN.placeHolderList[3491]" ""
+		"utility_room_viewRN.placeHolderList[2610]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:flexi_joint_systems|utility_room_view:pig_latest:vertebrae_flexi_spine01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_global01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_anim_mid01.rotateY" 
-		"utility_room_viewRN.placeHolderList[3492]" ""
+		"utility_room_viewRN.placeHolderList[2611]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:flexi_joint_systems|utility_room_view:pig_latest:vertebrae_flexi_spine01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_global01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_anim_mid01.scaleX" 
-		"utility_room_viewRN.placeHolderList[3493]" ""
+		"utility_room_viewRN.placeHolderList[2612]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:flexi_joint_systems|utility_room_view:pig_latest:vertebrae_flexi_spine01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_global01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_anim_mid01.scaleY" 
-		"utility_room_viewRN.placeHolderList[3494]" ""
+		"utility_room_viewRN.placeHolderList[2613]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:flexi_joint_systems|utility_room_view:pig_latest:vertebrae_flexi_spine01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_global01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_anim_mid01.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3495]" ""
+		"utility_room_viewRN.placeHolderList[2614]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:flexi_joint_systems|utility_room_view:pig_latest:vertebrae_flexi_spine01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_global01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_anim_mid01.visibility" 
-		"utility_room_viewRN.placeHolderList[3496]" "";
+		"utility_room_viewRN.placeHolderList[2615]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode animLayer -s -n "BaseAnimation";
@@ -24901,7 +24987,7 @@ createNode FurGlobals -n "defaultFurGlobals";
 	addAttr -ci true -h true -sn "fgrf" -ln "furGlobalReference" -min 0 -max 1 -at "bool";
 	setAttr ".av" 2;
 	setAttr ".rep" -type "string" "renderData/fur/furEqualMap/bodyintro_latest";
-	setAttr ".pjl" -type "string" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya";
+	setAttr ".pjl" -type "string" "X:/documents/GitHub/Bandits/maya";
 createNode animCurveTL -n "at_dryer_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
@@ -25038,40 +25124,40 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `outlinerPanel -unParent -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            outlinerEditor -e \n                -docTag \"isolOutln_fromSeln\" \n                -showShapes 0\n                -showReferenceNodes 1\n                -showReferenceMembers 1\n                -showAttributes 0\n                -showConnected 0\n                -showAnimCurvesOnly 0\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 1\n                -showAssets 1\n                -showContainedOnly 1\n                -showPublishedAsConnected 0\n                -showContainerContents 1\n                -ignoreDagHierarchy 0\n                -expandConnections 0\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 1\n                -showLeafs 1\n"
 		+ "                -showNumericAttrsOnly 0\n                -highlightActive 1\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"defaultSetFilter\" \n                -showSetMembers 1\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 0\n"
 		+ "                -ignoreHiddenAttribute 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n"
-		+ "            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n"
-		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"graphEditor\" -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n"
-		+ "                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n"
-		+ "                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1.25\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 2\n                -classicMode 1\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n"
-		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n"
-		+ "                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n"
-		+ "            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1.25\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 2\n                -classicMode 1\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n"
-		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dopeSheetPanel\" -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n"
-		+ "                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n"
-		+ "                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n"
-		+ "                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n"
-		+ "                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n"
-		+ "                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"clipEditorPanel\" -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n"
-		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"sequenceEditorPanel\" -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n"
-		+ "                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n"
-		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperGraphPanel\" -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n"
-		+ "                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n"
-		+ "                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperShadePanel\" -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n"
-		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"visorPanel\" -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n"
-		+ "                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -keyReleaseCommand \"nodeEdKeyReleaseCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;\n\t\t\tif (`objExists nodeEditorPanel1Info`) nodeEditor -e -restoreInfo nodeEditorPanel1Info $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n"
-		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -keyReleaseCommand \"nodeEdKeyReleaseCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n"
-		+ "                $editorName;\n\t\t\tif (`objExists nodeEditorPanel1Info`) nodeEditor -e -restoreInfo nodeEditorPanel1Info $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"createNodePanel\" -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Texture Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"polyTexturePlacementPanel\" -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels `;\n"
-		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"renderWindowPanel\" -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"blendShapePanel\" (localizedPanelLabel(\"Blend Shape\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\tblendShapePanel -unParent -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels ;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n"
-		+ "\t\tblendShapePanel -edit -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynRelEdPanel\" -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"relationshipPanel\" -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels `;\n"
-		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"referenceEditorPanel\" -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"componentEditorPanel\" -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels `;\n"
-		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynPaintScriptedPanelType\" -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"scriptEditorPanel\" -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels `;\n"
-		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"Stereo\" -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels `;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -editorChanged \"updateModelPanelBar\" \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n"
-		+ "                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n"
-		+ "                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n"
-		+ "                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -editorChanged \"updateModelPanelBar\" \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n"
-		+ "                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n"
-		+ "                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n"
-		+ "                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n"
-		+ "        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"vertical2\\\" -ps 1 59 100 -ps 2 41 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Top View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\tif ($useSceneConfig) {\n"
+		+ "\t\toutlinerPanel -e -to $panelName;\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"graphEditor\" -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n"
+		+ "                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n"
+		+ "                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1.25\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n"
+		+ "                -constrainDrag 2\n                -classicMode 1\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n"
+		+ "                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n"
+		+ "                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1.25\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 2\n                -classicMode 1\n                $editorName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dopeSheetPanel\" -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n"
+		+ "                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n"
+		+ "                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n"
+		+ "            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n"
+		+ "                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n"
+		+ "                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"clipEditorPanel\" -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n"
+		+ "                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"sequenceEditorPanel\" -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels `;\n"
+		+ "\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperGraphPanel\" -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n"
+		+ "                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n"
+		+ "                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" == $panelName) {\n"
+		+ "\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperShadePanel\" -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"visorPanel\" -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n"
+		+ "\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -keyReleaseCommand \"nodeEdKeyReleaseCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n"
+		+ "                -extendToShapes 1\n                $editorName;\n\t\t\tif (`objExists nodeEditorPanel1Info`) nodeEditor -e -restoreInfo nodeEditorPanel1Info $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -keyReleaseCommand \"nodeEdKeyReleaseCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n"
+		+ "                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;\n\t\t\tif (`objExists nodeEditorPanel1Info`) nodeEditor -e -restoreInfo nodeEditorPanel1Info $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"createNodePanel\" -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Texture Editor\")) `;\n"
+		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"polyTexturePlacementPanel\" -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"renderWindowPanel\" -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"blendShapePanel\" (localizedPanelLabel(\"Blend Shape\")) `;\n"
+		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\tblendShapePanel -unParent -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels ;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tblendShapePanel -edit -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynRelEdPanel\" -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n"
+		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"relationshipPanel\" -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"referenceEditorPanel\" -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n"
+		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"componentEditorPanel\" -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynPaintScriptedPanelType\" -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n"
+		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"scriptEditorPanel\" -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"Stereo\" -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels `;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -editorChanged \"updateModelPanelBar\" \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n"
+		+ "                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n"
+		+ "                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n"
+		+ "                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n"
+		+ "                -editorChanged \"updateModelPanelBar\" \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n"
+		+ "                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n"
+		+ "                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"vertical2\\\" -ps 1 59 100 -ps 2 41 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Top View\")) \n\t\t\t\t\t\"modelPanel\"\n"
 		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"utility_room_view:at_dryer\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 0\\n    -polymeshes 1\\n    -subdivSurfaces 0\\n    -planes 0\\n    -lights 0\\n    -cameras 0\\n    -controlVertices 0\\n    -hulls 0\\n    -grid 0\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 0\\n    -dynamics 0\\n    -particleInstancers 0\\n    -fluids 0\\n    -hairSystems 0\\n    -follicles 0\\n    -nCloths 0\\n    -nParticles 0\\n    -nRigids 0\\n    -dynamicConstraints 0\\n    -locators 0\\n    -manipulators 1\\n    -pluginShapes 0\\n    -dimensions 0\\n    -handles 0\\n    -pivots 0\\n    -textures 0\\n    -strokes 0\\n    -motionTrails 0\\n    -clipGhosts 0\\n    -greasePencils 0\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
 		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"utility_room_view:at_dryer\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 0\\n    -polymeshes 1\\n    -subdivSurfaces 0\\n    -planes 0\\n    -lights 0\\n    -cameras 0\\n    -controlVertices 0\\n    -hulls 0\\n    -grid 0\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 0\\n    -dynamics 0\\n    -particleInstancers 0\\n    -fluids 0\\n    -hairSystems 0\\n    -follicles 0\\n    -nCloths 0\\n    -nParticles 0\\n    -nRigids 0\\n    -dynamicConstraints 0\\n    -locators 0\\n    -manipulators 1\\n    -pluginShapes 0\\n    -dimensions 0\\n    -handles 0\\n    -pivots 0\\n    -textures 0\\n    -strokes 0\\n    -motionTrails 0\\n    -clipGhosts 0\\n    -greasePencils 0\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
 		+ "\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
@@ -25104,7 +25190,7 @@ createNode animCurveTA -n "global_ctrl_rotateX";
 createNode animCurveTA -n "global_ctrl_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 -1.2722218725854067e-14 200 -91.098772788141176
+	setAttr -s 3 ".ktv[0:2]"  1 -1.2722218725854067e-014 200 -91.098772788141176
 		 360 -57.851073522889664;
 createNode animCurveTA -n "global_ctrl_rotateZ";
 	setAttr ".tan" 18;
@@ -25125,114 +25211,240 @@ createNode animCurveTU -n "global_ctrl_scaleZ";
 createNode animCurveTL -n "bike_ctrl_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 15 ".ktv[0:14]"  1 11.146554903618034 30 11.708124050991238
-		 45 11.147 53 12.237870426198167 60 11.146554903618034 80 13.065415915914715 85 13.034122642205379
-		 90 12.074354170475125 95 10.204655640406884 100 6.1532085296019146 160 -46.501075630954539
-		 170 -59.832286718151735 180 -63.334699837643605 285 -76.688736739133034 315 -153.0155464160332;
-	setAttr -s 15 ".kit[5:14]"  9 18 18 18 18 18 18 18 
-		2 2;
-	setAttr -s 15 ".kot[5:14]"  9 18 18 18 18 18 18 18 
-		2 2;
+	setAttr -s 17 ".ktv[0:16]"  1 11.146554903618034 30 11.146554903618034
+		 40 10.723419028665228 50 11.950166922192473 60 11.146554903618034 80 13.065415915914715
+		 85 13.034122642205379 90 12.074354170475125 95 10.204655640406884 100 6.1532085296019146
+		 110 -2.4961806782248575 120 -11.160181009472158 160 -46.501075630954539 170 -59.832286718151735
+		 180 -63.334699837643605 285 -76.688736739133034 315 -153.0155464160332;
+	setAttr -s 17 ".kit[1:16]"  1 18 18 18 9 18 18 18 
+		18 18 18 18 18 18 2 2;
+	setAttr -s 17 ".kot[1:16]"  1 18 18 18 9 18 18 18 
+		18 18 18 18 18 18 2 2;
+	setAttr -s 17 ".kix[1:16]"  1 1 1 1 0.40387663245201111 0.87128520011901855 
+		0.11699877679347992 0.056206408888101578 0.03933701291680336 0.038477331399917603 
+		0.037847436964511871 0.034222684800624847 0.039572242647409439 0.22174882888793945 
+		0.25352981686592102 0.013100432232022285;
+	setAttr -s 17 ".kiy[1:16]"  0 0 0 0 0.91481345891952515 -0.49077707529067993 
+		-0.99313205480575562 -0.99841916561126709 -0.999225914478302 -0.99925947189331055 
+		-0.99928349256515503 -0.99941420555114746 -0.99921667575836182 -0.97510385513305664 
+		-0.96732759475708008 -0.99991422891616821;
+	setAttr -s 17 ".kox[1:16]"  1 1 1 1 0.40387663245201111 0.87128520011901855 
+		0.11699877679347992 0.056206405162811279 0.039337020367383957 0.038477335125207901 
+		0.03784744068980217 0.034222684800624847 0.039572246372699738 0.22174884378910065 
+		0.013100432232022285 1;
+	setAttr -s 17 ".koy[1:16]"  0 0 0 0 0.91481345891952515 -0.49077704548835754 
+		-0.99313205480575562 -0.99841916561126709 -0.99922603368759155 -0.99925947189331055 
+		-0.99928349256515503 -0.99941420555114746 -0.99921667575836182 -0.97510379552841187 
+		-0.99991422891616821 0;
 createNode animCurveTL -n "bike_ctrl_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 22 ".ktv[0:21]"  1 -1.517224425633183 30 -1.3721747709486012
-		 45 0.34691898654517428 53 -0.55882145569931785 60 -1.517224425633183 80 -1.2076237654300646
+	setAttr -s 22 ".ktv[0:21]"  1 -1.517224425633183 30 -1.517224425633183
+		 40 0.24396001552105906 50 -0.18905833922752457 60 -1.517224425633183 80 -1.2076237654300646
 		 85 -1.2921475434007199 90 -1.3034183835943884 95 -1.4465191916636313 100 -1.4447601243148738
 		 110 -1.4384200936635183 120 -1.4341694353641363 130 -1.4302792222192835 135 -1.4219957456090901
 		 140 -1.4137258117694433 145 -1.4055005707926937 150 -1.3709926508114099 160 -1.3709926508114094
 		 170 -1.3709926508114081 180 -1.3709926508114065 285 -1.3709926508114028 315 -1.3709926508114028;
-	setAttr -s 22 ".kit[5:21]"  9 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 2 2;
-	setAttr -s 22 ".kot[5:21]"  9 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 2 2;
+	setAttr -s 22 ".kit[1:21]"  1 18 18 18 9 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18 2 2;
+	setAttr -s 22 ".kot[1:21]"  1 18 18 18 9 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18 2 2;
+	setAttr -s 22 ".kix[1:21]"  1 1 0.3540186882019043 1 0.96540659666061401 
+		0.98003506660461426 0.98003506660461426 1 0.99986886978149414 0.99987387657165527 
+		0.99992543458938599 0.99970376491546631 0.99876922369003296 0.99877786636352539 0.99188238382339478 
+		1 1 1 1 1 1;
+	setAttr -s 22 ".kiy[1:21]"  0 0 -0.93523836135864258 0 0.26074886322021484 
+		-0.19882462918758392 -0.19882462918758392 0 0.016196072101593018 0.015884028747677803 
+		0.012210395187139511 0.024340167641639709 0.049599159508943558 0.049425024539232254 
+		0.1271587461233139 0 0 0 0 0 0;
+	setAttr -s 22 ".kox[1:21]"  1 1 0.35401865839958191 1 0.96540659666061401 
+		0.98003506660461426 0.98003506660461426 1 0.99986886978149414 0.99987387657165527 
+		0.99992543458938599 0.99970376491546631 0.99876922369003296 0.99877780675888062 0.99188238382339478 
+		1 1 1 1 1 1;
+	setAttr -s 22 ".koy[1:21]"  0 0 -0.93523836135864258 0 0.26074886322021484 
+		-0.19882462918758392 -0.19882462918758392 0 0.016196072101593018 0.015884028747677803 
+		0.012210395187139511 0.024340167641639709 0.049599159508943558 0.049425017088651657 
+		0.1271587461233139 0 0 0 0 0 0;
 createNode animCurveTL -n "bike_ctrl_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 15 ".ktv[0:14]"  1 7.0937915042433044 30 7.0937915042433044
-		 45 13.295930152888268 53 35.821980447580941 60 55.532274455437005 80 65.392493403607972
+	setAttr -s 17 ".ktv[0:16]"  1 7.0937915042433044 30 7.0937915042433044
+		 40 10.769133631512235 50 30.311813077102968 60 55.532274455437005 80 65.392493403607972
 		 85 66.086336575108504 90 66.484954311021227 95 66.582917526718404 100 66.815113478757738
-		 160 69.468877872057163 170 69.876898142135062 180 70.119427846130804 285 74.874993429028279
-		 315 83.974267243677232;
-	setAttr -s 15 ".kit[2:14]"  2 18 2 9 18 18 18 18 
-		18 18 18 2 2;
-	setAttr -s 15 ".kot[2:14]"  2 18 2 9 18 18 18 18 
-		18 18 18 2 2;
+		 110 67.259268190902077 120 67.70233216873028 160 69.468877872057163 170 69.876898142135062
+		 180 70.119427846130804 285 74.874993429028279 315 83.974267243677232;
+	setAttr -s 17 ".kit[1:16]"  1 18 18 2 9 18 18 18 
+		18 18 18 18 18 18 2 2;
+	setAttr -s 17 ".kot[1:16]"  1 18 18 2 9 18 18 18 
+		18 18 18 18 18 18 2 2;
+	setAttr -s 17 ".kix[1:16]"  1 0.030217699706554413 0.014891553670167923 
+		0.013215629383921623 0.078713551163673401 0.29183876514434814 0.55733603239059448 
+		0.71048140525817871 0.59445923566818237 0.60072219371795654 0.60218518972396851 0.60831648111343384 
+		0.71570485830307007 0.60857754945755005 0.59274882078170776 0.10924116522073746;
+	setAttr -s 17 ".kiy[1:16]"  0 0.99954336881637573 0.99988913536071777 
+		0.99991267919540405 0.99689733982086182 0.95646756887435913 0.83028703927993774 0.703715980052948 
+		0.80412578582763672 0.79945778846740723 0.79835647344589233 0.79369461536407471 0.69840288162231445 
+		0.79349440336227417 0.80538743734359741 0.99401527643203735;
+	setAttr -s 17 ".kox[1:16]"  1 0.030217697843909264 0.014891553670167923 
+		0.06745775043964386 0.078713551163673401 0.29183876514434814 0.55733603239059448 
+		0.71048140525817871 0.59445923566818237 0.60072219371795654 0.60218513011932373 0.60831642150878906 
+		0.71570485830307007 0.60857754945755005 0.10924116522073746 1;
+	setAttr -s 17 ".koy[1:16]"  0 0.99954336881637573 0.99988913536071777 
+		0.99772214889526367 0.99689733982086182 0.95646750926971436 0.83028703927993774 0.703715980052948 
+		0.80412578582763672 0.799457848072052 0.79835641384124756 0.79369461536407471 0.69840282201766968 
+		0.79349434375762939 0.99401527643203735 0;
 createNode animCurveTU -n "bike_ctrl_visibility";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 22 ".ktv[0:21]"  1 1 30 1 45 1 53 1 60 1 80 1 85 1 90 1 95 1
+	setAttr -s 22 ".ktv[0:21]"  1 1 30 1 40 1 50 1 60 1 80 1 85 1 90 1 95 1
 		 100 1 110 1 120 1 130 1 135 1 140 1 145 1 150 1 160 1 170 1 180 1 285 1 315 1;
-	setAttr -s 22 ".kit[20:21]"  2 2;
+	setAttr -s 22 ".kit[1:21]"  1 9 9 9 9 9 9 9 
+		9 9 9 9 9 9 9 9 9 9 9 2 2;
 	setAttr -s 22 ".kot[0:21]"  5 5 5 5 5 9 5 5 
 		5 5 5 5 5 5 5 5 5 5 5 5 2 2;
+	setAttr -s 22 ".kix[1:21]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		1;
+	setAttr -s 22 ".kiy[1:21]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0;
 createNode animCurveTA -n "bike_ctrl_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 22 ".ktv[0:21]"  1 0 30 0 45 -116.84854136013554 53 -50.697310900456216
+	setAttr -s 22 ".ktv[0:21]"  1 0 30 0 40 -109.10413913443212 50 -45.837107799350434
 		 60 0 80 -28.906083244219264 85 -18.889685902574037 90 -8.4343959215502835 95 -0.23544649373052395
-		 100 -0.17730851814734955 110 -0.15584706829071351 120 -0.14398156578050858 130 -0.13384193984076795
+		 100 -0.084726149077895788 110 -0.1551917628774977 120 -0.1439815657804068 130 -0.13384193984076795
 		 135 -0.11496122355375009 140 -0.096041275081735281 145 -0.077747708642816452 150 0
 		 160 0 170 0 180 0 285 0 315 0;
-	setAttr -s 22 ".kit[5:21]"  9 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 2 2;
-	setAttr -s 22 ".kot[5:21]"  9 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 2 2;
+	setAttr -s 22 ".kit[1:21]"  1 18 18 18 9 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18 2 2;
+	setAttr -s 22 ".kot[1:21]"  1 18 18 18 9 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18 2 2;
+	setAttr -s 22 ".kix[1:21]"  1 1 0.33043316006660461 1 0.92987293004989624 
+		0.68215936422348022 0.71538007259368896 0.99888092279434204 1 1 0.99999982118606567 
+		0.99999946355819702 0.99999803304672241 0.99999815225601196 0.99998742341995239 1 
+		1 1 1 1 1;
+	setAttr -s 22 ".kiy[1:21]"  0 0 0.94382935762405396 0 -0.36788070201873779 
+		0.73120349645614624 0.69873547554016113 0.047297246754169464 0 0 0.00055893691023811698 
+		0.0010130004957318306 0.0019792362581938505 0.0019484905060380697 0.0050286436453461647 
+		0 0 0 0 0 0;
+	setAttr -s 22 ".kox[1:21]"  1 1 0.33043316006660461 1 0.92987293004989624 
+		0.682159423828125 0.71538007259368896 0.99888092279434204 1 1 0.99999982118606567 
+		0.9999995231628418 0.99999803304672241 0.99999815225601196 0.99998742341995239 1 
+		1 1 1 1 1;
+	setAttr -s 22 ".koy[1:21]"  0 0 0.94382935762405396 0 -0.36788070201873779 
+		0.73120349645614624 0.69873547554016113 0.047297246754169464 0 0 0.00055893691023811698 
+		0.0010130006121471524 0.0019792362581938505 0.0019484905060380697 0.0050286436453461647 
+		0 0 0 0 0 0;
 createNode animCurveTA -n "bike_ctrl_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 22 ".ktv[0:21]"  1 -90 30 -75.979117063083692 45 -37.688382722933483
-		 53 -59.561938479955934 60 -90 80 -162.56329974315543 85 -183.68704580192093 90 -199.14436003625443
-		 95 -188.82828008144463 100 -171.19184452169912 110 -185.29525973204613 120 -175.65999639791821
-		 130 -180.88333808592893 135 -179.09271126589888 140 -181.11144654280372 145 -178.54574253770892
-		 150 -169.50487813670813 160 -168.45805885958177 170 -166.59813049098321 180 -165.0694229197087
-		 285 -157.03353231743489 315 -148.49125903710532;
-	setAttr -s 22 ".kit[5:21]"  9 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 2 2;
-	setAttr -s 22 ".kot[5:21]"  9 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 2 2;
+	setAttr -s 22 ".ktv[0:21]"  1 -90 30 -90 40 -43.121939476869542 50 -43.667081186354388
+		 60 -90 80 -162.56329974315543 85 -183.68704580192093 90 -199.14436003625443 95 -188.82828008144463
+		 100 -167.54095989107705 110 -180.64386662910448 120 -175.65999639791818 130 -180.88333808592893
+		 135 -179.09271126589888 140 -181.11144654280372 145 -178.54574253770892 150 -169.50487813670813
+		 160 -168.45805885958177 170 -166.59813049098321 180 -165.0694229197087 285 -157.03353231743489
+		 315 -148.49125903710532;
+	setAttr -s 22 ".kit[1:21]"  1 18 18 18 9 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18 2 2;
+	setAttr -s 22 ".kot[1:21]"  1 18 18 18 9 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18 2 2;
+	setAttr -s 22 ".kix[1:21]"  1 1 0.99635374546051025 0.43411979079246521 
+		0.45407015085220337 0.46281012892723083 1 0.51721221208572388 1 1 1 1 1 1 0.85456931591033936 
+		0.98674881458282471 0.99711698293685913 0.99608796834945679 0.99905312061309814 0.99919807910919189 
+		0.98906785249710083;
+	setAttr -s 22 ".kiy[1:21]"  0 0 -0.085318446159362793 -0.90085512399673462 
+		-0.89096599817276001 -0.88645744323730469 0 0.85585719347000122 0 0 0 0 0 0 0.51933729648590088 
+		0.16225497424602509 0.075879096984863281 0.088367253541946411 0.043506693094968796 
+		0.04004007950425148 0.14746092259883881;
+	setAttr -s 22 ".kox[1:21]"  1 1 0.99635374546051025 0.43411979079246521 
+		0.45407015085220337 0.46281018853187561 1 0.51721221208572388 1 1 1 1 1 1 0.85456931591033936 
+		0.98674887418746948 0.99711710214614868 0.99608796834945679 0.99905312061309814 0.98906785249710083 
+		1;
+	setAttr -s 22 ".koy[1:21]"  0 0 -0.085318446159362793 -0.90085512399673462 
+		-0.89096599817276001 -0.88645750284194946 0 0.85585719347000122 0 0 0 0 0 0 0.51933735609054565 
+		0.16225497424602509 0.075879111886024475 0.088367246091365814 0.043506693094968796 
+		0.14746092259883881 0;
 createNode animCurveTA -n "bike_ctrl_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 22 ".ktv[0:21]"  1 0 30 0 45 123.73124026636057 53 50.939246076124043
+	setAttr -s 22 ".ktv[0:21]"  1 0 30 0 40 123.28547091835227 50 43.189240380887242
 		 60 0 80 6.7014025248828295 85 4.8535533300193476 90 4.2499765152016886 95 1.4236662877069517
-		 100 1.1316105924426947 110 0.96409735074160408 120 0.91550658834415477 130 0.84652594890271149
+		 100 1.1781791430862887 110 0.97673628312817862 120 0.91550658834410392 130 0.84652594890271149
 		 135 0.71917442329124126 140 0.60287171567420828 145 0.48581508418257685 150 0 160 0
 		 170 0 180 0 285 0 315 0;
-	setAttr -s 22 ".kit[5:21]"  9 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 2 2;
-	setAttr -s 22 ".kot[5:21]"  9 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 2 2;
+	setAttr -s 22 ".kit[1:21]"  1 18 18 18 9 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18 2 2;
+	setAttr -s 22 ".kot[1:21]"  1 18 18 18 9 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18 2 2;
+	setAttr -s 22 ".kix[1:21]"  1 1 0.29594811797142029 1 0.99487298727035522 
+		0.99186277389526367 0.98425388336181641 0.9970393180847168 0.99987834692001343 0.99997639656066895 
+		0.99999421834945679 0.99997657537460327 0.99991863965988159 0.99992537498474121 0.99950218200683594 
+		1 1 1 1 1 1;
+	setAttr -s 22 ".kiy[1:21]"  0 0 -0.95520401000976563 0 0.10113141685724258 
+		-0.12731193006038666 -0.17676055431365967 -0.076893799006938934 -0.01559890154749155 
+		-0.0068765878677368164 -0.003408878343179822 -0.0068531245924532413 -0.012756681069731712 
+		-0.012217748910188675 -0.031550560146570206 0 0 0 0 0 0;
+	setAttr -s 22 ".kox[1:21]"  1 1 0.29594811797142029 1 0.99487298727035522 
+		0.9918627142906189 0.98425388336181641 0.9970393180847168 0.99987834692001343 0.99997639656066895 
+		0.99999421834945679 0.99997657537460327 0.99991863965988159 0.99992537498474121 0.99950218200683594 
+		1 1 1 1 1 1;
+	setAttr -s 22 ".koy[1:21]"  0 0 -0.95520395040512085 0 0.10113141685724258 
+		-0.12731191515922546 -0.17676055431365967 -0.076893799006938934 -0.01559890154749155 
+		-0.0068765878677368164 -0.003408878343179822 -0.0068531245924532413 -0.012756681069731712 
+		-0.012217748910188675 -0.031550560146570206 0 0 0 0 0 0;
 createNode animCurveTU -n "bike_ctrl_scaleX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 22 ".ktv[0:21]"  1 0.2 30 0.2 45 0.2 53 0.2 60 0.2 80 0.2
+	setAttr -s 22 ".ktv[0:21]"  1 0.2 30 0.2 40 0.2 50 0.2 60 0.2 80 0.2
 		 85 0.2 90 0.2 95 0.2 100 0.2 110 0.2 120 0.2 130 0.2 135 0.2 140 0.2 145 0.2 150 0.2
 		 160 0.2 170 0.2 180 0.2 285 0.2 315 0.2;
-	setAttr -s 22 ".kit[5:21]"  9 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 2 2;
-	setAttr -s 22 ".kot[5:21]"  9 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 2 2;
+	setAttr -s 22 ".kit[1:21]"  1 18 18 18 9 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18 2 2;
+	setAttr -s 22 ".kot[1:21]"  1 18 18 18 9 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18 2 2;
+	setAttr -s 22 ".kix[1:21]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		1;
+	setAttr -s 22 ".kiy[1:21]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0;
+	setAttr -s 22 ".kox[1:21]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		1;
+	setAttr -s 22 ".koy[1:21]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0;
 createNode animCurveTU -n "bike_ctrl_scaleY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 22 ".ktv[0:21]"  1 0.2 30 0.2 45 0.2 53 0.2 60 0.2 80 0.2
+	setAttr -s 22 ".ktv[0:21]"  1 0.2 30 0.2 40 0.2 50 0.2 60 0.2 80 0.2
 		 85 0.2 90 0.2 95 0.2 100 0.2 110 0.2 120 0.2 130 0.2 135 0.2 140 0.2 145 0.2 150 0.2
 		 160 0.2 170 0.2 180 0.2 285 0.2 315 0.2;
-	setAttr -s 22 ".kit[5:21]"  9 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 2 2;
-	setAttr -s 22 ".kot[5:21]"  9 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 2 2;
+	setAttr -s 22 ".kit[1:21]"  1 18 18 18 9 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18 2 2;
+	setAttr -s 22 ".kot[1:21]"  1 18 18 18 9 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18 2 2;
+	setAttr -s 22 ".kix[1:21]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		1;
+	setAttr -s 22 ".kiy[1:21]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0;
+	setAttr -s 22 ".kox[1:21]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		1;
+	setAttr -s 22 ".koy[1:21]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0;
 createNode animCurveTU -n "bike_ctrl_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 22 ".ktv[0:21]"  1 0.2 30 0.2 45 0.2 53 0.2 60 0.2 80 0.2
+	setAttr -s 22 ".ktv[0:21]"  1 0.2 30 0.2 40 0.2 50 0.2 60 0.2 80 0.2
 		 85 0.2 90 0.2 95 0.2 100 0.2 110 0.2 120 0.2 130 0.2 135 0.2 140 0.2 145 0.2 150 0.2
 		 160 0.2 170 0.2 180 0.2 285 0.2 315 0.2;
-	setAttr -s 22 ".kit[5:21]"  9 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 2 2;
-	setAttr -s 22 ".kot[5:21]"  9 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 2 2;
+	setAttr -s 22 ".kit[1:21]"  1 18 18 18 9 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18 2 2;
+	setAttr -s 22 ".kot[1:21]"  1 18 18 18 9 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18 2 2;
+	setAttr -s 22 ".kix[1:21]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		1;
+	setAttr -s 22 ".kiy[1:21]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0;
+	setAttr -s 22 ".kox[1:21]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		1;
+	setAttr -s 22 ".koy[1:21]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0;
 createNode pairBlend -n "pairBlend1";
 createNode animCurveTU -n "global_ctrl_blendParent1";
 	setAttr ".tan" 18;
@@ -25269,7 +25481,7 @@ createNode animCurveTA -n "controller_main01_rotateY";
 createNode animCurveTA -n "controller_main01_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  65 0 85 0 95 0 170 8.9333381845371316e-15
+	setAttr -s 6 ".ktv[0:5]"  65 0 85 0 95 0 170 8.9333381845371316e-015
 		 285 0 315 0;
 	setAttr -s 6 ".kit[4:5]"  2 2;
 	setAttr -s 6 ".kot[4:5]"  2 2;
@@ -25337,50 +25549,60 @@ createNode animCurveTA -n "head_ctrl_rotateZ";
 createNode animCurveTL -n "RightArm_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  160 -3.4614446073565919 195 -3.4614446073565919
-		 205 -10.162069012109882 275 -10.162069012109882 280 -11.232859317539036;
+	setAttr -s 8 ".ktv[0:7]"  160 -3.4614446073565919 180 -0.0075852721743486732
+		 185 0.9043608432095136 190 -9.1607889130894833 195 -6.8857613789675556 205 -10.162069012109882
+		 275 -10.162069012109882 280 -11.232859317539036;
 createNode animCurveTL -n "RightArm_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  160 -14.057940031833294 195 -14.057940031833294
-		 205 -5.1566672048327904 275 -5.1566672048327904 280 -2.0421960817853106;
+	setAttr -s 8 ".ktv[0:7]"  160 -14.057940031833294 180 -6.1751398424043362
+		 185 -3.8684071254423791 190 -2.6808140068953281 195 -3.6601668692374845 205 -5.1566672048327904
+		 275 -5.1566672048327904 280 -2.0421960817853106;
 createNode animCurveTL -n "RightArm_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  160 -0.36149126459878522 195 -0.36149126459878522
-		 205 -6.3199874952098867 275 -6.3199874952098867 280 -8.2833733661067619;
+	setAttr -s 8 ".ktv[0:7]"  160 -0.36149126459878522 180 -2.1904590635160579
+		 185 -7.1675597370493493 190 -4.1015238161358507 195 5.5975300839683566 205 -6.3199874952098867
+		 275 -6.3199874952098867 280 -8.2833733661067619;
 createNode animCurveTU -n "RightArm_visibility";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  160 1 195 1 205 1 275 1 280 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 8 ".ktv[0:7]"  160 1 180 1 185 1 190 1 195 1 205 1 275 1
+		 280 1;
+	setAttr -s 8 ".kot[0:7]"  5 5 5 5 5 5 5 5;
 createNode animCurveTA -n "RightArm_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  160 0 195 0 205 0 275 0 280 0;
+	setAttr -s 8 ".ktv[0:7]"  160 0 180 0 185 0 190 0 195 0 205 0 275 0
+		 280 0;
 createNode animCurveTA -n "RightArm_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  160 0 195 0 205 0 275 0 280 0;
+	setAttr -s 8 ".ktv[0:7]"  160 0 180 0 185 0 190 0 195 0 205 0 275 0
+		 280 0;
 createNode animCurveTA -n "RightArm_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  160 0 195 0 205 0 275 0 280 0;
+	setAttr -s 8 ".ktv[0:7]"  160 0 180 0 185 0 190 0 195 0 205 0 275 0
+		 280 0;
 createNode animCurveTU -n "RightArm_scaleX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  160 1 195 1 205 1 275 1 280 1;
+	setAttr -s 8 ".ktv[0:7]"  160 1 180 1 185 1 190 1 195 1 205 1 275 1
+		 280 1;
 createNode animCurveTU -n "RightArm_scaleY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  160 1 195 1 205 1 275 1 280 1;
+	setAttr -s 8 ".ktv[0:7]"  160 1 180 1 185 1 190 1 195 1 205 1 275 1
+		 280 1;
 createNode animCurveTU -n "RightArm_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  160 1 195 1 205 1 275 1 280 1;
+	setAttr -s 8 ".ktv[0:7]"  160 1 180 1 185 1 190 1 195 1 205 1 275 1
+		 280 1;
 createNode cacheFile -n "utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape1Cache2";
 	setAttr ".cn" -type "string" "utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape1";
-	setAttr ".cp" -type "string" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//shots/body/";
+	setAttr ".cp" -type "string" "X:/documents/GitHub/Bandits/maya//shots/body/";
 	setAttr ".ch[0]" -type "string" "utility_room_view:livingroom_shading_latest:living_room_latest:nClothShape1";
 	setAttr ".os" 1;
 	setAttr ".oe" 360;
@@ -25392,7 +25614,7 @@ createNode reference -n "sharedReferenceNode";
 		"sharedReferenceNode";
 createNode cacheFile -n "utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2Cache1";
 	setAttr ".cn" -type "string" "utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape2";
-	setAttr ".cp" -type "string" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//shots/body/";
+	setAttr ".cp" -type "string" "X:/documents/GitHub/Bandits/maya//shots/body/";
 	setAttr ".ch[0]" -type "string" "utility_room_view:livingroom_shading_latest:living_room_latest:nClothShape2";
 	setAttr ".os" 1;
 	setAttr ".oe" 315;
@@ -25680,22 +25902,22 @@ createNode animCurveTL -n "controller_leftArm_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 13 ".ktv[0:12]"  160 0.049390507877801873 175 -0.43418035401836858
-		 182 1.1268809868451157 190 -0.068683060902687582 205 -0.023898097582014378 220 -0.072938348889439203
+		 182 1.1268809868451157 190 -0.068683060902687582 205 -0.023898097582014378 220 0.16477036741773582
 		 240 0.045046606392988492 259 0.045046606392988492 262 0.046059961025348803 267 -0.11243739715991877
 		 276 0.11343594230801808 280 -0.45674419426715296 285 0.086969885711147138;
 	setAttr -s 13 ".kit[3:12]"  1 18 18 18 18 18 18 18 
 		18 18;
 	setAttr -s 13 ".kot[3:12]"  1 18 18 18 18 18 18 18 
 		18 18;
-	setAttr -s 13 ".kix[3:12]"  1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 13 ".kiy[3:12]"  0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 13 ".kox[3:12]"  1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 13 ".koy[3:12]"  0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 13 ".kix[3:12]"  1 0.97381532192230225 1 1 1 1 1 1 1 1;
+	setAttr -s 13 ".kiy[3:12]"  0 0.22734051942825317 0 0 0 0 0 0 0 0;
+	setAttr -s 13 ".kox[3:12]"  1 0.97381532192230225 1 1 1 1 1 1 1 1;
+	setAttr -s 13 ".koy[3:12]"  0 0.22734051942825317 0 0 0 0 0 0 0 0;
 createNode animCurveTL -n "controller_leftArm_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 13 ".ktv[0:12]"  160 8.1551643293450606 175 8.1781091084982567
-		 182 8.0647959903361564 190 8.3311892169615351 205 7.5662365218903869 220 12.213239614292322
+		 182 8.0647959903361564 190 8.3311892169615351 205 7.5662365218903869 220 11.928353958278137
 		 240 13.840141518766691 259 13.840141518766691 262 13.998210049683212 267 13.579616565041755
 		 276 13.695858333772318 280 7.5497439460667763 285 3.9174483010911265;
 	setAttr -s 13 ".kit[3:12]"  1 18 18 18 18 18 18 18 
@@ -25714,7 +25936,7 @@ createNode animCurveTL -n "controller_leftArm_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 13 ".ktv[0:12]"  160 0.8784561446788447 175 0.84760122165704632
-		 182 1.0196270535586489 190 0.93556717403189693 205 0.73287265703931603 220 4.5535923911887872
+		 182 1.0196270535586489 190 0.93556717403189693 205 0.73287265703931603 220 5.0736825256852276
 		 240 6.4064030957995151 259 6.4064030957995151 262 6.4913620452588816 267 6.1603724138426017
 		 276 6.0242618211862924 280 5.2821160613386819 285 3.357511044481821;
 	setAttr -s 13 ".kit[3:12]"  1 18 18 18 18 18 18 18 
@@ -25864,72 +26086,51 @@ createNode animCurveTL -n "nurbsCircle6_translateZ";
 createNode animCurveTL -n "controller_rightArm_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  160 0.92260478055686979 175 1.1521091890008777
-		 182 -0.53734181216413812 190 0.92744469732049106 205 0.67928659058810614 220 0.59057171992533053
-		 240 0.94038290650621414 257 0.94038290650621414 267 0.26470802247542596 272 0.58488963716022002
-		 274 1.1925106444651599 285 -0.064654390874338441;
-	setAttr -s 12 ".kit[3:11]"  1 18 18 3 18 18 18 18 
-		18;
-	setAttr -s 12 ".kot[3:11]"  1 18 18 3 18 18 18 18 
-		18;
-	setAttr -s 12 ".kix[3:11]"  1 0.94767212867736816 1 1 1 1 0.24389590322971344 
-		1 1;
-	setAttr -s 12 ".kiy[3:11]"  0 -0.31924512982368469 0 0 0 0 0.96980148553848267 
-		0 0;
-	setAttr -s 12 ".kox[3:11]"  1 0.94767212867736816 1 1 1 1 0.24389587342739105 
-		1 1;
-	setAttr -s 12 ".koy[3:11]"  0 -0.31924512982368469 0 0 0 0 0.96980142593383789 
-		0 0;
+	setAttr -s 15 ".ktv[0:14]"  160 0.92260478055686979 175 -0.53549022902034804
+		 180 -2.4818528735985828 182 -3.3716149152931214 185 -2.313118769374487 190 -0.49116580732066961
+		 205 -0.46945058832345127 220 -1.3668209206570494 240 -1.0673144818971056 257 -1.0011612741826099
+		 267 -1.6732815745382572 272 -0.61097661547759829 274 -0.18019510785600154 280 -0.68055730910696111
+		 285 -4.6114588368528535;
+	setAttr -s 15 ".kit[1:14]"  2 18 18 18 2 18 18 3 
+		18 18 18 18 18 18;
+	setAttr -s 15 ".kot[1:14]"  2 18 18 18 2 18 18 3 
+		18 18 18 18 18 18;
 createNode animCurveTL -n "controller_rightArm_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  160 7.7213147648311038 175 7.9112381029990013
-		 182 8.0115285313955056 190 8.0972794635145 205 8.0784770059081161 220 12.750821085553129
-		 240 14.84542117643784 257 14.84542117643784 267 14.749431675547378 272 14.305058224435015
-		 274 14.419304004452593 285 2.7527511933980358;
-	setAttr -s 12 ".kit[3:11]"  1 18 18 3 18 18 18 18 
-		18;
-	setAttr -s 12 ".kot[3:11]"  1 18 18 3 18 18 18 18 
-		18;
-	setAttr -s 12 ".kix[3:11]"  1 1 0.16990011930465698 1 1 0.75672197341918945 
-		1 1 1;
-	setAttr -s 12 ".kiy[3:11]"  0 0 0.98546129465103149 0 0 -0.65373694896697998 
-		0 0 0;
-	setAttr -s 12 ".kox[3:11]"  1 1 0.16990011930465698 1 1 0.75672191381454468 
-		1 1 1;
-	setAttr -s 12 ".koy[3:11]"  0 0 0.98546129465103149 0 0 -0.65373682975769043 
-		0 0 0;
+	setAttr -s 15 ".ktv[0:14]"  160 7.7213147648311038 175 7.1109126741576389
+		 180 7.782318329734859 182 7.753442430314788 185 7.7916013288040329 190 7.8084684164286582
+		 205 7.4625873647305774 220 11.689591451255502 240 14.125391008377903 257 14.008878143825084
+		 267 14.076400104157488 272 14.281901285441641 274 14.060236340546819 280 9.5456647152524461
+		 285 2.928332755912872;
+	setAttr -s 15 ".kit[1:14]"  2 18 18 18 2 18 18 3 
+		18 18 18 18 18 18;
+	setAttr -s 15 ".kot[1:14]"  2 18 18 18 2 18 18 3 
+		18 18 18 18 18 18;
 createNode animCurveTL -n "controller_rightArm_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  160 0.89535878152080262 175 0.99454715214952749
-		 182 1.3001753761376305 190 1.0990858903310379 205 1.1396800210659992 220 5.0601967727516124
-		 240 5.6492825600366308 257 5.6492825600366308 267 6.5691064242611859 272 6.3320656966835198
-		 274 6.1795114850903863 285 2.4252925894464088;
-	setAttr -s 12 ".kit[3:11]"  1 18 18 3 18 18 18 18 
-		18;
-	setAttr -s 12 ".kot[3:11]"  1 18 18 3 18 18 18 18 
-		18;
-	setAttr -s 12 ".kix[3:11]"  1 0.97159582376480103 0.35295388102531433 
-		1 1 1 0.51381009817123413 0.14414627850055695 1;
-	setAttr -s 12 ".kiy[3:11]"  0 0.23664653301239014 0.93564075231552124 
-		0 0 0 -0.85790395736694336 -0.98955637216567993 0;
-	setAttr -s 12 ".kox[3:11]"  1 0.97159582376480103 0.35295388102531433 
-		1 1 1 0.51381009817123413 0.14414627850055695 1;
-	setAttr -s 12 ".koy[3:11]"  0 0.23664653301239014 0.93564075231552124 
-		0 0 0 -0.85790395736694336 -0.98955637216567993 0;
+	setAttr -s 15 ".ktv[0:14]"  160 0.89535878152080262 175 2.5115860539507033
+		 180 2.376937745272051 182 2.4799238258609662 185 2.4257690317483602 190 2.4197184840338939
+		 205 2.3035533861842383 220 5.9914071162387996 240 7.3375418817755289 257 7.2391915481484963
+		 267 7.8571815450091185 272 7.5266933107999057 274 6.8747579276314541 280 5.8103898856490197
+		 285 4.2404091059167772;
+	setAttr -s 15 ".kit[1:14]"  2 18 18 18 2 18 18 3 
+		18 18 18 18 18 18;
+	setAttr -s 15 ".kot[1:14]"  2 18 18 18 2 18 18 3 
+		18 18 18 18 18 18;
 createNode animCurveTL -n "controller_rightWrist_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 0;
+	setAttr -s 5 ".ktv[0:4]"  160 0 170 0 180 0 190 0 250 0.21113373404311789;
 createNode animCurveTL -n "controller_rightWrist_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 0;
+	setAttr -s 5 ".ktv[0:4]"  160 0 170 0 180 0 190 0 250 -0.043257815003337093;
 createNode animCurveTL -n "controller_rightWrist_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 0;
+	setAttr -s 5 ".ktv[0:4]"  160 0 170 0 180 0 190 0 250 -0.071087194180858501;
 createNode animCurveTL -n "curve1_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
@@ -25993,63 +26194,78 @@ createNode animCurveTL -n "curve5_translateZ";
 createNode animCurveTL -n "nurbsCircle1_translateX1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 0;
+	setAttr -s 6 ".ktv[0:5]"  160 0 175 0.21559662596625767 190 0.12705922512697021
+		 205 0.26194928901653858 250 0.89480815815208836 260 0.63763723904016434;
 createNode animCurveTL -n "nurbsCircle1_translateY1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 0;
+	setAttr -s 6 ".ktv[0:5]"  160 0 175 -0.80017731702536365 190 -0.45139951514703475
+		 205 -0.92471513424908947 250 -1.0583099805005145 260 -0.46739253038123335;
 createNode animCurveTL -n "nurbsCircle1_translateZ1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 0;
+	setAttr -s 6 ".ktv[0:5]"  160 0 175 -0.41053731164102275 190 -0.0017483443153264947
+		 205 -0.33149406843987211 250 0.25499350515995134 260 0.59797576657230667;
 createNode animCurveTL -n "nurbsCircle10_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 0;
+	setAttr -s 6 ".ktv[0:5]"  160 0 175 0.044203270455663829 190 0.078746458975020153
+		 205 0.31005450799750001 250 1.3473119093626715 260 0.71815364481559985;
 createNode animCurveTL -n "nurbsCircle10_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 0;
+	setAttr -s 6 ".ktv[0:5]"  160 0 175 -0.73803181199143009 190 -0.4996708562834099
+		 205 -1.3806497058461065 250 -1.5527048751947841 260 -0.10704920506131026;
 createNode animCurveTL -n "nurbsCircle10_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 0;
+	setAttr -s 6 ".ktv[0:5]"  160 0 175 -0.42882071292142948 190 0.051789291623833826
+		 205 -0.46844330602889084 250 0.46531368540855028 260 1.3044059323304888;
 createNode animCurveTL -n "nurbsCircle11_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 0;
+	setAttr -s 6 ".ktv[0:5]"  160 0 175 0.069747034383708051 190 0.063193795088070104
+		 205 0.22511261703731225 250 1.2979555478498099 260 0.69836623859338454;
 createNode animCurveTL -n "nurbsCircle11_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 0;
+	setAttr -s 6 ".ktv[0:5]"  160 0 175 -0.47191055383231856 190 -0.36129553095383843
+		 205 -0.92945233394812388 250 -1.1074102563524562 260 0.27030300519383155;
 createNode animCurveTL -n "nurbsCircle11_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 0;
+	setAttr -s 6 ".ktv[0:5]"  160 0 175 -0.26073868396471028 190 -0.00034601388262496015
+		 205 -0.39616493229278421 250 0.5696267661245612 260 1.3692836554710821;
 createNode animCurveTL -n "nurbsCircle12_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 0;
+	setAttr -s 4 ".ktv[0:3]"  160 0 190 -0.36236357942025682 205 -0.45508427392222167
+		 250 0.16338066705719945;
 createNode animCurveTL -n "nurbsCircle12_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 0;
+	setAttr -s 4 ".ktv[0:3]"  160 0 190 -0.16191262518142566 205 0.15631185177884285
+		 250 -0.14068602948460074;
 createNode animCurveTL -n "nurbsCircle12_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 0;
+	setAttr -s 4 ".ktv[0:3]"  160 0 190 0.059661101389216604 205 0.2909659482138775
+		 250 0.72164270065976854;
 createNode animCurveTL -n "nurbsCircle9_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 0;
+	setAttr -s 6 ".ktv[0:5]"  160 0 175 0.19149683430102044 190 0.1531621159272967
+		 205 0.31897262699939799 250 1.209112895345102 260 0.83559584743013049;
 createNode animCurveTL -n "nurbsCircle9_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 0;
+	setAttr -s 6 ".ktv[0:5]"  160 0 175 -0.85031682509688089 190 -0.59714921315549385
+		 205 -1.1789615604753858 250 -1.3266136614993236 260 -0.46836054994157572;
 createNode animCurveTL -n "nurbsCircle9_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 0;
+	setAttr -s 6 ".ktv[0:5]"  160 0 175 -0.44846207412532407 190 0.068010955190512881
+		 205 -0.33732139816718409 250 0.46399821433576949 260 0.96214832482389201;
 createNode animCurveTL -n "controller_rightLeg_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
@@ -26645,7 +26861,7 @@ createNode animCurveTA -n "controller_tail2_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 9 ".ktv[0:8]"  160 0 175 0 185 0 210 0 230 0 257 0 262 0
-		 272 0 285 4.1084927375749817e-16;
+		 272 0 285 4.1084927375749817e-016;
 createNode animCurveTU -n "controller_tail2_scaleX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
@@ -26887,7 +27103,7 @@ createNode animCurveTA -n "controller_leftArm_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 13 ".ktv[0:12]"  160 15.708078425951602 175 15.708078425951602
-		 182 15.708078425951602 190 15.708078425951602 205 -3.1925867986622083 220 19.989187938457892
+		 182 15.708078425951602 190 15.708078425951602 205 -3.1925867986622083 220 18.024570642811227
 		 240 26.801954622831218 259 26.801954622831218 262 26.801954622831218 267 17.148206602727008
 		 276 17.311817132173886 280 15.523063960880902 285 28.365739150546478;
 	setAttr -s 13 ".kit[3:12]"  1 18 18 18 18 18 18 18 
@@ -26902,35 +27118,39 @@ createNode animCurveTA -n "controller_leftArm_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 13 ".ktv[0:12]"  160 -3.7738663801947272 175 -3.7738663801947272
-		 182 -3.7738663801947272 190 -3.7738663801947272 205 7.2941952464157129 220 -25.739112156240246
+		 182 -3.7738663801947272 190 -3.7738663801947272 205 7.2941952464157129 220 5.6427606061313771
 		 240 -22.201047152057253 259 -22.201047152057253 262 -22.201047152057253 267 -25.639797235442977
 		 276 -24.437926367231412 280 0.44918373256619537 285 0;
 	setAttr -s 13 ".kit[3:12]"  1 18 18 18 18 18 18 18 
 		18 18;
 	setAttr -s 13 ".kot[3:12]"  1 18 18 18 18 18 18 18 
 		18 18;
-	setAttr -s 13 ".kix[3:12]"  1 1 1 1 1 1 1 0.97869956493377686 1 1;
-	setAttr -s 13 ".kiy[3:12]"  0 0 0 0 0 0 0 0.20529778301715851 0 0;
-	setAttr -s 13 ".kox[3:12]"  1 1 1 1 1 1 1 0.97869956493377686 1 1;
-	setAttr -s 13 ".koy[3:12]"  0 0 0 0 0 0 0 0.2052977979183197 0 0;
+	setAttr -s 13 ".kix[3:12]"  1 1 0.98537349700927734 1 1 1 1 0.97869956493377686 
+		1 1;
+	setAttr -s 13 ".kiy[3:12]"  0 0 -0.17040835320949554 0 0 0 0 0.20529778301715851 
+		0 0;
+	setAttr -s 13 ".kox[3:12]"  1 1 0.98537349700927734 1 1 1 1 0.97869956493377686 
+		1 1;
+	setAttr -s 13 ".koy[3:12]"  0 0 -0.17040835320949554 0 0 0 0 0.2052977979183197 
+		0 0;
 createNode animCurveTA -n "controller_leftArm_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 13 ".ktv[0:12]"  160 -12.527459616662709 175 -12.527459616662709
-		 182 -12.527459616662709 190 -12.527459616662709 205 -51.943279615465308 220 -90.614031200071864
+		 182 -12.527459616662709 190 -12.527459616662709 205 -51.943279615465308 220 -79.804666991805888
 		 240 -96.716355104335477 259 -96.716355104335477 262 -96.716355104335477 267 -88.728798766024099
 		 276 -89.617230963479827 280 -88.490696053302756 285 0;
 	setAttr -s 13 ".kit[3:12]"  1 18 18 18 18 18 18 18 
 		18 18;
 	setAttr -s 13 ".kot[3:12]"  1 18 18 18 18 18 18 18 
 		18 18;
-	setAttr -s 13 ".kix[3:12]"  1 0.59158045053482056 0.90177774429321289 
+	setAttr -s 13 ".kix[3:12]"  1 0.64837181568145752 0.83084535598754883 
 		1 1 1 1 1 0.91450756788253784 1;
-	setAttr -s 13 ".kiy[3:12]"  0 -0.80624598264694214 -0.43220001459121704 
+	setAttr -s 13 ".kiy[3:12]"  0 -0.76132386922836304 -0.55650335550308228 
 		0 0 0 0 0 0.40456867218017578 0;
-	setAttr -s 13 ".kox[3:12]"  1 0.59158045053482056 0.90177774429321289 
+	setAttr -s 13 ".kox[3:12]"  1 0.64837181568145752 0.83084535598754883 
 		1 1 1 1 1 0.91450756788253784 1;
-	setAttr -s 13 ".koy[3:12]"  0 -0.80624598264694214 -0.43219998478889465 
+	setAttr -s 13 ".koy[3:12]"  0 -0.76132386922836304 -0.5565032958984375 
 		0 0 0 0 0 0.40456870198249817 0;
 createNode animCurveTU -n "controller_leftArm_scaleX";
 	setAttr ".tan" 18;
@@ -27360,279 +27580,267 @@ createNode animCurveTU -n "nurbsCircle8_scaleZ";
 	setAttr ".wgt" no;
 	setAttr -s 6 ".ktv[0:5]"  160 1 190 1 195 1 200 1 205 1 215 1;
 createNode animCurveTU -n "controller_rightArm_visibility";
-	setAttr ".tan" 5;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  160 1 175 1 182 1 190 1 205 1 220 1 240 1
-		 257 1 267 1 272 1 274 1 285 1;
-	setAttr -s 12 ".kit[0:11]"  9 9 9 1 9 9 3 9 
-		9 9 9 9;
-	setAttr -s 12 ".kot[6:11]"  3 5 5 5 5 5;
-	setAttr -s 12 ".kix[3:11]"  1 1 1 1 1 1 1 1 1;
-	setAttr -s 12 ".kiy[3:11]"  0 0 0 0 0 0 0 0 0;
+	setAttr -s 15 ".ktv[0:14]"  160 1 175 1 180 1 182 1 185 1 190 1 205 1
+		 220 1 240 1 257 1 267 1 272 1 274 1 280 1 285 1;
+	setAttr -s 15 ".kit[1:14]"  2 9 9 9 2 9 9 3 
+		9 9 9 9 9 9;
+	setAttr -s 15 ".kot[0:14]"  5 2 5 5 5 2 5 5 
+		3 5 5 5 5 5 5;
 createNode animCurveTA -n "controller_rightArm_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  160 0 175 0 182 0 190 0 205 8.0290277077887442
+	setAttr -s 15 ".ktv[0:14]"  160 0 175 5.5531902978611365 180 5.5385066807659209
+		 182 5.6277551688011203 185 8.5061972315570582 190 13.452366986206991 205 -8.9859537032498142
 		 220 -9.5831060206865519 240 -5.7426841330646168 257 -5.7426841330646168 267 -5.7426841330646168
-		 272 -5.7426841330646168 274 -5.6442380436766548 285 27.739862450890001;
-	setAttr -s 12 ".kit[3:11]"  1 18 18 3 18 18 18 18 
-		18;
-	setAttr -s 12 ".kot[3:11]"  1 18 18 3 18 18 18 18 
-		18;
-	setAttr -s 12 ".kix[3:11]"  1 1 1 1 1 1 1 0.99702411890029907 1;
-	setAttr -s 12 ".kiy[3:11]"  0 0 0 0 0 0 0 0.077089354395866394 0;
-	setAttr -s 12 ".kox[3:11]"  1 1 1 1 1 1 1 0.99702417850494385 1;
-	setAttr -s 12 ".koy[3:11]"  0 0 0 0 0 0 0 0.077089361846446991 0;
+		 272 -5.7426841330646168 274 -6.4348070956285168 280 -15.339007925248183 285 27.739862450890001;
+	setAttr -s 15 ".kit[1:14]"  2 18 18 18 2 18 18 3 
+		18 18 18 18 18 18;
+	setAttr -s 15 ".kot[1:14]"  2 18 18 18 2 18 18 3 
+		18 18 18 18 18 18;
 createNode animCurveTA -n "controller_rightArm_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  160 18.918684032957287 175 18.918684032957287
-		 182 18.918684032957287 190 18.918684032957287 205 -12.216484247318906 220 11.5888711145457
-		 240 13.876204680663353 257 13.876204680663353 267 13.876204680663353 272 13.876204680663353
-		 274 13.480266550995935 285 0;
-	setAttr -s 12 ".kit[3:11]"  1 18 18 3 18 18 18 18 
-		18;
-	setAttr -s 12 ".kot[3:11]"  1 18 18 3 18 18 18 18 
-		18;
-	setAttr -s 12 ".kix[3:11]"  1 1 0.98424386978149414 1 1 1 1 0.95489513874053955 
-		1;
-	setAttr -s 12 ".kiy[3:11]"  0 0 0.17681626975536346 0 0 0 0 -0.29694315791130066 
-		0;
-	setAttr -s 12 ".kox[3:11]"  1 1 0.98424392938613892 1 1 1 1 0.95489513874053955 
-		1;
-	setAttr -s 12 ".koy[3:11]"  0 0 0.17681626975536346 0 0 0 0 -0.29694315791130066 
-		0;
+	setAttr -s 15 ".ktv[0:14]"  160 18.918684032957287 175 12.70451171061746
+		 180 -13.127196258563444 182 -26.129831092788077 185 -25.307816150132414 190 -35.006445687858836
+		 205 -18.274175535526542 220 11.5888711145457 240 13.876204680663353 257 13.876204680663353
+		 267 13.876204680663353 272 13.876204680663353 274 13.126518487906873 280 -15.258402291164636
+		 285 0;
+	setAttr -s 15 ".kit[1:14]"  2 18 18 18 2 18 18 3 
+		18 18 18 18 18 18;
+	setAttr -s 15 ".kot[1:14]"  2 18 18 18 2 18 18 3 
+		18 18 18 18 18 18;
 createNode animCurveTA -n "controller_rightArm_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  160 0 175 0 182 0 190 0 205 42.403460052976811
+	setAttr -s 15 ".ktv[0:14]"  160 0 175 48.870466430966943 180 53.601164694541495
+		 182 82.277729469796569 185 57.025487264226854 190 60.212295688597145 205 78.515346129206989
 		 220 75.573028497769954 240 92.868315473434222 257 92.868315473434222 267 92.868315473434222
-		 272 92.868315473434222 274 88.50870179460351 285 0;
-	setAttr -s 12 ".kit[3:11]"  1 18 18 3 18 18 18 18 
-		18;
-	setAttr -s 12 ".kot[3:11]"  1 18 18 3 18 18 18 18 
-		18;
-	setAttr -s 12 ".kix[3:11]"  1 0.60414892435073853 0.79809868335723877 
-		1 1 1 1 0.28034177422523499 1;
-	setAttr -s 12 ".kiy[3:11]"  0 0.7968713641166687 0.60252666473388672 
-		0 0 0 0 -0.95990025997161865 0;
-	setAttr -s 12 ".kox[3:11]"  1 0.60414892435073853 0.79809868335723877 
-		1 1 1 1 0.28034177422523499 1;
-	setAttr -s 12 ".koy[3:11]"  0 0.7968713641166687 0.60252666473388672 
-		0 0 0 0 -0.95990025997161865 0;
+		 272 92.868315473434222 274 85.074039521641296 280 68.336229163056487 285 0;
+	setAttr -s 15 ".kit[1:14]"  2 18 18 18 2 18 18 3 
+		18 18 18 18 18 18;
+	setAttr -s 15 ".kot[1:14]"  2 18 18 18 2 18 18 3 
+		18 18 18 18 18 18;
 createNode animCurveTU -n "controller_rightArm_scaleX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  160 1 175 1 182 1 190 1 205 1 220 1 240 1
-		 257 1 267 1 272 1 274 1 285 1;
-	setAttr -s 12 ".kit[3:11]"  1 18 18 3 18 18 18 18 
-		18;
-	setAttr -s 12 ".kot[3:11]"  1 18 18 3 18 18 18 18 
-		18;
-	setAttr -s 12 ".kix[3:11]"  1 1 1 1 1 1 1 1 1;
-	setAttr -s 12 ".kiy[3:11]"  0 0 0 0 0 0 0 0 0;
-	setAttr -s 12 ".kox[3:11]"  1 1 1 1 1 1 1 1 1;
-	setAttr -s 12 ".koy[3:11]"  0 0 0 0 0 0 0 0 0;
+	setAttr -s 15 ".ktv[0:14]"  160 1 175 1 180 1 182 1 185 1 190 1 205 1
+		 220 1 240 1 257 1 267 1 272 1 274 1 280 1 285 1;
+	setAttr -s 15 ".kit[1:14]"  2 18 18 18 2 18 18 3 
+		18 18 18 18 18 18;
+	setAttr -s 15 ".kot[1:14]"  2 18 18 18 2 18 18 3 
+		18 18 18 18 18 18;
 createNode animCurveTU -n "controller_rightArm_scaleY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  160 1 175 1 182 1 190 1 205 1 220 1 240 1
-		 257 1 267 1 272 1 274 1 285 1;
-	setAttr -s 12 ".kit[3:11]"  1 18 18 3 18 18 18 18 
-		18;
-	setAttr -s 12 ".kot[3:11]"  1 18 18 3 18 18 18 18 
-		18;
-	setAttr -s 12 ".kix[3:11]"  1 1 1 1 1 1 1 1 1;
-	setAttr -s 12 ".kiy[3:11]"  0 0 0 0 0 0 0 0 0;
-	setAttr -s 12 ".kox[3:11]"  1 1 1 1 1 1 1 1 1;
-	setAttr -s 12 ".koy[3:11]"  0 0 0 0 0 0 0 0 0;
+	setAttr -s 15 ".ktv[0:14]"  160 1 175 1 180 1 182 1 185 1 190 1 205 1
+		 220 1 240 1 257 1 267 1 272 1 274 1 280 1 285 1;
+	setAttr -s 15 ".kit[1:14]"  2 18 18 18 2 18 18 3 
+		18 18 18 18 18 18;
+	setAttr -s 15 ".kot[1:14]"  2 18 18 18 2 18 18 3 
+		18 18 18 18 18 18;
 createNode animCurveTU -n "controller_rightArm_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  160 1 175 1 182 1 190 1 205 1 220 1 240 1
-		 257 1 267 1 272 1 274 1 285 1;
-	setAttr -s 12 ".kit[3:11]"  1 18 18 3 18 18 18 18 
-		18;
-	setAttr -s 12 ".kot[3:11]"  1 18 18 3 18 18 18 18 
-		18;
-	setAttr -s 12 ".kix[3:11]"  1 1 1 1 1 1 1 1 1;
-	setAttr -s 12 ".kiy[3:11]"  0 0 0 0 0 0 0 0 0;
-	setAttr -s 12 ".kox[3:11]"  1 1 1 1 1 1 1 1 1;
-	setAttr -s 12 ".koy[3:11]"  0 0 0 0 0 0 0 0 0;
+	setAttr -s 15 ".ktv[0:14]"  160 1 175 1 180 1 182 1 185 1 190 1 205 1
+		 220 1 240 1 257 1 267 1 272 1 274 1 280 1 285 1;
+	setAttr -s 15 ".kit[1:14]"  2 18 18 18 2 18 18 3 
+		18 18 18 18 18 18;
+	setAttr -s 15 ".kot[1:14]"  2 18 18 18 2 18 18 3 
+		18 18 18 18 18 18;
 createNode animCurveTU -n "controller_rightWrist_visibility";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 5 ".ktv[0:4]"  160 1 170 1 180 1 190 1 250 1;
+	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
 createNode animCurveTA -n "controller_rightWrist_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 0;
+	setAttr -s 5 ".ktv[0:4]"  160 0 170 0 180 2.7593173625119811 190 0
+		 250 -5.4992521154230829;
 createNode animCurveTA -n "controller_rightWrist_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 0;
+	setAttr -s 5 ".ktv[0:4]"  160 0 170 0 180 -33.971595103705909 190 0
+		 250 -0.74353471261121318;
 createNode animCurveTA -n "controller_rightWrist_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 0;
+	setAttr -s 5 ".ktv[0:4]"  160 0 170 0 180 -14.839013471290469 190 0
+		 250 -10.42256083364401;
 createNode animCurveTU -n "controller_rightWrist_scaleX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 1;
+	setAttr -s 5 ".ktv[0:4]"  160 1 170 1 180 1 190 1 250 1;
 createNode animCurveTU -n "controller_rightWrist_scaleY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 1;
+	setAttr -s 5 ".ktv[0:4]"  160 1 170 1 180 1 190 1 250 1;
 createNode animCurveTU -n "controller_rightWrist_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 1;
+	setAttr -s 5 ".ktv[0:4]"  160 1 170 1 180 1 190 1 250 1;
 createNode animCurveTU -n "nurbsCircle1_visibility1";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 6 ".ktv[0:5]"  160 1 175 1 190 1 205 1 250 1 260 1;
+	setAttr -s 6 ".kot[0:5]"  5 5 5 5 5 5;
 createNode animCurveTA -n "nurbsCircle1_rotateX1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 0;
+	setAttr -s 6 ".ktv[0:5]"  160 0 175 0 190 0 205 0 250 0 260 0;
 createNode animCurveTA -n "nurbsCircle1_rotateY1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 0;
+	setAttr -s 6 ".ktv[0:5]"  160 0 175 0 190 0 205 0 250 0 260 0;
 createNode animCurveTA -n "nurbsCircle1_rotateZ1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 0;
+	setAttr -s 6 ".ktv[0:5]"  160 0 175 0 190 0 205 0 250 0 260 0;
 createNode animCurveTU -n "nurbsCircle1_scaleX1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 1.0000000000000002;
+	setAttr -s 6 ".ktv[0:5]"  160 1.0000000000000002 175 1.0000000000000002
+		 190 1.0000000000000002 205 1.0000000000000002 250 1.0000000000000002 260 1.0000000000000002;
 createNode animCurveTU -n "nurbsCircle1_scaleY1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 1.0000000000000009;
+	setAttr -s 6 ".ktv[0:5]"  160 1.0000000000000009 175 1.0000000000000009
+		 190 1.0000000000000009 205 1.0000000000000009 250 1.0000000000000009 260 1.0000000000000009;
 createNode animCurveTU -n "nurbsCircle1_scaleZ1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 1.0000000000000009;
+	setAttr -s 6 ".ktv[0:5]"  160 1.0000000000000009 175 1.0000000000000009
+		 190 1.0000000000000009 205 1.0000000000000009 250 1.0000000000000009 260 1.0000000000000009;
 createNode animCurveTU -n "nurbsCircle9_visibility";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 6 ".ktv[0:5]"  160 1 175 1 190 1 205 1 250 1 260 1;
+	setAttr -s 6 ".kot[0:5]"  5 5 5 5 5 5;
 createNode animCurveTA -n "nurbsCircle9_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 0;
+	setAttr -s 6 ".ktv[0:5]"  160 0 175 0 190 0 205 0 250 0 260 0;
 createNode animCurveTA -n "nurbsCircle9_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 0;
+	setAttr -s 6 ".ktv[0:5]"  160 0 175 0 190 0 205 0 250 0 260 0;
 createNode animCurveTA -n "nurbsCircle9_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 0;
+	setAttr -s 6 ".ktv[0:5]"  160 0 175 0 190 0 205 0 250 0 260 0;
 createNode animCurveTU -n "nurbsCircle9_scaleX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 1.0000000000000002;
+	setAttr -s 6 ".ktv[0:5]"  160 1.0000000000000002 175 1.0000000000000002
+		 190 1.0000000000000002 205 1.0000000000000002 250 1.0000000000000002 260 1.0000000000000002;
 createNode animCurveTU -n "nurbsCircle9_scaleY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 1.0000000000000009;
+	setAttr -s 6 ".ktv[0:5]"  160 1.0000000000000009 175 1.0000000000000009
+		 190 1.0000000000000009 205 1.0000000000000009 250 1.0000000000000009 260 1.0000000000000009;
 createNode animCurveTU -n "nurbsCircle9_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 1.0000000000000009;
+	setAttr -s 6 ".ktv[0:5]"  160 1.0000000000000009 175 1.0000000000000009
+		 190 1.0000000000000009 205 1.0000000000000009 250 1.0000000000000009 260 1.0000000000000009;
 createNode animCurveTU -n "nurbsCircle10_visibility";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 6 ".ktv[0:5]"  160 1 175 1 190 1 205 1 250 1 260 1;
+	setAttr -s 6 ".kot[0:5]"  5 5 5 5 5 5;
 createNode animCurveTA -n "nurbsCircle10_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 0;
+	setAttr -s 6 ".ktv[0:5]"  160 0 175 0 190 0 205 0 250 0 260 0;
 createNode animCurveTA -n "nurbsCircle10_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 0;
+	setAttr -s 6 ".ktv[0:5]"  160 0 175 0 190 0 205 0 250 0 260 0;
 createNode animCurveTA -n "nurbsCircle10_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 0;
+	setAttr -s 6 ".ktv[0:5]"  160 0 175 0 190 0 205 0 250 0 260 0;
 createNode animCurveTU -n "nurbsCircle10_scaleX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 1.0000000000000002;
+	setAttr -s 6 ".ktv[0:5]"  160 1.0000000000000002 175 1.0000000000000002
+		 190 1.0000000000000002 205 1.0000000000000002 250 1.0000000000000002 260 1.0000000000000002;
 createNode animCurveTU -n "nurbsCircle10_scaleY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 1.0000000000000009;
+	setAttr -s 6 ".ktv[0:5]"  160 1.0000000000000009 175 1.0000000000000009
+		 190 1.0000000000000009 205 1.0000000000000009 250 1.0000000000000009 260 1.0000000000000009;
 createNode animCurveTU -n "nurbsCircle10_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 1.0000000000000009;
+	setAttr -s 6 ".ktv[0:5]"  160 1.0000000000000009 175 1.0000000000000009
+		 190 1.0000000000000009 205 1.0000000000000009 250 1.0000000000000009 260 1.0000000000000009;
 createNode animCurveTU -n "nurbsCircle11_visibility";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 6 ".ktv[0:5]"  160 1 175 1 190 1 205 1 250 1 260 1;
+	setAttr -s 6 ".kot[0:5]"  5 5 5 5 5 5;
 createNode animCurveTA -n "nurbsCircle11_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 0;
+	setAttr -s 6 ".ktv[0:5]"  160 0 175 0 190 0 205 0 250 0 260 0;
 createNode animCurveTA -n "nurbsCircle11_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 0;
+	setAttr -s 6 ".ktv[0:5]"  160 0 175 0 190 0 205 0 250 0 260 0;
 createNode animCurveTA -n "nurbsCircle11_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 0;
+	setAttr -s 6 ".ktv[0:5]"  160 0 175 0 190 0 205 0 250 0 260 0;
 createNode animCurveTU -n "nurbsCircle11_scaleX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 1.0000000000000002;
+	setAttr -s 6 ".ktv[0:5]"  160 1.0000000000000002 175 1.0000000000000002
+		 190 1.0000000000000002 205 1.0000000000000002 250 1.0000000000000002 260 1.0000000000000002;
 createNode animCurveTU -n "nurbsCircle11_scaleY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 1.0000000000000009;
+	setAttr -s 6 ".ktv[0:5]"  160 1.0000000000000009 175 1.0000000000000009
+		 190 1.0000000000000009 205 1.0000000000000009 250 1.0000000000000009 260 1.0000000000000009;
 createNode animCurveTU -n "nurbsCircle11_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 1.0000000000000009;
+	setAttr -s 6 ".ktv[0:5]"  160 1.0000000000000009 175 1.0000000000000009
+		 190 1.0000000000000009 205 1.0000000000000009 250 1.0000000000000009 260 1.0000000000000009;
 createNode animCurveTU -n "nurbsCircle12_visibility";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 4 ".ktv[0:3]"  160 1 190 1 205 1 250 1;
+	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
 createNode animCurveTA -n "nurbsCircle12_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 0;
+	setAttr -s 4 ".ktv[0:3]"  160 0 190 0 205 0 250 0;
 createNode animCurveTA -n "nurbsCircle12_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 0;
+	setAttr -s 4 ".ktv[0:3]"  160 0 190 0 205 0 250 0;
 createNode animCurveTA -n "nurbsCircle12_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 0;
+	setAttr -s 4 ".ktv[0:3]"  160 0 190 0 205 0 250 0;
 createNode animCurveTU -n "nurbsCircle12_scaleX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 1.0000000000000002;
+	setAttr -s 4 ".ktv[0:3]"  160 1.0000000000000002 190 1.0000000000000002
+		 205 1.0000000000000002 250 1.0000000000000002;
 createNode animCurveTU -n "nurbsCircle12_scaleY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 1.0000000000000009;
+	setAttr -s 4 ".ktv[0:3]"  160 1.0000000000000009 190 1.0000000000000009
+		 205 1.0000000000000009 250 1.0000000000000009;
 createNode animCurveTU -n "nurbsCircle12_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  160 1.0000000000000009;
+	setAttr -s 4 ".ktv[0:3]"  160 1.0000000000000009 190 1.0000000000000009
+		 205 1.0000000000000009 250 1.0000000000000009;
 createNode animCurveTU -n "curve1_visibility";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
@@ -27869,7 +28077,7 @@ createNode animCurveTL -n "ffd1LatticeShape_controlPoints_6__zValue";
 createNode animCurveTL -n "LeftArm_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  160 -2.5182325477239079e-14 195 -2.5182325477239079e-14
+	setAttr -s 6 ".ktv[0:5]"  160 -2.5182325477239079e-014 195 -2.5182325477239079e-014
 		 205 2.8711028009025559 275 2.8711028009025559 280 8.32164957975092 285 4.3631418896503611;
 createNode animCurveTL -n "LeftArm_translateY";
 	setAttr ".tan" 18;
@@ -28740,7 +28948,7 @@ createNode hyperLayout -n "hyperLayout1";
 	setAttr ".hyp[0].x" 1.4285714626312256;
 	setAttr ".hyp[0].y" -177.14285278320312;
 	setAttr ".hyp[0].nvs" 1920;
-	setAttr ".hyp[1].x" 212.85714721679688;
+	setAttr ".hyp[1].x" 212.85714721679687;
 	setAttr ".hyp[1].y" -177.14285278320312;
 	setAttr ".hyp[1].nvs" 1920;
 	setAttr ".hyp[2].x" 424.28570556640625;
@@ -28752,7 +28960,7 @@ createNode hyperLayout -n "hyperLayout1";
 	setAttr ".hyp[4].x" 1.4285714626312256;
 	setAttr ".hyp[4].y" -72.857139587402344;
 	setAttr ".hyp[4].nvs" 1920;
-	setAttr ".hyp[5].x" 212.85714721679688;
+	setAttr ".hyp[5].x" 212.85714721679687;
 	setAttr ".hyp[5].y" -72.857139587402344;
 	setAttr ".hyp[5].nvs" 1920;
 	setAttr ".hyp[6].x" 424.28570556640625;
@@ -29267,9 +29475,9 @@ createNode animCurveTU -n "pasted__pasted__pTorus2_scaleZ";
 createNode animCurveTU -n "blendShape1_angry";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 14 ".ktv[0:13]"  50 1 55 0.82798153162002563 60 0.3486238420009613
-		 65 0.31192660331726074 70 0 80 1 100 0.74311923980712891 110 0 120 0.66972476243972778
-		 130 0.54128438234329224 145 1 155 0 290 0 305 0;
+	setAttr -s 14 ".ktv[0:13]"  50 1 55 1 60 0.3486238420009613 65 0.51376146078109741
+		 70 1 80 1 100 0.40366971492767334 110 0 120 0.66972476243972778 130 0.54128438234329224
+		 145 1 155 0 290 0 305 0;
 createNode animCurveTU -n "blendShape1_happy";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
@@ -29299,15 +29507,15 @@ createNode animCurveTU -n "blendShape1_closedEyes";
 createNode animCurveTU -n "blendShape1_leftEyebrowUp";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 14 ".ktv[0:13]"  50 0.27522936463356018 55 0.10091742873191833
-		 60 0.59633028507232666 65 0.64220184087753296 70 0 80 0.44954127073287964 100 0.082568809390068054
+	setAttr -s 14 ".ktv[0:13]"  50 0.27522936463356018 55 0.16513761878013611
+		 60 0.59633028507232666 65 0.64220184087753296 70 0 80 0.44954127073287964 100 0.33027523756027222
 		 110 0.42201834917068481 120 0.42201834917068481 130 0.24770642817020416 145 1 155 0
 		 290 0 305 0;
 createNode animCurveTU -n "blendShape1_rightEyebrowUp";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 14 ".ktv[0:13]"  50 0.33027523756027222 55 0.22018349170684814
-		 60 0.61467891931533813 65 0.72477066516876221 70 0 80 0.40366971492767334 100 0.11009174585342407
+		 60 0.61467891931533813 65 0.72477066516876221 70 0 80 0.40366971492767334 100 0.33027523756027222
 		 110 0.41284403204917908 120 0.41284403204917908 130 0.302752286195755 145 1 155 0
 		 290 0 305 0;
 createNode animCurveTU -n "blendShape1_noseUp";
@@ -29382,7 +29590,7 @@ createNode animCurveTA -n "chest_ctrl_rotateZ";
 		 90 16.725777058595845 110 0;
 createNode cacheFile -n "utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape1Cache3";
 	setAttr ".cn" -type "string" "utility_room_view_livingroom_shading_latest_living_room_latest_nClothShape1";
-	setAttr ".cp" -type "string" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//shots/body/";
+	setAttr ".cp" -type "string" "X:/documents/GitHub/Bandits/maya//shots/body/";
 	setAttr ".ch[0]" -type "string" "utility_room_view:livingroom_shading_latest:living_room_latest:nClothShape1";
 	setAttr ".os" 1;
 	setAttr ".oe" 315;
@@ -29404,7 +29612,7 @@ createNode animCurveTL -n "pasted__pasted__pCylinder7_translateX1";
 createNode animCurveTL -n "pasted__pasted__pCylinder7_translateY1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  160 -1.7763568394002505e-15 211 0 230 0
+	setAttr -s 8 ".ktv[0:7]"  160 -1.7763568394002505e-015 211 0 230 0
 		 260 0 265 0 270 0 280 0 290 0;
 	setAttr -s 8 ".kit[3:7]"  1 18 18 18 18;
 	setAttr -s 8 ".kot[3:7]"  1 18 18 18 18;
@@ -29443,7 +29651,7 @@ createNode animCurveTL -n "pasted__pasted__pTorus2_translateX1";
 createNode animCurveTL -n "pasted__pasted__pTorus2_translateY1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  160 -1.7763568394002505e-15 211 0 230 0
+	setAttr -s 8 ".ktv[0:7]"  160 -1.7763568394002505e-015 211 0 230 0
 		 260 0 265 0 270 0 280 0 290 0;
 	setAttr -s 8 ".kit[3:7]"  1 18 18 18 18;
 	setAttr -s 8 ".kot[3:7]"  1 18 18 18 18;
@@ -29627,7 +29835,7 @@ createNode animCurveTU -n "pasted__pasted__pCylinder7_scaleZ1";
 	setAttr -s 8 ".koy[3:7]"  0 0 0 0 0;
 createNode cacheFile -n "utility_room_view_house_latest_nClothShape2Cache1";
 	setAttr ".cn" -type "string" "utility_room_view_house_latest_nClothShape2";
-	setAttr ".cp" -type "string" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//shots/body/";
+	setAttr ".cp" -type "string" "X:/documents/GitHub/Bandits/maya//shots/body/";
 	setAttr ".ch[0]" -type "string" "utility_room_view:house_latest:nClothShape2";
 	setAttr ".os" 1;
 	setAttr ".oe" 128;
@@ -29636,7 +29844,7 @@ createNode cacheFile -n "utility_room_view_house_latest_nClothShape2Cache1";
 	setAttr ".sf" 1;
 createNode cacheFile -n "utility_room_view_house_latest_nClothShape1Cache1";
 	setAttr ".cn" -type "string" "utility_room_view_house_latest_nClothShape1";
-	setAttr ".cp" -type "string" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//shots/body/";
+	setAttr ".cp" -type "string" "X:/documents/GitHub/Bandits/maya//shots/body/";
 	setAttr ".ch[0]" -type "string" "utility_room_view:house_latest:nClothShape1";
 	setAttr ".os" 1;
 	setAttr ".oe" 55;
@@ -29645,7 +29853,7 @@ createNode cacheFile -n "utility_room_view_house_latest_nClothShape1Cache1";
 	setAttr ".sf" 1;
 createNode cacheFile -n "utility_room_view_house_latest_bedroom_latest_nClothShape1Cache1";
 	setAttr ".cn" -type "string" "utility_room_view_house_latest_bedroom_latest_nClothShape1";
-	setAttr ".cp" -type "string" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//shots/body/";
+	setAttr ".cp" -type "string" "X:/documents/GitHub/Bandits/maya//shots/body/";
 	setAttr ".ch[0]" -type "string" "utility_room_view:house_latest:bedroom_latest:nClothShape1";
 	setAttr ".os" 1;
 	setAttr ".oe" 315;
@@ -31282,66 +31490,66 @@ createNode animCurveTA -n "back_ctrl_rotateZ";
 createNode animCurveTL -n "cog_ctrl_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  70 0.542410230289605 80 -1.92577500727413
-		 90 0.542410230289605;
-	setAttr -s 3 ".kit[2]"  1;
-	setAttr -s 3 ".kot[2]"  1;
-	setAttr -s 3 ".kix[2]"  1;
-	setAttr -s 3 ".kiy[2]"  0;
-	setAttr -s 3 ".kox[2]"  1;
-	setAttr -s 3 ".koy[2]"  0;
+	setAttr -s 4 ".ktv[0:3]"  70 0.542410230289605 80 -4.6773679029223931
+		 85 -1.9559312560417905 90 0.542410230289605;
+	setAttr -s 4 ".kit[3]"  1;
+	setAttr -s 4 ".kot[3]"  1;
+	setAttr -s 4 ".kix[3]"  1;
+	setAttr -s 4 ".kiy[3]"  0;
+	setAttr -s 4 ".kox[3]"  1;
+	setAttr -s 4 ".koy[3]"  0;
 createNode animCurveTL -n "cog_ctrl_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  70 0.071363698766655229 80 1.5305346383636882
-		 90 0.071363698766655229;
-	setAttr -s 3 ".kit[2]"  1;
-	setAttr -s 3 ".kot[2]"  1;
-	setAttr -s 3 ".kix[2]"  1;
-	setAttr -s 3 ".kiy[2]"  0;
-	setAttr -s 3 ".kox[2]"  1;
-	setAttr -s 3 ".koy[2]"  0;
+	setAttr -s 4 ".ktv[0:3]"  70 0.071363698766655229 80 0.47826173256664645
+		 85 0.61314729306742421 90 0.071363698766655229;
+	setAttr -s 4 ".kit[3]"  1;
+	setAttr -s 4 ".kot[3]"  1;
+	setAttr -s 4 ".kix[3]"  1;
+	setAttr -s 4 ".kiy[3]"  0;
+	setAttr -s 4 ".kox[3]"  1;
+	setAttr -s 4 ".koy[3]"  0;
 createNode animCurveTL -n "cog_ctrl_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  70 -1.6216285237922152 80 -4.6453602882968648
-		 90 -1.6216285237922152;
-	setAttr -s 3 ".kit[2]"  1;
-	setAttr -s 3 ".kot[2]"  1;
-	setAttr -s 3 ".kix[2]"  1;
-	setAttr -s 3 ".kiy[2]"  0;
-	setAttr -s 3 ".kox[2]"  1;
-	setAttr -s 3 ".koy[2]"  0;
+	setAttr -s 4 ".ktv[0:3]"  70 -1.6216285237922152 80 -5.6120343445691212
+		 85 -0.27919793011689109 90 -1.6216285237922152;
+	setAttr -s 4 ".kit[3]"  1;
+	setAttr -s 4 ".kot[3]"  1;
+	setAttr -s 4 ".kix[3]"  1;
+	setAttr -s 4 ".kiy[3]"  0;
+	setAttr -s 4 ".kox[3]"  1;
+	setAttr -s 4 ".koy[3]"  0;
 createNode animCurveTA -n "cog_ctrl_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  70 0 80 0 90 0;
-	setAttr -s 3 ".kit[2]"  1;
-	setAttr -s 3 ".kot[2]"  1;
-	setAttr -s 3 ".kix[2]"  1;
-	setAttr -s 3 ".kiy[2]"  0;
-	setAttr -s 3 ".kox[2]"  1;
-	setAttr -s 3 ".koy[2]"  0;
+	setAttr -s 4 ".ktv[0:3]"  70 0 80 0 85 0 90 0;
+	setAttr -s 4 ".kit[3]"  1;
+	setAttr -s 4 ".kot[3]"  1;
+	setAttr -s 4 ".kix[3]"  1;
+	setAttr -s 4 ".kiy[3]"  0;
+	setAttr -s 4 ".kox[3]"  1;
+	setAttr -s 4 ".koy[3]"  0;
 createNode animCurveTA -n "cog_ctrl_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  70 0 80 0 90 0;
-	setAttr -s 3 ".kit[2]"  1;
-	setAttr -s 3 ".kot[2]"  1;
-	setAttr -s 3 ".kix[2]"  1;
-	setAttr -s 3 ".kiy[2]"  0;
-	setAttr -s 3 ".kox[2]"  1;
-	setAttr -s 3 ".koy[2]"  0;
+	setAttr -s 4 ".ktv[0:3]"  70 0 80 0 85 0 90 0;
+	setAttr -s 4 ".kit[3]"  1;
+	setAttr -s 4 ".kot[3]"  1;
+	setAttr -s 4 ".kix[3]"  1;
+	setAttr -s 4 ".kiy[3]"  0;
+	setAttr -s 4 ".kox[3]"  1;
+	setAttr -s 4 ".koy[3]"  0;
 createNode animCurveTA -n "cog_ctrl_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  70 0 80 0 90 0;
-	setAttr -s 3 ".kit[2]"  1;
-	setAttr -s 3 ".kot[2]"  1;
-	setAttr -s 3 ".kix[2]"  1;
-	setAttr -s 3 ".kiy[2]"  0;
-	setAttr -s 3 ".kox[2]"  1;
-	setAttr -s 3 ".koy[2]"  0;
+	setAttr -s 4 ".ktv[0:3]"  70 0 80 0 85 0 90 0;
+	setAttr -s 4 ".kit[3]"  1;
+	setAttr -s 4 ".kot[3]"  1;
+	setAttr -s 4 ".kix[3]"  1;
+	setAttr -s 4 ".kiy[3]"  0;
+	setAttr -s 4 ".kox[3]"  1;
+	setAttr -s 4 ".koy[3]"  0;
 createNode animCurveTL -n "leftArm_ctrl_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
@@ -31434,7 +31642,7 @@ createNode animCurveTU -n "blendShape1_super_angry";
 createNode animCurveTU -n "blendShape1_slightly_angry";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  170 0 180 0 185 0 200 0 220 0 260 0 263 0
+	setAttr -s 9 ".ktv[0:8]"  170 0 180 0 185 0 200 0 220 1 260 0 263 0
 		 275 0 280 0;
 createNode animCurveTU -n "blendShape1_smile1";
 	setAttr ".tan" 18;
@@ -31453,7 +31661,7 @@ createNode animCurveTU -n "blendShape1_smile";
 		 275 0 280 0;
 createNode cacheFile -n "utility_room_view_house_latest_bedroom_latest_nClothShape2Cache1";
 	setAttr ".cn" -type "string" "utility_room_view_house_latest_bedroom_latest_nClothShape2";
-	setAttr ".cp" -type "string" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//cache/nCache/bodyintro_latest/";
+	setAttr ".cp" -type "string" "X:/documents/GitHub/Bandits/maya//cache/nCache/bodyintro_latest/";
 	setAttr ".ch[0]" -type "string" "utility_room_view:house_latest:bedroom_latest:nClothShape2";
 	setAttr ".os" 1;
 	setAttr ".oe" 315;
@@ -32431,7 +32639,7 @@ createNode animCurveTL -n "shoulders_rotation_ctrl01_translateX";
 	setAttr ".wgt" no;
 	setAttr -s 97 ".ktv[0:96]"  0 0 3 0 5 0 9 0 12 0 14 0 18 0 21 0 23 0
 		 27 0 30 0 32 0 36 0 39 0 41 0 45 0 48 0 50 0 54 0 57 0 59 0 63 0 66 0 68 0 72 0 75 0
-		 77 0 81 -9.9619218003591246e-15 84 4.0071151420975538e-18 86 0 90 0 93 0 95 0 99 0
+		 77 0 81 -9.9619218003591246e-015 84 4.0071151420975538e-018 86 0 90 0 93 0 95 0 99 0
 		 102 0 104 0 108 0 111 0 113 0 117 0 120 0 122 0 126 0 129 0 131 0 135 0 138 0 140 0
 		 144 0 147 0 149 0 153 0 156 0 158 0 162 0 165 0 167 0 171 0 174 0 176 0 180 0 183 0
 		 185 0 189 0 192 0 194 0 198 0 201 0 203 0 207 0 210 0 212 0 216 0 219 0 221 0 225 0
@@ -32705,13 +32913,73 @@ createNode animCurveTU -n "pig_left_eye_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  78 0.58116972736987449 102 0.58116972736987449;
+createNode animCurveTL -n "Tail_Ctrl1_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  80 0 85 0 90 0 95 0;
+	setAttr -s 4 ".kit[2:3]"  1 1;
+	setAttr -s 4 ".kot[2:3]"  1 1;
+	setAttr -s 4 ".kix[2:3]"  1 1;
+	setAttr -s 4 ".kiy[2:3]"  0 0;
+	setAttr -s 4 ".kox[2:3]"  1 1;
+	setAttr -s 4 ".koy[2:3]"  0 0;
+createNode animCurveTL -n "Tail_Ctrl1_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  80 0 85 0 90 0 95 0;
+	setAttr -s 4 ".kit[2:3]"  1 1;
+	setAttr -s 4 ".kot[2:3]"  1 1;
+	setAttr -s 4 ".kix[2:3]"  1 1;
+	setAttr -s 4 ".kiy[2:3]"  0 0;
+	setAttr -s 4 ".kox[2:3]"  1 1;
+	setAttr -s 4 ".koy[2:3]"  0 0;
+createNode animCurveTL -n "Tail_Ctrl1_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  80 0 85 0 90 0 95 0;
+	setAttr -s 4 ".kit[2:3]"  1 1;
+	setAttr -s 4 ".kot[2:3]"  1 1;
+	setAttr -s 4 ".kix[2:3]"  1 1;
+	setAttr -s 4 ".kiy[2:3]"  0 0;
+	setAttr -s 4 ".kox[2:3]"  1 1;
+	setAttr -s 4 ".koy[2:3]"  0 0;
+createNode animCurveTA -n "Tail_Ctrl1_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  80 0 85 75.153682720671085 90 0 95 0;
+	setAttr -s 4 ".kit[2:3]"  1 1;
+	setAttr -s 4 ".kot[2:3]"  1 1;
+	setAttr -s 4 ".kix[2:3]"  1 1;
+	setAttr -s 4 ".kiy[2:3]"  0 0;
+	setAttr -s 4 ".kox[2:3]"  1 1;
+	setAttr -s 4 ".koy[2:3]"  0 0;
+createNode animCurveTA -n "Tail_Ctrl1_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  80 0 85 0 90 0 95 0;
+	setAttr -s 4 ".kit[2:3]"  1 1;
+	setAttr -s 4 ".kot[2:3]"  1 1;
+	setAttr -s 4 ".kix[2:3]"  1 1;
+	setAttr -s 4 ".kiy[2:3]"  0 0;
+	setAttr -s 4 ".kox[2:3]"  1 1;
+	setAttr -s 4 ".koy[2:3]"  0 0;
+createNode animCurveTA -n "Tail_Ctrl1_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  80 0 85 0 90 34.091606874960128 95 0;
+	setAttr -s 4 ".kit[2:3]"  1 1;
+	setAttr -s 4 ".kot[2:3]"  1 1;
+	setAttr -s 4 ".kix[2:3]"  1 1;
+	setAttr -s 4 ".kiy[2:3]"  0 0;
+	setAttr -s 4 ".kox[2:3]"  1 1;
+	setAttr -s 4 ".koy[2:3]"  0 0;
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -cb on ".ihi" 0;
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr ".o" 315;
-	setAttr ".unw" 315;
+	setAttr ".o" 300;
+	setAttr ".unw" 300;
 select -ne :sequenceManager1;
 	setAttr ".o" 450;
 select -ne :renderPartition;
@@ -32807,7 +33075,6 @@ select -ne :defaultRenderGlobals;
 	setAttr ".mcfr" 30;
 	setAttr -k on ".clip";
 	setAttr -k on ".edm";
-	setAttr ".ren" -type "string" "renderManRIS";
 	setAttr -av -k on ".esr";
 	setAttr -k on ".ors";
 	setAttr ".outf" 32;
@@ -32962,1119 +33229,1130 @@ select -ne :defaultHardwareRenderGlobals;
 	setAttr -cb on ".sd";
 select -ne :ikSystem;
 	setAttr -s 6 ".sol";
-connectAttr "utility_room_viewRN.phl[3553]" "global_ctrl_parentConstraint1.tg[0].tt"
-		;
-connectAttr "bike_ctrl_translateX.o" "utility_room_viewRN.phl[3554]";
-connectAttr "bike_ctrl_translateY.o" "utility_room_viewRN.phl[3555]";
-connectAttr "bike_ctrl_translateZ.o" "utility_room_viewRN.phl[3556]";
-connectAttr "bike_ctrl_visibility.o" "utility_room_viewRN.phl[3557]";
-connectAttr "utility_room_viewRN.phl[3558]" "global_ctrl_parentConstraint1.tg[0].tr"
-		;
-connectAttr "bike_ctrl_rotateX.o" "utility_room_viewRN.phl[3559]";
-connectAttr "bike_ctrl_rotateY.o" "utility_room_viewRN.phl[3560]";
-connectAttr "bike_ctrl_rotateZ.o" "utility_room_viewRN.phl[3561]";
-connectAttr "utility_room_viewRN.phl[3562]" "global_ctrl_parentConstraint1.tg[0].ts"
-		;
-connectAttr "bike_ctrl_scaleX.o" "utility_room_viewRN.phl[3563]";
-connectAttr "bike_ctrl_scaleY.o" "utility_room_viewRN.phl[3564]";
-connectAttr "bike_ctrl_scaleZ.o" "utility_room_viewRN.phl[3565]";
-connectAttr "utility_room_viewRN.phl[3566]" "global_ctrl_parentConstraint1.tg[0].trp"
-		;
-connectAttr "utility_room_viewRN.phl[3567]" "global_ctrl_parentConstraint1.tg[0].trt"
-		;
-connectAttr "utility_room_viewRN.phl[3568]" "global_ctrl_parentConstraint1.tg[0].tro"
-		;
-connectAttr "utility_room_viewRN.phl[3569]" "global_ctrl_parentConstraint1.tg[0].tpm"
-		;
-connectAttr "pasted__pasted__pTorus2_translateX1.o" "utility_room_viewRN.phl[4175]"
-		;
-connectAttr "pasted__pasted__pTorus2_translateY1.o" "utility_room_viewRN.phl[4176]"
-		;
-connectAttr "pasted__pasted__pTorus2_translateZ1.o" "utility_room_viewRN.phl[4177]"
-		;
-connectAttr "pasted__pasted__pTorus2_rotateX1.o" "utility_room_viewRN.phl[4178]"
-		;
-connectAttr "pasted__pasted__pTorus2_rotateY1.o" "utility_room_viewRN.phl[4179]"
-		;
-connectAttr "pasted__pasted__pTorus2_rotateZ1.o" "utility_room_viewRN.phl[4180]"
-		;
-connectAttr "pasted__pasted__pTorus2_visibility1.o" "utility_room_viewRN.phl[4181]"
-		;
-connectAttr "pasted__pasted__pTorus2_scaleX1.o" "utility_room_viewRN.phl[4182]";
-connectAttr "pasted__pasted__pTorus2_scaleY1.o" "utility_room_viewRN.phl[4183]";
-connectAttr "pasted__pasted__pTorus2_scaleZ1.o" "utility_room_viewRN.phl[4184]";
-connectAttr "pasted__pasted__pCylinder7_translateX1.o" "utility_room_viewRN.phl[4185]"
-		;
-connectAttr "pasted__pasted__pCylinder7_translateY1.o" "utility_room_viewRN.phl[4186]"
-		;
-connectAttr "pasted__pasted__pCylinder7_translateZ1.o" "utility_room_viewRN.phl[4187]"
-		;
-connectAttr "pasted__pasted__pCylinder7_rotateX1.o" "utility_room_viewRN.phl[4188]"
-		;
-connectAttr "pasted__pasted__pCylinder7_rotateY1.o" "utility_room_viewRN.phl[4189]"
-		;
-connectAttr "pasted__pasted__pCylinder7_rotateZ1.o" "utility_room_viewRN.phl[4190]"
-		;
-connectAttr "pasted__pasted__pCylinder7_visibility1.o" "utility_room_viewRN.phl[4191]"
-		;
-connectAttr "pasted__pasted__pCylinder7_scaleX1.o" "utility_room_viewRN.phl[4192]"
-		;
-connectAttr "pasted__pasted__pCylinder7_scaleY1.o" "utility_room_viewRN.phl[4193]"
-		;
-connectAttr "pasted__pasted__pCylinder7_scaleZ1.o" "utility_room_viewRN.phl[4194]"
-		;
-connectAttr "utility_room_viewRN.phl[3497]" "pairBlend1.w";
-connectAttr "global_ctrl_blendParent1.o" "utility_room_viewRN.phl[3498]";
-connectAttr "pairBlend1.otx" "utility_room_viewRN.phl[3499]";
-connectAttr "pairBlend1.oty" "utility_room_viewRN.phl[3500]";
-connectAttr "pairBlend1.otz" "utility_room_viewRN.phl[3501]";
-connectAttr "pairBlend1.orx" "utility_room_viewRN.phl[3502]";
-connectAttr "pairBlend1.ory" "utility_room_viewRN.phl[3503]";
-connectAttr "pairBlend1.orz" "utility_room_viewRN.phl[3504]";
-connectAttr "global_ctrl_scaleX.o" "utility_room_viewRN.phl[3505]";
-connectAttr "global_ctrl_scaleY.o" "utility_room_viewRN.phl[3506]";
-connectAttr "global_ctrl_scaleZ.o" "utility_room_viewRN.phl[3507]";
-connectAttr "utility_room_viewRN.phl[3508]" "global_ctrl_parentConstraint1.crp";
-connectAttr "utility_room_viewRN.phl[3509]" "global_ctrl_parentConstraint1.crt";
-connectAttr "utility_room_viewRN.phl[3510]" "pairBlend1.ro";
-connectAttr "utility_room_viewRN.phl[3511]" "global_ctrl_parentConstraint1.cro";
-connectAttr "utility_room_viewRN.phl[3512]" "global_ctrl_parentConstraint1.cpim"
+connectAttr "utility_room_viewRN.phl[2678]" "global_ctrl_parentConstraint1.tg[0].tt"
+		;
+connectAttr "bike_ctrl_translateX.o" "utility_room_viewRN.phl[2679]";
+connectAttr "bike_ctrl_translateY.o" "utility_room_viewRN.phl[2680]";
+connectAttr "bike_ctrl_translateZ.o" "utility_room_viewRN.phl[2681]";
+connectAttr "bike_ctrl_visibility.o" "utility_room_viewRN.phl[2682]";
+connectAttr "utility_room_viewRN.phl[2683]" "global_ctrl_parentConstraint1.tg[0].tr"
+		;
+connectAttr "bike_ctrl_rotateX.o" "utility_room_viewRN.phl[2684]";
+connectAttr "bike_ctrl_rotateY.o" "utility_room_viewRN.phl[2685]";
+connectAttr "bike_ctrl_rotateZ.o" "utility_room_viewRN.phl[2686]";
+connectAttr "utility_room_viewRN.phl[2687]" "global_ctrl_parentConstraint1.tg[0].ts"
+		;
+connectAttr "bike_ctrl_scaleX.o" "utility_room_viewRN.phl[2688]";
+connectAttr "bike_ctrl_scaleY.o" "utility_room_viewRN.phl[2689]";
+connectAttr "bike_ctrl_scaleZ.o" "utility_room_viewRN.phl[2690]";
+connectAttr "utility_room_viewRN.phl[2691]" "global_ctrl_parentConstraint1.tg[0].trp"
+		;
+connectAttr "utility_room_viewRN.phl[2692]" "global_ctrl_parentConstraint1.tg[0].trt"
+		;
+connectAttr "utility_room_viewRN.phl[2693]" "global_ctrl_parentConstraint1.tg[0].tro"
+		;
+connectAttr "utility_room_viewRN.phl[2694]" "global_ctrl_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "pasted__pasted__pTorus2_translateX1.o" "utility_room_viewRN.phl[3303]"
+		;
+connectAttr "pasted__pasted__pTorus2_translateY1.o" "utility_room_viewRN.phl[3304]"
+		;
+connectAttr "pasted__pasted__pTorus2_translateZ1.o" "utility_room_viewRN.phl[3305]"
+		;
+connectAttr "pasted__pasted__pTorus2_rotateX1.o" "utility_room_viewRN.phl[3306]"
+		;
+connectAttr "pasted__pasted__pTorus2_rotateY1.o" "utility_room_viewRN.phl[3307]"
+		;
+connectAttr "pasted__pasted__pTorus2_rotateZ1.o" "utility_room_viewRN.phl[3308]"
+		;
+connectAttr "pasted__pasted__pTorus2_visibility1.o" "utility_room_viewRN.phl[3309]"
+		;
+connectAttr "pasted__pasted__pTorus2_scaleX1.o" "utility_room_viewRN.phl[3310]";
+connectAttr "pasted__pasted__pTorus2_scaleY1.o" "utility_room_viewRN.phl[3311]";
+connectAttr "pasted__pasted__pTorus2_scaleZ1.o" "utility_room_viewRN.phl[3312]";
+connectAttr "pasted__pasted__pCylinder7_translateX1.o" "utility_room_viewRN.phl[3313]"
+		;
+connectAttr "pasted__pasted__pCylinder7_translateY1.o" "utility_room_viewRN.phl[3314]"
+		;
+connectAttr "pasted__pasted__pCylinder7_translateZ1.o" "utility_room_viewRN.phl[3315]"
+		;
+connectAttr "pasted__pasted__pCylinder7_rotateX1.o" "utility_room_viewRN.phl[3316]"
+		;
+connectAttr "pasted__pasted__pCylinder7_rotateY1.o" "utility_room_viewRN.phl[3317]"
+		;
+connectAttr "pasted__pasted__pCylinder7_rotateZ1.o" "utility_room_viewRN.phl[3318]"
+		;
+connectAttr "pasted__pasted__pCylinder7_visibility1.o" "utility_room_viewRN.phl[3319]"
+		;
+connectAttr "pasted__pasted__pCylinder7_scaleX1.o" "utility_room_viewRN.phl[3320]"
+		;
+connectAttr "pasted__pasted__pCylinder7_scaleY1.o" "utility_room_viewRN.phl[3321]"
+		;
+connectAttr "pasted__pasted__pCylinder7_scaleZ1.o" "utility_room_viewRN.phl[3322]"
+		;
+connectAttr "utility_room_viewRN.phl[2616]" "pairBlend1.w";
+connectAttr "global_ctrl_blendParent1.o" "utility_room_viewRN.phl[2617]";
+connectAttr "pairBlend1.otx" "utility_room_viewRN.phl[2618]";
+connectAttr "pairBlend1.oty" "utility_room_viewRN.phl[2619]";
+connectAttr "pairBlend1.otz" "utility_room_viewRN.phl[2620]";
+connectAttr "pairBlend1.orx" "utility_room_viewRN.phl[2621]";
+connectAttr "pairBlend1.ory" "utility_room_viewRN.phl[2622]";
+connectAttr "pairBlend1.orz" "utility_room_viewRN.phl[2623]";
+connectAttr "global_ctrl_scaleX.o" "utility_room_viewRN.phl[2624]";
+connectAttr "global_ctrl_scaleY.o" "utility_room_viewRN.phl[2625]";
+connectAttr "global_ctrl_scaleZ.o" "utility_room_viewRN.phl[2626]";
+connectAttr "utility_room_viewRN.phl[2627]" "global_ctrl_parentConstraint1.crp";
+connectAttr "utility_room_viewRN.phl[2628]" "global_ctrl_parentConstraint1.crt";
+connectAttr "utility_room_viewRN.phl[2629]" "global_ctrl_parentConstraint1.cro";
+connectAttr "utility_room_viewRN.phl[2630]" "pairBlend1.ro";
+connectAttr "utility_room_viewRN.phl[2631]" "global_ctrl_parentConstraint1.cpim"
 		;
-connectAttr "cog_ctrl_translateX.o" "utility_room_viewRN.phl[3513]";
-connectAttr "cog_ctrl_translateY.o" "utility_room_viewRN.phl[3514]";
-connectAttr "cog_ctrl_translateZ.o" "utility_room_viewRN.phl[3515]";
-connectAttr "cog_ctrl_rotateX.o" "utility_room_viewRN.phl[3516]";
-connectAttr "cog_ctrl_rotateY.o" "utility_room_viewRN.phl[3517]";
-connectAttr "cog_ctrl_rotateZ.o" "utility_room_viewRN.phl[3518]";
-connectAttr "back_ctrl_rotateX.o" "utility_room_viewRN.phl[3519]";
-connectAttr "back_ctrl_rotateY.o" "utility_room_viewRN.phl[3520]";
-connectAttr "back_ctrl_rotateZ.o" "utility_room_viewRN.phl[3521]";
-connectAttr "chest_ctrl_rotateX.o" "utility_room_viewRN.phl[3522]";
-connectAttr "chest_ctrl_rotateY.o" "utility_room_viewRN.phl[3523]";
-connectAttr "chest_ctrl_rotateZ.o" "utility_room_viewRN.phl[3524]";
-connectAttr "head_ctrl_rotateX.o" "utility_room_viewRN.phl[3525]";
-connectAttr "head_ctrl_rotateY.o" "utility_room_viewRN.phl[3526]";
-connectAttr "head_ctrl_rotateZ.o" "utility_room_viewRN.phl[3527]";
-connectAttr "leftArm_ctrl_rotateX.o" "utility_room_viewRN.phl[3528]";
-connectAttr "leftArm_ctrl_rotateY.o" "utility_room_viewRN.phl[3529]";
-connectAttr "leftArm_ctrl_rotateZ.o" "utility_room_viewRN.phl[3530]";
-connectAttr "leftArm_ctrl_translateX.o" "utility_room_viewRN.phl[3531]";
-connectAttr "leftArm_ctrl_translateY.o" "utility_room_viewRN.phl[3532]";
-connectAttr "leftArm_ctrl_translateZ.o" "utility_room_viewRN.phl[3533]";
-connectAttr "blendShape1_angry.o" "utility_room_viewRN.phl[3534]";
-connectAttr "blendShape1_happy.o" "utility_room_viewRN.phl[3535]";
-connectAttr "blendShape1_worried.o" "utility_room_viewRN.phl[3536]";
-connectAttr "blendShape1_closedMouth.o" "utility_room_viewRN.phl[3537]";
-connectAttr "blendShape1_openMouth.o" "utility_room_viewRN.phl[3538]";
-connectAttr "blendShape1_closedEyes.o" "utility_room_viewRN.phl[3539]";
-connectAttr "blendShape1_leftEyebrowUp.o" "utility_room_viewRN.phl[3540]";
-connectAttr "blendShape1_rightEyebrowUp.o" "utility_room_viewRN.phl[3541]";
-connectAttr "blendShape1_noseUp.o" "utility_room_viewRN.phl[3542]";
-connectAttr "blendShape1_noseDown.o" "utility_room_viewRN.phl[3543]";
-connectAttr "blendShape1_leftEarOut.o" "utility_room_viewRN.phl[3544]";
-connectAttr "blendShape1_rightEarOut.o" "utility_room_viewRN.phl[3545]";
-connectAttr "blendShape1_earsSpread.o" "utility_room_viewRN.phl[3546]";
-connectAttr "blendShape1_leftEarForward.o" "utility_room_viewRN.phl[3547]";
-connectAttr "blendShape1_rightEarForward.o" "utility_room_viewRN.phl[3548]";
-connectAttr "blendShape1_leftEyeClosed.o" "utility_room_viewRN.phl[3549]";
-connectAttr "blendShape1_polySurface6.o" "utility_room_viewRN.phl[3550]";
-connectAttr "blendShape1_polySurface7.o" "utility_room_viewRN.phl[3551]";
-connectAttr "blendShape1_polySurface8.o" "utility_room_viewRN.phl[3552]";
-connectAttr "undies_visibility.o" "utility_room_viewRN.phl[4066]";
-connectAttr "undies_translateX.o" "utility_room_viewRN.phl[4067]";
-connectAttr "undies_translateY.o" "utility_room_viewRN.phl[4068]";
-connectAttr "undies_translateZ.o" "utility_room_viewRN.phl[4069]";
-connectAttr "undies_rotateX.o" "utility_room_viewRN.phl[4070]";
-connectAttr "undies_rotateY.o" "utility_room_viewRN.phl[4071]";
-connectAttr "undies_rotateZ.o" "utility_room_viewRN.phl[4072]";
-connectAttr "undies_scaleX.o" "utility_room_viewRN.phl[4073]";
-connectAttr "undies_scaleY.o" "utility_room_viewRN.phl[4074]";
-connectAttr "undies_scaleZ.o" "utility_room_viewRN.phl[4075]";
-connectAttr "ffd1Lattice_rotateX.o" "utility_room_viewRN.phl[4076]";
-connectAttr "ffd1Lattice_rotateY.o" "utility_room_viewRN.phl[4077]";
-connectAttr "ffd1Lattice_rotateZ.o" "utility_room_viewRN.phl[4078]";
-connectAttr "ffd1LatticeShape_controlPoints_0__xValue.o" "utility_room_viewRN.phl[4079]"
+connectAttr "cog_ctrl_translateX.o" "utility_room_viewRN.phl[2632]";
+connectAttr "cog_ctrl_translateY.o" "utility_room_viewRN.phl[2633]";
+connectAttr "cog_ctrl_translateZ.o" "utility_room_viewRN.phl[2634]";
+connectAttr "cog_ctrl_rotateX.o" "utility_room_viewRN.phl[2635]";
+connectAttr "cog_ctrl_rotateY.o" "utility_room_viewRN.phl[2636]";
+connectAttr "cog_ctrl_rotateZ.o" "utility_room_viewRN.phl[2637]";
+connectAttr "Tail_Ctrl1_rotateX.o" "utility_room_viewRN.phl[2638]";
+connectAttr "Tail_Ctrl1_rotateY.o" "utility_room_viewRN.phl[2639]";
+connectAttr "Tail_Ctrl1_rotateZ.o" "utility_room_viewRN.phl[2640]";
+connectAttr "Tail_Ctrl1_translateX.o" "utility_room_viewRN.phl[2641]";
+connectAttr "Tail_Ctrl1_translateY.o" "utility_room_viewRN.phl[2642]";
+connectAttr "Tail_Ctrl1_translateZ.o" "utility_room_viewRN.phl[2643]";
+connectAttr "back_ctrl_rotateX.o" "utility_room_viewRN.phl[2644]";
+connectAttr "back_ctrl_rotateY.o" "utility_room_viewRN.phl[2645]";
+connectAttr "back_ctrl_rotateZ.o" "utility_room_viewRN.phl[2646]";
+connectAttr "chest_ctrl_rotateX.o" "utility_room_viewRN.phl[2647]";
+connectAttr "chest_ctrl_rotateY.o" "utility_room_viewRN.phl[2648]";
+connectAttr "chest_ctrl_rotateZ.o" "utility_room_viewRN.phl[2649]";
+connectAttr "head_ctrl_rotateX.o" "utility_room_viewRN.phl[2650]";
+connectAttr "head_ctrl_rotateY.o" "utility_room_viewRN.phl[2651]";
+connectAttr "head_ctrl_rotateZ.o" "utility_room_viewRN.phl[2652]";
+connectAttr "leftArm_ctrl_rotateX.o" "utility_room_viewRN.phl[2653]";
+connectAttr "leftArm_ctrl_rotateY.o" "utility_room_viewRN.phl[2654]";
+connectAttr "leftArm_ctrl_rotateZ.o" "utility_room_viewRN.phl[2655]";
+connectAttr "leftArm_ctrl_translateX.o" "utility_room_viewRN.phl[2656]";
+connectAttr "leftArm_ctrl_translateY.o" "utility_room_viewRN.phl[2657]";
+connectAttr "leftArm_ctrl_translateZ.o" "utility_room_viewRN.phl[2658]";
+connectAttr "blendShape1_angry.o" "utility_room_viewRN.phl[2659]";
+connectAttr "blendShape1_happy.o" "utility_room_viewRN.phl[2660]";
+connectAttr "blendShape1_worried.o" "utility_room_viewRN.phl[2661]";
+connectAttr "blendShape1_closedMouth.o" "utility_room_viewRN.phl[2662]";
+connectAttr "blendShape1_openMouth.o" "utility_room_viewRN.phl[2663]";
+connectAttr "blendShape1_closedEyes.o" "utility_room_viewRN.phl[2664]";
+connectAttr "blendShape1_leftEyebrowUp.o" "utility_room_viewRN.phl[2665]";
+connectAttr "blendShape1_rightEyebrowUp.o" "utility_room_viewRN.phl[2666]";
+connectAttr "blendShape1_noseUp.o" "utility_room_viewRN.phl[2667]";
+connectAttr "blendShape1_noseDown.o" "utility_room_viewRN.phl[2668]";
+connectAttr "blendShape1_leftEarOut.o" "utility_room_viewRN.phl[2669]";
+connectAttr "blendShape1_rightEarOut.o" "utility_room_viewRN.phl[2670]";
+connectAttr "blendShape1_earsSpread.o" "utility_room_viewRN.phl[2671]";
+connectAttr "blendShape1_leftEarForward.o" "utility_room_viewRN.phl[2672]";
+connectAttr "blendShape1_rightEarForward.o" "utility_room_viewRN.phl[2673]";
+connectAttr "blendShape1_leftEyeClosed.o" "utility_room_viewRN.phl[2674]";
+connectAttr "blendShape1_polySurface6.o" "utility_room_viewRN.phl[2675]";
+connectAttr "blendShape1_polySurface7.o" "utility_room_viewRN.phl[2676]";
+connectAttr "blendShape1_polySurface8.o" "utility_room_viewRN.phl[2677]";
+connectAttr "undies_visibility.o" "utility_room_viewRN.phl[3191]";
+connectAttr "undies_translateX.o" "utility_room_viewRN.phl[3192]";
+connectAttr "undies_translateY.o" "utility_room_viewRN.phl[3193]";
+connectAttr "undies_translateZ.o" "utility_room_viewRN.phl[3194]";
+connectAttr "undies_rotateX.o" "utility_room_viewRN.phl[3195]";
+connectAttr "undies_rotateY.o" "utility_room_viewRN.phl[3196]";
+connectAttr "undies_rotateZ.o" "utility_room_viewRN.phl[3197]";
+connectAttr "undies_scaleX.o" "utility_room_viewRN.phl[3198]";
+connectAttr "undies_scaleY.o" "utility_room_viewRN.phl[3199]";
+connectAttr "undies_scaleZ.o" "utility_room_viewRN.phl[3200]";
+connectAttr "ffd1Lattice_rotateX.o" "utility_room_viewRN.phl[3201]";
+connectAttr "ffd1Lattice_rotateY.o" "utility_room_viewRN.phl[3202]";
+connectAttr "ffd1Lattice_rotateZ.o" "utility_room_viewRN.phl[3203]";
+connectAttr "ffd1LatticeShape_controlPoints_0__xValue.o" "utility_room_viewRN.phl[3204]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_0__yValue.o" "utility_room_viewRN.phl[4080]"
+connectAttr "ffd1LatticeShape_controlPoints_0__yValue.o" "utility_room_viewRN.phl[3205]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_0__zValue.o" "utility_room_viewRN.phl[4081]"
+connectAttr "ffd1LatticeShape_controlPoints_0__zValue.o" "utility_room_viewRN.phl[3206]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_1__xValue.o" "utility_room_viewRN.phl[4082]"
+connectAttr "ffd1LatticeShape_controlPoints_1__xValue.o" "utility_room_viewRN.phl[3207]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_1__yValue.o" "utility_room_viewRN.phl[4083]"
+connectAttr "ffd1LatticeShape_controlPoints_1__yValue.o" "utility_room_viewRN.phl[3208]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_1__zValue.o" "utility_room_viewRN.phl[4084]"
+connectAttr "ffd1LatticeShape_controlPoints_1__zValue.o" "utility_room_viewRN.phl[3209]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_2__xValue.o" "utility_room_viewRN.phl[4085]"
+connectAttr "ffd1LatticeShape_controlPoints_2__xValue.o" "utility_room_viewRN.phl[3210]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_2__yValue.o" "utility_room_viewRN.phl[4086]"
+connectAttr "ffd1LatticeShape_controlPoints_2__yValue.o" "utility_room_viewRN.phl[3211]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_2__zValue.o" "utility_room_viewRN.phl[4087]"
+connectAttr "ffd1LatticeShape_controlPoints_2__zValue.o" "utility_room_viewRN.phl[3212]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_3__xValue.o" "utility_room_viewRN.phl[4088]"
+connectAttr "ffd1LatticeShape_controlPoints_3__xValue.o" "utility_room_viewRN.phl[3213]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_3__yValue.o" "utility_room_viewRN.phl[4089]"
+connectAttr "ffd1LatticeShape_controlPoints_3__yValue.o" "utility_room_viewRN.phl[3214]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_3__zValue.o" "utility_room_viewRN.phl[4090]"
+connectAttr "ffd1LatticeShape_controlPoints_3__zValue.o" "utility_room_viewRN.phl[3215]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_4__xValue.o" "utility_room_viewRN.phl[4091]"
+connectAttr "ffd1LatticeShape_controlPoints_4__xValue.o" "utility_room_viewRN.phl[3216]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_4__yValue.o" "utility_room_viewRN.phl[4092]"
+connectAttr "ffd1LatticeShape_controlPoints_4__yValue.o" "utility_room_viewRN.phl[3217]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_4__zValue.o" "utility_room_viewRN.phl[4093]"
+connectAttr "ffd1LatticeShape_controlPoints_4__zValue.o" "utility_room_viewRN.phl[3218]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_5__xValue.o" "utility_room_viewRN.phl[4094]"
+connectAttr "ffd1LatticeShape_controlPoints_5__xValue.o" "utility_room_viewRN.phl[3219]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_5__yValue.o" "utility_room_viewRN.phl[4095]"
+connectAttr "ffd1LatticeShape_controlPoints_5__yValue.o" "utility_room_viewRN.phl[3220]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_5__zValue.o" "utility_room_viewRN.phl[4096]"
+connectAttr "ffd1LatticeShape_controlPoints_5__zValue.o" "utility_room_viewRN.phl[3221]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_6__xValue.o" "utility_room_viewRN.phl[4097]"
+connectAttr "ffd1LatticeShape_controlPoints_6__xValue.o" "utility_room_viewRN.phl[3222]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_6__yValue.o" "utility_room_viewRN.phl[4098]"
+connectAttr "ffd1LatticeShape_controlPoints_6__yValue.o" "utility_room_viewRN.phl[3223]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_6__zValue.o" "utility_room_viewRN.phl[4099]"
+connectAttr "ffd1LatticeShape_controlPoints_6__zValue.o" "utility_room_viewRN.phl[3224]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_7__xValue.o" "utility_room_viewRN.phl[4100]"
+connectAttr "ffd1LatticeShape_controlPoints_7__xValue.o" "utility_room_viewRN.phl[3225]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_7__yValue.o" "utility_room_viewRN.phl[4101]"
+connectAttr "ffd1LatticeShape_controlPoints_7__yValue.o" "utility_room_viewRN.phl[3226]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_7__zValue.o" "utility_room_viewRN.phl[4102]"
+connectAttr "ffd1LatticeShape_controlPoints_7__zValue.o" "utility_room_viewRN.phl[3227]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_8__xValue.o" "utility_room_viewRN.phl[4103]"
+connectAttr "ffd1LatticeShape_controlPoints_8__xValue.o" "utility_room_viewRN.phl[3228]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_8__yValue.o" "utility_room_viewRN.phl[4104]"
+connectAttr "ffd1LatticeShape_controlPoints_8__yValue.o" "utility_room_viewRN.phl[3229]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_8__zValue.o" "utility_room_viewRN.phl[4105]"
+connectAttr "ffd1LatticeShape_controlPoints_8__zValue.o" "utility_room_viewRN.phl[3230]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_9__xValue.o" "utility_room_viewRN.phl[4106]"
+connectAttr "ffd1LatticeShape_controlPoints_9__xValue.o" "utility_room_viewRN.phl[3231]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_9__yValue.o" "utility_room_viewRN.phl[4107]"
+connectAttr "ffd1LatticeShape_controlPoints_9__yValue.o" "utility_room_viewRN.phl[3232]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_9__zValue.o" "utility_room_viewRN.phl[4108]"
+connectAttr "ffd1LatticeShape_controlPoints_9__zValue.o" "utility_room_viewRN.phl[3233]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_10__xValue.o" "utility_room_viewRN.phl[4109]"
+connectAttr "ffd1LatticeShape_controlPoints_10__xValue.o" "utility_room_viewRN.phl[3234]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_10__yValue.o" "utility_room_viewRN.phl[4110]"
+connectAttr "ffd1LatticeShape_controlPoints_10__yValue.o" "utility_room_viewRN.phl[3235]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_10__zValue.o" "utility_room_viewRN.phl[4111]"
+connectAttr "ffd1LatticeShape_controlPoints_10__zValue.o" "utility_room_viewRN.phl[3236]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_11__xValue.o" "utility_room_viewRN.phl[4112]"
+connectAttr "ffd1LatticeShape_controlPoints_11__xValue.o" "utility_room_viewRN.phl[3237]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_11__yValue.o" "utility_room_viewRN.phl[4113]"
+connectAttr "ffd1LatticeShape_controlPoints_11__yValue.o" "utility_room_viewRN.phl[3238]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_11__zValue.o" "utility_room_viewRN.phl[4114]"
+connectAttr "ffd1LatticeShape_controlPoints_11__zValue.o" "utility_room_viewRN.phl[3239]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_12__xValue.o" "utility_room_viewRN.phl[4115]"
+connectAttr "ffd1LatticeShape_controlPoints_12__xValue.o" "utility_room_viewRN.phl[3240]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_12__yValue.o" "utility_room_viewRN.phl[4116]"
+connectAttr "ffd1LatticeShape_controlPoints_12__yValue.o" "utility_room_viewRN.phl[3241]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_12__zValue.o" "utility_room_viewRN.phl[4117]"
+connectAttr "ffd1LatticeShape_controlPoints_12__zValue.o" "utility_room_viewRN.phl[3242]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_13__xValue.o" "utility_room_viewRN.phl[4118]"
+connectAttr "ffd1LatticeShape_controlPoints_13__xValue.o" "utility_room_viewRN.phl[3243]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_13__yValue.o" "utility_room_viewRN.phl[4119]"
+connectAttr "ffd1LatticeShape_controlPoints_13__yValue.o" "utility_room_viewRN.phl[3244]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_13__zValue.o" "utility_room_viewRN.phl[4120]"
+connectAttr "ffd1LatticeShape_controlPoints_13__zValue.o" "utility_room_viewRN.phl[3245]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_14__xValue.o" "utility_room_viewRN.phl[4121]"
+connectAttr "ffd1LatticeShape_controlPoints_14__xValue.o" "utility_room_viewRN.phl[3246]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_14__yValue.o" "utility_room_viewRN.phl[4122]"
+connectAttr "ffd1LatticeShape_controlPoints_14__yValue.o" "utility_room_viewRN.phl[3247]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_14__zValue.o" "utility_room_viewRN.phl[4123]"
+connectAttr "ffd1LatticeShape_controlPoints_14__zValue.o" "utility_room_viewRN.phl[3248]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_15__xValue.o" "utility_room_viewRN.phl[4124]"
+connectAttr "ffd1LatticeShape_controlPoints_15__xValue.o" "utility_room_viewRN.phl[3249]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_15__yValue.o" "utility_room_viewRN.phl[4125]"
+connectAttr "ffd1LatticeShape_controlPoints_15__yValue.o" "utility_room_viewRN.phl[3250]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_15__zValue.o" "utility_room_viewRN.phl[4126]"
+connectAttr "ffd1LatticeShape_controlPoints_15__zValue.o" "utility_room_viewRN.phl[3251]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_16__xValue.o" "utility_room_viewRN.phl[4127]"
+connectAttr "ffd1LatticeShape_controlPoints_16__xValue.o" "utility_room_viewRN.phl[3252]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_16__yValue.o" "utility_room_viewRN.phl[4128]"
+connectAttr "ffd1LatticeShape_controlPoints_16__yValue.o" "utility_room_viewRN.phl[3253]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_16__zValue.o" "utility_room_viewRN.phl[4129]"
+connectAttr "ffd1LatticeShape_controlPoints_16__zValue.o" "utility_room_viewRN.phl[3254]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_17__xValue.o" "utility_room_viewRN.phl[4130]"
+connectAttr "ffd1LatticeShape_controlPoints_17__xValue.o" "utility_room_viewRN.phl[3255]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_17__yValue.o" "utility_room_viewRN.phl[4131]"
+connectAttr "ffd1LatticeShape_controlPoints_17__yValue.o" "utility_room_viewRN.phl[3256]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_17__zValue.o" "utility_room_viewRN.phl[4132]"
+connectAttr "ffd1LatticeShape_controlPoints_17__zValue.o" "utility_room_viewRN.phl[3257]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_18__xValue.o" "utility_room_viewRN.phl[4133]"
+connectAttr "ffd1LatticeShape_controlPoints_18__xValue.o" "utility_room_viewRN.phl[3258]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_18__yValue.o" "utility_room_viewRN.phl[4134]"
+connectAttr "ffd1LatticeShape_controlPoints_18__yValue.o" "utility_room_viewRN.phl[3259]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_18__zValue.o" "utility_room_viewRN.phl[4135]"
+connectAttr "ffd1LatticeShape_controlPoints_18__zValue.o" "utility_room_viewRN.phl[3260]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_19__xValue.o" "utility_room_viewRN.phl[4136]"
+connectAttr "ffd1LatticeShape_controlPoints_19__xValue.o" "utility_room_viewRN.phl[3261]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_19__yValue.o" "utility_room_viewRN.phl[4137]"
+connectAttr "ffd1LatticeShape_controlPoints_19__yValue.o" "utility_room_viewRN.phl[3262]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_19__zValue.o" "utility_room_viewRN.phl[4138]"
+connectAttr "ffd1LatticeShape_controlPoints_19__zValue.o" "utility_room_viewRN.phl[3263]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_20__xValue.o" "utility_room_viewRN.phl[4139]"
+connectAttr "ffd1LatticeShape_controlPoints_20__xValue.o" "utility_room_viewRN.phl[3264]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_20__yValue.o" "utility_room_viewRN.phl[4140]"
+connectAttr "ffd1LatticeShape_controlPoints_20__yValue.o" "utility_room_viewRN.phl[3265]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_20__zValue.o" "utility_room_viewRN.phl[4141]"
+connectAttr "ffd1LatticeShape_controlPoints_20__zValue.o" "utility_room_viewRN.phl[3266]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_21__xValue.o" "utility_room_viewRN.phl[4142]"
+connectAttr "ffd1LatticeShape_controlPoints_21__xValue.o" "utility_room_viewRN.phl[3267]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_21__yValue.o" "utility_room_viewRN.phl[4143]"
+connectAttr "ffd1LatticeShape_controlPoints_21__yValue.o" "utility_room_viewRN.phl[3268]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_21__zValue.o" "utility_room_viewRN.phl[4144]"
+connectAttr "ffd1LatticeShape_controlPoints_21__zValue.o" "utility_room_viewRN.phl[3269]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_22__xValue.o" "utility_room_viewRN.phl[4145]"
+connectAttr "ffd1LatticeShape_controlPoints_22__xValue.o" "utility_room_viewRN.phl[3270]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_22__yValue.o" "utility_room_viewRN.phl[4146]"
+connectAttr "ffd1LatticeShape_controlPoints_22__yValue.o" "utility_room_viewRN.phl[3271]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_22__zValue.o" "utility_room_viewRN.phl[4147]"
+connectAttr "ffd1LatticeShape_controlPoints_22__zValue.o" "utility_room_viewRN.phl[3272]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_23__xValue.o" "utility_room_viewRN.phl[4148]"
+connectAttr "ffd1LatticeShape_controlPoints_23__xValue.o" "utility_room_viewRN.phl[3273]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_23__yValue.o" "utility_room_viewRN.phl[4149]"
+connectAttr "ffd1LatticeShape_controlPoints_23__yValue.o" "utility_room_viewRN.phl[3274]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_23__zValue.o" "utility_room_viewRN.phl[4150]"
+connectAttr "ffd1LatticeShape_controlPoints_23__zValue.o" "utility_room_viewRN.phl[3275]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_24__xValue.o" "utility_room_viewRN.phl[4151]"
+connectAttr "ffd1LatticeShape_controlPoints_24__xValue.o" "utility_room_viewRN.phl[3276]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_24__yValue.o" "utility_room_viewRN.phl[4152]"
+connectAttr "ffd1LatticeShape_controlPoints_24__yValue.o" "utility_room_viewRN.phl[3277]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_24__zValue.o" "utility_room_viewRN.phl[4153]"
+connectAttr "ffd1LatticeShape_controlPoints_24__zValue.o" "utility_room_viewRN.phl[3278]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_25__xValue.o" "utility_room_viewRN.phl[4154]"
+connectAttr "ffd1LatticeShape_controlPoints_25__xValue.o" "utility_room_viewRN.phl[3279]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_25__yValue.o" "utility_room_viewRN.phl[4155]"
+connectAttr "ffd1LatticeShape_controlPoints_25__yValue.o" "utility_room_viewRN.phl[3280]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_25__zValue.o" "utility_room_viewRN.phl[4156]"
+connectAttr "ffd1LatticeShape_controlPoints_25__zValue.o" "utility_room_viewRN.phl[3281]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_26__xValue.o" "utility_room_viewRN.phl[4157]"
+connectAttr "ffd1LatticeShape_controlPoints_26__xValue.o" "utility_room_viewRN.phl[3282]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_26__yValue.o" "utility_room_viewRN.phl[4158]"
+connectAttr "ffd1LatticeShape_controlPoints_26__yValue.o" "utility_room_viewRN.phl[3283]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_26__zValue.o" "utility_room_viewRN.phl[4159]"
+connectAttr "ffd1LatticeShape_controlPoints_26__zValue.o" "utility_room_viewRN.phl[3284]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_27__xValue.o" "utility_room_viewRN.phl[4160]"
+connectAttr "ffd1LatticeShape_controlPoints_27__xValue.o" "utility_room_viewRN.phl[3285]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_27__yValue.o" "utility_room_viewRN.phl[4161]"
+connectAttr "ffd1LatticeShape_controlPoints_27__yValue.o" "utility_room_viewRN.phl[3286]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_27__zValue.o" "utility_room_viewRN.phl[4162]"
+connectAttr "ffd1LatticeShape_controlPoints_27__zValue.o" "utility_room_viewRN.phl[3287]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_28__xValue.o" "utility_room_viewRN.phl[4163]"
+connectAttr "ffd1LatticeShape_controlPoints_28__xValue.o" "utility_room_viewRN.phl[3288]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_28__yValue.o" "utility_room_viewRN.phl[4164]"
+connectAttr "ffd1LatticeShape_controlPoints_28__yValue.o" "utility_room_viewRN.phl[3289]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_28__zValue.o" "utility_room_viewRN.phl[4165]"
+connectAttr "ffd1LatticeShape_controlPoints_28__zValue.o" "utility_room_viewRN.phl[3290]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_29__xValue.o" "utility_room_viewRN.phl[4166]"
+connectAttr "ffd1LatticeShape_controlPoints_29__xValue.o" "utility_room_viewRN.phl[3291]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_29__yValue.o" "utility_room_viewRN.phl[4167]"
+connectAttr "ffd1LatticeShape_controlPoints_29__yValue.o" "utility_room_viewRN.phl[3292]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_29__zValue.o" "utility_room_viewRN.phl[4168]"
+connectAttr "ffd1LatticeShape_controlPoints_29__zValue.o" "utility_room_viewRN.phl[3293]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_30__xValue.o" "utility_room_viewRN.phl[4169]"
+connectAttr "ffd1LatticeShape_controlPoints_30__xValue.o" "utility_room_viewRN.phl[3294]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_30__yValue.o" "utility_room_viewRN.phl[4170]"
+connectAttr "ffd1LatticeShape_controlPoints_30__yValue.o" "utility_room_viewRN.phl[3295]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_30__zValue.o" "utility_room_viewRN.phl[4171]"
+connectAttr "ffd1LatticeShape_controlPoints_30__zValue.o" "utility_room_viewRN.phl[3296]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_31__xValue.o" "utility_room_viewRN.phl[4172]"
+connectAttr "ffd1LatticeShape_controlPoints_31__xValue.o" "utility_room_viewRN.phl[3297]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_31__yValue.o" "utility_room_viewRN.phl[4173]"
+connectAttr "ffd1LatticeShape_controlPoints_31__yValue.o" "utility_room_viewRN.phl[3298]"
 		;
-connectAttr "ffd1LatticeShape_controlPoints_31__zValue.o" "utility_room_viewRN.phl[4174]"
+connectAttr "ffd1LatticeShape_controlPoints_31__zValue.o" "utility_room_viewRN.phl[3299]"
 		;
-connectAttr "controller_root_visibility.o" "utility_room_viewRN.phl[3570]";
-connectAttr "controller_root_translateX.o" "utility_room_viewRN.phl[3571]";
-connectAttr "controller_root_translateY.o" "utility_room_viewRN.phl[3572]";
-connectAttr "controller_root_translateZ.o" "utility_room_viewRN.phl[3573]";
-connectAttr "controller_root_rotateX.o" "utility_room_viewRN.phl[3574]";
-connectAttr "controller_root_rotateY.o" "utility_room_viewRN.phl[3575]";
-connectAttr "controller_root_rotateZ.o" "utility_room_viewRN.phl[3576]";
-connectAttr "controller_root_scaleX.o" "utility_room_viewRN.phl[3577]";
-connectAttr "controller_root_scaleY.o" "utility_room_viewRN.phl[3578]";
-connectAttr "controller_root_scaleZ.o" "utility_room_viewRN.phl[3579]";
-connectAttr "controller_COG_translateX.o" "utility_room_viewRN.phl[3580]";
-connectAttr "controller_COG_translateY.o" "utility_room_viewRN.phl[3581]";
-connectAttr "controller_COG_translateZ.o" "utility_room_viewRN.phl[3582]";
-connectAttr "controller_COG_rotateX.o" "utility_room_viewRN.phl[3583]";
-connectAttr "controller_COG_rotateY.o" "utility_room_viewRN.phl[3584]";
-connectAttr "controller_COG_rotateZ.o" "utility_room_viewRN.phl[3585]";
-connectAttr "controller_COG_scaleX.o" "utility_room_viewRN.phl[3586]";
-connectAttr "controller_COG_scaleY.o" "utility_room_viewRN.phl[3587]";
-connectAttr "controller_COG_scaleZ.o" "utility_room_viewRN.phl[3588]";
-connectAttr "controller_COG_visibility.o" "utility_room_viewRN.phl[3589]";
-connectAttr "controller_spine3_translateX.o" "utility_room_viewRN.phl[3590]";
-connectAttr "controller_spine3_translateY.o" "utility_room_viewRN.phl[3591]";
-connectAttr "controller_spine3_translateZ.o" "utility_room_viewRN.phl[3592]";
-connectAttr "controller_spine3_rotateX.o" "utility_room_viewRN.phl[3593]";
-connectAttr "controller_spine3_rotateY.o" "utility_room_viewRN.phl[3594]";
-connectAttr "controller_spine3_rotateZ.o" "utility_room_viewRN.phl[3595]";
-connectAttr "controller_spine3_scaleX.o" "utility_room_viewRN.phl[3596]";
-connectAttr "controller_spine3_scaleY.o" "utility_room_viewRN.phl[3597]";
-connectAttr "controller_spine3_scaleZ.o" "utility_room_viewRN.phl[3598]";
-connectAttr "controller_spine3_visibility.o" "utility_room_viewRN.phl[3599]";
-connectAttr "controller_spine2_translateX.o" "utility_room_viewRN.phl[3600]";
-connectAttr "controller_spine2_translateY.o" "utility_room_viewRN.phl[3601]";
-connectAttr "controller_spine2_translateZ.o" "utility_room_viewRN.phl[3602]";
-connectAttr "controller_spine2_rotateX.o" "utility_room_viewRN.phl[3603]";
-connectAttr "controller_spine2_rotateY.o" "utility_room_viewRN.phl[3604]";
-connectAttr "controller_spine2_rotateZ.o" "utility_room_viewRN.phl[3605]";
-connectAttr "controller_spine2_scaleX.o" "utility_room_viewRN.phl[3606]";
-connectAttr "controller_spine2_scaleY.o" "utility_room_viewRN.phl[3607]";
-connectAttr "controller_spine2_scaleZ.o" "utility_room_viewRN.phl[3608]";
-connectAttr "controller_spine2_visibility.o" "utility_room_viewRN.phl[3609]";
-connectAttr "controller_spine1_translateX.o" "utility_room_viewRN.phl[3610]";
-connectAttr "controller_spine1_translateY.o" "utility_room_viewRN.phl[3611]";
-connectAttr "controller_spine1_translateZ.o" "utility_room_viewRN.phl[3612]";
-connectAttr "controller_spine1_rotateX.o" "utility_room_viewRN.phl[3613]";
-connectAttr "controller_spine1_rotateY.o" "utility_room_viewRN.phl[3614]";
-connectAttr "controller_spine1_rotateZ.o" "utility_room_viewRN.phl[3615]";
-connectAttr "controller_spine1_scaleX.o" "utility_room_viewRN.phl[3616]";
-connectAttr "controller_spine1_scaleY.o" "utility_room_viewRN.phl[3617]";
-connectAttr "controller_spine1_scaleZ.o" "utility_room_viewRN.phl[3618]";
-connectAttr "controller_spine1_visibility.o" "utility_room_viewRN.phl[3619]";
-connectAttr "controller_shoulder_translateX.o" "utility_room_viewRN.phl[3620]";
-connectAttr "controller_shoulder_translateY.o" "utility_room_viewRN.phl[3621]";
-connectAttr "controller_shoulder_translateZ.o" "utility_room_viewRN.phl[3622]";
-connectAttr "controller_shoulder_rotateX.o" "utility_room_viewRN.phl[3623]";
-connectAttr "controller_shoulder_rotateY.o" "utility_room_viewRN.phl[3624]";
-connectAttr "controller_shoulder_rotateZ.o" "utility_room_viewRN.phl[3625]";
-connectAttr "controller_shoulder_scaleX.o" "utility_room_viewRN.phl[3626]";
-connectAttr "controller_shoulder_scaleY.o" "utility_room_viewRN.phl[3627]";
-connectAttr "controller_shoulder_scaleZ.o" "utility_room_viewRN.phl[3628]";
-connectAttr "controller_shoulder_visibility.o" "utility_room_viewRN.phl[3629]";
-connectAttr "controller_head_translateX.o" "utility_room_viewRN.phl[3630]";
-connectAttr "controller_head_translateY.o" "utility_room_viewRN.phl[3631]";
-connectAttr "controller_head_translateZ.o" "utility_room_viewRN.phl[3632]";
-connectAttr "controller_head_rotateX.o" "utility_room_viewRN.phl[3633]";
-connectAttr "controller_head_rotateY.o" "utility_room_viewRN.phl[3634]";
-connectAttr "controller_head_rotateZ.o" "utility_room_viewRN.phl[3635]";
-connectAttr "controller_head_scaleX.o" "utility_room_viewRN.phl[3636]";
-connectAttr "controller_head_scaleY.o" "utility_room_viewRN.phl[3637]";
-connectAttr "controller_head_scaleZ.o" "utility_room_viewRN.phl[3638]";
-connectAttr "controller_head_visibility.o" "utility_room_viewRN.phl[3639]";
-connectAttr "nurbsCircle3_translateX.o" "utility_room_viewRN.phl[3640]";
-connectAttr "nurbsCircle3_translateY.o" "utility_room_viewRN.phl[3641]";
-connectAttr "nurbsCircle3_translateZ.o" "utility_room_viewRN.phl[3642]";
-connectAttr "nurbsCircle3_visibility.o" "utility_room_viewRN.phl[3643]";
-connectAttr "nurbsCircle3_rotateX.o" "utility_room_viewRN.phl[3644]";
-connectAttr "nurbsCircle3_rotateY.o" "utility_room_viewRN.phl[3645]";
-connectAttr "nurbsCircle3_rotateZ.o" "utility_room_viewRN.phl[3646]";
-connectAttr "nurbsCircle3_scaleX.o" "utility_room_viewRN.phl[3647]";
-connectAttr "nurbsCircle3_scaleY.o" "utility_room_viewRN.phl[3648]";
-connectAttr "nurbsCircle3_scaleZ.o" "utility_room_viewRN.phl[3649]";
-connectAttr "nurbsCircle2_translateX.o" "utility_room_viewRN.phl[3650]";
-connectAttr "nurbsCircle2_translateY.o" "utility_room_viewRN.phl[3651]";
-connectAttr "nurbsCircle2_translateZ.o" "utility_room_viewRN.phl[3652]";
-connectAttr "nurbsCircle2_visibility.o" "utility_room_viewRN.phl[3653]";
-connectAttr "nurbsCircle2_rotateX.o" "utility_room_viewRN.phl[3654]";
-connectAttr "nurbsCircle2_rotateY.o" "utility_room_viewRN.phl[3655]";
-connectAttr "nurbsCircle2_rotateZ.o" "utility_room_viewRN.phl[3656]";
-connectAttr "nurbsCircle2_scaleX.o" "utility_room_viewRN.phl[3657]";
-connectAttr "nurbsCircle2_scaleY.o" "utility_room_viewRN.phl[3658]";
-connectAttr "nurbsCircle2_scaleZ.o" "utility_room_viewRN.phl[3659]";
-connectAttr "nurbsCircle1_translateX.o" "utility_room_viewRN.phl[3660]";
-connectAttr "nurbsCircle1_translateY.o" "utility_room_viewRN.phl[3661]";
-connectAttr "nurbsCircle1_translateZ.o" "utility_room_viewRN.phl[3662]";
-connectAttr "nurbsCircle1_visibility.o" "utility_room_viewRN.phl[3663]";
-connectAttr "nurbsCircle1_rotateX.o" "utility_room_viewRN.phl[3664]";
-connectAttr "nurbsCircle1_rotateY.o" "utility_room_viewRN.phl[3665]";
-connectAttr "nurbsCircle1_rotateZ.o" "utility_room_viewRN.phl[3666]";
-connectAttr "nurbsCircle1_scaleX.o" "utility_room_viewRN.phl[3667]";
-connectAttr "nurbsCircle1_scaleY.o" "utility_room_viewRN.phl[3668]";
-connectAttr "nurbsCircle1_scaleZ.o" "utility_room_viewRN.phl[3669]";
-connectAttr "controller_hip_translateX.o" "utility_room_viewRN.phl[3670]";
-connectAttr "controller_hip_translateY.o" "utility_room_viewRN.phl[3671]";
-connectAttr "controller_hip_translateZ.o" "utility_room_viewRN.phl[3672]";
-connectAttr "controller_hip_rotateX.o" "utility_room_viewRN.phl[3673]";
-connectAttr "controller_hip_rotateY.o" "utility_room_viewRN.phl[3674]";
-connectAttr "controller_hip_rotateZ.o" "utility_room_viewRN.phl[3675]";
-connectAttr "controller_hip_scaleX.o" "utility_room_viewRN.phl[3676]";
-connectAttr "controller_hip_scaleY.o" "utility_room_viewRN.phl[3677]";
-connectAttr "controller_hip_scaleZ.o" "utility_room_viewRN.phl[3678]";
-connectAttr "controller_hip_visibility.o" "utility_room_viewRN.phl[3679]";
-connectAttr "controller_tailbase_translateX.o" "utility_room_viewRN.phl[3680]";
-connectAttr "controller_tailbase_translateY.o" "utility_room_viewRN.phl[3681]";
-connectAttr "controller_tailbase_translateZ.o" "utility_room_viewRN.phl[3682]";
-connectAttr "controller_tailbase_rotateX.o" "utility_room_viewRN.phl[3683]";
-connectAttr "controller_tailbase_rotateY.o" "utility_room_viewRN.phl[3684]";
-connectAttr "controller_tailbase_rotateZ.o" "utility_room_viewRN.phl[3685]";
-connectAttr "controller_tailbase_scaleX.o" "utility_room_viewRN.phl[3686]";
-connectAttr "controller_tailbase_scaleY.o" "utility_room_viewRN.phl[3687]";
-connectAttr "controller_tailbase_scaleZ.o" "utility_room_viewRN.phl[3688]";
-connectAttr "controller_tailbase_visibility.o" "utility_room_viewRN.phl[3689]";
-connectAttr "controller_tail2_translateX.o" "utility_room_viewRN.phl[3690]";
-connectAttr "controller_tail2_translateY.o" "utility_room_viewRN.phl[3691]";
-connectAttr "controller_tail2_translateZ.o" "utility_room_viewRN.phl[3692]";
-connectAttr "controller_tail2_rotateX.o" "utility_room_viewRN.phl[3693]";
-connectAttr "controller_tail2_rotateY.o" "utility_room_viewRN.phl[3694]";
-connectAttr "controller_tail2_rotateZ.o" "utility_room_viewRN.phl[3695]";
-connectAttr "controller_tail2_scaleX.o" "utility_room_viewRN.phl[3696]";
-connectAttr "controller_tail2_scaleY.o" "utility_room_viewRN.phl[3697]";
-connectAttr "controller_tail2_scaleZ.o" "utility_room_viewRN.phl[3698]";
-connectAttr "controller_tail2_visibility.o" "utility_room_viewRN.phl[3699]";
-connectAttr "controller_tail3_translateX.o" "utility_room_viewRN.phl[3700]";
-connectAttr "controller_tail3_translateY.o" "utility_room_viewRN.phl[3701]";
-connectAttr "controller_tail3_translateZ.o" "utility_room_viewRN.phl[3702]";
-connectAttr "controller_tail3_rotateX.o" "utility_room_viewRN.phl[3703]";
-connectAttr "controller_tail3_rotateY.o" "utility_room_viewRN.phl[3704]";
-connectAttr "controller_tail3_rotateZ.o" "utility_room_viewRN.phl[3705]";
-connectAttr "controller_tail3_scaleX.o" "utility_room_viewRN.phl[3706]";
-connectAttr "controller_tail3_scaleY.o" "utility_room_viewRN.phl[3707]";
-connectAttr "controller_tail3_scaleZ.o" "utility_room_viewRN.phl[3708]";
-connectAttr "controller_tail3_visibility.o" "utility_room_viewRN.phl[3709]";
-connectAttr "controller_tail4_translateX.o" "utility_room_viewRN.phl[3710]";
-connectAttr "controller_tail4_translateY.o" "utility_room_viewRN.phl[3711]";
-connectAttr "controller_tail4_translateZ.o" "utility_room_viewRN.phl[3712]";
-connectAttr "controller_tail4_rotateX.o" "utility_room_viewRN.phl[3713]";
-connectAttr "controller_tail4_rotateY.o" "utility_room_viewRN.phl[3714]";
-connectAttr "controller_tail4_rotateZ.o" "utility_room_viewRN.phl[3715]";
-connectAttr "controller_tail4_scaleX.o" "utility_room_viewRN.phl[3716]";
-connectAttr "controller_tail4_scaleY.o" "utility_room_viewRN.phl[3717]";
-connectAttr "controller_tail4_scaleZ.o" "utility_room_viewRN.phl[3718]";
-connectAttr "controller_tail4_visibility.o" "utility_room_viewRN.phl[3719]";
-connectAttr "controller_tailtip_translateX.o" "utility_room_viewRN.phl[3720]";
-connectAttr "controller_tailtip_translateY.o" "utility_room_viewRN.phl[3721]";
-connectAttr "controller_tailtip_translateZ.o" "utility_room_viewRN.phl[3722]";
-connectAttr "controller_tailtip_rotateX.o" "utility_room_viewRN.phl[3723]";
-connectAttr "controller_tailtip_rotateY.o" "utility_room_viewRN.phl[3724]";
-connectAttr "controller_tailtip_rotateZ.o" "utility_room_viewRN.phl[3725]";
-connectAttr "controller_tailtip_scaleX.o" "utility_room_viewRN.phl[3726]";
-connectAttr "controller_tailtip_scaleY.o" "utility_room_viewRN.phl[3727]";
-connectAttr "controller_tailtip_scaleZ.o" "utility_room_viewRN.phl[3728]";
-connectAttr "controller_tailtip_visibility.o" "utility_room_viewRN.phl[3729]";
-connectAttr "controller_rightLeg_visibility.o" "utility_room_viewRN.phl[3730]";
-connectAttr "controller_rightLeg_translateX.o" "utility_room_viewRN.phl[3731]";
-connectAttr "controller_rightLeg_translateY.o" "utility_room_viewRN.phl[3732]";
-connectAttr "controller_rightLeg_translateZ.o" "utility_room_viewRN.phl[3733]";
-connectAttr "controller_rightLeg_rotateX.o" "utility_room_viewRN.phl[3734]";
-connectAttr "controller_rightLeg_rotateY.o" "utility_room_viewRN.phl[3735]";
-connectAttr "controller_rightLeg_rotateZ.o" "utility_room_viewRN.phl[3736]";
-connectAttr "controller_rightLeg_scaleX.o" "utility_room_viewRN.phl[3737]";
-connectAttr "controller_rightLeg_scaleY.o" "utility_room_viewRN.phl[3738]";
-connectAttr "controller_rightLeg_scaleZ.o" "utility_room_viewRN.phl[3739]";
-connectAttr "nurbsCircle7_translateX.o" "utility_room_viewRN.phl[3740]";
-connectAttr "nurbsCircle7_translateY.o" "utility_room_viewRN.phl[3741]";
-connectAttr "nurbsCircle7_translateZ.o" "utility_room_viewRN.phl[3742]";
-connectAttr "nurbsCircle7_visibility.o" "utility_room_viewRN.phl[3743]";
-connectAttr "nurbsCircle7_rotateX.o" "utility_room_viewRN.phl[3744]";
-connectAttr "nurbsCircle7_rotateY.o" "utility_room_viewRN.phl[3745]";
-connectAttr "nurbsCircle7_rotateZ.o" "utility_room_viewRN.phl[3746]";
-connectAttr "nurbsCircle7_scaleX.o" "utility_room_viewRN.phl[3747]";
-connectAttr "nurbsCircle7_scaleY.o" "utility_room_viewRN.phl[3748]";
-connectAttr "nurbsCircle7_scaleZ.o" "utility_room_viewRN.phl[3749]";
-connectAttr "RightLeg_rotateX.o" "utility_room_viewRN.phl[3750]";
-connectAttr "RightLeg_rotateY.o" "utility_room_viewRN.phl[3751]";
-connectAttr "RightLeg_rotateZ.o" "utility_room_viewRN.phl[3752]";
-connectAttr "RightLeg_translateX.o" "utility_room_viewRN.phl[3753]";
-connectAttr "RightLeg_translateY.o" "utility_room_viewRN.phl[3754]";
-connectAttr "RightLeg_translateZ.o" "utility_room_viewRN.phl[3755]";
-connectAttr "RightLeg_visibility.o" "utility_room_viewRN.phl[3756]";
-connectAttr "RightLeg_scaleX.o" "utility_room_viewRN.phl[3757]";
-connectAttr "RightLeg_scaleY.o" "utility_room_viewRN.phl[3758]";
-connectAttr "RightLeg_scaleZ.o" "utility_room_viewRN.phl[3759]";
-connectAttr "controller_leftArm_visibility.o" "utility_room_viewRN.phl[3760]";
-connectAttr "controller_leftArm_translateX.o" "utility_room_viewRN.phl[3761]";
-connectAttr "controller_leftArm_translateY.o" "utility_room_viewRN.phl[3762]";
-connectAttr "controller_leftArm_translateZ.o" "utility_room_viewRN.phl[3763]";
-connectAttr "controller_leftArm_rotateX.o" "utility_room_viewRN.phl[3764]";
-connectAttr "controller_leftArm_rotateY.o" "utility_room_viewRN.phl[3765]";
-connectAttr "controller_leftArm_rotateZ.o" "utility_room_viewRN.phl[3766]";
-connectAttr "controller_leftArm_scaleX.o" "utility_room_viewRN.phl[3767]";
-connectAttr "controller_leftArm_scaleY.o" "utility_room_viewRN.phl[3768]";
-connectAttr "controller_leftArm_scaleZ.o" "utility_room_viewRN.phl[3769]";
-connectAttr "controller_leftWrist_translateX.o" "utility_room_viewRN.phl[3770]";
-connectAttr "controller_leftWrist_translateY.o" "utility_room_viewRN.phl[3771]";
-connectAttr "controller_leftWrist_translateZ.o" "utility_room_viewRN.phl[3772]";
-connectAttr "controller_leftWrist_rotateX.o" "utility_room_viewRN.phl[3773]";
-connectAttr "controller_leftWrist_rotateY.o" "utility_room_viewRN.phl[3774]";
-connectAttr "controller_leftWrist_rotateZ.o" "utility_room_viewRN.phl[3775]";
-connectAttr "controller_leftWrist_scaleX.o" "utility_room_viewRN.phl[3776]";
-connectAttr "controller_leftWrist_scaleY.o" "utility_room_viewRN.phl[3777]";
-connectAttr "controller_leftWrist_scaleZ.o" "utility_room_viewRN.phl[3778]";
-connectAttr "controller_leftWrist_visibility.o" "utility_room_viewRN.phl[3779]";
-connectAttr "nurbsCircle6_translateX.o" "utility_room_viewRN.phl[3780]";
-connectAttr "nurbsCircle6_translateY.o" "utility_room_viewRN.phl[3781]";
-connectAttr "nurbsCircle6_translateZ.o" "utility_room_viewRN.phl[3782]";
-connectAttr "nurbsCircle6_visibility.o" "utility_room_viewRN.phl[3783]";
-connectAttr "nurbsCircle6_rotateX.o" "utility_room_viewRN.phl[3784]";
-connectAttr "nurbsCircle6_rotateY.o" "utility_room_viewRN.phl[3785]";
-connectAttr "nurbsCircle6_rotateZ.o" "utility_room_viewRN.phl[3786]";
-connectAttr "nurbsCircle6_scaleX.o" "utility_room_viewRN.phl[3787]";
-connectAttr "nurbsCircle6_scaleY.o" "utility_room_viewRN.phl[3788]";
-connectAttr "nurbsCircle6_scaleZ.o" "utility_room_viewRN.phl[3789]";
-connectAttr "nurbsCircle5_translateX.o" "utility_room_viewRN.phl[3790]";
-connectAttr "nurbsCircle5_translateY.o" "utility_room_viewRN.phl[3791]";
-connectAttr "nurbsCircle5_translateZ.o" "utility_room_viewRN.phl[3792]";
-connectAttr "nurbsCircle5_visibility.o" "utility_room_viewRN.phl[3793]";
-connectAttr "nurbsCircle5_rotateX.o" "utility_room_viewRN.phl[3794]";
-connectAttr "nurbsCircle5_rotateY.o" "utility_room_viewRN.phl[3795]";
-connectAttr "nurbsCircle5_rotateZ.o" "utility_room_viewRN.phl[3796]";
-connectAttr "nurbsCircle5_scaleX.o" "utility_room_viewRN.phl[3797]";
-connectAttr "nurbsCircle5_scaleY.o" "utility_room_viewRN.phl[3798]";
-connectAttr "nurbsCircle5_scaleZ.o" "utility_room_viewRN.phl[3799]";
-connectAttr "nurbsCircle2_translateX1.o" "utility_room_viewRN.phl[3800]";
-connectAttr "nurbsCircle2_translateY1.o" "utility_room_viewRN.phl[3801]";
-connectAttr "nurbsCircle2_translateZ1.o" "utility_room_viewRN.phl[3802]";
-connectAttr "nurbsCircle2_visibility1.o" "utility_room_viewRN.phl[3803]";
-connectAttr "nurbsCircle2_rotateX1.o" "utility_room_viewRN.phl[3804]";
-connectAttr "nurbsCircle2_rotateY1.o" "utility_room_viewRN.phl[3805]";
-connectAttr "nurbsCircle2_rotateZ1.o" "utility_room_viewRN.phl[3806]";
-connectAttr "nurbsCircle2_scaleX1.o" "utility_room_viewRN.phl[3807]";
-connectAttr "nurbsCircle2_scaleY1.o" "utility_room_viewRN.phl[3808]";
-connectAttr "nurbsCircle2_scaleZ1.o" "utility_room_viewRN.phl[3809]";
-connectAttr "nurbsCircle3_translateX1.o" "utility_room_viewRN.phl[3810]";
-connectAttr "nurbsCircle3_translateY1.o" "utility_room_viewRN.phl[3811]";
-connectAttr "nurbsCircle3_translateZ1.o" "utility_room_viewRN.phl[3812]";
-connectAttr "nurbsCircle3_visibility1.o" "utility_room_viewRN.phl[3813]";
-connectAttr "nurbsCircle3_rotateX1.o" "utility_room_viewRN.phl[3814]";
-connectAttr "nurbsCircle3_rotateY1.o" "utility_room_viewRN.phl[3815]";
-connectAttr "nurbsCircle3_rotateZ1.o" "utility_room_viewRN.phl[3816]";
-connectAttr "nurbsCircle3_scaleX1.o" "utility_room_viewRN.phl[3817]";
-connectAttr "nurbsCircle3_scaleY1.o" "utility_room_viewRN.phl[3818]";
-connectAttr "nurbsCircle3_scaleZ1.o" "utility_room_viewRN.phl[3819]";
-connectAttr "nurbsCircle4_translateX.o" "utility_room_viewRN.phl[3820]";
-connectAttr "nurbsCircle4_translateY.o" "utility_room_viewRN.phl[3821]";
-connectAttr "nurbsCircle4_translateZ.o" "utility_room_viewRN.phl[3822]";
-connectAttr "nurbsCircle4_visibility.o" "utility_room_viewRN.phl[3823]";
-connectAttr "nurbsCircle4_rotateX.o" "utility_room_viewRN.phl[3824]";
-connectAttr "nurbsCircle4_rotateY.o" "utility_room_viewRN.phl[3825]";
-connectAttr "nurbsCircle4_rotateZ.o" "utility_room_viewRN.phl[3826]";
-connectAttr "nurbsCircle4_scaleX.o" "utility_room_viewRN.phl[3827]";
-connectAttr "nurbsCircle4_scaleY.o" "utility_room_viewRN.phl[3828]";
-connectAttr "nurbsCircle4_scaleZ.o" "utility_room_viewRN.phl[3829]";
-connectAttr "curve6_translateX.o" "utility_room_viewRN.phl[3830]";
-connectAttr "curve6_translateY.o" "utility_room_viewRN.phl[3831]";
-connectAttr "curve6_translateZ.o" "utility_room_viewRN.phl[3832]";
-connectAttr "curve6_visibility.o" "utility_room_viewRN.phl[3833]";
-connectAttr "curve6_rotateX.o" "utility_room_viewRN.phl[3834]";
-connectAttr "curve6_rotateY.o" "utility_room_viewRN.phl[3835]";
-connectAttr "curve6_rotateZ.o" "utility_room_viewRN.phl[3836]";
-connectAttr "curve6_scaleX.o" "utility_room_viewRN.phl[3837]";
-connectAttr "curve6_scaleY.o" "utility_room_viewRN.phl[3838]";
-connectAttr "curve6_scaleZ.o" "utility_room_viewRN.phl[3839]";
-connectAttr "curve7_translateX.o" "utility_room_viewRN.phl[3840]";
-connectAttr "curve7_translateY.o" "utility_room_viewRN.phl[3841]";
-connectAttr "curve7_translateZ.o" "utility_room_viewRN.phl[3842]";
-connectAttr "curve7_visibility.o" "utility_room_viewRN.phl[3843]";
-connectAttr "curve7_rotateX.o" "utility_room_viewRN.phl[3844]";
-connectAttr "curve7_rotateY.o" "utility_room_viewRN.phl[3845]";
-connectAttr "curve7_rotateZ.o" "utility_room_viewRN.phl[3846]";
-connectAttr "curve7_scaleX.o" "utility_room_viewRN.phl[3847]";
-connectAttr "curve7_scaleY.o" "utility_room_viewRN.phl[3848]";
-connectAttr "curve7_scaleZ.o" "utility_room_viewRN.phl[3849]";
-connectAttr "curve8_translateX.o" "utility_room_viewRN.phl[3850]";
-connectAttr "curve8_translateY.o" "utility_room_viewRN.phl[3851]";
-connectAttr "curve8_translateZ.o" "utility_room_viewRN.phl[3852]";
-connectAttr "curve8_visibility.o" "utility_room_viewRN.phl[3853]";
-connectAttr "curve8_rotateX.o" "utility_room_viewRN.phl[3854]";
-connectAttr "curve8_rotateY.o" "utility_room_viewRN.phl[3855]";
-connectAttr "curve8_rotateZ.o" "utility_room_viewRN.phl[3856]";
-connectAttr "curve8_scaleX.o" "utility_room_viewRN.phl[3857]";
-connectAttr "curve8_scaleY.o" "utility_room_viewRN.phl[3858]";
-connectAttr "curve8_scaleZ.o" "utility_room_viewRN.phl[3859]";
-connectAttr "curve9_translateX.o" "utility_room_viewRN.phl[3860]";
-connectAttr "curve9_translateY.o" "utility_room_viewRN.phl[3861]";
-connectAttr "curve9_translateZ.o" "utility_room_viewRN.phl[3862]";
-connectAttr "curve9_visibility.o" "utility_room_viewRN.phl[3863]";
-connectAttr "curve9_rotateX.o" "utility_room_viewRN.phl[3864]";
-connectAttr "curve9_rotateY.o" "utility_room_viewRN.phl[3865]";
-connectAttr "curve9_rotateZ.o" "utility_room_viewRN.phl[3866]";
-connectAttr "curve9_scaleX.o" "utility_room_viewRN.phl[3867]";
-connectAttr "curve9_scaleY.o" "utility_room_viewRN.phl[3868]";
-connectAttr "curve9_scaleZ.o" "utility_room_viewRN.phl[3869]";
-connectAttr "curve10_translateX.o" "utility_room_viewRN.phl[3870]";
-connectAttr "curve10_translateY.o" "utility_room_viewRN.phl[3871]";
-connectAttr "curve10_translateZ.o" "utility_room_viewRN.phl[3872]";
-connectAttr "curve10_visibility.o" "utility_room_viewRN.phl[3873]";
-connectAttr "curve10_rotateX.o" "utility_room_viewRN.phl[3874]";
-connectAttr "curve10_rotateY.o" "utility_room_viewRN.phl[3875]";
-connectAttr "curve10_rotateZ.o" "utility_room_viewRN.phl[3876]";
-connectAttr "curve10_scaleX.o" "utility_room_viewRN.phl[3877]";
-connectAttr "curve10_scaleY.o" "utility_room_viewRN.phl[3878]";
-connectAttr "curve10_scaleZ.o" "utility_room_viewRN.phl[3879]";
-connectAttr "LeftArm_rotateX.o" "utility_room_viewRN.phl[3880]";
-connectAttr "LeftArm_rotateY.o" "utility_room_viewRN.phl[3881]";
-connectAttr "LeftArm_rotateZ.o" "utility_room_viewRN.phl[3882]";
-connectAttr "LeftArm_translateX.o" "utility_room_viewRN.phl[3883]";
-connectAttr "LeftArm_translateY.o" "utility_room_viewRN.phl[3884]";
-connectAttr "LeftArm_translateZ.o" "utility_room_viewRN.phl[3885]";
-connectAttr "LeftArm_visibility.o" "utility_room_viewRN.phl[3886]";
-connectAttr "LeftArm_scaleX.o" "utility_room_viewRN.phl[3887]";
-connectAttr "LeftArm_scaleY.o" "utility_room_viewRN.phl[3888]";
-connectAttr "LeftArm_scaleZ.o" "utility_room_viewRN.phl[3889]";
-connectAttr "controller_rightLeg1_visibility.o" "utility_room_viewRN.phl[3890]";
-connectAttr "controller_rightLeg1_translateX.o" "utility_room_viewRN.phl[3891]";
-connectAttr "controller_rightLeg1_translateY.o" "utility_room_viewRN.phl[3892]";
-connectAttr "controller_rightLeg1_translateZ.o" "utility_room_viewRN.phl[3893]";
-connectAttr "controller_rightLeg1_rotateX.o" "utility_room_viewRN.phl[3894]";
-connectAttr "controller_rightLeg1_rotateY.o" "utility_room_viewRN.phl[3895]";
-connectAttr "controller_rightLeg1_rotateZ.o" "utility_room_viewRN.phl[3896]";
-connectAttr "controller_rightLeg1_scaleX.o" "utility_room_viewRN.phl[3897]";
-connectAttr "controller_rightLeg1_scaleY.o" "utility_room_viewRN.phl[3898]";
-connectAttr "controller_rightLeg1_scaleZ.o" "utility_room_viewRN.phl[3899]";
-connectAttr "nurbsCircle8_visibility.o" "utility_room_viewRN.phl[3900]";
-connectAttr "nurbsCircle8_translateX.o" "utility_room_viewRN.phl[3901]";
-connectAttr "nurbsCircle8_translateY.o" "utility_room_viewRN.phl[3902]";
-connectAttr "nurbsCircle8_translateZ.o" "utility_room_viewRN.phl[3903]";
-connectAttr "nurbsCircle8_rotateX.o" "utility_room_viewRN.phl[3904]";
-connectAttr "nurbsCircle8_rotateY.o" "utility_room_viewRN.phl[3905]";
-connectAttr "nurbsCircle8_rotateZ.o" "utility_room_viewRN.phl[3906]";
-connectAttr "nurbsCircle8_scaleX.o" "utility_room_viewRN.phl[3907]";
-connectAttr "nurbsCircle8_scaleY.o" "utility_room_viewRN.phl[3908]";
-connectAttr "nurbsCircle8_scaleZ.o" "utility_room_viewRN.phl[3909]";
-connectAttr "LeftLeg_rotateX.o" "utility_room_viewRN.phl[3910]";
-connectAttr "LeftLeg_rotateY.o" "utility_room_viewRN.phl[3911]";
-connectAttr "LeftLeg_rotateZ.o" "utility_room_viewRN.phl[3912]";
-connectAttr "LeftLeg_translateX.o" "utility_room_viewRN.phl[3913]";
-connectAttr "LeftLeg_translateY.o" "utility_room_viewRN.phl[3914]";
-connectAttr "LeftLeg_translateZ.o" "utility_room_viewRN.phl[3915]";
-connectAttr "LeftLeg_visibility.o" "utility_room_viewRN.phl[3916]";
-connectAttr "LeftLeg_scaleX.o" "utility_room_viewRN.phl[3917]";
-connectAttr "LeftLeg_scaleY.o" "utility_room_viewRN.phl[3918]";
-connectAttr "LeftLeg_scaleZ.o" "utility_room_viewRN.phl[3919]";
-connectAttr "controller_rightArm_visibility.o" "utility_room_viewRN.phl[3920]";
-connectAttr "controller_rightArm_translateX.o" "utility_room_viewRN.phl[3921]";
-connectAttr "controller_rightArm_translateY.o" "utility_room_viewRN.phl[3922]";
-connectAttr "controller_rightArm_translateZ.o" "utility_room_viewRN.phl[3923]";
-connectAttr "controller_rightArm_rotateX.o" "utility_room_viewRN.phl[3924]";
-connectAttr "controller_rightArm_rotateY.o" "utility_room_viewRN.phl[3925]";
-connectAttr "controller_rightArm_rotateZ.o" "utility_room_viewRN.phl[3926]";
-connectAttr "controller_rightArm_scaleX.o" "utility_room_viewRN.phl[3927]";
-connectAttr "controller_rightArm_scaleY.o" "utility_room_viewRN.phl[3928]";
-connectAttr "controller_rightArm_scaleZ.o" "utility_room_viewRN.phl[3929]";
-connectAttr "controller_rightWrist_translateX.o" "utility_room_viewRN.phl[3930]"
-		;
-connectAttr "controller_rightWrist_translateY.o" "utility_room_viewRN.phl[3931]"
-		;
-connectAttr "controller_rightWrist_translateZ.o" "utility_room_viewRN.phl[3932]"
-		;
-connectAttr "controller_rightWrist_rotateX.o" "utility_room_viewRN.phl[3933]";
-connectAttr "controller_rightWrist_rotateY.o" "utility_room_viewRN.phl[3934]";
-connectAttr "controller_rightWrist_rotateZ.o" "utility_room_viewRN.phl[3935]";
-connectAttr "controller_rightWrist_scaleX.o" "utility_room_viewRN.phl[3936]";
-connectAttr "controller_rightWrist_scaleY.o" "utility_room_viewRN.phl[3937]";
-connectAttr "controller_rightWrist_scaleZ.o" "utility_room_viewRN.phl[3938]";
-connectAttr "controller_rightWrist_visibility.o" "utility_room_viewRN.phl[3939]"
-		;
-connectAttr "nurbsCircle1_translateX1.o" "utility_room_viewRN.phl[3940]";
-connectAttr "nurbsCircle1_translateY1.o" "utility_room_viewRN.phl[3941]";
-connectAttr "nurbsCircle1_translateZ1.o" "utility_room_viewRN.phl[3942]";
-connectAttr "nurbsCircle1_visibility1.o" "utility_room_viewRN.phl[3943]";
-connectAttr "nurbsCircle1_rotateX1.o" "utility_room_viewRN.phl[3944]";
-connectAttr "nurbsCircle1_rotateY1.o" "utility_room_viewRN.phl[3945]";
-connectAttr "nurbsCircle1_rotateZ1.o" "utility_room_viewRN.phl[3946]";
-connectAttr "nurbsCircle1_scaleX1.o" "utility_room_viewRN.phl[3947]";
-connectAttr "nurbsCircle1_scaleY1.o" "utility_room_viewRN.phl[3948]";
-connectAttr "nurbsCircle1_scaleZ1.o" "utility_room_viewRN.phl[3949]";
-connectAttr "nurbsCircle9_translateX.o" "utility_room_viewRN.phl[3950]";
-connectAttr "nurbsCircle9_translateY.o" "utility_room_viewRN.phl[3951]";
-connectAttr "nurbsCircle9_translateZ.o" "utility_room_viewRN.phl[3952]";
-connectAttr "nurbsCircle9_visibility.o" "utility_room_viewRN.phl[3953]";
-connectAttr "nurbsCircle9_rotateX.o" "utility_room_viewRN.phl[3954]";
-connectAttr "nurbsCircle9_rotateY.o" "utility_room_viewRN.phl[3955]";
-connectAttr "nurbsCircle9_rotateZ.o" "utility_room_viewRN.phl[3956]";
-connectAttr "nurbsCircle9_scaleX.o" "utility_room_viewRN.phl[3957]";
-connectAttr "nurbsCircle9_scaleY.o" "utility_room_viewRN.phl[3958]";
-connectAttr "nurbsCircle9_scaleZ.o" "utility_room_viewRN.phl[3959]";
-connectAttr "nurbsCircle10_translateX.o" "utility_room_viewRN.phl[3960]";
-connectAttr "nurbsCircle10_translateY.o" "utility_room_viewRN.phl[3961]";
-connectAttr "nurbsCircle10_translateZ.o" "utility_room_viewRN.phl[3962]";
-connectAttr "nurbsCircle10_visibility.o" "utility_room_viewRN.phl[3963]";
-connectAttr "nurbsCircle10_rotateX.o" "utility_room_viewRN.phl[3964]";
-connectAttr "nurbsCircle10_rotateY.o" "utility_room_viewRN.phl[3965]";
-connectAttr "nurbsCircle10_rotateZ.o" "utility_room_viewRN.phl[3966]";
-connectAttr "nurbsCircle10_scaleX.o" "utility_room_viewRN.phl[3967]";
-connectAttr "nurbsCircle10_scaleY.o" "utility_room_viewRN.phl[3968]";
-connectAttr "nurbsCircle10_scaleZ.o" "utility_room_viewRN.phl[3969]";
-connectAttr "nurbsCircle11_translateX.o" "utility_room_viewRN.phl[3970]";
-connectAttr "nurbsCircle11_translateY.o" "utility_room_viewRN.phl[3971]";
-connectAttr "nurbsCircle11_translateZ.o" "utility_room_viewRN.phl[3972]";
-connectAttr "nurbsCircle11_visibility.o" "utility_room_viewRN.phl[3973]";
-connectAttr "nurbsCircle11_rotateX.o" "utility_room_viewRN.phl[3974]";
-connectAttr "nurbsCircle11_rotateY.o" "utility_room_viewRN.phl[3975]";
-connectAttr "nurbsCircle11_rotateZ.o" "utility_room_viewRN.phl[3976]";
-connectAttr "nurbsCircle11_scaleX.o" "utility_room_viewRN.phl[3977]";
-connectAttr "nurbsCircle11_scaleY.o" "utility_room_viewRN.phl[3978]";
-connectAttr "nurbsCircle11_scaleZ.o" "utility_room_viewRN.phl[3979]";
-connectAttr "nurbsCircle12_translateX.o" "utility_room_viewRN.phl[3980]";
-connectAttr "nurbsCircle12_translateY.o" "utility_room_viewRN.phl[3981]";
-connectAttr "nurbsCircle12_translateZ.o" "utility_room_viewRN.phl[3982]";
-connectAttr "nurbsCircle12_visibility.o" "utility_room_viewRN.phl[3983]";
-connectAttr "nurbsCircle12_rotateX.o" "utility_room_viewRN.phl[3984]";
-connectAttr "nurbsCircle12_rotateY.o" "utility_room_viewRN.phl[3985]";
-connectAttr "nurbsCircle12_rotateZ.o" "utility_room_viewRN.phl[3986]";
-connectAttr "nurbsCircle12_scaleX.o" "utility_room_viewRN.phl[3987]";
-connectAttr "nurbsCircle12_scaleY.o" "utility_room_viewRN.phl[3988]";
-connectAttr "nurbsCircle12_scaleZ.o" "utility_room_viewRN.phl[3989]";
-connectAttr "curve1_translateX.o" "utility_room_viewRN.phl[3990]";
-connectAttr "curve1_translateY.o" "utility_room_viewRN.phl[3991]";
-connectAttr "curve1_translateZ.o" "utility_room_viewRN.phl[3992]";
-connectAttr "curve1_visibility.o" "utility_room_viewRN.phl[3993]";
-connectAttr "curve1_rotateX.o" "utility_room_viewRN.phl[3994]";
-connectAttr "curve1_rotateY.o" "utility_room_viewRN.phl[3995]";
-connectAttr "curve1_rotateZ.o" "utility_room_viewRN.phl[3996]";
-connectAttr "curve1_scaleX.o" "utility_room_viewRN.phl[3997]";
-connectAttr "curve1_scaleY.o" "utility_room_viewRN.phl[3998]";
-connectAttr "curve1_scaleZ.o" "utility_room_viewRN.phl[3999]";
-connectAttr "curve2_translateX.o" "utility_room_viewRN.phl[4000]";
-connectAttr "curve2_translateY.o" "utility_room_viewRN.phl[4001]";
-connectAttr "curve2_translateZ.o" "utility_room_viewRN.phl[4002]";
-connectAttr "curve2_visibility.o" "utility_room_viewRN.phl[4003]";
-connectAttr "curve2_rotateX.o" "utility_room_viewRN.phl[4004]";
-connectAttr "curve2_rotateY.o" "utility_room_viewRN.phl[4005]";
-connectAttr "curve2_rotateZ.o" "utility_room_viewRN.phl[4006]";
-connectAttr "curve2_scaleX.o" "utility_room_viewRN.phl[4007]";
-connectAttr "curve2_scaleY.o" "utility_room_viewRN.phl[4008]";
-connectAttr "curve2_scaleZ.o" "utility_room_viewRN.phl[4009]";
-connectAttr "curve3_translateX.o" "utility_room_viewRN.phl[4010]";
-connectAttr "curve3_translateY.o" "utility_room_viewRN.phl[4011]";
-connectAttr "curve3_translateZ.o" "utility_room_viewRN.phl[4012]";
-connectAttr "curve3_visibility.o" "utility_room_viewRN.phl[4013]";
-connectAttr "curve3_rotateX.o" "utility_room_viewRN.phl[4014]";
-connectAttr "curve3_rotateY.o" "utility_room_viewRN.phl[4015]";
-connectAttr "curve3_rotateZ.o" "utility_room_viewRN.phl[4016]";
-connectAttr "curve3_scaleX.o" "utility_room_viewRN.phl[4017]";
-connectAttr "curve3_scaleY.o" "utility_room_viewRN.phl[4018]";
-connectAttr "curve3_scaleZ.o" "utility_room_viewRN.phl[4019]";
-connectAttr "curve4_translateX.o" "utility_room_viewRN.phl[4020]";
-connectAttr "curve4_translateY.o" "utility_room_viewRN.phl[4021]";
-connectAttr "curve4_translateZ.o" "utility_room_viewRN.phl[4022]";
-connectAttr "curve4_visibility.o" "utility_room_viewRN.phl[4023]";
-connectAttr "curve4_rotateX.o" "utility_room_viewRN.phl[4024]";
-connectAttr "curve4_rotateY.o" "utility_room_viewRN.phl[4025]";
-connectAttr "curve4_rotateZ.o" "utility_room_viewRN.phl[4026]";
-connectAttr "curve4_scaleX.o" "utility_room_viewRN.phl[4027]";
-connectAttr "curve4_scaleY.o" "utility_room_viewRN.phl[4028]";
-connectAttr "curve4_scaleZ.o" "utility_room_viewRN.phl[4029]";
-connectAttr "curve5_translateX.o" "utility_room_viewRN.phl[4030]";
-connectAttr "curve5_translateY.o" "utility_room_viewRN.phl[4031]";
-connectAttr "curve5_translateZ.o" "utility_room_viewRN.phl[4032]";
-connectAttr "curve5_visibility.o" "utility_room_viewRN.phl[4033]";
-connectAttr "curve5_rotateX.o" "utility_room_viewRN.phl[4034]";
-connectAttr "curve5_rotateY.o" "utility_room_viewRN.phl[4035]";
-connectAttr "curve5_rotateZ.o" "utility_room_viewRN.phl[4036]";
-connectAttr "curve5_scaleX.o" "utility_room_viewRN.phl[4037]";
-connectAttr "curve5_scaleY.o" "utility_room_viewRN.phl[4038]";
-connectAttr "curve5_scaleZ.o" "utility_room_viewRN.phl[4039]";
-connectAttr "RightArm_rotateX.o" "utility_room_viewRN.phl[4040]";
-connectAttr "RightArm_rotateY.o" "utility_room_viewRN.phl[4041]";
-connectAttr "RightArm_rotateZ.o" "utility_room_viewRN.phl[4042]";
-connectAttr "RightArm_translateX.o" "utility_room_viewRN.phl[4043]";
-connectAttr "RightArm_translateY.o" "utility_room_viewRN.phl[4044]";
-connectAttr "RightArm_translateZ.o" "utility_room_viewRN.phl[4045]";
-connectAttr "RightArm_visibility.o" "utility_room_viewRN.phl[4046]";
-connectAttr "RightArm_scaleX.o" "utility_room_viewRN.phl[4047]";
-connectAttr "RightArm_scaleY.o" "utility_room_viewRN.phl[4048]";
-connectAttr "RightArm_scaleZ.o" "utility_room_viewRN.phl[4049]";
-connectAttr "blendShape1_oh_shit.o" "utility_room_viewRN.phl[4050]";
-connectAttr "blendShape1_eyes_tight.o" "utility_room_viewRN.phl[4051]";
-connectAttr "blendShape1_DO_NOT_TOUCH.o" "utility_room_viewRN.phl[4052]";
-connectAttr "blendShape1_smile_closed_mouth.o" "utility_room_viewRN.phl[4053]";
-connectAttr "blendShape1_leftFwd.o" "utility_room_viewRN.phl[4054]";
-connectAttr "blendShape1_rightFwd.o" "utility_room_viewRN.phl[4055]";
-connectAttr "blendShape1_blink.o" "utility_room_viewRN.phl[4056]";
-connectAttr "blendShape1_leftSide.o" "utility_room_viewRN.phl[4057]";
-connectAttr "blendShape1_rightSide.o" "utility_room_viewRN.phl[4058]";
-connectAttr "blendShape1_nose.o" "utility_room_viewRN.phl[4059]";
-connectAttr "blendShape1_neutral.o" "utility_room_viewRN.phl[4060]";
-connectAttr "blendShape1_super_angry.o" "utility_room_viewRN.phl[4061]";
-connectAttr "blendShape1_slightly_angry.o" "utility_room_viewRN.phl[4062]";
-connectAttr "blendShape1_smile1.o" "utility_room_viewRN.phl[4063]";
-connectAttr "blendShape1_pervy.o" "utility_room_viewRN.phl[4064]";
-connectAttr "blendShape1_smile.o" "utility_room_viewRN.phl[4065]";
-connectAttr "at_dryer_visibility.o" "utility_room_viewRN.phl[4195]";
-connectAttr "at_dryer_translateX.o" "utility_room_viewRN.phl[4196]";
-connectAttr "at_dryer_translateY.o" "utility_room_viewRN.phl[4197]";
-connectAttr "at_dryer_translateZ.o" "utility_room_viewRN.phl[4198]";
-connectAttr "at_dryer_rotateX.o" "utility_room_viewRN.phl[4199]";
-connectAttr "at_dryer_rotateY.o" "utility_room_viewRN.phl[4200]";
-connectAttr "at_dryer_rotateZ.o" "utility_room_viewRN.phl[4201]";
-connectAttr "at_dryer_scaleX.o" "utility_room_viewRN.phl[4202]";
-connectAttr "at_dryer_scaleY.o" "utility_room_viewRN.phl[4203]";
-connectAttr "at_dryer_scaleZ.o" "utility_room_viewRN.phl[4204]";
-connectAttr "at_dryerShape_focalLength.o" "utility_room_viewRN.phl[4205]";
-connectAttr "controller_main01_translateX.o" "utility_room_viewRN.phl[3297]";
-connectAttr "controller_main01_translateY1.o" "utility_room_viewRN.phl[3298]";
-connectAttr "controller_main01_translateZ.o" "utility_room_viewRN.phl[3299]";
-connectAttr "controller_main01_rotateX1.o" "utility_room_viewRN.phl[3300]";
-connectAttr "controller_main01_rotateY.o" "utility_room_viewRN.phl[3301]";
-connectAttr "controller_main01_rotateZ1.o" "utility_room_viewRN.phl[3302]";
-connectAttr "controller_main01_scaleX.o" "utility_room_viewRN.phl[3303]";
-connectAttr "controller_main01_scaleY.o" "utility_room_viewRN.phl[3304]";
-connectAttr "controller_main01_scaleZ.o" "utility_room_viewRN.phl[3305]";
-connectAttr "pig_right_eye_rotateX.o" "utility_room_viewRN.phl[3306]";
-connectAttr "pig_right_eye_rotateY.o" "utility_room_viewRN.phl[3307]";
-connectAttr "pig_right_eye_rotateZ.o" "utility_room_viewRN.phl[3308]";
-connectAttr "pig_right_eye_visibility.o" "utility_room_viewRN.phl[3309]";
-connectAttr "pig_right_eye_translateX.o" "utility_room_viewRN.phl[3310]";
-connectAttr "pig_right_eye_translateY.o" "utility_room_viewRN.phl[3311]";
-connectAttr "pig_right_eye_translateZ.o" "utility_room_viewRN.phl[3312]";
-connectAttr "pig_right_eye_scaleX.o" "utility_room_viewRN.phl[3313]";
-connectAttr "pig_right_eye_scaleY.o" "utility_room_viewRN.phl[3314]";
-connectAttr "pig_right_eye_scaleZ.o" "utility_room_viewRN.phl[3315]";
-connectAttr "pig_left_eye_rotateX.o" "utility_room_viewRN.phl[3316]";
-connectAttr "pig_left_eye_rotateY.o" "utility_room_viewRN.phl[3317]";
-connectAttr "pig_left_eye_rotateZ.o" "utility_room_viewRN.phl[3318]";
-connectAttr "pig_left_eye_visibility.o" "utility_room_viewRN.phl[3319]";
-connectAttr "pig_left_eye_translateX.o" "utility_room_viewRN.phl[3320]";
-connectAttr "pig_left_eye_translateY.o" "utility_room_viewRN.phl[3321]";
-connectAttr "pig_left_eye_translateZ.o" "utility_room_viewRN.phl[3322]";
-connectAttr "pig_left_eye_scaleX.o" "utility_room_viewRN.phl[3323]";
-connectAttr "pig_left_eye_scaleY.o" "utility_room_viewRN.phl[3324]";
-connectAttr "pig_left_eye_scaleZ.o" "utility_room_viewRN.phl[3325]";
-connectAttr "stretchr_ctrl01_translateX.o" "utility_room_viewRN.phl[3326]";
-connectAttr "stretchr_ctrl01_translateY.o" "utility_room_viewRN.phl[3327]";
-connectAttr "stretchr_ctrl01_translateZ.o" "utility_room_viewRN.phl[3328]";
-connectAttr "stretchr_ctrl01_rotateX.o" "utility_room_viewRN.phl[3329]";
-connectAttr "stretchr_ctrl01_rotateY.o" "utility_room_viewRN.phl[3330]";
-connectAttr "stretchr_ctrl01_rotateZ.o" "utility_room_viewRN.phl[3331]";
-connectAttr "stretchr_ctrl01_scaleX.o" "utility_room_viewRN.phl[3332]";
-connectAttr "stretchr_ctrl01_scaleY.o" "utility_room_viewRN.phl[3333]";
-connectAttr "stretchr_ctrl01_scaleZ.o" "utility_room_viewRN.phl[3334]";
-connectAttr "stretchr_ctrl01_visibility.o" "utility_room_viewRN.phl[3335]";
-connectAttr "controller_L_backfoot01_rotateX.o" "utility_room_viewRN.phl[3336]";
-connectAttr "controller_L_backfoot01_rotateY.o" "utility_room_viewRN.phl[3337]";
-connectAttr "controller_L_backfoot01_rotateZ.o" "utility_room_viewRN.phl[3338]";
-connectAttr "controller_L_backfoot01_translateX.o" "utility_room_viewRN.phl[3339]"
-		;
-connectAttr "controller_L_backfoot01_translateY.o" "utility_room_viewRN.phl[3340]"
-		;
-connectAttr "controller_L_backfoot01_translateZ.o" "utility_room_viewRN.phl[3341]"
-		;
-connectAttr "controller_L_backfoot01_scaleX.o" "utility_room_viewRN.phl[3342]";
-connectAttr "controller_L_backfoot01_scaleY.o" "utility_room_viewRN.phl[3343]";
-connectAttr "controller_L_backfoot01_scaleZ.o" "utility_room_viewRN.phl[3344]";
-connectAttr "controller_R_backfoot01_rotateX.o" "utility_room_viewRN.phl[3345]";
-connectAttr "controller_R_backfoot01_rotateY.o" "utility_room_viewRN.phl[3346]";
-connectAttr "controller_R_backfoot01_rotateZ.o" "utility_room_viewRN.phl[3347]";
-connectAttr "controller_R_backfoot01_translateX.o" "utility_room_viewRN.phl[3348]"
-		;
-connectAttr "controller_R_backfoot01_translateY.o" "utility_room_viewRN.phl[3349]"
-		;
-connectAttr "controller_R_backfoot01_translateZ.o" "utility_room_viewRN.phl[3350]"
-		;
-connectAttr "controller_R_backfoot01_scaleX.o" "utility_room_viewRN.phl[3351]";
-connectAttr "controller_R_backfoot01_scaleY.o" "utility_room_viewRN.phl[3352]";
-connectAttr "controller_R_backfoot01_scaleZ.o" "utility_room_viewRN.phl[3353]";
-connectAttr "hip_rotation_ctrl01_translateX.o" "utility_room_viewRN.phl[3354]";
-connectAttr "hip_rotation_ctrl01_translateY.o" "utility_room_viewRN.phl[3355]";
-connectAttr "hip_rotation_ctrl01_translateZ.o" "utility_room_viewRN.phl[3356]";
-connectAttr "hip_rotation_ctrl01_rotateX.o" "utility_room_viewRN.phl[3357]";
-connectAttr "hip_rotation_ctrl01_rotateY.o" "utility_room_viewRN.phl[3358]";
-connectAttr "hip_rotation_ctrl01_rotateZ.o" "utility_room_viewRN.phl[3359]";
-connectAttr "hip_rotation_ctrl01_scaleX.o" "utility_room_viewRN.phl[3360]";
-connectAttr "hip_rotation_ctrl01_scaleY.o" "utility_room_viewRN.phl[3361]";
-connectAttr "hip_rotation_ctrl01_scaleZ.o" "utility_room_viewRN.phl[3362]";
-connectAttr "utility_room_viewRN.phl[3363]" "tail_2control01_parentConstraint1.tg[0].tt"
-		;
-connectAttr "pairBlend2.otx" "utility_room_viewRN.phl[3364]";
-connectAttr "pairBlend2.oty" "utility_room_viewRN.phl[3365]";
-connectAttr "pairBlend2.otz" "utility_room_viewRN.phl[3366]";
-connectAttr "utility_room_viewRN.phl[3367]" "tail_2control01_parentConstraint1.tg[0].trp"
-		;
-connectAttr "utility_room_viewRN.phl[3368]" "tail_2control01_parentConstraint1.tg[0].trt"
-		;
-connectAttr "utility_room_viewRN.phl[3369]" "tail_2control01_parentConstraint1.tg[0].tr"
-		;
-connectAttr "pairBlend2.orx" "utility_room_viewRN.phl[3370]";
-connectAttr "pairBlend2.ory" "utility_room_viewRN.phl[3371]";
-connectAttr "pairBlend2.orz" "utility_room_viewRN.phl[3372]";
-connectAttr "utility_room_viewRN.phl[3373]" "tail_2control01_parentConstraint1.tg[0].tro"
-		;
-connectAttr "utility_room_viewRN.phl[3374]" "tail_2control01_parentConstraint1.tg[0].ts"
-		;
-connectAttr "tail_1control01_scaleX.o" "utility_room_viewRN.phl[3375]";
-connectAttr "tail_1control01_scaleY.o" "utility_room_viewRN.phl[3376]";
-connectAttr "tail_1control01_scaleZ.o" "utility_room_viewRN.phl[3377]";
-connectAttr "utility_room_viewRN.phl[3378]" "tail_2control01_parentConstraint1.tg[0].tpm"
-		;
-connectAttr "utility_room_viewRN.phl[3379]" "pairBlend2.w";
-connectAttr "tail_1control01_blendParent1.o" "utility_room_viewRN.phl[3380]";
-connectAttr "utility_room_viewRN.phl[3381]" "tail_3control01_parentConstraint1.tg[0].tt"
-		;
-connectAttr "pairBlend4.otx" "utility_room_viewRN.phl[3382]";
-connectAttr "pairBlend4.oty" "utility_room_viewRN.phl[3383]";
-connectAttr "pairBlend4.otz" "utility_room_viewRN.phl[3384]";
-connectAttr "utility_room_viewRN.phl[3385]" "tail_2control01_parentConstraint1.crp"
-		;
-connectAttr "utility_room_viewRN.phl[3386]" "tail_3control01_parentConstraint1.tg[0].trp"
-		;
-connectAttr "utility_room_viewRN.phl[3387]" "tail_2control01_parentConstraint1.crt"
-		;
-connectAttr "utility_room_viewRN.phl[3388]" "tail_3control01_parentConstraint1.tg[0].trt"
-		;
-connectAttr "utility_room_viewRN.phl[3389]" "tail_3control01_parentConstraint1.tg[0].tr"
-		;
-connectAttr "pairBlend4.orx" "utility_room_viewRN.phl[3390]";
-connectAttr "pairBlend4.ory" "utility_room_viewRN.phl[3391]";
-connectAttr "pairBlend4.orz" "utility_room_viewRN.phl[3392]";
-connectAttr "utility_room_viewRN.phl[3393]" "tail_2control01_parentConstraint1.cro"
-		;
-connectAttr "utility_room_viewRN.phl[3394]" "tail_3control01_parentConstraint1.tg[0].tro"
-		;
-connectAttr "utility_room_viewRN.phl[3395]" "tail_3control01_parentConstraint1.tg[0].ts"
-		;
-connectAttr "tail_2control01_scaleX.o" "utility_room_viewRN.phl[3396]";
-connectAttr "tail_2control01_scaleY.o" "utility_room_viewRN.phl[3397]";
-connectAttr "tail_2control01_scaleZ.o" "utility_room_viewRN.phl[3398]";
-connectAttr "utility_room_viewRN.phl[3399]" "tail_3control01_parentConstraint1.tg[0].tpm"
-		;
-connectAttr "utility_room_viewRN.phl[3400]" "pairBlend4.w";
-connectAttr "tail_2control01_blendParent1.o" "utility_room_viewRN.phl[3401]";
-connectAttr "utility_room_viewRN.phl[3402]" "tail_2control01_parentConstraint1.cpim"
-		;
-connectAttr "utility_room_viewRN.phl[3403]" "tail_4control01_parentConstraint1.tg[0].tt"
-		;
-connectAttr "tail_3control01_parentConstraint1.ctx" "utility_room_viewRN.phl[3404]"
-		;
-connectAttr "tail_3control01_parentConstraint1.cty" "utility_room_viewRN.phl[3405]"
-		;
-connectAttr "tail_3control01_parentConstraint1.ctz" "utility_room_viewRN.phl[3406]"
-		;
-connectAttr "utility_room_viewRN.phl[3407]" "tail_3control01_parentConstraint1.crp"
-		;
-connectAttr "utility_room_viewRN.phl[3408]" "tail_4control01_parentConstraint1.tg[0].trp"
-		;
-connectAttr "utility_room_viewRN.phl[3409]" "tail_3control01_parentConstraint1.crt"
-		;
-connectAttr "utility_room_viewRN.phl[3410]" "tail_4control01_parentConstraint1.tg[0].trt"
-		;
-connectAttr "utility_room_viewRN.phl[3411]" "tail_4control01_parentConstraint1.tg[0].tr"
-		;
-connectAttr "tail_3control01_parentConstraint1.crx" "utility_room_viewRN.phl[3412]"
-		;
-connectAttr "tail_3control01_parentConstraint1.cry" "utility_room_viewRN.phl[3413]"
-		;
-connectAttr "tail_3control01_parentConstraint1.crz" "utility_room_viewRN.phl[3414]"
-		;
-connectAttr "utility_room_viewRN.phl[3415]" "tail_3control01_parentConstraint1.cro"
-		;
-connectAttr "utility_room_viewRN.phl[3416]" "tail_4control01_parentConstraint1.tg[0].tro"
-		;
-connectAttr "utility_room_viewRN.phl[3417]" "tail_4control01_parentConstraint1.tg[0].ts"
-		;
-connectAttr "utility_room_viewRN.phl[3418]" "tail_4control01_parentConstraint1.tg[0].tpm"
-		;
-connectAttr "utility_room_viewRN.phl[3419]" "tail_3control01_parentConstraint1.cpim"
-		;
-connectAttr "tail_4control01_parentConstraint1.ctx" "utility_room_viewRN.phl[3420]"
-		;
-connectAttr "tail_4control01_parentConstraint1.cty" "utility_room_viewRN.phl[3421]"
-		;
-connectAttr "tail_4control01_parentConstraint1.ctz" "utility_room_viewRN.phl[3422]"
-		;
-connectAttr "utility_room_viewRN.phl[3423]" "tail_4control01_parentConstraint1.crp"
-		;
-connectAttr "utility_room_viewRN.phl[3424]" "tail_4control01_parentConstraint1.crt"
-		;
-connectAttr "tail_4control01_parentConstraint1.crx" "utility_room_viewRN.phl[3425]"
-		;
-connectAttr "tail_4control01_parentConstraint1.cry" "utility_room_viewRN.phl[3426]"
-		;
-connectAttr "tail_4control01_parentConstraint1.crz" "utility_room_viewRN.phl[3427]"
-		;
-connectAttr "utility_room_viewRN.phl[3428]" "tail_4control01_parentConstraint1.cro"
-		;
-connectAttr "utility_room_viewRN.phl[3429]" "tail_4control01_parentConstraint1.cpim"
-		;
-connectAttr "stretchf_ctrl01_translateX.o" "utility_room_viewRN.phl[3430]";
-connectAttr "stretchf_ctrl01_translateY.o" "utility_room_viewRN.phl[3431]";
-connectAttr "stretchf_ctrl01_translateZ.o" "utility_room_viewRN.phl[3432]";
-connectAttr "stretchf_ctrl01_rotateX.o" "utility_room_viewRN.phl[3433]";
-connectAttr "stretchf_ctrl01_rotateY.o" "utility_room_viewRN.phl[3434]";
-connectAttr "stretchf_ctrl01_rotateZ.o" "utility_room_viewRN.phl[3435]";
-connectAttr "stretchf_ctrl01_scaleX.o" "utility_room_viewRN.phl[3436]";
-connectAttr "stretchf_ctrl01_scaleY.o" "utility_room_viewRN.phl[3437]";
-connectAttr "stretchf_ctrl01_scaleZ.o" "utility_room_viewRN.phl[3438]";
-connectAttr "stretchf_ctrl01_visibility.o" "utility_room_viewRN.phl[3439]";
-connectAttr "controller_L_frontfoot01_rotateX.o" "utility_room_viewRN.phl[3440]"
-		;
-connectAttr "controller_L_frontfoot01_rotateY.o" "utility_room_viewRN.phl[3441]"
-		;
-connectAttr "controller_L_frontfoot01_rotateZ.o" "utility_room_viewRN.phl[3442]"
-		;
-connectAttr "controller_L_frontfoot01_translateX.o" "utility_room_viewRN.phl[3443]"
-		;
-connectAttr "controller_L_frontfoot01_translateY.o" "utility_room_viewRN.phl[3444]"
-		;
-connectAttr "controller_L_frontfoot01_translateZ.o" "utility_room_viewRN.phl[3445]"
-		;
-connectAttr "controller_L_frontfoot01_scaleX.o" "utility_room_viewRN.phl[3446]";
-connectAttr "controller_L_frontfoot01_scaleY.o" "utility_room_viewRN.phl[3447]";
-connectAttr "controller_L_frontfoot01_scaleZ.o" "utility_room_viewRN.phl[3448]";
-connectAttr "controller_R_frontfoot01_rotateX.o" "utility_room_viewRN.phl[3449]"
-		;
-connectAttr "controller_R_frontfoot01_rotateY.o" "utility_room_viewRN.phl[3450]"
-		;
-connectAttr "controller_R_frontfoot01_rotateZ.o" "utility_room_viewRN.phl[3451]"
-		;
-connectAttr "controller_R_frontfoot01_translateX.o" "utility_room_viewRN.phl[3452]"
-		;
-connectAttr "controller_R_frontfoot01_translateY.o" "utility_room_viewRN.phl[3453]"
-		;
-connectAttr "controller_R_frontfoot01_translateZ.o" "utility_room_viewRN.phl[3454]"
-		;
-connectAttr "controller_R_frontfoot01_scaleX.o" "utility_room_viewRN.phl[3455]";
-connectAttr "controller_R_frontfoot01_scaleY.o" "utility_room_viewRN.phl[3456]";
-connectAttr "controller_R_frontfoot01_scaleZ.o" "utility_room_viewRN.phl[3457]";
-connectAttr "pairBlend5.oty" "utility_room_viewRN.phl[3458]";
-connectAttr "shoulders_rotation_ctrl01_translateX.o" "utility_room_viewRN.phl[3459]"
-		;
-connectAttr "shoulders_rotation_ctrl01_translateZ.o" "utility_room_viewRN.phl[3460]"
-		;
-connectAttr "pairBlend5.orx" "utility_room_viewRN.phl[3461]";
-connectAttr "pairBlend5.ory" "utility_room_viewRN.phl[3462]";
-connectAttr "pairBlend5.orz" "utility_room_viewRN.phl[3463]";
-connectAttr "shoulders_rotation_ctrl01_scaleX.o" "utility_room_viewRN.phl[3464]"
-		;
-connectAttr "shoulders_rotation_ctrl01_scaleY.o" "utility_room_viewRN.phl[3465]"
-		;
-connectAttr "shoulders_rotation_ctrl01_scaleZ.o" "utility_room_viewRN.phl[3466]"
-		;
-connectAttr "utility_room_viewRN.phl[3467]" "pairBlend5.w";
-connectAttr "shoulders_rotation_ctrl01_blendParent1.o" "utility_room_viewRN.phl[3468]"
-		;
-connectAttr "utility_room_viewRN.phl[3469]" "pairBlend5.ity2";
-connectAttr "utility_room_viewRN.phl[3470]" "pairBlend5.irx2";
-connectAttr "utility_room_viewRN.phl[3471]" "pairBlend5.iry2";
-connectAttr "utility_room_viewRN.phl[3472]" "pairBlend5.irz2";
-connectAttr "head_control_translateX.o" "utility_room_viewRN.phl[3473]";
-connectAttr "head_control_translateY.o" "utility_room_viewRN.phl[3474]";
-connectAttr "head_control_translateZ.o" "utility_room_viewRN.phl[3475]";
-connectAttr "head_control_rotateX.o" "utility_room_viewRN.phl[3476]";
-connectAttr "head_control_rotateY.o" "utility_room_viewRN.phl[3477]";
-connectAttr "head_control_rotateZ.o" "utility_room_viewRN.phl[3478]";
-connectAttr "head_control_scaleX.o" "utility_room_viewRN.phl[3479]";
-connectAttr "head_control_scaleY.o" "utility_room_viewRN.phl[3480]";
-connectAttr "head_control_scaleZ.o" "utility_room_viewRN.phl[3481]";
-connectAttr "spine_spline_ctrl_translateX.o" "utility_room_viewRN.phl[3482]";
-connectAttr "spine_spline_ctrl_translateZ.o" "utility_room_viewRN.phl[3483]";
-connectAttr "spine_spline_ctrl_translateY.o" "utility_room_viewRN.phl[3484]";
-connectAttr "spine_spline_ctrl_visibility.o" "utility_room_viewRN.phl[3485]";
-connectAttr "vertebrae_flexi_anim_mid01_followStart.o" "utility_room_viewRN.phl[3486]"
-		;
-connectAttr "vertebrae_flexi_anim_mid01_translateX.o" "utility_room_viewRN.phl[3487]"
-		;
-connectAttr "vertebrae_flexi_anim_mid01_translateY.o" "utility_room_viewRN.phl[3488]"
-		;
-connectAttr "vertebrae_flexi_anim_mid01_translateZ.o" "utility_room_viewRN.phl[3489]"
-		;
-connectAttr "vertebrae_flexi_anim_mid01_rotateZ.o" "utility_room_viewRN.phl[3490]"
-		;
-connectAttr "vertebrae_flexi_anim_mid01_rotateX.o" "utility_room_viewRN.phl[3491]"
-		;
-connectAttr "vertebrae_flexi_anim_mid01_rotateY.o" "utility_room_viewRN.phl[3492]"
-		;
-connectAttr "vertebrae_flexi_anim_mid01_scaleX.o" "utility_room_viewRN.phl[3493]"
-		;
-connectAttr "vertebrae_flexi_anim_mid01_scaleY.o" "utility_room_viewRN.phl[3494]"
-		;
-connectAttr "vertebrae_flexi_anim_mid01_scaleZ.o" "utility_room_viewRN.phl[3495]"
-		;
-connectAttr "vertebrae_flexi_anim_mid01_visibility.o" "utility_room_viewRN.phl[3496]"
+connectAttr "controller_root_visibility.o" "utility_room_viewRN.phl[2695]";
+connectAttr "controller_root_translateX.o" "utility_room_viewRN.phl[2696]";
+connectAttr "controller_root_translateY.o" "utility_room_viewRN.phl[2697]";
+connectAttr "controller_root_translateZ.o" "utility_room_viewRN.phl[2698]";
+connectAttr "controller_root_rotateX.o" "utility_room_viewRN.phl[2699]";
+connectAttr "controller_root_rotateY.o" "utility_room_viewRN.phl[2700]";
+connectAttr "controller_root_rotateZ.o" "utility_room_viewRN.phl[2701]";
+connectAttr "controller_root_scaleX.o" "utility_room_viewRN.phl[2702]";
+connectAttr "controller_root_scaleY.o" "utility_room_viewRN.phl[2703]";
+connectAttr "controller_root_scaleZ.o" "utility_room_viewRN.phl[2704]";
+connectAttr "controller_COG_translateX.o" "utility_room_viewRN.phl[2705]";
+connectAttr "controller_COG_translateY.o" "utility_room_viewRN.phl[2706]";
+connectAttr "controller_COG_translateZ.o" "utility_room_viewRN.phl[2707]";
+connectAttr "controller_COG_rotateX.o" "utility_room_viewRN.phl[2708]";
+connectAttr "controller_COG_rotateY.o" "utility_room_viewRN.phl[2709]";
+connectAttr "controller_COG_rotateZ.o" "utility_room_viewRN.phl[2710]";
+connectAttr "controller_COG_scaleX.o" "utility_room_viewRN.phl[2711]";
+connectAttr "controller_COG_scaleY.o" "utility_room_viewRN.phl[2712]";
+connectAttr "controller_COG_scaleZ.o" "utility_room_viewRN.phl[2713]";
+connectAttr "controller_COG_visibility.o" "utility_room_viewRN.phl[2714]";
+connectAttr "controller_spine3_translateX.o" "utility_room_viewRN.phl[2715]";
+connectAttr "controller_spine3_translateY.o" "utility_room_viewRN.phl[2716]";
+connectAttr "controller_spine3_translateZ.o" "utility_room_viewRN.phl[2717]";
+connectAttr "controller_spine3_rotateX.o" "utility_room_viewRN.phl[2718]";
+connectAttr "controller_spine3_rotateY.o" "utility_room_viewRN.phl[2719]";
+connectAttr "controller_spine3_rotateZ.o" "utility_room_viewRN.phl[2720]";
+connectAttr "controller_spine3_scaleX.o" "utility_room_viewRN.phl[2721]";
+connectAttr "controller_spine3_scaleY.o" "utility_room_viewRN.phl[2722]";
+connectAttr "controller_spine3_scaleZ.o" "utility_room_viewRN.phl[2723]";
+connectAttr "controller_spine3_visibility.o" "utility_room_viewRN.phl[2724]";
+connectAttr "controller_spine2_translateX.o" "utility_room_viewRN.phl[2725]";
+connectAttr "controller_spine2_translateY.o" "utility_room_viewRN.phl[2726]";
+connectAttr "controller_spine2_translateZ.o" "utility_room_viewRN.phl[2727]";
+connectAttr "controller_spine2_rotateX.o" "utility_room_viewRN.phl[2728]";
+connectAttr "controller_spine2_rotateY.o" "utility_room_viewRN.phl[2729]";
+connectAttr "controller_spine2_rotateZ.o" "utility_room_viewRN.phl[2730]";
+connectAttr "controller_spine2_scaleX.o" "utility_room_viewRN.phl[2731]";
+connectAttr "controller_spine2_scaleY.o" "utility_room_viewRN.phl[2732]";
+connectAttr "controller_spine2_scaleZ.o" "utility_room_viewRN.phl[2733]";
+connectAttr "controller_spine2_visibility.o" "utility_room_viewRN.phl[2734]";
+connectAttr "controller_spine1_translateX.o" "utility_room_viewRN.phl[2735]";
+connectAttr "controller_spine1_translateY.o" "utility_room_viewRN.phl[2736]";
+connectAttr "controller_spine1_translateZ.o" "utility_room_viewRN.phl[2737]";
+connectAttr "controller_spine1_rotateX.o" "utility_room_viewRN.phl[2738]";
+connectAttr "controller_spine1_rotateY.o" "utility_room_viewRN.phl[2739]";
+connectAttr "controller_spine1_rotateZ.o" "utility_room_viewRN.phl[2740]";
+connectAttr "controller_spine1_scaleX.o" "utility_room_viewRN.phl[2741]";
+connectAttr "controller_spine1_scaleY.o" "utility_room_viewRN.phl[2742]";
+connectAttr "controller_spine1_scaleZ.o" "utility_room_viewRN.phl[2743]";
+connectAttr "controller_spine1_visibility.o" "utility_room_viewRN.phl[2744]";
+connectAttr "controller_shoulder_translateX.o" "utility_room_viewRN.phl[2745]";
+connectAttr "controller_shoulder_translateY.o" "utility_room_viewRN.phl[2746]";
+connectAttr "controller_shoulder_translateZ.o" "utility_room_viewRN.phl[2747]";
+connectAttr "controller_shoulder_rotateX.o" "utility_room_viewRN.phl[2748]";
+connectAttr "controller_shoulder_rotateY.o" "utility_room_viewRN.phl[2749]";
+connectAttr "controller_shoulder_rotateZ.o" "utility_room_viewRN.phl[2750]";
+connectAttr "controller_shoulder_scaleX.o" "utility_room_viewRN.phl[2751]";
+connectAttr "controller_shoulder_scaleY.o" "utility_room_viewRN.phl[2752]";
+connectAttr "controller_shoulder_scaleZ.o" "utility_room_viewRN.phl[2753]";
+connectAttr "controller_shoulder_visibility.o" "utility_room_viewRN.phl[2754]";
+connectAttr "controller_head_translateX.o" "utility_room_viewRN.phl[2755]";
+connectAttr "controller_head_translateY.o" "utility_room_viewRN.phl[2756]";
+connectAttr "controller_head_translateZ.o" "utility_room_viewRN.phl[2757]";
+connectAttr "controller_head_rotateX.o" "utility_room_viewRN.phl[2758]";
+connectAttr "controller_head_rotateY.o" "utility_room_viewRN.phl[2759]";
+connectAttr "controller_head_rotateZ.o" "utility_room_viewRN.phl[2760]";
+connectAttr "controller_head_scaleX.o" "utility_room_viewRN.phl[2761]";
+connectAttr "controller_head_scaleY.o" "utility_room_viewRN.phl[2762]";
+connectAttr "controller_head_scaleZ.o" "utility_room_viewRN.phl[2763]";
+connectAttr "controller_head_visibility.o" "utility_room_viewRN.phl[2764]";
+connectAttr "nurbsCircle3_translateX.o" "utility_room_viewRN.phl[2765]";
+connectAttr "nurbsCircle3_translateY.o" "utility_room_viewRN.phl[2766]";
+connectAttr "nurbsCircle3_translateZ.o" "utility_room_viewRN.phl[2767]";
+connectAttr "nurbsCircle3_visibility.o" "utility_room_viewRN.phl[2768]";
+connectAttr "nurbsCircle3_rotateX.o" "utility_room_viewRN.phl[2769]";
+connectAttr "nurbsCircle3_rotateY.o" "utility_room_viewRN.phl[2770]";
+connectAttr "nurbsCircle3_rotateZ.o" "utility_room_viewRN.phl[2771]";
+connectAttr "nurbsCircle3_scaleX.o" "utility_room_viewRN.phl[2772]";
+connectAttr "nurbsCircle3_scaleY.o" "utility_room_viewRN.phl[2773]";
+connectAttr "nurbsCircle3_scaleZ.o" "utility_room_viewRN.phl[2774]";
+connectAttr "nurbsCircle2_translateX.o" "utility_room_viewRN.phl[2775]";
+connectAttr "nurbsCircle2_translateY.o" "utility_room_viewRN.phl[2776]";
+connectAttr "nurbsCircle2_translateZ.o" "utility_room_viewRN.phl[2777]";
+connectAttr "nurbsCircle2_visibility.o" "utility_room_viewRN.phl[2778]";
+connectAttr "nurbsCircle2_rotateX.o" "utility_room_viewRN.phl[2779]";
+connectAttr "nurbsCircle2_rotateY.o" "utility_room_viewRN.phl[2780]";
+connectAttr "nurbsCircle2_rotateZ.o" "utility_room_viewRN.phl[2781]";
+connectAttr "nurbsCircle2_scaleX.o" "utility_room_viewRN.phl[2782]";
+connectAttr "nurbsCircle2_scaleY.o" "utility_room_viewRN.phl[2783]";
+connectAttr "nurbsCircle2_scaleZ.o" "utility_room_viewRN.phl[2784]";
+connectAttr "nurbsCircle1_translateX.o" "utility_room_viewRN.phl[2785]";
+connectAttr "nurbsCircle1_translateY.o" "utility_room_viewRN.phl[2786]";
+connectAttr "nurbsCircle1_translateZ.o" "utility_room_viewRN.phl[2787]";
+connectAttr "nurbsCircle1_visibility.o" "utility_room_viewRN.phl[2788]";
+connectAttr "nurbsCircle1_rotateX.o" "utility_room_viewRN.phl[2789]";
+connectAttr "nurbsCircle1_rotateY.o" "utility_room_viewRN.phl[2790]";
+connectAttr "nurbsCircle1_rotateZ.o" "utility_room_viewRN.phl[2791]";
+connectAttr "nurbsCircle1_scaleX.o" "utility_room_viewRN.phl[2792]";
+connectAttr "nurbsCircle1_scaleY.o" "utility_room_viewRN.phl[2793]";
+connectAttr "nurbsCircle1_scaleZ.o" "utility_room_viewRN.phl[2794]";
+connectAttr "controller_hip_translateX.o" "utility_room_viewRN.phl[2795]";
+connectAttr "controller_hip_translateY.o" "utility_room_viewRN.phl[2796]";
+connectAttr "controller_hip_translateZ.o" "utility_room_viewRN.phl[2797]";
+connectAttr "controller_hip_rotateX.o" "utility_room_viewRN.phl[2798]";
+connectAttr "controller_hip_rotateY.o" "utility_room_viewRN.phl[2799]";
+connectAttr "controller_hip_rotateZ.o" "utility_room_viewRN.phl[2800]";
+connectAttr "controller_hip_scaleX.o" "utility_room_viewRN.phl[2801]";
+connectAttr "controller_hip_scaleY.o" "utility_room_viewRN.phl[2802]";
+connectAttr "controller_hip_scaleZ.o" "utility_room_viewRN.phl[2803]";
+connectAttr "controller_hip_visibility.o" "utility_room_viewRN.phl[2804]";
+connectAttr "controller_tailbase_translateX.o" "utility_room_viewRN.phl[2805]";
+connectAttr "controller_tailbase_translateY.o" "utility_room_viewRN.phl[2806]";
+connectAttr "controller_tailbase_translateZ.o" "utility_room_viewRN.phl[2807]";
+connectAttr "controller_tailbase_rotateX.o" "utility_room_viewRN.phl[2808]";
+connectAttr "controller_tailbase_rotateY.o" "utility_room_viewRN.phl[2809]";
+connectAttr "controller_tailbase_rotateZ.o" "utility_room_viewRN.phl[2810]";
+connectAttr "controller_tailbase_scaleX.o" "utility_room_viewRN.phl[2811]";
+connectAttr "controller_tailbase_scaleY.o" "utility_room_viewRN.phl[2812]";
+connectAttr "controller_tailbase_scaleZ.o" "utility_room_viewRN.phl[2813]";
+connectAttr "controller_tailbase_visibility.o" "utility_room_viewRN.phl[2814]";
+connectAttr "controller_tail2_translateX.o" "utility_room_viewRN.phl[2815]";
+connectAttr "controller_tail2_translateY.o" "utility_room_viewRN.phl[2816]";
+connectAttr "controller_tail2_translateZ.o" "utility_room_viewRN.phl[2817]";
+connectAttr "controller_tail2_rotateX.o" "utility_room_viewRN.phl[2818]";
+connectAttr "controller_tail2_rotateY.o" "utility_room_viewRN.phl[2819]";
+connectAttr "controller_tail2_rotateZ.o" "utility_room_viewRN.phl[2820]";
+connectAttr "controller_tail2_scaleX.o" "utility_room_viewRN.phl[2821]";
+connectAttr "controller_tail2_scaleY.o" "utility_room_viewRN.phl[2822]";
+connectAttr "controller_tail2_scaleZ.o" "utility_room_viewRN.phl[2823]";
+connectAttr "controller_tail2_visibility.o" "utility_room_viewRN.phl[2824]";
+connectAttr "controller_tail3_translateX.o" "utility_room_viewRN.phl[2825]";
+connectAttr "controller_tail3_translateY.o" "utility_room_viewRN.phl[2826]";
+connectAttr "controller_tail3_translateZ.o" "utility_room_viewRN.phl[2827]";
+connectAttr "controller_tail3_rotateX.o" "utility_room_viewRN.phl[2828]";
+connectAttr "controller_tail3_rotateY.o" "utility_room_viewRN.phl[2829]";
+connectAttr "controller_tail3_rotateZ.o" "utility_room_viewRN.phl[2830]";
+connectAttr "controller_tail3_scaleX.o" "utility_room_viewRN.phl[2831]";
+connectAttr "controller_tail3_scaleY.o" "utility_room_viewRN.phl[2832]";
+connectAttr "controller_tail3_scaleZ.o" "utility_room_viewRN.phl[2833]";
+connectAttr "controller_tail3_visibility.o" "utility_room_viewRN.phl[2834]";
+connectAttr "controller_tail4_translateX.o" "utility_room_viewRN.phl[2835]";
+connectAttr "controller_tail4_translateY.o" "utility_room_viewRN.phl[2836]";
+connectAttr "controller_tail4_translateZ.o" "utility_room_viewRN.phl[2837]";
+connectAttr "controller_tail4_rotateX.o" "utility_room_viewRN.phl[2838]";
+connectAttr "controller_tail4_rotateY.o" "utility_room_viewRN.phl[2839]";
+connectAttr "controller_tail4_rotateZ.o" "utility_room_viewRN.phl[2840]";
+connectAttr "controller_tail4_scaleX.o" "utility_room_viewRN.phl[2841]";
+connectAttr "controller_tail4_scaleY.o" "utility_room_viewRN.phl[2842]";
+connectAttr "controller_tail4_scaleZ.o" "utility_room_viewRN.phl[2843]";
+connectAttr "controller_tail4_visibility.o" "utility_room_viewRN.phl[2844]";
+connectAttr "controller_tailtip_translateX.o" "utility_room_viewRN.phl[2845]";
+connectAttr "controller_tailtip_translateY.o" "utility_room_viewRN.phl[2846]";
+connectAttr "controller_tailtip_translateZ.o" "utility_room_viewRN.phl[2847]";
+connectAttr "controller_tailtip_rotateX.o" "utility_room_viewRN.phl[2848]";
+connectAttr "controller_tailtip_rotateY.o" "utility_room_viewRN.phl[2849]";
+connectAttr "controller_tailtip_rotateZ.o" "utility_room_viewRN.phl[2850]";
+connectAttr "controller_tailtip_scaleX.o" "utility_room_viewRN.phl[2851]";
+connectAttr "controller_tailtip_scaleY.o" "utility_room_viewRN.phl[2852]";
+connectAttr "controller_tailtip_scaleZ.o" "utility_room_viewRN.phl[2853]";
+connectAttr "controller_tailtip_visibility.o" "utility_room_viewRN.phl[2854]";
+connectAttr "controller_rightLeg_visibility.o" "utility_room_viewRN.phl[2855]";
+connectAttr "controller_rightLeg_translateX.o" "utility_room_viewRN.phl[2856]";
+connectAttr "controller_rightLeg_translateY.o" "utility_room_viewRN.phl[2857]";
+connectAttr "controller_rightLeg_translateZ.o" "utility_room_viewRN.phl[2858]";
+connectAttr "controller_rightLeg_rotateX.o" "utility_room_viewRN.phl[2859]";
+connectAttr "controller_rightLeg_rotateY.o" "utility_room_viewRN.phl[2860]";
+connectAttr "controller_rightLeg_rotateZ.o" "utility_room_viewRN.phl[2861]";
+connectAttr "controller_rightLeg_scaleX.o" "utility_room_viewRN.phl[2862]";
+connectAttr "controller_rightLeg_scaleY.o" "utility_room_viewRN.phl[2863]";
+connectAttr "controller_rightLeg_scaleZ.o" "utility_room_viewRN.phl[2864]";
+connectAttr "nurbsCircle7_translateX.o" "utility_room_viewRN.phl[2865]";
+connectAttr "nurbsCircle7_translateY.o" "utility_room_viewRN.phl[2866]";
+connectAttr "nurbsCircle7_translateZ.o" "utility_room_viewRN.phl[2867]";
+connectAttr "nurbsCircle7_visibility.o" "utility_room_viewRN.phl[2868]";
+connectAttr "nurbsCircle7_rotateX.o" "utility_room_viewRN.phl[2869]";
+connectAttr "nurbsCircle7_rotateY.o" "utility_room_viewRN.phl[2870]";
+connectAttr "nurbsCircle7_rotateZ.o" "utility_room_viewRN.phl[2871]";
+connectAttr "nurbsCircle7_scaleX.o" "utility_room_viewRN.phl[2872]";
+connectAttr "nurbsCircle7_scaleY.o" "utility_room_viewRN.phl[2873]";
+connectAttr "nurbsCircle7_scaleZ.o" "utility_room_viewRN.phl[2874]";
+connectAttr "RightLeg_rotateX.o" "utility_room_viewRN.phl[2875]";
+connectAttr "RightLeg_rotateY.o" "utility_room_viewRN.phl[2876]";
+connectAttr "RightLeg_rotateZ.o" "utility_room_viewRN.phl[2877]";
+connectAttr "RightLeg_translateX.o" "utility_room_viewRN.phl[2878]";
+connectAttr "RightLeg_translateY.o" "utility_room_viewRN.phl[2879]";
+connectAttr "RightLeg_translateZ.o" "utility_room_viewRN.phl[2880]";
+connectAttr "RightLeg_visibility.o" "utility_room_viewRN.phl[2881]";
+connectAttr "RightLeg_scaleX.o" "utility_room_viewRN.phl[2882]";
+connectAttr "RightLeg_scaleY.o" "utility_room_viewRN.phl[2883]";
+connectAttr "RightLeg_scaleZ.o" "utility_room_viewRN.phl[2884]";
+connectAttr "controller_leftArm_visibility.o" "utility_room_viewRN.phl[2885]";
+connectAttr "controller_leftArm_translateX.o" "utility_room_viewRN.phl[2886]";
+connectAttr "controller_leftArm_translateY.o" "utility_room_viewRN.phl[2887]";
+connectAttr "controller_leftArm_translateZ.o" "utility_room_viewRN.phl[2888]";
+connectAttr "controller_leftArm_rotateX.o" "utility_room_viewRN.phl[2889]";
+connectAttr "controller_leftArm_rotateY.o" "utility_room_viewRN.phl[2890]";
+connectAttr "controller_leftArm_rotateZ.o" "utility_room_viewRN.phl[2891]";
+connectAttr "controller_leftArm_scaleX.o" "utility_room_viewRN.phl[2892]";
+connectAttr "controller_leftArm_scaleY.o" "utility_room_viewRN.phl[2893]";
+connectAttr "controller_leftArm_scaleZ.o" "utility_room_viewRN.phl[2894]";
+connectAttr "controller_leftWrist_translateX.o" "utility_room_viewRN.phl[2895]";
+connectAttr "controller_leftWrist_translateY.o" "utility_room_viewRN.phl[2896]";
+connectAttr "controller_leftWrist_translateZ.o" "utility_room_viewRN.phl[2897]";
+connectAttr "controller_leftWrist_rotateX.o" "utility_room_viewRN.phl[2898]";
+connectAttr "controller_leftWrist_rotateY.o" "utility_room_viewRN.phl[2899]";
+connectAttr "controller_leftWrist_rotateZ.o" "utility_room_viewRN.phl[2900]";
+connectAttr "controller_leftWrist_scaleX.o" "utility_room_viewRN.phl[2901]";
+connectAttr "controller_leftWrist_scaleY.o" "utility_room_viewRN.phl[2902]";
+connectAttr "controller_leftWrist_scaleZ.o" "utility_room_viewRN.phl[2903]";
+connectAttr "controller_leftWrist_visibility.o" "utility_room_viewRN.phl[2904]";
+connectAttr "nurbsCircle6_translateX.o" "utility_room_viewRN.phl[2905]";
+connectAttr "nurbsCircle6_translateY.o" "utility_room_viewRN.phl[2906]";
+connectAttr "nurbsCircle6_translateZ.o" "utility_room_viewRN.phl[2907]";
+connectAttr "nurbsCircle6_visibility.o" "utility_room_viewRN.phl[2908]";
+connectAttr "nurbsCircle6_rotateX.o" "utility_room_viewRN.phl[2909]";
+connectAttr "nurbsCircle6_rotateY.o" "utility_room_viewRN.phl[2910]";
+connectAttr "nurbsCircle6_rotateZ.o" "utility_room_viewRN.phl[2911]";
+connectAttr "nurbsCircle6_scaleX.o" "utility_room_viewRN.phl[2912]";
+connectAttr "nurbsCircle6_scaleY.o" "utility_room_viewRN.phl[2913]";
+connectAttr "nurbsCircle6_scaleZ.o" "utility_room_viewRN.phl[2914]";
+connectAttr "nurbsCircle5_translateX.o" "utility_room_viewRN.phl[2915]";
+connectAttr "nurbsCircle5_translateY.o" "utility_room_viewRN.phl[2916]";
+connectAttr "nurbsCircle5_translateZ.o" "utility_room_viewRN.phl[2917]";
+connectAttr "nurbsCircle5_visibility.o" "utility_room_viewRN.phl[2918]";
+connectAttr "nurbsCircle5_rotateX.o" "utility_room_viewRN.phl[2919]";
+connectAttr "nurbsCircle5_rotateY.o" "utility_room_viewRN.phl[2920]";
+connectAttr "nurbsCircle5_rotateZ.o" "utility_room_viewRN.phl[2921]";
+connectAttr "nurbsCircle5_scaleX.o" "utility_room_viewRN.phl[2922]";
+connectAttr "nurbsCircle5_scaleY.o" "utility_room_viewRN.phl[2923]";
+connectAttr "nurbsCircle5_scaleZ.o" "utility_room_viewRN.phl[2924]";
+connectAttr "nurbsCircle2_translateX1.o" "utility_room_viewRN.phl[2925]";
+connectAttr "nurbsCircle2_translateY1.o" "utility_room_viewRN.phl[2926]";
+connectAttr "nurbsCircle2_translateZ1.o" "utility_room_viewRN.phl[2927]";
+connectAttr "nurbsCircle2_visibility1.o" "utility_room_viewRN.phl[2928]";
+connectAttr "nurbsCircle2_rotateX1.o" "utility_room_viewRN.phl[2929]";
+connectAttr "nurbsCircle2_rotateY1.o" "utility_room_viewRN.phl[2930]";
+connectAttr "nurbsCircle2_rotateZ1.o" "utility_room_viewRN.phl[2931]";
+connectAttr "nurbsCircle2_scaleX1.o" "utility_room_viewRN.phl[2932]";
+connectAttr "nurbsCircle2_scaleY1.o" "utility_room_viewRN.phl[2933]";
+connectAttr "nurbsCircle2_scaleZ1.o" "utility_room_viewRN.phl[2934]";
+connectAttr "nurbsCircle3_translateX1.o" "utility_room_viewRN.phl[2935]";
+connectAttr "nurbsCircle3_translateY1.o" "utility_room_viewRN.phl[2936]";
+connectAttr "nurbsCircle3_translateZ1.o" "utility_room_viewRN.phl[2937]";
+connectAttr "nurbsCircle3_visibility1.o" "utility_room_viewRN.phl[2938]";
+connectAttr "nurbsCircle3_rotateX1.o" "utility_room_viewRN.phl[2939]";
+connectAttr "nurbsCircle3_rotateY1.o" "utility_room_viewRN.phl[2940]";
+connectAttr "nurbsCircle3_rotateZ1.o" "utility_room_viewRN.phl[2941]";
+connectAttr "nurbsCircle3_scaleX1.o" "utility_room_viewRN.phl[2942]";
+connectAttr "nurbsCircle3_scaleY1.o" "utility_room_viewRN.phl[2943]";
+connectAttr "nurbsCircle3_scaleZ1.o" "utility_room_viewRN.phl[2944]";
+connectAttr "nurbsCircle4_translateX.o" "utility_room_viewRN.phl[2945]";
+connectAttr "nurbsCircle4_translateY.o" "utility_room_viewRN.phl[2946]";
+connectAttr "nurbsCircle4_translateZ.o" "utility_room_viewRN.phl[2947]";
+connectAttr "nurbsCircle4_visibility.o" "utility_room_viewRN.phl[2948]";
+connectAttr "nurbsCircle4_rotateX.o" "utility_room_viewRN.phl[2949]";
+connectAttr "nurbsCircle4_rotateY.o" "utility_room_viewRN.phl[2950]";
+connectAttr "nurbsCircle4_rotateZ.o" "utility_room_viewRN.phl[2951]";
+connectAttr "nurbsCircle4_scaleX.o" "utility_room_viewRN.phl[2952]";
+connectAttr "nurbsCircle4_scaleY.o" "utility_room_viewRN.phl[2953]";
+connectAttr "nurbsCircle4_scaleZ.o" "utility_room_viewRN.phl[2954]";
+connectAttr "curve6_translateX.o" "utility_room_viewRN.phl[2955]";
+connectAttr "curve6_translateY.o" "utility_room_viewRN.phl[2956]";
+connectAttr "curve6_translateZ.o" "utility_room_viewRN.phl[2957]";
+connectAttr "curve6_visibility.o" "utility_room_viewRN.phl[2958]";
+connectAttr "curve6_rotateX.o" "utility_room_viewRN.phl[2959]";
+connectAttr "curve6_rotateY.o" "utility_room_viewRN.phl[2960]";
+connectAttr "curve6_rotateZ.o" "utility_room_viewRN.phl[2961]";
+connectAttr "curve6_scaleX.o" "utility_room_viewRN.phl[2962]";
+connectAttr "curve6_scaleY.o" "utility_room_viewRN.phl[2963]";
+connectAttr "curve6_scaleZ.o" "utility_room_viewRN.phl[2964]";
+connectAttr "curve7_translateX.o" "utility_room_viewRN.phl[2965]";
+connectAttr "curve7_translateY.o" "utility_room_viewRN.phl[2966]";
+connectAttr "curve7_translateZ.o" "utility_room_viewRN.phl[2967]";
+connectAttr "curve7_visibility.o" "utility_room_viewRN.phl[2968]";
+connectAttr "curve7_rotateX.o" "utility_room_viewRN.phl[2969]";
+connectAttr "curve7_rotateY.o" "utility_room_viewRN.phl[2970]";
+connectAttr "curve7_rotateZ.o" "utility_room_viewRN.phl[2971]";
+connectAttr "curve7_scaleX.o" "utility_room_viewRN.phl[2972]";
+connectAttr "curve7_scaleY.o" "utility_room_viewRN.phl[2973]";
+connectAttr "curve7_scaleZ.o" "utility_room_viewRN.phl[2974]";
+connectAttr "curve8_translateX.o" "utility_room_viewRN.phl[2975]";
+connectAttr "curve8_translateY.o" "utility_room_viewRN.phl[2976]";
+connectAttr "curve8_translateZ.o" "utility_room_viewRN.phl[2977]";
+connectAttr "curve8_visibility.o" "utility_room_viewRN.phl[2978]";
+connectAttr "curve8_rotateX.o" "utility_room_viewRN.phl[2979]";
+connectAttr "curve8_rotateY.o" "utility_room_viewRN.phl[2980]";
+connectAttr "curve8_rotateZ.o" "utility_room_viewRN.phl[2981]";
+connectAttr "curve8_scaleX.o" "utility_room_viewRN.phl[2982]";
+connectAttr "curve8_scaleY.o" "utility_room_viewRN.phl[2983]";
+connectAttr "curve8_scaleZ.o" "utility_room_viewRN.phl[2984]";
+connectAttr "curve9_translateX.o" "utility_room_viewRN.phl[2985]";
+connectAttr "curve9_translateY.o" "utility_room_viewRN.phl[2986]";
+connectAttr "curve9_translateZ.o" "utility_room_viewRN.phl[2987]";
+connectAttr "curve9_visibility.o" "utility_room_viewRN.phl[2988]";
+connectAttr "curve9_rotateX.o" "utility_room_viewRN.phl[2989]";
+connectAttr "curve9_rotateY.o" "utility_room_viewRN.phl[2990]";
+connectAttr "curve9_rotateZ.o" "utility_room_viewRN.phl[2991]";
+connectAttr "curve9_scaleX.o" "utility_room_viewRN.phl[2992]";
+connectAttr "curve9_scaleY.o" "utility_room_viewRN.phl[2993]";
+connectAttr "curve9_scaleZ.o" "utility_room_viewRN.phl[2994]";
+connectAttr "curve10_translateX.o" "utility_room_viewRN.phl[2995]";
+connectAttr "curve10_translateY.o" "utility_room_viewRN.phl[2996]";
+connectAttr "curve10_translateZ.o" "utility_room_viewRN.phl[2997]";
+connectAttr "curve10_visibility.o" "utility_room_viewRN.phl[2998]";
+connectAttr "curve10_rotateX.o" "utility_room_viewRN.phl[2999]";
+connectAttr "curve10_rotateY.o" "utility_room_viewRN.phl[3000]";
+connectAttr "curve10_rotateZ.o" "utility_room_viewRN.phl[3001]";
+connectAttr "curve10_scaleX.o" "utility_room_viewRN.phl[3002]";
+connectAttr "curve10_scaleY.o" "utility_room_viewRN.phl[3003]";
+connectAttr "curve10_scaleZ.o" "utility_room_viewRN.phl[3004]";
+connectAttr "LeftArm_rotateX.o" "utility_room_viewRN.phl[3005]";
+connectAttr "LeftArm_rotateY.o" "utility_room_viewRN.phl[3006]";
+connectAttr "LeftArm_rotateZ.o" "utility_room_viewRN.phl[3007]";
+connectAttr "LeftArm_translateX.o" "utility_room_viewRN.phl[3008]";
+connectAttr "LeftArm_translateY.o" "utility_room_viewRN.phl[3009]";
+connectAttr "LeftArm_translateZ.o" "utility_room_viewRN.phl[3010]";
+connectAttr "LeftArm_visibility.o" "utility_room_viewRN.phl[3011]";
+connectAttr "LeftArm_scaleX.o" "utility_room_viewRN.phl[3012]";
+connectAttr "LeftArm_scaleY.o" "utility_room_viewRN.phl[3013]";
+connectAttr "LeftArm_scaleZ.o" "utility_room_viewRN.phl[3014]";
+connectAttr "controller_rightLeg1_visibility.o" "utility_room_viewRN.phl[3015]";
+connectAttr "controller_rightLeg1_translateX.o" "utility_room_viewRN.phl[3016]";
+connectAttr "controller_rightLeg1_translateY.o" "utility_room_viewRN.phl[3017]";
+connectAttr "controller_rightLeg1_translateZ.o" "utility_room_viewRN.phl[3018]";
+connectAttr "controller_rightLeg1_rotateX.o" "utility_room_viewRN.phl[3019]";
+connectAttr "controller_rightLeg1_rotateY.o" "utility_room_viewRN.phl[3020]";
+connectAttr "controller_rightLeg1_rotateZ.o" "utility_room_viewRN.phl[3021]";
+connectAttr "controller_rightLeg1_scaleX.o" "utility_room_viewRN.phl[3022]";
+connectAttr "controller_rightLeg1_scaleY.o" "utility_room_viewRN.phl[3023]";
+connectAttr "controller_rightLeg1_scaleZ.o" "utility_room_viewRN.phl[3024]";
+connectAttr "nurbsCircle8_visibility.o" "utility_room_viewRN.phl[3025]";
+connectAttr "nurbsCircle8_translateX.o" "utility_room_viewRN.phl[3026]";
+connectAttr "nurbsCircle8_translateY.o" "utility_room_viewRN.phl[3027]";
+connectAttr "nurbsCircle8_translateZ.o" "utility_room_viewRN.phl[3028]";
+connectAttr "nurbsCircle8_rotateX.o" "utility_room_viewRN.phl[3029]";
+connectAttr "nurbsCircle8_rotateY.o" "utility_room_viewRN.phl[3030]";
+connectAttr "nurbsCircle8_rotateZ.o" "utility_room_viewRN.phl[3031]";
+connectAttr "nurbsCircle8_scaleX.o" "utility_room_viewRN.phl[3032]";
+connectAttr "nurbsCircle8_scaleY.o" "utility_room_viewRN.phl[3033]";
+connectAttr "nurbsCircle8_scaleZ.o" "utility_room_viewRN.phl[3034]";
+connectAttr "LeftLeg_rotateX.o" "utility_room_viewRN.phl[3035]";
+connectAttr "LeftLeg_rotateY.o" "utility_room_viewRN.phl[3036]";
+connectAttr "LeftLeg_rotateZ.o" "utility_room_viewRN.phl[3037]";
+connectAttr "LeftLeg_translateX.o" "utility_room_viewRN.phl[3038]";
+connectAttr "LeftLeg_translateY.o" "utility_room_viewRN.phl[3039]";
+connectAttr "LeftLeg_translateZ.o" "utility_room_viewRN.phl[3040]";
+connectAttr "LeftLeg_visibility.o" "utility_room_viewRN.phl[3041]";
+connectAttr "LeftLeg_scaleX.o" "utility_room_viewRN.phl[3042]";
+connectAttr "LeftLeg_scaleY.o" "utility_room_viewRN.phl[3043]";
+connectAttr "LeftLeg_scaleZ.o" "utility_room_viewRN.phl[3044]";
+connectAttr "controller_rightArm_visibility.o" "utility_room_viewRN.phl[3045]";
+connectAttr "controller_rightArm_translateX.o" "utility_room_viewRN.phl[3046]";
+connectAttr "controller_rightArm_translateY.o" "utility_room_viewRN.phl[3047]";
+connectAttr "controller_rightArm_translateZ.o" "utility_room_viewRN.phl[3048]";
+connectAttr "controller_rightArm_rotateX.o" "utility_room_viewRN.phl[3049]";
+connectAttr "controller_rightArm_rotateY.o" "utility_room_viewRN.phl[3050]";
+connectAttr "controller_rightArm_rotateZ.o" "utility_room_viewRN.phl[3051]";
+connectAttr "controller_rightArm_scaleX.o" "utility_room_viewRN.phl[3052]";
+connectAttr "controller_rightArm_scaleY.o" "utility_room_viewRN.phl[3053]";
+connectAttr "controller_rightArm_scaleZ.o" "utility_room_viewRN.phl[3054]";
+connectAttr "controller_rightWrist_translateX.o" "utility_room_viewRN.phl[3055]"
+		;
+connectAttr "controller_rightWrist_translateY.o" "utility_room_viewRN.phl[3056]"
+		;
+connectAttr "controller_rightWrist_translateZ.o" "utility_room_viewRN.phl[3057]"
+		;
+connectAttr "controller_rightWrist_rotateX.o" "utility_room_viewRN.phl[3058]";
+connectAttr "controller_rightWrist_rotateY.o" "utility_room_viewRN.phl[3059]";
+connectAttr "controller_rightWrist_rotateZ.o" "utility_room_viewRN.phl[3060]";
+connectAttr "controller_rightWrist_scaleX.o" "utility_room_viewRN.phl[3061]";
+connectAttr "controller_rightWrist_scaleY.o" "utility_room_viewRN.phl[3062]";
+connectAttr "controller_rightWrist_scaleZ.o" "utility_room_viewRN.phl[3063]";
+connectAttr "controller_rightWrist_visibility.o" "utility_room_viewRN.phl[3064]"
+		;
+connectAttr "nurbsCircle1_translateX1.o" "utility_room_viewRN.phl[3065]";
+connectAttr "nurbsCircle1_translateY1.o" "utility_room_viewRN.phl[3066]";
+connectAttr "nurbsCircle1_translateZ1.o" "utility_room_viewRN.phl[3067]";
+connectAttr "nurbsCircle1_visibility1.o" "utility_room_viewRN.phl[3068]";
+connectAttr "nurbsCircle1_rotateX1.o" "utility_room_viewRN.phl[3069]";
+connectAttr "nurbsCircle1_rotateY1.o" "utility_room_viewRN.phl[3070]";
+connectAttr "nurbsCircle1_rotateZ1.o" "utility_room_viewRN.phl[3071]";
+connectAttr "nurbsCircle1_scaleX1.o" "utility_room_viewRN.phl[3072]";
+connectAttr "nurbsCircle1_scaleY1.o" "utility_room_viewRN.phl[3073]";
+connectAttr "nurbsCircle1_scaleZ1.o" "utility_room_viewRN.phl[3074]";
+connectAttr "nurbsCircle9_translateX.o" "utility_room_viewRN.phl[3075]";
+connectAttr "nurbsCircle9_translateY.o" "utility_room_viewRN.phl[3076]";
+connectAttr "nurbsCircle9_translateZ.o" "utility_room_viewRN.phl[3077]";
+connectAttr "nurbsCircle9_visibility.o" "utility_room_viewRN.phl[3078]";
+connectAttr "nurbsCircle9_rotateX.o" "utility_room_viewRN.phl[3079]";
+connectAttr "nurbsCircle9_rotateY.o" "utility_room_viewRN.phl[3080]";
+connectAttr "nurbsCircle9_rotateZ.o" "utility_room_viewRN.phl[3081]";
+connectAttr "nurbsCircle9_scaleX.o" "utility_room_viewRN.phl[3082]";
+connectAttr "nurbsCircle9_scaleY.o" "utility_room_viewRN.phl[3083]";
+connectAttr "nurbsCircle9_scaleZ.o" "utility_room_viewRN.phl[3084]";
+connectAttr "nurbsCircle10_translateX.o" "utility_room_viewRN.phl[3085]";
+connectAttr "nurbsCircle10_translateY.o" "utility_room_viewRN.phl[3086]";
+connectAttr "nurbsCircle10_translateZ.o" "utility_room_viewRN.phl[3087]";
+connectAttr "nurbsCircle10_visibility.o" "utility_room_viewRN.phl[3088]";
+connectAttr "nurbsCircle10_rotateX.o" "utility_room_viewRN.phl[3089]";
+connectAttr "nurbsCircle10_rotateY.o" "utility_room_viewRN.phl[3090]";
+connectAttr "nurbsCircle10_rotateZ.o" "utility_room_viewRN.phl[3091]";
+connectAttr "nurbsCircle10_scaleX.o" "utility_room_viewRN.phl[3092]";
+connectAttr "nurbsCircle10_scaleY.o" "utility_room_viewRN.phl[3093]";
+connectAttr "nurbsCircle10_scaleZ.o" "utility_room_viewRN.phl[3094]";
+connectAttr "nurbsCircle11_translateX.o" "utility_room_viewRN.phl[3095]";
+connectAttr "nurbsCircle11_translateY.o" "utility_room_viewRN.phl[3096]";
+connectAttr "nurbsCircle11_translateZ.o" "utility_room_viewRN.phl[3097]";
+connectAttr "nurbsCircle11_visibility.o" "utility_room_viewRN.phl[3098]";
+connectAttr "nurbsCircle11_rotateX.o" "utility_room_viewRN.phl[3099]";
+connectAttr "nurbsCircle11_rotateY.o" "utility_room_viewRN.phl[3100]";
+connectAttr "nurbsCircle11_rotateZ.o" "utility_room_viewRN.phl[3101]";
+connectAttr "nurbsCircle11_scaleX.o" "utility_room_viewRN.phl[3102]";
+connectAttr "nurbsCircle11_scaleY.o" "utility_room_viewRN.phl[3103]";
+connectAttr "nurbsCircle11_scaleZ.o" "utility_room_viewRN.phl[3104]";
+connectAttr "nurbsCircle12_translateX.o" "utility_room_viewRN.phl[3105]";
+connectAttr "nurbsCircle12_translateY.o" "utility_room_viewRN.phl[3106]";
+connectAttr "nurbsCircle12_translateZ.o" "utility_room_viewRN.phl[3107]";
+connectAttr "nurbsCircle12_visibility.o" "utility_room_viewRN.phl[3108]";
+connectAttr "nurbsCircle12_rotateX.o" "utility_room_viewRN.phl[3109]";
+connectAttr "nurbsCircle12_rotateY.o" "utility_room_viewRN.phl[3110]";
+connectAttr "nurbsCircle12_rotateZ.o" "utility_room_viewRN.phl[3111]";
+connectAttr "nurbsCircle12_scaleX.o" "utility_room_viewRN.phl[3112]";
+connectAttr "nurbsCircle12_scaleY.o" "utility_room_viewRN.phl[3113]";
+connectAttr "nurbsCircle12_scaleZ.o" "utility_room_viewRN.phl[3114]";
+connectAttr "curve1_translateX.o" "utility_room_viewRN.phl[3115]";
+connectAttr "curve1_translateY.o" "utility_room_viewRN.phl[3116]";
+connectAttr "curve1_translateZ.o" "utility_room_viewRN.phl[3117]";
+connectAttr "curve1_visibility.o" "utility_room_viewRN.phl[3118]";
+connectAttr "curve1_rotateX.o" "utility_room_viewRN.phl[3119]";
+connectAttr "curve1_rotateY.o" "utility_room_viewRN.phl[3120]";
+connectAttr "curve1_rotateZ.o" "utility_room_viewRN.phl[3121]";
+connectAttr "curve1_scaleX.o" "utility_room_viewRN.phl[3122]";
+connectAttr "curve1_scaleY.o" "utility_room_viewRN.phl[3123]";
+connectAttr "curve1_scaleZ.o" "utility_room_viewRN.phl[3124]";
+connectAttr "curve2_translateX.o" "utility_room_viewRN.phl[3125]";
+connectAttr "curve2_translateY.o" "utility_room_viewRN.phl[3126]";
+connectAttr "curve2_translateZ.o" "utility_room_viewRN.phl[3127]";
+connectAttr "curve2_visibility.o" "utility_room_viewRN.phl[3128]";
+connectAttr "curve2_rotateX.o" "utility_room_viewRN.phl[3129]";
+connectAttr "curve2_rotateY.o" "utility_room_viewRN.phl[3130]";
+connectAttr "curve2_rotateZ.o" "utility_room_viewRN.phl[3131]";
+connectAttr "curve2_scaleX.o" "utility_room_viewRN.phl[3132]";
+connectAttr "curve2_scaleY.o" "utility_room_viewRN.phl[3133]";
+connectAttr "curve2_scaleZ.o" "utility_room_viewRN.phl[3134]";
+connectAttr "curve3_translateX.o" "utility_room_viewRN.phl[3135]";
+connectAttr "curve3_translateY.o" "utility_room_viewRN.phl[3136]";
+connectAttr "curve3_translateZ.o" "utility_room_viewRN.phl[3137]";
+connectAttr "curve3_visibility.o" "utility_room_viewRN.phl[3138]";
+connectAttr "curve3_rotateX.o" "utility_room_viewRN.phl[3139]";
+connectAttr "curve3_rotateY.o" "utility_room_viewRN.phl[3140]";
+connectAttr "curve3_rotateZ.o" "utility_room_viewRN.phl[3141]";
+connectAttr "curve3_scaleX.o" "utility_room_viewRN.phl[3142]";
+connectAttr "curve3_scaleY.o" "utility_room_viewRN.phl[3143]";
+connectAttr "curve3_scaleZ.o" "utility_room_viewRN.phl[3144]";
+connectAttr "curve4_translateX.o" "utility_room_viewRN.phl[3145]";
+connectAttr "curve4_translateY.o" "utility_room_viewRN.phl[3146]";
+connectAttr "curve4_translateZ.o" "utility_room_viewRN.phl[3147]";
+connectAttr "curve4_visibility.o" "utility_room_viewRN.phl[3148]";
+connectAttr "curve4_rotateX.o" "utility_room_viewRN.phl[3149]";
+connectAttr "curve4_rotateY.o" "utility_room_viewRN.phl[3150]";
+connectAttr "curve4_rotateZ.o" "utility_room_viewRN.phl[3151]";
+connectAttr "curve4_scaleX.o" "utility_room_viewRN.phl[3152]";
+connectAttr "curve4_scaleY.o" "utility_room_viewRN.phl[3153]";
+connectAttr "curve4_scaleZ.o" "utility_room_viewRN.phl[3154]";
+connectAttr "curve5_translateX.o" "utility_room_viewRN.phl[3155]";
+connectAttr "curve5_translateY.o" "utility_room_viewRN.phl[3156]";
+connectAttr "curve5_translateZ.o" "utility_room_viewRN.phl[3157]";
+connectAttr "curve5_visibility.o" "utility_room_viewRN.phl[3158]";
+connectAttr "curve5_rotateX.o" "utility_room_viewRN.phl[3159]";
+connectAttr "curve5_rotateY.o" "utility_room_viewRN.phl[3160]";
+connectAttr "curve5_rotateZ.o" "utility_room_viewRN.phl[3161]";
+connectAttr "curve5_scaleX.o" "utility_room_viewRN.phl[3162]";
+connectAttr "curve5_scaleY.o" "utility_room_viewRN.phl[3163]";
+connectAttr "curve5_scaleZ.o" "utility_room_viewRN.phl[3164]";
+connectAttr "RightArm_rotateX.o" "utility_room_viewRN.phl[3165]";
+connectAttr "RightArm_rotateY.o" "utility_room_viewRN.phl[3166]";
+connectAttr "RightArm_rotateZ.o" "utility_room_viewRN.phl[3167]";
+connectAttr "RightArm_translateX.o" "utility_room_viewRN.phl[3168]";
+connectAttr "RightArm_translateY.o" "utility_room_viewRN.phl[3169]";
+connectAttr "RightArm_translateZ.o" "utility_room_viewRN.phl[3170]";
+connectAttr "RightArm_visibility.o" "utility_room_viewRN.phl[3171]";
+connectAttr "RightArm_scaleX.o" "utility_room_viewRN.phl[3172]";
+connectAttr "RightArm_scaleY.o" "utility_room_viewRN.phl[3173]";
+connectAttr "RightArm_scaleZ.o" "utility_room_viewRN.phl[3174]";
+connectAttr "blendShape1_oh_shit.o" "utility_room_viewRN.phl[3175]";
+connectAttr "blendShape1_eyes_tight.o" "utility_room_viewRN.phl[3176]";
+connectAttr "blendShape1_DO_NOT_TOUCH.o" "utility_room_viewRN.phl[3177]";
+connectAttr "blendShape1_smile_closed_mouth.o" "utility_room_viewRN.phl[3178]";
+connectAttr "blendShape1_leftFwd.o" "utility_room_viewRN.phl[3179]";
+connectAttr "blendShape1_rightFwd.o" "utility_room_viewRN.phl[3180]";
+connectAttr "blendShape1_blink.o" "utility_room_viewRN.phl[3181]";
+connectAttr "blendShape1_leftSide.o" "utility_room_viewRN.phl[3182]";
+connectAttr "blendShape1_rightSide.o" "utility_room_viewRN.phl[3183]";
+connectAttr "blendShape1_nose.o" "utility_room_viewRN.phl[3184]";
+connectAttr "blendShape1_neutral.o" "utility_room_viewRN.phl[3185]";
+connectAttr "blendShape1_super_angry.o" "utility_room_viewRN.phl[3186]";
+connectAttr "blendShape1_slightly_angry.o" "utility_room_viewRN.phl[3187]";
+connectAttr "blendShape1_smile1.o" "utility_room_viewRN.phl[3188]";
+connectAttr "blendShape1_pervy.o" "utility_room_viewRN.phl[3189]";
+connectAttr "blendShape1_smile.o" "utility_room_viewRN.phl[3190]";
+connectAttr "at_dryer_visibility.o" "utility_room_viewRN.phl[3323]";
+connectAttr "at_dryer_translateX.o" "utility_room_viewRN.phl[3324]";
+connectAttr "at_dryer_translateY.o" "utility_room_viewRN.phl[3325]";
+connectAttr "at_dryer_translateZ.o" "utility_room_viewRN.phl[3326]";
+connectAttr "at_dryer_rotateX.o" "utility_room_viewRN.phl[3327]";
+connectAttr "at_dryer_rotateY.o" "utility_room_viewRN.phl[3328]";
+connectAttr "at_dryer_rotateZ.o" "utility_room_viewRN.phl[3329]";
+connectAttr "at_dryer_scaleX.o" "utility_room_viewRN.phl[3330]";
+connectAttr "at_dryer_scaleY.o" "utility_room_viewRN.phl[3331]";
+connectAttr "at_dryer_scaleZ.o" "utility_room_viewRN.phl[3332]";
+connectAttr "at_dryerShape_focalLength.o" "utility_room_viewRN.phl[3333]";
+connectAttr "pieceoshit_cloth.di" "utility_room_viewRN.phl[3300]";
+connectAttr "utility_room_view_house_latest_bedroom_latest_nClothShape1Cache1.ir" "utility_room_viewRN.phl[3301]"
+		;
+connectAttr "utility_room_view_house_latest_bedroom_latest_nClothShape1Cache1.ocd[0]" "utility_room_viewRN.phl[3302]"
+		;
+connectAttr "controller_main01_translateX.o" "utility_room_viewRN.phl[2416]";
+connectAttr "controller_main01_translateY1.o" "utility_room_viewRN.phl[2417]";
+connectAttr "controller_main01_translateZ.o" "utility_room_viewRN.phl[2418]";
+connectAttr "controller_main01_rotateX1.o" "utility_room_viewRN.phl[2419]";
+connectAttr "controller_main01_rotateY.o" "utility_room_viewRN.phl[2420]";
+connectAttr "controller_main01_rotateZ1.o" "utility_room_viewRN.phl[2421]";
+connectAttr "controller_main01_scaleX.o" "utility_room_viewRN.phl[2422]";
+connectAttr "controller_main01_scaleY.o" "utility_room_viewRN.phl[2423]";
+connectAttr "controller_main01_scaleZ.o" "utility_room_viewRN.phl[2424]";
+connectAttr "pig_right_eye_rotateX.o" "utility_room_viewRN.phl[2425]";
+connectAttr "pig_right_eye_rotateY.o" "utility_room_viewRN.phl[2426]";
+connectAttr "pig_right_eye_rotateZ.o" "utility_room_viewRN.phl[2427]";
+connectAttr "pig_right_eye_visibility.o" "utility_room_viewRN.phl[2428]";
+connectAttr "pig_right_eye_translateX.o" "utility_room_viewRN.phl[2429]";
+connectAttr "pig_right_eye_translateY.o" "utility_room_viewRN.phl[2430]";
+connectAttr "pig_right_eye_translateZ.o" "utility_room_viewRN.phl[2431]";
+connectAttr "pig_right_eye_scaleX.o" "utility_room_viewRN.phl[2432]";
+connectAttr "pig_right_eye_scaleY.o" "utility_room_viewRN.phl[2433]";
+connectAttr "pig_right_eye_scaleZ.o" "utility_room_viewRN.phl[2434]";
+connectAttr "pig_left_eye_rotateX.o" "utility_room_viewRN.phl[2435]";
+connectAttr "pig_left_eye_rotateY.o" "utility_room_viewRN.phl[2436]";
+connectAttr "pig_left_eye_rotateZ.o" "utility_room_viewRN.phl[2437]";
+connectAttr "pig_left_eye_visibility.o" "utility_room_viewRN.phl[2438]";
+connectAttr "pig_left_eye_translateX.o" "utility_room_viewRN.phl[2439]";
+connectAttr "pig_left_eye_translateY.o" "utility_room_viewRN.phl[2440]";
+connectAttr "pig_left_eye_translateZ.o" "utility_room_viewRN.phl[2441]";
+connectAttr "pig_left_eye_scaleX.o" "utility_room_viewRN.phl[2442]";
+connectAttr "pig_left_eye_scaleY.o" "utility_room_viewRN.phl[2443]";
+connectAttr "pig_left_eye_scaleZ.o" "utility_room_viewRN.phl[2444]";
+connectAttr "stretchr_ctrl01_translateX.o" "utility_room_viewRN.phl[2445]";
+connectAttr "stretchr_ctrl01_translateY.o" "utility_room_viewRN.phl[2446]";
+connectAttr "stretchr_ctrl01_translateZ.o" "utility_room_viewRN.phl[2447]";
+connectAttr "stretchr_ctrl01_rotateX.o" "utility_room_viewRN.phl[2448]";
+connectAttr "stretchr_ctrl01_rotateY.o" "utility_room_viewRN.phl[2449]";
+connectAttr "stretchr_ctrl01_rotateZ.o" "utility_room_viewRN.phl[2450]";
+connectAttr "stretchr_ctrl01_scaleX.o" "utility_room_viewRN.phl[2451]";
+connectAttr "stretchr_ctrl01_scaleY.o" "utility_room_viewRN.phl[2452]";
+connectAttr "stretchr_ctrl01_scaleZ.o" "utility_room_viewRN.phl[2453]";
+connectAttr "stretchr_ctrl01_visibility.o" "utility_room_viewRN.phl[2454]";
+connectAttr "controller_L_backfoot01_rotateX.o" "utility_room_viewRN.phl[2455]";
+connectAttr "controller_L_backfoot01_rotateY.o" "utility_room_viewRN.phl[2456]";
+connectAttr "controller_L_backfoot01_rotateZ.o" "utility_room_viewRN.phl[2457]";
+connectAttr "controller_L_backfoot01_translateX.o" "utility_room_viewRN.phl[2458]"
+		;
+connectAttr "controller_L_backfoot01_translateY.o" "utility_room_viewRN.phl[2459]"
+		;
+connectAttr "controller_L_backfoot01_translateZ.o" "utility_room_viewRN.phl[2460]"
+		;
+connectAttr "controller_L_backfoot01_scaleX.o" "utility_room_viewRN.phl[2461]";
+connectAttr "controller_L_backfoot01_scaleY.o" "utility_room_viewRN.phl[2462]";
+connectAttr "controller_L_backfoot01_scaleZ.o" "utility_room_viewRN.phl[2463]";
+connectAttr "controller_R_backfoot01_rotateX.o" "utility_room_viewRN.phl[2464]";
+connectAttr "controller_R_backfoot01_rotateY.o" "utility_room_viewRN.phl[2465]";
+connectAttr "controller_R_backfoot01_rotateZ.o" "utility_room_viewRN.phl[2466]";
+connectAttr "controller_R_backfoot01_translateX.o" "utility_room_viewRN.phl[2467]"
+		;
+connectAttr "controller_R_backfoot01_translateY.o" "utility_room_viewRN.phl[2468]"
+		;
+connectAttr "controller_R_backfoot01_translateZ.o" "utility_room_viewRN.phl[2469]"
+		;
+connectAttr "controller_R_backfoot01_scaleX.o" "utility_room_viewRN.phl[2470]";
+connectAttr "controller_R_backfoot01_scaleY.o" "utility_room_viewRN.phl[2471]";
+connectAttr "controller_R_backfoot01_scaleZ.o" "utility_room_viewRN.phl[2472]";
+connectAttr "hip_rotation_ctrl01_translateX.o" "utility_room_viewRN.phl[2473]";
+connectAttr "hip_rotation_ctrl01_translateY.o" "utility_room_viewRN.phl[2474]";
+connectAttr "hip_rotation_ctrl01_translateZ.o" "utility_room_viewRN.phl[2475]";
+connectAttr "hip_rotation_ctrl01_rotateX.o" "utility_room_viewRN.phl[2476]";
+connectAttr "hip_rotation_ctrl01_rotateY.o" "utility_room_viewRN.phl[2477]";
+connectAttr "hip_rotation_ctrl01_rotateZ.o" "utility_room_viewRN.phl[2478]";
+connectAttr "hip_rotation_ctrl01_scaleX.o" "utility_room_viewRN.phl[2479]";
+connectAttr "hip_rotation_ctrl01_scaleY.o" "utility_room_viewRN.phl[2480]";
+connectAttr "hip_rotation_ctrl01_scaleZ.o" "utility_room_viewRN.phl[2481]";
+connectAttr "utility_room_viewRN.phl[2482]" "tail_2control01_parentConstraint1.tg[0].tt"
+		;
+connectAttr "pairBlend2.otx" "utility_room_viewRN.phl[2483]";
+connectAttr "pairBlend2.oty" "utility_room_viewRN.phl[2484]";
+connectAttr "pairBlend2.otz" "utility_room_viewRN.phl[2485]";
+connectAttr "utility_room_viewRN.phl[2486]" "tail_2control01_parentConstraint1.tg[0].trp"
+		;
+connectAttr "utility_room_viewRN.phl[2487]" "tail_2control01_parentConstraint1.tg[0].trt"
+		;
+connectAttr "utility_room_viewRN.phl[2488]" "tail_2control01_parentConstraint1.tg[0].tr"
+		;
+connectAttr "pairBlend2.orx" "utility_room_viewRN.phl[2489]";
+connectAttr "pairBlend2.ory" "utility_room_viewRN.phl[2490]";
+connectAttr "pairBlend2.orz" "utility_room_viewRN.phl[2491]";
+connectAttr "utility_room_viewRN.phl[2492]" "tail_2control01_parentConstraint1.tg[0].tro"
+		;
+connectAttr "utility_room_viewRN.phl[2493]" "tail_2control01_parentConstraint1.tg[0].ts"
+		;
+connectAttr "tail_1control01_scaleX.o" "utility_room_viewRN.phl[2494]";
+connectAttr "tail_1control01_scaleY.o" "utility_room_viewRN.phl[2495]";
+connectAttr "tail_1control01_scaleZ.o" "utility_room_viewRN.phl[2496]";
+connectAttr "utility_room_viewRN.phl[2497]" "tail_2control01_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "utility_room_viewRN.phl[2498]" "pairBlend2.w";
+connectAttr "tail_1control01_blendParent1.o" "utility_room_viewRN.phl[2499]";
+connectAttr "utility_room_viewRN.phl[2500]" "tail_3control01_parentConstraint1.tg[0].tt"
+		;
+connectAttr "pairBlend4.otx" "utility_room_viewRN.phl[2501]";
+connectAttr "pairBlend4.oty" "utility_room_viewRN.phl[2502]";
+connectAttr "pairBlend4.otz" "utility_room_viewRN.phl[2503]";
+connectAttr "utility_room_viewRN.phl[2504]" "tail_2control01_parentConstraint1.crp"
+		;
+connectAttr "utility_room_viewRN.phl[2505]" "tail_3control01_parentConstraint1.tg[0].trp"
+		;
+connectAttr "utility_room_viewRN.phl[2506]" "tail_2control01_parentConstraint1.crt"
+		;
+connectAttr "utility_room_viewRN.phl[2507]" "tail_3control01_parentConstraint1.tg[0].trt"
+		;
+connectAttr "utility_room_viewRN.phl[2508]" "tail_3control01_parentConstraint1.tg[0].tr"
+		;
+connectAttr "pairBlend4.orx" "utility_room_viewRN.phl[2509]";
+connectAttr "pairBlend4.ory" "utility_room_viewRN.phl[2510]";
+connectAttr "pairBlend4.orz" "utility_room_viewRN.phl[2511]";
+connectAttr "utility_room_viewRN.phl[2512]" "tail_2control01_parentConstraint1.cro"
+		;
+connectAttr "utility_room_viewRN.phl[2513]" "tail_3control01_parentConstraint1.tg[0].tro"
+		;
+connectAttr "utility_room_viewRN.phl[2514]" "tail_3control01_parentConstraint1.tg[0].ts"
+		;
+connectAttr "tail_2control01_scaleX.o" "utility_room_viewRN.phl[2515]";
+connectAttr "tail_2control01_scaleY.o" "utility_room_viewRN.phl[2516]";
+connectAttr "tail_2control01_scaleZ.o" "utility_room_viewRN.phl[2517]";
+connectAttr "utility_room_viewRN.phl[2518]" "tail_3control01_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "utility_room_viewRN.phl[2519]" "pairBlend4.w";
+connectAttr "tail_2control01_blendParent1.o" "utility_room_viewRN.phl[2520]";
+connectAttr "utility_room_viewRN.phl[2521]" "tail_2control01_parentConstraint1.cpim"
+		;
+connectAttr "utility_room_viewRN.phl[2522]" "tail_4control01_parentConstraint1.tg[0].tt"
+		;
+connectAttr "tail_3control01_parentConstraint1.ctx" "utility_room_viewRN.phl[2523]"
+		;
+connectAttr "tail_3control01_parentConstraint1.cty" "utility_room_viewRN.phl[2524]"
+		;
+connectAttr "tail_3control01_parentConstraint1.ctz" "utility_room_viewRN.phl[2525]"
+		;
+connectAttr "utility_room_viewRN.phl[2526]" "tail_3control01_parentConstraint1.crp"
+		;
+connectAttr "utility_room_viewRN.phl[2527]" "tail_4control01_parentConstraint1.tg[0].trp"
+		;
+connectAttr "utility_room_viewRN.phl[2528]" "tail_3control01_parentConstraint1.crt"
+		;
+connectAttr "utility_room_viewRN.phl[2529]" "tail_4control01_parentConstraint1.tg[0].trt"
+		;
+connectAttr "utility_room_viewRN.phl[2530]" "tail_4control01_parentConstraint1.tg[0].tr"
+		;
+connectAttr "tail_3control01_parentConstraint1.crx" "utility_room_viewRN.phl[2531]"
+		;
+connectAttr "tail_3control01_parentConstraint1.cry" "utility_room_viewRN.phl[2532]"
+		;
+connectAttr "tail_3control01_parentConstraint1.crz" "utility_room_viewRN.phl[2533]"
+		;
+connectAttr "utility_room_viewRN.phl[2534]" "tail_3control01_parentConstraint1.cro"
+		;
+connectAttr "utility_room_viewRN.phl[2535]" "tail_4control01_parentConstraint1.tg[0].tro"
+		;
+connectAttr "utility_room_viewRN.phl[2536]" "tail_4control01_parentConstraint1.tg[0].ts"
+		;
+connectAttr "utility_room_viewRN.phl[2537]" "tail_4control01_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "utility_room_viewRN.phl[2538]" "tail_3control01_parentConstraint1.cpim"
+		;
+connectAttr "tail_4control01_parentConstraint1.ctx" "utility_room_viewRN.phl[2539]"
+		;
+connectAttr "tail_4control01_parentConstraint1.cty" "utility_room_viewRN.phl[2540]"
+		;
+connectAttr "tail_4control01_parentConstraint1.ctz" "utility_room_viewRN.phl[2541]"
+		;
+connectAttr "utility_room_viewRN.phl[2542]" "tail_4control01_parentConstraint1.crp"
+		;
+connectAttr "utility_room_viewRN.phl[2543]" "tail_4control01_parentConstraint1.crt"
+		;
+connectAttr "tail_4control01_parentConstraint1.crx" "utility_room_viewRN.phl[2544]"
+		;
+connectAttr "tail_4control01_parentConstraint1.cry" "utility_room_viewRN.phl[2545]"
+		;
+connectAttr "tail_4control01_parentConstraint1.crz" "utility_room_viewRN.phl[2546]"
+		;
+connectAttr "utility_room_viewRN.phl[2547]" "tail_4control01_parentConstraint1.cro"
+		;
+connectAttr "utility_room_viewRN.phl[2548]" "tail_4control01_parentConstraint1.cpim"
+		;
+connectAttr "stretchf_ctrl01_translateX.o" "utility_room_viewRN.phl[2549]";
+connectAttr "stretchf_ctrl01_translateY.o" "utility_room_viewRN.phl[2550]";
+connectAttr "stretchf_ctrl01_translateZ.o" "utility_room_viewRN.phl[2551]";
+connectAttr "stretchf_ctrl01_rotateX.o" "utility_room_viewRN.phl[2552]";
+connectAttr "stretchf_ctrl01_rotateY.o" "utility_room_viewRN.phl[2553]";
+connectAttr "stretchf_ctrl01_rotateZ.o" "utility_room_viewRN.phl[2554]";
+connectAttr "stretchf_ctrl01_scaleX.o" "utility_room_viewRN.phl[2555]";
+connectAttr "stretchf_ctrl01_scaleY.o" "utility_room_viewRN.phl[2556]";
+connectAttr "stretchf_ctrl01_scaleZ.o" "utility_room_viewRN.phl[2557]";
+connectAttr "stretchf_ctrl01_visibility.o" "utility_room_viewRN.phl[2558]";
+connectAttr "controller_L_frontfoot01_rotateX.o" "utility_room_viewRN.phl[2559]"
+		;
+connectAttr "controller_L_frontfoot01_rotateY.o" "utility_room_viewRN.phl[2560]"
+		;
+connectAttr "controller_L_frontfoot01_rotateZ.o" "utility_room_viewRN.phl[2561]"
+		;
+connectAttr "controller_L_frontfoot01_translateX.o" "utility_room_viewRN.phl[2562]"
+		;
+connectAttr "controller_L_frontfoot01_translateY.o" "utility_room_viewRN.phl[2563]"
+		;
+connectAttr "controller_L_frontfoot01_translateZ.o" "utility_room_viewRN.phl[2564]"
+		;
+connectAttr "controller_L_frontfoot01_scaleX.o" "utility_room_viewRN.phl[2565]";
+connectAttr "controller_L_frontfoot01_scaleY.o" "utility_room_viewRN.phl[2566]";
+connectAttr "controller_L_frontfoot01_scaleZ.o" "utility_room_viewRN.phl[2567]";
+connectAttr "controller_R_frontfoot01_rotateX.o" "utility_room_viewRN.phl[2568]"
+		;
+connectAttr "controller_R_frontfoot01_rotateY.o" "utility_room_viewRN.phl[2569]"
+		;
+connectAttr "controller_R_frontfoot01_rotateZ.o" "utility_room_viewRN.phl[2570]"
+		;
+connectAttr "controller_R_frontfoot01_translateX.o" "utility_room_viewRN.phl[2571]"
+		;
+connectAttr "controller_R_frontfoot01_translateY.o" "utility_room_viewRN.phl[2572]"
+		;
+connectAttr "controller_R_frontfoot01_translateZ.o" "utility_room_viewRN.phl[2573]"
+		;
+connectAttr "controller_R_frontfoot01_scaleX.o" "utility_room_viewRN.phl[2574]";
+connectAttr "controller_R_frontfoot01_scaleY.o" "utility_room_viewRN.phl[2575]";
+connectAttr "controller_R_frontfoot01_scaleZ.o" "utility_room_viewRN.phl[2576]";
+connectAttr "pairBlend5.oty" "utility_room_viewRN.phl[2577]";
+connectAttr "shoulders_rotation_ctrl01_translateX.o" "utility_room_viewRN.phl[2578]"
+		;
+connectAttr "shoulders_rotation_ctrl01_translateZ.o" "utility_room_viewRN.phl[2579]"
+		;
+connectAttr "pairBlend5.orx" "utility_room_viewRN.phl[2580]";
+connectAttr "pairBlend5.ory" "utility_room_viewRN.phl[2581]";
+connectAttr "pairBlend5.orz" "utility_room_viewRN.phl[2582]";
+connectAttr "shoulders_rotation_ctrl01_scaleX.o" "utility_room_viewRN.phl[2583]"
+		;
+connectAttr "shoulders_rotation_ctrl01_scaleY.o" "utility_room_viewRN.phl[2584]"
+		;
+connectAttr "shoulders_rotation_ctrl01_scaleZ.o" "utility_room_viewRN.phl[2585]"
+		;
+connectAttr "utility_room_viewRN.phl[2586]" "pairBlend5.w";
+connectAttr "shoulders_rotation_ctrl01_blendParent1.o" "utility_room_viewRN.phl[2587]"
+		;
+connectAttr "utility_room_viewRN.phl[2588]" "pairBlend5.ity2";
+connectAttr "utility_room_viewRN.phl[2589]" "pairBlend5.irx2";
+connectAttr "utility_room_viewRN.phl[2590]" "pairBlend5.iry2";
+connectAttr "utility_room_viewRN.phl[2591]" "pairBlend5.irz2";
+connectAttr "head_control_translateX.o" "utility_room_viewRN.phl[2592]";
+connectAttr "head_control_translateY.o" "utility_room_viewRN.phl[2593]";
+connectAttr "head_control_translateZ.o" "utility_room_viewRN.phl[2594]";
+connectAttr "head_control_rotateX.o" "utility_room_viewRN.phl[2595]";
+connectAttr "head_control_rotateY.o" "utility_room_viewRN.phl[2596]";
+connectAttr "head_control_rotateZ.o" "utility_room_viewRN.phl[2597]";
+connectAttr "head_control_scaleX.o" "utility_room_viewRN.phl[2598]";
+connectAttr "head_control_scaleY.o" "utility_room_viewRN.phl[2599]";
+connectAttr "head_control_scaleZ.o" "utility_room_viewRN.phl[2600]";
+connectAttr "spine_spline_ctrl_translateX.o" "utility_room_viewRN.phl[2601]";
+connectAttr "spine_spline_ctrl_translateZ.o" "utility_room_viewRN.phl[2602]";
+connectAttr "spine_spline_ctrl_translateY.o" "utility_room_viewRN.phl[2603]";
+connectAttr "spine_spline_ctrl_visibility.o" "utility_room_viewRN.phl[2604]";
+connectAttr "vertebrae_flexi_anim_mid01_followStart.o" "utility_room_viewRN.phl[2605]"
+		;
+connectAttr "vertebrae_flexi_anim_mid01_translateX.o" "utility_room_viewRN.phl[2606]"
+		;
+connectAttr "vertebrae_flexi_anim_mid01_translateY.o" "utility_room_viewRN.phl[2607]"
+		;
+connectAttr "vertebrae_flexi_anim_mid01_translateZ.o" "utility_room_viewRN.phl[2608]"
+		;
+connectAttr "vertebrae_flexi_anim_mid01_rotateZ.o" "utility_room_viewRN.phl[2609]"
+		;
+connectAttr "vertebrae_flexi_anim_mid01_rotateX.o" "utility_room_viewRN.phl[2610]"
+		;
+connectAttr "vertebrae_flexi_anim_mid01_rotateY.o" "utility_room_viewRN.phl[2611]"
+		;
+connectAttr "vertebrae_flexi_anim_mid01_scaleX.o" "utility_room_viewRN.phl[2612]"
+		;
+connectAttr "vertebrae_flexi_anim_mid01_scaleY.o" "utility_room_viewRN.phl[2613]"
+		;
+connectAttr "vertebrae_flexi_anim_mid01_scaleZ.o" "utility_room_viewRN.phl[2614]"
+		;
+connectAttr "vertebrae_flexi_anim_mid01_visibility.o" "utility_room_viewRN.phl[2615]"
 		;
 connectAttr "utility_room_viewRN.phl[77]" "undiesShapeDeformed.i";
 connectAttr "tail_2control01_parentConstraint1.w0" "tail_2control01_parentConstraint1.tg[0].tw"
@@ -34085,6 +34363,11 @@ connectAttr "tail_4control01_parentConstraint1.w0" "tail_4control01_parentConstr
 		;
 connectAttr "global_ctrl_parentConstraint1.w0" "global_ctrl_parentConstraint1.tg[0].tw"
 		;
+connectAttr ":mentalrayGlobals.msg" ":mentalrayItemsList.glb";
+connectAttr ":miDefaultOptions.msg" ":mentalrayItemsList.opt" -na;
+connectAttr ":miDefaultFramebuffer.msg" ":mentalrayItemsList.fb" -na;
+connectAttr ":miDefaultOptions.msg" ":mentalrayGlobals.opt";
+connectAttr ":miDefaultFramebuffer.msg" ":mentalrayGlobals.fb";
 connectAttr ":rmanFinalGlobals.msg" ":renderManRISGlobals.p" -na;
 connectAttr ":rmanPreviewGlobals.msg" ":renderManRISGlobals.p" -na;
 connectAttr ":rmanRerenderGlobals.msg" ":renderManRISGlobals.p" -na;
@@ -34191,11 +34474,6 @@ connectAttr ":rmanSBRenderChannelGlobals5.msg" ":rmanSBRenderGlobals.c" -na;
 connectAttr ":rmanSBRenderGlobals.msg" ":rmanSBMakePtCloudGlobals.p" -na;
 connectAttr ":rmanSBRenderGlobals.msg" ":rmanSBPtRenderGlobals.p" -na;
 connectAttr ":rmanSBRenderGlobals.msg" ":rmanSBMakePtexGlobals.p" -na;
-connectAttr ":mentalrayGlobals.msg" ":mentalrayItemsList.glb";
-connectAttr ":miDefaultOptions.msg" ":mentalrayItemsList.opt" -na;
-connectAttr ":miDefaultFramebuffer.msg" ":mentalrayItemsList.fb" -na;
-connectAttr ":miDefaultOptions.msg" ":mentalrayGlobals.opt";
-connectAttr ":miDefaultFramebuffer.msg" ":mentalrayGlobals.fb";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -34266,11 +34544,6 @@ connectAttr "back_flex_ctrl01_visibility.o" "utility_room_viewRN.phl[1526]";
 connectAttr "utility_room_view_house_latest_bedroom_latest_nClothShape2Cache1.ocd[0]" "utility_room_viewRN.phl[2414]"
 		;
 connectAttr "utility_room_view_house_latest_bedroom_latest_nClothShape2Cache1.ir" "utility_room_viewRN.phl[2415]"
-		;
-connectAttr "pieceoshit_cloth.di" "utility_room_viewRN.phl[3294]";
-connectAttr "utility_room_view_house_latest_bedroom_latest_nClothShape1Cache1.ir" "utility_room_viewRN.phl[3295]"
-		;
-connectAttr "utility_room_view_house_latest_bedroom_latest_nClothShape1Cache1.ocd[0]" "utility_room_viewRN.phl[3296]"
 		;
 connectAttr "utility_room_viewRNfosterParent1.msg" "utility_room_viewRN.fp";
 connectAttr "sharedReferenceNode.sr" "utility_room_viewRN.sr";
@@ -34513,6 +34786,6 @@ connectAttr "pairBlend5_inRotateZ1.o" "pairBlend5.irz1";
 connectAttr "layerManager.dli[1]" "pieceoshit_cloth.id";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 dataStructure -fmt "raw" -as "name=externalContentTable:string=node:string=key:string=upath:uint32=upathcrc:string=rpath:string=roles";
-applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"utility_room_viewRN\" \"\" \"X:/documents/GitHub/Bandits/maya//scenes/utility_room_view.ma\" 3882268200 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/scenes/utility_room_view.ma\" \"FileRef\"\nendStream\nendChannel\nendAssociations\n" 
+applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"utility_room_viewRN\" \"\" \"X:/documents/GitHub/Bandits/maya//scenes/utility_room_view.ma\" 3882268200 \"X:/documents/GitHub/Bandits/maya/scenes/utility_room_view.ma\" \"FileRef\"\nendStream\nendChannel\nendAssociations\n" 
 		-scn;
 // End of bodyintro_latest.ma

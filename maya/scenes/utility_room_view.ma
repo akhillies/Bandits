@@ -1,6 +1,6 @@
 //Maya ASCII 2015 scene
 //Name: utility_room_view.ma
-//Last modified: Wed, Apr 08, 2015 01:15:15 AM
+//Last modified: Fri, Apr 10, 2015 12:15:51 AM
 //Codeset: UTF-8
 file -rdi 1 -ns "pig_latest" -rfn "pig_latestRN" -op "v=0;p=17;f=0" "X:/documents/GitHub/Bandits/maya//assets/characters/pig/pig_latest.ma";
 file -rdi 2 -ns "key_latest" -rfn "pig_latest:key_latestRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/props/keys/key_latest.ma";
@@ -32,18 +32,18 @@ fileInfo "application" "maya";
 fileInfo "product" "Maya 2015";
 fileInfo "version" "2015";
 fileInfo "cutIdentifier" "201410051530-933320";
-fileInfo "osv" "Mac OS X 10.9.2";
+fileInfo "osv" "Mac OS X 10.9.3";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 16.716330781050416 12.822731837294555 38.499178282129151 ;
-	setAttr ".r" -type "double3" -24.938352729608056 1.3999999999984365 8.5632179178810849e-13 ;
+	setAttr ".t" -type "double3" 9.004957949848496 22.855055103225084 49.002648627173514 ;
+	setAttr ".r" -type "double3" -27.938352729609743 -6.6000000000011507 -2.0011084909432209e-16 ;
 	setAttr ".rp" -type "double3" -4.4408920985006262e-16 -1.1379786002407855e-15 7.1054273576010019e-15 ;
 	setAttr ".rpt" -type "double3" 1.2458522323622045e-15 3.506306949757113e-15 2.4585872572682608e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 39.422069091415544;
+	setAttr ".coi" 48.833685293766074;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -101,6 +101,759 @@ createNode camera -n "at_dryerShape" -p "at_dryer";
 	setAttr ".imn" -type "string" "camera1";
 	setAttr ".den" -type "string" "camera1_depth";
 	setAttr ".man" -type "string" "camera1_mask";
+createNode transform -n "pPlane1";
+	setAttr ".rp" -type "double3" 11.72401970567333 2.6890980298413334 17.132982641788008 ;
+	setAttr ".sp" -type "double3" 11.72401970567333 2.6890980298413334 17.132982641788008 ;
+createNode mesh -n "pPlaneShape1" -p "pPlane1";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 66 ".uvst[0].uvsp[0:65]" -type "float2" 0 0 0.097659588 0
+		 0.19531918 0 0.29297876 0 0.39063835 0 0.48829794 0 0.58595753 0 0.68361712 0 0.7812767
+		 0 0.87893629 0 0.97659588 0 0 0.2 0.097659588 0.2 0.19531918 0.2 0.29297876 0.2 0.39063835
+		 0.2 0.48829794 0.2 0.58595753 0.2 0.68361712 0.2 0.7812767 0.2 0.87893629 0.2 0.97659588
+		 0.2 0 0.40000001 0.097659588 0.40000001 0.19531918 0.40000001 0.29297876 0.40000001
+		 0.39063835 0.40000001 0.48829794 0.40000001 0.58595753 0.40000001 0.68361712 0.40000001
+		 0.7812767 0.40000001 0.87893629 0.40000001 0.97659588 0.40000001 0 0.60000002 0.097659588
+		 0.60000002 0.19531918 0.60000002 0.29297876 0.60000002 0.39063835 0.60000002 0.48829794
+		 0.60000002 0.58595753 0.60000002 0.68361712 0.60000002 0.7812767 0.60000002 0.87893629
+		 0.60000002 0.97659588 0.60000002 0 0.80000001 0.097659588 0.80000001 0.19531918 0.80000001
+		 0.29297876 0.80000001 0.39063835 0.80000001 0.48829794 0.80000001 0.58595753 0.80000001
+		 0.68361712 0.80000001 0.7812767 0.80000001 0.87893629 0.80000001 0.97659588 0.80000001
+		 0 1 0.097659588 1 0.19531918 1 0.29297876 1 0.39063835 1 0.48829794 1 0.58595753
+		 1 0.68361712 1 0.7812767 1 0.87893629 1 0.97659588 1;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 66 ".vt[0:65]"  6.082379341 5.33331299 17.13298225 7.21070766 5.33331299 17.13298225
+		 8.33903503 5.33331299 17.13298225 9.46736336 5.33331299 17.13298225 10.59569168 5.33331299 17.13298225
+		 11.72402 5.33331299 17.13298225 12.85234833 5.33331299 17.13298225 13.98067665 5.33331299 17.13298225
+		 15.10900402 5.33331299 17.13298225 16.23733139 5.33331299 17.13298225 17.36566162 5.33331299 17.13298225
+		 6.082379341 4.27562714 17.13298225 7.21070766 4.27562714 17.13298225 8.33903503 4.27562714 17.13298225
+		 9.46736336 4.27562714 17.13298225 10.59569168 4.27562714 17.13298225 11.72402 4.27562714 17.13298225
+		 12.85234833 4.27562714 17.13298225 13.98067665 4.27562714 17.13298225 15.10900402 4.27562714 17.13298225
+		 16.23733139 4.27562714 17.13298225 17.36566162 4.27562714 17.13298225 6.082379341 3.21794105 17.13298225
+		 7.21070766 3.21794105 17.13298225 8.33903503 3.21794105 17.13298225 9.46736336 3.21794105 17.13298225
+		 10.59569168 3.21794105 17.13298225 11.72402 3.21794105 17.13298225 12.85234833 3.21794105 17.13298225
+		 13.98067665 3.21794105 17.13298225 15.10900402 3.21794105 17.13298225 16.23733139 3.21794105 17.13298225
+		 17.36566162 3.21794105 17.13298225 6.082379341 2.16025496 17.13298225 7.21070766 2.16025496 17.13298225
+		 8.33903503 2.16025496 17.13298225 9.46736336 2.16025496 17.13298225 10.59569168 2.16025496 17.13298225
+		 11.72402 2.16025496 17.13298225 12.85234833 2.16025496 17.13298225 13.98067665 2.16025496 17.13298225
+		 15.10900402 2.16025496 17.13298225 16.23733139 2.16025496 17.13298225 17.36566162 2.16025496 17.13298225
+		 6.082379341 1.10256898 17.13298225 7.21070766 1.10256898 17.13298225 8.33903503 1.10256898 17.13298225
+		 9.46736336 1.10256898 17.13298225 10.59569168 1.10256898 17.13298225 11.72402 1.10256898 17.13298225
+		 12.85234833 1.10256898 17.13298225 13.98067665 1.10256898 17.13298225 15.10900402 1.10256898 17.13298225
+		 16.23733139 1.10256898 17.13298225 17.36566162 1.10256898 17.13298225 6.082379341 0.044883251 17.13298225
+		 7.21070766 0.044883251 17.13298225 8.33903503 0.044883251 17.13298225 9.46736336 0.044883251 17.13298225
+		 10.59569168 0.044883251 17.13298225 11.72402 0.044883251 17.13298225 12.85234833 0.044883251 17.13298225
+		 13.98067665 0.044883251 17.13298225 15.10900402 0.044883251 17.13298225 16.23733139 0.044883251 17.13298225
+		 17.36566162 0.044883251 17.13298225;
+	setAttr -s 115 ".ed[0:114]"  0 1 0 0 11 0 1 2 0 1 12 1 2 3 0 2 13 1 3 4 0
+		 3 14 1 4 5 0 4 15 1 5 6 0 5 16 1 6 7 0 6 17 1 7 8 0 7 18 1 8 9 0 8 19 1 9 10 0 9 20 1
+		 10 21 0 11 12 1 11 22 0 12 13 1 12 23 1 13 14 1 13 24 1 14 15 1 14 25 1 15 16 1 15 26 1
+		 16 17 1 16 27 1 17 18 1 17 28 1 18 19 1 18 29 1 19 20 1 19 30 1 20 21 1 20 31 1 21 32 0
+		 22 23 1 22 33 0 23 24 1 23 34 1 24 25 1 24 35 1 25 26 1 25 36 1 26 27 1 26 37 1 27 28 1
+		 27 38 1 28 29 1 28 39 1 29 30 1 29 40 1 30 31 1 30 41 1 31 32 1 31 42 1 32 43 0 33 34 1
+		 33 44 0 34 35 1 34 45 1 35 36 1 35 46 1 36 37 1 36 47 1 37 38 1 37 48 1 38 39 1 38 49 1
+		 39 40 1 39 50 1 40 41 1 40 51 1 41 42 1 41 52 1 42 43 1 42 53 1 43 54 0 44 45 1 44 55 0
+		 45 46 1 45 56 1 46 47 1 46 57 1 47 48 1 47 58 1 48 49 1 48 59 1 49 50 1 49 60 1 50 51 1
+		 50 61 1 51 52 1 51 62 1 52 53 1 52 63 1 53 54 1 53 64 1 54 65 0 55 56 0 56 57 0 57 58 0
+		 58 59 0 59 60 0 60 61 0 61 62 0 62 63 0 63 64 0 64 65 0;
+	setAttr -s 50 -ch 200 ".fc[0:49]" -type "polyFaces" 
+		f 4 1 21 -4 -1
+		mu 0 4 0 11 12 1
+		f 4 3 23 -6 -3
+		mu 0 4 1 12 13 2
+		f 4 5 25 -8 -5
+		mu 0 4 2 13 14 3
+		f 4 7 27 -10 -7
+		mu 0 4 3 14 15 4
+		f 4 9 29 -12 -9
+		mu 0 4 4 15 16 5
+		f 4 11 31 -14 -11
+		mu 0 4 5 16 17 6
+		f 4 13 33 -16 -13
+		mu 0 4 6 17 18 7
+		f 4 15 35 -18 -15
+		mu 0 4 7 18 19 8
+		f 4 17 37 -20 -17
+		mu 0 4 8 19 20 9
+		f 4 19 39 -21 -19
+		mu 0 4 9 20 21 10
+		f 4 22 42 -25 -22
+		mu 0 4 11 22 23 12
+		f 4 24 44 -27 -24
+		mu 0 4 12 23 24 13
+		f 4 26 46 -29 -26
+		mu 0 4 13 24 25 14
+		f 4 28 48 -31 -28
+		mu 0 4 14 25 26 15
+		f 4 30 50 -33 -30
+		mu 0 4 15 26 27 16
+		f 4 32 52 -35 -32
+		mu 0 4 16 27 28 17
+		f 4 34 54 -37 -34
+		mu 0 4 17 28 29 18
+		f 4 36 56 -39 -36
+		mu 0 4 18 29 30 19
+		f 4 38 58 -41 -38
+		mu 0 4 19 30 31 20
+		f 4 40 60 -42 -40
+		mu 0 4 20 31 32 21
+		f 4 43 63 -46 -43
+		mu 0 4 22 33 34 23
+		f 4 45 65 -48 -45
+		mu 0 4 23 34 35 24
+		f 4 47 67 -50 -47
+		mu 0 4 24 35 36 25
+		f 4 49 69 -52 -49
+		mu 0 4 25 36 37 26
+		f 4 51 71 -54 -51
+		mu 0 4 26 37 38 27
+		f 4 53 73 -56 -53
+		mu 0 4 27 38 39 28
+		f 4 55 75 -58 -55
+		mu 0 4 28 39 40 29
+		f 4 57 77 -60 -57
+		mu 0 4 29 40 41 30
+		f 4 59 79 -62 -59
+		mu 0 4 30 41 42 31
+		f 4 61 81 -63 -61
+		mu 0 4 31 42 43 32
+		f 4 64 84 -67 -64
+		mu 0 4 33 44 45 34
+		f 4 66 86 -69 -66
+		mu 0 4 34 45 46 35
+		f 4 68 88 -71 -68
+		mu 0 4 35 46 47 36
+		f 4 70 90 -73 -70
+		mu 0 4 36 47 48 37
+		f 4 72 92 -75 -72
+		mu 0 4 37 48 49 38
+		f 4 74 94 -77 -74
+		mu 0 4 38 49 50 39
+		f 4 76 96 -79 -76
+		mu 0 4 39 50 51 40
+		f 4 78 98 -81 -78
+		mu 0 4 40 51 52 41
+		f 4 80 100 -83 -80
+		mu 0 4 41 52 53 42
+		f 4 82 102 -84 -82
+		mu 0 4 42 53 54 43
+		f 4 85 105 -88 -85
+		mu 0 4 44 55 56 45
+		f 4 87 106 -90 -87
+		mu 0 4 45 56 57 46
+		f 4 89 107 -92 -89
+		mu 0 4 46 57 58 47
+		f 4 91 108 -94 -91
+		mu 0 4 47 58 59 48
+		f 4 93 109 -96 -93
+		mu 0 4 48 59 60 49
+		f 4 95 110 -98 -95
+		mu 0 4 49 60 61 50
+		f 4 97 111 -100 -97
+		mu 0 4 50 61 62 51
+		f 4 99 112 -102 -99
+		mu 0 4 51 62 63 52
+		f 4 101 113 -104 -101
+		mu 0 4 52 63 64 53
+		f 4 103 114 -105 -103
+		mu 0 4 53 64 65 54;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "outputCloth1" -p "pPlane1";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.48829793930053711 0 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr ".qsp" 0;
+createNode nucleus -n "nucleus1";
+	setAttr -s 12 ".nipo";
+	setAttr -s 12 ".nips";
+createNode transform -n "nCloth1";
+	setAttr -l on ".t";
+	setAttr -l on ".r";
+	setAttr -l on ".s";
+createNode nCloth -n "nClothShape1" -p "nCloth1";
+	setAttr -k off ".v";
+	setAttr ".gf" -type "Int32Array" 0 ;
+	setAttr ".pos0" -type "vectorArray" 0 ;
+	setAttr ".vel0" -type "vectorArray" 0 ;
+	setAttr ".acc0" -type "vectorArray" 0 ;
+	setAttr ".mas0" -type "doubleArray" 0 ;
+	setAttr ".id0" -type "doubleArray" 0 ;
+	setAttr ".nid" 66;
+	setAttr ".bt0" -type "doubleArray" 0 ;
+	setAttr ".ag0" -type "doubleArray" 0 ;
+	setAttr -k off ".dve";
+	setAttr -k off ".lfm";
+	setAttr -k off ".lfr";
+	setAttr -k off ".ead";
+	setAttr ".irbx" -type "string" "";
+	setAttr ".irax" -type "string" "";
+	setAttr ".icx" -type "string" "";
+	setAttr -k off ".dw";
+	setAttr -k off ".fiw";
+	setAttr -k off ".con";
+	setAttr -k off ".eiw";
+	setAttr -k off ".mxc";
+	setAttr -k off ".lod";
+	setAttr -k off ".inh";
+	setAttr ".cts" 21;
+	setAttr -k off ".stf";
+	setAttr -k off ".igs";
+	setAttr -k off ".ecfh";
+	setAttr -k off ".tgs";
+	setAttr -k off ".gsm";
+	setAttr -k off ".chd";
+	setAttr -k off ".trd";
+	setAttr -k off ".prt";
+	setAttr ".thss" 0.054621811956167221;
+	setAttr ".scfl" 3;
+	setAttr ".por" 0.21848724782466888;
+	setAttr -s 2 ".fsc[0:1]"  0 1 1 1 0 1;
+	setAttr -s 2 ".pfdo[0:1]"  0 1 1 1 0 1;
+	setAttr ".lsou" yes;
+createNode transform -n "nRigid1";
+	setAttr -l on ".t";
+	setAttr -l on ".r";
+	setAttr -l on ".s";
+createNode nRigid -n "nRigidShape1" -p "nRigid1";
+	setAttr -k off ".v";
+	setAttr ".gf" -type "Int32Array" 0 ;
+	setAttr ".pos0" -type "vectorArray" 0 ;
+	setAttr ".vel0" -type "vectorArray" 0 ;
+	setAttr ".acc0" -type "vectorArray" 0 ;
+	setAttr ".mas0" -type "doubleArray" 0 ;
+	setAttr ".id0" -type "doubleArray" 0 ;
+	setAttr ".nid" 56;
+	setAttr ".bt0" -type "doubleArray" 0 ;
+	setAttr ".ag0" -type "doubleArray" 0 ;
+	setAttr -k off ".dve";
+	setAttr -k off ".lfm";
+	setAttr -k off ".lfr";
+	setAttr -k off ".ead";
+	setAttr ".irbx" -type "string" "";
+	setAttr ".irax" -type "string" "";
+	setAttr ".icx" -type "string" "";
+	setAttr -k off ".dw";
+	setAttr -k off ".fiw";
+	setAttr -k off ".con";
+	setAttr -k off ".eiw";
+	setAttr -k off ".mxc";
+	setAttr -k off ".lod";
+	setAttr -k off ".inh";
+	setAttr ".cts" 21;
+	setAttr -k off ".stf";
+	setAttr -k off ".igs";
+	setAttr -k off ".ecfh";
+	setAttr -k off ".tgs";
+	setAttr -k off ".gsm";
+	setAttr -k off ".chd";
+	setAttr -k off ".trd";
+	setAttr -k off ".prt";
+	setAttr ".thss" 0.074276424944400787;
+	setAttr ".actv" no;
+	setAttr ".scld" no;
+	setAttr ".por" 0.29710569977760315;
+	setAttr ".tpc" yes;
+	setAttr -s 2 ".fsc[0:1]"  0 1 1 1 0 1;
+	setAttr -s 2 ".pfdo[0:1]"  0 1 1 1 0 1;
+createNode transform -n "dynamicConstraint1";
+createNode dynamicConstraint -n "dynamicConstraintShape1" -p "dynamicConstraint1";
+	setAttr -k off ".v";
+	setAttr -s 2 ".cid";
+	setAttr ".cdnr[0]"  0 1 1;
+	setAttr ".sdp[0]"  0 1 1;
+createNode transform -n "nRigid2";
+	setAttr -l on ".t";
+	setAttr -l on ".r";
+	setAttr -l on ".s";
+createNode nRigid -n "nRigidShape2" -p "nRigid2";
+	setAttr -k off ".v";
+	setAttr ".gf" -type "Int32Array" 0 ;
+	setAttr ".pos0" -type "vectorArray" 0 ;
+	setAttr ".vel0" -type "vectorArray" 0 ;
+	setAttr ".acc0" -type "vectorArray" 0 ;
+	setAttr ".mas0" -type "doubleArray" 0 ;
+	setAttr ".id0" -type "doubleArray" 0 ;
+	setAttr ".nid" 24;
+	setAttr ".bt0" -type "doubleArray" 0 ;
+	setAttr ".ag0" -type "doubleArray" 0 ;
+	setAttr -k off ".dve";
+	setAttr -k off ".lfm";
+	setAttr -k off ".lfr";
+	setAttr -k off ".ead";
+	setAttr ".irbx" -type "string" "";
+	setAttr ".irax" -type "string" "";
+	setAttr ".icx" -type "string" "";
+	setAttr -k off ".dw";
+	setAttr -k off ".fiw";
+	setAttr -k off ".con";
+	setAttr -k off ".eiw";
+	setAttr -k off ".mxc";
+	setAttr -k off ".lod";
+	setAttr -k off ".inh";
+	setAttr ".cts" 21;
+	setAttr -k off ".stf";
+	setAttr -k off ".igs";
+	setAttr -k off ".ecfh";
+	setAttr -k off ".tgs";
+	setAttr -k off ".gsm";
+	setAttr -k off ".chd";
+	setAttr -k off ".trd";
+	setAttr -k off ".prt";
+	setAttr ".thss" 0.072754867374897003;
+	setAttr ".actv" no;
+	setAttr ".scld" no;
+	setAttr ".por" 0.29101946949958801;
+	setAttr ".tpc" yes;
+	setAttr -s 2 ".fsc[0:1]"  0 1 1 1 0 1;
+	setAttr -s 2 ".pfdo[0:1]"  0 1 1 1 0 1;
+createNode transform -n "nRigid3";
+	setAttr -l on ".t";
+	setAttr -l on ".r";
+	setAttr -l on ".s";
+createNode nRigid -n "nRigidShape3" -p "nRigid3";
+	setAttr -k off ".v";
+	setAttr ".gf" -type "Int32Array" 0 ;
+	setAttr ".pos0" -type "vectorArray" 0 ;
+	setAttr ".vel0" -type "vectorArray" 0 ;
+	setAttr ".acc0" -type "vectorArray" 0 ;
+	setAttr ".mas0" -type "doubleArray" 0 ;
+	setAttr ".id0" -type "doubleArray" 0 ;
+	setAttr ".nid" 142;
+	setAttr ".bt0" -type "doubleArray" 0 ;
+	setAttr ".ag0" -type "doubleArray" 0 ;
+	setAttr -k off ".dve";
+	setAttr -k off ".lfm";
+	setAttr -k off ".lfr";
+	setAttr -k off ".ead";
+	setAttr ".irbx" -type "string" "";
+	setAttr ".irax" -type "string" "";
+	setAttr ".icx" -type "string" "";
+	setAttr -k off ".dw";
+	setAttr -k off ".fiw";
+	setAttr -k off ".con";
+	setAttr -k off ".eiw";
+	setAttr -k off ".mxc";
+	setAttr -k off ".lod";
+	setAttr -k off ".inh";
+	setAttr ".cts" 21;
+	setAttr -k off ".stf";
+	setAttr -k off ".igs";
+	setAttr -k off ".ecfh";
+	setAttr -k off ".tgs";
+	setAttr -k off ".gsm";
+	setAttr -k off ".chd";
+	setAttr -k off ".trd";
+	setAttr -k off ".prt";
+	setAttr ".thss" 0.01349340844899416;
+	setAttr ".actv" no;
+	setAttr ".scld" no;
+	setAttr ".por" 0.053973633795976639;
+	setAttr ".tpc" yes;
+	setAttr -s 2 ".fsc[0:1]"  0 1 1 1 0 1;
+	setAttr -s 2 ".pfdo[0:1]"  0 1 1 1 0 1;
+createNode transform -n "nRigid4";
+	setAttr -l on ".t";
+	setAttr -l on ".r";
+	setAttr -l on ".s";
+createNode nRigid -n "nRigidShape4" -p "nRigid4";
+	setAttr -k off ".v";
+	setAttr ".gf" -type "Int32Array" 0 ;
+	setAttr ".pos0" -type "vectorArray" 0 ;
+	setAttr ".vel0" -type "vectorArray" 0 ;
+	setAttr ".acc0" -type "vectorArray" 0 ;
+	setAttr ".mas0" -type "doubleArray" 0 ;
+	setAttr ".id0" -type "doubleArray" 0 ;
+	setAttr ".nid" 142;
+	setAttr ".bt0" -type "doubleArray" 0 ;
+	setAttr ".ag0" -type "doubleArray" 0 ;
+	setAttr -k off ".dve";
+	setAttr -k off ".lfm";
+	setAttr -k off ".lfr";
+	setAttr -k off ".ead";
+	setAttr ".irbx" -type "string" "";
+	setAttr ".irax" -type "string" "";
+	setAttr ".icx" -type "string" "";
+	setAttr -k off ".dw";
+	setAttr -k off ".fiw";
+	setAttr -k off ".con";
+	setAttr -k off ".eiw";
+	setAttr -k off ".mxc";
+	setAttr -k off ".lod";
+	setAttr -k off ".inh";
+	setAttr ".cts" 21;
+	setAttr -k off ".stf";
+	setAttr -k off ".igs";
+	setAttr -k off ".ecfh";
+	setAttr -k off ".tgs";
+	setAttr -k off ".gsm";
+	setAttr -k off ".chd";
+	setAttr -k off ".trd";
+	setAttr -k off ".prt";
+	setAttr ".thss" 0.013493412174284458;
+	setAttr ".actv" no;
+	setAttr ".scld" no;
+	setAttr ".por" 0.053973648697137833;
+	setAttr ".tpc" yes;
+	setAttr -s 2 ".fsc[0:1]"  0 1 1 1 0 1;
+	setAttr -s 2 ".pfdo[0:1]"  0 1 1 1 0 1;
+createNode transform -n "nRigid5";
+	setAttr -l on ".t";
+	setAttr -l on ".r";
+	setAttr -l on ".s";
+createNode nRigid -n "nRigidShape5" -p "nRigid5";
+	setAttr -k off ".v";
+	setAttr ".gf" -type "Int32Array" 0 ;
+	setAttr ".pos0" -type "vectorArray" 0 ;
+	setAttr ".vel0" -type "vectorArray" 0 ;
+	setAttr ".acc0" -type "vectorArray" 0 ;
+	setAttr ".mas0" -type "doubleArray" 0 ;
+	setAttr ".id0" -type "doubleArray" 0 ;
+	setAttr ".bt0" -type "doubleArray" 0 ;
+	setAttr ".ag0" -type "doubleArray" 0 ;
+	setAttr -k off ".dve";
+	setAttr -k off ".lfm";
+	setAttr -k off ".lfr";
+	setAttr -k off ".ead";
+	setAttr ".irbx" -type "string" "";
+	setAttr ".irax" -type "string" "";
+	setAttr ".icx" -type "string" "";
+	setAttr -k off ".dw";
+	setAttr -k off ".fiw";
+	setAttr -k off ".con";
+	setAttr -k off ".eiw";
+	setAttr -k off ".mxc";
+	setAttr -k off ".lod";
+	setAttr -k off ".inh";
+	setAttr -k off ".stf";
+	setAttr -k off ".igs";
+	setAttr -k off ".ecfh";
+	setAttr -k off ".tgs";
+	setAttr -k off ".gsm";
+	setAttr -k off ".chd";
+	setAttr -k off ".trd";
+	setAttr -k off ".prt";
+	setAttr ".thss" 0.048669066280126572;
+	setAttr ".actv" no;
+	setAttr ".scld" no;
+	setAttr ".por" 0.19467626512050629;
+	setAttr ".tpc" yes;
+	setAttr -s 2 ".fsc[0:1]"  0 1 1 1 0 1;
+	setAttr -s 2 ".pfdo[0:1]"  0 1 1 1 0 1;
+createNode transform -n "nRigid6";
+	setAttr -l on ".t";
+	setAttr -l on ".r";
+	setAttr -l on ".s";
+createNode nRigid -n "nRigidShape6" -p "nRigid6";
+	setAttr -k off ".v";
+	setAttr ".gf" -type "Int32Array" 0 ;
+	setAttr ".pos0" -type "vectorArray" 0 ;
+	setAttr ".vel0" -type "vectorArray" 0 ;
+	setAttr ".acc0" -type "vectorArray" 0 ;
+	setAttr ".mas0" -type "doubleArray" 0 ;
+	setAttr ".id0" -type "doubleArray" 0 ;
+	setAttr ".bt0" -type "doubleArray" 0 ;
+	setAttr ".ag0" -type "doubleArray" 0 ;
+	setAttr -k off ".dve";
+	setAttr -k off ".lfm";
+	setAttr -k off ".lfr";
+	setAttr -k off ".ead";
+	setAttr ".irbx" -type "string" "";
+	setAttr ".irax" -type "string" "";
+	setAttr ".icx" -type "string" "";
+	setAttr -k off ".dw";
+	setAttr -k off ".fiw";
+	setAttr -k off ".con";
+	setAttr -k off ".eiw";
+	setAttr -k off ".mxc";
+	setAttr -k off ".lod";
+	setAttr -k off ".inh";
+	setAttr -k off ".stf";
+	setAttr -k off ".igs";
+	setAttr -k off ".ecfh";
+	setAttr -k off ".tgs";
+	setAttr -k off ".gsm";
+	setAttr -k off ".chd";
+	setAttr -k off ".trd";
+	setAttr -k off ".prt";
+	setAttr ".thss" 0.05880042165517807;
+	setAttr ".actv" no;
+	setAttr ".scld" no;
+	setAttr ".por" 0.23520168662071228;
+	setAttr ".tpc" yes;
+	setAttr -s 2 ".fsc[0:1]"  0 1 1 1 0 1;
+	setAttr -s 2 ".pfdo[0:1]"  0 1 1 1 0 1;
+createNode transform -n "nRigid7";
+	setAttr -l on ".t";
+	setAttr -l on ".r";
+	setAttr -l on ".s";
+createNode nRigid -n "nRigidShape7" -p "nRigid7";
+	setAttr -k off ".v";
+	setAttr ".gf" -type "Int32Array" 0 ;
+	setAttr ".pos0" -type "vectorArray" 0 ;
+	setAttr ".vel0" -type "vectorArray" 0 ;
+	setAttr ".acc0" -type "vectorArray" 0 ;
+	setAttr ".mas0" -type "doubleArray" 0 ;
+	setAttr ".id0" -type "doubleArray" 0 ;
+	setAttr ".bt0" -type "doubleArray" 0 ;
+	setAttr ".ag0" -type "doubleArray" 0 ;
+	setAttr -k off ".dve";
+	setAttr -k off ".lfm";
+	setAttr -k off ".lfr";
+	setAttr -k off ".ead";
+	setAttr ".irbx" -type "string" "";
+	setAttr ".irax" -type "string" "";
+	setAttr ".icx" -type "string" "";
+	setAttr -k off ".dw";
+	setAttr -k off ".fiw";
+	setAttr -k off ".con";
+	setAttr -k off ".eiw";
+	setAttr -k off ".mxc";
+	setAttr -k off ".lod";
+	setAttr -k off ".inh";
+	setAttr -k off ".stf";
+	setAttr -k off ".igs";
+	setAttr -k off ".ecfh";
+	setAttr -k off ".tgs";
+	setAttr -k off ".gsm";
+	setAttr -k off ".chd";
+	setAttr -k off ".trd";
+	setAttr -k off ".prt";
+	setAttr ".thss" 0.092193134129047394;
+	setAttr ".actv" no;
+	setAttr ".scld" no;
+	setAttr ".por" 0.36877253651618958;
+	setAttr ".tpc" yes;
+	setAttr -s 2 ".fsc[0:1]"  0 1 1 1 0 1;
+	setAttr -s 2 ".pfdo[0:1]"  0 1 1 1 0 1;
+createNode transform -n "nRigid8";
+	setAttr -l on ".t";
+	setAttr -l on ".r";
+	setAttr -l on ".s";
+createNode nRigid -n "nRigidShape8" -p "nRigid8";
+	setAttr -k off ".v";
+	setAttr ".gf" -type "Int32Array" 0 ;
+	setAttr ".pos0" -type "vectorArray" 0 ;
+	setAttr ".vel0" -type "vectorArray" 0 ;
+	setAttr ".acc0" -type "vectorArray" 0 ;
+	setAttr ".mas0" -type "doubleArray" 0 ;
+	setAttr ".id0" -type "doubleArray" 0 ;
+	setAttr ".bt0" -type "doubleArray" 0 ;
+	setAttr ".ag0" -type "doubleArray" 0 ;
+	setAttr -k off ".dve";
+	setAttr -k off ".lfm";
+	setAttr -k off ".lfr";
+	setAttr -k off ".ead";
+	setAttr ".irbx" -type "string" "";
+	setAttr ".irax" -type "string" "";
+	setAttr ".icx" -type "string" "";
+	setAttr -k off ".dw";
+	setAttr -k off ".fiw";
+	setAttr -k off ".con";
+	setAttr -k off ".eiw";
+	setAttr -k off ".mxc";
+	setAttr -k off ".lod";
+	setAttr -k off ".inh";
+	setAttr -k off ".stf";
+	setAttr -k off ".igs";
+	setAttr -k off ".ecfh";
+	setAttr -k off ".tgs";
+	setAttr -k off ".gsm";
+	setAttr -k off ".chd";
+	setAttr -k off ".trd";
+	setAttr -k off ".prt";
+	setAttr ".thss" 0.059183843433856964;
+	setAttr ".actv" no;
+	setAttr ".scld" no;
+	setAttr ".por" 0.23673537373542786;
+	setAttr ".tpc" yes;
+	setAttr -s 2 ".fsc[0:1]"  0 1 1 1 0 1;
+	setAttr -s 2 ".pfdo[0:1]"  0 1 1 1 0 1;
+createNode transform -n "nRigid9";
+	setAttr -l on ".t";
+	setAttr -l on ".r";
+	setAttr -l on ".s";
+createNode nRigid -n "nRigidShape9" -p "nRigid9";
+	setAttr -k off ".v";
+	setAttr ".gf" -type "Int32Array" 0 ;
+	setAttr ".pos0" -type "vectorArray" 0 ;
+	setAttr ".vel0" -type "vectorArray" 0 ;
+	setAttr ".acc0" -type "vectorArray" 0 ;
+	setAttr ".mas0" -type "doubleArray" 0 ;
+	setAttr ".id0" -type "doubleArray" 0 ;
+	setAttr ".bt0" -type "doubleArray" 0 ;
+	setAttr ".ag0" -type "doubleArray" 0 ;
+	setAttr -k off ".dve";
+	setAttr -k off ".lfm";
+	setAttr -k off ".lfr";
+	setAttr -k off ".ead";
+	setAttr ".irbx" -type "string" "";
+	setAttr ".irax" -type "string" "";
+	setAttr ".icx" -type "string" "";
+	setAttr -k off ".dw";
+	setAttr -k off ".fiw";
+	setAttr -k off ".con";
+	setAttr -k off ".eiw";
+	setAttr -k off ".mxc";
+	setAttr -k off ".lod";
+	setAttr -k off ".inh";
+	setAttr -k off ".stf";
+	setAttr -k off ".igs";
+	setAttr -k off ".ecfh";
+	setAttr -k off ".tgs";
+	setAttr -k off ".gsm";
+	setAttr -k off ".chd";
+	setAttr -k off ".trd";
+	setAttr -k off ".prt";
+	setAttr ".thss" 0.029715711250901222;
+	setAttr ".actv" no;
+	setAttr ".scld" no;
+	setAttr ".por" 0.11886284500360489;
+	setAttr ".tpc" yes;
+	setAttr -s 2 ".fsc[0:1]"  0 1 1 1 0 1;
+	setAttr -s 2 ".pfdo[0:1]"  0 1 1 1 0 1;
+createNode transform -n "nRigid10";
+	setAttr -l on ".t";
+	setAttr -l on ".r";
+	setAttr -l on ".s";
+createNode nRigid -n "nRigidShape10" -p "nRigid10";
+	setAttr -k off ".v";
+	setAttr ".gf" -type "Int32Array" 0 ;
+	setAttr ".pos0" -type "vectorArray" 0 ;
+	setAttr ".vel0" -type "vectorArray" 0 ;
+	setAttr ".acc0" -type "vectorArray" 0 ;
+	setAttr ".mas0" -type "doubleArray" 0 ;
+	setAttr ".id0" -type "doubleArray" 0 ;
+	setAttr ".bt0" -type "doubleArray" 0 ;
+	setAttr ".ag0" -type "doubleArray" 0 ;
+	setAttr -k off ".dve";
+	setAttr -k off ".lfm";
+	setAttr -k off ".lfr";
+	setAttr -k off ".ead";
+	setAttr ".irbx" -type "string" "";
+	setAttr ".irax" -type "string" "";
+	setAttr ".icx" -type "string" "";
+	setAttr -k off ".dw";
+	setAttr -k off ".fiw";
+	setAttr -k off ".con";
+	setAttr -k off ".eiw";
+	setAttr -k off ".mxc";
+	setAttr -k off ".lod";
+	setAttr -k off ".inh";
+	setAttr -k off ".stf";
+	setAttr -k off ".igs";
+	setAttr -k off ".ecfh";
+	setAttr -k off ".tgs";
+	setAttr -k off ".gsm";
+	setAttr -k off ".chd";
+	setAttr -k off ".trd";
+	setAttr -k off ".prt";
+	setAttr ".thss" 0.019962403923273087;
+	setAttr ".actv" no;
+	setAttr ".scld" no;
+	setAttr ".por" 0.079849615693092346;
+	setAttr ".tpc" yes;
+	setAttr -s 2 ".fsc[0:1]"  0 1 1 1 0 1;
+	setAttr -s 2 ".pfdo[0:1]"  0 1 1 1 0 1;
+createNode transform -n "nRigid11";
+	setAttr -l on ".t";
+	setAttr -l on ".r";
+	setAttr -l on ".s";
+createNode nRigid -n "nRigidShape11" -p "nRigid11";
+	setAttr -k off ".v";
+	setAttr ".gf" -type "Int32Array" 0 ;
+	setAttr ".pos0" -type "vectorArray" 0 ;
+	setAttr ".vel0" -type "vectorArray" 0 ;
+	setAttr ".acc0" -type "vectorArray" 0 ;
+	setAttr ".mas0" -type "doubleArray" 0 ;
+	setAttr ".id0" -type "doubleArray" 0 ;
+	setAttr ".bt0" -type "doubleArray" 0 ;
+	setAttr ".ag0" -type "doubleArray" 0 ;
+	setAttr -k off ".dve";
+	setAttr -k off ".lfm";
+	setAttr -k off ".lfr";
+	setAttr -k off ".ead";
+	setAttr ".irbx" -type "string" "";
+	setAttr ".irax" -type "string" "";
+	setAttr ".icx" -type "string" "";
+	setAttr -k off ".dw";
+	setAttr -k off ".fiw";
+	setAttr -k off ".con";
+	setAttr -k off ".eiw";
+	setAttr -k off ".mxc";
+	setAttr -k off ".lod";
+	setAttr -k off ".inh";
+	setAttr -k off ".stf";
+	setAttr -k off ".igs";
+	setAttr -k off ".ecfh";
+	setAttr -k off ".tgs";
+	setAttr -k off ".gsm";
+	setAttr -k off ".chd";
+	setAttr -k off ".trd";
+	setAttr -k off ".prt";
+	setAttr ".thss" 0.0073723448440432549;
+	setAttr ".actv" no;
+	setAttr ".scld" no;
+	setAttr ".por" 0.029489379376173019;
+	setAttr ".tpc" yes;
+	setAttr -s 2 ".fsc[0:1]"  0 1 1 1 0 1;
+	setAttr -s 2 ".pfdo[0:1]"  0 1 1 1 0 1;
+createNode transform -n "nRigid12";
+	setAttr -l on ".t";
+	setAttr -l on ".r";
+	setAttr -l on ".s";
+createNode nRigid -n "nRigidShape12" -p "nRigid12";
+	setAttr -k off ".v";
+	setAttr ".gf" -type "Int32Array" 0 ;
+	setAttr ".pos0" -type "vectorArray" 0 ;
+	setAttr ".vel0" -type "vectorArray" 0 ;
+	setAttr ".acc0" -type "vectorArray" 0 ;
+	setAttr ".mas0" -type "doubleArray" 0 ;
+	setAttr ".id0" -type "doubleArray" 0 ;
+	setAttr ".bt0" -type "doubleArray" 0 ;
+	setAttr ".ag0" -type "doubleArray" 0 ;
+	setAttr -k off ".dve";
+	setAttr -k off ".lfm";
+	setAttr -k off ".lfr";
+	setAttr -k off ".ead";
+	setAttr ".irbx" -type "string" "";
+	setAttr ".irax" -type "string" "";
+	setAttr ".icx" -type "string" "";
+	setAttr -k off ".dw";
+	setAttr -k off ".fiw";
+	setAttr -k off ".con";
+	setAttr -k off ".eiw";
+	setAttr -k off ".mxc";
+	setAttr -k off ".lod";
+	setAttr -k off ".inh";
+	setAttr -k off ".stf";
+	setAttr -k off ".igs";
+	setAttr -k off ".ecfh";
+	setAttr -k off ".tgs";
+	setAttr -k off ".gsm";
+	setAttr -k off ".chd";
+	setAttr -k off ".trd";
+	setAttr -k off ".prt";
+	setAttr ".thss" 0.0073723448440432549;
+	setAttr ".actv" no;
+	setAttr ".scld" no;
+	setAttr ".por" 0.029489379376173019;
+	setAttr ".tpc" yes;
+	setAttr -s 2 ".fsc[0:1]"  0 1 1 1 0 1;
+	setAttr -s 2 ".pfdo[0:1]"  0 1 1 1 0 1;
 createNode RenderMan -s -n "renderManRISGlobals";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
 		-dt "string";
@@ -3735,8 +4488,8 @@ createNode mentalrayOptions -s -n "miDefaultOptions";
 createNode mentalrayFramebuffer -s -n "miDefaultFramebuffer";
 	setAttr ".dat" 2;
 createNode lightLinker -s -n "lightLinker1";
-	setAttr -s 1639 ".lnk";
-	setAttr -s 1639 ".slnk";
+	setAttr -s 1490 ".lnk";
+	setAttr -s 1490 ".slnk";
 createNode displayLayerManager -n "layerManager";
 createNode displayLayer -n "defaultLayer";
 createNode renderLayerManager -n "renderLayerManager";
@@ -4050,10 +4803,15 @@ createNode FurGlobals -n "defaultFurGlobals";
 	setAttr ".rep" -type "string" "renderData/fur/furEqualMap/utility_room_view";
 	setAttr ".pjl" -type "string" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya";
 createNode reference -n "smarty_latestRN";
+	setAttr -s 4 ".phl";
+	setAttr ".phl[1]" 0;
+	setAttr ".phl[2]" 0;
+	setAttr ".phl[3]" 0;
+	setAttr ".phl[4]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"smarty_latestRN"
 		"smarty_latestRN" 0
-		"smarty_latestRN" 6
+		"smarty_latestRN" 10
 		2 "|smarty_latest:SMARTY_OVERALL|smarty_latest:SmartyRig|smarty_latest:Smarty|smarty_latest:polySurface6|smarty_latest:polySurfaceShape4" 
 		"quadSplit" " 0"
 		2 "|smarty_latest:SMARTY_OVERALL|smarty_latest:SmartyRig|smarty_latest:global_ctrl|smarty_latest:rootJ|smarty_latest:backj|smarty_latest:chestJ|smarty_latest:neckJ|smarty_latest:smarty_008_fixed_rig_:Glasses|smarty_latest:smarty_008_fixed_rig_:glassFrame|smarty_latest:smarty_008_fixed_rig_:glassFrameShape" 
@@ -4065,14 +4823,27 @@ createNode reference -n "smarty_latestRN";
 		2 "|smarty_latest:SMARTY_OVERALL|smarty_latest:SmartyRig|smarty_latest:global_ctrl|smarty_latest:rootJ|smarty_latest:backj|smarty_latest:chestJ|smarty_latest:neckJ|smarty_latest:smarty_008_fixed_rig_:EyeL|smarty_latest:smarty_008_fixed_rig_:EyeR2Shape" 
 		"quadSplit" " 0"
 		2 "|smarty_latest:SMARTY_OVERALL|smarty_latest:SmartyRig|smarty_latest:global_ctrl|smarty_latest:rootJ|smarty_latest:backj|smarty_latest:chestJ|smarty_latest:neckJ|smarty_latest:smarty_008_fixed_rig_:EyeR|smarty_latest:smarty_008_fixed_rig_:EyeR2Shape" 
-		"quadSplit" " 0";
+		"quadSplit" " 0"
+		5 3 "smarty_latestRN" "|smarty_latest:SMARTY_OVERALL|smarty_latest:SmartyRig|smarty_latest:Smarty|smarty_latest:polySurface6|smarty_latest:polySurfaceShape4.worldMesh" 
+		"smarty_latestRN.placeHolderList[1]" ""
+		5 3 "smarty_latestRN" "|smarty_latest:SMARTY_OVERALL|smarty_latest:SmartyRig|smarty_latest:global_ctrl|smarty_latest:rootJ|smarty_latest:backj|smarty_latest:chestJ|smarty_latest:neckJ|smarty_latest:smarty_008_fixed_rig_:Glasses|smarty_latest:smarty_008_fixed_rig_:glassFrame|smarty_latest:smarty_008_fixed_rig_:glassFrameShape.worldMesh" 
+		"smarty_latestRN.placeHolderList[2]" ""
+		5 3 "smarty_latestRN" "|smarty_latest:SMARTY_OVERALL|smarty_latest:SmartyRig|smarty_latest:global_ctrl|smarty_latest:rootJ|smarty_latest:backj|smarty_latest:chestJ|smarty_latest:neckJ|smarty_latest:smarty_008_fixed_rig_:Glasses|smarty_latest:smarty_008_fixed_rig_:glassFrame|smarty_latest:smarty_008_fixed_rig_:Glasses|smarty_latest:smarty_008_fixed_rig_:glass|smarty_latest:smarty_008_fixed_rig_:glassR|smarty_latest:smarty_008_fixed_rig_:glassRShape.worldMesh" 
+		"smarty_latestRN.placeHolderList[3]" ""
+		5 3 "smarty_latestRN" "|smarty_latest:SMARTY_OVERALL|smarty_latest:SmartyRig|smarty_latest:global_ctrl|smarty_latest:rootJ|smarty_latest:backj|smarty_latest:chestJ|smarty_latest:neckJ|smarty_latest:smarty_008_fixed_rig_:Glasses|smarty_latest:smarty_008_fixed_rig_:glassFrame|smarty_latest:smarty_008_fixed_rig_:Glasses|smarty_latest:smarty_008_fixed_rig_:glass|smarty_latest:smarty_008_fixed_rig_:glassL|smarty_latest:smarty_008_fixed_rig_:glassLShape.worldMesh" 
+		"smarty_latestRN.placeHolderList[4]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "bike_rigRN";
+	setAttr -s 4 ".phl";
+	setAttr ".phl[1]" 0;
+	setAttr ".phl[2]" 0;
+	setAttr ".phl[3]" 0;
+	setAttr ".phl[4]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"bike_rigRN"
 		"bike_rigRN" 0
-		"bike_rigRN" 19
+		"bike_rigRN" 23
 		2 "|bike_rig:bike_ctrl|bike_rig:wholeBike|bike_rig:rightWheel|bike_rig:rightWheelShape" 
 		"quadSplit" " 0"
 		2 "|bike_rig:bike_ctrl|bike_rig:wholeBike|bike_rig:leftWheel|bike_rig:leftWheelShape" 
@@ -4110,7 +4881,15 @@ createNode reference -n "bike_rigRN";
 		2 "|bike_rig:bike_ctrl|bike_rig:wholeBike|bike_rig:polySurface13|bike_rig:right|bike_rig:rightShape" 
 		"quadSplit" " 0"
 		2 "|bike_rig:bike_ctrl|bike_rig:wholeBike|bike_rig:frame|bike_rig:frameShape" 
-		"quadSplit" " 0";
+		"quadSplit" " 0"
+		5 3 "bike_rigRN" "|bike_rig:bike_ctrl|bike_rig:wholeBike|bike_rig:frontWheel|bike_rig:frontWheelShape.worldMesh" 
+		"bike_rigRN.placeHolderList[1]" ""
+		5 3 "bike_rigRN" "|bike_rig:bike_ctrl|bike_rig:wholeBike|bike_rig:polySurface13|bike_rig:left|bike_rig:leftShape.worldMesh" 
+		"bike_rigRN.placeHolderList[2]" ""
+		5 3 "bike_rigRN" "|bike_rig:bike_ctrl|bike_rig:wholeBike|bike_rig:polySurface13|bike_rig:right|bike_rig:rightShape.worldMesh" 
+		"bike_rigRN.placeHolderList[3]" ""
+		5 3 "bike_rigRN" "|bike_rig:bike_ctrl|bike_rig:wholeBike|bike_rig:frame|bike_rig:frameShape.worldMesh" 
+		"bike_rigRN.placeHolderList[4]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "sneaks_latestRN";
@@ -4272,15 +5051,31 @@ createNode hyperLayout -n "hyperLayout1";
 	setAttr ".hyp[19].nvs" 1920;
 	setAttr ".anf" yes;
 createNode reference -n "house_latestRN";
+	setAttr -s 4 ".phl";
+	setAttr ".phl[1]" 0;
+	setAttr ".phl[2]" 0;
+	setAttr ".phl[3]" 0;
+	setAttr ".phl[4]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"house_latestRN"
 		"house_latest:living_room_furniture_latestRN" 0
 		"house_latest:kitchen_latestRN" 0
-		"house_latest:bedroom_latestRN" 2
+		"house_latest:bedroom_latestRN" 8
 		2 "|house_latest:bedroom_latest:nRigid1|house_latest:bedroom_latest:nRigidShape1" 
 		"cacheWidth" " 120"
 		2 "|house_latest:bedroom_latest:cloth|house_latest:bedroom_latest:nCloth1|house_latest:bedroom_latest:nClothShape1" 
 		"cacheWidth" " 120"
+		2 "|house_latest:bedroom_latest:cloth|house_latest:bedroom_latest:nRigid2|house_latest:bedroom_latest:nRigidShape2" 
+		"cacheWidth" " 120"
+		2 "|house_latest:bedroom_latest:cloth|house_latest:bedroom_latest:nRigid3|house_latest:bedroom_latest:nRigidShape3" 
+		"cacheWidth" " 120"
+		2 "|house_latest:bedroom_latest:cloth|house_latest:bedroom_latest:nRigid4|house_latest:bedroom_latest:nRigidShape4" 
+		"cacheWidth" " 120"
+		2 "|house_latest:bedroom_latest:cloth|house_latest:bedroom_latest:nRigid5|house_latest:bedroom_latest:nRigidShape5" 
+		"cacheWidth" " 120"
+		2 "|house_latest:bedroom_latest:cloth|house_latest:bedroom_latest:polySurface60|house_latest:bedroom_latest:outputCloth1" 
+		"intermediateObject" " 1"
+		2 "house_latest:bedroom_latest:layer2" "visibility" " 1"
 		"house_latest:utilities_latestRN" 0
 		"house_latestRN" 5
 		2 "|house_latest:ncloth|house_latest:nCloth1|house_latest:nClothShape1" "cacheWidth" 
@@ -4293,18 +5088,23 @@ createNode reference -n "house_latestRN";
 		" 120"
 		2 "|house_latest:ncloth|house_latest:nRigid4|house_latest:nRigidShape4" "cacheWidth" 
 		" 120"
-		"house_latest:bedroom_latestRN" 6
-		2 "|house_latest:bedroom_latest:cloth|house_latest:bedroom_latest:nRigid2|house_latest:bedroom_latest:nRigidShape2" 
-		"cacheWidth" " 120"
-		2 "|house_latest:bedroom_latest:cloth|house_latest:bedroom_latest:nRigid3|house_latest:bedroom_latest:nRigidShape3" 
-		"cacheWidth" " 120"
-		2 "|house_latest:bedroom_latest:cloth|house_latest:bedroom_latest:nRigid4|house_latest:bedroom_latest:nRigidShape4" 
-		"cacheWidth" " 120"
-		2 "|house_latest:bedroom_latest:cloth|house_latest:bedroom_latest:nRigid5|house_latest:bedroom_latest:nRigidShape5" 
-		"cacheWidth" " 120"
-		2 "|house_latest:bedroom_latest:cloth|house_latest:bedroom_latest:polySurface60|house_latest:bedroom_latest:outputCloth1" 
-		"intermediateObject" " 1"
-		2 "house_latest:bedroom_latest:layer2" "visibility" " 1"
+		"house_latest:bedroom_latestRN" 8
+		2 "|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:bed|house_latest:bedroom_latest:mattress|house_latest:bedroom_latest:mattressShape" 
+		"quadSplit" " 0"
+		2 "|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:bed|house_latest:bedroom_latest:mattress_frame1|house_latest:bedroom_latest:mattress_frame1Shape" 
+		"quadSplit" " 0"
+		2 "|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:bed|house_latest:bedroom_latest:leg_front_L|house_latest:bedroom_latest:leg_front_LShape" 
+		"quadSplit" " 0"
+		2 "|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:bed|house_latest:bedroom_latest:leg_front_L2|house_latest:bedroom_latest:leg_front_L2Shape" 
+		"quadSplit" " 0"
+		5 3 "house_latestRN" "|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:bed|house_latest:bedroom_latest:mattress|house_latest:bedroom_latest:mattressShape.worldMesh" 
+		"house_latestRN.placeHolderList[1]" ""
+		5 3 "house_latestRN" "|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:bed|house_latest:bedroom_latest:mattress_frame1|house_latest:bedroom_latest:mattress_frame1Shape.worldMesh" 
+		"house_latestRN.placeHolderList[2]" ""
+		5 3 "house_latestRN" "|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:bed|house_latest:bedroom_latest:leg_front_L|house_latest:bedroom_latest:leg_front_LShape.worldMesh" 
+		"house_latestRN.placeHolderList[3]" ""
+		5 3 "house_latestRN" "|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:bed|house_latest:bedroom_latest:leg_front_L2|house_latest:bedroom_latest:leg_front_L2Shape.worldMesh" 
+		"house_latestRN.placeHolderList[4]" ""
 		"house_latestRN" 3
 		2 "|house_latest:nRigid5|house_latest:nRigidShape5" "cacheWidth" " 120"
 		2 "house_latest:furniture" "visibility" " 1"
@@ -4314,13 +5114,20 @@ lockNode -l 1 ;
 createNode reference -n "sharedReferenceNode";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"sharedReferenceNode";
+createNode nComponent -n "nComponent1";
+	setAttr ".ct" 6;
+	setAttr ".el" 2;
+createNode nComponent -n "nComponent2";
+	setAttr ".ct" 2;
+	setAttr -s 11 ".ci[0:10]"  0 1 2 3 4 5 
+		6 7 8 9 10;
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -cb on ".ihi" 0;
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr ".o" 120;
-	setAttr ".unw" 120;
+	setAttr ".o" 21;
+	setAttr ".unw" 21;
 select -ne :renderPartition;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -4367,7 +5174,7 @@ select -ne :initialShadingGroup;
 	setAttr -cb on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 763 ".dsm";
+	setAttr -s 764 ".dsm";
 	setAttr -k on ".mwc";
 	setAttr -cb on ".an";
 	setAttr -cb on ".il";
@@ -4557,9 +5364,82 @@ select -ne :defaultHardwareRenderGlobals;
 	setAttr -k on ".gh";
 	setAttr -cb on ".sd";
 select -ne :ikSystem;
-	setAttr -s 6 ".sol";
+	setAttr -s 7 ".sol";
 connectAttr "defaultFurGlobals.rogl" "pig_latestRN.phl[1]";
 connectAttr "defaultFurGlobals.rogl" "pig_latestRN.phl[2]";
+connectAttr "smarty_latestRN.phl[1]" "nRigidShape9.imsh";
+connectAttr "smarty_latestRN.phl[2]" "nRigidShape10.imsh";
+connectAttr "smarty_latestRN.phl[3]" "nRigidShape11.imsh";
+connectAttr "smarty_latestRN.phl[4]" "nRigidShape12.imsh";
+connectAttr "bike_rigRN.phl[1]" "nRigidShape5.imsh";
+connectAttr "bike_rigRN.phl[2]" "nRigidShape6.imsh";
+connectAttr "bike_rigRN.phl[3]" "nRigidShape8.imsh";
+connectAttr "bike_rigRN.phl[4]" "nRigidShape7.imsh";
+connectAttr "house_latestRN.phl[1]" "nRigidShape1.imsh";
+connectAttr "house_latestRN.phl[2]" "nRigidShape2.imsh";
+connectAttr "house_latestRN.phl[3]" "nRigidShape4.imsh";
+connectAttr "house_latestRN.phl[4]" "nRigidShape3.imsh";
+connectAttr "nClothShape1.omsh" "outputCloth1.i";
+connectAttr ":time1.o" "nucleus1.cti";
+connectAttr "nClothShape1.cust" "nucleus1.niao[0]";
+connectAttr "nClothShape1.stst" "nucleus1.nias[0]";
+connectAttr "nRigidShape1.cust" "nucleus1.nipo[0]";
+connectAttr "nRigidShape2.cust" "nucleus1.nipo[1]";
+connectAttr "nRigidShape3.cust" "nucleus1.nipo[2]";
+connectAttr "nRigidShape4.cust" "nucleus1.nipo[3]";
+connectAttr "nRigidShape5.cust" "nucleus1.nipo[4]";
+connectAttr "nRigidShape6.cust" "nucleus1.nipo[5]";
+connectAttr "nRigidShape7.cust" "nucleus1.nipo[6]";
+connectAttr "nRigidShape8.cust" "nucleus1.nipo[7]";
+connectAttr "nRigidShape9.cust" "nucleus1.nipo[8]";
+connectAttr "nRigidShape10.cust" "nucleus1.nipo[9]";
+connectAttr "nRigidShape11.cust" "nucleus1.nipo[10]";
+connectAttr "nRigidShape12.cust" "nucleus1.nipo[11]";
+connectAttr "nRigidShape1.stst" "nucleus1.nips[0]";
+connectAttr "nRigidShape2.stst" "nucleus1.nips[1]";
+connectAttr "nRigidShape3.stst" "nucleus1.nips[2]";
+connectAttr "nRigidShape4.stst" "nucleus1.nips[3]";
+connectAttr "nRigidShape5.stst" "nucleus1.nips[4]";
+connectAttr "nRigidShape6.stst" "nucleus1.nips[5]";
+connectAttr "nRigidShape7.stst" "nucleus1.nips[6]";
+connectAttr "nRigidShape8.stst" "nucleus1.nips[7]";
+connectAttr "nRigidShape9.stst" "nucleus1.nips[8]";
+connectAttr "nRigidShape10.stst" "nucleus1.nips[9]";
+connectAttr "nRigidShape11.stst" "nucleus1.nips[10]";
+connectAttr "nRigidShape12.stst" "nucleus1.nips[11]";
+connectAttr "dynamicConstraintShape1.evs" "nucleus1.is[0]";
+connectAttr "dynamicConstraintShape1.evc" "nucleus1.ic[0]";
+connectAttr ":time1.o" "nClothShape1.cti";
+connectAttr "nucleus1.stf" "nClothShape1.stf";
+connectAttr "pPlaneShape1.w" "nClothShape1.imsh";
+connectAttr "nucleus1.noao[0]" "nClothShape1.nxst";
+connectAttr ":time1.o" "nRigidShape1.cti";
+connectAttr "nucleus1.stf" "nRigidShape1.stf";
+connectAttr "nComponent1.ocp" "dynamicConstraintShape1.cid[0]";
+connectAttr "nComponent2.ocp" "dynamicConstraintShape1.cid[1]";
+connectAttr ":time1.o" "dynamicConstraintShape1.cti";
+connectAttr ":time1.o" "nRigidShape2.cti";
+connectAttr "nucleus1.stf" "nRigidShape2.stf";
+connectAttr ":time1.o" "nRigidShape3.cti";
+connectAttr "nucleus1.stf" "nRigidShape3.stf";
+connectAttr ":time1.o" "nRigidShape4.cti";
+connectAttr "nucleus1.stf" "nRigidShape4.stf";
+connectAttr ":time1.o" "nRigidShape5.cti";
+connectAttr "nucleus1.stf" "nRigidShape5.stf";
+connectAttr ":time1.o" "nRigidShape6.cti";
+connectAttr "nucleus1.stf" "nRigidShape6.stf";
+connectAttr ":time1.o" "nRigidShape7.cti";
+connectAttr "nucleus1.stf" "nRigidShape7.stf";
+connectAttr ":time1.o" "nRigidShape8.cti";
+connectAttr "nucleus1.stf" "nRigidShape8.stf";
+connectAttr ":time1.o" "nRigidShape9.cti";
+connectAttr "nucleus1.stf" "nRigidShape9.stf";
+connectAttr ":time1.o" "nRigidShape10.cti";
+connectAttr "nucleus1.stf" "nRigidShape10.stf";
+connectAttr ":time1.o" "nRigidShape11.cti";
+connectAttr "nucleus1.stf" "nRigidShape11.stf";
+connectAttr ":time1.o" "nRigidShape12.cti";
+connectAttr "nucleus1.stf" "nRigidShape12.stf";
 connectAttr ":rmanFinalGlobals.msg" ":renderManRISGlobals.p" -na;
 connectAttr ":rmanPreviewGlobals.msg" ":renderManRISGlobals.p" -na;
 connectAttr ":rmanRerenderGlobals.msg" ":renderManRISGlobals.p" -na;
@@ -4682,7 +5562,11 @@ connectAttr ":defaultRenderGlobals.msg" "mtorPartition.rgcnx";
 connectAttr "hyperView1.msg" "nodeEditorPanel1Info.b[0]";
 connectAttr "hyperLayout1.msg" "hyperView1.hl";
 connectAttr "sharedReferenceNode.sr" "house_latestRN.sr";
+connectAttr "nRigidShape1.nuid" "nComponent1.obid";
+connectAttr "nClothShape1.nuid" "nComponent2.obid";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
+connectAttr "pPlaneShape1.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "outputCloth1.iog" ":initialShadingGroup.dsm" -na;
 dataStructure -fmt "raw" -as "name=externalContentTable:string=node:string=key:string=upath:uint32=upathcrc:string=rpath:string=roles";
 applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"pig_latestRN\" \"\" \"X:/documents/GitHub/Bandits/maya//assets/characters/pig/pig_latest.ma\" 672977679 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/characters/pig/pig_latest.ma\" \"FileRef\"\n1\n\"smarty_latestRN\" \"\" \"X:/documents/GitHub/Bandits/maya//assets/characters/smarty/smarty_latest.ma\" 1115229329 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/characters/smarty/smarty_latest.ma\" \"FileRef\"\n2\n\"bike_rigRN\" \"\" \"X:/documents/GitHub/Bandits/maya//assets/characters/smarty/bike_rig.ma\" 483276133 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/characters/smarty/bike_rig.ma\" \"FileRef\"\n3\n\"sneaks_latestRN\" \"\" \"X:/documents/GitHub/Bandits/maya//assets/characters/sneaks/sneaks_latest.ma\" 4193267377 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/characters/sneaks/sneaks_latest.ma\" \"FileRef\"\n4\n\"lighting_latestRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/sets/set_lighting/lighting_latest.ma\" 1486645550 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/sets/set_lighting/lighting_latest.ma\" \"FileRef\"\n5\n\"undies_fullRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/props/undies/undies_full.ma\" 84363646 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/props/undies/undies_full.ma\" \"FileRef\"\n6\n\"house_latestRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/sets/house/house_latest.ma\" 4116915578 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/sets/house/house_latest.ma\" \"FileRef\"\nendStream\nendChannel\nendAssociations\n" 
 		-scn;

@@ -2,7 +2,7 @@
 # Call this script from the github folder!!
 
 # set all these for your own use. $gitpath and $tmpfolder need to be an absolute path while the rest are all relative to $gitpath
-sshurl="shay.cs.berkeley.edu";
+sshurl="grove.cs.berkeley.edu";
 usr="cs198-ed";
 pw="saurabhissupersexy";
 gitpath="/home/cc/cs198/sp15/class/cs198-ed/CNM190/Bandits"
@@ -58,7 +58,9 @@ while getopts "f:c:s:e:d:" opt; do
 done
 
 
-printf "\n\nMAKE SURE YOU HAVE COMMITTED ALL YOUR REQUIRED FILES!!!!!!\n\n================================================================"
+printf "\n\nMAKE SURE YOU HAVE COMMITTED ALL YOUR REQUIRED FILES!!!!!!"
+sleep 1s
+printf "\n\n================================================================"
 printf "\n\nStarting Renderman Farm:\n"
 printf "\tUsing file: $file\n"
 printf "\tWith camera: $cam\n"

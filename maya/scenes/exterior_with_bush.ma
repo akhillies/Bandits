@@ -1,6 +1,6 @@
 //Maya ASCII 2015 scene
 //Name: exterior_with_bush.ma
-//Last modified: Sun, Mar 29, 2015 08:31:45 PM
+//Last modified: Fri, Apr 10, 2015 12:49:51 AM
 //Codeset: UTF-8
 file -rdi 1 -ns "sneaks_latest" -rfn "sneaks_latestRN" -op "v=0;" "X:/documents/GitHub/Bandits/maya//assets/characters/sneaks/sneaks_latest.ma";
 file -rdi 1 -ns "tuffs_latest" -rfn "tuffs_latestRN" -op "v=0;" "X:/documents/GitHub/Bandits/maya//assets/characters/tuffs/tuffs_latest.ma";
@@ -43,7 +43,7 @@ fileInfo "application" "maya";
 fileInfo "product" "Maya 2015";
 fileInfo "version" "2015";
 fileInfo "cutIdentifier" "201410051530-933320";
-fileInfo "osv" "Mac OS X 10.9.2";
+fileInfo "osv" "Mac OS X 10.9.3";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
@@ -84,7 +84,7 @@ createNode camera -s -n "frontShape" -p "front";
 	setAttr ".imn" -type "string" "front";
 	setAttr ".den" -type "string" "front_depth";
 	setAttr ".man" -type "string" "front_mask";
-	setAttr -s 5 ".ip";
+	setAttr -s 4 ".ip";
 	setAttr ".hc" -type "string" "viewSet -f %camera";
 	setAttr ".o" yes;
 createNode transform -s -n "side";
@@ -102,14 +102,15 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
 createNode transform -n "atraccoons";
-	setAttr ".t" -type "double3" -340.23763473273283 10.740148894370936 58.544392644395714 ;
-	setAttr ".r" -type "double3" -1.7999999999999989 0 0 ;
+	setAttr ".t" -type "double3" -348.46621782346136 12.363473098817874 32.461476057805093 ;
+	setAttr ".r" -type "double3" -38.39999999999965 -93.200000000000202 0 ;
 	setAttr ".s" -type "double3" 2.5 2.5 2.5 ;
 createNode camera -n "atraccoonsShape" -p "atraccoons";
 	setAttr -k off ".v";
 	setAttr ".cap" -type "double2" 1.41732 0.94488 ;
 	setAttr ".ff" 0;
 	setAttr ".ovr" 1.3;
+	setAttr ".coi" 9.9999997473787516e-06;
 	setAttr ".ow" 30;
 	setAttr ".imn" -type "string" "camera1";
 	setAttr ".den" -type "string" "camera1_depth";
@@ -3628,7 +3629,6 @@ createNode RenderMan -s -n "rmanSBMakePtexGlobals";
 	setAttr ".rman__param__ptxmake___channel" -type "string" "$BAKECHAN";
 	setAttr ".rman__param__ptxmake___outputfile" -type "string" "[passinfo this filename]";
 createNode mentalrayItemsList -s -n "mentalrayItemsList";
-	setAttr -s 3 ".opt";
 createNode mentalrayGlobals -s -n "mentalrayGlobals";
 	addAttr -s false -ci true -h true -sn "sunAndSkyShader" -ln "sunAndSkyShader" -at "message";
 	setAttr ".rvb" 3;
@@ -3786,8 +3786,8 @@ createNode mentalrayOptions -s -n "miDefaultOptions";
 	setAttr ".stringOptions[47].type" -type "string" "color";
 createNode mentalrayFramebuffer -s -n "miDefaultFramebuffer";
 createNode lightLinker -s -n "lightLinker1";
-	setAttr -s 1732 ".lnk";
-	setAttr -s 1732 ".slnk";
+	setAttr -s 1836 ".lnk";
+	setAttr -s 1836 ".slnk";
 createNode displayLayerManager -n "layerManager";
 createNode displayLayer -n "defaultLayer";
 createNode renderLayerManager -n "renderLayerManager";
@@ -4046,50 +4046,51 @@ createNode reference -n "pig_latestRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"pig_latestRN"
 		"pig_latest:key_latestRN" 0
-		"pig_latestRN" 1
+		"pig_latestRN" 2
 		2 "|pig_latest:defaultLight" "visibility" " 1"
-		"pig_latestRN" 22
-		2 "|pig_latest:PIG|pig_latest:controller_main01" "translate" " -type \"double3\" -180.1915330428175821 9.26291319580669459 53.05123243939496547"
-		
-		2 "|pig_latest:PIG|pig_latest:controller_main01" "rotate" " -type \"double3\" 0 -142.52697962012217658 0"
-		
-		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:hip_rotation_ctrl01" 
-		"translate" " -type \"double3\" 0 0 0"
-		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:hip_rotation_ctrl01" 
-		"translateY" " -av"
-		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:hip_rotation_ctrl01" 
-		"translateZ" " -av"
-		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:hip_rotation_ctrl01" 
-		"translateX" " -av"
-		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:hip_rotation_ctrl01" 
-		"rotate" " -type \"double3\" 0 0 0"
-		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:hip_rotation_ctrl01" 
-		"rotateX" " -av"
-		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:hip_rotation_ctrl01" 
-		"rotateZ" " -av"
-		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:hip_rotation_ctrl01" 
-		"rotateY" " -av"
-		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:splineiK_tail01" 
-		"translate" " -type \"double3\" -0.035666701541686059 9.50684457350198997 -13.33967068820426505"
-		
-		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:splineiK_tail01" 
-		"rotate" " -type \"double3\" 90.07587346879857648 41.8063746894477859 90.09659416823603806"
-		
-		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:shoulders_rotation_ctrl01" 
-		"translate" " -type \"double3\" 0 0 0.027375275944346633"
-		2 "|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:shoulders_rotation_ctrl01" 
-		"translateY" " -av"
-		2 "|pig_latest:PIG|pig_latest:flexi_joint_systems|pig_latest:vertebrae_flexi_spine01|pig_latest:PigSkin002:vertebrae_flexi_global01|pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01|pig_latest:PigSkin002:vertebrae_flexi_anim_end01" 
-		"followMid" " -av -k 1 1"
-		2 "|pig_latest:PIG|pig_latest:flexi_joint_systems|pig_latest:neck_flexi_spine01|pig_latest:PigSkin002:neck_flexi_global01|pig_latest:PigSkin002:neck_flexi_grp_anim_start01|pig_latest:PigSkin002:neck_flexi_anim_start01" 
-		"translate" " -type \"double3\" 0.0077654492008494272 0 0"
-		2 "|pig_latest:PIG|pig_latest:flexi_joint_systems|pig_latest:neck_flexi_spine01|pig_latest:PigSkin002:neck_flexi_global01|pig_latest:PigSkin002:neck_flexi_grp_anim_start01|pig_latest:PigSkin002:neck_flexi_anim_start01" 
-		"translateY" " -av"
-		2 "|pig_latest:PIG|pig_latest:flexi_joint_systems|pig_latest:neck_flexi_spine01|pig_latest:PigSkin002:neck_flexi_global01|pig_latest:PigSkin002:neck_flexi_grp_anim_start01|pig_latest:PigSkin002:neck_flexi_anim_start01" 
-		"translateZ" " -av"
-		2 "|pig_latest:PIG|pig_latest:flexi_joint_systems|pig_latest:neck_flexi_spine01|pig_latest:PigSkin002:neck_flexi_global01|pig_latest:PigSkin002:neck_flexi_grp_anim_start01|pig_latest:PigSkin002:neck_flexi_anim_start01" 
-		"translateX" " -av"
 		2 "pig_latest:pigmesh" "visibility" " 1"
+		"pig_latestRN" 21
+		2 "|pig_latest:pig_the_cat|pig_latest:PIG|pig_latest:controller_main01" "translate" 
+		" -type \"double3\" -180.1915330428175821 9.26291319580669459 53.05123243939496547"
+		
+		2 "|pig_latest:pig_the_cat|pig_latest:PIG|pig_latest:controller_main01" "rotate" 
+		" -type \"double3\" 0 -142.52697962012217658 0"
+		2 "|pig_latest:pig_the_cat|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:hip_rotation_ctrl01" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|pig_latest:pig_the_cat|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:hip_rotation_ctrl01" 
+		"translateX" " -av"
+		2 "|pig_latest:pig_the_cat|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:hip_rotation_ctrl01" 
+		"translateY" " -av"
+		2 "|pig_latest:pig_the_cat|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:hip_rotation_ctrl01" 
+		"translateZ" " -av"
+		2 "|pig_latest:pig_the_cat|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:hip_rotation_ctrl01" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|pig_latest:pig_the_cat|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:hip_rotation_ctrl01" 
+		"rotateX" " -av"
+		2 "|pig_latest:pig_the_cat|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:hip_rotation_ctrl01" 
+		"rotateY" " -av"
+		2 "|pig_latest:pig_the_cat|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:hip_rotation_ctrl01" 
+		"rotateZ" " -av"
+		2 "|pig_latest:pig_the_cat|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:splineiK_tail01" 
+		"translate" " -type \"double3\" -0.035605929950861544 9.5068587724989726 -13.33963281956067704"
+		
+		2 "|pig_latest:pig_the_cat|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:splineiK_tail01" 
+		"rotate" " -type \"double3\" 90.07587346879589063 41.80637468944944857 90.09659416823147637"
+		
+		2 "|pig_latest:pig_the_cat|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:shoulders_rotation_ctrl01" 
+		"translate" " -type \"double3\" 0 0 0.027375275944346633"
+		2 "|pig_latest:pig_the_cat|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchf_ctrl01|pig_latest:shoulders_rotation_ctrl01" 
+		"translateY" " -av"
+		2 "|pig_latest:pig_the_cat|pig_latest:PIG|pig_latest:flexi_joint_systems|pig_latest:vertebrae_flexi_spine01|pig_latest:PigSkin002:vertebrae_flexi_global01|pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01|pig_latest:PigSkin002:vertebrae_flexi_anim_end01" 
+		"followMid" " -av -k 1 1"
+		2 "|pig_latest:pig_the_cat|pig_latest:PIG|pig_latest:flexi_joint_systems|pig_latest:neck_flexi_spine01|pig_latest:PigSkin002:neck_flexi_global01|pig_latest:PigSkin002:neck_flexi_grp_anim_start01|pig_latest:PigSkin002:neck_flexi_anim_start01" 
+		"translate" " -type \"double3\" 0.0077654492008494272 0 0"
+		2 "|pig_latest:pig_the_cat|pig_latest:PIG|pig_latest:flexi_joint_systems|pig_latest:neck_flexi_spine01|pig_latest:PigSkin002:neck_flexi_global01|pig_latest:PigSkin002:neck_flexi_grp_anim_start01|pig_latest:PigSkin002:neck_flexi_anim_start01" 
+		"translateY" " -av"
+		2 "|pig_latest:pig_the_cat|pig_latest:PIG|pig_latest:flexi_joint_systems|pig_latest:neck_flexi_spine01|pig_latest:PigSkin002:neck_flexi_global01|pig_latest:PigSkin002:neck_flexi_grp_anim_start01|pig_latest:PigSkin002:neck_flexi_anim_start01" 
+		"translateZ" " -av"
+		2 "|pig_latest:pig_the_cat|pig_latest:PIG|pig_latest:flexi_joint_systems|pig_latest:neck_flexi_spine01|pig_latest:PigSkin002:neck_flexi_global01|pig_latest:PigSkin002:neck_flexi_grp_anim_start01|pig_latest:PigSkin002:neck_flexi_anim_start01" 
+		"translateX" " -av"
 		3 ":defaultRenderGlobals.rendercallback" "pig_latest:defaultFurGlobals.callback" 
 		""
 		5 4 "pig_latestRN" "pig_latest:defaultFurGlobals.furNodeList" "pig_latestRN.placeHolderList[1]" 
@@ -4307,7 +4308,7 @@ createNode shadingEngine -n "lambert3SG";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo2";
 createNode file -n "file1";
-	setAttr ".ftn" -type "string" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//sourceimages/map_front.jpg";
+	setAttr ".ftn" -type "string" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//sourceimages/map_front (3).jpg";
 createNode place2dTexture -n "place2dTexture1";
 createNode polyCube -n "polyCube1";
 	setAttr ".w" 5.1113267138196079;
@@ -4358,7 +4359,8 @@ createNode reference -n "smarty_latestRN";
 		"smarty_latestRN"
 		"smarty_latestRN" 0
 		"smarty_latestRN" 1
-		2 "|smarty_latest:SmartyRig|smarty_latest:global_ctrl" "translate" " -type \"double3\" -339.27570147935335854 16.60651114163744779 21.25966946155979542";
+		2 "|smarty_latest:SMARTY_OVERALL|smarty_latest:SmartyRig|smarty_latest:global_ctrl" 
+		"translate" " -type \"double3\" -339.27570147935335854 16.60651114163744779 21.25966946155979542";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "house_latestRN";
@@ -4369,7 +4371,8 @@ createNode reference -n "house_latestRN";
 		"house_latest:bedroom_latestRN" 0
 		"house_latest:utilities_latestRN" 0
 		"house_latestRN" 0
-		"house_latestRN" 1
+		"house_latestRN" 2
+		2 "|house_latest:nRigid5|house_latest:nRigidShape5" "cacheWidth" " 120"
 		2 "house_latest:furniture" "visibility" " 1";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
@@ -4397,7 +4400,7 @@ select -ne :renderPartition;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 1522 ".st";
+	setAttr -s 1688 ".st";
 	setAttr -cb on ".an";
 	setAttr -cb on ".pt";
 select -ne :renderGlobalsList1;
@@ -4410,7 +4413,7 @@ select -ne :defaultShaderList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 613 ".s";
+	setAttr -s 702 ".s";
 select -ne :postProcessList1;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -4422,9 +4425,9 @@ select -ne :defaultRenderUtilityList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 1049 ".u";
+	setAttr -s 1015 ".u";
 select -ne :defaultRenderingList1;
-	setAttr -s 134 ".r";
+	setAttr -s 124 ".r";
 select -ne :lightList1;
 	setAttr -s 16 ".l";
 select -ne :defaultTextureList1;
@@ -4432,14 +4435,13 @@ select -ne :defaultTextureList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 653 ".tx";
-select -ne :lambert1;
+	setAttr -s 598 ".tx";
 select -ne :initialShadingGroup;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 814 ".dsm";
+	setAttr -s 766 ".dsm";
 	setAttr -k on ".mwc";
 	setAttr -cb on ".an";
 	setAttr -cb on ".il";
@@ -4448,7 +4450,7 @@ select -ne :initialShadingGroup;
 	setAttr -cb on ".fo";
 	setAttr -cb on ".epo";
 	setAttr ".ro" yes;
-	setAttr -s 174 ".gn";
+	setAttr -s 152 ".gn";
 	setAttr -cb on ".mimt";
 	setAttr -cb on ".miop";
 	setAttr -cb on ".mise";
@@ -4480,8 +4482,6 @@ select -ne :initialParticleSE;
 	setAttr -cb on ".mica";
 	setAttr -cb on ".micw";
 	setAttr -cb on ".mirw";
-select -ne :initialMaterialInfo;
-	setAttr -s 2 ".t";
 select -ne :defaultRenderGlobals;
 	setAttr ".ren" -type "string" "mentalRay";
 	setAttr ".outf" 32;
@@ -4790,6 +4790,6 @@ connectAttr "pCubeShape1.ciog.cog[0]" ":initialShadingGroup.dsm" -na;
 connectAttr "groupId1.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId2.msg" ":initialShadingGroup.gn" -na;
 dataStructure -fmt "raw" -as "name=externalContentTable:string=node:string=key:string=upath:uint32=upathcrc:string=rpath:string=roles";
-applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"sneaks_latestRN\" \"\" \"X:/documents/GitHub/Bandits/maya//assets/characters/sneaks/sneaks_latest.ma\" 4193267377 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/characters/sneaks/sneaks_latest.ma\" \"FileRef\"\n1\n\"tuffs_latestRN\" \"\" \"X:/documents/GitHub/Bandits/maya//assets/characters/tuffs/tuffs_latest.ma\" 3888614028 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/characters/tuffs/tuffs_latest.ma\" \"FileRef\"\n2\n\"pig_latestRN\" \"\" \"X:/documents/GitHub/Bandits/maya//assets/characters/pig/pig_latest.ma\" 672977679 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/characters/pig/pig_latest.ma\" \"FileRef\"\n3\n\"binocularsRN\" \"\" \"X:/documents/GitHub/Bandits/maya//assets/props/binoculars.ma\" 3178957690 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/props/binoculars.ma\" \"FileRef\"\n4\n\"BushLeavesRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/sets/house_exterior/Bushes/BushLeaves.ma\" 2855614785 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/sets/house_exterior/Bushes/BushLeaves.ma\" \"FileRef\"\n5\n\"BushLeavesRN1\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/sets/house_exterior/Bushes/BushLeaves.ma\" 2855614785 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/sets/house_exterior/Bushes/BushLeaves.ma\" \"FileRef\"\n6\n\"BushLeavesRN2\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/sets/house_exterior/Bushes/BushLeaves.ma\" 2855614785 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/sets/house_exterior/Bushes/BushLeaves.ma\" \"FileRef\"\n7\n\"BushLeaves2RN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/sets/house_exterior/Bushes/BushLeaves.ma\" 2855614785 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/sets/house_exterior/Bushes/BushLeaves.ma\" \"FileRef\"\n8\n\"BushLeaves1RN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/sets/house_exterior/Bushes/BushLeaves.ma\" 2855614785 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/sets/house_exterior/Bushes/BushLeaves.ma\" \"FileRef\"\n9\n\"lighting_latestRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/sets/set_lighting/lighting_latest.ma\" 1486645550 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/sets/set_lighting/lighting_latest.ma\" \"FileRef\"\n10\n\"smarty_latestRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/characters/smarty/smarty_latest.ma\" 3117033860 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/characters/smarty/smarty_latest.ma\" \"FileRef\"\n11\n\"house_latestRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/sets/house/house_latest.ma\" 2354069368 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/sets/house/house_latest.ma\" \"FileRef\"\n12\n\"|imagePlane1|imagePlaneShape1\" \"imageName\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/sourceimages/map_front.jpg\" 3314537589 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/sourceimages/map_front.jpg\" \"sourceImages\"\n13\n\"file1\" \"fileTextureName\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/sourceimages/map_front.jpg\" 3314537589 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/sourceimages/map_front.jpg\" \"sourceImages\"\n14\n\"file2\" \"fileTextureName\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/sourceimages/map_back.jpg\" 3070675357 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/sourceimages/map_back.jpg\" \"sourceImages\"\nendStream\nendChannel\nendAssociations\n" 
+applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"sneaks_latestRN\" \"\" \"X:/documents/GitHub/Bandits/maya//assets/characters/sneaks/sneaks_latest.ma\" 4193267377 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/characters/sneaks/sneaks_latest.ma\" \"FileRef\"\n1\n\"tuffs_latestRN\" \"\" \"X:/documents/GitHub/Bandits/maya//assets/characters/tuffs/tuffs_latest.ma\" 3888614028 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/characters/tuffs/tuffs_latest.ma\" \"FileRef\"\n2\n\"pig_latestRN\" \"\" \"X:/documents/GitHub/Bandits/maya//assets/characters/pig/pig_latest.ma\" 672977679 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/characters/pig/pig_latest.ma\" \"FileRef\"\n3\n\"binocularsRN\" \"\" \"X:/documents/GitHub/Bandits/maya//assets/props/binoculars.ma\" 3178957690 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/props/binoculars.ma\" \"FileRef\"\n4\n\"BushLeavesRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/sets/house_exterior/Bushes/BushLeaves.ma\" 2855614785 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/sets/house_exterior/Bushes/BushLeaves.ma\" \"FileRef\"\n5\n\"BushLeavesRN1\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/sets/house_exterior/Bushes/BushLeaves.ma\" 2855614785 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/sets/house_exterior/Bushes/BushLeaves.ma\" \"FileRef\"\n6\n\"BushLeavesRN2\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/sets/house_exterior/Bushes/BushLeaves.ma\" 2855614785 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/sets/house_exterior/Bushes/BushLeaves.ma\" \"FileRef\"\n7\n\"BushLeaves2RN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/sets/house_exterior/Bushes/BushLeaves.ma\" 2855614785 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/sets/house_exterior/Bushes/BushLeaves.ma\" \"FileRef\"\n8\n\"BushLeaves1RN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/sets/house_exterior/Bushes/BushLeaves.ma\" 2855614785 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/sets/house_exterior/Bushes/BushLeaves.ma\" \"FileRef\"\n9\n\"lighting_latestRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/sets/set_lighting/lighting_latest.ma\" 1486645550 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/sets/set_lighting/lighting_latest.ma\" \"FileRef\"\n10\n\"smarty_latestRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/characters/smarty/smarty_latest.ma\" 3117033860 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/characters/smarty/smarty_latest.ma\" \"FileRef\"\n11\n\"house_latestRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/sets/house/house_latest.ma\" 4116915578 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/sets/house/house_latest.ma\" \"FileRef\"\n12\n\"|imagePlane1|imagePlaneShape1\" \"imageName\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/sourceimages/map_front.jpg\" 3314537589 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/sourceimages/map_front.jpg\" \"sourceImages\"\n13\n\"file1\" \"fileTextureName\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/sourceimages/map_front (3).jpg\" 4049949595 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/sourceimages/map_front (3).jpg\" \"sourceImages\"\n14\n\"file2\" \"fileTextureName\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/sourceimages/map_back.jpg\" 3070675357 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/sourceimages/map_back.jpg\" \"sourceImages\"\nendStream\nendChannel\nendAssociations\n" 
 		-scn;
 // End of exterior_with_bush.ma

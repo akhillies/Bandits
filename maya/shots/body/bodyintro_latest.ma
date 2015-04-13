@@ -1,6 +1,6 @@
 //Maya ASCII 2015 scene
 //Name: bodyintro_latest.ma
-//Last modified: Fri, Apr 10, 2015 12:25:10 AM
+//Last modified: Mon, Apr 13, 2015 02:13:36 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "utility_room_view" -rfn "utility_room_viewRN" -op "v=0;p=17;f=0"
 		 "X:/documents/GitHub/Bandits/maya//scenes/utility_room_view.ma";
@@ -112,6 +112,26 @@ createNode mesh -n "undiesShapeDeformed" -p "utility_room_viewRNfosterParent1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
+createNode parentConstraint -n "global_ctrl_parentConstraint1" -p "utility_room_viewRNfosterParent1";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "bike_ctrlW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" -4.9555423168764667 0.32750445826755481 -0.24902694208419862 ;
+	setAttr ".tg[0].tor" -type "double3" 0 89.999999999999986 0 ;
+	setAttr ".lr" -type "double3" 35.453340532974835 -50.120624870975739 -36.373290165757496 ;
+	setAttr ".rst" -type "double3" 10.079817474578334 11.003304021572831 6.0439861158264634 ;
+	setAttr ".rsrr" -type "double3" 0 89.999999999999986 0 ;
+	setAttr -k on ".w0";
 createNode parentConstraint -n "tail_2control01_parentConstraint1" -p "utility_room_viewRNfosterParent1";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "tail_1control01W0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -128,7 +148,7 @@ createNode parentConstraint -n "tail_2control01_parentConstraint1" -p "utility_r
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 1.6290676722285684e-17 1.1416307672183175 -1.7546462838769799 ;
 	setAttr ".tg[0].tor" -type "double3" 0 2.3854160110976392e-15 -1.4562654829165989e-17 ;
-	setAttr ".lr" -type "double3" 6.3611093629270335e-15 0 0 ;
+	setAttr ".lr" -type "double3" -3.1805546814635168e-15 0 0 ;
 	setAttr ".rst" -type "double3" 0 -1.7763568394002505e-15 0 ;
 	setAttr -k on ".w0";
 createNode parentConstraint -n "tail_3control01_parentConstraint1" -p "utility_room_viewRNfosterParent1";
@@ -148,7 +168,7 @@ createNode parentConstraint -n "tail_3control01_parentConstraint1" -p "utility_r
 	setAttr ".tg[0].tot" -type "double3" -7.5823278986472407e-14 1.4499869149123512 
 		-2.126843980456961 ;
 	setAttr ".tg[0].tor" -type "double3" 0 2.3854160110976392e-15 -1.4562654829165989e-17 ;
-	setAttr ".lr" -type "double3" 3.1805546814635168e-15 0 0 ;
+	setAttr ".lr" -type "double3" 6.3611093629270335e-15 0 0 ;
 	setAttr ".rst" -type "double3" -7.1054273576010019e-14 0 -7.1054273576010019e-15 ;
 	setAttr -k on ".w0";
 createNode parentConstraint -n "tail_4control01_parentConstraint1" -p "utility_room_viewRNfosterParent1";
@@ -168,26 +188,6 @@ createNode parentConstraint -n "tail_4control01_parentConstraint1" -p "utility_r
 	setAttr ".tg[0].tot" -type "double3" 5.4299924046680542e-14 0.8563280471171506 -1.2729200700390013 ;
 	setAttr ".tg[0].tor" -type "double3" 0 2.3854160110976392e-15 -1.4562654829165989e-17 ;
 	setAttr ".rst" -type "double3" -1.4210854715202004e-14 -1.7763568394002505e-15 -1.7763568394002505e-15 ;
-	setAttr -k on ".w0";
-createNode parentConstraint -n "global_ctrl_parentConstraint1" -p "utility_room_viewRNfosterParent1";
-	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "bike_ctrlW0" -dv 1 -min 0 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr ".tg[0].tot" -type "double3" -4.9555423168764667 0.32750445826755481 -0.24902694208419862 ;
-	setAttr ".tg[0].tor" -type "double3" 0 89.999999999999986 0 ;
-	setAttr ".lr" -type "double3" 0 -58.491259037105344 0 ;
-	setAttr ".rst" -type "double3" 10.079817474578334 11.003304021572831 6.0439861158264634 ;
-	setAttr ".rsrr" -type "double3" 0 89.999999999999986 0 ;
 	setAttr -k on ".w0";
 createNode RenderMan -s -n "renderManRISGlobals";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -3820,8 +3820,8 @@ createNode mentalrayOptions -s -n "miDefaultOptions";
 	setAttr ".stringOptions[47].type" -type "string" "color";
 createNode mentalrayFramebuffer -s -n "miDefaultFramebuffer";
 createNode lightLinker -s -n "lightLinker1";
-	setAttr -s 1490 ".lnk";
-	setAttr -s 1490 ".slnk";
+	setAttr -s 1292 ".lnk";
+	setAttr -s 1292 ".slnk";
 createNode displayLayerManager -n "layerManager";
 	setAttr ".cdl" 1;
 	setAttr -s 2 ".dli[1]"  1;
@@ -3840,268 +3840,12 @@ createNode reference -n "utility_room_viewRN";
 	setAttr ".phl[1614]" 0;
 	setAttr ".phl[1615]" 0;
 	setAttr ".phl[1616]" 0;
-	setAttr ".phl[3303]" 0;
-	setAttr ".phl[3304]" 0;
-	setAttr ".phl[3305]" 0;
-	setAttr ".phl[3306]" 0;
-	setAttr ".phl[3307]" 0;
-	setAttr ".phl[3308]" 0;
-	setAttr ".phl[3309]" 0;
-	setAttr ".phl[3310]" 0;
-	setAttr ".phl[3311]" 0;
-	setAttr ".phl[3312]" 0;
-	setAttr ".phl[3313]" 0;
-	setAttr ".phl[3314]" 0;
-	setAttr ".phl[3315]" 0;
-	setAttr ".phl[3316]" 0;
-	setAttr ".phl[3317]" 0;
-	setAttr ".phl[3318]" 0;
-	setAttr ".phl[3319]" 0;
-	setAttr ".phl[3320]" 0;
-	setAttr ".phl[3321]" 0;
-	setAttr ".phl[3322]" 0;
-	setAttr ".phl[3323]" 0;
-	setAttr ".phl[3324]" 0;
-	setAttr ".phl[3325]" 0;
-	setAttr ".phl[3326]" 0;
-	setAttr ".phl[3327]" 0;
-	setAttr ".phl[3328]" 0;
-	setAttr ".phl[3329]" 0;
-	setAttr ".phl[3330]" 0;
-	setAttr ".phl[3331]" 0;
-	setAttr ".phl[3332]" 0;
-	setAttr ".phl[3333]" 0;
-	setAttr ".phl[3334]" 0;
-	setAttr ".phl[3335]" 0;
-	setAttr ".phl[3336]" 0;
-	setAttr ".phl[3337]" 0;
-	setAttr ".phl[3338]" 0;
-	setAttr ".phl[3339]" 0;
-	setAttr ".phl[3340]" 0;
-	setAttr ".phl[3341]" 0;
-	setAttr ".phl[3342]" 0;
-	setAttr ".phl[3343]" 0;
-	setAttr ".phl[3344]" 0;
-	setAttr ".phl[3345]" 0;
-	setAttr ".phl[3346]" 0;
-	setAttr ".phl[3347]" 0;
-	setAttr ".phl[3348]" 0;
-	setAttr ".phl[3349]" 0;
-	setAttr ".phl[3350]" 0;
-	setAttr ".phl[3351]" 0;
-	setAttr ".phl[3352]" 0;
-	setAttr ".phl[3353]" 0;
-	setAttr ".phl[3354]" 0;
-	setAttr ".phl[3355]" 0;
-	setAttr ".phl[3356]" 0;
-	setAttr ".phl[3357]" 0;
-	setAttr ".phl[3358]" 0;
-	setAttr ".phl[3359]" 0;
-	setAttr ".phl[3360]" 0;
-	setAttr ".phl[3361]" 0;
-	setAttr ".phl[3362]" 0;
-	setAttr ".phl[3363]" 0;
-	setAttr ".phl[3364]" 0;
-	setAttr ".phl[3365]" 0;
-	setAttr ".phl[3366]" 0;
-	setAttr ".phl[3367]" 0;
-	setAttr ".phl[3368]" 0;
-	setAttr ".phl[3369]" 0;
-	setAttr ".phl[3370]" 0;
-	setAttr ".phl[3371]" 0;
-	setAttr ".phl[3372]" 0;
-	setAttr ".phl[3373]" 0;
-	setAttr ".phl[3374]" 0;
-	setAttr ".phl[3375]" 0;
-	setAttr ".phl[3376]" 0;
-	setAttr ".phl[3377]" 0;
-	setAttr ".phl[3378]" 0;
-	setAttr ".phl[3379]" 0;
-	setAttr ".phl[3380]" 0;
-	setAttr ".phl[3381]" 0;
-	setAttr ".phl[3382]" 0;
-	setAttr ".phl[3383]" 0;
-	setAttr ".phl[3384]" 0;
-	setAttr ".phl[3385]" 0;
-	setAttr ".phl[3386]" 0;
-	setAttr ".phl[3387]" 0;
-	setAttr ".phl[3388]" 0;
-	setAttr ".phl[3389]" 0;
-	setAttr ".phl[3390]" 0;
-	setAttr ".phl[3391]" 0;
-	setAttr ".phl[3392]" 0;
-	setAttr ".phl[3393]" 0;
-	setAttr ".phl[3394]" 0;
-	setAttr ".phl[3395]" 0;
-	setAttr ".phl[3396]" 0;
-	setAttr ".phl[3397]" 0;
-	setAttr ".phl[3398]" 0;
-	setAttr ".phl[3399]" 0;
-	setAttr ".phl[3400]" 0;
-	setAttr ".phl[3401]" 0;
-	setAttr ".phl[3402]" 0;
-	setAttr ".phl[3403]" 0;
-	setAttr ".phl[3404]" 0;
-	setAttr ".phl[3405]" 0;
-	setAttr ".phl[3406]" 0;
-	setAttr ".phl[3407]" 0;
-	setAttr ".phl[3408]" 0;
-	setAttr ".phl[3409]" 0;
-	setAttr ".phl[3410]" 0;
-	setAttr ".phl[3411]" 0;
-	setAttr ".phl[3412]" 0;
-	setAttr ".phl[3413]" 0;
-	setAttr ".phl[3414]" 0;
-	setAttr ".phl[3415]" 0;
-	setAttr ".phl[3416]" 0;
-	setAttr ".phl[3417]" 0;
-	setAttr ".phl[3418]" 0;
-	setAttr ".phl[3419]" 0;
-	setAttr ".phl[3420]" 0;
-	setAttr ".phl[3421]" 0;
-	setAttr ".phl[3422]" 0;
-	setAttr ".phl[3423]" 0;
-	setAttr ".phl[3424]" 0;
-	setAttr ".phl[3425]" 0;
-	setAttr ".phl[3426]" 0;
-	setAttr ".phl[3427]" 0;
-	setAttr ".phl[3428]" 0;
-	setAttr ".phl[3429]" 0;
-	setAttr ".phl[3430]" 0;
-	setAttr ".phl[3431]" 0;
-	setAttr ".phl[3432]" 0;
-	setAttr ".phl[3433]" 0;
-	setAttr ".phl[3434]" 0;
-	setAttr ".phl[3435]" 0;
-	setAttr ".phl[3436]" 0;
-	setAttr ".phl[3437]" 0;
-	setAttr ".phl[3438]" 0;
-	setAttr ".phl[3439]" 0;
-	setAttr ".phl[3440]" 0;
-	setAttr ".phl[3441]" 0;
-	setAttr ".phl[3442]" 0;
-	setAttr ".phl[3443]" 0;
-	setAttr ".phl[3444]" 0;
-	setAttr ".phl[3445]" 0;
-	setAttr ".phl[3446]" 0;
-	setAttr ".phl[3447]" 0;
-	setAttr ".phl[3448]" 0;
-	setAttr ".phl[3449]" 0;
-	setAttr ".phl[3450]" 0;
-	setAttr ".phl[3451]" 0;
-	setAttr ".phl[3452]" 0;
-	setAttr ".phl[3453]" 0;
-	setAttr ".phl[3454]" 0;
-	setAttr ".phl[3455]" 0;
-	setAttr ".phl[3456]" 0;
-	setAttr ".phl[3457]" 0;
-	setAttr ".phl[3458]" 0;
-	setAttr ".phl[3459]" 0;
-	setAttr ".phl[3460]" 0;
-	setAttr ".phl[3461]" 0;
-	setAttr ".phl[3462]" 0;
-	setAttr ".phl[3463]" 0;
-	setAttr ".phl[3464]" 0;
-	setAttr ".phl[3465]" 0;
-	setAttr ".phl[3466]" 0;
-	setAttr ".phl[3467]" 0;
-	setAttr ".phl[3468]" 0;
-	setAttr ".phl[3469]" 0;
-	setAttr ".phl[3470]" 0;
-	setAttr ".phl[3471]" 0;
-	setAttr ".phl[3472]" 0;
-	setAttr ".phl[3473]" 0;
-	setAttr ".phl[3474]" 0;
-	setAttr ".phl[3475]" 0;
-	setAttr ".phl[3476]" 0;
-	setAttr ".phl[3477]" 0;
-	setAttr ".phl[3478]" 0;
-	setAttr ".phl[3479]" 0;
-	setAttr ".phl[3480]" 0;
-	setAttr ".phl[3481]" 0;
-	setAttr ".phl[3482]" 0;
-	setAttr ".phl[3483]" 0;
-	setAttr ".phl[3484]" 0;
-	setAttr ".phl[3485]" 0;
-	setAttr ".phl[3486]" 0;
-	setAttr ".phl[3487]" 0;
-	setAttr ".phl[3488]" 0;
-	setAttr ".phl[3489]" 0;
-	setAttr ".phl[3490]" 0;
-	setAttr ".phl[3491]" 0;
-	setAttr ".phl[3492]" 0;
-	setAttr ".phl[3493]" 0;
-	setAttr ".phl[3494]" 0;
-	setAttr ".phl[3495]" 0;
-	setAttr ".phl[3496]" 0;
-	setAttr ".phl[3497]" 0;
-	setAttr ".phl[3498]" 0;
-	setAttr ".phl[3499]" 0;
-	setAttr ".phl[3500]" 0;
-	setAttr ".phl[3501]" 0;
-	setAttr ".phl[3502]" 0;
 	setAttr ".phl[3503]" 0;
-	setAttr ".phl[3504]" 0;
-	setAttr ".phl[3505]" 0;
-	setAttr ".phl[3506]" 0;
-	setAttr ".phl[3507]" 0;
-	setAttr ".phl[3508]" 0;
-	setAttr ".phl[3509]" 0;
-	setAttr ".phl[3510]" 0;
-	setAttr ".phl[3511]" 0;
-	setAttr ".phl[3512]" 0;
-	setAttr ".phl[3513]" 0;
 	setAttr ".phl[3514]" 0;
 	setAttr ".phl[3515]" 0;
 	setAttr ".phl[3516]" 0;
 	setAttr ".phl[3517]" 0;
 	setAttr ".phl[3518]" 0;
-	setAttr ".phl[3519]" 0;
-	setAttr ".phl[3520]" 0;
-	setAttr ".phl[3521]" 0;
-	setAttr ".phl[3522]" 0;
-	setAttr ".phl[3523]" 0;
-	setAttr ".phl[3524]" 0;
-	setAttr ".phl[3525]" 0;
-	setAttr ".phl[3526]" 0;
-	setAttr ".phl[3527]" 0;
-	setAttr ".phl[3528]" 0;
-	setAttr ".phl[3529]" 0;
-	setAttr ".phl[3530]" 0;
-	setAttr ".phl[3531]" 0;
-	setAttr ".phl[3532]" 0;
-	setAttr ".phl[3533]" 0;
-	setAttr ".phl[3534]" 0;
-	setAttr ".phl[3535]" 0;
-	setAttr ".phl[3536]" 0;
-	setAttr ".phl[3537]" 0;
-	setAttr ".phl[3538]" 0;
-	setAttr ".phl[3539]" 0;
-	setAttr ".phl[3540]" 0;
-	setAttr ".phl[3541]" 0;
-	setAttr ".phl[3542]" 0;
-	setAttr ".phl[3543]" 0;
-	setAttr ".phl[3544]" 0;
-	setAttr ".phl[3545]" 0;
-	setAttr ".phl[3546]" 0;
-	setAttr ".phl[3547]" 0;
-	setAttr ".phl[3548]" 0;
-	setAttr ".phl[3549]" 0;
-	setAttr ".phl[3550]" 0;
-	setAttr ".phl[3551]" 0;
-	setAttr ".phl[3552]" 0;
-	setAttr ".phl[3553]" 0;
-	setAttr ".phl[3554]" 0;
-	setAttr ".phl[3555]" 0;
-	setAttr ".phl[3556]" 0;
-	setAttr ".phl[3557]" 0;
-	setAttr ".phl[3558]" 0;
-	setAttr ".phl[3559]" 0;
-	setAttr ".phl[3560]" 0;
-	setAttr ".phl[3561]" 0;
-	setAttr ".phl[3562]" 0;
-	setAttr ".phl[3563]" 0;
-	setAttr ".phl[3564]" 0;
 	setAttr ".phl[3565]" 0;
 	setAttr ".phl[3566]" 0;
 	setAttr ".phl[3567]" 0;
@@ -4757,6 +4501,206 @@ createNode reference -n "utility_room_viewRN";
 	setAttr ".phl[4217]" 0;
 	setAttr ".phl[4218]" 0;
 	setAttr ".phl[4219]" 0;
+	setAttr ".phl[4220]" 0;
+	setAttr ".phl[4221]" 0;
+	setAttr ".phl[4222]" 0;
+	setAttr ".phl[4223]" 0;
+	setAttr ".phl[4224]" 0;
+	setAttr ".phl[4225]" 0;
+	setAttr ".phl[4226]" 0;
+	setAttr ".phl[4227]" 0;
+	setAttr ".phl[4228]" 0;
+	setAttr ".phl[4229]" 0;
+	setAttr ".phl[4230]" 0;
+	setAttr ".phl[4231]" 0;
+	setAttr ".phl[4232]" 0;
+	setAttr ".phl[4233]" 0;
+	setAttr ".phl[4234]" 0;
+	setAttr ".phl[4235]" 0;
+	setAttr ".phl[4236]" 0;
+	setAttr ".phl[4237]" 0;
+	setAttr ".phl[4238]" 0;
+	setAttr ".phl[4239]" 0;
+	setAttr ".phl[4240]" 0;
+	setAttr ".phl[4241]" 0;
+	setAttr ".phl[4242]" 0;
+	setAttr ".phl[4243]" 0;
+	setAttr ".phl[4244]" 0;
+	setAttr ".phl[4245]" 0;
+	setAttr ".phl[4246]" 0;
+	setAttr ".phl[4247]" 0;
+	setAttr ".phl[4248]" 0;
+	setAttr ".phl[4249]" 0;
+	setAttr ".phl[4250]" 0;
+	setAttr ".phl[4251]" 0;
+	setAttr ".phl[4252]" 0;
+	setAttr ".phl[4253]" 0;
+	setAttr ".phl[4254]" 0;
+	setAttr ".phl[4255]" 0;
+	setAttr ".phl[4256]" 0;
+	setAttr ".phl[4257]" 0;
+	setAttr ".phl[4258]" 0;
+	setAttr ".phl[4259]" 0;
+	setAttr ".phl[4260]" 0;
+	setAttr ".phl[4261]" 0;
+	setAttr ".phl[4262]" 0;
+	setAttr ".phl[4263]" 0;
+	setAttr ".phl[4264]" 0;
+	setAttr ".phl[4265]" 0;
+	setAttr ".phl[4266]" 0;
+	setAttr ".phl[4267]" 0;
+	setAttr ".phl[4268]" 0;
+	setAttr ".phl[4269]" 0;
+	setAttr ".phl[4270]" 0;
+	setAttr ".phl[4271]" 0;
+	setAttr ".phl[4272]" 0;
+	setAttr ".phl[4273]" 0;
+	setAttr ".phl[4274]" 0;
+	setAttr ".phl[4275]" 0;
+	setAttr ".phl[4276]" 0;
+	setAttr ".phl[4277]" 0;
+	setAttr ".phl[4278]" 0;
+	setAttr ".phl[4279]" 0;
+	setAttr ".phl[4280]" 0;
+	setAttr ".phl[4281]" 0;
+	setAttr ".phl[4282]" 0;
+	setAttr ".phl[4283]" 0;
+	setAttr ".phl[4284]" 0;
+	setAttr ".phl[4285]" 0;
+	setAttr ".phl[4286]" 0;
+	setAttr ".phl[4287]" 0;
+	setAttr ".phl[4288]" 0;
+	setAttr ".phl[4289]" 0;
+	setAttr ".phl[4290]" 0;
+	setAttr ".phl[4291]" 0;
+	setAttr ".phl[4292]" 0;
+	setAttr ".phl[4293]" 0;
+	setAttr ".phl[4294]" 0;
+	setAttr ".phl[4295]" 0;
+	setAttr ".phl[4296]" 0;
+	setAttr ".phl[4297]" 0;
+	setAttr ".phl[4298]" 0;
+	setAttr ".phl[4299]" 0;
+	setAttr ".phl[4300]" 0;
+	setAttr ".phl[4301]" 0;
+	setAttr ".phl[4302]" 0;
+	setAttr ".phl[4303]" 0;
+	setAttr ".phl[4304]" 0;
+	setAttr ".phl[4305]" 0;
+	setAttr ".phl[4306]" 0;
+	setAttr ".phl[4307]" 0;
+	setAttr ".phl[4308]" 0;
+	setAttr ".phl[4309]" 0;
+	setAttr ".phl[4310]" 0;
+	setAttr ".phl[4311]" 0;
+	setAttr ".phl[4312]" 0;
+	setAttr ".phl[4313]" 0;
+	setAttr ".phl[4314]" 0;
+	setAttr ".phl[4315]" 0;
+	setAttr ".phl[4316]" 0;
+	setAttr ".phl[4317]" 0;
+	setAttr ".phl[4318]" 0;
+	setAttr ".phl[4319]" 0;
+	setAttr ".phl[4320]" 0;
+	setAttr ".phl[4321]" 0;
+	setAttr ".phl[4322]" 0;
+	setAttr ".phl[4323]" 0;
+	setAttr ".phl[4324]" 0;
+	setAttr ".phl[4325]" 0;
+	setAttr ".phl[4326]" 0;
+	setAttr ".phl[4327]" 0;
+	setAttr ".phl[4328]" 0;
+	setAttr ".phl[4329]" 0;
+	setAttr ".phl[4330]" 0;
+	setAttr ".phl[4331]" 0;
+	setAttr ".phl[4332]" 0;
+	setAttr ".phl[4333]" 0;
+	setAttr ".phl[4334]" 0;
+	setAttr ".phl[4335]" 0;
+	setAttr ".phl[4336]" 0;
+	setAttr ".phl[4337]" 0;
+	setAttr ".phl[4338]" 0;
+	setAttr ".phl[4339]" 0;
+	setAttr ".phl[4340]" 0;
+	setAttr ".phl[4341]" 0;
+	setAttr ".phl[4342]" 0;
+	setAttr ".phl[4343]" 0;
+	setAttr ".phl[4344]" 0;
+	setAttr ".phl[4345]" 0;
+	setAttr ".phl[4346]" 0;
+	setAttr ".phl[4347]" 0;
+	setAttr ".phl[4348]" 0;
+	setAttr ".phl[4349]" 0;
+	setAttr ".phl[4350]" 0;
+	setAttr ".phl[4351]" 0;
+	setAttr ".phl[4352]" 0;
+	setAttr ".phl[4353]" 0;
+	setAttr ".phl[4354]" 0;
+	setAttr ".phl[4355]" 0;
+	setAttr ".phl[4356]" 0;
+	setAttr ".phl[4357]" 0;
+	setAttr ".phl[4358]" 0;
+	setAttr ".phl[4359]" 0;
+	setAttr ".phl[4360]" 0;
+	setAttr ".phl[4361]" 0;
+	setAttr ".phl[4362]" 0;
+	setAttr ".phl[4363]" 0;
+	setAttr ".phl[4364]" 0;
+	setAttr ".phl[4365]" 0;
+	setAttr ".phl[4366]" 0;
+	setAttr ".phl[4367]" 0;
+	setAttr ".phl[4368]" 0;
+	setAttr ".phl[4369]" 0;
+	setAttr ".phl[4370]" 0;
+	setAttr ".phl[4371]" 0;
+	setAttr ".phl[4372]" 0;
+	setAttr ".phl[4373]" 0;
+	setAttr ".phl[4374]" 0;
+	setAttr ".phl[4375]" 0;
+	setAttr ".phl[4376]" 0;
+	setAttr ".phl[4377]" 0;
+	setAttr ".phl[4378]" 0;
+	setAttr ".phl[4379]" 0;
+	setAttr ".phl[4380]" 0;
+	setAttr ".phl[4381]" 0;
+	setAttr ".phl[4382]" 0;
+	setAttr ".phl[4383]" 0;
+	setAttr ".phl[4384]" 0;
+	setAttr ".phl[4385]" 0;
+	setAttr ".phl[4386]" 0;
+	setAttr ".phl[4387]" 0;
+	setAttr ".phl[4388]" 0;
+	setAttr ".phl[4389]" 0;
+	setAttr ".phl[4390]" 0;
+	setAttr ".phl[4391]" 0;
+	setAttr ".phl[4392]" 0;
+	setAttr ".phl[4393]" 0;
+	setAttr ".phl[4394]" 0;
+	setAttr ".phl[4395]" 0;
+	setAttr ".phl[4396]" 0;
+	setAttr ".phl[4397]" 0;
+	setAttr ".phl[4398]" 0;
+	setAttr ".phl[4399]" 0;
+	setAttr ".phl[4400]" 0;
+	setAttr ".phl[4401]" 0;
+	setAttr ".phl[4402]" 0;
+	setAttr ".phl[4403]" 0;
+	setAttr ".phl[4404]" 0;
+	setAttr ".phl[4405]" 0;
+	setAttr ".phl[4406]" 0;
+	setAttr ".phl[4407]" 0;
+	setAttr ".phl[4408]" 0;
+	setAttr ".phl[4409]" 0;
+	setAttr ".phl[4410]" 0;
+	setAttr ".phl[4411]" 0;
+	setAttr ".phl[4412]" 0;
+	setAttr ".phl[4413]" 0;
+	setAttr ".phl[4414]" 0;
+	setAttr ".phl[4415]" 0;
+	setAttr ".phl[4416]" 0;
+	setAttr ".phl[4417]" 0;
+	setAttr ".phl[4418]" 0;
+	setAttr ".phl[4419]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"utility_room_viewRN"
 		"utility_room_view:livingroom_shading_latest:living_room_latest:bed_latestRN" 
@@ -5686,7 +5630,7 @@ createNode reference -n "utility_room_viewRN";
 		"furNameSpace" " -type \"string\" \"bed_latest1\""
 		"utility_room_view:house_latest:kitchen_latestRN" 0
 		"utility_room_view:light_setup_004RN" 0
-		"utility_room_view:sneaks_latestRN" 176
+		"utility_room_view:sneaks_latestRN" 182
 		1 |utility_room_view:sneaks_latest:sneaksmesh:polySurface1|utility_room_view:sneaks_latest:blink|utility_room_view:sneaks_latest:blinkShapeOrig 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
 		1 |utility_room_view:sneaks_latest:sneaksmesh:polySurface1|utility_room_view:sneaks_latest:blink|utility_room_view:sneaks_latest:blinkShapeOrig 
@@ -5860,6 +5804,12 @@ createNode reference -n "utility_room_viewRN";
 		1 |utility_room_view:sneaks_latest:sneaks_latest:sneaks_normal_face:sneaksmesh:polySurface1|utility_room_view:sneaks_latest:sneaks_latest:nose|utility_room_view:sneaks_latest:sneaks_latest:noseShape 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |utility_room_view:sneaks_latest:sneaks_latest:sneaks_normal_face:sneaksmesh:polySurface1|utility_room_view:sneaks_latest:sneaks_latest:nose|utility_room_view:sneaks_latest:sneaks_latest:noseShape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:Sneakio002:Bandana|utility_room_view:sneaks_latest:Sneakio002:BandanaShape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:Sneakio002:Bandana|utility_room_view:sneaks_latest:Sneakio002:BandanaShape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:Sneakio002:Bandana|utility_room_view:sneaks_latest:Sneakio002:BandanaShape 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		2 "|utility_room_view:sneaks_latest:sneaksmesh:polySurface1|utility_room_view:sneaks_latest:blink|utility_room_view:sneaks_latest:blinkShapeOrig" 
 		"surfaceReference" " 1"
@@ -6067,6 +6017,13 @@ createNode reference -n "utility_room_viewRN";
 		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/characters/sneaks/sneaks_latest.ma\""
 		
 		2 "|utility_room_view:sneaks_latest:sneaks_latest:sneaks_normal_face:sneaksmesh:polySurface1|utility_room_view:sneaks_latest:sneaks_latest:nose|utility_room_view:sneaks_latest:sneaks_latest:noseShape" 
+		"furNameSpace" " -type \"string\" \"sneaks_latest\""
+		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:Sneakio002:Bandana|utility_room_view:sneaks_latest:Sneakio002:BandanaShape" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:Sneakio002:Bandana|utility_room_view:sneaks_latest:Sneakio002:BandanaShape" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/characters/sneaks/sneaks_latest.ma\""
+		
+		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:Sneakio002:Bandana|utility_room_view:sneaks_latest:Sneakio002:BandanaShape" 
 		"furNameSpace" " -type \"string\" \"sneaks_latest\""
 		"utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latestRN1" 
 		42
@@ -8987,6 +8944,91 @@ createNode reference -n "utility_room_viewRN";
 		
 		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest4:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest4:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest4:taller_windowShape" 
 		"furNameSpace" " -type \"string\" \"taller_window_four_squares_latest4\""
+		"utility_room_view:livingroom_shading_latest:living_room_latest:telescopeRN" 38
+		
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform4|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02Shape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform4|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02Shape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform4|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02Shape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04Shape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04Shape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04Shape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurface1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurfaceShape1 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurface1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurfaceShape1 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurface1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurfaceShape1 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_" 
+		"translate" " -type \"double3\" 0 2169.506103515625 0"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_" 
+		"translateY" " -av"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_" 
+		"translateX" " -av"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_" 
+		"translateZ" " -av"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02" 
+		"translate" " -type \"double3\" 1.09363007545471191 496.370635986328125 -28.75731468200683594"
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02" 
+		"translateX" " -av"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02" 
+		"translateY" " -av"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02" 
+		"translateZ" " -av"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform4|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02Shape" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform4|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02Shape" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/telescope.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform4|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02Shape" 
+		"furNameSpace" " -type \"string\" \"telescope\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02FBXASC046Object03" 
+		"translate" " -type \"double3\" -132.7584075927734375 496.370635986328125 -271.658447265625"
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02FBXASC046Object03" 
+		"translateX" " -av"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02FBXASC046Object03" 
+		"translateY" " -av"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02FBXASC046Object03" 
+		"translateZ" " -av"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02FBXASC046Object04" 
+		"translate" " -type \"double3\" 134.1542510986328125 496.370635986328125 -270.256988525390625"
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02FBXASC046Object04" 
+		"translateX" " -av"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02FBXASC046Object04" 
+		"translateY" " -av"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02FBXASC046Object04" 
+		"translateZ" " -av"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04" 
+		"translate" " -type \"double3\" 3.39144754409790039 787.89642333984375 -217.28875732421875"
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04" 
+		"translateY" " -av"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04" 
+		"translateZ" " -av"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04" 
+		"translateX" " -av"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04Shape" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04Shape" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/telescope.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04Shape" 
+		"furNameSpace" " -type \"string\" \"telescope\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurface1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurfaceShape1" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurface1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurfaceShape1" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/telescope.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurface1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurfaceShape1" 
+		"furNameSpace" " -type \"string\" \"telescope\""
 		"utility_room_view:pig_latestRN" 38
 		1 |utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:pig_mesh|utility_room_view:pig_latest:pig_body|utility_room_view:pig_latest:pigShapeDeformedOrig 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
@@ -9075,91 +9117,6 @@ createNode reference -n "utility_room_viewRN";
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_1control01_parentConstraint1.constraintRotateZ" 
 		"utility_room_viewRN.placeHolderList[1616]" "utility_room_view:pig_latest:tail_1control01.rz"
 		
-		"utility_room_view:livingroom_shading_latest:living_room_latest:telescopeRN" 38
-		
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform4|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02Shape 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform4|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02Shape 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform4|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02Shape 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04Shape 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04Shape 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04Shape 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurface1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurfaceShape1 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurface1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurfaceShape1 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurface1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurfaceShape1 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_" 
-		"translate" " -type \"double3\" 0 2169.506103515625 0"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_" 
-		"translateY" " -av"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_" 
-		"translateX" " -av"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_" 
-		"translateZ" " -av"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02" 
-		"translate" " -type \"double3\" 1.09363007545471191 496.370635986328125 -28.75731468200683594"
-		
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02" 
-		"translateX" " -av"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02" 
-		"translateY" " -av"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02" 
-		"translateZ" " -av"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform4|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02Shape" 
-		"surfaceReference" " 1"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform4|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02Shape" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/telescope.ma\""
-		
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform4|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02Shape" 
-		"furNameSpace" " -type \"string\" \"telescope\""
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02FBXASC046Object03" 
-		"translate" " -type \"double3\" -132.7584075927734375 496.370635986328125 -271.658447265625"
-		
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02FBXASC046Object03" 
-		"translateX" " -av"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02FBXASC046Object03" 
-		"translateY" " -av"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02FBXASC046Object03" 
-		"translateZ" " -av"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02FBXASC046Object04" 
-		"translate" " -type \"double3\" 134.1542510986328125 496.370635986328125 -270.256988525390625"
-		
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02FBXASC046Object04" 
-		"translateX" " -av"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02FBXASC046Object04" 
-		"translateY" " -av"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Object02FBXASC046Object04" 
-		"translateZ" " -av"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04" 
-		"translate" " -type \"double3\" 3.39144754409790039 787.89642333984375 -217.28875732421875"
-		
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04" 
-		"translateY" " -av"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04" 
-		"translateZ" " -av"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04" 
-		"translateX" " -av"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04Shape" 
-		"surfaceReference" " 1"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04Shape" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/telescope.ma\""
-		
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:FBXASC036FBXASC036FBXASC036DUMMYFBXASC046celestron_|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:Line04Shape" 
-		"furNameSpace" " -type \"string\" \"telescope\""
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurface1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurfaceShape1" 
-		"surfaceReference" " 1"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurface1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurfaceShape1" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/telescope.ma\""
-		
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurface1|utility_room_view:livingroom_shading_latest:living_room_latest:telescope:polySurfaceShape1" 
-		"furNameSpace" " -type \"string\" \"telescope\""
 		"utility_room_view:bike_rigRN" 0
 		"utility_room_view:house_latestRN" 12
 		2 "|utility_room_view:house_latest:ncloth|utility_room_view:house_latest:nCloth2|utility_room_view:house_latest:nClothShape2" 
@@ -20679,469 +20636,6 @@ createNode reference -n "utility_room_viewRN";
 		5 4 "utility_room_viewRN" "|utility_room_view:livingroom_shading_latest:living_room_latest:nCloth1|utility_room_view:livingroom_shading_latest:living_room_latest:nClothShape1.positions" 
 		"utility_room_viewRN.placeHolderList[123]" ""
 		"utility_room_view:house_latest:living_room_furniture_latestRN" 0
-		"utility_room_view:smarty_latestRN" 0
-		"utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latestRN2" 
-		42
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape1 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape1 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape1 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface8|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface8|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface8|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface8|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface9|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape9 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface8|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface9|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape9 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface8|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface9|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape9 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface8|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface6|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape7 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface8|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface6|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape7 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface8|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface6|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape7 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface8|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface7|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape7 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface8|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface7|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape7 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface8|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface7|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape7 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:transform2|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape6 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:transform2|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape6 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:transform2|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape6 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_windowShape 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_windowShape 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_windowShape 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape1" 
-		"surfaceReference" " 1"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape1" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/additions/windows/taller_window_four_squares_latest.ma{6}\""
-		
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape1" 
-		"furNameSpace" " -type \"string\" \"taller_window_four_squares_latest6\""
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface8|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8" 
-		"surfaceReference" " 1"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface8|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/additions/windows/taller_window_four_squares_latest.ma{6}\""
-		
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface8|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8" 
-		"furNameSpace" " -type \"string\" \"taller_window_four_squares_latest6\""
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface8|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface9|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape9" 
-		"surfaceReference" " 1"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface8|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface9|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape9" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/additions/windows/taller_window_four_squares_latest.ma{6}\""
-		
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface8|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface9|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape9" 
-		"furNameSpace" " -type \"string\" \"taller_window_four_squares_latest6\""
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface8|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface6|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape7" 
-		"surfaceReference" " 1"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface8|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface6|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape7" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/additions/windows/taller_window_four_squares_latest.ma{6}\""
-		
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface8|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface6|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape7" 
-		"furNameSpace" " -type \"string\" \"taller_window_four_squares_latest6\""
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface8|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface7|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape7" 
-		"surfaceReference" " 1"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface8|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface7|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape7" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/additions/windows/taller_window_four_squares_latest.ma{6}\""
-		
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface8|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface7|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape7" 
-		"furNameSpace" " -type \"string\" \"taller_window_four_squares_latest6\""
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:transform2|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape6" 
-		"surfaceReference" " 1"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:transform2|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape6" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/additions/windows/taller_window_four_squares_latest.ma{6}\""
-		
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:transform2|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape6" 
-		"furNameSpace" " -type \"string\" \"taller_window_four_squares_latest6\""
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_windowShape" 
-		"surfaceReference" " 1"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_windowShape" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/additions/windows/taller_window_four_squares_latest.ma{6}\""
-		
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_windowShape" 
-		"furNameSpace" " -type \"string\" \"taller_window_four_squares_latest6\""
-		"utility_room_view:livingroom_shading_latest:living_room_latest:cube_cushionRN" 
-		6
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cube_cushion:pCube1|utility_room_view:livingroom_shading_latest:living_room_latest:cube_cushion:pCubeShape1 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cube_cushion:pCube1|utility_room_view:livingroom_shading_latest:living_room_latest:cube_cushion:pCubeShape1 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cube_cushion:pCube1|utility_room_view:livingroom_shading_latest:living_room_latest:cube_cushion:pCubeShape1 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cube_cushion:pCube1|utility_room_view:livingroom_shading_latest:living_room_latest:cube_cushion:pCubeShape1" 
-		"surfaceReference" " 1"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cube_cushion:pCube1|utility_room_view:livingroom_shading_latest:living_room_latest:cube_cushion:pCubeShape1" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cube_cushion.ma\""
-		
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cube_cushion:pCube1|utility_room_view:livingroom_shading_latest:living_room_latest:cube_cushion:pCubeShape1" 
-		"furNameSpace" " -type \"string\" \"cube_cushion\""
-		"utility_room_view:house_latest:bedroom_latestRN" 19
-		2 "|utility_room_view:house_latest:bedroom_latest:cloth|utility_room_view:house_latest:bedroom_latest:nRigid1|utility_room_view:house_latest:bedroom_latest:nRigidShape1" 
-		"cacheWidth" " 315"
-		2 "|utility_room_view:house_latest:bedroom_latest:nCloth2|utility_room_view:house_latest:bedroom_latest:nClothShape2" 
-		"isDynamic" " 1"
-		2 "|utility_room_view:house_latest:bedroom_latest:nCloth2|utility_room_view:house_latest:bedroom_latest:nClothShape2" 
-		"cacheWidth" " 315"
-		2 "|utility_room_view:house_latest:bedroom_latest:cloth|utility_room_view:house_latest:bedroom_latest:nRigid2|utility_room_view:house_latest:bedroom_latest:nRigidShape2" 
-		"cacheWidth" " 315"
-		2 "|utility_room_view:house_latest:bedroom_latest:cloth|utility_room_view:house_latest:bedroom_latest:nRigid3|utility_room_view:house_latest:bedroom_latest:nRigidShape3" 
-		"cacheWidth" " 315"
-		2 "|utility_room_view:house_latest:bedroom_latest:cloth|utility_room_view:house_latest:bedroom_latest:nRigid4|utility_room_view:house_latest:bedroom_latest:nRigidShape4" 
-		"cacheWidth" " 315"
-		2 "utility_room_view:house_latest:bedroom_latest:layer2" "visibility" " 1"
-		
-		2 "|utility_room_view:house_latest:bedroom_latest:cloth|utility_room_view:house_latest:bedroom_latest:nRigid5|utility_room_view:house_latest:bedroom_latest:nRigidShape5" 
-		"cacheWidth" " 315"
-		2 "|utility_room_view:house_latest:bedroom_latest:pPlane1" "scale" " -type \"double3\" 1 1 1.23633197893716651"
-		
-		2 "|utility_room_view:house_latest:bedroom_latest:nCloth1|utility_room_view:house_latest:bedroom_latest:nClothShape1" 
-		"cacheWidth" " 315"
-		2 "|utility_room_view:house_latest:bedroom_latest:nRigid6|utility_room_view:house_latest:bedroom_latest:nRigidShape6" 
-		"cacheWidth" " 315"
-		2 "|utility_room_view:house_latest:bedroom_latest:nRigid7|utility_room_view:house_latest:bedroom_latest:nRigidShape7" 
-		"cacheWidth" " 315"
-		2 "|utility_room_view:house_latest:bedroom_latest:nRigid8|utility_room_view:house_latest:bedroom_latest:nRigidShape8" 
-		"cacheWidth" " 315"
-		2 "|utility_room_view:house_latest:bedroom_latest:nRigid9|utility_room_view:house_latest:bedroom_latest:nRigidShape9" 
-		"cacheWidth" " 315"
-		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:bedroom_latest:nCloth2|utility_room_view:house_latest:bedroom_latest:nClothShape2.positions" 
-		"utility_room_viewRN.placeHolderList[2414]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:bedroom_latest:nCloth2|utility_room_view:house_latest:bedroom_latest:nClothShape2.playFromCache" 
-		"utility_room_viewRN.placeHolderList[2415]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:bedroom_latest:pPlane1.drawOverride" 
-		"utility_room_viewRN.placeHolderList[3300]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:bedroom_latest:nCloth1|utility_room_view:house_latest:bedroom_latest:nClothShape1.playFromCache" 
-		"utility_room_viewRN.placeHolderList[3301]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:bedroom_latest:nCloth1|utility_room_view:house_latest:bedroom_latest:nClothShape1.positions" 
-		"utility_room_viewRN.placeHolderList[3302]" ""
-		"utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latestRN1" 
-		24
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frameShape 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frameShape 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frameShape 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_cushion|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_cushionShape 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_cushion|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_cushionShape 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_cushion|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_cushionShape 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_1|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_Shape1 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_1|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_Shape1 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_1|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_Shape1 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_2|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_Shape2 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_2|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_Shape2 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_2|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_Shape2 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frameShape" 
-		"surfaceReference" " 1"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frameShape" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/additions/sofa/armchair_latest.ma{1}\""
-		
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frameShape" 
-		"furNameSpace" " -type \"string\" \"armchair_latest1\""
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_cushion|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_cushionShape" 
-		"surfaceReference" " 1"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_cushion|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_cushionShape" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/additions/sofa/armchair_latest.ma{1}\""
-		
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_cushion|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_cushionShape" 
-		"furNameSpace" " -type \"string\" \"armchair_latest1\""
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_1|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_Shape1" 
-		"surfaceReference" " 1"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_1|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_Shape1" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/additions/sofa/armchair_latest.ma{1}\""
-		
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_1|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_Shape1" 
-		"furNameSpace" " -type \"string\" \"armchair_latest1\""
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_2|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_Shape2" 
-		"surfaceReference" " 1"
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_2|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_Shape2" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/additions/sofa/armchair_latest.ma{1}\""
-		
-		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_2|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_Shape2" 
-		"furNameSpace" " -type \"string\" \"armchair_latest1\""
-		"utility_room_view:bike_rigRN" 88
-		1 |utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:rightWheel|utility_room_view:bike_rig:rightWheelShape 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:rightWheel|utility_room_view:bike_rig:rightWheelShape 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:rightWheel|utility_room_view:bike_rig:rightWheelShape 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:leftWheel|utility_room_view:bike_rig:leftWheelShape 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:leftWheel|utility_room_view:bike_rig:leftWheelShape 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:leftWheel|utility_room_view:bike_rig:leftWheelShape 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frontWheel|utility_room_view:bike_rig:frontWheelShape 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frontWheel|utility_room_view:bike_rig:frontWheelShape 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frontWheel|utility_room_view:bike_rig:frontWheelShape 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:polySurface13|utility_room_view:bike_rig:left|utility_room_view:bike_rig:leftShape 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:polySurface13|utility_room_view:bike_rig:left|utility_room_view:bike_rig:leftShape 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:polySurface13|utility_room_view:bike_rig:left|utility_room_view:bike_rig:leftShape 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:polySurface13|utility_room_view:bike_rig:right|utility_room_view:bike_rig:rightShape 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:polySurface13|utility_room_view:bike_rig:right|utility_room_view:bike_rig:rightShape 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:polySurface13|utility_room_view:bike_rig:right|utility_room_view:bike_rig:rightShape 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frame|utility_room_view:bike_rig:frameShape 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frame|utility_room_view:bike_rig:frameShape 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frame|utility_room_view:bike_rig:frameShape 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		2 "|utility_room_view:bike_rig:bike_ctrl" "visibility" " -av 1"
-		2 "|utility_room_view:bike_rig:bike_ctrl" "translate" " -type \"double3\" -153.01554641603320306 -1.37099265081140276 83.97426724367723239"
-		
-		2 "|utility_room_view:bike_rig:bike_ctrl" "translateX" " -av"
-		2 "|utility_room_view:bike_rig:bike_ctrl" "translateY" " -av"
-		2 "|utility_room_view:bike_rig:bike_ctrl" "translateZ" " -av"
-		2 "|utility_room_view:bike_rig:bike_ctrl" "rotate" " -type \"double3\" 0 -148.4912590371053227 0"
-		
-		2 "|utility_room_view:bike_rig:bike_ctrl" "rotateX" " -av"
-		2 "|utility_room_view:bike_rig:bike_ctrl" "rotateY" " -av"
-		2 "|utility_room_view:bike_rig:bike_ctrl" "rotateZ" " -av"
-		2 "|utility_room_view:bike_rig:bike_ctrl" "scale" " -type \"double3\" 0.2 0.2 0.2"
-		
-		2 "|utility_room_view:bike_rig:bike_ctrl" "scaleX" " -av"
-		2 "|utility_room_view:bike_rig:bike_ctrl" "scaleY" " -av"
-		2 "|utility_room_view:bike_rig:bike_ctrl" "scaleZ" " -av"
-		2 "|utility_room_view:bike_rig:bike_ctrl" "rotatePivot" " -type \"double3\" 0.30247623153311309 1.89205438473953791 0"
-		
-		2 "|utility_room_view:bike_rig:bike_ctrl" "scalePivot" " -type \"double3\" 0.30247623153311309 1.89205438473953791 0"
-		
-		2 "|utility_room_view:bike_rig:bike_ctrl" "scalePivotTranslate" " -type \"double3\" 0 0 0"
-		
-		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:rightWheel|utility_room_view:bike_rig:rightWheelShape" 
-		"quadSplit" " 0"
-		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:rightWheel|utility_room_view:bike_rig:rightWheelShape" 
-		"surfaceReference" " 1"
-		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:rightWheel|utility_room_view:bike_rig:rightWheelShape" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/characters/smarty/bike_rig.ma\""
-		
-		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:rightWheel|utility_room_view:bike_rig:rightWheelShape" 
-		"furNameSpace" " -type \"string\" \"bike_rig\""
-		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:leftWheel|utility_room_view:bike_rig:leftWheelShape" 
-		"quadSplit" " 0"
-		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:leftWheel|utility_room_view:bike_rig:leftWheelShape" 
-		"surfaceReference" " 1"
-		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:leftWheel|utility_room_view:bike_rig:leftWheelShape" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/characters/smarty/bike_rig.ma\""
-		
-		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:leftWheel|utility_room_view:bike_rig:leftWheelShape" 
-		"furNameSpace" " -type \"string\" \"bike_rig\""
-		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frontWheel" 
-		"translate" " -type \"double3\" 0 0 0"
-		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frontWheel" 
-		"translateX" " -av"
-		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frontWheel" 
-		"translateY" " -av"
-		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frontWheel" 
-		"translateZ" " -av"
-		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frontWheel" 
-		"rotate" " -type \"double3\" 0 0 -187.36809815568560111"
-		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frontWheel" 
-		"rotateZ" " -av"
-		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frontWheel" 
-		"rotateY" " -av"
-		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frontWheel" 
-		"rotateX" " -av"
-		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frontWheel" 
-		"scale" " -type \"double3\" 1 1 1"
-		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frontWheel" 
-		"scaleX" " -av"
-		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frontWheel" 
-		"scaleY" " -av"
-		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frontWheel" 
-		"scaleZ" " -av"
-		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frontWheel|utility_room_view:bike_rig:frontWheelShape" 
-		"quadSplit" " 0"
-		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frontWheel|utility_room_view:bike_rig:frontWheelShape" 
-		"surfaceReference" " 1"
-		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frontWheel|utility_room_view:bike_rig:frontWheelShape" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/characters/smarty/bike_rig.ma\""
-		
-		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frontWheel|utility_room_view:bike_rig:frontWheelShape" 
-		"furNameSpace" " -type \"string\" \"bike_rig\""
-		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:polySurface13|utility_room_view:bike_rig:left|utility_room_view:bike_rig:leftShape" 
-		"quadSplit" " 0"
-		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:polySurface13|utility_room_view:bike_rig:left|utility_room_view:bike_rig:leftShape" 
-		"surfaceReference" " 1"
-		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:polySurface13|utility_room_view:bike_rig:left|utility_room_view:bike_rig:leftShape" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/characters/smarty/bike_rig.ma\""
-		
-		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:polySurface13|utility_room_view:bike_rig:left|utility_room_view:bike_rig:leftShape" 
-		"furNameSpace" " -type \"string\" \"bike_rig\""
-		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:polySurface13|utility_room_view:bike_rig:right|utility_room_view:bike_rig:rightShape" 
-		"quadSplit" " 0"
-		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:polySurface13|utility_room_view:bike_rig:right|utility_room_view:bike_rig:rightShape" 
-		"surfaceReference" " 1"
-		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:polySurface13|utility_room_view:bike_rig:right|utility_room_view:bike_rig:rightShape" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/characters/smarty/bike_rig.ma\""
-		
-		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:polySurface13|utility_room_view:bike_rig:right|utility_room_view:bike_rig:rightShape" 
-		"furNameSpace" " -type \"string\" \"bike_rig\""
-		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frame|utility_room_view:bike_rig:frameShape" 
-		"quadSplit" " 0"
-		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frame|utility_room_view:bike_rig:frameShape" 
-		"surfaceReference" " 1"
-		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frame|utility_room_view:bike_rig:frameShape" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/characters/smarty/bike_rig.ma\""
-		
-		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frame|utility_room_view:bike_rig:frameShape" 
-		"furNameSpace" " -type \"string\" \"bike_rig\""
-		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:tire_ctrl" 
-		"translateZ" " 0"
-		5 3 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.translate" 
-		"utility_room_viewRN.placeHolderList[3565]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.translateX" 
-		"utility_room_viewRN.placeHolderList[3566]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.translateY" 
-		"utility_room_viewRN.placeHolderList[3567]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.translateZ" 
-		"utility_room_viewRN.placeHolderList[3568]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.visibility" 
-		"utility_room_viewRN.placeHolderList[3569]" ""
-		5 3 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.rotate" 
-		"utility_room_viewRN.placeHolderList[3570]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.rotateX" 
-		"utility_room_viewRN.placeHolderList[3571]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.rotateY" 
-		"utility_room_viewRN.placeHolderList[3572]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3573]" ""
-		5 3 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.scale" 
-		"utility_room_viewRN.placeHolderList[3574]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.scaleX" 
-		"utility_room_viewRN.placeHolderList[3575]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.scaleY" 
-		"utility_room_viewRN.placeHolderList[3576]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3577]" ""
-		5 3 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.rotatePivot" 
-		"utility_room_viewRN.placeHolderList[3578]" ""
-		5 3 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.rotatePivotTranslate" 
-		"utility_room_viewRN.placeHolderList[3579]" ""
-		5 3 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.rotateOrder" 
-		"utility_room_viewRN.placeHolderList[3580]" ""
-		5 3 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.parentMatrix" 
-		"utility_room_viewRN.placeHolderList[3581]" ""
-		"utility_room_view:house_latestRN" 11
-		2 "|utility_room_view:house_latest:architecture|utility_room_view:house_latest:walls_and_floors" 
-		"visibility" " 1"
-		2 "|utility_room_view:house_latest:architecture|utility_room_view:house_latest:walls_and_floors" 
-		"translate" " -type \"double3\" 0 0 0"
-		2 "|utility_room_view:house_latest:architecture|utility_room_view:house_latest:walls_and_floors" 
-		"translateX" " -av"
-		2 "|utility_room_view:house_latest:architecture|utility_room_view:house_latest:walls_and_floors" 
-		"translateY" " -av"
-		2 "|utility_room_view:house_latest:architecture|utility_room_view:house_latest:walls_and_floors" 
-		"translateZ" " -av"
-		2 "|utility_room_view:house_latest:architecture|utility_room_view:house_latest:walls_and_floors" 
-		"rotate" " -type \"double3\" 0 0 0"
-		2 "|utility_room_view:house_latest:architecture|utility_room_view:house_latest:walls_and_floors" 
-		"scale" " -type \"double3\" 1 1 1"
-		2 "|utility_room_view:house_latest:architecture|utility_room_view:house_latest:walls_and_floors|utility_room_view:house_latest:walls_and_floorsShape" 
-		"uvPivot" " -type \"double2\" 0.50661793351173401 0.59122622013092041"
-		2 "|utility_room_view:house_latest:nRigid5|utility_room_view:house_latest:nRigidShape5" 
-		"cacheWidth" " 315"
-		2 "utility_room_view:house_latest:bedroom_latestRN" "fileNames[0]" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/sets/bedroom/bedroom_latest.ma\""
-		
-		2 "utility_room_view:house_latest:sim" "visibility" " 1"
-		"utility_room_view:house_latest:kitchen_latestRN" 1
-		2 "utility_room_view:house_latest:kitchen_latest:kitchen:nonselectablelayer" 
-		"visibility" " 1"
-		"utility_room_view:house_latest:utilities_latestRN" 31
-		2 "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pTorus2" 
-		"translate" " -type \"double3\" -7.36534175716029438 0 2.52227960828523123"
-		2 "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pTorus2" 
-		"translateX" " -av"
-		2 "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pTorus2" 
-		"translateZ" " -av"
-		2 "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pTorus2" 
-		"rotate" " -type \"double3\" 0 -160.2724721120108029 0"
-		2 "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pTorus2" 
-		"rotateY" " -av"
-		2 "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pTorus2|utility_room_view:house_latest:utilities_latest:pasted__pasted__pTorusShape2" 
-		"uvPivot" " -type \"double2\" 0.15000000596046448 0.099999845027923584"
-		2 "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pCylinder7" 
-		"translate" " -type \"double3\" -7.36534175716029438 0 2.52227960828523123"
-		2 "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pCylinder7" 
-		"translateX" " -av"
-		2 "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pCylinder7" 
-		"translateZ" " -av"
-		2 "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pCylinder7" 
-		"rotate" " -type \"double3\" 0 -160.2724721120108029 0"
-		2 "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pCylinder7" 
-		"rotateY" " -av"
-		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pTorus2.translateX" 
-		"utility_room_viewRN.placeHolderList[4187]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pTorus2.translateY" 
-		"utility_room_viewRN.placeHolderList[4188]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pTorus2.translateZ" 
-		"utility_room_viewRN.placeHolderList[4189]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pTorus2.rotateX" 
-		"utility_room_viewRN.placeHolderList[4190]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pTorus2.rotateY" 
-		"utility_room_viewRN.placeHolderList[4191]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pTorus2.rotateZ" 
-		"utility_room_viewRN.placeHolderList[4192]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pTorus2.visibility" 
-		"utility_room_viewRN.placeHolderList[4193]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pTorus2.scaleX" 
-		"utility_room_viewRN.placeHolderList[4194]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pTorus2.scaleY" 
-		"utility_room_viewRN.placeHolderList[4195]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pTorus2.scaleZ" 
-		"utility_room_viewRN.placeHolderList[4196]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pCylinder7.translateX" 
-		"utility_room_viewRN.placeHolderList[4197]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pCylinder7.translateY" 
-		"utility_room_viewRN.placeHolderList[4198]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pCylinder7.translateZ" 
-		"utility_room_viewRN.placeHolderList[4199]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pCylinder7.rotateX" 
-		"utility_room_viewRN.placeHolderList[4200]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pCylinder7.rotateY" 
-		"utility_room_viewRN.placeHolderList[4201]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pCylinder7.rotateZ" 
-		"utility_room_viewRN.placeHolderList[4202]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pCylinder7.visibility" 
-		"utility_room_viewRN.placeHolderList[4203]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pCylinder7.scaleX" 
-		"utility_room_viewRN.placeHolderList[4204]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pCylinder7.scaleY" 
-		"utility_room_viewRN.placeHolderList[4205]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pCylinder7.scaleZ" 
-		"utility_room_viewRN.placeHolderList[4206]" ""
 		"utility_room_view:smarty_latestRN" 215
 		0 "|utility_room_viewRNfosterParent1|global_ctrl_parentConstraint1" "|utility_room_view:smarty_latest:SMARTY_OVERALL|utility_room_view:smarty_latest:SmartyRig|utility_room_view:smarty_latest:global_ctrl" 
 		"-s -r "
@@ -21568,14 +21062,476 @@ createNode reference -n "utility_room_viewRN";
 		"utility_room_viewRN.placeHolderList[3563]" ""
 		5 4 "utility_room_viewRN" "utility_room_view:smarty_latest:blendShape1.weight[18]" 
 		"utility_room_viewRN.placeHolderList[3564]" ""
+		"utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latestRN2" 
+		42
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape1 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape1 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape1 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface8|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface8|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface8|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface8|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface9|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape9 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface8|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface9|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape9 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface8|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface9|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape9 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface8|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface6|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape7 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface8|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface6|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape7 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface8|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface6|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape7 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface8|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface7|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape7 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface8|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface7|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape7 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface8|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface7|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape7 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:transform2|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape6 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:transform2|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape6 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:transform2|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape6 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_windowShape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_windowShape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_windowShape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape1" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape1" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/additions/windows/taller_window_four_squares_latest.ma{6}\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape1" 
+		"furNameSpace" " -type \"string\" \"taller_window_four_squares_latest6\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface8|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface8|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/additions/windows/taller_window_four_squares_latest.ma{6}\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface8|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape8" 
+		"furNameSpace" " -type \"string\" \"taller_window_four_squares_latest6\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface8|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface9|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape9" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface8|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface9|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape9" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/additions/windows/taller_window_four_squares_latest.ma{6}\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface8|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface9|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape9" 
+		"furNameSpace" " -type \"string\" \"taller_window_four_squares_latest6\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface8|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface6|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape7" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface8|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface6|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape7" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/additions/windows/taller_window_four_squares_latest.ma{6}\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface8|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface6|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape7" 
+		"furNameSpace" " -type \"string\" \"taller_window_four_squares_latest6\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface8|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface7|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape7" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface8|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface7|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape7" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/additions/windows/taller_window_four_squares_latest.ma{6}\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface8|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface7|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape7" 
+		"furNameSpace" " -type \"string\" \"taller_window_four_squares_latest6\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:transform2|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape6" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:transform2|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape6" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/additions/windows/taller_window_four_squares_latest.ma{6}\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurface5|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:transform2|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:polySurfaceShape6" 
+		"furNameSpace" " -type \"string\" \"taller_window_four_squares_latest6\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_windowShape" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_windowShape" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/additions/windows/taller_window_four_squares_latest.ma{6}\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_window|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:transform1|utility_room_view:livingroom_shading_latest:living_room_latest:taller_window_four_squares_latest6:taller_windowShape" 
+		"furNameSpace" " -type \"string\" \"taller_window_four_squares_latest6\""
+		"utility_room_view:livingroom_shading_latest:living_room_latest:cube_cushionRN" 
+		6
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cube_cushion:pCube1|utility_room_view:livingroom_shading_latest:living_room_latest:cube_cushion:pCubeShape1 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cube_cushion:pCube1|utility_room_view:livingroom_shading_latest:living_room_latest:cube_cushion:pCubeShape1 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:cube_cushion:pCube1|utility_room_view:livingroom_shading_latest:living_room_latest:cube_cushion:pCubeShape1 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cube_cushion:pCube1|utility_room_view:livingroom_shading_latest:living_room_latest:cube_cushion:pCubeShape1" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cube_cushion:pCube1|utility_room_view:livingroom_shading_latest:living_room_latest:cube_cushion:pCubeShape1" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/bedroom/additions/cube_cushion.ma\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:cube_cushion:pCube1|utility_room_view:livingroom_shading_latest:living_room_latest:cube_cushion:pCubeShape1" 
+		"furNameSpace" " -type \"string\" \"cube_cushion\""
+		"utility_room_view:house_latest:bedroom_latestRN" 19
+		2 "|utility_room_view:house_latest:bedroom_latest:cloth|utility_room_view:house_latest:bedroom_latest:nRigid1|utility_room_view:house_latest:bedroom_latest:nRigidShape1" 
+		"cacheWidth" " 315"
+		2 "|utility_room_view:house_latest:bedroom_latest:nCloth2|utility_room_view:house_latest:bedroom_latest:nClothShape2" 
+		"isDynamic" " 1"
+		2 "|utility_room_view:house_latest:bedroom_latest:nCloth2|utility_room_view:house_latest:bedroom_latest:nClothShape2" 
+		"cacheWidth" " 315"
+		2 "|utility_room_view:house_latest:bedroom_latest:cloth|utility_room_view:house_latest:bedroom_latest:nRigid2|utility_room_view:house_latest:bedroom_latest:nRigidShape2" 
+		"cacheWidth" " 315"
+		2 "|utility_room_view:house_latest:bedroom_latest:cloth|utility_room_view:house_latest:bedroom_latest:nRigid3|utility_room_view:house_latest:bedroom_latest:nRigidShape3" 
+		"cacheWidth" " 315"
+		2 "|utility_room_view:house_latest:bedroom_latest:cloth|utility_room_view:house_latest:bedroom_latest:nRigid4|utility_room_view:house_latest:bedroom_latest:nRigidShape4" 
+		"cacheWidth" " 315"
+		2 "utility_room_view:house_latest:bedroom_latest:layer2" "visibility" " 1"
+		
+		2 "|utility_room_view:house_latest:bedroom_latest:cloth|utility_room_view:house_latest:bedroom_latest:nRigid5|utility_room_view:house_latest:bedroom_latest:nRigidShape5" 
+		"cacheWidth" " 315"
+		2 "|utility_room_view:house_latest:bedroom_latest:pPlane1" "scale" " -type \"double3\" 1 1 1.23633197893716651"
+		
+		2 "|utility_room_view:house_latest:bedroom_latest:nCloth1|utility_room_view:house_latest:bedroom_latest:nClothShape1" 
+		"cacheWidth" " 315"
+		2 "|utility_room_view:house_latest:bedroom_latest:nRigid6|utility_room_view:house_latest:bedroom_latest:nRigidShape6" 
+		"cacheWidth" " 315"
+		2 "|utility_room_view:house_latest:bedroom_latest:nRigid7|utility_room_view:house_latest:bedroom_latest:nRigidShape7" 
+		"cacheWidth" " 315"
+		2 "|utility_room_view:house_latest:bedroom_latest:nRigid8|utility_room_view:house_latest:bedroom_latest:nRigidShape8" 
+		"cacheWidth" " 315"
+		2 "|utility_room_view:house_latest:bedroom_latest:nRigid9|utility_room_view:house_latest:bedroom_latest:nRigidShape9" 
+		"cacheWidth" " 315"
+		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:bedroom_latest:nCloth2|utility_room_view:house_latest:bedroom_latest:nClothShape2.positions" 
+		"utility_room_viewRN.placeHolderList[2414]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:bedroom_latest:nCloth2|utility_room_view:house_latest:bedroom_latest:nClothShape2.playFromCache" 
+		"utility_room_viewRN.placeHolderList[2415]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:bedroom_latest:pPlane1.drawOverride" 
+		"utility_room_viewRN.placeHolderList[3300]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:bedroom_latest:nCloth1|utility_room_view:house_latest:bedroom_latest:nClothShape1.playFromCache" 
+		"utility_room_viewRN.placeHolderList[3301]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:bedroom_latest:nCloth1|utility_room_view:house_latest:bedroom_latest:nClothShape1.positions" 
+		"utility_room_viewRN.placeHolderList[3302]" ""
+		"utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latestRN1" 
+		24
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frameShape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frameShape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frameShape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_cushion|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_cushionShape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_cushion|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_cushionShape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_cushion|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_cushionShape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_1|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_Shape1 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_1|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_Shape1 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_1|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_Shape1 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_2|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_Shape2 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_2|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_Shape2 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_2|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_Shape2 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frameShape" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frameShape" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/additions/sofa/armchair_latest.ma{1}\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frameShape" 
+		"furNameSpace" " -type \"string\" \"armchair_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_cushion|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_cushionShape" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_cushion|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_cushionShape" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/additions/sofa/armchair_latest.ma{1}\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_cushion|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_cushionShape" 
+		"furNameSpace" " -type \"string\" \"armchair_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_1|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_Shape1" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_1|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_Shape1" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/additions/sofa/armchair_latest.ma{1}\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_1|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_Shape1" 
+		"furNameSpace" " -type \"string\" \"armchair_latest1\""
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_2|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_Shape2" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_2|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_Shape2" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/sets/livingroom/additions/sofa/armchair_latest.ma{1}\""
+		
+		2 "|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_frame|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_2|utility_room_view:livingroom_shading_latest:living_room_latest:armchair_latest1:armchair_pillow_Shape2" 
+		"furNameSpace" " -type \"string\" \"armchair_latest1\""
+		"utility_room_view:bike_rigRN" 88
+		1 |utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:rightWheel|utility_room_view:bike_rig:rightWheelShape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:rightWheel|utility_room_view:bike_rig:rightWheelShape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:rightWheel|utility_room_view:bike_rig:rightWheelShape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:leftWheel|utility_room_view:bike_rig:leftWheelShape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:leftWheel|utility_room_view:bike_rig:leftWheelShape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:leftWheel|utility_room_view:bike_rig:leftWheelShape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frontWheel|utility_room_view:bike_rig:frontWheelShape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frontWheel|utility_room_view:bike_rig:frontWheelShape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frontWheel|utility_room_view:bike_rig:frontWheelShape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:polySurface13|utility_room_view:bike_rig:left|utility_room_view:bike_rig:leftShape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:polySurface13|utility_room_view:bike_rig:left|utility_room_view:bike_rig:leftShape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:polySurface13|utility_room_view:bike_rig:left|utility_room_view:bike_rig:leftShape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:polySurface13|utility_room_view:bike_rig:right|utility_room_view:bike_rig:rightShape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:polySurface13|utility_room_view:bike_rig:right|utility_room_view:bike_rig:rightShape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:polySurface13|utility_room_view:bike_rig:right|utility_room_view:bike_rig:rightShape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frame|utility_room_view:bike_rig:frameShape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frame|utility_room_view:bike_rig:frameShape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frame|utility_room_view:bike_rig:frameShape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		2 "|utility_room_view:bike_rig:bike_ctrl" "visibility" " -av 1"
+		2 "|utility_room_view:bike_rig:bike_ctrl" "translate" " -type \"double3\" 12.67256706652656817 -1.24708556978666874 64.20854701108305562"
+		
+		2 "|utility_room_view:bike_rig:bike_ctrl" "translateX" " -av"
+		2 "|utility_room_view:bike_rig:bike_ctrl" "translateY" " -av"
+		2 "|utility_room_view:bike_rig:bike_ctrl" "translateZ" " -av"
+		2 "|utility_room_view:bike_rig:bike_ctrl" "rotate" " -type \"double3\" -25.85639986587712613 -148.51386089971200022 6.48488161359675797"
+		
+		2 "|utility_room_view:bike_rig:bike_ctrl" "rotateX" " -av"
+		2 "|utility_room_view:bike_rig:bike_ctrl" "rotateY" " -av"
+		2 "|utility_room_view:bike_rig:bike_ctrl" "rotateZ" " -av"
+		2 "|utility_room_view:bike_rig:bike_ctrl" "scale" " -type \"double3\" 0.2 0.2 0.2"
+		
+		2 "|utility_room_view:bike_rig:bike_ctrl" "scaleX" " -av"
+		2 "|utility_room_view:bike_rig:bike_ctrl" "scaleY" " -av"
+		2 "|utility_room_view:bike_rig:bike_ctrl" "scaleZ" " -av"
+		2 "|utility_room_view:bike_rig:bike_ctrl" "rotatePivot" " -type \"double3\" 0.30247623153311309 1.89205438473953791 0"
+		
+		2 "|utility_room_view:bike_rig:bike_ctrl" "scalePivot" " -type \"double3\" 0.30247623153311309 1.89205438473953791 0"
+		
+		2 "|utility_room_view:bike_rig:bike_ctrl" "scalePivotTranslate" " -type \"double3\" 0 0 0"
+		
+		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:rightWheel|utility_room_view:bike_rig:rightWheelShape" 
+		"quadSplit" " 0"
+		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:rightWheel|utility_room_view:bike_rig:rightWheelShape" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:rightWheel|utility_room_view:bike_rig:rightWheelShape" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/characters/smarty/bike_rig.ma\""
+		
+		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:rightWheel|utility_room_view:bike_rig:rightWheelShape" 
+		"furNameSpace" " -type \"string\" \"bike_rig\""
+		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:leftWheel|utility_room_view:bike_rig:leftWheelShape" 
+		"quadSplit" " 0"
+		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:leftWheel|utility_room_view:bike_rig:leftWheelShape" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:leftWheel|utility_room_view:bike_rig:leftWheelShape" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/characters/smarty/bike_rig.ma\""
+		
+		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:leftWheel|utility_room_view:bike_rig:leftWheelShape" 
+		"furNameSpace" " -type \"string\" \"bike_rig\""
+		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frontWheel" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frontWheel" 
+		"translateX" " -av"
+		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frontWheel" 
+		"translateY" " -av"
+		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frontWheel" 
+		"translateZ" " -av"
+		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frontWheel" 
+		"rotate" " -type \"double3\" 0 0 -207.7717613376946133"
+		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frontWheel" 
+		"rotateZ" " -av"
+		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frontWheel" 
+		"rotateY" " -av"
+		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frontWheel" 
+		"rotateX" " -av"
+		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frontWheel" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frontWheel" 
+		"scaleX" " -av"
+		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frontWheel" 
+		"scaleY" " -av"
+		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frontWheel" 
+		"scaleZ" " -av"
+		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frontWheel|utility_room_view:bike_rig:frontWheelShape" 
+		"quadSplit" " 0"
+		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frontWheel|utility_room_view:bike_rig:frontWheelShape" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frontWheel|utility_room_view:bike_rig:frontWheelShape" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/characters/smarty/bike_rig.ma\""
+		
+		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frontWheel|utility_room_view:bike_rig:frontWheelShape" 
+		"furNameSpace" " -type \"string\" \"bike_rig\""
+		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:polySurface13|utility_room_view:bike_rig:left|utility_room_view:bike_rig:leftShape" 
+		"quadSplit" " 0"
+		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:polySurface13|utility_room_view:bike_rig:left|utility_room_view:bike_rig:leftShape" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:polySurface13|utility_room_view:bike_rig:left|utility_room_view:bike_rig:leftShape" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/characters/smarty/bike_rig.ma\""
+		
+		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:polySurface13|utility_room_view:bike_rig:left|utility_room_view:bike_rig:leftShape" 
+		"furNameSpace" " -type \"string\" \"bike_rig\""
+		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:polySurface13|utility_room_view:bike_rig:right|utility_room_view:bike_rig:rightShape" 
+		"quadSplit" " 0"
+		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:polySurface13|utility_room_view:bike_rig:right|utility_room_view:bike_rig:rightShape" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:polySurface13|utility_room_view:bike_rig:right|utility_room_view:bike_rig:rightShape" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/characters/smarty/bike_rig.ma\""
+		
+		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:polySurface13|utility_room_view:bike_rig:right|utility_room_view:bike_rig:rightShape" 
+		"furNameSpace" " -type \"string\" \"bike_rig\""
+		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frame|utility_room_view:bike_rig:frameShape" 
+		"quadSplit" " 0"
+		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frame|utility_room_view:bike_rig:frameShape" 
+		"surfaceReference" " 1"
+		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frame|utility_room_view:bike_rig:frameShape" 
+		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/characters/smarty/bike_rig.ma\""
+		
+		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:wholeBike|utility_room_view:bike_rig:frame|utility_room_view:bike_rig:frameShape" 
+		"furNameSpace" " -type \"string\" \"bike_rig\""
+		2 "|utility_room_view:bike_rig:bike_ctrl|utility_room_view:bike_rig:tire_ctrl" 
+		"translateZ" " 0"
+		5 3 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.translate" 
+		"utility_room_viewRN.placeHolderList[3765]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.translateX" 
+		"utility_room_viewRN.placeHolderList[3766]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.translateY" 
+		"utility_room_viewRN.placeHolderList[3767]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.translateZ" 
+		"utility_room_viewRN.placeHolderList[3768]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.visibility" 
+		"utility_room_viewRN.placeHolderList[3769]" ""
+		5 3 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.rotate" 
+		"utility_room_viewRN.placeHolderList[3770]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.rotateX" 
+		"utility_room_viewRN.placeHolderList[3771]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.rotateY" 
+		"utility_room_viewRN.placeHolderList[3772]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.rotateZ" 
+		"utility_room_viewRN.placeHolderList[3773]" ""
+		5 3 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.scale" 
+		"utility_room_viewRN.placeHolderList[3774]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.scaleX" 
+		"utility_room_viewRN.placeHolderList[3775]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.scaleY" 
+		"utility_room_viewRN.placeHolderList[3776]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.scaleZ" 
+		"utility_room_viewRN.placeHolderList[3777]" ""
+		5 3 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.rotatePivot" 
+		"utility_room_viewRN.placeHolderList[3778]" ""
+		5 3 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.rotatePivotTranslate" 
+		"utility_room_viewRN.placeHolderList[3779]" ""
+		5 3 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.rotateOrder" 
+		"utility_room_viewRN.placeHolderList[3780]" ""
+		5 3 "utility_room_viewRN" "|utility_room_view:bike_rig:bike_ctrl.parentMatrix" 
+		"utility_room_viewRN.placeHolderList[3781]" ""
+		"utility_room_view:house_latestRN" 11
+		2 "|utility_room_view:house_latest:architecture|utility_room_view:house_latest:walls_and_floors" 
+		"visibility" " 1"
+		2 "|utility_room_view:house_latest:architecture|utility_room_view:house_latest:walls_and_floors" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|utility_room_view:house_latest:architecture|utility_room_view:house_latest:walls_and_floors" 
+		"translateX" " -av"
+		2 "|utility_room_view:house_latest:architecture|utility_room_view:house_latest:walls_and_floors" 
+		"translateY" " -av"
+		2 "|utility_room_view:house_latest:architecture|utility_room_view:house_latest:walls_and_floors" 
+		"translateZ" " -av"
+		2 "|utility_room_view:house_latest:architecture|utility_room_view:house_latest:walls_and_floors" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|utility_room_view:house_latest:architecture|utility_room_view:house_latest:walls_and_floors" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|utility_room_view:house_latest:architecture|utility_room_view:house_latest:walls_and_floors|utility_room_view:house_latest:walls_and_floorsShape" 
+		"uvPivot" " -type \"double2\" 0.50661793351173401 0.59122622013092041"
+		2 "|utility_room_view:house_latest:nRigid5|utility_room_view:house_latest:nRigidShape5" 
+		"cacheWidth" " 111"
+		2 "utility_room_view:house_latest:bedroom_latestRN" "fileNames[0]" " -type \"string\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/sets/bedroom/bedroom_latest.ma\""
+		
+		2 "utility_room_view:house_latest:sim" "visibility" " 1"
+		"utility_room_view:house_latest:kitchen_latestRN" 1
+		2 "utility_room_view:house_latest:kitchen_latest:kitchen:nonselectablelayer" 
+		"visibility" " 1"
+		"utility_room_view:house_latest:utilities_latestRN" 31
+		2 "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pTorus2" 
+		"translate" " -type \"double3\" -6.50308687324827162 0 3.17901527071535384"
+		2 "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pTorus2" 
+		"translateX" " -av"
+		2 "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pTorus2" 
+		"translateZ" " -av"
+		2 "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pTorus2" 
+		"rotate" " -type \"double3\" 0 -133.23515369201018643 0"
+		2 "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pTorus2" 
+		"rotateY" " -av"
+		2 "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pTorus2|utility_room_view:house_latest:utilities_latest:pasted__pasted__pTorusShape2" 
+		"uvPivot" " -type \"double2\" 0.15000000596046448 0.099999845027923584"
+		2 "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pCylinder7" 
+		"translate" " -type \"double3\" -6.50308687324827162 0 3.17901527071535384"
+		2 "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pCylinder7" 
+		"translateX" " -av"
+		2 "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pCylinder7" 
+		"translateZ" " -av"
+		2 "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pCylinder7" 
+		"rotate" " -type \"double3\" 0 -133.23515369201018643 0"
+		2 "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pCylinder7" 
+		"rotateY" " -av"
+		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pTorus2.translateX" 
+		"utility_room_viewRN.placeHolderList[4387]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pTorus2.translateY" 
+		"utility_room_viewRN.placeHolderList[4388]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pTorus2.translateZ" 
+		"utility_room_viewRN.placeHolderList[4389]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pTorus2.rotateX" 
+		"utility_room_viewRN.placeHolderList[4390]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pTorus2.rotateY" 
+		"utility_room_viewRN.placeHolderList[4391]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pTorus2.rotateZ" 
+		"utility_room_viewRN.placeHolderList[4392]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pTorus2.visibility" 
+		"utility_room_viewRN.placeHolderList[4393]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pTorus2.scaleX" 
+		"utility_room_viewRN.placeHolderList[4394]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pTorus2.scaleY" 
+		"utility_room_viewRN.placeHolderList[4395]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pTorus2.scaleZ" 
+		"utility_room_viewRN.placeHolderList[4396]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pCylinder7.translateX" 
+		"utility_room_viewRN.placeHolderList[4397]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pCylinder7.translateY" 
+		"utility_room_viewRN.placeHolderList[4398]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pCylinder7.translateZ" 
+		"utility_room_viewRN.placeHolderList[4399]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pCylinder7.rotateX" 
+		"utility_room_viewRN.placeHolderList[4400]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pCylinder7.rotateY" 
+		"utility_room_viewRN.placeHolderList[4401]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pCylinder7.rotateZ" 
+		"utility_room_viewRN.placeHolderList[4402]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pCylinder7.visibility" 
+		"utility_room_viewRN.placeHolderList[4403]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pCylinder7.scaleX" 
+		"utility_room_viewRN.placeHolderList[4404]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pCylinder7.scaleY" 
+		"utility_room_viewRN.placeHolderList[4405]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:house_latest:utilities_latest:utilities_furniture|utility_room_view:house_latest:utilities_latest:right_washing_machine|utility_room_view:house_latest:utilities_latest:pasted__pasted__pCylinder7.scaleZ" 
+		"utility_room_viewRN.placeHolderList[4406]" ""
 		"utility_room_view:undies_fullRN" 227
 		2 "|utility_room_view:undies_full:undies" "visibility" " -av 1"
-		2 "|utility_room_view:undies_full:undies" "translate" " -type \"double3\" -34.29438115809096388 -0.81264019598083603 -113.24144010353386136"
+		2 "|utility_room_view:undies_full:undies" "translate" " -type \"double3\" -39.93004979309509395 4.03732334836563123 -113.70880256602849556"
 		
 		2 "|utility_room_view:undies_full:undies" "translateX" " -av"
 		2 "|utility_room_view:undies_full:undies" "translateY" " -av"
 		2 "|utility_room_view:undies_full:undies" "translateZ" " -av"
-		2 "|utility_room_view:undies_full:undies" "rotate" " -type \"double3\" -17.50863511438000941 -3.11595696845714354 72.72012414516331091"
+		2 "|utility_room_view:undies_full:undies" "rotate" " -type \"double3\" -52.1401069058773956 -12.50791747145693478 77.5894717616064753"
 		
 		2 "|utility_room_view:undies_full:undies" "rotateX" " -av"
 		2 "|utility_room_view:undies_full:undies" "rotateY" " -av"
@@ -21600,8 +21556,8 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice" 
 		"rotateZ" " -av"
 		2 "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape" 
-		"cp[0:31]" (" -s 32 -type \"double3\" 0.088199732385170676 -1.51206558087125642 0.12919184107992662 0.47938989779051416 -1.33699865799891171 0.11159423265551988 0.83368606716467419 -1.26135466807621599 0.1116419376992604 0.95702900974574301 -0.78514665779117343 -0.23777928182092836 -0.078835156843275078 -0.55187340390397488 0.049772106802894095 0.28107009992616694 -0.36957292045375995 0.023290998692527931 0.62761454588742782 -0.19450599067300101 0.032374280099538646 0.9197197064052024 -0.27953095773999509 -0.14049829636094521 0.076224859771639591 -1.49753853371222467 0.34523142007956065 0.47915770992103773 -1.30442528520536416 0.32831120074889308 0.83345387929519799 -1.22693039484829369 0.33310671681606863 0.9110961244842638 -0.74570298326504081 0.23377132533772196 -0.081510277388846739 -0.51937929773425473 0.28774721773101797 0.28075869675521714 -0.33699954870042997 0.24000796678590122 0.6273226039304407 -0.1619326168049986 0.23414338709216556 0.95369026800367318 -0.26464117236976265 0.087738581784393282 0.0759223713810131"
-		+ "82 -1.45090669579726295 0.54040520866387998 0.4789255220515613 -1.2718519103903847 0.52338015602089438 0.83322169142572156 -1.19250611928376826 0.53592312083203475 0.91093933312063979 -0.72935414795765707 0.66576184376334024 -0.081837973449246107 -0.48688518053384999 0.45555639241513024 0.28044729104126476 -0.30442617203258787 0.44043763726221341 0.677060353025835 -0.12935924683239336 0.42531888362105241 0.95385703275530864 -0.24683328712582328 0.48550062539328731 0.08750316877674133 -1.41434546897696101 0.75007105781830341 0.4786933341820851 -1.23927854241818558 0.73304600570210554 0.83298950355624513 -1.15808184749152776 0.7463928644435025 0.95667828918584141 -0.76755300635888801 1.13260343790261442 -0.079818240737009397 -0.45439106648890965 0.66464086433224556 0.28013588744245654 -0.27185280499584713 0.64761581207826902 0.67739156325386873 -0.096785875839030699 0.63059076221971944 0.91936898584530791 -0.23048445181891747 0.65834914137188505"
+		"cp[0:31]" (" -s 32 -type \"double3\" -0.5 -0.5 -0.5 -0.16666666666666669 -0.5 -0.5 0.16666666666666663 -0.5 -0.5 0.49999999999999994 -0.5 -0.5 -0.5 0.5 -0.5 -0.16666666666666669 0.5 -0.5 0.16666666666666663 0.5 -0.5 0.49999999999999994 0.5 -0.5 -0.5 -0.5 -0.16666666666666669 -0.16666666666666669 -0.5 -0.16666666666666669 0.14367409500338052 -0.55580921992607424 -0.17557142110253249 0.49999999999999994 -0.5 -0.16666666666666669 -0.5 0.5 -0.16666666666666669 -0.16666666666666669 0.5 -0.16666666666666669 0.16666666666666663 0.5 -0.16666666666666669 0.49999999999999994 0.5 -0.16666666666666669 -0.5 -0.5 0.16666666666666663 -0.16666666666666669 -0.5 0.16666666666666663 0.14367409500338052 -0.55580921992607424 0.15776191223080083 0.49999999999999994 -0.5 0.16666666666666663 -0.5 0.5 0.16666666666666663 -0.16666666666666669 0.5 0.16666666666666663 0.16666666666666663 0.5 0.16666666666666663 0.49999999999999994 0.5 0.16666666666666663 -0.5 -0.5 0.49999999999999994 -0.16666666666666669 -0.5 0.49999999999999994 0.14367409500338052 -"
+		+ "0.55580921992607424 0.4910952455641342 0.49999999999999994 -0.5 0.49999999999999994 -0.5 0.5 0.49999999999999994 -0.16666666666666669 0.5 0.49999999999999994 0.16666666666666663 0.5 0.49999999999999994 0.49999999999999994 0.5 0.49999999999999994"
 		)
 		2 "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape" 
 		"controlPoints" " -s 32"
@@ -21798,224 +21754,224 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape" 
 		"controlPoints[31].zValue" " -av"
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies.visibility" 
-		"utility_room_viewRN.placeHolderList[4078]" ""
+		"utility_room_viewRN.placeHolderList[4278]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies.translateX" 
-		"utility_room_viewRN.placeHolderList[4079]" ""
+		"utility_room_viewRN.placeHolderList[4279]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies.translateY" 
-		"utility_room_viewRN.placeHolderList[4080]" ""
+		"utility_room_viewRN.placeHolderList[4280]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies.translateZ" 
-		"utility_room_viewRN.placeHolderList[4081]" ""
+		"utility_room_viewRN.placeHolderList[4281]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies.rotateX" 
-		"utility_room_viewRN.placeHolderList[4082]" ""
+		"utility_room_viewRN.placeHolderList[4282]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies.rotateY" 
-		"utility_room_viewRN.placeHolderList[4083]" ""
+		"utility_room_viewRN.placeHolderList[4283]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies.rotateZ" 
-		"utility_room_viewRN.placeHolderList[4084]" ""
+		"utility_room_viewRN.placeHolderList[4284]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies.scaleX" 
-		"utility_room_viewRN.placeHolderList[4085]" ""
+		"utility_room_viewRN.placeHolderList[4285]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies.scaleY" 
-		"utility_room_viewRN.placeHolderList[4086]" ""
+		"utility_room_viewRN.placeHolderList[4286]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies.scaleZ" 
-		"utility_room_viewRN.placeHolderList[4087]" ""
+		"utility_room_viewRN.placeHolderList[4287]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice.rotateX" 
-		"utility_room_viewRN.placeHolderList[4088]" ""
+		"utility_room_viewRN.placeHolderList[4288]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice.rotateY" 
-		"utility_room_viewRN.placeHolderList[4089]" ""
+		"utility_room_viewRN.placeHolderList[4289]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice.rotateZ" 
-		"utility_room_viewRN.placeHolderList[4090]" ""
+		"utility_room_viewRN.placeHolderList[4290]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[0].xValue" 
-		"utility_room_viewRN.placeHolderList[4091]" ""
+		"utility_room_viewRN.placeHolderList[4291]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[0].yValue" 
-		"utility_room_viewRN.placeHolderList[4092]" ""
+		"utility_room_viewRN.placeHolderList[4292]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[0].zValue" 
-		"utility_room_viewRN.placeHolderList[4093]" ""
+		"utility_room_viewRN.placeHolderList[4293]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[1].xValue" 
-		"utility_room_viewRN.placeHolderList[4094]" ""
+		"utility_room_viewRN.placeHolderList[4294]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[1].yValue" 
-		"utility_room_viewRN.placeHolderList[4095]" ""
+		"utility_room_viewRN.placeHolderList[4295]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[1].zValue" 
-		"utility_room_viewRN.placeHolderList[4096]" ""
+		"utility_room_viewRN.placeHolderList[4296]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[2].xValue" 
-		"utility_room_viewRN.placeHolderList[4097]" ""
+		"utility_room_viewRN.placeHolderList[4297]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[2].yValue" 
-		"utility_room_viewRN.placeHolderList[4098]" ""
+		"utility_room_viewRN.placeHolderList[4298]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[2].zValue" 
-		"utility_room_viewRN.placeHolderList[4099]" ""
+		"utility_room_viewRN.placeHolderList[4299]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[3].xValue" 
-		"utility_room_viewRN.placeHolderList[4100]" ""
+		"utility_room_viewRN.placeHolderList[4300]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[3].yValue" 
-		"utility_room_viewRN.placeHolderList[4101]" ""
+		"utility_room_viewRN.placeHolderList[4301]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[3].zValue" 
-		"utility_room_viewRN.placeHolderList[4102]" ""
+		"utility_room_viewRN.placeHolderList[4302]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[4].xValue" 
-		"utility_room_viewRN.placeHolderList[4103]" ""
+		"utility_room_viewRN.placeHolderList[4303]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[4].yValue" 
-		"utility_room_viewRN.placeHolderList[4104]" ""
+		"utility_room_viewRN.placeHolderList[4304]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[4].zValue" 
-		"utility_room_viewRN.placeHolderList[4105]" ""
+		"utility_room_viewRN.placeHolderList[4305]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[5].xValue" 
-		"utility_room_viewRN.placeHolderList[4106]" ""
+		"utility_room_viewRN.placeHolderList[4306]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[5].yValue" 
-		"utility_room_viewRN.placeHolderList[4107]" ""
+		"utility_room_viewRN.placeHolderList[4307]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[5].zValue" 
-		"utility_room_viewRN.placeHolderList[4108]" ""
+		"utility_room_viewRN.placeHolderList[4308]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[6].xValue" 
-		"utility_room_viewRN.placeHolderList[4109]" ""
+		"utility_room_viewRN.placeHolderList[4309]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[6].yValue" 
-		"utility_room_viewRN.placeHolderList[4110]" ""
+		"utility_room_viewRN.placeHolderList[4310]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[6].zValue" 
-		"utility_room_viewRN.placeHolderList[4111]" ""
+		"utility_room_viewRN.placeHolderList[4311]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[7].xValue" 
-		"utility_room_viewRN.placeHolderList[4112]" ""
+		"utility_room_viewRN.placeHolderList[4312]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[7].yValue" 
-		"utility_room_viewRN.placeHolderList[4113]" ""
+		"utility_room_viewRN.placeHolderList[4313]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[7].zValue" 
-		"utility_room_viewRN.placeHolderList[4114]" ""
+		"utility_room_viewRN.placeHolderList[4314]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[8].xValue" 
-		"utility_room_viewRN.placeHolderList[4115]" ""
+		"utility_room_viewRN.placeHolderList[4315]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[8].yValue" 
-		"utility_room_viewRN.placeHolderList[4116]" ""
+		"utility_room_viewRN.placeHolderList[4316]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[8].zValue" 
-		"utility_room_viewRN.placeHolderList[4117]" ""
+		"utility_room_viewRN.placeHolderList[4317]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[9].xValue" 
-		"utility_room_viewRN.placeHolderList[4118]" ""
+		"utility_room_viewRN.placeHolderList[4318]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[9].yValue" 
-		"utility_room_viewRN.placeHolderList[4119]" ""
+		"utility_room_viewRN.placeHolderList[4319]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[9].zValue" 
-		"utility_room_viewRN.placeHolderList[4120]" ""
+		"utility_room_viewRN.placeHolderList[4320]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[10].xValue" 
-		"utility_room_viewRN.placeHolderList[4121]" ""
+		"utility_room_viewRN.placeHolderList[4321]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[10].yValue" 
-		"utility_room_viewRN.placeHolderList[4122]" ""
+		"utility_room_viewRN.placeHolderList[4322]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[10].zValue" 
-		"utility_room_viewRN.placeHolderList[4123]" ""
+		"utility_room_viewRN.placeHolderList[4323]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[11].xValue" 
-		"utility_room_viewRN.placeHolderList[4124]" ""
+		"utility_room_viewRN.placeHolderList[4324]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[11].yValue" 
-		"utility_room_viewRN.placeHolderList[4125]" ""
+		"utility_room_viewRN.placeHolderList[4325]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[11].zValue" 
-		"utility_room_viewRN.placeHolderList[4126]" ""
+		"utility_room_viewRN.placeHolderList[4326]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[12].xValue" 
-		"utility_room_viewRN.placeHolderList[4127]" ""
+		"utility_room_viewRN.placeHolderList[4327]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[12].yValue" 
-		"utility_room_viewRN.placeHolderList[4128]" ""
+		"utility_room_viewRN.placeHolderList[4328]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[12].zValue" 
-		"utility_room_viewRN.placeHolderList[4129]" ""
+		"utility_room_viewRN.placeHolderList[4329]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[13].xValue" 
-		"utility_room_viewRN.placeHolderList[4130]" ""
+		"utility_room_viewRN.placeHolderList[4330]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[13].yValue" 
-		"utility_room_viewRN.placeHolderList[4131]" ""
+		"utility_room_viewRN.placeHolderList[4331]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[13].zValue" 
-		"utility_room_viewRN.placeHolderList[4132]" ""
+		"utility_room_viewRN.placeHolderList[4332]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[14].xValue" 
-		"utility_room_viewRN.placeHolderList[4133]" ""
+		"utility_room_viewRN.placeHolderList[4333]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[14].yValue" 
-		"utility_room_viewRN.placeHolderList[4134]" ""
+		"utility_room_viewRN.placeHolderList[4334]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[14].zValue" 
-		"utility_room_viewRN.placeHolderList[4135]" ""
+		"utility_room_viewRN.placeHolderList[4335]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[15].xValue" 
-		"utility_room_viewRN.placeHolderList[4136]" ""
+		"utility_room_viewRN.placeHolderList[4336]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[15].yValue" 
-		"utility_room_viewRN.placeHolderList[4137]" ""
+		"utility_room_viewRN.placeHolderList[4337]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[15].zValue" 
-		"utility_room_viewRN.placeHolderList[4138]" ""
+		"utility_room_viewRN.placeHolderList[4338]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[16].xValue" 
-		"utility_room_viewRN.placeHolderList[4139]" ""
+		"utility_room_viewRN.placeHolderList[4339]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[16].yValue" 
-		"utility_room_viewRN.placeHolderList[4140]" ""
+		"utility_room_viewRN.placeHolderList[4340]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[16].zValue" 
-		"utility_room_viewRN.placeHolderList[4141]" ""
+		"utility_room_viewRN.placeHolderList[4341]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[17].xValue" 
-		"utility_room_viewRN.placeHolderList[4142]" ""
+		"utility_room_viewRN.placeHolderList[4342]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[17].yValue" 
-		"utility_room_viewRN.placeHolderList[4143]" ""
+		"utility_room_viewRN.placeHolderList[4343]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[17].zValue" 
-		"utility_room_viewRN.placeHolderList[4144]" ""
+		"utility_room_viewRN.placeHolderList[4344]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[18].xValue" 
-		"utility_room_viewRN.placeHolderList[4145]" ""
+		"utility_room_viewRN.placeHolderList[4345]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[18].yValue" 
-		"utility_room_viewRN.placeHolderList[4146]" ""
+		"utility_room_viewRN.placeHolderList[4346]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[18].zValue" 
-		"utility_room_viewRN.placeHolderList[4147]" ""
+		"utility_room_viewRN.placeHolderList[4347]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[19].xValue" 
-		"utility_room_viewRN.placeHolderList[4148]" ""
+		"utility_room_viewRN.placeHolderList[4348]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[19].yValue" 
-		"utility_room_viewRN.placeHolderList[4149]" ""
+		"utility_room_viewRN.placeHolderList[4349]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[19].zValue" 
-		"utility_room_viewRN.placeHolderList[4150]" ""
+		"utility_room_viewRN.placeHolderList[4350]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[20].xValue" 
-		"utility_room_viewRN.placeHolderList[4151]" ""
+		"utility_room_viewRN.placeHolderList[4351]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[20].yValue" 
-		"utility_room_viewRN.placeHolderList[4152]" ""
+		"utility_room_viewRN.placeHolderList[4352]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[20].zValue" 
-		"utility_room_viewRN.placeHolderList[4153]" ""
+		"utility_room_viewRN.placeHolderList[4353]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[21].xValue" 
-		"utility_room_viewRN.placeHolderList[4154]" ""
+		"utility_room_viewRN.placeHolderList[4354]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[21].yValue" 
-		"utility_room_viewRN.placeHolderList[4155]" ""
+		"utility_room_viewRN.placeHolderList[4355]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[21].zValue" 
-		"utility_room_viewRN.placeHolderList[4156]" ""
+		"utility_room_viewRN.placeHolderList[4356]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[22].xValue" 
-		"utility_room_viewRN.placeHolderList[4157]" ""
+		"utility_room_viewRN.placeHolderList[4357]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[22].yValue" 
-		"utility_room_viewRN.placeHolderList[4158]" ""
+		"utility_room_viewRN.placeHolderList[4358]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[22].zValue" 
-		"utility_room_viewRN.placeHolderList[4159]" ""
+		"utility_room_viewRN.placeHolderList[4359]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[23].xValue" 
-		"utility_room_viewRN.placeHolderList[4160]" ""
+		"utility_room_viewRN.placeHolderList[4360]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[23].yValue" 
-		"utility_room_viewRN.placeHolderList[4161]" ""
+		"utility_room_viewRN.placeHolderList[4361]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[23].zValue" 
-		"utility_room_viewRN.placeHolderList[4162]" ""
+		"utility_room_viewRN.placeHolderList[4362]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[24].xValue" 
-		"utility_room_viewRN.placeHolderList[4163]" ""
+		"utility_room_viewRN.placeHolderList[4363]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[24].yValue" 
-		"utility_room_viewRN.placeHolderList[4164]" ""
+		"utility_room_viewRN.placeHolderList[4364]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[24].zValue" 
-		"utility_room_viewRN.placeHolderList[4165]" ""
+		"utility_room_viewRN.placeHolderList[4365]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[25].xValue" 
-		"utility_room_viewRN.placeHolderList[4166]" ""
+		"utility_room_viewRN.placeHolderList[4366]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[25].yValue" 
-		"utility_room_viewRN.placeHolderList[4167]" ""
+		"utility_room_viewRN.placeHolderList[4367]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[25].zValue" 
-		"utility_room_viewRN.placeHolderList[4168]" ""
+		"utility_room_viewRN.placeHolderList[4368]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[26].xValue" 
-		"utility_room_viewRN.placeHolderList[4169]" ""
+		"utility_room_viewRN.placeHolderList[4369]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[26].yValue" 
-		"utility_room_viewRN.placeHolderList[4170]" ""
+		"utility_room_viewRN.placeHolderList[4370]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[26].zValue" 
-		"utility_room_viewRN.placeHolderList[4171]" ""
+		"utility_room_viewRN.placeHolderList[4371]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[27].xValue" 
-		"utility_room_viewRN.placeHolderList[4172]" ""
+		"utility_room_viewRN.placeHolderList[4372]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[27].yValue" 
-		"utility_room_viewRN.placeHolderList[4173]" ""
+		"utility_room_viewRN.placeHolderList[4373]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[27].zValue" 
-		"utility_room_viewRN.placeHolderList[4174]" ""
+		"utility_room_viewRN.placeHolderList[4374]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[28].xValue" 
-		"utility_room_viewRN.placeHolderList[4175]" ""
+		"utility_room_viewRN.placeHolderList[4375]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[28].yValue" 
-		"utility_room_viewRN.placeHolderList[4176]" ""
+		"utility_room_viewRN.placeHolderList[4376]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[28].zValue" 
-		"utility_room_viewRN.placeHolderList[4177]" ""
+		"utility_room_viewRN.placeHolderList[4377]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[29].xValue" 
-		"utility_room_viewRN.placeHolderList[4178]" ""
+		"utility_room_viewRN.placeHolderList[4378]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[29].yValue" 
-		"utility_room_viewRN.placeHolderList[4179]" ""
+		"utility_room_viewRN.placeHolderList[4379]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[29].zValue" 
-		"utility_room_viewRN.placeHolderList[4180]" ""
+		"utility_room_viewRN.placeHolderList[4380]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[30].xValue" 
-		"utility_room_viewRN.placeHolderList[4181]" ""
+		"utility_room_viewRN.placeHolderList[4381]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[30].yValue" 
-		"utility_room_viewRN.placeHolderList[4182]" ""
+		"utility_room_viewRN.placeHolderList[4382]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[30].zValue" 
-		"utility_room_viewRN.placeHolderList[4183]" ""
+		"utility_room_viewRN.placeHolderList[4383]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[31].xValue" 
-		"utility_room_viewRN.placeHolderList[4184]" ""
+		"utility_room_viewRN.placeHolderList[4384]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[31].yValue" 
-		"utility_room_viewRN.placeHolderList[4185]" ""
+		"utility_room_viewRN.placeHolderList[4385]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:undies_full:undies|utility_room_view:undies_full:ffd1LatticeGroup|utility_room_view:undies_full:ffd1Lattice|utility_room_view:undies_full:ffd1LatticeShape.controlPoints[31].zValue" 
-		"utility_room_viewRN.placeHolderList[4186]" ""
-		"utility_room_view:sneaks_latestRN" 883
+		"utility_room_viewRN.placeHolderList[4386]" ""
+		"utility_room_view:sneaks_latestRN" 877
 		1 |utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:pSphere2|utility_room_view:sneaks_latest:sneaksmesh:pSphereShape2 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
 		1 |utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:pSphere2|utility_room_view:sneaks_latest:sneaksmesh:pSphereShape2 
@@ -22027,12 +21983,6 @@ createNode reference -n "utility_room_viewRN";
 		1 |utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:pSphere1|utility_room_view:sneaks_latest:sneaksmesh:pSphereShape1 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:pSphere1|utility_room_view:sneaks_latest:sneaksmesh:pSphereShape1 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:Sneakio002:Bandana|utility_room_view:sneaks_latest:Sneakio002:BandanaShape 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:Sneakio002:Bandana|utility_room_view:sneaks_latest:Sneakio002:BandanaShape 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:Sneakio002:Bandana|utility_room_view:sneaks_latest:Sneakio002:BandanaShape 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |utility_room_view:sneaks_latest:sneaksmesh:polySurface1|utility_room_view:sneaks_latest:neutral|utility_room_view:sneaks_latest:neutralShape 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
@@ -22138,12 +22088,12 @@ createNode reference -n "utility_room_viewRN";
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		2 "|utility_room_view:sneaks_latest:controller_root" "visibility" " -av 1"
 		
-		2 "|utility_room_view:sneaks_latest:controller_root" "translate" " -type \"double3\" -39.39843530785336867 1.38196822214476867 -114.61127555377515819"
+		2 "|utility_room_view:sneaks_latest:controller_root" "translate" " -type \"double3\" -40.88120291131382089 2.80265650659237764 -114.61127555377515819"
 		
 		2 "|utility_room_view:sneaks_latest:controller_root" "translateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root" "translateY" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root" "translateZ" " -av"
-		2 "|utility_room_view:sneaks_latest:controller_root" "rotate" " -type \"double3\" 5.52519858893724347 68.14573632743208975 1.74227199022823109"
+		2 "|utility_room_view:sneaks_latest:controller_root" "rotate" " -type \"double3\" -28.06298358405947369 30.97789151701921995 0.75635663680346898"
 		
 		2 "|utility_room_view:sneaks_latest:controller_root" "rotateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root" "rotateY" " -av"
@@ -22156,7 +22106,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG" 
 		"visibility" " -av 1"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG" 
-		"translate" " -type \"double3\" 0.054036212568571863 1.47528520096672611 2.33198182900906215"
+		"translate" " -type \"double3\" 0.37226441870256211 2.65270030147573133 0.15158122296359269"
 		
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG" 
 		"translateX" " -av"
@@ -22165,7 +22115,8 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG" 
 		"translateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG" 
-		"rotate" " -type \"double3\" -27.24854994065110603 0 0"
+		"rotate" " -type \"double3\" -41.80588009457797227 -7.72652264047214921 6.8559022944214405"
+		
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG" 
 		"rotateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG" 
@@ -22253,7 +22204,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head" 
 		"translateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head" 
-		"rotate" " -type \"double3\" 54.95130338346192644 0 0"
+		"rotate" " -type \"double3\" 87.34451447716335792 0 0"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head" 
 		"rotateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head" 
@@ -22307,7 +22258,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_hip" 
 		"rotateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase" 
-		"translate" " -type \"double3\" -2.6547367129882633 0.1021463398678483 3.09071218594820163"
+		"translate" " -type \"double3\" 0.46450778239281154 3.7558775522025929 4.49936136695674715"
 		
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase" 
 		"translateX" " -av"
@@ -22316,8 +22267,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase" 
 		"translateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase" 
-		"rotate" " -type \"double3\" -30.24853613952979003 -48.46497039140334806 125.71956389086437866"
-		
+		"rotate" " -type \"double3\" 179.34852748019483215 0 0"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase" 
 		"rotateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase" 
@@ -22325,8 +22275,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase" 
 		"rotateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2" 
-		"translate" " -type \"double3\" 0.11668605866586421 -0.0037483153111689572 0.10527617350853326"
-		
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2" 
 		"translateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2" 
@@ -22334,7 +22283,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2" 
 		"translateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2" 
-		"rotate" " -type \"double3\" 11.67526741695355774 -14.60734240849033583 0"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2" 
 		"rotateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2" 
@@ -22342,8 +22291,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2" 
 		"rotateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3" 
-		"translate" " -type \"double3\" -0.31501827801289473 0.10183144714977488 0.18672110714774023"
-		
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3" 
 		"translateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3" 
@@ -22351,8 +22299,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3" 
 		"translateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3" 
-		"rotate" " -type \"double3\" 107.34547423842880676 1.06838505151015317 83.53422873021581552"
-		
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3" 
 		"rotateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3" 
@@ -22360,8 +22307,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3" 
 		"rotateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4" 
-		"translate" " -type \"double3\" 0.18026313263075683 0.0036988674599310453 -0.90136613401631227"
-		
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4" 
 		"translateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4" 
@@ -22369,8 +22315,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4" 
 		"translateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4" 
-		"rotate" " -type \"double3\" -41.99946280156138556 1.50248587030047798 -42.91783146343499311"
-		
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4" 
 		"rotateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4" 
@@ -22378,8 +22323,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4" 
 		"rotateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip" 
-		"translate" " -type \"double3\" 0.016014334237281554 0.0076735927743887492 -0.15619672191218914"
-		
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip" 
 		"translateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip" 
@@ -22387,25 +22331,17 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip" 
 		"translateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip" 
-		"rotate" " -type \"double3\" 99.46789235107901561 0.63048419718826387 15.11536685683043757"
-		
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip" 
 		"rotateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip" 
 		"rotateY" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip" 
 		"rotateZ" " -av"
-		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:Sneakio002:Bandana|utility_room_view:sneaks_latest:Sneakio002:BandanaShape" 
-		"surfaceReference" " 1"
-		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:Sneakio002:Bandana|utility_room_view:sneaks_latest:Sneakio002:BandanaShape" 
-		"referenceFile" " -type \"string\" \"X:/documents/GitHub/Bandits/maya/assets/characters/sneaks/sneaks_latest.ma\""
-		
-		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:Sneakio002:Bandana|utility_room_view:sneaks_latest:Sneakio002:BandanaShape" 
-		"furNameSpace" " -type \"string\" \"sneaks_latest\""
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg" 
 		"visibility" " -av 1"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg" 
-		"translate" " -type \"double3\" 0.59023429718404963 -1.31569571822548137 0.78002414451235991"
+		"translate" " -type \"double3\" 2.193391811418127 -0.89860181643078385 -1.75610409856338534"
 		
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg" 
 		"translateX" " -av"
@@ -22414,7 +22350,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg" 
 		"translateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg" 
-		"rotate" " -type \"double3\" 33.39252730116696455 0 0"
+		"rotate" " -type \"double3\" -8.13320405956481629 0 0"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg" 
 		"rotateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg" 
@@ -22458,7 +22394,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm" 
 		"visibility" " -av 1"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm" 
-		"translate" " -type \"double3\" 0.086969885711147138 3.91744830109112652 3.35751104448182103"
+		"translate" " -type \"double3\" 0.049390507877801873 8.15516432934506064 0.8784561446788447"
 		
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm" 
 		"translateX" " -av"
@@ -22467,7 +22403,8 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm" 
 		"translateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm" 
-		"rotate" " -type \"double3\" 28.36573915054647799 0 0"
+		"rotate" " -type \"double3\" 15.70807842595160153 -3.7738663801947272 -12.5274596166627088"
+		
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm" 
 		"rotateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm" 
@@ -22483,8 +22420,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm" 
 		"scaleZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:LeftArm" 
-		"translate" " -type \"double3\" 4.36314188965036109 -0.0019063579194717613 -9.1065088860257859"
-		
+		"translate" " -type \"double3\" 0 -4.89515877357113638 -5.78579678010650156"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:LeftArm" 
 		"translateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:LeftArm" 
@@ -22498,8 +22434,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1" 
 		"visibility" " -av 1"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1" 
-		"translate" " -type \"double3\" -1.73955370389400943 -3.14539169036424981 -0.42595476762347767"
-		
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1" 
 		"translateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1" 
@@ -22507,8 +22442,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1" 
 		"translateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1" 
-		"rotate" " -type \"double3\" 45.33015480612756676 0.44808172790487649 -1.08906610525301728"
-		
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1" 
 		"rotateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1" 
@@ -22526,8 +22460,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8" 
 		"visibility" " -av 1"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8" 
-		"translate" " -type \"double3\" -0.0060961464738263508 -0.29988423944649073 -0.1487666730297145"
-		
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8" 
 		"translateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8" 
@@ -22535,7 +22468,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8" 
 		"translateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8" 
-		"rotate" " -type \"double3\" -18.15889747446169977 0 0"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8" 
 		"rotateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8" 
@@ -22551,8 +22484,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8" 
 		"scaleZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:LeftLeg" 
-		"translate" " -type \"double3\" 0.80733535198718176 -5.02153334344165536 -2.21312494136737481"
-		
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:LeftLeg" 
 		"translateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:LeftLeg" 
@@ -22562,7 +22494,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm" 
 		"visibility" " -av 1"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm" 
-		"translate" " -type \"double3\" -4.61145883685285352 2.92833275591287201 4.24040910591677722"
+		"translate" " -type \"double3\" 0.92260478055686979 7.72131476483110379 0.89535878152080262"
 		
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm" 
 		"translateX" " -av"
@@ -22571,7 +22503,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm" 
 		"translateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm" 
-		"rotate" " -type \"double3\" 27.73986245089000136 0 0"
+		"rotate" " -type \"double3\" 0 18.9186840329572874 0"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm" 
 		"rotateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm" 
@@ -22587,8 +22519,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm" 
 		"scaleZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist" 
-		"translate" " -type \"double3\" 0.21113373404311789 -0.043257815003337093 -0.071087194180858501"
-		
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist" 
 		"translateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist" 
@@ -22596,8 +22527,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist" 
 		"translateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist" 
-		"rotate" " -type \"double3\" -5.4992521154230829 -0.74353471261121318 -10.42256083364400965"
-		
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist" 
 		"rotateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist" 
@@ -22605,8 +22535,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist" 
 		"rotateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1" 
-		"translate" " -type \"double3\" 0.23185999197129553 -0.56501036821050554 -0.35944450387961646"
-		
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1" 
 		"translateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1" 
@@ -22614,8 +22543,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1" 
 		"translateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9" 
-		"translate" " -type \"double3\" 0.34219781302807856 -0.60610590514643892 -0.53064753289627697"
-		
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9" 
 		"translateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9" 
@@ -22623,8 +22551,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9" 
 		"translateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10" 
-		"translate" " -type \"double3\" 0.35282439127552162 -0.52677379497042787 -0.62405293997783162"
-		
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10" 
 		"translateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10" 
@@ -22632,8 +22559,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10" 
 		"translateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11" 
-		"translate" " -type \"double3\" 0.36880952224167568 -0.45797988412061891 -0.37799955612700764"
-		
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11" 
 		"translateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11" 
@@ -22641,8 +22567,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11" 
 		"translateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12" 
-		"translate" " -type \"double3\" -0.90638836012754798 0.16452915315001174 0.67187999398623999"
-		
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12" 
 		"translateX" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12" 
@@ -22650,7 +22575,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12" 
 		"translateZ" " -av"
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm" 
-		"translate" " -type \"double3\" -11.23285931753903633 -2.04219608178531065 -8.28337336610676189"
+		"translate" " -type \"double3\" -3.46144460735659187 -14.05794003183329366 -0.36149126459878522"
 		
 		2 "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm" 
 		"translateX" " -av"
@@ -22793,7 +22718,7 @@ createNode reference -n "utility_room_viewRN";
 		
 		2 "|utility_room_view:sneaks_latest:three_faces:sneaks_normal_face4:polySurface10|utility_room_view:sneaks_latest:oh_shit|utility_room_view:sneaks_latest:oh_shitShape" 
 		"furNameSpace" " -type \"string\" \"sneaks_latest\""
-		2 "utility_room_view:sneaks_latest:blendShape1" "w[0:15]" " -s 16 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0"
+		2 "utility_room_view:sneaks_latest:blendShape1" "w[0:15]" " -s 16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
 		
 		2 "utility_room_view:sneaks_latest:blendShape1" "weight" " -s 16"
 		2 "utility_room_view:sneaks_latest:blendShape1" "weight[0]" " -av"
@@ -22813,997 +22738,997 @@ createNode reference -n "utility_room_viewRN";
 		2 "utility_room_view:sneaks_latest:sneaks_faces" "visibility" " 0"
 		2 "utility_room_view:sneaks_latest:sneaks_blendshaped" "visibility" " 1"
 		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root.visibility" 
-		"utility_room_viewRN.placeHolderList[3582]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root.translateX" 
-		"utility_room_viewRN.placeHolderList[3583]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root.translateY" 
-		"utility_room_viewRN.placeHolderList[3584]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root.translateZ" 
-		"utility_room_viewRN.placeHolderList[3585]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root.rotateX" 
-		"utility_room_viewRN.placeHolderList[3586]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root.rotateY" 
-		"utility_room_viewRN.placeHolderList[3587]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3588]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root.scaleX" 
-		"utility_room_viewRN.placeHolderList[3589]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root.scaleY" 
-		"utility_room_viewRN.placeHolderList[3590]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3591]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG.translateX" 
-		"utility_room_viewRN.placeHolderList[3592]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG.translateY" 
-		"utility_room_viewRN.placeHolderList[3593]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG.translateZ" 
-		"utility_room_viewRN.placeHolderList[3594]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG.rotateX" 
-		"utility_room_viewRN.placeHolderList[3595]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG.rotateY" 
-		"utility_room_viewRN.placeHolderList[3596]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3597]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG.scaleX" 
-		"utility_room_viewRN.placeHolderList[3598]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG.scaleY" 
-		"utility_room_viewRN.placeHolderList[3599]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3600]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG.visibility" 
-		"utility_room_viewRN.placeHolderList[3601]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine3.translateX" 
-		"utility_room_viewRN.placeHolderList[3602]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine3.translateY" 
-		"utility_room_viewRN.placeHolderList[3603]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine3.translateZ" 
-		"utility_room_viewRN.placeHolderList[3604]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine3.rotateX" 
-		"utility_room_viewRN.placeHolderList[3605]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine3.rotateY" 
-		"utility_room_viewRN.placeHolderList[3606]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine3.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3607]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine3.scaleX" 
-		"utility_room_viewRN.placeHolderList[3608]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine3.scaleY" 
-		"utility_room_viewRN.placeHolderList[3609]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine3.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3610]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine3.visibility" 
-		"utility_room_viewRN.placeHolderList[3611]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine2.translateX" 
-		"utility_room_viewRN.placeHolderList[3612]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine2.translateY" 
-		"utility_room_viewRN.placeHolderList[3613]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine2.translateZ" 
-		"utility_room_viewRN.placeHolderList[3614]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine2.rotateX" 
-		"utility_room_viewRN.placeHolderList[3615]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine2.rotateY" 
-		"utility_room_viewRN.placeHolderList[3616]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine2.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3617]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine2.scaleX" 
-		"utility_room_viewRN.placeHolderList[3618]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine2.scaleY" 
-		"utility_room_viewRN.placeHolderList[3619]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine2.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3620]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine2.visibility" 
-		"utility_room_viewRN.placeHolderList[3621]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine1.translateX" 
-		"utility_room_viewRN.placeHolderList[3622]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine1.translateY" 
-		"utility_room_viewRN.placeHolderList[3623]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine1.translateZ" 
-		"utility_room_viewRN.placeHolderList[3624]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine1.rotateX" 
-		"utility_room_viewRN.placeHolderList[3625]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine1.rotateY" 
-		"utility_room_viewRN.placeHolderList[3626]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine1.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3627]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine1.scaleX" 
-		"utility_room_viewRN.placeHolderList[3628]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine1.scaleY" 
-		"utility_room_viewRN.placeHolderList[3629]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine1.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3630]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine1.visibility" 
-		"utility_room_viewRN.placeHolderList[3631]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder.translateX" 
-		"utility_room_viewRN.placeHolderList[3632]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder.translateY" 
-		"utility_room_viewRN.placeHolderList[3633]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder.translateZ" 
-		"utility_room_viewRN.placeHolderList[3634]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder.rotateX" 
-		"utility_room_viewRN.placeHolderList[3635]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder.rotateY" 
-		"utility_room_viewRN.placeHolderList[3636]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3637]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder.scaleX" 
-		"utility_room_viewRN.placeHolderList[3638]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder.scaleY" 
-		"utility_room_viewRN.placeHolderList[3639]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3640]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder.visibility" 
-		"utility_room_viewRN.placeHolderList[3641]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head.translateX" 
-		"utility_room_viewRN.placeHolderList[3642]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head.translateY" 
-		"utility_room_viewRN.placeHolderList[3643]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head.translateZ" 
-		"utility_room_viewRN.placeHolderList[3644]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head.rotateX" 
-		"utility_room_viewRN.placeHolderList[3645]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head.rotateY" 
-		"utility_room_viewRN.placeHolderList[3646]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3647]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head.scaleX" 
-		"utility_room_viewRN.placeHolderList[3648]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head.scaleY" 
-		"utility_room_viewRN.placeHolderList[3649]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3650]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head.visibility" 
-		"utility_room_viewRN.placeHolderList[3651]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3.translateX" 
-		"utility_room_viewRN.placeHolderList[3652]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3.translateY" 
-		"utility_room_viewRN.placeHolderList[3653]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3.translateZ" 
-		"utility_room_viewRN.placeHolderList[3654]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3.visibility" 
-		"utility_room_viewRN.placeHolderList[3655]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3.rotateX" 
-		"utility_room_viewRN.placeHolderList[3656]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3.rotateY" 
-		"utility_room_viewRN.placeHolderList[3657]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3658]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3.scaleX" 
-		"utility_room_viewRN.placeHolderList[3659]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3.scaleY" 
-		"utility_room_viewRN.placeHolderList[3660]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3661]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle2.translateX" 
-		"utility_room_viewRN.placeHolderList[3662]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle2.translateY" 
-		"utility_room_viewRN.placeHolderList[3663]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle2.translateZ" 
-		"utility_room_viewRN.placeHolderList[3664]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle2.visibility" 
-		"utility_room_viewRN.placeHolderList[3665]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle2.rotateX" 
-		"utility_room_viewRN.placeHolderList[3666]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle2.rotateY" 
-		"utility_room_viewRN.placeHolderList[3667]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle2.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3668]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle2.scaleX" 
-		"utility_room_viewRN.placeHolderList[3669]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle2.scaleY" 
-		"utility_room_viewRN.placeHolderList[3670]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle2.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3671]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle1.translateX" 
-		"utility_room_viewRN.placeHolderList[3672]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle1.translateY" 
-		"utility_room_viewRN.placeHolderList[3673]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle1.translateZ" 
-		"utility_room_viewRN.placeHolderList[3674]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle1.visibility" 
-		"utility_room_viewRN.placeHolderList[3675]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle1.rotateX" 
-		"utility_room_viewRN.placeHolderList[3676]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle1.rotateY" 
-		"utility_room_viewRN.placeHolderList[3677]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle1.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3678]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle1.scaleX" 
-		"utility_room_viewRN.placeHolderList[3679]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle1.scaleY" 
-		"utility_room_viewRN.placeHolderList[3680]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle1.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3681]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_hip.translateX" 
-		"utility_room_viewRN.placeHolderList[3682]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_hip.translateY" 
-		"utility_room_viewRN.placeHolderList[3683]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_hip.translateZ" 
-		"utility_room_viewRN.placeHolderList[3684]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_hip.rotateX" 
-		"utility_room_viewRN.placeHolderList[3685]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_hip.rotateY" 
-		"utility_room_viewRN.placeHolderList[3686]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_hip.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3687]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_hip.scaleX" 
-		"utility_room_viewRN.placeHolderList[3688]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_hip.scaleY" 
-		"utility_room_viewRN.placeHolderList[3689]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_hip.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3690]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_hip.visibility" 
-		"utility_room_viewRN.placeHolderList[3691]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase.translateX" 
-		"utility_room_viewRN.placeHolderList[3692]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase.translateY" 
-		"utility_room_viewRN.placeHolderList[3693]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase.translateZ" 
-		"utility_room_viewRN.placeHolderList[3694]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase.rotateX" 
-		"utility_room_viewRN.placeHolderList[3695]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase.rotateY" 
-		"utility_room_viewRN.placeHolderList[3696]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3697]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase.scaleX" 
-		"utility_room_viewRN.placeHolderList[3698]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase.scaleY" 
-		"utility_room_viewRN.placeHolderList[3699]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3700]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase.visibility" 
-		"utility_room_viewRN.placeHolderList[3701]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2.translateX" 
-		"utility_room_viewRN.placeHolderList[3702]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2.translateY" 
-		"utility_room_viewRN.placeHolderList[3703]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2.translateZ" 
-		"utility_room_viewRN.placeHolderList[3704]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2.rotateX" 
-		"utility_room_viewRN.placeHolderList[3705]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2.rotateY" 
-		"utility_room_viewRN.placeHolderList[3706]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3707]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2.scaleX" 
-		"utility_room_viewRN.placeHolderList[3708]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2.scaleY" 
-		"utility_room_viewRN.placeHolderList[3709]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3710]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2.visibility" 
-		"utility_room_viewRN.placeHolderList[3711]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3.translateX" 
-		"utility_room_viewRN.placeHolderList[3712]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3.translateY" 
-		"utility_room_viewRN.placeHolderList[3713]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3.translateZ" 
-		"utility_room_viewRN.placeHolderList[3714]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3.rotateX" 
-		"utility_room_viewRN.placeHolderList[3715]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3.rotateY" 
-		"utility_room_viewRN.placeHolderList[3716]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3717]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3.scaleX" 
-		"utility_room_viewRN.placeHolderList[3718]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3.scaleY" 
-		"utility_room_viewRN.placeHolderList[3719]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3720]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3.visibility" 
-		"utility_room_viewRN.placeHolderList[3721]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4.translateX" 
-		"utility_room_viewRN.placeHolderList[3722]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4.translateY" 
-		"utility_room_viewRN.placeHolderList[3723]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4.translateZ" 
-		"utility_room_viewRN.placeHolderList[3724]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4.rotateX" 
-		"utility_room_viewRN.placeHolderList[3725]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4.rotateY" 
-		"utility_room_viewRN.placeHolderList[3726]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3727]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4.scaleX" 
-		"utility_room_viewRN.placeHolderList[3728]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4.scaleY" 
-		"utility_room_viewRN.placeHolderList[3729]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3730]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4.visibility" 
-		"utility_room_viewRN.placeHolderList[3731]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip.translateX" 
-		"utility_room_viewRN.placeHolderList[3732]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip.translateY" 
-		"utility_room_viewRN.placeHolderList[3733]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip.translateZ" 
-		"utility_room_viewRN.placeHolderList[3734]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip.rotateX" 
-		"utility_room_viewRN.placeHolderList[3735]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip.rotateY" 
-		"utility_room_viewRN.placeHolderList[3736]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3737]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip.scaleX" 
-		"utility_room_viewRN.placeHolderList[3738]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip.scaleY" 
-		"utility_room_viewRN.placeHolderList[3739]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3740]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip.visibility" 
-		"utility_room_viewRN.placeHolderList[3741]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg.visibility" 
-		"utility_room_viewRN.placeHolderList[3742]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg.translateX" 
-		"utility_room_viewRN.placeHolderList[3743]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg.translateY" 
-		"utility_room_viewRN.placeHolderList[3744]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg.translateZ" 
-		"utility_room_viewRN.placeHolderList[3745]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg.rotateX" 
-		"utility_room_viewRN.placeHolderList[3746]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg.rotateY" 
-		"utility_room_viewRN.placeHolderList[3747]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3748]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg.scaleX" 
-		"utility_room_viewRN.placeHolderList[3749]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg.scaleY" 
-		"utility_room_viewRN.placeHolderList[3750]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3751]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:nurbsCircle7.translateX" 
-		"utility_room_viewRN.placeHolderList[3752]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:nurbsCircle7.translateY" 
-		"utility_room_viewRN.placeHolderList[3753]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:nurbsCircle7.translateZ" 
-		"utility_room_viewRN.placeHolderList[3754]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:nurbsCircle7.visibility" 
-		"utility_room_viewRN.placeHolderList[3755]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:nurbsCircle7.rotateX" 
-		"utility_room_viewRN.placeHolderList[3756]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:nurbsCircle7.rotateY" 
-		"utility_room_viewRN.placeHolderList[3757]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:nurbsCircle7.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3758]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:nurbsCircle7.scaleX" 
-		"utility_room_viewRN.placeHolderList[3759]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:nurbsCircle7.scaleY" 
-		"utility_room_viewRN.placeHolderList[3760]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:nurbsCircle7.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3761]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:RightLeg.rotateX" 
-		"utility_room_viewRN.placeHolderList[3762]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:RightLeg.rotateY" 
-		"utility_room_viewRN.placeHolderList[3763]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:RightLeg.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3764]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:RightLeg.translateX" 
-		"utility_room_viewRN.placeHolderList[3765]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:RightLeg.translateY" 
-		"utility_room_viewRN.placeHolderList[3766]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:RightLeg.translateZ" 
-		"utility_room_viewRN.placeHolderList[3767]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:RightLeg.visibility" 
-		"utility_room_viewRN.placeHolderList[3768]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:RightLeg.scaleX" 
-		"utility_room_viewRN.placeHolderList[3769]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:RightLeg.scaleY" 
-		"utility_room_viewRN.placeHolderList[3770]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:RightLeg.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3771]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm.visibility" 
-		"utility_room_viewRN.placeHolderList[3772]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm.translateX" 
-		"utility_room_viewRN.placeHolderList[3773]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm.translateY" 
-		"utility_room_viewRN.placeHolderList[3774]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm.translateZ" 
-		"utility_room_viewRN.placeHolderList[3775]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm.rotateX" 
-		"utility_room_viewRN.placeHolderList[3776]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm.rotateY" 
-		"utility_room_viewRN.placeHolderList[3777]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3778]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm.scaleX" 
-		"utility_room_viewRN.placeHolderList[3779]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm.scaleY" 
-		"utility_room_viewRN.placeHolderList[3780]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3781]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist.translateX" 
 		"utility_room_viewRN.placeHolderList[3782]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root.translateX" 
 		"utility_room_viewRN.placeHolderList[3783]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root.translateY" 
 		"utility_room_viewRN.placeHolderList[3784]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root.translateZ" 
 		"utility_room_viewRN.placeHolderList[3785]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root.rotateX" 
 		"utility_room_viewRN.placeHolderList[3786]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root.rotateY" 
 		"utility_room_viewRN.placeHolderList[3787]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root.rotateZ" 
 		"utility_room_viewRN.placeHolderList[3788]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root.scaleX" 
 		"utility_room_viewRN.placeHolderList[3789]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root.scaleY" 
 		"utility_room_viewRN.placeHolderList[3790]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root.scaleZ" 
 		"utility_room_viewRN.placeHolderList[3791]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG.translateX" 
 		"utility_room_viewRN.placeHolderList[3792]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG.translateY" 
 		"utility_room_viewRN.placeHolderList[3793]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG.translateZ" 
 		"utility_room_viewRN.placeHolderList[3794]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG.rotateX" 
 		"utility_room_viewRN.placeHolderList[3795]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG.rotateY" 
 		"utility_room_viewRN.placeHolderList[3796]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG.rotateZ" 
 		"utility_room_viewRN.placeHolderList[3797]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG.scaleX" 
 		"utility_room_viewRN.placeHolderList[3798]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG.scaleY" 
 		"utility_room_viewRN.placeHolderList[3799]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG.scaleZ" 
 		"utility_room_viewRN.placeHolderList[3800]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG.visibility" 
 		"utility_room_viewRN.placeHolderList[3801]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine3.translateX" 
 		"utility_room_viewRN.placeHolderList[3802]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine3.translateY" 
 		"utility_room_viewRN.placeHolderList[3803]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine3.translateZ" 
 		"utility_room_viewRN.placeHolderList[3804]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine3.rotateX" 
 		"utility_room_viewRN.placeHolderList[3805]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine3.rotateY" 
 		"utility_room_viewRN.placeHolderList[3806]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine3.rotateZ" 
 		"utility_room_viewRN.placeHolderList[3807]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine3.scaleX" 
 		"utility_room_viewRN.placeHolderList[3808]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine3.scaleY" 
 		"utility_room_viewRN.placeHolderList[3809]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine3.scaleZ" 
 		"utility_room_viewRN.placeHolderList[3810]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine3.visibility" 
 		"utility_room_viewRN.placeHolderList[3811]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine2.translateX" 
 		"utility_room_viewRN.placeHolderList[3812]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine2.translateY" 
 		"utility_room_viewRN.placeHolderList[3813]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine2.translateZ" 
 		"utility_room_viewRN.placeHolderList[3814]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine2.rotateX" 
 		"utility_room_viewRN.placeHolderList[3815]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine2.rotateY" 
 		"utility_room_viewRN.placeHolderList[3816]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine2.rotateZ" 
 		"utility_room_viewRN.placeHolderList[3817]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine2.scaleX" 
 		"utility_room_viewRN.placeHolderList[3818]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine2.scaleY" 
 		"utility_room_viewRN.placeHolderList[3819]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine2.scaleZ" 
 		"utility_room_viewRN.placeHolderList[3820]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine2.visibility" 
 		"utility_room_viewRN.placeHolderList[3821]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine1.translateX" 
 		"utility_room_viewRN.placeHolderList[3822]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine1.translateY" 
 		"utility_room_viewRN.placeHolderList[3823]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine1.translateZ" 
 		"utility_room_viewRN.placeHolderList[3824]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine1.rotateX" 
 		"utility_room_viewRN.placeHolderList[3825]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine1.rotateY" 
 		"utility_room_viewRN.placeHolderList[3826]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine1.rotateZ" 
 		"utility_room_viewRN.placeHolderList[3827]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine1.scaleX" 
 		"utility_room_viewRN.placeHolderList[3828]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine1.scaleY" 
 		"utility_room_viewRN.placeHolderList[3829]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine1.scaleZ" 
 		"utility_room_viewRN.placeHolderList[3830]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_spine1.visibility" 
 		"utility_room_viewRN.placeHolderList[3831]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder.translateX" 
 		"utility_room_viewRN.placeHolderList[3832]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder.translateY" 
 		"utility_room_viewRN.placeHolderList[3833]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder.translateZ" 
 		"utility_room_viewRN.placeHolderList[3834]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder.rotateX" 
 		"utility_room_viewRN.placeHolderList[3835]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder.rotateY" 
 		"utility_room_viewRN.placeHolderList[3836]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder.rotateZ" 
 		"utility_room_viewRN.placeHolderList[3837]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder.scaleX" 
 		"utility_room_viewRN.placeHolderList[3838]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder.scaleY" 
 		"utility_room_viewRN.placeHolderList[3839]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder.scaleZ" 
 		"utility_room_viewRN.placeHolderList[3840]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_shoulder.visibility" 
 		"utility_room_viewRN.placeHolderList[3841]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve6.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head.translateX" 
 		"utility_room_viewRN.placeHolderList[3842]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve6.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head.translateY" 
 		"utility_room_viewRN.placeHolderList[3843]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve6.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head.translateZ" 
 		"utility_room_viewRN.placeHolderList[3844]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve6.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head.rotateX" 
 		"utility_room_viewRN.placeHolderList[3845]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve6.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head.rotateY" 
 		"utility_room_viewRN.placeHolderList[3846]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve6.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head.rotateZ" 
 		"utility_room_viewRN.placeHolderList[3847]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve6.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head.scaleX" 
 		"utility_room_viewRN.placeHolderList[3848]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve6.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head.scaleY" 
 		"utility_room_viewRN.placeHolderList[3849]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve6.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head.scaleZ" 
 		"utility_room_viewRN.placeHolderList[3850]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve6.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head.visibility" 
 		"utility_room_viewRN.placeHolderList[3851]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve7.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3.translateX" 
 		"utility_room_viewRN.placeHolderList[3852]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve7.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3.translateY" 
 		"utility_room_viewRN.placeHolderList[3853]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve7.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3.translateZ" 
 		"utility_room_viewRN.placeHolderList[3854]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve7.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3.visibility" 
 		"utility_room_viewRN.placeHolderList[3855]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve7.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3.rotateX" 
 		"utility_room_viewRN.placeHolderList[3856]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve7.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3.rotateY" 
 		"utility_room_viewRN.placeHolderList[3857]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve7.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3.rotateZ" 
 		"utility_room_viewRN.placeHolderList[3858]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve7.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3.scaleX" 
 		"utility_room_viewRN.placeHolderList[3859]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve7.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3.scaleY" 
 		"utility_room_viewRN.placeHolderList[3860]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve7.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3.scaleZ" 
 		"utility_room_viewRN.placeHolderList[3861]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve8.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle2.translateX" 
 		"utility_room_viewRN.placeHolderList[3862]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve8.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle2.translateY" 
 		"utility_room_viewRN.placeHolderList[3863]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve8.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle2.translateZ" 
 		"utility_room_viewRN.placeHolderList[3864]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve8.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle2.visibility" 
 		"utility_room_viewRN.placeHolderList[3865]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve8.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle2.rotateX" 
 		"utility_room_viewRN.placeHolderList[3866]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve8.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle2.rotateY" 
 		"utility_room_viewRN.placeHolderList[3867]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve8.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle2.rotateZ" 
 		"utility_room_viewRN.placeHolderList[3868]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve8.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle2.scaleX" 
 		"utility_room_viewRN.placeHolderList[3869]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve8.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle2.scaleY" 
 		"utility_room_viewRN.placeHolderList[3870]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve8.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle2.scaleZ" 
 		"utility_room_viewRN.placeHolderList[3871]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve9.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle1.translateX" 
 		"utility_room_viewRN.placeHolderList[3872]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve9.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle1.translateY" 
 		"utility_room_viewRN.placeHolderList[3873]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve9.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle1.translateZ" 
 		"utility_room_viewRN.placeHolderList[3874]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve9.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle1.visibility" 
 		"utility_room_viewRN.placeHolderList[3875]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve9.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle1.rotateX" 
 		"utility_room_viewRN.placeHolderList[3876]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve9.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle1.rotateY" 
 		"utility_room_viewRN.placeHolderList[3877]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve9.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle1.rotateZ" 
 		"utility_room_viewRN.placeHolderList[3878]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve9.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle1.scaleX" 
 		"utility_room_viewRN.placeHolderList[3879]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve9.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle1.scaleY" 
 		"utility_room_viewRN.placeHolderList[3880]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve9.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_head|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle3|utility_room_view:sneaks_latest:sneaksmesh:nurbsCircle1.scaleZ" 
 		"utility_room_viewRN.placeHolderList[3881]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve10.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_hip.translateX" 
 		"utility_room_viewRN.placeHolderList[3882]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve10.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_hip.translateY" 
 		"utility_room_viewRN.placeHolderList[3883]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve10.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_hip.translateZ" 
 		"utility_room_viewRN.placeHolderList[3884]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve10.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_hip.rotateX" 
 		"utility_room_viewRN.placeHolderList[3885]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve10.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_hip.rotateY" 
 		"utility_room_viewRN.placeHolderList[3886]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve10.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_hip.rotateZ" 
 		"utility_room_viewRN.placeHolderList[3887]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve10.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_hip.scaleX" 
 		"utility_room_viewRN.placeHolderList[3888]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve10.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_hip.scaleY" 
 		"utility_room_viewRN.placeHolderList[3889]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve10.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_hip.scaleZ" 
 		"utility_room_viewRN.placeHolderList[3890]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve10.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_hip.visibility" 
 		"utility_room_viewRN.placeHolderList[3891]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:LeftArm.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase.translateX" 
 		"utility_room_viewRN.placeHolderList[3892]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:LeftArm.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase.translateY" 
 		"utility_room_viewRN.placeHolderList[3893]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:LeftArm.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase.translateZ" 
 		"utility_room_viewRN.placeHolderList[3894]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:LeftArm.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase.rotateX" 
 		"utility_room_viewRN.placeHolderList[3895]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:LeftArm.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase.rotateY" 
 		"utility_room_viewRN.placeHolderList[3896]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:LeftArm.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase.rotateZ" 
 		"utility_room_viewRN.placeHolderList[3897]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:LeftArm.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase.scaleX" 
 		"utility_room_viewRN.placeHolderList[3898]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:LeftArm.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase.scaleY" 
 		"utility_room_viewRN.placeHolderList[3899]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:LeftArm.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase.scaleZ" 
 		"utility_room_viewRN.placeHolderList[3900]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:LeftArm.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase.visibility" 
 		"utility_room_viewRN.placeHolderList[3901]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2.translateX" 
 		"utility_room_viewRN.placeHolderList[3902]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2.translateY" 
 		"utility_room_viewRN.placeHolderList[3903]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2.translateZ" 
 		"utility_room_viewRN.placeHolderList[3904]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2.rotateX" 
 		"utility_room_viewRN.placeHolderList[3905]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2.rotateY" 
 		"utility_room_viewRN.placeHolderList[3906]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2.rotateZ" 
 		"utility_room_viewRN.placeHolderList[3907]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2.scaleX" 
 		"utility_room_viewRN.placeHolderList[3908]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2.scaleY" 
 		"utility_room_viewRN.placeHolderList[3909]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2.scaleZ" 
 		"utility_room_viewRN.placeHolderList[3910]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2.visibility" 
 		"utility_room_viewRN.placeHolderList[3911]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3.translateX" 
 		"utility_room_viewRN.placeHolderList[3912]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3.translateY" 
 		"utility_room_viewRN.placeHolderList[3913]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3.translateZ" 
 		"utility_room_viewRN.placeHolderList[3914]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3.rotateX" 
 		"utility_room_viewRN.placeHolderList[3915]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3.rotateY" 
 		"utility_room_viewRN.placeHolderList[3916]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3.rotateZ" 
 		"utility_room_viewRN.placeHolderList[3917]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3.scaleX" 
 		"utility_room_viewRN.placeHolderList[3918]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3.scaleY" 
 		"utility_room_viewRN.placeHolderList[3919]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3.scaleZ" 
 		"utility_room_viewRN.placeHolderList[3920]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3.visibility" 
 		"utility_room_viewRN.placeHolderList[3921]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:LeftLeg.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4.translateX" 
 		"utility_room_viewRN.placeHolderList[3922]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:LeftLeg.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4.translateY" 
 		"utility_room_viewRN.placeHolderList[3923]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:LeftLeg.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4.translateZ" 
 		"utility_room_viewRN.placeHolderList[3924]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:LeftLeg.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4.rotateX" 
 		"utility_room_viewRN.placeHolderList[3925]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:LeftLeg.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4.rotateY" 
 		"utility_room_viewRN.placeHolderList[3926]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:LeftLeg.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4.rotateZ" 
 		"utility_room_viewRN.placeHolderList[3927]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:LeftLeg.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4.scaleX" 
 		"utility_room_viewRN.placeHolderList[3928]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:LeftLeg.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4.scaleY" 
 		"utility_room_viewRN.placeHolderList[3929]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:LeftLeg.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4.scaleZ" 
 		"utility_room_viewRN.placeHolderList[3930]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:LeftLeg.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4.visibility" 
 		"utility_room_viewRN.placeHolderList[3931]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip.translateX" 
 		"utility_room_viewRN.placeHolderList[3932]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip.translateY" 
 		"utility_room_viewRN.placeHolderList[3933]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip.translateZ" 
 		"utility_room_viewRN.placeHolderList[3934]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip.rotateX" 
 		"utility_room_viewRN.placeHolderList[3935]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip.rotateY" 
 		"utility_room_viewRN.placeHolderList[3936]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip.rotateZ" 
 		"utility_room_viewRN.placeHolderList[3937]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip.scaleX" 
 		"utility_room_viewRN.placeHolderList[3938]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip.scaleY" 
 		"utility_room_viewRN.placeHolderList[3939]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip.scaleZ" 
 		"utility_room_viewRN.placeHolderList[3940]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_COG|utility_room_view:sneaks_latest:controller_tailbase|utility_room_view:sneaks_latest:controller_tail2|utility_room_view:sneaks_latest:controller_tail3|utility_room_view:sneaks_latest:controller_tail4|utility_room_view:sneaks_latest:controller_tailtip.visibility" 
 		"utility_room_viewRN.placeHolderList[3941]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg.visibility" 
 		"utility_room_viewRN.placeHolderList[3942]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg.translateX" 
 		"utility_room_viewRN.placeHolderList[3943]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg.translateY" 
 		"utility_room_viewRN.placeHolderList[3944]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg.translateZ" 
 		"utility_room_viewRN.placeHolderList[3945]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg.rotateX" 
 		"utility_room_viewRN.placeHolderList[3946]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg.rotateY" 
 		"utility_room_viewRN.placeHolderList[3947]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg.rotateZ" 
 		"utility_room_viewRN.placeHolderList[3948]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg.scaleX" 
 		"utility_room_viewRN.placeHolderList[3949]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg.scaleY" 
 		"utility_room_viewRN.placeHolderList[3950]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg.scaleZ" 
 		"utility_room_viewRN.placeHolderList[3951]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:nurbsCircle7.translateX" 
 		"utility_room_viewRN.placeHolderList[3952]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:nurbsCircle7.translateY" 
 		"utility_room_viewRN.placeHolderList[3953]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:nurbsCircle7.translateZ" 
 		"utility_room_viewRN.placeHolderList[3954]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:nurbsCircle7.visibility" 
 		"utility_room_viewRN.placeHolderList[3955]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:nurbsCircle7.rotateX" 
 		"utility_room_viewRN.placeHolderList[3956]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:nurbsCircle7.rotateY" 
 		"utility_room_viewRN.placeHolderList[3957]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:nurbsCircle7.rotateZ" 
 		"utility_room_viewRN.placeHolderList[3958]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:nurbsCircle7.scaleX" 
 		"utility_room_viewRN.placeHolderList[3959]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:nurbsCircle7.scaleY" 
 		"utility_room_viewRN.placeHolderList[3960]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:nurbsCircle7.scaleZ" 
 		"utility_room_viewRN.placeHolderList[3961]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:RightLeg.rotateX" 
 		"utility_room_viewRN.placeHolderList[3962]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:RightLeg.rotateY" 
 		"utility_room_viewRN.placeHolderList[3963]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:RightLeg.rotateZ" 
 		"utility_room_viewRN.placeHolderList[3964]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:RightLeg.translateX" 
 		"utility_room_viewRN.placeHolderList[3965]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:RightLeg.translateY" 
 		"utility_room_viewRN.placeHolderList[3966]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:RightLeg.translateZ" 
 		"utility_room_viewRN.placeHolderList[3967]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:RightLeg.visibility" 
 		"utility_room_viewRN.placeHolderList[3968]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:RightLeg.scaleX" 
 		"utility_room_viewRN.placeHolderList[3969]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:RightLeg.scaleY" 
 		"utility_room_viewRN.placeHolderList[3970]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg|utility_room_view:sneaks_latest:RightLeg.scaleZ" 
 		"utility_room_viewRN.placeHolderList[3971]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm.visibility" 
 		"utility_room_viewRN.placeHolderList[3972]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm.translateX" 
 		"utility_room_viewRN.placeHolderList[3973]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm.translateY" 
 		"utility_room_viewRN.placeHolderList[3974]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm.translateZ" 
 		"utility_room_viewRN.placeHolderList[3975]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm.rotateX" 
 		"utility_room_viewRN.placeHolderList[3976]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm.rotateY" 
 		"utility_room_viewRN.placeHolderList[3977]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm.rotateZ" 
 		"utility_room_viewRN.placeHolderList[3978]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm.scaleX" 
 		"utility_room_viewRN.placeHolderList[3979]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm.scaleY" 
 		"utility_room_viewRN.placeHolderList[3980]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm.scaleZ" 
 		"utility_room_viewRN.placeHolderList[3981]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist.translateX" 
 		"utility_room_viewRN.placeHolderList[3982]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist.translateY" 
 		"utility_room_viewRN.placeHolderList[3983]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist.translateZ" 
 		"utility_room_viewRN.placeHolderList[3984]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist.rotateX" 
 		"utility_room_viewRN.placeHolderList[3985]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist.rotateY" 
 		"utility_room_viewRN.placeHolderList[3986]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist.rotateZ" 
 		"utility_room_viewRN.placeHolderList[3987]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist.scaleX" 
 		"utility_room_viewRN.placeHolderList[3988]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist.scaleY" 
 		"utility_room_viewRN.placeHolderList[3989]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist.scaleZ" 
 		"utility_room_viewRN.placeHolderList[3990]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist.visibility" 
 		"utility_room_viewRN.placeHolderList[3991]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6.translateX" 
 		"utility_room_viewRN.placeHolderList[3992]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6.translateY" 
 		"utility_room_viewRN.placeHolderList[3993]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6.translateZ" 
 		"utility_room_viewRN.placeHolderList[3994]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6.visibility" 
 		"utility_room_viewRN.placeHolderList[3995]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6.rotateX" 
 		"utility_room_viewRN.placeHolderList[3996]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6.rotateY" 
 		"utility_room_viewRN.placeHolderList[3997]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6.rotateZ" 
 		"utility_room_viewRN.placeHolderList[3998]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6.scaleX" 
 		"utility_room_viewRN.placeHolderList[3999]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6.scaleY" 
 		"utility_room_viewRN.placeHolderList[4000]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle6.scaleZ" 
 		"utility_room_viewRN.placeHolderList[4001]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve1.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5.translateX" 
 		"utility_room_viewRN.placeHolderList[4002]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve1.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5.translateY" 
 		"utility_room_viewRN.placeHolderList[4003]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve1.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5.translateZ" 
 		"utility_room_viewRN.placeHolderList[4004]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve1.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5.visibility" 
 		"utility_room_viewRN.placeHolderList[4005]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve1.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5.rotateX" 
 		"utility_room_viewRN.placeHolderList[4006]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve1.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5.rotateY" 
 		"utility_room_viewRN.placeHolderList[4007]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve1.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5.rotateZ" 
 		"utility_room_viewRN.placeHolderList[4008]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve1.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5.scaleX" 
 		"utility_room_viewRN.placeHolderList[4009]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve1.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5.scaleY" 
 		"utility_room_viewRN.placeHolderList[4010]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve1.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle5.scaleZ" 
 		"utility_room_viewRN.placeHolderList[4011]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve2.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2.translateX" 
 		"utility_room_viewRN.placeHolderList[4012]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve2.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2.translateY" 
 		"utility_room_viewRN.placeHolderList[4013]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve2.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2.translateZ" 
 		"utility_room_viewRN.placeHolderList[4014]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve2.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2.visibility" 
 		"utility_room_viewRN.placeHolderList[4015]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve2.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2.rotateX" 
 		"utility_room_viewRN.placeHolderList[4016]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve2.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2.rotateY" 
 		"utility_room_viewRN.placeHolderList[4017]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve2.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2.rotateZ" 
 		"utility_room_viewRN.placeHolderList[4018]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve2.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2.scaleX" 
 		"utility_room_viewRN.placeHolderList[4019]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve2.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2.scaleY" 
 		"utility_room_viewRN.placeHolderList[4020]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve2.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle2.scaleZ" 
 		"utility_room_viewRN.placeHolderList[4021]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve3.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3.translateX" 
 		"utility_room_viewRN.placeHolderList[4022]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve3.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3.translateY" 
 		"utility_room_viewRN.placeHolderList[4023]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve3.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3.translateZ" 
 		"utility_room_viewRN.placeHolderList[4024]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve3.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3.visibility" 
 		"utility_room_viewRN.placeHolderList[4025]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve3.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3.rotateX" 
 		"utility_room_viewRN.placeHolderList[4026]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve3.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3.rotateY" 
 		"utility_room_viewRN.placeHolderList[4027]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve3.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3.rotateZ" 
 		"utility_room_viewRN.placeHolderList[4028]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve3.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3.scaleX" 
 		"utility_room_viewRN.placeHolderList[4029]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve3.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3.scaleY" 
 		"utility_room_viewRN.placeHolderList[4030]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve3.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle3.scaleZ" 
 		"utility_room_viewRN.placeHolderList[4031]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve4.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4.translateX" 
 		"utility_room_viewRN.placeHolderList[4032]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve4.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4.translateY" 
 		"utility_room_viewRN.placeHolderList[4033]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve4.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4.translateZ" 
 		"utility_room_viewRN.placeHolderList[4034]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve4.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4.visibility" 
 		"utility_room_viewRN.placeHolderList[4035]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve4.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4.rotateX" 
 		"utility_room_viewRN.placeHolderList[4036]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve4.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4.rotateY" 
 		"utility_room_viewRN.placeHolderList[4037]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve4.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4.rotateZ" 
 		"utility_room_viewRN.placeHolderList[4038]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve4.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4.scaleX" 
 		"utility_room_viewRN.placeHolderList[4039]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve4.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4.scaleY" 
 		"utility_room_viewRN.placeHolderList[4040]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve4.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:nurbsCircle4.scaleZ" 
 		"utility_room_viewRN.placeHolderList[4041]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve5.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve6.translateX" 
 		"utility_room_viewRN.placeHolderList[4042]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve5.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve6.translateY" 
 		"utility_room_viewRN.placeHolderList[4043]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve5.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve6.translateZ" 
 		"utility_room_viewRN.placeHolderList[4044]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve5.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve6.visibility" 
 		"utility_room_viewRN.placeHolderList[4045]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve5.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve6.rotateX" 
 		"utility_room_viewRN.placeHolderList[4046]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve5.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve6.rotateY" 
 		"utility_room_viewRN.placeHolderList[4047]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve5.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve6.rotateZ" 
 		"utility_room_viewRN.placeHolderList[4048]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve5.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve6.scaleX" 
 		"utility_room_viewRN.placeHolderList[4049]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve5.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve6.scaleY" 
 		"utility_room_viewRN.placeHolderList[4050]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve5.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve6.scaleZ" 
 		"utility_room_viewRN.placeHolderList[4051]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm.rotateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve7.translateX" 
 		"utility_room_viewRN.placeHolderList[4052]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm.rotateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve7.translateY" 
 		"utility_room_viewRN.placeHolderList[4053]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm.rotateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve7.translateZ" 
 		"utility_room_viewRN.placeHolderList[4054]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm.translateX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve7.visibility" 
 		"utility_room_viewRN.placeHolderList[4055]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm.translateY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve7.rotateX" 
 		"utility_room_viewRN.placeHolderList[4056]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm.translateZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve7.rotateY" 
 		"utility_room_viewRN.placeHolderList[4057]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm.visibility" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve7.rotateZ" 
 		"utility_room_viewRN.placeHolderList[4058]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm.scaleX" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve7.scaleX" 
 		"utility_room_viewRN.placeHolderList[4059]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm.scaleY" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve7.scaleY" 
 		"utility_room_viewRN.placeHolderList[4060]" ""
-		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm.scaleZ" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve7.scaleZ" 
 		"utility_room_viewRN.placeHolderList[4061]" ""
-		5 4 "utility_room_viewRN" "utility_room_view:sneaks_latest:blendShape1.weight[0]" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve8.translateX" 
 		"utility_room_viewRN.placeHolderList[4062]" ""
-		5 4 "utility_room_viewRN" "utility_room_view:sneaks_latest:blendShape1.weight[1]" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve8.translateY" 
 		"utility_room_viewRN.placeHolderList[4063]" ""
-		5 4 "utility_room_viewRN" "utility_room_view:sneaks_latest:blendShape1.weight[2]" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve8.translateZ" 
 		"utility_room_viewRN.placeHolderList[4064]" ""
-		5 4 "utility_room_viewRN" "utility_room_view:sneaks_latest:blendShape1.weight[3]" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve8.visibility" 
 		"utility_room_viewRN.placeHolderList[4065]" ""
-		5 4 "utility_room_viewRN" "utility_room_view:sneaks_latest:blendShape1.weight[4]" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve8.rotateX" 
 		"utility_room_viewRN.placeHolderList[4066]" ""
-		5 4 "utility_room_viewRN" "utility_room_view:sneaks_latest:blendShape1.weight[5]" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve8.rotateY" 
 		"utility_room_viewRN.placeHolderList[4067]" ""
-		5 4 "utility_room_viewRN" "utility_room_view:sneaks_latest:blendShape1.weight[6]" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve8.rotateZ" 
 		"utility_room_viewRN.placeHolderList[4068]" ""
-		5 4 "utility_room_viewRN" "utility_room_view:sneaks_latest:blendShape1.weight[7]" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve8.scaleX" 
 		"utility_room_viewRN.placeHolderList[4069]" ""
-		5 4 "utility_room_viewRN" "utility_room_view:sneaks_latest:blendShape1.weight[8]" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve8.scaleY" 
 		"utility_room_viewRN.placeHolderList[4070]" ""
-		5 4 "utility_room_viewRN" "utility_room_view:sneaks_latest:blendShape1.weight[9]" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve8.scaleZ" 
 		"utility_room_viewRN.placeHolderList[4071]" ""
-		5 4 "utility_room_viewRN" "utility_room_view:sneaks_latest:blendShape1.weight[10]" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve9.translateX" 
 		"utility_room_viewRN.placeHolderList[4072]" ""
-		5 4 "utility_room_viewRN" "utility_room_view:sneaks_latest:blendShape1.weight[11]" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve9.translateY" 
 		"utility_room_viewRN.placeHolderList[4073]" ""
-		5 4 "utility_room_viewRN" "utility_room_view:sneaks_latest:blendShape1.weight[12]" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve9.translateZ" 
 		"utility_room_viewRN.placeHolderList[4074]" ""
-		5 4 "utility_room_viewRN" "utility_room_view:sneaks_latest:blendShape1.weight[13]" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve9.visibility" 
 		"utility_room_viewRN.placeHolderList[4075]" ""
-		5 4 "utility_room_viewRN" "utility_room_view:sneaks_latest:blendShape1.weight[14]" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve9.rotateX" 
 		"utility_room_viewRN.placeHolderList[4076]" ""
-		5 4 "utility_room_viewRN" "utility_room_view:sneaks_latest:blendShape1.weight[15]" 
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve9.rotateY" 
 		"utility_room_viewRN.placeHolderList[4077]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve9.rotateZ" 
+		"utility_room_viewRN.placeHolderList[4078]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve9.scaleX" 
+		"utility_room_viewRN.placeHolderList[4079]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve9.scaleY" 
+		"utility_room_viewRN.placeHolderList[4080]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve9.scaleZ" 
+		"utility_room_viewRN.placeHolderList[4081]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve10.translateX" 
+		"utility_room_viewRN.placeHolderList[4082]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve10.translateY" 
+		"utility_room_viewRN.placeHolderList[4083]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve10.translateZ" 
+		"utility_room_viewRN.placeHolderList[4084]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve10.visibility" 
+		"utility_room_viewRN.placeHolderList[4085]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve10.rotateX" 
+		"utility_room_viewRN.placeHolderList[4086]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve10.rotateY" 
+		"utility_room_viewRN.placeHolderList[4087]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve10.rotateZ" 
+		"utility_room_viewRN.placeHolderList[4088]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve10.scaleX" 
+		"utility_room_viewRN.placeHolderList[4089]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve10.scaleY" 
+		"utility_room_viewRN.placeHolderList[4090]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:controller_leftWrist|utility_room_view:sneaks_latest:curve10.scaleZ" 
+		"utility_room_viewRN.placeHolderList[4091]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:LeftArm.rotateX" 
+		"utility_room_viewRN.placeHolderList[4092]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:LeftArm.rotateY" 
+		"utility_room_viewRN.placeHolderList[4093]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:LeftArm.rotateZ" 
+		"utility_room_viewRN.placeHolderList[4094]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:LeftArm.translateX" 
+		"utility_room_viewRN.placeHolderList[4095]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:LeftArm.translateY" 
+		"utility_room_viewRN.placeHolderList[4096]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:LeftArm.translateZ" 
+		"utility_room_viewRN.placeHolderList[4097]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:LeftArm.visibility" 
+		"utility_room_viewRN.placeHolderList[4098]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:LeftArm.scaleX" 
+		"utility_room_viewRN.placeHolderList[4099]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:LeftArm.scaleY" 
+		"utility_room_viewRN.placeHolderList[4100]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_leftArm|utility_room_view:sneaks_latest:LeftArm.scaleZ" 
+		"utility_room_viewRN.placeHolderList[4101]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1.visibility" 
+		"utility_room_viewRN.placeHolderList[4102]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1.translateX" 
+		"utility_room_viewRN.placeHolderList[4103]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1.translateY" 
+		"utility_room_viewRN.placeHolderList[4104]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1.translateZ" 
+		"utility_room_viewRN.placeHolderList[4105]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1.rotateX" 
+		"utility_room_viewRN.placeHolderList[4106]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1.rotateY" 
+		"utility_room_viewRN.placeHolderList[4107]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1.rotateZ" 
+		"utility_room_viewRN.placeHolderList[4108]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1.scaleX" 
+		"utility_room_viewRN.placeHolderList[4109]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1.scaleY" 
+		"utility_room_viewRN.placeHolderList[4110]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1.scaleZ" 
+		"utility_room_viewRN.placeHolderList[4111]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8.visibility" 
+		"utility_room_viewRN.placeHolderList[4112]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8.translateX" 
+		"utility_room_viewRN.placeHolderList[4113]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8.translateY" 
+		"utility_room_viewRN.placeHolderList[4114]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8.translateZ" 
+		"utility_room_viewRN.placeHolderList[4115]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8.rotateX" 
+		"utility_room_viewRN.placeHolderList[4116]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8.rotateY" 
+		"utility_room_viewRN.placeHolderList[4117]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8.rotateZ" 
+		"utility_room_viewRN.placeHolderList[4118]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8.scaleX" 
+		"utility_room_viewRN.placeHolderList[4119]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8.scaleY" 
+		"utility_room_viewRN.placeHolderList[4120]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:nurbsCircle8.scaleZ" 
+		"utility_room_viewRN.placeHolderList[4121]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:LeftLeg.rotateX" 
+		"utility_room_viewRN.placeHolderList[4122]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:LeftLeg.rotateY" 
+		"utility_room_viewRN.placeHolderList[4123]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:LeftLeg.rotateZ" 
+		"utility_room_viewRN.placeHolderList[4124]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:LeftLeg.translateX" 
+		"utility_room_viewRN.placeHolderList[4125]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:LeftLeg.translateY" 
+		"utility_room_viewRN.placeHolderList[4126]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:LeftLeg.translateZ" 
+		"utility_room_viewRN.placeHolderList[4127]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:LeftLeg.visibility" 
+		"utility_room_viewRN.placeHolderList[4128]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:LeftLeg.scaleX" 
+		"utility_room_viewRN.placeHolderList[4129]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:LeftLeg.scaleY" 
+		"utility_room_viewRN.placeHolderList[4130]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightLeg1|utility_room_view:sneaks_latest:LeftLeg.scaleZ" 
+		"utility_room_viewRN.placeHolderList[4131]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm.visibility" 
+		"utility_room_viewRN.placeHolderList[4132]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm.translateX" 
+		"utility_room_viewRN.placeHolderList[4133]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm.translateY" 
+		"utility_room_viewRN.placeHolderList[4134]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm.translateZ" 
+		"utility_room_viewRN.placeHolderList[4135]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm.rotateX" 
+		"utility_room_viewRN.placeHolderList[4136]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm.rotateY" 
+		"utility_room_viewRN.placeHolderList[4137]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm.rotateZ" 
+		"utility_room_viewRN.placeHolderList[4138]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm.scaleX" 
+		"utility_room_viewRN.placeHolderList[4139]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm.scaleY" 
+		"utility_room_viewRN.placeHolderList[4140]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm.scaleZ" 
+		"utility_room_viewRN.placeHolderList[4141]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist.translateX" 
+		"utility_room_viewRN.placeHolderList[4142]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist.translateY" 
+		"utility_room_viewRN.placeHolderList[4143]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist.translateZ" 
+		"utility_room_viewRN.placeHolderList[4144]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist.rotateX" 
+		"utility_room_viewRN.placeHolderList[4145]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist.rotateY" 
+		"utility_room_viewRN.placeHolderList[4146]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist.rotateZ" 
+		"utility_room_viewRN.placeHolderList[4147]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist.scaleX" 
+		"utility_room_viewRN.placeHolderList[4148]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist.scaleY" 
+		"utility_room_viewRN.placeHolderList[4149]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist.scaleZ" 
+		"utility_room_viewRN.placeHolderList[4150]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist.visibility" 
+		"utility_room_viewRN.placeHolderList[4151]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1.translateX" 
+		"utility_room_viewRN.placeHolderList[4152]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1.translateY" 
+		"utility_room_viewRN.placeHolderList[4153]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1.translateZ" 
+		"utility_room_viewRN.placeHolderList[4154]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1.visibility" 
+		"utility_room_viewRN.placeHolderList[4155]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1.rotateX" 
+		"utility_room_viewRN.placeHolderList[4156]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1.rotateY" 
+		"utility_room_viewRN.placeHolderList[4157]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1.rotateZ" 
+		"utility_room_viewRN.placeHolderList[4158]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1.scaleX" 
+		"utility_room_viewRN.placeHolderList[4159]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1.scaleY" 
+		"utility_room_viewRN.placeHolderList[4160]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle1.scaleZ" 
+		"utility_room_viewRN.placeHolderList[4161]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9.translateX" 
+		"utility_room_viewRN.placeHolderList[4162]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9.translateY" 
+		"utility_room_viewRN.placeHolderList[4163]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9.translateZ" 
+		"utility_room_viewRN.placeHolderList[4164]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9.visibility" 
+		"utility_room_viewRN.placeHolderList[4165]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9.rotateX" 
+		"utility_room_viewRN.placeHolderList[4166]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9.rotateY" 
+		"utility_room_viewRN.placeHolderList[4167]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9.rotateZ" 
+		"utility_room_viewRN.placeHolderList[4168]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9.scaleX" 
+		"utility_room_viewRN.placeHolderList[4169]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9.scaleY" 
+		"utility_room_viewRN.placeHolderList[4170]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle9.scaleZ" 
+		"utility_room_viewRN.placeHolderList[4171]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10.translateX" 
+		"utility_room_viewRN.placeHolderList[4172]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10.translateY" 
+		"utility_room_viewRN.placeHolderList[4173]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10.translateZ" 
+		"utility_room_viewRN.placeHolderList[4174]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10.visibility" 
+		"utility_room_viewRN.placeHolderList[4175]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10.rotateX" 
+		"utility_room_viewRN.placeHolderList[4176]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10.rotateY" 
+		"utility_room_viewRN.placeHolderList[4177]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10.rotateZ" 
+		"utility_room_viewRN.placeHolderList[4178]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10.scaleX" 
+		"utility_room_viewRN.placeHolderList[4179]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10.scaleY" 
+		"utility_room_viewRN.placeHolderList[4180]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle10.scaleZ" 
+		"utility_room_viewRN.placeHolderList[4181]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11.translateX" 
+		"utility_room_viewRN.placeHolderList[4182]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11.translateY" 
+		"utility_room_viewRN.placeHolderList[4183]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11.translateZ" 
+		"utility_room_viewRN.placeHolderList[4184]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11.visibility" 
+		"utility_room_viewRN.placeHolderList[4185]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11.rotateX" 
+		"utility_room_viewRN.placeHolderList[4186]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11.rotateY" 
+		"utility_room_viewRN.placeHolderList[4187]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11.rotateZ" 
+		"utility_room_viewRN.placeHolderList[4188]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11.scaleX" 
+		"utility_room_viewRN.placeHolderList[4189]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11.scaleY" 
+		"utility_room_viewRN.placeHolderList[4190]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle11.scaleZ" 
+		"utility_room_viewRN.placeHolderList[4191]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12.translateX" 
+		"utility_room_viewRN.placeHolderList[4192]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12.translateY" 
+		"utility_room_viewRN.placeHolderList[4193]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12.translateZ" 
+		"utility_room_viewRN.placeHolderList[4194]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12.visibility" 
+		"utility_room_viewRN.placeHolderList[4195]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12.rotateX" 
+		"utility_room_viewRN.placeHolderList[4196]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12.rotateY" 
+		"utility_room_viewRN.placeHolderList[4197]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12.rotateZ" 
+		"utility_room_viewRN.placeHolderList[4198]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12.scaleX" 
+		"utility_room_viewRN.placeHolderList[4199]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12.scaleY" 
+		"utility_room_viewRN.placeHolderList[4200]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:nurbsCircle12.scaleZ" 
+		"utility_room_viewRN.placeHolderList[4201]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve1.translateX" 
+		"utility_room_viewRN.placeHolderList[4202]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve1.translateY" 
+		"utility_room_viewRN.placeHolderList[4203]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve1.translateZ" 
+		"utility_room_viewRN.placeHolderList[4204]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve1.visibility" 
+		"utility_room_viewRN.placeHolderList[4205]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve1.rotateX" 
+		"utility_room_viewRN.placeHolderList[4206]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve1.rotateY" 
+		"utility_room_viewRN.placeHolderList[4207]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve1.rotateZ" 
+		"utility_room_viewRN.placeHolderList[4208]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve1.scaleX" 
+		"utility_room_viewRN.placeHolderList[4209]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve1.scaleY" 
+		"utility_room_viewRN.placeHolderList[4210]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve1.scaleZ" 
+		"utility_room_viewRN.placeHolderList[4211]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve2.translateX" 
+		"utility_room_viewRN.placeHolderList[4212]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve2.translateY" 
+		"utility_room_viewRN.placeHolderList[4213]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve2.translateZ" 
+		"utility_room_viewRN.placeHolderList[4214]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve2.visibility" 
+		"utility_room_viewRN.placeHolderList[4215]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve2.rotateX" 
+		"utility_room_viewRN.placeHolderList[4216]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve2.rotateY" 
+		"utility_room_viewRN.placeHolderList[4217]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve2.rotateZ" 
+		"utility_room_viewRN.placeHolderList[4218]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve2.scaleX" 
+		"utility_room_viewRN.placeHolderList[4219]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve2.scaleY" 
+		"utility_room_viewRN.placeHolderList[4220]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve2.scaleZ" 
+		"utility_room_viewRN.placeHolderList[4221]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve3.translateX" 
+		"utility_room_viewRN.placeHolderList[4222]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve3.translateY" 
+		"utility_room_viewRN.placeHolderList[4223]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve3.translateZ" 
+		"utility_room_viewRN.placeHolderList[4224]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve3.visibility" 
+		"utility_room_viewRN.placeHolderList[4225]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve3.rotateX" 
+		"utility_room_viewRN.placeHolderList[4226]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve3.rotateY" 
+		"utility_room_viewRN.placeHolderList[4227]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve3.rotateZ" 
+		"utility_room_viewRN.placeHolderList[4228]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve3.scaleX" 
+		"utility_room_viewRN.placeHolderList[4229]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve3.scaleY" 
+		"utility_room_viewRN.placeHolderList[4230]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve3.scaleZ" 
+		"utility_room_viewRN.placeHolderList[4231]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve4.translateX" 
+		"utility_room_viewRN.placeHolderList[4232]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve4.translateY" 
+		"utility_room_viewRN.placeHolderList[4233]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve4.translateZ" 
+		"utility_room_viewRN.placeHolderList[4234]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve4.visibility" 
+		"utility_room_viewRN.placeHolderList[4235]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve4.rotateX" 
+		"utility_room_viewRN.placeHolderList[4236]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve4.rotateY" 
+		"utility_room_viewRN.placeHolderList[4237]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve4.rotateZ" 
+		"utility_room_viewRN.placeHolderList[4238]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve4.scaleX" 
+		"utility_room_viewRN.placeHolderList[4239]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve4.scaleY" 
+		"utility_room_viewRN.placeHolderList[4240]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve4.scaleZ" 
+		"utility_room_viewRN.placeHolderList[4241]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve5.translateX" 
+		"utility_room_viewRN.placeHolderList[4242]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve5.translateY" 
+		"utility_room_viewRN.placeHolderList[4243]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve5.translateZ" 
+		"utility_room_viewRN.placeHolderList[4244]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve5.visibility" 
+		"utility_room_viewRN.placeHolderList[4245]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve5.rotateX" 
+		"utility_room_viewRN.placeHolderList[4246]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve5.rotateY" 
+		"utility_room_viewRN.placeHolderList[4247]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve5.rotateZ" 
+		"utility_room_viewRN.placeHolderList[4248]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve5.scaleX" 
+		"utility_room_viewRN.placeHolderList[4249]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve5.scaleY" 
+		"utility_room_viewRN.placeHolderList[4250]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:controller_rightWrist|utility_room_view:sneaks_latest:curve5.scaleZ" 
+		"utility_room_viewRN.placeHolderList[4251]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm.rotateX" 
+		"utility_room_viewRN.placeHolderList[4252]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm.rotateY" 
+		"utility_room_viewRN.placeHolderList[4253]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm.rotateZ" 
+		"utility_room_viewRN.placeHolderList[4254]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm.translateX" 
+		"utility_room_viewRN.placeHolderList[4255]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm.translateY" 
+		"utility_room_viewRN.placeHolderList[4256]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm.translateZ" 
+		"utility_room_viewRN.placeHolderList[4257]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm.visibility" 
+		"utility_room_viewRN.placeHolderList[4258]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm.scaleX" 
+		"utility_room_viewRN.placeHolderList[4259]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm.scaleY" 
+		"utility_room_viewRN.placeHolderList[4260]" ""
+		5 4 "utility_room_viewRN" "|utility_room_view:sneaks_latest:controller_root|utility_room_view:sneaks_latest:controller_rightArm|utility_room_view:sneaks_latest:RightArm.scaleZ" 
+		"utility_room_viewRN.placeHolderList[4261]" ""
+		5 4 "utility_room_viewRN" "utility_room_view:sneaks_latest:blendShape1.weight[0]" 
+		"utility_room_viewRN.placeHolderList[4262]" ""
+		5 4 "utility_room_viewRN" "utility_room_view:sneaks_latest:blendShape1.weight[1]" 
+		"utility_room_viewRN.placeHolderList[4263]" ""
+		5 4 "utility_room_viewRN" "utility_room_view:sneaks_latest:blendShape1.weight[2]" 
+		"utility_room_viewRN.placeHolderList[4264]" ""
+		5 4 "utility_room_viewRN" "utility_room_view:sneaks_latest:blendShape1.weight[3]" 
+		"utility_room_viewRN.placeHolderList[4265]" ""
+		5 4 "utility_room_viewRN" "utility_room_view:sneaks_latest:blendShape1.weight[4]" 
+		"utility_room_viewRN.placeHolderList[4266]" ""
+		5 4 "utility_room_viewRN" "utility_room_view:sneaks_latest:blendShape1.weight[5]" 
+		"utility_room_viewRN.placeHolderList[4267]" ""
+		5 4 "utility_room_viewRN" "utility_room_view:sneaks_latest:blendShape1.weight[6]" 
+		"utility_room_viewRN.placeHolderList[4268]" ""
+		5 4 "utility_room_viewRN" "utility_room_view:sneaks_latest:blendShape1.weight[7]" 
+		"utility_room_viewRN.placeHolderList[4269]" ""
+		5 4 "utility_room_viewRN" "utility_room_view:sneaks_latest:blendShape1.weight[8]" 
+		"utility_room_viewRN.placeHolderList[4270]" ""
+		5 4 "utility_room_viewRN" "utility_room_view:sneaks_latest:blendShape1.weight[9]" 
+		"utility_room_viewRN.placeHolderList[4271]" ""
+		5 4 "utility_room_viewRN" "utility_room_view:sneaks_latest:blendShape1.weight[10]" 
+		"utility_room_viewRN.placeHolderList[4272]" ""
+		5 4 "utility_room_viewRN" "utility_room_view:sneaks_latest:blendShape1.weight[11]" 
+		"utility_room_viewRN.placeHolderList[4273]" ""
+		5 4 "utility_room_viewRN" "utility_room_view:sneaks_latest:blendShape1.weight[12]" 
+		"utility_room_viewRN.placeHolderList[4274]" ""
+		5 4 "utility_room_viewRN" "utility_room_view:sneaks_latest:blendShape1.weight[13]" 
+		"utility_room_viewRN.placeHolderList[4275]" ""
+		5 4 "utility_room_viewRN" "utility_room_view:sneaks_latest:blendShape1.weight[14]" 
+		"utility_room_viewRN.placeHolderList[4276]" ""
+		5 4 "utility_room_viewRN" "utility_room_view:sneaks_latest:blendShape1.weight[15]" 
+		"utility_room_viewRN.placeHolderList[4277]" ""
 		"utility_room_view:pig_latest:key_latestRN" 3
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:cat_collar:diamond:pPyramid2|utility_room_view:pig_latest:colorClip_control|utility_room_view:pig_latest:key_control|utility_room_view:pig_latest:key_latest:Obj_000003|utility_room_view:pig_latest:key_latest:Obj_000003Shape" 
 		"surfaceReference" " 1"
@@ -23816,12 +23741,12 @@ createNode reference -n "utility_room_viewRN";
 		1 utility_room_view:defaultFurGlobals "furGlobalReference" "fgrf" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
 		
 		2 "|utility_room_view:at_dryer" "visibility" " -av 1"
-		2 "|utility_room_view:at_dryer" "translate" " -type \"double3\" -129.32330419224678053 3.93341151683805723 106.24470438068891553"
+		2 "|utility_room_view:at_dryer" "translate" " -type \"double3\" -44.75006392005706601 20.98161253141488203 -52.06280488669753481"
 		
 		2 "|utility_room_view:at_dryer" "translateX" " -av"
 		2 "|utility_room_view:at_dryer" "translateY" " -av"
 		2 "|utility_room_view:at_dryer" "translateZ" " -av"
-		2 "|utility_room_view:at_dryer" "rotate" " -type \"double3\" -0.54608521346857986 28.13693577080437791 -0.023220468017016618"
+		2 "|utility_room_view:at_dryer" "rotate" " -type \"double3\" -11.99018921398982407 -1.40119434882143312 3.33962740506492395"
 		
 		2 "|utility_room_view:at_dryer" "rotateX" " -av"
 		2 "|utility_room_view:at_dryer" "rotateY" " -av"
@@ -23845,9 +23770,10 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:at_dryer|utility_room_view:at_dryerShape" "farClipPlane" 
 		" 10000"
 		2 "|utility_room_view:at_dryer|utility_room_view:at_dryerShape" "centerOfInterest" 
-		" 4.1930861788914493"
+		" 65.62541132843230685"
 		2 "|utility_room_view:at_dryer|utility_room_view:at_dryerShape" "tumblePivot" 
-		" -type \"double3\" 0 0 -4.22904237579969688"
+		" -type \"double3\" -42.38879975143073864 7.46291033481828325 -116.23728372736810854"
+		
 		2 "|utility_room_view:at_dryer|utility_room_view:at_dryerShape" "displayGateMaskOpacity" 
 		" 0.86029398441314697"
 		2 "|utility_room_view:at_dryer|utility_room_view:at_dryerShape" "displayFilmGate" 
@@ -23857,60 +23783,60 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:at_dryer|utility_room_view:at_dryerShape" "displayGateMaskColor" 
 		" -type \"float3\" 0 0 0"
 		2 "|utility_room_view:nCloth1|utility_room_view:nClothShape1" "cacheWidth" 
-		" 315"
+		" 111"
 		2 "|utility_room_view:nRigid1|utility_room_view:nRigidShape1" "cacheWidth" 
-		" 315"
+		" 111"
 		2 "|utility_room_view:nRigid2|utility_room_view:nRigidShape2" "cacheWidth" 
-		" 315"
+		" 111"
 		2 "|utility_room_view:nRigid3|utility_room_view:nRigidShape3" "cacheWidth" 
-		" 315"
+		" 111"
 		2 "|utility_room_view:nRigid4|utility_room_view:nRigidShape4" "cacheWidth" 
-		" 315"
+		" 111"
 		2 "|utility_room_view:nRigid5|utility_room_view:nRigidShape5" "cacheWidth" 
-		" 315"
+		" 111"
 		2 "|utility_room_view:nRigid6|utility_room_view:nRigidShape6" "cacheWidth" 
-		" 315"
+		" 111"
 		2 "|utility_room_view:nRigid7|utility_room_view:nRigidShape7" "cacheWidth" 
-		" 315"
+		" 111"
 		2 "|utility_room_view:nRigid8|utility_room_view:nRigidShape8" "cacheWidth" 
-		" 315"
+		" 111"
 		2 "|utility_room_view:nRigid9|utility_room_view:nRigidShape9" "cacheWidth" 
-		" 315"
+		" 111"
 		2 "|utility_room_view:nRigid10|utility_room_view:nRigidShape10" "cacheWidth" 
-		" 315"
+		" 111"
 		2 "|utility_room_view:nRigid11|utility_room_view:nRigidShape11" "cacheWidth" 
-		" 315"
+		" 111"
 		2 "|utility_room_view:nRigid12|utility_room_view:nRigidShape12" "cacheWidth" 
-		" 315"
+		" 111"
 		2 "utility_room_view:defaultFurGlobals" "furGlobalReference" " 1"
 		3 ":defaultRenderGlobals.rendercallback" "utility_room_view:defaultFurGlobals.callback" 
 		""
-		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.visibility" "utility_room_viewRN.placeHolderList[4207]" 
+		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.visibility" "utility_room_viewRN.placeHolderList[4407]" 
 		""
-		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.translateX" "utility_room_viewRN.placeHolderList[4208]" 
+		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.translateX" "utility_room_viewRN.placeHolderList[4408]" 
 		""
-		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.translateY" "utility_room_viewRN.placeHolderList[4209]" 
+		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.translateY" "utility_room_viewRN.placeHolderList[4409]" 
 		""
-		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.translateZ" "utility_room_viewRN.placeHolderList[4210]" 
+		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.translateZ" "utility_room_viewRN.placeHolderList[4410]" 
 		""
-		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.rotateX" "utility_room_viewRN.placeHolderList[4211]" 
+		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.rotateX" "utility_room_viewRN.placeHolderList[4411]" 
 		""
-		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.rotateY" "utility_room_viewRN.placeHolderList[4212]" 
+		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.rotateY" "utility_room_viewRN.placeHolderList[4412]" 
 		""
-		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.rotateZ" "utility_room_viewRN.placeHolderList[4213]" 
+		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.rotateZ" "utility_room_viewRN.placeHolderList[4413]" 
 		""
-		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.scaleX" "utility_room_viewRN.placeHolderList[4214]" 
+		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.scaleX" "utility_room_viewRN.placeHolderList[4414]" 
 		""
-		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.scaleY" "utility_room_viewRN.placeHolderList[4215]" 
+		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.scaleY" "utility_room_viewRN.placeHolderList[4415]" 
 		""
-		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.scaleZ" "utility_room_viewRN.placeHolderList[4216]" 
+		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer.scaleZ" "utility_room_viewRN.placeHolderList[4416]" 
 		""
 		5 4 "utility_room_viewRN" "|utility_room_view:at_dryer|utility_room_view:at_dryerShape.focalLength" 
-		"utility_room_viewRN.placeHolderList[4217]" ""
+		"utility_room_viewRN.placeHolderList[4417]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:nCloth1|utility_room_view:nClothShape1.positions" 
-		"utility_room_viewRN.placeHolderList[4218]" ""
+		"utility_room_viewRN.placeHolderList[4418]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:nCloth1|utility_room_view:nClothShape1.playFromCache" 
-		"utility_room_viewRN.placeHolderList[4219]" ""
+		"utility_room_viewRN.placeHolderList[4419]" ""
 		"utility_room_view:pig_latestRN" 391
 		0 "|utility_room_viewRNfosterParent1|tail_4control01_parentConstraint1" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01|utility_room_view:pig_latest:tail_4control01" 
 		"-s -r "
@@ -23929,7 +23855,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:polySurface4|utility_room_view:pig_latest:polySurface7" 
 		"visibility" " 0"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01" 
-		"translate" " -type \"double3\" -139.03054169954276631 2.33257082102580116 78.00465152805024616"
+		"translate" " -type \"double3\" 32.97187123792546259 2.42128772887142318 63.44876136547604517"
 		
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01" 
 		"translateX" " -av"
@@ -23938,7 +23864,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01" 
 		"translateZ" " -av"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01" 
-		"rotate" " -type \"double3\" -9.71082093175770922 -81.11474496667237588 0"
+		"rotate" " -type \"double3\" -15.37608292719312608 -24.52648175175818679 0"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01" 
 		"rotateX" " -av"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01" 
@@ -23970,7 +23896,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:cat_collar:diamond:pPyramid2|utility_room_view:pig_latest:colorClip_control|utility_room_view:pig_latest:cat_collar:pTorus4|utility_room_view:pig_latest:cat_collar:pTorus4Shape" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:Skeleton_01|utility_room_view:pig_latest:PigSkin002:bind_root01|utility_room_view:pig_latest:PigSkin002:bind_head01|utility_room_view:pig_latest:pig_right_eye" 
-		"rotate" " -type \"double3\" 2.5831299381902566 82.87746541529944011 -78.83426881014979415"
+		"rotate" " -type \"double3\" 79.8817269120461475 61.76740024335076384 -1.51022626536636961"
 		
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:Skeleton_01|utility_room_view:pig_latest:PigSkin002:bind_root01|utility_room_view:pig_latest:PigSkin002:bind_head01|utility_room_view:pig_latest:pig_right_eye" 
 		"rotateX" " -av"
@@ -23986,7 +23912,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:Skeleton_01|utility_room_view:pig_latest:PigSkin002:bind_root01|utility_room_view:pig_latest:PigSkin002:bind_head01|utility_room_view:pig_latest:pig_right_eye|utility_room_view:pig_latest:pig_right_eyeShape" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:Skeleton_01|utility_room_view:pig_latest:PigSkin002:bind_root01|utility_room_view:pig_latest:PigSkin002:bind_head01|utility_room_view:pig_latest:pig_left_eye" 
-		"rotate" " -type \"double3\" 2.5831299381902566 82.87746541529944011 -78.83426881014979415"
+		"rotate" " -type \"double3\" 48.39524549593787128 74.54928976115446915 -37.61050092629074726"
 		
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:Skeleton_01|utility_room_view:pig_latest:PigSkin002:bind_root01|utility_room_view:pig_latest:PigSkin002:bind_head01|utility_room_view:pig_latest:pig_left_eye" 
 		"rotateX" " -av"
@@ -24011,7 +23937,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01" 
 		"translateZ" " -av"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_L_backfoot01" 
-		"translate" " -type \"double3\" 0.23146854936436267 1.83701970241677914 2.10001362954439941"
+		"translate" " -type \"double3\" 0.066834925464386463 0.79617497158691242 1.09902466323421"
 		
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_L_backfoot01" 
 		"translateX" " -av"
@@ -24020,7 +23946,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_L_backfoot01" 
 		"translateZ" " -av"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_L_backfoot01" 
-		"rotate" " -type \"double3\" 76.76145255334562023 0 0"
+		"rotate" " -type \"double3\" 29.31450174920179208 0 0"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_L_backfoot01" 
 		"rotateX" " -av"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_L_backfoot01" 
@@ -24036,7 +23962,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_L_backfoot01" 
 		"scaleZ" " -av"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_R_backfoot01" 
-		"translate" " -type \"double3\" -0.0062278346012611951 2.07149167720959415 1.71369525470636486"
+		"translate" " -type \"double3\" -0.074518949415868077 1.36521997069366585 2.60301712587676715"
 		
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_R_backfoot01" 
 		"translateX" " -av"
@@ -24045,7 +23971,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_R_backfoot01" 
 		"translateZ" " -av"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_R_backfoot01" 
-		"rotate" " -type \"double3\" 82.52505382983517279 0 0"
+		"rotate" " -type \"double3\" 66.06600578471480389 0 0"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_R_backfoot01" 
 		"rotateX" " -av"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_R_backfoot01" 
@@ -24065,7 +23991,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01" 
 		"translateZ" " -av"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01" 
-		"rotate" " -type \"double3\" 21.53368131570139354 0 0"
+		"rotate" " -type \"double3\" 11.98751170688024104 0 0"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01" 
 		"rotateX" " -av"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01" 
@@ -24081,13 +24007,13 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01" 
 		"translateZ" " -av"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01" 
-		"rotate" " -type \"double3\" -37.03926967074634291 0 0"
+		"rotate" " -type \"double3\" 19.85649439203782407 0 0"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01" 
 		"rotateX" " -av"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01" 
 		"blendParent1" " -k 1"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01" 
-		"translate" " -type \"double3\" 0.14465919242147388 -0.057833811050889139 0.17976079152267671"
+		"translate" " -type \"double3\" 0.15623215130707691 0.054331493972852217 0.21929197684446788"
 		
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01" 
 		"translateX" " -av"
@@ -24096,7 +24022,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01" 
 		"translateZ" " -av"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01" 
-		"rotate" " -type \"double3\" 26.51466304844207045 0 0"
+		"rotate" " -type \"double3\" 32.33966710082894735 0 0"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01" 
 		"rotateX" " -av"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01" 
@@ -24110,13 +24036,13 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01" 
 		"translateZ" " -av"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:splineiK_tail01" 
-		"translate" " -type \"double3\" 0.15041537984070885 2.1277437635060461 -6.59483225031482423"
+		"translate" " -type \"double3\" 0.16921967417329142 8.2996952509398465 -4.66719176127439628"
 		
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:splineiK_tail01" 
-		"rotate" " -type \"double3\" 84.71073393381843175 70.65138063542094926 94.88351695458194968"
+		"rotate" " -type \"double3\" 109.76817787350003641 2.2581032580258289 87.00727459644924977"
 		
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01" 
-		"translate" " -type \"double3\" 0 -0.11907576875095802 0.0027077676157416428"
+		"translate" " -type \"double3\" 0 -0.10669192150596192 0.0024261605274143463"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01" 
 		"translateX" " -av"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01" 
@@ -24124,7 +24050,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01" 
 		"translateZ" " -av"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_L_frontfoot01" 
-		"translate" " -type \"double3\" 0.61025649934851844 1.07665482243306831 -2.63003755973117936"
+		"translate" " -type \"double3\" 0.48489268938183971 1.78356374768880022 -1.50404915031711162"
 		
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_L_frontfoot01" 
 		"translateX" " -av"
@@ -24133,11 +24059,11 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_L_frontfoot01" 
 		"translateZ" " -av"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_L_frontfoot01" 
-		"rotate" " -type \"double3\" 100.75736059416568935 0 0"
+		"rotate" " -type \"double3\" 69.30569842806954739 0 0"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_L_frontfoot01" 
 		"rotateX" " -av"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_R_frontfoot01" 
-		"translate" " -type \"double3\" -0.23676421547705304 0.46580117474567678 -0.91030718649723541"
+		"translate" " -type \"double3\" -0.23528901272112265 1.17369270921103896 -1.11774557818267462"
 		
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_R_frontfoot01" 
 		"translateX" " -av"
@@ -24146,7 +24072,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_R_frontfoot01" 
 		"translateZ" " -av"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_R_frontfoot01" 
-		"rotate" " -type \"double3\" 53.58523195594766975 0 0"
+		"rotate" " -type \"double3\" 81.30645891155977267 0 0"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_R_frontfoot01" 
 		"rotateX" " -av"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_R_frontfoot01" 
@@ -24160,7 +24086,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_R_frontfoot01|utility_room_view:pig_latest:controller_R_frontfoot0Shape1" 
 		"lockLength" " -k 1 0"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01" 
-		"translate" " -type \"double3\" 0 0 0.027375275944346633"
+		"translate" " -type \"double3\" 0 -0.47451977172715426 0.11981361849153321"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01" 
 		"translateY" " -av"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01" 
@@ -24178,7 +24104,8 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01|utility_room_view:pig_latest:head_control" 
 		"translateZ" " -av"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01|utility_room_view:pig_latest:head_control" 
-		"rotate" " -type \"double3\" 10.09102142797962109 0 0"
+		"rotate" " -type \"double3\" 21.35990227134285036 -30.80702727693410736 -4.32044465347223294"
+		
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01|utility_room_view:pig_latest:head_control" 
 		"rotateX" " -av"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01|utility_room_view:pig_latest:head_control" 
@@ -24195,7 +24122,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01|utility_room_view:pig_latest:head_control" 
 		"scaleZ" " -av"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:spine_spline_ctrl" 
-		"translate" " -type \"double3\" 0 3.01286554233095227 0.25300000000000328"
+		"translate" " -type \"double3\" 0 2.70746505015630046 0.25300000000000328"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:spine_spline_ctrl" 
 		"translateX" " -av -k 0 -cb 1"
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:spine_spline_ctrl" 
@@ -24217,7 +24144,7 @@ createNode reference -n "utility_room_viewRN";
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:flexi_joint_systems|utility_room_view:pig_latest:vertebrae_flexi_spine01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_global01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_surface01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_surface0Shape1Orig" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:flexi_joint_systems|utility_room_view:pig_latest:vertebrae_flexi_spine01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_global01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_anim_mid01" 
-		"translate" " -type \"double3\" -0.00043978344870367866 -0.1265023679562976 -0.25728332091970563"
+		"translate" " -type \"double3\" -0.00044640703130360273 0.043901067872002125 -0.2611582674004459"
 		
 		2 "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:flexi_joint_systems|utility_room_view:pig_latest:vertebrae_flexi_spine01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_global01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_anim_mid01" 
 		"translateX" " -av"
@@ -24327,414 +24254,412 @@ createNode reference -n "utility_room_viewRN";
 		"|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01.rotateZ" 
 		""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01.translateX" 
-		"utility_room_viewRN.placeHolderList[3303]" ""
+		"utility_room_viewRN.placeHolderList[3565]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01.translateY" 
-		"utility_room_viewRN.placeHolderList[3304]" ""
+		"utility_room_viewRN.placeHolderList[3566]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01.translateZ" 
-		"utility_room_viewRN.placeHolderList[3305]" ""
+		"utility_room_viewRN.placeHolderList[3567]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01.rotateX" 
-		"utility_room_viewRN.placeHolderList[3306]" ""
+		"utility_room_viewRN.placeHolderList[3568]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01.rotateY" 
-		"utility_room_viewRN.placeHolderList[3307]" ""
+		"utility_room_viewRN.placeHolderList[3569]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3308]" ""
+		"utility_room_viewRN.placeHolderList[3570]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01.scaleX" 
-		"utility_room_viewRN.placeHolderList[3309]" ""
+		"utility_room_viewRN.placeHolderList[3571]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01.scaleY" 
-		"utility_room_viewRN.placeHolderList[3310]" ""
+		"utility_room_viewRN.placeHolderList[3572]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3311]" ""
+		"utility_room_viewRN.placeHolderList[3573]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:Skeleton_01|utility_room_view:pig_latest:PigSkin002:bind_root01|utility_room_view:pig_latest:PigSkin002:bind_head01|utility_room_view:pig_latest:pig_right_eye.rotateX" 
-		"utility_room_viewRN.placeHolderList[3312]" ""
+		"utility_room_viewRN.placeHolderList[3574]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:Skeleton_01|utility_room_view:pig_latest:PigSkin002:bind_root01|utility_room_view:pig_latest:PigSkin002:bind_head01|utility_room_view:pig_latest:pig_right_eye.rotateY" 
-		"utility_room_viewRN.placeHolderList[3313]" ""
+		"utility_room_viewRN.placeHolderList[3575]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:Skeleton_01|utility_room_view:pig_latest:PigSkin002:bind_root01|utility_room_view:pig_latest:PigSkin002:bind_head01|utility_room_view:pig_latest:pig_right_eye.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3314]" ""
+		"utility_room_viewRN.placeHolderList[3576]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:Skeleton_01|utility_room_view:pig_latest:PigSkin002:bind_root01|utility_room_view:pig_latest:PigSkin002:bind_head01|utility_room_view:pig_latest:pig_right_eye.visibility" 
-		"utility_room_viewRN.placeHolderList[3315]" ""
+		"utility_room_viewRN.placeHolderList[3577]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:Skeleton_01|utility_room_view:pig_latest:PigSkin002:bind_root01|utility_room_view:pig_latest:PigSkin002:bind_head01|utility_room_view:pig_latest:pig_right_eye.translateX" 
-		"utility_room_viewRN.placeHolderList[3316]" ""
+		"utility_room_viewRN.placeHolderList[3578]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:Skeleton_01|utility_room_view:pig_latest:PigSkin002:bind_root01|utility_room_view:pig_latest:PigSkin002:bind_head01|utility_room_view:pig_latest:pig_right_eye.translateY" 
-		"utility_room_viewRN.placeHolderList[3317]" ""
+		"utility_room_viewRN.placeHolderList[3579]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:Skeleton_01|utility_room_view:pig_latest:PigSkin002:bind_root01|utility_room_view:pig_latest:PigSkin002:bind_head01|utility_room_view:pig_latest:pig_right_eye.translateZ" 
-		"utility_room_viewRN.placeHolderList[3318]" ""
+		"utility_room_viewRN.placeHolderList[3580]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:Skeleton_01|utility_room_view:pig_latest:PigSkin002:bind_root01|utility_room_view:pig_latest:PigSkin002:bind_head01|utility_room_view:pig_latest:pig_right_eye.scaleX" 
-		"utility_room_viewRN.placeHolderList[3319]" ""
+		"utility_room_viewRN.placeHolderList[3581]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:Skeleton_01|utility_room_view:pig_latest:PigSkin002:bind_root01|utility_room_view:pig_latest:PigSkin002:bind_head01|utility_room_view:pig_latest:pig_right_eye.scaleY" 
-		"utility_room_viewRN.placeHolderList[3320]" ""
+		"utility_room_viewRN.placeHolderList[3582]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:Skeleton_01|utility_room_view:pig_latest:PigSkin002:bind_root01|utility_room_view:pig_latest:PigSkin002:bind_head01|utility_room_view:pig_latest:pig_right_eye.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3321]" ""
+		"utility_room_viewRN.placeHolderList[3583]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:Skeleton_01|utility_room_view:pig_latest:PigSkin002:bind_root01|utility_room_view:pig_latest:PigSkin002:bind_head01|utility_room_view:pig_latest:pig_left_eye.rotateX" 
-		"utility_room_viewRN.placeHolderList[3322]" ""
+		"utility_room_viewRN.placeHolderList[3584]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:Skeleton_01|utility_room_view:pig_latest:PigSkin002:bind_root01|utility_room_view:pig_latest:PigSkin002:bind_head01|utility_room_view:pig_latest:pig_left_eye.rotateY" 
-		"utility_room_viewRN.placeHolderList[3323]" ""
+		"utility_room_viewRN.placeHolderList[3585]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:Skeleton_01|utility_room_view:pig_latest:PigSkin002:bind_root01|utility_room_view:pig_latest:PigSkin002:bind_head01|utility_room_view:pig_latest:pig_left_eye.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3324]" ""
+		"utility_room_viewRN.placeHolderList[3586]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:Skeleton_01|utility_room_view:pig_latest:PigSkin002:bind_root01|utility_room_view:pig_latest:PigSkin002:bind_head01|utility_room_view:pig_latest:pig_left_eye.visibility" 
-		"utility_room_viewRN.placeHolderList[3325]" ""
+		"utility_room_viewRN.placeHolderList[3587]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:Skeleton_01|utility_room_view:pig_latest:PigSkin002:bind_root01|utility_room_view:pig_latest:PigSkin002:bind_head01|utility_room_view:pig_latest:pig_left_eye.translateX" 
-		"utility_room_viewRN.placeHolderList[3326]" ""
+		"utility_room_viewRN.placeHolderList[3588]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:Skeleton_01|utility_room_view:pig_latest:PigSkin002:bind_root01|utility_room_view:pig_latest:PigSkin002:bind_head01|utility_room_view:pig_latest:pig_left_eye.translateY" 
-		"utility_room_viewRN.placeHolderList[3327]" ""
+		"utility_room_viewRN.placeHolderList[3589]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:Skeleton_01|utility_room_view:pig_latest:PigSkin002:bind_root01|utility_room_view:pig_latest:PigSkin002:bind_head01|utility_room_view:pig_latest:pig_left_eye.translateZ" 
-		"utility_room_viewRN.placeHolderList[3328]" ""
+		"utility_room_viewRN.placeHolderList[3590]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:Skeleton_01|utility_room_view:pig_latest:PigSkin002:bind_root01|utility_room_view:pig_latest:PigSkin002:bind_head01|utility_room_view:pig_latest:pig_left_eye.scaleX" 
-		"utility_room_viewRN.placeHolderList[3329]" ""
+		"utility_room_viewRN.placeHolderList[3591]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:Skeleton_01|utility_room_view:pig_latest:PigSkin002:bind_root01|utility_room_view:pig_latest:PigSkin002:bind_head01|utility_room_view:pig_latest:pig_left_eye.scaleY" 
-		"utility_room_viewRN.placeHolderList[3330]" ""
+		"utility_room_viewRN.placeHolderList[3592]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:Skeleton_01|utility_room_view:pig_latest:PigSkin002:bind_root01|utility_room_view:pig_latest:PigSkin002:bind_head01|utility_room_view:pig_latest:pig_left_eye.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3331]" ""
+		"utility_room_viewRN.placeHolderList[3593]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01.translateX" 
-		"utility_room_viewRN.placeHolderList[3332]" ""
+		"utility_room_viewRN.placeHolderList[3594]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01.translateY" 
-		"utility_room_viewRN.placeHolderList[3333]" ""
+		"utility_room_viewRN.placeHolderList[3595]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01.translateZ" 
-		"utility_room_viewRN.placeHolderList[3334]" ""
+		"utility_room_viewRN.placeHolderList[3596]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01.rotateX" 
-		"utility_room_viewRN.placeHolderList[3335]" ""
+		"utility_room_viewRN.placeHolderList[3597]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01.rotateY" 
-		"utility_room_viewRN.placeHolderList[3336]" ""
+		"utility_room_viewRN.placeHolderList[3598]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3337]" ""
+		"utility_room_viewRN.placeHolderList[3599]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01.scaleX" 
-		"utility_room_viewRN.placeHolderList[3338]" ""
+		"utility_room_viewRN.placeHolderList[3600]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01.scaleY" 
-		"utility_room_viewRN.placeHolderList[3339]" ""
+		"utility_room_viewRN.placeHolderList[3601]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3340]" ""
+		"utility_room_viewRN.placeHolderList[3602]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01.visibility" 
-		"utility_room_viewRN.placeHolderList[3341]" ""
+		"utility_room_viewRN.placeHolderList[3603]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_L_backfoot01.rotateX" 
-		"utility_room_viewRN.placeHolderList[3342]" ""
+		"utility_room_viewRN.placeHolderList[3604]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_L_backfoot01.rotateY" 
-		"utility_room_viewRN.placeHolderList[3343]" ""
+		"utility_room_viewRN.placeHolderList[3605]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_L_backfoot01.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3344]" ""
+		"utility_room_viewRN.placeHolderList[3606]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_L_backfoot01.translateX" 
-		"utility_room_viewRN.placeHolderList[3345]" ""
+		"utility_room_viewRN.placeHolderList[3607]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_L_backfoot01.translateY" 
-		"utility_room_viewRN.placeHolderList[3346]" ""
+		"utility_room_viewRN.placeHolderList[3608]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_L_backfoot01.translateZ" 
-		"utility_room_viewRN.placeHolderList[3347]" ""
+		"utility_room_viewRN.placeHolderList[3609]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_L_backfoot01.scaleX" 
-		"utility_room_viewRN.placeHolderList[3348]" ""
+		"utility_room_viewRN.placeHolderList[3610]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_L_backfoot01.scaleY" 
-		"utility_room_viewRN.placeHolderList[3349]" ""
+		"utility_room_viewRN.placeHolderList[3611]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_L_backfoot01.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3350]" ""
+		"utility_room_viewRN.placeHolderList[3612]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_R_backfoot01.rotateX" 
-		"utility_room_viewRN.placeHolderList[3351]" ""
+		"utility_room_viewRN.placeHolderList[3613]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_R_backfoot01.rotateY" 
-		"utility_room_viewRN.placeHolderList[3352]" ""
+		"utility_room_viewRN.placeHolderList[3614]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_R_backfoot01.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3353]" ""
+		"utility_room_viewRN.placeHolderList[3615]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_R_backfoot01.translateX" 
-		"utility_room_viewRN.placeHolderList[3354]" ""
+		"utility_room_viewRN.placeHolderList[3616]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_R_backfoot01.translateY" 
-		"utility_room_viewRN.placeHolderList[3355]" ""
+		"utility_room_viewRN.placeHolderList[3617]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_R_backfoot01.translateZ" 
-		"utility_room_viewRN.placeHolderList[3356]" ""
+		"utility_room_viewRN.placeHolderList[3618]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_R_backfoot01.scaleX" 
-		"utility_room_viewRN.placeHolderList[3357]" ""
+		"utility_room_viewRN.placeHolderList[3619]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_R_backfoot01.scaleY" 
-		"utility_room_viewRN.placeHolderList[3358]" ""
+		"utility_room_viewRN.placeHolderList[3620]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:controller_R_backfoot01.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3359]" ""
+		"utility_room_viewRN.placeHolderList[3621]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01.translateX" 
-		"utility_room_viewRN.placeHolderList[3360]" ""
+		"utility_room_viewRN.placeHolderList[3622]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01.translateY" 
-		"utility_room_viewRN.placeHolderList[3361]" ""
+		"utility_room_viewRN.placeHolderList[3623]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01.translateZ" 
-		"utility_room_viewRN.placeHolderList[3362]" ""
+		"utility_room_viewRN.placeHolderList[3624]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01.rotateX" 
-		"utility_room_viewRN.placeHolderList[3363]" ""
+		"utility_room_viewRN.placeHolderList[3625]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01.rotateY" 
-		"utility_room_viewRN.placeHolderList[3364]" ""
+		"utility_room_viewRN.placeHolderList[3626]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3365]" ""
+		"utility_room_viewRN.placeHolderList[3627]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01.scaleX" 
-		"utility_room_viewRN.placeHolderList[3366]" ""
+		"utility_room_viewRN.placeHolderList[3628]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01.scaleY" 
-		"utility_room_viewRN.placeHolderList[3367]" ""
+		"utility_room_viewRN.placeHolderList[3629]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3368]" ""
+		"utility_room_viewRN.placeHolderList[3630]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01.translate" 
-		"utility_room_viewRN.placeHolderList[3369]" ""
+		"utility_room_viewRN.placeHolderList[3631]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01.translateX" 
-		"utility_room_viewRN.placeHolderList[3370]" ""
+		"utility_room_viewRN.placeHolderList[3632]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01.translateY" 
-		"utility_room_viewRN.placeHolderList[3371]" ""
+		"utility_room_viewRN.placeHolderList[3633]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01.translateZ" 
-		"utility_room_viewRN.placeHolderList[3372]" ""
+		"utility_room_viewRN.placeHolderList[3634]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01.rotatePivot" 
-		"utility_room_viewRN.placeHolderList[3373]" ""
+		"utility_room_viewRN.placeHolderList[3635]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01.rotatePivotTranslate" 
-		"utility_room_viewRN.placeHolderList[3374]" ""
+		"utility_room_viewRN.placeHolderList[3636]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01.rotate" 
-		"utility_room_viewRN.placeHolderList[3375]" ""
+		"utility_room_viewRN.placeHolderList[3637]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01.rotateX" 
-		"utility_room_viewRN.placeHolderList[3376]" ""
+		"utility_room_viewRN.placeHolderList[3638]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01.rotateY" 
-		"utility_room_viewRN.placeHolderList[3377]" ""
+		"utility_room_viewRN.placeHolderList[3639]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3378]" ""
+		"utility_room_viewRN.placeHolderList[3640]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01.rotateOrder" 
-		"utility_room_viewRN.placeHolderList[3379]" ""
+		"utility_room_viewRN.placeHolderList[3641]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01.scale" 
-		"utility_room_viewRN.placeHolderList[3380]" ""
+		"utility_room_viewRN.placeHolderList[3642]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01.scaleX" 
-		"utility_room_viewRN.placeHolderList[3381]" ""
+		"utility_room_viewRN.placeHolderList[3643]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01.scaleY" 
-		"utility_room_viewRN.placeHolderList[3382]" ""
+		"utility_room_viewRN.placeHolderList[3644]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3383]" ""
+		"utility_room_viewRN.placeHolderList[3645]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01.parentMatrix" 
-		"utility_room_viewRN.placeHolderList[3384]" ""
+		"utility_room_viewRN.placeHolderList[3646]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01.blendParent1" 
-		"utility_room_viewRN.placeHolderList[3385]" ""
+		"utility_room_viewRN.placeHolderList[3647]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01.blendParent1" 
-		"utility_room_viewRN.placeHolderList[3386]" ""
+		"utility_room_viewRN.placeHolderList[3648]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01.translate" 
-		"utility_room_viewRN.placeHolderList[3387]" ""
+		"utility_room_viewRN.placeHolderList[3649]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01.translateX" 
-		"utility_room_viewRN.placeHolderList[3388]" ""
+		"utility_room_viewRN.placeHolderList[3650]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01.translateY" 
-		"utility_room_viewRN.placeHolderList[3389]" ""
+		"utility_room_viewRN.placeHolderList[3651]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01.translateZ" 
-		"utility_room_viewRN.placeHolderList[3390]" ""
+		"utility_room_viewRN.placeHolderList[3652]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01.rotatePivot" 
-		"utility_room_viewRN.placeHolderList[3391]" ""
+		"utility_room_viewRN.placeHolderList[3653]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01.rotatePivot" 
-		"utility_room_viewRN.placeHolderList[3392]" ""
+		"utility_room_viewRN.placeHolderList[3654]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01.rotatePivotTranslate" 
-		"utility_room_viewRN.placeHolderList[3393]" ""
+		"utility_room_viewRN.placeHolderList[3655]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01.rotatePivotTranslate" 
-		"utility_room_viewRN.placeHolderList[3394]" ""
+		"utility_room_viewRN.placeHolderList[3656]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01.rotate" 
-		"utility_room_viewRN.placeHolderList[3395]" ""
+		"utility_room_viewRN.placeHolderList[3657]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01.rotateX" 
-		"utility_room_viewRN.placeHolderList[3396]" ""
+		"utility_room_viewRN.placeHolderList[3658]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01.rotateY" 
-		"utility_room_viewRN.placeHolderList[3397]" ""
+		"utility_room_viewRN.placeHolderList[3659]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3398]" ""
+		"utility_room_viewRN.placeHolderList[3660]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01.rotateOrder" 
-		"utility_room_viewRN.placeHolderList[3399]" ""
+		"utility_room_viewRN.placeHolderList[3661]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01.rotateOrder" 
-		"utility_room_viewRN.placeHolderList[3400]" ""
+		"utility_room_viewRN.placeHolderList[3662]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01.scale" 
-		"utility_room_viewRN.placeHolderList[3401]" ""
+		"utility_room_viewRN.placeHolderList[3663]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01.scaleX" 
-		"utility_room_viewRN.placeHolderList[3402]" ""
+		"utility_room_viewRN.placeHolderList[3664]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01.scaleY" 
-		"utility_room_viewRN.placeHolderList[3403]" ""
+		"utility_room_viewRN.placeHolderList[3665]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3404]" ""
+		"utility_room_viewRN.placeHolderList[3666]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01.parentMatrix" 
-		"utility_room_viewRN.placeHolderList[3405]" ""
+		"utility_room_viewRN.placeHolderList[3667]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01.blendParent1" 
-		"utility_room_viewRN.placeHolderList[3406]" ""
+		"utility_room_viewRN.placeHolderList[3668]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01.blendParent1" 
-		"utility_room_viewRN.placeHolderList[3407]" ""
+		"utility_room_viewRN.placeHolderList[3669]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01.parentInverseMatrix" 
-		"utility_room_viewRN.placeHolderList[3408]" ""
+		"utility_room_viewRN.placeHolderList[3670]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01.translate" 
-		"utility_room_viewRN.placeHolderList[3409]" ""
+		"utility_room_viewRN.placeHolderList[3671]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01.translateX" 
-		"utility_room_viewRN.placeHolderList[3410]" ""
+		"utility_room_viewRN.placeHolderList[3672]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01.translateY" 
-		"utility_room_viewRN.placeHolderList[3411]" ""
+		"utility_room_viewRN.placeHolderList[3673]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01.translateZ" 
-		"utility_room_viewRN.placeHolderList[3412]" ""
+		"utility_room_viewRN.placeHolderList[3674]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01.rotatePivot" 
-		"utility_room_viewRN.placeHolderList[3413]" ""
+		"utility_room_viewRN.placeHolderList[3675]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01.rotatePivot" 
-		"utility_room_viewRN.placeHolderList[3414]" ""
+		"utility_room_viewRN.placeHolderList[3676]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01.rotatePivotTranslate" 
-		"utility_room_viewRN.placeHolderList[3415]" ""
+		"utility_room_viewRN.placeHolderList[3677]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01.rotatePivotTranslate" 
-		"utility_room_viewRN.placeHolderList[3416]" ""
+		"utility_room_viewRN.placeHolderList[3678]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01.rotate" 
-		"utility_room_viewRN.placeHolderList[3417]" ""
+		"utility_room_viewRN.placeHolderList[3679]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01.rotateX" 
-		"utility_room_viewRN.placeHolderList[3418]" ""
+		"utility_room_viewRN.placeHolderList[3680]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01.rotateY" 
-		"utility_room_viewRN.placeHolderList[3419]" ""
+		"utility_room_viewRN.placeHolderList[3681]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3420]" ""
+		"utility_room_viewRN.placeHolderList[3682]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01.rotateOrder" 
-		"utility_room_viewRN.placeHolderList[3421]" ""
+		"utility_room_viewRN.placeHolderList[3683]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01.rotateOrder" 
-		"utility_room_viewRN.placeHolderList[3422]" ""
+		"utility_room_viewRN.placeHolderList[3684]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01.scale" 
-		"utility_room_viewRN.placeHolderList[3423]" ""
+		"utility_room_viewRN.placeHolderList[3685]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01.parentMatrix" 
-		"utility_room_viewRN.placeHolderList[3424]" ""
+		"utility_room_viewRN.placeHolderList[3686]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01.parentInverseMatrix" 
-		"utility_room_viewRN.placeHolderList[3425]" ""
+		"utility_room_viewRN.placeHolderList[3687]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01|utility_room_view:pig_latest:tail_4control01.translateX" 
-		"utility_room_viewRN.placeHolderList[3426]" ""
+		"utility_room_viewRN.placeHolderList[3688]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01|utility_room_view:pig_latest:tail_4control01.translateY" 
-		"utility_room_viewRN.placeHolderList[3427]" ""
+		"utility_room_viewRN.placeHolderList[3689]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01|utility_room_view:pig_latest:tail_4control01.translateZ" 
-		"utility_room_viewRN.placeHolderList[3428]" ""
+		"utility_room_viewRN.placeHolderList[3690]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01|utility_room_view:pig_latest:tail_4control01.rotatePivot" 
-		"utility_room_viewRN.placeHolderList[3429]" ""
+		"utility_room_viewRN.placeHolderList[3691]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01|utility_room_view:pig_latest:tail_4control01.rotatePivotTranslate" 
-		"utility_room_viewRN.placeHolderList[3430]" ""
+		"utility_room_viewRN.placeHolderList[3692]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01|utility_room_view:pig_latest:tail_4control01.rotateX" 
-		"utility_room_viewRN.placeHolderList[3431]" ""
+		"utility_room_viewRN.placeHolderList[3693]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01|utility_room_view:pig_latest:tail_4control01.rotateY" 
-		"utility_room_viewRN.placeHolderList[3432]" ""
+		"utility_room_viewRN.placeHolderList[3694]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01|utility_room_view:pig_latest:tail_4control01.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3433]" ""
+		"utility_room_viewRN.placeHolderList[3695]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01|utility_room_view:pig_latest:tail_4control01.rotateOrder" 
-		"utility_room_viewRN.placeHolderList[3434]" ""
+		"utility_room_viewRN.placeHolderList[3696]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchr_ctrl01|utility_room_view:pig_latest:hip_rotation_ctrl01|utility_room_view:pig_latest:tail_controllers_01|utility_room_view:pig_latest:TAIL_TAIL_TAIL|utility_room_view:pig_latest:tail_1control01|utility_room_view:pig_latest:tail_2control01|utility_room_view:pig_latest:tail_3control01|utility_room_view:pig_latest:tail_4control01.parentInverseMatrix" 
-		"utility_room_viewRN.placeHolderList[3435]" ""
+		"utility_room_viewRN.placeHolderList[3697]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01.translateX" 
-		"utility_room_viewRN.placeHolderList[3436]" ""
+		"utility_room_viewRN.placeHolderList[3698]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01.translateY" 
-		"utility_room_viewRN.placeHolderList[3437]" ""
+		"utility_room_viewRN.placeHolderList[3699]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01.translateZ" 
-		"utility_room_viewRN.placeHolderList[3438]" ""
+		"utility_room_viewRN.placeHolderList[3700]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01.rotateX" 
-		"utility_room_viewRN.placeHolderList[3439]" ""
+		"utility_room_viewRN.placeHolderList[3701]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01.rotateY" 
-		"utility_room_viewRN.placeHolderList[3440]" ""
+		"utility_room_viewRN.placeHolderList[3702]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3441]" ""
+		"utility_room_viewRN.placeHolderList[3703]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01.scaleX" 
-		"utility_room_viewRN.placeHolderList[3442]" ""
+		"utility_room_viewRN.placeHolderList[3704]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01.scaleY" 
-		"utility_room_viewRN.placeHolderList[3443]" ""
+		"utility_room_viewRN.placeHolderList[3705]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3444]" ""
+		"utility_room_viewRN.placeHolderList[3706]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01.visibility" 
-		"utility_room_viewRN.placeHolderList[3445]" ""
+		"utility_room_viewRN.placeHolderList[3707]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_L_frontfoot01.rotateX" 
-		"utility_room_viewRN.placeHolderList[3446]" ""
+		"utility_room_viewRN.placeHolderList[3708]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_L_frontfoot01.rotateY" 
-		"utility_room_viewRN.placeHolderList[3447]" ""
+		"utility_room_viewRN.placeHolderList[3709]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_L_frontfoot01.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3448]" ""
+		"utility_room_viewRN.placeHolderList[3710]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_L_frontfoot01.translateX" 
-		"utility_room_viewRN.placeHolderList[3449]" ""
+		"utility_room_viewRN.placeHolderList[3711]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_L_frontfoot01.translateY" 
-		"utility_room_viewRN.placeHolderList[3450]" ""
+		"utility_room_viewRN.placeHolderList[3712]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_L_frontfoot01.translateZ" 
-		"utility_room_viewRN.placeHolderList[3451]" ""
+		"utility_room_viewRN.placeHolderList[3713]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_L_frontfoot01.scaleX" 
-		"utility_room_viewRN.placeHolderList[3452]" ""
+		"utility_room_viewRN.placeHolderList[3714]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_L_frontfoot01.scaleY" 
-		"utility_room_viewRN.placeHolderList[3453]" ""
+		"utility_room_viewRN.placeHolderList[3715]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_L_frontfoot01.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3454]" ""
+		"utility_room_viewRN.placeHolderList[3716]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_R_frontfoot01.rotateX" 
-		"utility_room_viewRN.placeHolderList[3455]" ""
+		"utility_room_viewRN.placeHolderList[3717]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_R_frontfoot01.rotateY" 
-		"utility_room_viewRN.placeHolderList[3456]" ""
+		"utility_room_viewRN.placeHolderList[3718]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_R_frontfoot01.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3457]" ""
+		"utility_room_viewRN.placeHolderList[3719]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_R_frontfoot01.translateX" 
-		"utility_room_viewRN.placeHolderList[3458]" ""
+		"utility_room_viewRN.placeHolderList[3720]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_R_frontfoot01.translateY" 
-		"utility_room_viewRN.placeHolderList[3459]" ""
+		"utility_room_viewRN.placeHolderList[3721]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_R_frontfoot01.translateZ" 
-		"utility_room_viewRN.placeHolderList[3460]" ""
+		"utility_room_viewRN.placeHolderList[3722]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_R_frontfoot01.scaleX" 
-		"utility_room_viewRN.placeHolderList[3461]" ""
+		"utility_room_viewRN.placeHolderList[3723]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_R_frontfoot01.scaleY" 
-		"utility_room_viewRN.placeHolderList[3462]" ""
+		"utility_room_viewRN.placeHolderList[3724]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:controller_R_frontfoot01.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3463]" ""
+		"utility_room_viewRN.placeHolderList[3725]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01.translateY" 
-		"utility_room_viewRN.placeHolderList[3464]" ""
+		"utility_room_viewRN.placeHolderList[3726]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01.translateX" 
-		"utility_room_viewRN.placeHolderList[3465]" ""
+		"utility_room_viewRN.placeHolderList[3727]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01.translateZ" 
-		"utility_room_viewRN.placeHolderList[3466]" ""
+		"utility_room_viewRN.placeHolderList[3728]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01.rotateX" 
-		"utility_room_viewRN.placeHolderList[3467]" ""
+		"utility_room_viewRN.placeHolderList[3729]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01.rotateY" 
-		"utility_room_viewRN.placeHolderList[3468]" ""
+		"utility_room_viewRN.placeHolderList[3730]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3469]" ""
+		"utility_room_viewRN.placeHolderList[3731]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01.scaleX" 
-		"utility_room_viewRN.placeHolderList[3470]" ""
+		"utility_room_viewRN.placeHolderList[3732]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01.scaleY" 
-		"utility_room_viewRN.placeHolderList[3471]" ""
+		"utility_room_viewRN.placeHolderList[3733]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3472]" ""
+		"utility_room_viewRN.placeHolderList[3734]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01.blendParent1" 
-		"utility_room_viewRN.placeHolderList[3473]" ""
+		"utility_room_viewRN.placeHolderList[3735]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01.blendParent1" 
-		"utility_room_viewRN.placeHolderList[3474]" ""
+		"utility_room_viewRN.placeHolderList[3736]" ""
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01_parentConstraint1.constraintTranslateY" 
-		"utility_room_viewRN.placeHolderList[3475]" "utility_room_view:pig_latest:shoulders_rotation_ctrl01.ty"
+		"utility_room_viewRN.placeHolderList[3737]" "utility_room_view:pig_latest:shoulders_rotation_ctrl01.ty"
 		
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01_parentConstraint1.constraintRotateX" 
-		"utility_room_viewRN.placeHolderList[3476]" "utility_room_view:pig_latest:shoulders_rotation_ctrl01.rx"
+		"utility_room_viewRN.placeHolderList[3738]" "utility_room_view:pig_latest:shoulders_rotation_ctrl01.rx"
 		
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01_parentConstraint1.constraintRotateY" 
-		"utility_room_viewRN.placeHolderList[3477]" "utility_room_view:pig_latest:shoulders_rotation_ctrl01.ry"
+		"utility_room_viewRN.placeHolderList[3739]" "utility_room_view:pig_latest:shoulders_rotation_ctrl01.ry"
 		
 		5 3 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01_parentConstraint1.constraintRotateZ" 
-		"utility_room_viewRN.placeHolderList[3478]" "utility_room_view:pig_latest:shoulders_rotation_ctrl01.rz"
+		"utility_room_viewRN.placeHolderList[3740]" "utility_room_view:pig_latest:shoulders_rotation_ctrl01.rz"
 		
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01|utility_room_view:pig_latest:head_control.translateX" 
-		"utility_room_viewRN.placeHolderList[3479]" ""
+		"utility_room_viewRN.placeHolderList[3741]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01|utility_room_view:pig_latest:head_control.translateY" 
-		"utility_room_viewRN.placeHolderList[3480]" ""
+		"utility_room_viewRN.placeHolderList[3742]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01|utility_room_view:pig_latest:head_control.translateZ" 
-		"utility_room_viewRN.placeHolderList[3481]" ""
+		"utility_room_viewRN.placeHolderList[3743]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01|utility_room_view:pig_latest:head_control.rotateX" 
-		"utility_room_viewRN.placeHolderList[3482]" ""
+		"utility_room_viewRN.placeHolderList[3744]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01|utility_room_view:pig_latest:head_control.rotateY" 
-		"utility_room_viewRN.placeHolderList[3483]" ""
+		"utility_room_viewRN.placeHolderList[3745]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01|utility_room_view:pig_latest:head_control.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3484]" ""
+		"utility_room_viewRN.placeHolderList[3746]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01|utility_room_view:pig_latest:head_control.scaleX" 
-		"utility_room_viewRN.placeHolderList[3485]" ""
+		"utility_room_viewRN.placeHolderList[3747]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01|utility_room_view:pig_latest:head_control.scaleY" 
-		"utility_room_viewRN.placeHolderList[3486]" ""
+		"utility_room_viewRN.placeHolderList[3748]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:stretchf_ctrl01|utility_room_view:pig_latest:shoulders_rotation_ctrl01|utility_room_view:pig_latest:head_control.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3487]" ""
+		"utility_room_viewRN.placeHolderList[3749]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:spine_spline_ctrl.translateX" 
-		"utility_room_viewRN.placeHolderList[3488]" ""
+		"utility_room_viewRN.placeHolderList[3750]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:spine_spline_ctrl.translateZ" 
-		"utility_room_viewRN.placeHolderList[3489]" ""
+		"utility_room_viewRN.placeHolderList[3751]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:spine_spline_ctrl.translateY" 
-		"utility_room_viewRN.placeHolderList[3490]" ""
+		"utility_room_viewRN.placeHolderList[3752]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:controller_main01|utility_room_view:pig_latest:spine_spline_ctrl.visibility" 
-		"utility_room_viewRN.placeHolderList[3491]" ""
+		"utility_room_viewRN.placeHolderList[3753]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:flexi_joint_systems|utility_room_view:pig_latest:vertebrae_flexi_spine01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_global01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_anim_mid01.followStart" 
-		"utility_room_viewRN.placeHolderList[3492]" ""
+		"utility_room_viewRN.placeHolderList[3754]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:flexi_joint_systems|utility_room_view:pig_latest:vertebrae_flexi_spine01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_global01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_anim_mid01.translateX" 
-		"utility_room_viewRN.placeHolderList[3493]" ""
+		"utility_room_viewRN.placeHolderList[3755]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:flexi_joint_systems|utility_room_view:pig_latest:vertebrae_flexi_spine01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_global01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_anim_mid01.translateY" 
-		"utility_room_viewRN.placeHolderList[3494]" ""
+		"utility_room_viewRN.placeHolderList[3756]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:flexi_joint_systems|utility_room_view:pig_latest:vertebrae_flexi_spine01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_global01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_anim_mid01.translateZ" 
-		"utility_room_viewRN.placeHolderList[3495]" ""
+		"utility_room_viewRN.placeHolderList[3757]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:flexi_joint_systems|utility_room_view:pig_latest:vertebrae_flexi_spine01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_global01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_anim_mid01.rotateZ" 
-		"utility_room_viewRN.placeHolderList[3496]" ""
+		"utility_room_viewRN.placeHolderList[3758]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:flexi_joint_systems|utility_room_view:pig_latest:vertebrae_flexi_spine01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_global01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_anim_mid01.rotateX" 
-		"utility_room_viewRN.placeHolderList[3497]" ""
+		"utility_room_viewRN.placeHolderList[3759]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:flexi_joint_systems|utility_room_view:pig_latest:vertebrae_flexi_spine01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_global01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_anim_mid01.rotateY" 
-		"utility_room_viewRN.placeHolderList[3498]" ""
+		"utility_room_viewRN.placeHolderList[3760]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:flexi_joint_systems|utility_room_view:pig_latest:vertebrae_flexi_spine01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_global01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_anim_mid01.scaleX" 
-		"utility_room_viewRN.placeHolderList[3499]" ""
+		"utility_room_viewRN.placeHolderList[3761]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:flexi_joint_systems|utility_room_view:pig_latest:vertebrae_flexi_spine01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_global01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_anim_mid01.scaleY" 
-		"utility_room_viewRN.placeHolderList[3500]" ""
+		"utility_room_viewRN.placeHolderList[3762]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:flexi_joint_systems|utility_room_view:pig_latest:vertebrae_flexi_spine01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_global01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_anim_mid01.scaleZ" 
-		"utility_room_viewRN.placeHolderList[3501]" ""
+		"utility_room_viewRN.placeHolderList[3763]" ""
 		5 4 "utility_room_viewRN" "|utility_room_view:pig_latest:pig_the_cat|utility_room_view:pig_latest:PIG|utility_room_view:pig_latest:flexi_joint_systems|utility_room_view:pig_latest:vertebrae_flexi_spine01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_global01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_grp_anim_mid01|utility_room_view:pig_latest:PigSkin002:vertebrae_flexi_anim_mid01.visibility" 
-		"utility_room_viewRN.placeHolderList[3502]" "";
+		"utility_room_viewRN.placeHolderList[3764]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode animLayer -s -n "BaseAnimation";
-	setAttr -s 6 ".cdly";
-	setAttr -s 6 ".chsl";
 	setAttr ".ovrd" yes;
 createNode mentalrayOptions -s -n "miContourPreset";
 	setAttr ".splck" yes;
@@ -25009,105 +24934,119 @@ createNode FurGlobals -n "defaultFurGlobals";
 createNode animCurveTL -n "at_dryer_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 15 ".ktv[0:14]"  1 11.213762510074645 15 11.257165287055672
-		 30 11.321 40 11.444 50 11.7 60 11.016345694805578 70 11.7 71 4.4085313315816457 80 3.3417290355279521
-		 150 -44.949361164642283 170 -34.87391466736559 180 -39.143359239808213 280 -39.143142814572158
+	setAttr -s 23 ".ktv[0:22]"  1 11.213762510074645 15 11.257165287055672
+		 30 11.321 40 11.444 50 11.7 60 11.016345694805578 70 11.7 71 4.4467971683237133 80 3.3417290355279521
+		 85 4.1911415145819353 90 2.2156184986999383 100 -6.4059608739898426 110 -13.176062178640754
+		 120 -20.653105932511721 130 -28.562223463188964 140 -35.709200525229051 145 -39.771995319880318
+		 150 -45.447360093116409 170 -34.87391466736559 180 -39.143359239808213 280 -39.143142814572158
 		 290 -44.111821637722208 315 -129.32330419224678;
-	setAttr -s 15 ".kit[6:14]"  2 2 18 18 2 18 18 2 
-		2;
-	setAttr -s 15 ".kot[6:14]"  2 2 18 18 2 18 18 2 
-		2;
+	setAttr -s 23 ".kit[6:22]"  2 2 18 18 18 18 18 18 
+		18 18 18 18 2 18 18 2 2;
+	setAttr -s 23 ".kot[6:22]"  2 2 18 18 18 18 18 18 
+		18 18 18 18 2 18 18 2 2;
 createNode animCurveTL -n "at_dryer_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 15 ".ktv[0:14]"  1 1.7270802316599094 15 1.9752929233319829
-		 30 0.058 40 0.546 50 2.3202881135501232 60 1.7664504213358452 70 1.705 71 1.6666386780900857
-		 80 1.7250225290476535 150 2.644938305690447 170 4.4929398594725889 180 10.834762552208019
+	setAttr -s 23 ".ktv[0:22]"  1 1.7270802316599094 15 1.9752929233319829
+		 30 0.058 40 0.546 50 2.3202881135501232 60 1.7664504213358452 70 1.705 71 1.4611697600807849
+		 80 1.4611697600807849 85 1.576503663674901 90 1.5466022568191684 100 1.689655331141207
+		 110 1.8662123633242609 120 2.0012265050050795 130 2.2297120760655016 140 2.5222872010779724
+		 145 2.9002696863923108 150 3.3013185035660895 170 4.4929398594725889 180 10.834762552208019
 		 280 10.830805305723471 290 5.620224966005348 315 3.9334115168380572;
-	setAttr -s 15 ".kit[6:14]"  2 2 18 18 2 18 18 2 
-		2;
-	setAttr -s 15 ".kot[6:14]"  2 2 18 18 2 18 18 2 
-		2;
+	setAttr -s 23 ".kit[6:22]"  2 2 18 18 18 18 18 18 
+		18 18 18 18 9 18 18 2 2;
+	setAttr -s 23 ".kot[6:22]"  2 2 18 18 18 18 18 18 
+		18 18 18 18 9 18 18 2 2;
 createNode animCurveTL -n "at_dryer_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 15 ".ktv[0:14]"  1 17.386844128254221 15 19.312962507284155
-		 30 53.623 40 71.468 50 81.277 60 81.276549536816304 70 81.277 71 67.219596916141839
-		 80 71.892612448318005 150 77.680081241984752 170 72.84557735654208 180 -89.949837442286608
+	setAttr -s 23 ".ktv[0:22]"  1 17.386844128254221 15 19.312962507284155
+		 30 53.623 40 71.468 50 81.277 60 81.276549536816304 70 81.277 71 67.280829275277071
+		 80 71.892612448318005 85 73.514594480265899 90 73.367535811071662 100 72.947368648472761
+		 110 73.029511072185201 120 74.691045949139493 130 75.04871712128039 140 74.343987078319202
+		 145 75.012036201342056 150 76.65070553307973 170 72.84557735654208 180 -89.949837442286608
 		 280 -89.949519184622829 290 91.901596677702557 315 106.24470438068892;
-	setAttr -s 15 ".kit[7:14]"  2 18 18 2 18 18 2 2;
-	setAttr -s 15 ".kot[7:14]"  2 18 18 2 18 18 2 2;
+	setAttr -s 23 ".kit[7:22]"  2 18 18 18 18 18 18 18 
+		18 18 18 2 18 18 2 2;
+	setAttr -s 23 ".kot[7:22]"  2 18 18 18 18 18 18 18 
+		18 18 18 2 18 18 2 2;
 createNode animCurveTU -n "at_dryer_visibility";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 15 ".ktv[0:14]"  1 1 15 1 30 1 40 1 50 1 60 1 70 1 71 1 80 1
-		 150 1 170 1 180 1 280 1 290 1 315 1;
-	setAttr -s 15 ".kit[6:14]"  2 2 9 9 2 9 9 2 
-		2;
-	setAttr -s 15 ".kot[0:14]"  5 5 5 5 5 5 2 2 
-		5 5 2 5 5 2 2;
+	setAttr -s 23 ".ktv[0:22]"  1 1 15 1 30 1 40 1 50 1 60 1 70 1 71 1 80 1
+		 85 1 90 1 100 1 110 1 120 1 130 1 140 1 145 1 150 1 170 1 180 1 280 1 290 1 315 1;
+	setAttr -s 23 ".kit[6:22]"  2 2 9 9 9 9 9 9 
+		9 9 9 9 2 9 9 2 2;
+	setAttr -s 23 ".kot[0:22]"  5 5 5 5 5 5 2 2 
+		5 5 5 5 5 5 5 5 5 5 2 5 5 2 2;
 createNode animCurveTA -n "at_dryer_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 15 ".ktv[0:14]"  1 0 15 3.23 30 3.0000000000000004 40 2.0965541071604994
+	setAttr -s 23 ".ktv[0:22]"  1 0 15 3.23 30 3.0000000000000004 40 2.0965541071604994
 		 50 -0.42000000000000004 60 -0.42000000000000004 70 -0.42000000000000004 71 -4.7218630451341701
-		 80 -4.7218630451341701 150 -4.6829846400176427 170 -4.5002166379176254 180 -4.7825509038126954
-		 280 -4.7825509038126954 290 0 315 -0.54608521346857986;
-	setAttr -s 15 ".kit[6:14]"  2 2 18 18 2 18 18 2 
-		2;
-	setAttr -s 15 ".kot[6:14]"  2 2 18 18 2 18 18 2 
-		2;
+		 80 -4.7218630451341701 85 -4.7217598041162816 90 -4.7214507240877586 100 -4.7209562608591824
+		 110 -4.7209562608591824 120 -4.6829846400176427 130 -4.6829846400176427 140 -8.9124913046698602
+		 145 -10.663390751601415 150 -11.555251744169146 170 -5.8085791556105706 180 -4.6829846400176427
+		 280 -4.6829846400176427 290 0 315 -0.54608521346857986;
+	setAttr -s 23 ".kit[6:22]"  2 2 18 18 18 18 18 18 
+		18 18 18 18 2 18 18 2 2;
+	setAttr -s 23 ".kot[6:22]"  2 2 18 18 18 18 18 18 
+		18 18 18 18 2 18 18 2 2;
 createNode animCurveTA -n "at_dryer_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 15 ".ktv[0:14]"  1 0 15 -0.8 30 0 40 -0.18500000000000011
-		 50 0 60 0 70 0 71 -66.775514853547008 80 -66.775514853547008 150 -58.241803094640119
+	setAttr -s 23 ".ktv[0:22]"  1 0 15 -0.8 30 0 40 -0.18500000000000011
+		 50 0 60 0 70 0 71 -66.775514853547008 80 -66.775514853547008 85 -66.75285370421274
+		 90 -64.026026886982649 100 -63.885276314095648 110 -63.336767263121786 120 -62.345060732244583
+		 130 -57.315880417946936 140 -55.877590945985332 145 -55.274003023474656 150 -53.13789217573526
 		 170 2.8167556363304391 180 3.8558525300967967 280 3.8558525300967967 290 56.246268988324459
 		 315 28.136935770804378;
-	setAttr -s 15 ".kit[6:14]"  2 2 18 18 2 18 18 2 
-		2;
-	setAttr -s 15 ".kot[6:14]"  2 2 18 18 2 18 18 2 
-		2;
+	setAttr -s 23 ".kit[6:22]"  2 2 18 18 18 18 18 18 
+		18 18 18 18 2 18 18 2 2;
+	setAttr -s 23 ".kot[6:22]"  2 2 18 18 18 18 18 18 
+		18 18 18 18 2 18 18 2 2;
 createNode animCurveTA -n "at_dryer_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 15 ".ktv[0:14]"  1 0 15 0 30 0 40 0 50 0 60 0 70 0 71 8.4927575659967083
-		 80 8.4927575659967083 150 6.9188059923179015 170 -0.48036544131605696 180 0.20309090070636235
+	setAttr -s 23 ".ktv[0:22]"  1 0 15 0 30 0 40 0 50 0 60 0 70 0 71 8.4927575659967083
+		 80 8.4927575659967083 85 8.4885779629868434 90 8.4832942121302537 100 8.4560473647438847
+		 110 8.2958220350312271 120 7.2989923875488483 130 7.1034047793211927 140 6.9760413452769274
+		 145 6.9209210453933805 150 6.724521511299705 170 -0.48036544131605696 180 0.20309090070636235
 		 280 0.20309090070636235 290 0 315 -0.023220468017016618;
-	setAttr -s 15 ".kit[6:14]"  2 2 18 18 2 18 18 2 
-		2;
-	setAttr -s 15 ".kot[6:14]"  2 2 18 18 2 18 18 2 
-		2;
+	setAttr -s 23 ".kit[6:22]"  2 2 18 18 18 18 18 18 
+		18 18 18 18 2 18 18 2 2;
+	setAttr -s 23 ".kot[6:22]"  2 2 18 18 18 18 18 18 
+		18 18 18 18 2 18 18 2 2;
 createNode animCurveTU -n "at_dryer_scaleX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 15 ".ktv[0:14]"  1 2.372 15 2.372 30 2.372 40 2.372 50 2.372
-		 60 2.372 70 2.372 71 2.372 80 2.372 150 2.372 170 2.372 180 2.372 280 2.372 290 2.372
-		 315 2.372;
-	setAttr -s 15 ".kit[6:14]"  2 2 18 18 2 18 18 2 
-		2;
-	setAttr -s 15 ".kot[6:14]"  2 2 18 18 2 18 18 2 
-		2;
+	setAttr -s 23 ".ktv[0:22]"  1 2.372 15 2.372 30 2.372 40 2.372 50 2.372
+		 60 2.372 70 2.372 71 2.372 80 2.372 85 2.372 90 2.372 100 2.372 110 2.372 120 2.372
+		 130 2.372 140 2.372 145 2.372 150 2.372 170 2.372 180 2.372 280 2.372 290 2.372 315 2.372;
+	setAttr -s 23 ".kit[6:22]"  2 2 18 18 18 18 18 18 
+		18 18 18 18 2 18 18 2 2;
+	setAttr -s 23 ".kot[6:22]"  2 2 18 18 18 18 18 18 
+		18 18 18 18 2 18 18 2 2;
 createNode animCurveTU -n "at_dryer_scaleY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 15 ".ktv[0:14]"  1 2.372 15 2.372 30 2.372 40 2.372 50 2.372
-		 60 2.372 70 2.372 71 2.372 80 2.372 150 2.372 170 2.372 180 2.372 280 2.372 290 2.372
-		 315 2.372;
-	setAttr -s 15 ".kit[6:14]"  2 2 18 18 2 18 18 2 
-		2;
-	setAttr -s 15 ".kot[6:14]"  2 2 18 18 2 18 18 2 
-		2;
+	setAttr -s 23 ".ktv[0:22]"  1 2.372 15 2.372 30 2.372 40 2.372 50 2.372
+		 60 2.372 70 2.372 71 2.372 80 2.372 85 2.372 90 2.372 100 2.372 110 2.372 120 2.372
+		 130 2.372 140 2.372 145 2.372 150 2.372 170 2.372 180 2.372 280 2.372 290 2.372 315 2.372;
+	setAttr -s 23 ".kit[6:22]"  2 2 18 18 18 18 18 18 
+		18 18 18 18 2 18 18 2 2;
+	setAttr -s 23 ".kot[6:22]"  2 2 18 18 18 18 18 18 
+		18 18 18 18 2 18 18 2 2;
 createNode animCurveTU -n "at_dryer_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 15 ".ktv[0:14]"  1 2.372 15 2.372 30 2.372 40 2.372 50 2.372
-		 60 2.372 70 2.372 71 2.372 80 2.372 150 2.372 170 2.372 180 2.372 280 2.372 290 2.372
-		 315 2.372;
-	setAttr -s 15 ".kit[6:14]"  2 2 18 18 2 18 18 2 
-		2;
-	setAttr -s 15 ".kot[6:14]"  2 2 18 18 2 18 18 2 
-		2;
+	setAttr -s 23 ".ktv[0:22]"  1 2.372 15 2.372 30 2.372 40 2.372 50 2.372
+		 60 2.372 70 2.372 71 2.372 80 2.372 85 2.372 90 2.372 100 2.372 110 2.372 120 2.372
+		 130 2.372 140 2.372 145 2.372 150 2.372 170 2.372 180 2.372 280 2.372 290 2.372 315 2.372;
+	setAttr -s 23 ".kit[6:22]"  2 2 18 18 18 18 18 18 
+		18 18 18 18 2 18 18 2 2;
+	setAttr -s 23 ".kot[6:22]"  2 2 18 18 18 18 18 18 
+		18 18 18 18 2 18 18 2 2;
 createNode animCurveTU -n "at_dryerShape_focalLength";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
@@ -25184,7 +25123,7 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        setFocus `paneLayout -q -p1 $gMainPane`;\n        sceneUIReplacement -deleteRemaining;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
-	setAttr ".b" -type "string" "playbackOptions -min 1 -max 315 -ast 1 -aet 315 ";
+	setAttr ".b" -type "string" "playbackOptions -min 60 -max 170 -ast 1 -aet 315 ";
 	setAttr ".st" 6;
 createNode animCurveTL -n "global_ctrl_translateX";
 	setAttr ".tan" 18;
@@ -25229,246 +25168,207 @@ createNode animCurveTU -n "global_ctrl_scaleZ";
 createNode animCurveTL -n "bike_ctrl_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 21 ".ktv[0:20]"  1 11.146554903618034 30 11.146554903618034
+	setAttr -s 18 ".ktv[0:17]"  1 11.146554903618034 30 11.146554903618034
 		 40 10.723419028665228 50 11.950166922192473 60 11.146554903618034 80 13.065415915914715
-		 85 13.034122642205379 90 12.074354170475125 95 10.204655640406884 100 6.1532085296019146
-		 110 -2.4961806782248575 120 -11.160181009472158 130 -19.807545223204684 135 -24.157751246235573
-		 140 -28.513344222159546 145 -32.858840719613298 160 -46.501075630954539 170 -59.832286718151735
-		 180 -63.334699837643605 285 -76.688736739133034 315 -153.0155464160332;
-	setAttr -s 21 ".kit[1:20]"  1 18 18 18 9 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 2 2;
-	setAttr -s 21 ".kot[1:20]"  1 18 18 18 9 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 2 2;
-	setAttr -s 21 ".kix[1:20]"  1 1 1 1 0.40387663245201111 0.87128520011901855 
-		0.11699877679347992 0.056206408888101578 0.03933701291680336 0.038477331399917603 
-		0.038481827825307846 0.038440294563770294 0.038260582834482193 0.038281314074993134 
-		0.037036888301372528 0.030879836529493332 0.039572242647409439 0.22174882888793945 
-		0.25352981686592102 0.013100432232022285;
-	setAttr -s 21 ".kiy[1:20]"  0 0 0 0 0.91481345891952515 -0.49077707529067993 
-		-0.99313205480575562 -0.99841916561126709 -0.999225914478302 -0.99925947189331055 
-		-0.99925929307937622 -0.99926084280014038 -0.9992678165435791 -0.99926698207855225 
-		-0.99931389093399048 -0.99952316284179688 -0.99921667575836182 -0.97510385513305664 
-		-0.96732759475708008 -0.99991422891616821;
-	setAttr -s 21 ".kox[1:20]"  1 1 1 1 0.40387663245201111 0.87128520011901855 
-		0.11699877679347992 0.056206405162811279 0.039337020367383957 0.038477335125207901 
-		0.038481827825307846 0.038440294563770294 0.038260582834482193 0.038281314074993134 
-		0.037036888301372528 0.030879836529493332 0.039572246372699738 0.22174884378910065 
-		0.013100432232022285 1;
-	setAttr -s 21 ".koy[1:20]"  0 0 0 0 0.91481345891952515 -0.49077704548835754 
-		-0.99313205480575562 -0.99841916561126709 -0.99922603368759155 -0.99925947189331055 
-		-0.99925929307937622 -0.99926084280014038 -0.9992678165435791 -0.99926698207855225 
-		-0.99931395053863525 -0.9995231032371521 -0.99921667575836182 -0.97510379552841187 
-		-0.99991422891616821 0;
+		 85 13.034122642205379 90 10.978509316227996 100 4.228353167915845 110 -3.1979727462939671
+		 120 -11.588707031169726 130 -19.707576500548953 140 -28.364250059551466 160 -46.501075630954539
+		 170 -59.832286718151735 180 -63.334699837643605 285 -76.688736739133034 315 -153.0155464160332;
+	setAttr -s 18 ".kit[1:17]"  1 18 18 18 9 18 18 18 
+		18 18 18 18 18 18 18 2 2;
+	setAttr -s 18 ".kot[1:17]"  1 18 18 18 9 18 18 18 
+		18 18 18 18 18 18 18 2 2;
+	setAttr -s 18 ".kix[1:17]"  1 1 1 1 0.40387663245201111 0.87128520011901855 
+		0.056689642369747162 0.046974331140518188 0.042111199349164963 0.040347658097743988 
+		0.039709042757749557 0.037296514958143234 0.031762246042490005 0.039572242647409439 
+		0.22174882888793945 0.25352981686592102 0.013100432232022285;
+	setAttr -s 18 ".kiy[1:17]"  0 0 0 0 0.91481345891952515 -0.49077707529067993 
+		-0.99839186668395996 -0.99889606237411499 -0.99911296367645264 -0.99918562173843384 
+		-0.99921131134033203 -0.99930417537689209 -0.99949544668197632 -0.99921667575836182 
+		-0.97510385513305664 -0.96732759475708008 -0.99991422891616821;
+	setAttr -s 18 ".kox[1:17]"  1 1 1 1 0.40387663245201111 0.87128520011901855 
+		0.05668964609503746 0.046974334865808487 0.042111199349164963 0.040347661823034286 
+		0.039709039032459259 0.037296514958143234 0.031762242317199707 0.039572246372699738 
+		0.22174884378910065 0.013100432232022285 1;
+	setAttr -s 18 ".koy[1:17]"  0 0 0 0 0.91481345891952515 -0.49077704548835754 
+		-0.99839186668395996 -0.99889606237411499 -0.99911296367645264 -0.99918574094772339 
+		-0.99921131134033203 -0.99930417537689209 -0.99949544668197632 -0.99921667575836182 
+		-0.97510379552841187 -0.99991422891616821 0;
 createNode animCurveTL -n "bike_ctrl_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 22 ".ktv[0:21]"  1 -1.517224425633183 30 -1.517224425633183
-		 40 0.24396001552105906 50 -0.18905833922752457 60 -1.517224425633183 80 -1.2076237654300646
-		 85 -1.2921475434007199 90 -1.3034183835943884 95 -1.4465191916636313 100 -1.4447601243148738
-		 110 -1.4384200936635183 120 -1.4341694353641363 130 -1.4302792222192835 135 -1.4219957456090901
-		 140 -1.4137258117694433 145 -1.4055005707926937 150 -1.3709926508114099 160 -1.3709926508114094
-		 170 -1.3709926508114081 180 -1.3709926508114065 285 -1.3709926508114028 315 -1.3709926508114028;
-	setAttr -s 22 ".kit[1:21]"  1 18 18 18 9 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 2 2;
-	setAttr -s 22 ".kot[1:21]"  1 18 18 18 9 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 2 2;
-	setAttr -s 22 ".kix[1:21]"  1 1 0.3540186882019043 1 0.96540659666061401 
-		0.98003506660461426 0.98003506660461426 1 0.99986886978149414 0.99987387657165527 
-		0.99992543458938599 0.99970376491546631 0.99876922369003296 0.99877786636352539 0.99188238382339478 
-		1 1 1 1 1 1;
-	setAttr -s 22 ".kiy[1:21]"  0 0 -0.93523836135864258 0 0.26074886322021484 
-		-0.19882462918758392 -0.19882462918758392 0 0.016196072101593018 0.015884028747677803 
-		0.012210395187139511 0.024340167641639709 0.049599159508943558 0.049425024539232254 
-		0.1271587461233139 0 0 0 0 0 0;
-	setAttr -s 22 ".kox[1:21]"  1 1 0.35401865839958191 1 0.96540659666061401 
-		0.98003506660461426 0.98003506660461426 1 0.99986886978149414 0.99987387657165527 
-		0.99992543458938599 0.99970376491546631 0.99876922369003296 0.99877780675888062 0.99188238382339478 
-		1 1 1 1 1 1;
-	setAttr -s 22 ".koy[1:21]"  0 0 -0.93523836135864258 0 0.26074886322021484 
-		-0.19882462918758392 -0.19882462918758392 0 0.016196072101593018 0.015884028747677803 
-		0.012210395187139511 0.024340167641639709 0.049599159508943558 0.049425017088651657 
-		0.1271587461233139 0 0 0 0 0 0;
+	setAttr -s 19 ".ktv[0:18]"  1 -1.517224425633183 30 -1.517224425633183
+		 40 0.24396001552105906 50 -0.18905833922752457 60 -1.517224425633183 80 -1.190007030724503
+		 85 -1.2921475434007199 90 -1.3034183835943884 100 -1.4152511423379164 110 -1.4384200936635183
+		 120 -1.4278845591088982 130 -1.4056428546174917 140 -1.3835767768915428 150 -1.3709926508114099
+		 160 -1.3709926508114094 170 -1.3709926508114081 180 -1.3709926508114065 285 -1.3709926508114028
+		 315 -1.3709926508114028;
+	setAttr -s 19 ".kit[1:18]"  1 18 18 18 9 18 18 18 
+		18 18 18 18 18 18 18 18 2 2;
+	setAttr -s 19 ".kot[1:18]"  1 18 18 18 9 18 18 18 
+		18 18 18 18 18 18 18 18 2 2;
+	setAttr -s 19 ".kix[1:18]"  1 1 0.3540186882019043 1 0.96540659666061401 
+		0.98003506660461426 0.98003506660461426 0.9801061749458313 1 0.99879354238510132 
+		0.99779874086380005 0.99865204095840454 1 1 1 1 1 1;
+	setAttr -s 19 ".kiy[1:18]"  0 0 -0.93523836135864258 0 0.26074886322021484 
+		-0.19882462918758392 -0.19882462918758392 -0.19847398996353149 0 0.04910653829574585 
+		0.066315390169620514 0.051905259490013123 0 0 0 0 0 0;
+	setAttr -s 19 ".kox[1:18]"  1 1 0.35401865839958191 1 0.96540659666061401 
+		0.98003506660461426 0.98003506660461426 0.9801061749458313 1 0.99879354238510132 
+		0.99779874086380005 0.99865204095840454 1 1 1 1 1 1;
+	setAttr -s 19 ".koy[1:18]"  0 0 -0.93523836135864258 0 0.26074886322021484 
+		-0.19882462918758392 -0.19882464408874512 -0.19847400486469269 0 0.049106534570455551 
+		0.066315390169620514 0.051905259490013123 0 0 0 0 0 0;
 createNode animCurveTL -n "bike_ctrl_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 21 ".ktv[0:20]"  1 7.0937915042433044 30 7.0937915042433044
-		 40 10.769133631512235 50 30.311813077102968 60 55.532274455437005 80 65.392493403607972
-		 85 66.086336575108504 90 66.484954311021227 95 66.582917526718404 100 66.815113478757738
-		 110 67.259268190902077 120 67.70233216873028 130 68.145389963149242 135 68.366710940501463
-		 140 68.587989553544219 145 68.809344075866207 160 69.468877872057163 170 69.876898142135062
-		 180 70.119427846130804 285 74.874993429028279 315 83.974267243677232;
-	setAttr -s 21 ".kit[1:20]"  1 18 18 2 9 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 2 2;
-	setAttr -s 21 ".kot[1:20]"  1 18 18 2 9 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 2 2;
-	setAttr -s 21 ".kix[1:20]"  1 0.030217699706554413 0.014891553670167923 
-		0.013215629383921623 0.078713551163673401 0.29183876514434814 0.55733603239059448 
-		0.71048140525817871 0.59445923566818237 0.60072219371795654 0.60119718313217163 0.60131990909576416 
-		0.60159659385681152 0.60156810283660889 0.60347074270248413 0.615325927734375 0.71570485830307007 
+	setAttr -s 18 ".ktv[0:17]"  1 7.0937915042433044 30 7.0937915042433044
+		 40 10.769133631512235 50 30.311813077102968 60 55.532274455437005 80 66.330641679914905
+		 85 68.663235609775612 90 67.864801319126641 100 66.815113478757738 110 67.259268190902077
+		 120 67.70233216873028 130 68.145389963149242 140 68.588603941580985 160 69.468877872057163
+		 170 69.876898142135062 180 70.119427846130804 285 74.874993429028279 315 83.974267243677232;
+	setAttr -s 18 ".kit[1:17]"  1 18 18 2 9 18 18 18 
+		18 18 18 18 18 18 18 2 2;
+	setAttr -s 18 ".kot[1:17]"  1 18 18 2 9 18 18 18 
+		18 18 18 18 18 18 18 2 2;
+	setAttr -s 18 ".kix[1:17]"  1 0.030217699706554413 0.014891553670167923 
+		0.013215629383921623 0.063335813581943512 1 0.26115605235099792 1 0.60072219371795654 
+		0.60119718313217163 0.60113203525543213 0.60284513235092163 0.6131737232208252 0.71570485830307007 
 		0.60857754945755005 0.59274882078170776 0.10924116522073746;
-	setAttr -s 21 ".kiy[1:20]"  0 0.99954336881637573 0.99988913536071777 
-		0.99991267919540405 0.99689733982086182 0.95646756887435913 0.83028703927993774 0.703715980052948 
-		0.80412578582763672 0.79945778846740723 0.79910075664520264 0.79900836944580078 0.79879999160766602 
-		0.79882150888442993 0.79738515615463257 0.78827273845672607 0.69840288162231445 0.79349440336227417 
-		0.80538743734359741 0.99401527643203735;
-	setAttr -s 21 ".kox[1:20]"  1 0.030217697843909264 0.014891553670167923 
-		0.06745775043964386 0.078713551163673401 0.29183876514434814 0.55733603239059448 
-		0.71048140525817871 0.59445923566818237 0.60072219371795654 0.60119712352752686 0.60131990909576416 
-		0.60159659385681152 0.60156810283660889 0.60347074270248413 0.61532598733901978 0.71570485830307007 
+	setAttr -s 18 ".kiy[1:17]"  0 0.99954336881637573 0.99988913536071777 
+		0.99991267919540405 0.99799221754074097 0 -0.96529662609100342 0 0.79945778846740723 
+		0.79910075664520264 0.79914969205856323 0.79785823822021484 0.78994816541671753 0.69840288162231445 
+		0.79349440336227417 0.80538743734359741 0.99401527643203735;
+	setAttr -s 18 ".kox[1:17]"  1 0.030217697843909264 0.014891553670167923 
+		0.061620414257049561 0.063335813581943512 1 0.26115605235099792 1 0.60072219371795654 
+		0.60119712352752686 0.60113203525543213 0.60284513235092163 0.6131737232208252 0.71570485830307007 
 		0.60857754945755005 0.10924116522073746 1;
-	setAttr -s 21 ".koy[1:20]"  0 0.99954336881637573 0.99988913536071777 
-		0.99772214889526367 0.99689733982086182 0.95646750926971436 0.83028703927993774 0.703715980052948 
-		0.80412578582763672 0.799457848072052 0.79910075664520264 0.79900830984115601 0.79879999160766602 
-		0.79882156848907471 0.79738515615463257 0.78827279806137085 0.69840282201766968 0.79349434375762939 
-		0.99401527643203735 0;
+	setAttr -s 18 ".koy[1:17]"  0 0.99954336881637573 0.99988913536071777 
+		0.998099684715271 0.99799221754074097 0 -0.96529656648635864 0 0.799457848072052 
+		0.79910075664520264 0.79914975166320801 0.79785823822021484 0.78994816541671753 0.69840282201766968 
+		0.79349434375762939 0.99401527643203735 0;
 createNode animCurveTU -n "bike_ctrl_visibility";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 22 ".ktv[0:21]"  1 1 30 1 40 1 50 1 60 1 80 1 85 1 90 1 95 1
-		 100 1 110 1 120 1 130 1 135 1 140 1 145 1 150 1 160 1 170 1 180 1 285 1 315 1;
-	setAttr -s 22 ".kit[1:21]"  1 9 9 9 9 9 9 9 
-		9 9 9 9 9 9 9 9 9 9 9 2 2;
-	setAttr -s 22 ".kot[0:21]"  5 5 5 5 5 9 5 5 
-		5 5 5 5 5 5 5 5 5 5 5 5 2 2;
-	setAttr -s 22 ".kix[1:21]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1;
-	setAttr -s 22 ".kiy[1:21]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0;
+	setAttr -s 19 ".ktv[0:18]"  1 1 30 1 40 1 50 1 60 1 80 1 85 1 90 1 100 1
+		 110 1 120 1 130 1 140 1 150 1 160 1 170 1 180 1 285 1 315 1;
+	setAttr -s 19 ".kit[1:18]"  1 9 9 9 9 9 9 9 
+		9 9 9 9 9 9 9 9 2 2;
+	setAttr -s 19 ".kot[0:18]"  5 5 5 5 5 9 5 5 
+		5 5 5 5 5 5 5 5 5 2 2;
+	setAttr -s 19 ".kix[1:18]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 19 ".kiy[1:18]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "bike_ctrl_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 22 ".ktv[0:21]"  1 0 30 0 40 -109.10413913443212 50 -45.837107799350434
-		 60 0 80 -28.906083244219264 85 -18.889685902574037 90 -8.4343959215502835 95 -0.23544649373052395
-		 100 -0.30659849241165854 110 -0.15818198609683104 120 -0.15020919528552595 130 -0.1348538656986609
-		 135 -0.11570089252754726 140 -0.097596264721132933 145 -0.078464049335978336 150 0
-		 160 0 170 0 180 0 285 0 315 0;
-	setAttr -s 22 ".kit[1:21]"  1 18 18 18 9 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 2 2;
-	setAttr -s 22 ".kot[1:21]"  1 18 18 18 9 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 2 2;
-	setAttr -s 22 ".kix[1:21]"  1 1 0.33043316006660461 1 0.92987293004989624 
-		0.68215936422348022 0.71538007259368896 1 1 0.99999922513961792 0.99999982118606567 
-		0.9999992847442627 0.99999815225601196 0.99999815225601196 0.99998694658279419 1 
-		1 1 1 1 1;
-	setAttr -s 22 ".kiy[1:21]"  0 0 0.94382935762405396 0 -0.36788070201873779 
-		0.73120349645614624 0.69873547554016113 0 0 0.0012523623881861567 0.00061072857351973653 
-		0.0012045660987496376 0.0019508016994222999 0.0019497120520099998 0.0051100593991577625 
+	setAttr -s 19 ".ktv[0:18]"  1 0 30 0 40 -109.10413913443212 50 -45.837107799350434
+		 60 0 80 -31.021395319917847 85 -18.933252446012364 90 -8.4343959215502835 100 2.8799497246724646
+		 110 -6.3136242869361512 120 -1.4245773769446539 130 0.6734911735643665 140 0.34174845668261061
+		 150 0 160 0 170 0 180 0 285 0 315 0;
+	setAttr -s 19 ".kit[1:18]"  1 18 18 18 9 18 18 18 
+		18 18 18 18 18 18 18 18 2 2;
+	setAttr -s 19 ".kot[1:18]"  1 18 18 18 9 18 18 18 
+		18 18 18 18 18 18 18 18 2 2;
+	setAttr -s 19 ".kix[1:18]"  1 1 0.33043316006660461 1 0.92958259582519531 
+		0.64567643404006958 0.79561591148376465 1 1 0.98367822170257568 1 0.99984461069107056 
+		1 1 1 1 1 1;
+	setAttr -s 19 ".kiy[1:18]"  0 0 0.94382935762405396 0 -0.36861401796340942 
+		0.7636110782623291 0.60580134391784668 0 0 0.17993661761283875 0 -0.017629222944378853 
 		0 0 0 0 0 0;
-	setAttr -s 22 ".kox[1:21]"  1 1 0.33043316006660461 1 0.92987293004989624 
-		0.682159423828125 0.71538007259368896 1 1 0.99999922513961792 0.99999982118606567 
-		0.9999992847442627 0.99999815225601196 0.99999815225601196 0.99998694658279419 1 
-		1 1 1 1 1;
-	setAttr -s 22 ".koy[1:21]"  0 0 0.94382935762405396 0 -0.36788070201873779 
-		0.73120349645614624 0.69873547554016113 0 0 0.0012523622717708349 0.00061072857351973653 
-		0.0012045660987496376 0.0019508016994222999 0.0019497120520099998 0.0051100593991577625 
+	setAttr -s 19 ".kox[1:18]"  1 1 0.33043316006660461 1 0.92958259582519531 
+		0.64567649364471436 0.79561591148376465 1 1 0.98367822170257568 1 0.99984461069107056 
+		1 1 1 1 1 1;
+	setAttr -s 19 ".koy[1:18]"  0 0 0.94382935762405396 0 -0.36861401796340942 
+		0.7636110782623291 0.60580134391784668 0 0 0.17993661761283875 0 -0.017629222944378853 
 		0 0 0 0 0 0;
 createNode animCurveTA -n "bike_ctrl_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 22 ".ktv[0:21]"  1 -90 30 -90 40 -43.121939476869542 50 -43.667081186354388
-		 60 -90 80 -162.56329974315543 85 -183.68704580192093 90 -199.14436003625443 95 -188.82828008144463
-		 100 -160.16504002987293 110 -191.17659732885369 120 -162.89976422579448 130 -187.07852574127799
-		 135 -173.45492748594907 140 -190.30097698014004 145 -172.11746402232973 150 -169.50487813670813
-		 160 -168.45805885958177 170 -166.59813049098321 180 -165.0694229197087 285 -157.03353231743489
-		 315 -148.49125903710532;
-	setAttr -s 22 ".kit[1:21]"  1 18 18 18 9 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 2 2;
-	setAttr -s 22 ".kot[1:21]"  1 18 18 18 9 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 2 2;
-	setAttr -s 22 ".kix[1:21]"  1 1 0.99635374546051025 0.43411979079246521 
-		0.45407015085220337 0.46281012892723083 1 0.43999150395393372 1 1 1 1 1 1 0.7729763388633728 
-		0.99194008111953735 0.99711698293685913 0.99608796834945679 0.99905312061309814 0.99919807910919189 
-		0.98906785249710083;
-	setAttr -s 22 ".kiy[1:21]"  0 0 -0.085318446159362793 -0.90085512399673462 
-		-0.89096599817276001 -0.88645744323730469 0 0.89800190925598145 0 0 0 0 0 0 0.63443487882614136 
-		0.12670779228210449 0.075879096984863281 0.088367253541946411 0.043506693094968796 
-		0.04004007950425148 0.14746092259883881;
-	setAttr -s 22 ".kox[1:21]"  1 1 0.99635374546051025 0.43411979079246521 
-		0.45407015085220337 0.46281018853187561 1 0.43999150395393372 1 1 1 1 1 1 0.7729763388633728 
-		0.99194008111953735 0.99711710214614868 0.99608796834945679 0.99905312061309814 0.98906785249710083 
-		1;
-	setAttr -s 22 ".koy[1:21]"  0 0 -0.085318446159362793 -0.90085512399673462 
-		-0.89096599817276001 -0.88645750284194946 0 0.89800196886062622 0 0 0 0 0 0 0.63443487882614136 
-		0.12670779228210449 0.075879111886024475 0.088367246091365814 0.043506693094968796 
-		0.14746092259883881 0;
+	setAttr -s 19 ".ktv[0:18]"  1 -90 30 -90 40 -43.121939476869542 50 -43.667081186354388
+		 60 -90 80 -163.14077923644521 85 -183.44762774045822 90 -199.14436003625443 100 -148.88908565789902
+		 110 -193.1317889306724 120 -165.85842301646611 130 -187.56083534596326 140 -170.16118919429488
+		 150 -169.50487813670813 160 -168.45805885958177 170 -166.59813049098321 180 -165.0694229197087
+		 285 -157.03353231743489 315 -148.49125903710532;
+	setAttr -s 19 ".kit[1:18]"  1 18 18 18 9 18 18 18 
+		18 18 18 18 18 18 18 18 2 2;
+	setAttr -s 19 ".kot[1:18]"  1 18 18 18 9 18 18 18 
+		18 18 18 18 18 18 18 18 2 2;
+	setAttr -s 19 ".kix[1:18]"  1 1 0.99635374546051025 0.43241462111473083 
+		0.4549928605556488 0.46861332654953003 1 1 1 1 1 0.99472790956497192 0.99900752305984497 
+		0.99711698293685913 0.99608796834945679 0.99905312061309814 0.99919807910919189 0.98906785249710083;
+	setAttr -s 19 ".kiy[1:18]"  0 0 -0.085318446159362793 -0.90167486667633057 
+		-0.89049506187438965 -0.88340342044830322 0 0 0 0 0 0.10254953056573868 0.044543571770191193 
+		0.075879096984863281 0.088367253541946411 0.043506693094968796 0.04004007950425148 
+		0.14746092259883881;
+	setAttr -s 19 ".kox[1:18]"  1 1 0.99635374546051025 0.43241462111473083 
+		0.4549928605556488 0.46861332654953003 1 1 1 1 1 0.99472790956497192 0.99900752305984497 
+		0.99711710214614868 0.99608796834945679 0.99905312061309814 0.98906785249710083 1;
+	setAttr -s 19 ".koy[1:18]"  0 0 -0.085318446159362793 -0.90167486667633057 
+		-0.89049506187438965 -0.88340342044830322 0 0 0 0 0 0.10254953056573868 0.044543571770191193 
+		0.075879111886024475 0.088367246091365814 0.043506693094968796 0.14746092259883881 
+		0;
 createNode animCurveTA -n "bike_ctrl_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 22 ".ktv[0:21]"  1 0 30 0 40 123.28547091835227 50 43.189240380887242
-		 60 0 80 6.7014025248828295 85 4.8535533300193476 90 4.2499765152016886 95 1.4236662877069517
-		 100 1.90257514134198 110 0.94781916416470535 120 0.94877901338015935 130 0.83197132244631955
-		 135 0.73054222488380161 140 0.58728256580159921 145 0.49460270759919372 150 0 160 0
-		 170 0 180 0 285 0 315 0;
-	setAttr -s 22 ".kit[1:21]"  1 18 18 18 9 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 2 2;
-	setAttr -s 22 ".kot[1:21]"  1 18 18 18 9 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 2 2;
-	setAttr -s 22 ".kix[1:21]"  1 1 0.29594811797142029 1 0.99487298727035522 
-		0.99186277389526367 0.98425388336181641 1 1 1 1 0.99997103214263916 0.99991792440414429 
-		0.99992376565933228 0.9995763897895813 1 1 1 1 1 1;
-	setAttr -s 22 ".kiy[1:21]"  0 0 -0.95520401000976562 0 0.10113141685724258 
-		-0.12731193006038666 -0.17676055431365967 0 0 0 0 -0.0076176803559064865 -0.012810833752155304 
-		-0.012352815829217434 -0.029103847220540047 0 0 0 0 0 0;
-	setAttr -s 22 ".kox[1:21]"  1 1 0.29594811797142029 1 0.99487298727035522 
-		0.9918627142906189 0.98425388336181641 1 1 1 1 0.99997103214263916 0.99991792440414429 
-		0.99992364645004272 0.9995763897895813 1 1 1 1 1 1;
-	setAttr -s 22 ".koy[1:21]"  0 0 -0.95520395040512085 0 0.10113141685724258 
-		-0.12731191515922546 -0.17676055431365967 0 0 0 0 -0.0076176808215677738 -0.012810833752155304 
-		-0.012352815829217434 -0.029103847220540047 0 0 0 0 0 0;
+	setAttr -s 19 ".ktv[0:18]"  1 0 30 0 40 123.28547091835227 50 43.189240380887242
+		 60 0 80 7.7122644664503017 85 4.1533794208562353 90 4.2499765152016886 100 2.3911720502846023
+		 110 2.327025350922455 120 1.4930915959480036 130 2.5011418346937329 140 1.1961830582798203
+		 150 0 160 0 170 0 180 0 285 0 315 0;
+	setAttr -s 19 ".kit[1:18]"  1 18 18 18 9 18 18 18 
+		18 18 18 18 18 18 18 18 2 2;
+	setAttr -s 19 ".kot[1:18]"  1 18 18 18 9 18 18 18 
+		18 18 18 18 18 18 18 18 2 2;
+	setAttr -s 19 ".kix[1:18]"  1 1 0.29594811797142029 1 0.99623787403106689 
+		1 1 0.99994921684265137 0.99994921684265137 1 1 0.99786311388015747 1 1 1 1 1 1;
+	setAttr -s 19 ".kiy[1:18]"  0 0 -0.95520401000976562 0 0.086660921573638916 
+		0 0 -0.010075624100863934 -0.010075623169541359 0 0 -0.065339833498001099 0 0 0 0 
+		0 0;
+	setAttr -s 19 ".kox[1:18]"  1 1 0.29594811797142029 1 0.99623787403106689 
+		1 1 0.99994921684265137 0.99994921684265137 1 1 0.99786311388015747 1 1 1 1 1 1;
+	setAttr -s 19 ".koy[1:18]"  0 0 -0.95520395040512085 0 0.086660921573638916 
+		0 0 -0.010075623169541359 -0.010075624100863934 0 0 -0.065339833498001099 0 0 0 0 
+		0 0;
 createNode animCurveTU -n "bike_ctrl_scaleX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 22 ".ktv[0:21]"  1 0.2 30 0.2 40 0.2 50 0.2 60 0.2 80 0.2
-		 85 0.2 90 0.2 95 0.2 100 0.2 110 0.2 120 0.2 130 0.2 135 0.2 140 0.2 145 0.2 150 0.2
-		 160 0.2 170 0.2 180 0.2 285 0.2 315 0.2;
-	setAttr -s 22 ".kit[1:21]"  1 18 18 18 9 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 2 2;
-	setAttr -s 22 ".kot[1:21]"  1 18 18 18 9 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 2 2;
-	setAttr -s 22 ".kix[1:21]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1;
-	setAttr -s 22 ".kiy[1:21]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0;
-	setAttr -s 22 ".kox[1:21]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1;
-	setAttr -s 22 ".koy[1:21]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0;
+	setAttr -s 19 ".ktv[0:18]"  1 0.2 30 0.2 40 0.2 50 0.2 60 0.2 80 0.2
+		 85 0.2 90 0.2 100 0.2 110 0.2 120 0.2 130 0.2 140 0.2 150 0.2 160 0.2 170 0.2 180 0.2
+		 285 0.2 315 0.2;
+	setAttr -s 19 ".kit[1:18]"  1 18 18 18 9 18 18 18 
+		18 18 18 18 18 18 18 18 2 2;
+	setAttr -s 19 ".kot[1:18]"  1 18 18 18 9 18 18 18 
+		18 18 18 18 18 18 18 18 2 2;
+	setAttr -s 19 ".kix[1:18]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 19 ".kiy[1:18]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 19 ".kox[1:18]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 19 ".koy[1:18]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "bike_ctrl_scaleY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 22 ".ktv[0:21]"  1 0.2 30 0.2 40 0.2 50 0.2 60 0.2 80 0.2
-		 85 0.2 90 0.2 95 0.2 100 0.2 110 0.2 120 0.2 130 0.2 135 0.2 140 0.2 145 0.2 150 0.2
-		 160 0.2 170 0.2 180 0.2 285 0.2 315 0.2;
-	setAttr -s 22 ".kit[1:21]"  1 18 18 18 9 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 2 2;
-	setAttr -s 22 ".kot[1:21]"  1 18 18 18 9 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 2 2;
-	setAttr -s 22 ".kix[1:21]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1;
-	setAttr -s 22 ".kiy[1:21]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0;
-	setAttr -s 22 ".kox[1:21]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1;
-	setAttr -s 22 ".koy[1:21]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0;
+	setAttr -s 19 ".ktv[0:18]"  1 0.2 30 0.2 40 0.2 50 0.2 60 0.2 80 0.2
+		 85 0.2 90 0.2 100 0.2 110 0.2 120 0.2 130 0.2 140 0.2 150 0.2 160 0.2 170 0.2 180 0.2
+		 285 0.2 315 0.2;
+	setAttr -s 19 ".kit[1:18]"  1 18 18 18 9 18 18 18 
+		18 18 18 18 18 18 18 18 2 2;
+	setAttr -s 19 ".kot[1:18]"  1 18 18 18 9 18 18 18 
+		18 18 18 18 18 18 18 18 2 2;
+	setAttr -s 19 ".kix[1:18]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 19 ".kiy[1:18]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 19 ".kox[1:18]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 19 ".koy[1:18]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "bike_ctrl_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 22 ".ktv[0:21]"  1 0.2 30 0.2 40 0.2 50 0.2 60 0.2 80 0.2
-		 85 0.2 90 0.2 95 0.2 100 0.2 110 0.2 120 0.2 130 0.2 135 0.2 140 0.2 145 0.2 150 0.2
-		 160 0.2 170 0.2 180 0.2 285 0.2 315 0.2;
-	setAttr -s 22 ".kit[1:21]"  1 18 18 18 9 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 2 2;
-	setAttr -s 22 ".kot[1:21]"  1 18 18 18 9 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 2 2;
-	setAttr -s 22 ".kix[1:21]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1;
-	setAttr -s 22 ".kiy[1:21]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0;
-	setAttr -s 22 ".kox[1:21]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1;
-	setAttr -s 22 ".koy[1:21]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0;
+	setAttr -s 19 ".ktv[0:18]"  1 0.2 30 0.2 40 0.2 50 0.2 60 0.2 80 0.2
+		 85 0.2 90 0.2 100 0.2 110 0.2 120 0.2 130 0.2 140 0.2 150 0.2 160 0.2 170 0.2 180 0.2
+		 285 0.2 315 0.2;
+	setAttr -s 19 ".kit[1:18]"  1 18 18 18 9 18 18 18 
+		18 18 18 18 18 18 18 18 2 2;
+	setAttr -s 19 ".kot[1:18]"  1 18 18 18 9 18 18 18 
+		18 18 18 18 18 18 18 18 2 2;
+	setAttr -s 19 ".kix[1:18]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 19 ".kiy[1:18]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 19 ".kox[1:18]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 19 ".koy[1:18]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode pairBlend -n "pairBlend1";
 createNode animCurveTU -n "global_ctrl_blendParent1";
 	setAttr ".tan" 18;
@@ -31795,7 +31695,7 @@ createNode animCurveTA -n "cog_ctrl_rotateX";
 createNode animCurveTA -n "cog_ctrl_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  70 0 80 0 85 0 90 0 95 6.9156691160290578
+	setAttr -s 11 ".ktv[0:10]"  70 0 80 0 85 0 90 0 95 6.9156691160290586
 		 105 -4.6383826032606077 115 7.4893781065958072 125 -0.07845150947938466 135 10.057380389743168
 		 145 29.390463646406573 155 -7.4650117271746401;
 	setAttr -s 11 ".kit[3:10]"  1 18 18 18 18 18 18 18;
@@ -33253,8 +33153,8 @@ select -ne :time1;
 	setAttr -cb on ".ihi" 0;
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr ".o" 315;
-	setAttr ".unw" 315;
+	setAttr ".o" 76;
+	setAttr ".unw" 76;
 select -ne :sequenceManager1;
 	setAttr ".o" 450;
 select -ne :renderPartition;
@@ -33262,7 +33162,7 @@ select -ne :renderPartition;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 1342 ".st";
+	setAttr -s 1144 ".st";
 	setAttr -cb on ".an";
 	setAttr -cb on ".pt";
 select -ne :renderGlobalsList1;
@@ -33275,7 +33175,7 @@ select -ne :defaultShaderList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 695 ".s";
+	setAttr -s 263 ".s";
 select -ne :postProcessList1;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -33287,9 +33187,9 @@ select -ne :defaultRenderUtilityList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 1011 ".u";
+	setAttr -s 979 ".u";
 select -ne :defaultRenderingList1;
-	setAttr -s 120 ".r";
+	setAttr -s 119 ".r";
 select -ne :lightList1;
 	setAttr -s 16 ".l";
 select -ne :defaultTextureList1;
@@ -33297,13 +33197,13 @@ select -ne :defaultTextureList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 595 ".tx";
+	setAttr -s 563 ".tx";
 select -ne :initialShadingGroup;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 764 ".dsm";
+	setAttr -s 762 ".dsm";
 	setAttr -k on ".mwc";
 	setAttr -cb on ".an";
 	setAttr -cb on ".il";
@@ -33312,7 +33212,7 @@ select -ne :initialShadingGroup;
 	setAttr -cb on ".fo";
 	setAttr -cb on ".epo";
 	setAttr ".ro" yes;
-	setAttr -s 149 ".gn";
+	setAttr -s 147 ".gn";
 	setAttr -cb on ".mimt";
 	setAttr -cb on ".miop";
 	setAttr -cb on ".mise";
@@ -33504,1139 +33404,1081 @@ select -ne :defaultHardwareRenderGlobals;
 	setAttr -k on ".gh";
 	setAttr -cb on ".sd";
 select -ne :ikSystem;
-	setAttr -s 6 ".sol";
-connectAttr "utility_room_viewRN.phl[3565]" "global_ctrl_parentConstraint1.tg[0].tt"
+	setAttr -s 4 ".sol";
+connectAttr "utility_room_viewRN.phl[3765]" "global_ctrl_parentConstraint1.tg[0].tt"
 		;
-connectAttr "bike_ctrl_translateX.o" "utility_room_viewRN.phl[3566]";
-connectAttr "bike_ctrl_translateY.o" "utility_room_viewRN.phl[3567]";
-connectAttr "bike_ctrl_translateZ.o" "utility_room_viewRN.phl[3568]";
-connectAttr "bike_ctrl_visibility.o" "utility_room_viewRN.phl[3569]";
-connectAttr "utility_room_viewRN.phl[3570]" "global_ctrl_parentConstraint1.tg[0].tr"
+connectAttr "bike_ctrl_translateX.o" "utility_room_viewRN.phl[3766]";
+connectAttr "bike_ctrl_translateY.o" "utility_room_viewRN.phl[3767]";
+connectAttr "bike_ctrl_translateZ.o" "utility_room_viewRN.phl[3768]";
+connectAttr "bike_ctrl_visibility.o" "utility_room_viewRN.phl[3769]";
+connectAttr "utility_room_viewRN.phl[3770]" "global_ctrl_parentConstraint1.tg[0].tr"
 		;
-connectAttr "bike_ctrl_rotateX.o" "utility_room_viewRN.phl[3571]";
-connectAttr "bike_ctrl_rotateY.o" "utility_room_viewRN.phl[3572]";
-connectAttr "bike_ctrl_rotateZ.o" "utility_room_viewRN.phl[3573]";
-connectAttr "utility_room_viewRN.phl[3574]" "global_ctrl_parentConstraint1.tg[0].ts"
+connectAttr "bike_ctrl_rotateX.o" "utility_room_viewRN.phl[3771]";
+connectAttr "bike_ctrl_rotateY.o" "utility_room_viewRN.phl[3772]";
+connectAttr "bike_ctrl_rotateZ.o" "utility_room_viewRN.phl[3773]";
+connectAttr "utility_room_viewRN.phl[3774]" "global_ctrl_parentConstraint1.tg[0].ts"
 		;
-connectAttr "bike_ctrl_scaleX.o" "utility_room_viewRN.phl[3575]";
-connectAttr "bike_ctrl_scaleY.o" "utility_room_viewRN.phl[3576]";
-connectAttr "bike_ctrl_scaleZ.o" "utility_room_viewRN.phl[3577]";
-connectAttr "utility_room_viewRN.phl[3578]" "global_ctrl_parentConstraint1.tg[0].trp"
+connectAttr "bike_ctrl_scaleX.o" "utility_room_viewRN.phl[3775]";
+connectAttr "bike_ctrl_scaleY.o" "utility_room_viewRN.phl[3776]";
+connectAttr "bike_ctrl_scaleZ.o" "utility_room_viewRN.phl[3777]";
+connectAttr "utility_room_viewRN.phl[3778]" "global_ctrl_parentConstraint1.tg[0].trp"
 		;
-connectAttr "utility_room_viewRN.phl[3579]" "global_ctrl_parentConstraint1.tg[0].trt"
+connectAttr "utility_room_viewRN.phl[3779]" "global_ctrl_parentConstraint1.tg[0].trt"
 		;
-connectAttr "utility_room_viewRN.phl[3580]" "global_ctrl_parentConstraint1.tg[0].tro"
+connectAttr "utility_room_viewRN.phl[3780]" "global_ctrl_parentConstraint1.tg[0].tro"
 		;
-connectAttr "utility_room_viewRN.phl[3581]" "global_ctrl_parentConstraint1.tg[0].tpm"
+connectAttr "utility_room_viewRN.phl[3781]" "global_ctrl_parentConstraint1.tg[0].tpm"
 		;
-connectAttr "pasted__pasted__pTorus2_translateX1.o" "utility_room_viewRN.phl[4187]"
+connectAttr "pasted__pasted__pTorus2_translateX1.o" "utility_room_viewRN.phl[4387]"
 		;
-connectAttr "pasted__pasted__pTorus2_translateY1.o" "utility_room_viewRN.phl[4188]"
+connectAttr "pasted__pasted__pTorus2_translateY1.o" "utility_room_viewRN.phl[4388]"
 		;
-connectAttr "pasted__pasted__pTorus2_translateZ1.o" "utility_room_viewRN.phl[4189]"
+connectAttr "pasted__pasted__pTorus2_translateZ1.o" "utility_room_viewRN.phl[4389]"
 		;
-connectAttr "pasted__pasted__pTorus2_rotateX1.o" "utility_room_viewRN.phl[4190]"
+connectAttr "pasted__pasted__pTorus2_rotateX1.o" "utility_room_viewRN.phl[4390]"
 		;
-connectAttr "pasted__pasted__pTorus2_rotateY1.o" "utility_room_viewRN.phl[4191]"
+connectAttr "pasted__pasted__pTorus2_rotateY1.o" "utility_room_viewRN.phl[4391]"
 		;
-connectAttr "pasted__pasted__pTorus2_rotateZ1.o" "utility_room_viewRN.phl[4192]"
+connectAttr "pasted__pasted__pTorus2_rotateZ1.o" "utility_room_viewRN.phl[4392]"
 		;
-connectAttr "pasted__pasted__pTorus2_visibility1.o" "utility_room_viewRN.phl[4193]"
+connectAttr "pasted__pasted__pTorus2_visibility1.o" "utility_room_viewRN.phl[4393]"
 		;
-connectAttr "pasted__pasted__pTorus2_scaleX1.o" "utility_room_viewRN.phl[4194]";
-connectAttr "pasted__pasted__pTorus2_scaleY1.o" "utility_room_viewRN.phl[4195]";
-connectAttr "pasted__pasted__pTorus2_scaleZ1.o" "utility_room_viewRN.phl[4196]";
-connectAttr "pasted__pasted__pCylinder7_translateX1.o" "utility_room_viewRN.phl[4197]"
+connectAttr "pasted__pasted__pTorus2_scaleX1.o" "utility_room_viewRN.phl[4394]";
+connectAttr "pasted__pasted__pTorus2_scaleY1.o" "utility_room_viewRN.phl[4395]";
+connectAttr "pasted__pasted__pTorus2_scaleZ1.o" "utility_room_viewRN.phl[4396]";
+connectAttr "pasted__pasted__pCylinder7_translateX1.o" "utility_room_viewRN.phl[4397]"
 		;
-connectAttr "pasted__pasted__pCylinder7_translateY1.o" "utility_room_viewRN.phl[4198]"
+connectAttr "pasted__pasted__pCylinder7_translateY1.o" "utility_room_viewRN.phl[4398]"
 		;
-connectAttr "pasted__pasted__pCylinder7_translateZ1.o" "utility_room_viewRN.phl[4199]"
+connectAttr "pasted__pasted__pCylinder7_translateZ1.o" "utility_room_viewRN.phl[4399]"
 		;
-connectAttr "pasted__pasted__pCylinder7_rotateX1.o" "utility_room_viewRN.phl[4200]"
+connectAttr "pasted__pasted__pCylinder7_rotateX1.o" "utility_room_viewRN.phl[4400]"
 		;
-connectAttr "pasted__pasted__pCylinder7_rotateY1.o" "utility_room_viewRN.phl[4201]"
+connectAttr "pasted__pasted__pCylinder7_rotateY1.o" "utility_room_viewRN.phl[4401]"
 		;
-connectAttr "pasted__pasted__pCylinder7_rotateZ1.o" "utility_room_viewRN.phl[4202]"
+connectAttr "pasted__pasted__pCylinder7_rotateZ1.o" "utility_room_viewRN.phl[4402]"
 		;
-connectAttr "pasted__pasted__pCylinder7_visibility1.o" "utility_room_viewRN.phl[4203]"
+connectAttr "pasted__pasted__pCylinder7_visibility1.o" "utility_room_viewRN.phl[4403]"
 		;
-connectAttr "pasted__pasted__pCylinder7_scaleX1.o" "utility_room_viewRN.phl[4204]"
+connectAttr "pasted__pasted__pCylinder7_scaleX1.o" "utility_room_viewRN.phl[4404]"
 		;
-connectAttr "pasted__pasted__pCylinder7_scaleY1.o" "utility_room_viewRN.phl[4205]"
+connectAttr "pasted__pasted__pCylinder7_scaleY1.o" "utility_room_viewRN.phl[4405]"
 		;
-connectAttr "pasted__pasted__pCylinder7_scaleZ1.o" "utility_room_viewRN.phl[4206]"
+connectAttr "pasted__pasted__pCylinder7_scaleZ1.o" "utility_room_viewRN.phl[4406]"
 		;
-connectAttr "utility_room_viewRN.phl[3503]" "pairBlend1.w";
-connectAttr "global_ctrl_blendParent1.o" "utility_room_viewRN.phl[3504]";
-connectAttr "pairBlend1.otx" "utility_room_viewRN.phl[3505]";
-connectAttr "pairBlend1.oty" "utility_room_viewRN.phl[3506]";
-connectAttr "pairBlend1.otz" "utility_room_viewRN.phl[3507]";
-connectAttr "pairBlend1.orx" "utility_room_viewRN.phl[3508]";
-connectAttr "pairBlend1.ory" "utility_room_viewRN.phl[3509]";
-connectAttr "pairBlend1.orz" "utility_room_viewRN.phl[3510]";
-connectAttr "global_ctrl_scaleX.o" "utility_room_viewRN.phl[3511]";
-connectAttr "global_ctrl_scaleY.o" "utility_room_viewRN.phl[3512]";
-connectAttr "global_ctrl_scaleZ.o" "utility_room_viewRN.phl[3513]";
+connectAttr "undies_visibility.o" "utility_room_viewRN.phl[4278]";
+connectAttr "undies_translateX.o" "utility_room_viewRN.phl[4279]";
+connectAttr "undies_translateY.o" "utility_room_viewRN.phl[4280]";
+connectAttr "undies_translateZ.o" "utility_room_viewRN.phl[4281]";
+connectAttr "undies_rotateX.o" "utility_room_viewRN.phl[4282]";
+connectAttr "undies_rotateY.o" "utility_room_viewRN.phl[4283]";
+connectAttr "undies_rotateZ.o" "utility_room_viewRN.phl[4284]";
+connectAttr "undies_scaleX.o" "utility_room_viewRN.phl[4285]";
+connectAttr "undies_scaleY.o" "utility_room_viewRN.phl[4286]";
+connectAttr "undies_scaleZ.o" "utility_room_viewRN.phl[4287]";
+connectAttr "ffd1Lattice_rotateX.o" "utility_room_viewRN.phl[4288]";
+connectAttr "ffd1Lattice_rotateY.o" "utility_room_viewRN.phl[4289]";
+connectAttr "ffd1Lattice_rotateZ.o" "utility_room_viewRN.phl[4290]";
+connectAttr "ffd1LatticeShape_controlPoints_0__xValue.o" "utility_room_viewRN.phl[4291]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_0__yValue.o" "utility_room_viewRN.phl[4292]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_0__zValue.o" "utility_room_viewRN.phl[4293]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_1__xValue.o" "utility_room_viewRN.phl[4294]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_1__yValue.o" "utility_room_viewRN.phl[4295]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_1__zValue.o" "utility_room_viewRN.phl[4296]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_2__xValue.o" "utility_room_viewRN.phl[4297]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_2__yValue.o" "utility_room_viewRN.phl[4298]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_2__zValue.o" "utility_room_viewRN.phl[4299]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_3__xValue.o" "utility_room_viewRN.phl[4300]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_3__yValue.o" "utility_room_viewRN.phl[4301]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_3__zValue.o" "utility_room_viewRN.phl[4302]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_4__xValue.o" "utility_room_viewRN.phl[4303]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_4__yValue.o" "utility_room_viewRN.phl[4304]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_4__zValue.o" "utility_room_viewRN.phl[4305]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_5__xValue.o" "utility_room_viewRN.phl[4306]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_5__yValue.o" "utility_room_viewRN.phl[4307]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_5__zValue.o" "utility_room_viewRN.phl[4308]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_6__xValue.o" "utility_room_viewRN.phl[4309]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_6__yValue.o" "utility_room_viewRN.phl[4310]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_6__zValue.o" "utility_room_viewRN.phl[4311]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_7__xValue.o" "utility_room_viewRN.phl[4312]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_7__yValue.o" "utility_room_viewRN.phl[4313]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_7__zValue.o" "utility_room_viewRN.phl[4314]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_8__xValue.o" "utility_room_viewRN.phl[4315]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_8__yValue.o" "utility_room_viewRN.phl[4316]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_8__zValue.o" "utility_room_viewRN.phl[4317]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_9__xValue.o" "utility_room_viewRN.phl[4318]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_9__yValue.o" "utility_room_viewRN.phl[4319]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_9__zValue.o" "utility_room_viewRN.phl[4320]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_10__xValue.o" "utility_room_viewRN.phl[4321]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_10__yValue.o" "utility_room_viewRN.phl[4322]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_10__zValue.o" "utility_room_viewRN.phl[4323]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_11__xValue.o" "utility_room_viewRN.phl[4324]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_11__yValue.o" "utility_room_viewRN.phl[4325]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_11__zValue.o" "utility_room_viewRN.phl[4326]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_12__xValue.o" "utility_room_viewRN.phl[4327]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_12__yValue.o" "utility_room_viewRN.phl[4328]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_12__zValue.o" "utility_room_viewRN.phl[4329]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_13__xValue.o" "utility_room_viewRN.phl[4330]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_13__yValue.o" "utility_room_viewRN.phl[4331]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_13__zValue.o" "utility_room_viewRN.phl[4332]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_14__xValue.o" "utility_room_viewRN.phl[4333]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_14__yValue.o" "utility_room_viewRN.phl[4334]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_14__zValue.o" "utility_room_viewRN.phl[4335]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_15__xValue.o" "utility_room_viewRN.phl[4336]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_15__yValue.o" "utility_room_viewRN.phl[4337]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_15__zValue.o" "utility_room_viewRN.phl[4338]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_16__xValue.o" "utility_room_viewRN.phl[4339]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_16__yValue.o" "utility_room_viewRN.phl[4340]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_16__zValue.o" "utility_room_viewRN.phl[4341]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_17__xValue.o" "utility_room_viewRN.phl[4342]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_17__yValue.o" "utility_room_viewRN.phl[4343]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_17__zValue.o" "utility_room_viewRN.phl[4344]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_18__xValue.o" "utility_room_viewRN.phl[4345]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_18__yValue.o" "utility_room_viewRN.phl[4346]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_18__zValue.o" "utility_room_viewRN.phl[4347]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_19__xValue.o" "utility_room_viewRN.phl[4348]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_19__yValue.o" "utility_room_viewRN.phl[4349]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_19__zValue.o" "utility_room_viewRN.phl[4350]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_20__xValue.o" "utility_room_viewRN.phl[4351]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_20__yValue.o" "utility_room_viewRN.phl[4352]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_20__zValue.o" "utility_room_viewRN.phl[4353]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_21__xValue.o" "utility_room_viewRN.phl[4354]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_21__yValue.o" "utility_room_viewRN.phl[4355]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_21__zValue.o" "utility_room_viewRN.phl[4356]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_22__xValue.o" "utility_room_viewRN.phl[4357]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_22__yValue.o" "utility_room_viewRN.phl[4358]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_22__zValue.o" "utility_room_viewRN.phl[4359]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_23__xValue.o" "utility_room_viewRN.phl[4360]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_23__yValue.o" "utility_room_viewRN.phl[4361]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_23__zValue.o" "utility_room_viewRN.phl[4362]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_24__xValue.o" "utility_room_viewRN.phl[4363]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_24__yValue.o" "utility_room_viewRN.phl[4364]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_24__zValue.o" "utility_room_viewRN.phl[4365]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_25__xValue.o" "utility_room_viewRN.phl[4366]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_25__yValue.o" "utility_room_viewRN.phl[4367]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_25__zValue.o" "utility_room_viewRN.phl[4368]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_26__xValue.o" "utility_room_viewRN.phl[4369]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_26__yValue.o" "utility_room_viewRN.phl[4370]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_26__zValue.o" "utility_room_viewRN.phl[4371]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_27__xValue.o" "utility_room_viewRN.phl[4372]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_27__yValue.o" "utility_room_viewRN.phl[4373]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_27__zValue.o" "utility_room_viewRN.phl[4374]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_28__xValue.o" "utility_room_viewRN.phl[4375]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_28__yValue.o" "utility_room_viewRN.phl[4376]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_28__zValue.o" "utility_room_viewRN.phl[4377]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_29__xValue.o" "utility_room_viewRN.phl[4378]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_29__yValue.o" "utility_room_viewRN.phl[4379]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_29__zValue.o" "utility_room_viewRN.phl[4380]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_30__xValue.o" "utility_room_viewRN.phl[4381]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_30__yValue.o" "utility_room_viewRN.phl[4382]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_30__zValue.o" "utility_room_viewRN.phl[4383]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_31__xValue.o" "utility_room_viewRN.phl[4384]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_31__yValue.o" "utility_room_viewRN.phl[4385]"
+		;
+connectAttr "ffd1LatticeShape_controlPoints_31__zValue.o" "utility_room_viewRN.phl[4386]"
+		;
+connectAttr "controller_root_visibility.o" "utility_room_viewRN.phl[3782]";
+connectAttr "controller_root_translateX.o" "utility_room_viewRN.phl[3783]";
+connectAttr "controller_root_translateY.o" "utility_room_viewRN.phl[3784]";
+connectAttr "controller_root_translateZ.o" "utility_room_viewRN.phl[3785]";
+connectAttr "controller_root_rotateX.o" "utility_room_viewRN.phl[3786]";
+connectAttr "controller_root_rotateY.o" "utility_room_viewRN.phl[3787]";
+connectAttr "controller_root_rotateZ.o" "utility_room_viewRN.phl[3788]";
+connectAttr "controller_root_scaleX.o" "utility_room_viewRN.phl[3789]";
+connectAttr "controller_root_scaleY.o" "utility_room_viewRN.phl[3790]";
+connectAttr "controller_root_scaleZ.o" "utility_room_viewRN.phl[3791]";
+connectAttr "controller_COG_translateX.o" "utility_room_viewRN.phl[3792]";
+connectAttr "controller_COG_translateY.o" "utility_room_viewRN.phl[3793]";
+connectAttr "controller_COG_translateZ.o" "utility_room_viewRN.phl[3794]";
+connectAttr "controller_COG_rotateX.o" "utility_room_viewRN.phl[3795]";
+connectAttr "controller_COG_rotateY.o" "utility_room_viewRN.phl[3796]";
+connectAttr "controller_COG_rotateZ.o" "utility_room_viewRN.phl[3797]";
+connectAttr "controller_COG_scaleX.o" "utility_room_viewRN.phl[3798]";
+connectAttr "controller_COG_scaleY.o" "utility_room_viewRN.phl[3799]";
+connectAttr "controller_COG_scaleZ.o" "utility_room_viewRN.phl[3800]";
+connectAttr "controller_COG_visibility.o" "utility_room_viewRN.phl[3801]";
+connectAttr "controller_spine3_translateX.o" "utility_room_viewRN.phl[3802]";
+connectAttr "controller_spine3_translateY.o" "utility_room_viewRN.phl[3803]";
+connectAttr "controller_spine3_translateZ.o" "utility_room_viewRN.phl[3804]";
+connectAttr "controller_spine3_rotateX.o" "utility_room_viewRN.phl[3805]";
+connectAttr "controller_spine3_rotateY.o" "utility_room_viewRN.phl[3806]";
+connectAttr "controller_spine3_rotateZ.o" "utility_room_viewRN.phl[3807]";
+connectAttr "controller_spine3_scaleX.o" "utility_room_viewRN.phl[3808]";
+connectAttr "controller_spine3_scaleY.o" "utility_room_viewRN.phl[3809]";
+connectAttr "controller_spine3_scaleZ.o" "utility_room_viewRN.phl[3810]";
+connectAttr "controller_spine3_visibility.o" "utility_room_viewRN.phl[3811]";
+connectAttr "controller_spine2_translateX.o" "utility_room_viewRN.phl[3812]";
+connectAttr "controller_spine2_translateY.o" "utility_room_viewRN.phl[3813]";
+connectAttr "controller_spine2_translateZ.o" "utility_room_viewRN.phl[3814]";
+connectAttr "controller_spine2_rotateX.o" "utility_room_viewRN.phl[3815]";
+connectAttr "controller_spine2_rotateY.o" "utility_room_viewRN.phl[3816]";
+connectAttr "controller_spine2_rotateZ.o" "utility_room_viewRN.phl[3817]";
+connectAttr "controller_spine2_scaleX.o" "utility_room_viewRN.phl[3818]";
+connectAttr "controller_spine2_scaleY.o" "utility_room_viewRN.phl[3819]";
+connectAttr "controller_spine2_scaleZ.o" "utility_room_viewRN.phl[3820]";
+connectAttr "controller_spine2_visibility.o" "utility_room_viewRN.phl[3821]";
+connectAttr "controller_spine1_translateX.o" "utility_room_viewRN.phl[3822]";
+connectAttr "controller_spine1_translateY.o" "utility_room_viewRN.phl[3823]";
+connectAttr "controller_spine1_translateZ.o" "utility_room_viewRN.phl[3824]";
+connectAttr "controller_spine1_rotateX.o" "utility_room_viewRN.phl[3825]";
+connectAttr "controller_spine1_rotateY.o" "utility_room_viewRN.phl[3826]";
+connectAttr "controller_spine1_rotateZ.o" "utility_room_viewRN.phl[3827]";
+connectAttr "controller_spine1_scaleX.o" "utility_room_viewRN.phl[3828]";
+connectAttr "controller_spine1_scaleY.o" "utility_room_viewRN.phl[3829]";
+connectAttr "controller_spine1_scaleZ.o" "utility_room_viewRN.phl[3830]";
+connectAttr "controller_spine1_visibility.o" "utility_room_viewRN.phl[3831]";
+connectAttr "controller_shoulder_translateX.o" "utility_room_viewRN.phl[3832]";
+connectAttr "controller_shoulder_translateY.o" "utility_room_viewRN.phl[3833]";
+connectAttr "controller_shoulder_translateZ.o" "utility_room_viewRN.phl[3834]";
+connectAttr "controller_shoulder_rotateX.o" "utility_room_viewRN.phl[3835]";
+connectAttr "controller_shoulder_rotateY.o" "utility_room_viewRN.phl[3836]";
+connectAttr "controller_shoulder_rotateZ.o" "utility_room_viewRN.phl[3837]";
+connectAttr "controller_shoulder_scaleX.o" "utility_room_viewRN.phl[3838]";
+connectAttr "controller_shoulder_scaleY.o" "utility_room_viewRN.phl[3839]";
+connectAttr "controller_shoulder_scaleZ.o" "utility_room_viewRN.phl[3840]";
+connectAttr "controller_shoulder_visibility.o" "utility_room_viewRN.phl[3841]";
+connectAttr "controller_head_translateX.o" "utility_room_viewRN.phl[3842]";
+connectAttr "controller_head_translateY.o" "utility_room_viewRN.phl[3843]";
+connectAttr "controller_head_translateZ.o" "utility_room_viewRN.phl[3844]";
+connectAttr "controller_head_rotateX.o" "utility_room_viewRN.phl[3845]";
+connectAttr "controller_head_rotateY.o" "utility_room_viewRN.phl[3846]";
+connectAttr "controller_head_rotateZ.o" "utility_room_viewRN.phl[3847]";
+connectAttr "controller_head_scaleX.o" "utility_room_viewRN.phl[3848]";
+connectAttr "controller_head_scaleY.o" "utility_room_viewRN.phl[3849]";
+connectAttr "controller_head_scaleZ.o" "utility_room_viewRN.phl[3850]";
+connectAttr "controller_head_visibility.o" "utility_room_viewRN.phl[3851]";
+connectAttr "nurbsCircle3_translateX.o" "utility_room_viewRN.phl[3852]";
+connectAttr "nurbsCircle3_translateY.o" "utility_room_viewRN.phl[3853]";
+connectAttr "nurbsCircle3_translateZ.o" "utility_room_viewRN.phl[3854]";
+connectAttr "nurbsCircle3_visibility.o" "utility_room_viewRN.phl[3855]";
+connectAttr "nurbsCircle3_rotateX.o" "utility_room_viewRN.phl[3856]";
+connectAttr "nurbsCircle3_rotateY.o" "utility_room_viewRN.phl[3857]";
+connectAttr "nurbsCircle3_rotateZ.o" "utility_room_viewRN.phl[3858]";
+connectAttr "nurbsCircle3_scaleX.o" "utility_room_viewRN.phl[3859]";
+connectAttr "nurbsCircle3_scaleY.o" "utility_room_viewRN.phl[3860]";
+connectAttr "nurbsCircle3_scaleZ.o" "utility_room_viewRN.phl[3861]";
+connectAttr "nurbsCircle2_translateX.o" "utility_room_viewRN.phl[3862]";
+connectAttr "nurbsCircle2_translateY.o" "utility_room_viewRN.phl[3863]";
+connectAttr "nurbsCircle2_translateZ.o" "utility_room_viewRN.phl[3864]";
+connectAttr "nurbsCircle2_visibility.o" "utility_room_viewRN.phl[3865]";
+connectAttr "nurbsCircle2_rotateX.o" "utility_room_viewRN.phl[3866]";
+connectAttr "nurbsCircle2_rotateY.o" "utility_room_viewRN.phl[3867]";
+connectAttr "nurbsCircle2_rotateZ.o" "utility_room_viewRN.phl[3868]";
+connectAttr "nurbsCircle2_scaleX.o" "utility_room_viewRN.phl[3869]";
+connectAttr "nurbsCircle2_scaleY.o" "utility_room_viewRN.phl[3870]";
+connectAttr "nurbsCircle2_scaleZ.o" "utility_room_viewRN.phl[3871]";
+connectAttr "nurbsCircle1_translateX.o" "utility_room_viewRN.phl[3872]";
+connectAttr "nurbsCircle1_translateY.o" "utility_room_viewRN.phl[3873]";
+connectAttr "nurbsCircle1_translateZ.o" "utility_room_viewRN.phl[3874]";
+connectAttr "nurbsCircle1_visibility.o" "utility_room_viewRN.phl[3875]";
+connectAttr "nurbsCircle1_rotateX.o" "utility_room_viewRN.phl[3876]";
+connectAttr "nurbsCircle1_rotateY.o" "utility_room_viewRN.phl[3877]";
+connectAttr "nurbsCircle1_rotateZ.o" "utility_room_viewRN.phl[3878]";
+connectAttr "nurbsCircle1_scaleX.o" "utility_room_viewRN.phl[3879]";
+connectAttr "nurbsCircle1_scaleY.o" "utility_room_viewRN.phl[3880]";
+connectAttr "nurbsCircle1_scaleZ.o" "utility_room_viewRN.phl[3881]";
+connectAttr "controller_hip_translateX.o" "utility_room_viewRN.phl[3882]";
+connectAttr "controller_hip_translateY.o" "utility_room_viewRN.phl[3883]";
+connectAttr "controller_hip_translateZ.o" "utility_room_viewRN.phl[3884]";
+connectAttr "controller_hip_rotateX.o" "utility_room_viewRN.phl[3885]";
+connectAttr "controller_hip_rotateY.o" "utility_room_viewRN.phl[3886]";
+connectAttr "controller_hip_rotateZ.o" "utility_room_viewRN.phl[3887]";
+connectAttr "controller_hip_scaleX.o" "utility_room_viewRN.phl[3888]";
+connectAttr "controller_hip_scaleY.o" "utility_room_viewRN.phl[3889]";
+connectAttr "controller_hip_scaleZ.o" "utility_room_viewRN.phl[3890]";
+connectAttr "controller_hip_visibility.o" "utility_room_viewRN.phl[3891]";
+connectAttr "controller_tailbase_translateX.o" "utility_room_viewRN.phl[3892]";
+connectAttr "controller_tailbase_translateY.o" "utility_room_viewRN.phl[3893]";
+connectAttr "controller_tailbase_translateZ.o" "utility_room_viewRN.phl[3894]";
+connectAttr "controller_tailbase_rotateX.o" "utility_room_viewRN.phl[3895]";
+connectAttr "controller_tailbase_rotateY.o" "utility_room_viewRN.phl[3896]";
+connectAttr "controller_tailbase_rotateZ.o" "utility_room_viewRN.phl[3897]";
+connectAttr "controller_tailbase_scaleX.o" "utility_room_viewRN.phl[3898]";
+connectAttr "controller_tailbase_scaleY.o" "utility_room_viewRN.phl[3899]";
+connectAttr "controller_tailbase_scaleZ.o" "utility_room_viewRN.phl[3900]";
+connectAttr "controller_tailbase_visibility.o" "utility_room_viewRN.phl[3901]";
+connectAttr "controller_tail2_translateX.o" "utility_room_viewRN.phl[3902]";
+connectAttr "controller_tail2_translateY.o" "utility_room_viewRN.phl[3903]";
+connectAttr "controller_tail2_translateZ.o" "utility_room_viewRN.phl[3904]";
+connectAttr "controller_tail2_rotateX.o" "utility_room_viewRN.phl[3905]";
+connectAttr "controller_tail2_rotateY.o" "utility_room_viewRN.phl[3906]";
+connectAttr "controller_tail2_rotateZ.o" "utility_room_viewRN.phl[3907]";
+connectAttr "controller_tail2_scaleX.o" "utility_room_viewRN.phl[3908]";
+connectAttr "controller_tail2_scaleY.o" "utility_room_viewRN.phl[3909]";
+connectAttr "controller_tail2_scaleZ.o" "utility_room_viewRN.phl[3910]";
+connectAttr "controller_tail2_visibility.o" "utility_room_viewRN.phl[3911]";
+connectAttr "controller_tail3_translateX.o" "utility_room_viewRN.phl[3912]";
+connectAttr "controller_tail3_translateY.o" "utility_room_viewRN.phl[3913]";
+connectAttr "controller_tail3_translateZ.o" "utility_room_viewRN.phl[3914]";
+connectAttr "controller_tail3_rotateX.o" "utility_room_viewRN.phl[3915]";
+connectAttr "controller_tail3_rotateY.o" "utility_room_viewRN.phl[3916]";
+connectAttr "controller_tail3_rotateZ.o" "utility_room_viewRN.phl[3917]";
+connectAttr "controller_tail3_scaleX.o" "utility_room_viewRN.phl[3918]";
+connectAttr "controller_tail3_scaleY.o" "utility_room_viewRN.phl[3919]";
+connectAttr "controller_tail3_scaleZ.o" "utility_room_viewRN.phl[3920]";
+connectAttr "controller_tail3_visibility.o" "utility_room_viewRN.phl[3921]";
+connectAttr "controller_tail4_translateX.o" "utility_room_viewRN.phl[3922]";
+connectAttr "controller_tail4_translateY.o" "utility_room_viewRN.phl[3923]";
+connectAttr "controller_tail4_translateZ.o" "utility_room_viewRN.phl[3924]";
+connectAttr "controller_tail4_rotateX.o" "utility_room_viewRN.phl[3925]";
+connectAttr "controller_tail4_rotateY.o" "utility_room_viewRN.phl[3926]";
+connectAttr "controller_tail4_rotateZ.o" "utility_room_viewRN.phl[3927]";
+connectAttr "controller_tail4_scaleX.o" "utility_room_viewRN.phl[3928]";
+connectAttr "controller_tail4_scaleY.o" "utility_room_viewRN.phl[3929]";
+connectAttr "controller_tail4_scaleZ.o" "utility_room_viewRN.phl[3930]";
+connectAttr "controller_tail4_visibility.o" "utility_room_viewRN.phl[3931]";
+connectAttr "controller_tailtip_translateX.o" "utility_room_viewRN.phl[3932]";
+connectAttr "controller_tailtip_translateY.o" "utility_room_viewRN.phl[3933]";
+connectAttr "controller_tailtip_translateZ.o" "utility_room_viewRN.phl[3934]";
+connectAttr "controller_tailtip_rotateX.o" "utility_room_viewRN.phl[3935]";
+connectAttr "controller_tailtip_rotateY.o" "utility_room_viewRN.phl[3936]";
+connectAttr "controller_tailtip_rotateZ.o" "utility_room_viewRN.phl[3937]";
+connectAttr "controller_tailtip_scaleX.o" "utility_room_viewRN.phl[3938]";
+connectAttr "controller_tailtip_scaleY.o" "utility_room_viewRN.phl[3939]";
+connectAttr "controller_tailtip_scaleZ.o" "utility_room_viewRN.phl[3940]";
+connectAttr "controller_tailtip_visibility.o" "utility_room_viewRN.phl[3941]";
+connectAttr "controller_rightLeg_visibility.o" "utility_room_viewRN.phl[3942]";
+connectAttr "controller_rightLeg_translateX.o" "utility_room_viewRN.phl[3943]";
+connectAttr "controller_rightLeg_translateY.o" "utility_room_viewRN.phl[3944]";
+connectAttr "controller_rightLeg_translateZ.o" "utility_room_viewRN.phl[3945]";
+connectAttr "controller_rightLeg_rotateX.o" "utility_room_viewRN.phl[3946]";
+connectAttr "controller_rightLeg_rotateY.o" "utility_room_viewRN.phl[3947]";
+connectAttr "controller_rightLeg_rotateZ.o" "utility_room_viewRN.phl[3948]";
+connectAttr "controller_rightLeg_scaleX.o" "utility_room_viewRN.phl[3949]";
+connectAttr "controller_rightLeg_scaleY.o" "utility_room_viewRN.phl[3950]";
+connectAttr "controller_rightLeg_scaleZ.o" "utility_room_viewRN.phl[3951]";
+connectAttr "nurbsCircle7_translateX.o" "utility_room_viewRN.phl[3952]";
+connectAttr "nurbsCircle7_translateY.o" "utility_room_viewRN.phl[3953]";
+connectAttr "nurbsCircle7_translateZ.o" "utility_room_viewRN.phl[3954]";
+connectAttr "nurbsCircle7_visibility.o" "utility_room_viewRN.phl[3955]";
+connectAttr "nurbsCircle7_rotateX.o" "utility_room_viewRN.phl[3956]";
+connectAttr "nurbsCircle7_rotateY.o" "utility_room_viewRN.phl[3957]";
+connectAttr "nurbsCircle7_rotateZ.o" "utility_room_viewRN.phl[3958]";
+connectAttr "nurbsCircle7_scaleX.o" "utility_room_viewRN.phl[3959]";
+connectAttr "nurbsCircle7_scaleY.o" "utility_room_viewRN.phl[3960]";
+connectAttr "nurbsCircle7_scaleZ.o" "utility_room_viewRN.phl[3961]";
+connectAttr "RightLeg_rotateX.o" "utility_room_viewRN.phl[3962]";
+connectAttr "RightLeg_rotateY.o" "utility_room_viewRN.phl[3963]";
+connectAttr "RightLeg_rotateZ.o" "utility_room_viewRN.phl[3964]";
+connectAttr "RightLeg_translateX.o" "utility_room_viewRN.phl[3965]";
+connectAttr "RightLeg_translateY.o" "utility_room_viewRN.phl[3966]";
+connectAttr "RightLeg_translateZ.o" "utility_room_viewRN.phl[3967]";
+connectAttr "RightLeg_visibility.o" "utility_room_viewRN.phl[3968]";
+connectAttr "RightLeg_scaleX.o" "utility_room_viewRN.phl[3969]";
+connectAttr "RightLeg_scaleY.o" "utility_room_viewRN.phl[3970]";
+connectAttr "RightLeg_scaleZ.o" "utility_room_viewRN.phl[3971]";
+connectAttr "controller_leftArm_visibility.o" "utility_room_viewRN.phl[3972]";
+connectAttr "controller_leftArm_translateX.o" "utility_room_viewRN.phl[3973]";
+connectAttr "controller_leftArm_translateY.o" "utility_room_viewRN.phl[3974]";
+connectAttr "controller_leftArm_translateZ.o" "utility_room_viewRN.phl[3975]";
+connectAttr "controller_leftArm_rotateX.o" "utility_room_viewRN.phl[3976]";
+connectAttr "controller_leftArm_rotateY.o" "utility_room_viewRN.phl[3977]";
+connectAttr "controller_leftArm_rotateZ.o" "utility_room_viewRN.phl[3978]";
+connectAttr "controller_leftArm_scaleX.o" "utility_room_viewRN.phl[3979]";
+connectAttr "controller_leftArm_scaleY.o" "utility_room_viewRN.phl[3980]";
+connectAttr "controller_leftArm_scaleZ.o" "utility_room_viewRN.phl[3981]";
+connectAttr "controller_leftWrist_translateX.o" "utility_room_viewRN.phl[3982]";
+connectAttr "controller_leftWrist_translateY.o" "utility_room_viewRN.phl[3983]";
+connectAttr "controller_leftWrist_translateZ.o" "utility_room_viewRN.phl[3984]";
+connectAttr "controller_leftWrist_rotateX.o" "utility_room_viewRN.phl[3985]";
+connectAttr "controller_leftWrist_rotateY.o" "utility_room_viewRN.phl[3986]";
+connectAttr "controller_leftWrist_rotateZ.o" "utility_room_viewRN.phl[3987]";
+connectAttr "controller_leftWrist_scaleX.o" "utility_room_viewRN.phl[3988]";
+connectAttr "controller_leftWrist_scaleY.o" "utility_room_viewRN.phl[3989]";
+connectAttr "controller_leftWrist_scaleZ.o" "utility_room_viewRN.phl[3990]";
+connectAttr "controller_leftWrist_visibility.o" "utility_room_viewRN.phl[3991]";
+connectAttr "nurbsCircle6_translateX.o" "utility_room_viewRN.phl[3992]";
+connectAttr "nurbsCircle6_translateY.o" "utility_room_viewRN.phl[3993]";
+connectAttr "nurbsCircle6_translateZ.o" "utility_room_viewRN.phl[3994]";
+connectAttr "nurbsCircle6_visibility.o" "utility_room_viewRN.phl[3995]";
+connectAttr "nurbsCircle6_rotateX.o" "utility_room_viewRN.phl[3996]";
+connectAttr "nurbsCircle6_rotateY.o" "utility_room_viewRN.phl[3997]";
+connectAttr "nurbsCircle6_rotateZ.o" "utility_room_viewRN.phl[3998]";
+connectAttr "nurbsCircle6_scaleX.o" "utility_room_viewRN.phl[3999]";
+connectAttr "nurbsCircle6_scaleY.o" "utility_room_viewRN.phl[4000]";
+connectAttr "nurbsCircle6_scaleZ.o" "utility_room_viewRN.phl[4001]";
+connectAttr "nurbsCircle5_translateX.o" "utility_room_viewRN.phl[4002]";
+connectAttr "nurbsCircle5_translateY.o" "utility_room_viewRN.phl[4003]";
+connectAttr "nurbsCircle5_translateZ.o" "utility_room_viewRN.phl[4004]";
+connectAttr "nurbsCircle5_visibility.o" "utility_room_viewRN.phl[4005]";
+connectAttr "nurbsCircle5_rotateX.o" "utility_room_viewRN.phl[4006]";
+connectAttr "nurbsCircle5_rotateY.o" "utility_room_viewRN.phl[4007]";
+connectAttr "nurbsCircle5_rotateZ.o" "utility_room_viewRN.phl[4008]";
+connectAttr "nurbsCircle5_scaleX.o" "utility_room_viewRN.phl[4009]";
+connectAttr "nurbsCircle5_scaleY.o" "utility_room_viewRN.phl[4010]";
+connectAttr "nurbsCircle5_scaleZ.o" "utility_room_viewRN.phl[4011]";
+connectAttr "nurbsCircle2_translateX1.o" "utility_room_viewRN.phl[4012]";
+connectAttr "nurbsCircle2_translateY1.o" "utility_room_viewRN.phl[4013]";
+connectAttr "nurbsCircle2_translateZ1.o" "utility_room_viewRN.phl[4014]";
+connectAttr "nurbsCircle2_visibility1.o" "utility_room_viewRN.phl[4015]";
+connectAttr "nurbsCircle2_rotateX1.o" "utility_room_viewRN.phl[4016]";
+connectAttr "nurbsCircle2_rotateY1.o" "utility_room_viewRN.phl[4017]";
+connectAttr "nurbsCircle2_rotateZ1.o" "utility_room_viewRN.phl[4018]";
+connectAttr "nurbsCircle2_scaleX1.o" "utility_room_viewRN.phl[4019]";
+connectAttr "nurbsCircle2_scaleY1.o" "utility_room_viewRN.phl[4020]";
+connectAttr "nurbsCircle2_scaleZ1.o" "utility_room_viewRN.phl[4021]";
+connectAttr "nurbsCircle3_translateX1.o" "utility_room_viewRN.phl[4022]";
+connectAttr "nurbsCircle3_translateY1.o" "utility_room_viewRN.phl[4023]";
+connectAttr "nurbsCircle3_translateZ1.o" "utility_room_viewRN.phl[4024]";
+connectAttr "nurbsCircle3_visibility1.o" "utility_room_viewRN.phl[4025]";
+connectAttr "nurbsCircle3_rotateX1.o" "utility_room_viewRN.phl[4026]";
+connectAttr "nurbsCircle3_rotateY1.o" "utility_room_viewRN.phl[4027]";
+connectAttr "nurbsCircle3_rotateZ1.o" "utility_room_viewRN.phl[4028]";
+connectAttr "nurbsCircle3_scaleX1.o" "utility_room_viewRN.phl[4029]";
+connectAttr "nurbsCircle3_scaleY1.o" "utility_room_viewRN.phl[4030]";
+connectAttr "nurbsCircle3_scaleZ1.o" "utility_room_viewRN.phl[4031]";
+connectAttr "nurbsCircle4_translateX.o" "utility_room_viewRN.phl[4032]";
+connectAttr "nurbsCircle4_translateY.o" "utility_room_viewRN.phl[4033]";
+connectAttr "nurbsCircle4_translateZ.o" "utility_room_viewRN.phl[4034]";
+connectAttr "nurbsCircle4_visibility.o" "utility_room_viewRN.phl[4035]";
+connectAttr "nurbsCircle4_rotateX.o" "utility_room_viewRN.phl[4036]";
+connectAttr "nurbsCircle4_rotateY.o" "utility_room_viewRN.phl[4037]";
+connectAttr "nurbsCircle4_rotateZ.o" "utility_room_viewRN.phl[4038]";
+connectAttr "nurbsCircle4_scaleX.o" "utility_room_viewRN.phl[4039]";
+connectAttr "nurbsCircle4_scaleY.o" "utility_room_viewRN.phl[4040]";
+connectAttr "nurbsCircle4_scaleZ.o" "utility_room_viewRN.phl[4041]";
+connectAttr "curve6_translateX.o" "utility_room_viewRN.phl[4042]";
+connectAttr "curve6_translateY.o" "utility_room_viewRN.phl[4043]";
+connectAttr "curve6_translateZ.o" "utility_room_viewRN.phl[4044]";
+connectAttr "curve6_visibility.o" "utility_room_viewRN.phl[4045]";
+connectAttr "curve6_rotateX.o" "utility_room_viewRN.phl[4046]";
+connectAttr "curve6_rotateY.o" "utility_room_viewRN.phl[4047]";
+connectAttr "curve6_rotateZ.o" "utility_room_viewRN.phl[4048]";
+connectAttr "curve6_scaleX.o" "utility_room_viewRN.phl[4049]";
+connectAttr "curve6_scaleY.o" "utility_room_viewRN.phl[4050]";
+connectAttr "curve6_scaleZ.o" "utility_room_viewRN.phl[4051]";
+connectAttr "curve7_translateX.o" "utility_room_viewRN.phl[4052]";
+connectAttr "curve7_translateY.o" "utility_room_viewRN.phl[4053]";
+connectAttr "curve7_translateZ.o" "utility_room_viewRN.phl[4054]";
+connectAttr "curve7_visibility.o" "utility_room_viewRN.phl[4055]";
+connectAttr "curve7_rotateX.o" "utility_room_viewRN.phl[4056]";
+connectAttr "curve7_rotateY.o" "utility_room_viewRN.phl[4057]";
+connectAttr "curve7_rotateZ.o" "utility_room_viewRN.phl[4058]";
+connectAttr "curve7_scaleX.o" "utility_room_viewRN.phl[4059]";
+connectAttr "curve7_scaleY.o" "utility_room_viewRN.phl[4060]";
+connectAttr "curve7_scaleZ.o" "utility_room_viewRN.phl[4061]";
+connectAttr "curve8_translateX.o" "utility_room_viewRN.phl[4062]";
+connectAttr "curve8_translateY.o" "utility_room_viewRN.phl[4063]";
+connectAttr "curve8_translateZ.o" "utility_room_viewRN.phl[4064]";
+connectAttr "curve8_visibility.o" "utility_room_viewRN.phl[4065]";
+connectAttr "curve8_rotateX.o" "utility_room_viewRN.phl[4066]";
+connectAttr "curve8_rotateY.o" "utility_room_viewRN.phl[4067]";
+connectAttr "curve8_rotateZ.o" "utility_room_viewRN.phl[4068]";
+connectAttr "curve8_scaleX.o" "utility_room_viewRN.phl[4069]";
+connectAttr "curve8_scaleY.o" "utility_room_viewRN.phl[4070]";
+connectAttr "curve8_scaleZ.o" "utility_room_viewRN.phl[4071]";
+connectAttr "curve9_translateX.o" "utility_room_viewRN.phl[4072]";
+connectAttr "curve9_translateY.o" "utility_room_viewRN.phl[4073]";
+connectAttr "curve9_translateZ.o" "utility_room_viewRN.phl[4074]";
+connectAttr "curve9_visibility.o" "utility_room_viewRN.phl[4075]";
+connectAttr "curve9_rotateX.o" "utility_room_viewRN.phl[4076]";
+connectAttr "curve9_rotateY.o" "utility_room_viewRN.phl[4077]";
+connectAttr "curve9_rotateZ.o" "utility_room_viewRN.phl[4078]";
+connectAttr "curve9_scaleX.o" "utility_room_viewRN.phl[4079]";
+connectAttr "curve9_scaleY.o" "utility_room_viewRN.phl[4080]";
+connectAttr "curve9_scaleZ.o" "utility_room_viewRN.phl[4081]";
+connectAttr "curve10_translateX.o" "utility_room_viewRN.phl[4082]";
+connectAttr "curve10_translateY.o" "utility_room_viewRN.phl[4083]";
+connectAttr "curve10_translateZ.o" "utility_room_viewRN.phl[4084]";
+connectAttr "curve10_visibility.o" "utility_room_viewRN.phl[4085]";
+connectAttr "curve10_rotateX.o" "utility_room_viewRN.phl[4086]";
+connectAttr "curve10_rotateY.o" "utility_room_viewRN.phl[4087]";
+connectAttr "curve10_rotateZ.o" "utility_room_viewRN.phl[4088]";
+connectAttr "curve10_scaleX.o" "utility_room_viewRN.phl[4089]";
+connectAttr "curve10_scaleY.o" "utility_room_viewRN.phl[4090]";
+connectAttr "curve10_scaleZ.o" "utility_room_viewRN.phl[4091]";
+connectAttr "LeftArm_rotateX.o" "utility_room_viewRN.phl[4092]";
+connectAttr "LeftArm_rotateY.o" "utility_room_viewRN.phl[4093]";
+connectAttr "LeftArm_rotateZ.o" "utility_room_viewRN.phl[4094]";
+connectAttr "LeftArm_translateX.o" "utility_room_viewRN.phl[4095]";
+connectAttr "LeftArm_translateY.o" "utility_room_viewRN.phl[4096]";
+connectAttr "LeftArm_translateZ.o" "utility_room_viewRN.phl[4097]";
+connectAttr "LeftArm_visibility.o" "utility_room_viewRN.phl[4098]";
+connectAttr "LeftArm_scaleX.o" "utility_room_viewRN.phl[4099]";
+connectAttr "LeftArm_scaleY.o" "utility_room_viewRN.phl[4100]";
+connectAttr "LeftArm_scaleZ.o" "utility_room_viewRN.phl[4101]";
+connectAttr "controller_rightLeg1_visibility.o" "utility_room_viewRN.phl[4102]";
+connectAttr "controller_rightLeg1_translateX.o" "utility_room_viewRN.phl[4103]";
+connectAttr "controller_rightLeg1_translateY.o" "utility_room_viewRN.phl[4104]";
+connectAttr "controller_rightLeg1_translateZ.o" "utility_room_viewRN.phl[4105]";
+connectAttr "controller_rightLeg1_rotateX.o" "utility_room_viewRN.phl[4106]";
+connectAttr "controller_rightLeg1_rotateY.o" "utility_room_viewRN.phl[4107]";
+connectAttr "controller_rightLeg1_rotateZ.o" "utility_room_viewRN.phl[4108]";
+connectAttr "controller_rightLeg1_scaleX.o" "utility_room_viewRN.phl[4109]";
+connectAttr "controller_rightLeg1_scaleY.o" "utility_room_viewRN.phl[4110]";
+connectAttr "controller_rightLeg1_scaleZ.o" "utility_room_viewRN.phl[4111]";
+connectAttr "nurbsCircle8_visibility.o" "utility_room_viewRN.phl[4112]";
+connectAttr "nurbsCircle8_translateX.o" "utility_room_viewRN.phl[4113]";
+connectAttr "nurbsCircle8_translateY.o" "utility_room_viewRN.phl[4114]";
+connectAttr "nurbsCircle8_translateZ.o" "utility_room_viewRN.phl[4115]";
+connectAttr "nurbsCircle8_rotateX.o" "utility_room_viewRN.phl[4116]";
+connectAttr "nurbsCircle8_rotateY.o" "utility_room_viewRN.phl[4117]";
+connectAttr "nurbsCircle8_rotateZ.o" "utility_room_viewRN.phl[4118]";
+connectAttr "nurbsCircle8_scaleX.o" "utility_room_viewRN.phl[4119]";
+connectAttr "nurbsCircle8_scaleY.o" "utility_room_viewRN.phl[4120]";
+connectAttr "nurbsCircle8_scaleZ.o" "utility_room_viewRN.phl[4121]";
+connectAttr "LeftLeg_rotateX.o" "utility_room_viewRN.phl[4122]";
+connectAttr "LeftLeg_rotateY.o" "utility_room_viewRN.phl[4123]";
+connectAttr "LeftLeg_rotateZ.o" "utility_room_viewRN.phl[4124]";
+connectAttr "LeftLeg_translateX.o" "utility_room_viewRN.phl[4125]";
+connectAttr "LeftLeg_translateY.o" "utility_room_viewRN.phl[4126]";
+connectAttr "LeftLeg_translateZ.o" "utility_room_viewRN.phl[4127]";
+connectAttr "LeftLeg_visibility.o" "utility_room_viewRN.phl[4128]";
+connectAttr "LeftLeg_scaleX.o" "utility_room_viewRN.phl[4129]";
+connectAttr "LeftLeg_scaleY.o" "utility_room_viewRN.phl[4130]";
+connectAttr "LeftLeg_scaleZ.o" "utility_room_viewRN.phl[4131]";
+connectAttr "controller_rightArm_visibility.o" "utility_room_viewRN.phl[4132]";
+connectAttr "controller_rightArm_translateX.o" "utility_room_viewRN.phl[4133]";
+connectAttr "controller_rightArm_translateY.o" "utility_room_viewRN.phl[4134]";
+connectAttr "controller_rightArm_translateZ.o" "utility_room_viewRN.phl[4135]";
+connectAttr "controller_rightArm_rotateX.o" "utility_room_viewRN.phl[4136]";
+connectAttr "controller_rightArm_rotateY.o" "utility_room_viewRN.phl[4137]";
+connectAttr "controller_rightArm_rotateZ.o" "utility_room_viewRN.phl[4138]";
+connectAttr "controller_rightArm_scaleX.o" "utility_room_viewRN.phl[4139]";
+connectAttr "controller_rightArm_scaleY.o" "utility_room_viewRN.phl[4140]";
+connectAttr "controller_rightArm_scaleZ.o" "utility_room_viewRN.phl[4141]";
+connectAttr "controller_rightWrist_translateX.o" "utility_room_viewRN.phl[4142]"
+		;
+connectAttr "controller_rightWrist_translateY.o" "utility_room_viewRN.phl[4143]"
+		;
+connectAttr "controller_rightWrist_translateZ.o" "utility_room_viewRN.phl[4144]"
+		;
+connectAttr "controller_rightWrist_rotateX.o" "utility_room_viewRN.phl[4145]";
+connectAttr "controller_rightWrist_rotateY.o" "utility_room_viewRN.phl[4146]";
+connectAttr "controller_rightWrist_rotateZ.o" "utility_room_viewRN.phl[4147]";
+connectAttr "controller_rightWrist_scaleX.o" "utility_room_viewRN.phl[4148]";
+connectAttr "controller_rightWrist_scaleY.o" "utility_room_viewRN.phl[4149]";
+connectAttr "controller_rightWrist_scaleZ.o" "utility_room_viewRN.phl[4150]";
+connectAttr "controller_rightWrist_visibility.o" "utility_room_viewRN.phl[4151]"
+		;
+connectAttr "nurbsCircle1_translateX1.o" "utility_room_viewRN.phl[4152]";
+connectAttr "nurbsCircle1_translateY1.o" "utility_room_viewRN.phl[4153]";
+connectAttr "nurbsCircle1_translateZ1.o" "utility_room_viewRN.phl[4154]";
+connectAttr "nurbsCircle1_visibility1.o" "utility_room_viewRN.phl[4155]";
+connectAttr "nurbsCircle1_rotateX1.o" "utility_room_viewRN.phl[4156]";
+connectAttr "nurbsCircle1_rotateY1.o" "utility_room_viewRN.phl[4157]";
+connectAttr "nurbsCircle1_rotateZ1.o" "utility_room_viewRN.phl[4158]";
+connectAttr "nurbsCircle1_scaleX1.o" "utility_room_viewRN.phl[4159]";
+connectAttr "nurbsCircle1_scaleY1.o" "utility_room_viewRN.phl[4160]";
+connectAttr "nurbsCircle1_scaleZ1.o" "utility_room_viewRN.phl[4161]";
+connectAttr "nurbsCircle9_translateX.o" "utility_room_viewRN.phl[4162]";
+connectAttr "nurbsCircle9_translateY.o" "utility_room_viewRN.phl[4163]";
+connectAttr "nurbsCircle9_translateZ.o" "utility_room_viewRN.phl[4164]";
+connectAttr "nurbsCircle9_visibility.o" "utility_room_viewRN.phl[4165]";
+connectAttr "nurbsCircle9_rotateX.o" "utility_room_viewRN.phl[4166]";
+connectAttr "nurbsCircle9_rotateY.o" "utility_room_viewRN.phl[4167]";
+connectAttr "nurbsCircle9_rotateZ.o" "utility_room_viewRN.phl[4168]";
+connectAttr "nurbsCircle9_scaleX.o" "utility_room_viewRN.phl[4169]";
+connectAttr "nurbsCircle9_scaleY.o" "utility_room_viewRN.phl[4170]";
+connectAttr "nurbsCircle9_scaleZ.o" "utility_room_viewRN.phl[4171]";
+connectAttr "nurbsCircle10_translateX.o" "utility_room_viewRN.phl[4172]";
+connectAttr "nurbsCircle10_translateY.o" "utility_room_viewRN.phl[4173]";
+connectAttr "nurbsCircle10_translateZ.o" "utility_room_viewRN.phl[4174]";
+connectAttr "nurbsCircle10_visibility.o" "utility_room_viewRN.phl[4175]";
+connectAttr "nurbsCircle10_rotateX.o" "utility_room_viewRN.phl[4176]";
+connectAttr "nurbsCircle10_rotateY.o" "utility_room_viewRN.phl[4177]";
+connectAttr "nurbsCircle10_rotateZ.o" "utility_room_viewRN.phl[4178]";
+connectAttr "nurbsCircle10_scaleX.o" "utility_room_viewRN.phl[4179]";
+connectAttr "nurbsCircle10_scaleY.o" "utility_room_viewRN.phl[4180]";
+connectAttr "nurbsCircle10_scaleZ.o" "utility_room_viewRN.phl[4181]";
+connectAttr "nurbsCircle11_translateX.o" "utility_room_viewRN.phl[4182]";
+connectAttr "nurbsCircle11_translateY.o" "utility_room_viewRN.phl[4183]";
+connectAttr "nurbsCircle11_translateZ.o" "utility_room_viewRN.phl[4184]";
+connectAttr "nurbsCircle11_visibility.o" "utility_room_viewRN.phl[4185]";
+connectAttr "nurbsCircle11_rotateX.o" "utility_room_viewRN.phl[4186]";
+connectAttr "nurbsCircle11_rotateY.o" "utility_room_viewRN.phl[4187]";
+connectAttr "nurbsCircle11_rotateZ.o" "utility_room_viewRN.phl[4188]";
+connectAttr "nurbsCircle11_scaleX.o" "utility_room_viewRN.phl[4189]";
+connectAttr "nurbsCircle11_scaleY.o" "utility_room_viewRN.phl[4190]";
+connectAttr "nurbsCircle11_scaleZ.o" "utility_room_viewRN.phl[4191]";
+connectAttr "nurbsCircle12_translateX.o" "utility_room_viewRN.phl[4192]";
+connectAttr "nurbsCircle12_translateY.o" "utility_room_viewRN.phl[4193]";
+connectAttr "nurbsCircle12_translateZ.o" "utility_room_viewRN.phl[4194]";
+connectAttr "nurbsCircle12_visibility.o" "utility_room_viewRN.phl[4195]";
+connectAttr "nurbsCircle12_rotateX.o" "utility_room_viewRN.phl[4196]";
+connectAttr "nurbsCircle12_rotateY.o" "utility_room_viewRN.phl[4197]";
+connectAttr "nurbsCircle12_rotateZ.o" "utility_room_viewRN.phl[4198]";
+connectAttr "nurbsCircle12_scaleX.o" "utility_room_viewRN.phl[4199]";
+connectAttr "nurbsCircle12_scaleY.o" "utility_room_viewRN.phl[4200]";
+connectAttr "nurbsCircle12_scaleZ.o" "utility_room_viewRN.phl[4201]";
+connectAttr "curve1_translateX.o" "utility_room_viewRN.phl[4202]";
+connectAttr "curve1_translateY.o" "utility_room_viewRN.phl[4203]";
+connectAttr "curve1_translateZ.o" "utility_room_viewRN.phl[4204]";
+connectAttr "curve1_visibility.o" "utility_room_viewRN.phl[4205]";
+connectAttr "curve1_rotateX.o" "utility_room_viewRN.phl[4206]";
+connectAttr "curve1_rotateY.o" "utility_room_viewRN.phl[4207]";
+connectAttr "curve1_rotateZ.o" "utility_room_viewRN.phl[4208]";
+connectAttr "curve1_scaleX.o" "utility_room_viewRN.phl[4209]";
+connectAttr "curve1_scaleY.o" "utility_room_viewRN.phl[4210]";
+connectAttr "curve1_scaleZ.o" "utility_room_viewRN.phl[4211]";
+connectAttr "curve2_translateX.o" "utility_room_viewRN.phl[4212]";
+connectAttr "curve2_translateY.o" "utility_room_viewRN.phl[4213]";
+connectAttr "curve2_translateZ.o" "utility_room_viewRN.phl[4214]";
+connectAttr "curve2_visibility.o" "utility_room_viewRN.phl[4215]";
+connectAttr "curve2_rotateX.o" "utility_room_viewRN.phl[4216]";
+connectAttr "curve2_rotateY.o" "utility_room_viewRN.phl[4217]";
+connectAttr "curve2_rotateZ.o" "utility_room_viewRN.phl[4218]";
+connectAttr "curve2_scaleX.o" "utility_room_viewRN.phl[4219]";
+connectAttr "curve2_scaleY.o" "utility_room_viewRN.phl[4220]";
+connectAttr "curve2_scaleZ.o" "utility_room_viewRN.phl[4221]";
+connectAttr "curve3_translateX.o" "utility_room_viewRN.phl[4222]";
+connectAttr "curve3_translateY.o" "utility_room_viewRN.phl[4223]";
+connectAttr "curve3_translateZ.o" "utility_room_viewRN.phl[4224]";
+connectAttr "curve3_visibility.o" "utility_room_viewRN.phl[4225]";
+connectAttr "curve3_rotateX.o" "utility_room_viewRN.phl[4226]";
+connectAttr "curve3_rotateY.o" "utility_room_viewRN.phl[4227]";
+connectAttr "curve3_rotateZ.o" "utility_room_viewRN.phl[4228]";
+connectAttr "curve3_scaleX.o" "utility_room_viewRN.phl[4229]";
+connectAttr "curve3_scaleY.o" "utility_room_viewRN.phl[4230]";
+connectAttr "curve3_scaleZ.o" "utility_room_viewRN.phl[4231]";
+connectAttr "curve4_translateX.o" "utility_room_viewRN.phl[4232]";
+connectAttr "curve4_translateY.o" "utility_room_viewRN.phl[4233]";
+connectAttr "curve4_translateZ.o" "utility_room_viewRN.phl[4234]";
+connectAttr "curve4_visibility.o" "utility_room_viewRN.phl[4235]";
+connectAttr "curve4_rotateX.o" "utility_room_viewRN.phl[4236]";
+connectAttr "curve4_rotateY.o" "utility_room_viewRN.phl[4237]";
+connectAttr "curve4_rotateZ.o" "utility_room_viewRN.phl[4238]";
+connectAttr "curve4_scaleX.o" "utility_room_viewRN.phl[4239]";
+connectAttr "curve4_scaleY.o" "utility_room_viewRN.phl[4240]";
+connectAttr "curve4_scaleZ.o" "utility_room_viewRN.phl[4241]";
+connectAttr "curve5_translateX.o" "utility_room_viewRN.phl[4242]";
+connectAttr "curve5_translateY.o" "utility_room_viewRN.phl[4243]";
+connectAttr "curve5_translateZ.o" "utility_room_viewRN.phl[4244]";
+connectAttr "curve5_visibility.o" "utility_room_viewRN.phl[4245]";
+connectAttr "curve5_rotateX.o" "utility_room_viewRN.phl[4246]";
+connectAttr "curve5_rotateY.o" "utility_room_viewRN.phl[4247]";
+connectAttr "curve5_rotateZ.o" "utility_room_viewRN.phl[4248]";
+connectAttr "curve5_scaleX.o" "utility_room_viewRN.phl[4249]";
+connectAttr "curve5_scaleY.o" "utility_room_viewRN.phl[4250]";
+connectAttr "curve5_scaleZ.o" "utility_room_viewRN.phl[4251]";
+connectAttr "RightArm_rotateX.o" "utility_room_viewRN.phl[4252]";
+connectAttr "RightArm_rotateY.o" "utility_room_viewRN.phl[4253]";
+connectAttr "RightArm_rotateZ.o" "utility_room_viewRN.phl[4254]";
+connectAttr "RightArm_translateX.o" "utility_room_viewRN.phl[4255]";
+connectAttr "RightArm_translateY.o" "utility_room_viewRN.phl[4256]";
+connectAttr "RightArm_translateZ.o" "utility_room_viewRN.phl[4257]";
+connectAttr "RightArm_visibility.o" "utility_room_viewRN.phl[4258]";
+connectAttr "RightArm_scaleX.o" "utility_room_viewRN.phl[4259]";
+connectAttr "RightArm_scaleY.o" "utility_room_viewRN.phl[4260]";
+connectAttr "RightArm_scaleZ.o" "utility_room_viewRN.phl[4261]";
+connectAttr "blendShape1_oh_shit.o" "utility_room_viewRN.phl[4262]";
+connectAttr "blendShape1_eyes_tight.o" "utility_room_viewRN.phl[4263]";
+connectAttr "blendShape1_DO_NOT_TOUCH.o" "utility_room_viewRN.phl[4264]";
+connectAttr "blendShape1_smile_closed_mouth.o" "utility_room_viewRN.phl[4265]";
+connectAttr "blendShape1_leftFwd.o" "utility_room_viewRN.phl[4266]";
+connectAttr "blendShape1_rightFwd.o" "utility_room_viewRN.phl[4267]";
+connectAttr "blendShape1_blink.o" "utility_room_viewRN.phl[4268]";
+connectAttr "blendShape1_leftSide.o" "utility_room_viewRN.phl[4269]";
+connectAttr "blendShape1_rightSide.o" "utility_room_viewRN.phl[4270]";
+connectAttr "blendShape1_nose.o" "utility_room_viewRN.phl[4271]";
+connectAttr "blendShape1_neutral.o" "utility_room_viewRN.phl[4272]";
+connectAttr "blendShape1_super_angry.o" "utility_room_viewRN.phl[4273]";
+connectAttr "blendShape1_slightly_angry.o" "utility_room_viewRN.phl[4274]";
+connectAttr "blendShape1_smile1.o" "utility_room_viewRN.phl[4275]";
+connectAttr "blendShape1_pervy.o" "utility_room_viewRN.phl[4276]";
+connectAttr "blendShape1_smile.o" "utility_room_viewRN.phl[4277]";
+connectAttr "at_dryer_visibility.o" "utility_room_viewRN.phl[4407]";
+connectAttr "at_dryer_translateX.o" "utility_room_viewRN.phl[4408]";
+connectAttr "at_dryer_translateY.o" "utility_room_viewRN.phl[4409]";
+connectAttr "at_dryer_translateZ.o" "utility_room_viewRN.phl[4410]";
+connectAttr "at_dryer_rotateX.o" "utility_room_viewRN.phl[4411]";
+connectAttr "at_dryer_rotateY.o" "utility_room_viewRN.phl[4412]";
+connectAttr "at_dryer_rotateZ.o" "utility_room_viewRN.phl[4413]";
+connectAttr "at_dryer_scaleX.o" "utility_room_viewRN.phl[4414]";
+connectAttr "at_dryer_scaleY.o" "utility_room_viewRN.phl[4415]";
+connectAttr "at_dryer_scaleZ.o" "utility_room_viewRN.phl[4416]";
+connectAttr "at_dryerShape_focalLength.o" "utility_room_viewRN.phl[4417]";
+connectAttr "utility_room_view_nClothShape1Cache1.ocd[0]" "utility_room_viewRN.phl[4418]"
+		;
+connectAttr "utility_room_view_nClothShape1Cache1.ir" "utility_room_viewRN.phl[4419]"
+		;
+connectAttr "controller_main01_translateX.o" "utility_room_viewRN.phl[3565]";
+connectAttr "controller_main01_translateY1.o" "utility_room_viewRN.phl[3566]";
+connectAttr "controller_main01_translateZ.o" "utility_room_viewRN.phl[3567]";
+connectAttr "controller_main01_rotateX1.o" "utility_room_viewRN.phl[3568]";
+connectAttr "controller_main01_rotateY.o" "utility_room_viewRN.phl[3569]";
+connectAttr "controller_main01_rotateZ1.o" "utility_room_viewRN.phl[3570]";
+connectAttr "controller_main01_scaleX.o" "utility_room_viewRN.phl[3571]";
+connectAttr "controller_main01_scaleY.o" "utility_room_viewRN.phl[3572]";
+connectAttr "controller_main01_scaleZ.o" "utility_room_viewRN.phl[3573]";
+connectAttr "pig_right_eye_rotateX.o" "utility_room_viewRN.phl[3574]";
+connectAttr "pig_right_eye_rotateY.o" "utility_room_viewRN.phl[3575]";
+connectAttr "pig_right_eye_rotateZ.o" "utility_room_viewRN.phl[3576]";
+connectAttr "pig_right_eye_visibility.o" "utility_room_viewRN.phl[3577]";
+connectAttr "pig_right_eye_translateX.o" "utility_room_viewRN.phl[3578]";
+connectAttr "pig_right_eye_translateY.o" "utility_room_viewRN.phl[3579]";
+connectAttr "pig_right_eye_translateZ.o" "utility_room_viewRN.phl[3580]";
+connectAttr "pig_right_eye_scaleX.o" "utility_room_viewRN.phl[3581]";
+connectAttr "pig_right_eye_scaleY.o" "utility_room_viewRN.phl[3582]";
+connectAttr "pig_right_eye_scaleZ.o" "utility_room_viewRN.phl[3583]";
+connectAttr "pig_left_eye_rotateX.o" "utility_room_viewRN.phl[3584]";
+connectAttr "pig_left_eye_rotateY.o" "utility_room_viewRN.phl[3585]";
+connectAttr "pig_left_eye_rotateZ.o" "utility_room_viewRN.phl[3586]";
+connectAttr "pig_left_eye_visibility.o" "utility_room_viewRN.phl[3587]";
+connectAttr "pig_left_eye_translateX.o" "utility_room_viewRN.phl[3588]";
+connectAttr "pig_left_eye_translateY.o" "utility_room_viewRN.phl[3589]";
+connectAttr "pig_left_eye_translateZ.o" "utility_room_viewRN.phl[3590]";
+connectAttr "pig_left_eye_scaleX.o" "utility_room_viewRN.phl[3591]";
+connectAttr "pig_left_eye_scaleY.o" "utility_room_viewRN.phl[3592]";
+connectAttr "pig_left_eye_scaleZ.o" "utility_room_viewRN.phl[3593]";
+connectAttr "stretchr_ctrl01_translateX.o" "utility_room_viewRN.phl[3594]";
+connectAttr "stretchr_ctrl01_translateY.o" "utility_room_viewRN.phl[3595]";
+connectAttr "stretchr_ctrl01_translateZ.o" "utility_room_viewRN.phl[3596]";
+connectAttr "stretchr_ctrl01_rotateX.o" "utility_room_viewRN.phl[3597]";
+connectAttr "stretchr_ctrl01_rotateY.o" "utility_room_viewRN.phl[3598]";
+connectAttr "stretchr_ctrl01_rotateZ.o" "utility_room_viewRN.phl[3599]";
+connectAttr "stretchr_ctrl01_scaleX.o" "utility_room_viewRN.phl[3600]";
+connectAttr "stretchr_ctrl01_scaleY.o" "utility_room_viewRN.phl[3601]";
+connectAttr "stretchr_ctrl01_scaleZ.o" "utility_room_viewRN.phl[3602]";
+connectAttr "stretchr_ctrl01_visibility.o" "utility_room_viewRN.phl[3603]";
+connectAttr "controller_L_backfoot01_rotateX.o" "utility_room_viewRN.phl[3604]";
+connectAttr "controller_L_backfoot01_rotateY.o" "utility_room_viewRN.phl[3605]";
+connectAttr "controller_L_backfoot01_rotateZ.o" "utility_room_viewRN.phl[3606]";
+connectAttr "controller_L_backfoot01_translateX.o" "utility_room_viewRN.phl[3607]"
+		;
+connectAttr "controller_L_backfoot01_translateY.o" "utility_room_viewRN.phl[3608]"
+		;
+connectAttr "controller_L_backfoot01_translateZ.o" "utility_room_viewRN.phl[3609]"
+		;
+connectAttr "controller_L_backfoot01_scaleX.o" "utility_room_viewRN.phl[3610]";
+connectAttr "controller_L_backfoot01_scaleY.o" "utility_room_viewRN.phl[3611]";
+connectAttr "controller_L_backfoot01_scaleZ.o" "utility_room_viewRN.phl[3612]";
+connectAttr "controller_R_backfoot01_rotateX.o" "utility_room_viewRN.phl[3613]";
+connectAttr "controller_R_backfoot01_rotateY.o" "utility_room_viewRN.phl[3614]";
+connectAttr "controller_R_backfoot01_rotateZ.o" "utility_room_viewRN.phl[3615]";
+connectAttr "controller_R_backfoot01_translateX.o" "utility_room_viewRN.phl[3616]"
+		;
+connectAttr "controller_R_backfoot01_translateY.o" "utility_room_viewRN.phl[3617]"
+		;
+connectAttr "controller_R_backfoot01_translateZ.o" "utility_room_viewRN.phl[3618]"
+		;
+connectAttr "controller_R_backfoot01_scaleX.o" "utility_room_viewRN.phl[3619]";
+connectAttr "controller_R_backfoot01_scaleY.o" "utility_room_viewRN.phl[3620]";
+connectAttr "controller_R_backfoot01_scaleZ.o" "utility_room_viewRN.phl[3621]";
+connectAttr "hip_rotation_ctrl01_translateX.o" "utility_room_viewRN.phl[3622]";
+connectAttr "hip_rotation_ctrl01_translateY.o" "utility_room_viewRN.phl[3623]";
+connectAttr "hip_rotation_ctrl01_translateZ.o" "utility_room_viewRN.phl[3624]";
+connectAttr "hip_rotation_ctrl01_rotateX.o" "utility_room_viewRN.phl[3625]";
+connectAttr "hip_rotation_ctrl01_rotateY.o" "utility_room_viewRN.phl[3626]";
+connectAttr "hip_rotation_ctrl01_rotateZ.o" "utility_room_viewRN.phl[3627]";
+connectAttr "hip_rotation_ctrl01_scaleX.o" "utility_room_viewRN.phl[3628]";
+connectAttr "hip_rotation_ctrl01_scaleY.o" "utility_room_viewRN.phl[3629]";
+connectAttr "hip_rotation_ctrl01_scaleZ.o" "utility_room_viewRN.phl[3630]";
+connectAttr "utility_room_viewRN.phl[3631]" "tail_2control01_parentConstraint1.tg[0].tt"
+		;
+connectAttr "pairBlend2.otx" "utility_room_viewRN.phl[3632]";
+connectAttr "pairBlend2.oty" "utility_room_viewRN.phl[3633]";
+connectAttr "pairBlend2.otz" "utility_room_viewRN.phl[3634]";
+connectAttr "utility_room_viewRN.phl[3635]" "tail_2control01_parentConstraint1.tg[0].trp"
+		;
+connectAttr "utility_room_viewRN.phl[3636]" "tail_2control01_parentConstraint1.tg[0].trt"
+		;
+connectAttr "utility_room_viewRN.phl[3637]" "tail_2control01_parentConstraint1.tg[0].tr"
+		;
+connectAttr "pairBlend2.orx" "utility_room_viewRN.phl[3638]";
+connectAttr "pairBlend2.ory" "utility_room_viewRN.phl[3639]";
+connectAttr "pairBlend2.orz" "utility_room_viewRN.phl[3640]";
+connectAttr "utility_room_viewRN.phl[3641]" "tail_2control01_parentConstraint1.tg[0].tro"
+		;
+connectAttr "utility_room_viewRN.phl[3642]" "tail_2control01_parentConstraint1.tg[0].ts"
+		;
+connectAttr "tail_1control01_scaleX.o" "utility_room_viewRN.phl[3643]";
+connectAttr "tail_1control01_scaleY.o" "utility_room_viewRN.phl[3644]";
+connectAttr "tail_1control01_scaleZ.o" "utility_room_viewRN.phl[3645]";
+connectAttr "utility_room_viewRN.phl[3646]" "tail_2control01_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "utility_room_viewRN.phl[3647]" "pairBlend2.w";
+connectAttr "tail_1control01_blendParent1.o" "utility_room_viewRN.phl[3648]";
+connectAttr "utility_room_viewRN.phl[3649]" "tail_3control01_parentConstraint1.tg[0].tt"
+		;
+connectAttr "pairBlend4.otx" "utility_room_viewRN.phl[3650]";
+connectAttr "pairBlend4.oty" "utility_room_viewRN.phl[3651]";
+connectAttr "pairBlend4.otz" "utility_room_viewRN.phl[3652]";
+connectAttr "utility_room_viewRN.phl[3653]" "tail_2control01_parentConstraint1.crp"
+		;
+connectAttr "utility_room_viewRN.phl[3654]" "tail_3control01_parentConstraint1.tg[0].trp"
+		;
+connectAttr "utility_room_viewRN.phl[3655]" "tail_2control01_parentConstraint1.crt"
+		;
+connectAttr "utility_room_viewRN.phl[3656]" "tail_3control01_parentConstraint1.tg[0].trt"
+		;
+connectAttr "utility_room_viewRN.phl[3657]" "tail_3control01_parentConstraint1.tg[0].tr"
+		;
+connectAttr "pairBlend4.orx" "utility_room_viewRN.phl[3658]";
+connectAttr "pairBlend4.ory" "utility_room_viewRN.phl[3659]";
+connectAttr "pairBlend4.orz" "utility_room_viewRN.phl[3660]";
+connectAttr "utility_room_viewRN.phl[3661]" "tail_2control01_parentConstraint1.cro"
+		;
+connectAttr "utility_room_viewRN.phl[3662]" "tail_3control01_parentConstraint1.tg[0].tro"
+		;
+connectAttr "utility_room_viewRN.phl[3663]" "tail_3control01_parentConstraint1.tg[0].ts"
+		;
+connectAttr "tail_2control01_scaleX.o" "utility_room_viewRN.phl[3664]";
+connectAttr "tail_2control01_scaleY.o" "utility_room_viewRN.phl[3665]";
+connectAttr "tail_2control01_scaleZ.o" "utility_room_viewRN.phl[3666]";
+connectAttr "utility_room_viewRN.phl[3667]" "tail_3control01_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "utility_room_viewRN.phl[3668]" "pairBlend4.w";
+connectAttr "tail_2control01_blendParent1.o" "utility_room_viewRN.phl[3669]";
+connectAttr "utility_room_viewRN.phl[3670]" "tail_2control01_parentConstraint1.cpim"
+		;
+connectAttr "utility_room_viewRN.phl[3671]" "tail_4control01_parentConstraint1.tg[0].tt"
+		;
+connectAttr "tail_3control01_parentConstraint1.ctx" "utility_room_viewRN.phl[3672]"
+		;
+connectAttr "tail_3control01_parentConstraint1.cty" "utility_room_viewRN.phl[3673]"
+		;
+connectAttr "tail_3control01_parentConstraint1.ctz" "utility_room_viewRN.phl[3674]"
+		;
+connectAttr "utility_room_viewRN.phl[3675]" "tail_3control01_parentConstraint1.crp"
+		;
+connectAttr "utility_room_viewRN.phl[3676]" "tail_4control01_parentConstraint1.tg[0].trp"
+		;
+connectAttr "utility_room_viewRN.phl[3677]" "tail_3control01_parentConstraint1.crt"
+		;
+connectAttr "utility_room_viewRN.phl[3678]" "tail_4control01_parentConstraint1.tg[0].trt"
+		;
+connectAttr "utility_room_viewRN.phl[3679]" "tail_4control01_parentConstraint1.tg[0].tr"
+		;
+connectAttr "tail_3control01_parentConstraint1.crx" "utility_room_viewRN.phl[3680]"
+		;
+connectAttr "tail_3control01_parentConstraint1.cry" "utility_room_viewRN.phl[3681]"
+		;
+connectAttr "tail_3control01_parentConstraint1.crz" "utility_room_viewRN.phl[3682]"
+		;
+connectAttr "utility_room_viewRN.phl[3683]" "tail_3control01_parentConstraint1.cro"
+		;
+connectAttr "utility_room_viewRN.phl[3684]" "tail_4control01_parentConstraint1.tg[0].tro"
+		;
+connectAttr "utility_room_viewRN.phl[3685]" "tail_4control01_parentConstraint1.tg[0].ts"
+		;
+connectAttr "utility_room_viewRN.phl[3686]" "tail_4control01_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "utility_room_viewRN.phl[3687]" "tail_3control01_parentConstraint1.cpim"
+		;
+connectAttr "tail_4control01_parentConstraint1.ctx" "utility_room_viewRN.phl[3688]"
+		;
+connectAttr "tail_4control01_parentConstraint1.cty" "utility_room_viewRN.phl[3689]"
+		;
+connectAttr "tail_4control01_parentConstraint1.ctz" "utility_room_viewRN.phl[3690]"
+		;
+connectAttr "utility_room_viewRN.phl[3691]" "tail_4control01_parentConstraint1.crp"
+		;
+connectAttr "utility_room_viewRN.phl[3692]" "tail_4control01_parentConstraint1.crt"
+		;
+connectAttr "tail_4control01_parentConstraint1.crx" "utility_room_viewRN.phl[3693]"
+		;
+connectAttr "tail_4control01_parentConstraint1.cry" "utility_room_viewRN.phl[3694]"
+		;
+connectAttr "tail_4control01_parentConstraint1.crz" "utility_room_viewRN.phl[3695]"
+		;
+connectAttr "utility_room_viewRN.phl[3696]" "tail_4control01_parentConstraint1.cro"
+		;
+connectAttr "utility_room_viewRN.phl[3697]" "tail_4control01_parentConstraint1.cpim"
+		;
+connectAttr "stretchf_ctrl01_translateX.o" "utility_room_viewRN.phl[3698]";
+connectAttr "stretchf_ctrl01_translateY.o" "utility_room_viewRN.phl[3699]";
+connectAttr "stretchf_ctrl01_translateZ.o" "utility_room_viewRN.phl[3700]";
+connectAttr "stretchf_ctrl01_rotateX.o" "utility_room_viewRN.phl[3701]";
+connectAttr "stretchf_ctrl01_rotateY.o" "utility_room_viewRN.phl[3702]";
+connectAttr "stretchf_ctrl01_rotateZ.o" "utility_room_viewRN.phl[3703]";
+connectAttr "stretchf_ctrl01_scaleX.o" "utility_room_viewRN.phl[3704]";
+connectAttr "stretchf_ctrl01_scaleY.o" "utility_room_viewRN.phl[3705]";
+connectAttr "stretchf_ctrl01_scaleZ.o" "utility_room_viewRN.phl[3706]";
+connectAttr "stretchf_ctrl01_visibility.o" "utility_room_viewRN.phl[3707]";
+connectAttr "controller_L_frontfoot01_rotateX.o" "utility_room_viewRN.phl[3708]"
+		;
+connectAttr "controller_L_frontfoot01_rotateY.o" "utility_room_viewRN.phl[3709]"
+		;
+connectAttr "controller_L_frontfoot01_rotateZ.o" "utility_room_viewRN.phl[3710]"
+		;
+connectAttr "controller_L_frontfoot01_translateX.o" "utility_room_viewRN.phl[3711]"
+		;
+connectAttr "controller_L_frontfoot01_translateY.o" "utility_room_viewRN.phl[3712]"
+		;
+connectAttr "controller_L_frontfoot01_translateZ.o" "utility_room_viewRN.phl[3713]"
+		;
+connectAttr "controller_L_frontfoot01_scaleX.o" "utility_room_viewRN.phl[3714]";
+connectAttr "controller_L_frontfoot01_scaleY.o" "utility_room_viewRN.phl[3715]";
+connectAttr "controller_L_frontfoot01_scaleZ.o" "utility_room_viewRN.phl[3716]";
+connectAttr "controller_R_frontfoot01_rotateX.o" "utility_room_viewRN.phl[3717]"
+		;
+connectAttr "controller_R_frontfoot01_rotateY.o" "utility_room_viewRN.phl[3718]"
+		;
+connectAttr "controller_R_frontfoot01_rotateZ.o" "utility_room_viewRN.phl[3719]"
+		;
+connectAttr "controller_R_frontfoot01_translateX.o" "utility_room_viewRN.phl[3720]"
+		;
+connectAttr "controller_R_frontfoot01_translateY.o" "utility_room_viewRN.phl[3721]"
+		;
+connectAttr "controller_R_frontfoot01_translateZ.o" "utility_room_viewRN.phl[3722]"
+		;
+connectAttr "controller_R_frontfoot01_scaleX.o" "utility_room_viewRN.phl[3723]";
+connectAttr "controller_R_frontfoot01_scaleY.o" "utility_room_viewRN.phl[3724]";
+connectAttr "controller_R_frontfoot01_scaleZ.o" "utility_room_viewRN.phl[3725]";
+connectAttr "pairBlend5.oty" "utility_room_viewRN.phl[3726]";
+connectAttr "shoulders_rotation_ctrl01_translateX.o" "utility_room_viewRN.phl[3727]"
+		;
+connectAttr "shoulders_rotation_ctrl01_translateZ.o" "utility_room_viewRN.phl[3728]"
+		;
+connectAttr "pairBlend5.orx" "utility_room_viewRN.phl[3729]";
+connectAttr "pairBlend5.ory" "utility_room_viewRN.phl[3730]";
+connectAttr "pairBlend5.orz" "utility_room_viewRN.phl[3731]";
+connectAttr "shoulders_rotation_ctrl01_scaleX.o" "utility_room_viewRN.phl[3732]"
+		;
+connectAttr "shoulders_rotation_ctrl01_scaleY.o" "utility_room_viewRN.phl[3733]"
+		;
+connectAttr "shoulders_rotation_ctrl01_scaleZ.o" "utility_room_viewRN.phl[3734]"
+		;
+connectAttr "utility_room_viewRN.phl[3735]" "pairBlend5.w";
+connectAttr "shoulders_rotation_ctrl01_blendParent1.o" "utility_room_viewRN.phl[3736]"
+		;
+connectAttr "utility_room_viewRN.phl[3737]" "pairBlend5.ity2";
+connectAttr "utility_room_viewRN.phl[3738]" "pairBlend5.irx2";
+connectAttr "utility_room_viewRN.phl[3739]" "pairBlend5.iry2";
+connectAttr "utility_room_viewRN.phl[3740]" "pairBlend5.irz2";
+connectAttr "head_control_translateX.o" "utility_room_viewRN.phl[3741]";
+connectAttr "head_control_translateY.o" "utility_room_viewRN.phl[3742]";
+connectAttr "head_control_translateZ.o" "utility_room_viewRN.phl[3743]";
+connectAttr "head_control_rotateX.o" "utility_room_viewRN.phl[3744]";
+connectAttr "head_control_rotateY.o" "utility_room_viewRN.phl[3745]";
+connectAttr "head_control_rotateZ.o" "utility_room_viewRN.phl[3746]";
+connectAttr "head_control_scaleX.o" "utility_room_viewRN.phl[3747]";
+connectAttr "head_control_scaleY.o" "utility_room_viewRN.phl[3748]";
+connectAttr "head_control_scaleZ.o" "utility_room_viewRN.phl[3749]";
+connectAttr "spine_spline_ctrl_translateX.o" "utility_room_viewRN.phl[3750]";
+connectAttr "spine_spline_ctrl_translateZ.o" "utility_room_viewRN.phl[3751]";
+connectAttr "spine_spline_ctrl_translateY.o" "utility_room_viewRN.phl[3752]";
+connectAttr "spine_spline_ctrl_visibility.o" "utility_room_viewRN.phl[3753]";
+connectAttr "vertebrae_flexi_anim_mid01_followStart.o" "utility_room_viewRN.phl[3754]"
+		;
+connectAttr "vertebrae_flexi_anim_mid01_translateX.o" "utility_room_viewRN.phl[3755]"
+		;
+connectAttr "vertebrae_flexi_anim_mid01_translateY.o" "utility_room_viewRN.phl[3756]"
+		;
+connectAttr "vertebrae_flexi_anim_mid01_translateZ.o" "utility_room_viewRN.phl[3757]"
+		;
+connectAttr "vertebrae_flexi_anim_mid01_rotateZ.o" "utility_room_viewRN.phl[3758]"
+		;
+connectAttr "vertebrae_flexi_anim_mid01_rotateX.o" "utility_room_viewRN.phl[3759]"
+		;
+connectAttr "vertebrae_flexi_anim_mid01_rotateY.o" "utility_room_viewRN.phl[3760]"
+		;
+connectAttr "vertebrae_flexi_anim_mid01_scaleX.o" "utility_room_viewRN.phl[3761]"
+		;
+connectAttr "vertebrae_flexi_anim_mid01_scaleY.o" "utility_room_viewRN.phl[3762]"
+		;
+connectAttr "vertebrae_flexi_anim_mid01_scaleZ.o" "utility_room_viewRN.phl[3763]"
+		;
+connectAttr "vertebrae_flexi_anim_mid01_visibility.o" "utility_room_viewRN.phl[3764]"
+		;
+connectAttr "utility_room_viewRN.phl[77]" "undiesShapeDeformed.i";
+connectAttr "global_ctrl_parentConstraint1.w0" "global_ctrl_parentConstraint1.tg[0].tw"
+		;
 connectAttr "utility_room_viewRN.phl[3514]" "global_ctrl_parentConstraint1.crp";
 connectAttr "utility_room_viewRN.phl[3515]" "global_ctrl_parentConstraint1.crt";
 connectAttr "utility_room_viewRN.phl[3516]" "global_ctrl_parentConstraint1.cro";
-connectAttr "utility_room_viewRN.phl[3517]" "pairBlend1.ro";
 connectAttr "utility_room_viewRN.phl[3518]" "global_ctrl_parentConstraint1.cpim"
 		;
-connectAttr "cog_ctrl_translateX.o" "utility_room_viewRN.phl[3519]";
-connectAttr "cog_ctrl_translateY.o" "utility_room_viewRN.phl[3520]";
-connectAttr "cog_ctrl_translateZ.o" "utility_room_viewRN.phl[3521]";
-connectAttr "cog_ctrl_rotateX.o" "utility_room_viewRN.phl[3522]";
-connectAttr "cog_ctrl_rotateY.o" "utility_room_viewRN.phl[3523]";
-connectAttr "cog_ctrl_rotateZ.o" "utility_room_viewRN.phl[3524]";
-connectAttr "Tail_Ctrl1_rotateX.o" "utility_room_viewRN.phl[3525]";
-connectAttr "Tail_Ctrl1_rotateY.o" "utility_room_viewRN.phl[3526]";
-connectAttr "Tail_Ctrl1_rotateZ.o" "utility_room_viewRN.phl[3527]";
-connectAttr "Tail_Ctrl1_translateX.o" "utility_room_viewRN.phl[3528]";
-connectAttr "Tail_Ctrl1_translateY.o" "utility_room_viewRN.phl[3529]";
-connectAttr "Tail_Ctrl1_translateZ.o" "utility_room_viewRN.phl[3530]";
-connectAttr "back_ctrl_rotateX.o" "utility_room_viewRN.phl[3531]";
-connectAttr "back_ctrl_rotateY.o" "utility_room_viewRN.phl[3532]";
-connectAttr "back_ctrl_rotateZ.o" "utility_room_viewRN.phl[3533]";
-connectAttr "chest_ctrl_rotateX.o" "utility_room_viewRN.phl[3534]";
-connectAttr "chest_ctrl_rotateY.o" "utility_room_viewRN.phl[3535]";
-connectAttr "chest_ctrl_rotateZ.o" "utility_room_viewRN.phl[3536]";
-connectAttr "head_ctrl_rotateX.o" "utility_room_viewRN.phl[3537]";
-connectAttr "head_ctrl_rotateY.o" "utility_room_viewRN.phl[3538]";
-connectAttr "head_ctrl_rotateZ.o" "utility_room_viewRN.phl[3539]";
-connectAttr "leftArm_ctrl_rotateX.o" "utility_room_viewRN.phl[3540]";
-connectAttr "leftArm_ctrl_rotateY.o" "utility_room_viewRN.phl[3541]";
-connectAttr "leftArm_ctrl_rotateZ.o" "utility_room_viewRN.phl[3542]";
-connectAttr "leftArm_ctrl_translateX.o" "utility_room_viewRN.phl[3543]";
-connectAttr "leftArm_ctrl_translateY.o" "utility_room_viewRN.phl[3544]";
-connectAttr "leftArm_ctrl_translateZ.o" "utility_room_viewRN.phl[3545]";
-connectAttr "blendShape1_angry.o" "utility_room_viewRN.phl[3546]";
-connectAttr "blendShape1_happy.o" "utility_room_viewRN.phl[3547]";
-connectAttr "blendShape1_worried.o" "utility_room_viewRN.phl[3548]";
-connectAttr "blendShape1_closedMouth.o" "utility_room_viewRN.phl[3549]";
-connectAttr "blendShape1_openMouth.o" "utility_room_viewRN.phl[3550]";
-connectAttr "blendShape1_closedEyes.o" "utility_room_viewRN.phl[3551]";
-connectAttr "blendShape1_leftEyebrowUp.o" "utility_room_viewRN.phl[3552]";
-connectAttr "blendShape1_rightEyebrowUp.o" "utility_room_viewRN.phl[3553]";
-connectAttr "blendShape1_noseUp.o" "utility_room_viewRN.phl[3554]";
-connectAttr "blendShape1_noseDown.o" "utility_room_viewRN.phl[3555]";
-connectAttr "blendShape1_leftEarOut.o" "utility_room_viewRN.phl[3556]";
-connectAttr "blendShape1_rightEarOut.o" "utility_room_viewRN.phl[3557]";
-connectAttr "blendShape1_earsSpread.o" "utility_room_viewRN.phl[3558]";
-connectAttr "blendShape1_leftEarForward.o" "utility_room_viewRN.phl[3559]";
-connectAttr "blendShape1_rightEarForward.o" "utility_room_viewRN.phl[3560]";
-connectAttr "blendShape1_leftEyeClosed.o" "utility_room_viewRN.phl[3561]";
-connectAttr "blendShape1_polySurface6.o" "utility_room_viewRN.phl[3562]";
-connectAttr "blendShape1_polySurface7.o" "utility_room_viewRN.phl[3563]";
-connectAttr "blendShape1_polySurface8.o" "utility_room_viewRN.phl[3564]";
-connectAttr "undies_visibility.o" "utility_room_viewRN.phl[4078]";
-connectAttr "undies_translateX.o" "utility_room_viewRN.phl[4079]";
-connectAttr "undies_translateY.o" "utility_room_viewRN.phl[4080]";
-connectAttr "undies_translateZ.o" "utility_room_viewRN.phl[4081]";
-connectAttr "undies_rotateX.o" "utility_room_viewRN.phl[4082]";
-connectAttr "undies_rotateY.o" "utility_room_viewRN.phl[4083]";
-connectAttr "undies_rotateZ.o" "utility_room_viewRN.phl[4084]";
-connectAttr "undies_scaleX.o" "utility_room_viewRN.phl[4085]";
-connectAttr "undies_scaleY.o" "utility_room_viewRN.phl[4086]";
-connectAttr "undies_scaleZ.o" "utility_room_viewRN.phl[4087]";
-connectAttr "ffd1Lattice_rotateX.o" "utility_room_viewRN.phl[4088]";
-connectAttr "ffd1Lattice_rotateY.o" "utility_room_viewRN.phl[4089]";
-connectAttr "ffd1Lattice_rotateZ.o" "utility_room_viewRN.phl[4090]";
-connectAttr "ffd1LatticeShape_controlPoints_0__xValue.o" "utility_room_viewRN.phl[4091]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_0__yValue.o" "utility_room_viewRN.phl[4092]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_0__zValue.o" "utility_room_viewRN.phl[4093]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_1__xValue.o" "utility_room_viewRN.phl[4094]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_1__yValue.o" "utility_room_viewRN.phl[4095]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_1__zValue.o" "utility_room_viewRN.phl[4096]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_2__xValue.o" "utility_room_viewRN.phl[4097]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_2__yValue.o" "utility_room_viewRN.phl[4098]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_2__zValue.o" "utility_room_viewRN.phl[4099]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_3__xValue.o" "utility_room_viewRN.phl[4100]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_3__yValue.o" "utility_room_viewRN.phl[4101]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_3__zValue.o" "utility_room_viewRN.phl[4102]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_4__xValue.o" "utility_room_viewRN.phl[4103]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_4__yValue.o" "utility_room_viewRN.phl[4104]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_4__zValue.o" "utility_room_viewRN.phl[4105]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_5__xValue.o" "utility_room_viewRN.phl[4106]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_5__yValue.o" "utility_room_viewRN.phl[4107]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_5__zValue.o" "utility_room_viewRN.phl[4108]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_6__xValue.o" "utility_room_viewRN.phl[4109]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_6__yValue.o" "utility_room_viewRN.phl[4110]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_6__zValue.o" "utility_room_viewRN.phl[4111]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_7__xValue.o" "utility_room_viewRN.phl[4112]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_7__yValue.o" "utility_room_viewRN.phl[4113]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_7__zValue.o" "utility_room_viewRN.phl[4114]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_8__xValue.o" "utility_room_viewRN.phl[4115]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_8__yValue.o" "utility_room_viewRN.phl[4116]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_8__zValue.o" "utility_room_viewRN.phl[4117]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_9__xValue.o" "utility_room_viewRN.phl[4118]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_9__yValue.o" "utility_room_viewRN.phl[4119]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_9__zValue.o" "utility_room_viewRN.phl[4120]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_10__xValue.o" "utility_room_viewRN.phl[4121]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_10__yValue.o" "utility_room_viewRN.phl[4122]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_10__zValue.o" "utility_room_viewRN.phl[4123]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_11__xValue.o" "utility_room_viewRN.phl[4124]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_11__yValue.o" "utility_room_viewRN.phl[4125]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_11__zValue.o" "utility_room_viewRN.phl[4126]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_12__xValue.o" "utility_room_viewRN.phl[4127]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_12__yValue.o" "utility_room_viewRN.phl[4128]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_12__zValue.o" "utility_room_viewRN.phl[4129]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_13__xValue.o" "utility_room_viewRN.phl[4130]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_13__yValue.o" "utility_room_viewRN.phl[4131]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_13__zValue.o" "utility_room_viewRN.phl[4132]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_14__xValue.o" "utility_room_viewRN.phl[4133]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_14__yValue.o" "utility_room_viewRN.phl[4134]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_14__zValue.o" "utility_room_viewRN.phl[4135]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_15__xValue.o" "utility_room_viewRN.phl[4136]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_15__yValue.o" "utility_room_viewRN.phl[4137]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_15__zValue.o" "utility_room_viewRN.phl[4138]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_16__xValue.o" "utility_room_viewRN.phl[4139]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_16__yValue.o" "utility_room_viewRN.phl[4140]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_16__zValue.o" "utility_room_viewRN.phl[4141]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_17__xValue.o" "utility_room_viewRN.phl[4142]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_17__yValue.o" "utility_room_viewRN.phl[4143]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_17__zValue.o" "utility_room_viewRN.phl[4144]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_18__xValue.o" "utility_room_viewRN.phl[4145]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_18__yValue.o" "utility_room_viewRN.phl[4146]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_18__zValue.o" "utility_room_viewRN.phl[4147]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_19__xValue.o" "utility_room_viewRN.phl[4148]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_19__yValue.o" "utility_room_viewRN.phl[4149]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_19__zValue.o" "utility_room_viewRN.phl[4150]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_20__xValue.o" "utility_room_viewRN.phl[4151]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_20__yValue.o" "utility_room_viewRN.phl[4152]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_20__zValue.o" "utility_room_viewRN.phl[4153]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_21__xValue.o" "utility_room_viewRN.phl[4154]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_21__yValue.o" "utility_room_viewRN.phl[4155]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_21__zValue.o" "utility_room_viewRN.phl[4156]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_22__xValue.o" "utility_room_viewRN.phl[4157]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_22__yValue.o" "utility_room_viewRN.phl[4158]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_22__zValue.o" "utility_room_viewRN.phl[4159]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_23__xValue.o" "utility_room_viewRN.phl[4160]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_23__yValue.o" "utility_room_viewRN.phl[4161]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_23__zValue.o" "utility_room_viewRN.phl[4162]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_24__xValue.o" "utility_room_viewRN.phl[4163]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_24__yValue.o" "utility_room_viewRN.phl[4164]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_24__zValue.o" "utility_room_viewRN.phl[4165]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_25__xValue.o" "utility_room_viewRN.phl[4166]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_25__yValue.o" "utility_room_viewRN.phl[4167]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_25__zValue.o" "utility_room_viewRN.phl[4168]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_26__xValue.o" "utility_room_viewRN.phl[4169]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_26__yValue.o" "utility_room_viewRN.phl[4170]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_26__zValue.o" "utility_room_viewRN.phl[4171]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_27__xValue.o" "utility_room_viewRN.phl[4172]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_27__yValue.o" "utility_room_viewRN.phl[4173]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_27__zValue.o" "utility_room_viewRN.phl[4174]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_28__xValue.o" "utility_room_viewRN.phl[4175]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_28__yValue.o" "utility_room_viewRN.phl[4176]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_28__zValue.o" "utility_room_viewRN.phl[4177]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_29__xValue.o" "utility_room_viewRN.phl[4178]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_29__yValue.o" "utility_room_viewRN.phl[4179]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_29__zValue.o" "utility_room_viewRN.phl[4180]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_30__xValue.o" "utility_room_viewRN.phl[4181]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_30__yValue.o" "utility_room_viewRN.phl[4182]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_30__zValue.o" "utility_room_viewRN.phl[4183]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_31__xValue.o" "utility_room_viewRN.phl[4184]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_31__yValue.o" "utility_room_viewRN.phl[4185]"
-		;
-connectAttr "ffd1LatticeShape_controlPoints_31__zValue.o" "utility_room_viewRN.phl[4186]"
-		;
-connectAttr "controller_root_visibility.o" "utility_room_viewRN.phl[3582]";
-connectAttr "controller_root_translateX.o" "utility_room_viewRN.phl[3583]";
-connectAttr "controller_root_translateY.o" "utility_room_viewRN.phl[3584]";
-connectAttr "controller_root_translateZ.o" "utility_room_viewRN.phl[3585]";
-connectAttr "controller_root_rotateX.o" "utility_room_viewRN.phl[3586]";
-connectAttr "controller_root_rotateY.o" "utility_room_viewRN.phl[3587]";
-connectAttr "controller_root_rotateZ.o" "utility_room_viewRN.phl[3588]";
-connectAttr "controller_root_scaleX.o" "utility_room_viewRN.phl[3589]";
-connectAttr "controller_root_scaleY.o" "utility_room_viewRN.phl[3590]";
-connectAttr "controller_root_scaleZ.o" "utility_room_viewRN.phl[3591]";
-connectAttr "controller_COG_translateX.o" "utility_room_viewRN.phl[3592]";
-connectAttr "controller_COG_translateY.o" "utility_room_viewRN.phl[3593]";
-connectAttr "controller_COG_translateZ.o" "utility_room_viewRN.phl[3594]";
-connectAttr "controller_COG_rotateX.o" "utility_room_viewRN.phl[3595]";
-connectAttr "controller_COG_rotateY.o" "utility_room_viewRN.phl[3596]";
-connectAttr "controller_COG_rotateZ.o" "utility_room_viewRN.phl[3597]";
-connectAttr "controller_COG_scaleX.o" "utility_room_viewRN.phl[3598]";
-connectAttr "controller_COG_scaleY.o" "utility_room_viewRN.phl[3599]";
-connectAttr "controller_COG_scaleZ.o" "utility_room_viewRN.phl[3600]";
-connectAttr "controller_COG_visibility.o" "utility_room_viewRN.phl[3601]";
-connectAttr "controller_spine3_translateX.o" "utility_room_viewRN.phl[3602]";
-connectAttr "controller_spine3_translateY.o" "utility_room_viewRN.phl[3603]";
-connectAttr "controller_spine3_translateZ.o" "utility_room_viewRN.phl[3604]";
-connectAttr "controller_spine3_rotateX.o" "utility_room_viewRN.phl[3605]";
-connectAttr "controller_spine3_rotateY.o" "utility_room_viewRN.phl[3606]";
-connectAttr "controller_spine3_rotateZ.o" "utility_room_viewRN.phl[3607]";
-connectAttr "controller_spine3_scaleX.o" "utility_room_viewRN.phl[3608]";
-connectAttr "controller_spine3_scaleY.o" "utility_room_viewRN.phl[3609]";
-connectAttr "controller_spine3_scaleZ.o" "utility_room_viewRN.phl[3610]";
-connectAttr "controller_spine3_visibility.o" "utility_room_viewRN.phl[3611]";
-connectAttr "controller_spine2_translateX.o" "utility_room_viewRN.phl[3612]";
-connectAttr "controller_spine2_translateY.o" "utility_room_viewRN.phl[3613]";
-connectAttr "controller_spine2_translateZ.o" "utility_room_viewRN.phl[3614]";
-connectAttr "controller_spine2_rotateX.o" "utility_room_viewRN.phl[3615]";
-connectAttr "controller_spine2_rotateY.o" "utility_room_viewRN.phl[3616]";
-connectAttr "controller_spine2_rotateZ.o" "utility_room_viewRN.phl[3617]";
-connectAttr "controller_spine2_scaleX.o" "utility_room_viewRN.phl[3618]";
-connectAttr "controller_spine2_scaleY.o" "utility_room_viewRN.phl[3619]";
-connectAttr "controller_spine2_scaleZ.o" "utility_room_viewRN.phl[3620]";
-connectAttr "controller_spine2_visibility.o" "utility_room_viewRN.phl[3621]";
-connectAttr "controller_spine1_translateX.o" "utility_room_viewRN.phl[3622]";
-connectAttr "controller_spine1_translateY.o" "utility_room_viewRN.phl[3623]";
-connectAttr "controller_spine1_translateZ.o" "utility_room_viewRN.phl[3624]";
-connectAttr "controller_spine1_rotateX.o" "utility_room_viewRN.phl[3625]";
-connectAttr "controller_spine1_rotateY.o" "utility_room_viewRN.phl[3626]";
-connectAttr "controller_spine1_rotateZ.o" "utility_room_viewRN.phl[3627]";
-connectAttr "controller_spine1_scaleX.o" "utility_room_viewRN.phl[3628]";
-connectAttr "controller_spine1_scaleY.o" "utility_room_viewRN.phl[3629]";
-connectAttr "controller_spine1_scaleZ.o" "utility_room_viewRN.phl[3630]";
-connectAttr "controller_spine1_visibility.o" "utility_room_viewRN.phl[3631]";
-connectAttr "controller_shoulder_translateX.o" "utility_room_viewRN.phl[3632]";
-connectAttr "controller_shoulder_translateY.o" "utility_room_viewRN.phl[3633]";
-connectAttr "controller_shoulder_translateZ.o" "utility_room_viewRN.phl[3634]";
-connectAttr "controller_shoulder_rotateX.o" "utility_room_viewRN.phl[3635]";
-connectAttr "controller_shoulder_rotateY.o" "utility_room_viewRN.phl[3636]";
-connectAttr "controller_shoulder_rotateZ.o" "utility_room_viewRN.phl[3637]";
-connectAttr "controller_shoulder_scaleX.o" "utility_room_viewRN.phl[3638]";
-connectAttr "controller_shoulder_scaleY.o" "utility_room_viewRN.phl[3639]";
-connectAttr "controller_shoulder_scaleZ.o" "utility_room_viewRN.phl[3640]";
-connectAttr "controller_shoulder_visibility.o" "utility_room_viewRN.phl[3641]";
-connectAttr "controller_head_translateX.o" "utility_room_viewRN.phl[3642]";
-connectAttr "controller_head_translateY.o" "utility_room_viewRN.phl[3643]";
-connectAttr "controller_head_translateZ.o" "utility_room_viewRN.phl[3644]";
-connectAttr "controller_head_rotateX.o" "utility_room_viewRN.phl[3645]";
-connectAttr "controller_head_rotateY.o" "utility_room_viewRN.phl[3646]";
-connectAttr "controller_head_rotateZ.o" "utility_room_viewRN.phl[3647]";
-connectAttr "controller_head_scaleX.o" "utility_room_viewRN.phl[3648]";
-connectAttr "controller_head_scaleY.o" "utility_room_viewRN.phl[3649]";
-connectAttr "controller_head_scaleZ.o" "utility_room_viewRN.phl[3650]";
-connectAttr "controller_head_visibility.o" "utility_room_viewRN.phl[3651]";
-connectAttr "nurbsCircle3_translateX.o" "utility_room_viewRN.phl[3652]";
-connectAttr "nurbsCircle3_translateY.o" "utility_room_viewRN.phl[3653]";
-connectAttr "nurbsCircle3_translateZ.o" "utility_room_viewRN.phl[3654]";
-connectAttr "nurbsCircle3_visibility.o" "utility_room_viewRN.phl[3655]";
-connectAttr "nurbsCircle3_rotateX.o" "utility_room_viewRN.phl[3656]";
-connectAttr "nurbsCircle3_rotateY.o" "utility_room_viewRN.phl[3657]";
-connectAttr "nurbsCircle3_rotateZ.o" "utility_room_viewRN.phl[3658]";
-connectAttr "nurbsCircle3_scaleX.o" "utility_room_viewRN.phl[3659]";
-connectAttr "nurbsCircle3_scaleY.o" "utility_room_viewRN.phl[3660]";
-connectAttr "nurbsCircle3_scaleZ.o" "utility_room_viewRN.phl[3661]";
-connectAttr "nurbsCircle2_translateX.o" "utility_room_viewRN.phl[3662]";
-connectAttr "nurbsCircle2_translateY.o" "utility_room_viewRN.phl[3663]";
-connectAttr "nurbsCircle2_translateZ.o" "utility_room_viewRN.phl[3664]";
-connectAttr "nurbsCircle2_visibility.o" "utility_room_viewRN.phl[3665]";
-connectAttr "nurbsCircle2_rotateX.o" "utility_room_viewRN.phl[3666]";
-connectAttr "nurbsCircle2_rotateY.o" "utility_room_viewRN.phl[3667]";
-connectAttr "nurbsCircle2_rotateZ.o" "utility_room_viewRN.phl[3668]";
-connectAttr "nurbsCircle2_scaleX.o" "utility_room_viewRN.phl[3669]";
-connectAttr "nurbsCircle2_scaleY.o" "utility_room_viewRN.phl[3670]";
-connectAttr "nurbsCircle2_scaleZ.o" "utility_room_viewRN.phl[3671]";
-connectAttr "nurbsCircle1_translateX.o" "utility_room_viewRN.phl[3672]";
-connectAttr "nurbsCircle1_translateY.o" "utility_room_viewRN.phl[3673]";
-connectAttr "nurbsCircle1_translateZ.o" "utility_room_viewRN.phl[3674]";
-connectAttr "nurbsCircle1_visibility.o" "utility_room_viewRN.phl[3675]";
-connectAttr "nurbsCircle1_rotateX.o" "utility_room_viewRN.phl[3676]";
-connectAttr "nurbsCircle1_rotateY.o" "utility_room_viewRN.phl[3677]";
-connectAttr "nurbsCircle1_rotateZ.o" "utility_room_viewRN.phl[3678]";
-connectAttr "nurbsCircle1_scaleX.o" "utility_room_viewRN.phl[3679]";
-connectAttr "nurbsCircle1_scaleY.o" "utility_room_viewRN.phl[3680]";
-connectAttr "nurbsCircle1_scaleZ.o" "utility_room_viewRN.phl[3681]";
-connectAttr "controller_hip_translateX.o" "utility_room_viewRN.phl[3682]";
-connectAttr "controller_hip_translateY.o" "utility_room_viewRN.phl[3683]";
-connectAttr "controller_hip_translateZ.o" "utility_room_viewRN.phl[3684]";
-connectAttr "controller_hip_rotateX.o" "utility_room_viewRN.phl[3685]";
-connectAttr "controller_hip_rotateY.o" "utility_room_viewRN.phl[3686]";
-connectAttr "controller_hip_rotateZ.o" "utility_room_viewRN.phl[3687]";
-connectAttr "controller_hip_scaleX.o" "utility_room_viewRN.phl[3688]";
-connectAttr "controller_hip_scaleY.o" "utility_room_viewRN.phl[3689]";
-connectAttr "controller_hip_scaleZ.o" "utility_room_viewRN.phl[3690]";
-connectAttr "controller_hip_visibility.o" "utility_room_viewRN.phl[3691]";
-connectAttr "controller_tailbase_translateX.o" "utility_room_viewRN.phl[3692]";
-connectAttr "controller_tailbase_translateY.o" "utility_room_viewRN.phl[3693]";
-connectAttr "controller_tailbase_translateZ.o" "utility_room_viewRN.phl[3694]";
-connectAttr "controller_tailbase_rotateX.o" "utility_room_viewRN.phl[3695]";
-connectAttr "controller_tailbase_rotateY.o" "utility_room_viewRN.phl[3696]";
-connectAttr "controller_tailbase_rotateZ.o" "utility_room_viewRN.phl[3697]";
-connectAttr "controller_tailbase_scaleX.o" "utility_room_viewRN.phl[3698]";
-connectAttr "controller_tailbase_scaleY.o" "utility_room_viewRN.phl[3699]";
-connectAttr "controller_tailbase_scaleZ.o" "utility_room_viewRN.phl[3700]";
-connectAttr "controller_tailbase_visibility.o" "utility_room_viewRN.phl[3701]";
-connectAttr "controller_tail2_translateX.o" "utility_room_viewRN.phl[3702]";
-connectAttr "controller_tail2_translateY.o" "utility_room_viewRN.phl[3703]";
-connectAttr "controller_tail2_translateZ.o" "utility_room_viewRN.phl[3704]";
-connectAttr "controller_tail2_rotateX.o" "utility_room_viewRN.phl[3705]";
-connectAttr "controller_tail2_rotateY.o" "utility_room_viewRN.phl[3706]";
-connectAttr "controller_tail2_rotateZ.o" "utility_room_viewRN.phl[3707]";
-connectAttr "controller_tail2_scaleX.o" "utility_room_viewRN.phl[3708]";
-connectAttr "controller_tail2_scaleY.o" "utility_room_viewRN.phl[3709]";
-connectAttr "controller_tail2_scaleZ.o" "utility_room_viewRN.phl[3710]";
-connectAttr "controller_tail2_visibility.o" "utility_room_viewRN.phl[3711]";
-connectAttr "controller_tail3_translateX.o" "utility_room_viewRN.phl[3712]";
-connectAttr "controller_tail3_translateY.o" "utility_room_viewRN.phl[3713]";
-connectAttr "controller_tail3_translateZ.o" "utility_room_viewRN.phl[3714]";
-connectAttr "controller_tail3_rotateX.o" "utility_room_viewRN.phl[3715]";
-connectAttr "controller_tail3_rotateY.o" "utility_room_viewRN.phl[3716]";
-connectAttr "controller_tail3_rotateZ.o" "utility_room_viewRN.phl[3717]";
-connectAttr "controller_tail3_scaleX.o" "utility_room_viewRN.phl[3718]";
-connectAttr "controller_tail3_scaleY.o" "utility_room_viewRN.phl[3719]";
-connectAttr "controller_tail3_scaleZ.o" "utility_room_viewRN.phl[3720]";
-connectAttr "controller_tail3_visibility.o" "utility_room_viewRN.phl[3721]";
-connectAttr "controller_tail4_translateX.o" "utility_room_viewRN.phl[3722]";
-connectAttr "controller_tail4_translateY.o" "utility_room_viewRN.phl[3723]";
-connectAttr "controller_tail4_translateZ.o" "utility_room_viewRN.phl[3724]";
-connectAttr "controller_tail4_rotateX.o" "utility_room_viewRN.phl[3725]";
-connectAttr "controller_tail4_rotateY.o" "utility_room_viewRN.phl[3726]";
-connectAttr "controller_tail4_rotateZ.o" "utility_room_viewRN.phl[3727]";
-connectAttr "controller_tail4_scaleX.o" "utility_room_viewRN.phl[3728]";
-connectAttr "controller_tail4_scaleY.o" "utility_room_viewRN.phl[3729]";
-connectAttr "controller_tail4_scaleZ.o" "utility_room_viewRN.phl[3730]";
-connectAttr "controller_tail4_visibility.o" "utility_room_viewRN.phl[3731]";
-connectAttr "controller_tailtip_translateX.o" "utility_room_viewRN.phl[3732]";
-connectAttr "controller_tailtip_translateY.o" "utility_room_viewRN.phl[3733]";
-connectAttr "controller_tailtip_translateZ.o" "utility_room_viewRN.phl[3734]";
-connectAttr "controller_tailtip_rotateX.o" "utility_room_viewRN.phl[3735]";
-connectAttr "controller_tailtip_rotateY.o" "utility_room_viewRN.phl[3736]";
-connectAttr "controller_tailtip_rotateZ.o" "utility_room_viewRN.phl[3737]";
-connectAttr "controller_tailtip_scaleX.o" "utility_room_viewRN.phl[3738]";
-connectAttr "controller_tailtip_scaleY.o" "utility_room_viewRN.phl[3739]";
-connectAttr "controller_tailtip_scaleZ.o" "utility_room_viewRN.phl[3740]";
-connectAttr "controller_tailtip_visibility.o" "utility_room_viewRN.phl[3741]";
-connectAttr "controller_rightLeg_visibility.o" "utility_room_viewRN.phl[3742]";
-connectAttr "controller_rightLeg_translateX.o" "utility_room_viewRN.phl[3743]";
-connectAttr "controller_rightLeg_translateY.o" "utility_room_viewRN.phl[3744]";
-connectAttr "controller_rightLeg_translateZ.o" "utility_room_viewRN.phl[3745]";
-connectAttr "controller_rightLeg_rotateX.o" "utility_room_viewRN.phl[3746]";
-connectAttr "controller_rightLeg_rotateY.o" "utility_room_viewRN.phl[3747]";
-connectAttr "controller_rightLeg_rotateZ.o" "utility_room_viewRN.phl[3748]";
-connectAttr "controller_rightLeg_scaleX.o" "utility_room_viewRN.phl[3749]";
-connectAttr "controller_rightLeg_scaleY.o" "utility_room_viewRN.phl[3750]";
-connectAttr "controller_rightLeg_scaleZ.o" "utility_room_viewRN.phl[3751]";
-connectAttr "nurbsCircle7_translateX.o" "utility_room_viewRN.phl[3752]";
-connectAttr "nurbsCircle7_translateY.o" "utility_room_viewRN.phl[3753]";
-connectAttr "nurbsCircle7_translateZ.o" "utility_room_viewRN.phl[3754]";
-connectAttr "nurbsCircle7_visibility.o" "utility_room_viewRN.phl[3755]";
-connectAttr "nurbsCircle7_rotateX.o" "utility_room_viewRN.phl[3756]";
-connectAttr "nurbsCircle7_rotateY.o" "utility_room_viewRN.phl[3757]";
-connectAttr "nurbsCircle7_rotateZ.o" "utility_room_viewRN.phl[3758]";
-connectAttr "nurbsCircle7_scaleX.o" "utility_room_viewRN.phl[3759]";
-connectAttr "nurbsCircle7_scaleY.o" "utility_room_viewRN.phl[3760]";
-connectAttr "nurbsCircle7_scaleZ.o" "utility_room_viewRN.phl[3761]";
-connectAttr "RightLeg_rotateX.o" "utility_room_viewRN.phl[3762]";
-connectAttr "RightLeg_rotateY.o" "utility_room_viewRN.phl[3763]";
-connectAttr "RightLeg_rotateZ.o" "utility_room_viewRN.phl[3764]";
-connectAttr "RightLeg_translateX.o" "utility_room_viewRN.phl[3765]";
-connectAttr "RightLeg_translateY.o" "utility_room_viewRN.phl[3766]";
-connectAttr "RightLeg_translateZ.o" "utility_room_viewRN.phl[3767]";
-connectAttr "RightLeg_visibility.o" "utility_room_viewRN.phl[3768]";
-connectAttr "RightLeg_scaleX.o" "utility_room_viewRN.phl[3769]";
-connectAttr "RightLeg_scaleY.o" "utility_room_viewRN.phl[3770]";
-connectAttr "RightLeg_scaleZ.o" "utility_room_viewRN.phl[3771]";
-connectAttr "controller_leftArm_visibility.o" "utility_room_viewRN.phl[3772]";
-connectAttr "controller_leftArm_translateX.o" "utility_room_viewRN.phl[3773]";
-connectAttr "controller_leftArm_translateY.o" "utility_room_viewRN.phl[3774]";
-connectAttr "controller_leftArm_translateZ.o" "utility_room_viewRN.phl[3775]";
-connectAttr "controller_leftArm_rotateX.o" "utility_room_viewRN.phl[3776]";
-connectAttr "controller_leftArm_rotateY.o" "utility_room_viewRN.phl[3777]";
-connectAttr "controller_leftArm_rotateZ.o" "utility_room_viewRN.phl[3778]";
-connectAttr "controller_leftArm_scaleX.o" "utility_room_viewRN.phl[3779]";
-connectAttr "controller_leftArm_scaleY.o" "utility_room_viewRN.phl[3780]";
-connectAttr "controller_leftArm_scaleZ.o" "utility_room_viewRN.phl[3781]";
-connectAttr "controller_leftWrist_translateX.o" "utility_room_viewRN.phl[3782]";
-connectAttr "controller_leftWrist_translateY.o" "utility_room_viewRN.phl[3783]";
-connectAttr "controller_leftWrist_translateZ.o" "utility_room_viewRN.phl[3784]";
-connectAttr "controller_leftWrist_rotateX.o" "utility_room_viewRN.phl[3785]";
-connectAttr "controller_leftWrist_rotateY.o" "utility_room_viewRN.phl[3786]";
-connectAttr "controller_leftWrist_rotateZ.o" "utility_room_viewRN.phl[3787]";
-connectAttr "controller_leftWrist_scaleX.o" "utility_room_viewRN.phl[3788]";
-connectAttr "controller_leftWrist_scaleY.o" "utility_room_viewRN.phl[3789]";
-connectAttr "controller_leftWrist_scaleZ.o" "utility_room_viewRN.phl[3790]";
-connectAttr "controller_leftWrist_visibility.o" "utility_room_viewRN.phl[3791]";
-connectAttr "nurbsCircle6_translateX.o" "utility_room_viewRN.phl[3792]";
-connectAttr "nurbsCircle6_translateY.o" "utility_room_viewRN.phl[3793]";
-connectAttr "nurbsCircle6_translateZ.o" "utility_room_viewRN.phl[3794]";
-connectAttr "nurbsCircle6_visibility.o" "utility_room_viewRN.phl[3795]";
-connectAttr "nurbsCircle6_rotateX.o" "utility_room_viewRN.phl[3796]";
-connectAttr "nurbsCircle6_rotateY.o" "utility_room_viewRN.phl[3797]";
-connectAttr "nurbsCircle6_rotateZ.o" "utility_room_viewRN.phl[3798]";
-connectAttr "nurbsCircle6_scaleX.o" "utility_room_viewRN.phl[3799]";
-connectAttr "nurbsCircle6_scaleY.o" "utility_room_viewRN.phl[3800]";
-connectAttr "nurbsCircle6_scaleZ.o" "utility_room_viewRN.phl[3801]";
-connectAttr "nurbsCircle5_translateX.o" "utility_room_viewRN.phl[3802]";
-connectAttr "nurbsCircle5_translateY.o" "utility_room_viewRN.phl[3803]";
-connectAttr "nurbsCircle5_translateZ.o" "utility_room_viewRN.phl[3804]";
-connectAttr "nurbsCircle5_visibility.o" "utility_room_viewRN.phl[3805]";
-connectAttr "nurbsCircle5_rotateX.o" "utility_room_viewRN.phl[3806]";
-connectAttr "nurbsCircle5_rotateY.o" "utility_room_viewRN.phl[3807]";
-connectAttr "nurbsCircle5_rotateZ.o" "utility_room_viewRN.phl[3808]";
-connectAttr "nurbsCircle5_scaleX.o" "utility_room_viewRN.phl[3809]";
-connectAttr "nurbsCircle5_scaleY.o" "utility_room_viewRN.phl[3810]";
-connectAttr "nurbsCircle5_scaleZ.o" "utility_room_viewRN.phl[3811]";
-connectAttr "nurbsCircle2_translateX1.o" "utility_room_viewRN.phl[3812]";
-connectAttr "nurbsCircle2_translateY1.o" "utility_room_viewRN.phl[3813]";
-connectAttr "nurbsCircle2_translateZ1.o" "utility_room_viewRN.phl[3814]";
-connectAttr "nurbsCircle2_visibility1.o" "utility_room_viewRN.phl[3815]";
-connectAttr "nurbsCircle2_rotateX1.o" "utility_room_viewRN.phl[3816]";
-connectAttr "nurbsCircle2_rotateY1.o" "utility_room_viewRN.phl[3817]";
-connectAttr "nurbsCircle2_rotateZ1.o" "utility_room_viewRN.phl[3818]";
-connectAttr "nurbsCircle2_scaleX1.o" "utility_room_viewRN.phl[3819]";
-connectAttr "nurbsCircle2_scaleY1.o" "utility_room_viewRN.phl[3820]";
-connectAttr "nurbsCircle2_scaleZ1.o" "utility_room_viewRN.phl[3821]";
-connectAttr "nurbsCircle3_translateX1.o" "utility_room_viewRN.phl[3822]";
-connectAttr "nurbsCircle3_translateY1.o" "utility_room_viewRN.phl[3823]";
-connectAttr "nurbsCircle3_translateZ1.o" "utility_room_viewRN.phl[3824]";
-connectAttr "nurbsCircle3_visibility1.o" "utility_room_viewRN.phl[3825]";
-connectAttr "nurbsCircle3_rotateX1.o" "utility_room_viewRN.phl[3826]";
-connectAttr "nurbsCircle3_rotateY1.o" "utility_room_viewRN.phl[3827]";
-connectAttr "nurbsCircle3_rotateZ1.o" "utility_room_viewRN.phl[3828]";
-connectAttr "nurbsCircle3_scaleX1.o" "utility_room_viewRN.phl[3829]";
-connectAttr "nurbsCircle3_scaleY1.o" "utility_room_viewRN.phl[3830]";
-connectAttr "nurbsCircle3_scaleZ1.o" "utility_room_viewRN.phl[3831]";
-connectAttr "nurbsCircle4_translateX.o" "utility_room_viewRN.phl[3832]";
-connectAttr "nurbsCircle4_translateY.o" "utility_room_viewRN.phl[3833]";
-connectAttr "nurbsCircle4_translateZ.o" "utility_room_viewRN.phl[3834]";
-connectAttr "nurbsCircle4_visibility.o" "utility_room_viewRN.phl[3835]";
-connectAttr "nurbsCircle4_rotateX.o" "utility_room_viewRN.phl[3836]";
-connectAttr "nurbsCircle4_rotateY.o" "utility_room_viewRN.phl[3837]";
-connectAttr "nurbsCircle4_rotateZ.o" "utility_room_viewRN.phl[3838]";
-connectAttr "nurbsCircle4_scaleX.o" "utility_room_viewRN.phl[3839]";
-connectAttr "nurbsCircle4_scaleY.o" "utility_room_viewRN.phl[3840]";
-connectAttr "nurbsCircle4_scaleZ.o" "utility_room_viewRN.phl[3841]";
-connectAttr "curve6_translateX.o" "utility_room_viewRN.phl[3842]";
-connectAttr "curve6_translateY.o" "utility_room_viewRN.phl[3843]";
-connectAttr "curve6_translateZ.o" "utility_room_viewRN.phl[3844]";
-connectAttr "curve6_visibility.o" "utility_room_viewRN.phl[3845]";
-connectAttr "curve6_rotateX.o" "utility_room_viewRN.phl[3846]";
-connectAttr "curve6_rotateY.o" "utility_room_viewRN.phl[3847]";
-connectAttr "curve6_rotateZ.o" "utility_room_viewRN.phl[3848]";
-connectAttr "curve6_scaleX.o" "utility_room_viewRN.phl[3849]";
-connectAttr "curve6_scaleY.o" "utility_room_viewRN.phl[3850]";
-connectAttr "curve6_scaleZ.o" "utility_room_viewRN.phl[3851]";
-connectAttr "curve7_translateX.o" "utility_room_viewRN.phl[3852]";
-connectAttr "curve7_translateY.o" "utility_room_viewRN.phl[3853]";
-connectAttr "curve7_translateZ.o" "utility_room_viewRN.phl[3854]";
-connectAttr "curve7_visibility.o" "utility_room_viewRN.phl[3855]";
-connectAttr "curve7_rotateX.o" "utility_room_viewRN.phl[3856]";
-connectAttr "curve7_rotateY.o" "utility_room_viewRN.phl[3857]";
-connectAttr "curve7_rotateZ.o" "utility_room_viewRN.phl[3858]";
-connectAttr "curve7_scaleX.o" "utility_room_viewRN.phl[3859]";
-connectAttr "curve7_scaleY.o" "utility_room_viewRN.phl[3860]";
-connectAttr "curve7_scaleZ.o" "utility_room_viewRN.phl[3861]";
-connectAttr "curve8_translateX.o" "utility_room_viewRN.phl[3862]";
-connectAttr "curve8_translateY.o" "utility_room_viewRN.phl[3863]";
-connectAttr "curve8_translateZ.o" "utility_room_viewRN.phl[3864]";
-connectAttr "curve8_visibility.o" "utility_room_viewRN.phl[3865]";
-connectAttr "curve8_rotateX.o" "utility_room_viewRN.phl[3866]";
-connectAttr "curve8_rotateY.o" "utility_room_viewRN.phl[3867]";
-connectAttr "curve8_rotateZ.o" "utility_room_viewRN.phl[3868]";
-connectAttr "curve8_scaleX.o" "utility_room_viewRN.phl[3869]";
-connectAttr "curve8_scaleY.o" "utility_room_viewRN.phl[3870]";
-connectAttr "curve8_scaleZ.o" "utility_room_viewRN.phl[3871]";
-connectAttr "curve9_translateX.o" "utility_room_viewRN.phl[3872]";
-connectAttr "curve9_translateY.o" "utility_room_viewRN.phl[3873]";
-connectAttr "curve9_translateZ.o" "utility_room_viewRN.phl[3874]";
-connectAttr "curve9_visibility.o" "utility_room_viewRN.phl[3875]";
-connectAttr "curve9_rotateX.o" "utility_room_viewRN.phl[3876]";
-connectAttr "curve9_rotateY.o" "utility_room_viewRN.phl[3877]";
-connectAttr "curve9_rotateZ.o" "utility_room_viewRN.phl[3878]";
-connectAttr "curve9_scaleX.o" "utility_room_viewRN.phl[3879]";
-connectAttr "curve9_scaleY.o" "utility_room_viewRN.phl[3880]";
-connectAttr "curve9_scaleZ.o" "utility_room_viewRN.phl[3881]";
-connectAttr "curve10_translateX.o" "utility_room_viewRN.phl[3882]";
-connectAttr "curve10_translateY.o" "utility_room_viewRN.phl[3883]";
-connectAttr "curve10_translateZ.o" "utility_room_viewRN.phl[3884]";
-connectAttr "curve10_visibility.o" "utility_room_viewRN.phl[3885]";
-connectAttr "curve10_rotateX.o" "utility_room_viewRN.phl[3886]";
-connectAttr "curve10_rotateY.o" "utility_room_viewRN.phl[3887]";
-connectAttr "curve10_rotateZ.o" "utility_room_viewRN.phl[3888]";
-connectAttr "curve10_scaleX.o" "utility_room_viewRN.phl[3889]";
-connectAttr "curve10_scaleY.o" "utility_room_viewRN.phl[3890]";
-connectAttr "curve10_scaleZ.o" "utility_room_viewRN.phl[3891]";
-connectAttr "LeftArm_rotateX.o" "utility_room_viewRN.phl[3892]";
-connectAttr "LeftArm_rotateY.o" "utility_room_viewRN.phl[3893]";
-connectAttr "LeftArm_rotateZ.o" "utility_room_viewRN.phl[3894]";
-connectAttr "LeftArm_translateX.o" "utility_room_viewRN.phl[3895]";
-connectAttr "LeftArm_translateY.o" "utility_room_viewRN.phl[3896]";
-connectAttr "LeftArm_translateZ.o" "utility_room_viewRN.phl[3897]";
-connectAttr "LeftArm_visibility.o" "utility_room_viewRN.phl[3898]";
-connectAttr "LeftArm_scaleX.o" "utility_room_viewRN.phl[3899]";
-connectAttr "LeftArm_scaleY.o" "utility_room_viewRN.phl[3900]";
-connectAttr "LeftArm_scaleZ.o" "utility_room_viewRN.phl[3901]";
-connectAttr "controller_rightLeg1_visibility.o" "utility_room_viewRN.phl[3902]";
-connectAttr "controller_rightLeg1_translateX.o" "utility_room_viewRN.phl[3903]";
-connectAttr "controller_rightLeg1_translateY.o" "utility_room_viewRN.phl[3904]";
-connectAttr "controller_rightLeg1_translateZ.o" "utility_room_viewRN.phl[3905]";
-connectAttr "controller_rightLeg1_rotateX.o" "utility_room_viewRN.phl[3906]";
-connectAttr "controller_rightLeg1_rotateY.o" "utility_room_viewRN.phl[3907]";
-connectAttr "controller_rightLeg1_rotateZ.o" "utility_room_viewRN.phl[3908]";
-connectAttr "controller_rightLeg1_scaleX.o" "utility_room_viewRN.phl[3909]";
-connectAttr "controller_rightLeg1_scaleY.o" "utility_room_viewRN.phl[3910]";
-connectAttr "controller_rightLeg1_scaleZ.o" "utility_room_viewRN.phl[3911]";
-connectAttr "nurbsCircle8_visibility.o" "utility_room_viewRN.phl[3912]";
-connectAttr "nurbsCircle8_translateX.o" "utility_room_viewRN.phl[3913]";
-connectAttr "nurbsCircle8_translateY.o" "utility_room_viewRN.phl[3914]";
-connectAttr "nurbsCircle8_translateZ.o" "utility_room_viewRN.phl[3915]";
-connectAttr "nurbsCircle8_rotateX.o" "utility_room_viewRN.phl[3916]";
-connectAttr "nurbsCircle8_rotateY.o" "utility_room_viewRN.phl[3917]";
-connectAttr "nurbsCircle8_rotateZ.o" "utility_room_viewRN.phl[3918]";
-connectAttr "nurbsCircle8_scaleX.o" "utility_room_viewRN.phl[3919]";
-connectAttr "nurbsCircle8_scaleY.o" "utility_room_viewRN.phl[3920]";
-connectAttr "nurbsCircle8_scaleZ.o" "utility_room_viewRN.phl[3921]";
-connectAttr "LeftLeg_rotateX.o" "utility_room_viewRN.phl[3922]";
-connectAttr "LeftLeg_rotateY.o" "utility_room_viewRN.phl[3923]";
-connectAttr "LeftLeg_rotateZ.o" "utility_room_viewRN.phl[3924]";
-connectAttr "LeftLeg_translateX.o" "utility_room_viewRN.phl[3925]";
-connectAttr "LeftLeg_translateY.o" "utility_room_viewRN.phl[3926]";
-connectAttr "LeftLeg_translateZ.o" "utility_room_viewRN.phl[3927]";
-connectAttr "LeftLeg_visibility.o" "utility_room_viewRN.phl[3928]";
-connectAttr "LeftLeg_scaleX.o" "utility_room_viewRN.phl[3929]";
-connectAttr "LeftLeg_scaleY.o" "utility_room_viewRN.phl[3930]";
-connectAttr "LeftLeg_scaleZ.o" "utility_room_viewRN.phl[3931]";
-connectAttr "controller_rightArm_visibility.o" "utility_room_viewRN.phl[3932]";
-connectAttr "controller_rightArm_translateX.o" "utility_room_viewRN.phl[3933]";
-connectAttr "controller_rightArm_translateY.o" "utility_room_viewRN.phl[3934]";
-connectAttr "controller_rightArm_translateZ.o" "utility_room_viewRN.phl[3935]";
-connectAttr "controller_rightArm_rotateX.o" "utility_room_viewRN.phl[3936]";
-connectAttr "controller_rightArm_rotateY.o" "utility_room_viewRN.phl[3937]";
-connectAttr "controller_rightArm_rotateZ.o" "utility_room_viewRN.phl[3938]";
-connectAttr "controller_rightArm_scaleX.o" "utility_room_viewRN.phl[3939]";
-connectAttr "controller_rightArm_scaleY.o" "utility_room_viewRN.phl[3940]";
-connectAttr "controller_rightArm_scaleZ.o" "utility_room_viewRN.phl[3941]";
-connectAttr "controller_rightWrist_translateX.o" "utility_room_viewRN.phl[3942]"
-		;
-connectAttr "controller_rightWrist_translateY.o" "utility_room_viewRN.phl[3943]"
-		;
-connectAttr "controller_rightWrist_translateZ.o" "utility_room_viewRN.phl[3944]"
-		;
-connectAttr "controller_rightWrist_rotateX.o" "utility_room_viewRN.phl[3945]";
-connectAttr "controller_rightWrist_rotateY.o" "utility_room_viewRN.phl[3946]";
-connectAttr "controller_rightWrist_rotateZ.o" "utility_room_viewRN.phl[3947]";
-connectAttr "controller_rightWrist_scaleX.o" "utility_room_viewRN.phl[3948]";
-connectAttr "controller_rightWrist_scaleY.o" "utility_room_viewRN.phl[3949]";
-connectAttr "controller_rightWrist_scaleZ.o" "utility_room_viewRN.phl[3950]";
-connectAttr "controller_rightWrist_visibility.o" "utility_room_viewRN.phl[3951]"
-		;
-connectAttr "nurbsCircle1_translateX1.o" "utility_room_viewRN.phl[3952]";
-connectAttr "nurbsCircle1_translateY1.o" "utility_room_viewRN.phl[3953]";
-connectAttr "nurbsCircle1_translateZ1.o" "utility_room_viewRN.phl[3954]";
-connectAttr "nurbsCircle1_visibility1.o" "utility_room_viewRN.phl[3955]";
-connectAttr "nurbsCircle1_rotateX1.o" "utility_room_viewRN.phl[3956]";
-connectAttr "nurbsCircle1_rotateY1.o" "utility_room_viewRN.phl[3957]";
-connectAttr "nurbsCircle1_rotateZ1.o" "utility_room_viewRN.phl[3958]";
-connectAttr "nurbsCircle1_scaleX1.o" "utility_room_viewRN.phl[3959]";
-connectAttr "nurbsCircle1_scaleY1.o" "utility_room_viewRN.phl[3960]";
-connectAttr "nurbsCircle1_scaleZ1.o" "utility_room_viewRN.phl[3961]";
-connectAttr "nurbsCircle9_translateX.o" "utility_room_viewRN.phl[3962]";
-connectAttr "nurbsCircle9_translateY.o" "utility_room_viewRN.phl[3963]";
-connectAttr "nurbsCircle9_translateZ.o" "utility_room_viewRN.phl[3964]";
-connectAttr "nurbsCircle9_visibility.o" "utility_room_viewRN.phl[3965]";
-connectAttr "nurbsCircle9_rotateX.o" "utility_room_viewRN.phl[3966]";
-connectAttr "nurbsCircle9_rotateY.o" "utility_room_viewRN.phl[3967]";
-connectAttr "nurbsCircle9_rotateZ.o" "utility_room_viewRN.phl[3968]";
-connectAttr "nurbsCircle9_scaleX.o" "utility_room_viewRN.phl[3969]";
-connectAttr "nurbsCircle9_scaleY.o" "utility_room_viewRN.phl[3970]";
-connectAttr "nurbsCircle9_scaleZ.o" "utility_room_viewRN.phl[3971]";
-connectAttr "nurbsCircle10_translateX.o" "utility_room_viewRN.phl[3972]";
-connectAttr "nurbsCircle10_translateY.o" "utility_room_viewRN.phl[3973]";
-connectAttr "nurbsCircle10_translateZ.o" "utility_room_viewRN.phl[3974]";
-connectAttr "nurbsCircle10_visibility.o" "utility_room_viewRN.phl[3975]";
-connectAttr "nurbsCircle10_rotateX.o" "utility_room_viewRN.phl[3976]";
-connectAttr "nurbsCircle10_rotateY.o" "utility_room_viewRN.phl[3977]";
-connectAttr "nurbsCircle10_rotateZ.o" "utility_room_viewRN.phl[3978]";
-connectAttr "nurbsCircle10_scaleX.o" "utility_room_viewRN.phl[3979]";
-connectAttr "nurbsCircle10_scaleY.o" "utility_room_viewRN.phl[3980]";
-connectAttr "nurbsCircle10_scaleZ.o" "utility_room_viewRN.phl[3981]";
-connectAttr "nurbsCircle11_translateX.o" "utility_room_viewRN.phl[3982]";
-connectAttr "nurbsCircle11_translateY.o" "utility_room_viewRN.phl[3983]";
-connectAttr "nurbsCircle11_translateZ.o" "utility_room_viewRN.phl[3984]";
-connectAttr "nurbsCircle11_visibility.o" "utility_room_viewRN.phl[3985]";
-connectAttr "nurbsCircle11_rotateX.o" "utility_room_viewRN.phl[3986]";
-connectAttr "nurbsCircle11_rotateY.o" "utility_room_viewRN.phl[3987]";
-connectAttr "nurbsCircle11_rotateZ.o" "utility_room_viewRN.phl[3988]";
-connectAttr "nurbsCircle11_scaleX.o" "utility_room_viewRN.phl[3989]";
-connectAttr "nurbsCircle11_scaleY.o" "utility_room_viewRN.phl[3990]";
-connectAttr "nurbsCircle11_scaleZ.o" "utility_room_viewRN.phl[3991]";
-connectAttr "nurbsCircle12_translateX.o" "utility_room_viewRN.phl[3992]";
-connectAttr "nurbsCircle12_translateY.o" "utility_room_viewRN.phl[3993]";
-connectAttr "nurbsCircle12_translateZ.o" "utility_room_viewRN.phl[3994]";
-connectAttr "nurbsCircle12_visibility.o" "utility_room_viewRN.phl[3995]";
-connectAttr "nurbsCircle12_rotateX.o" "utility_room_viewRN.phl[3996]";
-connectAttr "nurbsCircle12_rotateY.o" "utility_room_viewRN.phl[3997]";
-connectAttr "nurbsCircle12_rotateZ.o" "utility_room_viewRN.phl[3998]";
-connectAttr "nurbsCircle12_scaleX.o" "utility_room_viewRN.phl[3999]";
-connectAttr "nurbsCircle12_scaleY.o" "utility_room_viewRN.phl[4000]";
-connectAttr "nurbsCircle12_scaleZ.o" "utility_room_viewRN.phl[4001]";
-connectAttr "curve1_translateX.o" "utility_room_viewRN.phl[4002]";
-connectAttr "curve1_translateY.o" "utility_room_viewRN.phl[4003]";
-connectAttr "curve1_translateZ.o" "utility_room_viewRN.phl[4004]";
-connectAttr "curve1_visibility.o" "utility_room_viewRN.phl[4005]";
-connectAttr "curve1_rotateX.o" "utility_room_viewRN.phl[4006]";
-connectAttr "curve1_rotateY.o" "utility_room_viewRN.phl[4007]";
-connectAttr "curve1_rotateZ.o" "utility_room_viewRN.phl[4008]";
-connectAttr "curve1_scaleX.o" "utility_room_viewRN.phl[4009]";
-connectAttr "curve1_scaleY.o" "utility_room_viewRN.phl[4010]";
-connectAttr "curve1_scaleZ.o" "utility_room_viewRN.phl[4011]";
-connectAttr "curve2_translateX.o" "utility_room_viewRN.phl[4012]";
-connectAttr "curve2_translateY.o" "utility_room_viewRN.phl[4013]";
-connectAttr "curve2_translateZ.o" "utility_room_viewRN.phl[4014]";
-connectAttr "curve2_visibility.o" "utility_room_viewRN.phl[4015]";
-connectAttr "curve2_rotateX.o" "utility_room_viewRN.phl[4016]";
-connectAttr "curve2_rotateY.o" "utility_room_viewRN.phl[4017]";
-connectAttr "curve2_rotateZ.o" "utility_room_viewRN.phl[4018]";
-connectAttr "curve2_scaleX.o" "utility_room_viewRN.phl[4019]";
-connectAttr "curve2_scaleY.o" "utility_room_viewRN.phl[4020]";
-connectAttr "curve2_scaleZ.o" "utility_room_viewRN.phl[4021]";
-connectAttr "curve3_translateX.o" "utility_room_viewRN.phl[4022]";
-connectAttr "curve3_translateY.o" "utility_room_viewRN.phl[4023]";
-connectAttr "curve3_translateZ.o" "utility_room_viewRN.phl[4024]";
-connectAttr "curve3_visibility.o" "utility_room_viewRN.phl[4025]";
-connectAttr "curve3_rotateX.o" "utility_room_viewRN.phl[4026]";
-connectAttr "curve3_rotateY.o" "utility_room_viewRN.phl[4027]";
-connectAttr "curve3_rotateZ.o" "utility_room_viewRN.phl[4028]";
-connectAttr "curve3_scaleX.o" "utility_room_viewRN.phl[4029]";
-connectAttr "curve3_scaleY.o" "utility_room_viewRN.phl[4030]";
-connectAttr "curve3_scaleZ.o" "utility_room_viewRN.phl[4031]";
-connectAttr "curve4_translateX.o" "utility_room_viewRN.phl[4032]";
-connectAttr "curve4_translateY.o" "utility_room_viewRN.phl[4033]";
-connectAttr "curve4_translateZ.o" "utility_room_viewRN.phl[4034]";
-connectAttr "curve4_visibility.o" "utility_room_viewRN.phl[4035]";
-connectAttr "curve4_rotateX.o" "utility_room_viewRN.phl[4036]";
-connectAttr "curve4_rotateY.o" "utility_room_viewRN.phl[4037]";
-connectAttr "curve4_rotateZ.o" "utility_room_viewRN.phl[4038]";
-connectAttr "curve4_scaleX.o" "utility_room_viewRN.phl[4039]";
-connectAttr "curve4_scaleY.o" "utility_room_viewRN.phl[4040]";
-connectAttr "curve4_scaleZ.o" "utility_room_viewRN.phl[4041]";
-connectAttr "curve5_translateX.o" "utility_room_viewRN.phl[4042]";
-connectAttr "curve5_translateY.o" "utility_room_viewRN.phl[4043]";
-connectAttr "curve5_translateZ.o" "utility_room_viewRN.phl[4044]";
-connectAttr "curve5_visibility.o" "utility_room_viewRN.phl[4045]";
-connectAttr "curve5_rotateX.o" "utility_room_viewRN.phl[4046]";
-connectAttr "curve5_rotateY.o" "utility_room_viewRN.phl[4047]";
-connectAttr "curve5_rotateZ.o" "utility_room_viewRN.phl[4048]";
-connectAttr "curve5_scaleX.o" "utility_room_viewRN.phl[4049]";
-connectAttr "curve5_scaleY.o" "utility_room_viewRN.phl[4050]";
-connectAttr "curve5_scaleZ.o" "utility_room_viewRN.phl[4051]";
-connectAttr "RightArm_rotateX.o" "utility_room_viewRN.phl[4052]";
-connectAttr "RightArm_rotateY.o" "utility_room_viewRN.phl[4053]";
-connectAttr "RightArm_rotateZ.o" "utility_room_viewRN.phl[4054]";
-connectAttr "RightArm_translateX.o" "utility_room_viewRN.phl[4055]";
-connectAttr "RightArm_translateY.o" "utility_room_viewRN.phl[4056]";
-connectAttr "RightArm_translateZ.o" "utility_room_viewRN.phl[4057]";
-connectAttr "RightArm_visibility.o" "utility_room_viewRN.phl[4058]";
-connectAttr "RightArm_scaleX.o" "utility_room_viewRN.phl[4059]";
-connectAttr "RightArm_scaleY.o" "utility_room_viewRN.phl[4060]";
-connectAttr "RightArm_scaleZ.o" "utility_room_viewRN.phl[4061]";
-connectAttr "blendShape1_oh_shit.o" "utility_room_viewRN.phl[4062]";
-connectAttr "blendShape1_eyes_tight.o" "utility_room_viewRN.phl[4063]";
-connectAttr "blendShape1_DO_NOT_TOUCH.o" "utility_room_viewRN.phl[4064]";
-connectAttr "blendShape1_smile_closed_mouth.o" "utility_room_viewRN.phl[4065]";
-connectAttr "blendShape1_leftFwd.o" "utility_room_viewRN.phl[4066]";
-connectAttr "blendShape1_rightFwd.o" "utility_room_viewRN.phl[4067]";
-connectAttr "blendShape1_blink.o" "utility_room_viewRN.phl[4068]";
-connectAttr "blendShape1_leftSide.o" "utility_room_viewRN.phl[4069]";
-connectAttr "blendShape1_rightSide.o" "utility_room_viewRN.phl[4070]";
-connectAttr "blendShape1_nose.o" "utility_room_viewRN.phl[4071]";
-connectAttr "blendShape1_neutral.o" "utility_room_viewRN.phl[4072]";
-connectAttr "blendShape1_super_angry.o" "utility_room_viewRN.phl[4073]";
-connectAttr "blendShape1_slightly_angry.o" "utility_room_viewRN.phl[4074]";
-connectAttr "blendShape1_smile1.o" "utility_room_viewRN.phl[4075]";
-connectAttr "blendShape1_pervy.o" "utility_room_viewRN.phl[4076]";
-connectAttr "blendShape1_smile.o" "utility_room_viewRN.phl[4077]";
-connectAttr "at_dryer_visibility.o" "utility_room_viewRN.phl[4207]";
-connectAttr "at_dryer_translateX.o" "utility_room_viewRN.phl[4208]";
-connectAttr "at_dryer_translateY.o" "utility_room_viewRN.phl[4209]";
-connectAttr "at_dryer_translateZ.o" "utility_room_viewRN.phl[4210]";
-connectAttr "at_dryer_rotateX.o" "utility_room_viewRN.phl[4211]";
-connectAttr "at_dryer_rotateY.o" "utility_room_viewRN.phl[4212]";
-connectAttr "at_dryer_rotateZ.o" "utility_room_viewRN.phl[4213]";
-connectAttr "at_dryer_scaleX.o" "utility_room_viewRN.phl[4214]";
-connectAttr "at_dryer_scaleY.o" "utility_room_viewRN.phl[4215]";
-connectAttr "at_dryer_scaleZ.o" "utility_room_viewRN.phl[4216]";
-connectAttr "at_dryerShape_focalLength.o" "utility_room_viewRN.phl[4217]";
-connectAttr "utility_room_view_nClothShape1Cache1.ocd[0]" "utility_room_viewRN.phl[4218]"
-		;
-connectAttr "utility_room_view_nClothShape1Cache1.ir" "utility_room_viewRN.phl[4219]"
-		;
-connectAttr "controller_main01_translateX.o" "utility_room_viewRN.phl[3303]";
-connectAttr "controller_main01_translateY1.o" "utility_room_viewRN.phl[3304]";
-connectAttr "controller_main01_translateZ.o" "utility_room_viewRN.phl[3305]";
-connectAttr "controller_main01_rotateX1.o" "utility_room_viewRN.phl[3306]";
-connectAttr "controller_main01_rotateY.o" "utility_room_viewRN.phl[3307]";
-connectAttr "controller_main01_rotateZ1.o" "utility_room_viewRN.phl[3308]";
-connectAttr "controller_main01_scaleX.o" "utility_room_viewRN.phl[3309]";
-connectAttr "controller_main01_scaleY.o" "utility_room_viewRN.phl[3310]";
-connectAttr "controller_main01_scaleZ.o" "utility_room_viewRN.phl[3311]";
-connectAttr "pig_right_eye_rotateX.o" "utility_room_viewRN.phl[3312]";
-connectAttr "pig_right_eye_rotateY.o" "utility_room_viewRN.phl[3313]";
-connectAttr "pig_right_eye_rotateZ.o" "utility_room_viewRN.phl[3314]";
-connectAttr "pig_right_eye_visibility.o" "utility_room_viewRN.phl[3315]";
-connectAttr "pig_right_eye_translateX.o" "utility_room_viewRN.phl[3316]";
-connectAttr "pig_right_eye_translateY.o" "utility_room_viewRN.phl[3317]";
-connectAttr "pig_right_eye_translateZ.o" "utility_room_viewRN.phl[3318]";
-connectAttr "pig_right_eye_scaleX.o" "utility_room_viewRN.phl[3319]";
-connectAttr "pig_right_eye_scaleY.o" "utility_room_viewRN.phl[3320]";
-connectAttr "pig_right_eye_scaleZ.o" "utility_room_viewRN.phl[3321]";
-connectAttr "pig_left_eye_rotateX.o" "utility_room_viewRN.phl[3322]";
-connectAttr "pig_left_eye_rotateY.o" "utility_room_viewRN.phl[3323]";
-connectAttr "pig_left_eye_rotateZ.o" "utility_room_viewRN.phl[3324]";
-connectAttr "pig_left_eye_visibility.o" "utility_room_viewRN.phl[3325]";
-connectAttr "pig_left_eye_translateX.o" "utility_room_viewRN.phl[3326]";
-connectAttr "pig_left_eye_translateY.o" "utility_room_viewRN.phl[3327]";
-connectAttr "pig_left_eye_translateZ.o" "utility_room_viewRN.phl[3328]";
-connectAttr "pig_left_eye_scaleX.o" "utility_room_viewRN.phl[3329]";
-connectAttr "pig_left_eye_scaleY.o" "utility_room_viewRN.phl[3330]";
-connectAttr "pig_left_eye_scaleZ.o" "utility_room_viewRN.phl[3331]";
-connectAttr "stretchr_ctrl01_translateX.o" "utility_room_viewRN.phl[3332]";
-connectAttr "stretchr_ctrl01_translateY.o" "utility_room_viewRN.phl[3333]";
-connectAttr "stretchr_ctrl01_translateZ.o" "utility_room_viewRN.phl[3334]";
-connectAttr "stretchr_ctrl01_rotateX.o" "utility_room_viewRN.phl[3335]";
-connectAttr "stretchr_ctrl01_rotateY.o" "utility_room_viewRN.phl[3336]";
-connectAttr "stretchr_ctrl01_rotateZ.o" "utility_room_viewRN.phl[3337]";
-connectAttr "stretchr_ctrl01_scaleX.o" "utility_room_viewRN.phl[3338]";
-connectAttr "stretchr_ctrl01_scaleY.o" "utility_room_viewRN.phl[3339]";
-connectAttr "stretchr_ctrl01_scaleZ.o" "utility_room_viewRN.phl[3340]";
-connectAttr "stretchr_ctrl01_visibility.o" "utility_room_viewRN.phl[3341]";
-connectAttr "controller_L_backfoot01_rotateX.o" "utility_room_viewRN.phl[3342]";
-connectAttr "controller_L_backfoot01_rotateY.o" "utility_room_viewRN.phl[3343]";
-connectAttr "controller_L_backfoot01_rotateZ.o" "utility_room_viewRN.phl[3344]";
-connectAttr "controller_L_backfoot01_translateX.o" "utility_room_viewRN.phl[3345]"
-		;
-connectAttr "controller_L_backfoot01_translateY.o" "utility_room_viewRN.phl[3346]"
-		;
-connectAttr "controller_L_backfoot01_translateZ.o" "utility_room_viewRN.phl[3347]"
-		;
-connectAttr "controller_L_backfoot01_scaleX.o" "utility_room_viewRN.phl[3348]";
-connectAttr "controller_L_backfoot01_scaleY.o" "utility_room_viewRN.phl[3349]";
-connectAttr "controller_L_backfoot01_scaleZ.o" "utility_room_viewRN.phl[3350]";
-connectAttr "controller_R_backfoot01_rotateX.o" "utility_room_viewRN.phl[3351]";
-connectAttr "controller_R_backfoot01_rotateY.o" "utility_room_viewRN.phl[3352]";
-connectAttr "controller_R_backfoot01_rotateZ.o" "utility_room_viewRN.phl[3353]";
-connectAttr "controller_R_backfoot01_translateX.o" "utility_room_viewRN.phl[3354]"
-		;
-connectAttr "controller_R_backfoot01_translateY.o" "utility_room_viewRN.phl[3355]"
-		;
-connectAttr "controller_R_backfoot01_translateZ.o" "utility_room_viewRN.phl[3356]"
-		;
-connectAttr "controller_R_backfoot01_scaleX.o" "utility_room_viewRN.phl[3357]";
-connectAttr "controller_R_backfoot01_scaleY.o" "utility_room_viewRN.phl[3358]";
-connectAttr "controller_R_backfoot01_scaleZ.o" "utility_room_viewRN.phl[3359]";
-connectAttr "hip_rotation_ctrl01_translateX.o" "utility_room_viewRN.phl[3360]";
-connectAttr "hip_rotation_ctrl01_translateY.o" "utility_room_viewRN.phl[3361]";
-connectAttr "hip_rotation_ctrl01_translateZ.o" "utility_room_viewRN.phl[3362]";
-connectAttr "hip_rotation_ctrl01_rotateX.o" "utility_room_viewRN.phl[3363]";
-connectAttr "hip_rotation_ctrl01_rotateY.o" "utility_room_viewRN.phl[3364]";
-connectAttr "hip_rotation_ctrl01_rotateZ.o" "utility_room_viewRN.phl[3365]";
-connectAttr "hip_rotation_ctrl01_scaleX.o" "utility_room_viewRN.phl[3366]";
-connectAttr "hip_rotation_ctrl01_scaleY.o" "utility_room_viewRN.phl[3367]";
-connectAttr "hip_rotation_ctrl01_scaleZ.o" "utility_room_viewRN.phl[3368]";
-connectAttr "utility_room_viewRN.phl[3369]" "tail_2control01_parentConstraint1.tg[0].tt"
-		;
-connectAttr "pairBlend2.otx" "utility_room_viewRN.phl[3370]";
-connectAttr "pairBlend2.oty" "utility_room_viewRN.phl[3371]";
-connectAttr "pairBlend2.otz" "utility_room_viewRN.phl[3372]";
-connectAttr "utility_room_viewRN.phl[3373]" "tail_2control01_parentConstraint1.tg[0].trp"
-		;
-connectAttr "utility_room_viewRN.phl[3374]" "tail_2control01_parentConstraint1.tg[0].trt"
-		;
-connectAttr "utility_room_viewRN.phl[3375]" "tail_2control01_parentConstraint1.tg[0].tr"
-		;
-connectAttr "pairBlend2.orx" "utility_room_viewRN.phl[3376]";
-connectAttr "pairBlend2.ory" "utility_room_viewRN.phl[3377]";
-connectAttr "pairBlend2.orz" "utility_room_viewRN.phl[3378]";
-connectAttr "utility_room_viewRN.phl[3379]" "tail_2control01_parentConstraint1.tg[0].tro"
-		;
-connectAttr "utility_room_viewRN.phl[3380]" "tail_2control01_parentConstraint1.tg[0].ts"
-		;
-connectAttr "tail_1control01_scaleX.o" "utility_room_viewRN.phl[3381]";
-connectAttr "tail_1control01_scaleY.o" "utility_room_viewRN.phl[3382]";
-connectAttr "tail_1control01_scaleZ.o" "utility_room_viewRN.phl[3383]";
-connectAttr "utility_room_viewRN.phl[3384]" "tail_2control01_parentConstraint1.tg[0].tpm"
-		;
-connectAttr "utility_room_viewRN.phl[3385]" "pairBlend2.w";
-connectAttr "tail_1control01_blendParent1.o" "utility_room_viewRN.phl[3386]";
-connectAttr "utility_room_viewRN.phl[3387]" "tail_3control01_parentConstraint1.tg[0].tt"
-		;
-connectAttr "pairBlend4.otx" "utility_room_viewRN.phl[3388]";
-connectAttr "pairBlend4.oty" "utility_room_viewRN.phl[3389]";
-connectAttr "pairBlend4.otz" "utility_room_viewRN.phl[3390]";
-connectAttr "utility_room_viewRN.phl[3391]" "tail_2control01_parentConstraint1.crp"
-		;
-connectAttr "utility_room_viewRN.phl[3392]" "tail_3control01_parentConstraint1.tg[0].trp"
-		;
-connectAttr "utility_room_viewRN.phl[3393]" "tail_2control01_parentConstraint1.crt"
-		;
-connectAttr "utility_room_viewRN.phl[3394]" "tail_3control01_parentConstraint1.tg[0].trt"
-		;
-connectAttr "utility_room_viewRN.phl[3395]" "tail_3control01_parentConstraint1.tg[0].tr"
-		;
-connectAttr "pairBlend4.orx" "utility_room_viewRN.phl[3396]";
-connectAttr "pairBlend4.ory" "utility_room_viewRN.phl[3397]";
-connectAttr "pairBlend4.orz" "utility_room_viewRN.phl[3398]";
-connectAttr "utility_room_viewRN.phl[3399]" "tail_2control01_parentConstraint1.cro"
-		;
-connectAttr "utility_room_viewRN.phl[3400]" "tail_3control01_parentConstraint1.tg[0].tro"
-		;
-connectAttr "utility_room_viewRN.phl[3401]" "tail_3control01_parentConstraint1.tg[0].ts"
-		;
-connectAttr "tail_2control01_scaleX.o" "utility_room_viewRN.phl[3402]";
-connectAttr "tail_2control01_scaleY.o" "utility_room_viewRN.phl[3403]";
-connectAttr "tail_2control01_scaleZ.o" "utility_room_viewRN.phl[3404]";
-connectAttr "utility_room_viewRN.phl[3405]" "tail_3control01_parentConstraint1.tg[0].tpm"
-		;
-connectAttr "utility_room_viewRN.phl[3406]" "pairBlend4.w";
-connectAttr "tail_2control01_blendParent1.o" "utility_room_viewRN.phl[3407]";
-connectAttr "utility_room_viewRN.phl[3408]" "tail_2control01_parentConstraint1.cpim"
-		;
-connectAttr "utility_room_viewRN.phl[3409]" "tail_4control01_parentConstraint1.tg[0].tt"
-		;
-connectAttr "tail_3control01_parentConstraint1.ctx" "utility_room_viewRN.phl[3410]"
-		;
-connectAttr "tail_3control01_parentConstraint1.cty" "utility_room_viewRN.phl[3411]"
-		;
-connectAttr "tail_3control01_parentConstraint1.ctz" "utility_room_viewRN.phl[3412]"
-		;
-connectAttr "utility_room_viewRN.phl[3413]" "tail_3control01_parentConstraint1.crp"
-		;
-connectAttr "utility_room_viewRN.phl[3414]" "tail_4control01_parentConstraint1.tg[0].trp"
-		;
-connectAttr "utility_room_viewRN.phl[3415]" "tail_3control01_parentConstraint1.crt"
-		;
-connectAttr "utility_room_viewRN.phl[3416]" "tail_4control01_parentConstraint1.tg[0].trt"
-		;
-connectAttr "utility_room_viewRN.phl[3417]" "tail_4control01_parentConstraint1.tg[0].tr"
-		;
-connectAttr "tail_3control01_parentConstraint1.crx" "utility_room_viewRN.phl[3418]"
-		;
-connectAttr "tail_3control01_parentConstraint1.cry" "utility_room_viewRN.phl[3419]"
-		;
-connectAttr "tail_3control01_parentConstraint1.crz" "utility_room_viewRN.phl[3420]"
-		;
-connectAttr "utility_room_viewRN.phl[3421]" "tail_3control01_parentConstraint1.cro"
-		;
-connectAttr "utility_room_viewRN.phl[3422]" "tail_4control01_parentConstraint1.tg[0].tro"
-		;
-connectAttr "utility_room_viewRN.phl[3423]" "tail_4control01_parentConstraint1.tg[0].ts"
-		;
-connectAttr "utility_room_viewRN.phl[3424]" "tail_4control01_parentConstraint1.tg[0].tpm"
-		;
-connectAttr "utility_room_viewRN.phl[3425]" "tail_3control01_parentConstraint1.cpim"
-		;
-connectAttr "tail_4control01_parentConstraint1.ctx" "utility_room_viewRN.phl[3426]"
-		;
-connectAttr "tail_4control01_parentConstraint1.cty" "utility_room_viewRN.phl[3427]"
-		;
-connectAttr "tail_4control01_parentConstraint1.ctz" "utility_room_viewRN.phl[3428]"
-		;
-connectAttr "utility_room_viewRN.phl[3429]" "tail_4control01_parentConstraint1.crp"
-		;
-connectAttr "utility_room_viewRN.phl[3430]" "tail_4control01_parentConstraint1.crt"
-		;
-connectAttr "tail_4control01_parentConstraint1.crx" "utility_room_viewRN.phl[3431]"
-		;
-connectAttr "tail_4control01_parentConstraint1.cry" "utility_room_viewRN.phl[3432]"
-		;
-connectAttr "tail_4control01_parentConstraint1.crz" "utility_room_viewRN.phl[3433]"
-		;
-connectAttr "utility_room_viewRN.phl[3434]" "tail_4control01_parentConstraint1.cro"
-		;
-connectAttr "utility_room_viewRN.phl[3435]" "tail_4control01_parentConstraint1.cpim"
-		;
-connectAttr "stretchf_ctrl01_translateX.o" "utility_room_viewRN.phl[3436]";
-connectAttr "stretchf_ctrl01_translateY.o" "utility_room_viewRN.phl[3437]";
-connectAttr "stretchf_ctrl01_translateZ.o" "utility_room_viewRN.phl[3438]";
-connectAttr "stretchf_ctrl01_rotateX.o" "utility_room_viewRN.phl[3439]";
-connectAttr "stretchf_ctrl01_rotateY.o" "utility_room_viewRN.phl[3440]";
-connectAttr "stretchf_ctrl01_rotateZ.o" "utility_room_viewRN.phl[3441]";
-connectAttr "stretchf_ctrl01_scaleX.o" "utility_room_viewRN.phl[3442]";
-connectAttr "stretchf_ctrl01_scaleY.o" "utility_room_viewRN.phl[3443]";
-connectAttr "stretchf_ctrl01_scaleZ.o" "utility_room_viewRN.phl[3444]";
-connectAttr "stretchf_ctrl01_visibility.o" "utility_room_viewRN.phl[3445]";
-connectAttr "controller_L_frontfoot01_rotateX.o" "utility_room_viewRN.phl[3446]"
-		;
-connectAttr "controller_L_frontfoot01_rotateY.o" "utility_room_viewRN.phl[3447]"
-		;
-connectAttr "controller_L_frontfoot01_rotateZ.o" "utility_room_viewRN.phl[3448]"
-		;
-connectAttr "controller_L_frontfoot01_translateX.o" "utility_room_viewRN.phl[3449]"
-		;
-connectAttr "controller_L_frontfoot01_translateY.o" "utility_room_viewRN.phl[3450]"
-		;
-connectAttr "controller_L_frontfoot01_translateZ.o" "utility_room_viewRN.phl[3451]"
-		;
-connectAttr "controller_L_frontfoot01_scaleX.o" "utility_room_viewRN.phl[3452]";
-connectAttr "controller_L_frontfoot01_scaleY.o" "utility_room_viewRN.phl[3453]";
-connectAttr "controller_L_frontfoot01_scaleZ.o" "utility_room_viewRN.phl[3454]";
-connectAttr "controller_R_frontfoot01_rotateX.o" "utility_room_viewRN.phl[3455]"
-		;
-connectAttr "controller_R_frontfoot01_rotateY.o" "utility_room_viewRN.phl[3456]"
-		;
-connectAttr "controller_R_frontfoot01_rotateZ.o" "utility_room_viewRN.phl[3457]"
-		;
-connectAttr "controller_R_frontfoot01_translateX.o" "utility_room_viewRN.phl[3458]"
-		;
-connectAttr "controller_R_frontfoot01_translateY.o" "utility_room_viewRN.phl[3459]"
-		;
-connectAttr "controller_R_frontfoot01_translateZ.o" "utility_room_viewRN.phl[3460]"
-		;
-connectAttr "controller_R_frontfoot01_scaleX.o" "utility_room_viewRN.phl[3461]";
-connectAttr "controller_R_frontfoot01_scaleY.o" "utility_room_viewRN.phl[3462]";
-connectAttr "controller_R_frontfoot01_scaleZ.o" "utility_room_viewRN.phl[3463]";
-connectAttr "pairBlend5.oty" "utility_room_viewRN.phl[3464]";
-connectAttr "shoulders_rotation_ctrl01_translateX.o" "utility_room_viewRN.phl[3465]"
-		;
-connectAttr "shoulders_rotation_ctrl01_translateZ.o" "utility_room_viewRN.phl[3466]"
-		;
-connectAttr "pairBlend5.orx" "utility_room_viewRN.phl[3467]";
-connectAttr "pairBlend5.ory" "utility_room_viewRN.phl[3468]";
-connectAttr "pairBlend5.orz" "utility_room_viewRN.phl[3469]";
-connectAttr "shoulders_rotation_ctrl01_scaleX.o" "utility_room_viewRN.phl[3470]"
-		;
-connectAttr "shoulders_rotation_ctrl01_scaleY.o" "utility_room_viewRN.phl[3471]"
-		;
-connectAttr "shoulders_rotation_ctrl01_scaleZ.o" "utility_room_viewRN.phl[3472]"
-		;
-connectAttr "utility_room_viewRN.phl[3473]" "pairBlend5.w";
-connectAttr "shoulders_rotation_ctrl01_blendParent1.o" "utility_room_viewRN.phl[3474]"
-		;
-connectAttr "utility_room_viewRN.phl[3475]" "pairBlend5.ity2";
-connectAttr "utility_room_viewRN.phl[3476]" "pairBlend5.irx2";
-connectAttr "utility_room_viewRN.phl[3477]" "pairBlend5.iry2";
-connectAttr "utility_room_viewRN.phl[3478]" "pairBlend5.irz2";
-connectAttr "head_control_translateX.o" "utility_room_viewRN.phl[3479]";
-connectAttr "head_control_translateY.o" "utility_room_viewRN.phl[3480]";
-connectAttr "head_control_translateZ.o" "utility_room_viewRN.phl[3481]";
-connectAttr "head_control_rotateX.o" "utility_room_viewRN.phl[3482]";
-connectAttr "head_control_rotateY.o" "utility_room_viewRN.phl[3483]";
-connectAttr "head_control_rotateZ.o" "utility_room_viewRN.phl[3484]";
-connectAttr "head_control_scaleX.o" "utility_room_viewRN.phl[3485]";
-connectAttr "head_control_scaleY.o" "utility_room_viewRN.phl[3486]";
-connectAttr "head_control_scaleZ.o" "utility_room_viewRN.phl[3487]";
-connectAttr "spine_spline_ctrl_translateX.o" "utility_room_viewRN.phl[3488]";
-connectAttr "spine_spline_ctrl_translateZ.o" "utility_room_viewRN.phl[3489]";
-connectAttr "spine_spline_ctrl_translateY.o" "utility_room_viewRN.phl[3490]";
-connectAttr "spine_spline_ctrl_visibility.o" "utility_room_viewRN.phl[3491]";
-connectAttr "vertebrae_flexi_anim_mid01_followStart.o" "utility_room_viewRN.phl[3492]"
-		;
-connectAttr "vertebrae_flexi_anim_mid01_translateX.o" "utility_room_viewRN.phl[3493]"
-		;
-connectAttr "vertebrae_flexi_anim_mid01_translateY.o" "utility_room_viewRN.phl[3494]"
-		;
-connectAttr "vertebrae_flexi_anim_mid01_translateZ.o" "utility_room_viewRN.phl[3495]"
-		;
-connectAttr "vertebrae_flexi_anim_mid01_rotateZ.o" "utility_room_viewRN.phl[3496]"
-		;
-connectAttr "vertebrae_flexi_anim_mid01_rotateX.o" "utility_room_viewRN.phl[3497]"
-		;
-connectAttr "vertebrae_flexi_anim_mid01_rotateY.o" "utility_room_viewRN.phl[3498]"
-		;
-connectAttr "vertebrae_flexi_anim_mid01_scaleX.o" "utility_room_viewRN.phl[3499]"
-		;
-connectAttr "vertebrae_flexi_anim_mid01_scaleY.o" "utility_room_viewRN.phl[3500]"
-		;
-connectAttr "vertebrae_flexi_anim_mid01_scaleZ.o" "utility_room_viewRN.phl[3501]"
-		;
-connectAttr "vertebrae_flexi_anim_mid01_visibility.o" "utility_room_viewRN.phl[3502]"
-		;
-connectAttr "utility_room_viewRN.phl[77]" "undiesShapeDeformed.i";
 connectAttr "tail_2control01_parentConstraint1.w0" "tail_2control01_parentConstraint1.tg[0].tw"
 		;
 connectAttr "tail_3control01_parentConstraint1.w0" "tail_3control01_parentConstraint1.tg[0].tw"
 		;
 connectAttr "tail_4control01_parentConstraint1.w0" "tail_4control01_parentConstraint1.tg[0].tw"
-		;
-connectAttr "global_ctrl_parentConstraint1.w0" "global_ctrl_parentConstraint1.tg[0].tw"
 		;
 connectAttr ":rmanFinalGlobals.msg" ":renderManRISGlobals.p" -na;
 connectAttr ":rmanPreviewGlobals.msg" ":renderManRISGlobals.p" -na;
@@ -34825,9 +34667,67 @@ connectAttr "utility_room_view_house_latest_bedroom_latest_nClothShape1Cache1.ir
 		;
 connectAttr "utility_room_view_house_latest_bedroom_latest_nClothShape1Cache1.ocd[0]" "utility_room_viewRN.phl[3302]"
 		;
+connectAttr "global_ctrl_blendParent1.o" "utility_room_viewRN.phl[3504]";
+connectAttr "pairBlend1.otx" "utility_room_viewRN.phl[3505]";
+connectAttr "pairBlend1.oty" "utility_room_viewRN.phl[3506]";
+connectAttr "pairBlend1.otz" "utility_room_viewRN.phl[3507]";
+connectAttr "pairBlend1.orx" "utility_room_viewRN.phl[3508]";
+connectAttr "pairBlend1.ory" "utility_room_viewRN.phl[3509]";
+connectAttr "pairBlend1.orz" "utility_room_viewRN.phl[3510]";
+connectAttr "global_ctrl_scaleX.o" "utility_room_viewRN.phl[3511]";
+connectAttr "global_ctrl_scaleY.o" "utility_room_viewRN.phl[3512]";
+connectAttr "global_ctrl_scaleZ.o" "utility_room_viewRN.phl[3513]";
+connectAttr "cog_ctrl_translateX.o" "utility_room_viewRN.phl[3519]";
+connectAttr "cog_ctrl_translateY.o" "utility_room_viewRN.phl[3520]";
+connectAttr "cog_ctrl_translateZ.o" "utility_room_viewRN.phl[3521]";
+connectAttr "cog_ctrl_rotateX.o" "utility_room_viewRN.phl[3522]";
+connectAttr "cog_ctrl_rotateY.o" "utility_room_viewRN.phl[3523]";
+connectAttr "cog_ctrl_rotateZ.o" "utility_room_viewRN.phl[3524]";
+connectAttr "Tail_Ctrl1_rotateX.o" "utility_room_viewRN.phl[3525]";
+connectAttr "Tail_Ctrl1_rotateY.o" "utility_room_viewRN.phl[3526]";
+connectAttr "Tail_Ctrl1_rotateZ.o" "utility_room_viewRN.phl[3527]";
+connectAttr "Tail_Ctrl1_translateX.o" "utility_room_viewRN.phl[3528]";
+connectAttr "Tail_Ctrl1_translateY.o" "utility_room_viewRN.phl[3529]";
+connectAttr "Tail_Ctrl1_translateZ.o" "utility_room_viewRN.phl[3530]";
+connectAttr "back_ctrl_rotateX.o" "utility_room_viewRN.phl[3531]";
+connectAttr "back_ctrl_rotateY.o" "utility_room_viewRN.phl[3532]";
+connectAttr "back_ctrl_rotateZ.o" "utility_room_viewRN.phl[3533]";
+connectAttr "chest_ctrl_rotateX.o" "utility_room_viewRN.phl[3534]";
+connectAttr "chest_ctrl_rotateY.o" "utility_room_viewRN.phl[3535]";
+connectAttr "chest_ctrl_rotateZ.o" "utility_room_viewRN.phl[3536]";
+connectAttr "head_ctrl_rotateX.o" "utility_room_viewRN.phl[3537]";
+connectAttr "head_ctrl_rotateY.o" "utility_room_viewRN.phl[3538]";
+connectAttr "head_ctrl_rotateZ.o" "utility_room_viewRN.phl[3539]";
+connectAttr "leftArm_ctrl_rotateX.o" "utility_room_viewRN.phl[3540]";
+connectAttr "leftArm_ctrl_rotateY.o" "utility_room_viewRN.phl[3541]";
+connectAttr "leftArm_ctrl_rotateZ.o" "utility_room_viewRN.phl[3542]";
+connectAttr "leftArm_ctrl_translateX.o" "utility_room_viewRN.phl[3543]";
+connectAttr "leftArm_ctrl_translateY.o" "utility_room_viewRN.phl[3544]";
+connectAttr "leftArm_ctrl_translateZ.o" "utility_room_viewRN.phl[3545]";
+connectAttr "blendShape1_angry.o" "utility_room_viewRN.phl[3546]";
+connectAttr "blendShape1_happy.o" "utility_room_viewRN.phl[3547]";
+connectAttr "blendShape1_worried.o" "utility_room_viewRN.phl[3548]";
+connectAttr "blendShape1_closedMouth.o" "utility_room_viewRN.phl[3549]";
+connectAttr "blendShape1_openMouth.o" "utility_room_viewRN.phl[3550]";
+connectAttr "blendShape1_closedEyes.o" "utility_room_viewRN.phl[3551]";
+connectAttr "blendShape1_leftEyebrowUp.o" "utility_room_viewRN.phl[3552]";
+connectAttr "blendShape1_rightEyebrowUp.o" "utility_room_viewRN.phl[3553]";
+connectAttr "blendShape1_noseUp.o" "utility_room_viewRN.phl[3554]";
+connectAttr "blendShape1_noseDown.o" "utility_room_viewRN.phl[3555]";
+connectAttr "blendShape1_leftEarOut.o" "utility_room_viewRN.phl[3556]";
+connectAttr "blendShape1_rightEarOut.o" "utility_room_viewRN.phl[3557]";
+connectAttr "blendShape1_earsSpread.o" "utility_room_viewRN.phl[3558]";
+connectAttr "blendShape1_leftEarForward.o" "utility_room_viewRN.phl[3559]";
+connectAttr "blendShape1_rightEarForward.o" "utility_room_viewRN.phl[3560]";
+connectAttr "blendShape1_leftEyeClosed.o" "utility_room_viewRN.phl[3561]";
+connectAttr "blendShape1_polySurface6.o" "utility_room_viewRN.phl[3562]";
+connectAttr "blendShape1_polySurface7.o" "utility_room_viewRN.phl[3563]";
+connectAttr "blendShape1_polySurface8.o" "utility_room_viewRN.phl[3564]";
 connectAttr "utility_room_viewRNfosterParent1.msg" "utility_room_viewRN.fp";
 connectAttr "sharedReferenceNode.sr" "utility_room_viewRN.sr";
 connectAttr ":defaultRenderGlobals.rcb" "defaultFurGlobals.cb";
+connectAttr "utility_room_viewRN.phl[3503]" "pairBlend1.w";
+connectAttr "utility_room_viewRN.phl[3517]" "pairBlend1.ro";
 connectAttr "global_ctrl_translateX.o" "pairBlend1.itx1";
 connectAttr "global_ctrl_translateY.o" "pairBlend1.ity1";
 connectAttr "global_ctrl_translateZ.o" "pairBlend1.itz1";

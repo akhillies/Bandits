@@ -2,7 +2,7 @@
 # Call this script from the github folder!!
 
 # set all these for your own use. $gitpath and $tmpfolder need to be an absolute path while the rest are all relative to $gitpath
-sshurl="liberty.cs.berkeley.edu";
+sshurl="shay.cs.berkeley.edu";
 usr="cs198-ed";
 pw="saurabhissupersexy";
 gitpath="/home/cc/cs198/sp15/class/cs198-ed/CNM190/Bandits"

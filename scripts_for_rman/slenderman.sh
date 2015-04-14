@@ -36,5 +36,4 @@ printf "Rendering:\n\n"
 #while [ $(ls -l | grep -v ^l | wc -l) != $(expr $8 - $7) ]; do
 #    echo "."
 #done
-
 #spinner $! "Working on rendering..."

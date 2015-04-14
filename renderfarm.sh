@@ -2,7 +2,7 @@
 # Call this script from the github folder!!
 
 # set all these for your own use. $gitpath and $tmpfolder need to be an absolute path while the rest are all relative to $gitpath
-sshurl="liberty.cs.berkeley.edu";
+sshurl="shay.cs.berkeley.edu";
 usr="cs198-ed";
 pw="saurabhissupersexy";
 gitpath="/home/cc/cs198/sp15/class/cs198-ed/CNM190/Bandits"
@@ -70,6 +70,7 @@ printf "\tAnd when done will send to: $email\n\n\n"
 
 $scripts/sshlogin.sh $sshurl $usr $pw $gitpath $mayaproj $renderable $scripts $tmpfolder $file $cam $start $end $email
 
+# for windows:
 #ssh -oStrictHostKeyChecking=no -oCheckHostIP=no $usr@$sshurl "$gitpath/$scripts/slenderman.sh $gitpath $mayaproj $renderable $tmpfolder $file $cam $start $end $email"
 
 printf "\n\n==============================================================\nRender Farm should have started, please go to shay.cs.berkeley.edu:8888 and login with cs198-ed to see progress\n\t An email will be sent to the specified email address given with a command to run so you can transfer the rendered frames to your computer\n\n\n"

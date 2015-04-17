@@ -1,6 +1,6 @@
 //Maya ASCII 2013 scene
-//Name: bike_rig_latest.ma
-//Last modified: Thu, Apr 16, 2015 11:05:06 PM
+//Name: bike_rig_04_rotat.ma
+//Last modified: Thu, Apr 16, 2015 11:04:58 PM
 //Codeset: UTF-8
 requires maya "2013";
 requires "stereoCamera" "10.0";
@@ -32226,4 +32226,4 @@ connectAttr "groupId24.msg" ":initialShadingGroup.gn" -na;
 connectAttr "lambert2.msg" ":defaultShaderList1.s" -na;
 connectAttr "lambert3.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-// End of bike_rig_latest.ma
+// End of bike_rig_04_rotat.ma

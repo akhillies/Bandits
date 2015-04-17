@@ -1,6 +1,6 @@
 //Maya ASCII 2015 scene
 //Name: smarty_under_table.ma
-//Last modified: Mon, Mar 30, 2015 03:45:47 AM
+//Last modified: Tue, Apr 07, 2015 10:54:39 PM
 //Codeset: 1252
 file -rdi 1 -rpr "livingroom_shading_latest" -rfn "livingroom_shading_latestRN"
 		 "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/sets/livingroom_shading/livingroom_shading_latest.ma";
@@ -62,20 +62,19 @@ file -rdi 2 -ns "NewSmarty_024" -rfn "smartybike_NewSmarty_024RN" "assets/charac
 file -rdi 2 -ns "bike" -rfn "smartybike_bikeRN" "/Users/scai/Bandits/maya//assets/props/bike_rig.ma";
 file -rdi 1 -rpr "sneaks_latest" -rfn "sneaks_latestRN" "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/sneaks/versions/sneaks17.ma";
 file -rdi 1 -rpr "tuffs_latest" -rfn "tuffs_latestRN" "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/tuffs/tuffs_latest.ma";
-file -rdi 1 -rpr "pig_latest" -rfn "pig_latestRN" "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/pig/pig_latest.ma";
+file -rdi 1 -rpr "pig_latest" -rfn "pig_latestRN" "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/pig/skinned/pig_skinned_spine.ma";
 file -rdi 2 -ns "key_latest" -rfn "pig_latest_key_latestRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/props/keys/key_latest.ma";
 file -r -rpr "livingroom_shading_latest" -dr 1 -rfn "livingroom_shading_latestRN"
 		 "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/sets/livingroom_shading/livingroom_shading_latest.ma";
 file -r -rpr "smartybike" -dr 1 -rfn "smartybikeRN" "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/smarty/smartybike.ma";
 file -r -rpr "sneaks_latest" -dr 1 -rfn "sneaks_latestRN" "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/sneaks/versions/sneaks17.ma";
 file -r -rpr "tuffs_latest" -dr 1 -rfn "tuffs_latestRN" "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/tuffs/tuffs_latest.ma";
-file -r -rpr "pig_latest" -dr 1 -rfn "pig_latestRN" "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/pig/pig_latest.ma";
+file -r -rpr "pig_latest" -dr 1 -rfn "pig_latestRN" "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/pig/skinned/pig_skinned_spine.ma";
 requires maya "2015";
 requires -nodeType "RenderMan" "RenderMan_for_Maya" "5.5";
 requires -nodeType "FurGlobals" "Fur" "2015";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOptions" -nodeType "mentalrayGlobals"
 		 -nodeType "mentalrayItemsList" -dataType "byteArray" "Mayatomr" "2015.0 - 3.12.1.16 ";
-requires "stereoCamera" "10.0";
 requires "FurryBall_2013" "4.8.3522";
 currentUnit -l centimeter -a degree -t ntsc;
 fileInfo "application" "maya";
@@ -85,17 +84,17 @@ fileInfo "cutIdentifier" "201402282131-909040";
 fileInfo "osv" "Microsoft Windows 8 Home Premium Edition, 64-bit  (Build 9200)\n";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
-	setAttr ".t" -type "double3" -220.90338475892625 11.08828217226899 75.820591967205431 ;
-	setAttr ".r" -type "double3" 2.0616472711652598 -1130.599999999755 -3.1317963049791023e-016 ;
+	setAttr ".t" -type "double3" -223.11045509716823 18.975898344169423 53.393077882245422 ;
+	setAttr ".r" -type "double3" -7.538352728683325 -1142.1999999989953 -8.5244580522284733e-016 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v";
 	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 38.859147906409262;
+	setAttr ".coi" 27.93650893825976;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -197.11369480646664 13.285144483316223 43.646082588528039 ;
+	setAttr ".tp" -type "double3" -198.61193088490415 15.310912830222726 40.476471351847309 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	setAttr ".t" -type "double3" -173.86315937000805 291.39159408278505 48.688005242063241 ;
@@ -123,13 +122,13 @@ createNode camera -s -n "frontShape" -p "front";
 	setAttr ".hc" -type "string" "viewSet -f %camera";
 	setAttr ".o" yes;
 createNode transform -s -n "side";
-	setAttr ".t" -type "double3" 100.1 0 0 ;
+	setAttr ".t" -type "double3" 100.1 16.49221515752048 -6.6480067213221936 ;
 	setAttr ".r" -type "double3" 0 89.999999999999986 0 ;
 createNode camera -s -n "sideShape" -p "side";
 	setAttr -k off ".v";
 	setAttr ".rnd" no;
 	setAttr ".coi" 100.1;
-	setAttr ".ow" 30;
+	setAttr ".ow" 186.49415697403134;
 	setAttr ".imn" -type "string" "side";
 	setAttr ".den" -type "string" "side_depth";
 	setAttr ".man" -type "string" "side_mask";
@@ -18712,11 +18711,11 @@ createNode camera -n "cameraShape3" -p "camera3";
 	setAttr -k off ".v";
 	setAttr ".ovr" 1.3;
 	setAttr ".fl" 92.179488515815677;
-	setAttr ".coi" 6.8180246170143608;
+	setAttr ".coi" 31.718665279282991;
 	setAttr ".imn" -type "string" "persp1";
 	setAttr ".den" -type "string" "persp1_depth";
 	setAttr ".man" -type "string" "persp1_mask";
-	setAttr ".tp" -type "double3" -197.64848361868874 15.256626420228049 40.762088251203494 ;
+	setAttr ".tp" -type "double3" -206.01211547851562 3.852132186293602 34.60136604309082 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 	setAttr ".dr" yes;
 createNode transform -n "curve4";
@@ -18766,7 +18765,7 @@ createNode parentConstraint -n "pig_latest_tail_4control01_parentConstraint1" -p
 	setAttr ".tg[0].tot" -type "double3" 1.1386811301321735e-013 0.85632804711715416 
 		-1.2729200700390564 ;
 	setAttr ".tg[0].tor" -type "double3" 0 0 5.0506984604175018e-019 ;
-	setAttr ".lr" -type "double3" -6.2881172475714333 0 0 ;
+	setAttr ".lr" -type "double3" -53.753826539204979 0 0 ;
 	setAttr ".rst" -type "double3" 1.7053025658242404e-013 1.7763568394002505e-015 -2.6645352591003757e-014 ;
 	setAttr -k on ".w0";
 createNode parentConstraint -n "pig_latest_tail_3control01_parentConstraint1" -p "pig_latestRNfosterParent1";
@@ -18787,7 +18786,7 @@ createNode parentConstraint -n "pig_latest_tail_3control01_parentConstraint1" -p
 	setAttr ".tg[0].tot" -type "double3" -1.1439964968381305e-016 1.4499869149123503 
 		-2.1268439804569841 ;
 	setAttr ".tg[0].tor" -type "double3" 0 0 5.0506984604175018e-019 ;
-	setAttr ".lr" -type "double3" -6.2881172475714315 0 0 ;
+	setAttr ".lr" -type "double3" -53.753826539204979 0 0 ;
 	setAttr ".rst" -type "double3" 5.6843418860808015e-014 0 1.2434497875801753e-014 ;
 	setAttr -k on ".w0";
 createNode parentConstraint -n "pig_latest_tail_2control01_parentConstraint1" -p "pig_latestRNfosterParent1";
@@ -18808,7 +18807,7 @@ createNode parentConstraint -n "pig_latest_tail_2control01_parentConstraint1" -p
 	setAttr ".tg[0].tot" -type "double3" 1.7057058917128012e-013 1.1416307672183201 
 		-1.7546462838769887 ;
 	setAttr ".tg[0].tor" -type "double3" 0 0 5.0506984604175018e-019 ;
-	setAttr ".lr" -type "double3" -6.2881172475714298 0 0 ;
+	setAttr ".lr" -type "double3" -53.753826539204979 0 0 ;
 	setAttr ".rst" -type "double3" 5.6843418860808015e-014 0 2.3092638912203256e-014 ;
 	setAttr -k on ".w0";
 createNode RenderMan -s -n "renderManRISGlobals";
@@ -19444,266 +19443,6 @@ createNode RenderMan -s -n "rmanFinalOutputGlobals0";
 	setAttr -k on ".rman__riopt__Display_dither" 0;
 	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
 	setAttr -k on ".rman__riopt__Display_remap" -type "float3" 0 0 0 ;
-createNode RenderMan -s -n "rmanRerenderRISGlobals";
-	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
-	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__torattr___previewPass" -ln "rman__torattr___previewPass" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__torattr___motionBlur" -ln "rman__torattr___motionBlur" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__torattr___passLayer" -ln "rman__torattr___passLayer" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___camera" -ln "rman__torattr___camera" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___crew" -ln "rman__torattr___crew" -dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___flavor" -ln "rman__torattr___flavor" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___cameraFlavor" -ln "rman__torattr___cameraFlavor" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___lightcrew" -ln "rman__torattr___lightcrew" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__torattr___depthOfField" -ln "rman__torattr___depthOfField" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__torattr___passNameFormat" -ln "rman__torattr___passNameFormat" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt__shading_directlightingsamples" -ln "rman__riopt__shading_directlightingsamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__riopt__bucket_order" -ln "rman__riopt__bucket_order" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize" -ln "rman__riopt__limits_bucketsize" 
-		-at "long2" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize0" -ln "rman__riopt__limits_bucketsize0" 
-		-dv -1 -at "long" -p "rman__riopt__limits_bucketsize";
-	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize1" -ln "rman__riopt__limits_bucketsize1" 
-		-dv -1 -at "long" -p "rman__riopt__limits_bucketsize";
-	addAttr -ci true -k true -sn "rman__riopt___PixelVariance" -ln "rman__riopt___PixelVariance" 
-		-dv -1 -at "float";
-	addAttr -ci true -h true -sn "rman__riopt__Hider_name" -ln "rman__riopt__Hider_name" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt__Hider_minsamples" -ln "rman__riopt__Hider_minsamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Hider_maxsamples" -ln "rman__riopt__Hider_maxsamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__riopt__Integrator_name" -ln "rman__riopt__Integrator_name" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt___CropWindow" -ln "rman__riopt___CropWindow" 
-		-at "compound" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt___CropWindowX" -ln "rman__riopt___CropWindowX" 
-		-at "float2" -p "rman__riopt___CropWindow" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt___CropWindowX0" -ln "rman__riopt___CropWindowX0" 
-		-dv -1 -at "float" -p "rman__riopt___CropWindowX";
-	addAttr -ci true -k true -sn "rman__riopt___CropWindowX1" -ln "rman__riopt___CropWindowX1" 
-		-dv -1 -at "float" -p "rman__riopt___CropWindowX";
-	addAttr -ci true -k true -sn "rman__riopt___CropWindowY" -ln "rman__riopt___CropWindowY" 
-		-at "float2" -p "rman__riopt___CropWindow" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt___CropWindowY0" -ln "rman__riopt___CropWindowY0" 
-		-dv -1 -at "float" -p "rman__riopt___CropWindowY";
-	addAttr -ci true -k true -sn "rman__riopt___CropWindowY1" -ln "rman__riopt___CropWindowY1" 
-		-dv -1 -at "float" -p "rman__riopt___CropWindowY";
-	addAttr -ci true -h true -sn "rman__riopt__photon_lifetime" -ln "rman__riopt__photon_lifetime" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt__photon_emit" -ln "rman__riopt__photon_emit" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riattr__trace_maxspeculardepth" -ln "rman__riattr__trace_maxspeculardepth" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riattr__trace_maxdiffusedepth" -ln "rman__riattr__trace_maxdiffusedepth" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riattr__trace_displacements" -ln "rman__riattr__trace_displacements" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__riattr__photon_causticmap" -ln "rman__riattr__photon_causticmap" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__riattr__photon_globalmap" -ln "rman__riattr__photon_globalmap" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__riopt__Hider_integrationmode" -ln "rman__riopt__Hider_integrationmode" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_mergePaths" -ln "rman__riopt__Integrator_mergePaths" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_mergeRadiusScale" -ln "rman__riopt__Integrator_mergeRadiusScale" 
-		-dv -1 -at "float";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_timeRadius" -ln "rman__riopt__Integrator_timeRadius" 
-		-dv -1 -at "float";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_reduceRadius" -ln "rman__riopt__Integrator_reduceRadius" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_connectPaths" -ln "rman__riopt__Integrator_connectPaths" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_maxPathLength" -ln "rman__riopt__Integrator_maxPathLength" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__riopt__Integrator_sampleMode" -ln "rman__riopt__Integrator_sampleMode" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_numLightSamples" -ln "rman__riopt__Integrator_numLightSamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_numBxdfSamples" -ln "rman__riopt__Integrator_numBxdfSamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_numIndirectSamples" -ln "rman__riopt__Integrator_numIndirectSamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_numDiffuseSamples" -ln "rman__riopt__Integrator_numDiffuseSamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_numSpecularSamples" -ln "rman__riopt__Integrator_numSpecularSamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_numSubsurfaceSamples" -ln "rman__riopt__Integrator_numSubsurfaceSamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_numRefractionSamples" -ln "rman__riopt__Integrator_numRefractionSamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_rouletteDepth" -ln "rman__riopt__Integrator_rouletteDepth" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_rouletteThreshold" -ln "rman__riopt__Integrator_rouletteThreshold" 
-		-dv -1 -at "float";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_clampDepth" -ln "rman__riopt__Integrator_clampDepth" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_clampLuminance" -ln "rman__riopt__Integrator_clampLuminance" 
-		-dv -1 -at "float";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_allowCaustics" -ln "rman__riopt__Integrator_allowCaustics" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_numSamples" -ln "rman__riopt__Integrator_numSamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__riopt__Integrator_viewchannel" -ln "rman__riopt__Integrator_viewchannel" 
-		-dt "string";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "pass:render";
-	setAttr ".t" 1;
-	setAttr ".rman__torattr___class" -type "string" "RerenderRIS";
-	setAttr ".rman__torattr___task" -type "string" "render";
-	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Images";
-	setAttr -k on ".rman__torattr___previewPass" 1;
-	setAttr -k on ".rman__torattr___motionBlur" 0;
-	setAttr -k on ".rman__torattr___computeBehavior" 1;
-	setAttr ".rman__torattr___passLayer" -type "string" "";
-	setAttr ".rman__torattr___camera" -type "string" "";
-	setAttr ".rman__torattr___crew" -type "string" "";
-	setAttr ".rman__torattr___flavor" -type "string" "";
-	setAttr ".rman__torattr___cameraFlavor" -type "string" "";
-	setAttr ".rman__torattr___lightcrew" -type "string" "";
-	setAttr -k on ".rman__torattr___depthOfField" 1;
-	setAttr ".rman__torattr___passNameFormat" -type "string" "";
-	setAttr -k on ".rman__riopt__shading_directlightingsamples" 4;
-	setAttr ".rman__riopt__bucket_order" -type "string" "spiral";
-	setAttr -k on ".rman__riopt__limits_bucketsize" -type "long2" 16 16 ;
-	setAttr -k on ".rman__riopt___PixelVariance" 0.0099999997764825821;
-	setAttr ".rman__riopt__Hider_name" -type "string" "raytrace";
-	setAttr -k on ".rman__riopt__Hider_minsamples" 0;
-	setAttr -k on ".rman__riopt__Hider_maxsamples" 16;
-	setAttr ".rman__riopt__Integrator_name" -type "string" "PxrPathTracer";
-	setAttr -k on ".rman__riopt___CropWindowX" -type "float2" 0 1 ;
-	setAttr -k on ".rman__riopt___CropWindowY" -type "float2" 0 1 ;
-	setAttr ".rman__riopt__photon_lifetime" -type "string" "transient";
-	setAttr -k on ".rman__riopt__photon_emit" 0;
-	setAttr -k on ".rman__riattr__trace_maxspeculardepth" 2;
-	setAttr -k on ".rman__riattr__trace_maxdiffusedepth" 1;
-	setAttr -k on ".rman__riattr__trace_displacements" 1;
-	setAttr ".rman__riattr__photon_causticmap" -type "string" "";
-	setAttr ".rman__riattr__photon_globalmap" -type "string" "";
-	setAttr ".rman__riopt__Hider_integrationmode" -type "string" "path";
-	setAttr -k on ".rman__riopt__Integrator_mergePaths" 1;
-	setAttr -k on ".rman__riopt__Integrator_mergeRadiusScale" 5;
-	setAttr -k on ".rman__riopt__Integrator_timeRadius" 1;
-	setAttr -k on ".rman__riopt__Integrator_reduceRadius" 1;
-	setAttr -k on ".rman__riopt__Integrator_connectPaths" 1;
-	setAttr -k on ".rman__riopt__Integrator_maxPathLength" 10;
-	setAttr ".rman__riopt__Integrator_sampleMode" -type "string" "bxdf";
-	setAttr -k on ".rman__riopt__Integrator_numLightSamples" 8;
-	setAttr -k on ".rman__riopt__Integrator_numBxdfSamples" 8;
-	setAttr -k on ".rman__riopt__Integrator_numIndirectSamples" 1;
-	setAttr -k on ".rman__riopt__Integrator_numDiffuseSamples" 1;
-	setAttr -k on ".rman__riopt__Integrator_numSpecularSamples" 1;
-	setAttr -k on ".rman__riopt__Integrator_numSubsurfaceSamples" 1;
-	setAttr -k on ".rman__riopt__Integrator_numRefractionSamples" 1;
-	setAttr -k on ".rman__riopt__Integrator_rouletteDepth" 4;
-	setAttr -k on ".rman__riopt__Integrator_rouletteThreshold" 0.20000000298023224;
-	setAttr -k on ".rman__riopt__Integrator_clampDepth" 2;
-	setAttr -k on ".rman__riopt__Integrator_clampLuminance" 10;
-	setAttr -k on ".rman__riopt__Integrator_allowCaustics" 0;
-	setAttr -k on ".rman__riopt__Integrator_numSamples" 4;
-	setAttr ".rman__riopt__Integrator_viewchannel" -type "string" "Nn";
-createNode RenderMan -s -n "rmanRerenderRISOutputGlobals0";
-	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
-	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
-	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__torattr___primaryDisplay" -ln "rman__torattr___primaryDisplay" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__torattr___dspyID" -ln "rman__torattr___dspyID" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__torattr___dspyGetChannelsFromCamera" -ln "rman__torattr___dspyGetChannelsFromCamera" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__riopt__Display_name" -ln "rman__riopt__Display_name" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__riopt__Display_type" -ln "rman__riopt__Display_type" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__riopt__Display_mode" -ln "rman__riopt__Display_mode" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__riopt__Display_filter" -ln "rman__riopt__Display_filter" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth" -ln "rman__riopt__Display_filterwidth" 
-		-at "float2" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth0" -ln "rman__riopt__Display_filterwidth0" 
-		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
-	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth1" -ln "rman__riopt__Display_filterwidth1" 
-		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantize" -ln "rman__riopt__Display_quantize" 
-		-at "compound" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX" -ln "rman__riopt__Display_quantizeX" 
-		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX0" -ln "rman__riopt__Display_quantizeX0" 
-		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX1" -ln "rman__riopt__Display_quantizeX1" 
-		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY" -ln "rman__riopt__Display_quantizeY" 
-		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY0" -ln "rman__riopt__Display_quantizeY0" 
-		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY1" -ln "rman__riopt__Display_quantizeY1" 
-		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
-	addAttr -ci true -k true -sn "rman__riopt__Display_dither" -ln "rman__riopt__Display_dither" 
-		-dv -1 -at "float";
-	addAttr -ci true -k true -sn "rman__riopt__Display_exposure" -ln "rman__riopt__Display_exposure" 
-		-at "float2" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt__Display_exposure0" -ln "rman__riopt__Display_exposure0" 
-		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
-	addAttr -ci true -k true -sn "rman__riopt__Display_exposure1" -ln "rman__riopt__Display_exposure1" 
-		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
-	addAttr -ci true -k true -sn "rman__riopt__Display_remap" -ln "rman__riopt__Display_remap" 
-		-at "float3" -nc 3;
-	addAttr -ci true -k true -sn "rman__riopt__Display_remap0" -ln "rman__riopt__Display_remap0" 
-		-dv -1 -at "float" -p "rman__riopt__Display_remap";
-	addAttr -ci true -k true -sn "rman__riopt__Display_remap1" -ln "rman__riopt__Display_remap1" 
-		-dv -1 -at "float" -p "rman__riopt__Display_remap";
-	addAttr -ci true -k true -sn "rman__riopt__Display_remap2" -ln "rman__riopt__Display_remap2" 
-		-dv -1 -at "float" -p "rman__riopt__Display_remap";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	setAttr ".nt" -type "string" "settings:display";
-	setAttr ".t" 1;
-	setAttr ".rman__torattr___class" -type "string" "PrimaryRerender";
-	setAttr ".rman__torattr___task" -type "string" "display";
-	setAttr -k on ".rman__torattr___computeBehavior" 1;
-	setAttr -k on ".rman__torattr___primaryDisplay" 1;
-	setAttr ".rman__torattr___dspyID" -type "string" "";
-	setAttr -k on ".rman__torattr___dspyGetChannelsFromCamera" 1;
-	setAttr ".rman__riopt__Display_name" -type "string" "[passinfo this filename]";
-	setAttr ".rman__riopt__Display_type" -type "string" "openexr";
-	setAttr ".rman__riopt__Display_mode" -type "string" "rgba";
-	setAttr ".rman__riopt__Display_filter" -type "string" "gaussian";
-	setAttr -k on ".rman__riopt__Display_filterwidth" -type "float2" 2 2 ;
-	setAttr -k on ".rman__riopt__Display_quantizeX" -type "long2" 0 0 ;
-	setAttr -k on ".rman__riopt__Display_quantizeY" -type "long2" 0 0 ;
-	setAttr -k on ".rman__riopt__Display_dither" 0;
-	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
-	setAttr -k on ".rman__riopt__Display_remap" -type "float3" 0 0 0 ;
 createNode RenderMan -s -n "rmanPreviewGlobals";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -20272,6 +20011,266 @@ createNode RenderMan -s -n "rmanReyesRerenderOutputGlobals0";
 	setAttr ".nt" -type "string" "settings:display";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Primary";
+	setAttr ".rman__torattr___task" -type "string" "display";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr -k on ".rman__torattr___primaryDisplay" 1;
+	setAttr ".rman__torattr___dspyID" -type "string" "";
+	setAttr -k on ".rman__torattr___dspyGetChannelsFromCamera" 1;
+	setAttr ".rman__riopt__Display_name" -type "string" "[passinfo this filename]";
+	setAttr ".rman__riopt__Display_type" -type "string" "openexr";
+	setAttr ".rman__riopt__Display_mode" -type "string" "rgba";
+	setAttr ".rman__riopt__Display_filter" -type "string" "gaussian";
+	setAttr -k on ".rman__riopt__Display_filterwidth" -type "float2" 2 2 ;
+	setAttr -k on ".rman__riopt__Display_quantizeX" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_quantizeY" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_dither" 0;
+	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
+	setAttr -k on ".rman__riopt__Display_remap" -type "float3" 0 0 0 ;
+createNode RenderMan -s -n "rmanRerenderRISGlobals";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___previewPass" -ln "rman__torattr___previewPass" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___motionBlur" -ln "rman__torattr___motionBlur" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passLayer" -ln "rman__torattr___passLayer" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___camera" -ln "rman__torattr___camera" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___crew" -ln "rman__torattr___crew" -dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___flavor" -ln "rman__torattr___flavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___cameraFlavor" -ln "rman__torattr___cameraFlavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___lightcrew" -ln "rman__torattr___lightcrew" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___depthOfField" -ln "rman__torattr___depthOfField" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passNameFormat" -ln "rman__torattr___passNameFormat" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__shading_directlightingsamples" -ln "rman__riopt__shading_directlightingsamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__bucket_order" -ln "rman__riopt__bucket_order" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize" -ln "rman__riopt__limits_bucketsize" 
+		-at "long2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize0" -ln "rman__riopt__limits_bucketsize0" 
+		-dv -1 -at "long" -p "rman__riopt__limits_bucketsize";
+	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize1" -ln "rman__riopt__limits_bucketsize1" 
+		-dv -1 -at "long" -p "rman__riopt__limits_bucketsize";
+	addAttr -ci true -k true -sn "rman__riopt___PixelVariance" -ln "rman__riopt___PixelVariance" 
+		-dv -1 -at "float";
+	addAttr -ci true -h true -sn "rman__riopt__Hider_name" -ln "rman__riopt__Hider_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Hider_minsamples" -ln "rman__riopt__Hider_minsamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Hider_maxsamples" -ln "rman__riopt__Hider_maxsamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Integrator_name" -ln "rman__riopt__Integrator_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindow" -ln "rman__riopt___CropWindow" 
+		-at "compound" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX" -ln "rman__riopt___CropWindowX" 
+		-at "float2" -p "rman__riopt___CropWindow" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX0" -ln "rman__riopt___CropWindowX0" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowX";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX1" -ln "rman__riopt___CropWindowX1" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowX";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY" -ln "rman__riopt___CropWindowY" 
+		-at "float2" -p "rman__riopt___CropWindow" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY0" -ln "rman__riopt___CropWindowY0" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowY";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY1" -ln "rman__riopt___CropWindowY1" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowY";
+	addAttr -ci true -h true -sn "rman__riopt__photon_lifetime" -ln "rman__riopt__photon_lifetime" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__photon_emit" -ln "rman__riopt__photon_emit" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__trace_maxspeculardepth" -ln "rman__riattr__trace_maxspeculardepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__trace_maxdiffusedepth" -ln "rman__riattr__trace_maxdiffusedepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__trace_displacements" -ln "rman__riattr__trace_displacements" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riattr__photon_causticmap" -ln "rman__riattr__photon_causticmap" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riattr__photon_globalmap" -ln "rman__riattr__photon_globalmap" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Hider_integrationmode" -ln "rman__riopt__Hider_integrationmode" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_mergePaths" -ln "rman__riopt__Integrator_mergePaths" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_mergeRadiusScale" -ln "rman__riopt__Integrator_mergeRadiusScale" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_timeRadius" -ln "rman__riopt__Integrator_timeRadius" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_reduceRadius" -ln "rman__riopt__Integrator_reduceRadius" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_connectPaths" -ln "rman__riopt__Integrator_connectPaths" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_maxPathLength" -ln "rman__riopt__Integrator_maxPathLength" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Integrator_sampleMode" -ln "rman__riopt__Integrator_sampleMode" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numLightSamples" -ln "rman__riopt__Integrator_numLightSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numBxdfSamples" -ln "rman__riopt__Integrator_numBxdfSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numIndirectSamples" -ln "rman__riopt__Integrator_numIndirectSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numDiffuseSamples" -ln "rman__riopt__Integrator_numDiffuseSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numSpecularSamples" -ln "rman__riopt__Integrator_numSpecularSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numSubsurfaceSamples" -ln "rman__riopt__Integrator_numSubsurfaceSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numRefractionSamples" -ln "rman__riopt__Integrator_numRefractionSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_rouletteDepth" -ln "rman__riopt__Integrator_rouletteDepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_rouletteThreshold" -ln "rman__riopt__Integrator_rouletteThreshold" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_clampDepth" -ln "rman__riopt__Integrator_clampDepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_clampLuminance" -ln "rman__riopt__Integrator_clampLuminance" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_allowCaustics" -ln "rman__riopt__Integrator_allowCaustics" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numSamples" -ln "rman__riopt__Integrator_numSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Integrator_viewchannel" -ln "rman__riopt__Integrator_viewchannel" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:render";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "RerenderRIS";
+	setAttr ".rman__torattr___task" -type "string" "render";
+	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Images";
+	setAttr -k on ".rman__torattr___previewPass" 1;
+	setAttr -k on ".rman__torattr___motionBlur" 0;
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr ".rman__torattr___passLayer" -type "string" "";
+	setAttr ".rman__torattr___camera" -type "string" "";
+	setAttr ".rman__torattr___crew" -type "string" "";
+	setAttr ".rman__torattr___flavor" -type "string" "";
+	setAttr ".rman__torattr___cameraFlavor" -type "string" "";
+	setAttr ".rman__torattr___lightcrew" -type "string" "";
+	setAttr -k on ".rman__torattr___depthOfField" 1;
+	setAttr ".rman__torattr___passNameFormat" -type "string" "";
+	setAttr -k on ".rman__riopt__shading_directlightingsamples" 4;
+	setAttr ".rman__riopt__bucket_order" -type "string" "spiral";
+	setAttr -k on ".rman__riopt__limits_bucketsize" -type "long2" 16 16 ;
+	setAttr -k on ".rman__riopt___PixelVariance" 0.0099999997764825821;
+	setAttr ".rman__riopt__Hider_name" -type "string" "raytrace";
+	setAttr -k on ".rman__riopt__Hider_minsamples" 0;
+	setAttr -k on ".rman__riopt__Hider_maxsamples" 16;
+	setAttr ".rman__riopt__Integrator_name" -type "string" "PxrPathTracer";
+	setAttr -k on ".rman__riopt___CropWindowX" -type "float2" 0 1 ;
+	setAttr -k on ".rman__riopt___CropWindowY" -type "float2" 0 1 ;
+	setAttr ".rman__riopt__photon_lifetime" -type "string" "transient";
+	setAttr -k on ".rman__riopt__photon_emit" 0;
+	setAttr -k on ".rman__riattr__trace_maxspeculardepth" 2;
+	setAttr -k on ".rman__riattr__trace_maxdiffusedepth" 1;
+	setAttr -k on ".rman__riattr__trace_displacements" 1;
+	setAttr ".rman__riattr__photon_causticmap" -type "string" "";
+	setAttr ".rman__riattr__photon_globalmap" -type "string" "";
+	setAttr ".rman__riopt__Hider_integrationmode" -type "string" "path";
+	setAttr -k on ".rman__riopt__Integrator_mergePaths" 1;
+	setAttr -k on ".rman__riopt__Integrator_mergeRadiusScale" 5;
+	setAttr -k on ".rman__riopt__Integrator_timeRadius" 1;
+	setAttr -k on ".rman__riopt__Integrator_reduceRadius" 1;
+	setAttr -k on ".rman__riopt__Integrator_connectPaths" 1;
+	setAttr -k on ".rman__riopt__Integrator_maxPathLength" 10;
+	setAttr ".rman__riopt__Integrator_sampleMode" -type "string" "bxdf";
+	setAttr -k on ".rman__riopt__Integrator_numLightSamples" 8;
+	setAttr -k on ".rman__riopt__Integrator_numBxdfSamples" 8;
+	setAttr -k on ".rman__riopt__Integrator_numIndirectSamples" 1;
+	setAttr -k on ".rman__riopt__Integrator_numDiffuseSamples" 1;
+	setAttr -k on ".rman__riopt__Integrator_numSpecularSamples" 1;
+	setAttr -k on ".rman__riopt__Integrator_numSubsurfaceSamples" 1;
+	setAttr -k on ".rman__riopt__Integrator_numRefractionSamples" 1;
+	setAttr -k on ".rman__riopt__Integrator_rouletteDepth" 4;
+	setAttr -k on ".rman__riopt__Integrator_rouletteThreshold" 0.20000000298023224;
+	setAttr -k on ".rman__riopt__Integrator_clampDepth" 2;
+	setAttr -k on ".rman__riopt__Integrator_clampLuminance" 10;
+	setAttr -k on ".rman__riopt__Integrator_allowCaustics" 0;
+	setAttr -k on ".rman__riopt__Integrator_numSamples" 4;
+	setAttr ".rman__riopt__Integrator_viewchannel" -type "string" "Nn";
+createNode RenderMan -s -n "rmanRerenderRISOutputGlobals0";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___primaryDisplay" -ln "rman__torattr___primaryDisplay" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___dspyID" -ln "rman__torattr___dspyID" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___dspyGetChannelsFromCamera" -ln "rman__torattr___dspyGetChannelsFromCamera" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Display_name" -ln "rman__riopt__Display_name" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_type" -ln "rman__riopt__Display_type" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_mode" -ln "rman__riopt__Display_mode" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_filter" -ln "rman__riopt__Display_filter" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth" -ln "rman__riopt__Display_filterwidth" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth0" -ln "rman__riopt__Display_filterwidth0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth1" -ln "rman__riopt__Display_filterwidth1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantize" -ln "rman__riopt__Display_quantize" 
+		-at "compound" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX" -ln "rman__riopt__Display_quantizeX" 
+		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX0" -ln "rman__riopt__Display_quantizeX0" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX1" -ln "rman__riopt__Display_quantizeX1" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY" -ln "rman__riopt__Display_quantizeY" 
+		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY0" -ln "rman__riopt__Display_quantizeY0" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY1" -ln "rman__riopt__Display_quantizeY1" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_dither" -ln "rman__riopt__Display_dither" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure" -ln "rman__riopt__Display_exposure" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure0" -ln "rman__riopt__Display_exposure0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure1" -ln "rman__riopt__Display_exposure1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap" -ln "rman__riopt__Display_remap" 
+		-at "float3" -nc 3;
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap0" -ln "rman__riopt__Display_remap0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap1" -ln "rman__riopt__Display_remap1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap2" -ln "rman__riopt__Display_remap2" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:display";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "PrimaryRerender";
 	setAttr ".rman__torattr___task" -type "string" "display";
 	setAttr -k on ".rman__torattr___computeBehavior" 1;
 	setAttr -k on ".rman__torattr___primaryDisplay" 1;
@@ -22283,8 +22282,8 @@ createNode RenderMan -s -n "rmanSBMakePtexGlobals";
 	setAttr ".rman__param__ptxmake___channel" -type "string" "$BAKECHAN";
 	setAttr ".rman__param__ptxmake___outputfile" -type "string" "[passinfo this filename]";
 createNode lightLinker -s -n "lightLinker1";
-	setAttr -s 777 ".lnk";
-	setAttr -s 777 ".slnk";
+	setAttr -s 778 ".lnk";
+	setAttr -s 778 ".slnk";
 createNode displayLayerManager -n "layerManager";
 createNode displayLayer -n "defaultLayer";
 createNode renderLayerManager -n "renderLayerManager";
@@ -22292,13 +22291,13 @@ createNode renderLayer -n "defaultRenderLayer";
 	setAttr ".g" yes;
 createNode script -n "uiConfigurationScriptNode";
 	setAttr ".b" -type "string" (
-		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"top\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n"
-		+ "                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"base_OpenGL_Renderer\" \n"
-		+ "                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n"
-		+ "                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n"
-		+ "            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n"
-		+ "            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels `;\n"
+		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"camera3\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n"
+		+ "                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 1\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"vp2Renderer\" \n                -objectFilterShowInHUD 1\n"
+		+ "                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n"
+		+ "                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"camera3\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
+		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n"
+		+ "            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels `;\n"
 		+ "\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"side\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n"
 		+ "                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"base_OpenGL_Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n"
 		+ "                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n"
@@ -22306,15 +22305,15 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n"
 		+ "            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
 		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"front\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n"
-		+ "                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"base_OpenGL_Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n"
+		+ "                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"base_OpenGL_Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n"
 		+ "                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n"
 		+ "                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n"
-		+ "            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n"
+		+ "            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 0\n            -occlusionCulling 0\n"
 		+ "            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n"
-		+ "            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"camera3\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n"
+		+ "            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n"
 		+ "                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 1\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"vp2Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n"
 		+ "                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n"
-		+ "                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"camera3\" \n            -useInteractiveMode 0\n"
+		+ "                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n"
 		+ "            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n"
 		+ "            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n"
 		+ "            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `outlinerPanel -unParent -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            outlinerEditor -e \n"
@@ -22345,22 +22344,22 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;\n\t\t\tif (`objExists nodeEditorPanel1Info`) nodeEditor -e -restoreInfo nodeEditorPanel1Info $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"createNodePanel\" -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Texture Editor\")) `;\n"
 		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"polyTexturePlacementPanel\" -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"renderWindowPanel\" -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"blendShapePanel\" (localizedPanelLabel(\"Blend Shape\")) `;\n"
 		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\tblendShapePanel -unParent -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels ;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tblendShapePanel -edit -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\tif ($useSceneConfig) {\n\t\tblendShapePanel -e -to $panelName;\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynRelEdPanel\" -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n"
-		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"relationshipPanel\" -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"referenceEditorPanel\" -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n"
-		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"componentEditorPanel\" -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynPaintScriptedPanelType\" -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n"
-		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"scriptEditorPanel\" -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"Stereo\" -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels `;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n"
-		+ "                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n"
-		+ "                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n"
-		+ "                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n"
-		+ "                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n"
-		+ "                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n"
-		+ "            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"camera3\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"camera3\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"relationshipPanel\" -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"referenceEditorPanel\" -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\tif ($useSceneConfig) {\n\t\tscriptedPanel -e -to $panelName;\n"
+		+ "\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"componentEditorPanel\" -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynPaintScriptedPanelType\" -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"scriptEditorPanel\" -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"Stereo\" -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels `;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -editorChanged \"updateModelPanelBar\" \n                -camera \"persp\" \n"
+		+ "                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n"
+		+ "                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n"
+		+ "                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n"
+		+ "                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -editorChanged \"updateModelPanelBar\" \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n"
+		+ "                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n"
+		+ "                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n"
+		+ "                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Top View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"camera3\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"camera3\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        setFocus `paneLayout -q -p1 $gMainPane`;\n        sceneUIReplacement -deleteRemaining;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
-	setAttr ".b" -type "string" "playbackOptions -min 1.25 -max 320 -ast 1.25 -aet 320 ";
+	setAttr ".b" -type "string" "playbackOptions -min 152 -max 294 -ast 152 -aet 320 ";
 	setAttr ".st" 6;
 createNode reference -n "livingroom_shading_latestRN";
 	setAttr -s 53 ".phl";
@@ -22692,6 +22691,7 @@ createNode reference -n "livingroom_shading_latestRN";
 		"living_room_latest:taller_window_four_squares_latestRN4" 0
 		"living_room_latest:resurrected_staircaseRN" 0
 		"living_room_latest:taller_window_four_squares_latest4RN" 0
+		"living_room_latest:taller_window_four_squares_latest3RN" 0
 		"living_room_latest:cat_robotRN" 30
 		1 |living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:pCylinder13|living_room_latest:cat_robot:polySurfaceShape2 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
@@ -22757,7 +22757,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		2 "|living_room_latest:cat_robot:CatRobot|living_room_latest:cat_robot:pCylinder7|living_room_latest:cat_robot:polySurfaceShape5" 
 		"furNameSpace" " -type \"string\" \"cat_robot\""
-		"living_room_latest:taller_window_four_squares_latest3RN" 0
 		"living_room_latest:bed_latestRN" 0
 		"living_room_latest:taller_window_four_squares_latest2RN" 0
 		"living_room_latest:taller_window_four_squares_latestRN2" 0
@@ -23472,7 +23471,7 @@ createNode reference -n "livingroom_shading_latestRN";
 		"living_room_latest:armchair_latestRN" 0
 		"living_room_latest:taller_window_four_squares_latestRN" 0
 		"living_room_latest:armchair_latestRN1" 0
-		"livingroom_shading_latest_living_room_latestRN" 1709
+		"livingroom_shading_latest_living_room_latestRN" 1745
 		1 |living_room_latest:bed_pillow|living_room_latest:bed_pillowShape "VisibleInIndirect" 
 		"VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		1 |living_room_latest:bed_mattress|living_room_latest:bed_mattressShape "VisibleInIndirect" 
@@ -25295,6 +25294,12 @@ createNode reference -n "livingroom_shading_latestRN";
 		" -ci 1 -min 0 -max 1 -at \"bool\""
 		1 living_room_latest:vase_flowers:multiplyDivide12 "compressColor" "compressColor" 
 		" -ci 1 -dv 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:pPlane1|living_room_latest:outputCloth2 "surfaceReference" 
+		"sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |living_room_latest:pPlane1|living_room_latest:outputCloth2 "referenceFile" 
+		"reff" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:pPlane1|living_room_latest:outputCloth2 "furNameSpace" 
+		"fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
 		1 |living_room_latest:pCube92|living_room_latest:polySurface1|living_room_latest:polySurfaceShape1 
@@ -25412,18 +25417,186 @@ createNode reference -n "livingroom_shading_latestRN";
 		1 |living_room_latest:tissue_box1|living_room_latest:tissue|living_room_latest:tissueShape 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
-		1 |living_room_latest:pPlane1|living_room_latest:outputCloth2 "surfaceReference" 
-		"sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |living_room_latest:pPlane1|living_room_latest:outputCloth2 "referenceFile" 
-		"reff" " -ci 1 -h 1 -dt \"string\""
-		1 |living_room_latest:pPlane1|living_room_latest:outputCloth2 "furNameSpace" 
-		"fns" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:polySurface9|living_room_latest:polySurfaceShape9 "surfaceReference" 
 		"sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
 		1 |living_room_latest:polySurface9|living_room_latest:polySurfaceShape9 "referenceFile" 
 		"reff" " -ci 1 -h 1 -dt \"string\""
 		1 |living_room_latest:polySurface9|living_room_latest:polySurfaceShape9 "furNameSpace" 
 		"fns" " -ci 1 -h 1 -dt \"string\""
+		1 |living_room_latest:pCubeShape279 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape279 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape279 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape277 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape277 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape277 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape247 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape247 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape247 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape249 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape249 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape249 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape253 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape253 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape253 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape250 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape250 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape250 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape256 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape256 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape256 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape255 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape255 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape255 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape254 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape254 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape254 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape257 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape257 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape257 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape258 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape258 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape258 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape259 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape259 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape259 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape262 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape262 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape262 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape261 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape261 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape261 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape260 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape260 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape260 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape265 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape265 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape265 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape264 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape264 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape264 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape263 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape263 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape263 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape268 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape268 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape268 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape267 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape267 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape267 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape266 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape266 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape266 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape271 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape271 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape271 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape270 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape270 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape270 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape269 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape269 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape269 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape243 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape243 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape243 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape273 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape273 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape273 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape272 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape272 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape272 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape274 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape274 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape274 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape244 "surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		
+		1 |living_room_latest:pCubeShape244 "referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		
+		1 |living_room_latest:pCubeShape244 "furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		
 		2 "|living_room_latest:bed_pillow|living_room_latest:bed_pillowShape" "VisibleInIndirect" 
 		" 1"
 		2 "|living_room_latest:bed_mattress|living_room_latest:bed_mattressShape" 
@@ -26647,31 +26820,10 @@ createNode reference -n "livingroom_shading_latestRN";
 		" -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:pCube213|living_room_latest:pCubeShape213" "VisibleInIndirect" 
 		" 1"
-		2 "|living_room_latest:pCube250|living_room_latest:pCube213|living_room_latest:pCubeShape213" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:pCube250|living_room_latest:pCube213|living_room_latest:pCubeShape213" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:pCube250|living_room_latest:pCube213|living_room_latest:pCubeShape213" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:pCube214|living_room_latest:pCubeShape214" "VisibleInIndirect" 
 		" 1"
-		2 "|living_room_latest:pCube250|living_room_latest:pCube214|living_room_latest:pCubeShape214" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:pCube250|living_room_latest:pCube214|living_room_latest:pCubeShape214" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:pCube250|living_room_latest:pCube214|living_room_latest:pCubeShape214" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:pCube215|living_room_latest:pCubeShape215" "VisibleInIndirect" 
 		" 1"
-		2 "|living_room_latest:pCube250|living_room_latest:pCube215|living_room_latest:pCubeShape215" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:pCube250|living_room_latest:pCube215|living_room_latest:pCubeShape215" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:pCube250|living_room_latest:pCube215|living_room_latest:pCubeShape215" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:pCube215|living_room_latest:polySurfaceShape307" "surfaceReference" 
 		" 1"
 		2 "|living_room_latest:pCube215|living_room_latest:polySurfaceShape307" "referenceFile" 
@@ -26681,13 +26833,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		" -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:pCube216|living_room_latest:pCubeShape216" "VisibleInIndirect" 
 		" 1"
-		2 "|living_room_latest:pCube250|living_room_latest:pCube216|living_room_latest:pCubeShape216" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:pCube250|living_room_latest:pCube216|living_room_latest:pCubeShape216" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:pCube250|living_room_latest:pCube216|living_room_latest:pCubeShape216" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:pCube216|living_room_latest:polySurfaceShape307" "surfaceReference" 
 		" 1"
 		2 "|living_room_latest:pCube216|living_room_latest:polySurfaceShape307" "referenceFile" 
@@ -26697,13 +26842,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		" -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:pCube217|living_room_latest:pCubeShape217" "VisibleInIndirect" 
 		" 1"
-		2 "|living_room_latest:pCube250|living_room_latest:pCube217|living_room_latest:pCubeShape217" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:pCube250|living_room_latest:pCube217|living_room_latest:pCubeShape217" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:pCube250|living_room_latest:pCube217|living_room_latest:pCubeShape217" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:pCube217|living_room_latest:polySurfaceShape306" "surfaceReference" 
 		" 1"
 		2 "|living_room_latest:pCube217|living_room_latest:polySurfaceShape306" "referenceFile" 
@@ -26713,13 +26851,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		" -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:pCube218|living_room_latest:pCubeShape218" "VisibleInIndirect" 
 		" 1"
-		2 "|living_room_latest:pCube250|living_room_latest:pCube218|living_room_latest:pCubeShape218" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:pCube250|living_room_latest:pCube218|living_room_latest:pCubeShape218" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:pCube250|living_room_latest:pCube218|living_room_latest:pCubeShape218" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:pCube218|living_room_latest:polySurfaceShape306" "surfaceReference" 
 		" 1"
 		2 "|living_room_latest:pCube218|living_room_latest:polySurfaceShape306" "referenceFile" 
@@ -26729,103 +26860,26 @@ createNode reference -n "livingroom_shading_latestRN";
 		" -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:pCube219|living_room_latest:pCubeShape219" "VisibleInIndirect" 
 		" 1"
-		2 "|living_room_latest:pCube250|living_room_latest:pCube219|living_room_latest:pCubeShape219" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:pCube250|living_room_latest:pCube219|living_room_latest:pCubeShape219" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:pCube250|living_room_latest:pCube219|living_room_latest:pCubeShape219" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:pCube220|living_room_latest:pCubeShape220" "VisibleInIndirect" 
 		" 1"
-		2 "|living_room_latest:pCube250|living_room_latest:pCube220|living_room_latest:pCubeShape220" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:pCube250|living_room_latest:pCube220|living_room_latest:pCubeShape220" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:pCube250|living_room_latest:pCube220|living_room_latest:pCubeShape220" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:pCube221|living_room_latest:pCubeShape221" "VisibleInIndirect" 
 		" 1"
-		2 "|living_room_latest:pCube250|living_room_latest:pCube221|living_room_latest:pCubeShape221" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:pCube250|living_room_latest:pCube221|living_room_latest:pCubeShape221" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:pCube250|living_room_latest:pCube221|living_room_latest:pCubeShape221" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:pCube222|living_room_latest:pCubeShape222" "VisibleInIndirect" 
 		" 1"
-		2 "|living_room_latest:pCube250|living_room_latest:pCube222|living_room_latest:pCubeShape222" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:pCube250|living_room_latest:pCube222|living_room_latest:pCubeShape222" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:pCube250|living_room_latest:pCube222|living_room_latest:pCubeShape222" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:pTorus4|living_room_latest:pTorusShape4" "VisibleInIndirect" 
 		" 1"
-		2 "|living_room_latest:pCube250|living_room_latest:pTorus4|living_room_latest:pTorusShape4" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:pCube250|living_room_latest:pTorus4|living_room_latest:pTorusShape4" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:pCube250|living_room_latest:pTorus4|living_room_latest:pTorusShape4" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:pCube224|living_room_latest:pCubeShape224" "VisibleInIndirect" 
 		" 1"
-		2 "|living_room_latest:pCube250|living_room_latest:pCube224|living_room_latest:pCubeShape224" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:pCube250|living_room_latest:pCube224|living_room_latest:pCubeShape224" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:pCube250|living_room_latest:pCube224|living_room_latest:pCubeShape224" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:pCube225|living_room_latest:pCubeShape225" "VisibleInIndirect" 
 		" 1"
-		2 "|living_room_latest:pCube250|living_room_latest:pCube225|living_room_latest:pCubeShape225" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:pCube250|living_room_latest:pCube225|living_room_latest:pCubeShape225" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:pCube250|living_room_latest:pCube225|living_room_latest:pCubeShape225" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:pCube226|living_room_latest:pCubeShape226" "VisibleInIndirect" 
 		" 1"
-		2 "|living_room_latest:pCube250|living_room_latest:pCube226|living_room_latest:pCubeShape226" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:pCube250|living_room_latest:pCube226|living_room_latest:pCubeShape226" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:pCube250|living_room_latest:pCube226|living_room_latest:pCubeShape226" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:pCube227|living_room_latest:pCubeShape227" "VisibleInIndirect" 
 		" 1"
-		2 "|living_room_latest:pCube250|living_room_latest:pCube227|living_room_latest:pCubeShape227" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:pCube250|living_room_latest:pCube227|living_room_latest:pCubeShape227" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:pCube250|living_room_latest:pCube227|living_room_latest:pCubeShape227" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:pCube228|living_room_latest:pCubeShape228" "VisibleInIndirect" 
 		" 1"
-		2 "|living_room_latest:pCube250|living_room_latest:pCube228|living_room_latest:pCubeShape228" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:pCube250|living_room_latest:pCube228|living_room_latest:pCubeShape228" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:pCube250|living_room_latest:pCube228|living_room_latest:pCubeShape228" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:pCube229|living_room_latest:pCubeShape229" "VisibleInIndirect" 
 		" 1"
-		2 "|living_room_latest:pCube250|living_room_latest:pCube229|living_room_latest:pCubeShape229" 
-		"surfaceReference" " 1"
-		2 "|living_room_latest:pCube250|living_room_latest:pCube229|living_room_latest:pCubeShape229" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom/living_room_latest.ma\""
-		
-		2 "|living_room_latest:pCube250|living_room_latest:pCube229|living_room_latest:pCubeShape229" 
-		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:pCube229|living_room_latest:polySurfaceShape308" "surfaceReference" 
 		" 1"
 		2 "|living_room_latest:pCube229|living_room_latest:polySurfaceShape308" "referenceFile" 
@@ -42787,17 +42841,17 @@ createNode reference -n "livingroom_shading_latestRN";
 		2 "|living_room_latest:polySurface89|living_room_latest:polySurfaceShape336" 
 		"furNameSpace" " -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:nRigid1|living_room_latest:nRigidShape1" "cacheWidth" 
-		" 319"
+		" 143"
 		2 "|living_room_latest:nRigid2|living_room_latest:nRigidShape2" "cacheWidth" 
-		" 319"
+		" 143"
 		2 "|living_room_latest:nRigid3|living_room_latest:nRigidShape3" "cacheWidth" 
-		" 319"
+		" 143"
 		2 "|living_room_latest:nRigid4|living_room_latest:nRigidShape4" "cacheWidth" 
-		" 319"
+		" 143"
 		2 "|living_room_latest:nRigid5|living_room_latest:nRigidShape5" "cacheWidth" 
-		" 319"
+		" 143"
 		2 "|living_room_latest:nRigid6|living_room_latest:nRigidShape6" "cacheWidth" 
-		" 319"
+		" 143"
 		2 "|living_room_latest:pPlane1|living_room_latest:pPlaneShape1" "surfaceReference" 
 		" 1"
 		2 "|living_room_latest:pPlane1|living_room_latest:pPlaneShape1" "referenceFile" 
@@ -42813,7 +42867,7 @@ createNode reference -n "livingroom_shading_latestRN";
 		2 "|living_room_latest:pPlane1|living_room_latest:outputCloth1" "furNameSpace" 
 		" -type \"string\" \"living_room_latest\""
 		2 "|living_room_latest:nCloth1|living_room_latest:nClothShape1" "cacheWidth" 
-		" 319"
+		" 143"
 		2 "|living_room_latest:polySurface90|living_room_latest:transform35|living_room_latest:polySurfaceShape90" 
 		"surfaceReference" " 1"
 		2 "|living_room_latest:polySurface90|living_room_latest:transform35|living_room_latest:polySurfaceShape90" 
@@ -44088,428 +44142,428 @@ createNode reference -n "smartybikeRN";
 		3 ":defaultRenderGlobals.rendercallback" "smartybike_defaultFurGlobals.callback" 
 		""
 		"smartybike_NewSmarty_024RN" 507
-		1 |NewSmarty_024:SmartyRig|NewSmarty_024:Smarty|NewSmarty_024:polySurface6|NewSmarty_024:polySurfaceShape4 
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:pPlaneShape1Deformed 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:pPlaneShape1Deformed 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:pPlaneShape1Deformed 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:pCubeShape2Deformed 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:pCubeShape2Deformed 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:pCubeShape2Deformed 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:pCubeShape1Deformed 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:pCubeShape1Deformed 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:pCubeShape1Deformed 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:bowTieShapeDeformed 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:bowTieShapeDeformed 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:bowTieShapeDeformed 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:EyeR2ShapeDeformed 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:EyeR2ShapeDeformed 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:EyeR2ShapeDeformed 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:transform2|NewSmarty_024:smarty_blendshapes_latest:EyeR2ShapeDeformed 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:transform2|NewSmarty_024:smarty_blendshapes_latest:EyeR2ShapeDeformed 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:transform2|NewSmarty_024:smarty_blendshapes_latest:EyeR2ShapeDeformed 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassFrameShapeDeformed 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassFrameShapeDeformed 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassFrameShapeDeformed 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassLShapeDeformed 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassLShapeDeformed 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassLShapeDeformed 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassRShapeDeformed 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassRShapeDeformed 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassRShapeDeformed 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape4Deformed 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape4Deformed 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape4Deformed 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:bowTieShapeOrig 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:bowTieShapeOrig 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:bowTieShapeOrig 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:EyeR2ShapeOrig 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:EyeR2ShapeOrig 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:EyeR2ShapeOrig 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:fosterParent2|NewSmarty_024:smarty_blendshapes_latest:EyeR2ShapeOrig 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:fosterParent2|NewSmarty_024:smarty_blendshapes_latest:EyeR2ShapeOrig 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:fosterParent2|NewSmarty_024:smarty_blendshapes_latest:EyeR2ShapeOrig 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassFrameShapeOrig 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassFrameShapeOrig 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassFrameShapeOrig 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassLShapeOrig 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassLShapeOrig 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassLShapeOrig 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassRShapeOrig 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassRShapeOrig 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassRShapeOrig 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:Smarty18|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape6 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:Smarty18|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape6 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:Smarty18|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape6 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:Smarty18|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape4Orig6 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:Smarty18|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape4Orig6 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:Smarty18|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape4Orig6 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:Smarty17|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape6 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:Smarty17|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape6 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:Smarty17|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape6 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:Smarty17|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape4Orig6 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:Smarty17|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape4Orig6 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:Smarty17|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape4Orig6 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:Smarty16|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape6 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:Smarty16|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape6 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:Smarty16|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape6 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:Smarty16|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape4Orig6 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:Smarty16|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape4Orig6 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:Smarty16|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape4Orig6 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosed|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosed|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosedShape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosed|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosed|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosedShape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosed|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosed|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosedShape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosed|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosed|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosedShape4Orig 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosed|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosed|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosedShape4Orig 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosed|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosed|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosedShape4Orig 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:rightEarForward|NewSmarty_024:smarty_blendshapes_latest:rightEarForward|NewSmarty_024:smarty_blendshapes_latest:rightEarForwardShape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:rightEarForward|NewSmarty_024:smarty_blendshapes_latest:rightEarForward|NewSmarty_024:smarty_blendshapes_latest:rightEarForwardShape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:rightEarForward|NewSmarty_024:smarty_blendshapes_latest:rightEarForward|NewSmarty_024:smarty_blendshapes_latest:rightEarForwardShape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:rightEarForward|NewSmarty_024:smarty_blendshapes_latest:rightEarForward|NewSmarty_024:smarty_blendshapes_latest:rightEarForwardShape4Orig 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:rightEarForward|NewSmarty_024:smarty_blendshapes_latest:rightEarForward|NewSmarty_024:smarty_blendshapes_latest:rightEarForwardShape4Orig 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:rightEarForward|NewSmarty_024:smarty_blendshapes_latest:rightEarForward|NewSmarty_024:smarty_blendshapes_latest:rightEarForwardShape4Orig 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:leftEarForward|NewSmarty_024:smarty_blendshapes_latest:leftEarForward|NewSmarty_024:smarty_blendshapes_latest:leftEarForwardShape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:leftEarForward|NewSmarty_024:smarty_blendshapes_latest:leftEarForward|NewSmarty_024:smarty_blendshapes_latest:leftEarForwardShape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:leftEarForward|NewSmarty_024:smarty_blendshapes_latest:leftEarForward|NewSmarty_024:smarty_blendshapes_latest:leftEarForwardShape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:leftEarForward|NewSmarty_024:smarty_blendshapes_latest:leftEarForward|NewSmarty_024:smarty_blendshapes_latest:leftEarForwardShape4Orig 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:leftEarForward|NewSmarty_024:smarty_blendshapes_latest:leftEarForward|NewSmarty_024:smarty_blendshapes_latest:leftEarForwardShape4Orig 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:leftEarForward|NewSmarty_024:smarty_blendshapes_latest:leftEarForward|NewSmarty_024:smarty_blendshapes_latest:leftEarForwardShape4Orig 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:earsSpread|NewSmarty_024:smarty_blendshapes_latest:earsSpread|NewSmarty_024:smarty_blendshapes_latest:earsSpreadShape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:earsSpread|NewSmarty_024:smarty_blendshapes_latest:earsSpread|NewSmarty_024:smarty_blendshapes_latest:earsSpreadShape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:earsSpread|NewSmarty_024:smarty_blendshapes_latest:earsSpread|NewSmarty_024:smarty_blendshapes_latest:earsSpreadShape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:earsSpread|NewSmarty_024:smarty_blendshapes_latest:earsSpread|NewSmarty_024:smarty_blendshapes_latest:earsSpreadShape4Orig 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:earsSpread|NewSmarty_024:smarty_blendshapes_latest:earsSpread|NewSmarty_024:smarty_blendshapes_latest:earsSpreadShape4Orig 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:earsSpread|NewSmarty_024:smarty_blendshapes_latest:earsSpread|NewSmarty_024:smarty_blendshapes_latest:earsSpreadShape4Orig 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:rightEarOut|NewSmarty_024:smarty_blendshapes_latest:rightEarOut|NewSmarty_024:smarty_blendshapes_latest:rightEarOutShape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:rightEarOut|NewSmarty_024:smarty_blendshapes_latest:rightEarOut|NewSmarty_024:smarty_blendshapes_latest:rightEarOutShape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:rightEarOut|NewSmarty_024:smarty_blendshapes_latest:rightEarOut|NewSmarty_024:smarty_blendshapes_latest:rightEarOutShape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:rightEarOut|NewSmarty_024:smarty_blendshapes_latest:rightEarOut|NewSmarty_024:smarty_blendshapes_latest:rightEarOutShape4Orig 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:rightEarOut|NewSmarty_024:smarty_blendshapes_latest:rightEarOut|NewSmarty_024:smarty_blendshapes_latest:rightEarOutShape4Orig 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:rightEarOut|NewSmarty_024:smarty_blendshapes_latest:rightEarOut|NewSmarty_024:smarty_blendshapes_latest:rightEarOutShape4Orig 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:leftEarOut|NewSmarty_024:smarty_blendshapes_latest:leftEarOut|NewSmarty_024:smarty_blendshapes_latest:leftEarOutShape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:leftEarOut|NewSmarty_024:smarty_blendshapes_latest:leftEarOut|NewSmarty_024:smarty_blendshapes_latest:leftEarOutShape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:leftEarOut|NewSmarty_024:smarty_blendshapes_latest:leftEarOut|NewSmarty_024:smarty_blendshapes_latest:leftEarOutShape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:leftEarOut|NewSmarty_024:smarty_blendshapes_latest:leftEarOut|NewSmarty_024:smarty_blendshapes_latest:leftEarOutShape4Orig 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:leftEarOut|NewSmarty_024:smarty_blendshapes_latest:leftEarOut|NewSmarty_024:smarty_blendshapes_latest:leftEarOutShape4Orig 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:leftEarOut|NewSmarty_024:smarty_blendshapes_latest:leftEarOut|NewSmarty_024:smarty_blendshapes_latest:leftEarOutShape4Orig 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:noseDown|NewSmarty_024:smarty_blendshapes_latest:noseDown|NewSmarty_024:smarty_blendshapes_latest:noseDownShape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:noseDown|NewSmarty_024:smarty_blendshapes_latest:noseDown|NewSmarty_024:smarty_blendshapes_latest:noseDownShape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:noseDown|NewSmarty_024:smarty_blendshapes_latest:noseDown|NewSmarty_024:smarty_blendshapes_latest:noseDownShape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:noseDown|NewSmarty_024:smarty_blendshapes_latest:noseDown|NewSmarty_024:smarty_blendshapes_latest:noseDownShape4Orig 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:noseDown|NewSmarty_024:smarty_blendshapes_latest:noseDown|NewSmarty_024:smarty_blendshapes_latest:noseDownShape4Orig 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:noseDown|NewSmarty_024:smarty_blendshapes_latest:noseDown|NewSmarty_024:smarty_blendshapes_latest:noseDownShape4Orig 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:closedEyes|NewSmarty_024:smarty_blendshapes_latest:closedEyes|NewSmarty_024:smarty_blendshapes_latest:closedEyes 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:closedEyes|NewSmarty_024:smarty_blendshapes_latest:closedEyes|NewSmarty_024:smarty_blendshapes_latest:closedEyes 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:closedEyes|NewSmarty_024:smarty_blendshapes_latest:closedEyes|NewSmarty_024:smarty_blendshapes_latest:closedEyes 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:closedEyes|NewSmarty_024:smarty_blendshapes_latest:closedEyes|NewSmarty_024:smarty_blendshapes_latest:closedEyesShape4Orig 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:closedEyes|NewSmarty_024:smarty_blendshapes_latest:closedEyes|NewSmarty_024:smarty_blendshapes_latest:closedEyesShape4Orig 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:closedEyes|NewSmarty_024:smarty_blendshapes_latest:closedEyes|NewSmarty_024:smarty_blendshapes_latest:closedEyesShape4Orig 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:openMouth|NewSmarty_024:smarty_blendshapes_latest:openMouth|NewSmarty_024:smarty_blendshapes_latest:openMouthShape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:openMouth|NewSmarty_024:smarty_blendshapes_latest:openMouth|NewSmarty_024:smarty_blendshapes_latest:openMouthShape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:openMouth|NewSmarty_024:smarty_blendshapes_latest:openMouth|NewSmarty_024:smarty_blendshapes_latest:openMouthShape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:openMouth|NewSmarty_024:smarty_blendshapes_latest:openMouth|NewSmarty_024:smarty_blendshapes_latest:openMouthShape4Orig 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:openMouth|NewSmarty_024:smarty_blendshapes_latest:openMouth|NewSmarty_024:smarty_blendshapes_latest:openMouthShape4Orig 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:openMouth|NewSmarty_024:smarty_blendshapes_latest:openMouth|NewSmarty_024:smarty_blendshapes_latest:openMouthShape4Orig 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:closedMouth|NewSmarty_024:smarty_blendshapes_latest:closedMouth|NewSmarty_024:smarty_blendshapes_latest:closedMouthShape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:closedMouth|NewSmarty_024:smarty_blendshapes_latest:closedMouth|NewSmarty_024:smarty_blendshapes_latest:closedMouthShape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:closedMouth|NewSmarty_024:smarty_blendshapes_latest:closedMouth|NewSmarty_024:smarty_blendshapes_latest:closedMouthShape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:closedMouth|NewSmarty_024:smarty_blendshapes_latest:closedMouth|NewSmarty_024:smarty_blendshapes_latest:closedMouthShape4Orig 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:closedMouth|NewSmarty_024:smarty_blendshapes_latest:closedMouth|NewSmarty_024:smarty_blendshapes_latest:closedMouthShape4Orig 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:closedMouth|NewSmarty_024:smarty_blendshapes_latest:closedMouth|NewSmarty_024:smarty_blendshapes_latest:closedMouthShape4Orig 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:worried|NewSmarty_024:smarty_blendshapes_latest:worried|NewSmarty_024:smarty_blendshapes_latest:worriedShape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:worried|NewSmarty_024:smarty_blendshapes_latest:worried|NewSmarty_024:smarty_blendshapes_latest:worriedShape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:worried|NewSmarty_024:smarty_blendshapes_latest:worried|NewSmarty_024:smarty_blendshapes_latest:worriedShape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:worried|NewSmarty_024:smarty_blendshapes_latest:worried|NewSmarty_024:smarty_blendshapes_latest:worriedShape4Orig 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:worried|NewSmarty_024:smarty_blendshapes_latest:worried|NewSmarty_024:smarty_blendshapes_latest:worriedShape4Orig 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:worried|NewSmarty_024:smarty_blendshapes_latest:worried|NewSmarty_024:smarty_blendshapes_latest:worriedShape4Orig 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:angry|NewSmarty_024:smarty_blendshapes_latest:angry|NewSmarty_024:smarty_blendshapes_latest:angryShape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:angry|NewSmarty_024:smarty_blendshapes_latest:angry|NewSmarty_024:smarty_blendshapes_latest:angryShape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:angry|NewSmarty_024:smarty_blendshapes_latest:angry|NewSmarty_024:smarty_blendshapes_latest:angryShape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:angry|NewSmarty_024:smarty_blendshapes_latest:angry|NewSmarty_024:smarty_blendshapes_latest:angryShape4Orig 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:angry|NewSmarty_024:smarty_blendshapes_latest:angry|NewSmarty_024:smarty_blendshapes_latest:angryShape4Orig 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:angry|NewSmarty_024:smarty_blendshapes_latest:angry|NewSmarty_024:smarty_blendshapes_latest:angryShape4Orig 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:happy|NewSmarty_024:smarty_blendshapes_latest:happy|NewSmarty_024:smarty_blendshapes_latest:happyShape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:happy|NewSmarty_024:smarty_blendshapes_latest:happy|NewSmarty_024:smarty_blendshapes_latest:happyShape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:happy|NewSmarty_024:smarty_blendshapes_latest:happy|NewSmarty_024:smarty_blendshapes_latest:happyShape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:happy|NewSmarty_024:smarty_blendshapes_latest:happy|NewSmarty_024:smarty_blendshapes_latest:happyShape4Orig 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:happy|NewSmarty_024:smarty_blendshapes_latest:happy|NewSmarty_024:smarty_blendshapes_latest:happyShape4Orig 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:happy|NewSmarty_024:smarty_blendshapes_latest:happy|NewSmarty_024:smarty_blendshapes_latest:happyShape4Orig 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUpShape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUpShape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUpShape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUpShape4Orig 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUpShape4Orig 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUpShape4Orig 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUpShape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUpShape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUpShape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUpShape4Orig 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUpShape4Orig 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUpShape4Orig 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:noseUp|NewSmarty_024:smarty_blendshapes_latest:noseUp|NewSmarty_024:smarty_blendshapes_latest:noseUpShape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:noseUp|NewSmarty_024:smarty_blendshapes_latest:noseUp|NewSmarty_024:smarty_blendshapes_latest:noseUpShape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:noseUp|NewSmarty_024:smarty_blendshapes_latest:noseUp|NewSmarty_024:smarty_blendshapes_latest:noseUpShape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:noseUp|NewSmarty_024:smarty_blendshapes_latest:noseUp|NewSmarty_024:smarty_blendshapes_latest:noseUpShape4Orig 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:noseUp|NewSmarty_024:smarty_blendshapes_latest:noseUp|NewSmarty_024:smarty_blendshapes_latest:noseUpShape4Orig 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:noseUp|NewSmarty_024:smarty_blendshapes_latest:noseUp|NewSmarty_024:smarty_blendshapes_latest:noseUpShape4Orig 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:Smarty|NewSmarty_024:polySurface6|NewSmarty_024:polySurfaceShape4 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
-		1 |NewSmarty_024:SmartyRig|NewSmarty_024:Smarty|NewSmarty_024:polySurface6|NewSmarty_024:polySurfaceShape4 
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:Smarty|NewSmarty_024:polySurface6|NewSmarty_024:polySurfaceShape4 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:SmartyRig|NewSmarty_024:Smarty|NewSmarty_024:polySurface6|NewSmarty_024:polySurfaceShape4 
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:Smarty|NewSmarty_024:polySurface6|NewSmarty_024:polySurfaceShape4 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:SmartyRig|NewSmarty_024:Smarty|NewSmarty_024:polySurface6|NewSmarty_024:polySurfaceShape4 
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:Smarty|NewSmarty_024:polySurface6|NewSmarty_024:polySurfaceShape4 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:SmartyRig|NewSmarty_024:Smarty|NewSmarty_024:polySurface6|NewSmarty_024:polySurfaceShape4Orig 
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:Smarty|NewSmarty_024:polySurface6|NewSmarty_024:polySurfaceShape4Orig 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:SmartyRig|NewSmarty_024:Smarty|NewSmarty_024:polySurface6|NewSmarty_024:polySurfaceShape4Orig 
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:Smarty|NewSmarty_024:polySurface6|NewSmarty_024:polySurfaceShape4Orig 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:SmartyRig|NewSmarty_024:Smarty|NewSmarty_024:polySurface6|NewSmarty_024:polySurfaceShape4Orig 
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:Smarty|NewSmarty_024:polySurface6|NewSmarty_024:polySurfaceShape4Orig 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glassFrame|NewSmarty_024:smarty_008_fixed_rig_:glassFrameShape 
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glassFrame|NewSmarty_024:smarty_008_fixed_rig_:glassFrameShape 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
-		1 |NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glassFrame|NewSmarty_024:smarty_008_fixed_rig_:glassFrameShape 
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glassFrame|NewSmarty_024:smarty_008_fixed_rig_:glassFrameShape 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glassFrame|NewSmarty_024:smarty_008_fixed_rig_:glassFrameShape 
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glassFrame|NewSmarty_024:smarty_008_fixed_rig_:glassFrameShape 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glassFrame|NewSmarty_024:smarty_008_fixed_rig_:glassFrameShape 
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glassFrame|NewSmarty_024:smarty_008_fixed_rig_:glassFrameShape 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glassFrame|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glass|NewSmarty_024:smarty_008_fixed_rig_:glassR|NewSmarty_024:smarty_008_fixed_rig_:glassRShape 
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glassFrame|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glass|NewSmarty_024:smarty_008_fixed_rig_:glassR|NewSmarty_024:smarty_008_fixed_rig_:glassRShape 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
-		1 |NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glassFrame|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glass|NewSmarty_024:smarty_008_fixed_rig_:glassR|NewSmarty_024:smarty_008_fixed_rig_:glassRShape 
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glassFrame|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glass|NewSmarty_024:smarty_008_fixed_rig_:glassR|NewSmarty_024:smarty_008_fixed_rig_:glassRShape 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glassFrame|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glass|NewSmarty_024:smarty_008_fixed_rig_:glassR|NewSmarty_024:smarty_008_fixed_rig_:glassRShape 
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glassFrame|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glass|NewSmarty_024:smarty_008_fixed_rig_:glassR|NewSmarty_024:smarty_008_fixed_rig_:glassRShape 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glassFrame|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glass|NewSmarty_024:smarty_008_fixed_rig_:glassR|NewSmarty_024:smarty_008_fixed_rig_:glassRShape 
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glassFrame|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glass|NewSmarty_024:smarty_008_fixed_rig_:glassR|NewSmarty_024:smarty_008_fixed_rig_:glassRShape 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glassFrame|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glass|NewSmarty_024:smarty_008_fixed_rig_:glassL|NewSmarty_024:smarty_008_fixed_rig_:glassLShape 
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glassFrame|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glass|NewSmarty_024:smarty_008_fixed_rig_:glassL|NewSmarty_024:smarty_008_fixed_rig_:glassLShape 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
-		1 |NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glassFrame|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glass|NewSmarty_024:smarty_008_fixed_rig_:glassL|NewSmarty_024:smarty_008_fixed_rig_:glassLShape 
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glassFrame|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glass|NewSmarty_024:smarty_008_fixed_rig_:glassL|NewSmarty_024:smarty_008_fixed_rig_:glassLShape 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glassFrame|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glass|NewSmarty_024:smarty_008_fixed_rig_:glassL|NewSmarty_024:smarty_008_fixed_rig_:glassLShape 
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glassFrame|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glass|NewSmarty_024:smarty_008_fixed_rig_:glassL|NewSmarty_024:smarty_008_fixed_rig_:glassLShape 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glassFrame|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glass|NewSmarty_024:smarty_008_fixed_rig_:glassL|NewSmarty_024:smarty_008_fixed_rig_:glassLShape 
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glassFrame|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glass|NewSmarty_024:smarty_008_fixed_rig_:glassL|NewSmarty_024:smarty_008_fixed_rig_:glassLShape 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:EyeL|NewSmarty_024:smarty_008_fixed_rig_:EyeR2Shape 
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:EyeL|NewSmarty_024:smarty_008_fixed_rig_:EyeR2Shape 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
-		1 |NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:EyeL|NewSmarty_024:smarty_008_fixed_rig_:EyeR2Shape 
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:EyeL|NewSmarty_024:smarty_008_fixed_rig_:EyeR2Shape 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:EyeL|NewSmarty_024:smarty_008_fixed_rig_:EyeR2Shape 
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:EyeL|NewSmarty_024:smarty_008_fixed_rig_:EyeR2Shape 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:EyeL|NewSmarty_024:smarty_008_fixed_rig_:EyeR2Shape 
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:EyeL|NewSmarty_024:smarty_008_fixed_rig_:EyeR2Shape 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:EyeR|NewSmarty_024:smarty_008_fixed_rig_:EyeR2Shape 
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:EyeR|NewSmarty_024:smarty_008_fixed_rig_:EyeR2Shape 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
-		1 |NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:EyeR|NewSmarty_024:smarty_008_fixed_rig_:EyeR2Shape 
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:EyeR|NewSmarty_024:smarty_008_fixed_rig_:EyeR2Shape 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:EyeR|NewSmarty_024:smarty_008_fixed_rig_:EyeR2Shape 
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:EyeR|NewSmarty_024:smarty_008_fixed_rig_:EyeR2Shape 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:EyeR|NewSmarty_024:smarty_008_fixed_rig_:EyeR2Shape 
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:EyeR|NewSmarty_024:smarty_008_fixed_rig_:EyeR2Shape 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:smarty_008_fixed_rig_:bowTie|NewSmarty_024:smarty_008_fixed_rig_:bowTieShape 
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:smarty_008_fixed_rig_:bowTie|NewSmarty_024:smarty_008_fixed_rig_:bowTieShape 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
-		1 |NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:smarty_008_fixed_rig_:bowTie|NewSmarty_024:smarty_008_fixed_rig_:bowTieShape 
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:smarty_008_fixed_rig_:bowTie|NewSmarty_024:smarty_008_fixed_rig_:bowTieShape 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:smarty_008_fixed_rig_:bowTie|NewSmarty_024:smarty_008_fixed_rig_:bowTieShape 
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:smarty_008_fixed_rig_:bowTie|NewSmarty_024:smarty_008_fixed_rig_:bowTieShape 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:smarty_008_fixed_rig_:bowTie|NewSmarty_024:smarty_008_fixed_rig_:bowTieShape 
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:smarty_008_fixed_rig_:bowTie|NewSmarty_024:smarty_008_fixed_rig_:bowTieShape 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:teeth:pCube1|NewSmarty_024:teeth:pCubeShape1 
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:teeth:pCube1|NewSmarty_024:teeth:pCubeShape1 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:teeth:pCube1|NewSmarty_024:teeth:pCubeShape1 
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:teeth:pCube1|NewSmarty_024:teeth:pCubeShape1 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:teeth:pCube1|NewSmarty_024:teeth:pCubeShape1 
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:teeth:pCube1|NewSmarty_024:teeth:pCubeShape1 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:teeth:pCube1|NewSmarty_024:teeth:polySurfaceShape1 
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:teeth:pCube1|NewSmarty_024:teeth:polySurfaceShape1 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:teeth:pCube1|NewSmarty_024:teeth:polySurfaceShape1 
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:teeth:pCube1|NewSmarty_024:teeth:polySurfaceShape1 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:teeth:pCube1|NewSmarty_024:teeth:polySurfaceShape1 
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:teeth:pCube1|NewSmarty_024:teeth:polySurfaceShape1 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:teeth:pCube2|NewSmarty_024:teeth:pCubeShape2 
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:teeth:pCube2|NewSmarty_024:teeth:pCubeShape2 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:teeth:pCube2|NewSmarty_024:teeth:pCubeShape2 
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:teeth:pCube2|NewSmarty_024:teeth:pCubeShape2 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:teeth:pCube2|NewSmarty_024:teeth:pCubeShape2 
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:teeth:pCube2|NewSmarty_024:teeth:pCubeShape2 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:teeth:pCube2|NewSmarty_024:teeth:polySurfaceShape1 
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:teeth:pCube2|NewSmarty_024:teeth:polySurfaceShape1 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:teeth:pCube2|NewSmarty_024:teeth:polySurfaceShape1 
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:teeth:pCube2|NewSmarty_024:teeth:polySurfaceShape1 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:teeth:pCube2|NewSmarty_024:teeth:polySurfaceShape1 
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:teeth:pCube2|NewSmarty_024:teeth:polySurfaceShape1 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:tongue:pPlane1|NewSmarty_024:tongue:pPlaneShape1 
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:tongue:pPlane1|NewSmarty_024:tongue:pPlaneShape1 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:tongue:pPlane1|NewSmarty_024:tongue:pPlaneShape1 
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:tongue:pPlane1|NewSmarty_024:tongue:pPlaneShape1 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:tongue:pPlane1|NewSmarty_024:tongue:pPlaneShape1 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:noseUp|NewSmarty_024:smarty_blendshapes_latest:noseUp|NewSmarty_024:smarty_blendshapes_latest:noseUpShape 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:noseUp|NewSmarty_024:smarty_blendshapes_latest:noseUp|NewSmarty_024:smarty_blendshapes_latest:noseUpShape 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:noseUp|NewSmarty_024:smarty_blendshapes_latest:noseUp|NewSmarty_024:smarty_blendshapes_latest:noseUpShape 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:noseUp|NewSmarty_024:smarty_blendshapes_latest:noseUp|NewSmarty_024:smarty_blendshapes_latest:noseUpShape4Orig 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:noseUp|NewSmarty_024:smarty_blendshapes_latest:noseUp|NewSmarty_024:smarty_blendshapes_latest:noseUpShape4Orig 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:noseUp|NewSmarty_024:smarty_blendshapes_latest:noseUp|NewSmarty_024:smarty_blendshapes_latest:noseUpShape4Orig 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUpShape 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUpShape 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUpShape 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUpShape4Orig 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUpShape4Orig 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUpShape4Orig 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUpShape 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUpShape 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUpShape 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUpShape4Orig 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUpShape4Orig 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUpShape4Orig 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:happy|NewSmarty_024:smarty_blendshapes_latest:happy|NewSmarty_024:smarty_blendshapes_latest:happyShape 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:happy|NewSmarty_024:smarty_blendshapes_latest:happy|NewSmarty_024:smarty_blendshapes_latest:happyShape 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:happy|NewSmarty_024:smarty_blendshapes_latest:happy|NewSmarty_024:smarty_blendshapes_latest:happyShape 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:happy|NewSmarty_024:smarty_blendshapes_latest:happy|NewSmarty_024:smarty_blendshapes_latest:happyShape4Orig 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:happy|NewSmarty_024:smarty_blendshapes_latest:happy|NewSmarty_024:smarty_blendshapes_latest:happyShape4Orig 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:happy|NewSmarty_024:smarty_blendshapes_latest:happy|NewSmarty_024:smarty_blendshapes_latest:happyShape4Orig 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:angry|NewSmarty_024:smarty_blendshapes_latest:angry|NewSmarty_024:smarty_blendshapes_latest:angryShape 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:angry|NewSmarty_024:smarty_blendshapes_latest:angry|NewSmarty_024:smarty_blendshapes_latest:angryShape 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:angry|NewSmarty_024:smarty_blendshapes_latest:angry|NewSmarty_024:smarty_blendshapes_latest:angryShape 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:angry|NewSmarty_024:smarty_blendshapes_latest:angry|NewSmarty_024:smarty_blendshapes_latest:angryShape4Orig 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:angry|NewSmarty_024:smarty_blendshapes_latest:angry|NewSmarty_024:smarty_blendshapes_latest:angryShape4Orig 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:angry|NewSmarty_024:smarty_blendshapes_latest:angry|NewSmarty_024:smarty_blendshapes_latest:angryShape4Orig 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:worried|NewSmarty_024:smarty_blendshapes_latest:worried|NewSmarty_024:smarty_blendshapes_latest:worriedShape 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:worried|NewSmarty_024:smarty_blendshapes_latest:worried|NewSmarty_024:smarty_blendshapes_latest:worriedShape 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:worried|NewSmarty_024:smarty_blendshapes_latest:worried|NewSmarty_024:smarty_blendshapes_latest:worriedShape 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:worried|NewSmarty_024:smarty_blendshapes_latest:worried|NewSmarty_024:smarty_blendshapes_latest:worriedShape4Orig 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:worried|NewSmarty_024:smarty_blendshapes_latest:worried|NewSmarty_024:smarty_blendshapes_latest:worriedShape4Orig 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:worried|NewSmarty_024:smarty_blendshapes_latest:worried|NewSmarty_024:smarty_blendshapes_latest:worriedShape4Orig 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:closedMouth|NewSmarty_024:smarty_blendshapes_latest:closedMouth|NewSmarty_024:smarty_blendshapes_latest:closedMouthShape 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:closedMouth|NewSmarty_024:smarty_blendshapes_latest:closedMouth|NewSmarty_024:smarty_blendshapes_latest:closedMouthShape 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:closedMouth|NewSmarty_024:smarty_blendshapes_latest:closedMouth|NewSmarty_024:smarty_blendshapes_latest:closedMouthShape 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:closedMouth|NewSmarty_024:smarty_blendshapes_latest:closedMouth|NewSmarty_024:smarty_blendshapes_latest:closedMouthShape4Orig 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:closedMouth|NewSmarty_024:smarty_blendshapes_latest:closedMouth|NewSmarty_024:smarty_blendshapes_latest:closedMouthShape4Orig 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:closedMouth|NewSmarty_024:smarty_blendshapes_latest:closedMouth|NewSmarty_024:smarty_blendshapes_latest:closedMouthShape4Orig 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:openMouth|NewSmarty_024:smarty_blendshapes_latest:openMouth|NewSmarty_024:smarty_blendshapes_latest:openMouthShape 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:openMouth|NewSmarty_024:smarty_blendshapes_latest:openMouth|NewSmarty_024:smarty_blendshapes_latest:openMouthShape 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:openMouth|NewSmarty_024:smarty_blendshapes_latest:openMouth|NewSmarty_024:smarty_blendshapes_latest:openMouthShape 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:openMouth|NewSmarty_024:smarty_blendshapes_latest:openMouth|NewSmarty_024:smarty_blendshapes_latest:openMouthShape4Orig 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:openMouth|NewSmarty_024:smarty_blendshapes_latest:openMouth|NewSmarty_024:smarty_blendshapes_latest:openMouthShape4Orig 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:openMouth|NewSmarty_024:smarty_blendshapes_latest:openMouth|NewSmarty_024:smarty_blendshapes_latest:openMouthShape4Orig 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:closedEyes|NewSmarty_024:smarty_blendshapes_latest:closedEyes|NewSmarty_024:smarty_blendshapes_latest:closedEyes 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:closedEyes|NewSmarty_024:smarty_blendshapes_latest:closedEyes|NewSmarty_024:smarty_blendshapes_latest:closedEyes 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:closedEyes|NewSmarty_024:smarty_blendshapes_latest:closedEyes|NewSmarty_024:smarty_blendshapes_latest:closedEyes 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:closedEyes|NewSmarty_024:smarty_blendshapes_latest:closedEyes|NewSmarty_024:smarty_blendshapes_latest:closedEyesShape4Orig 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:closedEyes|NewSmarty_024:smarty_blendshapes_latest:closedEyes|NewSmarty_024:smarty_blendshapes_latest:closedEyesShape4Orig 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:closedEyes|NewSmarty_024:smarty_blendshapes_latest:closedEyes|NewSmarty_024:smarty_blendshapes_latest:closedEyesShape4Orig 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:noseDown|NewSmarty_024:smarty_blendshapes_latest:noseDown|NewSmarty_024:smarty_blendshapes_latest:noseDownShape 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:noseDown|NewSmarty_024:smarty_blendshapes_latest:noseDown|NewSmarty_024:smarty_blendshapes_latest:noseDownShape 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:noseDown|NewSmarty_024:smarty_blendshapes_latest:noseDown|NewSmarty_024:smarty_blendshapes_latest:noseDownShape 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:noseDown|NewSmarty_024:smarty_blendshapes_latest:noseDown|NewSmarty_024:smarty_blendshapes_latest:noseDownShape4Orig 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:noseDown|NewSmarty_024:smarty_blendshapes_latest:noseDown|NewSmarty_024:smarty_blendshapes_latest:noseDownShape4Orig 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:noseDown|NewSmarty_024:smarty_blendshapes_latest:noseDown|NewSmarty_024:smarty_blendshapes_latest:noseDownShape4Orig 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:leftEarOut|NewSmarty_024:smarty_blendshapes_latest:leftEarOut|NewSmarty_024:smarty_blendshapes_latest:leftEarOutShape 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:leftEarOut|NewSmarty_024:smarty_blendshapes_latest:leftEarOut|NewSmarty_024:smarty_blendshapes_latest:leftEarOutShape 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:leftEarOut|NewSmarty_024:smarty_blendshapes_latest:leftEarOut|NewSmarty_024:smarty_blendshapes_latest:leftEarOutShape 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:leftEarOut|NewSmarty_024:smarty_blendshapes_latest:leftEarOut|NewSmarty_024:smarty_blendshapes_latest:leftEarOutShape4Orig 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:leftEarOut|NewSmarty_024:smarty_blendshapes_latest:leftEarOut|NewSmarty_024:smarty_blendshapes_latest:leftEarOutShape4Orig 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:leftEarOut|NewSmarty_024:smarty_blendshapes_latest:leftEarOut|NewSmarty_024:smarty_blendshapes_latest:leftEarOutShape4Orig 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:rightEarOut|NewSmarty_024:smarty_blendshapes_latest:rightEarOut|NewSmarty_024:smarty_blendshapes_latest:rightEarOutShape 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:rightEarOut|NewSmarty_024:smarty_blendshapes_latest:rightEarOut|NewSmarty_024:smarty_blendshapes_latest:rightEarOutShape 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:rightEarOut|NewSmarty_024:smarty_blendshapes_latest:rightEarOut|NewSmarty_024:smarty_blendshapes_latest:rightEarOutShape 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:rightEarOut|NewSmarty_024:smarty_blendshapes_latest:rightEarOut|NewSmarty_024:smarty_blendshapes_latest:rightEarOutShape4Orig 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:rightEarOut|NewSmarty_024:smarty_blendshapes_latest:rightEarOut|NewSmarty_024:smarty_blendshapes_latest:rightEarOutShape4Orig 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:rightEarOut|NewSmarty_024:smarty_blendshapes_latest:rightEarOut|NewSmarty_024:smarty_blendshapes_latest:rightEarOutShape4Orig 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:earsSpread|NewSmarty_024:smarty_blendshapes_latest:earsSpread|NewSmarty_024:smarty_blendshapes_latest:earsSpreadShape 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:earsSpread|NewSmarty_024:smarty_blendshapes_latest:earsSpread|NewSmarty_024:smarty_blendshapes_latest:earsSpreadShape 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:earsSpread|NewSmarty_024:smarty_blendshapes_latest:earsSpread|NewSmarty_024:smarty_blendshapes_latest:earsSpreadShape 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:earsSpread|NewSmarty_024:smarty_blendshapes_latest:earsSpread|NewSmarty_024:smarty_blendshapes_latest:earsSpreadShape4Orig 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:earsSpread|NewSmarty_024:smarty_blendshapes_latest:earsSpread|NewSmarty_024:smarty_blendshapes_latest:earsSpreadShape4Orig 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:earsSpread|NewSmarty_024:smarty_blendshapes_latest:earsSpread|NewSmarty_024:smarty_blendshapes_latest:earsSpreadShape4Orig 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:leftEarForward|NewSmarty_024:smarty_blendshapes_latest:leftEarForward|NewSmarty_024:smarty_blendshapes_latest:leftEarForwardShape 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:leftEarForward|NewSmarty_024:smarty_blendshapes_latest:leftEarForward|NewSmarty_024:smarty_blendshapes_latest:leftEarForwardShape 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:leftEarForward|NewSmarty_024:smarty_blendshapes_latest:leftEarForward|NewSmarty_024:smarty_blendshapes_latest:leftEarForwardShape 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:leftEarForward|NewSmarty_024:smarty_blendshapes_latest:leftEarForward|NewSmarty_024:smarty_blendshapes_latest:leftEarForwardShape4Orig 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:leftEarForward|NewSmarty_024:smarty_blendshapes_latest:leftEarForward|NewSmarty_024:smarty_blendshapes_latest:leftEarForwardShape4Orig 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:leftEarForward|NewSmarty_024:smarty_blendshapes_latest:leftEarForward|NewSmarty_024:smarty_blendshapes_latest:leftEarForwardShape4Orig 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:rightEarForward|NewSmarty_024:smarty_blendshapes_latest:rightEarForward|NewSmarty_024:smarty_blendshapes_latest:rightEarForwardShape 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:rightEarForward|NewSmarty_024:smarty_blendshapes_latest:rightEarForward|NewSmarty_024:smarty_blendshapes_latest:rightEarForwardShape 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:rightEarForward|NewSmarty_024:smarty_blendshapes_latest:rightEarForward|NewSmarty_024:smarty_blendshapes_latest:rightEarForwardShape 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:rightEarForward|NewSmarty_024:smarty_blendshapes_latest:rightEarForward|NewSmarty_024:smarty_blendshapes_latest:rightEarForwardShape4Orig 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:rightEarForward|NewSmarty_024:smarty_blendshapes_latest:rightEarForward|NewSmarty_024:smarty_blendshapes_latest:rightEarForwardShape4Orig 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:rightEarForward|NewSmarty_024:smarty_blendshapes_latest:rightEarForward|NewSmarty_024:smarty_blendshapes_latest:rightEarForwardShape4Orig 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:leftEyeClosed|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosed|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosedShape 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:leftEyeClosed|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosed|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosedShape 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:leftEyeClosed|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosed|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosedShape 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:leftEyeClosed|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosed|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosedShape4Orig 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:leftEyeClosed|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosed|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosedShape4Orig 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:leftEyeClosed|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosed|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosedShape4Orig 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:Smarty16|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape6 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:Smarty16|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape6 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:Smarty16|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape6 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:Smarty16|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape4Orig6 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:Smarty16|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape4Orig6 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:Smarty16|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape4Orig6 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:Smarty17|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape6 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:Smarty17|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape6 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:Smarty17|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape6 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:Smarty17|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape4Orig6 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:Smarty17|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape4Orig6 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:Smarty17|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape4Orig6 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:Smarty18|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape6 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:Smarty18|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape6 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:Smarty18|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape6 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:Smarty18|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape4Orig6 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:Smarty18|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape4Orig6 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:Smarty18|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape4Orig6 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:bowTieShapeOrig 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:bowTieShapeOrig 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:bowTieShapeOrig 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:EyeR2ShapeOrig 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:EyeR2ShapeOrig 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:EyeR2ShapeOrig 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:fosterParent2|NewSmarty_024:smarty_blendshapes_latest:EyeR2ShapeOrig 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:fosterParent2|NewSmarty_024:smarty_blendshapes_latest:EyeR2ShapeOrig 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:fosterParent2|NewSmarty_024:smarty_blendshapes_latest:EyeR2ShapeOrig 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassFrameShapeOrig 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassFrameShapeOrig 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassFrameShapeOrig 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassLShapeOrig 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassLShapeOrig 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassLShapeOrig 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassRShapeOrig 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassRShapeOrig 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassRShapeOrig 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:pPlaneShape1Deformed 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:pPlaneShape1Deformed 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:pPlaneShape1Deformed 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:pCubeShape2Deformed 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:pCubeShape2Deformed 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:pCubeShape2Deformed 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:pCubeShape1Deformed 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:pCubeShape1Deformed 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:pCubeShape1Deformed 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:bowTieShapeDeformed 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:bowTieShapeDeformed 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:bowTieShapeDeformed 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:EyeR2ShapeDeformed 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:EyeR2ShapeDeformed 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:EyeR2ShapeDeformed 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:transform2|NewSmarty_024:smarty_blendshapes_latest:EyeR2ShapeDeformed 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:transform2|NewSmarty_024:smarty_blendshapes_latest:EyeR2ShapeDeformed 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:transform2|NewSmarty_024:smarty_blendshapes_latest:EyeR2ShapeDeformed 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassFrameShapeDeformed 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassFrameShapeDeformed 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassFrameShapeDeformed 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassLShapeDeformed 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassLShapeDeformed 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassLShapeDeformed 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassRShapeDeformed 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassRShapeDeformed 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassRShapeDeformed 
-		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape4Deformed 
-		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape4Deformed 
-		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
-		1 |NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape4Deformed 
+		1 |NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:tongue:pPlane1|NewSmarty_024:tongue:pPlaneShape1 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 NewSmarty_024:file3 "proceduralTexDefaultRes" "proceduralTexDefaultRes" 
 		" -ci 1 -dv 512 -min 256 -max 4096 -smn 8 -smx 8192 -at \"short\""
@@ -44542,585 +44596,593 @@ createNode reference -n "smartybikeRN";
 		1 NewSmarty_024:file5 "compressColor" "compressColor" " -ci 1 -dv 1 -min 0 -max 1 -at \"bool\""
 		
 		2 "|NewSmarty_024:_UNKNOWN_REF_NODE_fosterParent1" "visibility" " 1"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:Smarty" "scale" " -type \"double3\" 1 1 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:pPlaneShape1Deformed" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:pPlaneShape1Deformed" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
 		
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:Smarty|NewSmarty_024:polySurface6|NewSmarty_024:polySurfaceShape4" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:pPlaneShape1Deformed" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:pCubeShape2Deformed" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:pCubeShape2Deformed" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:pCubeShape2Deformed" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:pCubeShape1Deformed" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:pCubeShape1Deformed" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:pCubeShape1Deformed" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:bowTieShapeDeformed" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:bowTieShapeDeformed" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:bowTieShapeDeformed" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:EyeR2ShapeDeformed" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:EyeR2ShapeDeformed" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:EyeR2ShapeDeformed" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:transform2|NewSmarty_024:smarty_blendshapes_latest:EyeR2ShapeDeformed" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:transform2|NewSmarty_024:smarty_blendshapes_latest:EyeR2ShapeDeformed" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:transform2|NewSmarty_024:smarty_blendshapes_latest:EyeR2ShapeDeformed" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassFrameShapeDeformed" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassFrameShapeDeformed" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassFrameShapeDeformed" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassLShapeDeformed" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassLShapeDeformed" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassLShapeDeformed" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassRShapeDeformed" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassRShapeDeformed" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassRShapeDeformed" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape4Deformed" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape4Deformed" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape4Deformed" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:bowTieShapeOrig" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:bowTieShapeOrig" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:bowTieShapeOrig" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:EyeR2ShapeOrig" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:EyeR2ShapeOrig" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:EyeR2ShapeOrig" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:fosterParent2|NewSmarty_024:smarty_blendshapes_latest:EyeR2ShapeOrig" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:fosterParent2|NewSmarty_024:smarty_blendshapes_latest:EyeR2ShapeOrig" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:fosterParent2|NewSmarty_024:smarty_blendshapes_latest:EyeR2ShapeOrig" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassFrameShapeOrig" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassFrameShapeOrig" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassFrameShapeOrig" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassLShapeOrig" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassLShapeOrig" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassLShapeOrig" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassRShapeOrig" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassRShapeOrig" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassRShapeOrig" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:Smarty18|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape6" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:Smarty18|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape6" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:Smarty18|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape6" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:Smarty18|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape4Orig6" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:Smarty18|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape4Orig6" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:Smarty18|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape4Orig6" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:Smarty17|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape6" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:Smarty17|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape6" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:Smarty17|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape6" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:Smarty17|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape4Orig6" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:Smarty17|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape4Orig6" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:Smarty17|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape4Orig6" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:Smarty16|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape6" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:Smarty16|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape6" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:Smarty16|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape6" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:Smarty16|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape4Orig6" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:Smarty16|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape4Orig6" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:Smarty16|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape4Orig6" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosed|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosed|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosedShape" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosed|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosed|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosedShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosed|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosed|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosedShape" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosed|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosed|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosedShape4Orig" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosed|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosed|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosedShape4Orig" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosed|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosed|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosedShape4Orig" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:rightEarForward|NewSmarty_024:smarty_blendshapes_latest:rightEarForward|NewSmarty_024:smarty_blendshapes_latest:rightEarForwardShape" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:rightEarForward|NewSmarty_024:smarty_blendshapes_latest:rightEarForward|NewSmarty_024:smarty_blendshapes_latest:rightEarForwardShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:rightEarForward|NewSmarty_024:smarty_blendshapes_latest:rightEarForward|NewSmarty_024:smarty_blendshapes_latest:rightEarForwardShape" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:rightEarForward|NewSmarty_024:smarty_blendshapes_latest:rightEarForward|NewSmarty_024:smarty_blendshapes_latest:rightEarForwardShape4Orig" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:rightEarForward|NewSmarty_024:smarty_blendshapes_latest:rightEarForward|NewSmarty_024:smarty_blendshapes_latest:rightEarForwardShape4Orig" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:rightEarForward|NewSmarty_024:smarty_blendshapes_latest:rightEarForward|NewSmarty_024:smarty_blendshapes_latest:rightEarForwardShape4Orig" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:leftEarForward|NewSmarty_024:smarty_blendshapes_latest:leftEarForward|NewSmarty_024:smarty_blendshapes_latest:leftEarForwardShape" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:leftEarForward|NewSmarty_024:smarty_blendshapes_latest:leftEarForward|NewSmarty_024:smarty_blendshapes_latest:leftEarForwardShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:leftEarForward|NewSmarty_024:smarty_blendshapes_latest:leftEarForward|NewSmarty_024:smarty_blendshapes_latest:leftEarForwardShape" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:leftEarForward|NewSmarty_024:smarty_blendshapes_latest:leftEarForward|NewSmarty_024:smarty_blendshapes_latest:leftEarForwardShape4Orig" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:leftEarForward|NewSmarty_024:smarty_blendshapes_latest:leftEarForward|NewSmarty_024:smarty_blendshapes_latest:leftEarForwardShape4Orig" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:leftEarForward|NewSmarty_024:smarty_blendshapes_latest:leftEarForward|NewSmarty_024:smarty_blendshapes_latest:leftEarForwardShape4Orig" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:earsSpread|NewSmarty_024:smarty_blendshapes_latest:earsSpread|NewSmarty_024:smarty_blendshapes_latest:earsSpreadShape" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:earsSpread|NewSmarty_024:smarty_blendshapes_latest:earsSpread|NewSmarty_024:smarty_blendshapes_latest:earsSpreadShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:earsSpread|NewSmarty_024:smarty_blendshapes_latest:earsSpread|NewSmarty_024:smarty_blendshapes_latest:earsSpreadShape" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:earsSpread|NewSmarty_024:smarty_blendshapes_latest:earsSpread|NewSmarty_024:smarty_blendshapes_latest:earsSpreadShape4Orig" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:earsSpread|NewSmarty_024:smarty_blendshapes_latest:earsSpread|NewSmarty_024:smarty_blendshapes_latest:earsSpreadShape4Orig" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:earsSpread|NewSmarty_024:smarty_blendshapes_latest:earsSpread|NewSmarty_024:smarty_blendshapes_latest:earsSpreadShape4Orig" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:rightEarOut|NewSmarty_024:smarty_blendshapes_latest:rightEarOut|NewSmarty_024:smarty_blendshapes_latest:rightEarOutShape" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:rightEarOut|NewSmarty_024:smarty_blendshapes_latest:rightEarOut|NewSmarty_024:smarty_blendshapes_latest:rightEarOutShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:rightEarOut|NewSmarty_024:smarty_blendshapes_latest:rightEarOut|NewSmarty_024:smarty_blendshapes_latest:rightEarOutShape" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:rightEarOut|NewSmarty_024:smarty_blendshapes_latest:rightEarOut|NewSmarty_024:smarty_blendshapes_latest:rightEarOutShape4Orig" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:rightEarOut|NewSmarty_024:smarty_blendshapes_latest:rightEarOut|NewSmarty_024:smarty_blendshapes_latest:rightEarOutShape4Orig" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:rightEarOut|NewSmarty_024:smarty_blendshapes_latest:rightEarOut|NewSmarty_024:smarty_blendshapes_latest:rightEarOutShape4Orig" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:leftEarOut|NewSmarty_024:smarty_blendshapes_latest:leftEarOut|NewSmarty_024:smarty_blendshapes_latest:leftEarOutShape" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:leftEarOut|NewSmarty_024:smarty_blendshapes_latest:leftEarOut|NewSmarty_024:smarty_blendshapes_latest:leftEarOutShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:leftEarOut|NewSmarty_024:smarty_blendshapes_latest:leftEarOut|NewSmarty_024:smarty_blendshapes_latest:leftEarOutShape" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:leftEarOut|NewSmarty_024:smarty_blendshapes_latest:leftEarOut|NewSmarty_024:smarty_blendshapes_latest:leftEarOutShape4Orig" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:leftEarOut|NewSmarty_024:smarty_blendshapes_latest:leftEarOut|NewSmarty_024:smarty_blendshapes_latest:leftEarOutShape4Orig" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:leftEarOut|NewSmarty_024:smarty_blendshapes_latest:leftEarOut|NewSmarty_024:smarty_blendshapes_latest:leftEarOutShape4Orig" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:noseDown|NewSmarty_024:smarty_blendshapes_latest:noseDown|NewSmarty_024:smarty_blendshapes_latest:noseDownShape" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:noseDown|NewSmarty_024:smarty_blendshapes_latest:noseDown|NewSmarty_024:smarty_blendshapes_latest:noseDownShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:noseDown|NewSmarty_024:smarty_blendshapes_latest:noseDown|NewSmarty_024:smarty_blendshapes_latest:noseDownShape" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:noseDown|NewSmarty_024:smarty_blendshapes_latest:noseDown|NewSmarty_024:smarty_blendshapes_latest:noseDownShape4Orig" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:noseDown|NewSmarty_024:smarty_blendshapes_latest:noseDown|NewSmarty_024:smarty_blendshapes_latest:noseDownShape4Orig" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:noseDown|NewSmarty_024:smarty_blendshapes_latest:noseDown|NewSmarty_024:smarty_blendshapes_latest:noseDownShape4Orig" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:closedEyes|NewSmarty_024:smarty_blendshapes_latest:closedEyes|NewSmarty_024:smarty_blendshapes_latest:closedEyes" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:closedEyes|NewSmarty_024:smarty_blendshapes_latest:closedEyes|NewSmarty_024:smarty_blendshapes_latest:closedEyes" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:closedEyes|NewSmarty_024:smarty_blendshapes_latest:closedEyes|NewSmarty_024:smarty_blendshapes_latest:closedEyes" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:closedEyes|NewSmarty_024:smarty_blendshapes_latest:closedEyes|NewSmarty_024:smarty_blendshapes_latest:closedEyesShape4Orig" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:closedEyes|NewSmarty_024:smarty_blendshapes_latest:closedEyes|NewSmarty_024:smarty_blendshapes_latest:closedEyesShape4Orig" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:closedEyes|NewSmarty_024:smarty_blendshapes_latest:closedEyes|NewSmarty_024:smarty_blendshapes_latest:closedEyesShape4Orig" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:openMouth|NewSmarty_024:smarty_blendshapes_latest:openMouth|NewSmarty_024:smarty_blendshapes_latest:openMouthShape" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:openMouth|NewSmarty_024:smarty_blendshapes_latest:openMouth|NewSmarty_024:smarty_blendshapes_latest:openMouthShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:openMouth|NewSmarty_024:smarty_blendshapes_latest:openMouth|NewSmarty_024:smarty_blendshapes_latest:openMouthShape" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:openMouth|NewSmarty_024:smarty_blendshapes_latest:openMouth|NewSmarty_024:smarty_blendshapes_latest:openMouthShape4Orig" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:openMouth|NewSmarty_024:smarty_blendshapes_latest:openMouth|NewSmarty_024:smarty_blendshapes_latest:openMouthShape4Orig" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:openMouth|NewSmarty_024:smarty_blendshapes_latest:openMouth|NewSmarty_024:smarty_blendshapes_latest:openMouthShape4Orig" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:closedMouth|NewSmarty_024:smarty_blendshapes_latest:closedMouth|NewSmarty_024:smarty_blendshapes_latest:closedMouthShape" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:closedMouth|NewSmarty_024:smarty_blendshapes_latest:closedMouth|NewSmarty_024:smarty_blendshapes_latest:closedMouthShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:closedMouth|NewSmarty_024:smarty_blendshapes_latest:closedMouth|NewSmarty_024:smarty_blendshapes_latest:closedMouthShape" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:closedMouth|NewSmarty_024:smarty_blendshapes_latest:closedMouth|NewSmarty_024:smarty_blendshapes_latest:closedMouthShape4Orig" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:closedMouth|NewSmarty_024:smarty_blendshapes_latest:closedMouth|NewSmarty_024:smarty_blendshapes_latest:closedMouthShape4Orig" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:closedMouth|NewSmarty_024:smarty_blendshapes_latest:closedMouth|NewSmarty_024:smarty_blendshapes_latest:closedMouthShape4Orig" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:worried|NewSmarty_024:smarty_blendshapes_latest:worried|NewSmarty_024:smarty_blendshapes_latest:worriedShape" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:worried|NewSmarty_024:smarty_blendshapes_latest:worried|NewSmarty_024:smarty_blendshapes_latest:worriedShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:worried|NewSmarty_024:smarty_blendshapes_latest:worried|NewSmarty_024:smarty_blendshapes_latest:worriedShape" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:worried|NewSmarty_024:smarty_blendshapes_latest:worried|NewSmarty_024:smarty_blendshapes_latest:worriedShape4Orig" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:worried|NewSmarty_024:smarty_blendshapes_latest:worried|NewSmarty_024:smarty_blendshapes_latest:worriedShape4Orig" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:worried|NewSmarty_024:smarty_blendshapes_latest:worried|NewSmarty_024:smarty_blendshapes_latest:worriedShape4Orig" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:angry|NewSmarty_024:smarty_blendshapes_latest:angry|NewSmarty_024:smarty_blendshapes_latest:angryShape" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:angry|NewSmarty_024:smarty_blendshapes_latest:angry|NewSmarty_024:smarty_blendshapes_latest:angryShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:angry|NewSmarty_024:smarty_blendshapes_latest:angry|NewSmarty_024:smarty_blendshapes_latest:angryShape" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:angry|NewSmarty_024:smarty_blendshapes_latest:angry|NewSmarty_024:smarty_blendshapes_latest:angryShape4Orig" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:angry|NewSmarty_024:smarty_blendshapes_latest:angry|NewSmarty_024:smarty_blendshapes_latest:angryShape4Orig" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:angry|NewSmarty_024:smarty_blendshapes_latest:angry|NewSmarty_024:smarty_blendshapes_latest:angryShape4Orig" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:happy|NewSmarty_024:smarty_blendshapes_latest:happy|NewSmarty_024:smarty_blendshapes_latest:happyShape" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:happy|NewSmarty_024:smarty_blendshapes_latest:happy|NewSmarty_024:smarty_blendshapes_latest:happyShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:happy|NewSmarty_024:smarty_blendshapes_latest:happy|NewSmarty_024:smarty_blendshapes_latest:happyShape" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:happy|NewSmarty_024:smarty_blendshapes_latest:happy|NewSmarty_024:smarty_blendshapes_latest:happyShape4Orig" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:happy|NewSmarty_024:smarty_blendshapes_latest:happy|NewSmarty_024:smarty_blendshapes_latest:happyShape4Orig" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:happy|NewSmarty_024:smarty_blendshapes_latest:happy|NewSmarty_024:smarty_blendshapes_latest:happyShape4Orig" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUpShape" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUpShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUpShape" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUpShape4Orig" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUpShape4Orig" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUpShape4Orig" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUpShape" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUpShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUpShape" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUpShape4Orig" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUpShape4Orig" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUpShape4Orig" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:noseUp|NewSmarty_024:smarty_blendshapes_latest:noseUp|NewSmarty_024:smarty_blendshapes_latest:noseUpShape" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:noseUp|NewSmarty_024:smarty_blendshapes_latest:noseUp|NewSmarty_024:smarty_blendshapes_latest:noseUpShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:noseUp|NewSmarty_024:smarty_blendshapes_latest:noseUp|NewSmarty_024:smarty_blendshapes_latest:noseUpShape" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:noseUp|NewSmarty_024:smarty_blendshapes_latest:noseUp|NewSmarty_024:smarty_blendshapes_latest:noseUpShape4Orig" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:noseUp|NewSmarty_024:smarty_blendshapes_latest:noseUp|NewSmarty_024:smarty_blendshapes_latest:noseUpShape4Orig" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:blendshapes|NewSmarty_024:smarty_blendshapes_latest:noseUp|NewSmarty_024:smarty_blendshapes_latest:noseUp|NewSmarty_024:smarty_blendshapes_latest:noseUpShape4Orig" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:Smarty" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:Smarty|NewSmarty_024:polySurface6|NewSmarty_024:polySurfaceShape4" 
 		"VisibleInIndirect" " 1"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:Smarty|NewSmarty_024:polySurface6|NewSmarty_024:polySurfaceShape4" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:Smarty|NewSmarty_024:polySurface6|NewSmarty_024:polySurfaceShape4" 
 		"surfaceReference" " 1"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:Smarty|NewSmarty_024:polySurface6|NewSmarty_024:polySurfaceShape4" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:Smarty|NewSmarty_024:polySurface6|NewSmarty_024:polySurfaceShape4" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
 		
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:Smarty|NewSmarty_024:polySurface6|NewSmarty_024:polySurfaceShape4" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:Smarty|NewSmarty_024:polySurface6|NewSmarty_024:polySurfaceShape4" 
 		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:Smarty|NewSmarty_024:polySurface6|NewSmarty_024:polySurfaceShape4Orig" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:Smarty|NewSmarty_024:polySurface6|NewSmarty_024:polySurfaceShape4Orig" 
 		"surfaceReference" " 1"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:Smarty|NewSmarty_024:polySurface6|NewSmarty_024:polySurfaceShape4Orig" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:Smarty|NewSmarty_024:polySurface6|NewSmarty_024:polySurfaceShape4Orig" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
 		
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:Smarty|NewSmarty_024:polySurface6|NewSmarty_024:polySurfaceShape4Orig" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:Smarty|NewSmarty_024:polySurface6|NewSmarty_024:polySurfaceShape4Orig" 
 		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" "translate" " -type \"double3\" -201.35573986914002 11.742703263864499 25.226589473242239"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" 
+		"translate" " -type \"double3\" -197.47481409820352 11.742632527450469 53.249560939911333"
 		
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" "translateX" " -av"
-		
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" "translateY" " -av"
-		
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" "translateZ" " -av"
-		
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" "rotate" " -type \"double3\" -9.6553082714666143 45.770311373639672 -13.356432173811015"
-		
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" "rotateX" " -av"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" "rotateY" " -av"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" "rotateZ" " -av"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" "scale" " -type \"double3\" 0.2 0.2 0.2"
-		
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" "scaleX" " -av"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" "scaleY" " -av"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" "scaleZ" " -av"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glassFrame|NewSmarty_024:smarty_008_fixed_rig_:glassFrameShape" 
-		"VisibleInIndirect" " 1"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glassFrame|NewSmarty_024:smarty_008_fixed_rig_:glassFrameShape" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glassFrame|NewSmarty_024:smarty_008_fixed_rig_:glassFrameShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glassFrame|NewSmarty_024:smarty_008_fixed_rig_:glassFrameShape" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glassFrame|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glass|NewSmarty_024:smarty_008_fixed_rig_:glassR|NewSmarty_024:smarty_008_fixed_rig_:glassRShape" 
-		"VisibleInIndirect" " 1"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glassFrame|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glass|NewSmarty_024:smarty_008_fixed_rig_:glassR|NewSmarty_024:smarty_008_fixed_rig_:glassRShape" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glassFrame|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glass|NewSmarty_024:smarty_008_fixed_rig_:glassR|NewSmarty_024:smarty_008_fixed_rig_:glassRShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glassFrame|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glass|NewSmarty_024:smarty_008_fixed_rig_:glassR|NewSmarty_024:smarty_008_fixed_rig_:glassRShape" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glassFrame|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glass|NewSmarty_024:smarty_008_fixed_rig_:glassL|NewSmarty_024:smarty_008_fixed_rig_:glassLShape" 
-		"VisibleInIndirect" " 1"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glassFrame|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glass|NewSmarty_024:smarty_008_fixed_rig_:glassL|NewSmarty_024:smarty_008_fixed_rig_:glassLShape" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glassFrame|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glass|NewSmarty_024:smarty_008_fixed_rig_:glassL|NewSmarty_024:smarty_008_fixed_rig_:glassLShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glassFrame|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glass|NewSmarty_024:smarty_008_fixed_rig_:glassL|NewSmarty_024:smarty_008_fixed_rig_:glassLShape" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:eye_ctrl" 
-		"translate" " -type \"double3\" -0.95696609714656367 0.97003208396668417 -1.7582404424015001"
-		
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:eye_ctrl" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" 
 		"translateX" " -av"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:eye_ctrl" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" 
 		"translateY" " -av"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:eye_ctrl" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" 
 		"translateZ" " -av"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:eye_ctrl" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" 
+		"rotate" " -type \"double3\" -0.031233780884889123 -1.1559474591956675 1.5478644684664462"
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" 
+		"rotateX" " -av"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" 
+		"rotateY" " -av"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" 
+		"rotateZ" " -av"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" 
+		"scale" " -type \"double3\" 0.2 0.2 0.2"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" 
+		"scaleX" " -av"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" 
+		"scaleY" " -av"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" 
+		"scaleZ" " -av"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glassFrame|NewSmarty_024:smarty_008_fixed_rig_:glassFrameShape" 
+		"VisibleInIndirect" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glassFrame|NewSmarty_024:smarty_008_fixed_rig_:glassFrameShape" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glassFrame|NewSmarty_024:smarty_008_fixed_rig_:glassFrameShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glassFrame|NewSmarty_024:smarty_008_fixed_rig_:glassFrameShape" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glassFrame|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glass|NewSmarty_024:smarty_008_fixed_rig_:glassR|NewSmarty_024:smarty_008_fixed_rig_:glassRShape" 
+		"VisibleInIndirect" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glassFrame|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glass|NewSmarty_024:smarty_008_fixed_rig_:glassR|NewSmarty_024:smarty_008_fixed_rig_:glassRShape" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glassFrame|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glass|NewSmarty_024:smarty_008_fixed_rig_:glassR|NewSmarty_024:smarty_008_fixed_rig_:glassRShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glassFrame|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glass|NewSmarty_024:smarty_008_fixed_rig_:glassR|NewSmarty_024:smarty_008_fixed_rig_:glassRShape" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glassFrame|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glass|NewSmarty_024:smarty_008_fixed_rig_:glassL|NewSmarty_024:smarty_008_fixed_rig_:glassLShape" 
+		"VisibleInIndirect" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glassFrame|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glass|NewSmarty_024:smarty_008_fixed_rig_:glassL|NewSmarty_024:smarty_008_fixed_rig_:glassLShape" 
+		"surfaceReference" " 1"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glassFrame|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glass|NewSmarty_024:smarty_008_fixed_rig_:glassL|NewSmarty_024:smarty_008_fixed_rig_:glassLShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glassFrame|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glass|NewSmarty_024:smarty_008_fixed_rig_:glassL|NewSmarty_024:smarty_008_fixed_rig_:glassLShape" 
+		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:eye_ctrl" 
+		"translate" " -type \"double3\" -1.1650256437432949 1.2410442354283484 -2.0151866086344281"
+		
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:eye_ctrl" 
+		"translateX" " -av"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:eye_ctrl" 
+		"translateY" " -av"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:eye_ctrl" 
+		"translateZ" " -av"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:eye_ctrl" 
 		"rotate" " -type \"double3\" -13.031455306517932 0 0"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:eye_ctrl" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:eye_ctrl" 
 		"rotateX" " -av"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:eye_ctrl" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:eye_ctrl" 
 		"rotateY" " -av"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:eye_ctrl" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:eye_ctrl" 
 		"rotateZ" " -av"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:EyeL|NewSmarty_024:smarty_008_fixed_rig_:EyeR2Shape" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:EyeL|NewSmarty_024:smarty_008_fixed_rig_:EyeR2Shape" 
 		"VisibleInIndirect" " 1"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:EyeL|NewSmarty_024:smarty_008_fixed_rig_:EyeR2Shape" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:EyeL|NewSmarty_024:smarty_008_fixed_rig_:EyeR2Shape" 
 		"surfaceReference" " 1"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:EyeL|NewSmarty_024:smarty_008_fixed_rig_:EyeR2Shape" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:EyeL|NewSmarty_024:smarty_008_fixed_rig_:EyeR2Shape" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
 		
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:EyeL|NewSmarty_024:smarty_008_fixed_rig_:EyeR2Shape" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:EyeL|NewSmarty_024:smarty_008_fixed_rig_:EyeR2Shape" 
 		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:EyeR|NewSmarty_024:smarty_008_fixed_rig_:EyeR2Shape" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:EyeR|NewSmarty_024:smarty_008_fixed_rig_:EyeR2Shape" 
 		"VisibleInIndirect" " 1"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:EyeR|NewSmarty_024:smarty_008_fixed_rig_:EyeR2Shape" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:EyeR|NewSmarty_024:smarty_008_fixed_rig_:EyeR2Shape" 
 		"surfaceReference" " 1"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:EyeR|NewSmarty_024:smarty_008_fixed_rig_:EyeR2Shape" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:EyeR|NewSmarty_024:smarty_008_fixed_rig_:EyeR2Shape" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
 		
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:EyeR|NewSmarty_024:smarty_008_fixed_rig_:EyeR2Shape" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:EyeR|NewSmarty_024:smarty_008_fixed_rig_:EyeR2Shape" 
 		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:clavicleLJ1|NewSmarty_024:shoulderLJ|NewSmarty_024:elbowLJ|NewSmarty_024:new31:effector11" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:clavicleLJ1|NewSmarty_024:shoulderLJ|NewSmarty_024:elbowLJ|NewSmarty_024:new31:effector11" 
 		"visibility" " 1"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:clavicleLJ1|NewSmarty_024:shoulderLJ|NewSmarty_024:elbowLJ|NewSmarty_024:effector16" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:clavicleLJ1|NewSmarty_024:shoulderLJ|NewSmarty_024:elbowLJ|NewSmarty_024:effector16" 
 		"visibility" " 1"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:clavicleRJ|NewSmarty_024:shoulderRJ|NewSmarty_024:elbowRJ|NewSmarty_024:effector11" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:clavicleRJ|NewSmarty_024:shoulderRJ|NewSmarty_024:elbowRJ|NewSmarty_024:effector11" 
 		"visibility" " 1"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:clavicleRJ|NewSmarty_024:shoulderRJ|NewSmarty_024:elbowRJ|NewSmarty_024:effector14" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:clavicleRJ|NewSmarty_024:shoulderRJ|NewSmarty_024:elbowRJ|NewSmarty_024:effector14" 
 		"visibility" " 1"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:clavicleRJ|NewSmarty_024:shoulderRJ|NewSmarty_024:elbowRJ|NewSmarty_024:effector15" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:clavicleRJ|NewSmarty_024:shoulderRJ|NewSmarty_024:elbowRJ|NewSmarty_024:effector15" 
 		"visibility" " 1"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:smarty_008_fixed_rig_:bowTie|NewSmarty_024:smarty_008_fixed_rig_:bowTieShape" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:smarty_008_fixed_rig_:bowTie|NewSmarty_024:smarty_008_fixed_rig_:bowTieShape" 
 		"VisibleInIndirect" " 1"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:smarty_008_fixed_rig_:bowTie|NewSmarty_024:smarty_008_fixed_rig_:bowTieShape" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:smarty_008_fixed_rig_:bowTie|NewSmarty_024:smarty_008_fixed_rig_:bowTieShape" 
 		"surfaceReference" " 1"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:smarty_008_fixed_rig_:bowTie|NewSmarty_024:smarty_008_fixed_rig_:bowTieShape" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:smarty_008_fixed_rig_:bowTie|NewSmarty_024:smarty_008_fixed_rig_:bowTieShape" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
 		
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:smarty_008_fixed_rig_:bowTie|NewSmarty_024:smarty_008_fixed_rig_:bowTieShape" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:smarty_008_fixed_rig_:bowTie|NewSmarty_024:smarty_008_fixed_rig_:bowTieShape" 
 		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:hip|NewSmarty_024:thighLJ|NewSmarty_024:kneeLJ|NewSmarty_024:effector17" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:hip|NewSmarty_024:thighLJ|NewSmarty_024:kneeLJ|NewSmarty_024:effector17" 
 		"visibility" " 1"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:hip|NewSmarty_024:thighRJ|NewSmarty_024:kneeRJ|NewSmarty_024:effector18" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:hip|NewSmarty_024:thighRJ|NewSmarty_024:kneeRJ|NewSmarty_024:effector18" 
 		"visibility" " 1"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl" 
-		"rotate" " -type \"double3\" 0.051456415178708394 0.39599129003793682 -0.3943534325457777"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl" 
+		"rotate" " -type \"double3\" 14.271576976244797 21.384793471642592 -27.15843767985255"
 		
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl" 
 		"rotateX" " -av"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl" 
 		"rotateY" " -av"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl" 
 		"rotateZ" " -av"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:teeth:pCube1|NewSmarty_024:teeth:pCubeShape1" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:teeth:pCube1|NewSmarty_024:teeth:pCubeShape1" 
 		"surfaceReference" " 1"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:teeth:pCube1|NewSmarty_024:teeth:pCubeShape1" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:teeth:pCube1|NewSmarty_024:teeth:pCubeShape1" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
 		
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:teeth:pCube1|NewSmarty_024:teeth:pCubeShape1" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:teeth:pCube1|NewSmarty_024:teeth:pCubeShape1" 
 		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:teeth:pCube1|NewSmarty_024:teeth:polySurfaceShape1" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:teeth:pCube1|NewSmarty_024:teeth:polySurfaceShape1" 
 		"surfaceReference" " 1"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:teeth:pCube1|NewSmarty_024:teeth:polySurfaceShape1" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:teeth:pCube1|NewSmarty_024:teeth:polySurfaceShape1" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
 		
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:teeth:pCube1|NewSmarty_024:teeth:polySurfaceShape1" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:teeth:pCube1|NewSmarty_024:teeth:polySurfaceShape1" 
 		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:teeth:pCube2|NewSmarty_024:teeth:pCubeShape2" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:teeth:pCube2|NewSmarty_024:teeth:pCubeShape2" 
 		"surfaceReference" " 1"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:teeth:pCube2|NewSmarty_024:teeth:pCubeShape2" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:teeth:pCube2|NewSmarty_024:teeth:pCubeShape2" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
 		
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:teeth:pCube2|NewSmarty_024:teeth:pCubeShape2" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:teeth:pCube2|NewSmarty_024:teeth:pCubeShape2" 
 		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:teeth:pCube2|NewSmarty_024:teeth:polySurfaceShape1" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:teeth:pCube2|NewSmarty_024:teeth:polySurfaceShape1" 
 		"surfaceReference" " 1"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:teeth:pCube2|NewSmarty_024:teeth:polySurfaceShape1" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:teeth:pCube2|NewSmarty_024:teeth:polySurfaceShape1" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
 		
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:teeth:pCube2|NewSmarty_024:teeth:polySurfaceShape1" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:teeth:pCube2|NewSmarty_024:teeth:polySurfaceShape1" 
 		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:tongue:pPlane1|NewSmarty_024:tongue:pPlaneShape1" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:tongue:pPlane1|NewSmarty_024:tongue:pPlaneShape1" 
 		"surfaceReference" " 1"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:tongue:pPlane1|NewSmarty_024:tongue:pPlaneShape1" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:tongue:pPlane1|NewSmarty_024:tongue:pPlaneShape1" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
 		
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:tongue:pPlane1|NewSmarty_024:tongue:pPlaneShape1" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:tongue:pPlane1|NewSmarty_024:tongue:pPlaneShape1" 
 		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rightLeg_ik" 
-		"translate" " -type \"double3\" -2.233211292986693 -9.9748973102823566 1.3446827995202673"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rightLeg_ik" 
+		"translate" " -type \"double3\" -2.2332112929865793 -9.9748973102823921 1.3446827995202673"
 		
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rightLeg_ik" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rightLeg_ik" 
 		"translateX" " -av"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rightLeg_ik" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rightLeg_ik" 
 		"translateY" " -av"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rightLeg_ik" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rightLeg_ik" 
 		"translateZ" " -av"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:leftLeg_ik" 
-		"translate" " -type \"double3\" 2.0746780938947977 -9.9748837915002415 1.344680856526234"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:leftLeg_ik" 
+		"translate" " -type \"double3\" 2.0746780938946841 -9.9748837915002841 1.344680856526234"
 		
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:leftLeg_ik" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:leftLeg_ik" 
 		"translateX" " -av"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:leftLeg_ik" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:leftLeg_ik" 
 		"translateY" " -av"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:leftLeg_ik" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:leftLeg_ik" 
 		"translateZ" " -av"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rightArm_ik" 
-		"translate" " -type \"double3\" -3.656627460131165 -2.3839183228781806 5.1006420311372498"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rightArm_ik" 
+		"translate" " -type \"double3\" -3.6566274601310513 -2.3839183228782233 5.1006420311372498"
 		
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rightArm_ik" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rightArm_ik" 
 		"translateX" " -av"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rightArm_ik" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rightArm_ik" 
 		"translateY" " -av"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rightArm_ik" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rightArm_ik" 
 		"translateZ" " -av"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:leftArm_ik" 
-		"translate" " -type \"double3\" 3.6422651701393964 -2.3839187642246795 5.1006740279143461"
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:leftArm_ik" 
+		"translate" " -type \"double3\" 3.6422651701393964 -2.3839187642247079 5.1006740279143461"
 		
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:leftArm_ik" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:leftArm_ik" 
 		"translateX" " -av"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:leftArm_ik" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:leftArm_ik" 
 		"translateY" " -av"
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:leftArm_ik" 
+		2 "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:leftArm_ik" 
 		"translateZ" " -av"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:noseUp|NewSmarty_024:smarty_blendshapes_latest:noseUp|NewSmarty_024:smarty_blendshapes_latest:noseUpShape" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:noseUp|NewSmarty_024:smarty_blendshapes_latest:noseUp|NewSmarty_024:smarty_blendshapes_latest:noseUpShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:noseUp|NewSmarty_024:smarty_blendshapes_latest:noseUp|NewSmarty_024:smarty_blendshapes_latest:noseUpShape" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:smarty_blendshapes_latest:noseUp|NewSmarty_024:smarty_blendshapes_latest:noseUp|NewSmarty_024:smarty_blendshapes_latest:noseUpShape4Orig" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:noseUp|NewSmarty_024:smarty_blendshapes_latest:noseUp|NewSmarty_024:smarty_blendshapes_latest:noseUpShape4Orig" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:noseUp|NewSmarty_024:smarty_blendshapes_latest:noseUp|NewSmarty_024:smarty_blendshapes_latest:noseUpShape4Orig" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUpShape" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUpShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUpShape" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUpShape4Orig" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUpShape4Orig" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:rightEyebrowUpShape4Orig" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUpShape" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUpShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUpShape" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUpShape4Orig" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUpShape4Orig" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUp|NewSmarty_024:smarty_blendshapes_latest:leftEyebrowUpShape4Orig" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:smarty_blendshapes_latest:happy|NewSmarty_024:smarty_blendshapes_latest:happy|NewSmarty_024:smarty_blendshapes_latest:happyShape" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:happy|NewSmarty_024:smarty_blendshapes_latest:happy|NewSmarty_024:smarty_blendshapes_latest:happyShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:happy|NewSmarty_024:smarty_blendshapes_latest:happy|NewSmarty_024:smarty_blendshapes_latest:happyShape" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:smarty_blendshapes_latest:happy|NewSmarty_024:smarty_blendshapes_latest:happy|NewSmarty_024:smarty_blendshapes_latest:happyShape4Orig" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:happy|NewSmarty_024:smarty_blendshapes_latest:happy|NewSmarty_024:smarty_blendshapes_latest:happyShape4Orig" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:happy|NewSmarty_024:smarty_blendshapes_latest:happy|NewSmarty_024:smarty_blendshapes_latest:happyShape4Orig" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:smarty_blendshapes_latest:angry|NewSmarty_024:smarty_blendshapes_latest:angry|NewSmarty_024:smarty_blendshapes_latest:angryShape" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:angry|NewSmarty_024:smarty_blendshapes_latest:angry|NewSmarty_024:smarty_blendshapes_latest:angryShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:angry|NewSmarty_024:smarty_blendshapes_latest:angry|NewSmarty_024:smarty_blendshapes_latest:angryShape" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:smarty_blendshapes_latest:angry|NewSmarty_024:smarty_blendshapes_latest:angry|NewSmarty_024:smarty_blendshapes_latest:angryShape4Orig" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:angry|NewSmarty_024:smarty_blendshapes_latest:angry|NewSmarty_024:smarty_blendshapes_latest:angryShape4Orig" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:angry|NewSmarty_024:smarty_blendshapes_latest:angry|NewSmarty_024:smarty_blendshapes_latest:angryShape4Orig" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:smarty_blendshapes_latest:worried|NewSmarty_024:smarty_blendshapes_latest:worried|NewSmarty_024:smarty_blendshapes_latest:worriedShape" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:worried|NewSmarty_024:smarty_blendshapes_latest:worried|NewSmarty_024:smarty_blendshapes_latest:worriedShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:worried|NewSmarty_024:smarty_blendshapes_latest:worried|NewSmarty_024:smarty_blendshapes_latest:worriedShape" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:smarty_blendshapes_latest:worried|NewSmarty_024:smarty_blendshapes_latest:worried|NewSmarty_024:smarty_blendshapes_latest:worriedShape4Orig" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:worried|NewSmarty_024:smarty_blendshapes_latest:worried|NewSmarty_024:smarty_blendshapes_latest:worriedShape4Orig" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:worried|NewSmarty_024:smarty_blendshapes_latest:worried|NewSmarty_024:smarty_blendshapes_latest:worriedShape4Orig" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:smarty_blendshapes_latest:closedMouth|NewSmarty_024:smarty_blendshapes_latest:closedMouth|NewSmarty_024:smarty_blendshapes_latest:closedMouthShape" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:closedMouth|NewSmarty_024:smarty_blendshapes_latest:closedMouth|NewSmarty_024:smarty_blendshapes_latest:closedMouthShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:closedMouth|NewSmarty_024:smarty_blendshapes_latest:closedMouth|NewSmarty_024:smarty_blendshapes_latest:closedMouthShape" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:smarty_blendshapes_latest:closedMouth|NewSmarty_024:smarty_blendshapes_latest:closedMouth|NewSmarty_024:smarty_blendshapes_latest:closedMouthShape4Orig" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:closedMouth|NewSmarty_024:smarty_blendshapes_latest:closedMouth|NewSmarty_024:smarty_blendshapes_latest:closedMouthShape4Orig" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:closedMouth|NewSmarty_024:smarty_blendshapes_latest:closedMouth|NewSmarty_024:smarty_blendshapes_latest:closedMouthShape4Orig" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:smarty_blendshapes_latest:openMouth|NewSmarty_024:smarty_blendshapes_latest:openMouth|NewSmarty_024:smarty_blendshapes_latest:openMouthShape" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:openMouth|NewSmarty_024:smarty_blendshapes_latest:openMouth|NewSmarty_024:smarty_blendshapes_latest:openMouthShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:openMouth|NewSmarty_024:smarty_blendshapes_latest:openMouth|NewSmarty_024:smarty_blendshapes_latest:openMouthShape" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:smarty_blendshapes_latest:openMouth|NewSmarty_024:smarty_blendshapes_latest:openMouth|NewSmarty_024:smarty_blendshapes_latest:openMouthShape4Orig" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:openMouth|NewSmarty_024:smarty_blendshapes_latest:openMouth|NewSmarty_024:smarty_blendshapes_latest:openMouthShape4Orig" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:openMouth|NewSmarty_024:smarty_blendshapes_latest:openMouth|NewSmarty_024:smarty_blendshapes_latest:openMouthShape4Orig" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:smarty_blendshapes_latest:closedEyes|NewSmarty_024:smarty_blendshapes_latest:closedEyes|NewSmarty_024:smarty_blendshapes_latest:closedEyes" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:closedEyes|NewSmarty_024:smarty_blendshapes_latest:closedEyes|NewSmarty_024:smarty_blendshapes_latest:closedEyes" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:closedEyes|NewSmarty_024:smarty_blendshapes_latest:closedEyes|NewSmarty_024:smarty_blendshapes_latest:closedEyes" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:smarty_blendshapes_latest:closedEyes|NewSmarty_024:smarty_blendshapes_latest:closedEyes|NewSmarty_024:smarty_blendshapes_latest:closedEyesShape4Orig" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:closedEyes|NewSmarty_024:smarty_blendshapes_latest:closedEyes|NewSmarty_024:smarty_blendshapes_latest:closedEyesShape4Orig" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:closedEyes|NewSmarty_024:smarty_blendshapes_latest:closedEyes|NewSmarty_024:smarty_blendshapes_latest:closedEyesShape4Orig" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:smarty_blendshapes_latest:noseDown|NewSmarty_024:smarty_blendshapes_latest:noseDown|NewSmarty_024:smarty_blendshapes_latest:noseDownShape" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:noseDown|NewSmarty_024:smarty_blendshapes_latest:noseDown|NewSmarty_024:smarty_blendshapes_latest:noseDownShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:noseDown|NewSmarty_024:smarty_blendshapes_latest:noseDown|NewSmarty_024:smarty_blendshapes_latest:noseDownShape" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:smarty_blendshapes_latest:noseDown|NewSmarty_024:smarty_blendshapes_latest:noseDown|NewSmarty_024:smarty_blendshapes_latest:noseDownShape4Orig" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:noseDown|NewSmarty_024:smarty_blendshapes_latest:noseDown|NewSmarty_024:smarty_blendshapes_latest:noseDownShape4Orig" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:noseDown|NewSmarty_024:smarty_blendshapes_latest:noseDown|NewSmarty_024:smarty_blendshapes_latest:noseDownShape4Orig" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:smarty_blendshapes_latest:leftEarOut|NewSmarty_024:smarty_blendshapes_latest:leftEarOut|NewSmarty_024:smarty_blendshapes_latest:leftEarOutShape" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:leftEarOut|NewSmarty_024:smarty_blendshapes_latest:leftEarOut|NewSmarty_024:smarty_blendshapes_latest:leftEarOutShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:leftEarOut|NewSmarty_024:smarty_blendshapes_latest:leftEarOut|NewSmarty_024:smarty_blendshapes_latest:leftEarOutShape" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:smarty_blendshapes_latest:leftEarOut|NewSmarty_024:smarty_blendshapes_latest:leftEarOut|NewSmarty_024:smarty_blendshapes_latest:leftEarOutShape4Orig" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:leftEarOut|NewSmarty_024:smarty_blendshapes_latest:leftEarOut|NewSmarty_024:smarty_blendshapes_latest:leftEarOutShape4Orig" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:leftEarOut|NewSmarty_024:smarty_blendshapes_latest:leftEarOut|NewSmarty_024:smarty_blendshapes_latest:leftEarOutShape4Orig" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:smarty_blendshapes_latest:rightEarOut|NewSmarty_024:smarty_blendshapes_latest:rightEarOut|NewSmarty_024:smarty_blendshapes_latest:rightEarOutShape" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:rightEarOut|NewSmarty_024:smarty_blendshapes_latest:rightEarOut|NewSmarty_024:smarty_blendshapes_latest:rightEarOutShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:rightEarOut|NewSmarty_024:smarty_blendshapes_latest:rightEarOut|NewSmarty_024:smarty_blendshapes_latest:rightEarOutShape" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:smarty_blendshapes_latest:rightEarOut|NewSmarty_024:smarty_blendshapes_latest:rightEarOut|NewSmarty_024:smarty_blendshapes_latest:rightEarOutShape4Orig" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:rightEarOut|NewSmarty_024:smarty_blendshapes_latest:rightEarOut|NewSmarty_024:smarty_blendshapes_latest:rightEarOutShape4Orig" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:rightEarOut|NewSmarty_024:smarty_blendshapes_latest:rightEarOut|NewSmarty_024:smarty_blendshapes_latest:rightEarOutShape4Orig" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:smarty_blendshapes_latest:earsSpread|NewSmarty_024:smarty_blendshapes_latest:earsSpread|NewSmarty_024:smarty_blendshapes_latest:earsSpreadShape" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:earsSpread|NewSmarty_024:smarty_blendshapes_latest:earsSpread|NewSmarty_024:smarty_blendshapes_latest:earsSpreadShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:earsSpread|NewSmarty_024:smarty_blendshapes_latest:earsSpread|NewSmarty_024:smarty_blendshapes_latest:earsSpreadShape" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:smarty_blendshapes_latest:earsSpread|NewSmarty_024:smarty_blendshapes_latest:earsSpread|NewSmarty_024:smarty_blendshapes_latest:earsSpreadShape4Orig" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:earsSpread|NewSmarty_024:smarty_blendshapes_latest:earsSpread|NewSmarty_024:smarty_blendshapes_latest:earsSpreadShape4Orig" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:earsSpread|NewSmarty_024:smarty_blendshapes_latest:earsSpread|NewSmarty_024:smarty_blendshapes_latest:earsSpreadShape4Orig" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:smarty_blendshapes_latest:leftEarForward|NewSmarty_024:smarty_blendshapes_latest:leftEarForward|NewSmarty_024:smarty_blendshapes_latest:leftEarForwardShape" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:leftEarForward|NewSmarty_024:smarty_blendshapes_latest:leftEarForward|NewSmarty_024:smarty_blendshapes_latest:leftEarForwardShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:leftEarForward|NewSmarty_024:smarty_blendshapes_latest:leftEarForward|NewSmarty_024:smarty_blendshapes_latest:leftEarForwardShape" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:smarty_blendshapes_latest:leftEarForward|NewSmarty_024:smarty_blendshapes_latest:leftEarForward|NewSmarty_024:smarty_blendshapes_latest:leftEarForwardShape4Orig" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:leftEarForward|NewSmarty_024:smarty_blendshapes_latest:leftEarForward|NewSmarty_024:smarty_blendshapes_latest:leftEarForwardShape4Orig" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:leftEarForward|NewSmarty_024:smarty_blendshapes_latest:leftEarForward|NewSmarty_024:smarty_blendshapes_latest:leftEarForwardShape4Orig" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:smarty_blendshapes_latest:rightEarForward|NewSmarty_024:smarty_blendshapes_latest:rightEarForward|NewSmarty_024:smarty_blendshapes_latest:rightEarForwardShape" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:rightEarForward|NewSmarty_024:smarty_blendshapes_latest:rightEarForward|NewSmarty_024:smarty_blendshapes_latest:rightEarForwardShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:rightEarForward|NewSmarty_024:smarty_blendshapes_latest:rightEarForward|NewSmarty_024:smarty_blendshapes_latest:rightEarForwardShape" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:smarty_blendshapes_latest:rightEarForward|NewSmarty_024:smarty_blendshapes_latest:rightEarForward|NewSmarty_024:smarty_blendshapes_latest:rightEarForwardShape4Orig" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:rightEarForward|NewSmarty_024:smarty_blendshapes_latest:rightEarForward|NewSmarty_024:smarty_blendshapes_latest:rightEarForwardShape4Orig" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:rightEarForward|NewSmarty_024:smarty_blendshapes_latest:rightEarForward|NewSmarty_024:smarty_blendshapes_latest:rightEarForwardShape4Orig" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosed|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosed|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosedShape" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosed|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosed|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosedShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosed|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosed|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosedShape" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosed|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosed|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosedShape4Orig" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosed|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosed|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosedShape4Orig" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosed|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosed|NewSmarty_024:smarty_blendshapes_latest:leftEyeClosedShape4Orig" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:smarty_blendshapes_latest:Smarty16|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape6" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:Smarty16|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape6" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:Smarty16|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape6" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:smarty_blendshapes_latest:Smarty16|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape4Orig6" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:Smarty16|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape4Orig6" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:Smarty16|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape4Orig6" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:smarty_blendshapes_latest:Smarty17|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape6" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:Smarty17|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape6" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:Smarty17|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape6" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:smarty_blendshapes_latest:Smarty17|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape4Orig6" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:Smarty17|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape4Orig6" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:Smarty17|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape4Orig6" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:smarty_blendshapes_latest:Smarty18|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape6" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:Smarty18|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape6" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:Smarty18|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape6" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:smarty_blendshapes_latest:Smarty18|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape4Orig6" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:Smarty18|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape4Orig6" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:Smarty18|NewSmarty_024:smarty_blendshapes_latest:polySurface6|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape4Orig6" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:bowTieShapeOrig" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:bowTieShapeOrig" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:bowTieShapeOrig" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:EyeR2ShapeOrig" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:EyeR2ShapeOrig" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:EyeR2ShapeOrig" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:fosterParent2|NewSmarty_024:smarty_blendshapes_latest:EyeR2ShapeOrig" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:fosterParent2|NewSmarty_024:smarty_blendshapes_latest:EyeR2ShapeOrig" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:fosterParent2|NewSmarty_024:smarty_blendshapes_latest:EyeR2ShapeOrig" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassFrameShapeOrig" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassFrameShapeOrig" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassFrameShapeOrig" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassLShapeOrig" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassLShapeOrig" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassLShapeOrig" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassRShapeOrig" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassRShapeOrig" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRNfosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassRShapeOrig" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:pPlaneShape1Deformed" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:pPlaneShape1Deformed" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:pPlaneShape1Deformed" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:pCubeShape2Deformed" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:pCubeShape2Deformed" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:pCubeShape2Deformed" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:pCubeShape1Deformed" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:pCubeShape1Deformed" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:pCubeShape1Deformed" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:bowTieShapeDeformed" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:bowTieShapeDeformed" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:bowTieShapeDeformed" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:EyeR2ShapeDeformed" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:EyeR2ShapeDeformed" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:EyeR2ShapeDeformed" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:transform2|NewSmarty_024:smarty_blendshapes_latest:EyeR2ShapeDeformed" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:transform2|NewSmarty_024:smarty_blendshapes_latest:EyeR2ShapeDeformed" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:transform2|NewSmarty_024:smarty_blendshapes_latest:EyeR2ShapeDeformed" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassFrameShapeDeformed" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassFrameShapeDeformed" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassFrameShapeDeformed" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassLShapeDeformed" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassLShapeDeformed" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassLShapeDeformed" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassRShapeDeformed" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassRShapeDeformed" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:glassRShapeDeformed" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape4Deformed" 
-		"surfaceReference" " 1"
-		2 "|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape4Deformed" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smarty_latest.ma\""
-		
-		2 "|NewSmarty_024:smarty_blendshapes_latest:smarty_latestRN1fosterParent1|NewSmarty_024:smarty_blendshapes_latest:polySurfaceShape4Deformed" 
-		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
 		2 "NewSmarty_024:file3" "proceduralTexDefaultRes" " 512"
 		2 "NewSmarty_024:file3" "proceduralTexMaxRes" " 1024"
 		2 "NewSmarty_024:file3" "ReduceTextureInCuda" " 1"
@@ -45139,23 +45201,23 @@ createNode reference -n "smartybikeRN";
 		2 "NewSmarty_024:blendShape1" "w[0:18]" " -s 19 0.33944954999999999 1 0 0.95412843999999997 0 0 0 0 0.37614679000000001 0 0 0 0 1 0 0 0 0 0"
 		
 		2 "NewSmarty_024:blendShape1" "weight[13]" " -av"
-		5 4 "smartybikeRN" "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:eye_ctrl.translateX" 
+		5 4 "smartybikeRN" "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:eye_ctrl.translateX" 
 		"smartybikeRN.placeHolderList[1]" ""
-		5 4 "smartybikeRN" "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:eye_ctrl.translateY" 
+		5 4 "smartybikeRN" "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:eye_ctrl.translateY" 
 		"smartybikeRN.placeHolderList[2]" ""
-		5 4 "smartybikeRN" "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:eye_ctrl.translateZ" 
+		5 4 "smartybikeRN" "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:eye_ctrl.translateZ" 
 		"smartybikeRN.placeHolderList[3]" ""
-		5 4 "smartybikeRN" "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:eye_ctrl.rotateX" 
+		5 4 "smartybikeRN" "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:eye_ctrl.rotateX" 
 		"smartybikeRN.placeHolderList[4]" ""
-		5 4 "smartybikeRN" "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:eye_ctrl.rotateY" 
+		5 4 "smartybikeRN" "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:eye_ctrl.rotateY" 
 		"smartybikeRN.placeHolderList[5]" ""
-		5 4 "smartybikeRN" "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:eye_ctrl.rotateZ" 
+		5 4 "smartybikeRN" "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:eye_ctrl.rotateZ" 
 		"smartybikeRN.placeHolderList[6]" ""
-		5 4 "smartybikeRN" "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl.rotateX" 
+		5 4 "smartybikeRN" "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl.rotateX" 
 		"smartybikeRN.placeHolderList[7]" ""
-		5 4 "smartybikeRN" "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl.rotateY" 
+		5 4 "smartybikeRN" "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl.rotateY" 
 		"smartybikeRN.placeHolderList[8]" ""
-		5 4 "smartybikeRN" "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl.rotateZ" 
+		5 4 "smartybikeRN" "|NewSmarty_024:SMARTY_OVERALL|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl.rotateZ" 
 		"smartybikeRN.placeHolderList[9]" ""
 		5 4 "smartybikeRN" "NewSmarty_024:blendShape1.weight[13]" "smartybikeRN.placeHolderList[10]" 
 		""
@@ -45210,7 +45272,7 @@ createNode reference -n "smartybikeRN";
 		"fns" " -ci 1 -h 1 -dt \"string\""
 		1 |bike:bike_ctrl|bike:wholeBike|bike:frame|bike:frameShape "VisibleInIndirect" 
 		"VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
-		2 "|bike:bike_ctrl" "translate" " -type \"double3\" -201.16881471435752 -0.39205438473953808 26.65168093678253"
+		2 "|bike:bike_ctrl" "translate" " -type \"double3\" -197.8175154402704 -0.39205438473953813 54.896520969517837"
 		
 		2 "|bike:bike_ctrl" "translateZ" " -av"
 		2 "|bike:bike_ctrl" "rotateOrder" " 0"
@@ -47829,7 +47891,8 @@ createNode animCurveTU -n "bike:bike_ctrl_scaleZ";
 		 333.75 0.8 335 0.8 336.25 0.8 337.5 0.8 338.75 0.8 340 0.8 341.25 0.8 342.5 0.8 343.75 0.8
 		 345 0.8 346.25 0.8 347.5 0.8 348.75 0.8 350 0.8 351.25 0.8 352.5 0.8;
 createNode reference -n "pig_latestRN";
-	setAttr -s 215 ".phl";
+	setAttr ".fn[0]" -type "string" "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/pig/pig_latest.ma";
+	setAttr -s 219 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -48045,6 +48108,10 @@ createNode reference -n "pig_latestRN";
 	setAttr ".phl[213]" 0;
 	setAttr ".phl[214]" 0;
 	setAttr ".phl[215]" 0;
+	setAttr ".phl[216]" 0;
+	setAttr ".phl[217]" 0;
+	setAttr ".phl[218]" 0;
+	setAttr ".phl[219]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"pig_latestRN"
 		"pig_latest_key_latestRN" 3
@@ -48054,7 +48121,7 @@ createNode reference -n "pig_latestRN";
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_pPyramid2|pig_latest_colorClip_control|pig_latest_key_control|key_latest:Obj_000003|key_latest:Obj_000003Shape 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
-		"pig_latestRN" 7
+		"pig_latestRN" 29
 		1 |pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_pigShapeDeformed 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
@@ -48066,53 +48133,106 @@ createNode reference -n "pig_latestRN";
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_pigShapeDeformed" 
 		"VisibleInIndirect" " 1"
+		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_back_flex_ctrl01" 
+		"visibility" " 1"
+		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_back_flex_ctrl01" 
+		"translate" " -type \"double3\" 0 1.1023064600205441 0"
+		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_back_flex_ctrl01" 
+		"translateX" " -av"
+		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_back_flex_ctrl01" 
+		"translateY" " -av"
+		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_back_flex_ctrl01" 
+		"translateZ" " -av"
+		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_back_flex_ctrl01" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_back_flex_ctrl01" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|pig_latest_base|pig_latest_baseShape" "surfaceReference" " 1"
+		2 "|pig_latest_base|pig_latest_baseShape" "referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		
+		2 "|pig_latest_base|pig_latest_baseShape" "furNameSpace" " -type \"string\" \"pig_latest\""
+		
+		2 "|pig_latest_base|pig_latest_baseShape4Orig" "surfaceReference" " 1"
+		2 "|pig_latest_base|pig_latest_baseShape4Orig" "referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		
+		2 "|pig_latest_base|pig_latest_baseShape4Orig" "furNameSpace" " -type \"string\" \"pig_latest\""
+		
+		2 "|pig_latest_base|pig_latest_baseShapeOrig" "surfaceReference" " 1"
+		2 "|pig_latest_base|pig_latest_baseShapeOrig" "referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		
+		2 "|pig_latest_base|pig_latest_baseShapeOrig" "furNameSpace" " -type \"string\" \"pig_latest\""
+		
 		3 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintTranslateX" 
 		"|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01.translateX" 
 		""
 		3 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintTranslateZ" 
 		"|pig_latest_PIG|pig_latest_controller_main01|pig_latest_shoulders_rotation_ctrl01.translateZ" 
 		""
+		3 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_hip_rotation_ctrl01_parentConstraint1.constraintTranslateX" 
+		"|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01.translateX" 
+		""
+		3 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_hip_rotation_ctrl01_parentConstraint1.constraintTranslateY" 
+		"|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01.translateY" 
+		""
+		3 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_hip_rotation_ctrl01_parentConstraint1.constraintTranslateZ" 
+		"|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01.translateZ" 
+		""
+		3 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_hip_rotation_ctrl01_parentConstraint1.constraintRotateX" 
+		"|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01.rotateX" 
+		""
+		3 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_hip_rotation_ctrl01_parentConstraint1.constraintRotateY" 
+		"|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01.rotateY" 
+		""
+		3 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_hip_rotation_ctrl01_parentConstraint1.constraintRotateZ" 
+		"|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01.rotateZ" 
+		""
 		"pig_latest_key_latestRN" 5
-		1 |pig_latest_PIG|pig_latest_controller_main01|pig_latest_pPyramid2|pig_latest_colorClip_control|pig_latest_key_control|key_latest:Obj_000003|key_latest:Obj_000003Shape 
+		1 |pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_pPyramid2|pig_latest_colorClip_control|pig_latest_key_control|key_latest:Obj_000003|key_latest:Obj_000003Shape 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_pPyramid2|pig_latest_colorClip_control|pig_latest_key_control|key_latest:Obj_000003|key_latest:Obj_000003Shape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_pPyramid2|pig_latest_colorClip_control|pig_latest_key_control|key_latest:Obj_000003|key_latest:Obj_000003Shape" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_pPyramid2|pig_latest_colorClip_control|pig_latest_key_control|key_latest:Obj_000003|key_latest:Obj_000003Shape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_pPyramid2|pig_latest_colorClip_control|pig_latest_key_control|key_latest:Obj_000003|key_latest:Obj_000003Shape" 
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/props/keys/key_latest.ma\""
 		
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_pPyramid2|pig_latest_colorClip_control|pig_latest_key_control|key_latest:Obj_000003|key_latest:Obj_000003Shape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_pPyramid2|pig_latest_colorClip_control|pig_latest_key_control|key_latest:Obj_000003|key_latest:Obj_000003Shape" 
 		"furNameSpace" " -type \"string\" \"key_latest\""
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_pPyramid2|pig_latest_colorClip_control|pig_latest_key_control|key_latest:Obj_000003|key_latest:Obj_000003Shape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_pPyramid2|pig_latest_colorClip_control|pig_latest_key_control|key_latest:Obj_000003|key_latest:Obj_000003Shape" 
 		"VisibleInIndirect" " 1"
-		"pig_latestRN" 731
+		"pig_latestRN" 746
 		0 "|pig_latestRNfosterParent1|pig_latest_tail_2control01_parentConstraint1" 
-		"|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01" 
+		"|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01" 
 		"-s -r "
 		0 "|pig_latestRNfosterParent1|pig_latest_tail_3control01_parentConstraint1" 
-		"|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01" 
+		"|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01" 
 		"-s -r "
 		0 "|pig_latestRNfosterParent1|pig_latest_tail_4control01_parentConstraint1" 
-		"|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_4control01" 
+		"|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_4control01" 
 		"-s -r "
-		1 |pig_latest_PIG|pig_latest_controller_main01|pig_latest_pPyramid2|pig_latest_pPyramid1Shape2 
+		1 |pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_pPyramid2|pig_latest_pPyramid1Shape2 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
-		1 |pig_latest_PIG|pig_latest_controller_main01|pig_latest_pPyramid2|pig_latest_colorClip_control|pig_latest_pTorus4|pig_latest_pTorus4Shape 
+		1 |pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_pPyramid2|pig_latest_colorClip_control|pig_latest_pTorus4|pig_latest_pTorus4Shape 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
-		1 |pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye|pig_latest_pig_right_eyeShape 
+		1 |pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye|pig_latest_pig_right_eyeShape 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
-		1 |pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye|pig_latest_pig_left_eyeShape 
+		1 |pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye|pig_latest_pig_left_eyeShape 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		
-		1 |pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01 
+		1 |pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01 
 		"blendParent1" "blendParent1" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
-		1 |pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01 
+		1 |pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01 
 		"blendParent1" "blendParent1" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
-		1 |pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01 
+		1 |pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01 
 		"blendParent1" "blendParent1" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
+		1 |pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_spine_fix_sphere|pig_latest_spine_fix_sphereShape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_spine_fix_sphere|pig_latest_spine_fix_sphereShape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_spine_fix_sphere|pig_latest_spine_fix_sphereShape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 pig_latest_pig_latest_ramp1 "proceduralTexDefaultRes" "proceduralTexDefaultRes" 
 		" -ci 1 -dv 256 -min 256 -max 4096 -smn 8 -smx 8192 -at \"short\""
 		1 pig_latest_pig_latest_ramp1 "proceduralTexMaxRes" "proceduralTexMaxRes" 
@@ -48157,923 +48277,974 @@ createNode reference -n "pig_latestRN";
 		" -ci 1 -min 0 -max 1 -at \"bool\""
 		1 pig_latest_pig_latest_pig_latest_pig_latest_file2 "compressColor" "compressColor" 
 		" -ci 1 -dv 1 -min 0 -max 1 -at \"bool\""
-		2 "|pig_latest_Tyrion_CattisterRNfosterParent1" "visibility" " 1"
-		2 "|pig_latest_Tyrion_CattisterRNfosterParent1|pig_latest_pigShapeDeformedOrig" 
+		2 "|pig_latest_pig_the_cat|pig_latest_Tyrion_CattisterRNfosterParent1" "visibility" 
+		" 1"
+		2 "|pig_latest_pig_the_cat|pig_latest_Tyrion_CattisterRNfosterParent1|pig_latest_pigShapeDeformedOrig" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_Tyrion_CattisterRNfosterParent1|pig_latest_pigShapeDeformedOrig" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_Tyrion_CattisterRNfosterParent1|pig_latest_pigShapeDeformedOrig" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_Tyrion_CattisterRNfosterParent1|pig_latest_pigShapeDeformedOrig" 
+		2 "|pig_latest_pig_the_cat|pig_latest_Tyrion_CattisterRNfosterParent1|pig_latest_pigShapeDeformedOrig" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_Tyrion_CattisterRNfosterParent1|pig_latest_pigShapeDeformed" 
+		2 "|pig_latest_pig_the_cat|pig_latest_Tyrion_CattisterRNfosterParent1|pig_latest_pigShapeDeformed" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_Tyrion_CattisterRNfosterParent1|pig_latest_pigShapeDeformed" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_Tyrion_CattisterRNfosterParent1|pig_latest_pigShapeDeformed" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_Tyrion_CattisterRNfosterParent1|pig_latest_pigShapeDeformed" 
+		2 "|pig_latest_pig_the_cat|pig_latest_Tyrion_CattisterRNfosterParent1|pig_latest_pigShapeDeformed" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_Tyrion_CattisterRNfosterParent1|pig_latest_polySurfaceShape1" 
+		2 "|pig_latest_pig_the_cat|pig_latest_Tyrion_CattisterRNfosterParent1|pig_latest_polySurfaceShape1" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_Tyrion_CattisterRNfosterParent1|pig_latest_polySurfaceShape1" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_Tyrion_CattisterRNfosterParent1|pig_latest_polySurfaceShape1" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_Tyrion_CattisterRNfosterParent1|pig_latest_polySurfaceShape1" 
+		2 "|pig_latest_pig_the_cat|pig_latest_Tyrion_CattisterRNfosterParent1|pig_latest_polySurfaceShape1" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_Tyrion_CattisterRNfosterParent1|pig_latest_pigShapeDeformedDeformed" 
+		2 "|pig_latest_pig_the_cat|pig_latest_Tyrion_CattisterRNfosterParent1|pig_latest_pigShapeDeformedDeformed" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_Tyrion_CattisterRNfosterParent1|pig_latest_pigShapeDeformedDeformed" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_Tyrion_CattisterRNfosterParent1|pig_latest_pigShapeDeformedDeformed" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_Tyrion_CattisterRNfosterParent1|pig_latest_pigShapeDeformedDeformed" 
+		2 "|pig_latest_pig_the_cat|pig_latest_Tyrion_CattisterRNfosterParent1|pig_latest_pigShapeDeformedDeformed" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_PIG|pig_latest_controller_main01" "translate" " -type \"double3\" -206.46102688143921 3.0528329889996746 33.817760733918846"
-		
-		2 "|pig_latest_PIG|pig_latest_controller_main01" "translateX" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01" "translateY" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01" "translateZ" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01" "rotate" " -type \"double3\" 0 -220.31678422762923 0"
-		
-		2 "|pig_latest_PIG|pig_latest_controller_main01" "rotateX" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01" "rotateY" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01" "rotateZ" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01" "scale" " -type \"double3\" 0.575 0.575 0.575"
-		
-		2 "|pig_latest_PIG|pig_latest_controller_main01" "scaleX" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01" "scaleY" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01" "scaleZ" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_pPyramid2" "rotate" 
-		" -type \"double3\" 22.03291 0 0"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_pPyramid2|pig_latest_pPyramid1Shape2" 
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface8|pig_latest_polySurfaceShape8" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_pPyramid2|pig_latest_pPyramid1Shape2" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface8|pig_latest_polySurfaceShape8" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_pPyramid2|pig_latest_pPyramid1Shape2" 
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface8|pig_latest_polySurfaceShape8" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_pPyramid2|pig_latest_pPyramid1Shape2" 
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface8|pig_latest_polySurfaceShape8Orig8" 
+		"surfaceReference" " 1"
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface8|pig_latest_polySurfaceShape8Orig8" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
+		
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface8|pig_latest_polySurfaceShape8Orig8" 
+		"furNameSpace" " -type \"string\" \"pig_latest\""
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_polySurfaceShape4Orig4" 
+		"surfaceReference" " 1"
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_polySurfaceShape4Orig4" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
+		
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_polySurfaceShape4Orig4" 
+		"furNameSpace" " -type \"string\" \"pig_latest\""
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_polySurface5|pig_latest_transform5" 
+		"visibility" " 1"
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_polySurface5|pig_latest_transform5|pig_latest_polySurfaceShape5" 
+		"surfaceReference" " 1"
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_polySurface5|pig_latest_transform5|pig_latest_polySurfaceShape5" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
+		
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_polySurface5|pig_latest_transform5|pig_latest_polySurfaceShape5" 
+		"furNameSpace" " -type \"string\" \"pig_latest\""
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_polySurface6|pig_latest_transform4" 
+		"visibility" " 1"
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_polySurface6|pig_latest_transform4|pig_latest_polySurfaceShape6" 
+		"surfaceReference" " 1"
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_polySurface6|pig_latest_transform4|pig_latest_polySurfaceShape6" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
+		
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_polySurface6|pig_latest_transform4|pig_latest_polySurfaceShape6" 
+		"furNameSpace" " -type \"string\" \"pig_latest\""
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_transform3" 
+		"visibility" " 1"
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_transform3|pig_latest_polySurfaceShape4" 
+		"surfaceReference" " 1"
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_transform3|pig_latest_polySurfaceShape4" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
+		
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_transform3|pig_latest_polySurfaceShape4" 
+		"furNameSpace" " -type \"string\" \"pig_latest\""
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_polySurface7|pig_latest_polySurfaceShape7" 
+		"surfaceReference" " 1"
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_polySurface7|pig_latest_polySurfaceShape7" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
+		
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_polySurface7|pig_latest_polySurfaceShape7" 
+		"furNameSpace" " -type \"string\" \"pig_latest\""
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_earDownL|pig_latest_earDownLShape" 
+		"surfaceReference" " 1"
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_earDownL|pig_latest_earDownLShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
+		
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_earDownL|pig_latest_earDownLShape" 
+		"furNameSpace" " -type \"string\" \"pig_latest\""
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_earDownR|pig_latest_earDownRShape" 
+		"surfaceReference" " 1"
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_earDownR|pig_latest_earDownRShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
+		
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_earDownR|pig_latest_earDownRShape" 
+		"furNameSpace" " -type \"string\" \"pig_latest\""
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_earForwardR|pig_latest_earForwardRShape" 
+		"surfaceReference" " 1"
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_earForwardR|pig_latest_earForwardRShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
+		
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_earForwardR|pig_latest_earForwardRShape" 
+		"furNameSpace" " -type \"string\" \"pig_latest\""
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_earForwardL|pig_latest_earForwardLShape" 
+		"surfaceReference" " 1"
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_earForwardL|pig_latest_earForwardLShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
+		
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_earForwardL|pig_latest_earForwardLShape" 
+		"furNameSpace" " -type \"string\" \"pig_latest\""
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_noseUp|pig_latest_noseUpShape" 
+		"surfaceReference" " 1"
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_noseUp|pig_latest_noseUpShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
+		
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_noseUp|pig_latest_noseUpShape" 
+		"furNameSpace" " -type \"string\" \"pig_latest\""
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_noseDown|pig_latest_noseDownShape" 
+		"surfaceReference" " 1"
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_noseDown|pig_latest_noseDownShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
+		
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_noseDown|pig_latest_noseDownShape" 
+		"furNameSpace" " -type \"string\" \"pig_latest\""
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_noseRight|pig_latest_noseRightShape" 
+		"surfaceReference" " 1"
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_noseRight|pig_latest_noseRightShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
+		
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_noseRight|pig_latest_noseRightShape" 
+		"furNameSpace" " -type \"string\" \"pig_latest\""
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_noseLeft|pig_latest_noseLeftShape" 
+		"surfaceReference" " 1"
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_noseLeft|pig_latest_noseLeftShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
+		
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_noseLeft|pig_latest_noseLeftShape" 
+		"furNameSpace" " -type \"string\" \"pig_latest\""
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_earSideL|pig_latest_earSideLShape" 
+		"surfaceReference" " 1"
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_earSideL|pig_latest_earSideLShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
+		
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_earSideL|pig_latest_earSideLShape" 
+		"furNameSpace" " -type \"string\" \"pig_latest\""
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_earSideR|pig_latest_earSideRShape" 
+		"surfaceReference" " 1"
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_earSideR|pig_latest_earSideRShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
+		
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_earSideR|pig_latest_earSideRShape" 
+		"furNameSpace" " -type \"string\" \"pig_latest\""
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_bottomUpR|pig_latest_bottomUpRShape" 
+		"surfaceReference" " 1"
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_bottomUpR|pig_latest_bottomUpRShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
+		
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_bottomUpR|pig_latest_bottomUpRShape" 
+		"furNameSpace" " -type \"string\" \"pig_latest\""
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_bottomUpL|pig_latest_bottomUpLShape" 
+		"surfaceReference" " 1"
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_bottomUpL|pig_latest_bottomUpLShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
+		
+		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_bottomUpL|pig_latest_bottomUpLShape" 
+		"furNameSpace" " -type \"string\" \"pig_latest\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01" "translate" 
+		" -type \"double3\" -198.1021730577468 11.333229272360871 36.673438316107266"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01" "translateX" 
+		" -av"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01" "translateY" 
+		" -av"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01" "translateZ" 
+		" -av"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01" "rotate" 
+		" -type \"double3\" -28.935625608864736 -355.68796613209179 0"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01" "rotateX" 
+		" -av"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01" "rotateY" 
+		" -av"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01" "rotateZ" 
+		" -av"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01" "scale" 
+		" -type \"double3\" 0.575 0.575 0.575"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01" "scaleX" 
+		" -av"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01" "scaleY" 
+		" -av"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01" "scaleZ" 
+		" -av"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_pPyramid2" 
+		"rotate" " -type \"double3\" 48.597637876015376 0 0"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_pPyramid2|pig_latest_pPyramid1Shape2" 
+		"surfaceReference" " 1"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_pPyramid2|pig_latest_pPyramid1Shape2" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
+		
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_pPyramid2|pig_latest_pPyramid1Shape2" 
+		"furNameSpace" " -type \"string\" \"pig_latest\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_pPyramid2|pig_latest_pPyramid1Shape2" 
 		"VisibleInIndirect" " 1"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_pPyramid2|pig_latest_colorClip_control|pig_latest_pTorus4|pig_latest_pTorus4Shape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_pPyramid2|pig_latest_colorClip_control|pig_latest_pTorus4|pig_latest_pTorus4Shape" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_pPyramid2|pig_latest_colorClip_control|pig_latest_pTorus4|pig_latest_pTorus4Shape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_pPyramid2|pig_latest_colorClip_control|pig_latest_pTorus4|pig_latest_pTorus4Shape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_pPyramid2|pig_latest_colorClip_control|pig_latest_pTorus4|pig_latest_pTorus4Shape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_pPyramid2|pig_latest_colorClip_control|pig_latest_pTorus4|pig_latest_pTorus4Shape" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_pPyramid2|pig_latest_colorClip_control|pig_latest_pTorus4|pig_latest_pTorus4Shape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_pPyramid2|pig_latest_colorClip_control|pig_latest_pTorus4|pig_latest_pTorus4Shape" 
 		"VisibleInIndirect" " 1"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_pelvis01|pig_latest_bind_tailroot_a01|pig_latest_bind_tailroot_a02|pig_latest_bind_tail_a01|pig_latest_bind_tail_b01|pig_latest_bind_tail_c01|pig_latest_bind_tail_d01|pig_latest_effector5" 
-		"visibility" " 1"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_pelvis01|pig_latest_bind_R_femur01|pig_latest_bind_R_tibia01|pig_latest_bind_R_metatarsis01|pig_latest_effector1" 
-		"visibility" " 1"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_pelvis01|pig_latest_bind_L_femur01|pig_latest_bind_L_tibia01|pig_latest_bind_L_metatarsis01|pig_latest_effector2" 
-		"visibility" " 1"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_thorax01|pig_latest_bind_L_humerus01|pig_latest_bind_L_radius01|pig_latest_effector4" 
-		"visibility" " 1"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_thorax01|pig_latest_bind_R_humerus01|pig_latest_bind_R_radius01|pig_latest_effector3" 
-		"visibility" " 1"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_be_head01" 
-		"translate" " -type \"double3\" 3.554766 0.040545699999999997 0"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_be_head01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_pPyramid2|pig_latest_colorClip_control|pig_latest_key_control" 
 		"rotate" " -type \"double3\" 0 0 0"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_be_head01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_pelvis01|pig_latest_bind_tailroot_a01|pig_latest_bind_tailroot_a02|pig_latest_bind_tail_a01|pig_latest_bind_tail_b01|pig_latest_bind_tail_c01|pig_latest_bind_tail_d01|pig_latest_effector5" 
+		"visibility" " 1"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_pelvis01|pig_latest_bind_R_femur01|pig_latest_bind_R_tibia01|pig_latest_bind_R_metatarsis01|pig_latest_effector1" 
+		"visibility" " 1"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_pelvis01|pig_latest_bind_L_femur01|pig_latest_bind_L_tibia01|pig_latest_bind_L_metatarsis01|pig_latest_effector2" 
+		"visibility" " 1"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_thorax01|pig_latest_bind_L_humerus01|pig_latest_bind_L_radius01|pig_latest_effector4" 
+		"visibility" " 1"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_thorax01|pig_latest_bind_R_humerus01|pig_latest_bind_R_radius01|pig_latest_effector3" 
+		"visibility" " 1"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_thorax01|pig_latest_jDrv_R_scapula01" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_thorax01|pig_latest_jDrv_R_scapula01" 
 		"segmentScaleCompensate" " 1"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_thorax01|pig_latest_jDrv_R_scapula01|pig_latest_bind_R_scapula01" 
+		"translate" " -type \"double3\" -3.454577 -0.185408 0.14731"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_thorax01|pig_latest_jDrv_R_scapula01|pig_latest_bind_R_scapula01" 
+		"rotate" " -type \"double3\" -15.537113606617179 17.170722033038846 -12.590299973851955"
+		
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_be_head01" 
+		"translate" " -type \"double3\" 3.554766 0.040545699999999997 0"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_be_head01" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_be_head01" 
+		"segmentScaleCompensate" " 1"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye" 
 		"rotate" " -type \"double3\" -12.692371851351949 82.87746541529944 -78.83426881014968"
 		
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye" 
 		"rotateX" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye" 
 		"rotateY" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye" 
 		"rotateZ" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye|pig_latest_pig_right_eyeShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye|pig_latest_pig_right_eyeShape" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye|pig_latest_pig_right_eyeShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye|pig_latest_pig_right_eyeShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye|pig_latest_pig_right_eyeShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye|pig_latest_pig_right_eyeShape" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye|pig_latest_pig_right_eyeShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye|pig_latest_pig_right_eyeShape" 
 		"VisibleInIndirect" " 1"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye" 
 		"rotate" " -type \"double3\" -1.6297384079216157 82.877465415299412 -78.83426881014995"
 		
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye" 
 		"rotateX" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye" 
 		"rotateY" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye" 
 		"rotateZ" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye|pig_latest_pig_left_eyeShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye|pig_latest_pig_left_eyeShape" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye|pig_latest_pig_left_eyeShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye|pig_latest_pig_left_eyeShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye|pig_latest_pig_left_eyeShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye|pig_latest_pig_left_eyeShape" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye|pig_latest_pig_left_eyeShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye|pig_latest_pig_left_eyeShape" 
 		"VisibleInIndirect" " 1"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye1|pig_latest_pig_right_eye1Shape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye1" 
+		"translate" " -type \"double3\" -390.44864789056965 507.75333274936634 -2997.9092892299714"
+		
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye1|pig_latest_pig_right_eye1Shape" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye1|pig_latest_pig_right_eye1Shape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye1|pig_latest_pig_right_eye1Shape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye1|pig_latest_pig_right_eye1Shape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye1|pig_latest_pig_right_eye1Shape" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye1|pig_latest_pig_left_eye1Shape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye1" 
+		"translate" " -type \"double3\" -390.44864789056965 507.75333274936634 -3000.275827141535"
+		
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye1|pig_latest_pig_left_eye1Shape" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye1|pig_latest_pig_left_eye1Shape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye1|pig_latest_pig_left_eye1Shape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye1|pig_latest_pig_left_eye1Shape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye1|pig_latest_pig_left_eye1Shape" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_back_flex_ctrl01" 
-		"translate" " -type \"double3\" 0 1.1023064600205441 0"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01" 
-		"translate" " -type \"double3\" 0 0 0"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01" 
-		"translateX" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01" 
-		"translateY" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01" 
-		"translateZ" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01" 
-		"translate" " -type \"double3\" 0.63275901965002568 1.9368725812654026 1.6607947879160294"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01" 
+		"translate" " -type \"double3\" 0.11879677914729611 -0.91030110996149949 -2.7948564268418963"
 		
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01" 
 		"translateX" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01" 
 		"translateY" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01" 
 		"translateZ" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01" 
-		"rotate" " -type \"double3\" 36.400318268564938 4.9930725289154863 -3.9603795739355623"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01" 
+		"translate" " -type \"double3\" 0.31068924783278828 0.45568377820182804 -4.4754776959834341"
 		
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01" 
+		"translateX" " -av"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01" 
+		"translateY" " -av"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01" 
+		"translateZ" " -av"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01" 
+		"rotate" " -type \"double3\" 69.18160950558206 22.564036446688213 -13.893723374143663"
+		
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01" 
 		"rotateX" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01" 
 		"rotateY" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01" 
 		"rotateZ" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01" 
-		"translate" " -type \"double3\" -0.16710376427772042 0.93374242664547258 -1.9383337681558939"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01" 
+		"translate" " -type \"double3\" -0.070229078333024553 1.0965931636254693 -4.5226656632658697"
 		
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01" 
 		"translateX" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01" 
 		"translateY" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01" 
 		"translateZ" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01" 
-		"rotate" " -type \"double3\" 52.291367928824499 0 0"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01" 
+		"rotate" " -type \"double3\" 95.764800755046238 0 0"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01" 
 		"rotateX" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01" 
 		"rotateY" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01" 
 		"rotateZ" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01" 
 		"translate" " -type \"double3\" 0 0 0"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01" 
-		"translateY" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01" 
-		"translateZ" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01" 
 		"translateX" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01" 
+		"translateY" " -av"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01" 
+		"translateZ" " -av"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01" 
 		"rotate" " -type \"double3\" 0 0 0"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01" 
 		"rotateX" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01" 
-		"rotateZ" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01" 
 		"rotateY" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01" 
+		"rotateZ" " -av"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01" 
 		"blendParent1" " -k 1"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01" 
-		"translate" " -type \"double3\" 0 0.044231111526974433 0"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01" 
+		"translate" " -type \"double3\" 0.04267633873991214 -1.1736431264875626 -0.3317491074764356"
+		
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01" 
 		"translateX" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01" 
 		"translateY" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01" 
 		"translateZ" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01" 
-		"rotate" " -type \"double3\" -6.288117247571428 0 0"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01" 
+		"rotate" " -type \"double3\" -53.753826539204979 0 0"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01" 
 		"rotateX" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01" 
 		"rotateY" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01" 
 		"rotateZ" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01" 
 		"scale" " -type \"double3\" 0.99999999999999989 0.99999999999999989 0.99999999999999989"
 		
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01" 
 		"scaleX" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01" 
 		"scaleY" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01" 
 		"scaleZ" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01" 
 		"blendParent1" " -av -k 1 0"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01" 
-		"translate" " -type \"double3\" 0 -0.15482048355783462 -0.11448423442367606"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01" 
+		"translate" " -type \"double3\" 0.042676338739966013 -3.0553724124182207 -0.53525464937359324"
+		
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01" 
 		"translateX" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01" 
 		"translateY" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01" 
 		"translateZ" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01" 
-		"rotate" " -type \"double3\" -6.2881172475714298 0 0"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01" 
+		"rotate" " -type \"double3\" -53.753826539204979 0 0"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01" 
 		"rotateX" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01" 
 		"rotateY" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01" 
 		"rotateZ" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01" 
 		"scale" " -type \"double3\" 0.99999999999999989 0.99999999999999989 0.99999999999999989"
 		
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01" 
 		"scaleX" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01" 
 		"scaleY" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01" 
 		"scaleZ" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01" 
-		"translate" " -type \"double3\" 0 -0.39649337598510215 -0.26050289691038309"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01" 
+		"translate" " -type \"double3\" 0.04267633873990917 -5.3633120108615824 -0.83531086534932619"
+		
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01" 
 		"translateX" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01" 
 		"translateY" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01" 
 		"translateZ" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01" 
-		"rotate" " -type \"double3\" -6.2881172475714315 0 0"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01" 
+		"rotate" " -type \"double3\" -53.753826539204979 0 0"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01" 
 		"rotateX" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01" 
 		"rotateY" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01" 
 		"rotateZ" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01" 
 		"scale" " -type \"double3\" 0.99999999999999989 0.99999999999999989 0.99999999999999989"
 		
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01" 
 		"scaleX" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01" 
 		"scaleY" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01" 
 		"scaleZ" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_4control01" 
-		"translate" " -type \"double3\" 0 -0.54106591240029367 -0.34663666023229034"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_4control01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_4control01" 
+		"translate" " -type \"double3\" 0.042676338739966013 -6.7399209324197997 -1.0056271032926656"
+		
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_4control01" 
 		"translateX" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_4control01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_4control01" 
 		"translateY" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_4control01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_4control01" 
 		"translateZ" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_4control01" 
-		"rotate" " -type \"double3\" -6.2881172475714333 0 0"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_4control01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_4control01" 
+		"rotate" " -type \"double3\" -53.753826539204979 0 0"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_4control01" 
 		"rotateX" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_4control01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_4control01" 
 		"rotateY" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_4control01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_4control01" 
 		"rotateZ" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_4control01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_4control01" 
 		"scale" " -type \"double3\" 0.99999999999999989 0.99999999999999989 0.99999999999999989"
 		
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_4control01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_4control01" 
 		"scaleX" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_4control01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_4control01" 
 		"scaleY" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_4control01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_4control01" 
 		"scaleZ" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_splineiK_tail01" 
-		"translate" " -type \"double3\" -0.035886926480912969 8.925221386582205 -13.680734187178246"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_splineiK_tail01" 
+		"translate" " -type \"double3\" -0.052876285651279893 3.0060275485724239 -12.712080814587399"
 		
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_splineiK_tail01" 
-		"rotate" " -type \"double3\" 90.071239159863069 48.146911901822577 90.119644554795883"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_splineiK_tail01" 
+		"rotate" " -type \"double3\" -89.806044326344349 83.745997249339169 -90.202856704628672"
 		
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01" 
-		"translate" " -type \"double3\" 0 0 0"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01" 
+		"translate" " -type \"double3\" 0.28159593531181781 1.5454604888867947 0.64736192424861527"
+		
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01" 
 		"translateX" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01" 
 		"translateY" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01" 
 		"translateZ" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01" 
-		"translate" " -type \"double3\" -0.075916252494387645 0.1927475093143943 -1.5975106201040268"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01" 
+		"translate" " -type \"double3\" 0.67714382670934281 2.4630756637501698 4.4950958727592996"
 		
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01" 
 		"translateX" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01" 
 		"translateY" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01" 
 		"translateZ" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01" 
-		"rotate" " -type \"double3\" 55.692866177963779 0 0"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01" 
+		"rotate" " -type \"double3\" 14.47121871741588 0 0"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01" 
 		"rotateX" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01" 
-		"translate" " -type \"double3\" -1.1723839015410529 2.6938759495589357 3.5923072894918535"
-		
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01" 
-		"translateX" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01" 
-		"translateY" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01" 
-		"translateZ" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01" 
-		"rotate" " -type \"double3\" 27.260863472789385 0 0"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01" 
-		"rotateX" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01" 
 		"rotateY" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01" 
 		"rotateZ" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01" 
 		"scale" " -type \"double3\" 1 1 1"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01" 
 		"scaleX" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01" 
 		"scaleY" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01" 
 		"scaleZ" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01" 
-		"translate" " -type \"double3\" -0.12238930576632796 -0.30485691741838716 -0.40888313334009357"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01" 
+		"translate" " -type \"double3\" -1.0682673641138365 1.6123238639691284 3.6555386160221319"
 		
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01" 
-		"translateY" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01" 
 		"translateX" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01" 
+		"translateY" " -av"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01" 
 		"translateZ" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01" 
-		"rotate" " -type \"double3\" 0 0 0"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01" 
+		"rotate" " -type \"double3\" 9.2465557984627882 0 0"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01" 
 		"rotateX" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01" 
 		"rotateY" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01" 
 		"rotateZ" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01" 
+		"scaleX" " -av"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01" 
+		"scaleY" " -av"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01" 
+		"scaleZ" " -av"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01" 
+		"translate" " -type \"double3\" 0 0 0.026019667912308364"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01" 
+		"translateY" " -av"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01" 
+		"translateX" " -av"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01" 
+		"translateZ" " -av"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01" 
+		"rotate" " -type \"double3\" 15.400298421462729 0 0"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01" 
+		"rotateX" " -av"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01" 
+		"rotateY" " -av"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01" 
+		"rotateZ" " -av"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01" 
 		"blendParent1" " -k 1"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control" 
 		"translate" " -type \"double3\" 0 0 0.026019667912326128"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control" 
 		"translateX" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control" 
 		"translateY" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control" 
 		"translateZ" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control" 
-		"rotate" " -type \"double3\" 0 -1.4306382647361333 0"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control" 
+		"rotate" " -type \"double3\" 49.718724606288639 0 0"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control" 
 		"rotateX" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control" 
 		"rotateY" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control" 
 		"rotateZ" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control" 
 		"scale" " -type \"double3\" 1 1 1"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control" 
 		"scaleX" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control" 
 		"scaleY" " -av"
-		2 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control" 
 		"scaleZ" " -av"
-		2 "|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_global01|pig_latest_vertebrae_flexi_surface01|pig_latest_vertebrae_flexi_surface0Shape1" 
-		"surfaceReference" " 1"
-		2 "|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_global01|pig_latest_vertebrae_flexi_surface01|pig_latest_vertebrae_flexi_surface0Shape1" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
-		
-		2 "|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_global01|pig_latest_vertebrae_flexi_surface01|pig_latest_vertebrae_flexi_surface0Shape1" 
-		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_global01|pig_latest_vertebrae_flexi_surface01|pig_latest_vertebrae_flexi_surface0Shape1Orig1" 
-		"surfaceReference" " 1"
-		2 "|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_global01|pig_latest_vertebrae_flexi_surface01|pig_latest_vertebrae_flexi_surface0Shape1Orig1" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
-		
-		2 "|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_global01|pig_latest_vertebrae_flexi_surface01|pig_latest_vertebrae_flexi_surface0Shape1Orig1" 
-		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_global01|pig_latest_vertebrae_flexi_grp_anim_mid01|pig_latest_vertebrae_flexi_anim_mid01" 
-		"translate" " -type \"double3\" 0.055598411227549605 1.4312021429562609 0.21748122168662576"
-		
-		2 "|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_global01|pig_latest_vertebrae_flexi_grp_anim_mid01|pig_latest_vertebrae_flexi_anim_mid01" 
-		"translateX" " -av"
-		2 "|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_global01|pig_latest_vertebrae_flexi_grp_anim_mid01|pig_latest_vertebrae_flexi_anim_mid01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_spine_spline_ctrl" 
+		"translate" " -type \"double3\" -0.11812431649554159 1.791 0.47813017721304296"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_spine_spline_ctrl" 
+		"translateX" " -av -k 0 -cb 1"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_spine_spline_ctrl" 
+		"translateZ" " -av -k 0 -cb 1"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_spine_spline_ctrl" 
 		"translateY" " -av"
-		2 "|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_global01|pig_latest_vertebrae_flexi_grp_anim_mid01|pig_latest_vertebrae_flexi_anim_mid01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_spine_spline_ctrl" 
+		"rotate" " -type \"double3\" -90.223963514027844 0 0"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_spine_spline_ctrl" 
+		"rotateX" " -k 0 -cb 1"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_spine_spline_ctrl" 
+		"rotateY" " -k 0 -cb 1"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_spine_spline_ctrl" 
+		"rotateZ" " -k 0 -cb 1"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_spine_fix_sphere|pig_latest_spine_fix_sphereShape" 
+		"surfaceReference" " 1"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_spine_fix_sphere|pig_latest_spine_fix_sphereShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
+		
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_spine_fix_sphere|pig_latest_spine_fix_sphereShape" 
+		"furNameSpace" " -type \"string\" \"pig_latest\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_global01|pig_latest_vertebrae_flexi_surface01|pig_latest_vertebrae_flexi_surface0Shape1" 
+		"surfaceReference" " 1"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_global01|pig_latest_vertebrae_flexi_surface01|pig_latest_vertebrae_flexi_surface0Shape1" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
+		
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_global01|pig_latest_vertebrae_flexi_surface01|pig_latest_vertebrae_flexi_surface0Shape1" 
+		"furNameSpace" " -type \"string\" \"pig_latest\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_global01|pig_latest_vertebrae_flexi_surface01|pig_latest_vertebrae_flexi_surface0Shape1Orig1" 
+		"surfaceReference" " 1"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_global01|pig_latest_vertebrae_flexi_surface01|pig_latest_vertebrae_flexi_surface0Shape1Orig1" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
+		
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_global01|pig_latest_vertebrae_flexi_surface01|pig_latest_vertebrae_flexi_surface0Shape1Orig1" 
+		"furNameSpace" " -type \"string\" \"pig_latest\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_global01|pig_latest_vertebrae_flexi_grp_anim_mid01|pig_latest_vertebrae_flexi_anim_mid01" 
+		"translate" " -type \"double3\" 0.039928448178216058 0.65734602118929075 -0.02612679008141397"
+		
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_global01|pig_latest_vertebrae_flexi_grp_anim_mid01|pig_latest_vertebrae_flexi_anim_mid01" 
+		"translateX" " -av"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_global01|pig_latest_vertebrae_flexi_grp_anim_mid01|pig_latest_vertebrae_flexi_anim_mid01" 
+		"translateY" " -av"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_global01|pig_latest_vertebrae_flexi_grp_anim_mid01|pig_latest_vertebrae_flexi_anim_mid01" 
 		"translateZ" " -av"
-		2 "|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_global01|pig_latest_vertebrae_flexi_grp_anim_end01|pig_latest_vertebrae_flexi_anim_end01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_global01|pig_latest_vertebrae_flexi_grp_anim_end01|pig_latest_vertebrae_flexi_anim_end01" 
 		"followMid" " -av -k 1 1"
-		2 "|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_flcs01|pig_latest_vertebrae_flexi_flc_a01|pig_latest_vertebrae_flexi_flc_a0Shape1" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_flcs01|pig_latest_vertebrae_flexi_flc_a01|pig_latest_vertebrae_flexi_flc_a0Shape1" 
 		"visibility" " -k 0 1"
-		2 "|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_flcs01|pig_latest_vertebrae_flexi_flc_b01|pig_latest_vertebrae_flexi_flc_b0Shape1" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_flcs01|pig_latest_vertebrae_flexi_flc_b01|pig_latest_vertebrae_flexi_flc_b0Shape1" 
 		"visibility" " -k 0 1"
-		2 "|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_flcs01|pig_latest_vertebrae_flexi_flc_c01|pig_latest_vertebrae_flexi_flc_c0Shape1" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_flcs01|pig_latest_vertebrae_flexi_flc_c01|pig_latest_vertebrae_flexi_flc_c0Shape1" 
 		"visibility" " -k 0 1"
-		2 "|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_flcs01|pig_latest_vertebrae_flexi_flc_d01|pig_latest_vertebrae_flexi_flc_d0Shape1" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_flcs01|pig_latest_vertebrae_flexi_flc_d01|pig_latest_vertebrae_flexi_flc_d0Shape1" 
 		"visibility" " -k 0 1"
-		2 "|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_flcs01|pig_latest_vertebrae_flexi_flc_e01|pig_latest_vertebrae_flexi_flc_e0Shape1" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_flcs01|pig_latest_vertebrae_flexi_flc_e01|pig_latest_vertebrae_flexi_flc_e0Shape1" 
 		"visibility" " -k 0 1"
-		2 "|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_hidden01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_hidden01" 
 		"visibility" " 1"
-		2 "|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_hidden01|pig_latest_vertebrae_flexi_bshp_surface01|pig_latest_vertebrae_flexi_bshp_surface01Shape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_hidden01|pig_latest_vertebrae_flexi_bshp_surface01|pig_latest_vertebrae_flexi_bshp_surface01Shape" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_hidden01|pig_latest_vertebrae_flexi_bshp_surface01|pig_latest_vertebrae_flexi_bshp_surface01Shape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_hidden01|pig_latest_vertebrae_flexi_bshp_surface01|pig_latest_vertebrae_flexi_bshp_surface01Shape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_hidden01|pig_latest_vertebrae_flexi_bshp_surface01|pig_latest_vertebrae_flexi_bshp_surface01Shape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_hidden01|pig_latest_vertebrae_flexi_bshp_surface01|pig_latest_vertebrae_flexi_bshp_surface01Shape" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_hidden01|pig_latest_vertebrae_flexi_bshp_surface01|pig_latest_vertebrae_flexi_bshp_surface01ShapeOrig" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_hidden01|pig_latest_vertebrae_flexi_bshp_surface01|pig_latest_vertebrae_flexi_bshp_surface01ShapeOrig" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_hidden01|pig_latest_vertebrae_flexi_bshp_surface01|pig_latest_vertebrae_flexi_bshp_surface01ShapeOrig" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_hidden01|pig_latest_vertebrae_flexi_bshp_surface01|pig_latest_vertebrae_flexi_bshp_surface01ShapeOrig" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_hidden01|pig_latest_vertebrae_flexi_bshp_surface01|pig_latest_vertebrae_flexi_bshp_surface01ShapeOrig" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_hidden01|pig_latest_vertebrae_flexi_bshp_surface01|pig_latest_vertebrae_flexi_bshp_surface01ShapeOrig" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_hidden01|pig_latest_vertebrae_flexi_cwire_surface01BaseWire" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_hidden01|pig_latest_vertebrae_flexi_cwire_surface01BaseWire" 
 		"visibility" " 1"
-		2 "|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_neck_flexi_spine01|pig_latest_neck_flexi_global01|pig_latest_neck_flexi_surface01|pig_latest_neck_flexi_surface0Shape1" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_neck_flexi_spine01|pig_latest_neck_flexi_global01|pig_latest_neck_flexi_surface01|pig_latest_neck_flexi_surface0Shape1" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_neck_flexi_spine01|pig_latest_neck_flexi_global01|pig_latest_neck_flexi_surface01|pig_latest_neck_flexi_surface0Shape1" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_neck_flexi_spine01|pig_latest_neck_flexi_global01|pig_latest_neck_flexi_surface01|pig_latest_neck_flexi_surface0Shape1" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_neck_flexi_spine01|pig_latest_neck_flexi_global01|pig_latest_neck_flexi_surface01|pig_latest_neck_flexi_surface0Shape1" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_neck_flexi_spine01|pig_latest_neck_flexi_global01|pig_latest_neck_flexi_surface01|pig_latest_neck_flexi_surface0Shape1" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_neck_flexi_spine01|pig_latest_neck_flexi_global01|pig_latest_neck_flexi_surface01|pig_latest_neck_flexi_surface0Shape1Orig1" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_neck_flexi_spine01|pig_latest_neck_flexi_global01|pig_latest_neck_flexi_surface01|pig_latest_neck_flexi_surface0Shape1Orig1" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_neck_flexi_spine01|pig_latest_neck_flexi_global01|pig_latest_neck_flexi_surface01|pig_latest_neck_flexi_surface0Shape1Orig1" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_neck_flexi_spine01|pig_latest_neck_flexi_global01|pig_latest_neck_flexi_surface01|pig_latest_neck_flexi_surface0Shape1Orig1" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_neck_flexi_spine01|pig_latest_neck_flexi_global01|pig_latest_neck_flexi_surface01|pig_latest_neck_flexi_surface0Shape1Orig1" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_neck_flexi_spine01|pig_latest_neck_flexi_global01|pig_latest_neck_flexi_surface01|pig_latest_neck_flexi_surface0Shape1Orig1" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_neck_flexi_spine01|pig_latest_neck_flexi_global01|pig_latest_neck_flexi_grp_anim_start01|pig_latest_neck_flexi_anim_start01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_neck_flexi_spine01|pig_latest_neck_flexi_global01|pig_latest_neck_flexi_grp_anim_start01|pig_latest_neck_flexi_anim_start01" 
 		"translate" " -type \"double3\" 0.0077654492008494272 0 0"
-		2 "|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_neck_flexi_spine01|pig_latest_neck_flexi_global01|pig_latest_neck_flexi_grp_anim_start01|pig_latest_neck_flexi_anim_start01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_neck_flexi_spine01|pig_latest_neck_flexi_global01|pig_latest_neck_flexi_grp_anim_start01|pig_latest_neck_flexi_anim_start01" 
 		"translateY" " -av"
-		2 "|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_neck_flexi_spine01|pig_latest_neck_flexi_global01|pig_latest_neck_flexi_grp_anim_start01|pig_latest_neck_flexi_anim_start01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_neck_flexi_spine01|pig_latest_neck_flexi_global01|pig_latest_neck_flexi_grp_anim_start01|pig_latest_neck_flexi_anim_start01" 
 		"translateZ" " -av"
-		2 "|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_neck_flexi_spine01|pig_latest_neck_flexi_global01|pig_latest_neck_flexi_grp_anim_start01|pig_latest_neck_flexi_anim_start01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_neck_flexi_spine01|pig_latest_neck_flexi_global01|pig_latest_neck_flexi_grp_anim_start01|pig_latest_neck_flexi_anim_start01" 
 		"translateX" " -av"
-		2 "|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_neck_flexi_spine01|pig_latest_neck_flexi_flcs01|pig_latest_neck_flexi_flc_a01|pig_latest_neck_flexi_flc_a0Shape1" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_neck_flexi_spine01|pig_latest_neck_flexi_flcs01|pig_latest_neck_flexi_flc_a01|pig_latest_neck_flexi_flc_a0Shape1" 
 		"visibility" " -k 0 1"
-		2 "|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_neck_flexi_spine01|pig_latest_neck_flexi_flcs01|pig_latest_neck_flexi_flc_b01|pig_latest_neck_flexi_flc_b0Shape1" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_neck_flexi_spine01|pig_latest_neck_flexi_flcs01|pig_latest_neck_flexi_flc_b01|pig_latest_neck_flexi_flc_b0Shape1" 
 		"visibility" " -k 0 1"
-		2 "|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_neck_flexi_spine01|pig_latest_neck_flexi_flcs01|pig_latest_neck_flexi_flc_c01|pig_latest_neck_flexi_flc_c0Shape1" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_neck_flexi_spine01|pig_latest_neck_flexi_flcs01|pig_latest_neck_flexi_flc_c01|pig_latest_neck_flexi_flc_c0Shape1" 
 		"visibility" " -k 0 1"
-		2 "|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_neck_flexi_spine01|pig_latest_neck_flexi_flcs01|pig_latest_neck_flexi_flc_d01|pig_latest_neck_flexi_flc_d0Shape1" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_neck_flexi_spine01|pig_latest_neck_flexi_flcs01|pig_latest_neck_flexi_flc_d01|pig_latest_neck_flexi_flc_d0Shape1" 
 		"visibility" " -k 0 1"
-		2 "|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_neck_flexi_spine01|pig_latest_neck_flexi_flcs01|pig_latest_neck_flexi_flc_e01|pig_latest_neck_flexi_flc_e0Shape1" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_neck_flexi_spine01|pig_latest_neck_flexi_flcs01|pig_latest_neck_flexi_flc_e01|pig_latest_neck_flexi_flc_e0Shape1" 
 		"visibility" " -k 0 1"
-		2 "|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_neck_flexi_spine01|pig_latest_neck_flexi_hidden01" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_neck_flexi_spine01|pig_latest_neck_flexi_hidden01" 
 		"visibility" " 1"
-		2 "|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_neck_flexi_spine01|pig_latest_neck_flexi_hidden01|pig_latest_neck_flexi_bshp_surface01|pig_latest_neck_flexi_bshp_surface01Shape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_neck_flexi_spine01|pig_latest_neck_flexi_hidden01|pig_latest_neck_flexi_bshp_surface01|pig_latest_neck_flexi_bshp_surface01Shape" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_neck_flexi_spine01|pig_latest_neck_flexi_hidden01|pig_latest_neck_flexi_bshp_surface01|pig_latest_neck_flexi_bshp_surface01Shape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_neck_flexi_spine01|pig_latest_neck_flexi_hidden01|pig_latest_neck_flexi_bshp_surface01|pig_latest_neck_flexi_bshp_surface01Shape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_neck_flexi_spine01|pig_latest_neck_flexi_hidden01|pig_latest_neck_flexi_bshp_surface01|pig_latest_neck_flexi_bshp_surface01Shape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_neck_flexi_spine01|pig_latest_neck_flexi_hidden01|pig_latest_neck_flexi_bshp_surface01|pig_latest_neck_flexi_bshp_surface01Shape" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_neck_flexi_spine01|pig_latest_neck_flexi_hidden01|pig_latest_neck_flexi_bshp_surface01|pig_latest_neck_flexi_bshp_surface01ShapeOrig" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_neck_flexi_spine01|pig_latest_neck_flexi_hidden01|pig_latest_neck_flexi_bshp_surface01|pig_latest_neck_flexi_bshp_surface01ShapeOrig" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_neck_flexi_spine01|pig_latest_neck_flexi_hidden01|pig_latest_neck_flexi_bshp_surface01|pig_latest_neck_flexi_bshp_surface01ShapeOrig" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_neck_flexi_spine01|pig_latest_neck_flexi_hidden01|pig_latest_neck_flexi_bshp_surface01|pig_latest_neck_flexi_bshp_surface01ShapeOrig" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_neck_flexi_spine01|pig_latest_neck_flexi_hidden01|pig_latest_neck_flexi_bshp_surface01|pig_latest_neck_flexi_bshp_surface01ShapeOrig" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_neck_flexi_spine01|pig_latest_neck_flexi_hidden01|pig_latest_neck_flexi_bshp_surface01|pig_latest_neck_flexi_bshp_surface01ShapeOrig" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_neck_flexi_spine01|pig_latest_neck_flexi_hidden01|pig_latest_neck_flexi_cwire_surface01BaseWire" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_neck_flexi_spine01|pig_latest_neck_flexi_hidden01|pig_latest_neck_flexi_cwire_surface01BaseWire" 
 		"visibility" " 1"
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_polySurface1|pig_latest_transform1" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_polySurface1|pig_latest_transform1" 
 		"visibility" " 1"
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_polySurface1|pig_latest_transform1|pig_latest_polySurfaceShape1" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_polySurface1|pig_latest_transform1|pig_latest_polySurfaceShape1" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_polySurface1|pig_latest_transform1|pig_latest_polySurfaceShape1" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_polySurface1|pig_latest_transform1|pig_latest_polySurfaceShape1" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_polySurface1|pig_latest_transform1|pig_latest_polySurfaceShape1" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_polySurface1|pig_latest_transform1|pig_latest_polySurfaceShape1" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_polySurface2|pig_latest_transform2" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_polySurface2|pig_latest_transform2" 
 		"visibility" " 1"
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_polySurface2|pig_latest_transform2|pig_latest_polySurfaceShape2" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_polySurface2|pig_latest_transform2|pig_latest_polySurfaceShape2" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_polySurface2|pig_latest_transform2|pig_latest_polySurfaceShape2" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_polySurface2|pig_latest_transform2|pig_latest_polySurfaceShape2" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_polySurface2|pig_latest_transform2|pig_latest_polySurfaceShape2" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_polySurface2|pig_latest_transform2|pig_latest_polySurfaceShape2" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_determinedL|pig_latest_determinedLShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_determinedL|pig_latest_determinedLShape" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_determinedL|pig_latest_determinedLShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_determinedL|pig_latest_determinedLShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_determinedL|pig_latest_determinedLShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_determinedL|pig_latest_determinedLShape" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_boredL|pig_latest_boredLShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_boredL|pig_latest_boredLShape" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_boredL|pig_latest_boredLShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_boredL|pig_latest_boredLShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_boredL|pig_latest_boredLShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_boredL|pig_latest_boredLShape" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_angryL|pig_latest_angryLShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_angryL|pig_latest_angryLShape" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_angryL|pig_latest_angryLShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_angryL|pig_latest_angryLShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_angryL|pig_latest_angryLShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_angryL|pig_latest_angryLShape" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_pervyL|pig_latest_pervyLShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_pervyL|pig_latest_pervyLShape" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_pervyL|pig_latest_pervyLShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_pervyL|pig_latest_pervyLShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_pervyL|pig_latest_pervyLShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_pervyL|pig_latest_pervyLShape" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_annoyedL1|pig_latest_annoyedL1Shape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_annoyedL1|pig_latest_annoyedL1Shape" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_annoyedL1|pig_latest_annoyedL1Shape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_annoyedL1|pig_latest_annoyedL1Shape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_annoyedL1|pig_latest_annoyedL1Shape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_annoyedL1|pig_latest_annoyedL1Shape" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_wide_eyeL|pig_latest_wide_eyeLShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_wide_eyeL|pig_latest_wide_eyeLShape" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_wide_eyeL|pig_latest_wide_eyeLShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_wide_eyeL|pig_latest_wide_eyeLShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_wide_eyeL|pig_latest_wide_eyeLShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_wide_eyeL|pig_latest_wide_eyeLShape" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_sadL|pig_latest_sadLShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_sadL|pig_latest_sadLShape" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_sadL|pig_latest_sadLShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_sadL|pig_latest_sadLShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_sadL|pig_latest_sadLShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_sadL|pig_latest_sadLShape" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_idkL|pig_latest_idkLShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_idkL|pig_latest_idkLShape" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_idkL|pig_latest_idkLShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_idkL|pig_latest_idkLShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_idkL|pig_latest_idkLShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_idkL|pig_latest_idkLShape" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_closed_eyeL|pig_latest_closed_eyeLShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_closed_eyeL|pig_latest_closed_eyeLShape" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_closed_eyeL|pig_latest_closed_eyeLShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_closed_eyeL|pig_latest_closed_eyeLShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_closed_eyeL|pig_latest_closed_eyeLShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_closed_eyeL|pig_latest_closed_eyeLShape" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_closed_eyeR|pig_latest_closed_eyeRShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_closed_eyeR|pig_latest_closed_eyeRShape" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_closed_eyeR|pig_latest_closed_eyeRShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_closed_eyeR|pig_latest_closed_eyeRShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_closed_eyeR|pig_latest_closed_eyeRShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_closed_eyeR|pig_latest_closed_eyeRShape" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_sadR|pig_latest_sadRShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_sadR|pig_latest_sadRShape" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_sadR|pig_latest_sadRShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_sadR|pig_latest_sadRShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_sadR|pig_latest_sadRShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_sadR|pig_latest_sadRShape" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_idkR|pig_latest_idkRShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_idkR|pig_latest_idkRShape" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_idkR|pig_latest_idkRShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_idkR|pig_latest_idkRShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_idkR|pig_latest_idkRShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_idkR|pig_latest_idkRShape" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_wide_eyeR|pig_latest_wide_eyeRShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_wide_eyeR|pig_latest_wide_eyeRShape" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_wide_eyeR|pig_latest_wide_eyeRShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_wide_eyeR|pig_latest_wide_eyeRShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_wide_eyeR|pig_latest_wide_eyeRShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_wide_eyeR|pig_latest_wide_eyeRShape" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_angryR|pig_latest_angryRShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_angryR|pig_latest_angryRShape" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_angryR|pig_latest_angryRShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_angryR|pig_latest_angryRShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_angryR|pig_latest_angryRShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_angryR|pig_latest_angryRShape" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_pervyR|pig_latest_pervyRShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_pervyR|pig_latest_pervyRShape" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_pervyR|pig_latest_pervyRShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_pervyR|pig_latest_pervyRShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_pervyR|pig_latest_pervyRShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_pervyR|pig_latest_pervyRShape" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_annoyedR|pig_latest_annoyedRShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_annoyedR|pig_latest_annoyedRShape" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_annoyedR|pig_latest_annoyedRShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_annoyedR|pig_latest_annoyedRShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_annoyedR|pig_latest_annoyedRShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_annoyedR|pig_latest_annoyedRShape" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_boredR|pig_latest_boredRShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_boredR|pig_latest_boredRShape" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_boredR|pig_latest_boredRShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_boredR|pig_latest_boredRShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_boredR|pig_latest_boredRShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_boredR|pig_latest_boredRShape" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_boredR|pig_latest_boredRShapeOrig" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_boredR|pig_latest_boredRShapeOrig" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_boredR|pig_latest_boredRShapeOrig" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_boredR|pig_latest_boredRShapeOrig" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_boredR|pig_latest_boredRShapeOrig" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_boredR|pig_latest_boredRShapeOrig" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_grumpy|pig_latest_grumpyShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_grumpy|pig_latest_grumpyShape" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_grumpy|pig_latest_grumpyShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_grumpy|pig_latest_grumpyShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_grumpy|pig_latest_grumpyShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_grumpy|pig_latest_grumpyShape" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_no1|pig_latest_no1Shape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_no1|pig_latest_no1Shape" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_no1|pig_latest_no1Shape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_no1|pig_latest_no1Shape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_no1|pig_latest_no1Shape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_no1|pig_latest_no1Shape" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_sad|pig_latest_sadShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_sad|pig_latest_sadShape" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_sad|pig_latest_sadShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_sad|pig_latest_sadShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_sad|pig_latest_sadShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_sad|pig_latest_sadShape" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_wtf|pig_latest_wtfShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_wtf|pig_latest_wtfShape" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_wtf|pig_latest_wtfShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_wtf|pig_latest_wtfShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_wtf|pig_latest_wtfShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_wtf|pig_latest_wtfShape" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_creep|pig_latest_creepShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_creep|pig_latest_creepShape" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_creep|pig_latest_creepShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_creep|pig_latest_creepShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_creep|pig_latest_creepShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_creep|pig_latest_creepShape" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_ohshit|pig_latest_ohshitShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_ohshit|pig_latest_ohshitShape" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_ohshit|pig_latest_ohshitShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_ohshit|pig_latest_ohshitShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_ohshit|pig_latest_ohshitShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_ohshit|pig_latest_ohshitShape" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_happy|pig_latest_happyShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_happy|pig_latest_happyShape" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_happy|pig_latest_happyShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_happy|pig_latest_happyShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_happy|pig_latest_happyShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_happy|pig_latest_happyShape" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_idk|pig_latest_idkShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_idk|pig_latest_idkShape" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_idk|pig_latest_idkShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_idk|pig_latest_idkShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_idk|pig_latest_idkShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_idk|pig_latest_idkShape" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_idk1|pig_latest_idk1Shape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_idk1|pig_latest_idk1Shape" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_idk1|pig_latest_idk1Shape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_idk1|pig_latest_idk1Shape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_idk1|pig_latest_idk1Shape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_idk1|pig_latest_idk1Shape" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_idk2|pig_latest_idk2Shape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_idk2|pig_latest_idk2Shape" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_idk2|pig_latest_idk2Shape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_idk2|pig_latest_idk2Shape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_idk2|pig_latest_idk2Shape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_idk2|pig_latest_idk2Shape" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_smirk|pig_latest_smirkShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_smirk|pig_latest_smirkShape" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_smirk|pig_latest_smirkShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_smirk|pig_latest_smirkShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_smirk|pig_latest_smirkShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_smirk|pig_latest_smirkShape" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_SquintR|pig_latest_SquintRShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_SquintR|pig_latest_SquintRShape" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_SquintR|pig_latest_SquintRShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_SquintR|pig_latest_SquintRShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_SquintR|pig_latest_SquintRShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_SquintR|pig_latest_SquintRShape" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_determinedR|pig_latest_determinedRShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_determinedR|pig_latest_determinedRShape" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_determinedR|pig_latest_determinedRShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_determinedR|pig_latest_determinedRShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_determinedR|pig_latest_determinedRShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_determinedR|pig_latest_determinedRShape" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_SquintL|pig_latest_SquintLShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_SquintL|pig_latest_SquintLShape" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_SquintL|pig_latest_SquintLShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_SquintL|pig_latest_SquintLShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_SquintL|pig_latest_SquintLShape" 
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_mesh|pig_latest_pig_body|pig_latest_SquintL|pig_latest_SquintLShape" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_polySurface4|pig_latest_polySurfaceShape4Orig4" "surfaceReference" 
-		" 1"
-		2 "|pig_latest_polySurface4|pig_latest_polySurfaceShape4Orig4" "referenceFile" 
-		" -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
-		
-		2 "|pig_latest_polySurface4|pig_latest_polySurfaceShape4Orig4" "furNameSpace" 
-		" -type \"string\" \"pig_latest\""
-		2 "|pig_latest_polySurface4|pig_latest_polySurface5|pig_latest_transform5" 
+		2 "|pig_latest_pig_the_cat|pig_latest_pig_latest_Tyrion_CattisterRNfosterParent1" 
 		"visibility" " 1"
-		2 "|pig_latest_polySurface4|pig_latest_polySurface5|pig_latest_transform5|pig_latest_polySurfaceShape5" 
+		2 "|pig_latest_pig_the_cat|pig_latest_pig_latest_Tyrion_CattisterRNfosterParent1|pig_latest_pigShapeDeformedOrig" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_polySurface4|pig_latest_polySurface5|pig_latest_transform5|pig_latest_polySurfaceShape5" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_pig_latest_Tyrion_CattisterRNfosterParent1|pig_latest_pigShapeDeformedOrig" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_polySurface4|pig_latest_polySurface5|pig_latest_transform5|pig_latest_polySurfaceShape5" 
+		2 "|pig_latest_pig_the_cat|pig_latest_pig_latest_Tyrion_CattisterRNfosterParent1|pig_latest_pigShapeDeformedOrig" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_polySurface4|pig_latest_polySurface6|pig_latest_transform4" 
-		"visibility" " 1"
-		2 "|pig_latest_polySurface4|pig_latest_polySurface6|pig_latest_transform4|pig_latest_polySurfaceShape6" 
+		2 "|pig_latest_pig_the_cat|pig_latest_pig_latest_Tyrion_CattisterRNfosterParent1|pig_latest_pigShapeDeformed" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_polySurface4|pig_latest_polySurface6|pig_latest_transform4|pig_latest_polySurfaceShape6" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_pig_latest_Tyrion_CattisterRNfosterParent1|pig_latest_pigShapeDeformed" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_polySurface4|pig_latest_polySurface6|pig_latest_transform4|pig_latest_polySurfaceShape6" 
+		2 "|pig_latest_pig_the_cat|pig_latest_pig_latest_Tyrion_CattisterRNfosterParent1|pig_latest_pigShapeDeformed" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_polySurface4|pig_latest_transform3" "visibility" " 1"
-		2 "|pig_latest_polySurface4|pig_latest_transform3|pig_latest_polySurfaceShape4" 
+		2 "|pig_latest_pig_the_cat|pig_latest_pig_latest_Tyrion_CattisterRNfosterParent1|pig_latest_polySurfaceShape1" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_polySurface4|pig_latest_transform3|pig_latest_polySurfaceShape4" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_pig_latest_Tyrion_CattisterRNfosterParent1|pig_latest_polySurfaceShape1" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_polySurface4|pig_latest_transform3|pig_latest_polySurfaceShape4" 
+		2 "|pig_latest_pig_the_cat|pig_latest_pig_latest_Tyrion_CattisterRNfosterParent1|pig_latest_polySurfaceShape1" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_polySurface4|pig_latest_polySurface7|pig_latest_polySurfaceShape7" 
+		2 "|pig_latest_pig_the_cat|pig_latest_pig_latest_Tyrion_CattisterRNfosterParent1|pig_latest_pigShapeDeformedDeformed" 
 		"surfaceReference" " 1"
-		2 "|pig_latest_polySurface4|pig_latest_polySurface7|pig_latest_polySurfaceShape7" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		2 "|pig_latest_pig_the_cat|pig_latest_pig_latest_Tyrion_CattisterRNfosterParent1|pig_latest_pigShapeDeformedDeformed" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\""
 		
-		2 "|pig_latest_polySurface4|pig_latest_polySurface7|pig_latest_polySurfaceShape7" 
-		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_polySurface4|pig_latest_earDownL|pig_latest_earDownLShape" 
-		"surfaceReference" " 1"
-		2 "|pig_latest_polySurface4|pig_latest_earDownL|pig_latest_earDownLShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
-		
-		2 "|pig_latest_polySurface4|pig_latest_earDownL|pig_latest_earDownLShape" 
-		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_polySurface4|pig_latest_earDownR|pig_latest_earDownRShape" 
-		"surfaceReference" " 1"
-		2 "|pig_latest_polySurface4|pig_latest_earDownR|pig_latest_earDownRShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
-		
-		2 "|pig_latest_polySurface4|pig_latest_earDownR|pig_latest_earDownRShape" 
-		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_polySurface4|pig_latest_earForwardR|pig_latest_earForwardRShape" 
-		"surfaceReference" " 1"
-		2 "|pig_latest_polySurface4|pig_latest_earForwardR|pig_latest_earForwardRShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
-		
-		2 "|pig_latest_polySurface4|pig_latest_earForwardR|pig_latest_earForwardRShape" 
-		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_polySurface4|pig_latest_earForwardL|pig_latest_earForwardLShape" 
-		"surfaceReference" " 1"
-		2 "|pig_latest_polySurface4|pig_latest_earForwardL|pig_latest_earForwardLShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
-		
-		2 "|pig_latest_polySurface4|pig_latest_earForwardL|pig_latest_earForwardLShape" 
-		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_polySurface4|pig_latest_noseUp|pig_latest_noseUpShape" "surfaceReference" 
-		" 1"
-		2 "|pig_latest_polySurface4|pig_latest_noseUp|pig_latest_noseUpShape" "referenceFile" 
-		" -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
-		
-		2 "|pig_latest_polySurface4|pig_latest_noseUp|pig_latest_noseUpShape" "furNameSpace" 
-		" -type \"string\" \"pig_latest\""
-		2 "|pig_latest_polySurface4|pig_latest_noseDown|pig_latest_noseDownShape" 
-		"surfaceReference" " 1"
-		2 "|pig_latest_polySurface4|pig_latest_noseDown|pig_latest_noseDownShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
-		
-		2 "|pig_latest_polySurface4|pig_latest_noseDown|pig_latest_noseDownShape" 
-		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_polySurface4|pig_latest_noseRight|pig_latest_noseRightShape" 
-		"surfaceReference" " 1"
-		2 "|pig_latest_polySurface4|pig_latest_noseRight|pig_latest_noseRightShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
-		
-		2 "|pig_latest_polySurface4|pig_latest_noseRight|pig_latest_noseRightShape" 
-		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_polySurface4|pig_latest_noseLeft|pig_latest_noseLeftShape" 
-		"surfaceReference" " 1"
-		2 "|pig_latest_polySurface4|pig_latest_noseLeft|pig_latest_noseLeftShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
-		
-		2 "|pig_latest_polySurface4|pig_latest_noseLeft|pig_latest_noseLeftShape" 
-		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_polySurface4|pig_latest_earSideL|pig_latest_earSideLShape" 
-		"surfaceReference" " 1"
-		2 "|pig_latest_polySurface4|pig_latest_earSideL|pig_latest_earSideLShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
-		
-		2 "|pig_latest_polySurface4|pig_latest_earSideL|pig_latest_earSideLShape" 
-		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_polySurface4|pig_latest_earSideR|pig_latest_earSideRShape" 
-		"surfaceReference" " 1"
-		2 "|pig_latest_polySurface4|pig_latest_earSideR|pig_latest_earSideRShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
-		
-		2 "|pig_latest_polySurface4|pig_latest_earSideR|pig_latest_earSideRShape" 
-		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_polySurface4|pig_latest_bottomUpR|pig_latest_bottomUpRShape" 
-		"surfaceReference" " 1"
-		2 "|pig_latest_polySurface4|pig_latest_bottomUpR|pig_latest_bottomUpRShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
-		
-		2 "|pig_latest_polySurface4|pig_latest_bottomUpR|pig_latest_bottomUpRShape" 
-		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_polySurface4|pig_latest_bottomUpL|pig_latest_bottomUpLShape" 
-		"surfaceReference" " 1"
-		2 "|pig_latest_polySurface4|pig_latest_bottomUpL|pig_latest_bottomUpLShape" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
-		
-		2 "|pig_latest_polySurface4|pig_latest_bottomUpL|pig_latest_bottomUpLShape" 
-		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_base|pig_latest_baseShape" "surfaceReference" " 1"
-		2 "|pig_latest_base|pig_latest_baseShape" "referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
-		
-		2 "|pig_latest_base|pig_latest_baseShape" "furNameSpace" " -type \"string\" \"pig_latest\""
-		
-		2 "|pig_latest_base|pig_latest_baseShape4Orig" "surfaceReference" " 1"
-		2 "|pig_latest_base|pig_latest_baseShape4Orig" "referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
-		
-		2 "|pig_latest_base|pig_latest_baseShape4Orig" "furNameSpace" " -type \"string\" \"pig_latest\""
-		
-		2 "|pig_latest_base|pig_latest_baseShapeOrig" "surfaceReference" " 1"
-		2 "|pig_latest_base|pig_latest_baseShapeOrig" "referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
-		
-		2 "|pig_latest_base|pig_latest_baseShapeOrig" "furNameSpace" " -type \"string\" \"pig_latest\""
-		
-		2 "|pig_latest_polySurface8|pig_latest_polySurfaceShape8" "surfaceReference" 
-		" 1"
-		2 "|pig_latest_polySurface8|pig_latest_polySurfaceShape8" "referenceFile" 
-		" -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
-		
-		2 "|pig_latest_polySurface8|pig_latest_polySurfaceShape8" "furNameSpace" 
-		" -type \"string\" \"pig_latest\""
-		2 "|pig_latest_polySurface8|pig_latest_polySurfaceShape8Orig8" "surfaceReference" 
-		" 1"
-		2 "|pig_latest_polySurface8|pig_latest_polySurfaceShape8Orig8" "referenceFile" 
-		" -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
-		
-		2 "|pig_latest_polySurface8|pig_latest_polySurfaceShape8Orig8" "furNameSpace" 
-		" -type \"string\" \"pig_latest\""
-		2 "|pig_latest_pig_latest_Tyrion_CattisterRNfosterParent1" "visibility" " 1"
-		
-		2 "|pig_latest_pig_latest_Tyrion_CattisterRNfosterParent1|pig_latest_pigShapeDeformedOrig" 
-		"surfaceReference" " 1"
-		2 "|pig_latest_pig_latest_Tyrion_CattisterRNfosterParent1|pig_latest_pigShapeDeformedOrig" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
-		
-		2 "|pig_latest_pig_latest_Tyrion_CattisterRNfosterParent1|pig_latest_pigShapeDeformedOrig" 
-		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_pig_latest_Tyrion_CattisterRNfosterParent1|pig_latest_pigShapeDeformed" 
-		"surfaceReference" " 1"
-		2 "|pig_latest_pig_latest_Tyrion_CattisterRNfosterParent1|pig_latest_pigShapeDeformed" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
-		
-		2 "|pig_latest_pig_latest_Tyrion_CattisterRNfosterParent1|pig_latest_pigShapeDeformed" 
-		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_pig_latest_Tyrion_CattisterRNfosterParent1|pig_latest_polySurfaceShape1" 
-		"surfaceReference" " 1"
-		2 "|pig_latest_pig_latest_Tyrion_CattisterRNfosterParent1|pig_latest_polySurfaceShape1" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
-		
-		2 "|pig_latest_pig_latest_Tyrion_CattisterRNfosterParent1|pig_latest_polySurfaceShape1" 
-		"furNameSpace" " -type \"string\" \"pig_latest\""
-		2 "|pig_latest_pig_latest_Tyrion_CattisterRNfosterParent1|pig_latest_pigShapeDeformedDeformed" 
-		"surfaceReference" " 1"
-		2 "|pig_latest_pig_latest_Tyrion_CattisterRNfosterParent1|pig_latest_pigShapeDeformedDeformed" 
-		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
-		
-		2 "|pig_latest_pig_latest_Tyrion_CattisterRNfosterParent1|pig_latest_pigShapeDeformedDeformed" 
+		2 "|pig_latest_pig_the_cat|pig_latest_pig_latest_Tyrion_CattisterRNfosterParent1|pig_latest_pigShapeDeformedDeformed" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
 		2 "pig_latest_defaultFurGlobals" "furGlobalReference" " 1"
 		2 "pig_latest_pig_latest_ramp1" "proceduralTexDefaultRes" " 256"
@@ -49106,7 +49277,7 @@ createNode reference -n "pig_latestRN";
 		
 		2 "pig_latest_pig_latest_pig_latest_pig_latest_file2" "compressColor" " 1"
 		
-		2 "pig_latest_Pig_blendshapes" "w[0:42]" " -s 43 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0.23853210999999999 0.22018349000000001 0 0 0 0 0 0 0 0 0 0 0.82568805999999995 0 0 0.82568805999999995 0 0 0.78899085999999996 0.064220183 0 0.75229358999999996 0"
+		2 "pig_latest_Pig_blendshapes" "w[0:42]" " -s 43 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.99068707 0.99068707 0 0 0 0 0.23853210999999999 0.22018349000000001 0 0 0 0 0 0 0 0 0 0 0.81871128000000004 0 0 0.82568805999999995 0 0 0.78899085999999996 0.064220183 0 0.75229358999999996 0"
 		
 		2 "pig_latest_Pig_blendshapes" "weight" " -s 18"
 		2 "pig_latest_Pig_blendshapes" "weight[4]" " -av"
@@ -49130,598 +49301,586 @@ createNode reference -n "pig_latestRN";
 		2 "pig_latest_pig_latest_pig_latest_defaultFurGlobals1" "furGlobalReference" 
 		" 1"
 		2 "pig_latest_pig_latest_pigfur" "furReference" " 1"
-		3 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintTranslateY" 
-		"|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.translateY" 
+		3 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintTranslateY" 
+		"|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.translateY" 
 		""
-		3 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintRotateX" 
-		"|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.rotateX" 
+		3 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintRotateX" 
+		"|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.rotateX" 
 		""
-		3 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintRotateY" 
-		"|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.rotateY" 
+		3 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintRotateY" 
+		"|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.rotateY" 
 		""
-		3 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintRotateZ" 
-		"|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.rotateZ" 
+		3 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintRotateZ" 
+		"|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.rotateZ" 
 		""
-		3 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_hip_rotation_ctrl01_parentConstraint1.constraintTranslateX" 
-		"|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01.translateX" 
+		3 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01|pig_latest_tail_1control01_parentConstraint1.constraintTranslateX" 
+		"|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01.translateX" 
 		""
-		3 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_hip_rotation_ctrl01_parentConstraint1.constraintTranslateY" 
-		"|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01.translateY" 
+		3 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01|pig_latest_tail_1control01_parentConstraint1.constraintTranslateY" 
+		"|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01.translateY" 
 		""
-		3 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_hip_rotation_ctrl01_parentConstraint1.constraintTranslateZ" 
-		"|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01.translateZ" 
+		3 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01|pig_latest_tail_1control01_parentConstraint1.constraintTranslateZ" 
+		"|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01.translateZ" 
 		""
-		3 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_hip_rotation_ctrl01_parentConstraint1.constraintRotateX" 
-		"|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01.rotateX" 
+		3 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01|pig_latest_tail_1control01_parentConstraint1.constraintRotateX" 
+		"|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01.rotateX" 
 		""
-		3 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_hip_rotation_ctrl01_parentConstraint1.constraintRotateY" 
-		"|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01.rotateY" 
+		3 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01|pig_latest_tail_1control01_parentConstraint1.constraintRotateY" 
+		"|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01.rotateY" 
 		""
-		3 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_hip_rotation_ctrl01_parentConstraint1.constraintRotateZ" 
-		"|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01.rotateZ" 
-		""
-		3 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01|pig_latest_tail_1control01_parentConstraint1.constraintTranslateX" 
-		"|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01.translateX" 
-		""
-		3 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01|pig_latest_tail_1control01_parentConstraint1.constraintTranslateY" 
-		"|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01.translateY" 
-		""
-		3 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01|pig_latest_tail_1control01_parentConstraint1.constraintTranslateZ" 
-		"|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01.translateZ" 
-		""
-		3 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01|pig_latest_tail_1control01_parentConstraint1.constraintRotateX" 
-		"|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01.rotateX" 
-		""
-		3 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01|pig_latest_tail_1control01_parentConstraint1.constraintRotateY" 
-		"|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01.rotateY" 
-		""
-		3 "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01|pig_latest_tail_1control01_parentConstraint1.constraintRotateZ" 
-		"|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01.rotateZ" 
+		3 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01|pig_latest_tail_1control01_parentConstraint1.constraintRotateZ" 
+		"|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01.rotateZ" 
 		""
 		3 ":defaultRenderGlobals.rendercallback" "pig_latest_defaultFurGlobals.callback" 
 		""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01.translateX" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01.translateX" 
 		"pig_latestRN.placeHolderList[1]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01.translateY" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01.translateY" 
 		"pig_latestRN.placeHolderList[2]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01.translateZ" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01.translateZ" 
 		"pig_latestRN.placeHolderList[3]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01.rotateX" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01.rotateX" 
 		"pig_latestRN.placeHolderList[4]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01.rotateY" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01.rotateY" 
 		"pig_latestRN.placeHolderList[5]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01.rotateZ" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01.rotateZ" 
 		"pig_latestRN.placeHolderList[6]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01.scaleX" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01.scaleX" 
 		"pig_latestRN.placeHolderList[7]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01.scaleY" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01.scaleY" 
 		"pig_latestRN.placeHolderList[8]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01.scaleZ" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01.scaleZ" 
 		"pig_latestRN.placeHolderList[9]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye.rotateX" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye.rotateX" 
 		"pig_latestRN.placeHolderList[10]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye.rotateY" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye.rotateY" 
 		"pig_latestRN.placeHolderList[11]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye.rotateZ" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye.rotateZ" 
 		"pig_latestRN.placeHolderList[12]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye.visibility" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye.visibility" 
 		"pig_latestRN.placeHolderList[13]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye.translateX" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye.translateX" 
 		"pig_latestRN.placeHolderList[14]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye.translateY" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye.translateY" 
 		"pig_latestRN.placeHolderList[15]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye.translateZ" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye.translateZ" 
 		"pig_latestRN.placeHolderList[16]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye.scaleX" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye.scaleX" 
 		"pig_latestRN.placeHolderList[17]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye.scaleY" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye.scaleY" 
 		"pig_latestRN.placeHolderList[18]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye.scaleZ" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye.scaleZ" 
 		"pig_latestRN.placeHolderList[19]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye.rotateX" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye.rotateX" 
 		"pig_latestRN.placeHolderList[20]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye.rotateY" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye.rotateY" 
 		"pig_latestRN.placeHolderList[21]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye.rotateZ" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye.rotateZ" 
 		"pig_latestRN.placeHolderList[22]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye.visibility" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye.visibility" 
 		"pig_latestRN.placeHolderList[23]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye.translateX" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye.translateX" 
 		"pig_latestRN.placeHolderList[24]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye.translateY" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye.translateY" 
 		"pig_latestRN.placeHolderList[25]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye.translateZ" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye.translateZ" 
 		"pig_latestRN.placeHolderList[26]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye.scaleX" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye.scaleX" 
 		"pig_latestRN.placeHolderList[27]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye.scaleY" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye.scaleY" 
 		"pig_latestRN.placeHolderList[28]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye.scaleZ" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye.scaleZ" 
 		"pig_latestRN.placeHolderList[29]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01.translateX" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01.translateX" 
 		"pig_latestRN.placeHolderList[30]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01.translateY" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01.translateY" 
 		"pig_latestRN.placeHolderList[31]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01.translateZ" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01.translateZ" 
 		"pig_latestRN.placeHolderList[32]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01.rotateX" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01.rotateX" 
 		"pig_latestRN.placeHolderList[33]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01.rotateY" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01.rotateY" 
 		"pig_latestRN.placeHolderList[34]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01.rotateZ" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01.rotateZ" 
 		"pig_latestRN.placeHolderList[35]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01.scaleX" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01.scaleX" 
 		"pig_latestRN.placeHolderList[36]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01.scaleY" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01.scaleY" 
 		"pig_latestRN.placeHolderList[37]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01.scaleZ" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01.scaleZ" 
 		"pig_latestRN.placeHolderList[38]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01.visibility" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01.visibility" 
 		"pig_latestRN.placeHolderList[39]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01.rotateX" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01.rotateX" 
 		"pig_latestRN.placeHolderList[40]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01.rotateY" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01.rotateY" 
 		"pig_latestRN.placeHolderList[41]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01.rotateZ" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01.rotateZ" 
 		"pig_latestRN.placeHolderList[42]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01.translateX" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01.translateX" 
 		"pig_latestRN.placeHolderList[43]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01.translateY" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01.translateY" 
 		"pig_latestRN.placeHolderList[44]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01.translateZ" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01.translateZ" 
 		"pig_latestRN.placeHolderList[45]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01.scaleX" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01.scaleX" 
 		"pig_latestRN.placeHolderList[46]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01.scaleY" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01.scaleY" 
 		"pig_latestRN.placeHolderList[47]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01.scaleZ" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01.scaleZ" 
 		"pig_latestRN.placeHolderList[48]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01.rotateX" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01.rotateX" 
 		"pig_latestRN.placeHolderList[49]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01.rotateY" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01.rotateY" 
 		"pig_latestRN.placeHolderList[50]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01.rotateZ" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01.rotateZ" 
 		"pig_latestRN.placeHolderList[51]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01.translateX" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01.translateX" 
 		"pig_latestRN.placeHolderList[52]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01.translateY" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01.translateY" 
 		"pig_latestRN.placeHolderList[53]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01.translateZ" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01.translateZ" 
 		"pig_latestRN.placeHolderList[54]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01.scaleX" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01.scaleX" 
 		"pig_latestRN.placeHolderList[55]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01.scaleY" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01.scaleY" 
 		"pig_latestRN.placeHolderList[56]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01.scaleZ" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01.scaleZ" 
 		"pig_latestRN.placeHolderList[57]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01.translateY" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01.translateX" 
 		"pig_latestRN.placeHolderList[58]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01.translateZ" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01.translateY" 
 		"pig_latestRN.placeHolderList[59]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01.translateX" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01.translateZ" 
 		"pig_latestRN.placeHolderList[60]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01.rotateX" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01.rotateX" 
 		"pig_latestRN.placeHolderList[61]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01.rotateZ" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01.rotateY" 
 		"pig_latestRN.placeHolderList[62]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01.rotateY" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01.rotateZ" 
 		"pig_latestRN.placeHolderList[63]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01.scaleX" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01.scaleX" 
 		"pig_latestRN.placeHolderList[64]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01.scaleY" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01.scaleY" 
 		"pig_latestRN.placeHolderList[65]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01.scaleZ" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01.scaleZ" 
 		"pig_latestRN.placeHolderList[66]" ""
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01.blendParent1" 
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01.blendParent1" 
 		"pig_latestRN.placeHolderList[67]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01.blendParent1" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01.blendParent1" 
 		"pig_latestRN.placeHolderList[68]" ""
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01.translate" 
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01.translate" 
 		"pig_latestRN.placeHolderList[69]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01.translateX" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01.translateX" 
 		"pig_latestRN.placeHolderList[70]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01.translateY" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01.translateY" 
 		"pig_latestRN.placeHolderList[71]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01.translateZ" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01.translateZ" 
 		"pig_latestRN.placeHolderList[72]" ""
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01.rotate" 
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01.rotate" 
 		"pig_latestRN.placeHolderList[73]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01.rotateX" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01.rotateX" 
 		"pig_latestRN.placeHolderList[74]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01.rotateY" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01.rotateY" 
 		"pig_latestRN.placeHolderList[75]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01.rotateZ" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01.rotateZ" 
 		"pig_latestRN.placeHolderList[76]" ""
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01.rotateOrder" 
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01.rotateOrder" 
 		"pig_latestRN.placeHolderList[77]" ""
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01.rotatePivot" 
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01.rotatePivot" 
 		"pig_latestRN.placeHolderList[78]" ""
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01.rotatePivotTranslate" 
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01.rotatePivotTranslate" 
 		"pig_latestRN.placeHolderList[79]" ""
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01.scale" 
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01.scale" 
 		"pig_latestRN.placeHolderList[80]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01.scaleX" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01.scaleX" 
 		"pig_latestRN.placeHolderList[81]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01.scaleY" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01.scaleY" 
 		"pig_latestRN.placeHolderList[82]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01.scaleZ" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01.scaleZ" 
 		"pig_latestRN.placeHolderList[83]" ""
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01.parentMatrix" 
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01.parentMatrix" 
 		"pig_latestRN.placeHolderList[84]" ""
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01.blendParent1" 
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01.blendParent1" 
 		"pig_latestRN.placeHolderList[85]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01.blendParent1" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01.blendParent1" 
 		"pig_latestRN.placeHolderList[86]" ""
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01|pig_latest_tail_1control01_parentConstraint1.constraintTranslateX" 
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01|pig_latest_tail_1control01_parentConstraint1.constraintTranslateX" 
 		"pig_latestRN.placeHolderList[87]" "pig_latest_tail_1control01.tx"
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01|pig_latest_tail_1control01_parentConstraint1.constraintTranslateY" 
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01|pig_latest_tail_1control01_parentConstraint1.constraintTranslateY" 
 		"pig_latestRN.placeHolderList[88]" "pig_latest_tail_1control01.ty"
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01|pig_latest_tail_1control01_parentConstraint1.constraintTranslateZ" 
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01|pig_latest_tail_1control01_parentConstraint1.constraintTranslateZ" 
 		"pig_latestRN.placeHolderList[89]" "pig_latest_tail_1control01.tz"
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01|pig_latest_tail_1control01_parentConstraint1.constraintRotateX" 
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01|pig_latest_tail_1control01_parentConstraint1.constraintRotateX" 
 		"pig_latestRN.placeHolderList[90]" "pig_latest_tail_1control01.rx"
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01|pig_latest_tail_1control01_parentConstraint1.constraintRotateY" 
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01|pig_latest_tail_1control01_parentConstraint1.constraintRotateY" 
 		"pig_latestRN.placeHolderList[91]" "pig_latest_tail_1control01.ry"
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01|pig_latest_tail_1control01_parentConstraint1.constraintRotateZ" 
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_1control01|pig_latest_tail_1control01_parentConstraint1.constraintRotateZ" 
 		"pig_latestRN.placeHolderList[92]" "pig_latest_tail_1control01.rz"
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01.translate" 
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01.translate" 
 		"pig_latestRN.placeHolderList[93]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01.translateX" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01.translateX" 
 		"pig_latestRN.placeHolderList[94]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01.translateY" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01.translateY" 
 		"pig_latestRN.placeHolderList[95]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01.translateZ" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01.translateZ" 
 		"pig_latestRN.placeHolderList[96]" ""
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01.rotatePivot" 
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01.rotatePivot" 
 		"pig_latestRN.placeHolderList[97]" ""
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01.rotatePivot" 
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01.rotatePivot" 
 		"pig_latestRN.placeHolderList[98]" ""
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01.rotatePivotTranslate" 
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01.rotatePivotTranslate" 
 		"pig_latestRN.placeHolderList[99]" ""
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01.rotatePivotTranslate" 
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01.rotatePivotTranslate" 
 		"pig_latestRN.placeHolderList[100]" ""
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01.rotate" 
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01.rotate" 
 		"pig_latestRN.placeHolderList[101]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01.rotateX" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01.rotateX" 
 		"pig_latestRN.placeHolderList[102]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01.rotateY" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01.rotateY" 
 		"pig_latestRN.placeHolderList[103]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01.rotateZ" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01.rotateZ" 
 		"pig_latestRN.placeHolderList[104]" ""
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01.rotateOrder" 
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01.rotateOrder" 
 		"pig_latestRN.placeHolderList[105]" ""
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01.rotateOrder" 
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01.rotateOrder" 
 		"pig_latestRN.placeHolderList[106]" ""
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01.scale" 
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01.scale" 
 		"pig_latestRN.placeHolderList[107]" ""
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01.parentMatrix" 
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01.parentMatrix" 
 		"pig_latestRN.placeHolderList[108]" ""
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01.parentInverseMatrix" 
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_2control01.parentInverseMatrix" 
 		"pig_latestRN.placeHolderList[109]" ""
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01.translate" 
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01.translate" 
 		"pig_latestRN.placeHolderList[110]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01.translateX" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01.translateX" 
 		"pig_latestRN.placeHolderList[111]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01.translateY" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01.translateY" 
 		"pig_latestRN.placeHolderList[112]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01.translateZ" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01.translateZ" 
 		"pig_latestRN.placeHolderList[113]" ""
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01.rotatePivot" 
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01.rotatePivot" 
 		"pig_latestRN.placeHolderList[114]" ""
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01.rotatePivot" 
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01.rotatePivot" 
 		"pig_latestRN.placeHolderList[115]" ""
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01.rotatePivotTranslate" 
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01.rotatePivotTranslate" 
 		"pig_latestRN.placeHolderList[116]" ""
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01.rotatePivotTranslate" 
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01.rotatePivotTranslate" 
 		"pig_latestRN.placeHolderList[117]" ""
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01.rotate" 
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01.rotate" 
 		"pig_latestRN.placeHolderList[118]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01.rotateX" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01.rotateX" 
 		"pig_latestRN.placeHolderList[119]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01.rotateY" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01.rotateY" 
 		"pig_latestRN.placeHolderList[120]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01.rotateZ" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01.rotateZ" 
 		"pig_latestRN.placeHolderList[121]" ""
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01.rotateOrder" 
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01.rotateOrder" 
 		"pig_latestRN.placeHolderList[122]" ""
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01.rotateOrder" 
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01.rotateOrder" 
 		"pig_latestRN.placeHolderList[123]" ""
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01.scale" 
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01.scale" 
 		"pig_latestRN.placeHolderList[124]" ""
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01.parentMatrix" 
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01.parentMatrix" 
 		"pig_latestRN.placeHolderList[125]" ""
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01.parentInverseMatrix" 
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_3control01.parentInverseMatrix" 
 		"pig_latestRN.placeHolderList[126]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_4control01.translateX" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_4control01.translateX" 
 		"pig_latestRN.placeHolderList[127]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_4control01.translateY" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_4control01.translateY" 
 		"pig_latestRN.placeHolderList[128]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_4control01.translateZ" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_4control01.translateZ" 
 		"pig_latestRN.placeHolderList[129]" ""
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_4control01.rotatePivot" 
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_4control01.rotatePivot" 
 		"pig_latestRN.placeHolderList[130]" ""
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_4control01.rotatePivotTranslate" 
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_4control01.rotatePivotTranslate" 
 		"pig_latestRN.placeHolderList[131]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_4control01.rotateX" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_4control01.rotateX" 
 		"pig_latestRN.placeHolderList[132]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_4control01.rotateY" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_4control01.rotateY" 
 		"pig_latestRN.placeHolderList[133]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_4control01.rotateZ" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_4control01.rotateZ" 
 		"pig_latestRN.placeHolderList[134]" ""
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_4control01.rotateOrder" 
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_4control01.rotateOrder" 
 		"pig_latestRN.placeHolderList[135]" ""
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_4control01.parentInverseMatrix" 
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_tail_4control01.parentInverseMatrix" 
 		"pig_latestRN.placeHolderList[136]" ""
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_hip_rotation_ctrl01_parentConstraint1.constraintTranslateY" 
-		"pig_latestRN.placeHolderList[137]" "pig_latest_hip_rotation_ctrl01.ty"
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_hip_rotation_ctrl01_parentConstraint1.constraintTranslateZ" 
-		"pig_latestRN.placeHolderList[138]" "pig_latest_hip_rotation_ctrl01.tz"
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_hip_rotation_ctrl01_parentConstraint1.constraintTranslateX" 
-		"pig_latestRN.placeHolderList[139]" "pig_latest_hip_rotation_ctrl01.tx"
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_hip_rotation_ctrl01_parentConstraint1.constraintRotateZ" 
-		"pig_latestRN.placeHolderList[140]" "pig_latest_hip_rotation_ctrl01.rz"
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_hip_rotation_ctrl01_parentConstraint1.constraintRotateX" 
-		"pig_latestRN.placeHolderList[141]" "pig_latest_hip_rotation_ctrl01.rx"
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_hip_rotation_ctrl01_parentConstraint1.constraintRotateY" 
-		"pig_latestRN.placeHolderList[142]" "pig_latest_hip_rotation_ctrl01.ry"
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01.translateX" 
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_hip_rotation_ctrl01_parentConstraint1.constraintTranslateY" 
+		"pig_latestRN.placeHolderList[137]" ""
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_hip_rotation_ctrl01_parentConstraint1.constraintTranslateZ" 
+		"pig_latestRN.placeHolderList[138]" ""
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_hip_rotation_ctrl01_parentConstraint1.constraintTranslateX" 
+		"pig_latestRN.placeHolderList[139]" ""
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_hip_rotation_ctrl01_parentConstraint1.constraintRotateZ" 
+		"pig_latestRN.placeHolderList[140]" ""
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_hip_rotation_ctrl01_parentConstraint1.constraintRotateX" 
+		"pig_latestRN.placeHolderList[141]" ""
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_hip_rotation_ctrl01_parentConstraint1.constraintRotateY" 
+		"pig_latestRN.placeHolderList[142]" ""
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01.translateX" 
 		"pig_latestRN.placeHolderList[143]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01.translateY" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01.translateY" 
 		"pig_latestRN.placeHolderList[144]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01.translateZ" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01.translateZ" 
 		"pig_latestRN.placeHolderList[145]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01.rotateX" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01.rotateX" 
 		"pig_latestRN.placeHolderList[146]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01.rotateY" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01.rotateY" 
 		"pig_latestRN.placeHolderList[147]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01.rotateZ" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01.rotateZ" 
 		"pig_latestRN.placeHolderList[148]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01.scaleX" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01.scaleX" 
 		"pig_latestRN.placeHolderList[149]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01.scaleY" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01.scaleY" 
 		"pig_latestRN.placeHolderList[150]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01.scaleZ" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01.scaleZ" 
 		"pig_latestRN.placeHolderList[151]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01.visibility" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01.visibility" 
 		"pig_latestRN.placeHolderList[152]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01.rotateX" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01.rotateX" 
 		"pig_latestRN.placeHolderList[153]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01.rotateY" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01.rotateY" 
 		"pig_latestRN.placeHolderList[154]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01.rotateZ" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01.rotateZ" 
 		"pig_latestRN.placeHolderList[155]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01.translateX" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01.translateX" 
 		"pig_latestRN.placeHolderList[156]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01.translateY" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01.translateY" 
 		"pig_latestRN.placeHolderList[157]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01.translateZ" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01.translateZ" 
 		"pig_latestRN.placeHolderList[158]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01.scaleX" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01.scaleX" 
 		"pig_latestRN.placeHolderList[159]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01.scaleY" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01.scaleY" 
 		"pig_latestRN.placeHolderList[160]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01.scaleZ" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01.scaleZ" 
 		"pig_latestRN.placeHolderList[161]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01.rotateX" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01.rotateX" 
 		"pig_latestRN.placeHolderList[162]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01.rotateY" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01.rotateY" 
 		"pig_latestRN.placeHolderList[163]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01.rotateZ" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01.rotateZ" 
 		"pig_latestRN.placeHolderList[164]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01.translateX" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01.translateX" 
 		"pig_latestRN.placeHolderList[165]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01.translateY" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01.translateY" 
 		"pig_latestRN.placeHolderList[166]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01.translateZ" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01.translateZ" 
 		"pig_latestRN.placeHolderList[167]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01.scaleX" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01.scaleX" 
 		"pig_latestRN.placeHolderList[168]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01.scaleY" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01.scaleY" 
 		"pig_latestRN.placeHolderList[169]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01.scaleZ" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01.scaleZ" 
 		"pig_latestRN.placeHolderList[170]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.translateY" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.translateY" 
 		"pig_latestRN.placeHolderList[171]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.translateX" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.translateX" 
 		"pig_latestRN.placeHolderList[172]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.translateZ" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.translateZ" 
 		"pig_latestRN.placeHolderList[173]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.rotateX" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.rotateX" 
 		"pig_latestRN.placeHolderList[174]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.rotateY" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.rotateY" 
 		"pig_latestRN.placeHolderList[175]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.rotateZ" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.rotateZ" 
 		"pig_latestRN.placeHolderList[176]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.scaleX" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.scaleX" 
 		"pig_latestRN.placeHolderList[177]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.scaleY" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.scaleY" 
 		"pig_latestRN.placeHolderList[178]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.scaleZ" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.scaleZ" 
 		"pig_latestRN.placeHolderList[179]" ""
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.blendParent1" 
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.blendParent1" 
 		"pig_latestRN.placeHolderList[180]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.blendParent1" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.blendParent1" 
 		"pig_latestRN.placeHolderList[181]" ""
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintTranslateY" 
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintTranslateY" 
 		"pig_latestRN.placeHolderList[182]" "pig_latest_shoulders_rotation_ctrl01.ty"
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintTranslateX" 
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintTranslateX" 
 		"pig_latestRN.placeHolderList[183]" ""
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintTranslateZ" 
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintTranslateZ" 
 		"pig_latestRN.placeHolderList[184]" ""
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintRotateX" 
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintRotateX" 
 		"pig_latestRN.placeHolderList[185]" "pig_latest_shoulders_rotation_ctrl01.rx"
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintRotateY" 
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintRotateY" 
 		"pig_latestRN.placeHolderList[186]" "pig_latest_shoulders_rotation_ctrl01.ry"
-		5 3 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintRotateZ" 
+		5 3 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintRotateZ" 
 		"pig_latestRN.placeHolderList[187]" "pig_latest_shoulders_rotation_ctrl01.rz"
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control.translateX" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control.translateX" 
 		"pig_latestRN.placeHolderList[188]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control.translateY" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control.translateY" 
 		"pig_latestRN.placeHolderList[189]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control.translateZ" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control.translateZ" 
 		"pig_latestRN.placeHolderList[190]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control.rotateX" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control.rotateX" 
 		"pig_latestRN.placeHolderList[191]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control.rotateY" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control.rotateY" 
 		"pig_latestRN.placeHolderList[192]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control.rotateZ" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control.rotateZ" 
 		"pig_latestRN.placeHolderList[193]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control.scaleX" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control.scaleX" 
 		"pig_latestRN.placeHolderList[194]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control.scaleY" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control.scaleY" 
 		"pig_latestRN.placeHolderList[195]" ""
-		5 4 "pig_latestRN" "|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control.scaleZ" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control.scaleZ" 
 		"pig_latestRN.placeHolderList[196]" ""
-		5 4 "pig_latestRN" "pig_latest_defaultFurGlobals.furNodeList" "pig_latestRN.placeHolderList[197]" 
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_spine_spline_ctrl.translateX" 
+		"pig_latestRN.placeHolderList[197]" ""
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_spine_spline_ctrl.translateZ" 
+		"pig_latestRN.placeHolderList[198]" ""
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_spine_spline_ctrl.translateY" 
+		"pig_latestRN.placeHolderList[199]" ""
+		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_spine_spline_ctrl.visibility" 
+		"pig_latestRN.placeHolderList[200]" ""
+		5 4 "pig_latestRN" "pig_latest_defaultFurGlobals.furNodeList" "pig_latestRN.placeHolderList[201]" 
 		""
-		5 4 "pig_latestRN" "pig_latest_Pig_blendshapes.weight[4]" "pig_latestRN.placeHolderList[198]" 
+		5 4 "pig_latestRN" "pig_latest_Pig_blendshapes.weight[4]" "pig_latestRN.placeHolderList[202]" 
 		""
-		5 4 "pig_latestRN" "pig_latest_Pig_blendshapes.weight[5]" "pig_latestRN.placeHolderList[199]" 
+		5 4 "pig_latestRN" "pig_latest_Pig_blendshapes.weight[5]" "pig_latestRN.placeHolderList[203]" 
 		""
-		5 4 "pig_latestRN" "pig_latest_Pig_blendshapes.weight[6]" "pig_latestRN.placeHolderList[200]" 
+		5 4 "pig_latestRN" "pig_latest_Pig_blendshapes.weight[6]" "pig_latestRN.placeHolderList[204]" 
 		""
-		5 4 "pig_latestRN" "pig_latest_Pig_blendshapes.weight[7]" "pig_latestRN.placeHolderList[201]" 
+		5 4 "pig_latestRN" "pig_latest_Pig_blendshapes.weight[7]" "pig_latestRN.placeHolderList[205]" 
 		""
-		5 4 "pig_latestRN" "pig_latest_Pig_blendshapes.weight[8]" "pig_latestRN.placeHolderList[202]" 
+		5 4 "pig_latestRN" "pig_latest_Pig_blendshapes.weight[8]" "pig_latestRN.placeHolderList[206]" 
 		""
-		5 4 "pig_latestRN" "pig_latest_Pig_blendshapes.weight[9]" "pig_latestRN.placeHolderList[203]" 
+		5 4 "pig_latestRN" "pig_latest_Pig_blendshapes.weight[9]" "pig_latestRN.placeHolderList[207]" 
 		""
-		5 4 "pig_latestRN" "pig_latest_Pig_blendshapes.weight[10]" "pig_latestRN.placeHolderList[204]" 
+		5 4 "pig_latestRN" "pig_latest_Pig_blendshapes.weight[10]" "pig_latestRN.placeHolderList[208]" 
 		""
-		5 4 "pig_latestRN" "pig_latest_Pig_blendshapes.weight[11]" "pig_latestRN.placeHolderList[205]" 
+		5 4 "pig_latestRN" "pig_latest_Pig_blendshapes.weight[11]" "pig_latestRN.placeHolderList[209]" 
 		""
-		5 4 "pig_latestRN" "pig_latest_Pig_blendshapes.weight[14]" "pig_latestRN.placeHolderList[206]" 
+		5 4 "pig_latestRN" "pig_latest_Pig_blendshapes.weight[14]" "pig_latestRN.placeHolderList[210]" 
 		""
-		5 4 "pig_latestRN" "pig_latest_Pig_blendshapes.weight[15]" "pig_latestRN.placeHolderList[207]" 
+		5 4 "pig_latestRN" "pig_latest_Pig_blendshapes.weight[15]" "pig_latestRN.placeHolderList[211]" 
 		""
-		5 4 "pig_latestRN" "pig_latest_Pig_blendshapes.weight[20]" "pig_latestRN.placeHolderList[208]" 
+		5 4 "pig_latestRN" "pig_latest_Pig_blendshapes.weight[20]" "pig_latestRN.placeHolderList[212]" 
 		""
-		5 4 "pig_latestRN" "pig_latest_Pig_blendshapes.weight[21]" "pig_latestRN.placeHolderList[209]" 
+		5 4 "pig_latestRN" "pig_latest_Pig_blendshapes.weight[21]" "pig_latestRN.placeHolderList[213]" 
 		""
-		5 4 "pig_latestRN" "pig_latest_Pig_blendshapes.weight[32]" "pig_latestRN.placeHolderList[210]" 
+		5 4 "pig_latestRN" "pig_latest_Pig_blendshapes.weight[32]" "pig_latestRN.placeHolderList[214]" 
 		""
-		5 4 "pig_latestRN" "pig_latest_Pig_blendshapes.weight[35]" "pig_latestRN.placeHolderList[211]" 
+		5 4 "pig_latestRN" "pig_latest_Pig_blendshapes.weight[35]" "pig_latestRN.placeHolderList[215]" 
 		""
-		5 4 "pig_latestRN" "pig_latest_Pig_blendshapes.weight[36]" "pig_latestRN.placeHolderList[212]" 
+		5 4 "pig_latestRN" "pig_latest_Pig_blendshapes.weight[36]" "pig_latestRN.placeHolderList[216]" 
 		""
-		5 4 "pig_latestRN" "pig_latest_Pig_blendshapes.weight[38]" "pig_latestRN.placeHolderList[213]" 
+		5 4 "pig_latestRN" "pig_latest_Pig_blendshapes.weight[38]" "pig_latestRN.placeHolderList[217]" 
 		""
-		5 4 "pig_latestRN" "pig_latest_Pig_blendshapes.weight[39]" "pig_latestRN.placeHolderList[214]" 
+		5 4 "pig_latestRN" "pig_latest_Pig_blendshapes.weight[39]" "pig_latestRN.placeHolderList[218]" 
 		""
-		5 4 "pig_latestRN" "pig_latest_Pig_blendshapes.weight[41]" "pig_latestRN.placeHolderList[215]" 
+		5 4 "pig_latestRN" "pig_latest_Pig_blendshapes.weight[41]" "pig_latestRN.placeHolderList[219]" 
 		"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode animCurveTL -n "pig_latest_controller_main01_translateX1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 24 ".ktv[0:23]"  1.25 -118.42825103584128 77.5 -181.77090925422465
+	setAttr -s 25 ".ktv[0:24]"  1.25 -118.42825103584128 77.5 -181.77090925422465
 		 110 -208.65650570305215 122.5 -212.50823133874843 130 -210.98469395667624 140 -209.77126726771888
 		 143.75 -208.09292540395495 150 -207.33403590373533 156.25 -206.73436973171081 160 -205.88398895756794
 		 162.5 -204.1289091450989 170 -198.7528551572764 171.25 -198.39478944420807 172.5 -198.25849107025812
 		 175 -198.12904807267165 255 -197.81926877528841 260 -197.81926877528841 267.5 -197.81926877528841
-		 276.25 -197.81926877528841 281 -197.24707231780457 281.25 -197.81926877528841 287.5 -197.81926877528841
-		 290 -197.81926877528841 295 -197.81926877528841;
-	setAttr -s 24 ".kit[7:23]"  16 18 16 16 18 16 16 18 
-		18 18 18 18 16 18 18 16 16;
-	setAttr -s 24 ".kot[7:23]"  16 18 16 16 18 16 16 18 
-		18 18 18 18 16 18 18 16 16;
+		 276.25 -197.81926877528841 278 -197.81317148732114 281 -197.24707231780457 281.25 -197.81926877528841
+		 287.5 -197.81926877528841 290 -197.81926877528841 295 -197.81926877528841;
+	setAttr -s 25 ".kit[7:24]"  16 18 16 16 18 16 16 18 
+		18 18 18 18 16 16 18 18 16 16;
+	setAttr -s 25 ".kot[7:24]"  16 18 16 16 18 16 16 18 
+		18 18 18 18 16 16 18 18 16 16;
 createNode animCurveTL -n "pig_latest_controller_main01_translateY1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 24 ".ktv[0:23]"  1.25 2.266211507035973 77.5 2.266211507035973
+	setAttr -s 25 ".ktv[0:24]"  1.25 2.266211507035973 77.5 2.266211507035973
 		 110 2.266211507035973 122.5 10.999857992090693 130 3.7458541241994001 140 2.266211507035973
 		 143.75 2.882460095313804 150 2.882460095313804 156.25 2.8521563119043534 160 3.1557803553534867
 		 162.5 2.873546332679219 170 2.873546332679219 171.25 3.8971676360895802 172.5 6.2923246382107765
 		 175 10.921583793261131 255 13.480734961879104 260 13.480734961879104 267.5 17.435155563655812
-		 276.25 14.413408593937159 281 11.349192914884936 281.25 10.144153536891185 287.5 2.4153998487489501
-		 290 2.094164705434121 295 2.8281305265294936;
-	setAttr -s 24 ".kit[6:23]"  1 1 1 16 16 1 16 16 
-		18 18 18 18 18 16 18 18 16 16;
-	setAttr -s 24 ".kot[6:23]"  1 1 1 16 16 18 16 16 
-		18 18 18 18 18 16 18 18 16 16;
-	setAttr -s 24 ".ktl[7:23]" no no yes yes yes yes yes yes yes yes yes 
-		yes yes yes yes yes yes;
-	setAttr -s 24 ".kix[6:23]"  0.038531813770532608 0.093485713005065918 
+		 276.25 14.413408593937159 278 15.18617429372803 281 11.349192914884936 281.25 10.144153536891185
+		 287.5 2.4153998487489501 290 2.094164705434121 295 2.8281305265294936;
+	setAttr -s 25 ".kit[6:24]"  1 1 1 16 16 1 16 16 
+		18 18 18 18 18 16 16 18 18 16 16;
+	setAttr -s 25 ".kot[6:24]"  1 1 1 16 16 18 16 16 
+		18 18 18 18 18 16 16 18 18 16 16;
+	setAttr -s 25 ".ktl[7:24]" no no yes yes yes yes yes yes yes yes yes 
+		yes yes yes yes yes yes yes;
+	setAttr -s 25 ".kix[6:24]"  0.038531813770532608 0.093485713005065918 
 		0.045702803879976273 1 1 0.45372393727302551 0.024367988109588623 0.01779225654900074 
-		0.35730639100074768 1 1 1 0.073739320039749146 0.039009176194667816 0.024245303124189377 
-		0.086150959134101868 1 1;
-	setAttr -s 24 ".kiy[6:23]"  0.99925738573074341 -0.99562066793441772 
-		-0.9989551305770874 0 0 -0.89114236831665039 0.99970310926437378 0.99984174966812134 
-		0.93398725986480713 0 0 0 -0.99727755784988403 -0.99923884868621826 -0.99970602989196777 
-		-0.99628210067749023 0 0;
-	setAttr -s 24 ".kox[6:23]"  0.03853181004524231 0.063248567283153534 
-		0.25087699294090271 1 1 1 0.024367988109588623 0.01779225654900074 0.35730639100074768 
-		1 1 1 0.073739312589168549 0.039009176194667816 0.024245303124189377 0.086150951683521271 
+		0.35730639100074768 1 1 1 1 1 0.021481186151504517 0.024245303124189377 0.086150959134101868 
 		1 1;
-	setAttr -s 24 ".koy[6:23]"  0.99925738573074341 0.99799782037734985 
-		0.96801900863647461 0 0 0 0.99970310926437378 0.99984174966812134 0.93398725986480713 
-		0 0 0 -0.99727749824523926 -0.99923884868621826 -0.999705970287323 -0.99628204107284546 
+	setAttr -s 25 ".kiy[6:24]"  0.99925738573074341 -0.99562066793441772 
+		-0.9989551305770874 0 0 -0.89114236831665039 0.99970310926437378 0.99984174966812134 
+		0.93398725986480713 0 0 0 0 0 -0.99976927042007446 -0.99970602989196777 -0.99628210067749023 
 		0 0;
+	setAttr -s 25 ".kox[6:24]"  0.03853181004524231 0.063248567283153534 
+		0.25087699294090271 1 1 1 0.024367988109588623 0.01779225654900074 0.35730639100074768 
+		1 1 1 1 1 0.021481186151504517 0.024245303124189377 0.086150951683521271 1 1;
+	setAttr -s 25 ".koy[6:24]"  0.99925738573074341 0.99799782037734985 
+		0.96801900863647461 0 0 0 0.99970310926437378 0.99984174966812134 0.93398725986480713 
+		0 0 0 0 0 -0.99976927042007446 -0.999705970287323 -0.99628204107284546 0 0;
 createNode animCurveTL -n "pig_latest_controller_main01_translateZ1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 24 ".ktv[0:23]"  1.25 108.45101816042344 77.5 75.336223649472373
+	setAttr -s 25 ".ktv[0:24]"  1.25 108.45101816042344 77.5 75.336223649472373
 		 110 48.934504442473632 122.5 44.429082105918035 130 45.717935367888195 140 46.475625986302504
 		 143.75 50.033124253925131 150 44.080134664037153 156.25 34.919192400208992 160 33.351774659711083
 		 162.5 32.938151948875394 170 32.371900514751218 171.25 32.964383982108266 172.5 34.243424010510225
 		 175 36.307912520148754 255 40.540781357146365 260 41.371491286766776 267.5 50.883765156588545
-		 276.25 52.625783777812103 281 60.441665421150987 281.25 59.659087500975403 287.5 61.96693332214835
-		 290 61.96693332214835 295 61.96693332214835;
-	setAttr -s 24 ".kit[7:23]"  16 18 16 16 18 16 16 18 
-		18 18 18 18 16 18 18 16 16;
-	setAttr -s 24 ".kot[7:23]"  16 18 16 16 18 16 16 18 
-		18 18 18 18 16 18 18 16 16;
+		 276.25 52.625783777812103 278 53.996420073787533 281 60.441665421150987 281.25 59.659087500975403
+		 287.5 61.96693332214835 290 61.96693332214835 295 61.96693332214835;
+	setAttr -s 25 ".kit[7:24]"  16 18 16 16 18 16 16 18 
+		18 18 18 18 16 16 18 18 16 16;
+	setAttr -s 25 ".kot[7:24]"  16 18 16 16 18 16 16 18 
+		18 18 18 18 16 16 18 18 16 16;
 createNode animCurveTA -n "pig_latest_controller_main01_rotateX1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 24 ".ktv[0:23]"  1.25 0 77.5 0 110 0 122.5 -33.921125066555646
+	setAttr -s 25 ".ktv[0:24]"  1.25 0 77.5 0 110 0 122.5 -33.921125066555646
 		 130 -29.640269776949175 140 -6.6254559622124578 143.75 0 150 0 156.25 0 160 0 162.5 0
 		 170 0 171.25 -27.896676547935321 172.5 -42.990052525096935 175 -29.442865689705094
 		 255 -15.990474509405951 260 76.362065238610711 267.5 145.4024532290681 276.25 179.81702341514341
-		 281 249.24133074367143 281.25 253.25998905717705 287.5 358.29174504302472 290 357.94176143493917
-		 295 358.29174504302472;
-	setAttr -s 24 ".kit[7:23]"  16 18 16 16 18 16 16 1 
-		18 18 18 18 16 18 18 16 16;
-	setAttr -s 24 ".kot[7:23]"  16 18 16 16 18 16 16 1 
-		18 18 18 18 16 18 18 16 16;
-	setAttr -s 24 ".kix[14:23]"  0.99820214509963989 0.96684116125106812 
-		0.1463279128074646 0.28733676671981812 0.24098154902458191 0.12893819808959961 0.11310728639364243 
-		1 1 1;
-	setAttr -s 24 ".kiy[14:23]"  0.059937361627817154 0.2553786039352417 
-		0.98923617601394653 0.95782965421676636 0.97052973508834839 0.99165266752243042 0.99358278512954712 
-		0 0 0;
-	setAttr -s 24 ".kox[14:23]"  0.99820214509963989 0.96684110164642334 
-		0.14632792770862579 0.28733676671981812 0.24098153412342072 0.12893819808959961 0.11310727894306183 
-		1 1 1;
-	setAttr -s 24 ".koy[14:23]"  0.059937328100204468 0.2553786039352417 
-		0.98923617601394653 0.95782965421676636 0.97052967548370361 0.99165266752243042 0.99358278512954712 
-		0 0 0;
+		 278 183.31183274472667 281 249.24133074367143 281.25 253.25998905717705 287.5 358.29174504302472
+		 290 357.94176143493917 295 358.29174504302472;
+	setAttr -s 25 ".kit[7:24]"  16 18 16 16 18 16 16 1 
+		18 18 18 18 16 16 18 18 16 16;
+	setAttr -s 25 ".kot[7:24]"  16 18 16 16 18 16 16 1 
+		18 18 18 18 16 16 18 18 16 16;
+	setAttr -s 25 ".kix[14:24]"  0.99820214509963989 0.96684116125106812 
+		0.1463279128074646 0.28733676671981812 0.46759301424026489 1 0.088390633463859558 
+		0.11310728639364243 1 1 1;
+	setAttr -s 25 ".kiy[14:24]"  0.059937361627817154 0.2553786039352417 
+		0.98923617601394653 0.95782965421676636 0.88394391536712646 0 0.99608588218688965 
+		0.99358278512954712 0 0 0;
+	setAttr -s 25 ".kox[14:24]"  0.99820214509963989 0.96684110164642334 
+		0.14632792770862579 0.28733676671981812 0.4675929844379425 1 0.088390633463859558 
+		0.11310727894306183 1 1 1;
+	setAttr -s 25 ".koy[14:24]"  0.059937328100204468 0.2553786039352417 
+		0.98923617601394653 0.95782965421676636 0.88394391536712646 0 0.99608588218688965 
+		0.99358278512954712 0 0 0;
 createNode animCurveTA -n "pig_latest_controller_main01_rotateY1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 24 ".ktv[0:23]"  1.25 -130.80325669790534 77.5 -130.80325669790534
+	setAttr -s 25 ".ktv[0:24]"  1.25 -130.80325669790534 77.5 -130.80325669790534
 		 110 -130.80325669790534 122.5 -141.78516836938121 130 -146.49317105879356 140 -174.6600332487271
 		 143.75 -166.94051409299135 150 -184.05420586076775 156.25 -213.55635203549824 160 -231.36046754688135
 		 162.5 -265.3227101854751 170 -355.68796613209179 171.25 -355.68796613209179 172.5 -355.68796613209179
 		 175 -355.68796613209179 255 -355.68796613209179 260 -355.68796613209179 267.5 -355.68796613209179
-		 276.25 -355.68796613209179 281 -355.68796613209179 281.25 -355.68796613209179 287.5 -355.68796613209179
-		 290 -355.68796613209179 295 -355.68796613209179;
-	setAttr -s 24 ".kit[7:23]"  16 18 16 16 18 16 16 18 
-		18 18 18 18 16 18 18 16 16;
-	setAttr -s 24 ".kot[7:23]"  16 18 16 16 18 16 16 18 
-		18 18 18 18 16 18 18 16 16;
+		 276.25 -355.68796613209179 278 -355.68796613209179 281 -355.68796613209179 281.25 -355.68796613209179
+		 287.5 -355.68796613209179 290 -355.68796613209179 295 -355.68796613209179;
+	setAttr -s 25 ".kit[7:24]"  16 18 16 16 18 16 16 18 
+		18 18 18 18 16 16 18 18 16 16;
+	setAttr -s 25 ".kot[7:24]"  16 18 16 16 18 16 16 18 
+		18 18 18 18 16 16 18 18 16 16;
 createNode animCurveTA -n "pig_latest_controller_main01_rotateZ1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 24 ".ktv[0:23]"  1.25 0 77.5 0 110 0 122.5 1.772403033971685
+	setAttr -s 25 ".ktv[0:24]"  1.25 0 77.5 0 110 0 122.5 1.772403033971685
 		 130 1.5487252848284825 140 -2.0330093677597425 143.75 0 150 0 156.25 0 160 0 162.5 0
 		 170 0 171.25 1.9934895197075701e-016 172.5 0 175 0 255 -9.967447598537854e-017 260 0
-		 267.5 0 276.25 0 281 0 281.25 0 287.5 0 290 -1.2459309498172316e-017 295 0;
-	setAttr -s 24 ".kit[7:23]"  16 18 16 16 18 16 16 18 
-		18 18 18 18 16 18 18 16 16;
-	setAttr -s 24 ".kot[7:23]"  16 18 16 16 18 16 16 18 
-		18 18 18 18 16 18 18 16 16;
+		 267.5 0 276.25 0 278 0 281 0 281.25 0 287.5 0 290 -1.2459309498172316e-017 295 0;
+	setAttr -s 25 ".kit[7:24]"  16 18 16 16 18 16 16 18 
+		18 18 18 18 16 16 18 18 16 16;
+	setAttr -s 25 ".kot[7:24]"  16 18 16 16 18 16 16 18 
+		18 18 18 18 16 16 18 18 16 16;
 createNode animCurveTU -n "camera3_scaleX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
@@ -49736,8 +49895,8 @@ createNode animCurveTU -n "camera3_scaleZ";
 	setAttr ".ktv[0]"  167.5 1;
 createNode hyperGraphInfo -n "nodeEditorPanel2Info";
 createNode hyperView -n "hyperView2";
-	setAttr ".vl" -type "double2" -189.58858683917526 -486.40064462802655 ;
-	setAttr ".vh" -type "double2" 1268.5738989343545 128.32919452924574 ;
+	setAttr ".vl" -type "double2" -113.09523809523805 -1381.0820132248707 ;
+	setAttr ".vh" -type "double2" 2269.0476190476193 482.27248941534674 ;
 	setAttr ".dag" no;
 createNode hyperLayout -n "hyperLayout2";
 	setAttr ".ihi" 0;
@@ -49801,90 +49960,92 @@ lockNode -l 1 ;
 createNode animCurveTA -n "pig_latest_head_control_rotateX1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 14 ".ktv[0:13]"  152.5 0 165 0 171.25 0 175 49.75523568111138
-		 257.5 46.302339627412181 258.75 7.69011314262226 282.5 0 293 57.488631873790766 296 32.299063113638745
+	setAttr -s 18 ".ktv[0:17]"  152.5 0 165 0 171.25 0 175 49.75523568111138
+		 257.5 46.302339627412181 258.75 7.69011314262226 260 7.6284478523725898 261 -36.379174337696227
+		 262 -58.963777455568156 264 -109.00952732450411 282.5 0 293 57.488631873790766 296 32.299063113638745
 		 297 61.470198858360042 300 53.458055536338428 303 49.131810502102674 306 48.849962360401605
 		 309 -30.091573579630527;
-	setAttr -s 14 ".kit[2:13]"  18 18 16 16 18 16 16 16 
-		16 16 16 16;
-	setAttr -s 14 ".kot[2:13]"  18 18 16 16 18 16 16 16 
-		16 16 16 16;
+	setAttr -s 18 ".kit[2:17]"  18 18 16 16 16 16 16 16 
+		18 16 16 16 16 16 16 16;
+	setAttr -s 18 ".kot[2:17]"  18 18 16 16 16 16 16 16 
+		18 16 16 16 16 16 16 16;
 createNode animCurveTA -n "pig_latest_head_control_rotateY1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 14 ".ktv[0:13]"  152.5 13.916068887935637 165 -23.475483035759915
-		 171.25 0 175 0 257.5 0 258.75 0 282.5 0 293 0 296 0 297 -52.541112210559298 300 48.311617136582846
-		 303 -45.04151026096217 306 44.795727356225534 309 48.341789717652198;
-	setAttr -s 14 ".kit[2:13]"  18 18 16 16 18 16 16 16 
-		16 16 16 16;
-	setAttr -s 14 ".kot[2:13]"  18 18 16 16 18 16 16 16 
-		16 16 16 16;
+	setAttr -s 18 ".ktv[0:17]"  152.5 13.916068887935637 165 -23.475483035759915
+		 171.25 0 175 0 257.5 0 258.75 0 260 0 261 0 262 0 264 0 282.5 0 293 0 296 0 297 -52.541112210559298
+		 300 48.311617136582846 303 -45.04151026096217 306 44.795727356225534 309 48.341789717652198;
+	setAttr -s 18 ".kit[2:17]"  18 18 16 16 16 16 16 16 
+		18 16 16 16 16 16 16 16;
+	setAttr -s 18 ".kot[2:17]"  18 18 16 16 16 16 16 16 
+		18 16 16 16 16 16 16 16;
 createNode animCurveTA -n "pig_latest_head_control_rotateZ1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 14 ".ktv[0:13]"  152.5 0 165 0 171.25 0 175 0 257.5 0 258.75 0
-		 282.5 0 293 0 296 0 297 -55.594593323750431 300 45.218668408173713 303 -39.276802248246476
-		 306 38.877643152962257 309 -23.667040594714948;
-	setAttr -s 14 ".kit[2:13]"  18 18 16 16 18 16 16 16 
-		16 16 16 16;
-	setAttr -s 14 ".kot[2:13]"  18 18 16 16 18 16 16 16 
-		16 16 16 16;
+	setAttr -s 18 ".ktv[0:17]"  152.5 0 165 0 171.25 0 175 0 257.5 0 258.75 0
+		 260 0 261 0 262 0 264 0 282.5 0 293 0 296 0 297 -55.594593323750431 300 45.218668408173713
+		 303 -39.276802248246476 306 38.877643152962257 309 -23.667040594714948;
+	setAttr -s 18 ".kit[2:17]"  18 18 16 16 16 16 16 16 
+		18 16 16 16 16 16 16 16;
+	setAttr -s 18 ".kot[2:17]"  18 18 16 16 16 16 16 16 
+		18 16 16 16 16 16 16 16;
 createNode animCurveTL -n "pig_latest_head_control_translateX1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  152.5 0 165 0 171.25 0 175 0 257.5 0 258.75 0
-		 282.5 0 293 0 296 0 300 0 303 0 306 0 309 0;
-	setAttr -s 13 ".kit[2:12]"  18 18 16 16 18 16 16 16 
-		16 16 16;
-	setAttr -s 13 ".kot[2:12]"  18 18 16 16 18 16 16 16 
-		16 16 16;
+	setAttr -s 17 ".ktv[0:16]"  152.5 0 165 0 171.25 0 175 0 257.5 0 258.75 0
+		 260 0 261 0 262 0 264 0 282.5 0 293 0 296 0 300 0 303 0 306 0 309 0;
+	setAttr -s 17 ".kit[2:16]"  18 18 16 16 16 16 16 16 
+		18 16 16 16 16 16 16;
+	setAttr -s 17 ".kot[2:16]"  18 18 16 16 16 16 16 16 
+		18 16 16 16 16 16 16;
 createNode animCurveTL -n "pig_latest_head_control_translateY1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  152.5 0 165 0 171.25 0 175 0 257.5 0 258.75 0
-		 282.5 0 293 0 296 0 300 0 303 0 306 0 309 0;
-	setAttr -s 13 ".kit[2:12]"  18 18 16 16 18 16 16 16 
-		16 16 16;
-	setAttr -s 13 ".kot[2:12]"  18 18 16 16 18 16 16 16 
-		16 16 16;
+	setAttr -s 17 ".ktv[0:16]"  152.5 0 165 0 171.25 0 175 0 257.5 0 258.75 0
+		 260 0 261 0 262 0 264 0 282.5 0 293 0 296 0 300 0 303 0 306 0 309 0;
+	setAttr -s 17 ".kit[2:16]"  18 18 16 16 16 16 16 16 
+		18 16 16 16 16 16 16;
+	setAttr -s 17 ".kot[2:16]"  18 18 16 16 16 16 16 16 
+		18 16 16 16 16 16 16;
 createNode animCurveTL -n "pig_latest_head_control_translateZ1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  152.5 0.026019667912326128 165 0.026019667912326128
+	setAttr -s 17 ".ktv[0:16]"  152.5 0.026019667912326128 165 0.026019667912326128
 		 171.25 0.026019667912326128 175 0.026019667912326128 257.5 0.026019667912326128 258.75 0.026019667912326128
+		 260 0.026019667912326128 261 0.026019667912326128 262 0.026019667912326128 264 0.026019667912326128
 		 282.5 0.026019667912326128 293 0.026019667912326128 296 0.026019667912326128 300 0.026019667912326128
 		 303 0.026019667912326128 306 0.026019667912326128 309 0.026019667912326128;
-	setAttr -s 13 ".kit[2:12]"  18 18 16 16 18 16 16 16 
-		16 16 16;
-	setAttr -s 13 ".kot[2:12]"  18 18 16 16 18 16 16 16 
-		16 16 16;
+	setAttr -s 17 ".kit[2:16]"  18 18 16 16 16 16 16 16 
+		18 16 16 16 16 16 16;
+	setAttr -s 17 ".kot[2:16]"  18 18 16 16 16 16 16 16 
+		18 16 16 16 16 16 16;
 createNode animCurveTU -n "pig_latest_head_control_scaleX1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  152.5 1 165 1 171.25 1 175 1 257.5 1 258.75 1
-		 282.5 1 293 1 296 1 300 1 303 1 306 1 309 1;
-	setAttr -s 13 ".kit[2:12]"  18 18 16 16 18 16 16 16 
-		16 16 16;
-	setAttr -s 13 ".kot[2:12]"  18 18 16 16 18 16 16 16 
-		16 16 16;
+	setAttr -s 17 ".ktv[0:16]"  152.5 1 165 1 171.25 1 175 1 257.5 1 258.75 1
+		 260 1 261 1 262 1 264 1 282.5 1 293 1 296 1 300 1 303 1 306 1 309 1;
+	setAttr -s 17 ".kit[2:16]"  18 18 16 16 16 16 16 16 
+		18 16 16 16 16 16 16;
+	setAttr -s 17 ".kot[2:16]"  18 18 16 16 16 16 16 16 
+		18 16 16 16 16 16 16;
 createNode animCurveTU -n "pig_latest_head_control_scaleY1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  152.5 1 165 1 171.25 1 175 1 257.5 1 258.75 1
-		 282.5 1 293 1 296 1 300 1 303 1 306 1 309 1;
-	setAttr -s 13 ".kit[2:12]"  18 18 16 16 18 16 16 16 
-		16 16 16;
-	setAttr -s 13 ".kot[2:12]"  18 18 16 16 18 16 16 16 
-		16 16 16;
+	setAttr -s 17 ".ktv[0:16]"  152.5 1 165 1 171.25 1 175 1 257.5 1 258.75 1
+		 260 1 261 1 262 1 264 1 282.5 1 293 1 296 1 300 1 303 1 306 1 309 1;
+	setAttr -s 17 ".kit[2:16]"  18 18 16 16 16 16 16 16 
+		18 16 16 16 16 16 16;
+	setAttr -s 17 ".kot[2:16]"  18 18 16 16 16 16 16 16 
+		18 16 16 16 16 16 16;
 createNode animCurveTU -n "pig_latest_head_control_scaleZ1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  152.5 1 165 1 171.25 1 175 1 257.5 1 258.75 1
-		 282.5 1 293 1 296 1 300 1 303 1 306 1 309 1;
-	setAttr -s 13 ".kit[2:12]"  18 18 16 16 18 16 16 16 
-		16 16 16;
-	setAttr -s 13 ".kot[2:12]"  18 18 16 16 18 16 16 16 
-		16 16 16;
+	setAttr -s 17 ".ktv[0:16]"  152.5 1 165 1 171.25 1 175 1 257.5 1 258.75 1
+		 260 1 261 1 262 1 264 1 282.5 1 293 1 296 1 300 1 303 1 306 1 309 1;
+	setAttr -s 17 ".kit[2:16]"  18 18 16 16 16 16 16 16 
+		18 16 16 16 16 16 16;
+	setAttr -s 17 ".kot[2:16]"  18 18 16 16 16 16 16 16 
+		18 16 16 16 16 16 16;
 createNode reference -n "sharedReferenceNode";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"sharedReferenceNode";
@@ -49892,79 +50053,111 @@ createNode pairBlend -n "pairBlend3";
 createNode animCurveTL -n "pairBlend3_inTranslateX1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  160 -0.12238930576632796 167.5 -0.12238930576632986
+	setAttr -s 14 ".ktv[0:13]"  160 -0.12238930576632796 167.5 -0.12238930576632986
 		 171.25 -1.6819878823071122e-014 177.5 -1.6819878823071122e-014 259 -1.6819878823071122e-014
-		 268 -1.6819878823071122e-014 289 -1.6819878823071122e-014 294 -1.6819878823071122e-014;
-	setAttr -s 8 ".kit[2:7]"  18 18 16 16 16 16;
-	setAttr -s 8 ".kot[2:7]"  18 18 16 16 16 16;
+		 268 -1.6819878823071122e-014 270 -1.589075875077213e-014 289 -1.6819878823071122e-014
+		 294 -1.6819878823071122e-014 295 -1.6819878823071122e-014 297 -1.6819878823071122e-014
+		 300 -1.6819878823071122e-014 303 -1.6819878823071122e-014 310 -1.6819878823071122e-014;
+	setAttr -s 14 ".kit[2:13]"  18 18 16 16 16 16 16 16 
+		16 16 16 16;
+	setAttr -s 14 ".kot[2:13]"  18 18 16 16 16 16 16 16 
+		16 16 16 16;
 createNode animCurveTL -n "pairBlend3_inTranslateY1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  160 -0.30485691741838716 167.5 -2.0699373197305611
+	setAttr -s 14 ".ktv[0:13]"  160 -0.30485691741838716 167.5 -2.0699373197305611
 		 171.25 -1.4210854715202004e-014 177.5 -1.4210854715202004e-014 259 -1.4210854715202004e-014
-		 268 -1.4210854715202004e-014 289 -1.4210854715202004e-014 294 -1.4210854715202004e-014;
-	setAttr -s 8 ".kit[2:7]"  18 18 16 16 16 16;
-	setAttr -s 8 ".kot[2:7]"  18 18 16 16 16 16;
+		 268 -1.4210854715202004e-014 270 -2.3600464147888127 289 -1.4210854715202004e-014
+		 294 -1.4210854715202004e-014 295 -1.4210854715202004e-014 297 -1.4210854715202004e-014
+		 300 -1.4210854715202004e-014 303 -1.4210854715202004e-014 310 -1.4210854715202004e-014;
+	setAttr -s 14 ".kit[2:13]"  18 18 16 16 16 16 16 16 
+		16 16 16 16;
+	setAttr -s 14 ".kot[2:13]"  18 18 16 16 16 16 16 16 
+		16 16 16 16;
 createNode animCurveTL -n "pairBlend3_inTranslateZ1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  160 -0.40888313334009357 167.5 -0.40888313334003179
+	setAttr -s 14 ".ktv[0:13]"  160 -0.40888313334009357 167.5 -0.40888313334003179
 		 171.25 0.026019667912308364 177.5 0.026019667912308364 259 0.026019667912308364 268 0.026019667912308364
-		 289 0.026019667912308364 294 0.026019667912308364;
-	setAttr -s 8 ".kit[2:7]"  18 18 16 16 16 16;
-	setAttr -s 8 ".kot[2:7]"  18 18 16 16 16 16;
+		 270 -0.90345718476512871 289 0.026019667912308364 294 0.026019667912308364 295 0.026019667912308364
+		 297 0.026019667912308364 300 0.026019667912308364 303 0.026019667912308364 310 0.026019667912308364;
+	setAttr -s 14 ".kit[2:13]"  18 18 16 16 16 16 16 16 
+		16 16 16 16;
+	setAttr -s 14 ".kot[2:13]"  18 18 16 16 16 16 16 16 
+		16 16 16 16;
 createNode animCurveTA -n "pairBlend3_inRotateX1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  160 0 167.5 0 171.25 0 177.5 15.400298421462729
-		 259 15.400298421462729 268 66.689432520095025 289 66.689432520095025 294 19.287498693364114;
-	setAttr -s 8 ".kit[2:7]"  18 18 16 16 16 16;
-	setAttr -s 8 ".kot[2:7]"  18 18 16 16 16 16;
+	setAttr -s 14 ".ktv[0:13]"  160 0 167.5 0 171.25 0 177.5 15.400298421462729
+		 259 15.400298421462729 268 107.86102316958211 270 153.74542620778578 289 66.689432520095025
+		 294 2.7980381153548799 295 10.17976854532108 297 5.0936918748986262 300 12.0426619283798
+		 303 13.009081885122871 310 41.441502497636023;
+	setAttr -s 14 ".kit[2:13]"  18 18 16 16 16 16 16 16 
+		16 16 16 16;
+	setAttr -s 14 ".kot[2:13]"  18 18 16 16 16 16 16 16 
+		16 16 16 16;
 createNode animCurveTA -n "pairBlend3_inRotateY1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  160 0 167.5 0 171.25 0 177.5 0 259 0 268 0
-		 289 0 294 0;
-	setAttr -s 8 ".kit[2:7]"  18 18 16 16 16 16;
-	setAttr -s 8 ".kot[2:7]"  18 18 16 16 16 16;
+	setAttr -s 14 ".ktv[0:13]"  160 0 167.5 0 171.25 0 177.5 0 259 0 268 0
+		 270 0 289 0 294 0 295 0 297 -14.019908338976162 300 13.2352075811904 303 5.9661693248532721
+		 310 20.24231714138007;
+	setAttr -s 14 ".kit[2:13]"  18 18 16 16 16 16 16 16 
+		16 16 16 16;
+	setAttr -s 14 ".kot[2:13]"  18 18 16 16 16 16 16 16 
+		16 16 16 16;
 createNode animCurveTA -n "pairBlend3_inRotateZ1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  160 0 167.5 0 171.25 0 177.5 0 259 0 268 0
-		 289 0 294 0;
-	setAttr -s 8 ".kit[2:7]"  18 18 16 16 16 16;
-	setAttr -s 8 ".kot[2:7]"  18 18 16 16 16 16;
+	setAttr -s 14 ".ktv[0:13]"  160 0 167.5 0 171.25 0 177.5 0 259 0 268 0
+		 270 0 289 0 294 0 295 0 297 -3.8351465360655808 300 -2.527525197520557 303 2.2260500908632395
+		 310 7.6758738012842551;
+	setAttr -s 14 ".kit[2:13]"  18 18 16 16 16 16 16 16 
+		16 16 16 16;
+	setAttr -s 14 ".kot[2:13]"  18 18 16 16 16 16 16 16 
+		16 16 16 16;
 createNode animCurveTU -n "pig_latest_shoulders_rotation_ctrl01_scaleX1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  160 0.99999999999999989 167.5 0.99999999999999989
+	setAttr -s 14 ".ktv[0:13]"  160 0.99999999999999989 167.5 0.99999999999999989
 		 171.25 0.99999999999999989 177.5 0.99999999999999989 259 0.99999999999999989 268 0.99999999999999989
-		 289 0.99999999999999989 294 0.99999999999999989;
-	setAttr -s 8 ".kit[2:7]"  18 18 16 16 16 16;
-	setAttr -s 8 ".kot[2:7]"  18 18 16 16 16 16;
+		 270 0.99999999999999989 289 0.99999999999999989 294 0.99999999999999989 295 0.99999999999999989
+		 297 0.99999999999999989 300 0.99999999999999989 303 0.99999999999999989 310 0.99999999999999989;
+	setAttr -s 14 ".kit[2:13]"  18 18 16 16 16 16 16 16 
+		16 16 16 16;
+	setAttr -s 14 ".kot[2:13]"  18 18 16 16 16 16 16 16 
+		16 16 16 16;
 createNode animCurveTU -n "pig_latest_shoulders_rotation_ctrl01_scaleY1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  160 0.99999999999999989 167.5 0.99999999999999989
+	setAttr -s 14 ".ktv[0:13]"  160 0.99999999999999989 167.5 0.99999999999999989
 		 171.25 0.99999999999999989 177.5 0.99999999999999989 259 0.99999999999999989 268 0.99999999999999989
-		 289 0.99999999999999989 294 0.99999999999999989;
-	setAttr -s 8 ".kit[2:7]"  18 18 16 16 16 16;
-	setAttr -s 8 ".kot[2:7]"  18 18 16 16 16 16;
+		 270 0.99999999999999989 289 0.99999999999999989 294 0.99999999999999989 295 0.99999999999999989
+		 297 0.99999999999999989 300 0.99999999999999989 303 0.99999999999999989 310 0.99999999999999989;
+	setAttr -s 14 ".kit[2:13]"  18 18 16 16 16 16 16 16 
+		16 16 16 16;
+	setAttr -s 14 ".kot[2:13]"  18 18 16 16 16 16 16 16 
+		16 16 16 16;
 createNode animCurveTU -n "pig_latest_shoulders_rotation_ctrl01_scaleZ1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  160 0.99999999999999989 167.5 0.99999999999999989
+	setAttr -s 14 ".ktv[0:13]"  160 0.99999999999999989 167.5 0.99999999999999989
 		 171.25 0.99999999999999989 177.5 0.99999999999999989 259 0.99999999999999989 268 0.99999999999999989
-		 289 0.99999999999999989 294 0.99999999999999989;
-	setAttr -s 8 ".kit[2:7]"  18 18 16 16 16 16;
-	setAttr -s 8 ".kot[2:7]"  18 18 16 16 16 16;
+		 270 0.99999999999999989 289 0.99999999999999989 294 0.99999999999999989 295 0.99999999999999989
+		 297 0.99999999999999989 300 0.99999999999999989 303 0.99999999999999989 310 0.99999999999999989;
+	setAttr -s 14 ".kit[2:13]"  18 18 16 16 16 16 16 16 
+		16 16 16 16;
+	setAttr -s 14 ".kot[2:13]"  18 18 16 16 16 16 16 16 
+		16 16 16 16;
 createNode animCurveTU -n "pig_latest_shoulders_rotation_ctrl01_blendParent1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  160 0 167.5 0 171.25 0 177.5 0 259 0 268 0
-		 289 0 294 0;
-	setAttr -s 8 ".kit[2:7]"  18 18 16 16 16 16;
-	setAttr -s 8 ".kot[2:7]"  18 18 16 16 16 16;
+	setAttr -s 14 ".ktv[0:13]"  160 0 167.5 0 171.25 0 177.5 0 259 0 268 0
+		 270 0 289 0 294 0 295 0 297 0 300 0 303 0 310 0;
+	setAttr -s 14 ".kit[2:13]"  18 18 16 16 16 16 16 16 
+		16 16 16 16;
+	setAttr -s 14 ".kot[2:13]"  18 18 16 16 16 16 16 16 
+		16 16 16 16;
 createNode animCurveTA -n "camera3_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
@@ -50078,321 +50271,381 @@ createNode partition -n "mtorPartition";
 createNode animCurveTU -n "pig_latest_controller_main01_scaleX1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  143.75 0.575 150 0.575 156.25 0.575 160 0.575
-		 162.5 0.575 170 0.575 171.25 0.575 172.5 0.575 255 0.575 281 0.575 290 0.575 295 0.575;
+	setAttr -s 13 ".ktv[0:12]"  143.75 0.575 150 0.575 156.25 0.575 160 0.575
+		 162.5 0.575 170 0.575 171.25 0.575 172.5 0.575 255 0.575 278 0.575 281 0.575 290 0.575
+		 295 0.575;
 createNode animCurveTU -n "pig_latest_controller_main01_scaleY1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  143.75 0.575 150 0.575 156.25 0.575 160 0.575
-		 162.5 0.575 170 0.575 171.25 0.575 172.5 0.575 255 0.575 281 0.575 290 0.575 295 0.575;
+	setAttr -s 13 ".ktv[0:12]"  143.75 0.575 150 0.575 156.25 0.575 160 0.575
+		 162.5 0.575 170 0.575 171.25 0.575 172.5 0.575 255 0.575 278 0.575 281 0.575 290 0.575
+		 295 0.575;
 createNode animCurveTU -n "pig_latest_controller_main01_scaleZ1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  143.75 0.575 150 0.575 156.25 0.575 160 0.575
-		 162.5 0.575 170 0.575 171.25 0.575 172.5 0.575 255 0.575 281 0.575 290 0.575 295 0.575;
+	setAttr -s 13 ".ktv[0:12]"  143.75 0.575 150 0.575 156.25 0.575 160 0.575
+		 162.5 0.575 170 0.575 171.25 0.575 172.5 0.575 255 0.575 278 0.575 281 0.575 290 0.575
+		 295 0.575;
 createNode animCurveTA -n "pig_latest_controller_R_backfoot01_rotateX";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 22 ".ktv[0:21]"  143.75 0 146.25 66.697805360780791 150 38.810717194828115
+	setAttr -s 32 ".ktv[0:31]"  143.75 0 146.25 66.697805360780791 150 38.810717194828115
 		 152.5 -2.3818345935435543 156.25 0 158.75 66.697805360780791 162.5 38.810717194828115
-		 165 -2.3818345935435543 168.75 0 170 0 171.25 22.225876053403603 172.5 95.764800755046238
-		 202.5 95.764800755046238 255 95.764800755046238 259 95.764800755046238 261 109.46870060263561
-		 272 109.46870060263561 280 22.129363726537463 282 5.9346834541934026 284 5.9346834541934026
-		 286 7.4969633652654917 291 5.9346834541934026;
+		 165 -2.3818345935435543 168.75 0 170 0 171 13.785151025574226 171.25 22.225876053403603
+		 172 62.929402438574058 172.5 95.764800755046238 202 95.764800755046238 202.5 95.764800755046238
+		 234 -26.908993800632739 245 -23.279179713020127 255 -28.52818302274698 259 95.764800755046238
+		 261 109.46870060263561 266 109.46870060263561 272 109.46870060263561 276 76.152435034688821
+		 280 22.129363726537463 282 5.9346834541934026 284 5.9346834541934026 286 7.4969633652654917
+		 289 -7.3648525075538718 291 5.9346834541934026 292 5.9346834541934026 294 5.9346834541934026;
 createNode animCurveTA -n "pig_latest_controller_R_backfoot01_rotateY";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 22 ".ktv[0:21]"  143.75 0 146.25 0 150 0 152.5 0.43235522379276542
-		 156.25 0 158.75 0 162.5 0 165 0.43235522379276542 168.75 0 170 0 171.25 0 172.5 0
-		 215 0 255 0 259 0 261 -1.8314359257031512 272 -1.8314359257031512 280 -1.8314359257031561
-		 282 -3.0888469830690899 284 -3.0888469830690899 286 -3.0888469830690988 291 -3.0888469830690899;
+	setAttr -s 32 ".ktv[0:31]"  143.75 0 146.25 0 150 0 152.5 0.43235522379276542
+		 156.25 0 158.75 0 162.5 0 165 0.43235522379276542 168.75 0 170 0 171 0 171.25 0 172 0
+		 172.5 0 202 0 219 0 234 0 245 0 255 0 259 0 261 -1.8314359257031512 266 -1.8314359257031512
+		 272 -1.8314359257031512 276 -1.8314359257031536 280 -1.8314359257031561 282 -3.0888469830690899
+		 284 -3.0888469830690899 286 -3.0888469830690988 289 -3.0888469830690948 291 -3.0888469830690899
+		 292 -3.0888469830690899 294 -3.0888469830690899;
 createNode animCurveTA -n "pig_latest_controller_R_backfoot01_rotateZ";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 22 ".ktv[0:21]"  143.75 0 146.25 0 150 0 152.5 -5.1301448404534522
-		 156.25 0 158.75 0 162.5 0 165 -5.1301448404534522 168.75 0 170 0 171.25 0 172.5 0
-		 215 0 255 0 259 0 261 -17.428198134081729 272 -17.428198134081729 280 -17.428198134081711
-		 282 -2.799746788936377 284 -2.799746788936377 286 -2.799746788936385 291 -2.799746788936377;
+	setAttr -s 32 ".ktv[0:31]"  143.75 0 146.25 0 150 0 152.5 -5.1301448404534522
+		 156.25 0 158.75 0 162.5 0 165 -5.1301448404534522 168.75 0 170 0 171 0 171.25 0 172 0
+		 172.5 0 202 0 219 0 234 0 245 0 255 0 259 0 261 -17.428198134081729 266 -17.428198134081729
+		 272 -17.428198134081729 276 -17.428198134081722 280 -17.428198134081711 282 -2.799746788936377
+		 284 -2.799746788936377 286 -2.799746788936385 289 -2.7997467889363814 291 -2.799746788936377
+		 292 -2.799746788936377 294 -2.799746788936377;
 createNode animCurveTL -n "pig_latest_controller_R_backfoot01_translateX";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 22 ".ktv[0:21]"  143.75 0 146.25 -0.36806681479530579 150 -2.0656918972899465
+	setAttr -s 32 ".ktv[0:31]"  143.75 0 146.25 -0.36806681479530579 150 -2.0656918972899465
 		 152.5 -0.22533168700300416 156.25 0 158.75 -0.36806681479530579 162.5 -2.0656918972899465
-		 165 -0.22533168700300416 168.75 1.1741026179462182 170 -0.17572269530051096 171.25 -0.53038171322431271
-		 172.5 -0.48723028139123575 215 -0.82457446842297399 255 -1.18859904249958 259 -1.5628971400798488
-		 261 -6.4050749303747692 272 -4.8293120334090451 280 -1.3353834841646886 282 -1.0962028864116891
-		 284 -1.0222672622786058 286 -0.97408363018206146 291 -0.89454883569029353;
+		 165 -0.22533168700300416 168.75 1.1741026179462182 170 -0.17572269530051049 171 -0.52076838197149922
+		 171.25 -0.53038171322431271 172 -0.50242001206748677 172.5 -0.48723028139123575 202 0.89534537473735765
+		 219 -0.82457446842297399 234 -1.07438340699303 245 -0.76477457733949317 255 -1.0256466277973815
+		 259 -1.5628971400798488 261 -6.4050749303747692 266 -2.8580801421153135 272 -3.3162534555054481
+		 276 -2.2809978435686618 280 -1.3353834841646886 282 -1.0962028864116891 284 -1.0222672622786058
+		 286 -0.97408363018216093 289 -0.91378738838914864 291 -0.89454883569019494 292 -0.89454883569024335
+		 294 -0.89454883569024246;
 createNode animCurveTL -n "pig_latest_controller_R_backfoot01_translateY";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 22 ".ktv[0:21]"  143.75 3.8906076428168526e-015 146.25 1.3303591413343785
+	setAttr -s 32 ".ktv[0:31]"  143.75 3.8906076428168526e-015 146.25 1.3303591413343785
 		 150 1.8582538507136859 152.5 1.3087708918138294 156.25 3.8906076428168526e-015 158.75 1.3303591413343785
-		 162.5 1.8582538507136859 165 1.3087708918138294 168.75 -0.023765252153521869 170 -0.030011395390167502
-		 171.25 0.55663042576400856 172.5 1.1267561118042035 215 0.70495085811277569 255 1.1874652643038384
-		 259 4.1739506076089805 261 6.4666501195432975 272 5.6901242189174859 280 -0.125852793614571
-		 282 0.71672570979201722 284 1.0607922265055048 286 1.5662479725922487 291 0.31151798836893202;
+		 162.5 1.8582538507136859 165 1.3087708918138294 168.75 -0.023765252153521869 170 0.29315186440773289
+		 171 1.501661259388863 171.25 0.55663042576400856 172 2.8105630076980548 172.5 1.1267561118042035
+		 202 0.85936256036756842 219 0.70495085811277569 234 0.42529551049432102 245 2.0306218615572904
+		 255 2.0101956466508968 259 4.1739506076089805 261 6.4666501195432975 266 8.5365429134354223
+		 272 2.9647669674444574 276 6.722892546134462 280 -0.125852793614571 282 0.71672570979201722
+		 284 1.0607922265055048 286 0.26920284815207485 289 1.3742578805932368 291 1.4580021064385509
+		 292 1.0412345572332007 294 0.29162709125894043;
 createNode animCurveTL -n "pig_latest_controller_R_backfoot01_translateZ";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 22 ".ktv[0:21]"  143.75 0 146.25 -2.3049890259528367 150 0.14641122603045065
+	setAttr -s 32 ".ktv[0:31]"  143.75 0 146.25 -2.3049890259528367 150 0.14641122603045065
 		 152.5 2.9019575535173447 156.25 0 158.75 -2.3049890259528367 162.5 0.14641122603045065
-		 165 2.9019575535173447 168.75 0.3758937735118259 170 0.39686707553337808 171.25 -0.57087574560786747
-		 172.5 -4.7524387319680796 215 -1.1476526200705084 255 0.43987138542019633 259 -2.9346656261380897
-		 261 -4.0293298662346153 272 -5.3937561776010527 280 -1.7121752932941325 282 -1.1292317751369163
-		 284 -0.92968203453079823 286 -0.78259925879300418 291 -0.60572653870433757;
+		 165 2.9019575535173447 168.75 0.3758937735118259 170 0.39686707553337192 171 0.27507167248037756
+		 171.25 -0.57087574560786747 172 -2.1158981075136358 172.5 -4.7524387319680796 202 -2.6411487394908582
+		 219 -1.1476526200705084 234 1.4141638580839841 245 2.4932791767922984 255 -0.60594695812272747
+		 259 -2.9346656261380897 261 -4.0293298662346153 266 -4.9812135379742655 272 -5.7193924637707907
+		 276 -3.9739208281575915 280 -1.7121752932941325 282 -1.1292317751369163 284 -0.92968203453079823
+		 286 -1.0669038340440493 289 -0.62478856421041129 291 -0.56525285479715293 292 -0.58107253089239197
+		 294 -0.60390508306374757;
 createNode animCurveTU -n "pig_latest_controller_R_backfoot01_scaleX";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 22 ".ktv[0:21]"  143.75 1 146.25 1 150 1 152.5 1 156.25 1
-		 158.75 1 162.5 1 165 1 168.75 1 170 1 171.25 1 172.5 1 215 1 255 1 259 1 261 1 272 1
-		 280 1 282 1 284 1 286 1 291 1;
+	setAttr -s 32 ".ktv[0:31]"  143.75 1 146.25 1 150 1 152.5 1 156.25 1
+		 158.75 1 162.5 1 165 1 168.75 1 170 1 171 1 171.25 1 172 1 172.5 1 202 1 219 1 234 1
+		 245 1 255 1 259 1 261 1 266 1 272 1 276 1 280 1 282 1 284 1 286 1 289 1 291 1 292 1
+		 294 1;
 createNode animCurveTU -n "pig_latest_controller_R_backfoot01_scaleY";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 22 ".ktv[0:21]"  143.75 1 146.25 1 150 1 152.5 1 156.25 1
-		 158.75 1 162.5 1 165 1 168.75 1 170 1 171.25 1 172.5 1 215 1 255 1 259 1 261 1 272 1
-		 280 1 282 1 284 1 286 1 291 1;
+	setAttr -s 32 ".ktv[0:31]"  143.75 1 146.25 1 150 1 152.5 1 156.25 1
+		 158.75 1 162.5 1 165 1 168.75 1 170 1 171 1 171.25 1 172 1 172.5 1 202 1 219 1 234 1
+		 245 1 255 1 259 1 261 1 266 1 272 1 276 1 280 1 282 1 284 1 286 1 289 1 291 1 292 1
+		 294 1;
 createNode animCurveTU -n "pig_latest_controller_R_backfoot01_scaleZ";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 22 ".ktv[0:21]"  143.75 1 146.25 1 150 1 152.5 1 156.25 1
-		 158.75 1 162.5 1 165 1 168.75 1 170 1 171.25 1 172.5 1 215 1 255 1 259 1 261 1 272 1
-		 280 1 282 1 284 1 286 1 291 1;
+	setAttr -s 32 ".ktv[0:31]"  143.75 1 146.25 1 150 1 152.5 1 156.25 1
+		 158.75 1 162.5 1 165 1 168.75 1 170 1 171 1 171.25 1 172 1 172.5 1 202 1 219 1 234 1
+		 245 1 255 1 259 1 261 1 266 1 272 1 276 1 280 1 282 1 284 1 286 1 289 1 291 1 292 1
+		 294 1;
 createNode animCurveTL -n "pig_latest_controller_L_backfoot01_translateX1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 22 ".ktv[0:21]"  143.75 1.2842846199277462 146.25 0.45326165388031436
+	setAttr -s 37 ".ktv[0:36]"  143.75 1.2842846199277462 146.25 0.45326165388031436
 		 150 1.1977626732654754 152.5 -0.52399504034460309 156.25 1.2842846199277462 158.75 0.45326165388031436
 		 162.5 1.1977626732654754 165 -0.52399504034460309 168.75 2.1817438516927257 170 0.62139888310368874
-		 171.25 0.24580703502877665 172.5 0.55046891185865632 215 -0.0091567058742819049 255 0.0018833490809210401
-		 259 -1.0865725726645532 261 5.7215824392212911 274 4.2967029181818672 282 0.90210407772245449
-		 283 0.90210407772250378 285 0.90210407772245549 287 0.90210407772246337 293 0.90210407772250667;
+		 171 0.25389403527073684 171.25 0.24580703502877665 172 0.44322491879071685 172.5 0.55046891185865632
+		 202 -0.93844076626985073 219 -0.0091567058742819049 227 0.11302234598837725 237 0.53305750217000969
+		 245 0.65739006561093383 255 0.03201083633490398 259 -1.0865725726645532 261 5.7215824392212911
+		 266 2.4689503788762313 272 2.993015398490515 276 1.7997419428673875 282 0.90210407772245449
+		 283 0.90210407772250378 285 0.90210407772245549 287 0.9473270984119545 288 0.94397715517693181
+		 289 0.93479869967684948 290 0.92497927637603594 291 0.91541604781138008 292 0.90685367152551444
+		 293 0.90210407772255508 294 0.90210407772255508 295 0.90210407772255696;
 createNode animCurveTL -n "pig_latest_controller_L_backfoot01_translateY1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 22 ".ktv[0:21]"  143.75 2.7220153289936464 146.25 1.5852386307734341
+	setAttr -s 37 ".ktv[0:36]"  143.75 2.7220153289936464 146.25 1.5852386307734341
 		 150 0.0081009407959932445 152.5 3.7076005824302727 156.25 2.7220153289936464 158.75 1.5852386307734341
 		 162.5 0.0081009407959932445 165 3.7076005824302727 168.75 -0.077072304208577122 170 -0.034819672603134767
-		 171.25 0.40674035683240689 172.5 0.34073287575163363 215 1.4947244685498697 255 1.2954597859048602
-		 259 2.2330932642304449 261 3.9911323466322881 274 4.1701893529064442 282 -0.61538164531794259
-		 283 -0.12279706762729065 285 0.94094111012411163 287 1.5338138765540632 293 0.26064001639425433;
+		 171 1.3314074831614875 171.25 0.40674035683240689 172 2.2368193199776902 172.5 0.34073287575163363
+		 202 1.2736520106286333 219 1.4947244685498697 227 1.4022886874139606 237 0.071905412886018844
+		 245 1.2647320047575792 255 2.4243847934708902 259 2.2330932642304449 261 3.9911323466322881
+		 266 7.863000726569056 272 2.2440577987283983 276 5.9562934486855577 282 -0.61538164531794259
+		 283 -0.12279706762729065 285 0.94094111012411163 287 0.71848139961953672 288 1.3192899408176382
+		 289 1.5464542379969233 290 1.5685062447486819 291 1.5011382357921945 292 1.1837821058245053
+		 293 0.74955014706766854 294 0.46092593977547669 295 0.29837294700545614;
 createNode animCurveTL -n "pig_latest_controller_L_backfoot01_translateZ1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 22 ".ktv[0:21]"  143.75 -0.0099201906556746038 146.25 1.8951903104162755
+	setAttr -s 37 ".ktv[0:36]"  143.75 -0.0099201906556746038 146.25 1.8951903104162755
 		 150 0.051851490448055468 152.5 -5.1327339060738835 156.25 -0.0099201906556746038
 		 158.75 1.8951903104162755 162.5 0.051851490448055468 165 -5.1327339060738835 168.75 1.2136403355454111
-		 170 0.90311799309347085 171.25 -0.11221653534040971 172.5 -4.6527690239637991 215 -1.9141731948723344
-		 255 -1.1376916437418696 259 -2.292644133382618 261 -4.0304263642288829 274 -4.8590377876149677
-		 282 -1.4777674348092615 283 -1.2090551794496942 285 -1.1533091844900429 287 -1.1328573793284493
-		 293 -1.1735981515329645;
+		 170 0.90311799309347085 171 0.72471216310768005 171.25 -0.11221653534040971 172 -1.9275409673977137
+		 172.5 -4.6527690239637991 202 -3.0318455573117942 219 -1.9141731948723344 227 -1.1434533496552644
+		 237 0.4051855745336656 245 1.3925635616952536 255 -0.114316474151513 259 -2.292644133382618
+		 261 -4.0304263642288829 266 -4.824210447880998 272 -4.8349717706594646 276 -5.4733408432560022
+		 282 -1.4777674348092615 283 -1.2090551794496942 285 -1.1533091844900429 287 -0.9289698045758753
+		 288 -0.92595884689245833 289 -0.94031816534351509 290 -0.96875605061438341 291 -1.0381904962268644
+		 292 -1.112731879131013 293 -1.1579648982826702 294 -1.1667562024919291 295 -1.1716041034338056;
 createNode animCurveTA -n "pig_latest_controller_L_backfoot01_rotateX";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 22 ".ktv[0:21]"  143.75 44.539233209421596 146.25 31.46234814356022
+	setAttr -s 37 ".ktv[0:36]"  143.75 44.539233209421596 146.25 31.46234814356022
 		 150 -5.5319932405949821 152.5 64.429568216038589 156.25 44.539233209421596 158.75 31.46234814356022
 		 162.5 -5.5319932405949821 165 64.429568216038589 168.75 -5.3507104497934543 170 -5.3507104497934543
-		 171.25 20.323637073214989 172.5 69.18160950558206 215 69.18160950558206 255 69.18160950558206
-		 259 69.18160950558206 261 37.667855061067989 274 37.667855061067989 282 25.42112452188853
-		 283 25.42112452188853 285 -12.287617934204736 287 -12.287617934204736 293 -12.287617934204736;
+		 171 12.88315827365509 171.25 20.323637073214989 172 35.060704352647484 172.5 69.18160950558206
+		 202 69.18160950558206 219 69.18160950558206 227 9.1166681998083803 237 -21.374955352347857
+		 245 -19.911856028982289 255 -9.9210938504550636 259 69.18160950558206 261 37.667855061067989
+		 266 70.111855659338715 272 37.667855061067989 276 33.357005911276815 282 25.42112452188853
+		 283 25.42112452188853 285 -12.287617934204736 287 -12.287617934204736 288 -12.287617934204736
+		 289 -12.287617934204736 290 -12.287617934204736 291 -12.287617934204736 292 -12.287617934204736
+		 293 -12.287617934204736 294 -12.287617934204736 295 -12.287617934204736;
 createNode animCurveTA -n "pig_latest_controller_L_backfoot01_rotateY";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 22 ".ktv[0:21]"  143.75 0 146.25 6.3686798199496462 150 0
+	setAttr -s 37 ".ktv[0:36]"  143.75 0 146.25 6.3686798199496462 150 0
 		 152.5 0 156.25 0 158.75 6.3686798199496462 162.5 0 165 0 168.75 -14.00926161791809
-		 170 -14.00926161791809 171.25 -5.705192344975142 172.5 22.564036446688213 215 22.564036446688213
-		 255 22.564036446688213 259 22.564036446688213 261 49.744284205283357 274 49.744284205283357
+		 170 -14.00926161791809 171 -8.9096150808719479 171.25 -5.705192344975142 172 -9.879065522894269
+		 172.5 22.564036446688213 202 22.564036446688213 219 22.564036446688213 227 22.564036446688213
+		 237 22.564036446688227 245 22.56403644668822 255 3.1992360534697442 259 22.564036446688213
+		 261 49.744284205283357 266 -22.91000697380511 272 49.744284205283357 276 36.047908195182032
 		 282 10.834125085677307 283 10.834125085677307 285 10.834125085677318 287 10.834125085677318
-		 293 10.834125085677318;
+		 288 10.834125085677318 289 10.834125085677318 290 10.834125085677318 291 10.834125085677318
+		 292 10.834125085677318 293 10.834125085677318 294 10.834125085677318 295 10.834125085677318;
 createNode animCurveTA -n "pig_latest_controller_L_backfoot01_rotateZ";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 22 ".ktv[0:21]"  143.75 0 146.25 -5.0514766861082609 150 0
+	setAttr -s 37 ".ktv[0:36]"  143.75 0 146.25 -5.0514766861082609 150 0
 		 152.5 0 156.25 0 158.75 -5.0514766861082609 162.5 0 165 0 168.75 -7.6659221104537156
-		 170 -7.6659221104537156 171.25 -24.809160573855362 172.5 -13.893723374143663 215 -13.893723374143663
-		 255 -13.893723374143663 259 -13.893723374143663 261 56.298497344441699 274 56.298497344441699
+		 170 -7.6659221104537156 171 -23.026150768323156 171.25 -24.809160573855362 172 -10.781416110399359
+		 172.5 -13.893723374143663 202 -13.893723374143663 219 -13.893723374143663 227 -13.893723374143656
+		 237 -13.893723374143669 245 -13.893723374143663 255 1.350410009268818 259 -13.893723374143663
+		 261 56.298497344441699 266 24.736063360357974 272 56.298497344441699 276 33.96991219557701
 		 282 -7.1349831921057412 283 -7.1349831921057412 285 -7.1349831921057421 287 -7.1349831921057421
-		 293 -7.1349831921057421;
+		 288 -7.1349831921057421 289 -7.1349831921057421 290 -7.1349831921057421 291 -7.1349831921057421
+		 292 -7.1349831921057421 293 -7.1349831921057421 294 -7.1349831921057421 295 -7.1349831921057421;
 createNode animCurveTU -n "pig_latest_controller_L_backfoot01_scaleX";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 22 ".ktv[0:21]"  143.75 1 146.25 1 150 1 152.5 1 156.25 1
-		 158.75 1 162.5 1 165 1 168.75 1 170 1 171.25 1 172.5 1 215 1 255 1 259 1 261 1 274 1
-		 282 1 283 1 285 1 287 1 293 1;
+	setAttr -s 37 ".ktv[0:36]"  143.75 1 146.25 1 150 1 152.5 1 156.25 1
+		 158.75 1 162.5 1 165 1 168.75 1 170 1 171 1 171.25 1 172 1 172.5 1 202 1 219 1 227 1
+		 237 1 245 1 255 1 259 1 261 1 266 1 272 1 276 1 282 1 283 1 285 1 287 1 288 1 289 1
+		 290 1 291 1 292 1 293 1 294 1 295 1;
 createNode animCurveTU -n "pig_latest_controller_L_backfoot01_scaleY";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 22 ".ktv[0:21]"  143.75 1 146.25 1 150 1 152.5 1 156.25 1
-		 158.75 1 162.5 1 165 1 168.75 1 170 1 171.25 1 172.5 1 215 1 255 1 259 1 261 1 274 1
-		 282 1 283 1 285 1 287 1 293 1;
+	setAttr -s 37 ".ktv[0:36]"  143.75 1 146.25 1 150 1 152.5 1 156.25 1
+		 158.75 1 162.5 1 165 1 168.75 1 170 1 171 1 171.25 1 172 1 172.5 1 202 1 219 1 227 1
+		 237 1 245 1 255 1 259 1 261 1 266 1 272 1 276 1 282 1 283 1 285 1 287 1 288 1 289 1
+		 290 1 291 1 292 1 293 1 294 1 295 1;
 createNode animCurveTU -n "pig_latest_controller_L_backfoot01_scaleZ";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 22 ".ktv[0:21]"  143.75 1 146.25 1 150 1 152.5 1 156.25 1
-		 158.75 1 162.5 1 165 1 168.75 1 170 1 171.25 1 172.5 1 215 1 255 1 259 1 261 1 274 1
-		 282 1 283 1 285 1 287 1 293 1;
+	setAttr -s 37 ".ktv[0:36]"  143.75 1 146.25 1 150 1 152.5 1 156.25 1
+		 158.75 1 162.5 1 165 1 168.75 1 170 1 171 1 171.25 1 172 1 172.5 1 202 1 219 1 227 1
+		 237 1 245 1 255 1 259 1 261 1 266 1 272 1 276 1 282 1 283 1 285 1 287 1 288 1 289 1
+		 290 1 291 1 292 1 293 1 294 1 295 1;
 createNode animCurveTL -n "pig_latest_controller_R_frontfoot01_translateX1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 23 ".ktv[0:22]"  143.75 -4.5358347092972536e-014 146.25 -1.4953793784766098
+	setAttr -s 27 ".ktv[0:26]"  143.75 -4.5358347092972536e-014 146.25 -1.4953793784766098
 		 150 -4.5358347092972536e-014 152.5 -0.44245385777153273 156.25 -4.5358347092972536e-014
 		 158.75 -1.4953793784766098 162.5 -4.5358347092972536e-014 165 -0.098263235200193047
 		 168.75 0.0020263039643947894 170 -0.45438293411379499 171.25 -0.16741106876384684
-		 172.5 -1.0664150548873423 201.25 -1.0927017199694644 255 -1.4289318932551323 259 0.33692748039460696
+		 172.5 -1.0664150548873423 201.25 -1.0927017199694644 214 -1.1404833571757016 222 -0.75344203943125021
+		 231 -0.87139677540469052 240 -0.71206541318543837 248 -0.71578816320458694 259 0.33692748039460696
 		 261 -4.9961550818124065 276 -3.3786270209688993 286 -0.38957806786926441 287 -0.42431121174849795
 		 288 -0.42331347689390525 290 -0.41892355451614832 292 -0.40965594070653866 296 -0.39521797367626077;
 createNode animCurveTL -n "pig_latest_controller_R_frontfoot01_translateY1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 23 ".ktv[0:22]"  143.75 2.1492564599816411 146.25 2.7606077595055427
+	setAttr -s 27 ".ktv[0:26]"  143.75 2.1492564599816411 146.25 2.7606077595055427
 		 150 -0.13001482755864879 152.5 0.16859392068031478 156.25 2.1492564599816411 158.75 2.7606077595055427
 		 162.5 -0.13001482755864879 165 0.25707259925389969 168.75 -0.11755837752085918 170 0.65526916872221375
-		 171.25 1.0087520516678568 172.5 1.7415828713131554 201.25 0.73093805712762172 255 0.38401923800174492
+		 171.25 1.0087520516678568 172.5 1.7415828713131554 201.25 0.73093805712762172 214 0.55956235887793326
+		 222 2.3159841871918951 231 1.5095112363221892 240 0.70159576848335425 248 0.90849781767848237
 		 259 1.8904899572137284 261 4.5872248199415973 276 4.1620983393506643 286 -0.19481269417298994
 		 287 0.41487274800054641 288 0.85349296617600467 290 1.1809157983523797 292 0.72226131713727704
 		 294 -0.13331348131406545;
-	setAttr -s 23 ".kit[22]"  1;
-	setAttr -s 23 ".kot[18:22]"  1 16 16 16 16;
-	setAttr -s 23 ".ktl[18:22]" no yes yes yes yes;
-	setAttr -s 23 ".kix[22]"  0.17298251390457153;
-	setAttr -s 23 ".kiy[22]"  -0.98492491245269775;
-	setAttr -s 23 ".kox[18:22]"  0.71260404586791992 0.12944319844245911 
+	setAttr -s 27 ".kit[26]"  1;
+	setAttr -s 27 ".kot[22:26]"  1 16 16 16 16;
+	setAttr -s 27 ".ktl[22:26]" no yes yes yes yes;
+	setAttr -s 27 ".kix[26]"  0.17298251390457153;
+	setAttr -s 27 ".kiy[26]"  -0.98492491245269775;
+	setAttr -s 27 ".kox[22:26]"  0.71260404586791992 0.12944319844245911 
 		1 0.10093541443347931 0.17298251390457153;
-	setAttr -s 23 ".koy[18:22]"  0.70156651735305786 0.99158686399459839 
+	setAttr -s 27 ".koy[22:26]"  0.70156651735305786 0.99158686399459839 
 		0 -0.99489295482635498 -0.98492491245269775;
 createNode animCurveTL -n "pig_latest_controller_R_frontfoot01_translateZ1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 23 ".ktv[0:22]"  143.75 -2.3206772870090604e-014 146.25 4.379601527139398
+	setAttr -s 27 ".ktv[0:26]"  143.75 -2.3206772870090604e-014 146.25 4.379601527139398
 		 150 -2.3206772870090604e-014 152.5 -1.9173810729012977 156.25 -2.3206772870090604e-014
 		 158.75 4.379601527139398 162.5 -2.3206772870090604e-014 165 -1.1063057113085799 168.75 -0.043980339348099647
 		 170 0.23880300558065329 171.25 2.2336814281795712 172.5 3.8985107169666628 201.25 1.9277407739934127
-		 255 0.12767881342177501 259 1.0741916091632313 261 0.80227856811977272 276 3.1858002975270834
+		 214 1.33285266505596 222 0.99250691753399523 231 0.70723800605325748 240 -0.8350101892797831
+		 248 0.45408851065471068 259 1.0741916091632313 261 0.80227856811977272 276 3.1858002975270834
 		 286 0.84311405701726205 287 0.37846906736773284 288 0.38929761371343269 290 0.39635861632366209
 		 292 0.37999239732918394 296 0.31973570253773087;
 createNode animCurveTA -n "pig_latest_controller_R_frontfoot01_rotateX1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 23 ".ktv[0:22]"  143.75 37.163074530352361 146.25 23.565492686731471
+	setAttr -s 27 ".ktv[0:26]"  143.75 37.163074530352361 146.25 23.565492686731471
 		 150 -1.4663470034699251 152.5 83.608348202784029 156.25 37.163074530352361 158.75 23.565492686731471
 		 162.5 -1.4663470034699251 165 19.242841233777948 168.75 8.0822535600875174 170 8.0822535600875174
-		 171.25 8.0822535600875174 172.5 8.0822535600875174 201.25 18.66212115640074 255 45.648900334533643
+		 171.25 8.0822535600875174 172.5 8.0822535600875174 201.25 18.66212115640074 214 25.875284795705376
+		 222 -35.057310680395176 231 -22.374510215907844 240 -15.772353640774243 248 7.5583153688107734
 		 259 45.910190558654918 261 45.910190558654918 276 45.910190558654918 286 -2.9971979975776128
 		 287 -4.1634150436776531 288 -4.1634150436776531 290 -4.1634150436776531 292 -4.1634150436776531
 		 296 -4.1634150436776531;
+	setAttr -s 27 ".kit[14:26]"  1 16 16 16 16 16 16 16 
+		16 16 16 16 16;
+	setAttr -s 27 ".kot[14:26]"  1 16 16 16 16 16 16 16 
+		16 16 16 16 16;
+	setAttr -s 27 ".kix[14:26]"  0.6762961745262146 1 0.73522394895553589 
+		0.50705611705780029 1 1 1 1 1 1 1 1 1;
+	setAttr -s 27 ".kiy[14:26]"  -0.73662984371185303 0 0.67782425880432129 
+		0.86191302537918091 0 0 0 0 0 0 0 0 0;
+	setAttr -s 27 ".kox[14:26]"  0.67629611492156982 1 0.73522394895553589 
+		0.50705611705780029 1 1 1 1 1 1 1 1 1;
+	setAttr -s 27 ".koy[14:26]"  -0.7366299033164978 0 0.67782425880432129 
+		0.86191302537918091 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "pig_latest_controller_R_frontfoot01_rotateY1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 23 ".ktv[0:22]"  143.75 0 146.25 0 150 0 152.5 0 156.25 0
-		 158.75 0 162.5 0 165 0 168.75 0 170 0 171.25 0 172.5 0 201.25 0 255 0 259 0 261 0
+	setAttr -s 27 ".ktv[0:26]"  143.75 0 146.25 0 150 0 152.5 0 156.25 0
+		 158.75 0 162.5 0 165 0 168.75 0 170 0 171.25 0 172.5 0 201.25 0 214 0 222 -16.208327576473469
+		 231 4.0555251025881445 240 -5.5219216814893946 248 22.349171522514492 259 0 261 0
 		 276 0 286 3.2770867014469101 287 3.3552301984848065 288 3.3552301984848065 290 3.3552301984848065
 		 292 3.3552301984848065 296 3.3552301984848065;
 createNode animCurveTA -n "pig_latest_controller_R_frontfoot01_rotateZ1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 23 ".ktv[0:22]"  143.75 0 146.25 0 150 0 152.5 0 156.25 0
-		 158.75 0 162.5 0 165 0 168.75 0 170 0 171.25 0 172.5 0 201.25 0 255 0 259 0 261 0
+	setAttr -s 27 ".ktv[0:26]"  143.75 0 146.25 0 150 0 152.5 0 156.25 0
+		 158.75 0 162.5 0 165 0 168.75 0 170 0 171.25 0 172.5 0 201.25 0 214 0 222 -19.660150687274466
+		 231 -24.189103773863749 240 19.980348397419739 248 -3.8958048434909451 259 0 261 0
 		 276 0 286 -3.4337659222430181 287 -3.5156455005450371 288 -3.5156455005450371 290 -3.5156455005450371
 		 292 -3.5156455005450371 296 -3.5156455005450371;
 createNode animCurveTU -n "pig_latest_controller_R_frontfoot01_scaleX1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 23 ".ktv[0:22]"  143.75 1 146.25 1 150 1 152.5 1 156.25 1
-		 158.75 1 162.5 1 165 1 168.75 1 170 1 171.25 1 172.5 1 201.25 1 255 1 259 1 261 1
-		 276 1 286 1 287 1 288 1 290 1 292 1 296 1;
+	setAttr -s 27 ".ktv[0:26]"  143.75 1 146.25 1 150 1 152.5 1 156.25 1
+		 158.75 1 162.5 1 165 1 168.75 1 170 1 171.25 1 172.5 1 201.25 1 214 1 222 1 231 1
+		 240 1 248 1 259 1 261 1 276 1 286 1 287 1 288 1 290 1 292 1 296 1;
 createNode animCurveTU -n "pig_latest_controller_R_frontfoot01_scaleY1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 23 ".ktv[0:22]"  143.75 1 146.25 1 150 1 152.5 1 156.25 1
-		 158.75 1 162.5 1 165 1 168.75 1 170 1 171.25 1 172.5 1 201.25 1 255 1 259 1 261 1
-		 276 1 286 1 287 1 288 1 290 1 292 1 296 1;
+	setAttr -s 27 ".ktv[0:26]"  143.75 1 146.25 1 150 1 152.5 1 156.25 1
+		 158.75 1 162.5 1 165 1 168.75 1 170 1 171.25 1 172.5 1 201.25 1 214 1 222 1 231 1
+		 240 1 248 1 259 1 261 1 276 1 286 1 287 1 288 1 290 1 292 1 296 1;
 createNode animCurveTU -n "pig_latest_controller_R_frontfoot01_scaleZ1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 23 ".ktv[0:22]"  143.75 1 146.25 1 150 1 152.5 1 156.25 1
-		 158.75 1 162.5 1 165 1 168.75 1 170 1 171.25 1 172.5 1 201.25 1 255 1 259 1 261 1
-		 276 1 286 1 287 1 288 1 290 1 292 1 296 1;
+	setAttr -s 27 ".ktv[0:26]"  143.75 1 146.25 1 150 1 152.5 1 156.25 1
+		 158.75 1 162.5 1 165 1 168.75 1 170 1 171.25 1 172.5 1 201.25 1 214 1 222 1 231 1
+		 240 1 248 1 259 1 261 1 276 1 286 1 287 1 288 1 290 1 292 1 296 1;
 createNode animCurveTL -n "pig_latest_controller_L_frontfoot01_translateX1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 24 ".ktv[0:23]"  143.75 0 146.25 -0.088909049096805082 150 0.089178504004004039
+	setAttr -s 23 ".ktv[0:22]"  143.75 0 146.25 -0.088909049096805082 150 0.089178504004004039
 		 152.5 0.15757107817540589 156.25 0 158.75 -0.088909049096805082 162.5 0.089178504004004039
 		 165 0.15757107817540589 168.75 0 170 -0.12747840385859557 171.25 -0.028904846076546899
-		 172.5 0.67055225317243861 201.25 0.70963592716192792 255 0.64121534888978615 259 -0.88949411467538309
-		 261 5.8219920008033998 276 5.8219920008033998 283 2.2104958917324069 286 0.60723888861802444
-		 287 0.50942350441613704 288 0.50942350441613893 291 0.50942350441608908 293 0.50942350441610595
-		 296 0.50942350441613704;
+		 172.5 0.67055225317243861 201.25 0.70963592716192792 214 0.69991268544184937 261 5.8219920008033998
+		 276 5.8219920008033998 283 2.2104958917324069 286 0.60723888861802444 287 0.50942350441613704
+		 288 0.50942350441613893 291 0.50942350441608908 293 0.50942350441610595 296 0.50942350441613704;
 createNode animCurveTL -n "pig_latest_controller_L_frontfoot01_translateY1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 24 ".ktv[0:23]"  143.75 0 146.25 0.24585005841739038 150 1.9640067218602533
+	setAttr -s 23 ".ktv[0:22]"  143.75 0 146.25 0.24585005841739038 150 1.9640067218602533
 		 152.5 1.8782376341842291 156.25 0 158.75 0.24585005841739038 162.5 1.9640067218602533
 		 165 1.8782376341842291 168.75 0 170 1.1408895919365225 171.25 2.2593576116308367
-		 172.5 2.5756387003145358 201.25 1.6702049030278121 255 0.95871505084433617 259 2.3667345832840749
-		 261 3.3085531517451465 276 3.3085531517451465 283 0.1115251953440321 286 -0.25568471527933018
-		 287 0.42911793168537321 288 0.981925876916389 291 1.1251115897458002 293 0.37769165171194591
-		 296 -0.051924687268285828;
+		 172.5 2.5756387003145358 201.25 1.6702049030278121 214 1.4236978437487888 261 3.3085531517451465
+		 276 3.3085531517451465 283 0.1115251953440321 286 -0.25568471527933018 287 0.42911793168537321
+		 288 0.981925876916389 291 1.1251115897458002 293 0.37769165171194591 296 -0.051924687268285828;
 createNode animCurveTL -n "pig_latest_controller_L_frontfoot01_translateZ1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 24 ".ktv[0:23]"  143.75 0 146.25 -1.861175408764258 150 0.091489162853193889
+	setAttr -s 23 ".ktv[0:22]"  143.75 0 146.25 -1.861175408764258 150 0.091489162853193889
 		 152.5 3.6286597811330266 156.25 0 158.75 -1.861175408764258 162.5 0.091489162853193889
 		 165 3.6286597811330266 168.75 0 170 0.58889601118597412 171.25 2.6649423613894698
-		 172.5 4.6340314990870919 201.25 3.5326510370881006 255 2.5419287316783179 259 1.3593157603434256
-		 261 0.46947746899737397 276 0.46947746899737397 283 0.21136379631722485 286 0.15998397099991934
-		 287 -0.052872004289470566 288 -0.036023316567346801 291 -0.02929081986588045 293 -0.053292535495349971
-		 296 -0.067218384050042879;
+		 172.5 4.6340314990870919 201.25 3.5326510370881006 214 3.2905535002322468 261 0.46947746899737397
+		 276 0.46947746899737397 283 0.21136379631722485 286 0.15998397099991934 287 -0.052872004289470566
+		 288 -0.036023316567346801 291 -0.02929081986588045 293 -0.053292535495349971 296 -0.067218384050042879;
 createNode animCurveTA -n "pig_latest_controller_L_frontfoot01_rotateX1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 24 ".ktv[0:23]"  143.75 0 146.25 71.036427147553184 150 40.742263063056789
+	setAttr -s 23 ".ktv[0:22]"  143.75 0 146.25 71.036427147553184 150 40.742263063056789
 		 152.5 20.00768129727539 156.25 0 158.75 71.036427147553184 162.5 40.742263063056789
 		 165 20.00768129727539 168.75 0 170 10.337425505619889 171.25 10.337425505619889 172.5 10.337425505619889
-		 201.25 24.743133346108198 255 36.74870704609156 259 36.835718856587832 261 36.835718856587832
-		 276 36.835718856587832 283 11.919169994810174 286 2.279397154384887 287 1.2139192811733508
-		 288 1.2139192811733508 291 1.2139192811733508 293 1.2139192811733508 296 1.2139192811733508;
-	setAttr -s 24 ".kit[11:23]"  1 16 16 16 16 16 16 16 
-		16 16 16 16 16;
-	setAttr -s 24 ".kot[11:23]"  1 16 16 16 16 16 16 16 
-		16 16 16 16 16;
-	setAttr -s 24 ".kix[11:23]"  0.95779883861541748 0.98624056577682495 
-		1 1 1 1 0.48371937870979309 0.58087676763534546 1 1 1 1 1;
-	setAttr -s 24 ".kiy[11:23]"  0.2874394953250885 0.16531680524349213 
-		0 0 0 0 -0.87522310018539429 -0.8139914870262146 0 0 0 0 0;
-	setAttr -s 24 ".kox[11:23]"  0.95779883861541748 0.98624056577682495 
-		1 1 1 1 0.48371937870979309 0.58087676763534546 1 1 1 1 1;
-	setAttr -s 24 ".koy[11:23]"  0.2874394953250885 0.16531680524349213 
-		0 0 0 0 -0.87522310018539429 -0.8139914870262146 0 0 0 0 0;
+		 201.25 24.743133346108198 214 28.824204512525288 261 36.835718856587832 276 36.835718856587832
+		 283 11.919169994810174 286 2.279397154384887 287 1.2139192811733508 288 1.2139192811733508
+		 291 1.2139192811733508 293 1.2139192811733508 296 1.2139192811733508;
+	setAttr -s 23 ".kit[11:22]"  1 16 16 16 16 16 16 16 
+		16 16 16 16;
+	setAttr -s 23 ".kot[11:22]"  1 16 16 16 16 16 16 16 
+		16 16 16 16;
+	setAttr -s 23 ".kix[11:22]"  0.95779883861541748 0.97386032342910767 
+		0.99443203210830688 1 1 0.48371937870979309 0.58087676763534546 1 1 1 1 1;
+	setAttr -s 23 ".kiy[11:22]"  0.2874394953250885 0.22714777290821075 
+		0.10537923872470856 0 0 -0.87522310018539429 -0.8139914870262146 0 0 0 0 0;
+	setAttr -s 23 ".kox[11:22]"  0.95779883861541748 0.97386032342910767 
+		0.99443203210830688 1 1 0.48371937870979309 0.58087676763534546 1 1 1 1 1;
+	setAttr -s 23 ".koy[11:22]"  0.2874394953250885 0.22714777290821075 
+		0.10537923872470856 0 0 -0.87522310018539429 -0.8139914870262146 0 0 0 0 0;
 createNode animCurveTA -n "pig_latest_controller_L_frontfoot01_rotateY1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 24 ".ktv[0:23]"  143.75 0 146.25 0 150 0 152.5 0 156.25 0
-		 158.75 0 162.5 0 165 0 168.75 0 170 0 171.25 0 172.5 0 201.25 0 255 0 259 0 261 0
-		 276 0 283 0 286 0 287 0 288 0 291 0 293 0 296 0;
+	setAttr -s 23 ".ktv[0:22]"  143.75 0 146.25 0 150 0 152.5 0 156.25 0
+		 158.75 0 162.5 0 165 0 168.75 0 170 0 171.25 0 172.5 0 201.25 0 214 0 261 0 276 0
+		 283 0 286 0 287 0 288 0 291 0 293 0 296 0;
 createNode animCurveTA -n "pig_latest_controller_L_frontfoot01_rotateZ1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 24 ".ktv[0:23]"  143.75 0 146.25 0 150 0 152.5 0 156.25 0
-		 158.75 0 162.5 0 165 0 168.75 0 170 0 171.25 0 172.5 0 201.25 0 255 0 259 0 261 0
-		 276 0 283 0 286 0 287 0 288 0 291 0 293 0 296 0;
+	setAttr -s 23 ".ktv[0:22]"  143.75 0 146.25 0 150 0 152.5 0 156.25 0
+		 158.75 0 162.5 0 165 0 168.75 0 170 0 171.25 0 172.5 0 201.25 0 214 0 261 0 276 0
+		 283 0 286 0 287 0 288 0 291 0 293 0 296 0;
 createNode animCurveTU -n "pig_latest_controller_L_frontfoot01_scaleX1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 24 ".ktv[0:23]"  143.75 1 146.25 1 150 1 152.5 1 156.25 1
-		 158.75 1 162.5 1 165 1 168.75 1 170 1 171.25 1 172.5 1 201.25 1 255 1 259 1 261 1
-		 276 1 283 1 286 1 287 1 288 1 291 1 293 1 296 1;
+	setAttr -s 23 ".ktv[0:22]"  143.75 1 146.25 1 150 1 152.5 1 156.25 1
+		 158.75 1 162.5 1 165 1 168.75 1 170 1 171.25 1 172.5 1 201.25 1 214 1 261 1 276 1
+		 283 1 286 1 287 1 288 1 291 1 293 1 296 1;
 createNode animCurveTU -n "pig_latest_controller_L_frontfoot01_scaleY1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 24 ".ktv[0:23]"  143.75 1 146.25 1 150 1 152.5 1 156.25 1
-		 158.75 1 162.5 1 165 1 168.75 1 170 1 171.25 1 172.5 1 201.25 1 255 1 259 1 261 1
-		 276 1 283 1 286 1 287 1 288 1 291 1 293 1 296 1;
+	setAttr -s 23 ".ktv[0:22]"  143.75 1 146.25 1 150 1 152.5 1 156.25 1
+		 158.75 1 162.5 1 165 1 168.75 1 170 1 171.25 1 172.5 1 201.25 1 214 1 261 1 276 1
+		 283 1 286 1 287 1 288 1 291 1 293 1 296 1;
 createNode animCurveTU -n "pig_latest_controller_L_frontfoot01_scaleZ1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 24 ".ktv[0:23]"  143.75 1 146.25 1 150 1 152.5 1 156.25 1
-		 158.75 1 162.5 1 165 1 168.75 1 170 1 171.25 1 172.5 1 201.25 1 255 1 259 1 261 1
-		 276 1 283 1 286 1 287 1 288 1 291 1 293 1 296 1;
+	setAttr -s 23 ".ktv[0:22]"  143.75 1 146.25 1 150 1 152.5 1 156.25 1
+		 158.75 1 162.5 1 165 1 168.75 1 170 1 171.25 1 172.5 1 201.25 1 214 1 261 1 276 1
+		 283 1 286 1 287 1 288 1 291 1 293 1 296 1;
 createNode animCurveTL -n "pCube118_translateX";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
@@ -50564,66 +50817,97 @@ createNode pairBlend -n "pairBlend4";
 createNode animCurveTA -n "pairBlend4_inRotateX1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  143.75 0 148.75 -3.3382715215769627 152.5 -37.172156266219005
-		 156.25 -3.5028558166056283 163.75 -23.696709148350983 168.75 16.756868003718346 171.25 16.756868003718346
-		 173.75 -53.753826539204979 259 -53.753826539204979 261 51.022089667525499 269 -81.960386803532685;
+	setAttr -s 24 ".ktv[0:23]"  143.75 0 148.75 -3.3382715215769627 152.5 -37.172156266219005
+		 156 -3.0199732586527142 156.25 -3.5028558166056283 157 -4.7415426495994506 160 -16.925424004159705
+		 161 -34.046326330958536 162 -58.118368304585879 163 -75.771489877571597 163.75 -23.696709148350983
+		 164 -42.639853071598068 166 -25.495945002278592 168.75 16.756868003718346 171.25 16.756868003718346
+		 173.75 -53.753826539204979 259 -53.753826539204979 261 51.022089667525499 269 -81.960386803532685
+		 279 -81.960386803532685 283 -113.53649926403567 286 -84.799324171026285 290 -84.799324171026285
+		 297 -5.207072528797986;
 createNode animCurveTA -n "pairBlend4_inRotateY1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  143.75 0 148.75 0 152.5 0 156.25 0 163.75 0
-		 168.75 0 171.25 0 173.75 0 259 0 261 0 269 0;
+	setAttr -s 24 ".ktv[0:23]"  143.75 0 148.75 0 152.5 0 156 16.24000758190147
+		 156.25 0 157 28.344218525241892 160 50.184974876593991 161 58.982220348067422 162 63.076884085555577
+		 163 55.481523444849557 163.75 0 164 56.416679348626261 166 55.138720472223177 168.75 0
+		 171.25 0 173.75 0 259 0 261 0 269 0 279 0 283 0 286 -51.05097316515603 290 -51.05097316515603
+		 297 -7.849607359552456;
 createNode animCurveTA -n "pairBlend4_inRotateZ1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  143.75 0 148.75 0 152.5 0 156.25 0 163.75 0
-		 168.75 0 171.25 0 173.75 0 259 0 261 0 269 0;
+	setAttr -s 24 ".ktv[0:23]"  143.75 0 148.75 0 152.5 0 156 2.2734797909298048
+		 156.25 0 157 -3.0820082565778533 160 -11.584179160507672 161 -28.541116366448183
+		 162 -53.527802086468739 163 -76.258359191654989 163.75 0 164 -36.657288630321034
+		 166 -24.934356122890883 168.75 0 171.25 0 173.75 0 259 0 261 0 269 0 279 0 283 0
+		 286 32.606322010469952 290 32.606322010469952 297 64.756132822599966;
 createNode animCurveTL -n "pairBlend4_inTranslateX1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  143.75 -5.6843418860808015e-014 148.75 4.20071319393809e-014
-		 152.5 -5.6843418860808015e-014 156.25 -2.9313205099992759e-014 163.75 -2.9313205099992759e-014
-		 168.75 0.36994154580785432 171.25 0.04267633873991214 173.75 0.04267633873991214
-		 259 0.04267633873991214 261 0.59147322139253111 269 0.59147322139253111;
+	setAttr -s 24 ".ktv[0:23]"  143.75 -5.6843418860808015e-014 148.75 4.20071319393809e-014
+		 152.5 -5.6843418860808015e-014 156 -2.9663989168603119e-014 156.25 -2.9313205099992759e-014
+		 157 -2.9313205099992759e-014 160 -2.9313205099992759e-014 161 -2.9313205099992759e-014
+		 162 -2.9313205099992759e-014 163 -2.9313205099992759e-014 163.75 -2.9313205099992759e-014
+		 164 0.0026820007957151894 166 0.14318176433755997 168.75 0.36994154580785432 171.25 0.04267633873991214
+		 173.75 0.04267633873991214 259 0.04267633873991214 261 0.59147322139253111 269 0.59147322139253111
+		 279 0.59147322139253111 283 0.59147322139253111 286 0.59147322139253111 290 0.59147322139253111
+		 297 -0.68889963517886399;
 createNode animCurveTL -n "pairBlend4_inTranslateY1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  143.75 8.8817841970012523e-016 148.75 -0.25966023518531667
-		 152.5 -0.52898448920625973 156.25 0.044231111526974433 163.75 0.044231111526974433
-		 168.75 1.310355888365847 171.25 -1.1736431264875626 173.75 -1.1736431264875626 259 -1.1736431264875626
-		 261 0.076314173381286751 269 -1.1987625597890519;
+	setAttr -s 24 ".ktv[0:23]"  143.75 8.8817841970012523e-016 148.75 -0.25966023518531667
+		 152.5 -0.52898448920625973 156 0.036927321503290478 156.25 0.044231111526974433 157 0.044231111526974433
+		 160 0.044231111526974433 161 0.044231111526974433 162 0.044231111526974433 163 0.044231111526974433
+		 163.75 0.044231111526974433 164 0.053410258063700942 166 0.53427063661851659 168.75 1.310355888365847
+		 171.25 -1.1736431264875626 173.75 -1.1736431264875626 259 -1.1736431264875626 261 0.076314173381286751
+		 269 -1.1987625597890519 279 -1.1987625597890519 283 -1.1987625597890519 286 -1.1987625597890519
+		 290 -1.1987625597890519 297 -0.33551335435482466;
 createNode animCurveTL -n "pairBlend4_inTranslateZ1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  143.75 4.4408920985006262e-015 148.75 5.6641862462429814e-015
-		 152.5 4.4408920985006262e-015 156.25 -4.3477030236795975e-014 163.75 -4.3477030236795975e-014
-		 168.75 1.7222747885873231 171.25 -0.3317491074764356 173.75 -0.3317491074764356 259 -0.3317491074764356
-		 261 0.80024133140408393 269 0.15075501349009415;
+	setAttr -s 24 ".ktv[0:23]"  143.75 4.4408920985006262e-015 148.75 5.6641862462429814e-015
+		 152.5 4.4408920985006262e-015 156 -4.2866470366023921e-014 156.25 -4.3477030236795975e-014
+		 157 -4.3477030236795975e-014 160 -4.3477030236795975e-014 161 -4.3477030236795975e-014
+		 162 -4.3477030236795975e-014 163 -4.3477030236795975e-014 163.75 -4.3477030236795975e-014
+		 164 0.012486141137185817 166 0.66658731818170525 168.75 1.7222747885873231 171.25 -0.3317491074764356
+		 173.75 -0.3317491074764356 259 -0.3317491074764356 261 0.80024133140408393 269 0.15075501349009415
+		 279 0.15075501349009415 283 0.15075501349009415 286 0.15075501349009415 290 0.15075501349009415
+		 297 0.49174479321396536;
 createNode animCurveTU -n "pig_latest_tail_1control01_scaleX";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  143.75 0.99999999999999989 148.75 0.99999999999999989
-		 152.5 0.99999999999999989 156.25 0.99999999999999989 163.75 0.99999999999999989 168.75 0.99999999999999989
+	setAttr -s 24 ".ktv[0:23]"  143.75 0.99999999999999989 148.75 0.99999999999999989
+		 152.5 0.99999999999999989 156 0.99999999999999989 156.25 0.99999999999999989 157 0.99999999999999989
+		 160 0.99999999999999989 161 0.99999999999999989 162 0.99999999999999989 163 0.99999999999999989
+		 163.75 0.99999999999999989 164 0.99999999999999989 166 0.99999999999999989 168.75 0.99999999999999989
 		 171.25 0.99999999999999989 173.75 0.99999999999999989 259 0.99999999999999989 261 0.99999999999999989
-		 269 0.99999999999999989;
+		 269 0.99999999999999989 279 0.99999999999999989 283 0.99999999999999989 286 0.99999999999999989
+		 290 0.99999999999999989 297 0.99999999999999989;
 createNode animCurveTU -n "pig_latest_tail_1control01_scaleY";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  143.75 0.99999999999999989 148.75 0.99999999999999989
-		 152.5 0.99999999999999989 156.25 0.99999999999999989 163.75 0.99999999999999989 168.75 0.99999999999999989
+	setAttr -s 24 ".ktv[0:23]"  143.75 0.99999999999999989 148.75 0.99999999999999989
+		 152.5 0.99999999999999989 156 0.99999999999999989 156.25 0.99999999999999989 157 0.99999999999999989
+		 160 0.99999999999999989 161 0.99999999999999989 162 0.99999999999999989 163 0.99999999999999989
+		 163.75 0.99999999999999989 164 0.99999999999999989 166 0.99999999999999989 168.75 0.99999999999999989
 		 171.25 0.99999999999999989 173.75 0.99999999999999989 259 0.99999999999999989 261 0.99999999999999989
-		 269 0.99999999999999989;
+		 269 0.99999999999999989 279 0.99999999999999989 283 0.99999999999999989 286 0.99999999999999989
+		 290 0.99999999999999989 297 0.99999999999999989;
 createNode animCurveTU -n "pig_latest_tail_1control01_scaleZ";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  143.75 0.99999999999999989 148.75 0.99999999999999989
-		 152.5 0.99999999999999989 156.25 0.99999999999999989 163.75 0.99999999999999989 168.75 0.99999999999999989
+	setAttr -s 24 ".ktv[0:23]"  143.75 0.99999999999999989 148.75 0.99999999999999989
+		 152.5 0.99999999999999989 156 0.99999999999999989 156.25 0.99999999999999989 157 0.99999999999999989
+		 160 0.99999999999999989 161 0.99999999999999989 162 0.99999999999999989 163 0.99999999999999989
+		 163.75 0.99999999999999989 164 0.99999999999999989 166 0.99999999999999989 168.75 0.99999999999999989
 		 171.25 0.99999999999999989 173.75 0.99999999999999989 259 0.99999999999999989 261 0.99999999999999989
-		 269 0.99999999999999989;
+		 269 0.99999999999999989 279 0.99999999999999989 283 0.99999999999999989 286 0.99999999999999989
+		 290 0.99999999999999989 297 0.99999999999999989;
 createNode animCurveTU -n "pig_latest_tail_1control01_blendParent1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  143.75 0 148.75 0 152.5 0 156.25 0 163.75 0
-		 168.75 0 171.25 0 173.75 0 259 0 261 0 269 0;
+	setAttr -s 24 ".ktv[0:23]"  143.75 0 148.75 0 152.5 0 156 0 156.25 0
+		 157 0 160 0 161 0 162 0 163 0 163.75 0 164 0 166 0 168.75 0 171.25 0 173.75 0 259 0
+		 261 0 269 0 279 0 283 0 286 0 290 0 297 0;
 createNode animCurveTU -n "pig_latest_Pig_blendshapes_determinedR";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
@@ -50804,43 +51088,58 @@ createNode pairBlend -n "pairBlend5";
 createNode animCurveTA -n "pairBlend5_inRotateX1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  257 0 265 -41.971644657999896;
+	setAttr -s 10 ".ktv[0:9]"  257 0 261 -6.9823981176069667 265 -41.971644657999896
+		 270 -70.786716660102186 295 -41.971644657999896 297 -43.534022863457352 300 -51.374070371577432
+		 302 -52.870836192031291 305 -49.949966769432805 310 -46.565666899230173;
 createNode animCurveTA -n "pairBlend5_inRotateY1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  257 0 265 0;
+	setAttr -s 10 ".ktv[0:9]"  257 0 261 0 265 0 270 0 295 0 297 -20.388280843522782
+		 300 15.16724757291321 302 -20.845877287383576 305 12.665210593788428 310 -39.288799313597096;
 createNode animCurveTA -n "pairBlend5_inRotateZ1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  257 0 265 0;
+	setAttr -s 10 ".ktv[0:9]"  257 0 261 0 265 0 270 0 295 0 297 -0.81871267683178073
+		 300 5.6429546852615289 302 -0.35175909583704451 305 -2.1759763414817708 310 -6.8167788791003643;
 createNode animCurveTL -n "pairBlend5_inTranslateX1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  257 0 265 0;
+	setAttr -s 10 ".ktv[0:9]"  257 0 261 0 265 0 270 0.039219638745537626
+		 295 0 297 0 300 0 302 0 305 0 310 0;
 createNode animCurveTL -n "pairBlend5_inTranslateY1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  257 -7.9936057773011271e-015 265 -7.9936057773011271e-015;
+	setAttr -s 10 ".ktv[0:9]"  257 -7.9936057773011271e-015 261 -7.9936057773011271e-015
+		 265 -7.9936057773011271e-015 270 -1.6869135588686188 295 -7.9936057773011271e-015
+		 297 -7.9936057773011271e-015 300 -7.9936057773011271e-015 302 -7.9936057773011271e-015
+		 305 -7.9936057773011271e-015 310 -7.9936057773011271e-015;
 createNode animCurveTL -n "pairBlend5_inTranslateZ1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  257 1.6875389974302379e-014 265 1.6875389974302379e-014;
+	setAttr -s 10 ".ktv[0:9]"  257 1.6875389974302379e-014 261 1.6875389974302379e-014
+		 265 1.6875389974302379e-014 270 -0.084170779307671001 295 1.6875389974302379e-014
+		 297 1.6875389974302379e-014 300 1.6875389974302379e-014 302 1.6875389974302379e-014
+		 305 1.6875389974302379e-014 310 1.6875389974302379e-014;
 createNode animCurveTU -n "pig_latest_hip_rotation_ctrl01_scaleX1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  257 1 265 1;
+	setAttr -s 10 ".ktv[0:9]"  257 1 261 1 265 1 270 1 295 1 297 1 300 1
+		 302 1 305 1 310 1;
 createNode animCurveTU -n "pig_latest_hip_rotation_ctrl01_scaleY1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  257 1 265 1;
+	setAttr -s 10 ".ktv[0:9]"  257 1 261 1 265 1 270 1 295 1 297 1 300 1
+		 302 1 305 1 310 1;
 createNode animCurveTU -n "pig_latest_hip_rotation_ctrl01_scaleZ1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  257 1 265 1;
+	setAttr -s 10 ".ktv[0:9]"  257 1 261 1 265 1 270 1 295 1 297 1 300 1
+		 302 1 305 1 310 1;
 createNode animCurveTU -n "pig_latest_hip_rotation_ctrl01_blendParent1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  257 0 265 0;
+	setAttr -s 10 ".ktv[0:9]"  257 0 261 0 265 0 270 0 295 0 297 0 300 0
+		 302 0 305 0 310 0;
 createNode animCurveTL -n "mug_translateX";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
@@ -50882,19 +51181,44 @@ createNode animCurveTU -n "mug_scaleZ";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  259 1 265 1 278 1;
+createNode animCurveTU -n "pig_latest_spine_spline_ctrl_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 9 ".ktv[0:8]"  253 1 259 1 260 1 278 1 284 1 292 1 295 1
+		 299 1 303 1;
+	setAttr -s 9 ".kot[0:8]"  5 5 5 5 5 5 5 5 
+		5;
+createNode animCurveTL -n "pig_latest_spine_spline_ctrl_translateY";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 9 ".ktv[0:8]"  253 1.791 259 0.58143787270865865 260 0.90914283378759075
+		 278 3.7123529560212702 284 3.7123529560212702 292 0.62261958067798173 295 2.5345396413365222
+		 299 1.751827430991812 303 2.3295147825527751;
+createNode animCurveTL -n "pig_latest_spine_spline_ctrl_translateX";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  253 -0.11812431649554159 259 -0.15479735537364625
+		 260 -0.081737444365569983 278 -0.11812431649554159 292 -0.11812431649554252 295 -0.11812431649559274
+		 299 -0.1181243164955946 303 -0.11812431649559553;
+createNode animCurveTL -n "pig_latest_spine_spline_ctrl_translateZ";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  253 0.47813017721304296 259 0.21577565284050365
+		 260 0.081946662982588875 278 0.47813017721304296 292 0.37374127606596097 295 0.43076144471906386
+		 299 0.40741821862975131 303 0.42464688362081959;
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr ".o" 158;
-	setAttr ".unw" 158;
+	setAttr ".o" 180;
+	setAttr ".unw" 180;
 select -ne :renderPartition;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 777 ".st";
+	setAttr -s 778 ".st";
 	setAttr -cb on ".an";
 	setAttr -cb on ".pt";
 select -ne :renderGlobalsList1;
@@ -50907,7 +51231,7 @@ select -ne :defaultShaderList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 317 ".s";
+	setAttr -s 318 ".s";
 select -ne :postProcessList1;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -50919,7 +51243,7 @@ select -ne :defaultRenderUtilityList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 778 ".u";
+	setAttr -s 792 ".u";
 select -ne :defaultRenderingList1;
 	setAttr -s 30 ".r";
 select -ne :defaultTextureList1;
@@ -50927,13 +51251,13 @@ select -ne :defaultTextureList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 358 ".tx";
+	setAttr -s 360 ".tx";
 select -ne :initialShadingGroup;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 471 ".dsm";
+	setAttr -s 472 ".dsm";
 	setAttr -k on ".mwc";
 	setAttr -cb on ".an";
 	setAttr -cb on ".il";
@@ -50970,8 +51294,8 @@ select -ne :defaultRenderGlobals;
 	setAttr ".outf" 32;
 	setAttr -k on ".gama";
 	setAttr ".an" yes;
-	setAttr ".fs" 154;
-	setAttr ".ef" 315;
+	setAttr ".fs" 151;
+	setAttr ".ef" 170;
 	setAttr -k on ".be";
 	setAttr ".ep" 1;
 	setAttr -k on ".fec";
@@ -51104,7 +51428,7 @@ select -ne :defaultHardwareRenderGlobals;
 	setAttr -k on ".gh";
 	setAttr -cb on ".sd";
 select -ne :ikSystem;
-	setAttr -s 8 ".sol";
+	setAttr -s 9 ".sol";
 connectAttr "pCube118_translateX.o" "livingroom_shading_latestRN.phl[34]";
 connectAttr "pCube118_translateY.o" "livingroom_shading_latestRN.phl[35]";
 connectAttr "pCube118_translateZ.o" "livingroom_shading_latestRN.phl[36]";
@@ -51285,12 +51609,12 @@ connectAttr "pig_latest_controller_R_backfoot01_scaleY.o" "pig_latestRN.phl[56]"
 		;
 connectAttr "pig_latest_controller_R_backfoot01_scaleZ.o" "pig_latestRN.phl[57]"
 		;
-connectAttr "pairBlend5.oty" "pig_latestRN.phl[58]";
-connectAttr "pairBlend5.otz" "pig_latestRN.phl[59]";
-connectAttr "pairBlend5.otx" "pig_latestRN.phl[60]";
+connectAttr "pairBlend5.otx" "pig_latestRN.phl[58]";
+connectAttr "pairBlend5.oty" "pig_latestRN.phl[59]";
+connectAttr "pairBlend5.otz" "pig_latestRN.phl[60]";
 connectAttr "pairBlend5.orx" "pig_latestRN.phl[61]";
-connectAttr "pairBlend5.orz" "pig_latestRN.phl[62]";
-connectAttr "pairBlend5.ory" "pig_latestRN.phl[63]";
+connectAttr "pairBlend5.ory" "pig_latestRN.phl[62]";
+connectAttr "pairBlend5.orz" "pig_latestRN.phl[63]";
 connectAttr "pig_latest_hip_rotation_ctrl01_scaleX1.o" "pig_latestRN.phl[64]";
 connectAttr "pig_latest_hip_rotation_ctrl01_scaleY1.o" "pig_latestRN.phl[65]";
 connectAttr "pig_latest_hip_rotation_ctrl01_scaleZ1.o" "pig_latestRN.phl[66]";
@@ -51498,25 +51822,29 @@ connectAttr "pig_latest_head_control_rotateZ1.o" "pig_latestRN.phl[193]";
 connectAttr "pig_latest_head_control_scaleX1.o" "pig_latestRN.phl[194]";
 connectAttr "pig_latest_head_control_scaleY1.o" "pig_latestRN.phl[195]";
 connectAttr "pig_latest_head_control_scaleZ1.o" "pig_latestRN.phl[196]";
-connectAttr "defaultFurGlobals.rogl" "pig_latestRN.phl[197]";
-connectAttr "pig_latest_Pig_blendshapes_idkR.o" "pig_latestRN.phl[198]";
-connectAttr "pig_latest_Pig_blendshapes_idkL.o" "pig_latestRN.phl[199]";
-connectAttr "pig_latest_Pig_blendshapes_wide_eyeR.o" "pig_latestRN.phl[200]";
-connectAttr "pig_latest_Pig_blendshapes_wide_eyeL.o" "pig_latestRN.phl[201]";
-connectAttr "pig_latest_Pig_blendshapes_angryR.o" "pig_latestRN.phl[202]";
-connectAttr "pig_latest_Pig_blendshapes_angryL.o" "pig_latestRN.phl[203]";
-connectAttr "pig_latest_Pig_blendshapes_pervyR.o" "pig_latestRN.phl[204]";
-connectAttr "pig_latest_Pig_blendshapes_pervyL.o" "pig_latestRN.phl[205]";
-connectAttr "pig_latest_Pig_blendshapes_determinedR.o" "pig_latestRN.phl[206]";
-connectAttr "pig_latest_Pig_blendshapes_determinedL.o" "pig_latestRN.phl[207]";
-connectAttr "pig_latest_Pig_blendshapes_bottomUpR.o" "pig_latestRN.phl[208]";
-connectAttr "pig_latest_Pig_blendshapes_bottomUpL.o" "pig_latestRN.phl[209]";
-connectAttr "pig_latest_Pig_blendshapes_grumpy.o" "pig_latestRN.phl[210]";
-connectAttr "pig_latest_Pig_blendshapes_wtf.o" "pig_latestRN.phl[211]";
-connectAttr "pig_latest_Pig_blendshapes_ohshit.o" "pig_latestRN.phl[212]";
-connectAttr "pig_latest_Pig_blendshapes_happy.o" "pig_latestRN.phl[213]";
-connectAttr "pig_latest_Pig_blendshapes_smirk.o" "pig_latestRN.phl[214]";
-connectAttr "pig_latest_Pig_blendshapes_idk1.o" "pig_latestRN.phl[215]";
+connectAttr "pig_latest_spine_spline_ctrl_translateX.o" "pig_latestRN.phl[197]";
+connectAttr "pig_latest_spine_spline_ctrl_translateZ.o" "pig_latestRN.phl[198]";
+connectAttr "pig_latest_spine_spline_ctrl_translateY.o" "pig_latestRN.phl[199]";
+connectAttr "pig_latest_spine_spline_ctrl_visibility.o" "pig_latestRN.phl[200]";
+connectAttr "defaultFurGlobals.rogl" "pig_latestRN.phl[201]";
+connectAttr "pig_latest_Pig_blendshapes_idkR.o" "pig_latestRN.phl[202]";
+connectAttr "pig_latest_Pig_blendshapes_idkL.o" "pig_latestRN.phl[203]";
+connectAttr "pig_latest_Pig_blendshapes_wide_eyeR.o" "pig_latestRN.phl[204]";
+connectAttr "pig_latest_Pig_blendshapes_wide_eyeL.o" "pig_latestRN.phl[205]";
+connectAttr "pig_latest_Pig_blendshapes_angryR.o" "pig_latestRN.phl[206]";
+connectAttr "pig_latest_Pig_blendshapes_angryL.o" "pig_latestRN.phl[207]";
+connectAttr "pig_latest_Pig_blendshapes_pervyR.o" "pig_latestRN.phl[208]";
+connectAttr "pig_latest_Pig_blendshapes_pervyL.o" "pig_latestRN.phl[209]";
+connectAttr "pig_latest_Pig_blendshapes_determinedR.o" "pig_latestRN.phl[210]";
+connectAttr "pig_latest_Pig_blendshapes_determinedL.o" "pig_latestRN.phl[211]";
+connectAttr "pig_latest_Pig_blendshapes_bottomUpR.o" "pig_latestRN.phl[212]";
+connectAttr "pig_latest_Pig_blendshapes_bottomUpL.o" "pig_latestRN.phl[213]";
+connectAttr "pig_latest_Pig_blendshapes_grumpy.o" "pig_latestRN.phl[214]";
+connectAttr "pig_latest_Pig_blendshapes_wtf.o" "pig_latestRN.phl[215]";
+connectAttr "pig_latest_Pig_blendshapes_ohshit.o" "pig_latestRN.phl[216]";
+connectAttr "pig_latest_Pig_blendshapes_happy.o" "pig_latestRN.phl[217]";
+connectAttr "pig_latest_Pig_blendshapes_smirk.o" "pig_latestRN.phl[218]";
+connectAttr "pig_latest_Pig_blendshapes_idk1.o" "pig_latestRN.phl[219]";
 connectAttr "soap_bottle:imagePlaneShape1.msg" ":sideShape.ip" -na;
 connectAttr "camera1_translateX.o" "camera1.tx";
 connectAttr "camera1_translateY.o" "camera1.ty";
@@ -51576,10 +51904,10 @@ connectAttr "pig_latest_tail_3control01_parentConstraint1.w0" "pig_latest_tail_3
 connectAttr "pig_latest_tail_2control01_parentConstraint1.w0" "pig_latest_tail_2control01_parentConstraint1.tg[0].tw"
 		;
 connectAttr ":rmanFinalGlobals.msg" ":renderManRISGlobals.p" -na;
-connectAttr ":rmanRerenderRISGlobals.msg" ":renderManRISGlobals.p" -na;
 connectAttr ":rmanPreviewGlobals.msg" ":renderManRISGlobals.p" -na;
 connectAttr ":rmanRerenderGlobals.msg" ":renderManRISGlobals.p" -na;
 connectAttr ":rmanReyesRerenderGlobals.msg" ":renderManRISGlobals.p" -na;
+connectAttr ":rmanRerenderRISGlobals.msg" ":renderManRISGlobals.p" -na;
 connectAttr ":rmanDeepShadowGlobals.msg" ":renderManRISGlobals.p" -na;
 connectAttr ":rmanAreaShadowGlobals.msg" ":renderManRISGlobals.p" -na;
 connectAttr ":rmanShadowGlobals.msg" ":renderManRISGlobals.p" -na;
@@ -51595,12 +51923,12 @@ connectAttr ":rmanSBPtRenderGlobals.msg" ":renderManRISGlobals.p" -na;
 connectAttr ":rmanSBRenderGlobals.msg" ":renderManRISGlobals.p" -na;
 connectAttr ":rmanSBMakePtexGlobals.msg" ":renderManRISGlobals.p" -na;
 connectAttr ":rmanFinalOutputGlobals0.msg" ":rmanFinalGlobals.d" -na;
-connectAttr ":rmanRerenderRISOutputGlobals0.msg" ":rmanRerenderRISGlobals.d" -na
-		;
 connectAttr ":rmanPreviewOutputGlobals0.msg" ":rmanPreviewGlobals.d" -na;
 connectAttr ":rmanRerenderOutputGlobals0.msg" ":rmanRerenderGlobals.d" -na;
 connectAttr ":rmanReyesRerenderOutputGlobals0.msg" ":rmanReyesRerenderGlobals.d"
 		 -na;
+connectAttr ":rmanRerenderRISOutputGlobals0.msg" ":rmanRerenderRISGlobals.d" -na
+		;
 connectAttr ":rmanDeepShadowOutputGlobals0.msg" ":rmanDeepShadowGlobals.d" -na;
 connectAttr ":rmanDeepShadowOutputGlobals1.msg" ":rmanDeepShadowGlobals.d" -na;
 connectAttr ":rmanAreaShadowOutputGlobals0.msg" ":rmanAreaShadowGlobals.d" -na;
@@ -51758,6 +52086,7 @@ connectAttr "furryBallGISettings.renderNode" "furryBallRenderSettingsDefault.ren
 		;
 connectAttr "furryBallGISettings.renderNode" "high.renderGINodeMessage";
 connectAttr "pig_latestRNfosterParent1.msg" "pig_latestRN.fp";
+connectAttr "sharedReferenceNode.sr" "pig_latestRN.sr";
 connectAttr "hyperView2.msg" "nodeEditorPanel2Info.b[0]";
 connectAttr "hyperLayout2.msg" "hyperView2.hl";
 connectAttr "wood1.oc" "phong3.c";
@@ -51806,6 +52135,6 @@ connectAttr "undies_latest:file1.msg" ":defaultTextureList1.tx" -na;
 connectAttr "wood1.msg" ":defaultTextureList1.tx" -na;
 connectAttr "pCylinderShape8.iog" ":initialShadingGroup.dsm" -na;
 dataStructure -fmt "raw" -as "name=externalContentTable:string=node:string=key:string=upath:uint32=upathcrc:string=rpath:string=roles";
-applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"livingroom_shading_latestRN\" \"\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/sets/livingroom_shading/livingroom_shading_latest.ma\" 2081054145 \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom_shading/livingroom_shading_latest.ma\" \"FileRef\"\n1\n\"smartybikeRN\" \"\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/smarty/smartybike.ma\" 2677305362 \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smartybike.ma\" \"FileRef\"\n2\n\"sneaks_latestRN\" \"\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/sneaks/versions/sneaks17.ma\" 1483682575 \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/sneaks/versions/sneaks17.ma\" \"FileRef\"\n3\n\"tuffs_latestRN\" \"\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/tuffs/tuffs_latest.ma\" 1466656841 \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/tuffs/tuffs_latest.ma\" \"FileRef\"\n4\n\"pig_latestRN\" \"\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/pig/pig_latest.ma\" 3104522739 \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\" \"FileRef\"\n5\n\"|soap_bottle:_UNKNOWN_REF_NODE_fosterParent1|soap_bottle:imagePlane1|soap_bottle:imagePlaneShape1\" \"imageName\" \"/Users/KristenCurry/Desktop/imgres.jpg\" 1103782025 \"\" \"sourceImages\"\n6\n\"undies_latest:file1\" \"fileTextureName\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/props/undies/undie_pattern.jpg\" 110585401 \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/props/undies/undie_pattern.jpg\" \"sourceImages\"\nendStream\nendChannel\nendAssociations\n" 
+applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"livingroom_shading_latestRN\" \"\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/sets/livingroom_shading/livingroom_shading_latest.ma\" 2081054145 \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/livingroom_shading/livingroom_shading_latest.ma\" \"FileRef\"\n1\n\"smartybikeRN\" \"\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/smarty/smartybike.ma\" 2677305362 \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smartybike.ma\" \"FileRef\"\n2\n\"sneaks_latestRN\" \"\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/sneaks/versions/sneaks17.ma\" 1483682575 \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/sneaks/versions/sneaks17.ma\" \"FileRef\"\n3\n\"tuffs_latestRN\" \"\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/tuffs/tuffs_latest.ma\" 1466656841 \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/tuffs/tuffs_latest.ma\" \"FileRef\"\n4\n\"pig_latestRN\" \"\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/pig/skinned/pig_skinned_spine.ma\" 1751019110 \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/skinned/pig_skinned_06_spline.ma\" \"FileRef\"\n5\n\"|soap_bottle:_UNKNOWN_REF_NODE_fosterParent1|soap_bottle:imagePlane1|soap_bottle:imagePlaneShape1\" \"imageName\" \"/Users/KristenCurry/Desktop/imgres.jpg\" 1103782025 \"\" \"sourceImages\"\n6\n\"undies_latest:file1\" \"fileTextureName\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/props/undies/undie_pattern.jpg\" 110585401 \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/props/undies/undie_pattern.jpg\" \"sourceImages\"\nendStream\nendChannel\nendAssociations\n" 
 		-scn;
 // End of smarty_under_table.ma

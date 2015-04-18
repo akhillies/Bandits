@@ -1,6 +1,6 @@
 //Maya ASCII 2013 scene
 //Name: bike_rig_latest.ma
-//Last modified: Wed, Apr 15, 2015 02:21:02 PM
+//Last modified: Thu, Apr 16, 2015 11:05:06 PM
 //Codeset: UTF-8
 requires maya "2013";
 requires "stereoCamera" "10.0";
@@ -12,17 +12,17 @@ fileInfo "cutIdentifier" "201207040330-835994";
 fileInfo "osv" "Mac OS X 10.9.2";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
-	setAttr ".t" -type "double3" -136.61420317098577 25.399169012965853 34.411363023928594 ;
-	setAttr ".r" -type "double3" -6.6000000000006809 -87.199999999999747 -3.2554449025764303e-14 ;
-	setAttr ".rpt" -type "double3" -2.5968662361637189e-14 1.5353119481451598e-14 9.0857412831273213e-15 ;
+	setAttr ".t" -type "double3" 29.861368591488802 35.769089092676445 87.55805147528028 ;
+	setAttr ".r" -type "double3" -25.200000000001175 6.4000000000003121 4.0006255738135899e-16 ;
+	setAttr ".rpt" -type "double3" -2.5968662361637186e-14 1.5353119481451598e-14 9.0857412831273213e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v";
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 160.89555704378924;
+	setAttr ".coi" 67.788165148176461;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 6.0000000000000133 7.2744316721994693 3.1558438940816616e-14 ;
+	setAttr ".tp" -type "double3" 6.0000000000000133 7.2744316721994684 3.1558438940816616e-14 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	setAttr ".t" -type "double3" 11.422510800231938 100.1 1.6648193878880568 ;
@@ -70,6 +70,7 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
 createNode transform -n "controller";
+	setAttr ".r" -type "double3" 0 90 0 ;
 	setAttr -k off ".sx";
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
@@ -82,21 +83,21 @@ createNode nurbsCurve -n "controllerShape" -p "controller";
 		8.7889439807675096 5.8913247721609815e-16 16.167489001102698
 		12.429443776538792 8.3315913931346497e-16 -5.3290705182007514e-15
 		8.7889439807675078 5.8913247721609854e-16 -16.167489001102687
-		-1.4751486649871045e-15 2.4142867457712938e-31 -22.86428221487726
+		-1.4751486649871045e-15 2.4142867457712942e-31 -22.86428221487726
 		-8.7889439807675114 -5.8913247721609835e-16 -16.167489001102684
 		-12.4294437765388 -8.3315913931346517e-16 -4.4408920985006262e-15
 		-8.7889439807675078 -5.8913247721609864e-16 16.167489001102677
-		-1.5989879876265157e-15 -4.4749139899751097e-31 22.86428221487726
+		-1.5989879876265157e-15 -4.4749139899751106e-31 22.86428221487726
 		8.7889439807675096 5.8913247721609815e-16 16.167489001102698
 		12.429443776538792 8.3315913931346497e-16 -5.3290705182007514e-15
 		8.7889439807675078 5.8913247721609854e-16 -16.167489001102687
 		;
 createNode transform -n "car" -p "controller";
-	setAttr ".rp" -type "double3" 9.930310759983083e-17 0 0.44722143838333039 ;
-	setAttr ".sp" -type "double3" 9.930310759983083e-17 0 0.44722143838333039 ;
+	setAttr ".rp" -type "double3" 9.9303107599830854e-17 0 0.44722143838333039 ;
+	setAttr ".sp" -type "double3" 9.9303107599830854e-17 0 0.44722143838333039 ;
 createNode transform -n "frame" -p "car";
-	setAttr ".rp" -type "double3" 9.930310759983083e-17 0 0.44722143838333039 ;
-	setAttr ".sp" -type "double3" 9.930310759983083e-17 0 0.44722143838333039 ;
+	setAttr ".rp" -type "double3" 9.9303107599830854e-17 0 0.44722143838333039 ;
+	setAttr ".sp" -type "double3" 9.9303107599830854e-17 0 0.44722143838333039 ;
 createNode transform -n "hood" -p "frame";
 	setAttr ".rp" -type "double3" 1.4926789938153051e-15 10.412130409728396 6.7224285603303748 ;
 	setAttr ".sp" -type "double3" 1.4926789938153051e-15 10.412130409728396 6.7224285603303748 ;
@@ -1367,8 +1368,8 @@ createNode mesh -n "hoodShape" -p "hood";
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
 createNode transform -n "shell" -p "frame";
-	setAttr ".rp" -type "double3" 9.930310759983083e-17 0 0.44722143838333039 ;
-	setAttr ".sp" -type "double3" 9.930310759983083e-17 0 0.44722143838333039 ;
+	setAttr ".rp" -type "double3" 9.9303107599830854e-17 0 0.44722143838333039 ;
+	setAttr ".sp" -type "double3" 9.9303107599830854e-17 0 0.44722143838333039 ;
 createNode mesh -n "shellShape" -p "shell";
 	setAttr -k off ".v";
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:2580]";
@@ -9608,8 +9609,8 @@ createNode mesh -n "shellShape" -p "shell";
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
 createNode transform -n "back" -p "frame";
-	setAttr ".rp" -type "double3" 9.930310759983083e-17 0 0.44722143838333039 ;
-	setAttr ".sp" -type "double3" 9.930310759983083e-17 0 0.44722143838333039 ;
+	setAttr ".rp" -type "double3" 9.9303107599830854e-17 0 0.44722143838333039 ;
+	setAttr ".sp" -type "double3" 9.9303107599830854e-17 0 0.44722143838333039 ;
 createNode mesh -n "backShape" -p "back";
 	setAttr -k off ".v";
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:65]";
@@ -9843,8 +9844,8 @@ createNode mesh -n "backShape" -p "back";
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
 createNode transform -n "seats" -p "frame";
-	setAttr ".rp" -type "double3" 9.930310759983083e-17 0 0.44722143838333039 ;
-	setAttr ".sp" -type "double3" 9.930310759983083e-17 0 0.44722143838333039 ;
+	setAttr ".rp" -type "double3" 9.9303107599830854e-17 0 0.44722143838333039 ;
+	setAttr ".sp" -type "double3" 9.9303107599830854e-17 0 0.44722143838333039 ;
 createNode transform -n "polySurface17" -p "seats";
 	setAttr ".rp" -type "double3" -1.8436586538991177e-15 7.163468599319458 -8.3031004266984567 ;
 	setAttr ".sp" -type "double3" -1.8436586538991177e-15 7.163468599319458 -8.3031004266984567 ;
@@ -10127,8 +10128,8 @@ createNode mesh -n "polySurfaceShape7" -p "polySurface17";
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
 createNode transform -n "polySurface18" -p "seats";
-	setAttr ".rp" -type "double3" 9.930310759983083e-17 0 0.44722143838333039 ;
-	setAttr ".sp" -type "double3" 9.930310759983083e-17 0 0.44722143838333039 ;
+	setAttr ".rp" -type "double3" 9.9303107599830854e-17 0 0.44722143838333039 ;
+	setAttr ".sp" -type "double3" 9.9303107599830854e-17 0 0.44722143838333039 ;
 createNode mesh -n "polySurfaceShape8" -p "polySurface18";
 	setAttr -k off ".v";
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:81]";
@@ -10406,11 +10407,11 @@ createNode mesh -n "polySurfaceShape8" -p "polySurface18";
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
 createNode transform -n "handlebars" -p "frame";
-	setAttr ".rp" -type "double3" 9.930310759983083e-17 0 0.44722143838333039 ;
-	setAttr ".sp" -type "double3" 9.930310759983083e-17 0 0.44722143838333039 ;
+	setAttr ".rp" -type "double3" 9.9303107599830854e-17 0 0.44722143838333039 ;
+	setAttr ".sp" -type "double3" 9.9303107599830854e-17 0 0.44722143838333039 ;
 createNode transform -n "handleL" -p "handlebars";
-	setAttr ".rp" -type "double3" 0.20576131687242918 0 8.1838469527866238 ;
-	setAttr ".sp" -type "double3" 0.20576131687242918 0 8.1838469527866238 ;
+	setAttr ".rp" -type "double3" 0.20576131687242921 0 8.1838469527866238 ;
+	setAttr ".sp" -type "double3" 0.20576131687242921 0 8.1838469527866238 ;
 createNode mesh -n "handleLShape" -p "handleL";
 	setAttr -k off ".v";
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:111]";
@@ -10788,8 +10789,8 @@ createNode mesh -n "handleLShape" -p "handleL";
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
 createNode transform -n "handleR" -p "handlebars";
-	setAttr ".rp" -type "double3" 0.20576131687242918 0 8.1838469527866238 ;
-	setAttr ".sp" -type "double3" 0.20576131687242918 0 8.1838469527866238 ;
+	setAttr ".rp" -type "double3" 0.20576131687242921 0 8.1838469527866238 ;
+	setAttr ".sp" -type "double3" 0.20576131687242921 0 8.1838469527866238 ;
 createNode mesh -n "handleRShape" -p "handleR";
 	setAttr -k off ".v";
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:111]";
@@ -11186,16 +11187,16 @@ createNode nurbsCurve -n "turn_controllerShape" -p "turn_controller";
 		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
 		11
 		1.5707988714228414 16.024413965112817 2.4012641978861717
-		2.2141740681326456 16.0249371573071 1.9725375520505311
-		1.5605161251851549 16.010852500957913 1.5598980357677237
+		2.2141740681326456 16.0249371573071 1.9725375520505313
+		1.5605161251851547 16.010852500957913 1.5598980357677237
 		-0.0072709995938882444 15.990410596733248 1.4050642813051444
-		-1.5707988714228411 15.975586034887183 1.598735802113826
+		-1.5707988714228411 15.975586034887185 1.598735802113826
 		-2.2141740681326452 15.9750628426929 2.0274624479494676
-		-1.560516125185154 15.989147499042087 2.4401019642322748
+		-1.560516125185154 15.989147499042089 2.4401019642322748
 		0.0072709995938885774 16.009589403266752 2.5949357186948543
 		1.5707988714228414 16.024413965112817 2.4012641978861717
-		2.2141740681326456 16.0249371573071 1.9725375520505311
-		1.5605161251851549 16.010852500957913 1.5598980357677237
+		2.2141740681326456 16.0249371573071 1.9725375520505313
+		1.5605161251851547 16.010852500957913 1.5598980357677237
 		;
 createNode transform -n "ctrl_back" -p "car";
 	setAttr -k off ".tx";
@@ -11206,8 +11207,8 @@ createNode transform -n "ctrl_back" -p "car";
 	setAttr -k off ".sx";
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
-	setAttr ".rp" -type "double3" -7.7328630046935061 3.6631979942321777 -9.6116784410722342 ;
-	setAttr ".sp" -type "double3" -7.7328630046935061 3.6631979942321777 -9.6116784410722342 ;
+	setAttr ".rp" -type "double3" -7.7328630046935052 3.6631979942321777 -9.6116784410722342 ;
+	setAttr ".sp" -type "double3" -7.7328630046935052 3.6631979942321777 -9.6116784410722342 ;
 createNode nurbsCurve -n "ctrl_backShape" -p "ctrl_back";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
@@ -11215,20 +11216,20 @@ createNode nurbsCurve -n "ctrl_backShape" -p "ctrl_back";
 		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
 		11
 		-7.7328630046935043 6.3658921452950494 -6.19557085227743
-		-7.7328630046935043 7.9898441972215899 -9.1072189614623849
+		-7.7328630046935043 7.9898441972215908 -9.1072189614623849
 		-7.7328630046935052 7.0793055830269793 -12.314372592135111
-		-7.7328630046935078 4.1676574738420307 -13.938324644061645
+		-7.732863004693507 4.1676574738420307 -13.938324644061645
 		-7.732863004693507 0.96050384316929893 -13.027786029867036
 		-7.732863004693507 -0.66344820875723443 -10.116137920682087
-		-7.7328630046935061 0.24709040543737615 -6.9089842900093572
+		-7.7328630046935052 0.24709040543737615 -6.9089842900093572
 		-7.7328630046935052 3.1587385146223248 -5.285032238082823
 		-7.7328630046935043 6.3658921452950494 -6.19557085227743
-		-7.7328630046935043 7.9898441972215899 -9.1072189614623849
+		-7.7328630046935043 7.9898441972215908 -9.1072189614623849
 		-7.7328630046935052 7.0793055830269793 -12.314372592135111
 		;
 createNode transform -n "back_hub_L" -p "ctrl_back";
-	setAttr ".rp" -type "double3" 5.258671548788004 3.6631977473707202 -9.6116785053231855 ;
-	setAttr ".sp" -type "double3" 5.258671548788004 3.6631977473707202 -9.6116785053231855 ;
+	setAttr ".rp" -type "double3" 5.258671548788004 3.6631977473707198 -9.6116785053231855 ;
+	setAttr ".sp" -type "double3" 5.258671548788004 3.6631977473707198 -9.6116785053231855 ;
 createNode mesh -n "back_hub_LShape" -p "back_hub_L";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -12591,8 +12592,8 @@ createNode mesh -n "back_hub_LShape" -p "back_hub_L";
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
 createNode transform -n "back_axle" -p "ctrl_back";
-	setAttr ".rp" -type "double3" -2.1342214119703378e-15 3.6631981834615761 -9.6116787556757437 ;
-	setAttr ".sp" -type "double3" -2.1342214119703378e-15 3.6631981834615761 -9.6116787556757437 ;
+	setAttr ".rp" -type "double3" -2.1342214119703374e-15 3.6631981834615761 -9.6116787556757437 ;
+	setAttr ".sp" -type "double3" -2.1342214119703374e-15 3.6631981834615761 -9.6116787556757437 ;
 createNode mesh -n "back_axleShape" -p "back_axle";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -18295,8 +18296,8 @@ createNode mesh -n "polySurfaceShape11" -p "back_wheel_R";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 createNode transform -n "back_hub_R" -p "ctrl_back";
-	setAttr ".rp" -type "double3" -5.2958270918343038 3.6631977473707202 -9.6116785053231837 ;
-	setAttr ".sp" -type "double3" -5.2958270918343038 3.6631977473707202 -9.6116785053231837 ;
+	setAttr ".rp" -type "double3" -5.2958270918343038 3.6631977473707198 -9.6116785053231837 ;
+	setAttr ".sp" -type "double3" -5.2958270918343038 3.6631977473707198 -9.6116785053231837 ;
 createNode mesh -n "back_hub_RShape" -p "back_hub_R";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -19660,7 +19661,7 @@ createNode mesh -n "back_hub_RShape" -p "back_hub_R";
 	setAttr ".dsm" 2;
 createNode transform -n "back_wheel_L" -p "ctrl_back";
 	setAttr ".rp" -type "double3" 5.2070778251046139 3.6631976623491695 -9.6116796137328286 ;
-	setAttr ".sp" -type "double3" 5.2070778251046139 3.6631976623491678 -9.6116796137328198 ;
+	setAttr ".sp" -type "double3" 5.2070778251046139 3.6631976623491682 -9.6116796137328198 ;
 createNode mesh -n "back_wheel_LShape" -p "back_wheel_L";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -25195,24 +25196,24 @@ createNode transform -n "ctrl_front" -p "car";
 	setAttr -k off ".sx";
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
-	setAttr ".rp" -type "double3" -0.014451328665015603 3.6631979942321777 11.162455718015899 ;
-	setAttr ".sp" -type "double3" -0.014451328665015603 3.6631979942321777 11.162455718015899 ;
+	setAttr ".rp" -type "double3" -0.014451328665015604 3.6631979942321777 11.162455718015901 ;
+	setAttr ".sp" -type "double3" -0.014451328665015604 3.6631979942321777 11.162455718015901 ;
 createNode nurbsCurve -n "ctrl_frontShape" -p "ctrl_front";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
 		3 8 2 no 3
 		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
 		11
-		-0.01445132866501429 6.6154962802934651 14.894053899568785
-		-0.014451328665014513 8.3894265112309725 11.713503958695973
+		-0.01445132866501429 6.6154962802934651 14.894053899568783
+		-0.014451328665014512 8.3894265112309725 11.713503958695972
 		-0.014451328665015773 7.3947961757850642 8.2101574319546078
 		-0.014451328665016652 4.2142462349122543 6.4362272010171031
 		-0.014451328665016918 0.71089970817089032 7.4308575364630114
-		-0.014451328665017183 -1.0630305227666152 10.61140747733582
+		-0.014451328665017185 -1.0630305227666152 10.61140747733582
 		-0.014451328665015433 -0.068400187320705186 14.114754004077181
-		-0.014451328665014553 3.1121497535520994 15.88868423501469
-		-0.01445132866501429 6.6154962802934651 14.894053899568785
-		-0.014451328665014513 8.3894265112309725 11.713503958695973
+		-0.014451328665014552 3.112149753552099 15.88868423501469
+		-0.01445132866501429 6.6154962802934651 14.894053899568783
+		-0.014451328665014512 8.3894265112309725 11.713503958695972
 		-0.014451328665015773 7.3947961757850642 8.2101574319546078
 		;
 createNode transform -n "front_axle" -p "ctrl_front";
@@ -25220,7 +25221,7 @@ createNode transform -n "front_axle" -p "ctrl_front";
 	setAttr -k off ".tx";
 	setAttr -k off ".ty";
 	setAttr -k off ".tz";
-	setAttr ".r" -type "double3" 0.00017496084347639823 -0.56517138989787175 0.77578570271123193 ;
+	setAttr ".r" -type "double3" 0.00017496084347639823 -0.56517138989787175 0.77578570271123204 ;
 	setAttr -k off ".rz";
 	setAttr -k off ".ry";
 	setAttr ".s" -type "double3" 0.99999999999999989 1.0000000000000002 1 ;
@@ -25230,7 +25231,7 @@ createNode transform -n "front_axle" -p "ctrl_front";
 	setAttr ".rp" -type "double3" 2.4785630698999969e-15 3.6631979942321768 11.162455718015901 ;
 	setAttr ".rpt" -type "double3" -0.15969360718991388 -0.0018606588845210958 -0.00053186635732831861 ;
 	setAttr ".sp" -type "double3" 2.4785630698999973e-15 3.663197994232176 11.162455718015901 ;
-	setAttr ".spt" -type "double3" -3.9443045261050586e-31 8.8817841970012543e-16 0 ;
+	setAttr ".spt" -type "double3" -3.944304526105059e-31 8.8817841970012543e-16 0 ;
 createNode mesh -n "front_axleShape" -p "front_axle";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -30089,8 +30090,8 @@ createNode mesh -n "front_wheelShape" -p "front_wheel";
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
 createNode transform -n "front_hub" -p "ctrl_front";
-	setAttr ".rp" -type "double3" 2.4785630698999969e-15 3.6631979942321768 11.162455718015899 ;
-	setAttr ".sp" -type "double3" 2.4785630698999969e-15 3.6631979942321768 11.162455718015899 ;
+	setAttr ".rp" -type "double3" 2.4785630698999969e-15 3.6631979942321768 11.162455718015901 ;
+	setAttr ".sp" -type "double3" 2.4785630698999969e-15 3.6631979942321768 11.162455718015901 ;
 createNode mesh -n "front_hubShape" -p "front_hub";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -31453,8 +31454,8 @@ createNode mesh -n "front_hubShape" -p "front_hub";
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
 createNode transform -n "front_wheel_holders" -p "car";
-	setAttr ".rp" -type "double3" 0.026494026184083169 3.4479611310455374 11.11029741575266 ;
-	setAttr ".sp" -type "double3" 0.026494026184083169 3.4479611310455374 11.11029741575266 ;
+	setAttr ".rp" -type "double3" 0.026494026184083169 3.4479611310455378 11.11029741575266 ;
+	setAttr ".sp" -type "double3" 0.026494026184083169 3.4479611310455378 11.11029741575266 ;
 createNode mesh -n "front_wheel_holdersShape" -p "front_wheel_holders";
 	setAttr -k off ".v";
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:59]";
@@ -31877,136 +31878,70 @@ createNode hyperLayout -n "hyperLayout2";
 	setAttr ".anf" yes;
 createNode hyperGraphInfo -n "nodeEditorPanel4Info";
 createNode hyperView -n "hyperView3";
-	setAttr ".vl" -type "double2" -231.06071052206605 -42920.335732614098 ;
-	setAttr ".vh" -type "double2" 1740.0963391620105 -42151.778004967287 ;
+	setAttr ".vl" -type "double2" -113.09523809523803 -43035.48804514794 ;
+	setAttr ".vh" -type "double2" 1464.2857142857144 -42420.464335804456 ;
 	setAttr ".dag" no;
 createNode hyperLayout -n "hyperLayout3";
 	setAttr ".ihi" 0;
 	setAttr -s 45 ".hyp";
-	setAttr ".hyp[0].x" 8.5714282989501953;
-	setAttr ".hyp[0].y" -42090;
-	setAttr ".hyp[0].nvs" 2384;
-	setAttr ".hyp[1].x" 4.2857141494750977;
-	setAttr ".hyp[1].y" -41927.14453125;
-	setAttr ".hyp[1].nvs" 2480;
-	setAttr ".hyp[2].x" 1114.2857666015625;
-	setAttr ".hyp[2].y" -41712.85546875;
-	setAttr ".hyp[2].nvs" 2176;
-	setAttr ".hyp[3].x" 1.4285714626312256;
-	setAttr ".hyp[3].y" -41764.28515625;
-	setAttr ".hyp[3].nvs" 2544;
-	setAttr ".hyp[4].x" 34.285713195800781;
-	setAttr ".hyp[4].y" -41601.4296875;
-	setAttr ".hyp[4].nvs" 1824;
-	setAttr ".hyp[5].x" 2025.7142333984375;
-	setAttr ".hyp[5].y" -41114.28515625;
-	setAttr ".hyp[5].nvs" 2560;
-	setAttr ".hyp[6].x" 1095.7142333984375;
-	setAttr ".hyp[6].y" -41835.71484375;
-	setAttr ".hyp[6].nvs" 2576;
-	setAttr ".hyp[7].x" 1095.7142333984375;
-	setAttr ".hyp[7].y" -41958.5703125;
-	setAttr ".hyp[7].nvs" 2592;
-	setAttr ".hyp[8].x" 1688.5714111328125;
-	setAttr ".hyp[8].y" -41440;
+	setAttr ".hyp[0].x" 367.14285278320312;
+	setAttr ".hyp[0].y" -42685.71484375;
+	setAttr ".hyp[0].nvs" 1760;
+	setAttr ".hyp[1].x" 1.4285714626312256;
+	setAttr ".hyp[1].y" -42598.5703125;
+	setAttr ".hyp[1].nvs" 2208;
+	setAttr ".hyp[2].x" 1170;
+	setAttr ".hyp[2].y" -42604.28515625;
+	setAttr ".hyp[2].nvs" 1760;
+	setAttr ".hyp[3].x" 874.28570556640625;
+	setAttr ".hyp[3].y" -42604.28515625;
+	setAttr ".hyp[3].nvs" 2288;
+	setAttr ".hyp[4].x" 614.28570556640625;
+	setAttr ".hyp[4].y" -42604.28515625;
+	setAttr ".hyp[4].nvs" 1920;
+	setAttr ".hyp[5].x" 874.28570556640625;
+	setAttr ".hyp[5].y" -42767.14453125;
+	setAttr ".hyp[5].nvs" 2288;
+	setAttr ".hyp[6].x" 1170;
+	setAttr ".hyp[6].y" -42767.14453125;
+	setAttr ".hyp[6].nvs" 1760;
+	setAttr ".hyp[7].x" 614.28570556640625;
+	setAttr ".hyp[7].y" -42767.14453125;
+	setAttr ".hyp[7].nvs" 1920;
 	setAttr ".hyp[8].nvs" 2368;
-	setAttr ".hyp[9].x" 1694.2857666015625;
-	setAttr ".hyp[9].y" -41277.14453125;
 	setAttr ".hyp[9].nvs" 2240;
-	setAttr ".hyp[10].x" 1347.142822265625;
-	setAttr ".hyp[10].y" -41487.14453125;
 	setAttr ".hyp[10].nvs" 1760;
-	setAttr ".hyp[11].x" 1120;
-	setAttr ".hyp[11].y" -42081.4296875;
 	setAttr ".hyp[11].nvs" 2048;
-	setAttr ".hyp[12].x" 4.2857141494750977;
-	setAttr ".hyp[12].y" -41438.5703125;
 	setAttr ".hyp[12].nvs" 2480;
-	setAttr ".hyp[13].x" 1430;
-	setAttr ".hyp[13].y" -41712.85546875;
 	setAttr ".hyp[13].nvs" 1888;
-	setAttr ".hyp[14].x" 1118.5714111328125;
-	setAttr ".hyp[14].y" -42204.28515625;
 	setAttr ".hyp[14].nvs" 2064;
-	setAttr ".hyp[15].x" 2342.857177734375;
-	setAttr ".hyp[15].y" -41114.28515625;
 	setAttr ".hyp[15].nvs" 3088;
-	setAttr ".hyp[16].x" 1435.7142333984375;
-	setAttr ".hyp[16].y" -41835.71484375;
 	setAttr ".hyp[16].nvs" 1760;
-	setAttr ".hyp[17].x" 1430;
-	setAttr ".hyp[17].y" -41958.5703125;
 	setAttr ".hyp[17].nvs" 1872;
-	setAttr ".hyp[18].x" 465.71429443359375;
-	setAttr ".hyp[18].y" -42538.5703125;
 	setAttr ".hyp[18].nvs" 1648;
-	setAttr ".hyp[19].x" 35.714286804199219;
-	setAttr ".hyp[19].y" -41275.71484375;
 	setAttr ".hyp[19].nvs" 1792;
-	setAttr ".hyp[20].x" 1435.7142333984375;
-	setAttr ".hyp[20].y" -42081.4296875;
 	setAttr ".hyp[20].nvs" 1760;
-	setAttr ".hyp[21].x" 1430;
-	setAttr ".hyp[21].y" -42204.28515625;
 	setAttr ".hyp[21].nvs" 1888;
-	setAttr ".hyp[22].x" 1132.857177734375;
-	setAttr ".hyp[22].y" -42327.14453125;
 	setAttr ".hyp[22].nvs" 1760;
-	setAttr ".hyp[23].x" 34.285713195800781;
-	setAttr ".hyp[23].y" -41112.85546875;
 	setAttr ".hyp[23].nvs" 1808;
-	setAttr ".hyp[24].x" 22.857143402099609;
-	setAttr ".hyp[24].y" -40950;
 	setAttr ".hyp[24].nvs" 2080;
-	setAttr ".hyp[25].x" 461.42855834960938;
-	setAttr ".hyp[25].y" -42701.4296875;
 	setAttr ".hyp[25].nvs" 1760;
 	setAttr ".hyp[26].nvs" 2144;
-	setAttr ".hyp[27].x" 1435.7142333984375;
-	setAttr ".hyp[27].y" -42327.14453125;
 	setAttr ".hyp[27].nvs" 1760;
-	setAttr ".hyp[28].x" 421.42855834960938;
-	setAttr ".hyp[28].y" -41438.5703125;
 	setAttr ".hyp[28].nvs" 2128;
-	setAttr ".hyp[29].x" 1738.5714111328125;
-	setAttr ".hyp[29].y" -41712.85546875;
 	setAttr ".hyp[29].nvs" 1760;
-	setAttr ".hyp[30].x" 1694.2857666015625;
-	setAttr ".hyp[30].y" -41114.28515625;
 	setAttr ".hyp[30].nvs" 2224;
-	setAttr ".hyp[31].x" 1095.7142333984375;
-	setAttr ".hyp[31].y" -42450;
 	setAttr ".hyp[31].nvs" 2576;
-	setAttr ".hyp[32].x" 1420;
-	setAttr ".hyp[32].y" -42450;
 	setAttr ".hyp[32].nvs" 2096;
-	setAttr ".hyp[33].x" 1687.142822265625;
-	setAttr ".hyp[33].y" -40951.4296875;
 	setAttr ".hyp[33].nvs" 2384;
-	setAttr ".hyp[34].x" 1722.857177734375;
-	setAttr ".hyp[34].y" -41835.71484375;
 	setAttr ".hyp[34].nvs" 2096;
-	setAttr ".hyp[35].x" 1695.7142333984375;
-	setAttr ".hyp[35].y" -40788.5703125;
 	setAttr ".hyp[35].nvs" 2208;
-	setAttr ".hyp[36].x" 1721.4285888671875;
-	setAttr ".hyp[36].y" -41958.5703125;
 	setAttr ".hyp[36].nvs" 2144;
-	setAttr ".hyp[37].x" 1738.5714111328125;
-	setAttr ".hyp[37].y" -42081.4296875;
 	setAttr ".hyp[37].nvs" 1760;
-	setAttr ".hyp[38].x" 701.4285888671875;
-	setAttr ".hyp[38].y" -41438.5703125;
 	setAttr ".hyp[38].nvs" 2064;
 	setAttr ".hyp[39].nvs" 2640;
-	setAttr ".hyp[40].x" 1738.5714111328125;
-	setAttr ".hyp[40].y" -42327.14453125;
 	setAttr ".hyp[40].nvs" 1760;
-	setAttr ".hyp[41].x" 1738.5714111328125;
-	setAttr ".hyp[41].y" -42450;
 	setAttr ".hyp[41].nvs" 1760;
-	setAttr ".hyp[42].x" 1112.857177734375;
-	setAttr ".hyp[42].y" -42572.85546875;
 	setAttr ".hyp[42].nvs" 2208;
 	setAttr ".hyp[43].x" 461.42855834960938;
 	setAttr ".hyp[43].y" -42375.71484375;
@@ -32018,12 +31953,12 @@ createNode hyperLayout -n "hyperLayout3";
 createNode expression -n "expression1";
 	setAttr -k on ".nds";
 	setAttr ".ixp" -type "string" ".O[0] = (.I[0] / (2 * 3.14 *3.855 )) * 360;";
-createNode unitConversion -n "unitConversion1";
-	setAttr ".cf" 0.017453292519943295;
 createNode expression -n "expression3";
 	setAttr -k on ".nds";
 	setAttr ".ixp" -type "string" ".O[0] = (.I[0] / (2 * 3.14 *3.855 )) * 360;";
-createNode unitConversion -n "unitConversion3";
+createNode unitConversion -n "unitConversion4";
+	setAttr ".cf" 0.017453292519943295;
+createNode unitConversion -n "unitConversion5";
 	setAttr ".cf" 0.017453292519943295;
 select -ne :time1;
 	setAttr -av -k on ".cch";
@@ -32187,8 +32122,6 @@ select -ne :defaultHardwareRenderGlobals;
 	setAttr -k on ".aap";
 	setAttr -k on ".gh";
 	setAttr -cb on ".sd";
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 connectAttr "groupId11.id" "hoodShape.iog.og[0].gid";
 connectAttr "lambert3SG.mwc" "hoodShape.iog.og[0].gco";
 connectAttr "groupId18.id" "shellShape.iog.og[0].gid";
@@ -32203,9 +32136,9 @@ connectAttr "groupId13.id" "handleLShape.iog.og[0].gid";
 connectAttr "lambert3SG.mwc" "handleLShape.iog.og[0].gco";
 connectAttr "groupId17.id" "handleRShape.iog.og[0].gid";
 connectAttr "lambert3SG.mwc" "handleRShape.iog.og[0].gco";
-connectAttr "unitConversion1.o" "ctrl_back.rx";
+connectAttr "unitConversion4.o" "ctrl_back.rx";
 connectAttr "turn_controller.ry" "ctrl_front.ry";
-connectAttr "unitConversion3.o" "ctrl_front.rx";
+connectAttr "unitConversion5.o" "ctrl_front.rx";
 connectAttr "turn_controller.ry" "front_wheel_holders.ry";
 connectAttr "groupId24.id" "front_wheel_holdersShape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "front_wheel_holdersShape.iog.og[0].gco";
@@ -32261,59 +32194,24 @@ connectAttr "handleR.msg" "hyperLayout2.hyp[14].dn";
 connectAttr "front_wheel.msg" "hyperLayout2.hyp[15].dn";
 connectAttr "hyperView3.msg" "nodeEditorPanel4Info.b[0]";
 connectAttr "hyperLayout3.msg" "hyperView3.hl";
-connectAttr "front_wheelShape.msg" "hyperLayout3.hyp[0].dn";
-connectAttr "polySurfaceShape7.msg" "hyperLayout3.hyp[1].dn";
-connectAttr "ctrl_frontShape.msg" "hyperLayout3.hyp[2].dn";
-connectAttr "back_wheel_RShape.msg" "hyperLayout3.hyp[3].dn";
-connectAttr "hoodShape.msg" "hyperLayout3.hyp[4].dn";
-connectAttr ":initialShadingGroup.msg" "hyperLayout3.hyp[5].dn";
-connectAttr "|controller|car|ctrl_back|back_wheel_R|polySurfaceShape11.msg" "hyperLayout3.hyp[6].dn"
-		;
-connectAttr "front_wheel_holders.msg" "hyperLayout3.hyp[7].dn";
-connectAttr "back_hub_LShape.msg" "hyperLayout3.hyp[8].dn";
-connectAttr "front_axleShape.msg" "hyperLayout3.hyp[9].dn";
-connectAttr "ctrl_front.msg" "hyperLayout3.hyp[10].dn";
-connectAttr "back_wheel_L.msg" "hyperLayout3.hyp[11].dn";
-connectAttr "polySurfaceShape8.msg" "hyperLayout3.hyp[12].dn";
-connectAttr "back_hub_R.msg" "hyperLayout3.hyp[13].dn";
-connectAttr "back_wheel_R.msg" "hyperLayout3.hyp[14].dn";
-connectAttr "front_wheel_holdersShape.msg" "hyperLayout3.hyp[15].dn";
-connectAttr "back_axle.msg" "hyperLayout3.hyp[16].dn";
-connectAttr "back_hub_L.msg" "hyperLayout3.hyp[17].dn";
-connectAttr ":time1.msg" "hyperLayout3.hyp[18].dn";
-connectAttr "backShape.msg" "hyperLayout3.hyp[19].dn";
-connectAttr "ctrl_back.msg" "hyperLayout3.hyp[20].dn";
-connectAttr "front_wheel.msg" "hyperLayout3.hyp[21].dn";
-connectAttr "front_hub.msg" "hyperLayout3.hyp[22].dn";
-connectAttr "shellShape.msg" "hyperLayout3.hyp[23].dn";
-connectAttr "handleRShape.msg" "hyperLayout3.hyp[24].dn";
-connectAttr "front_axle.msg" "hyperLayout3.hyp[25].dn";
-connectAttr "handleR.msg" "hyperLayout3.hyp[27].dn";
-connectAttr "lambert3SG.msg" "hyperLayout3.hyp[28].dn";
-connectAttr "handleL.msg" "hyperLayout3.hyp[29].dn";
-connectAttr "front_hubShape.msg" "hyperLayout3.hyp[30].dn";
-connectAttr "|controller|car|ctrl_back|back_wheel_L|polySurfaceShape11.msg" "hyperLayout3.hyp[31].dn"
-		;
-connectAttr "polySurface18.msg" "hyperLayout3.hyp[32].dn";
-connectAttr "back_hub_RShape.msg" "hyperLayout3.hyp[33].dn";
-connectAttr "polySurface17.msg" "hyperLayout3.hyp[34].dn";
-connectAttr "back_axleShape.msg" "hyperLayout3.hyp[35].dn";
-connectAttr "ctrl_backShape.msg" "hyperLayout3.hyp[36].dn";
-connectAttr "back.msg" "hyperLayout3.hyp[37].dn";
-connectAttr "handleLShape.msg" "hyperLayout3.hyp[38].dn";
-connectAttr "shell.msg" "hyperLayout3.hyp[40].dn";
-connectAttr "hood.msg" "hyperLayout3.hyp[41].dn";
-connectAttr "controllerShape.msg" "hyperLayout3.hyp[42].dn";
+connectAttr "controller.msg" "hyperLayout3.hyp[0].dn";
+connectAttr "controllerShape.msg" "hyperLayout3.hyp[1].dn";
+connectAttr "ctrl_front.msg" "hyperLayout3.hyp[2].dn";
+connectAttr "unitConversion3.msg" "hyperLayout3.hyp[3].dn";
+connectAttr "expression3.msg" "hyperLayout3.hyp[4].dn";
+connectAttr "unitConversion1.msg" "hyperLayout3.hyp[5].dn";
+connectAttr "ctrl_back.msg" "hyperLayout3.hyp[6].dn";
+connectAttr "expression1.msg" "hyperLayout3.hyp[7].dn";
 connectAttr "controller.msg" "hyperLayout3.hyp[43].dn";
 connectAttr "back_wheel_LShape.msg" "hyperLayout3.hyp[44].dn";
-connectAttr "controller.tz" "expression1.in[0]";
+connectAttr "controller.tx" "expression1.in[0]";
 connectAttr ":time1.o" "expression1.tim";
 connectAttr "ctrl_back.msg" "expression1.obm";
-connectAttr "expression1.out[0]" "unitConversion1.i";
-connectAttr "controller.tz" "expression3.in[0]";
+connectAttr "controller.tx" "expression3.in[0]";
 connectAttr ":time1.o" "expression3.tim";
 connectAttr "ctrl_front.msg" "expression3.obm";
-connectAttr "expression3.out[0]" "unitConversion3.i";
+connectAttr "expression1.out[0]" "unitConversion4.i";
+connectAttr "expression3.out[0]" "unitConversion5.i";
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert3SG.pa" ":renderPartition.st" -na;
 connectAttr "front_axleShape.iog" ":initialShadingGroup.dsm" -na;

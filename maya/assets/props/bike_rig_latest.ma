@@ -1,6 +1,6 @@
 //Maya ASCII 2013 scene
 //Name: bike_rig_latest.ma
-//Last modified: Thu, Apr 16, 2015 11:05:06 PM
+//Last modified: Sun, Apr 19, 2015 04:15:21 PM
 //Codeset: UTF-8
 requires maya "2013";
 requires "stereoCamera" "10.0";
@@ -12,13 +12,13 @@ fileInfo "cutIdentifier" "201207040330-835994";
 fileInfo "osv" "Mac OS X 10.9.2";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
-	setAttr ".t" -type "double3" 29.861368591488802 35.769089092676445 87.55805147528028 ;
-	setAttr ".r" -type "double3" -25.200000000001175 6.4000000000003121 4.0006255738135899e-16 ;
-	setAttr ".rpt" -type "double3" -2.5968662361637186e-14 1.5353119481451598e-14 9.0857412831273213e-15 ;
+	setAttr ".t" -type "double3" 30.375825869549956 24.348970460488722 17.270919269330996 ;
+	setAttr ".r" -type "double3" -37.800000000000338 42.400000000000126 -4.3070372796922531e-15 ;
+	setAttr ".rpt" -type "double3" -2.5968662361637183e-14 1.5353119481451598e-14 9.0857412831273213e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v";
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 67.788165148176461;
+	setAttr ".coi" 22.09941935610885;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -83,11 +83,11 @@ createNode nurbsCurve -n "controllerShape" -p "controller";
 		8.7889439807675096 5.8913247721609815e-16 16.167489001102698
 		12.429443776538792 8.3315913931346497e-16 -5.3290705182007514e-15
 		8.7889439807675078 5.8913247721609854e-16 -16.167489001102687
-		-1.4751486649871045e-15 2.4142867457712942e-31 -22.86428221487726
+		-1.4751486649871045e-15 2.4142867457712946e-31 -22.86428221487726
 		-8.7889439807675114 -5.8913247721609835e-16 -16.167489001102684
 		-12.4294437765388 -8.3315913931346517e-16 -4.4408920985006262e-15
 		-8.7889439807675078 -5.8913247721609864e-16 16.167489001102677
-		-1.5989879876265157e-15 -4.4749139899751106e-31 22.86428221487726
+		-1.5989879876265157e-15 -4.4749139899751115e-31 22.86428221487726
 		8.7889439807675096 5.8913247721609815e-16 16.167489001102698
 		12.429443776538792 8.3315913931346497e-16 -5.3290705182007514e-15
 		8.7889439807675078 5.8913247721609854e-16 -16.167489001102687
@@ -11171,33 +11171,6 @@ createNode mesh -n "handleRShape" -p "handleR";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
-createNode transform -n "turn_controller" -p "car";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".rp" -type "double3" 4.4408920985006262e-16 16 1.9999999999999991 ;
-	setAttr ".sp" -type "double3" 4.4408920985006262e-16 16 1.9999999999999991 ;
-createNode nurbsCurve -n "turn_controllerShape" -p "turn_controller";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		1.5707988714228414 16.024413965112817 2.4012641978861717
-		2.2141740681326456 16.0249371573071 1.9725375520505313
-		1.5605161251851547 16.010852500957913 1.5598980357677237
-		-0.0072709995938882444 15.990410596733248 1.4050642813051444
-		-1.5707988714228411 15.975586034887185 1.598735802113826
-		-2.2141740681326452 15.9750628426929 2.0274624479494676
-		-1.560516125185154 15.989147499042089 2.4401019642322748
-		0.0072709995938885774 16.009589403266752 2.5949357186948543
-		1.5707988714228414 16.024413965112817 2.4012641978861717
-		2.2141740681326456 16.0249371573071 1.9725375520505313
-		1.5605161251851547 16.010852500957913 1.5598980357677237
-		;
 createNode transform -n "ctrl_back" -p "car";
 	setAttr -k off ".tx";
 	setAttr -k off ".ty";
@@ -25231,7 +25204,7 @@ createNode transform -n "front_axle" -p "ctrl_front";
 	setAttr ".rp" -type "double3" 2.4785630698999969e-15 3.6631979942321768 11.162455718015901 ;
 	setAttr ".rpt" -type "double3" -0.15969360718991388 -0.0018606588845210958 -0.00053186635732831861 ;
 	setAttr ".sp" -type "double3" 2.4785630698999973e-15 3.663197994232176 11.162455718015901 ;
-	setAttr ".spt" -type "double3" -3.944304526105059e-31 8.8817841970012543e-16 0 ;
+	setAttr ".spt" -type "double3" -3.9443045261050599e-31 8.8817841970012543e-16 0 ;
 createNode mesh -n "front_axleShape" -p "front_axle";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -30090,6 +30063,7 @@ createNode mesh -n "front_wheelShape" -p "front_wheel";
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
 createNode transform -n "front_hub" -p "ctrl_front";
+	setAttr ".r" -type "double3" 0 -11.507784520256697 0 ;
 	setAttr ".rp" -type "double3" 2.4785630698999969e-15 3.6631979942321768 11.162455718015901 ;
 	setAttr ".sp" -type "double3" 2.4785630698999969e-15 3.6631979942321768 11.162455718015901 ;
 createNode mesh -n "front_hubShape" -p "front_hub";
@@ -31878,7 +31852,7 @@ createNode hyperLayout -n "hyperLayout2";
 	setAttr ".anf" yes;
 createNode hyperGraphInfo -n "nodeEditorPanel4Info";
 createNode hyperView -n "hyperView3";
-	setAttr ".vl" -type "double2" -113.09523809523803 -43035.48804514794 ;
+	setAttr ".vl" -type "double2" -113.09523809523805 -43035.48804514794 ;
 	setAttr ".vh" -type "double2" 1464.2857142857144 -42420.464335804456 ;
 	setAttr ".dag" no;
 createNode hyperLayout -n "hyperLayout3";
@@ -31893,14 +31867,10 @@ createNode hyperLayout -n "hyperLayout3";
 	setAttr ".hyp[2].x" 1170;
 	setAttr ".hyp[2].y" -42604.28515625;
 	setAttr ".hyp[2].nvs" 1760;
-	setAttr ".hyp[3].x" 874.28570556640625;
-	setAttr ".hyp[3].y" -42604.28515625;
 	setAttr ".hyp[3].nvs" 2288;
 	setAttr ".hyp[4].x" 614.28570556640625;
 	setAttr ".hyp[4].y" -42604.28515625;
 	setAttr ".hyp[4].nvs" 1920;
-	setAttr ".hyp[5].x" 874.28570556640625;
-	setAttr ".hyp[5].y" -42767.14453125;
 	setAttr ".hyp[5].nvs" 2288;
 	setAttr ".hyp[6].x" 1170;
 	setAttr ".hyp[6].y" -42767.14453125;
@@ -32137,9 +32107,8 @@ connectAttr "lambert3SG.mwc" "handleLShape.iog.og[0].gco";
 connectAttr "groupId17.id" "handleRShape.iog.og[0].gid";
 connectAttr "lambert3SG.mwc" "handleRShape.iog.og[0].gco";
 connectAttr "unitConversion4.o" "ctrl_back.rx";
-connectAttr "turn_controller.ry" "ctrl_front.ry";
 connectAttr "unitConversion5.o" "ctrl_front.rx";
-connectAttr "turn_controller.ry" "front_wheel_holders.ry";
+connectAttr "ctrl_front.ry" "front_wheel_holders.ry";
 connectAttr "groupId24.id" "front_wheel_holdersShape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "front_wheel_holdersShape.iog.og[0].gco";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -32197,9 +32166,7 @@ connectAttr "hyperLayout3.msg" "hyperView3.hl";
 connectAttr "controller.msg" "hyperLayout3.hyp[0].dn";
 connectAttr "controllerShape.msg" "hyperLayout3.hyp[1].dn";
 connectAttr "ctrl_front.msg" "hyperLayout3.hyp[2].dn";
-connectAttr "unitConversion3.msg" "hyperLayout3.hyp[3].dn";
 connectAttr "expression3.msg" "hyperLayout3.hyp[4].dn";
-connectAttr "unitConversion1.msg" "hyperLayout3.hyp[5].dn";
 connectAttr "ctrl_back.msg" "hyperLayout3.hyp[6].dn";
 connectAttr "expression1.msg" "hyperLayout3.hyp[7].dn";
 connectAttr "controller.msg" "hyperLayout3.hyp[43].dn";

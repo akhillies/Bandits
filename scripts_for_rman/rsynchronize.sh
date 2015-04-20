@@ -28,7 +28,7 @@ while getopts "s:d:" opt; do
 done
 
 # for mac
-./sshlogin $host $usr $pw "rsync -r $usr@$host:$tmpfolder/$src/ $dest"
+./scripts_for_rman/sshlogin.sh $host $usr $pw "rsync -r $usr@$host:$tmpfolder/$src/ $dest"
 
 # for windows -not tested at all
 #ssh -oStrictHostKeyChecking=no -oCheckHostIP=no $usr@$sshurl "rsync -r $usr@$host:$tmpfolder/$src/ $dest"

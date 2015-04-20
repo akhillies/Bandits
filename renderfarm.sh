@@ -5,11 +5,11 @@
 sshurl="shay.cs.berkeley.edu";
 usr="cs198-ed";
 pw="saurabhissupersexy";
-gitpath="/home/cc/cs198/sp15/class/cs198-ed/CNM190/Bandits"
+gitpath="/home/tmp/cs198-ed/Bandits"
 mayaproj="maya"
 renderable="/"
 scripts="scripts_for_rman"
-tmpfolder="/home/tmp/cs198-ed/Bandits"
+tmpfolder="/home/tmp/cs198-ed/renderedFrames"
 
 
 # default values for render command

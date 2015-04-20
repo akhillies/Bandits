@@ -7,7 +7,7 @@ usr="cs198-ed";
 pw="saurabhissupersexy";
 gitpath="/home/cc/cs198/sp15/class/cs198-ed/CNM190/Bandits"
 mayaproj="maya"
-renderable=""
+renderable="/"
 scripts="scripts_for_rman"
 tmpfolder="/home/tmp/cs198-ed/Bandits"
 

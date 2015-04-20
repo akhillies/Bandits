@@ -7,24 +7,23 @@ usr="cs198-ed";
 pw="saurabhissupersexy";
 gitpath="/home/cc/cs198/sp15/class/cs198-ed/CNM190/Bandits"
 mayaproj="maya"
-renderable="shots"
+renderable=""
 scripts="scripts_for_rman"
 tmpfolder="/home/tmp/cs198-ed/Bandits"
 
 
 # default values for render command
-file="pre_title/blockTextTitle/bandits_title_overlay.ma"
+file="shots/pre_title/blockTextTitle/bandits_title_overlay.ma"
 cam="camera1"
 start="1"
 end="100"
-email="qwertyrit@yahoo.com"
 
 
 # -f is file path (prepended with **/Bandits/maya/shots/
 # -c is camera
 # -s/-e is frame start/end
 # -d is email to send command when finished
-while getopts "f:c:s:e:d:" opt; do
+while getopts "f:c:s:e:" opt; do
   case $opt in
     f)
       #echo "File name: $OPTARG" >&2
@@ -41,10 +40,6 @@ while getopts "f:c:s:e:d:" opt; do
     e)
       #echo "End frame: $OPTARG" >&2
       end="$OPTARG"
-      ;;
-    d)
-      #echo "Email when done: $OPTARG" >&2
-      email="$OPTARG"
       ;;
     \?)
       echo "Invalid option: -$OPTARG" >&2
@@ -64,13 +59,23 @@ printf "================================================================"
 printf "\n\nStarting Renderman Farm:\n"
 printf "\tUsing file: $file\n"
 printf "\tWith camera: $cam\n"
-printf "\tFrom frame $start to frame $end\n"
-printf "\tAnd when done will send to: $email\n\n\n"
+printf "\tFrom frame $start to frame $end\n\n\n"
 
 
-$scripts/sshlogin.sh $sshurl $usr $pw $gitpath $mayaproj $renderable $scripts $tmpfolder $file $cam $start $end $email
+# for mac
+#$scripts/sshlogin.sh $sshurl $usr $pw $gitpath $mayaproj $renderable $scripts $tmpfolder $file $cam $start $end
+#$scripts/sshlogin.sh $sshurl $usr $pw "$gitpath/$scripts/slenderman.sh $gitpath $mayaproj $renderable $tmpfolder $file $cam $startframe $endframe"
+
 
 # for windows:
-#ssh -oStrictHostKeyChecking=no -oCheckHostIP=no $usr@$sshurl "$gitpath/$scripts/slenderman.sh $gitpath $mayaproj $renderable $tmpfolder $file $cam $start $end $email"
+#ssh -oStrictHostKeyChecking=no -oCheckHostIP=no $usr@$sshurl "$gitpath/$scripts/slenderman.sh $gitpath $mayaproj $renderable $tmpfolder $file $cam $start $end"
 
-printf "\n\n==============================================================\nRender Farm should have started, please go to shay.cs.berkeley.edu:8888 and login with cs198-ed to see progress\n\t An email will be sent to the specified email address given with a command to run so you can transfer the rendered frames to your computer\n\n\n"
+printf "\n\n==============================================================\n\nRender Farm should have started, please go to shay.cs.berkeley.edu:8888 (should have opened) and login with cs198-ed to see progress.
+    When the farm is done, the website will indicate it (with a grayed out text for the job and being in the 'done' status)\n
+Finished EXR files will be stored in '$tmpfolder$(basename $file .ma)/'
+    To transfer files, please do one of the following AFTER the render job is complete:
+        Use an SCP client (like Cyberduck for Mac or WinSCP for Windows) to transfer the files over manually
+        OR
+        If on UNIX-based machine (aka Mac or Linux) install 'rsync' and use this command: './scripts_for_rman/rsyncronize.sh -s $(basename $file .ma) -d ./'\n\n"
+
+#open http://shay.cs.berkeley.edu:8888

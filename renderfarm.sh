@@ -5,11 +5,11 @@
 sshurl="shay.cs.berkeley.edu";
 usr="cs198-ed";
 pw="saurabhissupersexy";
-gitpath="/home/cc/cs198/sp15/class/cs198-ed/CNM190/Bandits"
+gitpath="/home/tmp/cs198-ed/Bandits"
 mayaproj="maya"
-renderable=""
+renderable="/"
 scripts="scripts_for_rman"
-tmpfolder="/home/tmp/cs198-ed/Bandits"
+tmpfolder="/home/tmp/cs198-ed/renderedFrames"
 
 
 # default values for render command
@@ -64,7 +64,7 @@ printf "\tFrom frame $start to frame $end\n\n\n"
 
 # for mac
 #$scripts/sshlogin.sh $sshurl $usr $pw $gitpath $mayaproj $renderable $scripts $tmpfolder $file $cam $start $end
-#$scripts/sshlogin.sh $sshurl $usr $pw "$gitpath/$scripts/slenderman.sh $gitpath $mayaproj $renderable $tmpfolder $file $cam $startframe $endframe"
+$scripts/sshlogin.sh $sshurl $usr $pw "$gitpath/$scripts/slenderman.sh $gitpath $mayaproj $renderable $tmpfolder $file $cam $startframe $endframe"
 
 
 # for windows:

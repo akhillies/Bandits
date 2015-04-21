@@ -10,9 +10,9 @@ class Logger:
         print "LOGGER: " + msg
 
 def update_git():
-    subprocess.check_call(['git', '-C', '/home/cc/cs198/sp15/class/cs198-ed/CNM190/Bandits/', 'fetch', '--depth=1'])
+    subprocess.check_call(['git', '-C', '/home/tmp/cs198-ed/Bandits/', 'fetch', '--depth=1'])
     Logger.log('Git just made fetch happen')
-    subprocess.check_call(['git', '-C', '/home/cc/cs198/sp15/class/cs198-ed/CNM190/Bandits/', 'reset', '--hard', 'origin/master'])
+    subprocess.check_call(['git', '-C', '/home/tmp/cs198-ed/Bandits/', 'reset', '--hard', 'origin/master'])
     Logger.log('Git is now updated with origin/master')
 
 def render(mafile, camera, start, end):

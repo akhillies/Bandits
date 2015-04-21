@@ -1,6 +1,6 @@
 //Maya ASCII 2015 scene
 //Name: utility_room_view.ma
-//Last modified: Fri, Apr 17, 2015 12:25:55 AM
+//Last modified: Mon, Apr 20, 2015 01:14:51 AM
 //Codeset: UTF-8
 file -rdi 1 -ns "pig_latest" -rfn "pig_latestRN" -op "v=0;p=17;f=0" "X:/documents/GitHub/Bandits/maya//assets/characters/pig/pig_latest.ma";
 file -rdi 2 -ns "key_latest" -rfn "pig_latest:key_latestRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/props/keys/key_latest.ma";
@@ -20,16 +20,16 @@ file -rdi 2 -ns "rectangular_window_latest1" -dr 1 -rfn "house_latest:rectangula
 file -rdi 2 -ns "rectangular_window_latest2" -dr 1 -rfn "house_latest:rectangular_window_latestRN2"
 		 "/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya//assets/sets/livingroom/additions/windows/rectangular_window_latest.ma";
 file -rdi 1 -ns "bike_rig_latest" -rfn "bike_rig_latestRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/props/bike_rig_latest.ma";
-file -rdi 1 -ns "smarty_latest1" -rfn "smarty_latestRN1" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/characters/smarty/smarty_latest.ma";
-file -rdi 1 -ns "smarty_latest2" -rfn "smarty_latest1RN" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/characters/smarty/smarty_latest.ma";
+file -rdi 1 -ns "smarty_latest3" -rfn "smarty_latest2RN" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/characters/smarty/smarty_latest.ma";
+file -rdi 1 -ns "smarty_latest4" -rfn "smarty_latest3RN" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/characters/smarty/smarty_latest.ma";
 file -r -ns "pig_latest" -dr 1 -rfn "pig_latestRN" -op "v=0;p=17;f=0" "X:/documents/GitHub/Bandits/maya//assets/characters/pig/pig_latest.ma";
 file -r -ns "sneaks_latest" -dr 1 -rfn "sneaks_latestRN" -op "v=0;p=17;f=0" "X:/documents/GitHub/Bandits/maya//assets/characters/sneaks/sneaks_latest.ma";
 file -r -ns "lighting_latest" -dr 1 -rfn "lighting_latestRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/sets/set_lighting/lighting_latest.ma";
 file -r -ns "undies_full" -dr 1 -rfn "undies_fullRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/props/undies/undies_full.ma";
 file -r -ns "house_latest" -dr 1 -rfn "house_latestRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/sets/house/house_latest.ma";
 file -r -ns "bike_rig_latest" -dr 1 -rfn "bike_rig_latestRN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/props/bike_rig_latest.ma";
-file -r -ns "smarty_latest1" -dr 1 -rfn "smarty_latestRN1" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/characters/smarty/smarty_latest.ma";
-file -r -ns "smarty_latest2" -dr 1 -rfn "smarty_latest1RN" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/characters/smarty/smarty_latest.ma";
+file -r -ns "smarty_latest3" -dr 1 -rfn "smarty_latest2RN" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/characters/smarty/smarty_latest.ma";
+file -r -ns "smarty_latest4" -dr 1 -rfn "smarty_latest3RN" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/characters/smarty/smarty_latest.ma";
 requires maya "2015";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOptions" -nodeType "mentalrayGlobals"
 		 -nodeType "mentalrayItemsList" -dataType "byteArray" "Mayatomr" "2015.0 - 3.12.1.18 ";
@@ -44,8 +44,8 @@ fileInfo "osv" "Mac OS X 10.9.3";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 8.6286832131842175 16.437813940207846 42.765617858949383 ;
-	setAttr ".r" -type "double3" -18.938352729610138 1.7999999999989775 4.9720701062415236e-16 ;
+	setAttr ".t" -type "double3" 3.6149983328426538 -2.445430522798592 44.938137994452937 ;
+	setAttr ".r" -type "double3" 5.0616472703898561 -4.6000000000010228 2.4928380793358131e-17 ;
 	setAttr ".rp" -type "double3" 1.4210854715202004e-14 0 0 ;
 	setAttr ".rpt" -type "double3" -1.7435588717891992e-16 3.6130297934465454e-15 8.5514672949369122e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -1114,7 +1114,6 @@ createNode nCloth -n "nClothShape1" -p "nCloth1";
 	setAttr ".acc0" -type "vectorArray" 0 ;
 	setAttr ".mas0" -type "doubleArray" 0 ;
 	setAttr ".id0" -type "doubleArray" 0 ;
-	setAttr ".nid" 66;
 	setAttr ".bt0" -type "doubleArray" 0 ;
 	setAttr ".ag0" -type "doubleArray" 0 ;
 	setAttr -k off ".dve";
@@ -4834,8 +4833,8 @@ createNode mentalrayOptions -s -n "miDefaultOptions";
 createNode mentalrayFramebuffer -s -n "miDefaultFramebuffer";
 	setAttr ".dat" 2;
 createNode lightLinker -s -n "lightLinker1";
-	setAttr -s 2146 ".lnk";
-	setAttr -s 2146 ".slnk";
+	setAttr -s 2504 ".lnk";
+	setAttr -s 2504 ".slnk";
 createNode displayLayerManager -n "layerManager";
 createNode displayLayer -n "defaultLayer";
 createNode renderLayerManager -n "renderLayerManager";
@@ -5089,10 +5088,10 @@ createNode reference -n "pig_latestRN";
 		""
 		"pig_latestRN" 6
 		2 "|pig_latest:pig_the_cat|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:splineiK_tail01" 
-		"translate" " -type \"double3\" -0.035605929950880168 9.5068587724989122 -13.33963281956066993"
+		"translate" " -type \"double3\" -0.035605929950888883 9.50685877249889444 -13.33963281956068236"
 		
 		2 "|pig_latest:pig_the_cat|pig_latest:PIG|pig_latest:controller_main01|pig_latest:stretchr_ctrl01|pig_latest:hip_rotation_ctrl01|pig_latest:tail_controllers_01|pig_latest:splineiK_tail01" 
-		"rotate" " -type \"double3\" 90.07587346879756751 41.8063746894496262 90.09659416823394906"
+		"rotate" " -type \"double3\" 90.07587346879756751 41.80637468944989621 90.09659416823393485"
 		
 		2 "|pig_latest:pig_the_cat|pig_latest:PIG|pig_latest:flexi_joint_systems|pig_latest:vertebrae_flexi_spine01|pig_latest:PigSkin002:vertebrae_flexi_global01|pig_latest:PigSkin002:vertebrae_flexi_grp_anim_end01|pig_latest:PigSkin002:vertebrae_flexi_anim_end01" 
 		"followMid" " -av -k 1 1"
@@ -5312,7 +5311,7 @@ createNode reference -n "house_latestRN";
 		"house_latestRN"
 		"house_latest:living_room_furniture_latestRN" 0
 		"house_latest:kitchen_latestRN" 0
-		"house_latest:bedroom_latestRN" 8
+		"house_latest:bedroom_latestRN" 9
 		2 "|house_latest:bedroom_latest:nRigid1|house_latest:bedroom_latest:nRigidShape1" 
 		"cacheWidth" " 120"
 		2 "|house_latest:bedroom_latest:cloth|house_latest:bedroom_latest:nCloth1|house_latest:bedroom_latest:nClothShape1" 
@@ -5328,6 +5327,8 @@ createNode reference -n "house_latestRN";
 		2 "|house_latest:bedroom_latest:cloth|house_latest:bedroom_latest:polySurface60|house_latest:bedroom_latest:outputCloth1" 
 		"intermediateObject" " 1"
 		2 "house_latest:bedroom_latest:layer2" "visibility" " 1"
+		2 "|house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:bed|house_latest:bedroom_latest:leg_front_L2|house_latest:bedroom_latest:leg_front_L2Shape" 
+		"quadSplit" " 0"
 		"house_latest:utilities_latestRN" 0
 		"house_latestRN" 5
 		2 "|house_latest:ncloth|house_latest:nCloth1|house_latest:nClothShape1" "cacheWidth" 
@@ -5340,14 +5341,12 @@ createNode reference -n "house_latestRN";
 		" 120"
 		2 "|house_latest:ncloth|house_latest:nRigid4|house_latest:nRigidShape4" "cacheWidth" 
 		" 120"
-		"house_latest:bedroom_latestRN" 5
+		"house_latest:bedroom_latestRN" 4
 		2 "|house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:bed|house_latest:bedroom_latest:mattress|house_latest:bedroom_latest:mattressShape" 
 		"quadSplit" " 0"
 		2 "|house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:bed|house_latest:bedroom_latest:mattress_frame1|house_latest:bedroom_latest:mattress_frame1Shape" 
 		"quadSplit" " 0"
 		2 "|house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:bed|house_latest:bedroom_latest:leg_front_L|house_latest:bedroom_latest:leg_front_LShape" 
-		"quadSplit" " 0"
-		2 "|house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:bed|house_latest:bedroom_latest:leg_front_L2|house_latest:bedroom_latest:leg_front_L2Shape" 
 		"quadSplit" " 0"
 		5 3 "house_latestRN" "|house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:bed|house_latest:bedroom_latest:mattress|house_latest:bedroom_latest:mattressShape.worldMesh" 
 		"house_latestRN.placeHolderList[1]" ""
@@ -5449,14 +5448,6 @@ createNode reference -n "bike_rig_latestRN";
 		"bike_rig_latestRN.placeHolderList[16]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "smarty_latestRN1";
-	setAttr ".ed" -type "dataReferenceEdits" 
-		"smarty_latestRN1"
-		"smarty_latestRN1" 0
-		"smarty_latestRN1" 1
-		2 "|smarty_latest1:SmartyRig|smarty_latest1:global_ctrl" "translate" " -type \"double3\" 0 0 0";
-	setAttr ".ptag" -type "string" "";
-lockNode -l 1 ;
 createNode nComponent -n "nComponent1";
 	setAttr ".ct" 6;
 	setAttr ".el" 2;
@@ -5464,10 +5455,15 @@ createNode nComponent -n "nComponent2";
 	setAttr ".ct" 2;
 	setAttr -s 11 ".ci[0:10]"  0 1 2 3 4 5 
 		6 7 8 9 10;
-createNode reference -n "smarty_latest1RN";
+createNode reference -n "smarty_latest2RN";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"smarty_latest1RN"
-		"smarty_latest1RN" 0;
+		"smarty_latest2RN"
+		"smarty_latest2RN" 0;
+lockNode -l 1 ;
+createNode reference -n "smarty_latest3RN";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"smarty_latest3RN"
+		"smarty_latest3RN" 0;
 lockNode -l 1 ;
 select -ne :time1;
 	setAttr -av -k on ".cch";
@@ -5481,7 +5477,7 @@ select -ne :renderPartition;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 1998 ".st";
+	setAttr -s 1960 ".st";
 	setAttr -cb on ".an";
 	setAttr -cb on ".pt";
 select -ne :renderGlobalsList1;
@@ -5494,7 +5490,7 @@ select -ne :defaultShaderList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 335 ".s";
+	setAttr -s 301 ".s";
 select -ne :postProcessList1;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -5506,7 +5502,7 @@ select -ne :defaultRenderUtilityList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 2120 ".u";
+	setAttr -s 1174 ".u";
 select -ne :defaultRenderingList1;
 	setAttr -s 120 ".r";
 select -ne :lightList1;
@@ -5516,13 +5512,13 @@ select -ne :defaultTextureList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 796 ".tx";
+	setAttr -s 718 ".tx";
 select -ne :initialShadingGroup;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 830 ".dsm";
+	setAttr -s 824 ".dsm";
 	setAttr -k on ".mwc";
 	setAttr -cb on ".an";
 	setAttr -cb on ".il";
@@ -5531,7 +5527,7 @@ select -ne :initialShadingGroup;
 	setAttr -cb on ".fo";
 	setAttr -cb on ".epo";
 	setAttr ".ro" yes;
-	setAttr -s 212 ".gn";
+	setAttr -s 210 ".gn";
 	setAttr -cb on ".mimt";
 	setAttr -cb on ".miop";
 	setAttr -cb on ".mise";
@@ -5674,7 +5670,7 @@ select -ne :hardwareRenderingGlobals;
 		 1 1 1 0 0 0 0 0 0 0 0 0
 		 0 0 0 0 ;
 select -ne :characterPartition;
-	setAttr -s 6 ".st";
+	setAttr -s 4 ".st";
 select -ne :defaultHardwareRenderGlobals;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -5943,6 +5939,6 @@ connectAttr "pPlaneShape1.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "outputCloth1.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "outputCloth2.iog" ":initialShadingGroup.dsm" -na;
 dataStructure -fmt "raw" -as "name=externalContentTable:string=node:string=key:string=upath:uint32=upathcrc:string=rpath:string=roles";
-applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"pig_latestRN\" \"\" \"X:/documents/GitHub/Bandits/maya//assets/characters/pig/pig_latest.ma\" 672977679 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/characters/pig/pig_latest.ma\" \"FileRef\"\n1\n\"sneaks_latestRN\" \"\" \"X:/documents/GitHub/Bandits/maya//assets/characters/sneaks/sneaks_latest.ma\" 4193267377 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/characters/sneaks/sneaks_latest.ma\" \"FileRef\"\n2\n\"lighting_latestRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/sets/set_lighting/lighting_latest.ma\" 1486645550 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/sets/set_lighting/lighting_latest.ma\" \"FileRef\"\n3\n\"undies_fullRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/props/undies/undies_full.ma\" 84363646 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/props/undies/undies_full.ma\" \"FileRef\"\n4\n\"house_latestRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/sets/house/house_latest.ma\" 4116915578 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/sets/house/house_latest.ma\" \"FileRef\"\n5\n\"bike_rig_latestRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/props/bike_rig_latest.ma\" 2189625445 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/props/bike_rig_latest.ma\" \"FileRef\"\n6\n\"smarty_latestRN1\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/characters/smarty/smarty_latest.ma\" 3117033860 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/characters/smarty/smarty_latest.ma\" \"FileRef\"\n7\n\"smarty_latest1RN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/characters/smarty/smarty_latest.ma\" 1315773124 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/characters/smarty/smarty_latest.ma\" \"FileRef\"\nendStream\nendChannel\nendAssociations\n" 
+applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"pig_latestRN\" \"\" \"X:/documents/GitHub/Bandits/maya//assets/characters/pig/pig_latest.ma\" 672977679 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/characters/pig/pig_latest.ma\" \"FileRef\"\n1\n\"sneaks_latestRN\" \"\" \"X:/documents/GitHub/Bandits/maya//assets/characters/sneaks/sneaks_latest.ma\" 4193267377 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/characters/sneaks/sneaks_latest.ma\" \"FileRef\"\n2\n\"lighting_latestRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/sets/set_lighting/lighting_latest.ma\" 1486645550 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/sets/set_lighting/lighting_latest.ma\" \"FileRef\"\n3\n\"undies_fullRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/props/undies/undies_full.ma\" 84363646 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/props/undies/undies_full.ma\" \"FileRef\"\n4\n\"house_latestRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/sets/house/house_latest.ma\" 4116915578 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/sets/house/house_latest.ma\" \"FileRef\"\n5\n\"bike_rig_latestRN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/props/bike_rig_latest.ma\" 2189625445 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/props/bike_rig_latest.ma\" \"FileRef\"\n6\n\"smarty_latest2RN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/characters/smarty/smarty_latest.ma\" 3117033860 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/characters/smarty/smarty_latest.ma\" \"FileRef\"\n7\n\"smarty_latest3RN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/characters/smarty/smarty_latest.ma\" 1315773124 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/characters/smarty/smarty_latest.ma\" \"FileRef\"\nendStream\nendChannel\nendAssociations\n" 
 		-scn;
 // End of utility_room_view.ma

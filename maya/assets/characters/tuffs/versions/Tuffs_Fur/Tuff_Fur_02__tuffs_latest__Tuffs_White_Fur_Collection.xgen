@@ -2,7 +2,7 @@
 #
 # Version:  /Applications/Autodesk/maya2015/plug-ins/xgen/
 # Author:   AshleyTheMagnificant
-# Date:     Sun Apr 19 18:05:34 2015
+# Date:     Mon Apr 20 15:17:19 2015
 
 FileVersion 16
 
@@ -116,6 +116,29 @@ SplinePrimitive
 	CVFrequency		1.0
 	endAttrs
 
+CoilFXModule
+	active			true
+	mask			.03
+	name			Coil1
+	count			.04
+	countScale		rampUI(0.0,0.75,3:0.001,0.118421052632,1:1.0,0.25,3)
+	radius			1.0
+	radiusScale		rampUI(0.0,0.0,3:0.3,1.0,3)
+	endAttrs
+
+NoiseFXModule
+	active			true
+	mask			.7
+	name			Noise1
+	frequency		.6
+	magnitude		.5
+	magnitudeScale		rampUI(0.0,0.0,1:1.0,1.0,1)
+	correlation		0.0
+	preserveLength		0.0
+	mode			0
+	bakeDir			${DESC}/${FXMODULE}/
+	endAttrs
+
 RandomGenerator
 	displacement		$a=0.0000;#-1.0,1.0\n$a
 	vectorDisplacement	0
@@ -127,7 +150,7 @@ RandomGenerator
 	cullAngleBF		0.0
 	cullAngleF		0.0
 	cullExpr		$a=0.0000;#0.0,1.0\n$a
-	density			1500.0
+	density			1000.0
 	mask			1.0 # map('${DESC}/density/')
 	dcFlag			false
 	scFlag			true

@@ -1,6 +1,6 @@
 //Maya ASCII 2013 scene
 //Name: bike_rig_05_wheeldirctrl.ma
-//Last modified: Sun, Apr 19, 2015 04:15:38 PM
+//Last modified: Wed, Apr 22, 2015 02:07:30 PM
 //Codeset: UTF-8
 requires maya "2013";
 requires "stereoCamera" "10.0";
@@ -12,8 +12,8 @@ fileInfo "cutIdentifier" "201207040330-835994";
 fileInfo "osv" "Mac OS X 10.9.2";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
-	setAttr ".t" -type "double3" 30.375825869549956 24.348970460488722 17.270919269330996 ;
-	setAttr ".r" -type "double3" -37.800000000000338 42.400000000000126 -4.3070372796922531e-15 ;
+	setAttr ".t" -type "double3" 30.375825869549956 24.348970460488719 17.270919269330996 ;
+	setAttr ".r" -type "double3" -37.800000000000338 42.400000000000126 -4.3070372796922523e-15 ;
 	setAttr ".rpt" -type "double3" -2.5968662361637183e-14 1.5353119481451598e-14 9.0857412831273213e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v";
@@ -71,6 +71,7 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".o" yes;
 createNode transform -n "controller";
 	setAttr ".r" -type "double3" 0 90 0 ;
+	setAttr ".s" -type "double3" 0.218 0.218 0.218 ;
 	setAttr -k off ".sx";
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
@@ -87,7 +88,7 @@ createNode nurbsCurve -n "controllerShape" -p "controller";
 		-8.7889439807675114 -5.8913247721609835e-16 -16.167489001102684
 		-12.4294437765388 -8.3315913931346517e-16 -4.4408920985006262e-15
 		-8.7889439807675078 -5.8913247721609864e-16 16.167489001102677
-		-1.5989879876265157e-15 -4.4749139899751115e-31 22.86428221487726
+		-1.5989879876265157e-15 -4.4749139899751124e-31 22.86428221487726
 		8.7889439807675096 5.8913247721609815e-16 16.167489001102698
 		12.429443776538792 8.3315913931346497e-16 -5.3290705182007514e-15
 		8.7889439807675078 5.8913247721609854e-16 -16.167489001102687
@@ -25204,7 +25205,7 @@ createNode transform -n "front_axle" -p "ctrl_front";
 	setAttr ".rp" -type "double3" 2.4785630698999969e-15 3.6631979942321768 11.162455718015901 ;
 	setAttr ".rpt" -type "double3" -0.15969360718991388 -0.0018606588845210958 -0.00053186635732831861 ;
 	setAttr ".sp" -type "double3" 2.4785630698999973e-15 3.663197994232176 11.162455718015901 ;
-	setAttr ".spt" -type "double3" -3.9443045261050599e-31 8.8817841970012543e-16 0 ;
+	setAttr ".spt" -type "double3" -3.9443045261050608e-31 8.8817841970012543e-16 0 ;
 createNode mesh -n "front_axleShape" -p "front_axle";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -30063,7 +30064,7 @@ createNode mesh -n "front_wheelShape" -p "front_wheel";
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
 createNode transform -n "front_hub" -p "ctrl_front";
-	setAttr ".r" -type "double3" 0 -11.507784520256697 0 ;
+	setAttr ".r" -type "double3" 0 -11.507784520256696 0 ;
 	setAttr ".rp" -type "double3" 2.4785630698999969e-15 3.6631979942321768 11.162455718015901 ;
 	setAttr ".sp" -type "double3" 2.4785630698999969e-15 3.6631979942321768 11.162455718015901 ;
 createNode mesh -n "front_hubShape" -p "front_hub";

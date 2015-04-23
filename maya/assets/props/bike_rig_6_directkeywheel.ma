@@ -1,6 +1,6 @@
 //Maya ASCII 2013 scene
-//Name: bike_rig_latest.ma
-//Last modified: Thu, Apr 23, 2015 08:24:26 AM
+//Name: bike_rig_6_directkeywheel.ma
+//Last modified: Thu, Apr 23, 2015 08:24:50 AM
 //Codeset: UTF-8
 requires maya "2013";
 requires "stereoCamera" "10.0";
@@ -31414,4 +31414,4 @@ connectAttr "groupId67.msg" ":initialShadingGroup.gn" -na;
 connectAttr "lambert2.msg" ":defaultShaderList1.s" -na;
 connectAttr "lambert3.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-// End of bike_rig_latest.ma
+// End of bike_rig_6_directkeywheel.ma

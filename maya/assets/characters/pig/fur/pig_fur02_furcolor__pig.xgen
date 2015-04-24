@@ -1,8 +1,8 @@
 # XGen Palette File
 #
-# Version:  C:/Program Files/Autodesk/Maya2015/plug-ins/xgen/
-# Author:   Brian
-# Date:     Sun Apr 19 17:45:41 2015
+# Version:  /Applications/Autodesk/maya2015/plug-ins/xgen/
+# Author:   alyyassin
+# Date:     Fri Apr 24 02:51:36 2015
 
 FileVersion 16
 
@@ -10,7 +10,7 @@ Palette
 	name			pig
 	parent			
 	xgDataPath		${PROJECT}xgen/collections/pig
-	xgProjectPath		C:/Users/Brian/Documents/GitHub/Bandits/Bandits/maya/
+	xgProjectPath		/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/
 	xgDogTag		
 	endAttrs
 

@@ -1,6 +1,6 @@
 //Maya ASCII 2013 scene
 //Name: bike_rig_05_wheeldirctrl.ma
-//Last modified: Sun, Apr 19, 2015 04:15:38 PM
+//Last modified: Wed, Apr 22, 2015 02:24:36 PM
 //Codeset: UTF-8
 requires maya "2013";
 requires "stereoCamera" "10.0";
@@ -12,17 +12,17 @@ fileInfo "cutIdentifier" "201207040330-835994";
 fileInfo "osv" "Mac OS X 10.9.2";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
-	setAttr ".t" -type "double3" 30.375825869549956 24.348970460488722 17.270919269330996 ;
-	setAttr ".r" -type "double3" -37.800000000000338 42.400000000000126 -4.3070372796922531e-15 ;
-	setAttr ".rpt" -type "double3" -2.5968662361637183e-14 1.5353119481451598e-14 9.0857412831273213e-15 ;
+	setAttr ".t" -type "double3" 7.9570668139806866 6.0139972093218681 -17.844034597904429 ;
+	setAttr ".r" -type "double3" -15.599999999999335 162.79999999999905 0 ;
+	setAttr ".rpt" -type "double3" -2.5727763991071454e-14 1.5429274725576484e-14 9.0787024372418513e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v";
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 22.09941935610885;
+	setAttr ".coi" 19.393827332218027;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 6.0000000000000133 7.2744316721994684 3.1558438940816616e-14 ;
+	setAttr ".tp" -type "double3" 2.4334153465274628 0.79861264209860661 1.721232252283045e-07 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	setAttr ".t" -type "double3" 11.422510800231938 100.1 1.6648193878880568 ;
@@ -71,6 +71,7 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".o" yes;
 createNode transform -n "controller";
 	setAttr ".r" -type "double3" 0 90 0 ;
+	setAttr ".s" -type "double3" 0.218 0.218 0.218 ;
 	setAttr -k off ".sx";
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
@@ -87,7 +88,7 @@ createNode nurbsCurve -n "controllerShape" -p "controller";
 		-8.7889439807675114 -5.8913247721609835e-16 -16.167489001102684
 		-12.4294437765388 -8.3315913931346517e-16 -4.4408920985006262e-15
 		-8.7889439807675078 -5.8913247721609864e-16 16.167489001102677
-		-1.5989879876265157e-15 -4.4749139899751115e-31 22.86428221487726
+		-1.5989879876265157e-15 -4.4749139899751124e-31 22.86428221487726
 		8.7889439807675096 5.8913247721609815e-16 16.167489001102698
 		12.429443776538792 8.3315913931346497e-16 -5.3290705182007514e-15
 		8.7889439807675078 5.8913247721609854e-16 -16.167489001102687
@@ -25204,7 +25205,7 @@ createNode transform -n "front_axle" -p "ctrl_front";
 	setAttr ".rp" -type "double3" 2.4785630698999969e-15 3.6631979942321768 11.162455718015901 ;
 	setAttr ".rpt" -type "double3" -0.15969360718991388 -0.0018606588845210958 -0.00053186635732831861 ;
 	setAttr ".sp" -type "double3" 2.4785630698999973e-15 3.663197994232176 11.162455718015901 ;
-	setAttr ".spt" -type "double3" -3.9443045261050599e-31 8.8817841970012543e-16 0 ;
+	setAttr ".spt" -type "double3" -3.9443045261050617e-31 8.8817841970012543e-16 0 ;
 createNode mesh -n "front_axleShape" -p "front_axle";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -30063,7 +30064,6 @@ createNode mesh -n "front_wheelShape" -p "front_wheel";
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
 createNode transform -n "front_hub" -p "ctrl_front";
-	setAttr ".r" -type "double3" 0 -11.507784520256697 0 ;
 	setAttr ".rp" -type "double3" 2.4785630698999969e-15 3.6631979942321768 11.162455718015901 ;
 	setAttr ".sp" -type "double3" 2.4785630698999969e-15 3.6631979942321768 11.162455718015901 ;
 createNode mesh -n "front_hubShape" -p "front_hub";
@@ -31868,8 +31868,6 @@ createNode hyperLayout -n "hyperLayout3";
 	setAttr ".hyp[2].y" -42604.28515625;
 	setAttr ".hyp[2].nvs" 1760;
 	setAttr ".hyp[3].nvs" 2288;
-	setAttr ".hyp[4].x" 614.28570556640625;
-	setAttr ".hyp[4].y" -42604.28515625;
 	setAttr ".hyp[4].nvs" 1920;
 	setAttr ".hyp[5].nvs" 2288;
 	setAttr ".hyp[6].x" 1170;
@@ -31922,13 +31920,10 @@ createNode hyperLayout -n "hyperLayout3";
 	setAttr ".anf" yes;
 createNode expression -n "expression1";
 	setAttr -k on ".nds";
-	setAttr ".ixp" -type "string" ".O[0] = (.I[0] / (2 * 3.14 *3.855 )) * 360;";
-createNode expression -n "expression3";
-	setAttr -k on ".nds";
-	setAttr ".ixp" -type "string" ".O[0] = (.I[0] / (2 * 3.14 *3.855 )) * 360;";
-createNode unitConversion -n "unitConversion4";
-	setAttr ".cf" 0.017453292519943295;
-createNode unitConversion -n "unitConversion5";
+	setAttr ".ixp" -type "string" ".O[0] = .I[0]";
+createNode unitConversion -n "unitConversion6";
+	setAttr ".cf" 57.295779513082323;
+createNode unitConversion -n "unitConversion7";
 	setAttr ".cf" 0.017453292519943295;
 select -ne :time1;
 	setAttr -av -k on ".cch";
@@ -32106,8 +32101,7 @@ connectAttr "groupId13.id" "handleLShape.iog.og[0].gid";
 connectAttr "lambert3SG.mwc" "handleLShape.iog.og[0].gco";
 connectAttr "groupId17.id" "handleRShape.iog.og[0].gid";
 connectAttr "lambert3SG.mwc" "handleRShape.iog.og[0].gco";
-connectAttr "unitConversion4.o" "ctrl_back.rx";
-connectAttr "unitConversion5.o" "ctrl_front.rx";
+connectAttr "unitConversion7.o" "ctrl_back.rx";
 connectAttr "ctrl_front.ry" "front_wheel_holders.ry";
 connectAttr "groupId24.id" "front_wheel_holdersShape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "front_wheel_holdersShape.iog.og[0].gco";
@@ -32166,19 +32160,15 @@ connectAttr "hyperLayout3.msg" "hyperView3.hl";
 connectAttr "controller.msg" "hyperLayout3.hyp[0].dn";
 connectAttr "controllerShape.msg" "hyperLayout3.hyp[1].dn";
 connectAttr "ctrl_front.msg" "hyperLayout3.hyp[2].dn";
-connectAttr "expression3.msg" "hyperLayout3.hyp[4].dn";
 connectAttr "ctrl_back.msg" "hyperLayout3.hyp[6].dn";
 connectAttr "expression1.msg" "hyperLayout3.hyp[7].dn";
 connectAttr "controller.msg" "hyperLayout3.hyp[43].dn";
 connectAttr "back_wheel_LShape.msg" "hyperLayout3.hyp[44].dn";
-connectAttr "controller.tx" "expression1.in[0]";
+connectAttr "unitConversion6.o" "expression1.in[0]";
 connectAttr ":time1.o" "expression1.tim";
 connectAttr "ctrl_back.msg" "expression1.obm";
-connectAttr "controller.tx" "expression3.in[0]";
-connectAttr ":time1.o" "expression3.tim";
-connectAttr "ctrl_front.msg" "expression3.obm";
-connectAttr "expression1.out[0]" "unitConversion4.i";
-connectAttr "expression3.out[0]" "unitConversion5.i";
+connectAttr "ctrl_front.rx" "unitConversion6.i";
+connectAttr "expression1.out[0]" "unitConversion7.i";
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert3SG.pa" ":renderPartition.st" -na;
 connectAttr "front_axleShape.iog" ":initialShadingGroup.dsm" -na;

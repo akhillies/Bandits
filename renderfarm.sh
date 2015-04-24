@@ -65,7 +65,7 @@ printf "\tFrom frame $start to frame $end\n\n\n"
 
 
 # for mac
-$scripts/sshlogin.sh $sshurl $usr $pw $gitpath $mayaproj $renderable $scripts $tmpfolder $file $cam $start $end
+$scripts/sshlogin.sh $sshurl $usr $pw $gitpath $mayaproj $renderable $scripts $tmpfolder $file $cam $start $end $width $height
 #$scripts/sshlogin.sh $sshurl $usr $pw "$gitpath/$scripts/slenderman.sh $gitpath $mayaproj $renderable $tmpfolder $file $cam $startframe $endframe $width $height"
 
 

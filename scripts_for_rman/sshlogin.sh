@@ -13,8 +13,10 @@ set file [lindex $argv 8]
 set cam [lindex $argv 9]
 set startframe [lindex $argv 10]
 set endframe [lindex $argv 11]
+set width [lindex $argv 12]
+set height [lindex $argv 13]
 
-spawn ssh -oStrictHostKeyChecking=no -oCheckHostIP=no $usr@$host "$gitfolder/$scripts/slenderman.sh $gitfolder $proj $render $tmp $file $cam $startframe $endframe"
+spawn ssh -oStrictHostKeyChecking=no -oCheckHostIP=no $usr@$host "$gitfolder/$scripts/slenderman.sh $gitfolder $proj $render $tmp $file $cam $startframe $endframe $width $height"
 #spawn ssh -oStrictHostKeyChecking=no -oCheckHostIP=no $usr@$host "$command"
 
 expect "Password:"

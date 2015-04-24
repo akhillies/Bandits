@@ -1,8 +1,8 @@
 # XGen Palette File
 #
 # Version:  /Applications/Autodesk/maya2015/plug-ins/xgen/
-# Author:   CynthiaDiaz
-# Date:     Wed Apr  8 14:14:36 2015
+# Author:   AshleyTheMagnificant
+# Date:     Fri Apr 24 13:33:15 2015
 
 FileVersion 16
 
@@ -10,7 +10,7 @@ Palette
 	name			sneaks
 	parent			
 	xgDataPath		${PROJECT}xgen/collections/sneaks
-	xgProjectPath		/Users/CynthiaDiaz/Desktop/Bandits/maya/
+	xgProjectPath		/Users/AshleyTheMagnificant/GitHub/Bandits/maya/
 	xgDogTag		
 	endAttrs
 
@@ -91,11 +91,22 @@ RendermanRenderer
 	dPdvref_XS		false
 	dPdvg_XS		false
 	dPdvrefg_XS		false
-	renderer		mental ray
+	renderer		RenderMan
 	renderMethod		2
 	draMode			0
 	primitiveBound		1.0
 	custom__rr_splinesAsHair	1
+	custom__mr_rendermode	0
+	custom__mr_splinedegree	1
+	custom__mr_approx_type	1
+	custom__mr_approx_fine	0.1
+	custom__mr_approx_parametric	3
+	custom__mr_motion_blur	0
+	custom__mr_motion_blur_mode	1
+	custom__mr_motion_blur_steps	5
+	custom__mr_motion_blur_factor	1.0
+	custom__mr_motion_blur_multiplier	1.0
+	custom_color_root_color	$a=map('${DESC}/paintmaps/color');#3dpaint,10.0\n$a\n
 	endAttrs
 
 SplinePrimitive
@@ -144,7 +155,7 @@ RandomGenerator
 	cullAngleBF		0.0
 	cullAngleF		0.0
 	cullExpr		$a=0.0000;#0.0,1.0\n$a
-	density			30.0
+	density			500.0
 	mask			1.0 # map('${DESC}/density/')
 	dcFlag			false
 	scFlag			true
@@ -174,6 +185,7 @@ GLRenderer
 	TEXCOORD6		
 	TEXCOORD7		
 	splineSegments		2
+	primNumLimit		1000000
 	endAttrs
 
 	Active	SplinePrimitive

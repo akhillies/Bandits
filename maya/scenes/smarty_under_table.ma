@@ -1,9 +1,9 @@
 //Maya ASCII 2015 scene
 //Name: smarty_under_table.ma
-//Last modified: Fri, Apr 24, 2015 01:16:07 AM
+//Last modified: Fri, Apr 24, 2015 02:29:26 AM
 //Codeset: 1252
 file -rdi 1 -rpr "livingroom_shading_latest" -rfn "livingroom_shading_latestRN"
-		 "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/sets/house/house_latest_pxr5.ma";
+		 "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/sets/house/house_latest_pxr6.ma";
 file -rdi 2 -ns "kitchen_latest" -rfn "livingroom_shading_latest_kitchen_latestRN"
 		 "/Users/scai/Bandits/maya//assets/sets/kitchen/kitchen_latest.ma";
 file -rdi 2 -ns "living_room_furniture_latest" -rfn "livingroom_shading_latest_living_room_furniture_latestRN"
@@ -28,10 +28,11 @@ file -rdi 2 -ns "bike" -rfn "smartybike_bikeRN" "/Users/scai/Bandits/maya//asset
 file -rdi 1 -rpr "pig_latest" -rfn "pig_latestRN" "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/pig/pig_latest_pxr.ma";
 file -rdi 2 -ns "key_latest" -rfn "pig_latest_key_latestRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/props/keys/key_latest.ma";
 file -r -rpr "livingroom_shading_latest" -dr 1 -rfn "livingroom_shading_latestRN"
-		 "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/sets/house/house_latest_pxr5.ma";
+		 "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/sets/house/house_latest_pxr6.ma";
 file -r -rpr "smartybike" -dr 1 -rfn "smartybikeRN" "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/smarty/smartybike.ma";
 file -r -rpr "pig_latest" -dr 1 -rfn "pig_latestRN" "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/pig/pig_latest_pxr.ma";
 requires maya "2015";
+requires "dmm_cinematic" "1.1.10";
 requires -nodeType "RenderMan" "RenderMan_for_Maya" "5.5";
 requires -nodeType "FurGlobals" "Fur" "2015";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOptions" -nodeType "mentalrayGlobals"
@@ -45,17 +46,17 @@ fileInfo "cutIdentifier" "201402282131-909040";
 fileInfo "osv" "Microsoft Windows 8 Home Premium Edition, 64-bit  (Build 9200)\n";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
-	setAttr ".t" -type "double3" -200.050278265141 8.8860772875279519 54.395357901248047 ;
-	setAttr ".r" -type "double3" 1.4616472723071781 -1096.2000000010401 2.5875504358386481e-017 ;
+	setAttr ".t" -type "double3" -205.9641014986444 11.514630006633112 96.968781729342041 ;
+	setAttr ".r" -type "double3" -11.138352727707574 -1086.6000000009294 -1.0005542454734858e-016 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v";
 	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 7.7987713735396813;
+	setAttr ".coi" 59.606080258234883;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -197.87519836425781 9.0850067138671875 46.908683776855469 ;
+	setAttr ".tp" -type "double3" -199.24219595346597 0 38.873049653713281 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	setAttr ".t" -type "double3" -194.37256248651767 291.39159408278505 66.178955569045343 ;
@@ -2428,6 +2429,233 @@ createNode positionMarker -n "positionMarkerShape2" -p "positionMarker2";
 	setAttr ".uwo" yes;
 	setAttr ".lp" -type "double3" 1 0 0 ;
 	setAttr ".t" 294;
+createNode transform -n "pCube245";
+	setAttr ".t" -type "double3" -197.64207293454032 7.3526110366740447 46.508845694611225 ;
+	setAttr ".s" -type "double3" 10.107238096853171 0.26062082182317431 18.099314694699775 ;
+createNode mesh -n "pCubeShape1" -p "pCube245";
+	setAttr -k off ".v" no;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "pCube245_DmmTriMesh" -p "pCube245";
+	setAttr -k off ".v" no;
+	setAttr ".tmp" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode DMMObject -n "pCube245_DmmObject" -p "pCube245";
+	setAttr -k off ".v";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr ".dpv" yes;
+createNode mesh -n "pCube245_DmmDriven" -p "pCube245";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".tmp" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "pCube245_DmmSim" -p "pCube245";
+	setAttr -k off ".v" no;
+	setAttr ".tmp" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "outputSurfaceShape" -p "pCube245";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode transform -n "pSphere1";
+	setAttr ".t" -type "double3" -197.80530931094313 9.5461678056613284 40.616624695563829 ;
+	setAttr ".r" -type "double3" 91.926309686623512 0 0 ;
+	setAttr ".s" -type "double3" 1.6701221982620764 1.6701221982620764 1.6701221982620764 ;
+createNode mesh -n "pSphereShape1" -p "pSphere1";
+	setAttr -k off ".v" no;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "pSphere1_DmmTriMesh" -p "pSphere1";
+	setAttr -k off ".v" no;
+	setAttr ".tmp" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode DMMObject -n "pSphere1_DmmObject" -p "pSphere1";
+	setAttr -k off ".v";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr ".dpv" yes;
+createNode mesh -n "pSphere1_DmmDriven" -p "pSphere1";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".tmp" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "pSphere1_DmmSim" -p "pSphere1";
+	setAttr -k off ".v" no;
+	setAttr ".tmp" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "outputSurfaceShape" -p "pSphere1";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode transform -n "pCube246";
+	setAttr ".t" -type "double3" -199.24219440280643 -0.068776510531290302 38.873048103053748 ;
+	setAttr ".s" -type "double3" 52.031499894585835 0.41928162664386759 52.031499894585835 ;
+createNode mesh -n "pCubeShape2" -p "pCube246";
+	setAttr -k off ".v" no;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "pCube246_DmmTriMesh" -p "pCube246";
+	setAttr -k off ".v" no;
+	setAttr ".tmp" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode DMMObject -n "pCube246_DmmObject" -p "pCube246";
+	setAttr -k off ".v";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr ".dpv" yes;
+createNode mesh -n "pCube246_DmmDriven" -p "pCube246";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".tmp" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "pCube246_DmmSim" -p "pCube246";
+	setAttr -k off ".v" no;
+	setAttr ".tmp" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "outputSurfaceShape" -p "pCube246";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode fosterParent -n "livingroom_shading_latestRNfosterParent1";
+createNode mesh -n "living_room_furniture_latest_pxr:vase_flowers:pCylinder8_DmmAutoMesh" 
+		-p "livingroom_shading_latestRNfosterParent1";
+	setAttr -k off ".v" no;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode DMMObject -n "living_room_furniture_latest_pxr:vase_flowers:pCylinder8_DmmObject" 
+		-p "livingroom_shading_latestRNfosterParent1";
+	setAttr -k off ".v";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "living_room_furniture_latest_pxr:vase_flowers:pCylinder8_DmmDriven" 
+		-p "livingroom_shading_latestRNfosterParent1";
+	setAttr -k off ".v";
+	setAttr ".tmp" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "living_room_furniture_latest_pxr:vase_flowers:pCylinder8_DmmSim" 
+		-p "livingroom_shading_latestRNfosterParent1";
+	setAttr -k off ".v" no;
+	setAttr ".tmp" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "living_room_furniture_latest_pxr:vase_flowers:outputSurfaceShape" 
+		-p "livingroom_shading_latestRNfosterParent1";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.076799869537353516 ;
+	setAttr -s 2 ".uvst";
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".uvst[1].uvsn" -type "string" "UvPlanar";
+	setAttr ".cuvs" -type "string" "UvPlanar";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr ".sdt" 0;
+	setAttr ".ugsdt" no;
+	setAttr ".dr" 3;
+	setAttr ".dsm" 2;
 createNode fosterParent -n "pig_latestRNfosterParent1";
 createNode parentConstraint -n "pig_latest_tail_2control01_parentConstraint1" -p
 		 "pig_latestRNfosterParent1";
@@ -2448,6 +2676,7 @@ createNode parentConstraint -n "pig_latest_tail_2control01_parentConstraint1" -p
 	setAttr ".tg[0].tot" -type "double3" 1.7057058917128012e-013 1.1416307672183201 
 		-1.7546462838769887 ;
 	setAttr ".tg[0].tor" -type "double3" 0 0 5.0506984604175018e-019 ;
+	setAttr ".lr" -type "double3" -1.987846675914698e-016 0 0 ;
 	setAttr ".rst" -type "double3" 5.6843418860808015e-014 0 2.3092638912203256e-014 ;
 	setAttr -k on ".w0";
 createNode parentConstraint -n "pig_latest_tail_3control01_parentConstraint1" -p "pig_latestRNfosterParent1";
@@ -5962,9 +6191,9 @@ createNode RenderMan -s -n "rmanSBMakePtexGlobals";
 	setAttr ".rman__param__ptxmake___channel" -type "string" "$BAKECHAN";
 	setAttr ".rman__param__ptxmake___outputfile" -type "string" "[passinfo this filename]";
 createNode lightLinker -s -n "lightLinker1";
-	setAttr -s 1909 ".lnk";
-	setAttr -s 950 ".ign";
-	setAttr -s 1909 ".slnk";
+	setAttr -s 3323 ".lnk";
+	setAttr -s 1900 ".ign";
+	setAttr -s 3323 ".slnk";
 createNode displayLayerManager -n "layerManager";
 createNode displayLayer -n "defaultLayer";
 createNode renderLayerManager -n "renderLayerManager";
@@ -5991,10 +6220,10 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n"
 		+ "            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 0\n            -occlusionCulling 0\n"
 		+ "            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n"
-		+ "            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n"
+		+ "            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"camera3\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n"
 		+ "                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 1\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"vp2Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n"
 		+ "                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n"
-		+ "                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n"
+		+ "                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"camera3\" \n            -useInteractiveMode 0\n"
 		+ "            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n"
 		+ "            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n"
 		+ "            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `outlinerPanel -unParent -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            outlinerEditor -e \n"
@@ -6038,19 +6267,29 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -defaultPinnedState 0\n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -keyReleaseCommand \"nodeEdKeyReleaseCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;\n\t\t\tif (`objExists nodeEditorPanel2Info`) nodeEditor -e -restoreInfo nodeEditorPanel2Info $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n"
 		+ "            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -keyReleaseCommand \"nodeEdKeyReleaseCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;\n\t\t\tif (`objExists nodeEditorPanel2Info`) nodeEditor -e -restoreInfo nodeEditorPanel2Info $editorName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\tif ($useSceneConfig) {\n\t\tscriptedPanel -e -to $panelName;\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"camera3\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"camera3\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        setFocus `paneLayout -q -p1 $gMainPane`;\n        sceneUIReplacement -deleteRemaining;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	setAttr ".b" -type "string" "playbackOptions -min 146 -max 320 -ast 146 -aet 320 ";
 	setAttr ".st" 6;
 createNode reference -n "livingroom_shading_latestRN";
-	setAttr ".fn[0]" -type "string" "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/sets/livingroom_shading/livingroom_shading_latest.ma";
-	setAttr -s 43 ".phl";
+	setAttr -s 2 ".fn";
+	setAttr ".fn[0]" -type "string" "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/sets/house/house_latest_pxr5.ma";
+	setAttr ".fn[1]" -type "string" "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/sets/livingroom_shading/livingroom_shading_latest.ma";
+	setAttr -s 51 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[74]" 0;
 	setAttr ".phl[75]" 0;
+	setAttr ".phl[76]" 0;
+	setAttr ".phl[77]" 0;
+	setAttr ".phl[78]" 0;
+	setAttr ".phl[79]" 0;
+	setAttr ".phl[80]" 0;
+	setAttr ".phl[81]" 0;
+	setAttr ".phl[82]" 0;
+	setAttr ".phl[83]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"livingroom_shading_latestRN"
 		"livingroom_shading_latest_kitchen_latest_pxrRN" 0
@@ -7735,7 +7974,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		2 "living_room_latest:armchair_latest:file8" "ReduceTextureInCuda" " 1"
 		2 "living_room_latest:armchair_latest:file8" "onlineUpdate" " 0"
 		2 "living_room_latest:armchair_latest:file8" "compressColor" " 1"
-		"livingroom_shading_latest_rectangular_window_latestRN" 0
 		"living_room_latest:armchair_latestRN1" 63
 		1 |living_room_latest:armchair_latest1:armchair_frame|living_room_latest:armchair_latest1:armchair_frameShape 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
@@ -7862,6 +8100,7 @@ createNode reference -n "livingroom_shading_latestRN";
 		2 "living_room_latest:armchair_latest1:file8" "ReduceTextureInCuda" " 1"
 		2 "living_room_latest:armchair_latest1:file8" "onlineUpdate" " 0"
 		2 "living_room_latest:armchair_latest1:file8" "compressColor" " 1"
+		"livingroom_shading_latest_rectangular_window_latestRN" 0
 		"living_room_latest:taller_window_four_squares_latestRN1" 52
 		1 |living_room_latest:taller_window_four_squares_latest1:taller_window|living_room_latest:taller_window_four_squares_latest1:polySurfaceShape1 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
@@ -12694,6 +12933,7 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		2 "|livingroom_shading_latest_living_room_latestRNfosterParent1|livingroom_shading_latest_polySurfaceShape367" 
 		"furNameSpace" " -type \"string\" \"livingroom_shading_latest\""
+		"livingroom_shading_latest_kitchen_latestRN" 0
 		"living_room_latest:cube_cushionRN" 6
 		1 |living_room_latest:cube_cushion:pCube1|living_room_latest:cube_cushion:pCubeShape1 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
@@ -12708,7 +12948,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		2 "|living_room_latest:cube_cushion:pCube1|living_room_latest:cube_cushion:pCubeShape1" 
 		"furNameSpace" " -type \"string\" \"cube_cushion\""
-		"livingroom_shading_latest_kitchen_latestRN" 0
 		"living_room_latest:taller_window_four_squares_latestRN" 52
 		1 |living_room_latest:taller_window_four_squares_latest:taller_window|living_room_latest:taller_window_four_squares_latest:polySurfaceShape1 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
@@ -27046,7 +27285,24 @@ createNode reference -n "livingroom_shading_latestRN";
 		2 "|living_room_furniture_latest:pig_statue:pig_the_cat|living_room_furniture_latest:pig_statue:PIG|living_room_furniture_latest:pig_statue:controller_main01|living_room_furniture_latest:pig_statue:stretchr_ctrl01|living_room_furniture_latest:pig_statue:hip_rotation_ctrl01|living_room_furniture_latest:pig_statue:tail_controllers_01|living_room_furniture_latest:pig_statue:splineiK_tail01" 
 		"rotate" " -type \"double3\" 90.075873468792011 41.806374689449974 90.096594168227938"
 		
-		"livingroom_shading_latest_living_room_furniture_latest_pxrRN" 9
+		"livingroom_shading_latest_living_room_furniture_latest_pxrRN" 21
+		0 "|livingroom_shading_latestRNfosterParent1|living_room_furniture_latest_pxr:vase_flowers:outputSurfaceShape" 
+		"|living_room_furniture_latest_pxr:living_room_furniture|living_room_furniture_latest_pxr:living_room_group|living_room_furniture_latest_pxr:vase|living_room_furniture_latest_pxr:vase_flowers:pCylinder8" 
+		"-s -r "
+		0 "|livingroom_shading_latestRNfosterParent1|living_room_furniture_latest_pxr:vase_flowers:pCylinder8_DmmSim" 
+		"|living_room_furniture_latest_pxr:living_room_furniture|living_room_furniture_latest_pxr:living_room_group|living_room_furniture_latest_pxr:vase|living_room_furniture_latest_pxr:vase_flowers:pCylinder8" 
+		"-s -r "
+		0 "|livingroom_shading_latestRNfosterParent1|living_room_furniture_latest_pxr:vase_flowers:pCylinder8_DmmDriven" 
+		"|living_room_furniture_latest_pxr:living_room_furniture|living_room_furniture_latest_pxr:living_room_group|living_room_furniture_latest_pxr:vase|living_room_furniture_latest_pxr:vase_flowers:pCylinder8" 
+		"-s -r "
+		0 "|livingroom_shading_latestRNfosterParent1|living_room_furniture_latest_pxr:vase_flowers:pCylinder8_DmmObject" 
+		"|living_room_furniture_latest_pxr:living_room_furniture|living_room_furniture_latest_pxr:living_room_group|living_room_furniture_latest_pxr:vase|living_room_furniture_latest_pxr:vase_flowers:pCylinder8" 
+		"-s -r "
+		0 "|livingroom_shading_latestRNfosterParent1|living_room_furniture_latest_pxr:vase_flowers:pCylinder8_DmmAutoMesh" 
+		"|living_room_furniture_latest_pxr:living_room_furniture|living_room_furniture_latest_pxr:living_room_group|living_room_furniture_latest_pxr:vase|living_room_furniture_latest_pxr:vase_flowers:pCylinder8" 
+		"-s -r "
+		2 "|living_room_furniture_latest_pxr:living_room_furniture|living_room_furniture_latest_pxr:living_room_group|living_room_furniture_latest_pxr:vase|living_room_furniture_latest_pxr:vase_flowers:pCylinder8|living_room_furniture_latest_pxr:vase_flowers:pCylinderShape8" 
+		"visibility" " -k 0 0"
 		2 "|living_room_furniture_latest_pxr:living_room_furniture|living_room_furniture_latest_pxr:living_room_group|living_room_furniture_latest_pxr:round_table_L" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "living_room_furniture_latest_pxr:PxrLMGlass1" "eta" " 1.6599999666213989"
@@ -27058,11 +27314,23 @@ createNode reference -n "livingroom_shading_latestRN";
 		2 "living_room_furniture_latest_pxr:PxrLMGlass1" "absorption" " 0"
 		2 "living_room_furniture_latest_pxr:PxrLMGlass1" "presence" " 1"
 		2 "living_room_furniture_latest_pxr:PxrLMGlass1" "inputAOV" " 0"
-		5 3 "livingroom_shading_latestRN" "living_room_furniture_latest_pxr:PxrLMGlass1.message" 
+		5 3 "livingroom_shading_latestRN" "|living_room_furniture_latest_pxr:living_room_furniture|living_room_furniture_latest_pxr:living_room_group|living_room_furniture_latest_pxr:vase|living_room_furniture_latest_pxr:vase_flowers:pCylinder8.worldMatrix" 
 		"livingroom_shading_latestRN.placeHolderList[74]" ""
-		5 3 "livingroom_shading_latestRN" "living_room_furniture_latest_pxr:PxrLMGlass1SG.message" 
+		5 3 "livingroom_shading_latestRN" "|living_room_furniture_latest_pxr:living_room_furniture|living_room_furniture_latest_pxr:living_room_group|living_room_furniture_latest_pxr:vase|living_room_furniture_latest_pxr:vase_flowers:pCylinder8.message" 
 		"livingroom_shading_latestRN.placeHolderList[75]" ""
-		"livingroom_shading_latestRN" 172
+		5 3 "livingroom_shading_latestRN" "|living_room_furniture_latest_pxr:living_room_furniture|living_room_furniture_latest_pxr:living_room_group|living_room_furniture_latest_pxr:vase|living_room_furniture_latest_pxr:vase_flowers:pCylinder8|living_room_furniture_latest_pxr:vase_flowers:pCylinderShape8.outMesh" 
+		"livingroom_shading_latestRN.placeHolderList[76]" ""
+		5 3 "livingroom_shading_latestRN" "|living_room_furniture_latest_pxr:living_room_furniture|living_room_furniture_latest_pxr:living_room_group|living_room_furniture_latest_pxr:vase|living_room_furniture_latest_pxr:vase_flowers:pCylinder8|living_room_furniture_latest_pxr:vase_flowers:pCylinderShape8.outMesh" 
+		"livingroom_shading_latestRN.placeHolderList[77]" ""
+		5 3 "livingroom_shading_latestRN" "|living_room_furniture_latest_pxr:living_room_furniture|living_room_furniture_latest_pxr:living_room_group|living_room_furniture_latest_pxr:vase|living_room_furniture_latest_pxr:vase_flowers:pCylinder8|living_room_furniture_latest_pxr:vase_flowers:pCylinderShape8.matrix" 
+		"livingroom_shading_latestRN.placeHolderList[78]" ""
+		5 3 "livingroom_shading_latestRN" "|living_room_furniture_latest_pxr:living_room_furniture|living_room_furniture_latest_pxr:living_room_group|living_room_furniture_latest_pxr:vase|living_room_furniture_latest_pxr:vase_flowers:pCylinder8|living_room_furniture_latest_pxr:vase_flowers:pCylinderShape8.matrix" 
+		"livingroom_shading_latestRN.placeHolderList[79]" ""
+		5 3 "livingroom_shading_latestRN" "|living_room_furniture_latest_pxr:living_room_furniture|living_room_furniture_latest_pxr:living_room_group|living_room_furniture_latest_pxr:vase|living_room_furniture_latest_pxr:vase_flowers:pCylinder8|living_room_furniture_latest_pxr:vase_flowers:pCylinderShape8.message" 
+		"livingroom_shading_latestRN.placeHolderList[80]" ""
+		5 4 "livingroom_shading_latestRN" "living_room_furniture_latest_pxr:PxrLMGlass1SG.dagSetMembers" 
+		"livingroom_shading_latestRN.placeHolderList[81]" ""
+		"livingroom_shading_latestRN" 181
 		1 livingroom_shading_latest_ramp1 "proceduralTexDefaultRes" "proceduralTexDefaultRes" 
 		" -ci 1 -dv 512 -min 256 -max 4096 -smn 8 -smx 8192 -at \"short\""
 		1 livingroom_shading_latest_ramp1 "proceduralTexMaxRes" "proceduralTexMaxRes" 
@@ -27237,6 +27505,20 @@ createNode reference -n "livingroom_shading_latestRN";
 		"uvPivot" " -type \"double2\" 0.45153021812438965 0.43240678310394287"
 		2 "|livingroom_shading_latest_house_full|livingroom_shading_latest_architecture|livingroom_shading_latest_nRigid5|livingroom_shading_latest_nRigidShape5" 
 		"cacheWidth" " 175"
+		2 "|livingroom_shading_latest_kitchen_light_1|livingroom_shading_latest_kitchen_light_1" 
+		"rman__riattr___ShadingRate" " 100"
+		2 "|livingroom_shading_latest_kitchen_light_1|livingroom_shading_latest_kitchen_light_1" 
+		"intensity" " 7"
+		2 "|livingroom_shading_latest_kitchen_light_1|livingroom_shading_latest_kitchen_light_1" 
+		"temperature" " 5500"
+		2 "|livingroom_shading_latest_kitchen_light_1|livingroom_shading_latest_kitchen_light_1" 
+		"coneangle" " 20"
+		2 "|livingroom_shading_latest_kitchen_light_1|livingroom_shading_latest_kitchen_light_1" 
+		"penumbraangle" " 5"
+		2 "|livingroom_shading_latest_kitchen_light_1|livingroom_shading_latest_kitchen_light_1" 
+		"penumbraexponent" " 0"
+		2 "|livingroom_shading_latest_kitchen_light_1|livingroom_shading_latest_kitchen_light_1" 
+		"angularVisibility" " 1"
 		2 "livingroom_shading_latest_ramp1" "proceduralTexDefaultRes" " 512"
 		2 "livingroom_shading_latest_ramp1" "proceduralTexMaxRes" " 1024"
 		2 "livingroom_shading_latest_ramp1" "ReduceTextureInCuda" " 1"
@@ -27321,7 +27603,11 @@ createNode reference -n "livingroom_shading_latestRN";
 		2 "livingroom_shading_latest_file12" "proceduralTexMaxRes" " 1024"
 		2 "livingroom_shading_latest_file12" "ReduceTextureInCuda" " 1"
 		2 "livingroom_shading_latest_file12" "onlineUpdate" " 0"
-		2 "livingroom_shading_latest_file12" "compressColor" " 1";
+		2 "livingroom_shading_latest_file12" "compressColor" " 1"
+		5 3 "livingroom_shading_latestRN" "|livingroom_shading_latest_living_room_furniture_latest_pxrRNfosterParent1|livingroom_shading_latest_polySurfaceShape1.message" 
+		"livingroom_shading_latestRN.placeHolderList[82]" ""
+		5 3 "livingroom_shading_latestRN" "livingroom_shading_latest_polyExtrudeFace81.message" 
+		"livingroom_shading_latestRN.placeHolderList[83]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode mentalrayItemsList -s -n "mentalrayItemsList";
@@ -28302,7 +28588,7 @@ createNode reference -n "smartybikeRN";
 		
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:Smarty|NewSmarty_024:polySurface6|NewSmarty_024:polySurfaceShape4Orig" 
 		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" "translate" " -type \"double3\" -196.14045391247532 11.049054038597747 56.433291837942662"
+		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" "translate" " -type \"double3\" -204.02430750022961 11.07139471854958 28.60562933557889"
 		
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" "translateX" " -av"
 		
@@ -28310,7 +28596,7 @@ createNode reference -n "smartybikeRN";
 		
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" "translateZ" " -av"
 		
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" "rotate" " -type \"double3\" 1.6543810502369882 9.906595673150683 9.5299256944059021"
+		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" "rotate" " -type \"double3\" -101.83679506412632 59.463906670267512 -100.2325095720568"
 		
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" "rotateX" " -av"
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" "rotateY" " -av"
@@ -28339,7 +28625,7 @@ createNode reference -n "smartybikeRN";
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_glasses|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glass|NewSmarty_024:smarty_008_fixed_rig_:glassL|NewSmarty_024:smarty_008_fixed_rig_:glassLShape" 
 		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:eye_ctrl" 
-		"translate" " -type \"double3\" 1.9449882451808771 -0.23882316071898113 -1.12064062752312"
+		"translate" " -type \"double3\" -0.95696609714656367 0.97003208396668417 -1.7582404424015001"
 		
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:eye_ctrl" 
 		"translateX" " -av"
@@ -28384,8 +28670,7 @@ createNode reference -n "smartybikeRN";
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:hip|NewSmarty_024:thighRJ|NewSmarty_024:kneeRJ|NewSmarty_024:effector18" 
 		"visibility" " 1"
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl" 
-		"rotate" " -type \"double3\" 0.7190195891882587 13.081491456083182 -1.6368677349258938"
-		
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl" 
 		"rotateX" " -av"
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl" 
@@ -28428,7 +28713,7 @@ createNode reference -n "smartybikeRN";
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:tongue:pPlane1|NewSmarty_024:tongue:pPlaneShape1" 
 		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rightLeg_ik" 
-		"translate" " -type \"double3\" -2.2332112929864656 -9.9748973102824277 1.344682799520182"
+		"translate" " -type \"double3\" -2.2332112929867285 -9.9748973102824063 1.3446827995201536"
 		
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rightLeg_ik" 
 		"translateX" " -av"
@@ -28437,7 +28722,7 @@ createNode reference -n "smartybikeRN";
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rightLeg_ik" 
 		"translateZ" " -av"
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:leftLeg_ik" 
-		"translate" " -type \"double3\" 2.0746780938947977 -9.9748837915002841 1.3446808565261488"
+		"translate" " -type \"double3\" 2.0746780938946059 -9.9748837915002984 1.344680856526234"
 		
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:leftLeg_ik" 
 		"translateX" " -av"
@@ -28446,7 +28731,7 @@ createNode reference -n "smartybikeRN";
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:leftLeg_ik" 
 		"translateZ" " -av"
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:leftArm_ik" 
-		"translate" " -type \"double3\" 3.6422651701395101 -2.3839187642247222 5.1006740279142893"
+		"translate" " -type \"double3\" 3.6422651701393325 -2.383918764224715 5.1006740279143461"
 		
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:leftArm_ik" 
 		"translateX" " -av"
@@ -28455,7 +28740,7 @@ createNode reference -n "smartybikeRN";
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:leftArm_ik" 
 		"translateZ" " -av"
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rightArm_ik" 
-		"translate" " -type \"double3\" -3.6370077846692395 -2.3482719264141867 5.2136017003447073"
+		"translate" " -type \"double3\" -3.637007784669545 -2.3482719264141512 5.2136017003447641"
 		
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rightArm_ik" 
 		"translateX" " -av"
@@ -28828,7 +29113,7 @@ createNode reference -n "smartybikeRN";
 		2 "NewSmarty_024:file5" "ReduceTextureInCuda" " 1"
 		2 "NewSmarty_024:file5" "onlineUpdate" " 0"
 		2 "NewSmarty_024:file5" "compressColor" " 1"
-		2 "NewSmarty_024:blendShape1" "w[0:18]" " -s 19 0.33944954999999999 1 0 0.95412843999999997 0 0 0 0 0.37614679000000001 0 0 0 0 0 0 0 0 0 0"
+		2 "NewSmarty_024:blendShape1" "w[0:18]" " -s 19 0.33944954999999999 1 0 0.95412843999999997 0 0 0 0 0.37614679000000001 0 0 0 0 1 0 0 0 0 0"
 		
 		2 "NewSmarty_024:blendShape1" "weight[13]" " -av"
 		5 4 "smartybikeRN" "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:eye_ctrl.translateX" 
@@ -28902,7 +29187,7 @@ createNode reference -n "smartybikeRN";
 		"fns" " -ci 1 -h 1 -dt \"string\""
 		1 |bike:bike_ctrl|bike:wholeBike|bike:frame|bike:frameShape "VisibleInIndirect" 
 		"VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
-		2 "|bike:bike_ctrl" "translate" " -type \"double3\" -196.39554022665303 -1.0920543847395379 58.082616532042152"
+		2 "|bike:bike_ctrl" "translate" " -type \"double3\" -203.69611302638839 -1.0920543847395379 29.409852870156296"
 		
 		2 "|bike:bike_ctrl" "translateZ" " -av"
 		2 "|bike:bike_ctrl" "showManipDefault" " 7"
@@ -30800,7 +31085,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_bottomUpL|pig_latest_bottomUpLShape" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01" "translate" 
-		" -type \"double3\" -197.83569085037334 13.939932572573928 39.734682411424274"
+		" -type \"double3\" -207.70040856232666 3.8631642367555541 48.900885917229118"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01" "translateX" 
 		" -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01" "translateY" 
@@ -30808,7 +31093,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01" "translateZ" 
 		" -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01" "rotate" 
-		" -type \"double3\" -21.965255841253192 -355.68796613209179 0"
+		" -type \"double3\" 0 -170.06417012030897 0"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01" "rotateX" 
 		" -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01" "rotateY" 
@@ -30858,7 +31143,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_thorax01|pig_latest_bind_R_humerus01|pig_latest_bind_R_radius01" 
 		"translate" " -type \"double3\" -3.170597 1.70856e-006 0"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_thorax01|pig_latest_bind_R_humerus01|pig_latest_bind_R_radius01" 
-		"rotate" " -type \"double3\" 29.271788529746313 0 0"
+		"rotate" " -type \"double3\" 14.517331899756172 0 0"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_thorax01|pig_latest_bind_R_humerus01|pig_latest_bind_R_radius01" 
 		"segmentScaleCompensate" " 1"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_thorax01|pig_latest_bind_R_humerus01|pig_latest_bind_R_radius01|pig_latest_effector3" 
@@ -30879,7 +31164,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_be_head01" 
 		"segmentScaleCompensate" " 1"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye" 
-		"rotate" " -type \"double3\" -173.38455112948577 10.235785819324498 -206.95530746834211"
+		"rotate" " -type \"double3\" -185.81798878990105 27.269174209881761 -189.93097207061072"
 		
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye" 
 		"rotateX" " -av"
@@ -30897,7 +31182,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye|pig_latest_pig_right_eyeShape" 
 		"VisibleInIndirect" " 1"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye" 
-		"rotate" " -type \"double3\" -170.00211235847237 22.241275129147105 -199.63925308787393"
+		"rotate" " -type \"double3\" -193.11415925292874 10.875307730395249 -186.63883105248348"
 		
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye" 
 		"rotateX" " -av"
@@ -30935,7 +31220,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye1|pig_latest_pig_left_eye1Shape" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_iK_L_frontleg01" 
-		"translate" " -type \"double3\" 1.5632551089753974 -1.5624201787148086 5.0560657549491523"
+		"translate" " -type \"double3\" 1.4835454228751814 -1.4986275672007237 2.6297209674296091"
 		
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_iK_L_frontleg01" 
 		"translateX" " -av"
@@ -30944,7 +31229,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_iK_L_frontleg01" 
 		"translateZ" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_iK_L_frontleg01" 
-		"rotate" " -type \"double3\" -76.865141604198314 -0.36103378286077709 178.3125295453973"
+		"rotate" " -type \"double3\" 32.509087014500622 -178.28833521301823 -0.21927653585819767"
 		
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_iK_L_frontleg01" 
 		"rotateX" " -av"
@@ -30962,9 +31247,9 @@ createNode reference -n "pig_latestRN";
 		"translate" " -type \"double3\" 0.54199675799195812 -0.30795431116145822 -0.42888801626169698"
 		
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01" 
-		"translateZ" " -av 0.55422740749648058"
+		"translateZ" " -av 0"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01" 
-		"translate" " -type \"double3\" 0.09878609203774727 1.2729825868565343 -2.7876159829724911"
+		"translate" " -type \"double3\" 0.47652952660243708 1.7049970788617426 1.8418489823524353"
 		
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01" 
 		"translateX" " -av"
@@ -30973,7 +31258,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01" 
 		"translateZ" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01" 
-		"rotate" " -type \"double3\" 63.595035704673137 9.7535649093968786 -12.387921046339686"
+		"rotate" " -type \"double3\" 33.45077676992436 6.1903626885190297 -4.9100400214271689"
 		
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01" 
 		"rotateX" " -av"
@@ -30990,7 +31275,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01" 
 		"scaleZ" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01" 
-		"translate" " -type \"double3\" -1.1030870589382042 1.0272117132050931 1.3932343170485761"
+		"translate" " -type \"double3\" -0.29083368348502114 1.2329036252412442 -2.2404514698647668"
 		
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01" 
 		"translateX" " -av"
@@ -30999,8 +31284,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01" 
 		"translateZ" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01" 
-		"rotate" " -type \"double3\" 13.021406063449017 8.0175484660986545 -4.2383454317691829"
-		
+		"rotate" " -type \"double3\" 64.830328637049689 0 0"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01" 
 		"rotateX" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01" 
@@ -31026,8 +31310,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01" 
 		"blendParent1" " -k 1"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_TAIL_TAIL_TAIL|pig_latest_tail_1control01" 
-		"translate" " -type \"double3\" 0.04267633873991214 -1.1736431264875626 -0.3317491074764356"
-		
+		"translate" " -type \"double3\" 0 -0.076754659647520734 0"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_TAIL_TAIL_TAIL|pig_latest_tail_1control01" 
 		"translateX" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_TAIL_TAIL_TAIL|pig_latest_tail_1control01" 
@@ -31035,7 +31318,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_TAIL_TAIL_TAIL|pig_latest_tail_1control01" 
 		"translateZ" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_TAIL_TAIL_TAIL|pig_latest_tail_1control01" 
-		"rotate" " -type \"double3\" -53.753826539204979 0 0"
+		"rotate" " -type \"double3\" -1.41960421945645 0 0"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_TAIL_TAIL_TAIL|pig_latest_tail_1control01" 
 		"rotateX" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_TAIL_TAIL_TAIL|pig_latest_tail_1control01" 
@@ -31129,15 +31412,15 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_TAIL_TAIL_TAIL|pig_latest_tail_1control01|pig_latest_tail_2control01|pig_latest_tail_3control01|pig_latest_tail_4control01" 
 		"scaleZ" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_splineiK_tail01" 
-		"translate" " -type \"double3\" 0.0065221039227480911 2.5508769935916615 -14.386622731756582"
+		"translate" " -type \"double3\" -0.035749061360661478 9.3172448151427254 -13.453432025411633"
 		
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_splineiK_tail01" 
-		"rotate" " -type \"double3\" -89.80604432629886 83.745997249338856 -90.202856704583127"
+		"rotate" " -type \"double3\" 90.076835620045543 43.1189763919824 90.100198661803006"
 		
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01" 
-		"translateZ" " -av -0.037402008663713793"
+		"translateZ" " -av 0"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01" 
-		"translate" " -type \"double3\" -0.0067099920371790529 0.35423763232924138 1.5053350296481944"
+		"translate" " -type \"double3\" -0.086419678137457448 0.23896648467551168 -1.809064222558846"
 		
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01" 
 		"translateX" " -av"
@@ -31146,7 +31429,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01" 
 		"translateZ" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01" 
-		"rotate" " -type \"double3\" -1.5762569772617887 0 0"
+		"rotate" " -type \"double3\" 69.047473035532576 0 0"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01" 
 		"rotateX" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01" 
@@ -31162,7 +31445,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01" 
 		"scaleZ" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01" 
-		"translate" " -type \"double3\" -0.28805195183485077 1.1176923037489972 2.7328624908351564"
+		"translate" " -type \"double3\" -1.4535101420400158 2.7434904898186607 4.256976744106292"
 		
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01" 
 		"translateX" " -av"
@@ -31171,8 +31454,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01" 
 		"translateZ" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01" 
-		"rotate" " -type \"double3\" -17.959594482130704 6.8985111885740809 -5.0893297255468495"
-		
+		"rotate" " -type \"double3\" 25.197790309123878 0 0"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01" 
 		"rotateX" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01" 
@@ -31188,7 +31470,8 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01" 
 		"scaleZ" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01" 
-		"translate" " -type \"double3\" 0 0 0.026019667912308364"
+		"translate" " -type \"double3\" -0.12238930576632796 -0.30485691741838716 -0.40888313334009357"
+		
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01" 
 		"translateY" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01" 
@@ -31196,7 +31479,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01" 
 		"translateZ" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01" 
-		"rotate" " -type \"double3\" 15.400298421462729 0 0"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01" 
 		"rotateX" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01" 
@@ -31214,7 +31497,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control" 
 		"translateZ" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control" 
-		"rotate" " -type \"double3\" 46.70252056228955 0 0"
+		"rotate" " -type \"double3\" 0 13.916068887935637 0"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control" 
 		"rotateX" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control" 
@@ -31269,7 +31552,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_COG_ctrl" 
 		"rotateZ" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_global01" 
-		"translate" " -type \"double3\" -197.93420638119017 15.292289628077237 38.08560602782277"
+		"translate" " -type \"double3\" -207.73439234515112 5.4315740669214181 48.364351933653197"
 		
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_global01" 
 		"translateY" " -av"
@@ -31683,7 +31966,7 @@ createNode reference -n "pig_latestRN";
 		
 		2 "pig_latest_pig_latest_pig_latest_pig_latest_file2" "compressColor" " 1"
 		
-		2 "pig_latest_Pig_blendshapes" "w[0:42]" " -s 43 0 0 0 0 0.26146789999999998 0.33027524000000003 1 1 0 0 0 0 0 0 0.1216433 0.1216433 0 0 0 0 0.23379538999999999 0.22492019999999999 0 0 0 0 0 0 0 0 0 0 0.29154523999999998 0 0 0.81007951 1 0 0 0 0 0 0"
+		2 "pig_latest_Pig_blendshapes" "w[0:42]" " -s 43 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0.23853210999999999 0.22018349000000001 0 0 0 0 0 0 0 0 0 0 0.82568805999999995 0 0 0.82568805999999995 0 0 0.78899085999999996 0.064220183 0 0.75229358999999996 0"
 		
 		2 "pig_latest_Pig_blendshapes" "weight" " -s 18"
 		2 "pig_latest_Pig_blendshapes" "weight[4]" " -av"
@@ -31707,6 +31990,20 @@ createNode reference -n "pig_latestRN";
 		2 "pig_latest_pig_latest_pig_latest_defaultFurGlobals1" "furGlobalReference" 
 		" 1"
 		2 "pig_latest_pig_latest_pigfur" "furReference" " 1"
+		3 ":defaultRenderGlobals.rendercallback" "pig_latest_defaultFurGlobals.callback" 
+		""
+		3 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintTranslateY" 
+		"|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.translateY" 
+		""
+		3 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintRotateX" 
+		"|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.rotateX" 
+		""
+		3 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintRotateY" 
+		"|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.rotateY" 
+		""
+		3 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintRotateZ" 
+		"|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.rotateZ" 
+		""
 		3 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_hip_rotation_ctrl01_parentConstraint2.constraintTranslateX" 
 		"|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01.translateX" 
 		""
@@ -31724,20 +32021,6 @@ createNode reference -n "pig_latestRN";
 		""
 		3 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_hip_rotation_ctrl01_parentConstraint2.constraintRotateZ" 
 		"|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01.rotateZ" 
-		""
-		3 ":defaultRenderGlobals.rendercallback" "pig_latest_defaultFurGlobals.callback" 
-		""
-		3 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintTranslateY" 
-		"|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.translateY" 
-		""
-		3 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintRotateX" 
-		"|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.rotateX" 
-		""
-		3 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintRotateY" 
-		"|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.rotateY" 
-		""
-		3 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_shoulders_rotation_ctrl01_parentConstraint1.constraintRotateZ" 
-		"|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01.rotateZ" 
 		""
 		5 4 "pig_latestRN" "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01.translateX" 
 		"pig_latestRN.placeHolderList[152]" ""
@@ -32283,69 +32566,161 @@ createNode animCurveTU -n "camera3_scaleZ";
 	setAttr ".ktv[0]"  167.5 1;
 createNode hyperGraphInfo -n "nodeEditorPanel2Info";
 createNode hyperView -n "hyperView2";
-	setAttr ".vl" -type "double2" -112.16112321373404 -535.10545242965213 ;
-	setAttr ".vh" -type "double2" 793.72122972744251 173.49183263822121 ;
+	setAttr ".vl" -type "double2" 13.57426163650806 -1602.4508446300622 ;
+	setAttr ".vh" -type "double2" 2846.7550454158836 613.71354467987919 ;
 	setAttr ".dag" no;
 createNode hyperLayout -n "hyperLayout2";
 	setAttr ".ihi" 0;
 	setAttr -s 2554 ".hyp";
-	setAttr ".hyp[0].x" -62.824821472167969;
-	setAttr ".hyp[0].y" -4.01422119140625;
+	setAttr ".hyp[0].x" 241.42857360839844;
+	setAttr ".hyp[0].y" -458.57144165039062;
 	setAttr ".hyp[0].nvs" 1920;
-	setAttr ".hyp[1].x" 481.42855834960937;
-	setAttr ".hyp[1].y" -215.71427917480469;
+	setAttr ".hyp[1].x" -219.33876037597656;
+	setAttr ".hyp[1].y" -483.37478637695312;
 	setAttr ".hyp[1].nvs" 1920;
-	setAttr ".hyp[2].x" 481.42855834960937;
-	setAttr ".hyp[2].y" -72.857139587402344;
+	setAttr ".hyp[2].x" 721.4285888671875;
+	setAttr ".hyp[2].y" -315.71429443359375;
 	setAttr ".hyp[2].nvs" 1920;
-	setAttr ".hyp[3].x" 172.65028381347656;
-	setAttr ".hyp[3].y" -46.54815673828125;
+	setAttr ".hyp[3].x" 2399.9677734375;
+	setAttr ".hyp[3].y" -397.41049194335937;
 	setAttr ".hyp[3].nvs" 1920;
+	setAttr ".hyp[4].x" 2165.238525390625;
+	setAttr ".hyp[4].y" -247.19488525390625;
 	setAttr ".hyp[4].nvs" 1920;
+	setAttr ".hyp[5].x" 1458.5714111328125;
+	setAttr ".hyp[5].y" -215.71427917480469;
 	setAttr ".hyp[5].nvs" 1920;
+	setAttr ".hyp[6].x" 1885.5;
+	setAttr ".hyp[6].y" -742.28350830078125;
 	setAttr ".hyp[6].nvs" 1920;
+	setAttr ".hyp[7].x" 481.42855834960937;
+	setAttr ".hyp[7].y" -458.57144165039062;
 	setAttr ".hyp[7].nvs" 1920;
+	setAttr ".hyp[8].x" 721.4285888671875;
+	setAttr ".hyp[8].y" -72.857139587402344;
 	setAttr ".hyp[8].nvs" 1920;
+	setAttr ".hyp[9].x" -273.11541748046875;
+	setAttr ".hyp[9].y" 157.62405395507812;
 	setAttr ".hyp[9].nvs" 1920;
+	setAttr ".hyp[10].x" 827.82232666015625;
+	setAttr ".hyp[10].y" -847.80303955078125;
 	setAttr ".hyp[10].nvs" 1920;
+	setAttr ".hyp[11].x" 1201.4285888671875;
+	setAttr ".hyp[11].y" -72.857139587402344;
 	setAttr ".hyp[11].nvs" 1920;
+	setAttr ".hyp[12].x" 241.42857360839844;
+	setAttr ".hyp[12].y" -315.71429443359375;
 	setAttr ".hyp[12].nvs" 1920;
+	setAttr ".hyp[13].x" 721.4285888671875;
+	setAttr ".hyp[13].y" -458.57144165039062;
 	setAttr ".hyp[13].nvs" 1920;
+	setAttr ".hyp[14].x" 1399.5531005859375;
+	setAttr ".hyp[14].y" -1219.9185791015625;
 	setAttr ".hyp[14].nvs" 1920;
+	setAttr ".hyp[15].x" 481.42855834960937;
+	setAttr ".hyp[15].y" -72.857139587402344;
 	setAttr ".hyp[15].nvs" 1920;
+	setAttr ".hyp[16].x" 961.4285888671875;
+	setAttr ".hyp[16].y" -72.857139587402344;
 	setAttr ".hyp[16].nvs" 1920;
+	setAttr ".hyp[17].x" 721.4285888671875;
+	setAttr ".hyp[17].y" -601.4285888671875;
 	setAttr ".hyp[17].nvs" 1920;
+	setAttr ".hyp[18].x" 961.4285888671875;
+	setAttr ".hyp[18].y" -458.57144165039062;
 	setAttr ".hyp[18].nvs" 1920;
+	setAttr ".hyp[19].x" 1825.874755859375;
+	setAttr ".hyp[19].y" 275.14950561523438;
 	setAttr ".hyp[19].nvs" 1920;
+	setAttr ".hyp[20].x" 1127.8394775390625;
+	setAttr ".hyp[20].y" -679.47271728515625;
 	setAttr ".hyp[20].nvs" 1920;
+	setAttr ".hyp[21].x" 1458.5714111328125;
+	setAttr ".hyp[21].y" -72.857139587402344;
 	setAttr ".hyp[21].nvs" 1920;
+	setAttr ".hyp[22].x" 1633.1666259765625;
+	setAttr ".hyp[22].y" -525.79766845703125;
 	setAttr ".hyp[22].nvs" 1920;
+	setAttr ".hyp[23].x" 1435.8253173828125;
+	setAttr ".hyp[23].y" -500.02935791015625;
 	setAttr ".hyp[23].nvs" 1920;
+	setAttr ".hyp[24].x" 1435.8253173828125;
+	setAttr ".hyp[24].y" -1377.0614013671875;
 	setAttr ".hyp[24].nvs" 1920;
+	setAttr ".hyp[25].x" 1435.8253173828125;
+	setAttr ".hyp[25].y" -657.17218017578125;
 	setAttr ".hyp[25].nvs" 1920;
+	setAttr ".hyp[26].x" 1435.8253173828125;
+	setAttr ".hyp[26].y" -892.886474609375;
 	setAttr ".hyp[26].nvs" 1920;
+	setAttr ".hyp[27].x" 1435.8253173828125;
+	setAttr ".hyp[27].y" -578.60076904296875;
 	setAttr ".hyp[27].nvs" 1920;
+	setAttr ".hyp[28].x" 1435.8253173828125;
+	setAttr ".hyp[28].y" -971.45794677734375;
 	setAttr ".hyp[28].nvs" 1920;
+	setAttr ".hyp[29].x" 1435.8253173828125;
+	setAttr ".hyp[29].y" -735.74365234375;
 	setAttr ".hyp[29].nvs" 1920;
+	setAttr ".hyp[30].x" 1435.8253173828125;
+	setAttr ".hyp[30].y" -1128.600830078125;
 	setAttr ".hyp[30].nvs" 1920;
+	setAttr ".hyp[31].x" 1435.8253173828125;
+	setAttr ".hyp[31].y" -1298.489990234375;
 	setAttr ".hyp[31].nvs" 1920;
+	setAttr ".hyp[32].x" 1435.8253173828125;
+	setAttr ".hyp[32].y" -1050.029296875;
 	setAttr ".hyp[32].nvs" 1920;
+	setAttr ".hyp[33].x" 1435.8253173828125;
+	setAttr ".hyp[33].y" -814.3150634765625;
 	setAttr ".hyp[33].nvs" 1920;
+	setAttr ".hyp[34].x" 1435.8253173828125;
+	setAttr ".hyp[34].y" -1455.6328125;
 	setAttr ".hyp[34].nvs" 1920;
+	setAttr ".hyp[35].x" 1435.8253173828125;
+	setAttr ".hyp[35].y" -1534.2042236328125;
 	setAttr ".hyp[35].nvs" 1920;
+	setAttr ".hyp[36].x" 1238.6824951171875;
+	setAttr ".hyp[36].y" -1542.3436279296875;
 	setAttr ".hyp[36].nvs" 1920;
+	setAttr ".hyp[37].x" 1238.6824951171875;
+	setAttr ".hyp[37].y" -608.04412841796875;
 	setAttr ".hyp[37].nvs" 1920;
+	setAttr ".hyp[38].x" 1238.6824951171875;
+	setAttr ".hyp[38].y" -536.6156005859375;
 	setAttr ".hyp[38].nvs" 1920;
+	setAttr ".hyp[39].x" 1238.6824951171875;
+	setAttr ".hyp[39].y" -934.20428466796875;
 	setAttr ".hyp[39].nvs" 1920;
+	setAttr ".hyp[40].x" 1238.6824951171875;
+	setAttr ".hyp[40].y" -1328.0579833984375;
 	setAttr ".hyp[40].nvs" 1920;
+	setAttr ".hyp[41].x" 1238.6824951171875;
+	setAttr ".hyp[41].y" -862.77569580078125;
 	setAttr ".hyp[41].nvs" 1920;
+	setAttr ".hyp[42].x" 1238.6824951171875;
+	setAttr ".hyp[42].y" -1077.0614013671875;
 	setAttr ".hyp[42].nvs" 1920;
+	setAttr ".hyp[43].x" 1238.6824951171875;
+	setAttr ".hyp[43].y" -1470.9151611328125;
 	setAttr ".hyp[43].nvs" 1920;
+	setAttr ".hyp[44].x" 1238.6824951171875;
+	setAttr ".hyp[44].y" -1399.486572265625;
 	setAttr ".hyp[44].nvs" 1920;
+	setAttr ".hyp[45].x" 1238.6824951171875;
+	setAttr ".hyp[45].y" -791.34710693359375;
 	setAttr ".hyp[45].nvs" 1920;
+	setAttr ".hyp[46].x" 1238.6824951171875;
+	setAttr ".hyp[46].y" -1005.6328125;
 	setAttr ".hyp[46].nvs" 1920;
+	setAttr ".hyp[47].x" 1238.6824951171875;
+	setAttr ".hyp[47].y" -1148.489990234375;
 	setAttr ".hyp[47].nvs" 1920;
+	setAttr ".hyp[48].x" 1238.6824951171875;
+	setAttr ".hyp[48].y" -465.18701171875;
 	setAttr ".hyp[48].nvs" 1920;
+	setAttr ".hyp[49].x" 1238.6824951171875;
+	setAttr ".hyp[49].y" -393.75845336914062;
 	setAttr ".hyp[49].nvs" 1920;
 	setAttr ".hyp[50].nvs" 1920;
 	setAttr ".hyp[51].nvs" 1920;
@@ -35910,7 +36285,7 @@ createNode animCurveTA -n "pig_latest_pig_left_eye_rotateX";
 createNode animCurveTA -n "pig_latest_pig_left_eye_rotateY";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  174 10.875307730395249 194 6.2720932165503172
+	setAttr -s 4 ".ktv[0:3]"  174 10.875307730395249 194 6.272093216550318
 		 203 24.3352825938412 208 22.241275129147105;
 createNode animCurveTA -n "pig_latest_pig_left_eye_rotateZ";
 	setAttr ".tan" 16;
@@ -36198,7 +36573,7 @@ createNode animCurveTU -n "pig_latest_COG_ctrl_visibility";
 createNode animCurveTA -n "pig_latest_COG_ctrl_rotateX";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  287 0 292 0 295 0 299 0 300 0.8892726687704412
+	setAttr -s 7 ".ktv[0:6]"  287 0 292 0 295 0 299 0 300 0.88927266877044131
 		 303 -0.7905236778605057 308 0.50302258294331359;
 createNode animCurveTA -n "pig_latest_COG_ctrl_rotateY";
 	setAttr ".tan" 16;
@@ -36272,19 +36647,3040 @@ createNode animCurveTU -n "pig_latest_pig_right_eye_scaleZ";
 	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  172 0.58116972736987449 193 0.58116972736987449
 		 203 0.58116972736987449;
+createNode polyCube -n "polyCube1";
+	setAttr ".cuv" 1;
+createNode DMMScene -n "DMMScene1";
+	setAttr -s 4 ".ite";
+	setAttr -s 4 ".itt";
+	setAttr -s 4 ".itm";
+	setAttr -s 4 ".dts";
+	setAttr -s 4 ".otn";
+	setAttr ".cpn" -type "string" "";
+createNode DMMSurfTri -n "pCube245_DmmSurftri";
+createNode DMMNetgen -n "pCube245_DmmNetgen";
+createNode DMMPhysMaterial -n "defaultDmmMaterial1";
+	setAttr ".you" 80000000;
+	setAttr ".tou" 1;
+createNode blindDataTemplate -n "blindDataTemplate1";
+	addAttr -ci true -sn "dri" -ln "driven" -at "long";
+	setAttr ".tid" 2003;
+createNode DMMPrepMesh -n "pCube245_DmmPrepMesh";
+	setAttr -l on ".bre" yes;
+	setAttr ".utm" yes;
+createNode lambert -n "lambert2";
+	setAttr ".c" -type "float3" 0 0 0 ;
+	setAttr ".it" -type "float3" 1 1 1 ;
+createNode shadingEngine -n "lambert2SG";
+	setAttr ".ihi" 0;
+	setAttr -s 4 ".dsm";
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo4";
+createNode DMMAutoCage -n "living_room_furniture_latest_pxr:vase_flowers:pCylinder8_DmmAutoCage";
+	setAttr ".sg" 0.5;
+	setAttr ".tfc" 500;
+	setAttr ".outMesh" -type "mesh" 
+
+
+		"v"	294
+		-198.8631	8.4841585	46.392166
+		-198.79187	8.9038754	46.162563
+		-198.52094	8.4878607	45.995617
+		-199.0215	8.9214869	46.632988
+		-198.39618	8.9726563	45.811653
+		-198.65666	8.2879086	46.222549
+		-198.89236	9.3769417	46.387386
+		-199.00754	8.5990944	46.658035
+		-198.03806	8.575469	45.780907
+		-198.61702	9.3981524	46.052666
+		-198.78564	8.0724993	46.652668
+		-198.2448	8.0821657	46.045456
+		-199.0239	9.2480431	46.658245
+		-199.03418	8.7953987	47.108364
+		-198.21457	8.269434	45.92728
+		-197.8757	9.0855713	45.748817
+		-198.13545	9.4414606	45.820179
+		-198.3882	7.8617206	46.377949
+		-198.72118	9.5706234	46.25919
+		-198.9093	9.5889912	46.678108
+		-199.04541	9.0488157	47.108265
+		-198.91466	8.2838573	47.068352
+		-197.71687	8.207325	45.898075
+		-197.77631	8.772233	45.751873
+		-198.37262	9.6052599	45.978466
+		-198.65799	7.5589876	46.725636
+		-198.22464	7.8649449	46.180382
+		-199.01149	9.4066687	47.130451
+		-198.85997	8.9302444	47.536625
+		-198.84378	8.536458	47.534908
+		-198.59015	7.8736148	47.096069
+		-197.38905	9.0682449	45.824512
+		-197.82013	9.4695377	45.803165
+		-197.86598	9.8111315	46.057796
+		-198.39792	7.4029737	46.381279
+		-198.49121	9.9688301	46.256279
+		-198.67749	9.997859	46.510849
+		-198.69229	9.8248835	47.096664
+		-198.85802	9.1844893	47.549576
+		-198.60931	8.0586977	47.447216
+		-197.28934	8.5571737	45.887775
+		-198.36478	10.119125	46.090054
+		-198.55199	7.3600521	47.200233
+		-198.48643	7.3481398	46.666523
+		-197.92003	7.4262643	46.140709
+		-197.52548	7.578505	46.165638
+		-198.81311	10.001375	47.015152
+		-198.74413	9.56985	47.563145
+		-198.52249	9.0836086	47.88361
+		-198.5238	8.7454042	47.864517
+		-198.42969	8.3794222	47.838943
+		-198.39861	7.6002913	47.47546
+		-197.28027	8.1190882	46.204273
+		-196.98323	8.9167976	46.135971
+		-197.42094	9.4702415	45.890575
+		-197.69603	9.6948452	45.949566
+		-197.90221	10.32417	45.919846
+		-198.52019	7.3100953	46.881359
+		-198.00267	7.4179964	46.668427
+		-198.67368	10.384169	46.311909
+		-198.90408	10.437361	46.70966
+		-198.65671	10.156226	47.440018
+		-198.4819	9.2715445	47.877014
+		-198.15211	7.9409151	47.702343
+		-196.91199	8.5055218	46.267036
+		-197.12395	9.2331963	46.016239
+		-197.60979	10.170691	46.011864
+		-198.37599	10.60534	45.865177
+		-198.36784	7.3627319	47.380474
+		-198.07996	7.4171686	47.073429
+		-198.05476	7.4147472	46.85957
+		-197.45586	7.318377	46.38586
+		-197.12508	7.6979055	46.525822
+		-198.90042	10.479007	47.245407
+		-198.26898	9.8344154	47.671566
+		-198.51239	9.5710058	47.778862
+		-198.08881	9.0951433	48.075665
+		-198.10027	8.9020147	48.066067
+		-198.0752	8.6522198	48.068909
+		-197.92146	8.3235836	48.001545
+		-198.00465	7.4198661	47.7673
+		-196.94302	8.1037197	46.621532
+		-196.7356	8.8191004	46.640312
+		-196.82646	9.3028526	46.411282
+		-197.17961	9.5349016	46.079548
+		-197.30594	9.805088	46.245167
+		-197.51199	10.672908	45.827415
+		-197.97493	10.701021	45.74279
+		-197.58049	7.409781	46.88604
+		-198.67252	10.715994	46.086311
+		-198.93265	10.667331	46.379921
+		-199.03397	10.714943	46.940727
+		-198.6899	10.661987	47.727943
+		-198.3215	10.353079	47.816334
+		-198.07903	9.5215368	48.00396
+		-197.61736	7.9854035	47.716419
+		-197.64552	7.7865257	47.6036
+		-196.7404	8.5777493	46.770237
+		-197.04968	9.56215	46.217991
+		-197.13452	10.302981	46.220242
+		-198.18771	10.783283	45.865566
+		-197.85039	7.409986	47.254299
+		-197.09793	7.4099269	46.696823
+		-197.14885	7.8469014	47.020626
+		-198.45641	10.778066	46.018013
+		-198.99178	10.724427	46.671162
+		-198.97395	10.73352	47.25811
+		-198.88846	10.7194	47.479805
+		-197.8421	10.111441	47.844959
+		-197.61971	9.2953815	48.026001
+		-197.6301	8.9733868	48.074947
+		-197.5154	8.5372686	47.969002
+		-197.40494	8.4377337	47.911766
+		-197.67822	7.4303513	47.620518
+		-196.86252	8.2099314	47.141201
+		-196.71185	8.9178925	47.11393
+		-196.71791	9.1590824	46.707977
+		-196.91435	9.7227669	46.67662
+		-197.01424	10.00102	46.64674
+		-197.13776	10.674574	46.021721
+		-197.70361	10.836555	45.725437
+		-198.00801	10.737371	45.934433
+		-197.24193	7.4113975	47.377495
+		-197.16978	7.4308529	47.223526
+		-198.5152	10.722474	46.185726
+		-198.69864	10.733509	46.332146
+		-198.78056	10.745255	46.552734
+		-198.86081	10.704044	46.829193
+		-198.85732	10.701073	47.034988
+		-198.67111	10.750009	47.567432
+		-198.39073	10.692185	47.938438
+		-197.91429	10.594886	48.068935
+		-197.86703	9.5989494	47.98019
+		-197.13599	8.1508007	47.54686
+		-197.23131	7.9570241	47.434841
+		-197.39403	7.4303913	47.490311
+		-196.79071	8.7218943	47.284527
+		-196.82149	9.6414165	46.773663
+		-196.85135	10.51165	46.625221
+		-196.81044	10.673129	46.413414
+		-197.41776	10.754128	46.056419
+		-197.64325	10.796514	45.910091
+		-198.27556	10.389677	46.11655
+		-198.79062	10.694359	47.21524
+		-198.72383	10.71427	47.392006
+		-198.54639	10.743526	47.685318
+		-197.4384	10.464978	47.857327
+		-197.4599	9.7748928	47.680977
+		-197.46275	9.6562386	47.873589
+		-197.19737	9.0936413	47.873253
+		-197.15414	8.8996153	47.881252
+		-197.10857	8.4565763	47.721004
+		-197.36665	7.651803	47.473141
+		-197.0448	8.3839951	47.61478
+		-196.87572	9.1412134	47.510868
+		-196.7119	9.4375753	47.153061
+		-197.00272	9.9253016	47.092777
+		-196.90678	10.26758	47.099712
+		-197.13397	10.788076	46.336662
+		-197.2507	10.749621	46.176521
+		-197.76703	10.290477	46.054729
+		-198.62694	10.321446	46.478619
+		-198.6971	10.277845	46.660229
+		-198.72679	10.257272	46.92342
+		-198.49265	10.31578	47.502972
+		-198.34483	10.732818	47.738831
+		-198.1398	10.814951	48.08511
+		-197.60005	10.701195	48.02956
+		-197.35577	9.9697714	47.668049
+		-197.30806	9.361702	47.919746
+		-196.96739	8.7711344	47.634712
+		-197.07146	9.8040552	47.193539
+		-196.72797	10.663799	47.014519
+		-196.76176	10.700139	46.61496
+		-196.99968	10.750501	46.520679
+		-197.39729	10.297029	46.187115
+		-197.66467	10.337771	46.063259
+		-198.02554	9.8327875	46.221138
+		-198.3335	9.8256636	46.381111
+		-198.5575	10.264012	47.430584
+		-197.91573	10.724875	47.945107
+		-197.92853	10.810007	48.020817
+		-197.37794	10.67734	47.946781
+		-197.02643	10.369186	47.527294
+		-197.03575	9.6614971	47.492996
+		-197.05492	9.5070133	47.659721
+		-197.022	9.6461678	47.522987
+		-196.90059	10.593522	47.493969
+		-197.1604	10.314874	46.404175
+		-197.6348	9.891757	46.228958
+		-198.57179	9.8644276	46.725586
+		-198.5634	9.8032131	47.156796
+		-198.31337	9.807909	47.461834
+		-198.02618	10.312035	47.749023
+		-197.53339	10.730737	47.857105
+		-197.0041	10.570381	47.657822
+		-197.04578	9.9211025	47.232929
+		-196.74271	10.790573	47.299419
+		-196.94724	10.794069	46.832958
+		-196.98242	10.382063	46.890949
+		-197.32088	9.8439007	46.439796
+		-197.84326	9.7005234	46.170208
+		-198.20081	9.7266083	46.286758
+		-198.52884	9.6926718	46.569748
+		-197.3788	10.686689	47.716244
+		-197.7868	10.685795	48.097664
+		-197.3786	10.726752	47.781883
+		-196.8925	10.804564	47.453163
+		-196.91283	10.785739	47.121727
+		-197.17081	9.8868217	46.689594
+		-197.64415	9.6881981	46.21431
+		-198.57414	9.4353409	46.26001
+		-198.59633	9.6804008	46.74316
+		-198.60927	9.696763	46.922546
+		-198.53888	9.4728794	47.561001
+		-197.77731	9.8201399	47.632217
+		-197.66049	9.9423876	47.63385
+		-197.18037	10.672281	47.854622
+		-197.16499	10.032571	47.253452
+		-197.2346	9.7252331	46.570232
+		-197.47549	9.7277603	46.299107
+		-197.71225	9.3046112	45.941345
+		-198.13525	9.3498182	45.962555
+		-198.8315	9.2999992	46.675171
+		-198.79568	9.3893652	47.244545
+		-198.0903	9.4997778	47.800037
+		-198.04323	9.4407043	47.569412
+		-197.22495	10.172761	47.427265
+		-197.22147	10.731746	47.68425
+		-197.16464	10.413324	47.325203
+		-197.19655	9.7777271	47.018856
+		-197.17883	9.7153978	46.739845
+		-197.31793	9.669733	46.427128
+		-197.37428	9.3275385	46.065166
+		-198.45764	8.9400558	46.089497
+		-198.69441	8.9245148	46.328335
+		-198.67145	8.9827681	47.524471
+		-198.34796	9.0369682	47.793709
+		-197.79176	9.5469389	47.595249
+		-197.62161	9.789012	47.579247
+		-197.36986	9.8086529	47.40659
+		-197.2803	10.463943	47.567566
+		-196.98296	10.647145	47.697723
+		-197.26157	9.8094835	47.250942
+		-196.96053	9.3400135	46.552036
+		-197.50656	8.853158	45.988766
+		-197.97444	8.8662691	45.923492
+		-198.85547	8.7855606	46.818863
+		-198.8577	8.8882093	47.034275
+		-197.82843	9.0491743	47.919979
+		-196.97481	9.4242992	47.256649
+		-196.90244	9.3929443	46.976456
+		-197.25865	9.2385015	46.128147
+		-198.25414	8.4491491	46.097443
+		-198.49953	8.4763632	46.255089
+		-198.65233	8.4149351	46.489189
+		-198.67474	8.4827719	47.332577
+		-198.43201	8.551815	47.657951
+		-198.06886	8.5801849	47.822021
+		-197.55482	9.4878206	47.778275
+		-197.31082	9.4794054	47.653595
+		-196.88617	8.90693	46.815357
+		-197.03181	8.8344374	46.39431
+		-197.76509	8.4035625	46.040813
+		-198.68553	8.3163204	47.015358
+		-198.74278	8.4307051	47.121296
+		-197.53453	8.6182747	47.79493
+		-197.32143	9.0057039	47.750458
+		-197.1035	8.9990168	47.55127
+		-196.90979	8.948679	47.175472
+		-197.32635	8.3850069	46.237286
+		-198.01849	8.0300732	46.311474
+		-198.27589	8.0690489	46.40134
+		-198.41133	7.9829822	46.696812
+		-198.33139	8.1172228	47.414547
+		-198.13968	8.1493158	47.566902
+		-197.78043	8.1719322	47.627327
+		-196.98137	8.4731998	47.042652
+		-197.01161	8.4191561	46.700771
+		-197.6601	8.0003729	46.357235
+		-198.34264	7.9630542	47.228489
+		-197.28748	8.2889614	47.450974
+		-197.12231	8.6109829	47.486305
+		-197.35579	8.0063372	46.625042
+		-197.90512	7.6484942	46.611893
+		-198.10204	7.6867676	46.643097
+		-198.04027	7.6622787	46.907768
+		-198.13504	7.964674	47.399773
+		-197.9256	7.9688997	47.464012
+		-197.54201	7.968564	47.342834
+		-197.23904	8.0586519	46.95443
+		-197.70543	7.6561499	46.724049
+		-197.2776	8.2777805	47.43177
+		-197.54601	7.6681533	46.935711
+
+		"e"	876
+		0	1	"smooth"
+		1	2	"smooth"
+		2	0	"smooth"
+		0	3	"smooth"
+		3	1	"smooth"
+		1	4	"smooth"
+		4	2	"smooth"
+		2	5	"smooth"
+		5	0	"smooth"
+		3	6	"smooth"
+		6	1	"smooth"
+		0	7	"smooth"
+		7	3	"smooth"
+		4	8	"smooth"
+		8	2	"smooth"
+		1	9	"smooth"
+		9	4	"smooth"
+		5	10	"smooth"
+		10	0	"smooth"
+		2	11	"smooth"
+		11	5	"smooth"
+		6	9	"smooth"
+		3	12	"smooth"
+		12	6	"smooth"
+		7	13	"smooth"
+		13	3	"smooth"
+		10	7	"smooth"
+		8	14	"smooth"
+		14	2	"smooth"
+		4	15	"smooth"
+		15	8	"smooth"
+		9	16	"smooth"
+		16	4	"smooth"
+		5	17	"smooth"
+		17	10	"smooth"
+		11	17	"smooth"
+		14	11	"smooth"
+		6	18	"smooth"
+		18	9	"smooth"
+		12	19	"smooth"
+		19	6	"smooth"
+		3	20	"smooth"
+		20	12	"smooth"
+		13	20	"smooth"
+		7	21	"smooth"
+		21	13	"smooth"
+		10	21	"smooth"
+		8	22	"smooth"
+		22	14	"smooth"
+		15	23	"smooth"
+		23	8	"smooth"
+		16	15	"smooth"
+		9	24	"smooth"
+		24	16	"smooth"
+		17	25	"smooth"
+		25	10	"smooth"
+		11	26	"smooth"
+		26	17	"smooth"
+		22	11	"smooth"
+		18	24	"smooth"
+		19	18	"smooth"
+		12	27	"smooth"
+		27	19	"smooth"
+		20	27	"smooth"
+		13	28	"smooth"
+		28	20	"smooth"
+		21	29	"smooth"
+		29	13	"smooth"
+		10	30	"smooth"
+		30	21	"smooth"
+		23	22	"smooth"
+		15	31	"smooth"
+		31	23	"smooth"
+		16	32	"smooth"
+		32	15	"smooth"
+		24	33	"smooth"
+		33	16	"smooth"
+		25	30	"smooth"
+		17	34	"smooth"
+		34	25	"smooth"
+		26	34	"smooth"
+		22	26	"smooth"
+		18	35	"smooth"
+		35	24	"smooth"
+		19	36	"smooth"
+		36	18	"smooth"
+		27	37	"smooth"
+		37	19	"smooth"
+		20	38	"smooth"
+		38	27	"smooth"
+		28	38	"smooth"
+		29	28	"smooth"
+		21	39	"smooth"
+		39	29	"smooth"
+		30	39	"smooth"
+		23	40	"smooth"
+		40	22	"smooth"
+		31	40	"smooth"
+		32	31	"smooth"
+		33	32	"smooth"
+		24	41	"smooth"
+		41	33	"smooth"
+		25	42	"smooth"
+		42	30	"smooth"
+		34	43	"smooth"
+		43	25	"smooth"
+		26	44	"smooth"
+		44	34	"smooth"
+		22	45	"smooth"
+		45	26	"smooth"
+		35	41	"smooth"
+		36	35	"smooth"
+		19	46	"smooth"
+		46	36	"smooth"
+		37	46	"smooth"
+		27	47	"smooth"
+		47	37	"smooth"
+		38	47	"smooth"
+		28	48	"smooth"
+		48	38	"smooth"
+		29	49	"smooth"
+		49	28	"smooth"
+		39	50	"smooth"
+		50	29	"smooth"
+		30	51	"smooth"
+		51	39	"smooth"
+		40	52	"smooth"
+		52	22	"smooth"
+		31	53	"smooth"
+		53	40	"smooth"
+		32	54	"smooth"
+		54	31	"smooth"
+		33	55	"smooth"
+		55	32	"smooth"
+		41	56	"smooth"
+		56	33	"smooth"
+		42	51	"smooth"
+		25	57	"smooth"
+		57	42	"smooth"
+		43	57	"smooth"
+		34	58	"smooth"
+		58	43	"smooth"
+		44	58	"smooth"
+		45	44	"smooth"
+		52	45	"smooth"
+		35	59	"smooth"
+		59	41	"smooth"
+		36	59	"smooth"
+		46	60	"smooth"
+		60	36	"smooth"
+		37	61	"smooth"
+		61	46	"smooth"
+		47	61	"smooth"
+		38	62	"smooth"
+		62	47	"smooth"
+		48	62	"smooth"
+		49	48	"smooth"
+		50	49	"smooth"
+		39	63	"smooth"
+		63	50	"smooth"
+		51	63	"smooth"
+		40	64	"smooth"
+		64	52	"smooth"
+		53	64	"smooth"
+		31	65	"smooth"
+		65	53	"smooth"
+		54	65	"smooth"
+		55	54	"smooth"
+		33	66	"smooth"
+		66	55	"smooth"
+		56	66	"smooth"
+		41	67	"smooth"
+		67	56	"smooth"
+		42	68	"smooth"
+		68	51	"smooth"
+		57	69	"smooth"
+		69	42	"smooth"
+		43	70	"smooth"
+		70	57	"smooth"
+		58	70	"smooth"
+		44	71	"smooth"
+		71	58	"smooth"
+		45	71	"smooth"
+		52	72	"smooth"
+		72	45	"smooth"
+		59	67	"smooth"
+		60	59	"smooth"
+		46	73	"smooth"
+		73	60	"smooth"
+		61	73	"smooth"
+		47	74	"smooth"
+		74	61	"smooth"
+		62	75	"smooth"
+		75	47	"smooth"
+		48	76	"smooth"
+		76	62	"smooth"
+		49	77	"smooth"
+		77	48	"smooth"
+		50	78	"smooth"
+		78	49	"smooth"
+		63	79	"smooth"
+		79	50	"smooth"
+		51	80	"smooth"
+		80	63	"smooth"
+		64	81	"smooth"
+		81	52	"smooth"
+		53	82	"smooth"
+		82	64	"smooth"
+		65	83	"smooth"
+		83	53	"smooth"
+		54	84	"smooth"
+		84	65	"smooth"
+		55	85	"smooth"
+		85	54	"smooth"
+		66	85	"smooth"
+		56	86	"smooth"
+		86	66	"smooth"
+		67	87	"smooth"
+		87	56	"smooth"
+		68	80	"smooth"
+		69	68	"smooth"
+		70	69	"smooth"
+		58	88	"smooth"
+		88	70	"smooth"
+		71	88	"smooth"
+		72	71	"smooth"
+		81	72	"smooth"
+		59	89	"smooth"
+		89	67	"smooth"
+		60	90	"smooth"
+		90	59	"smooth"
+		73	91	"smooth"
+		91	60	"smooth"
+		61	92	"smooth"
+		92	73	"smooth"
+		74	93	"smooth"
+		93	61	"smooth"
+		75	74	"smooth"
+		62	94	"smooth"
+		94	75	"smooth"
+		76	94	"smooth"
+		77	76	"smooth"
+		78	77	"smooth"
+		79	78	"smooth"
+		63	95	"smooth"
+		95	79	"smooth"
+		80	96	"smooth"
+		96	63	"smooth"
+		64	97	"smooth"
+		97	81	"smooth"
+		82	97	"smooth"
+		83	82	"smooth"
+		65	98	"smooth"
+		98	83	"smooth"
+		84	98	"smooth"
+		85	84	"smooth"
+		66	99	"smooth"
+		99	85	"smooth"
+		86	99	"smooth"
+		87	86	"smooth"
+		67	100	"smooth"
+		100	87	"smooth"
+		68	101	"smooth"
+		101	80	"smooth"
+		69	101	"smooth"
+		70	101	"smooth"
+		88	101	"smooth"
+		71	102	"smooth"
+		102	88	"smooth"
+		72	102	"smooth"
+		81	103	"smooth"
+		103	72	"smooth"
+		89	104	"smooth"
+		104	67	"smooth"
+		90	89	"smooth"
+		60	105	"smooth"
+		105	90	"smooth"
+		91	105	"smooth"
+		73	106	"smooth"
+		106	91	"smooth"
+		92	107	"smooth"
+		107	73	"smooth"
+		93	92	"smooth"
+		74	108	"smooth"
+		108	93	"smooth"
+		94	74	"smooth"
+		76	109	"smooth"
+		109	94	"smooth"
+		77	110	"smooth"
+		110	76	"smooth"
+		78	110	"smooth"
+		79	111	"smooth"
+		111	78	"smooth"
+		95	112	"smooth"
+		112	79	"smooth"
+		96	95	"smooth"
+		80	113	"smooth"
+		113	96	"smooth"
+		97	114	"smooth"
+		114	81	"smooth"
+		82	115	"smooth"
+		115	97	"smooth"
+		83	116	"smooth"
+		116	82	"smooth"
+		98	117	"smooth"
+		117	83	"smooth"
+		85	98	"smooth"
+		99	118	"smooth"
+		118	85	"smooth"
+		86	119	"smooth"
+		119	99	"smooth"
+		87	120	"smooth"
+		120	86	"smooth"
+		100	121	"smooth"
+		121	87	"smooth"
+		104	100	"smooth"
+		101	113	"smooth"
+		88	122	"smooth"
+		122	101	"smooth"
+		102	123	"smooth"
+		123	88	"smooth"
+		103	102	"smooth"
+		114	103	"smooth"
+		89	124	"smooth"
+		124	104	"smooth"
+		90	125	"smooth"
+		125	89	"smooth"
+		105	126	"smooth"
+		126	90	"smooth"
+		91	127	"smooth"
+		127	105	"smooth"
+		106	128	"smooth"
+		128	91	"smooth"
+		107	106	"smooth"
+		92	129	"smooth"
+		129	107	"smooth"
+		93	130	"smooth"
+		130	92	"smooth"
+		108	131	"smooth"
+		131	93	"smooth"
+		74	132	"smooth"
+		132	108	"smooth"
+		94	132	"smooth"
+		109	132	"smooth"
+		110	109	"smooth"
+		111	110	"smooth"
+		112	111	"smooth"
+		95	133	"smooth"
+		133	112	"smooth"
+		96	134	"smooth"
+		134	95	"smooth"
+		113	135	"smooth"
+		135	96	"smooth"
+		97	136	"smooth"
+		136	114	"smooth"
+		115	136	"smooth"
+		116	115	"smooth"
+		83	137	"smooth"
+		137	116	"smooth"
+		117	137	"smooth"
+		85	117	"smooth"
+		118	117	"smooth"
+		99	138	"smooth"
+		138	118	"smooth"
+		119	139	"smooth"
+		139	99	"smooth"
+		86	140	"smooth"
+		140	119	"smooth"
+		120	141	"smooth"
+		141	86	"smooth"
+		121	120	"smooth"
+		100	142	"smooth"
+		142	121	"smooth"
+		104	142	"smooth"
+		101	135	"smooth"
+		123	122	"smooth"
+		103	123	"smooth"
+		124	142	"smooth"
+		125	124	"smooth"
+		126	125	"smooth"
+		127	126	"smooth"
+		128	127	"smooth"
+		106	143	"smooth"
+		143	128	"smooth"
+		107	143	"smooth"
+		129	144	"smooth"
+		144	107	"smooth"
+		92	145	"smooth"
+		145	129	"smooth"
+		130	145	"smooth"
+		131	130	"smooth"
+		108	146	"smooth"
+		146	131	"smooth"
+		132	147	"smooth"
+		147	108	"smooth"
+		109	148	"smooth"
+		148	132	"smooth"
+		110	149	"smooth"
+		149	109	"smooth"
+		111	150	"smooth"
+		150	110	"smooth"
+		112	150	"smooth"
+		133	151	"smooth"
+		151	112	"smooth"
+		134	133	"smooth"
+		96	152	"smooth"
+		152	134	"smooth"
+		136	153	"smooth"
+		153	114	"smooth"
+		115	154	"smooth"
+		154	136	"smooth"
+		116	155	"smooth"
+		155	115	"smooth"
+		137	155	"smooth"
+		117	156	"smooth"
+		156	137	"smooth"
+		118	156	"smooth"
+		138	157	"smooth"
+		157	118	"smooth"
+		139	138	"smooth"
+		119	158	"smooth"
+		158	139	"smooth"
+		140	159	"smooth"
+		159	119	"smooth"
+		141	140	"smooth"
+		121	141	"smooth"
+		142	160	"smooth"
+		160	121	"smooth"
+		122	135	"smooth"
+		124	161	"smooth"
+		161	142	"smooth"
+		125	161	"smooth"
+		126	161	"smooth"
+		127	162	"smooth"
+		162	126	"smooth"
+		128	163	"smooth"
+		163	127	"smooth"
+		143	163	"smooth"
+		144	143	"smooth"
+		129	164	"smooth"
+		164	144	"smooth"
+		145	164	"smooth"
+		130	165	"smooth"
+		165	145	"smooth"
+		131	166	"smooth"
+		166	130	"smooth"
+		146	167	"smooth"
+		167	131	"smooth"
+		108	168	"smooth"
+		168	146	"smooth"
+		147	168	"smooth"
+		148	147	"smooth"
+		109	169	"smooth"
+		169	148	"smooth"
+		149	169	"smooth"
+		150	149	"smooth"
+		151	150	"smooth"
+		136	170	"smooth"
+		170	153	"smooth"
+		154	170	"smooth"
+		155	154	"smooth"
+		137	171	"smooth"
+		171	155	"smooth"
+		156	171	"smooth"
+		157	156	"smooth"
+		138	172	"smooth"
+		172	157	"smooth"
+		139	173	"smooth"
+		173	138	"smooth"
+		158	174	"smooth"
+		174	139	"smooth"
+		159	158	"smooth"
+		140	175	"smooth"
+		175	159	"smooth"
+		141	176	"smooth"
+		176	140	"smooth"
+		121	176	"smooth"
+		160	176	"smooth"
+		142	177	"smooth"
+		177	160	"smooth"
+		161	178	"smooth"
+		178	142	"smooth"
+		162	161	"smooth"
+		163	162	"smooth"
+		143	179	"smooth"
+		179	163	"smooth"
+		144	179	"smooth"
+		164	179	"smooth"
+		165	164	"smooth"
+		130	180	"smooth"
+		180	165	"smooth"
+		166	180	"smooth"
+		131	181	"smooth"
+		181	166	"smooth"
+		146	182	"smooth"
+		182	167	"smooth"
+		168	183	"smooth"
+		183	146	"smooth"
+		147	184	"smooth"
+		184	168	"smooth"
+		148	185	"smooth"
+		185	147	"smooth"
+		169	185	"smooth"
+		149	185	"smooth"
+		155	186	"smooth"
+		186	154	"smooth"
+		172	187	"smooth"
+		187	157	"smooth"
+		173	172	"smooth"
+		174	173	"smooth"
+		158	188	"smooth"
+		188	174	"smooth"
+		159	188	"smooth"
+		175	188	"smooth"
+		176	175	"smooth"
+		160	189	"smooth"
+		189	176	"smooth"
+		177	189	"smooth"
+		178	177	"smooth"
+		161	190	"smooth"
+		190	178	"smooth"
+		162	190	"smooth"
+		163	190	"smooth"
+		179	191	"smooth"
+		191	163	"smooth"
+		164	192	"smooth"
+		192	179	"smooth"
+		165	193	"smooth"
+		193	164	"smooth"
+		180	193	"smooth"
+		181	180	"smooth"
+		182	194	"smooth"
+		194	167	"smooth"
+		146	195	"smooth"
+		195	182	"smooth"
+		183	195	"smooth"
+		168	196	"smooth"
+		196	183	"smooth"
+		184	196	"smooth"
+		172	197	"smooth"
+		197	187	"smooth"
+		173	198	"smooth"
+		198	172	"smooth"
+		174	198	"smooth"
+		188	199	"smooth"
+		199	174	"smooth"
+		175	200	"smooth"
+		200	188	"smooth"
+		189	175	"smooth"
+		177	201	"smooth"
+		201	189	"smooth"
+		178	202	"smooth"
+		202	177	"smooth"
+		190	203	"smooth"
+		203	178	"smooth"
+		191	190	"smooth"
+		192	191	"smooth"
+		193	192	"smooth"
+		180	204	"smooth"
+		204	193	"smooth"
+		181	205	"smooth"
+		205	180	"smooth"
+		182	206	"smooth"
+		206	194	"smooth"
+		197	207	"smooth"
+		207	187	"smooth"
+		172	208	"smooth"
+		208	197	"smooth"
+		199	198	"smooth"
+		188	209	"smooth"
+		209	199	"smooth"
+		200	209	"smooth"
+		189	200	"smooth"
+		201	210	"smooth"
+		210	189	"smooth"
+		202	201	"smooth"
+		178	211	"smooth"
+		211	202	"smooth"
+		203	211	"smooth"
+		190	212	"smooth"
+		212	203	"smooth"
+		191	213	"smooth"
+		213	190	"smooth"
+		192	214	"smooth"
+		214	191	"smooth"
+		193	215	"smooth"
+		215	192	"smooth"
+		204	216	"smooth"
+		216	193	"smooth"
+		182	217	"smooth"
+		217	206	"smooth"
+		208	207	"smooth"
+		198	208	"smooth"
+		209	218	"smooth"
+		218	199	"smooth"
+		200	219	"smooth"
+		219	209	"smooth"
+		189	220	"smooth"
+		220	200	"smooth"
+		210	220	"smooth"
+		201	221	"smooth"
+		221	210	"smooth"
+		202	222	"smooth"
+		222	201	"smooth"
+		211	222	"smooth"
+		203	223	"smooth"
+		223	211	"smooth"
+		212	223	"smooth"
+		213	212	"smooth"
+		191	224	"smooth"
+		224	213	"smooth"
+		214	224	"smooth"
+		192	225	"smooth"
+		225	214	"smooth"
+		215	226	"smooth"
+		226	192	"smooth"
+		216	215	"smooth"
+		204	227	"smooth"
+		227	216	"smooth"
+		217	228	"smooth"
+		228	206	"smooth"
+		208	229	"smooth"
+		229	207	"smooth"
+		199	208	"smooth"
+		209	230	"smooth"
+		230	218	"smooth"
+		219	231	"smooth"
+		231	209	"smooth"
+		200	232	"smooth"
+		232	219	"smooth"
+		220	232	"smooth"
+		210	233	"smooth"
+		233	220	"smooth"
+		221	233	"smooth"
+		222	221	"smooth"
+		211	234	"smooth"
+		234	222	"smooth"
+		223	235	"smooth"
+		235	211	"smooth"
+		213	223	"smooth"
+		224	223	"smooth"
+		214	236	"smooth"
+		236	224	"smooth"
+		225	237	"smooth"
+		237	214	"smooth"
+		215	238	"smooth"
+		238	226	"smooth"
+		216	239	"smooth"
+		239	215	"smooth"
+		227	240	"smooth"
+		240	216	"smooth"
+		204	241	"smooth"
+		241	227	"smooth"
+		217	242	"smooth"
+		242	228	"smooth"
+		199	229	"smooth"
+		230	243	"smooth"
+		243	218	"smooth"
+		231	230	"smooth"
+		219	244	"smooth"
+		244	231	"smooth"
+		232	244	"smooth"
+		233	232	"smooth"
+		221	245	"smooth"
+		245	233	"smooth"
+		222	246	"smooth"
+		246	221	"smooth"
+		234	246	"smooth"
+		235	234	"smooth"
+		223	247	"smooth"
+		247	235	"smooth"
+		224	248	"smooth"
+		248	223	"smooth"
+		236	248	"smooth"
+		237	236	"smooth"
+		225	249	"smooth"
+		249	237	"smooth"
+		239	238	"smooth"
+		240	239	"smooth"
+		218	229	"smooth"
+		230	250	"smooth"
+		250	243	"smooth"
+		231	251	"smooth"
+		251	230	"smooth"
+		244	251	"smooth"
+		232	252	"smooth"
+		252	244	"smooth"
+		233	252	"smooth"
+		245	252	"smooth"
+		246	245	"smooth"
+		234	253	"smooth"
+		253	246	"smooth"
+		235	254	"smooth"
+		254	234	"smooth"
+		247	255	"smooth"
+		255	235	"smooth"
+		248	247	"smooth"
+		236	256	"smooth"
+		256	248	"smooth"
+		237	257	"smooth"
+		257	236	"smooth"
+		249	258	"smooth"
+		258	237	"smooth"
+		225	259	"smooth"
+		259	249	"smooth"
+		240	238	"smooth"
+		250	260	"smooth"
+		260	243	"smooth"
+		251	250	"smooth"
+		244	261	"smooth"
+		261	251	"smooth"
+		252	262	"smooth"
+		262	244	"smooth"
+		245	262	"smooth"
+		246	263	"smooth"
+		263	245	"smooth"
+		253	263	"smooth"
+		254	253	"smooth"
+		255	254	"smooth"
+		247	264	"smooth"
+		264	255	"smooth"
+		248	265	"smooth"
+		265	247	"smooth"
+		256	265	"smooth"
+		257	256	"smooth"
+		258	257	"smooth"
+		249	266	"smooth"
+		266	258	"smooth"
+		259	267	"smooth"
+		267	249	"smooth"
+		250	268	"smooth"
+		268	260	"smooth"
+		251	269	"smooth"
+		269	250	"smooth"
+		261	269	"smooth"
+		262	261	"smooth"
+		245	270	"smooth"
+		270	262	"smooth"
+		263	270	"smooth"
+		253	271	"smooth"
+		271	263	"smooth"
+		254	272	"smooth"
+		272	253	"smooth"
+		255	272	"smooth"
+		264	273	"smooth"
+		273	255	"smooth"
+		265	264	"smooth"
+		256	264	"smooth"
+		257	274	"smooth"
+		274	256	"smooth"
+		258	275	"smooth"
+		275	257	"smooth"
+		266	276	"smooth"
+		276	258	"smooth"
+		267	266	"smooth"
+		269	268	"smooth"
+		261	277	"smooth"
+		277	269	"smooth"
+		262	278	"smooth"
+		278	261	"smooth"
+		270	278	"smooth"
+		263	279	"smooth"
+		279	270	"smooth"
+		271	279	"smooth"
+		272	271	"smooth"
+		273	272	"smooth"
+		264	280	"smooth"
+		280	273	"smooth"
+		274	264	"smooth"
+		275	274	"smooth"
+		276	275	"smooth"
+		266	281	"smooth"
+		281	276	"smooth"
+		267	282	"smooth"
+		282	266	"smooth"
+		278	277	"smooth"
+		270	283	"smooth"
+		283	278	"smooth"
+		279	283	"smooth"
+		271	284	"smooth"
+		284	279	"smooth"
+		272	285	"smooth"
+		285	271	"smooth"
+		273	285	"smooth"
+		280	286	"smooth"
+		286	273	"smooth"
+		274	280	"smooth"
+		275	287	"smooth"
+		287	274	"smooth"
+		276	288	"smooth"
+		288	275	"smooth"
+		281	289	"smooth"
+		289	276	"smooth"
+		282	281	"smooth"
+		278	290	"smooth"
+		290	277	"smooth"
+		283	290	"smooth"
+		279	291	"smooth"
+		291	283	"smooth"
+		284	291	"smooth"
+		285	284	"smooth"
+		286	285	"smooth"
+		287	280	"smooth"
+		288	287	"smooth"
+		289	288	"smooth"
+		290	292	"smooth"
+		292	277	"smooth"
+		283	293	"smooth"
+		293	290	"smooth"
+		291	293	"smooth"
+		286	284	"smooth"
+		287	286	"smooth"
+		288	286	"smooth"
+		289	286	"smooth"
+		286	291	"smooth"
+		286	293	"smooth"
+		289	293	"smooth"
+		289	290	"smooth"
+		289	292	"smooth"
+		281	292	"smooth"
+		282	292	"smooth"
+		282	277	"smooth"
+		282	269	"smooth"
+		282	268	"smooth"
+		267	268	"smooth"
+		267	260	"smooth"
+		259	260	"smooth"
+		134	103	"smooth"
+		114	134	"smooth"
+		133	114	"smooth"
+		153	133	"smooth"
+		151	153	"smooth"
+		170	151	"smooth"
+		150	170	"smooth"
+		154	150	"smooth"
+		185	154	"smooth"
+		186	185	"smooth"
+		184	186	"smooth"
+		155	184	"smooth"
+		196	171	"smooth"
+		156	196	"smooth"
+		195	187	"smooth"
+		207	195	"smooth"
+		227	229	"smooth"
+		218	227	"smooth"
+		240	218	"smooth"
+		243	240	"smooth"
+		240	260	"smooth"
+		259	240	"smooth"
+		238	259	"smooth"
+		225	238	"smooth"
+		229	241	"smooth"
+		204	229	"smooth"
+		206	204	"smooth"
+		180	206	"smooth"
+		205	167	"smooth"
+		194	205	"smooth"
+		195	242	"smooth"
+		217	195	"smooth"
+		157	195	"smooth"
+		183	157	"smooth"
+		122	134	"smooth"
+		152	122	"smooth"
+		122	103	"smooth"
+		135	152	"smooth"
+		149	154	"smooth"
+		185	184	"smooth"
+		171	184	"smooth"
+		196	157	"smooth"
+		205	131	"smooth"
+		180	194	"smooth"
+		226	225	"smooth"
+		228	204	"smooth"
+		207	242	"smooth"
+		228	229	"smooth"
+		228	207	"smooth"
+
+		"face"	
+		"l"	3	0	1	2	
+
+		"face"	
+		"l"	3	-1	3	4	
+
+		"face"	
+		"l"	3	-2	5	6	
+
+		"face"	
+		"l"	3	-3	7	8	
+
+		"face"	
+		"l"	3	-5	9	10	
+
+		"face"	
+		"l"	3	-4	11	12	
+
+		"face"	
+		"l"	3	-7	13	14	
+
+		"face"	
+		"l"	3	-6	15	16	
+
+		"face"	
+		"l"	3	-9	17	18	
+
+		"face"	
+		"l"	3	-8	19	20	
+
+		"face"	
+		"l"	3	-16	-11	21	
+
+		"face"	
+		"l"	3	-10	22	23	
+
+		"face"	
+		"l"	3	-13	24	25	
+
+		"face"	
+		"l"	3	-12	-19	26	
+
+		"face"	
+		"l"	3	-15	27	28	
+
+		"face"	
+		"l"	3	-14	29	30	
+
+		"face"	
+		"l"	3	-17	31	32	
+
+		"face"	
+		"l"	3	-18	33	34	
+
+		"face"	
+		"l"	3	-34	-21	35	
+
+		"face"	
+		"l"	3	-20	-29	36	
+
+		"face"	
+		"l"	3	-22	37	38	
+
+		"face"	
+		"l"	3	-24	39	40	
+
+		"face"	
+		"l"	3	-23	41	42	
+
+		"face"	
+		"l"	3	-42	-26	43	
+
+		"face"	
+		"l"	3	-25	44	45	
+
+		"face"	
+		"l"	3	-45	-27	46	
+
+		"face"	
+		"l"	3	-28	47	48	
+
+		"face"	
+		"l"	3	-31	49	50	
+
+		"face"	
+		"l"	3	-30	-33	51	
+
+		"face"	
+		"l"	3	-32	52	53	
+
+		"face"	
+		"l"	3	-35	54	55	
+
+		"face"	
+		"l"	3	-36	56	57	
+
+		"face"	
+		"l"	3	-37	-49	58	
+
+		"face"	
+		"l"	3	-53	-39	59	
+
+		"face"	
+		"l"	3	-38	-41	60	
+
+		"face"	
+		"l"	3	-40	61	62	
+
+		"face"	
+		"l"	3	-62	-43	63	
+
+		"face"	
+		"l"	3	-44	64	65	
+
+		"face"	
+		"l"	3	-46	66	67	
+
+		"face"	
+		"l"	3	-47	68	69	
+
+		"face"	
+		"l"	3	-48	-51	70	
+
+		"face"	
+		"l"	3	-50	71	72	
+
+		"face"	
+		"l"	3	-52	73	74	
+
+		"face"	
+		"l"	3	-54	75	76	
+
+		"face"	
+		"l"	3	-69	-56	77	
+
+		"face"	
+		"l"	3	-55	78	79	
+
+		"face"	
+		"l"	3	-79	-58	80	
+
+		"face"	
+		"l"	3	-57	-59	81	
+
+		"face"	
+		"l"	3	-60	82	83	
+
+		"face"	
+		"l"	3	-61	84	85	
+
+		"face"	
+		"l"	3	-63	86	87	
+
+		"face"	
+		"l"	3	-64	88	89	
+
+		"face"	
+		"l"	3	-89	-66	90	
+
+		"face"	
+		"l"	3	-65	-68	91	
+
+		"face"	
+		"l"	3	-67	92	93	
+
+		"face"	
+		"l"	3	-93	-70	94	
+
+		"face"	
+		"l"	3	-71	95	96	
+
+		"face"	
+		"l"	3	-96	-73	97	
+
+		"face"	
+		"l"	3	-72	-75	98	
+
+		"face"	
+		"l"	3	-74	-77	99	
+
+		"face"	
+		"l"	3	-76	100	101	
+
+		"face"	
+		"l"	3	-78	102	103	
+
+		"face"	
+		"l"	3	-80	104	105	
+
+		"face"	
+		"l"	3	-81	106	107	
+
+		"face"	
+		"l"	3	-82	108	109	
+
+		"face"	
+		"l"	3	-101	-84	110	
+
+		"face"	
+		"l"	3	-83	-86	111	
+
+		"face"	
+		"l"	3	-85	112	113	
+
+		"face"	
+		"l"	3	-113	-88	114	
+
+		"face"	
+		"l"	3	-87	115	116	
+
+		"face"	
+		"l"	3	-116	-90	117	
+
+		"face"	
+		"l"	3	-91	118	119	
+
+		"face"	
+		"l"	3	-92	120	121	
+
+		"face"	
+		"l"	3	-94	122	123	
+
+		"face"	
+		"l"	3	-95	124	125	
+
+		"face"	
+		"l"	3	-97	126	127	
+
+		"face"	
+		"l"	3	-98	128	129	
+
+		"face"	
+		"l"	3	-99	130	131	
+
+		"face"	
+		"l"	3	-100	132	133	
+
+		"face"	
+		"l"	3	-102	134	135	
+
+		"face"	
+		"l"	3	-125	-104	136	
+
+		"face"	
+		"l"	3	-103	137	138	
+
+		"face"	
+		"l"	3	-138	-106	139	
+
+		"face"	
+		"l"	3	-105	140	141	
+
+		"face"	
+		"l"	3	-141	-108	142	
+
+		"face"	
+		"l"	3	-107	-110	143	
+
+		"face"	
+		"l"	3	-109	-128	144	
+
+		"face"	
+		"l"	3	-111	145	146	
+
+		"face"	
+		"l"	3	-146	-112	147	
+
+		"face"	
+		"l"	3	-114	148	149	
+
+		"face"	
+		"l"	3	-115	150	151	
+
+		"face"	
+		"l"	3	-151	-117	152	
+
+		"face"	
+		"l"	3	-118	153	154	
+
+		"face"	
+		"l"	3	-154	-120	155	
+
+		"face"	
+		"l"	3	-119	-122	156	
+
+		"face"	
+		"l"	3	-121	-124	157	
+
+		"face"	
+		"l"	3	-123	158	159	
+
+		"face"	
+		"l"	3	-159	-126	160	
+
+		"face"	
+		"l"	3	-127	161	162	
+
+		"face"	
+		"l"	3	-162	-130	163	
+
+		"face"	
+		"l"	3	-129	164	165	
+
+		"face"	
+		"l"	3	-165	-132	166	
+
+		"face"	
+		"l"	3	-131	-134	167	
+
+		"face"	
+		"l"	3	-133	168	169	
+
+		"face"	
+		"l"	3	-169	-136	170	
+
+		"face"	
+		"l"	3	-135	171	172	
+
+		"face"	
+		"l"	3	-137	173	174	
+
+		"face"	
+		"l"	3	-139	175	176	
+
+		"face"	
+		"l"	3	-140	177	178	
+
+		"face"	
+		"l"	3	-178	-142	179	
+
+		"face"	
+		"l"	3	-143	180	181	
+
+		"face"	
+		"l"	3	-181	-144	182	
+
+		"face"	
+		"l"	3	-145	183	184	
+
+		"face"	
+		"l"	3	-172	-147	185	
+
+		"face"	
+		"l"	3	-148	-150	186	
+
+		"face"	
+		"l"	3	-149	187	188	
+
+		"face"	
+		"l"	3	-188	-152	189	
+
+		"face"	
+		"l"	3	-153	190	191	
+
+		"face"	
+		"l"	3	-155	192	193	
+
+		"face"	
+		"l"	3	-156	194	195	
+
+		"face"	
+		"l"	3	-157	196	197	
+
+		"face"	
+		"l"	3	-158	198	199	
+
+		"face"	
+		"l"	3	-160	200	201	
+
+		"face"	
+		"l"	3	-161	202	203	
+
+		"face"	
+		"l"	3	-163	204	205	
+
+		"face"	
+		"l"	3	-164	206	207	
+
+		"face"	
+		"l"	3	-166	208	209	
+
+		"face"	
+		"l"	3	-167	210	211	
+
+		"face"	
+		"l"	3	-168	212	213	
+
+		"face"	
+		"l"	3	-213	-170	214	
+
+		"face"	
+		"l"	3	-171	215	216	
+
+		"face"	
+		"l"	3	-173	217	218	
+
+		"face"	
+		"l"	3	-203	-175	219	
+
+		"face"	
+		"l"	3	-174	-177	220	
+
+		"face"	
+		"l"	3	-176	-179	221	
+
+		"face"	
+		"l"	3	-180	222	223	
+
+		"face"	
+		"l"	3	-223	-182	224	
+
+		"face"	
+		"l"	3	-183	-185	225	
+
+		"face"	
+		"l"	3	-184	-206	226	
+
+		"face"	
+		"l"	3	-186	227	228	
+
+		"face"	
+		"l"	3	-187	229	230	
+
+		"face"	
+		"l"	3	-189	231	232	
+
+		"face"	
+		"l"	3	-190	233	234	
+
+		"face"	
+		"l"	3	-192	235	236	
+
+		"face"	
+		"l"	3	-191	-194	237	
+
+		"face"	
+		"l"	3	-193	238	239	
+
+		"face"	
+		"l"	3	-239	-196	240	
+
+		"face"	
+		"l"	3	-195	-198	241	
+
+		"face"	
+		"l"	3	-197	-200	242	
+
+		"face"	
+		"l"	3	-199	-202	243	
+
+		"face"	
+		"l"	3	-201	244	245	
+
+		"face"	
+		"l"	3	-204	246	247	
+
+		"face"	
+		"l"	3	-205	248	249	
+
+		"face"	
+		"l"	3	-249	-208	250	
+
+		"face"	
+		"l"	3	-207	-210	251	
+
+		"face"	
+		"l"	3	-209	252	253	
+
+		"face"	
+		"l"	3	-253	-212	254	
+
+		"face"	
+		"l"	3	-211	-214	255	
+
+		"face"	
+		"l"	3	-215	256	257	
+
+		"face"	
+		"l"	3	-257	-217	258	
+
+		"face"	
+		"l"	3	-216	-219	259	
+
+		"face"	
+		"l"	3	-218	260	261	
+
+		"face"	
+		"l"	3	-220	262	263	
+
+		"face"	
+		"l"	3	-263	-221	264	
+
+		"face"	
+		"l"	3	-265	-222	265	
+
+		"face"	
+		"l"	3	-266	-224	266	
+
+		"face"	
+		"l"	3	-225	267	268	
+
+		"face"	
+		"l"	3	-268	-226	269	
+
+		"face"	
+		"l"	3	-227	270	271	
+
+		"face"	
+		"l"	3	-229	272	273	
+
+		"face"	
+		"l"	3	-228	-231	274	
+
+		"face"	
+		"l"	3	-230	275	276	
+
+		"face"	
+		"l"	3	-276	-233	277	
+
+		"face"	
+		"l"	3	-232	278	279	
+
+		"face"	
+		"l"	3	-235	280	281	
+
+		"face"	
+		"l"	3	-234	-237	282	
+
+		"face"	
+		"l"	3	-236	283	284	
+
+		"face"	
+		"l"	3	-238	-240	285	
+
+		"face"	
+		"l"	3	-241	286	287	
+
+		"face"	
+		"l"	3	-242	288	289	
+
+		"face"	
+		"l"	3	-289	-243	290	
+
+		"face"	
+		"l"	3	-244	291	292	
+
+		"face"	
+		"l"	3	-246	293	294	
+
+		"face"	
+		"l"	3	-245	-248	295	
+
+		"face"	
+		"l"	3	-247	296	297	
+
+		"face"	
+		"l"	3	-250	298	299	
+
+		"face"	
+		"l"	3	-251	300	301	
+
+		"face"	
+		"l"	3	-252	302	303	
+
+		"face"	
+		"l"	3	-254	304	305	
+
+		"face"	
+		"l"	3	-255	-256	306	
+
+		"face"	
+		"l"	3	-258	307	308	
+
+		"face"	
+		"l"	3	-259	309	310	
+
+		"face"	
+		"l"	3	-260	311	312	
+
+		"face"	
+		"l"	3	-262	313	314	
+
+		"face"	
+		"l"	3	-261	-274	315	
+
+		"face"	
+		"l"	3	-297	-264	316	
+
+		"face"	
+		"l"	3	-267	317	318	
+
+		"face"	
+		"l"	3	-269	319	320	
+
+		"face"	
+		"l"	3	-270	-272	321	
+
+		"face"	
+		"l"	3	-271	-300	322	
+
+		"face"	
+		"l"	3	-273	323	324	
+
+		"face"	
+		"l"	3	-275	325	326	
+
+		"face"	
+		"l"	3	-277	327	328	
+
+		"face"	
+		"l"	3	-278	329	330	
+
+		"face"	
+		"l"	3	-280	331	332	
+
+		"face"	
+		"l"	3	-279	-282	333	
+
+		"face"	
+		"l"	3	-281	334	335	
+
+		"face"	
+		"l"	3	-283	336	337	
+
+		"face"	
+		"l"	3	-285	338	339	
+
+		"face"	
+		"l"	3	-284	340	341	
+
+		"face"	
+		"l"	3	-341	-286	342	
+
+		"face"	
+		"l"	3	-343	-288	343	
+
+		"face"	
+		"l"	3	-287	-290	344	
+
+		"face"	
+		"l"	3	-291	-293	345	
+
+		"face"	
+		"l"	3	-292	-295	346	
+
+		"face"	
+		"l"	3	-294	347	348	
+
+		"face"	
+		"l"	3	-296	349	350	
+
+		"face"	
+		"l"	3	-298	351	352	
+
+		"face"	
+		"l"	3	-299	353	354	
+
+		"face"	
+		"l"	3	-354	-302	355	
+
+		"face"	
+		"l"	3	-301	-304	356	
+
+		"face"	
+		"l"	3	-303	357	358	
+
+		"face"	
+		"l"	3	-358	-306	359	
+
+		"face"	
+		"l"	3	-305	-307	360	
+
+		"face"	
+		"l"	3	-361	-309	361	
+
+		"face"	
+		"l"	3	-308	362	363	
+
+		"face"	
+		"l"	3	-311	364	365	
+
+		"face"	
+		"l"	3	-310	366	367	
+
+		"face"	
+		"l"	3	-313	368	369	
+
+		"face"	
+		"l"	3	-312	-315	370	
+
+		"face"	
+		"l"	3	-314	371	372	
+
+		"face"	
+		"l"	3	-372	-316	373	
+
+		"face"	
+		"l"	3	-352	-317	374	
+
+		"face"	
+		"l"	3	-318	-321	375	
+
+		"face"	
+		"l"	3	-320	-322	376	
+
+		"face"	
+		"l"	3	-374	-325	377	
+
+		"face"	
+		"l"	3	-324	-327	378	
+
+		"face"	
+		"l"	3	-326	-329	379	
+
+		"face"	
+		"l"	3	-328	-331	380	
+
+		"face"	
+		"l"	3	-330	-333	381	
+
+		"face"	
+		"l"	3	-332	382	383	
+
+		"face"	
+		"l"	3	-383	-334	384	
+
+		"face"	
+		"l"	3	-336	385	386	
+
+		"face"	
+		"l"	3	-335	387	388	
+
+		"face"	
+		"l"	3	-388	-338	389	
+
+		"face"	
+		"l"	3	-337	-340	390	
+
+		"face"	
+		"l"	3	-339	391	392	
+
+		"face"	
+		"l"	3	-342	393	394	
+
+		"face"	
+		"l"	3	-344	395	396	
+
+		"face"	
+		"l"	3	-345	397	398	
+
+		"face"	
+		"l"	3	-346	399	400	
+
+		"face"	
+		"l"	3	-400	-347	401	
+
+		"face"	
+		"l"	3	-349	402	403	
+
+		"face"	
+		"l"	3	-348	-351	404	
+
+		"face"	
+		"l"	3	-350	405	406	
+
+		"face"	
+		"l"	3	-355	407	408	
+
+		"face"	
+		"l"	3	-356	409	410	
+
+		"face"	
+		"l"	3	-357	411	412	
+
+		"face"	
+		"l"	3	-412	-359	413	
+
+		"face"	
+		"l"	3	-360	414	415	
+
+		"face"	
+		"l"	3	-415	-362	416	
+
+		"face"	
+		"l"	3	-364	417	418	
+
+		"face"	
+		"l"	3	-363	-366	419	
+
+		"face"	
+		"l"	3	-365	420	421	
+
+		"face"	
+		"l"	3	-368	422	423	
+
+		"face"	
+		"l"	3	-367	-370	424	
+
+		"face"	
+		"l"	3	-369	-371	425	
+
+		"face"	
+		"l"	3	-373	426	427	
+
+		"face"	
+		"l"	3	-375	-319	428	
+
+		"face"	
+		"l"	3	-378	429	430	
+
+		"face"	
+		"l"	3	-430	-379	431	
+
+		"face"	
+		"l"	3	-432	-380	432	
+
+		"face"	
+		"l"	3	-381	433	434	
+
+		"face"	
+		"l"	3	-382	435	436	
+
+		"face"	
+		"l"	3	-436	-384	437	
+
+		"face"	
+		"l"	3	-385	-387	438	
+
+		"face"	
+		"l"	3	-386	439	440	
+
+		"face"	
+		"l"	3	-440	-389	441	
+
+		"face"	
+		"l"	3	-390	442	443	
+
+		"face"	
+		"l"	3	-391	444	445	
+
+		"face"	
+		"l"	3	-393	446	447	
+
+		"face"	
+		"l"	3	-392	448	449	
+
+		"face"	
+		"l"	3	-449	-395	450	
+
+		"face"	
+		"l"	3	-394	-397	451	
+
+		"face"	
+		"l"	3	-396	452	453	
+
+		"face"	
+		"l"	3	-453	-399	454	
+
+		"face"	
+		"l"	3	-398	-401	455	
+
+		"face"	
+		"l"	3	-402	-404	456	
+
+		"face"	
+		"l"	3	-408	457	458	
+
+		"face"	
+		"l"	3	-458	-411	459	
+
+		"face"	
+		"l"	3	-410	-413	460	
+
+		"face"	
+		"l"	3	-414	461	462	
+
+		"face"	
+		"l"	3	-462	-416	463	
+
+		"face"	
+		"l"	3	-417	-419	464	
+
+		"face"	
+		"l"	3	-418	465	466	
+
+		"face"	
+		"l"	3	-420	467	468	
+
+		"face"	
+		"l"	3	-422	469	470	
+
+		"face"	
+		"l"	3	-421	-424	471	
+
+		"face"	
+		"l"	3	-423	472	473	
+
+		"face"	
+		"l"	3	-425	474	475	
+
+		"face"	
+		"l"	3	-475	-426	476	
+
+		"face"	
+		"l"	3	-477	-428	477	
+
+		"face"	
+		"l"	3	-427	478	479	
+
+		"face"	
+		"l"	3	-431	480	481	
+
+		"face"	
+		"l"	3	-433	-435	482	
+
+		"face"	
+		"l"	3	-434	-437	483	
+
+		"face"	
+		"l"	3	-438	484	485	
+
+		"face"	
+		"l"	3	-485	-439	486	
+
+		"face"	
+		"l"	3	-487	-441	487	
+
+		"face"	
+		"l"	3	-442	-444	488	
+
+		"face"	
+		"l"	3	-443	489	490	
+
+		"face"	
+		"l"	3	-490	-446	491	
+
+		"face"	
+		"l"	3	-445	492	493	
+
+		"face"	
+		"l"	3	-447	494	495	
+
+		"face"	
+		"l"	3	-450	496	497	
+
+		"face"	
+		"l"	3	-451	498	499	
+
+		"face"	
+		"l"	3	-452	500	501	
+
+		"face"	
+		"l"	3	-501	-454	502	
+
+		"face"	
+		"l"	3	-503	-455	503	
+
+		"face"	
+		"l"	3	-461	504	505	
+
+		"face"	
+		"l"	3	-467	506	507	
+
+		"face"	
+		"l"	3	-466	-469	508	
+
+		"face"	
+		"l"	3	-468	-471	509	
+
+		"face"	
+		"l"	3	-470	510	511	
+
+		"face"	
+		"l"	3	-511	-472	512	
+
+		"face"	
+		"l"	3	-513	-474	513	
+
+		"face"	
+		"l"	3	-473	-476	514	
+
+		"face"	
+		"l"	3	-478	515	516	
+
+		"face"	
+		"l"	3	-516	-480	517	
+
+		"face"	
+		"l"	3	-479	-482	518	
+
+		"face"	
+		"l"	3	-481	519	520	
+
+		"face"	
+		"l"	3	-520	-483	521	
+
+		"face"	
+		"l"	3	-522	-484	522	
+
+		"face"	
+		"l"	3	-486	523	524	
+
+		"face"	
+		"l"	3	-488	525	526	
+
+		"face"	
+		"l"	3	-489	527	528	
+
+		"face"	
+		"l"	3	-528	-491	529	
+
+		"face"	
+		"l"	3	-492	-494	530	
+
+		"face"	
+		"l"	3	-496	531	532	
+
+		"face"	
+		"l"	3	-495	533	534	
+
+		"face"	
+		"l"	3	-534	-498	535	
+
+		"face"	
+		"l"	3	-497	536	537	
+
+		"face"	
+		"l"	3	-537	-500	538	
+
+		"face"	
+		"l"	3	-507	539	540	
+
+		"face"	
+		"l"	3	-509	541	542	
+
+		"face"	
+		"l"	3	-542	-510	543	
+
+		"face"	
+		"l"	3	-512	544	545	
+
+		"face"	
+		"l"	3	-514	546	547	
+
+		"face"	
+		"l"	3	-515	-517	548	
+
+		"face"	
+		"l"	3	-518	549	550	
+
+		"face"	
+		"l"	3	-519	551	552	
+
+		"face"	
+		"l"	3	-521	553	554	
+
+		"face"	
+		"l"	3	-523	-525	555	
+
+		"face"	
+		"l"	3	-524	-527	556	
+
+		"face"	
+		"l"	3	-526	-529	557	
+
+		"face"	
+		"l"	3	-530	558	559	
+
+		"face"	
+		"l"	3	-531	560	561	
+
+		"face"	
+		"l"	3	-532	562	563	
+
+		"face"	
+		"l"	3	-541	564	565	
+
+		"face"	
+		"l"	3	-540	566	567	
+
+		"face"	
+		"l"	3	-544	-546	568	
+
+		"face"	
+		"l"	3	-545	569	570	
+
+		"face"	
+		"l"	3	-570	-548	571	
+
+		"face"	
+		"l"	3	-547	-549	572	
+
+		"face"	
+		"l"	3	-551	573	574	
+
+		"face"	
+		"l"	3	-550	-553	575	
+
+		"face"	
+		"l"	3	-552	576	577	
+
+		"face"	
+		"l"	3	-577	-555	578	
+
+		"face"	
+		"l"	3	-554	579	580	
+
+		"face"	
+		"l"	3	-556	581	582	
+
+		"face"	
+		"l"	3	-557	583	584	
+
+		"face"	
+		"l"	3	-558	585	586	
+
+		"face"	
+		"l"	3	-560	587	588	
+
+		"face"	
+		"l"	3	-563	589	590	
+
+		"face"	
+		"l"	3	-565	-568	591	
+
+		"face"	
+		"l"	3	-567	-543	592	
+
+		"face"	
+		"l"	3	-571	593	594	
+
+		"face"	
+		"l"	3	-572	595	596	
+
+		"face"	
+		"l"	3	-573	597	598	
+
+		"face"	
+		"l"	3	-598	-575	599	
+
+		"face"	
+		"l"	3	-574	600	601	
+
+		"face"	
+		"l"	3	-576	602	603	
+
+		"face"	
+		"l"	3	-603	-578	604	
+
+		"face"	
+		"l"	3	-579	605	606	
+
+		"face"	
+		"l"	3	-606	-581	607	
+
+		"face"	
+		"l"	3	-580	-583	608	
+
+		"face"	
+		"l"	3	-582	609	610	
+
+		"face"	
+		"l"	3	-610	-585	611	
+
+		"face"	
+		"l"	3	-584	612	613	
+
+		"face"	
+		"l"	3	-587	614	615	
+
+		"face"	
+		"l"	3	-586	-589	616	
+
+		"face"	
+		"l"	3	-588	617	618	
+
+		"face"	
+		"l"	3	-591	619	620	
+
+		"face"	
+		"l"	3	-592	621	622	
+
+		"face"	
+		"l"	3	-593	-569	623	
+
+		"face"	
+		"l"	3	-594	624	625	
+
+		"face"	
+		"l"	3	-597	626	627	
+
+		"face"	
+		"l"	3	-596	628	629	
+
+		"face"	
+		"l"	3	-629	-599	630	
+
+		"face"	
+		"l"	3	-600	631	632	
+
+		"face"	
+		"l"	3	-632	-602	633	
+
+		"face"	
+		"l"	3	-601	-604	634	
+
+		"face"	
+		"l"	3	-605	635	636	
+
+		"face"	
+		"l"	3	-607	637	638	
+
+		"face"	
+		"l"	3	-608	-609	639	
+
+		"face"	
+		"l"	3	-640	-611	640	
+
+		"face"	
+		"l"	3	-612	641	642	
+
+		"face"	
+		"l"	3	-614	643	644	
+
+		"face"	
+		"l"	3	-615	645	646	
+
+		"face"	
+		"l"	3	-617	647	648	
+
+		"face"	
+		"l"	3	-619	649	650	
+
+		"face"	
+		"l"	3	-618	651	652	
+
+		"face"	
+		"l"	3	-620	653	654	
+
+		"face"	
+		"l"	3	-622	-624	655	
+
+		"face"	
+		"l"	3	-626	656	657	
+
+		"face"	
+		"l"	3	-625	-628	658	
+
+		"face"	
+		"l"	3	-627	659	660	
+
+		"face"	
+		"l"	3	-660	-630	661	
+
+		"face"	
+		"l"	3	-631	-633	662	
+
+		"face"	
+		"l"	3	-634	663	664	
+
+		"face"	
+		"l"	3	-635	665	666	
+
+		"face"	
+		"l"	3	-666	-637	667	
+
+		"face"	
+		"l"	3	-636	-639	668	
+
+		"face"	
+		"l"	3	-638	669	670	
+
+		"face"	
+		"l"	3	-641	671	672	
+
+		"face"	
+		"l"	3	-672	-643	673	
+
+		"face"	
+		"l"	3	-642	-645	674	
+
+		"face"	
+		"l"	3	-644	675	676	
+
+		"face"	
+		"l"	3	-646	-649	677	
+
+		"face"	
+		"l"	3	-648	-651	678	
+
+		"face"	
+		"l"	3	-656	-595	679	
+
+		"face"	
+		"l"	3	-657	680	681	
+
+		"face"	
+		"l"	3	-659	682	683	
+
+		"face"	
+		"l"	3	-683	-661	684	
+
+		"face"	
+		"l"	3	-662	685	686	
+
+		"face"	
+		"l"	3	-686	-663	687	
+
+		"face"	
+		"l"	3	-688	-665	688	
+
+		"face"	
+		"l"	3	-664	-667	689	
+
+		"face"	
+		"l"	3	-668	690	691	
+
+		"face"	
+		"l"	3	-669	692	693	
+
+		"face"	
+		"l"	3	-671	694	695	
+
+		"face"	
+		"l"	3	-670	-673	696	
+
+		"face"	
+		"l"	3	-674	697	698	
+
+		"face"	
+		"l"	3	-675	699	700	
+
+		"face"	
+		"l"	3	-677	701	702	
+
+		"face"	
+		"l"	3	-676	703	704	
+
+		"face"	
+		"l"	3	-678	-679	705	
+
+		"face"	
+		"l"	3	-682	706	707	
+
+		"face"	
+		"l"	3	-681	-684	708	
+
+		"face"	
+		"l"	3	-685	709	710	
+
+		"face"	
+		"l"	3	-687	711	712	
+
+		"face"	
+		"l"	3	-712	-689	713	
+
+		"face"	
+		"l"	3	-690	714	715	
+
+		"face"	
+		"l"	3	-715	-692	716	
+
+		"face"	
+		"l"	3	-691	-694	717	
+
+		"face"	
+		"l"	3	-693	-696	718	
+
+		"face"	
+		"l"	3	-695	719	720	
+
+		"face"	
+		"l"	3	-697	721	722	
+
+		"face"	
+		"l"	3	-722	-699	723	
+
+		"face"	
+		"l"	3	-698	-701	724	
+
+		"face"	
+		"l"	3	-700	-703	725	
+
+		"face"	
+		"l"	3	-702	726	727	
+
+		"face"	
+		"l"	3	-705	728	729	
+
+		"face"	
+		"l"	3	-707	730	731	
+
+		"face"	
+		"l"	3	-709	732	733	
+
+		"face"	
+		"l"	3	-733	-711	734	
+
+		"face"	
+		"l"	3	-710	-713	735	
+
+		"face"	
+		"l"	3	-714	736	737	
+
+		"face"	
+		"l"	3	-737	-716	738	
+
+		"face"	
+		"l"	3	-717	739	740	
+
+		"face"	
+		"l"	3	-718	741	742	
+
+		"face"	
+		"l"	3	-742	-719	743	
+
+		"face"	
+		"l"	3	-721	744	745	
+
+		"face"	
+		"l"	3	-720	-723	746	
+
+		"face"	
+		"l"	3	-747	-724	747	
+
+		"face"	
+		"l"	3	-725	748	749	
+
+		"face"	
+		"l"	3	-726	750	751	
+
+		"face"	
+		"l"	3	-728	752	753	
+
+		"face"	
+		"l"	3	-727	-730	754	
+
+		"face"	
+		"l"	3	-731	-734	755	
+
+		"face"	
+		"l"	3	-735	756	757	
+
+		"face"	
+		"l"	3	-736	758	759	
+
+		"face"	
+		"l"	3	-759	-738	760	
+
+		"face"	
+		"l"	3	-739	761	762	
+
+		"face"	
+		"l"	3	-762	-741	763	
+
+		"face"	
+		"l"	3	-740	-743	764	
+
+		"face"	
+		"l"	3	-744	-746	765	
+
+		"face"	
+		"l"	3	-745	766	767	
+
+		"face"	
+		"l"	3	-748	-750	768	
+
+		"face"	
+		"l"	3	-749	-752	769	
+
+		"face"	
+		"l"	3	-751	-754	770	
+
+		"face"	
+		"l"	3	-753	771	772	
+
+		"face"	
+		"l"	3	-755	773	774	
+
+		"face"	
+		"l"	3	-757	-760	775	
+
+		"face"	
+		"l"	3	-761	776	777	
+
+		"face"	
+		"l"	3	-777	-763	778	
+
+		"face"	
+		"l"	3	-764	779	780	
+
+		"face"	
+		"l"	3	-765	781	782	
+
+		"face"	
+		"l"	3	-782	-766	783	
+
+		"face"	
+		"l"	3	-768	784	785	
+
+		"face"	
+		"l"	3	-767	-769	786	
+
+		"face"	
+		"l"	3	-770	787	788	
+
+		"face"	
+		"l"	3	-771	789	790	
+
+		"face"	
+		"l"	3	-773	791	792	
+
+		"face"	
+		"l"	3	-772	-775	793	
+
+		"face"	
+		"l"	3	-776	794	795	
+
+		"face"	
+		"l"	3	-795	-778	796	
+
+		"face"	
+		"l"	3	-779	797	798	
+
+		"face"	
+		"l"	3	-798	-781	799	
+
+		"face"	
+		"l"	3	-780	-783	800	
+
+		"face"	
+		"l"	3	-784	-786	801	
+
+		"face"	
+		"l"	3	-787	-789	802	
+
+		"face"	
+		"l"	3	-788	-791	803	
+
+		"face"	
+		"l"	3	-790	-793	804	
+
+		"face"	
+		"l"	3	-796	805	806	
+
+		"face"	
+		"l"	3	-797	807	808	
+
+		"face"	
+		"l"	3	-808	-799	809	
+
+		"face"	
+		"l"	3	-801	-802	810	
+
+		"face"	
+		"l"	3	-785	-803	811	
+
+		"face"	
+		"l"	3	-812	-804	812	
+
+		"face"	
+		"l"	3	-813	-805	813	
+
+		"face"	
+		"l"	3	-800	-811	814	
+
+		"face"	
+		"l"	3	-810	-815	815	
+
+		"face"	
+		"l"	3	-816	-814	816	
+
+		"face"	
+		"l"	3	-809	-817	817	
+
+		"face"	
+		"l"	3	-806	-818	818	
+
+		"face"	
+		"l"	3	-819	-792	819	
+
+		"face"	
+		"l"	3	-820	-794	820	
+
+		"face"	
+		"l"	3	-807	-821	821	
+
+		"face"	
+		"l"	3	-758	-822	822	
+
+		"face"	
+		"l"	3	-756	-823	823	
+
+		"face"	
+		"l"	3	-824	-774	824	
+
+		"face"	
+		"l"	3	-732	-825	825	
+
+		"face"	
+		"l"	3	-826	-729	826	
+
+		"face"	
+		"l"	3	827	-323	828	
+
+		"face"	
+		"l"	3	829	-409	830	
+
+		"face"	
+		"l"	3	831	-459	832	
+
+		"face"	
+		"l"	3	833	-460	834	
+
+		"face"	
+		"l"	3	835	-506	836	
+
+		"face"	
+		"l"	3	837	-505	838	
+
+		"face"	
+		"l"	3	839	-464	840	
+
+		"face"	
+		"l"	3	841	-566	842	
+
+		"face"	
+		"l"	3	843	-680	844	
+
+		"face"	
+		"l"	3	845	-658	846	
+
+		"face"	
+		"l"	3	847	-827	848	
+
+		"face"	
+		"l"	3	849	-704	850	
+
+		"face"	
+		"l"	3	851	-652	852	
+
+		"face"	
+		"l"	3	853	-559	854	
+
+		"face"	
+		"l"	3	855	-533	856	
+
+		"face"	
+		"l"	3	857	-654	858	
+
+		"face"	
+		"l"	3	859	-536	860	
+
+		"face"	
+		"l"	3	861	-407	862	
+
+		"face"	
+		"l"	3	-828	-862	863	
+
+		"face"	
+		"l"	3	-376	-377	-864	
+
+		"face"	
+		"l"	3	-406	-353	864	
+
+		"face"	
+		"l"	3	-865	-429	-863	
+
+		"face"	
+		"l"	3	-405	-829	-830	
+
+		"face"	
+		"l"	3	-403	-831	-832	
+
+		"face"	
+		"l"	3	-457	-833	-834	
+
+		"face"	
+		"l"	3	-836	-504	865	
+
+		"face"	
+		"l"	3	-456	-835	-866	
+
+		"face"	
+		"l"	3	-499	-502	866	
+
+		"face"	
+		"l"	3	-867	-837	-838	
+
+		"face"	
+		"l"	3	-839	-463	867	
+
+		"face"	
+		"l"	3	-539	-868	-840	
+
+		"face"	
+		"l"	3	-508	-842	-860	
+
+		"face"	
+		"l"	3	-861	-538	868	
+
+		"face"	
+		"l"	3	-841	-465	-869	
+
+		"face"	
+		"l"	3	-844	-653	-852	
+
+		"face"	
+		"l"	3	-590	-535	-859	
+
+		"face"	
+		"l"	3	-448	-856	869	
+
+		"face"	
+		"l"	3	-561	-493	-870	
+
+		"face"	
+		"l"	3	-564	-855	870	
+
+		"face"	
+		"l"	3	-871	-562	-857	
+
+		"face"	
+		"l"	3	-650	-845	-846	
+
+		"face"	
+		"l"	3	-847	-708	-848	
+
+		"face"	
+		"l"	3	-706	-849	-850	
+
+		"face"	
+		"l"	3	-613	-616	871	
+
+		"face"	
+		"l"	3	-872	-647	-851	
+
+		"face"	
+		"l"	3	-854	-621	872	
+
+		"face"	
+		"l"	3	-858	-843	873	
+
+		"face"	
+		"l"	3	-853	-873	874	
+
+		"face"	
+		"l"	3	-623	-875	875	
+
+		"face"	
+		"l"	3	-876	-655	-874	;
+createNode DMMNetgen -n "living_room_furniture_latest_pxr:vase_flowers:pCylinder8_DmmNetgen";
+	setAttr ".hei" 100;
+createNode lambert -n "autoCageShader";
+	setAttr ".c" -type "float3" 1 0 1 ;
+	setAttr ".it" -type "float3" 0.55000001 0.55000001 0.55000001 ;
+createNode shadingEngine -n "autoCageShaderSG";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo5";
+createNode DMMPrepMesh -n "living_room_furniture_latest_pxr:vase_flowers:pCylinder8_DmmPrepMesh";
+	setAttr ".bre" yes;
+createNode animCurveTU -n "DMMScene1_gravity1";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  259 0 260 -98.1;
+	setAttr -s 2 ".kit[1]"  16;
+	setAttr -s 2 ".kot[1]"  16;
+	setAttr -s 2 ".kix[0:1]"  9.9999997473787516e-006 1;
+	setAttr -s 2 ".kiy[0:1]"  -1 0;
+	setAttr -s 2 ".kox[0:1]"  0.003127280855551362 1;
+	setAttr -s 2 ".koy[0:1]"  -0.99999517202377319 0;
+createNode polySphere -n "polySphere1";
+	setAttr ".sa" 6;
+	setAttr ".sh" 6;
+createNode DMMSurfTri -n "pSphere1_DmmSurftri";
+createNode DMMNetgen -n "pSphere1_DmmNetgen";
+createNode DMMPrepMesh -n "pSphere1_DmmPrepMesh";
+	setAttr -l on ".bre" yes;
+	setAttr ".utm" yes;
+createNode animCurveTL -n "pSphere1_translateZ";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  256 40.616624695563829 266 51.554478460930902;
+	setAttr -s 2 ".kit[1]"  16;
+	setAttr -s 2 ".kot[1]"  16;
+	setAttr -s 2 ".kix[0:1]"  0.0045996466651558876 1;
+	setAttr -s 2 ".kiy[0:1]"  -0.99998939037322998 0;
+	setAttr -s 2 ".kox[0:1]"  0.013918889686465263 1;
+	setAttr -s 2 ".koy[0:1]"  0.99990314245223999 0;
+createNode lambert -n "lambert3";
+	setAttr ".c" -type "float3" 0 0 0 ;
+	setAttr ".it" -type "float3" 1 1 1 ;
+createNode shadingEngine -n "lambert3SG";
+	setAttr ".ihi" 0;
+	setAttr -s 4 ".dsm";
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo6";
+createNode polyCube -n "polyCube2";
+	setAttr ".cuv" 1;
+createNode DMMSurfTri -n "pCube246_DmmSurftri";
+createNode DMMNetgen -n "pCube246_DmmNetgen";
+createNode DMMPrepMesh -n "pCube246_DmmPrepMesh";
+	setAttr -l on ".bre" yes;
+	setAttr ".utm" yes;
+createNode lambert -n "lambert4";
+	setAttr ".c" -type "float3" 0 0 0 ;
+	setAttr ".it" -type "float3" 1 1 1 ;
+createNode shadingEngine -n "lambert4SG";
+	setAttr ".ihi" 0;
+	setAttr -s 4 ".dsm";
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo7";
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr ".o" 240;
-	setAttr ".unw" 240;
+	setAttr ".o" 146;
+	setAttr ".unw" 146;
 select -ne :renderPartition;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 1761 ".st";
+	setAttr -s 1765 ".st";
 	setAttr -cb on ".an";
 	setAttr -cb on ".pt";
 select -ne :renderGlobalsList1;
@@ -36297,7 +39693,7 @@ select -ne :defaultShaderList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 556 ".s";
+	setAttr -s 560 ".s";
 select -ne :postProcessList1;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -36509,8 +39905,22 @@ select -ne :defaultHardwareRenderGlobals;
 	setAttr -cb on ".sd";
 select -ne :ikSystem;
 	setAttr -s 6 ".sol";
-connectAttr "livingroom_shading_latestRN.phl[74]" "hyperLayout2.hyp[0].dn";
-connectAttr "livingroom_shading_latestRN.phl[75]" "hyperLayout2.hyp[3].dn";
+connectAttr "livingroom_shading_latestRN.phl[74]" "living_room_furniture_latest_pxr:vase_flowers:pCylinder8_DmmObject.mtt"
+		;
+connectAttr "livingroom_shading_latestRN.phl[75]" "hyperLayout2.hyp[17].dn";
+connectAttr "livingroom_shading_latestRN.phl[76]" "living_room_furniture_latest_pxr:vase_flowers:pCylinder8_DmmPrepMesh.im"
+		;
+connectAttr "livingroom_shading_latestRN.phl[77]" "living_room_furniture_latest_pxr:vase_flowers:pCylinder8_DmmAutoCage.inMesh"
+		;
+connectAttr "livingroom_shading_latestRN.phl[78]" "living_room_furniture_latest_pxr:vase_flowers:pCylinder8_DmmPrepMesh.tmt"
+		;
+connectAttr "livingroom_shading_latestRN.phl[79]" "living_room_furniture_latest_pxr:vase_flowers:pCylinder8_DmmPrepMesh.imt"
+		;
+connectAttr "livingroom_shading_latestRN.phl[80]" "hyperLayout2.hyp[1].dn";
+connectAttr "living_room_furniture_latest_pxr:vase_flowers:outputSurfaceShape.iog" "livingroom_shading_latestRN.phl[81]"
+		;
+connectAttr "livingroom_shading_latestRN.phl[82]" "hyperLayout2.hyp[9].dn";
+connectAttr "livingroom_shading_latestRN.phl[83]" "hyperLayout2.hyp[12].dn";
 connectAttr "NewSmarty_024:eye_ctrl_translateX.o" "smartybikeRN.phl[1]";
 connectAttr "NewSmarty_024:eye_ctrl_translateY.o" "smartybikeRN.phl[2]";
 connectAttr "NewSmarty_024:eye_ctrl_translateZ.o" "smartybikeRN.phl[3]";
@@ -36876,6 +40286,58 @@ connectAttr "camera3_rotateZ.o" "camera3.rz";
 connectAttr "camera3_scaleX1.o" "camera3.sx";
 connectAttr "camera3_scaleY1.o" "camera3.sy";
 connectAttr "camera3_scaleZ1.o" "camera3.sz";
+connectAttr "polyCube1.out" "pCubeShape1.i";
+connectAttr "pCube245_DmmSurftri.ome" "pCube245_DmmTriMesh.i";
+connectAttr "pCube245.wm" "pCube245_DmmObject.mtt";
+connectAttr "pCube245_DmmNetgen.tet" "pCube245_DmmObject.mtm";
+connectAttr "DMMScene1.otn[0]" "pCube245_DmmObject.tns";
+connectAttr "defaultDmmMaterial1.pmo" "pCube245_DmmObject.pma[0]";
+connectAttr "pCube245_DmmPrepMesh.om" "pCube245_DmmObject.pme";
+connectAttr "pCube245_DmmPrepMesh.of" "pCube245_DmmObject.pmf";
+connectAttr "pCube245_DmmObject.oit" "pCube245_DmmDriven.i";
+connectAttr "pCube245_DmmObject.ote" "pCube245_DmmSim.i";
+connectAttr "pCube245_DmmObject.osu" "|pCube245|outputSurfaceShape.i";
+connectAttr "pSphere1_translateZ.o" "pSphere1.tz";
+connectAttr "polySphere1.out" "pSphereShape1.i";
+connectAttr "pSphere1_DmmSurftri.ome" "pSphere1_DmmTriMesh.i";
+connectAttr "pSphere1.wm" "pSphere1_DmmObject.mtt";
+connectAttr "pSphere1_DmmNetgen.tet" "pSphere1_DmmObject.mtm";
+connectAttr "DMMScene1.otn[2]" "pSphere1_DmmObject.tns";
+connectAttr "defaultDmmMaterial1.pmo" "pSphere1_DmmObject.pma[0]";
+connectAttr "pSphere1_DmmPrepMesh.om" "pSphere1_DmmObject.pme";
+connectAttr "pSphere1_DmmPrepMesh.of" "pSphere1_DmmObject.pmf";
+connectAttr "pSphere1_DmmObject.oit" "pSphere1_DmmDriven.i";
+connectAttr "pSphere1_DmmObject.ote" "pSphere1_DmmSim.i";
+connectAttr "pSphere1_DmmObject.osu" "|pSphere1|outputSurfaceShape.i";
+connectAttr "polyCube2.out" "pCubeShape2.i";
+connectAttr "pCube246_DmmSurftri.ome" "pCube246_DmmTriMesh.i";
+connectAttr "pCube246.wm" "pCube246_DmmObject.mtt";
+connectAttr "pCube246_DmmNetgen.tet" "pCube246_DmmObject.mtm";
+connectAttr "DMMScene1.otn[3]" "pCube246_DmmObject.tns";
+connectAttr "defaultDmmMaterial1.pmo" "pCube246_DmmObject.pma[0]";
+connectAttr "pCube246_DmmPrepMesh.om" "pCube246_DmmObject.pme";
+connectAttr "pCube246_DmmPrepMesh.of" "pCube246_DmmObject.pmf";
+connectAttr "pCube246_DmmObject.oit" "pCube246_DmmDriven.i";
+connectAttr "pCube246_DmmObject.ote" "pCube246_DmmSim.i";
+connectAttr "pCube246_DmmObject.osu" "|pCube246|outputSurfaceShape.i";
+connectAttr "living_room_furniture_latest_pxr:vase_flowers:pCylinder8_DmmAutoCage.outMesh" "living_room_furniture_latest_pxr:vase_flowers:pCylinder8_DmmAutoMesh.i"
+		;
+connectAttr "living_room_furniture_latest_pxr:vase_flowers:pCylinder8_DmmNetgen.tet" "living_room_furniture_latest_pxr:vase_flowers:pCylinder8_DmmObject.mtm"
+		;
+connectAttr "DMMScene1.otn[1]" "living_room_furniture_latest_pxr:vase_flowers:pCylinder8_DmmObject.tns"
+		;
+connectAttr "defaultDmmMaterial1.pmo" "living_room_furniture_latest_pxr:vase_flowers:pCylinder8_DmmObject.pma[0]"
+		;
+connectAttr "living_room_furniture_latest_pxr:vase_flowers:pCylinder8_DmmPrepMesh.om" "living_room_furniture_latest_pxr:vase_flowers:pCylinder8_DmmObject.pme"
+		;
+connectAttr "living_room_furniture_latest_pxr:vase_flowers:pCylinder8_DmmPrepMesh.of" "living_room_furniture_latest_pxr:vase_flowers:pCylinder8_DmmObject.pmf"
+		;
+connectAttr "living_room_furniture_latest_pxr:vase_flowers:pCylinder8_DmmObject.oit" "living_room_furniture_latest_pxr:vase_flowers:pCylinder8_DmmDriven.i"
+		;
+connectAttr "living_room_furniture_latest_pxr:vase_flowers:pCylinder8_DmmObject.ote" "living_room_furniture_latest_pxr:vase_flowers:pCylinder8_DmmSim.i"
+		;
+connectAttr "living_room_furniture_latest_pxr:vase_flowers:pCylinder8_DmmObject.osu" "living_room_furniture_latest_pxr:vase_flowers:outputSurfaceShape.i"
+		;
 connectAttr "pig_latest_tail_2control01_parentConstraint1.w0" "pig_latest_tail_2control01_parentConstraint1.tg[0].tw"
 		;
 connectAttr "pig_latest_tail_3control01_parentConstraint1.w0" "pig_latest_tail_3control01_parentConstraint1.tg[0].tw"
@@ -36995,6 +40457,10 @@ relationship "link" ":lightLinker1" "undies_latest:lambert2SG.message" ":default
 relationship "link" ":lightLinker1" "undies_latest:lambert3SG.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "phong2SG.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "phong3SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "autoCageShaderSG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert3SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert4SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "phong1SG.message" ":defaultLightSet.message";
@@ -37002,6 +40468,10 @@ relationship "shadowLink" ":lightLinker1" "undies_latest:lambert2SG.message" ":d
 relationship "shadowLink" ":lightLinker1" "undies_latest:lambert3SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "phong2SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "phong3SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "autoCageShaderSG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert3SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert4SG.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr "pCube118_translateX.o" "livingroom_shading_latestRN.phl[34]";
@@ -37055,6 +40525,8 @@ connectAttr "living_room_latest:tissue_box1_scaleY.o" "livingroom_shading_latest
 connectAttr "living_room_latest:tissue_box1_scaleZ.o" "livingroom_shading_latestRN.phl[73]"
 		;
 connectAttr "sharedReferenceNode.sr" "livingroom_shading_latestRN.sr";
+connectAttr "livingroom_shading_latestRNfosterParent1.msg" "livingroom_shading_latestRN.fp"
+		;
 connectAttr "sharedReferenceNode.sr" "smartybikeRN.sr";
 connectAttr ":defaultRenderGlobals.rcb" "defaultFurGlobals.cb";
 connectAttr "phong1.oc" "phong1SG.ss";
@@ -37133,8 +40605,57 @@ connectAttr "pig_latestRNfosterParent1.msg" "pig_latestRN.fp";
 connectAttr "sharedReferenceNode.sr" "pig_latestRN.sr";
 connectAttr "hyperView2.msg" "nodeEditorPanel2Info.b[0]";
 connectAttr "hyperLayout2.msg" "hyperView2.hl";
-connectAttr ":lightLinker1.msg" "hyperLayout2.hyp[1].dn";
-connectAttr ":renderPartition.msg" "hyperLayout2.hyp[2].dn";
+connectAttr "living_room_furniture_latest_pxr:vase_flowers:pCylinder8_DmmAutoCage.msg" "hyperLayout2.hyp[0].dn"
+		;
+connectAttr "defaultDmmMaterial1.msg" "hyperLayout2.hyp[2].dn";
+connectAttr "lambert2SG.msg" "hyperLayout2.hyp[3].dn";
+connectAttr "pCube245_DmmSim.msg" "hyperLayout2.hyp[4].dn";
+connectAttr "pCube245.msg" "hyperLayout2.hyp[5].dn";
+connectAttr "DMMScene1.msg" "hyperLayout2.hyp[6].dn";
+connectAttr "living_room_furniture_latest_pxr:vase_flowers:pCylinder8_DmmAutoMesh.msg" "hyperLayout2.hyp[7].dn"
+		;
+connectAttr "pCubeShape1.msg" "hyperLayout2.hyp[8].dn";
+connectAttr ":time1.msg" "hyperLayout2.hyp[10].dn";
+connectAttr "pCube245_DmmTriMesh.msg" "hyperLayout2.hyp[11].dn";
+connectAttr "living_room_furniture_latest_pxr:vase_flowers:pCylinder8_DmmNetgen.msg" "hyperLayout2.hyp[13].dn"
+		;
+connectAttr "pCube245_DmmDriven.msg" "hyperLayout2.hyp[14].dn";
+connectAttr "polyCube1.msg" "hyperLayout2.hyp[15].dn";
+connectAttr "pCube245_DmmSurftri.msg" "hyperLayout2.hyp[16].dn";
+connectAttr "living_room_furniture_latest_pxr:vase_flowers:pCylinder8_DmmObject.msg" "hyperLayout2.hyp[18].dn"
+		;
+connectAttr "pCube245_DmmObject.msg" "hyperLayout2.hyp[19].dn";
+connectAttr "living_room_furniture_latest_pxr:vase_flowers:pCylinder8_DmmDriven.msg" "hyperLayout2.hyp[20].dn"
+		;
+connectAttr "pCube245_DmmNetgen.msg" "hyperLayout2.hyp[21].dn";
+connectAttr "DMMScene1_gravity1.msg" "hyperLayout2.hyp[22].dn";
+connectAttr "polySphere1.msg" "hyperLayout2.hyp[23].dn";
+connectAttr "pSphere1.msg" "hyperLayout2.hyp[24].dn";
+connectAttr "pSphereShape1.msg" "hyperLayout2.hyp[25].dn";
+connectAttr "|pSphere1|outputSurfaceShape.msg" "hyperLayout2.hyp[26].dn";
+connectAttr "pSphere1_DmmSurftri.msg" "hyperLayout2.hyp[27].dn";
+connectAttr "pSphere1_DmmTriMesh.msg" "hyperLayout2.hyp[28].dn";
+connectAttr "pSphere1_DmmNetgen.msg" "hyperLayout2.hyp[29].dn";
+connectAttr "pSphere1_DmmObject.msg" "hyperLayout2.hyp[30].dn";
+connectAttr "pSphere1_DmmDriven.msg" "hyperLayout2.hyp[31].dn";
+connectAttr "pSphere1_DmmSim.msg" "hyperLayout2.hyp[32].dn";
+connectAttr "pSphere1_DmmPrepMesh.msg" "hyperLayout2.hyp[33].dn";
+connectAttr "pSphere1_translateZ.msg" "hyperLayout2.hyp[34].dn";
+connectAttr "lambert3.msg" "hyperLayout2.hyp[35].dn";
+connectAttr "lambert3SG.msg" "hyperLayout2.hyp[36].dn";
+connectAttr "polyCube2.msg" "hyperLayout2.hyp[37].dn";
+connectAttr "pCube246.msg" "hyperLayout2.hyp[38].dn";
+connectAttr "pCubeShape2.msg" "hyperLayout2.hyp[39].dn";
+connectAttr "|pCube246|outputSurfaceShape.msg" "hyperLayout2.hyp[40].dn";
+connectAttr "pCube246_DmmSurftri.msg" "hyperLayout2.hyp[41].dn";
+connectAttr "pCube246_DmmTriMesh.msg" "hyperLayout2.hyp[42].dn";
+connectAttr "pCube246_DmmNetgen.msg" "hyperLayout2.hyp[43].dn";
+connectAttr "pCube246_DmmObject.msg" "hyperLayout2.hyp[44].dn";
+connectAttr "pCube246_DmmDriven.msg" "hyperLayout2.hyp[45].dn";
+connectAttr "pCube246_DmmSim.msg" "hyperLayout2.hyp[46].dn";
+connectAttr "pCube246_DmmPrepMesh.msg" "hyperLayout2.hyp[47].dn";
+connectAttr "lambert4.msg" "hyperLayout2.hyp[48].dn";
+connectAttr "lambert4SG.msg" "hyperLayout2.hyp[49].dn";
 connectAttr "wood1.oc" "phong3.c";
 connectAttr "livingroom_shading_latestRN.phl[1]" "phong3SG.dsm" -na;
 connectAttr "phong3.oc" "phong3SG.ss";
@@ -37171,16 +40692,94 @@ connectAttr "motionPath1_uValue.o" "motionPath1.u";
 connectAttr "curveShape5.ws" "motionPath1.gp";
 connectAttr "positionMarkerShape1.t" "motionPath1.pmt[0]";
 connectAttr "positionMarkerShape2.t" "motionPath1.pmt[1]";
+connectAttr ":time1.o" "DMMScene1.tm";
+connectAttr "pCube245_DmmObject.opm" "DMMScene1.itm[0]";
+connectAttr "living_room_furniture_latest_pxr:vase_flowers:pCylinder8_DmmObject.opm" "DMMScene1.itm[1]"
+		;
+connectAttr "pSphere1_DmmObject.opm" "DMMScene1.itm[2]";
+connectAttr "pCube246_DmmObject.opm" "DMMScene1.itm[3]";
+connectAttr "pCube245_DmmObject.ost" "DMMScene1.dts[0]";
+connectAttr "living_room_furniture_latest_pxr:vase_flowers:pCylinder8_DmmObject.ost" "DMMScene1.dts[1]"
+		;
+connectAttr "pSphere1_DmmObject.ost" "DMMScene1.dts[2]";
+connectAttr "pCube246_DmmObject.ost" "DMMScene1.dts[3]";
+connectAttr "pCube245_DmmDriven.o" "DMMScene1.ite[0]";
+connectAttr "living_room_furniture_latest_pxr:vase_flowers:pCylinder8_DmmDriven.o" "DMMScene1.ite[1]"
+		;
+connectAttr "pSphere1_DmmDriven.o" "DMMScene1.ite[2]";
+connectAttr "pCube246_DmmDriven.o" "DMMScene1.ite[3]";
+connectAttr "pCube245_DmmDriven.wm" "DMMScene1.itt[0]";
+connectAttr "living_room_furniture_latest_pxr:vase_flowers:pCylinder8_DmmDriven.wm" "DMMScene1.itt[1]"
+		;
+connectAttr "pSphere1_DmmDriven.wm" "DMMScene1.itt[2]";
+connectAttr "pCube246_DmmDriven.wm" "DMMScene1.itt[3]";
+connectAttr "DMMScene1_gravity1.o" "DMMScene1.gra1";
+connectAttr "pCubeShape1.o" "pCube245_DmmSurftri.ime";
+connectAttr "pCube245_DmmTriMesh.o" "pCube245_DmmNetgen.tme";
+connectAttr "pCube245_DmmTriMesh.o" "pCube245_DmmPrepMesh.im";
+connectAttr "pCubeShape1.m" "pCube245_DmmPrepMesh.imt";
+connectAttr "pCube245_DmmNetgen.tet" "pCube245_DmmPrepMesh.tm";
+connectAttr "pCubeShape1.m" "pCube245_DmmPrepMesh.tmt";
+connectAttr "lambert2.oc" "lambert2SG.ss";
+connectAttr "|pCube245|outputSurfaceShape.iog" "lambert2SG.dsm" -na;
+connectAttr "pCube245_DmmSim.iog" "lambert2SG.dsm" -na;
+connectAttr "pCube245_DmmTriMesh.iog" "lambert2SG.dsm" -na;
+connectAttr "pCubeShape1.iog" "lambert2SG.dsm" -na;
+connectAttr "lambert2SG.msg" "materialInfo4.sg";
+connectAttr "lambert2.msg" "materialInfo4.m";
+connectAttr "living_room_furniture_latest_pxr:vase_flowers:pCylinder8_DmmAutoMesh.o" "living_room_furniture_latest_pxr:vase_flowers:pCylinder8_DmmNetgen.tme"
+		;
+connectAttr "autoCageShader.oc" "autoCageShaderSG.ss";
+connectAttr "living_room_furniture_latest_pxr:vase_flowers:pCylinder8_DmmAutoMesh.iog" "autoCageShaderSG.dsm"
+		 -na;
+connectAttr "autoCageShaderSG.msg" "materialInfo5.sg";
+connectAttr "autoCageShader.msg" "materialInfo5.m";
+connectAttr "living_room_furniture_latest_pxr:vase_flowers:pCylinder8_DmmNetgen.tet" "living_room_furniture_latest_pxr:vase_flowers:pCylinder8_DmmPrepMesh.tm"
+		;
+connectAttr "pSphereShape1.o" "pSphere1_DmmSurftri.ime";
+connectAttr "pSphere1_DmmTriMesh.o" "pSphere1_DmmNetgen.tme";
+connectAttr "pSphere1_DmmTriMesh.o" "pSphere1_DmmPrepMesh.im";
+connectAttr "pSphereShape1.m" "pSphere1_DmmPrepMesh.imt";
+connectAttr "pSphere1_DmmNetgen.tet" "pSphere1_DmmPrepMesh.tm";
+connectAttr "pSphereShape1.m" "pSphere1_DmmPrepMesh.tmt";
+connectAttr "lambert3.oc" "lambert3SG.ss";
+connectAttr "|pSphere1|outputSurfaceShape.iog" "lambert3SG.dsm" -na;
+connectAttr "pSphere1_DmmSim.iog" "lambert3SG.dsm" -na;
+connectAttr "pSphere1_DmmTriMesh.iog" "lambert3SG.dsm" -na;
+connectAttr "pSphereShape1.iog" "lambert3SG.dsm" -na;
+connectAttr "lambert3SG.msg" "materialInfo6.sg";
+connectAttr "lambert3.msg" "materialInfo6.m";
+connectAttr "pCubeShape2.o" "pCube246_DmmSurftri.ime";
+connectAttr "pCube246_DmmTriMesh.o" "pCube246_DmmNetgen.tme";
+connectAttr "pCube246_DmmTriMesh.o" "pCube246_DmmPrepMesh.im";
+connectAttr "pCubeShape2.m" "pCube246_DmmPrepMesh.imt";
+connectAttr "pCube246_DmmNetgen.tet" "pCube246_DmmPrepMesh.tm";
+connectAttr "pCubeShape2.m" "pCube246_DmmPrepMesh.tmt";
+connectAttr "lambert4.oc" "lambert4SG.ss";
+connectAttr "|pCube246|outputSurfaceShape.iog" "lambert4SG.dsm" -na;
+connectAttr "pCube246_DmmSim.iog" "lambert4SG.dsm" -na;
+connectAttr "pCube246_DmmTriMesh.iog" "lambert4SG.dsm" -na;
+connectAttr "pCubeShape2.iog" "lambert4SG.dsm" -na;
+connectAttr "lambert4SG.msg" "materialInfo7.sg";
+connectAttr "lambert4.msg" "materialInfo7.m";
 connectAttr "phong1SG.pa" ":renderPartition.st" -na;
 connectAttr "undies_latest:lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "undies_latest:lambert3SG.pa" ":renderPartition.st" -na;
 connectAttr "phong2SG.pa" ":renderPartition.st" -na;
 connectAttr "phong3SG.pa" ":renderPartition.st" -na;
+connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
+connectAttr "autoCageShaderSG.pa" ":renderPartition.st" -na;
+connectAttr "lambert3SG.pa" ":renderPartition.st" -na;
+connectAttr "lambert4SG.pa" ":renderPartition.st" -na;
 connectAttr "phong1.msg" ":defaultShaderList1.s" -na;
 connectAttr "undies_latest:undiesShader.msg" ":defaultShaderList1.s" -na;
 connectAttr "undies_latest:lambert3.msg" ":defaultShaderList1.s" -na;
 connectAttr "phong2.msg" ":defaultShaderList1.s" -na;
 connectAttr "phong3.msg" ":defaultShaderList1.s" -na;
+connectAttr "lambert2.msg" ":defaultShaderList1.s" -na;
+connectAttr "autoCageShader.msg" ":defaultShaderList1.s" -na;
+connectAttr "lambert3.msg" ":defaultShaderList1.s" -na;
+connectAttr "lambert4.msg" ":defaultShaderList1.s" -na;
 connectAttr "soap_bottle:imagePlaneShape1.msg" ":defaultRenderUtilityList1.u" -na
 		;
 connectAttr "undies_latest:place2dTexture1.msg" ":defaultRenderUtilityList1.u" -na
@@ -37190,6 +40789,6 @@ connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "undies_latest:file1.msg" ":defaultTextureList1.tx" -na;
 connectAttr "wood1.msg" ":defaultTextureList1.tx" -na;
 dataStructure -fmt "raw" -as "name=externalContentTable:string=node:string=key:string=upath:uint32=upathcrc:string=rpath:string=roles";
-applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"livingroom_shading_latestRN\" \"\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/sets/house/house_latest_pxr5.ma\" 1381617881 \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/house/house_latest_pxr5.ma\" \"FileRef\"\n1\n\"smartybikeRN\" \"\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/smarty/smartybike.ma\" 2677305362 \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smartybike.ma\" \"FileRef\"\n2\n\"pig_latestRN\" \"\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/pig/pig_latest_pxr.ma\" 337783729 \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest_pxr.ma\" \"FileRef\"\n3\n\"|soap_bottle:_UNKNOWN_REF_NODE_fosterParent1|soap_bottle:imagePlane1|soap_bottle:imagePlaneShape1\" \"imageName\" \"/Users/KristenCurry/Desktop/imgres.jpg\" 1103782025 \"\" \"sourceImages\"\n4\n\"undies_latest:file1\" \"fileTextureName\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/props/undies/undie_pattern.jpg\" 110585401 \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/props/undies/undie_pattern.jpg\" \"sourceImages\"\nendStream\nendChannel\nendAssociations\n" 
+applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"livingroom_shading_latestRN\" \"\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/sets/house/house_latest_pxr6.ma\" 1089240887 \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/house/house_latest_pxr6.ma\" \"FileRef\"\n1\n\"smartybikeRN\" \"\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/smarty/smartybike.ma\" 2677305362 \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/smarty/smartybike.ma\" \"FileRef\"\n2\n\"pig_latestRN\" \"\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/pig/pig_latest_pxr.ma\" 337783729 \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest_pxr.ma\" \"FileRef\"\n3\n\"|soap_bottle:_UNKNOWN_REF_NODE_fosterParent1|soap_bottle:imagePlane1|soap_bottle:imagePlaneShape1\" \"imageName\" \"/Users/KristenCurry/Desktop/imgres.jpg\" 1103782025 \"\" \"sourceImages\"\n4\n\"undies_latest:file1\" \"fileTextureName\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/props/undies/undie_pattern.jpg\" 110585401 \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/props/undies/undie_pattern.jpg\" \"sourceImages\"\nendStream\nendChannel\nendAssociations\n" 
 		-scn;
 // End of smarty_under_table.ma

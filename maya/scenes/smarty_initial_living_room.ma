@@ -1,9 +1,9 @@
 //Maya ASCII 2015 scene
 //Name: smarty_initial_living_room.ma
-//Last modified: Thu, Apr 23, 2015 09:54:19 PM
+//Last modified: Thu, Apr 23, 2015 11:05:49 PM
 //Codeset: 1252
 file -rdi 1 -rpr "smartybike" -rfn "smartybikeRN" "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/smarty/smartybike.ma";
-file -rdi 2 -ns "NewSmarty_024" -rfn "smartybike_NewSmarty_024RN" "assets/characters/smarty/smarty_latest_pxr.ma";
+file -rdi 2 -ns "NewSmarty_024" -rfn "smartybike_NewSmarty_024RN" "assets/characters/smarty/smarty_latest.ma";
 file -rdi 2 -ns "bike" -rfn "smartybike_bikeRN" "/Users/scai/Bandits/maya//assets/props/bike_rig.ma";
 file -rdi 1 -rpr "pig_latest" -rfn "pig_latestRN" "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/characters/pig/pig_latest.ma";
 file -rdi 2 -ns "key_latest" -rfn "pig_latest_key_latestRN" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/props/keys/key_latest.ma";
@@ -18816,7 +18816,6 @@ createNode parentConstraint -n "pig_latest_tail_4control01_parentConstraint1" -p
 	setAttr ".tg[0].tot" -type "double3" -2.1753034992158867e-015 0.85632804711715593 
 		-1.2729200700390368 ;
 	setAttr ".tg[0].tor" -type "double3" 0 -3.180554681463516e-015 9.2296341220416406e-017 ;
-	setAttr ".lr" -type "double3" 6.3611093629270335e-015 0 0 ;
 	setAttr ".rst" -type "double3" 5.6843418860808015e-014 0 -1.2434497875801753e-014 ;
 	setAttr -k on ".w0";
 createNode RenderMan -s -n "renderManRISGlobals";
@@ -22310,8 +22309,8 @@ createNode RenderMan -s -n "rmanSBMakePtexGlobals";
 	setAttr ".rman__param__ptxmake___channel" -type "string" "$BAKECHAN";
 	setAttr ".rman__param__ptxmake___outputfile" -type "string" "[passinfo this filename]";
 createNode lightLinker -s -n "lightLinker1";
-	setAttr -s 1696 ".lnk";
-	setAttr -s 1696 ".slnk";
+	setAttr -s 1300 ".lnk";
+	setAttr -s 1300 ".slnk";
 createNode displayLayerManager -n "layerManager";
 createNode displayLayer -n "defaultLayer";
 createNode renderLayerManager -n "renderLayerManager";
@@ -22387,7 +22386,7 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        setFocus `paneLayout -q -p1 $gMainPane`;\n        sceneUIReplacement -deleteRemaining;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
-	setAttr ".b" -type "string" "playbackOptions -min 36 -max 79 -ast 1.25 -aet 312.5 ";
+	setAttr ".b" -type "string" "playbackOptions -min 39 -max 79 -ast 1.25 -aet 312.5 ";
 	setAttr ".st" 6;
 createNode mentalrayItemsList -s -n "mentalrayItemsList";
 createNode mentalrayGlobals -s -n "mentalrayGlobals";
@@ -23782,7 +23781,7 @@ createNode reference -n "smartybikeRN";
 		
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:Smarty|NewSmarty_024:polySurface6|NewSmarty_024:polySurfaceShape4Orig" 
 		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" "translate" " -type \"double3\" -180.39366252567419 11.652334628466775 68.676850675201536"
+		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" "translate" " -type \"double3\" -174.2026386144386 11.652928945378594 71.119489450233033"
 		
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" "translateX" " -av"
 		
@@ -23790,7 +23789,7 @@ createNode reference -n "smartybikeRN";
 		
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" "translateZ" " -av"
 		
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" "rotate" " -type \"double3\" -7.5816396269705102 -114.18922232798562 8.3016707664434062"
+		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" "rotate" " -type \"double3\" -19.892825667637748 -111.06538733215898 21.194674251552755"
 		
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" "rotateX" " -av"
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" "rotateY" " -av"
@@ -23885,7 +23884,7 @@ createNode reference -n "smartybikeRN";
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:Tail_Ctrl1" 
 		"rotateZ" " -av"
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl" 
-		"rotate" " -type \"double3\" 0.73421703018504392 83.816494513478318 9.8991408659244478"
+		"rotate" " -type \"double3\" 1.0305881582250347 118.31848431400851 13.915341934975039"
 		
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl" 
 		"rotateX" " -av"
@@ -23922,7 +23921,7 @@ createNode reference -n "smartybikeRN";
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:teeth:pCube2|NewSmarty_024:teeth:polySurfaceShape1" 
 		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:tongue:pPlane1" 
-		"translate" " -type \"double3\" 0.0088099289612880369 -14.542286128772888 17.349291679630468"
+		"translate" " -type \"double3\" 1.4538559595794356 -13.895491502999546 21.380977146913306"
 		
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:tongue:pPlane1" 
 		"translateX" " -av"
@@ -23931,7 +23930,8 @@ createNode reference -n "smartybikeRN";
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:tongue:pPlane1" 
 		"translateZ" " -av"
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:tongue:pPlane1" 
-		"rotate" " -type \"double3\" 0 0 0"
+		"rotate" " -type \"double3\" 59.355893931413142 -1.715943741717515 2.6990486748943345"
+		
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:tongue:pPlane1" 
 		"rotateX" " -av"
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:tongue:pPlane1" 
@@ -23964,7 +23964,7 @@ createNode reference -n "smartybikeRN";
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rightArm_ctrl" 
 		"rotateZ" " -av"
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rightElbow_ctrl" 
-		"translate" " -type \"double3\" -0.97592920526802784 0.89560858427845247 0.38544003608985505"
+		"translate" " -type \"double3\" -0.73926731182288397 1.5764247515599425 -0.33275259316852851"
 		
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rightElbow_ctrl" 
 		"translateX" " -av"
@@ -23991,7 +23991,7 @@ createNode reference -n "smartybikeRN";
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:leftArm_ctrl" 
 		"rotateZ" " -av"
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rightLeg_ik" 
-		"translate" " -type \"double3\" -2.233211292986693 -9.9748973102823921 1.3446827995202673"
+		"translate" " -type \"double3\" -2.2332112929865793 -9.974897310282385 1.3446827995203809"
 		
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rightLeg_ik" 
 		"translateX" " -av"
@@ -24000,7 +24000,7 @@ createNode reference -n "smartybikeRN";
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rightLeg_ik" 
 		"translateZ" " -av"
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:leftLeg_ik" 
-		"translate" " -type \"double3\" 2.0746780938946841 -9.9748837915002913 1.344680856526234"
+		"translate" " -type \"double3\" 2.0746780938947977 -9.9748837915002699 1.3446808565263477"
 		
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:leftLeg_ik" 
 		"translateX" " -av"
@@ -24009,7 +24009,7 @@ createNode reference -n "smartybikeRN";
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:leftLeg_ik" 
 		"translateZ" " -av"
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:leftArm_ik" 
-		"translate" " -type \"double3\" 3.5423768421955377 -4.3242606073582674 2.8289774672805326"
+		"translate" " -type \"double3\" 3.5423768421956514 -4.3242606073582461 2.8289774672806463"
 		
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:leftArm_ik" 
 		"translateX" " -av"
@@ -24018,7 +24018,7 @@ createNode reference -n "smartybikeRN";
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:leftArm_ik" 
 		"translateZ" " -av"
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rightArm_ik" 
-		"translate" " -type \"double3\" -3.2996674424314589 -4.1575602756711678 2.59833779467878"
+		"translate" " -type \"double3\" -3.2996674424313452 -4.1575602756711465 2.5983377946790074"
 		
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rightArm_ik" 
 		"translateX" " -av"
@@ -24971,7 +24971,7 @@ createNode reference -n "smartybikeRN";
 		1 |bike:bike_ctrl|bike:wholeBike|bike:frame|bike:frameShape "VisibleInIndirect" 
 		"VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
 		2 "|bike:bike_ctrl" "visibility" " 1"
-		2 "|bike:bike_ctrl" "translate" " -type \"double3\" -181.2871282459038 -0.48109350335133216 69.411948487776073"
+		2 "|bike:bike_ctrl" "translate" " -type \"double3\" -175.12097286174998 -0.48109350335133216 71.918224944511095"
 		
 		2 "|bike:bike_ctrl" "translateZ" " -av"
 		2 "|bike:bike_ctrl" "scale" " -type \"double3\" 0.4 0.4 0.4"
@@ -26671,7 +26671,7 @@ createNode reference -n "pig_latestRN";
 		"furNameSpace" " -type \"string\" \"key_latest\""
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_key_control|key_latest:Obj_000003|key_latest:Obj_000003Shape" 
 		"VisibleInIndirect" " 1"
-		"pig_latestRN" 649
+		"pig_latestRN" 712
 		0 "|pig_latestRNfosterParent1|pig_latest_tail_4control01_parentConstraint1" 
 		"|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_TAIL_TAIL_TAIL|pig_latest_tail_1control01|pig_latest_tail_2control01|pig_latest_tail_3control01|pig_latest_tail_4control01" 
 		"-s -r "
@@ -26700,6 +26700,66 @@ createNode reference -n "pig_latestRN";
 		1 |pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_spine_fix_sphere|pig_latest_spine_fix_sphereShape 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_spine_fix_sphere|pig_latest_spine_fix_sphereShape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCube1|pig_latest_pCubeShape1 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCube1|pig_latest_pCubeShape1 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCube1|pig_latest_pCubeShape1 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCube2|pig_latest_pCubeShape2 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCube2|pig_latest_pCubeShape2 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCube2|pig_latest_pCubeShape2 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCube2|pig_latest_polySurfaceShape1 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCube2|pig_latest_polySurfaceShape1 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCube2|pig_latest_polySurfaceShape1 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCube3|pig_latest_pCubeShape3 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCube3|pig_latest_pCubeShape3 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCube3|pig_latest_pCubeShape3 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCube3|pig_latest_polySurfaceShape2 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCube3|pig_latest_polySurfaceShape2 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCube3|pig_latest_polySurfaceShape2 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCylinder1|pig_latest_pCylinderShape1 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCylinder1|pig_latest_pCylinderShape1 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCylinder1|pig_latest_pCylinderShape1 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCube4|pig_latest_pCubeShape4 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCube4|pig_latest_pCubeShape4 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCube4|pig_latest_pCubeShape4 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCube5|pig_latest_pCubeShape5 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCube5|pig_latest_pCubeShape5 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCube5|pig_latest_pCubeShape5 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCylinder2|pig_latest_pCylinderShape2 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCylinder2|pig_latest_pCylinderShape2 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCylinder2|pig_latest_pCylinderShape2 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCylinder3|pig_latest_pCylinderShape3 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCylinder3|pig_latest_pCylinderShape3 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCylinder3|pig_latest_pCylinderShape3 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 pig_latest_pig_latest_ramp1 "proceduralTexDefaultRes" "proceduralTexDefaultRes" 
 		" -ci 1 -dv 256 -min 256 -max 4096 -smn 8 -smx 8192 -at \"short\""
@@ -26786,6 +26846,13 @@ createNode reference -n "pig_latestRN";
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
 		
 		2 "|pig_latest_pig_the_cat|pig_latest_polySurface8|pig_latest_polySurfaceShape8Orig8" 
+		"furNameSpace" " -type \"string\" \"pig_latest\""
+		2 "|pig_latest_pig_the_cat|pig_latest_blendshapes|pig_latest_blendshapesShape4Orig" 
+		"surfaceReference" " 1"
+		2 "|pig_latest_pig_the_cat|pig_latest_blendshapes|pig_latest_blendshapesShape4Orig" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		
+		2 "|pig_latest_pig_the_cat|pig_latest_blendshapes|pig_latest_blendshapesShape4Orig" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
 		2 "|pig_latest_pig_the_cat|pig_latest_blendshapes|pig_latest_polySurface5|pig_latest_transform5|pig_latest_polySurfaceShape5" 
 		"surfaceReference" " 1"
@@ -26900,7 +26967,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_blendshapes|pig_latest_bottomUpL|pig_latest_bottomUpLShape" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01" "translate" 
-		" -type \"double3\" -160.0350560082548 2.638412638558834 88.798131353994464"
+		" -type \"double3\" -151.54104146349712 2.8158143082206673 93.152504660029749"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01" "translateX" 
 		" -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01" "translateY" 
@@ -26908,7 +26975,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01" "translateZ" 
 		" -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01" "rotate" 
-		" -type \"double3\" -17.170055695117551 -117.26586965604032 0"
+		" -type \"double3\" 5.8462248450444338 -117.26586965604032 0"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01" "rotateX" 
 		" -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01" "rotateY" 
@@ -27016,7 +27083,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01" 
 		"translateZ" " -av 0"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01" 
-		"translate" " -type \"double3\" 0.39720440452351952 0.27159665624950297 -0.79389045514156575"
+		"translate" " -type \"double3\" 0.60888305994942127 2.3933896163366799 -3.0754812992460012"
 		
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01" 
 		"translateX" " -av"
@@ -27025,7 +27092,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01" 
 		"translateZ" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01" 
-		"rotate" " -type \"double3\" 28.582879865661692 -14.563161115340135 -14.842907111896919"
+		"rotate" " -type \"double3\" 102.603721293573 -12.411082703109265 -3.1949393887780224"
 		
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01" 
 		"rotateX" " -av"
@@ -27042,7 +27109,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01" 
 		"scaleZ" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01" 
-		"translate" " -type \"double3\" -0.44114192817588055 0.10678806267294889 -0.37935257737665357"
+		"translate" " -type \"double3\" -0.16671071247996722 3.1849482050815712 -5.288703595927073"
 		
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01" 
 		"translateX" " -av"
@@ -27051,7 +27118,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01" 
 		"translateZ" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01" 
-		"rotate" " -type \"double3\" 26.488262507375591 -3.7682035012224855 6.7998137176665585"
+		"rotate" " -type \"double3\" 110.15848869586785 -10.604363935426569 16.16103137715243"
 		
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01" 
 		"rotateX" " -av"
@@ -27060,7 +27127,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01" 
 		"rotateZ" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01" 
-		"translate" " -type \"double3\" -0.076248160581090935 -0.007587200880575129 0.43381446316128147"
+		"translate" " -type \"double3\" -0.046222759567673667 0.23409394007730688 0.16878658290533438"
 		
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01" 
 		"translateX" " -av"
@@ -27069,7 +27136,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01" 
 		"translateZ" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01" 
-		"rotate" " -type \"double3\" -27.730711305898307 0 0"
+		"rotate" " -type \"double3\" -8.7273309756023867 0 0"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01" 
 		"rotateX" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01" 
@@ -27165,15 +27232,15 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_TAIL_TAIL_TAIL|pig_latest_tail_1control01|pig_latest_tail_2control01|pig_latest_tail_3control01" 
 		"blendParent1" " -k 1"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_splineiK_tail01" 
-		"translate" " -type \"double3\" -0.10617674448320714 10.79880699764955 -11.994046272682908"
+		"translate" " -type \"double3\" -0.12089093050371959 9.2817168960888594 -13.046932273921783"
 		
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_splineiK_tail01" 
-		"rotate" " -type \"double3\" 89.882152645791237 8.9978903152489114 90.089023526531363"
+		"rotate" " -type \"double3\" 89.897976512434752 18.499568098003174 90.088754273777411"
 		
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01" 
-		"translateZ" " -av -0.25275397532672506"
+		"translateZ" " -av -0.044911659352177308"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01" 
-		"translate" " -type \"double3\" 0.18266481891285258 2.1833881663757504 -0.53354628649979552"
+		"translate" " -type \"double3\" -0.2481457148939834 -0.27865451168957522 1.6847159394020181"
 		
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01" 
 		"translateX" " -av"
@@ -27182,7 +27249,8 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01" 
 		"translateZ" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01" 
-		"rotate" " -type \"double3\" 77.913590770668407 0 0"
+		"rotate" " -type \"double3\" 19.837793819694657 -11.228453659759266 -7.7146110514220219"
+		
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01" 
 		"rotateX" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01" 
@@ -27190,7 +27258,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01" 
 		"rotateZ" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01" 
-		"translate" " -type \"double3\" -0.50487577661502048 1.2073208796350265 -2.4889954865656962"
+		"translate" " -type \"double3\" -0.15625703155996878 1.5064144719398316 3.3435064913559076"
 		
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01" 
 		"translateX" " -av"
@@ -27199,8 +27267,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01" 
 		"translateZ" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01" 
-		"rotate" " -type \"double3\" 110.79292320647029 0.47952533960993848 9.5868765980144097"
-		
+		"rotate" " -type \"double3\" 22.8163618512238 0 0"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01" 
 		"rotateX" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01" 
@@ -27244,7 +27311,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01" 
 		"blendParent1" " -av -k 1 0"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control" 
-		"rotate" " -type \"double3\" 17.129092418847709 0 0"
+		"rotate" " -type \"double3\" -1.547943887221553 0 0"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control" 
 		"rotateX" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control" 
@@ -27252,7 +27319,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control" 
 		"rotateZ" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_spine_spline_ctrl" 
-		"translate" " -type \"double3\" 0 2.5109755476567694 0.53055699156482961"
+		"translate" " -type \"double3\" 0 1.8983114189827572 0.396904771242725"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_spine_spline_ctrl" 
 		"translateX" " -av -k 0 -cb 1"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_spine_spline_ctrl" 
@@ -27267,7 +27334,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_spine_fix_sphere|pig_latest_spine_fix_sphereShape" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_global01" 
-		"translate" " -type \"double3\" -159.1549834184753 4.0870857016062692 88.909174920648866"
+		"translate" " -type \"double3\" -152.07657839078425 4.3434032411031662 92.533965247043554"
 		
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_global01" 
 		"translateY" " -av"
@@ -27580,6 +27647,76 @@ createNode reference -n "pig_latestRN";
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
 		
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_pig_blendshapes|pig_latest_pig_body|pig_latest_SquintL|pig_latest_SquintLShape" 
+		"furNameSpace" " -type \"string\" \"pig_latest\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCube1|pig_latest_pCubeShape1" 
+		"surfaceReference" " 1"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCube1|pig_latest_pCubeShape1" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCube1|pig_latest_pCubeShape1" 
+		"furNameSpace" " -type \"string\" \"pig_latest\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCube2|pig_latest_pCubeShape2" 
+		"surfaceReference" " 1"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCube2|pig_latest_pCubeShape2" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCube2|pig_latest_pCubeShape2" 
+		"furNameSpace" " -type \"string\" \"pig_latest\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCube2|pig_latest_polySurfaceShape1" 
+		"surfaceReference" " 1"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCube2|pig_latest_polySurfaceShape1" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCube2|pig_latest_polySurfaceShape1" 
+		"furNameSpace" " -type \"string\" \"pig_latest\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCube3|pig_latest_pCubeShape3" 
+		"surfaceReference" " 1"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCube3|pig_latest_pCubeShape3" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCube3|pig_latest_pCubeShape3" 
+		"furNameSpace" " -type \"string\" \"pig_latest\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCube3|pig_latest_polySurfaceShape2" 
+		"surfaceReference" " 1"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCube3|pig_latest_polySurfaceShape2" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCube3|pig_latest_polySurfaceShape2" 
+		"furNameSpace" " -type \"string\" \"pig_latest\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCylinder1|pig_latest_pCylinderShape1" 
+		"surfaceReference" " 1"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCylinder1|pig_latest_pCylinderShape1" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCylinder1|pig_latest_pCylinderShape1" 
+		"furNameSpace" " -type \"string\" \"pig_latest\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCube4|pig_latest_pCubeShape4" 
+		"surfaceReference" " 1"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCube4|pig_latest_pCubeShape4" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCube4|pig_latest_pCubeShape4" 
+		"furNameSpace" " -type \"string\" \"pig_latest\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCube5|pig_latest_pCubeShape5" 
+		"surfaceReference" " 1"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCube5|pig_latest_pCubeShape5" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCube5|pig_latest_pCubeShape5" 
+		"furNameSpace" " -type \"string\" \"pig_latest\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCylinder2|pig_latest_pCylinderShape2" 
+		"surfaceReference" " 1"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCylinder2|pig_latest_pCylinderShape2" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCylinder2|pig_latest_pCylinderShape2" 
+		"furNameSpace" " -type \"string\" \"pig_latest\""
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCylinder3|pig_latest_pCylinderShape3" 
+		"surfaceReference" " 1"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCylinder3|pig_latest_pCylinderShape3" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/characters/pig/pig_latest.ma\""
+		
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_collar|pig_latest_pCylinder3|pig_latest_pCylinderShape3" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
 		2 "|pig_latest_pig_the_cat|pig_latest_pig_latest_Tyrion_CattisterRNfosterParent1|pig_latest_pigShapeDeformedOrig" 
 		"surfaceReference" " 1"
@@ -35153,7 +35290,7 @@ createNode reference -n "house_latestRN";
 		
 		2 "|house_latest:house_full|house_latest:kitchen_latest:kitchen_furniture|house_latest:kitchen_latest:bar_stools|house_latest:kitchen_latest:kitchen:pCube290|house_latest:kitchen_latest:kitchen:pCube229|house_latest:kitchen_latest:kitchen:pCubeShape229" 
 		"furNameSpace" " -type \"string\" \"kitchen_latest\""
-		"house_latest:bedroom_latestRN" 702
+		"house_latest:bedroom_latestRN" 744
 		1 |house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:windows|house_latest:bedroom_latest:window2|house_latest:bedroom_latest:taller_window_four_squares_latest7:polySurface5|house_latest:bedroom_latest:taller_window_four_squares_latest7:polySurface8|house_latest:bedroom_latest:taller_window_four_squares_latest7:polySurfaceShape8 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
 		1 |house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:windows|house_latest:bedroom_latest:window2|house_latest:bedroom_latest:taller_window_four_squares_latest7:polySurface5|house_latest:bedroom_latest:taller_window_four_squares_latest7:polySurface8|house_latest:bedroom_latest:taller_window_four_squares_latest7:polySurfaceShape8 
@@ -35165,6 +35302,12 @@ createNode reference -n "house_latestRN";
 		1 |house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:windows|house_latest:bedroom_latest:window2|house_latest:bedroom_latest:taller_window_four_squares_latest7:polySurface5|house_latest:bedroom_latest:polySurface8|house_latest:bedroom_latest:polySurfaceShape8 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:windows|house_latest:bedroom_latest:window2|house_latest:bedroom_latest:taller_window_four_squares_latest7:polySurface5|house_latest:bedroom_latest:polySurface8|house_latest:bedroom_latest:polySurfaceShape8 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:windows|house_latest:bedroom_latest:blinds_L|house_latest:bedroom_latest:blinds_LShape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:windows|house_latest:bedroom_latest:blinds_L|house_latest:bedroom_latest:blinds_LShape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:windows|house_latest:bedroom_latest:blinds_L|house_latest:bedroom_latest:blinds_LShape 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:windows|house_latest:bedroom_latest:blinds_R|house_latest:bedroom_latest:polySurface97|house_latest:bedroom_latest:polySurfaceShape377 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
@@ -35598,6 +35741,24 @@ createNode reference -n "house_latestRN";
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:bed|house_latest:bedroom_latest:leg_front_L|house_latest:bedroom_latest:leg_front_LShape 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:bed|house_latest:bedroom_latest:leg_front_L|house_latest:bedroom_latest:polySurfaceShape321 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:bed|house_latest:bedroom_latest:leg_front_L|house_latest:bedroom_latest:polySurfaceShape321 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:bed|house_latest:bedroom_latest:leg_front_L|house_latest:bedroom_latest:polySurfaceShape321 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:bed|house_latest:bedroom_latest:leg_Front_R|house_latest:bedroom_latest:leg_Front_RShape 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:bed|house_latest:bedroom_latest:leg_Front_R|house_latest:bedroom_latest:leg_Front_RShape 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:bed|house_latest:bedroom_latest:leg_Front_R|house_latest:bedroom_latest:leg_Front_RShape 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:bed|house_latest:bedroom_latest:leg_Front_R|house_latest:bedroom_latest:polySurfaceShape321 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:bed|house_latest:bedroom_latest:leg_Front_R|house_latest:bedroom_latest:polySurfaceShape321 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:bed|house_latest:bedroom_latest:leg_Front_R|house_latest:bedroom_latest:polySurfaceShape321 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		1 |house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:bed|house_latest:bedroom_latest:bed_shelf:polySurface366|house_latest:bedroom_latest:bed_shelf:polySurfaceShape366 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
 		1 |house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:bed|house_latest:bedroom_latest:bed_shelf:polySurface366|house_latest:bedroom_latest:bed_shelf:polySurfaceShape366 
@@ -35855,6 +36016,24 @@ createNode reference -n "house_latestRN";
 		1 |house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:rocket_shelf|house_latest:bedroom_latest:books|house_latest:bedroom_latest:polySurface59|house_latest:bedroom_latest:polySurfaceShape59 
 		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
 		1 |house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:rocket_shelf|house_latest:bedroom_latest:books|house_latest:bedroom_latest:polySurface59|house_latest:bedroom_latest:polySurfaceShape59 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:rocket_shelf|house_latest:bedroom_latest:fin5|house_latest:bedroom_latest:finShape5 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:rocket_shelf|house_latest:bedroom_latest:fin5|house_latest:bedroom_latest:finShape5 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:rocket_shelf|house_latest:bedroom_latest:fin5|house_latest:bedroom_latest:finShape5 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:rocket_shelf|house_latest:bedroom_latest:fin6|house_latest:bedroom_latest:finShape6 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:rocket_shelf|house_latest:bedroom_latest:fin6|house_latest:bedroom_latest:finShape6 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:rocket_shelf|house_latest:bedroom_latest:fin6|house_latest:bedroom_latest:finShape6 
+		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
+		1 |house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:rocket_shelf|house_latest:bedroom_latest:fin7|house_latest:bedroom_latest:finShape7 
+		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
+		1 |house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:rocket_shelf|house_latest:bedroom_latest:fin7|house_latest:bedroom_latest:finShape7 
+		"referenceFile" "reff" " -ci 1 -h 1 -dt \"string\""
+		1 |house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:rocket_shelf|house_latest:bedroom_latest:fin7|house_latest:bedroom_latest:finShape7 
 		"furNameSpace" "fns" " -ci 1 -h 1 -dt \"string\""
 		2 "|house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:windows|house_latest:bedroom_latest:window2|house_latest:bedroom_latest:taller_window_four_squares_latest7:polySurface5|house_latest:bedroom_latest:taller_window_four_squares_latest7:polySurface8|house_latest:bedroom_latest:taller_window_four_squares_latest7:polySurfaceShape8" 
 		"surfaceReference" " 1"
@@ -35869,6 +36048,13 @@ createNode reference -n "house_latestRN";
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/bedroom/bedroom_latest.ma\""
 		
 		2 "|house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:windows|house_latest:bedroom_latest:window2|house_latest:bedroom_latest:taller_window_four_squares_latest7:polySurface5|house_latest:bedroom_latest:polySurface8|house_latest:bedroom_latest:polySurfaceShape8" 
+		"furNameSpace" " -type \"string\" \"bedroom_latest\""
+		2 "|house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:windows|house_latest:bedroom_latest:blinds_L|house_latest:bedroom_latest:blinds_LShape" 
+		"surfaceReference" " 1"
+		2 "|house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:windows|house_latest:bedroom_latest:blinds_L|house_latest:bedroom_latest:blinds_LShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/bedroom/bedroom_latest.ma\""
+		
+		2 "|house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:windows|house_latest:bedroom_latest:blinds_L|house_latest:bedroom_latest:blinds_LShape" 
 		"furNameSpace" " -type \"string\" \"bedroom_latest\""
 		2 "|house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:windows|house_latest:bedroom_latest:blinds_R|house_latest:bedroom_latest:polySurface97|house_latest:bedroom_latest:polySurfaceShape377" 
 		"surfaceReference" " 1"
@@ -36374,6 +36560,27 @@ createNode reference -n "house_latestRN";
 		
 		2 "|house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:bed|house_latest:bedroom_latest:leg_front_L|house_latest:bedroom_latest:leg_front_LShape" 
 		"furNameSpace" " -type \"string\" \"bedroom_latest\""
+		2 "|house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:bed|house_latest:bedroom_latest:leg_front_L|house_latest:bedroom_latest:polySurfaceShape321" 
+		"surfaceReference" " 1"
+		2 "|house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:bed|house_latest:bedroom_latest:leg_front_L|house_latest:bedroom_latest:polySurfaceShape321" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/bedroom/bedroom_latest.ma\""
+		
+		2 "|house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:bed|house_latest:bedroom_latest:leg_front_L|house_latest:bedroom_latest:polySurfaceShape321" 
+		"furNameSpace" " -type \"string\" \"bedroom_latest\""
+		2 "|house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:bed|house_latest:bedroom_latest:leg_Front_R|house_latest:bedroom_latest:leg_Front_RShape" 
+		"surfaceReference" " 1"
+		2 "|house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:bed|house_latest:bedroom_latest:leg_Front_R|house_latest:bedroom_latest:leg_Front_RShape" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/bedroom/bedroom_latest.ma\""
+		
+		2 "|house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:bed|house_latest:bedroom_latest:leg_Front_R|house_latest:bedroom_latest:leg_Front_RShape" 
+		"furNameSpace" " -type \"string\" \"bedroom_latest\""
+		2 "|house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:bed|house_latest:bedroom_latest:leg_Front_R|house_latest:bedroom_latest:polySurfaceShape321" 
+		"surfaceReference" " 1"
+		2 "|house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:bed|house_latest:bedroom_latest:leg_Front_R|house_latest:bedroom_latest:polySurfaceShape321" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/bedroom/bedroom_latest.ma\""
+		
+		2 "|house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:bed|house_latest:bedroom_latest:leg_Front_R|house_latest:bedroom_latest:polySurfaceShape321" 
+		"furNameSpace" " -type \"string\" \"bedroom_latest\""
 		2 "|house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:bed|house_latest:bedroom_latest:bed_shelf:polySurface366|house_latest:bedroom_latest:bed_shelf:polySurfaceShape366" 
 		"surfaceReference" " 1"
 		2 "|house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:bed|house_latest:bedroom_latest:bed_shelf:polySurface366|house_latest:bedroom_latest:bed_shelf:polySurfaceShape366" 
@@ -36674,6 +36881,27 @@ createNode reference -n "house_latestRN";
 		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/bedroom/bedroom_latest.ma\""
 		
 		2 "|house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:rocket_shelf|house_latest:bedroom_latest:books|house_latest:bedroom_latest:polySurface59|house_latest:bedroom_latest:polySurfaceShape59" 
+		"furNameSpace" " -type \"string\" \"bedroom_latest\""
+		2 "|house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:rocket_shelf|house_latest:bedroom_latest:fin5|house_latest:bedroom_latest:finShape5" 
+		"surfaceReference" " 1"
+		2 "|house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:rocket_shelf|house_latest:bedroom_latest:fin5|house_latest:bedroom_latest:finShape5" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/bedroom/bedroom_latest.ma\""
+		
+		2 "|house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:rocket_shelf|house_latest:bedroom_latest:fin5|house_latest:bedroom_latest:finShape5" 
+		"furNameSpace" " -type \"string\" \"bedroom_latest\""
+		2 "|house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:rocket_shelf|house_latest:bedroom_latest:fin6|house_latest:bedroom_latest:finShape6" 
+		"surfaceReference" " 1"
+		2 "|house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:rocket_shelf|house_latest:bedroom_latest:fin6|house_latest:bedroom_latest:finShape6" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/bedroom/bedroom_latest.ma\""
+		
+		2 "|house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:rocket_shelf|house_latest:bedroom_latest:fin6|house_latest:bedroom_latest:finShape6" 
+		"furNameSpace" " -type \"string\" \"bedroom_latest\""
+		2 "|house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:rocket_shelf|house_latest:bedroom_latest:fin7|house_latest:bedroom_latest:finShape7" 
+		"surfaceReference" " 1"
+		2 "|house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:rocket_shelf|house_latest:bedroom_latest:fin7|house_latest:bedroom_latest:finShape7" 
+		"referenceFile" " -type \"string\" \"C:/Users/Saurabh/Documents/GitHub/Bandits/maya/assets/sets/bedroom/bedroom_latest.ma\""
+		
+		2 "|house_latest:house_full|house_latest:bedroom_latest:bedroom_furniture|house_latest:bedroom_latest:rocket_shelf|house_latest:bedroom_latest:fin7|house_latest:bedroom_latest:finShape7" 
 		"furNameSpace" " -type \"string\" \"bedroom_latest\""
 		"house_latest:utilities_latestRN" 258
 		1 |house_latest:house_full|house_latest:utilities_latest:utilities_furniture|house_latest:utilities_latest:cleaning_shovel|house_latest:utilities_latest:cleaning_shovelShape 
@@ -42664,7 +42892,7 @@ createNode reference -n "house_latestRN";
 		2 "|house_latest:house_full|house_latest:architecture|house_latest:bedroom_corner_wall|house_latest:transform2|house_latest:bedroom_corner_wallShape" 
 		"furNameSpace" " -type \"string\" \"house_latest\""
 		2 "|house_latest:house_full|house_latest:architecture|house_latest:nRigid5|house_latest:nRigidShape5" 
-		"cacheWidth" " 44"
+		"cacheWidth" " 41"
 		2 "|house_latest:house_full|house_latest:architecture|house_latest:doorknob:hole:polySurface2|house_latest:doorknob:hole:transform5|house_latest:doorknob:hole:polySurfaceShape1" 
 		"surfaceReference" " 1"
 		2 "|house_latest:house_full|house_latest:architecture|house_latest:doorknob:hole:polySurface2|house_latest:doorknob:hole:transform5|house_latest:doorknob:hole:polySurfaceShape1" 
@@ -43093,8 +43321,8 @@ select -ne :time1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr ".o" 44;
-	setAttr ".unw" 44;
+	setAttr ".o" 39;
+	setAttr ".unw" 39;
 select -ne :renderPartition;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -43125,7 +43353,7 @@ select -ne :defaultRenderUtilityList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 885 ".u";
+	setAttr -s 882 ".u";
 select -ne :defaultRenderingList1;
 	setAttr -s 118 ".r";
 select -ne :defaultTextureList1;
@@ -43133,7 +43361,7 @@ select -ne :defaultTextureList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 428 ".tx";
+	setAttr -s 425 ".tx";
 select -ne :initialShadingGroup;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";

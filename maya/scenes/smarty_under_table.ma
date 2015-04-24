@@ -1,6 +1,6 @@
 //Maya ASCII 2015 scene
 //Name: smarty_under_table.ma
-//Last modified: Thu, Apr 23, 2015 09:47:44 PM
+//Last modified: Fri, Apr 24, 2015 01:16:07 AM
 //Codeset: 1252
 file -rdi 1 -rpr "livingroom_shading_latest" -rfn "livingroom_shading_latestRN"
 		 "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/sets/house/house_latest_pxr5.ma";
@@ -45,17 +45,17 @@ fileInfo "cutIdentifier" "201402282131-909040";
 fileInfo "osv" "Microsoft Windows 8 Home Premium Edition, 64-bit  (Build 9200)\n";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
-	setAttr ".t" -type "double3" -178.91785394176193 14.624850007000283 45.897238714303661 ;
-	setAttr ".r" -type "double3" -9.3383527276886493 -1015.4000000011156 1.8537503888401265e-015 ;
+	setAttr ".t" -type "double3" -200.050278265141 8.8860772875279519 54.395357901248047 ;
+	setAttr ".r" -type "double3" 1.4616472723071781 -1096.2000000010401 2.5875504358386481e-017 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v";
 	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 20.51738405781235;
+	setAttr ".coi" 7.7987713735396813;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -200.14551376498312 9.5530112114615928 35.250473766911874 ;
+	setAttr ".tp" -type "double3" -197.87519836425781 9.0850067138671875 46.908683776855469 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	setAttr ".t" -type "double3" -194.37256248651767 291.39159408278505 66.178955569045343 ;
@@ -2448,7 +2448,6 @@ createNode parentConstraint -n "pig_latest_tail_2control01_parentConstraint1" -p
 	setAttr ".tg[0].tot" -type "double3" 1.7057058917128012e-013 1.1416307672183201 
 		-1.7546462838769887 ;
 	setAttr ".tg[0].tor" -type "double3" 0 0 5.0506984604175018e-019 ;
-	setAttr ".lr" -type "double3" 9.939233379573486e-016 0 0 ;
 	setAttr ".rst" -type "double3" 5.6843418860808015e-014 0 2.3092638912203256e-014 ;
 	setAttr -k on ".w0";
 createNode parentConstraint -n "pig_latest_tail_3control01_parentConstraint1" -p "pig_latestRNfosterParent1";
@@ -5992,10 +5991,10 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n"
 		+ "            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 0\n            -occlusionCulling 0\n"
 		+ "            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n"
-		+ "            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"camera3\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n"
+		+ "            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n"
 		+ "                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 1\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"vp2Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n"
 		+ "                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n"
-		+ "                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"camera3\" \n            -useInteractiveMode 0\n"
+		+ "                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n"
 		+ "            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n"
 		+ "            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n"
 		+ "            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `outlinerPanel -unParent -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            outlinerEditor -e \n"
@@ -6005,10 +6004,10 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\tif ($useSceneConfig) {\n\t\toutlinerPanel -e -to $panelName;\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n"
 		+ "\t\t\t$panelName = `scriptedPanel -unParent  -type \"graphEditor\" -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n"
 		+ "                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n"
-		+ "\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1.25\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -clipTime \"on\" \n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 2\n                -classicMode 1\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1.25\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -clipTime \"on\" \n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 1\n                -classicMode 1\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n"
 		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n"
 		+ "                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n"
-		+ "            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1.25\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -clipTime \"on\" \n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 2\n                -classicMode 1\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\tif ($useSceneConfig) {\n\t\tscriptedPanel -e -to $panelName;\n"
+		+ "            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1.25\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -clipTime \"on\" \n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 1\n                -classicMode 1\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\tif ($useSceneConfig) {\n\t\tscriptedPanel -e -to $panelName;\n"
 		+ "\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dopeSheetPanel\" -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n"
 		+ "                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n"
 		+ "                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n"
@@ -6026,18 +6025,21 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;\n\t\t\tif (`objExists nodeEditorPanel1Info`) nodeEditor -e -restoreInfo nodeEditorPanel1Info $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"createNodePanel\" -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Texture Editor\")) `;\n"
 		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"polyTexturePlacementPanel\" -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"renderWindowPanel\" -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"blendShapePanel\" (localizedPanelLabel(\"Blend Shape\")) `;\n"
 		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\tblendShapePanel -unParent -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels ;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tblendShapePanel -edit -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\tif ($useSceneConfig) {\n\t\tblendShapePanel -e -to $panelName;\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynRelEdPanel\" -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n"
-		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"relationshipPanel\" -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"referenceEditorPanel\" -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n"
-		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"componentEditorPanel\" -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynPaintScriptedPanelType\" -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n"
-		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"scriptEditorPanel\" -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"Stereo\" -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels `;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -editorChanged \"updateModelPanelBar\" \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n"
-		+ "                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n"
-		+ "                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n"
-		+ "                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -editorChanged \"updateModelPanelBar\" \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n"
-		+ "                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n"
-		+ "                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n"
-		+ "                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"camera3\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"camera3\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"relationshipPanel\" -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"referenceEditorPanel\" -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\tif ($useSceneConfig) {\n\t\tscriptedPanel -e -to $panelName;\n"
+		+ "\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"componentEditorPanel\" -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynPaintScriptedPanelType\" -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"scriptEditorPanel\" -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"Stereo\" -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels `;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -editorChanged \"updateModelPanelBar\" \n                -camera \"persp\" \n"
+		+ "                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n"
+		+ "                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n"
+		+ "                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n"
+		+ "                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -editorChanged \"updateModelPanelBar\" \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n"
+		+ "                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n"
+		+ "                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n"
+		+ "                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n"
+		+ "                -defaultPinnedState 0\n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -keyReleaseCommand \"nodeEdKeyReleaseCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;\n\t\t\tif (`objExists nodeEditorPanel2Info`) nodeEditor -e -restoreInfo nodeEditorPanel2Info $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n"
+		+ "            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -keyReleaseCommand \"nodeEdKeyReleaseCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;\n\t\t\tif (`objExists nodeEditorPanel2Info`) nodeEditor -e -restoreInfo nodeEditorPanel2Info $editorName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\tif ($useSceneConfig) {\n\t\tscriptedPanel -e -to $panelName;\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        setFocus `paneLayout -q -p1 $gMainPane`;\n        sceneUIReplacement -deleteRemaining;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -6045,20 +6047,10 @@ createNode script -n "sceneConfigurationScriptNode";
 	setAttr ".st" 6;
 createNode reference -n "livingroom_shading_latestRN";
 	setAttr ".fn[0]" -type "string" "C:/Users/Saurabh/Documents/GitHub/Bandits/maya//assets/sets/livingroom_shading/livingroom_shading_latest.ma";
-	setAttr -s 53 ".phl";
+	setAttr -s 43 ".phl";
 	setAttr ".phl[1]" 0;
-	setAttr ".phl[23]" -type "TdataCompound" ;
-	setAttr ".phl[33]" -type "TdataCompound" ;
-	setAttr ".phl[74]" -type "TdataCompound" ;
-	setAttr ".phl[75]" -type "TdataCompound" ;
-	setAttr ".phl[76]" -type "TdataCompound" ;
-	setAttr ".phl[77]" -type "TdataCompound" ;
-	setAttr ".phl[78]" -type "TdataCompound" ;
-	setAttr ".phl[79]" -type "TdataCompound" ;
-	setAttr ".phl[80]" -type "TdataCompound" ;
-	setAttr ".phl[81]" -type "TdataCompound" ;
-	setAttr ".phl[82]" -type "TdataCompound" ;
-	setAttr ".phl[83]" -type "TdataCompound" ;
+	setAttr ".phl[74]" 0;
+	setAttr ".phl[75]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"livingroom_shading_latestRN"
 		"livingroom_shading_latest_kitchen_latest_pxrRN" 0
@@ -7743,6 +7735,7 @@ createNode reference -n "livingroom_shading_latestRN";
 		2 "living_room_latest:armchair_latest:file8" "ReduceTextureInCuda" " 1"
 		2 "living_room_latest:armchair_latest:file8" "onlineUpdate" " 0"
 		2 "living_room_latest:armchair_latest:file8" "compressColor" " 1"
+		"livingroom_shading_latest_rectangular_window_latestRN" 0
 		"living_room_latest:armchair_latestRN1" 63
 		1 |living_room_latest:armchair_latest1:armchair_frame|living_room_latest:armchair_latest1:armchair_frameShape 
 		"VisibleInIndirect" "VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
@@ -7869,7 +7862,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		2 "living_room_latest:armchair_latest1:file8" "ReduceTextureInCuda" " 1"
 		2 "living_room_latest:armchair_latest1:file8" "onlineUpdate" " 0"
 		2 "living_room_latest:armchair_latest1:file8" "compressColor" " 1"
-		"livingroom_shading_latest_rectangular_window_latestRN" 0
 		"living_room_latest:taller_window_four_squares_latestRN1" 52
 		1 |living_room_latest:taller_window_four_squares_latest1:taller_window|living_room_latest:taller_window_four_squares_latest1:polySurfaceShape1 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
@@ -12702,7 +12694,6 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		2 "|livingroom_shading_latest_living_room_latestRNfosterParent1|livingroom_shading_latest_polySurfaceShape367" 
 		"furNameSpace" " -type \"string\" \"livingroom_shading_latest\""
-		"livingroom_shading_latest_kitchen_latestRN" 0
 		"living_room_latest:cube_cushionRN" 6
 		1 |living_room_latest:cube_cushion:pCube1|living_room_latest:cube_cushion:pCubeShape1 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
@@ -12717,6 +12708,7 @@ createNode reference -n "livingroom_shading_latestRN";
 		
 		2 "|living_room_latest:cube_cushion:pCube1|living_room_latest:cube_cushion:pCubeShape1" 
 		"furNameSpace" " -type \"string\" \"cube_cushion\""
+		"livingroom_shading_latest_kitchen_latestRN" 0
 		"living_room_latest:taller_window_four_squares_latestRN" 52
 		1 |living_room_latest:taller_window_four_squares_latest:taller_window|living_room_latest:taller_window_four_squares_latest:polySurfaceShape1 
 		"surfaceReference" "sref" " -ci 1 -h 1 -min 0 -max 1 -at \"bool\""
@@ -27054,6 +27046,22 @@ createNode reference -n "livingroom_shading_latestRN";
 		2 "|living_room_furniture_latest:pig_statue:pig_the_cat|living_room_furniture_latest:pig_statue:PIG|living_room_furniture_latest:pig_statue:controller_main01|living_room_furniture_latest:pig_statue:stretchr_ctrl01|living_room_furniture_latest:pig_statue:hip_rotation_ctrl01|living_room_furniture_latest:pig_statue:tail_controllers_01|living_room_furniture_latest:pig_statue:splineiK_tail01" 
 		"rotate" " -type \"double3\" 90.075873468792011 41.806374689449974 90.096594168227938"
 		
+		"livingroom_shading_latest_living_room_furniture_latest_pxrRN" 9
+		2 "|living_room_furniture_latest_pxr:living_room_furniture|living_room_furniture_latest_pxr:living_room_group|living_room_furniture_latest_pxr:round_table_L" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "living_room_furniture_latest_pxr:PxrLMGlass1" "eta" " 1.6599999666213989"
+		
+		2 "living_room_furniture_latest_pxr:PxrLMGlass1" "refractionColor" " -type \"float3\" 0.42696269999999997 0 0.42696269999999997"
+		
+		2 "living_room_furniture_latest_pxr:PxrLMGlass1" "roughness" " 0.0099999997764825821"
+		
+		2 "living_room_furniture_latest_pxr:PxrLMGlass1" "absorption" " 0"
+		2 "living_room_furniture_latest_pxr:PxrLMGlass1" "presence" " 1"
+		2 "living_room_furniture_latest_pxr:PxrLMGlass1" "inputAOV" " 0"
+		5 3 "livingroom_shading_latestRN" "living_room_furniture_latest_pxr:PxrLMGlass1.message" 
+		"livingroom_shading_latestRN.placeHolderList[74]" ""
+		5 3 "livingroom_shading_latestRN" "living_room_furniture_latest_pxr:PxrLMGlass1SG.message" 
+		"livingroom_shading_latestRN.placeHolderList[75]" ""
 		"livingroom_shading_latestRN" 172
 		1 livingroom_shading_latest_ramp1 "proceduralTexDefaultRes" "proceduralTexDefaultRes" 
 		" -ci 1 -dv 512 -min 256 -max 4096 -smn 8 -smx 8192 -at \"short\""
@@ -28294,7 +28302,7 @@ createNode reference -n "smartybikeRN";
 		
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:Smarty|NewSmarty_024:polySurface6|NewSmarty_024:polySurfaceShape4Orig" 
 		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" "translate" " -type \"double3\" -195.42083509074001 11.057499597806833 60.243865262919009"
+		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" "translate" " -type \"double3\" -196.14045391247532 11.049054038597747 56.433291837942662"
 		
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" "translateX" " -av"
 		
@@ -28302,7 +28310,7 @@ createNode reference -n "smartybikeRN";
 		
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" "translateZ" " -av"
 		
-		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" "rotate" " -type \"double3\" 8.1735984150494136 27.388952773292196 17.339605535667513"
+		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" "rotate" " -type \"double3\" 1.6543810502369882 9.906595673150683 9.5299256944059021"
 		
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" "rotateX" " -av"
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl" "rotateY" " -av"
@@ -28331,7 +28339,7 @@ createNode reference -n "smartybikeRN";
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_glasses|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:smarty_008_fixed_rig_:glass|NewSmarty_024:smarty_008_fixed_rig_:glassL|NewSmarty_024:smarty_008_fixed_rig_:glassLShape" 
 		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:eye_ctrl" 
-		"translate" " -type \"double3\" 1.9511288420010071 -0.24172229902896239 -1.1203685067861802"
+		"translate" " -type \"double3\" 1.9449882451808771 -0.23882316071898113 -1.12064062752312"
 		
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:backj|NewSmarty_024:chestJ|NewSmarty_024:neckJ|NewSmarty_024:smarty_008_fixed_rig_:Glasses|NewSmarty_024:eye_ctrl" 
 		"translateX" " -av"
@@ -28376,7 +28384,7 @@ createNode reference -n "smartybikeRN";
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rootJ|NewSmarty_024:hip|NewSmarty_024:thighRJ|NewSmarty_024:kneeRJ|NewSmarty_024:effector18" 
 		"visibility" " 1"
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl" 
-		"rotate" " -type \"double3\" 1.4082881712018336 25.621707608937324 -3.2060064893649458"
+		"rotate" " -type \"double3\" 0.7190195891882587 13.081491456083182 -1.6368677349258938"
 		
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl" 
 		"rotateX" " -av"
@@ -28420,7 +28428,7 @@ createNode reference -n "smartybikeRN";
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:cog_ctrl|NewSmarty_024:back_ctrl|NewSmarty_024:chest_ctrl|NewSmarty_024:head_ctrl|NewSmarty_024:tongue:pPlane1|NewSmarty_024:tongue:pPlaneShape1" 
 		"furNameSpace" " -type \"string\" \"NewSmarty_024\""
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rightLeg_ik" 
-		"translate" " -type \"double3\" -2.2332112929865793 -9.9748973102823424 1.3446827995200399"
+		"translate" " -type \"double3\" -2.2332112929864656 -9.9748973102824277 1.344682799520182"
 		
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rightLeg_ik" 
 		"translateX" " -av"
@@ -28429,7 +28437,7 @@ createNode reference -n "smartybikeRN";
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rightLeg_ik" 
 		"translateZ" " -av"
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:leftLeg_ik" 
-		"translate" " -type \"double3\" 2.0746780938946841 -9.9748837915002841 1.3446808565261203"
+		"translate" " -type \"double3\" 2.0746780938947977 -9.9748837915002841 1.3446808565261488"
 		
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:leftLeg_ik" 
 		"translateX" " -av"
@@ -28438,7 +28446,7 @@ createNode reference -n "smartybikeRN";
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:leftLeg_ik" 
 		"translateZ" " -av"
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:leftArm_ik" 
-		"translate" " -type \"double3\" 3.6422651701393964 -2.3839187642246937 5.1006740279141756"
+		"translate" " -type \"double3\" 3.6422651701395101 -2.3839187642247222 5.1006740279142893"
 		
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:leftArm_ik" 
 		"translateX" " -av"
@@ -28447,7 +28455,7 @@ createNode reference -n "smartybikeRN";
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:leftArm_ik" 
 		"translateZ" " -av"
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rightArm_ik" 
-		"translate" " -type \"double3\" -3.6370077846693531 -2.3482719264141867 5.2136017003447073"
+		"translate" " -type \"double3\" -3.6370077846692395 -2.3482719264141867 5.2136017003447073"
 		
 		2 "|NewSmarty_024:SmartyRig|NewSmarty_024:global_ctrl|NewSmarty_024:rightArm_ik" 
 		"translateX" " -av"
@@ -28894,7 +28902,7 @@ createNode reference -n "smartybikeRN";
 		"fns" " -ci 1 -h 1 -dt \"string\""
 		1 |bike:bike_ctrl|bike:wholeBike|bike:frame|bike:frameShape "VisibleInIndirect" 
 		"VisibleInIndirect" " -ci 1 -dv 1 -min 0 -max 1 -smn 0 -smx 1 -at \"bool\""
-		2 "|bike:bike_ctrl" "translate" " -type \"double3\" -195.4984911175473 -1.0920543847395379 61.858727633320811"
+		2 "|bike:bike_ctrl" "translate" " -type \"double3\" -196.39554022665303 -1.0920543847395379 58.082616532042152"
 		
 		2 "|bike:bike_ctrl" "translateZ" " -av"
 		2 "|bike:bike_ctrl" "showManipDefault" " 7"
@@ -30544,7 +30552,7 @@ createNode reference -n "pig_latestRN";
 		"furNameSpace" " -type \"string\" \"key_latest\""
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_pPyramid2|pig_latest_colorClip_control|pig_latest_key_control|key_latest:Obj_000003|key_latest:Obj_000003Shape" 
 		"VisibleInIndirect" " 1"
-		"pig_latestRN" 755
+		"pig_latestRN" 759
 		0 "|pig_latestRNfosterParent1|pig_latest_tail_4control01_parentConstraint1" 
 		"|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_TAIL_TAIL_TAIL|pig_latest_tail_1control01|pig_latest_tail_2control01|pig_latest_tail_3control01|pig_latest_tail_4control01" 
 		"-s -r "
@@ -30792,7 +30800,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_polySurface4|pig_latest_bottomUpL|pig_latest_bottomUpLShape" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01" "translate" 
-		" -type \"double3\" -197.81926877528841 13.480734961879104 41.371491286766776"
+		" -type \"double3\" -197.83569085037334 13.939932572573928 39.734682411424274"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01" "translateX" 
 		" -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01" "translateY" 
@@ -30800,7 +30808,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01" "translateZ" 
 		" -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01" "rotate" 
-		" -type \"double3\" 76.362065238610711 -355.68796613209179 0"
+		" -type \"double3\" -21.965255841253192 -355.68796613209179 0"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01" "rotateX" 
 		" -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01" "rotateY" 
@@ -30850,7 +30858,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_thorax01|pig_latest_bind_R_humerus01|pig_latest_bind_R_radius01" 
 		"translate" " -type \"double3\" -3.170597 1.70856e-006 0"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_thorax01|pig_latest_bind_R_humerus01|pig_latest_bind_R_radius01" 
-		"rotate" " -type \"double3\" 90.376394165572961 0 0"
+		"rotate" " -type \"double3\" 29.271788529746313 0 0"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_thorax01|pig_latest_bind_R_humerus01|pig_latest_bind_R_radius01" 
 		"segmentScaleCompensate" " 1"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_thorax01|pig_latest_bind_R_humerus01|pig_latest_bind_R_radius01|pig_latest_effector3" 
@@ -30871,7 +30879,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_be_head01" 
 		"segmentScaleCompensate" " 1"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye" 
-		"rotate" " -type \"double3\" 17.735309241536381 82.877465415299511 -78.834268810150192"
+		"rotate" " -type \"double3\" -173.38455112948577 10.235785819324498 -206.95530746834211"
 		
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye" 
 		"rotateX" " -av"
@@ -30889,7 +30897,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_right_eye|pig_latest_pig_right_eyeShape" 
 		"VisibleInIndirect" " 1"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye" 
-		"rotate" " -type \"double3\" 28.797942684967236 82.877465415299426 -78.834268810149922"
+		"rotate" " -type \"double3\" -170.00211235847237 22.241275129147105 -199.63925308787393"
 		
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye" 
 		"rotateX" " -av"
@@ -30927,7 +30935,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_Skeleton_01|pig_latest_bind_root01|pig_latest_bind_head01|pig_latest_pig_left_eye1|pig_latest_pig_left_eye1Shape" 
 		"furNameSpace" " -type \"string\" \"pig_latest\""
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_iK_L_frontleg01" 
-		"translate" " -type \"double3\" 4.5305915484543675 0.98679617457574409 3.9462247011246374"
+		"translate" " -type \"double3\" 1.5632551089753974 -1.5624201787148086 5.0560657549491523"
 		
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_iK_L_frontleg01" 
 		"translateX" " -av"
@@ -30936,7 +30944,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_iK_L_frontleg01" 
 		"translateZ" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_iK_L_frontleg01" 
-		"rotate" " -type \"double3\" 77.788421903722423 -178.95122036150019 -1.3704507590264636"
+		"rotate" " -type \"double3\" -76.865141604198314 -0.36103378286077709 178.3125295453973"
 		
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_iK_L_frontleg01" 
 		"rotateX" " -av"
@@ -30954,9 +30962,9 @@ createNode reference -n "pig_latestRN";
 		"translate" " -type \"double3\" 0.54199675799195812 -0.30795431116145822 -0.42888801626169698"
 		
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01" 
-		"translateZ" " -av 0.89031501412199021"
+		"translateZ" " -av 0.55422740749648058"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01" 
-		"translate" " -type \"double3\" 2.3175779769270139 2.9110610733701439 -3.2343086185636793"
+		"translate" " -type \"double3\" 0.09878609203774727 1.2729825868565343 -2.7876159829724911"
 		
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01" 
 		"translateX" " -av"
@@ -30965,7 +30973,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01" 
 		"translateZ" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01" 
-		"rotate" " -type \"double3\" 53.424394177097554 38.093801205514239 21.203140066695909"
+		"rotate" " -type \"double3\" 63.595035704673137 9.7535649093968786 -12.387921046339686"
 		
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01" 
 		"rotateX" " -av"
@@ -30982,7 +30990,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_L_backfoot01" 
 		"scaleZ" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01" 
-		"translate" " -type \"double3\" -3.9840379862085333 5.3501991314577646 -3.5515564989736816"
+		"translate" " -type \"double3\" -1.1030870589382042 1.0272117132050931 1.3932343170485761"
 		
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01" 
 		"translateX" " -av"
@@ -30991,7 +30999,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01" 
 		"translateZ" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01" 
-		"rotate" " -type \"double3\" 102.61689770587597 -0.91573761204611381 -8.7142860514997693"
+		"rotate" " -type \"double3\" 13.021406063449017 8.0175484660986545 -4.2383454317691829"
 		
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_controller_R_backfoot01" 
 		"rotateX" " -av"
@@ -31008,7 +31016,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01" 
 		"translateZ" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01" 
-		"rotate" " -type \"double3\" -5.8914265040004778 0 0"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01" 
 		"rotateX" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01" 
@@ -31018,7 +31026,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01" 
 		"blendParent1" " -k 1"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_TAIL_TAIL_TAIL|pig_latest_tail_1control01" 
-		"translate" " -type \"double3\" 0.31708066802362045 -0.54865106595339763 0.23425825691524538"
+		"translate" " -type \"double3\" 0.04267633873991214 -1.1736431264875626 -0.3317491074764356"
 		
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_TAIL_TAIL_TAIL|pig_latest_tail_1control01" 
 		"translateX" " -av"
@@ -31027,7 +31035,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_TAIL_TAIL_TAIL|pig_latest_tail_1control01" 
 		"translateZ" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_TAIL_TAIL_TAIL|pig_latest_tail_1control01" 
-		"rotate" " -type \"double3\" -1.3647443111397943 0 0"
+		"rotate" " -type \"double3\" -53.753826539204979 0 0"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_TAIL_TAIL_TAIL|pig_latest_tail_1control01" 
 		"rotateX" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_TAIL_TAIL_TAIL|pig_latest_tail_1control01" 
@@ -31121,15 +31129,15 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_TAIL_TAIL_TAIL|pig_latest_tail_1control01|pig_latest_tail_2control01|pig_latest_tail_3control01|pig_latest_tail_4control01" 
 		"scaleZ" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_splineiK_tail01" 
-		"translate" " -type \"double3\" 0.280950227878634 9.5464151268419499 -13.850645388046516"
+		"translate" " -type \"double3\" 0.0065221039227480911 2.5508769935916615 -14.386622731756582"
 		
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchr_ctrl01|pig_latest_hip_rotation_ctrl01|pig_latest_tail_controllers_01|pig_latest_splineiK_tail01" 
-		"rotate" " -type \"double3\" 89.851274367621158 39.304302278103769 90.144349584575764"
+		"rotate" " -type \"double3\" -89.80604432629886 83.745997249338856 -90.202856704583127"
 		
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01" 
-		"translateZ" " -av -0.10646201548540919"
+		"translateZ" " -av -0.037402008663713793"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01" 
-		"translate" " -type \"double3\" 2.9606264474416886 2.7164148391144698 0.19263751644438298"
+		"translate" " -type \"double3\" -0.0067099920371790529 0.35423763232924138 1.5053350296481944"
 		
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01" 
 		"translateX" " -av"
@@ -31138,7 +31146,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01" 
 		"translateZ" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01" 
-		"rotate" " -type \"double3\" 23.777406308985899 0 0"
+		"rotate" " -type \"double3\" -1.5762569772617887 0 0"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01" 
 		"rotateX" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01" 
@@ -31154,7 +31162,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_L_frontfoot01" 
 		"scaleZ" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01" 
-		"translate" " -type \"double3\" -2.3296710185319651 3.2388863214314916 0.91114844729492872"
+		"translate" " -type \"double3\" -0.28805195183485077 1.1176923037489972 2.7328624908351564"
 		
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01" 
 		"translateX" " -av"
@@ -31163,7 +31171,8 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01" 
 		"translateZ" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01" 
-		"rotate" " -type \"double3\" 45.910190558654918 0 0"
+		"rotate" " -type \"double3\" -17.959594482130704 6.8985111885740809 -5.0893297255468495"
+		
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01" 
 		"rotateX" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_controller_R_frontfoot01" 
@@ -31187,7 +31196,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01" 
 		"translateZ" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01" 
-		"rotate" " -type \"double3\" 17.328996561745292 0 0"
+		"rotate" " -type \"double3\" 15.400298421462729 0 0"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01" 
 		"rotateX" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01" 
@@ -31205,7 +31214,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control" 
 		"translateZ" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control" 
-		"rotate" " -type \"double3\" 7.6284478523725898 0 0"
+		"rotate" " -type \"double3\" 46.70252056228955 0 0"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control" 
 		"rotateX" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control" 
@@ -31221,8 +31230,7 @@ createNode reference -n "pig_latestRN";
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_stretchf_ctrl01|pig_latest_shoulders_rotation_ctrl01|pig_latest_head_control" 
 		"scaleZ" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_spine_spline_ctrl" 
-		"translate" " -type \"double3\" -0.081737444365569983 0.90914283378759075 0.081946662982588875"
-		
+		"translate" " -type \"double3\" -0.11812431649554159 1.791 0.47813017721304296"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_spine_spline_ctrl" 
 		"translateX" " -av -k 0 -cb 1"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_spine_spline_ctrl" 
@@ -31252,8 +31260,16 @@ createNode reference -n "pig_latestRN";
 		"translateY" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_COG_ctrl" 
 		"translateZ" " -av"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_COG_ctrl" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_COG_ctrl" 
+		"rotateX" " -av"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_COG_ctrl" 
+		"rotateY" " -av"
+		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_controller_main01|pig_latest_COG_ctrl" 
+		"rotateZ" " -av"
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_global01" 
-		"translate" " -type \"double3\" -197.52414189909695 11.807554858656742 44.943025762831809"
+		"translate" " -type \"double3\" -197.93420638119017 15.292289628077237 38.08560602782277"
 		
 		2 "|pig_latest_pig_the_cat|pig_latest_PIG|pig_latest_flexi_joint_systems|pig_latest_vertebrae_flexi_spine01|pig_latest_vertebrae_flexi_global01" 
 		"translateY" " -av"
@@ -31667,7 +31683,7 @@ createNode reference -n "pig_latestRN";
 		
 		2 "pig_latest_pig_latest_pig_latest_pig_latest_file2" "compressColor" " 1"
 		
-		2 "pig_latest_Pig_blendshapes" "w[0:42]" " -s 43 0 0 0 0 0.48419967000000003 0.61162066000000004 0.87738013000000004 0.87738013000000004 0 0 0 0 0 0 0.45305178000000002 0.45305178000000002 0 0 0 0 0.23102196999999999 0.22769362000000001 0 0 0 0 0 0 0 0 0 0 0.70845502999999999 0 0 0.42548016 0.90211748999999997 0 0 0 0 0 0"
+		2 "pig_latest_Pig_blendshapes" "w[0:42]" " -s 43 0 0 0 0 0.26146789999999998 0.33027524000000003 1 1 0 0 0 0 0 0 0.1216433 0.1216433 0 0 0 0 0.23379538999999999 0.22492019999999999 0 0 0 0 0 0 0 0 0 0 0.29154523999999998 0 0 0.81007951 1 0 0 0 0 0 0"
 		
 		2 "pig_latest_Pig_blendshapes" "weight" " -s 18"
 		2 "pig_latest_Pig_blendshapes" "weight[4]" " -av"
@@ -32160,31 +32176,31 @@ createNode animCurveTL -n "pig_latest_controller_main01_translateY1";
 		 110 2.266211507035973 122.5 10.999857992090693 130 3.7458541241994001 140 2.266211507035973
 		 143.75 2.882460095313804 150 2.882460095313804 156.25 2.8521563119043534 160 3.1557803553534867
 		 162.5 2.873546332679219 170 2.873546332679219 171.25 3.8971676360895802 172.5 6.2923246382107765
-		 175 10.921583793261131 255 13.480734961879104 260 13.480734961879104 267.5 17.435155563655812
+		 175 10.921583793261131 255 13.989575423824526 260 13.989575423824526 267.5 17.435155563655812
 		 278 15.18617429372803 281 11.349192914884936 281.25 10.144153536891185 288 2.4153998487489501
 		 290 1.7289466382738481 295 2.4193493705686953;
 	setAttr -s 24 ".kit[6:23]"  1 1 1 16 16 1 16 16 
-		18 18 18 18 16 16 18 18 16 16;
+		1 1 18 18 16 16 18 18 16 16;
 	setAttr -s 24 ".kot[6:23]"  1 1 1 16 16 18 16 16 
-		18 18 18 18 16 16 18 18 16 16;
+		1 1 18 18 16 16 18 18 16 16;
 	setAttr -s 24 ".ktl[7:23]" no no yes yes yes yes yes yes yes yes yes 
 		yes yes yes yes yes yes;
 	setAttr -s 24 ".kix[6:23]"  0.038531813770532608 0.093485713005065918 
 		0.045702803879976273 1 1 0.45372393727302551 0.024367988109588623 0.01779225654900074 
-		0.35730639100074768 1 1 1 0.073739312589168549 0.021481186151504517 0.026109181344509125 
-		0.034638714045286179 1 1;
+		0.29112318158149719 0.9987030029296875 1 1 0.073739312589168549 0.021481186151504517 
+		0.026109181344509125 0.034638714045286179 1 1;
 	setAttr -s 24 ".kiy[6:23]"  0.99925738573074341 -0.99562066793441772 
 		-0.9989551305770874 0 0 -0.89114236831665039 0.99970310926437378 0.99984174966812134 
-		0.93398725986480713 0 0 0 -0.99727755784988403 -0.99976927042007446 -0.99965906143188477 
-		-0.99939990043640137 0 0;
+		0.95668560266494751 0.050915870815515518 0 0 -0.99727755784988403 -0.99976927042007446 
+		-0.99965906143188477 -0.99939990043640137 0 0;
 	setAttr -s 24 ".kox[6:23]"  0.03853181004524231 0.063248567283153534 
-		0.25087699294090271 1 1 1 0.024367988109588623 0.01779225654900074 0.35730639100074768 
-		1 1 1 0.073739312589168549 0.021481186151504517 0.026109181344509125 0.034638717770576477 
-		1 1;
+		0.25087699294090271 1 1 1 0.024367988109588623 0.01779225654900074 0.29112300276756287 
+		0.9987030029296875 1 1 0.073739312589168549 0.021481186151504517 0.026109181344509125 
+		0.034638717770576477 1 1;
 	setAttr -s 24 ".koy[6:23]"  0.99925738573074341 0.99799782037734985 
-		0.96801900863647461 0 0 0 0.99970310926437378 0.99984174966812134 0.93398725986480713 
-		0 0 0 -0.99727755784988403 -0.99976927042007446 -0.99965906143188477 -0.99939996004104614 
-		0 0;
+		0.96801900863647461 0 0 0 0.99970310926437378 0.99984174966812134 0.95668566226959229 
+		0.050915423780679703 0 0 -0.99727755784988403 -0.99976927042007446 -0.99965906143188477 
+		-0.99939996004104614 0 0;
 createNode animCurveTL -n "pig_latest_controller_main01_translateZ1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
@@ -32267,11 +32283,2574 @@ createNode animCurveTU -n "camera3_scaleZ";
 	setAttr ".ktv[0]"  167.5 1;
 createNode hyperGraphInfo -n "nodeEditorPanel2Info";
 createNode hyperView -n "hyperView2";
-	setAttr ".vl" -type "double2" -113.09523809523805 -1381.0820132248707 ;
-	setAttr ".vh" -type "double2" 2269.0476190476193 482.27248941534674 ;
+	setAttr ".vl" -type "double2" -112.16112321373404 -535.10545242965213 ;
+	setAttr ".vh" -type "double2" 793.72122972744251 173.49183263822121 ;
 	setAttr ".dag" no;
 createNode hyperLayout -n "hyperLayout2";
 	setAttr ".ihi" 0;
+	setAttr -s 2554 ".hyp";
+	setAttr ".hyp[0].x" -62.824821472167969;
+	setAttr ".hyp[0].y" -4.01422119140625;
+	setAttr ".hyp[0].nvs" 1920;
+	setAttr ".hyp[1].x" 481.42855834960937;
+	setAttr ".hyp[1].y" -215.71427917480469;
+	setAttr ".hyp[1].nvs" 1920;
+	setAttr ".hyp[2].x" 481.42855834960937;
+	setAttr ".hyp[2].y" -72.857139587402344;
+	setAttr ".hyp[2].nvs" 1920;
+	setAttr ".hyp[3].x" 172.65028381347656;
+	setAttr ".hyp[3].y" -46.54815673828125;
+	setAttr ".hyp[3].nvs" 1920;
+	setAttr ".hyp[4].nvs" 1920;
+	setAttr ".hyp[5].nvs" 1920;
+	setAttr ".hyp[6].nvs" 1920;
+	setAttr ".hyp[7].nvs" 1920;
+	setAttr ".hyp[8].nvs" 1920;
+	setAttr ".hyp[9].nvs" 1920;
+	setAttr ".hyp[10].nvs" 1920;
+	setAttr ".hyp[11].nvs" 1920;
+	setAttr ".hyp[12].nvs" 1920;
+	setAttr ".hyp[13].nvs" 1920;
+	setAttr ".hyp[14].nvs" 1920;
+	setAttr ".hyp[15].nvs" 1920;
+	setAttr ".hyp[16].nvs" 1920;
+	setAttr ".hyp[17].nvs" 1920;
+	setAttr ".hyp[18].nvs" 1920;
+	setAttr ".hyp[19].nvs" 1920;
+	setAttr ".hyp[20].nvs" 1920;
+	setAttr ".hyp[21].nvs" 1920;
+	setAttr ".hyp[22].nvs" 1920;
+	setAttr ".hyp[23].nvs" 1920;
+	setAttr ".hyp[24].nvs" 1920;
+	setAttr ".hyp[25].nvs" 1920;
+	setAttr ".hyp[26].nvs" 1920;
+	setAttr ".hyp[27].nvs" 1920;
+	setAttr ".hyp[28].nvs" 1920;
+	setAttr ".hyp[29].nvs" 1920;
+	setAttr ".hyp[30].nvs" 1920;
+	setAttr ".hyp[31].nvs" 1920;
+	setAttr ".hyp[32].nvs" 1920;
+	setAttr ".hyp[33].nvs" 1920;
+	setAttr ".hyp[34].nvs" 1920;
+	setAttr ".hyp[35].nvs" 1920;
+	setAttr ".hyp[36].nvs" 1920;
+	setAttr ".hyp[37].nvs" 1920;
+	setAttr ".hyp[38].nvs" 1920;
+	setAttr ".hyp[39].nvs" 1920;
+	setAttr ".hyp[40].nvs" 1920;
+	setAttr ".hyp[41].nvs" 1920;
+	setAttr ".hyp[42].nvs" 1920;
+	setAttr ".hyp[43].nvs" 1920;
+	setAttr ".hyp[44].nvs" 1920;
+	setAttr ".hyp[45].nvs" 1920;
+	setAttr ".hyp[46].nvs" 1920;
+	setAttr ".hyp[47].nvs" 1920;
+	setAttr ".hyp[48].nvs" 1920;
+	setAttr ".hyp[49].nvs" 1920;
+	setAttr ".hyp[50].nvs" 1920;
+	setAttr ".hyp[51].nvs" 1920;
+	setAttr ".hyp[52].nvs" 1920;
+	setAttr ".hyp[53].nvs" 1920;
+	setAttr ".hyp[54].nvs" 1920;
+	setAttr ".hyp[55].nvs" 1920;
+	setAttr ".hyp[56].nvs" 1920;
+	setAttr ".hyp[57].nvs" 1920;
+	setAttr ".hyp[58].nvs" 1920;
+	setAttr ".hyp[59].nvs" 1920;
+	setAttr ".hyp[60].nvs" 1920;
+	setAttr ".hyp[61].nvs" 1920;
+	setAttr ".hyp[62].nvs" 1920;
+	setAttr ".hyp[63].nvs" 1920;
+	setAttr ".hyp[64].nvs" 1920;
+	setAttr ".hyp[65].nvs" 1920;
+	setAttr ".hyp[66].nvs" 1920;
+	setAttr ".hyp[67].nvs" 1920;
+	setAttr ".hyp[68].nvs" 1920;
+	setAttr ".hyp[69].nvs" 1920;
+	setAttr ".hyp[70].nvs" 1920;
+	setAttr ".hyp[71].nvs" 1920;
+	setAttr ".hyp[72].nvs" 1920;
+	setAttr ".hyp[73].nvs" 1920;
+	setAttr ".hyp[74].nvs" 1920;
+	setAttr ".hyp[75].nvs" 1920;
+	setAttr ".hyp[76].nvs" 1920;
+	setAttr ".hyp[77].nvs" 1920;
+	setAttr ".hyp[78].nvs" 1920;
+	setAttr ".hyp[79].nvs" 1920;
+	setAttr ".hyp[80].nvs" 1920;
+	setAttr ".hyp[81].nvs" 1920;
+	setAttr ".hyp[82].nvs" 1920;
+	setAttr ".hyp[83].nvs" 1920;
+	setAttr ".hyp[84].nvs" 1920;
+	setAttr ".hyp[85].nvs" 1920;
+	setAttr ".hyp[86].nvs" 1920;
+	setAttr ".hyp[87].nvs" 1920;
+	setAttr ".hyp[88].nvs" 1920;
+	setAttr ".hyp[89].nvs" 1920;
+	setAttr ".hyp[90].nvs" 1920;
+	setAttr ".hyp[91].nvs" 1920;
+	setAttr ".hyp[92].nvs" 1920;
+	setAttr ".hyp[93].nvs" 1920;
+	setAttr ".hyp[94].nvs" 1920;
+	setAttr ".hyp[95].nvs" 1920;
+	setAttr ".hyp[96].nvs" 1920;
+	setAttr ".hyp[97].nvs" 1920;
+	setAttr ".hyp[98].nvs" 1920;
+	setAttr ".hyp[99].nvs" 1920;
+	setAttr ".hyp[100].nvs" 1920;
+	setAttr ".hyp[101].nvs" 1920;
+	setAttr ".hyp[102].nvs" 1920;
+	setAttr ".hyp[103].nvs" 1920;
+	setAttr ".hyp[104].nvs" 1920;
+	setAttr ".hyp[105].nvs" 1920;
+	setAttr ".hyp[106].nvs" 1920;
+	setAttr ".hyp[107].nvs" 1920;
+	setAttr ".hyp[108].nvs" 1920;
+	setAttr ".hyp[109].nvs" 1920;
+	setAttr ".hyp[110].nvs" 1920;
+	setAttr ".hyp[111].nvs" 1920;
+	setAttr ".hyp[112].nvs" 1920;
+	setAttr ".hyp[113].nvs" 1920;
+	setAttr ".hyp[114].nvs" 1920;
+	setAttr ".hyp[115].nvs" 1920;
+	setAttr ".hyp[116].nvs" 1920;
+	setAttr ".hyp[117].nvs" 1920;
+	setAttr ".hyp[118].nvs" 1920;
+	setAttr ".hyp[119].nvs" 1920;
+	setAttr ".hyp[120].nvs" 1920;
+	setAttr ".hyp[121].nvs" 1920;
+	setAttr ".hyp[122].nvs" 1920;
+	setAttr ".hyp[123].nvs" 1920;
+	setAttr ".hyp[124].nvs" 1920;
+	setAttr ".hyp[125].nvs" 1920;
+	setAttr ".hyp[126].nvs" 1920;
+	setAttr ".hyp[127].nvs" 1920;
+	setAttr ".hyp[128].nvs" 1920;
+	setAttr ".hyp[129].nvs" 1920;
+	setAttr ".hyp[130].nvs" 1920;
+	setAttr ".hyp[131].nvs" 1920;
+	setAttr ".hyp[132].nvs" 1920;
+	setAttr ".hyp[133].nvs" 1920;
+	setAttr ".hyp[134].nvs" 1920;
+	setAttr ".hyp[135].nvs" 1920;
+	setAttr ".hyp[136].nvs" 1920;
+	setAttr ".hyp[137].nvs" 1920;
+	setAttr ".hyp[138].nvs" 1920;
+	setAttr ".hyp[139].nvs" 1920;
+	setAttr ".hyp[140].nvs" 1920;
+	setAttr ".hyp[141].nvs" 1920;
+	setAttr ".hyp[142].nvs" 1920;
+	setAttr ".hyp[143].nvs" 1920;
+	setAttr ".hyp[144].nvs" 1920;
+	setAttr ".hyp[145].nvs" 1920;
+	setAttr ".hyp[146].nvs" 1920;
+	setAttr ".hyp[147].nvs" 1920;
+	setAttr ".hyp[148].nvs" 1920;
+	setAttr ".hyp[149].nvs" 1920;
+	setAttr ".hyp[150].nvs" 1920;
+	setAttr ".hyp[151].nvs" 1920;
+	setAttr ".hyp[152].nvs" 1920;
+	setAttr ".hyp[153].nvs" 1920;
+	setAttr ".hyp[154].nvs" 1920;
+	setAttr ".hyp[155].nvs" 1920;
+	setAttr ".hyp[156].nvs" 1920;
+	setAttr ".hyp[157].nvs" 1920;
+	setAttr ".hyp[158].nvs" 1920;
+	setAttr ".hyp[159].nvs" 1920;
+	setAttr ".hyp[160].nvs" 1920;
+	setAttr ".hyp[161].nvs" 1920;
+	setAttr ".hyp[162].nvs" 1920;
+	setAttr ".hyp[163].nvs" 1920;
+	setAttr ".hyp[164].nvs" 1920;
+	setAttr ".hyp[165].nvs" 1920;
+	setAttr ".hyp[166].nvs" 1920;
+	setAttr ".hyp[167].nvs" 1920;
+	setAttr ".hyp[168].nvs" 1920;
+	setAttr ".hyp[169].nvs" 1920;
+	setAttr ".hyp[170].nvs" 1920;
+	setAttr ".hyp[171].nvs" 1920;
+	setAttr ".hyp[172].nvs" 1920;
+	setAttr ".hyp[173].nvs" 1920;
+	setAttr ".hyp[174].nvs" 1920;
+	setAttr ".hyp[175].nvs" 1920;
+	setAttr ".hyp[176].nvs" 1920;
+	setAttr ".hyp[177].nvs" 1920;
+	setAttr ".hyp[178].nvs" 1920;
+	setAttr ".hyp[179].nvs" 1920;
+	setAttr ".hyp[180].nvs" 1920;
+	setAttr ".hyp[181].nvs" 1920;
+	setAttr ".hyp[182].nvs" 1920;
+	setAttr ".hyp[183].nvs" 1920;
+	setAttr ".hyp[184].nvs" 1920;
+	setAttr ".hyp[185].nvs" 1920;
+	setAttr ".hyp[186].nvs" 1920;
+	setAttr ".hyp[187].nvs" 1920;
+	setAttr ".hyp[188].nvs" 1920;
+	setAttr ".hyp[189].nvs" 1920;
+	setAttr ".hyp[190].nvs" 1920;
+	setAttr ".hyp[191].nvs" 1920;
+	setAttr ".hyp[192].nvs" 1920;
+	setAttr ".hyp[193].nvs" 1920;
+	setAttr ".hyp[194].nvs" 1920;
+	setAttr ".hyp[195].nvs" 1920;
+	setAttr ".hyp[196].nvs" 1920;
+	setAttr ".hyp[197].nvs" 1920;
+	setAttr ".hyp[198].nvs" 1920;
+	setAttr ".hyp[199].nvs" 1920;
+	setAttr ".hyp[200].nvs" 1920;
+	setAttr ".hyp[201].nvs" 1920;
+	setAttr ".hyp[202].nvs" 1920;
+	setAttr ".hyp[203].nvs" 1920;
+	setAttr ".hyp[204].nvs" 1920;
+	setAttr ".hyp[205].nvs" 1920;
+	setAttr ".hyp[206].nvs" 1920;
+	setAttr ".hyp[207].nvs" 1920;
+	setAttr ".hyp[208].nvs" 1920;
+	setAttr ".hyp[209].nvs" 1920;
+	setAttr ".hyp[210].nvs" 1920;
+	setAttr ".hyp[211].nvs" 1920;
+	setAttr ".hyp[212].nvs" 1920;
+	setAttr ".hyp[213].nvs" 1920;
+	setAttr ".hyp[214].nvs" 1920;
+	setAttr ".hyp[215].nvs" 1920;
+	setAttr ".hyp[216].nvs" 1920;
+	setAttr ".hyp[217].nvs" 1920;
+	setAttr ".hyp[218].nvs" 1920;
+	setAttr ".hyp[219].nvs" 1920;
+	setAttr ".hyp[220].nvs" 1920;
+	setAttr ".hyp[221].nvs" 1920;
+	setAttr ".hyp[222].nvs" 1920;
+	setAttr ".hyp[223].nvs" 1920;
+	setAttr ".hyp[224].nvs" 1920;
+	setAttr ".hyp[225].nvs" 1920;
+	setAttr ".hyp[226].nvs" 1920;
+	setAttr ".hyp[227].nvs" 1920;
+	setAttr ".hyp[228].nvs" 1920;
+	setAttr ".hyp[229].nvs" 1920;
+	setAttr ".hyp[230].nvs" 1920;
+	setAttr ".hyp[231].nvs" 1920;
+	setAttr ".hyp[232].nvs" 1920;
+	setAttr ".hyp[233].nvs" 1920;
+	setAttr ".hyp[234].nvs" 1920;
+	setAttr ".hyp[235].nvs" 1920;
+	setAttr ".hyp[236].nvs" 1920;
+	setAttr ".hyp[237].nvs" 1920;
+	setAttr ".hyp[238].nvs" 1920;
+	setAttr ".hyp[239].nvs" 1920;
+	setAttr ".hyp[240].nvs" 1920;
+	setAttr ".hyp[241].nvs" 1920;
+	setAttr ".hyp[242].nvs" 1920;
+	setAttr ".hyp[243].nvs" 1920;
+	setAttr ".hyp[244].nvs" 1920;
+	setAttr ".hyp[245].nvs" 1920;
+	setAttr ".hyp[246].nvs" 1920;
+	setAttr ".hyp[247].nvs" 1920;
+	setAttr ".hyp[248].nvs" 1920;
+	setAttr ".hyp[249].nvs" 1920;
+	setAttr ".hyp[250].nvs" 1920;
+	setAttr ".hyp[251].nvs" 1920;
+	setAttr ".hyp[252].nvs" 1920;
+	setAttr ".hyp[253].nvs" 1920;
+	setAttr ".hyp[254].nvs" 1920;
+	setAttr ".hyp[255].nvs" 1920;
+	setAttr ".hyp[256].nvs" 1920;
+	setAttr ".hyp[257].nvs" 1920;
+	setAttr ".hyp[258].nvs" 1920;
+	setAttr ".hyp[259].nvs" 1920;
+	setAttr ".hyp[260].nvs" 1920;
+	setAttr ".hyp[261].nvs" 1920;
+	setAttr ".hyp[262].nvs" 1920;
+	setAttr ".hyp[263].nvs" 1920;
+	setAttr ".hyp[264].nvs" 1920;
+	setAttr ".hyp[265].nvs" 1920;
+	setAttr ".hyp[266].nvs" 1920;
+	setAttr ".hyp[267].nvs" 1920;
+	setAttr ".hyp[268].nvs" 1920;
+	setAttr ".hyp[269].nvs" 1920;
+	setAttr ".hyp[270].nvs" 1920;
+	setAttr ".hyp[271].nvs" 1920;
+	setAttr ".hyp[272].nvs" 1920;
+	setAttr ".hyp[273].nvs" 1920;
+	setAttr ".hyp[274].nvs" 1920;
+	setAttr ".hyp[275].nvs" 1920;
+	setAttr ".hyp[276].nvs" 1920;
+	setAttr ".hyp[277].nvs" 1920;
+	setAttr ".hyp[278].nvs" 1920;
+	setAttr ".hyp[279].nvs" 1920;
+	setAttr ".hyp[280].nvs" 1920;
+	setAttr ".hyp[281].nvs" 1920;
+	setAttr ".hyp[282].nvs" 1920;
+	setAttr ".hyp[283].nvs" 1920;
+	setAttr ".hyp[284].nvs" 1920;
+	setAttr ".hyp[285].nvs" 1920;
+	setAttr ".hyp[286].nvs" 1920;
+	setAttr ".hyp[287].nvs" 1920;
+	setAttr ".hyp[288].nvs" 1920;
+	setAttr ".hyp[289].nvs" 1920;
+	setAttr ".hyp[290].nvs" 1920;
+	setAttr ".hyp[291].nvs" 1920;
+	setAttr ".hyp[292].nvs" 1920;
+	setAttr ".hyp[293].nvs" 1920;
+	setAttr ".hyp[294].nvs" 1920;
+	setAttr ".hyp[295].nvs" 1920;
+	setAttr ".hyp[296].nvs" 1920;
+	setAttr ".hyp[297].nvs" 1920;
+	setAttr ".hyp[298].nvs" 1920;
+	setAttr ".hyp[299].nvs" 1920;
+	setAttr ".hyp[300].nvs" 1920;
+	setAttr ".hyp[301].nvs" 1920;
+	setAttr ".hyp[302].nvs" 1920;
+	setAttr ".hyp[303].nvs" 1920;
+	setAttr ".hyp[304].nvs" 1920;
+	setAttr ".hyp[305].nvs" 1920;
+	setAttr ".hyp[306].nvs" 1920;
+	setAttr ".hyp[307].nvs" 1920;
+	setAttr ".hyp[308].nvs" 1920;
+	setAttr ".hyp[309].nvs" 1920;
+	setAttr ".hyp[310].nvs" 1920;
+	setAttr ".hyp[311].nvs" 1920;
+	setAttr ".hyp[312].nvs" 1920;
+	setAttr ".hyp[313].nvs" 1920;
+	setAttr ".hyp[314].nvs" 1920;
+	setAttr ".hyp[315].nvs" 1920;
+	setAttr ".hyp[316].nvs" 1920;
+	setAttr ".hyp[317].nvs" 1920;
+	setAttr ".hyp[318].nvs" 1920;
+	setAttr ".hyp[319].nvs" 1920;
+	setAttr ".hyp[320].nvs" 1920;
+	setAttr ".hyp[321].nvs" 1920;
+	setAttr ".hyp[322].nvs" 1920;
+	setAttr ".hyp[323].nvs" 1920;
+	setAttr ".hyp[324].nvs" 1920;
+	setAttr ".hyp[325].nvs" 1920;
+	setAttr ".hyp[326].nvs" 1920;
+	setAttr ".hyp[327].nvs" 1920;
+	setAttr ".hyp[328].nvs" 1920;
+	setAttr ".hyp[329].nvs" 1920;
+	setAttr ".hyp[330].nvs" 1920;
+	setAttr ".hyp[331].nvs" 1920;
+	setAttr ".hyp[332].nvs" 1920;
+	setAttr ".hyp[333].nvs" 1920;
+	setAttr ".hyp[334].nvs" 1920;
+	setAttr ".hyp[335].nvs" 1920;
+	setAttr ".hyp[336].nvs" 1920;
+	setAttr ".hyp[337].nvs" 1920;
+	setAttr ".hyp[338].nvs" 1920;
+	setAttr ".hyp[339].nvs" 1920;
+	setAttr ".hyp[340].nvs" 1920;
+	setAttr ".hyp[341].nvs" 1920;
+	setAttr ".hyp[342].nvs" 1920;
+	setAttr ".hyp[343].nvs" 1920;
+	setAttr ".hyp[344].nvs" 1920;
+	setAttr ".hyp[345].nvs" 1920;
+	setAttr ".hyp[346].nvs" 1920;
+	setAttr ".hyp[347].nvs" 1920;
+	setAttr ".hyp[348].nvs" 1920;
+	setAttr ".hyp[349].nvs" 1920;
+	setAttr ".hyp[350].nvs" 1920;
+	setAttr ".hyp[351].nvs" 1920;
+	setAttr ".hyp[352].nvs" 1920;
+	setAttr ".hyp[353].nvs" 1920;
+	setAttr ".hyp[354].nvs" 1920;
+	setAttr ".hyp[355].nvs" 1920;
+	setAttr ".hyp[356].nvs" 1920;
+	setAttr ".hyp[357].nvs" 1920;
+	setAttr ".hyp[358].nvs" 1920;
+	setAttr ".hyp[359].nvs" 1920;
+	setAttr ".hyp[360].nvs" 1920;
+	setAttr ".hyp[361].nvs" 1920;
+	setAttr ".hyp[362].nvs" 1920;
+	setAttr ".hyp[363].nvs" 1920;
+	setAttr ".hyp[364].nvs" 1920;
+	setAttr ".hyp[365].nvs" 1920;
+	setAttr ".hyp[366].nvs" 1920;
+	setAttr ".hyp[367].nvs" 1920;
+	setAttr ".hyp[368].nvs" 1920;
+	setAttr ".hyp[369].nvs" 1920;
+	setAttr ".hyp[370].nvs" 1920;
+	setAttr ".hyp[371].nvs" 1920;
+	setAttr ".hyp[372].nvs" 1920;
+	setAttr ".hyp[373].nvs" 1920;
+	setAttr ".hyp[374].nvs" 1920;
+	setAttr ".hyp[375].nvs" 1920;
+	setAttr ".hyp[376].nvs" 1920;
+	setAttr ".hyp[377].nvs" 1920;
+	setAttr ".hyp[378].nvs" 1920;
+	setAttr ".hyp[379].nvs" 1920;
+	setAttr ".hyp[380].nvs" 1920;
+	setAttr ".hyp[381].nvs" 1920;
+	setAttr ".hyp[382].nvs" 1920;
+	setAttr ".hyp[383].nvs" 1920;
+	setAttr ".hyp[384].nvs" 1920;
+	setAttr ".hyp[385].nvs" 1920;
+	setAttr ".hyp[386].nvs" 1920;
+	setAttr ".hyp[387].nvs" 1920;
+	setAttr ".hyp[388].nvs" 1920;
+	setAttr ".hyp[389].nvs" 1920;
+	setAttr ".hyp[390].nvs" 1920;
+	setAttr ".hyp[391].nvs" 1920;
+	setAttr ".hyp[392].nvs" 1920;
+	setAttr ".hyp[393].nvs" 1920;
+	setAttr ".hyp[394].nvs" 1920;
+	setAttr ".hyp[395].nvs" 1920;
+	setAttr ".hyp[396].nvs" 1920;
+	setAttr ".hyp[397].nvs" 1920;
+	setAttr ".hyp[398].nvs" 1920;
+	setAttr ".hyp[399].nvs" 1920;
+	setAttr ".hyp[400].nvs" 1920;
+	setAttr ".hyp[401].nvs" 1920;
+	setAttr ".hyp[402].nvs" 1920;
+	setAttr ".hyp[403].nvs" 1920;
+	setAttr ".hyp[404].nvs" 1920;
+	setAttr ".hyp[405].nvs" 1920;
+	setAttr ".hyp[406].nvs" 1920;
+	setAttr ".hyp[407].nvs" 1920;
+	setAttr ".hyp[408].nvs" 1920;
+	setAttr ".hyp[409].nvs" 1920;
+	setAttr ".hyp[410].nvs" 1920;
+	setAttr ".hyp[411].nvs" 1920;
+	setAttr ".hyp[412].nvs" 1920;
+	setAttr ".hyp[413].nvs" 1920;
+	setAttr ".hyp[414].nvs" 1920;
+	setAttr ".hyp[415].nvs" 1920;
+	setAttr ".hyp[416].nvs" 1920;
+	setAttr ".hyp[417].nvs" 1920;
+	setAttr ".hyp[418].nvs" 1920;
+	setAttr ".hyp[419].nvs" 1920;
+	setAttr ".hyp[420].nvs" 1920;
+	setAttr ".hyp[421].nvs" 1920;
+	setAttr ".hyp[422].nvs" 1920;
+	setAttr ".hyp[423].nvs" 1920;
+	setAttr ".hyp[424].nvs" 1920;
+	setAttr ".hyp[425].nvs" 1920;
+	setAttr ".hyp[426].nvs" 1920;
+	setAttr ".hyp[427].nvs" 1920;
+	setAttr ".hyp[428].nvs" 1920;
+	setAttr ".hyp[429].nvs" 1920;
+	setAttr ".hyp[430].nvs" 1920;
+	setAttr ".hyp[431].nvs" 1920;
+	setAttr ".hyp[432].nvs" 1920;
+	setAttr ".hyp[433].nvs" 1920;
+	setAttr ".hyp[434].nvs" 1920;
+	setAttr ".hyp[435].nvs" 1920;
+	setAttr ".hyp[436].nvs" 1920;
+	setAttr ".hyp[437].nvs" 1920;
+	setAttr ".hyp[438].nvs" 1920;
+	setAttr ".hyp[439].nvs" 1920;
+	setAttr ".hyp[440].nvs" 1920;
+	setAttr ".hyp[441].nvs" 1920;
+	setAttr ".hyp[442].nvs" 1920;
+	setAttr ".hyp[443].nvs" 1920;
+	setAttr ".hyp[444].nvs" 1920;
+	setAttr ".hyp[445].nvs" 1920;
+	setAttr ".hyp[446].nvs" 1920;
+	setAttr ".hyp[447].nvs" 1920;
+	setAttr ".hyp[448].nvs" 1920;
+	setAttr ".hyp[449].nvs" 1920;
+	setAttr ".hyp[450].nvs" 1920;
+	setAttr ".hyp[451].nvs" 1920;
+	setAttr ".hyp[452].nvs" 1920;
+	setAttr ".hyp[453].nvs" 1920;
+	setAttr ".hyp[454].nvs" 1920;
+	setAttr ".hyp[455].nvs" 1920;
+	setAttr ".hyp[456].nvs" 1920;
+	setAttr ".hyp[457].nvs" 1920;
+	setAttr ".hyp[458].nvs" 1920;
+	setAttr ".hyp[459].nvs" 1920;
+	setAttr ".hyp[460].nvs" 1920;
+	setAttr ".hyp[461].nvs" 1920;
+	setAttr ".hyp[462].nvs" 1920;
+	setAttr ".hyp[463].nvs" 1920;
+	setAttr ".hyp[464].nvs" 1920;
+	setAttr ".hyp[465].nvs" 1920;
+	setAttr ".hyp[466].nvs" 1920;
+	setAttr ".hyp[467].nvs" 1920;
+	setAttr ".hyp[468].nvs" 1920;
+	setAttr ".hyp[469].nvs" 1920;
+	setAttr ".hyp[470].nvs" 1920;
+	setAttr ".hyp[471].nvs" 1920;
+	setAttr ".hyp[472].nvs" 1920;
+	setAttr ".hyp[473].nvs" 1920;
+	setAttr ".hyp[474].nvs" 1920;
+	setAttr ".hyp[475].nvs" 1920;
+	setAttr ".hyp[476].nvs" 1920;
+	setAttr ".hyp[477].nvs" 1920;
+	setAttr ".hyp[478].nvs" 1920;
+	setAttr ".hyp[479].nvs" 1920;
+	setAttr ".hyp[480].nvs" 1920;
+	setAttr ".hyp[481].nvs" 1920;
+	setAttr ".hyp[482].nvs" 1920;
+	setAttr ".hyp[483].nvs" 1920;
+	setAttr ".hyp[484].nvs" 1920;
+	setAttr ".hyp[485].nvs" 1920;
+	setAttr ".hyp[486].nvs" 1920;
+	setAttr ".hyp[487].nvs" 1920;
+	setAttr ".hyp[488].nvs" 1920;
+	setAttr ".hyp[489].nvs" 1920;
+	setAttr ".hyp[490].nvs" 1920;
+	setAttr ".hyp[491].nvs" 1920;
+	setAttr ".hyp[492].nvs" 1920;
+	setAttr ".hyp[493].nvs" 1920;
+	setAttr ".hyp[494].nvs" 1920;
+	setAttr ".hyp[495].nvs" 1920;
+	setAttr ".hyp[496].nvs" 1920;
+	setAttr ".hyp[497].nvs" 1920;
+	setAttr ".hyp[498].nvs" 1920;
+	setAttr ".hyp[499].nvs" 1920;
+	setAttr ".hyp[500].nvs" 1920;
+	setAttr ".hyp[501].nvs" 1920;
+	setAttr ".hyp[502].nvs" 1920;
+	setAttr ".hyp[503].nvs" 1920;
+	setAttr ".hyp[504].nvs" 1920;
+	setAttr ".hyp[505].nvs" 1920;
+	setAttr ".hyp[506].nvs" 1920;
+	setAttr ".hyp[507].nvs" 1920;
+	setAttr ".hyp[508].nvs" 1920;
+	setAttr ".hyp[509].nvs" 1920;
+	setAttr ".hyp[510].nvs" 1920;
+	setAttr ".hyp[511].nvs" 1920;
+	setAttr ".hyp[512].nvs" 1920;
+	setAttr ".hyp[513].nvs" 1920;
+	setAttr ".hyp[514].nvs" 1920;
+	setAttr ".hyp[515].nvs" 1920;
+	setAttr ".hyp[516].nvs" 1920;
+	setAttr ".hyp[517].nvs" 1920;
+	setAttr ".hyp[518].nvs" 1920;
+	setAttr ".hyp[519].nvs" 1920;
+	setAttr ".hyp[520].nvs" 1920;
+	setAttr ".hyp[521].nvs" 1920;
+	setAttr ".hyp[522].nvs" 1920;
+	setAttr ".hyp[523].nvs" 1920;
+	setAttr ".hyp[524].nvs" 1920;
+	setAttr ".hyp[525].nvs" 1920;
+	setAttr ".hyp[526].nvs" 1920;
+	setAttr ".hyp[527].nvs" 1920;
+	setAttr ".hyp[528].nvs" 1920;
+	setAttr ".hyp[529].nvs" 1920;
+	setAttr ".hyp[530].nvs" 1920;
+	setAttr ".hyp[531].nvs" 1920;
+	setAttr ".hyp[532].nvs" 1920;
+	setAttr ".hyp[533].nvs" 1920;
+	setAttr ".hyp[534].nvs" 1920;
+	setAttr ".hyp[535].nvs" 1920;
+	setAttr ".hyp[536].nvs" 1920;
+	setAttr ".hyp[537].nvs" 1920;
+	setAttr ".hyp[538].nvs" 1920;
+	setAttr ".hyp[539].nvs" 1920;
+	setAttr ".hyp[540].nvs" 1920;
+	setAttr ".hyp[541].nvs" 1920;
+	setAttr ".hyp[542].nvs" 1920;
+	setAttr ".hyp[543].nvs" 1920;
+	setAttr ".hyp[544].nvs" 1920;
+	setAttr ".hyp[545].nvs" 1920;
+	setAttr ".hyp[546].nvs" 1920;
+	setAttr ".hyp[547].nvs" 1920;
+	setAttr ".hyp[548].nvs" 1920;
+	setAttr ".hyp[549].nvs" 1920;
+	setAttr ".hyp[550].nvs" 1920;
+	setAttr ".hyp[551].nvs" 1920;
+	setAttr ".hyp[552].nvs" 1920;
+	setAttr ".hyp[553].nvs" 1920;
+	setAttr ".hyp[554].nvs" 1920;
+	setAttr ".hyp[555].nvs" 1920;
+	setAttr ".hyp[556].nvs" 1920;
+	setAttr ".hyp[557].nvs" 1920;
+	setAttr ".hyp[558].nvs" 1920;
+	setAttr ".hyp[559].nvs" 1920;
+	setAttr ".hyp[560].nvs" 1920;
+	setAttr ".hyp[561].nvs" 1920;
+	setAttr ".hyp[562].nvs" 1920;
+	setAttr ".hyp[563].nvs" 1920;
+	setAttr ".hyp[564].nvs" 1920;
+	setAttr ".hyp[565].nvs" 1920;
+	setAttr ".hyp[566].nvs" 1920;
+	setAttr ".hyp[567].nvs" 1920;
+	setAttr ".hyp[568].nvs" 1920;
+	setAttr ".hyp[569].nvs" 1920;
+	setAttr ".hyp[570].nvs" 1920;
+	setAttr ".hyp[571].nvs" 1920;
+	setAttr ".hyp[572].nvs" 1920;
+	setAttr ".hyp[573].nvs" 1920;
+	setAttr ".hyp[574].nvs" 1920;
+	setAttr ".hyp[575].nvs" 1920;
+	setAttr ".hyp[576].nvs" 1920;
+	setAttr ".hyp[577].nvs" 1920;
+	setAttr ".hyp[578].nvs" 1920;
+	setAttr ".hyp[579].nvs" 1920;
+	setAttr ".hyp[580].nvs" 1920;
+	setAttr ".hyp[581].nvs" 1920;
+	setAttr ".hyp[582].nvs" 1920;
+	setAttr ".hyp[583].nvs" 1920;
+	setAttr ".hyp[584].nvs" 1920;
+	setAttr ".hyp[585].nvs" 1920;
+	setAttr ".hyp[586].nvs" 1920;
+	setAttr ".hyp[587].nvs" 1920;
+	setAttr ".hyp[588].nvs" 1920;
+	setAttr ".hyp[589].nvs" 1920;
+	setAttr ".hyp[590].nvs" 1920;
+	setAttr ".hyp[591].nvs" 1920;
+	setAttr ".hyp[592].nvs" 1920;
+	setAttr ".hyp[593].nvs" 1920;
+	setAttr ".hyp[594].nvs" 1920;
+	setAttr ".hyp[595].nvs" 1920;
+	setAttr ".hyp[596].nvs" 1920;
+	setAttr ".hyp[597].nvs" 1920;
+	setAttr ".hyp[598].nvs" 1920;
+	setAttr ".hyp[599].nvs" 1920;
+	setAttr ".hyp[600].nvs" 1920;
+	setAttr ".hyp[601].nvs" 1920;
+	setAttr ".hyp[602].nvs" 1920;
+	setAttr ".hyp[603].nvs" 1920;
+	setAttr ".hyp[604].nvs" 1920;
+	setAttr ".hyp[605].nvs" 1920;
+	setAttr ".hyp[606].nvs" 1920;
+	setAttr ".hyp[607].nvs" 1920;
+	setAttr ".hyp[608].nvs" 1920;
+	setAttr ".hyp[609].nvs" 1920;
+	setAttr ".hyp[610].nvs" 1920;
+	setAttr ".hyp[611].nvs" 1920;
+	setAttr ".hyp[612].nvs" 1920;
+	setAttr ".hyp[613].nvs" 1920;
+	setAttr ".hyp[614].nvs" 1920;
+	setAttr ".hyp[615].nvs" 1920;
+	setAttr ".hyp[616].nvs" 1920;
+	setAttr ".hyp[617].nvs" 1920;
+	setAttr ".hyp[618].nvs" 1920;
+	setAttr ".hyp[619].nvs" 1920;
+	setAttr ".hyp[620].nvs" 1920;
+	setAttr ".hyp[621].nvs" 1920;
+	setAttr ".hyp[622].nvs" 1920;
+	setAttr ".hyp[623].nvs" 1920;
+	setAttr ".hyp[624].nvs" 1920;
+	setAttr ".hyp[625].nvs" 1920;
+	setAttr ".hyp[626].nvs" 1920;
+	setAttr ".hyp[627].nvs" 1920;
+	setAttr ".hyp[628].nvs" 1920;
+	setAttr ".hyp[629].nvs" 1920;
+	setAttr ".hyp[630].nvs" 1920;
+	setAttr ".hyp[631].nvs" 1920;
+	setAttr ".hyp[632].nvs" 1920;
+	setAttr ".hyp[633].nvs" 1920;
+	setAttr ".hyp[634].nvs" 1920;
+	setAttr ".hyp[635].nvs" 1920;
+	setAttr ".hyp[636].nvs" 1920;
+	setAttr ".hyp[637].nvs" 1920;
+	setAttr ".hyp[638].nvs" 1920;
+	setAttr ".hyp[639].nvs" 1920;
+	setAttr ".hyp[640].nvs" 1920;
+	setAttr ".hyp[641].nvs" 1920;
+	setAttr ".hyp[642].nvs" 1920;
+	setAttr ".hyp[643].nvs" 1920;
+	setAttr ".hyp[644].nvs" 1920;
+	setAttr ".hyp[645].nvs" 1920;
+	setAttr ".hyp[646].nvs" 1920;
+	setAttr ".hyp[647].nvs" 1920;
+	setAttr ".hyp[648].nvs" 1920;
+	setAttr ".hyp[649].nvs" 1920;
+	setAttr ".hyp[650].nvs" 1920;
+	setAttr ".hyp[651].nvs" 1920;
+	setAttr ".hyp[652].nvs" 1920;
+	setAttr ".hyp[653].nvs" 1920;
+	setAttr ".hyp[654].nvs" 1920;
+	setAttr ".hyp[655].nvs" 1920;
+	setAttr ".hyp[656].nvs" 1920;
+	setAttr ".hyp[657].nvs" 1920;
+	setAttr ".hyp[658].nvs" 1920;
+	setAttr ".hyp[659].nvs" 1920;
+	setAttr ".hyp[660].nvs" 1920;
+	setAttr ".hyp[661].nvs" 1920;
+	setAttr ".hyp[662].nvs" 1920;
+	setAttr ".hyp[663].nvs" 1920;
+	setAttr ".hyp[664].nvs" 1920;
+	setAttr ".hyp[665].nvs" 1920;
+	setAttr ".hyp[666].nvs" 1920;
+	setAttr ".hyp[667].nvs" 1920;
+	setAttr ".hyp[668].nvs" 1920;
+	setAttr ".hyp[669].nvs" 1920;
+	setAttr ".hyp[670].nvs" 1920;
+	setAttr ".hyp[671].nvs" 1920;
+	setAttr ".hyp[672].nvs" 1920;
+	setAttr ".hyp[673].nvs" 1920;
+	setAttr ".hyp[674].nvs" 1920;
+	setAttr ".hyp[675].nvs" 1920;
+	setAttr ".hyp[676].nvs" 1920;
+	setAttr ".hyp[677].nvs" 1920;
+	setAttr ".hyp[678].nvs" 1920;
+	setAttr ".hyp[679].nvs" 1920;
+	setAttr ".hyp[680].nvs" 1920;
+	setAttr ".hyp[681].nvs" 1920;
+	setAttr ".hyp[682].nvs" 1920;
+	setAttr ".hyp[683].nvs" 1920;
+	setAttr ".hyp[684].nvs" 1920;
+	setAttr ".hyp[685].nvs" 1920;
+	setAttr ".hyp[686].nvs" 1920;
+	setAttr ".hyp[687].nvs" 1920;
+	setAttr ".hyp[688].nvs" 1920;
+	setAttr ".hyp[689].nvs" 1920;
+	setAttr ".hyp[690].nvs" 1920;
+	setAttr ".hyp[691].nvs" 1920;
+	setAttr ".hyp[692].nvs" 1920;
+	setAttr ".hyp[693].nvs" 1920;
+	setAttr ".hyp[694].nvs" 1920;
+	setAttr ".hyp[695].nvs" 1920;
+	setAttr ".hyp[696].nvs" 1920;
+	setAttr ".hyp[697].nvs" 1920;
+	setAttr ".hyp[698].nvs" 1920;
+	setAttr ".hyp[699].nvs" 1920;
+	setAttr ".hyp[700].nvs" 1920;
+	setAttr ".hyp[701].nvs" 1920;
+	setAttr ".hyp[702].nvs" 1920;
+	setAttr ".hyp[703].nvs" 1920;
+	setAttr ".hyp[704].nvs" 1920;
+	setAttr ".hyp[705].nvs" 1920;
+	setAttr ".hyp[706].nvs" 1920;
+	setAttr ".hyp[707].nvs" 1920;
+	setAttr ".hyp[708].nvs" 1920;
+	setAttr ".hyp[709].nvs" 1920;
+	setAttr ".hyp[710].nvs" 1920;
+	setAttr ".hyp[711].nvs" 1920;
+	setAttr ".hyp[712].nvs" 1920;
+	setAttr ".hyp[713].nvs" 1920;
+	setAttr ".hyp[714].nvs" 1920;
+	setAttr ".hyp[715].nvs" 1920;
+	setAttr ".hyp[716].nvs" 1920;
+	setAttr ".hyp[717].nvs" 1920;
+	setAttr ".hyp[718].nvs" 1920;
+	setAttr ".hyp[719].nvs" 1920;
+	setAttr ".hyp[720].nvs" 1920;
+	setAttr ".hyp[721].nvs" 1920;
+	setAttr ".hyp[722].nvs" 1920;
+	setAttr ".hyp[723].nvs" 1920;
+	setAttr ".hyp[724].nvs" 1920;
+	setAttr ".hyp[725].nvs" 1920;
+	setAttr ".hyp[726].nvs" 1920;
+	setAttr ".hyp[727].nvs" 1920;
+	setAttr ".hyp[728].nvs" 1920;
+	setAttr ".hyp[729].nvs" 1920;
+	setAttr ".hyp[730].nvs" 1920;
+	setAttr ".hyp[731].nvs" 1920;
+	setAttr ".hyp[732].nvs" 1920;
+	setAttr ".hyp[733].nvs" 1920;
+	setAttr ".hyp[734].nvs" 1920;
+	setAttr ".hyp[735].nvs" 1920;
+	setAttr ".hyp[736].nvs" 1920;
+	setAttr ".hyp[737].nvs" 1920;
+	setAttr ".hyp[738].nvs" 1920;
+	setAttr ".hyp[739].nvs" 1920;
+	setAttr ".hyp[740].nvs" 1920;
+	setAttr ".hyp[741].nvs" 1920;
+	setAttr ".hyp[742].nvs" 1920;
+	setAttr ".hyp[743].nvs" 1920;
+	setAttr ".hyp[744].nvs" 1920;
+	setAttr ".hyp[745].nvs" 1920;
+	setAttr ".hyp[746].nvs" 1920;
+	setAttr ".hyp[747].nvs" 1920;
+	setAttr ".hyp[748].nvs" 1920;
+	setAttr ".hyp[749].nvs" 1920;
+	setAttr ".hyp[750].nvs" 1920;
+	setAttr ".hyp[751].nvs" 1920;
+	setAttr ".hyp[752].nvs" 1920;
+	setAttr ".hyp[753].nvs" 1920;
+	setAttr ".hyp[754].nvs" 1920;
+	setAttr ".hyp[755].nvs" 1920;
+	setAttr ".hyp[756].nvs" 1920;
+	setAttr ".hyp[757].nvs" 1920;
+	setAttr ".hyp[758].nvs" 1920;
+	setAttr ".hyp[759].nvs" 1920;
+	setAttr ".hyp[760].nvs" 1920;
+	setAttr ".hyp[761].nvs" 1920;
+	setAttr ".hyp[762].nvs" 1920;
+	setAttr ".hyp[763].nvs" 1920;
+	setAttr ".hyp[764].nvs" 1920;
+	setAttr ".hyp[765].nvs" 1920;
+	setAttr ".hyp[766].nvs" 1920;
+	setAttr ".hyp[767].nvs" 1920;
+	setAttr ".hyp[768].nvs" 1920;
+	setAttr ".hyp[769].nvs" 1920;
+	setAttr ".hyp[770].nvs" 1920;
+	setAttr ".hyp[771].nvs" 1920;
+	setAttr ".hyp[772].nvs" 1920;
+	setAttr ".hyp[773].nvs" 1920;
+	setAttr ".hyp[774].nvs" 1920;
+	setAttr ".hyp[775].nvs" 1920;
+	setAttr ".hyp[776].nvs" 1920;
+	setAttr ".hyp[777].nvs" 1920;
+	setAttr ".hyp[778].nvs" 1920;
+	setAttr ".hyp[779].nvs" 1920;
+	setAttr ".hyp[780].nvs" 1920;
+	setAttr ".hyp[781].nvs" 1920;
+	setAttr ".hyp[782].nvs" 1920;
+	setAttr ".hyp[783].nvs" 1920;
+	setAttr ".hyp[784].nvs" 1920;
+	setAttr ".hyp[785].nvs" 1920;
+	setAttr ".hyp[786].nvs" 1920;
+	setAttr ".hyp[787].nvs" 1920;
+	setAttr ".hyp[788].nvs" 1920;
+	setAttr ".hyp[789].nvs" 1920;
+	setAttr ".hyp[790].nvs" 1920;
+	setAttr ".hyp[791].nvs" 1920;
+	setAttr ".hyp[792].nvs" 1920;
+	setAttr ".hyp[793].nvs" 1920;
+	setAttr ".hyp[794].nvs" 1920;
+	setAttr ".hyp[795].nvs" 1920;
+	setAttr ".hyp[796].nvs" 1920;
+	setAttr ".hyp[797].nvs" 1920;
+	setAttr ".hyp[798].nvs" 1920;
+	setAttr ".hyp[799].nvs" 1920;
+	setAttr ".hyp[800].nvs" 1920;
+	setAttr ".hyp[801].nvs" 1920;
+	setAttr ".hyp[802].nvs" 1920;
+	setAttr ".hyp[803].nvs" 1920;
+	setAttr ".hyp[804].nvs" 1920;
+	setAttr ".hyp[805].nvs" 1920;
+	setAttr ".hyp[806].nvs" 1920;
+	setAttr ".hyp[807].nvs" 1920;
+	setAttr ".hyp[808].nvs" 1920;
+	setAttr ".hyp[809].nvs" 1920;
+	setAttr ".hyp[810].nvs" 1920;
+	setAttr ".hyp[811].nvs" 1920;
+	setAttr ".hyp[812].nvs" 1920;
+	setAttr ".hyp[813].nvs" 1920;
+	setAttr ".hyp[814].nvs" 1920;
+	setAttr ".hyp[815].nvs" 1920;
+	setAttr ".hyp[816].nvs" 1920;
+	setAttr ".hyp[817].nvs" 1920;
+	setAttr ".hyp[818].nvs" 1920;
+	setAttr ".hyp[819].nvs" 1920;
+	setAttr ".hyp[820].nvs" 1920;
+	setAttr ".hyp[821].nvs" 1920;
+	setAttr ".hyp[822].nvs" 1920;
+	setAttr ".hyp[823].nvs" 1920;
+	setAttr ".hyp[824].nvs" 1920;
+	setAttr ".hyp[825].nvs" 1920;
+	setAttr ".hyp[826].nvs" 1920;
+	setAttr ".hyp[827].nvs" 1920;
+	setAttr ".hyp[828].nvs" 1920;
+	setAttr ".hyp[829].nvs" 1920;
+	setAttr ".hyp[830].nvs" 1920;
+	setAttr ".hyp[831].nvs" 1920;
+	setAttr ".hyp[832].nvs" 1920;
+	setAttr ".hyp[833].nvs" 1920;
+	setAttr ".hyp[834].nvs" 1920;
+	setAttr ".hyp[835].nvs" 1920;
+	setAttr ".hyp[836].nvs" 1920;
+	setAttr ".hyp[837].nvs" 1920;
+	setAttr ".hyp[838].nvs" 1920;
+	setAttr ".hyp[839].nvs" 1920;
+	setAttr ".hyp[840].nvs" 1920;
+	setAttr ".hyp[841].nvs" 1920;
+	setAttr ".hyp[842].nvs" 1920;
+	setAttr ".hyp[843].nvs" 1920;
+	setAttr ".hyp[844].nvs" 1920;
+	setAttr ".hyp[845].nvs" 1920;
+	setAttr ".hyp[846].nvs" 1920;
+	setAttr ".hyp[847].nvs" 1920;
+	setAttr ".hyp[848].nvs" 1920;
+	setAttr ".hyp[849].nvs" 1920;
+	setAttr ".hyp[850].nvs" 1920;
+	setAttr ".hyp[851].nvs" 1920;
+	setAttr ".hyp[852].nvs" 1920;
+	setAttr ".hyp[853].nvs" 1920;
+	setAttr ".hyp[854].nvs" 1920;
+	setAttr ".hyp[855].nvs" 1920;
+	setAttr ".hyp[856].nvs" 1920;
+	setAttr ".hyp[857].nvs" 1920;
+	setAttr ".hyp[858].nvs" 1920;
+	setAttr ".hyp[859].nvs" 1920;
+	setAttr ".hyp[860].nvs" 1920;
+	setAttr ".hyp[861].nvs" 1920;
+	setAttr ".hyp[862].nvs" 1920;
+	setAttr ".hyp[863].nvs" 1920;
+	setAttr ".hyp[864].nvs" 1920;
+	setAttr ".hyp[865].nvs" 1920;
+	setAttr ".hyp[866].nvs" 1920;
+	setAttr ".hyp[867].nvs" 1920;
+	setAttr ".hyp[868].nvs" 1920;
+	setAttr ".hyp[869].nvs" 1920;
+	setAttr ".hyp[870].nvs" 1920;
+	setAttr ".hyp[871].nvs" 1920;
+	setAttr ".hyp[872].nvs" 1920;
+	setAttr ".hyp[873].nvs" 1920;
+	setAttr ".hyp[874].nvs" 1920;
+	setAttr ".hyp[875].nvs" 1920;
+	setAttr ".hyp[876].nvs" 1920;
+	setAttr ".hyp[877].nvs" 1920;
+	setAttr ".hyp[878].nvs" 1920;
+	setAttr ".hyp[879].nvs" 1920;
+	setAttr ".hyp[880].nvs" 1920;
+	setAttr ".hyp[881].nvs" 1920;
+	setAttr ".hyp[882].nvs" 1920;
+	setAttr ".hyp[883].nvs" 1920;
+	setAttr ".hyp[884].nvs" 1920;
+	setAttr ".hyp[885].nvs" 1920;
+	setAttr ".hyp[886].nvs" 1920;
+	setAttr ".hyp[887].nvs" 1920;
+	setAttr ".hyp[888].nvs" 1920;
+	setAttr ".hyp[889].nvs" 1920;
+	setAttr ".hyp[890].nvs" 1920;
+	setAttr ".hyp[891].nvs" 1920;
+	setAttr ".hyp[892].nvs" 1920;
+	setAttr ".hyp[893].nvs" 1920;
+	setAttr ".hyp[894].nvs" 1920;
+	setAttr ".hyp[895].nvs" 1920;
+	setAttr ".hyp[896].nvs" 1920;
+	setAttr ".hyp[897].nvs" 1920;
+	setAttr ".hyp[898].nvs" 1920;
+	setAttr ".hyp[899].nvs" 1920;
+	setAttr ".hyp[900].nvs" 1920;
+	setAttr ".hyp[901].nvs" 1920;
+	setAttr ".hyp[902].nvs" 1920;
+	setAttr ".hyp[903].nvs" 1920;
+	setAttr ".hyp[904].nvs" 1920;
+	setAttr ".hyp[905].nvs" 1920;
+	setAttr ".hyp[906].nvs" 1920;
+	setAttr ".hyp[907].nvs" 1920;
+	setAttr ".hyp[908].nvs" 1920;
+	setAttr ".hyp[909].nvs" 1920;
+	setAttr ".hyp[910].nvs" 1920;
+	setAttr ".hyp[911].nvs" 1920;
+	setAttr ".hyp[912].nvs" 1920;
+	setAttr ".hyp[913].nvs" 1920;
+	setAttr ".hyp[914].nvs" 1920;
+	setAttr ".hyp[915].nvs" 1920;
+	setAttr ".hyp[916].nvs" 1920;
+	setAttr ".hyp[917].nvs" 1920;
+	setAttr ".hyp[918].nvs" 1920;
+	setAttr ".hyp[919].nvs" 1920;
+	setAttr ".hyp[920].nvs" 1920;
+	setAttr ".hyp[921].nvs" 1920;
+	setAttr ".hyp[922].nvs" 1920;
+	setAttr ".hyp[923].nvs" 1920;
+	setAttr ".hyp[924].nvs" 1920;
+	setAttr ".hyp[925].nvs" 1920;
+	setAttr ".hyp[926].nvs" 1920;
+	setAttr ".hyp[927].nvs" 1920;
+	setAttr ".hyp[928].nvs" 1920;
+	setAttr ".hyp[929].nvs" 1920;
+	setAttr ".hyp[930].nvs" 1920;
+	setAttr ".hyp[931].nvs" 1920;
+	setAttr ".hyp[932].nvs" 1920;
+	setAttr ".hyp[933].nvs" 1920;
+	setAttr ".hyp[934].nvs" 1920;
+	setAttr ".hyp[935].nvs" 1920;
+	setAttr ".hyp[936].nvs" 1920;
+	setAttr ".hyp[937].nvs" 1920;
+	setAttr ".hyp[938].nvs" 1920;
+	setAttr ".hyp[939].nvs" 1920;
+	setAttr ".hyp[940].nvs" 1920;
+	setAttr ".hyp[941].nvs" 1920;
+	setAttr ".hyp[942].nvs" 1920;
+	setAttr ".hyp[943].nvs" 1920;
+	setAttr ".hyp[944].nvs" 1920;
+	setAttr ".hyp[945].nvs" 1920;
+	setAttr ".hyp[946].nvs" 1920;
+	setAttr ".hyp[947].nvs" 1920;
+	setAttr ".hyp[948].nvs" 1920;
+	setAttr ".hyp[949].nvs" 1920;
+	setAttr ".hyp[950].nvs" 1920;
+	setAttr ".hyp[951].nvs" 1920;
+	setAttr ".hyp[952].nvs" 1920;
+	setAttr ".hyp[953].nvs" 1920;
+	setAttr ".hyp[954].nvs" 1920;
+	setAttr ".hyp[955].nvs" 1920;
+	setAttr ".hyp[956].nvs" 1920;
+	setAttr ".hyp[957].nvs" 1920;
+	setAttr ".hyp[958].nvs" 1920;
+	setAttr ".hyp[959].nvs" 1920;
+	setAttr ".hyp[960].nvs" 1920;
+	setAttr ".hyp[961].nvs" 1920;
+	setAttr ".hyp[962].nvs" 1920;
+	setAttr ".hyp[963].nvs" 1920;
+	setAttr ".hyp[964].nvs" 1920;
+	setAttr ".hyp[965].nvs" 1920;
+	setAttr ".hyp[966].nvs" 1920;
+	setAttr ".hyp[967].nvs" 1920;
+	setAttr ".hyp[968].nvs" 1920;
+	setAttr ".hyp[969].nvs" 1920;
+	setAttr ".hyp[970].nvs" 1920;
+	setAttr ".hyp[971].nvs" 1920;
+	setAttr ".hyp[972].nvs" 1920;
+	setAttr ".hyp[973].nvs" 1920;
+	setAttr ".hyp[974].nvs" 1920;
+	setAttr ".hyp[975].nvs" 1920;
+	setAttr ".hyp[976].nvs" 1920;
+	setAttr ".hyp[977].nvs" 1920;
+	setAttr ".hyp[978].nvs" 1920;
+	setAttr ".hyp[979].nvs" 1920;
+	setAttr ".hyp[980].nvs" 1920;
+	setAttr ".hyp[981].nvs" 1920;
+	setAttr ".hyp[982].nvs" 1920;
+	setAttr ".hyp[983].nvs" 1920;
+	setAttr ".hyp[984].nvs" 1920;
+	setAttr ".hyp[985].nvs" 1920;
+	setAttr ".hyp[986].nvs" 1920;
+	setAttr ".hyp[987].nvs" 1920;
+	setAttr ".hyp[988].nvs" 1920;
+	setAttr ".hyp[989].nvs" 1920;
+	setAttr ".hyp[990].nvs" 1920;
+	setAttr ".hyp[991].nvs" 1920;
+	setAttr ".hyp[992].nvs" 1920;
+	setAttr ".hyp[993].nvs" 1920;
+	setAttr ".hyp[994].nvs" 1920;
+	setAttr ".hyp[995].nvs" 1920;
+	setAttr ".hyp[996].nvs" 1920;
+	setAttr ".hyp[997].nvs" 1920;
+	setAttr ".hyp[998].nvs" 1920;
+	setAttr ".hyp[999].nvs" 1920;
+	setAttr ".hyp[1000].nvs" 1920;
+	setAttr ".hyp[1001].nvs" 1920;
+	setAttr ".hyp[1002].nvs" 1920;
+	setAttr ".hyp[1003].nvs" 1920;
+	setAttr ".hyp[1004].nvs" 1920;
+	setAttr ".hyp[1005].nvs" 1920;
+	setAttr ".hyp[1006].nvs" 1920;
+	setAttr ".hyp[1007].nvs" 1920;
+	setAttr ".hyp[1008].nvs" 1920;
+	setAttr ".hyp[1009].nvs" 1920;
+	setAttr ".hyp[1010].nvs" 1920;
+	setAttr ".hyp[1011].nvs" 1920;
+	setAttr ".hyp[1012].nvs" 1920;
+	setAttr ".hyp[1013].nvs" 1920;
+	setAttr ".hyp[1014].nvs" 1920;
+	setAttr ".hyp[1015].nvs" 1920;
+	setAttr ".hyp[1016].nvs" 1920;
+	setAttr ".hyp[1017].nvs" 1920;
+	setAttr ".hyp[1018].nvs" 1920;
+	setAttr ".hyp[1019].nvs" 1920;
+	setAttr ".hyp[1020].nvs" 1920;
+	setAttr ".hyp[1021].nvs" 1920;
+	setAttr ".hyp[1022].nvs" 1920;
+	setAttr ".hyp[1023].nvs" 1920;
+	setAttr ".hyp[1024].nvs" 1920;
+	setAttr ".hyp[1025].nvs" 1920;
+	setAttr ".hyp[1026].nvs" 1920;
+	setAttr ".hyp[1027].nvs" 1920;
+	setAttr ".hyp[1028].nvs" 1920;
+	setAttr ".hyp[1029].nvs" 1920;
+	setAttr ".hyp[1030].nvs" 1920;
+	setAttr ".hyp[1031].nvs" 1920;
+	setAttr ".hyp[1032].nvs" 1920;
+	setAttr ".hyp[1033].nvs" 1920;
+	setAttr ".hyp[1034].nvs" 1920;
+	setAttr ".hyp[1035].nvs" 1920;
+	setAttr ".hyp[1036].nvs" 1920;
+	setAttr ".hyp[1037].nvs" 1920;
+	setAttr ".hyp[1038].nvs" 1920;
+	setAttr ".hyp[1039].nvs" 1920;
+	setAttr ".hyp[1040].nvs" 1920;
+	setAttr ".hyp[1041].nvs" 1920;
+	setAttr ".hyp[1042].nvs" 1920;
+	setAttr ".hyp[1043].nvs" 1920;
+	setAttr ".hyp[1044].nvs" 1920;
+	setAttr ".hyp[1045].nvs" 1920;
+	setAttr ".hyp[1046].nvs" 1920;
+	setAttr ".hyp[1047].nvs" 1920;
+	setAttr ".hyp[1048].nvs" 1920;
+	setAttr ".hyp[1049].nvs" 1920;
+	setAttr ".hyp[1050].nvs" 1920;
+	setAttr ".hyp[1051].nvs" 1920;
+	setAttr ".hyp[1052].nvs" 1920;
+	setAttr ".hyp[1053].nvs" 1920;
+	setAttr ".hyp[1054].nvs" 1920;
+	setAttr ".hyp[1055].nvs" 1920;
+	setAttr ".hyp[1056].nvs" 1920;
+	setAttr ".hyp[1057].nvs" 1920;
+	setAttr ".hyp[1058].nvs" 1920;
+	setAttr ".hyp[1059].nvs" 1920;
+	setAttr ".hyp[1060].nvs" 1920;
+	setAttr ".hyp[1061].nvs" 1920;
+	setAttr ".hyp[1062].nvs" 1920;
+	setAttr ".hyp[1063].nvs" 1920;
+	setAttr ".hyp[1064].nvs" 1920;
+	setAttr ".hyp[1065].nvs" 1920;
+	setAttr ".hyp[1066].nvs" 1920;
+	setAttr ".hyp[1067].nvs" 1920;
+	setAttr ".hyp[1068].nvs" 1920;
+	setAttr ".hyp[1069].nvs" 1920;
+	setAttr ".hyp[1070].nvs" 1920;
+	setAttr ".hyp[1071].nvs" 1920;
+	setAttr ".hyp[1072].nvs" 1920;
+	setAttr ".hyp[1073].nvs" 1920;
+	setAttr ".hyp[1074].nvs" 1920;
+	setAttr ".hyp[1075].nvs" 1920;
+	setAttr ".hyp[1076].nvs" 1920;
+	setAttr ".hyp[1077].nvs" 1920;
+	setAttr ".hyp[1078].nvs" 1920;
+	setAttr ".hyp[1079].nvs" 1920;
+	setAttr ".hyp[1080].nvs" 1920;
+	setAttr ".hyp[1081].nvs" 1920;
+	setAttr ".hyp[1082].nvs" 1920;
+	setAttr ".hyp[1083].nvs" 1920;
+	setAttr ".hyp[1084].nvs" 1920;
+	setAttr ".hyp[1085].nvs" 1920;
+	setAttr ".hyp[1086].nvs" 1920;
+	setAttr ".hyp[1087].nvs" 1920;
+	setAttr ".hyp[1088].nvs" 1920;
+	setAttr ".hyp[1089].nvs" 1920;
+	setAttr ".hyp[1090].nvs" 1920;
+	setAttr ".hyp[1091].nvs" 1920;
+	setAttr ".hyp[1092].nvs" 1920;
+	setAttr ".hyp[1093].nvs" 1920;
+	setAttr ".hyp[1094].nvs" 1920;
+	setAttr ".hyp[1095].nvs" 1920;
+	setAttr ".hyp[1096].nvs" 1920;
+	setAttr ".hyp[1097].nvs" 1920;
+	setAttr ".hyp[1098].nvs" 1920;
+	setAttr ".hyp[1099].nvs" 1920;
+	setAttr ".hyp[1100].nvs" 1920;
+	setAttr ".hyp[1101].nvs" 1920;
+	setAttr ".hyp[1102].nvs" 1920;
+	setAttr ".hyp[1103].nvs" 1920;
+	setAttr ".hyp[1104].nvs" 1920;
+	setAttr ".hyp[1105].nvs" 1920;
+	setAttr ".hyp[1106].nvs" 1920;
+	setAttr ".hyp[1107].nvs" 1920;
+	setAttr ".hyp[1108].nvs" 1920;
+	setAttr ".hyp[1109].nvs" 1920;
+	setAttr ".hyp[1110].nvs" 1920;
+	setAttr ".hyp[1111].nvs" 1920;
+	setAttr ".hyp[1112].nvs" 1920;
+	setAttr ".hyp[1113].nvs" 1920;
+	setAttr ".hyp[1114].nvs" 1920;
+	setAttr ".hyp[1115].nvs" 1920;
+	setAttr ".hyp[1116].nvs" 1920;
+	setAttr ".hyp[1117].nvs" 1920;
+	setAttr ".hyp[1118].nvs" 1920;
+	setAttr ".hyp[1119].nvs" 1920;
+	setAttr ".hyp[1120].nvs" 1920;
+	setAttr ".hyp[1121].nvs" 1920;
+	setAttr ".hyp[1122].nvs" 1920;
+	setAttr ".hyp[1123].nvs" 1920;
+	setAttr ".hyp[1124].nvs" 1920;
+	setAttr ".hyp[1125].nvs" 1920;
+	setAttr ".hyp[1126].nvs" 1920;
+	setAttr ".hyp[1127].nvs" 1920;
+	setAttr ".hyp[1128].nvs" 1920;
+	setAttr ".hyp[1129].nvs" 1920;
+	setAttr ".hyp[1130].nvs" 1920;
+	setAttr ".hyp[1131].nvs" 1920;
+	setAttr ".hyp[1132].nvs" 1920;
+	setAttr ".hyp[1133].nvs" 1920;
+	setAttr ".hyp[1134].nvs" 1920;
+	setAttr ".hyp[1135].nvs" 1920;
+	setAttr ".hyp[1136].nvs" 1920;
+	setAttr ".hyp[1137].nvs" 1920;
+	setAttr ".hyp[1138].nvs" 1920;
+	setAttr ".hyp[1139].nvs" 1920;
+	setAttr ".hyp[1140].nvs" 1920;
+	setAttr ".hyp[1141].nvs" 1920;
+	setAttr ".hyp[1142].nvs" 1920;
+	setAttr ".hyp[1143].nvs" 1920;
+	setAttr ".hyp[1144].nvs" 1920;
+	setAttr ".hyp[1145].nvs" 1920;
+	setAttr ".hyp[1146].nvs" 1920;
+	setAttr ".hyp[1147].nvs" 1920;
+	setAttr ".hyp[1148].nvs" 1920;
+	setAttr ".hyp[1149].nvs" 1920;
+	setAttr ".hyp[1150].nvs" 1920;
+	setAttr ".hyp[1151].nvs" 1920;
+	setAttr ".hyp[1152].nvs" 1920;
+	setAttr ".hyp[1153].nvs" 1920;
+	setAttr ".hyp[1154].nvs" 1920;
+	setAttr ".hyp[1155].nvs" 1920;
+	setAttr ".hyp[1156].nvs" 1920;
+	setAttr ".hyp[1157].nvs" 1920;
+	setAttr ".hyp[1158].nvs" 1920;
+	setAttr ".hyp[1159].nvs" 1920;
+	setAttr ".hyp[1160].nvs" 1920;
+	setAttr ".hyp[1161].nvs" 1920;
+	setAttr ".hyp[1162].nvs" 1920;
+	setAttr ".hyp[1163].nvs" 1920;
+	setAttr ".hyp[1164].nvs" 1920;
+	setAttr ".hyp[1165].nvs" 1920;
+	setAttr ".hyp[1166].nvs" 1920;
+	setAttr ".hyp[1167].nvs" 1920;
+	setAttr ".hyp[1168].nvs" 1920;
+	setAttr ".hyp[1169].nvs" 1920;
+	setAttr ".hyp[1170].nvs" 1920;
+	setAttr ".hyp[1171].nvs" 1920;
+	setAttr ".hyp[1172].nvs" 1920;
+	setAttr ".hyp[1173].nvs" 1920;
+	setAttr ".hyp[1174].nvs" 1920;
+	setAttr ".hyp[1175].nvs" 1920;
+	setAttr ".hyp[1176].nvs" 1920;
+	setAttr ".hyp[1177].nvs" 1920;
+	setAttr ".hyp[1178].nvs" 1920;
+	setAttr ".hyp[1179].nvs" 1920;
+	setAttr ".hyp[1180].nvs" 1920;
+	setAttr ".hyp[1181].nvs" 1920;
+	setAttr ".hyp[1182].nvs" 1920;
+	setAttr ".hyp[1183].nvs" 1920;
+	setAttr ".hyp[1184].nvs" 1920;
+	setAttr ".hyp[1185].nvs" 1920;
+	setAttr ".hyp[1186].nvs" 1920;
+	setAttr ".hyp[1187].nvs" 1920;
+	setAttr ".hyp[1188].nvs" 1920;
+	setAttr ".hyp[1189].nvs" 1920;
+	setAttr ".hyp[1190].nvs" 1920;
+	setAttr ".hyp[1191].nvs" 1920;
+	setAttr ".hyp[1192].nvs" 1920;
+	setAttr ".hyp[1193].nvs" 1920;
+	setAttr ".hyp[1194].nvs" 1920;
+	setAttr ".hyp[1195].nvs" 1920;
+	setAttr ".hyp[1196].nvs" 1920;
+	setAttr ".hyp[1197].nvs" 1920;
+	setAttr ".hyp[1198].nvs" 1920;
+	setAttr ".hyp[1199].nvs" 1920;
+	setAttr ".hyp[1200].nvs" 1920;
+	setAttr ".hyp[1201].nvs" 1920;
+	setAttr ".hyp[1202].nvs" 1920;
+	setAttr ".hyp[1203].nvs" 1920;
+	setAttr ".hyp[1204].nvs" 1920;
+	setAttr ".hyp[1205].nvs" 1920;
+	setAttr ".hyp[1206].nvs" 1920;
+	setAttr ".hyp[1207].nvs" 1920;
+	setAttr ".hyp[1208].nvs" 1920;
+	setAttr ".hyp[1209].nvs" 1920;
+	setAttr ".hyp[1210].nvs" 1920;
+	setAttr ".hyp[1211].nvs" 1920;
+	setAttr ".hyp[1212].nvs" 1920;
+	setAttr ".hyp[1213].nvs" 1920;
+	setAttr ".hyp[1214].nvs" 1920;
+	setAttr ".hyp[1215].nvs" 1920;
+	setAttr ".hyp[1216].nvs" 1920;
+	setAttr ".hyp[1217].nvs" 1920;
+	setAttr ".hyp[1218].nvs" 1920;
+	setAttr ".hyp[1219].nvs" 1920;
+	setAttr ".hyp[1220].nvs" 1920;
+	setAttr ".hyp[1221].nvs" 1920;
+	setAttr ".hyp[1222].nvs" 1920;
+	setAttr ".hyp[1223].nvs" 1920;
+	setAttr ".hyp[1224].nvs" 1920;
+	setAttr ".hyp[1225].nvs" 1920;
+	setAttr ".hyp[1226].nvs" 1920;
+	setAttr ".hyp[1227].nvs" 1920;
+	setAttr ".hyp[1228].nvs" 1920;
+	setAttr ".hyp[1229].nvs" 1920;
+	setAttr ".hyp[1230].nvs" 1920;
+	setAttr ".hyp[1231].nvs" 1920;
+	setAttr ".hyp[1232].nvs" 1920;
+	setAttr ".hyp[1233].nvs" 1920;
+	setAttr ".hyp[1234].nvs" 1920;
+	setAttr ".hyp[1235].nvs" 1920;
+	setAttr ".hyp[1236].nvs" 1920;
+	setAttr ".hyp[1237].nvs" 1920;
+	setAttr ".hyp[1238].nvs" 1920;
+	setAttr ".hyp[1239].nvs" 1920;
+	setAttr ".hyp[1240].nvs" 1920;
+	setAttr ".hyp[1241].nvs" 1920;
+	setAttr ".hyp[1242].nvs" 1920;
+	setAttr ".hyp[1243].nvs" 1920;
+	setAttr ".hyp[1244].nvs" 1920;
+	setAttr ".hyp[1245].nvs" 1920;
+	setAttr ".hyp[1246].nvs" 1920;
+	setAttr ".hyp[1247].nvs" 1920;
+	setAttr ".hyp[1248].nvs" 1920;
+	setAttr ".hyp[1249].nvs" 1920;
+	setAttr ".hyp[1250].nvs" 1920;
+	setAttr ".hyp[1251].nvs" 1920;
+	setAttr ".hyp[1252].nvs" 1920;
+	setAttr ".hyp[1253].nvs" 1920;
+	setAttr ".hyp[1254].nvs" 1920;
+	setAttr ".hyp[1255].nvs" 1920;
+	setAttr ".hyp[1256].nvs" 1920;
+	setAttr ".hyp[1257].nvs" 1920;
+	setAttr ".hyp[1258].nvs" 1920;
+	setAttr ".hyp[1259].nvs" 1920;
+	setAttr ".hyp[1260].nvs" 1920;
+	setAttr ".hyp[1261].nvs" 1920;
+	setAttr ".hyp[1262].nvs" 1920;
+	setAttr ".hyp[1263].nvs" 1920;
+	setAttr ".hyp[1264].nvs" 1920;
+	setAttr ".hyp[1265].nvs" 1920;
+	setAttr ".hyp[1266].nvs" 1920;
+	setAttr ".hyp[1267].nvs" 1920;
+	setAttr ".hyp[1268].nvs" 1920;
+	setAttr ".hyp[1269].nvs" 1920;
+	setAttr ".hyp[1270].nvs" 1920;
+	setAttr ".hyp[1271].nvs" 1920;
+	setAttr ".hyp[1272].nvs" 1920;
+	setAttr ".hyp[1273].nvs" 1920;
+	setAttr ".hyp[1274].nvs" 1920;
+	setAttr ".hyp[1275].nvs" 1920;
+	setAttr ".hyp[1276].nvs" 1920;
+	setAttr ".hyp[1277].nvs" 1920;
+	setAttr ".hyp[1278].nvs" 1920;
+	setAttr ".hyp[1279].nvs" 1920;
+	setAttr ".hyp[1280].nvs" 1920;
+	setAttr ".hyp[1281].nvs" 1920;
+	setAttr ".hyp[1282].nvs" 1920;
+	setAttr ".hyp[1283].nvs" 1920;
+	setAttr ".hyp[1284].nvs" 1920;
+	setAttr ".hyp[1285].nvs" 1920;
+	setAttr ".hyp[1286].nvs" 1920;
+	setAttr ".hyp[1287].nvs" 1920;
+	setAttr ".hyp[1288].nvs" 1920;
+	setAttr ".hyp[1289].nvs" 1920;
+	setAttr ".hyp[1290].nvs" 1920;
+	setAttr ".hyp[1291].nvs" 1920;
+	setAttr ".hyp[1292].nvs" 1920;
+	setAttr ".hyp[1293].nvs" 1920;
+	setAttr ".hyp[1294].nvs" 1920;
+	setAttr ".hyp[1295].nvs" 1920;
+	setAttr ".hyp[1296].nvs" 1920;
+	setAttr ".hyp[1297].nvs" 1920;
+	setAttr ".hyp[1298].nvs" 1920;
+	setAttr ".hyp[1299].nvs" 1920;
+	setAttr ".hyp[1300].nvs" 1920;
+	setAttr ".hyp[1301].nvs" 1920;
+	setAttr ".hyp[1302].nvs" 1920;
+	setAttr ".hyp[1303].nvs" 1920;
+	setAttr ".hyp[1304].nvs" 1920;
+	setAttr ".hyp[1305].nvs" 1920;
+	setAttr ".hyp[1306].nvs" 1920;
+	setAttr ".hyp[1307].nvs" 1920;
+	setAttr ".hyp[1308].nvs" 1920;
+	setAttr ".hyp[1309].nvs" 1920;
+	setAttr ".hyp[1310].nvs" 1920;
+	setAttr ".hyp[1311].nvs" 1920;
+	setAttr ".hyp[1312].nvs" 1920;
+	setAttr ".hyp[1313].nvs" 1920;
+	setAttr ".hyp[1314].nvs" 1920;
+	setAttr ".hyp[1315].nvs" 1920;
+	setAttr ".hyp[1316].nvs" 1920;
+	setAttr ".hyp[1317].nvs" 1920;
+	setAttr ".hyp[1318].nvs" 1920;
+	setAttr ".hyp[1319].nvs" 1920;
+	setAttr ".hyp[1320].nvs" 1920;
+	setAttr ".hyp[1321].nvs" 1920;
+	setAttr ".hyp[1322].nvs" 1920;
+	setAttr ".hyp[1323].nvs" 1920;
+	setAttr ".hyp[1324].nvs" 1920;
+	setAttr ".hyp[1325].nvs" 1920;
+	setAttr ".hyp[1326].nvs" 1920;
+	setAttr ".hyp[1327].nvs" 1920;
+	setAttr ".hyp[1328].nvs" 1920;
+	setAttr ".hyp[1329].nvs" 1920;
+	setAttr ".hyp[1330].nvs" 1920;
+	setAttr ".hyp[1331].nvs" 1920;
+	setAttr ".hyp[1332].nvs" 1920;
+	setAttr ".hyp[1333].nvs" 1920;
+	setAttr ".hyp[1334].nvs" 1920;
+	setAttr ".hyp[1335].nvs" 1920;
+	setAttr ".hyp[1336].nvs" 1920;
+	setAttr ".hyp[1337].nvs" 1920;
+	setAttr ".hyp[1338].nvs" 1920;
+	setAttr ".hyp[1339].nvs" 1920;
+	setAttr ".hyp[1340].nvs" 1920;
+	setAttr ".hyp[1341].nvs" 1920;
+	setAttr ".hyp[1342].nvs" 1920;
+	setAttr ".hyp[1343].nvs" 1920;
+	setAttr ".hyp[1344].nvs" 1920;
+	setAttr ".hyp[1345].nvs" 1920;
+	setAttr ".hyp[1346].nvs" 1920;
+	setAttr ".hyp[1347].nvs" 1920;
+	setAttr ".hyp[1348].nvs" 1920;
+	setAttr ".hyp[1349].nvs" 1920;
+	setAttr ".hyp[1350].nvs" 1920;
+	setAttr ".hyp[1351].nvs" 1920;
+	setAttr ".hyp[1352].nvs" 1920;
+	setAttr ".hyp[1353].nvs" 1920;
+	setAttr ".hyp[1354].nvs" 1920;
+	setAttr ".hyp[1355].nvs" 1920;
+	setAttr ".hyp[1356].nvs" 1920;
+	setAttr ".hyp[1357].nvs" 1920;
+	setAttr ".hyp[1358].nvs" 1920;
+	setAttr ".hyp[1359].nvs" 1920;
+	setAttr ".hyp[1360].nvs" 1920;
+	setAttr ".hyp[1361].nvs" 1920;
+	setAttr ".hyp[1362].nvs" 1920;
+	setAttr ".hyp[1363].nvs" 1920;
+	setAttr ".hyp[1364].nvs" 1920;
+	setAttr ".hyp[1365].nvs" 1920;
+	setAttr ".hyp[1366].nvs" 1920;
+	setAttr ".hyp[1367].nvs" 1920;
+	setAttr ".hyp[1368].nvs" 1920;
+	setAttr ".hyp[1369].nvs" 1920;
+	setAttr ".hyp[1370].nvs" 1920;
+	setAttr ".hyp[1371].nvs" 1920;
+	setAttr ".hyp[1372].nvs" 1920;
+	setAttr ".hyp[1373].nvs" 1920;
+	setAttr ".hyp[1374].nvs" 1920;
+	setAttr ".hyp[1375].nvs" 1920;
+	setAttr ".hyp[1376].nvs" 1920;
+	setAttr ".hyp[1377].nvs" 1920;
+	setAttr ".hyp[1378].nvs" 1920;
+	setAttr ".hyp[1379].nvs" 1920;
+	setAttr ".hyp[1380].nvs" 1920;
+	setAttr ".hyp[1381].nvs" 1920;
+	setAttr ".hyp[1382].nvs" 1920;
+	setAttr ".hyp[1383].nvs" 1920;
+	setAttr ".hyp[1384].nvs" 1920;
+	setAttr ".hyp[1385].nvs" 1920;
+	setAttr ".hyp[1386].nvs" 1920;
+	setAttr ".hyp[1387].nvs" 1920;
+	setAttr ".hyp[1388].nvs" 1920;
+	setAttr ".hyp[1389].nvs" 1920;
+	setAttr ".hyp[1390].nvs" 1920;
+	setAttr ".hyp[1391].nvs" 1920;
+	setAttr ".hyp[1392].nvs" 1920;
+	setAttr ".hyp[1393].nvs" 1920;
+	setAttr ".hyp[1394].nvs" 1920;
+	setAttr ".hyp[1395].nvs" 1920;
+	setAttr ".hyp[1396].nvs" 1920;
+	setAttr ".hyp[1397].nvs" 1920;
+	setAttr ".hyp[1398].nvs" 1920;
+	setAttr ".hyp[1399].nvs" 1920;
+	setAttr ".hyp[1400].nvs" 1920;
+	setAttr ".hyp[1401].nvs" 1920;
+	setAttr ".hyp[1402].nvs" 1920;
+	setAttr ".hyp[1403].nvs" 1920;
+	setAttr ".hyp[1404].nvs" 1920;
+	setAttr ".hyp[1405].nvs" 1920;
+	setAttr ".hyp[1406].nvs" 1920;
+	setAttr ".hyp[1407].nvs" 1920;
+	setAttr ".hyp[1408].nvs" 1920;
+	setAttr ".hyp[1409].nvs" 1920;
+	setAttr ".hyp[1410].nvs" 1920;
+	setAttr ".hyp[1411].nvs" 1920;
+	setAttr ".hyp[1412].nvs" 1920;
+	setAttr ".hyp[1413].nvs" 1920;
+	setAttr ".hyp[1414].nvs" 1920;
+	setAttr ".hyp[1415].nvs" 1920;
+	setAttr ".hyp[1416].nvs" 1920;
+	setAttr ".hyp[1417].nvs" 1920;
+	setAttr ".hyp[1418].nvs" 1920;
+	setAttr ".hyp[1419].nvs" 1920;
+	setAttr ".hyp[1420].nvs" 1920;
+	setAttr ".hyp[1421].nvs" 1920;
+	setAttr ".hyp[1422].nvs" 1920;
+	setAttr ".hyp[1423].nvs" 1920;
+	setAttr ".hyp[1424].nvs" 1920;
+	setAttr ".hyp[1425].nvs" 1920;
+	setAttr ".hyp[1426].nvs" 1920;
+	setAttr ".hyp[1427].nvs" 1920;
+	setAttr ".hyp[1428].nvs" 1920;
+	setAttr ".hyp[1429].nvs" 1920;
+	setAttr ".hyp[1430].nvs" 1920;
+	setAttr ".hyp[1431].nvs" 1920;
+	setAttr ".hyp[1432].nvs" 1920;
+	setAttr ".hyp[1433].nvs" 1920;
+	setAttr ".hyp[1434].nvs" 1920;
+	setAttr ".hyp[1435].nvs" 1920;
+	setAttr ".hyp[1436].nvs" 1920;
+	setAttr ".hyp[1437].nvs" 1920;
+	setAttr ".hyp[1438].nvs" 1920;
+	setAttr ".hyp[1439].nvs" 1920;
+	setAttr ".hyp[1440].nvs" 1920;
+	setAttr ".hyp[1441].nvs" 1920;
+	setAttr ".hyp[1442].nvs" 1920;
+	setAttr ".hyp[1443].nvs" 1920;
+	setAttr ".hyp[1444].nvs" 1920;
+	setAttr ".hyp[1445].nvs" 1920;
+	setAttr ".hyp[1446].nvs" 1920;
+	setAttr ".hyp[1447].nvs" 1920;
+	setAttr ".hyp[1448].nvs" 1920;
+	setAttr ".hyp[1449].nvs" 1920;
+	setAttr ".hyp[1450].nvs" 1920;
+	setAttr ".hyp[1451].nvs" 1920;
+	setAttr ".hyp[1452].nvs" 1920;
+	setAttr ".hyp[1453].nvs" 1920;
+	setAttr ".hyp[1454].nvs" 1920;
+	setAttr ".hyp[1455].nvs" 1920;
+	setAttr ".hyp[1456].nvs" 1920;
+	setAttr ".hyp[1457].nvs" 1920;
+	setAttr ".hyp[1458].nvs" 1920;
+	setAttr ".hyp[1459].nvs" 1920;
+	setAttr ".hyp[1460].nvs" 1920;
+	setAttr ".hyp[1461].nvs" 1920;
+	setAttr ".hyp[1462].nvs" 1920;
+	setAttr ".hyp[1463].nvs" 1920;
+	setAttr ".hyp[1464].nvs" 1920;
+	setAttr ".hyp[1465].nvs" 1920;
+	setAttr ".hyp[1466].nvs" 1920;
+	setAttr ".hyp[1467].nvs" 1920;
+	setAttr ".hyp[1468].nvs" 1920;
+	setAttr ".hyp[1469].nvs" 1920;
+	setAttr ".hyp[1470].nvs" 1920;
+	setAttr ".hyp[1471].nvs" 1920;
+	setAttr ".hyp[1472].nvs" 1920;
+	setAttr ".hyp[1473].nvs" 1920;
+	setAttr ".hyp[1474].nvs" 1920;
+	setAttr ".hyp[1475].nvs" 1920;
+	setAttr ".hyp[1476].nvs" 1920;
+	setAttr ".hyp[1477].nvs" 1920;
+	setAttr ".hyp[1478].nvs" 1920;
+	setAttr ".hyp[1479].nvs" 1920;
+	setAttr ".hyp[1480].nvs" 1920;
+	setAttr ".hyp[1481].nvs" 1920;
+	setAttr ".hyp[1482].nvs" 1920;
+	setAttr ".hyp[1483].nvs" 1920;
+	setAttr ".hyp[1484].nvs" 1920;
+	setAttr ".hyp[1485].nvs" 1920;
+	setAttr ".hyp[1486].nvs" 1920;
+	setAttr ".hyp[1487].nvs" 1920;
+	setAttr ".hyp[1488].nvs" 1920;
+	setAttr ".hyp[1489].nvs" 1920;
+	setAttr ".hyp[1490].nvs" 1920;
+	setAttr ".hyp[1491].nvs" 1920;
+	setAttr ".hyp[1492].nvs" 1920;
+	setAttr ".hyp[1493].nvs" 1920;
+	setAttr ".hyp[1494].nvs" 1920;
+	setAttr ".hyp[1495].nvs" 1920;
+	setAttr ".hyp[1496].nvs" 1920;
+	setAttr ".hyp[1497].nvs" 1920;
+	setAttr ".hyp[1498].nvs" 1920;
+	setAttr ".hyp[1499].nvs" 1920;
+	setAttr ".hyp[1500].nvs" 1920;
+	setAttr ".hyp[1501].nvs" 1920;
+	setAttr ".hyp[1502].nvs" 1920;
+	setAttr ".hyp[1503].nvs" 1920;
+	setAttr ".hyp[1504].nvs" 1920;
+	setAttr ".hyp[1505].nvs" 1920;
+	setAttr ".hyp[1506].nvs" 1920;
+	setAttr ".hyp[1507].nvs" 1920;
+	setAttr ".hyp[1508].nvs" 1920;
+	setAttr ".hyp[1509].nvs" 1920;
+	setAttr ".hyp[1510].nvs" 1920;
+	setAttr ".hyp[1511].nvs" 1920;
+	setAttr ".hyp[1512].nvs" 1920;
+	setAttr ".hyp[1513].nvs" 1920;
+	setAttr ".hyp[1514].nvs" 1920;
+	setAttr ".hyp[1515].nvs" 1920;
+	setAttr ".hyp[1516].nvs" 1920;
+	setAttr ".hyp[1517].nvs" 1920;
+	setAttr ".hyp[1518].nvs" 1920;
+	setAttr ".hyp[1519].nvs" 1920;
+	setAttr ".hyp[1520].nvs" 1920;
+	setAttr ".hyp[1521].nvs" 1920;
+	setAttr ".hyp[1522].nvs" 1920;
+	setAttr ".hyp[1523].nvs" 1920;
+	setAttr ".hyp[1524].nvs" 1920;
+	setAttr ".hyp[1525].nvs" 1920;
+	setAttr ".hyp[1526].nvs" 1920;
+	setAttr ".hyp[1527].nvs" 1920;
+	setAttr ".hyp[1528].nvs" 1920;
+	setAttr ".hyp[1529].nvs" 1920;
+	setAttr ".hyp[1530].nvs" 1920;
+	setAttr ".hyp[1531].nvs" 1920;
+	setAttr ".hyp[1532].nvs" 1920;
+	setAttr ".hyp[1533].nvs" 1920;
+	setAttr ".hyp[1534].nvs" 1920;
+	setAttr ".hyp[1535].nvs" 1920;
+	setAttr ".hyp[1536].nvs" 1920;
+	setAttr ".hyp[1537].nvs" 1920;
+	setAttr ".hyp[1538].nvs" 1920;
+	setAttr ".hyp[1539].nvs" 1920;
+	setAttr ".hyp[1540].nvs" 1920;
+	setAttr ".hyp[1541].nvs" 1920;
+	setAttr ".hyp[1542].nvs" 1920;
+	setAttr ".hyp[1543].nvs" 1920;
+	setAttr ".hyp[1544].nvs" 1920;
+	setAttr ".hyp[1545].nvs" 1920;
+	setAttr ".hyp[1546].nvs" 1920;
+	setAttr ".hyp[1547].nvs" 1920;
+	setAttr ".hyp[1548].nvs" 1920;
+	setAttr ".hyp[1549].nvs" 1920;
+	setAttr ".hyp[1550].nvs" 1920;
+	setAttr ".hyp[1551].nvs" 1920;
+	setAttr ".hyp[1552].nvs" 1920;
+	setAttr ".hyp[1553].nvs" 1920;
+	setAttr ".hyp[1554].nvs" 1920;
+	setAttr ".hyp[1555].nvs" 1920;
+	setAttr ".hyp[1556].nvs" 1920;
+	setAttr ".hyp[1557].nvs" 1920;
+	setAttr ".hyp[1558].nvs" 1920;
+	setAttr ".hyp[1559].nvs" 1920;
+	setAttr ".hyp[1560].nvs" 1920;
+	setAttr ".hyp[1561].nvs" 1920;
+	setAttr ".hyp[1562].nvs" 1920;
+	setAttr ".hyp[1563].nvs" 1920;
+	setAttr ".hyp[1564].nvs" 1920;
+	setAttr ".hyp[1565].nvs" 1920;
+	setAttr ".hyp[1566].nvs" 1920;
+	setAttr ".hyp[1567].nvs" 1920;
+	setAttr ".hyp[1568].nvs" 1920;
+	setAttr ".hyp[1569].nvs" 1920;
+	setAttr ".hyp[1570].nvs" 1920;
+	setAttr ".hyp[1571].nvs" 1920;
+	setAttr ".hyp[1572].nvs" 1920;
+	setAttr ".hyp[1573].nvs" 1920;
+	setAttr ".hyp[1574].nvs" 1920;
+	setAttr ".hyp[1575].nvs" 1920;
+	setAttr ".hyp[1576].nvs" 1920;
+	setAttr ".hyp[1577].nvs" 1920;
+	setAttr ".hyp[1578].nvs" 1920;
+	setAttr ".hyp[1579].nvs" 1920;
+	setAttr ".hyp[1580].nvs" 1920;
+	setAttr ".hyp[1581].nvs" 1920;
+	setAttr ".hyp[1582].nvs" 1920;
+	setAttr ".hyp[1583].nvs" 1920;
+	setAttr ".hyp[1584].nvs" 1920;
+	setAttr ".hyp[1585].nvs" 1920;
+	setAttr ".hyp[1586].nvs" 1920;
+	setAttr ".hyp[1587].nvs" 1920;
+	setAttr ".hyp[1588].nvs" 1920;
+	setAttr ".hyp[1589].nvs" 1920;
+	setAttr ".hyp[1590].nvs" 1920;
+	setAttr ".hyp[1591].nvs" 1920;
+	setAttr ".hyp[1592].nvs" 1920;
+	setAttr ".hyp[1593].nvs" 1920;
+	setAttr ".hyp[1594].nvs" 1920;
+	setAttr ".hyp[1595].nvs" 1920;
+	setAttr ".hyp[1596].nvs" 1920;
+	setAttr ".hyp[1597].nvs" 1920;
+	setAttr ".hyp[1598].nvs" 1920;
+	setAttr ".hyp[1599].nvs" 1920;
+	setAttr ".hyp[1600].nvs" 1920;
+	setAttr ".hyp[1601].nvs" 1920;
+	setAttr ".hyp[1602].nvs" 1920;
+	setAttr ".hyp[1603].nvs" 1920;
+	setAttr ".hyp[1604].nvs" 1920;
+	setAttr ".hyp[1605].nvs" 1920;
+	setAttr ".hyp[1606].nvs" 1920;
+	setAttr ".hyp[1607].nvs" 1920;
+	setAttr ".hyp[1608].nvs" 1920;
+	setAttr ".hyp[1609].nvs" 1920;
+	setAttr ".hyp[1610].nvs" 1920;
+	setAttr ".hyp[1611].nvs" 1920;
+	setAttr ".hyp[1612].nvs" 1920;
+	setAttr ".hyp[1613].nvs" 1920;
+	setAttr ".hyp[1614].nvs" 1920;
+	setAttr ".hyp[1615].nvs" 1920;
+	setAttr ".hyp[1616].nvs" 1920;
+	setAttr ".hyp[1617].nvs" 1920;
+	setAttr ".hyp[1618].nvs" 1920;
+	setAttr ".hyp[1619].nvs" 1920;
+	setAttr ".hyp[1620].nvs" 1920;
+	setAttr ".hyp[1621].nvs" 1920;
+	setAttr ".hyp[1622].nvs" 1920;
+	setAttr ".hyp[1623].nvs" 1920;
+	setAttr ".hyp[1624].nvs" 1920;
+	setAttr ".hyp[1625].nvs" 1920;
+	setAttr ".hyp[1626].nvs" 1920;
+	setAttr ".hyp[1627].nvs" 1920;
+	setAttr ".hyp[1628].nvs" 1920;
+	setAttr ".hyp[1629].nvs" 1920;
+	setAttr ".hyp[1630].nvs" 1920;
+	setAttr ".hyp[1631].nvs" 1920;
+	setAttr ".hyp[1632].nvs" 1920;
+	setAttr ".hyp[1633].nvs" 1920;
+	setAttr ".hyp[1634].nvs" 1920;
+	setAttr ".hyp[1635].nvs" 1920;
+	setAttr ".hyp[1636].nvs" 1920;
+	setAttr ".hyp[1637].nvs" 1920;
+	setAttr ".hyp[1638].nvs" 1920;
+	setAttr ".hyp[1639].nvs" 1920;
+	setAttr ".hyp[1640].nvs" 1920;
+	setAttr ".hyp[1641].nvs" 1920;
+	setAttr ".hyp[1642].nvs" 1920;
+	setAttr ".hyp[1643].nvs" 1920;
+	setAttr ".hyp[1644].nvs" 1920;
+	setAttr ".hyp[1645].nvs" 1920;
+	setAttr ".hyp[1646].nvs" 1920;
+	setAttr ".hyp[1647].nvs" 1920;
+	setAttr ".hyp[1648].nvs" 1920;
+	setAttr ".hyp[1649].nvs" 1920;
+	setAttr ".hyp[1650].nvs" 1920;
+	setAttr ".hyp[1651].nvs" 1920;
+	setAttr ".hyp[1652].nvs" 1920;
+	setAttr ".hyp[1653].nvs" 1920;
+	setAttr ".hyp[1654].nvs" 1920;
+	setAttr ".hyp[1655].nvs" 1920;
+	setAttr ".hyp[1656].nvs" 1920;
+	setAttr ".hyp[1657].nvs" 1920;
+	setAttr ".hyp[1658].nvs" 1920;
+	setAttr ".hyp[1659].nvs" 1920;
+	setAttr ".hyp[1660].nvs" 1920;
+	setAttr ".hyp[1661].nvs" 1920;
+	setAttr ".hyp[1662].nvs" 1920;
+	setAttr ".hyp[1663].nvs" 1920;
+	setAttr ".hyp[1664].nvs" 1920;
+	setAttr ".hyp[1665].nvs" 1920;
+	setAttr ".hyp[1666].nvs" 1920;
+	setAttr ".hyp[1667].nvs" 1920;
+	setAttr ".hyp[1668].nvs" 1920;
+	setAttr ".hyp[1669].nvs" 1920;
+	setAttr ".hyp[1670].nvs" 1920;
+	setAttr ".hyp[1671].nvs" 1920;
+	setAttr ".hyp[1672].nvs" 1920;
+	setAttr ".hyp[1673].nvs" 1920;
+	setAttr ".hyp[1674].nvs" 1920;
+	setAttr ".hyp[1675].nvs" 1920;
+	setAttr ".hyp[1676].nvs" 1920;
+	setAttr ".hyp[1677].nvs" 1920;
+	setAttr ".hyp[1678].nvs" 1920;
+	setAttr ".hyp[1679].nvs" 1920;
+	setAttr ".hyp[1680].nvs" 1920;
+	setAttr ".hyp[1681].nvs" 1920;
+	setAttr ".hyp[1682].nvs" 1920;
+	setAttr ".hyp[1683].nvs" 1920;
+	setAttr ".hyp[1684].nvs" 1920;
+	setAttr ".hyp[1685].nvs" 1920;
+	setAttr ".hyp[1686].nvs" 1920;
+	setAttr ".hyp[1687].nvs" 1920;
+	setAttr ".hyp[1688].nvs" 1920;
+	setAttr ".hyp[1689].nvs" 1920;
+	setAttr ".hyp[1690].nvs" 1920;
+	setAttr ".hyp[1691].nvs" 1920;
+	setAttr ".hyp[1692].nvs" 1920;
+	setAttr ".hyp[1693].nvs" 1920;
+	setAttr ".hyp[1694].nvs" 1920;
+	setAttr ".hyp[1695].nvs" 1920;
+	setAttr ".hyp[1696].nvs" 1920;
+	setAttr ".hyp[1697].nvs" 1920;
+	setAttr ".hyp[1698].nvs" 1920;
+	setAttr ".hyp[1699].nvs" 1920;
+	setAttr ".hyp[1700].nvs" 1920;
+	setAttr ".hyp[1701].nvs" 1920;
+	setAttr ".hyp[1702].nvs" 1920;
+	setAttr ".hyp[1703].nvs" 1920;
+	setAttr ".hyp[1704].nvs" 1920;
+	setAttr ".hyp[1705].nvs" 1920;
+	setAttr ".hyp[1706].nvs" 1920;
+	setAttr ".hyp[1707].nvs" 1920;
+	setAttr ".hyp[1708].nvs" 1920;
+	setAttr ".hyp[1709].nvs" 1920;
+	setAttr ".hyp[1710].nvs" 1920;
+	setAttr ".hyp[1711].nvs" 1920;
+	setAttr ".hyp[1712].nvs" 1920;
+	setAttr ".hyp[1713].nvs" 1920;
+	setAttr ".hyp[1714].nvs" 1920;
+	setAttr ".hyp[1715].nvs" 1920;
+	setAttr ".hyp[1716].nvs" 1920;
+	setAttr ".hyp[1717].nvs" 1920;
+	setAttr ".hyp[1718].nvs" 1920;
+	setAttr ".hyp[1719].nvs" 1920;
+	setAttr ".hyp[1720].nvs" 1920;
+	setAttr ".hyp[1721].nvs" 1920;
+	setAttr ".hyp[1722].nvs" 1920;
+	setAttr ".hyp[1723].nvs" 1920;
+	setAttr ".hyp[1724].nvs" 1920;
+	setAttr ".hyp[1725].nvs" 1920;
+	setAttr ".hyp[1726].nvs" 1920;
+	setAttr ".hyp[1727].nvs" 1920;
+	setAttr ".hyp[1728].nvs" 1920;
+	setAttr ".hyp[1729].nvs" 1920;
+	setAttr ".hyp[1730].nvs" 1920;
+	setAttr ".hyp[1731].nvs" 1920;
+	setAttr ".hyp[1732].nvs" 1920;
+	setAttr ".hyp[1733].nvs" 1920;
+	setAttr ".hyp[1734].nvs" 1920;
+	setAttr ".hyp[1735].nvs" 1920;
+	setAttr ".hyp[1736].nvs" 1920;
+	setAttr ".hyp[1737].nvs" 1920;
+	setAttr ".hyp[1738].nvs" 1920;
+	setAttr ".hyp[1739].nvs" 1920;
+	setAttr ".hyp[1740].nvs" 1920;
+	setAttr ".hyp[1741].nvs" 1920;
+	setAttr ".hyp[1742].nvs" 1920;
+	setAttr ".hyp[1743].nvs" 1920;
+	setAttr ".hyp[1744].nvs" 1920;
+	setAttr ".hyp[1745].nvs" 1920;
+	setAttr ".hyp[1746].nvs" 1920;
+	setAttr ".hyp[1747].nvs" 1920;
+	setAttr ".hyp[1748].nvs" 1920;
+	setAttr ".hyp[1749].nvs" 1920;
+	setAttr ".hyp[1750].nvs" 1920;
+	setAttr ".hyp[1751].nvs" 1920;
+	setAttr ".hyp[1752].nvs" 1920;
+	setAttr ".hyp[1753].nvs" 1920;
+	setAttr ".hyp[1754].nvs" 1920;
+	setAttr ".hyp[1755].nvs" 1920;
+	setAttr ".hyp[1756].nvs" 1920;
+	setAttr ".hyp[1757].nvs" 1920;
+	setAttr ".hyp[1758].nvs" 1920;
+	setAttr ".hyp[1759].nvs" 1920;
+	setAttr ".hyp[1760].nvs" 1920;
+	setAttr ".hyp[1761].nvs" 1920;
+	setAttr ".hyp[1762].nvs" 1920;
+	setAttr ".hyp[1763].nvs" 1920;
+	setAttr ".hyp[1764].nvs" 1920;
+	setAttr ".hyp[1765].nvs" 1920;
+	setAttr ".hyp[1766].nvs" 1920;
+	setAttr ".hyp[1767].nvs" 1920;
+	setAttr ".hyp[1768].nvs" 1920;
+	setAttr ".hyp[1769].nvs" 1920;
+	setAttr ".hyp[1770].nvs" 1920;
+	setAttr ".hyp[1771].nvs" 1920;
+	setAttr ".hyp[1772].nvs" 1920;
+	setAttr ".hyp[1773].nvs" 1920;
+	setAttr ".hyp[1774].nvs" 1920;
+	setAttr ".hyp[1775].nvs" 1920;
+	setAttr ".hyp[1776].nvs" 1920;
+	setAttr ".hyp[1777].nvs" 1920;
+	setAttr ".hyp[1778].nvs" 1920;
+	setAttr ".hyp[1779].nvs" 1920;
+	setAttr ".hyp[1780].nvs" 1920;
+	setAttr ".hyp[1781].nvs" 1920;
+	setAttr ".hyp[1782].nvs" 1920;
+	setAttr ".hyp[1783].nvs" 1920;
+	setAttr ".hyp[1784].nvs" 1920;
+	setAttr ".hyp[1785].nvs" 1920;
+	setAttr ".hyp[1786].nvs" 1920;
+	setAttr ".hyp[1787].nvs" 1920;
+	setAttr ".hyp[1788].nvs" 1920;
+	setAttr ".hyp[1789].nvs" 1920;
+	setAttr ".hyp[1790].nvs" 1920;
+	setAttr ".hyp[1791].nvs" 1920;
+	setAttr ".hyp[1792].nvs" 1920;
+	setAttr ".hyp[1793].nvs" 1920;
+	setAttr ".hyp[1794].nvs" 1920;
+	setAttr ".hyp[1795].nvs" 1920;
+	setAttr ".hyp[1796].nvs" 1920;
+	setAttr ".hyp[1797].nvs" 1920;
+	setAttr ".hyp[1798].nvs" 1920;
+	setAttr ".hyp[1799].nvs" 1920;
+	setAttr ".hyp[1800].nvs" 1920;
+	setAttr ".hyp[1801].nvs" 1920;
+	setAttr ".hyp[1802].nvs" 1920;
+	setAttr ".hyp[1803].nvs" 1920;
+	setAttr ".hyp[1804].nvs" 1920;
+	setAttr ".hyp[1805].nvs" 1920;
+	setAttr ".hyp[1806].nvs" 1920;
+	setAttr ".hyp[1807].nvs" 1920;
+	setAttr ".hyp[1808].nvs" 1920;
+	setAttr ".hyp[1809].nvs" 1920;
+	setAttr ".hyp[1810].nvs" 1920;
+	setAttr ".hyp[1811].nvs" 1920;
+	setAttr ".hyp[1812].nvs" 1920;
+	setAttr ".hyp[1813].nvs" 1920;
+	setAttr ".hyp[1814].nvs" 1920;
+	setAttr ".hyp[1815].nvs" 1920;
+	setAttr ".hyp[1816].nvs" 1920;
+	setAttr ".hyp[1817].nvs" 1920;
+	setAttr ".hyp[1818].nvs" 1920;
+	setAttr ".hyp[1819].nvs" 1920;
+	setAttr ".hyp[1820].nvs" 1920;
+	setAttr ".hyp[1821].nvs" 1920;
+	setAttr ".hyp[1822].nvs" 1920;
+	setAttr ".hyp[1823].nvs" 1920;
+	setAttr ".hyp[1824].nvs" 1920;
+	setAttr ".hyp[1825].nvs" 1920;
+	setAttr ".hyp[1826].nvs" 1920;
+	setAttr ".hyp[1827].nvs" 1920;
+	setAttr ".hyp[1828].nvs" 1920;
+	setAttr ".hyp[1829].nvs" 1920;
+	setAttr ".hyp[1830].nvs" 1920;
+	setAttr ".hyp[1831].nvs" 1920;
+	setAttr ".hyp[1832].nvs" 1920;
+	setAttr ".hyp[1833].nvs" 1920;
+	setAttr ".hyp[1834].nvs" 1920;
+	setAttr ".hyp[1835].nvs" 1920;
+	setAttr ".hyp[1836].nvs" 1920;
+	setAttr ".hyp[1837].nvs" 1920;
+	setAttr ".hyp[1838].nvs" 1920;
+	setAttr ".hyp[1839].nvs" 1920;
+	setAttr ".hyp[1840].nvs" 1920;
+	setAttr ".hyp[1841].nvs" 1920;
+	setAttr ".hyp[1842].nvs" 1920;
+	setAttr ".hyp[1843].nvs" 1920;
+	setAttr ".hyp[1844].nvs" 1920;
+	setAttr ".hyp[1845].nvs" 1920;
+	setAttr ".hyp[1846].nvs" 1920;
+	setAttr ".hyp[1847].nvs" 1920;
+	setAttr ".hyp[1848].nvs" 1920;
+	setAttr ".hyp[1849].nvs" 1920;
+	setAttr ".hyp[1850].nvs" 1920;
+	setAttr ".hyp[1851].nvs" 1920;
+	setAttr ".hyp[1852].nvs" 1920;
+	setAttr ".hyp[1853].nvs" 1920;
+	setAttr ".hyp[1854].nvs" 1920;
+	setAttr ".hyp[1855].nvs" 1920;
+	setAttr ".hyp[1856].nvs" 1920;
+	setAttr ".hyp[1857].nvs" 1920;
+	setAttr ".hyp[1858].nvs" 1920;
+	setAttr ".hyp[1859].nvs" 1920;
+	setAttr ".hyp[1860].nvs" 1920;
+	setAttr ".hyp[1861].nvs" 1920;
+	setAttr ".hyp[1862].nvs" 1920;
+	setAttr ".hyp[1863].nvs" 1920;
+	setAttr ".hyp[1864].nvs" 1920;
+	setAttr ".hyp[1865].nvs" 1920;
+	setAttr ".hyp[1866].nvs" 1920;
+	setAttr ".hyp[1867].nvs" 1920;
+	setAttr ".hyp[1868].nvs" 1920;
+	setAttr ".hyp[1869].nvs" 1920;
+	setAttr ".hyp[1870].nvs" 1920;
+	setAttr ".hyp[1871].nvs" 1920;
+	setAttr ".hyp[1872].nvs" 1920;
+	setAttr ".hyp[1873].nvs" 1920;
+	setAttr ".hyp[1874].nvs" 1920;
+	setAttr ".hyp[1875].nvs" 1920;
+	setAttr ".hyp[1876].nvs" 1920;
+	setAttr ".hyp[1877].nvs" 1920;
+	setAttr ".hyp[1878].nvs" 1920;
+	setAttr ".hyp[1879].nvs" 1920;
+	setAttr ".hyp[1880].nvs" 1920;
+	setAttr ".hyp[1881].nvs" 1920;
+	setAttr ".hyp[1882].nvs" 1920;
+	setAttr ".hyp[1883].nvs" 1920;
+	setAttr ".hyp[1884].nvs" 1920;
+	setAttr ".hyp[1885].nvs" 1920;
+	setAttr ".hyp[1886].nvs" 1920;
+	setAttr ".hyp[1887].nvs" 1920;
+	setAttr ".hyp[1888].nvs" 1920;
+	setAttr ".hyp[1889].nvs" 1920;
+	setAttr ".hyp[1890].nvs" 1920;
+	setAttr ".hyp[1891].nvs" 1920;
+	setAttr ".hyp[1892].nvs" 1920;
+	setAttr ".hyp[1893].nvs" 1920;
+	setAttr ".hyp[1894].nvs" 1920;
+	setAttr ".hyp[1895].nvs" 1920;
+	setAttr ".hyp[1896].nvs" 1920;
+	setAttr ".hyp[1897].nvs" 1920;
+	setAttr ".hyp[1898].nvs" 1920;
+	setAttr ".hyp[1899].nvs" 1920;
+	setAttr ".hyp[1900].nvs" 1920;
+	setAttr ".hyp[1901].nvs" 1920;
+	setAttr ".hyp[1902].nvs" 1920;
+	setAttr ".hyp[1903].nvs" 1920;
+	setAttr ".hyp[1904].nvs" 1920;
+	setAttr ".hyp[1905].nvs" 1920;
+	setAttr ".hyp[1906].nvs" 1920;
+	setAttr ".hyp[1907].nvs" 1920;
+	setAttr ".hyp[1908].nvs" 1920;
+	setAttr ".hyp[1909].nvs" 1920;
+	setAttr ".hyp[1910].nvs" 1920;
+	setAttr ".hyp[1911].nvs" 1920;
+	setAttr ".hyp[1912].nvs" 1920;
+	setAttr ".hyp[1913].nvs" 1920;
+	setAttr ".hyp[1914].nvs" 1920;
+	setAttr ".hyp[1915].nvs" 1920;
+	setAttr ".hyp[1916].nvs" 1920;
+	setAttr ".hyp[1917].nvs" 1920;
+	setAttr ".hyp[1918].nvs" 1920;
+	setAttr ".hyp[1919].nvs" 1920;
+	setAttr ".hyp[1920].nvs" 1920;
+	setAttr ".hyp[1921].nvs" 1920;
+	setAttr ".hyp[1922].nvs" 1920;
+	setAttr ".hyp[1923].nvs" 1920;
+	setAttr ".hyp[1924].nvs" 1920;
+	setAttr ".hyp[1925].nvs" 1920;
+	setAttr ".hyp[1926].nvs" 1920;
+	setAttr ".hyp[1927].nvs" 1920;
+	setAttr ".hyp[1928].nvs" 1920;
+	setAttr ".hyp[1929].nvs" 1920;
+	setAttr ".hyp[1930].nvs" 1920;
+	setAttr ".hyp[1931].nvs" 1920;
+	setAttr ".hyp[1932].nvs" 1920;
+	setAttr ".hyp[1933].nvs" 1920;
+	setAttr ".hyp[1934].nvs" 1920;
+	setAttr ".hyp[1935].nvs" 1920;
+	setAttr ".hyp[1936].nvs" 1920;
+	setAttr ".hyp[1937].nvs" 1920;
+	setAttr ".hyp[1938].nvs" 1920;
+	setAttr ".hyp[1939].nvs" 1920;
+	setAttr ".hyp[1940].nvs" 1920;
+	setAttr ".hyp[1941].nvs" 1920;
+	setAttr ".hyp[1942].nvs" 1920;
+	setAttr ".hyp[1943].nvs" 1920;
+	setAttr ".hyp[1944].nvs" 1920;
+	setAttr ".hyp[1945].nvs" 1920;
+	setAttr ".hyp[1946].nvs" 1920;
+	setAttr ".hyp[1947].nvs" 1920;
+	setAttr ".hyp[1948].nvs" 1920;
+	setAttr ".hyp[1949].nvs" 1920;
+	setAttr ".hyp[1950].nvs" 1920;
+	setAttr ".hyp[1951].nvs" 1920;
+	setAttr ".hyp[1952].nvs" 1920;
+	setAttr ".hyp[1953].nvs" 1920;
+	setAttr ".hyp[1954].nvs" 1920;
+	setAttr ".hyp[1955].nvs" 1920;
+	setAttr ".hyp[1956].nvs" 1920;
+	setAttr ".hyp[1957].nvs" 1920;
+	setAttr ".hyp[1958].nvs" 1920;
+	setAttr ".hyp[1959].nvs" 1920;
+	setAttr ".hyp[1960].nvs" 1920;
+	setAttr ".hyp[1961].nvs" 1920;
+	setAttr ".hyp[1962].nvs" 1920;
+	setAttr ".hyp[1963].nvs" 1920;
+	setAttr ".hyp[1964].nvs" 1920;
+	setAttr ".hyp[1965].nvs" 1920;
+	setAttr ".hyp[1966].nvs" 1920;
+	setAttr ".hyp[1967].nvs" 1920;
+	setAttr ".hyp[1968].nvs" 1920;
+	setAttr ".hyp[1969].nvs" 1920;
+	setAttr ".hyp[1970].nvs" 1920;
+	setAttr ".hyp[1971].nvs" 1920;
+	setAttr ".hyp[1972].nvs" 1920;
+	setAttr ".hyp[1973].nvs" 1920;
+	setAttr ".hyp[1974].nvs" 1920;
+	setAttr ".hyp[1975].nvs" 1920;
+	setAttr ".hyp[1976].nvs" 1920;
+	setAttr ".hyp[1977].nvs" 1920;
+	setAttr ".hyp[1978].nvs" 1920;
+	setAttr ".hyp[1979].nvs" 1920;
+	setAttr ".hyp[1980].nvs" 1920;
+	setAttr ".hyp[1981].nvs" 1920;
+	setAttr ".hyp[1982].nvs" 1920;
+	setAttr ".hyp[1983].nvs" 1920;
+	setAttr ".hyp[1984].nvs" 1920;
+	setAttr ".hyp[1985].nvs" 1920;
+	setAttr ".hyp[1986].nvs" 1920;
+	setAttr ".hyp[1987].nvs" 1920;
+	setAttr ".hyp[1988].nvs" 1920;
+	setAttr ".hyp[1989].nvs" 1920;
+	setAttr ".hyp[1990].nvs" 1920;
+	setAttr ".hyp[1991].nvs" 1920;
+	setAttr ".hyp[1992].nvs" 1920;
+	setAttr ".hyp[1993].nvs" 1920;
+	setAttr ".hyp[1994].nvs" 1920;
+	setAttr ".hyp[1995].nvs" 1920;
+	setAttr ".hyp[1996].nvs" 1920;
+	setAttr ".hyp[1997].nvs" 1920;
+	setAttr ".hyp[1998].nvs" 1920;
+	setAttr ".hyp[1999].nvs" 1920;
+	setAttr ".hyp[2000].nvs" 1920;
+	setAttr ".hyp[2001].nvs" 1920;
+	setAttr ".hyp[2002].nvs" 1920;
+	setAttr ".hyp[2003].nvs" 1920;
+	setAttr ".hyp[2004].nvs" 1920;
+	setAttr ".hyp[2005].nvs" 1920;
+	setAttr ".hyp[2006].nvs" 1920;
+	setAttr ".hyp[2007].nvs" 1920;
+	setAttr ".hyp[2008].nvs" 1920;
+	setAttr ".hyp[2009].nvs" 1920;
+	setAttr ".hyp[2010].nvs" 1920;
+	setAttr ".hyp[2011].nvs" 1920;
+	setAttr ".hyp[2012].nvs" 1920;
+	setAttr ".hyp[2013].nvs" 1920;
+	setAttr ".hyp[2014].nvs" 1920;
+	setAttr ".hyp[2015].nvs" 1920;
+	setAttr ".hyp[2016].nvs" 1920;
+	setAttr ".hyp[2017].nvs" 1920;
+	setAttr ".hyp[2018].nvs" 1920;
+	setAttr ".hyp[2019].nvs" 1920;
+	setAttr ".hyp[2020].nvs" 1920;
+	setAttr ".hyp[2021].nvs" 1920;
+	setAttr ".hyp[2022].nvs" 1920;
+	setAttr ".hyp[2023].nvs" 1920;
+	setAttr ".hyp[2024].nvs" 1920;
+	setAttr ".hyp[2025].nvs" 1920;
+	setAttr ".hyp[2026].nvs" 1920;
+	setAttr ".hyp[2027].nvs" 1920;
+	setAttr ".hyp[2028].nvs" 1920;
+	setAttr ".hyp[2029].nvs" 1920;
+	setAttr ".hyp[2030].nvs" 1920;
+	setAttr ".hyp[2031].nvs" 1920;
+	setAttr ".hyp[2032].nvs" 1920;
+	setAttr ".hyp[2033].nvs" 1920;
+	setAttr ".hyp[2034].nvs" 1920;
+	setAttr ".hyp[2035].nvs" 1920;
+	setAttr ".hyp[2036].nvs" 1920;
+	setAttr ".hyp[2037].nvs" 1920;
+	setAttr ".hyp[2038].nvs" 1920;
+	setAttr ".hyp[2039].nvs" 1920;
+	setAttr ".hyp[2040].nvs" 1920;
+	setAttr ".hyp[2041].nvs" 1920;
+	setAttr ".hyp[2042].nvs" 1920;
+	setAttr ".hyp[2043].nvs" 1920;
+	setAttr ".hyp[2044].nvs" 1920;
+	setAttr ".hyp[2045].nvs" 1920;
+	setAttr ".hyp[2046].nvs" 1920;
+	setAttr ".hyp[2047].nvs" 1920;
+	setAttr ".hyp[2048].nvs" 1920;
+	setAttr ".hyp[2049].nvs" 1920;
+	setAttr ".hyp[2050].nvs" 1920;
+	setAttr ".hyp[2051].nvs" 1920;
+	setAttr ".hyp[2052].nvs" 1920;
+	setAttr ".hyp[2053].nvs" 1920;
+	setAttr ".hyp[2054].nvs" 1920;
+	setAttr ".hyp[2055].nvs" 1920;
+	setAttr ".hyp[2056].nvs" 1920;
+	setAttr ".hyp[2057].nvs" 1920;
+	setAttr ".hyp[2058].nvs" 1920;
+	setAttr ".hyp[2059].nvs" 1920;
+	setAttr ".hyp[2060].nvs" 1920;
+	setAttr ".hyp[2061].nvs" 1920;
+	setAttr ".hyp[2062].nvs" 1920;
+	setAttr ".hyp[2063].nvs" 1920;
+	setAttr ".hyp[2064].nvs" 1920;
+	setAttr ".hyp[2065].nvs" 1920;
+	setAttr ".hyp[2066].nvs" 1920;
+	setAttr ".hyp[2067].nvs" 1920;
+	setAttr ".hyp[2068].nvs" 1920;
+	setAttr ".hyp[2069].nvs" 1920;
+	setAttr ".hyp[2070].nvs" 1920;
+	setAttr ".hyp[2071].nvs" 1920;
+	setAttr ".hyp[2072].nvs" 1920;
+	setAttr ".hyp[2073].nvs" 1920;
+	setAttr ".hyp[2074].nvs" 1920;
+	setAttr ".hyp[2075].nvs" 1920;
+	setAttr ".hyp[2076].nvs" 1920;
+	setAttr ".hyp[2077].nvs" 1920;
+	setAttr ".hyp[2078].nvs" 1920;
+	setAttr ".hyp[2079].nvs" 1920;
+	setAttr ".hyp[2080].nvs" 1920;
+	setAttr ".hyp[2081].nvs" 1920;
+	setAttr ".hyp[2082].nvs" 1920;
+	setAttr ".hyp[2083].nvs" 1920;
+	setAttr ".hyp[2084].nvs" 1920;
+	setAttr ".hyp[2085].nvs" 1920;
+	setAttr ".hyp[2086].nvs" 1920;
+	setAttr ".hyp[2087].nvs" 1920;
+	setAttr ".hyp[2088].nvs" 1920;
+	setAttr ".hyp[2089].nvs" 1920;
+	setAttr ".hyp[2090].nvs" 1920;
+	setAttr ".hyp[2091].nvs" 1920;
+	setAttr ".hyp[2092].nvs" 1920;
+	setAttr ".hyp[2093].nvs" 1920;
+	setAttr ".hyp[2094].nvs" 1920;
+	setAttr ".hyp[2095].nvs" 1920;
+	setAttr ".hyp[2096].nvs" 1920;
+	setAttr ".hyp[2097].nvs" 1920;
+	setAttr ".hyp[2098].nvs" 1920;
+	setAttr ".hyp[2099].nvs" 1920;
+	setAttr ".hyp[2100].nvs" 1920;
+	setAttr ".hyp[2101].nvs" 1920;
+	setAttr ".hyp[2102].nvs" 1920;
+	setAttr ".hyp[2103].nvs" 1920;
+	setAttr ".hyp[2104].nvs" 1920;
+	setAttr ".hyp[2105].nvs" 1920;
+	setAttr ".hyp[2106].nvs" 1920;
+	setAttr ".hyp[2107].nvs" 1920;
+	setAttr ".hyp[2108].nvs" 1920;
+	setAttr ".hyp[2109].nvs" 1920;
+	setAttr ".hyp[2110].nvs" 1920;
+	setAttr ".hyp[2111].nvs" 1920;
+	setAttr ".hyp[2112].nvs" 1920;
+	setAttr ".hyp[2113].nvs" 1920;
+	setAttr ".hyp[2114].nvs" 1920;
+	setAttr ".hyp[2115].nvs" 1920;
+	setAttr ".hyp[2116].nvs" 1920;
+	setAttr ".hyp[2117].nvs" 1920;
+	setAttr ".hyp[2118].nvs" 1920;
+	setAttr ".hyp[2119].nvs" 1920;
+	setAttr ".hyp[2120].nvs" 1920;
+	setAttr ".hyp[2121].nvs" 1920;
+	setAttr ".hyp[2122].nvs" 1920;
+	setAttr ".hyp[2123].nvs" 1920;
+	setAttr ".hyp[2124].nvs" 1920;
+	setAttr ".hyp[2125].nvs" 1920;
+	setAttr ".hyp[2126].nvs" 1920;
+	setAttr ".hyp[2127].nvs" 1920;
+	setAttr ".hyp[2128].nvs" 1920;
+	setAttr ".hyp[2129].nvs" 1920;
+	setAttr ".hyp[2130].nvs" 1920;
+	setAttr ".hyp[2131].nvs" 1920;
+	setAttr ".hyp[2132].nvs" 1920;
+	setAttr ".hyp[2133].nvs" 1920;
+	setAttr ".hyp[2134].nvs" 1920;
+	setAttr ".hyp[2135].nvs" 1920;
+	setAttr ".hyp[2136].nvs" 1920;
+	setAttr ".hyp[2137].nvs" 1920;
+	setAttr ".hyp[2138].nvs" 1920;
+	setAttr ".hyp[2139].nvs" 1920;
+	setAttr ".hyp[2140].nvs" 1920;
+	setAttr ".hyp[2141].nvs" 1920;
+	setAttr ".hyp[2142].nvs" 1920;
+	setAttr ".hyp[2143].nvs" 1920;
+	setAttr ".hyp[2144].nvs" 1920;
+	setAttr ".hyp[2145].nvs" 1920;
+	setAttr ".hyp[2146].nvs" 1920;
+	setAttr ".hyp[2147].nvs" 1920;
+	setAttr ".hyp[2148].nvs" 1920;
+	setAttr ".hyp[2149].nvs" 1920;
+	setAttr ".hyp[2150].nvs" 1920;
+	setAttr ".hyp[2151].nvs" 1920;
+	setAttr ".hyp[2152].nvs" 1920;
+	setAttr ".hyp[2153].nvs" 1920;
+	setAttr ".hyp[2154].nvs" 1920;
+	setAttr ".hyp[2155].nvs" 1920;
+	setAttr ".hyp[2156].nvs" 1920;
+	setAttr ".hyp[2157].nvs" 1920;
+	setAttr ".hyp[2158].nvs" 1920;
+	setAttr ".hyp[2159].nvs" 1920;
+	setAttr ".hyp[2160].nvs" 1920;
+	setAttr ".hyp[2161].nvs" 1920;
+	setAttr ".hyp[2162].nvs" 1920;
+	setAttr ".hyp[2163].nvs" 1920;
+	setAttr ".hyp[2164].nvs" 1920;
+	setAttr ".hyp[2165].nvs" 1920;
+	setAttr ".hyp[2166].nvs" 1920;
+	setAttr ".hyp[2167].nvs" 1920;
+	setAttr ".hyp[2168].nvs" 1920;
+	setAttr ".hyp[2169].nvs" 1920;
+	setAttr ".hyp[2170].nvs" 1920;
+	setAttr ".hyp[2171].nvs" 1920;
+	setAttr ".hyp[2172].nvs" 1920;
+	setAttr ".hyp[2173].nvs" 1920;
+	setAttr ".hyp[2174].nvs" 1920;
+	setAttr ".hyp[2175].nvs" 1920;
+	setAttr ".hyp[2176].nvs" 1920;
+	setAttr ".hyp[2177].nvs" 1920;
+	setAttr ".hyp[2178].nvs" 1920;
+	setAttr ".hyp[2179].nvs" 1920;
+	setAttr ".hyp[2180].nvs" 1920;
+	setAttr ".hyp[2181].nvs" 1920;
+	setAttr ".hyp[2182].nvs" 1920;
+	setAttr ".hyp[2183].nvs" 1920;
+	setAttr ".hyp[2184].nvs" 1920;
+	setAttr ".hyp[2185].nvs" 1920;
+	setAttr ".hyp[2186].nvs" 1920;
+	setAttr ".hyp[2187].nvs" 1920;
+	setAttr ".hyp[2188].nvs" 1920;
+	setAttr ".hyp[2189].nvs" 1920;
+	setAttr ".hyp[2190].nvs" 1920;
+	setAttr ".hyp[2191].nvs" 1920;
+	setAttr ".hyp[2192].nvs" 1920;
+	setAttr ".hyp[2193].nvs" 1920;
+	setAttr ".hyp[2194].nvs" 1920;
+	setAttr ".hyp[2195].nvs" 1920;
+	setAttr ".hyp[2196].nvs" 1920;
+	setAttr ".hyp[2197].nvs" 1920;
+	setAttr ".hyp[2198].nvs" 1920;
+	setAttr ".hyp[2199].nvs" 1920;
+	setAttr ".hyp[2200].nvs" 1920;
+	setAttr ".hyp[2201].nvs" 1920;
+	setAttr ".hyp[2202].nvs" 1920;
+	setAttr ".hyp[2203].nvs" 1920;
+	setAttr ".hyp[2204].nvs" 1920;
+	setAttr ".hyp[2205].nvs" 1920;
+	setAttr ".hyp[2206].nvs" 1920;
+	setAttr ".hyp[2207].nvs" 1920;
+	setAttr ".hyp[2208].nvs" 1920;
+	setAttr ".hyp[2209].nvs" 1920;
+	setAttr ".hyp[2210].nvs" 1920;
+	setAttr ".hyp[2211].nvs" 1920;
+	setAttr ".hyp[2212].nvs" 1920;
+	setAttr ".hyp[2213].nvs" 1920;
+	setAttr ".hyp[2214].nvs" 1920;
+	setAttr ".hyp[2215].nvs" 1920;
+	setAttr ".hyp[2216].nvs" 1920;
+	setAttr ".hyp[2217].nvs" 1920;
+	setAttr ".hyp[2218].nvs" 1920;
+	setAttr ".hyp[2219].nvs" 1920;
+	setAttr ".hyp[2220].nvs" 1920;
+	setAttr ".hyp[2221].nvs" 1920;
+	setAttr ".hyp[2222].nvs" 1920;
+	setAttr ".hyp[2223].nvs" 1920;
+	setAttr ".hyp[2224].nvs" 1920;
+	setAttr ".hyp[2225].nvs" 1920;
+	setAttr ".hyp[2226].nvs" 1920;
+	setAttr ".hyp[2227].nvs" 1920;
+	setAttr ".hyp[2228].nvs" 1920;
+	setAttr ".hyp[2229].nvs" 1920;
+	setAttr ".hyp[2230].nvs" 1920;
+	setAttr ".hyp[2231].nvs" 1920;
+	setAttr ".hyp[2232].nvs" 1920;
+	setAttr ".hyp[2233].nvs" 1920;
+	setAttr ".hyp[2234].nvs" 1920;
+	setAttr ".hyp[2235].nvs" 1920;
+	setAttr ".hyp[2236].nvs" 1920;
+	setAttr ".hyp[2237].nvs" 1920;
+	setAttr ".hyp[2238].nvs" 1920;
+	setAttr ".hyp[2239].nvs" 1920;
+	setAttr ".hyp[2240].nvs" 1920;
+	setAttr ".hyp[2241].nvs" 1920;
+	setAttr ".hyp[2242].nvs" 1920;
+	setAttr ".hyp[2243].nvs" 1920;
+	setAttr ".hyp[2244].nvs" 1920;
+	setAttr ".hyp[2245].nvs" 1920;
+	setAttr ".hyp[2246].nvs" 1920;
+	setAttr ".hyp[2247].nvs" 1920;
+	setAttr ".hyp[2248].nvs" 1920;
+	setAttr ".hyp[2249].nvs" 1920;
+	setAttr ".hyp[2250].nvs" 1920;
+	setAttr ".hyp[2251].nvs" 1920;
+	setAttr ".hyp[2252].nvs" 1920;
+	setAttr ".hyp[2253].nvs" 1920;
+	setAttr ".hyp[2254].nvs" 1920;
+	setAttr ".hyp[2255].nvs" 1920;
+	setAttr ".hyp[2256].nvs" 1920;
+	setAttr ".hyp[2257].nvs" 1920;
+	setAttr ".hyp[2258].nvs" 1920;
+	setAttr ".hyp[2259].nvs" 1920;
+	setAttr ".hyp[2260].nvs" 1920;
+	setAttr ".hyp[2261].nvs" 1920;
+	setAttr ".hyp[2262].nvs" 1920;
+	setAttr ".hyp[2263].nvs" 1920;
+	setAttr ".hyp[2264].nvs" 1920;
+	setAttr ".hyp[2265].nvs" 1920;
+	setAttr ".hyp[2266].nvs" 1920;
+	setAttr ".hyp[2267].nvs" 1920;
+	setAttr ".hyp[2268].nvs" 1920;
+	setAttr ".hyp[2269].nvs" 1920;
+	setAttr ".hyp[2270].nvs" 1920;
+	setAttr ".hyp[2271].nvs" 1920;
+	setAttr ".hyp[2272].nvs" 1920;
+	setAttr ".hyp[2273].nvs" 1920;
+	setAttr ".hyp[2274].nvs" 1920;
+	setAttr ".hyp[2275].nvs" 1920;
+	setAttr ".hyp[2276].nvs" 1920;
+	setAttr ".hyp[2277].nvs" 1920;
+	setAttr ".hyp[2278].nvs" 1920;
+	setAttr ".hyp[2279].nvs" 1920;
+	setAttr ".hyp[2280].nvs" 1920;
+	setAttr ".hyp[2281].nvs" 1920;
+	setAttr ".hyp[2282].nvs" 1920;
+	setAttr ".hyp[2283].nvs" 1920;
+	setAttr ".hyp[2284].nvs" 1920;
+	setAttr ".hyp[2285].nvs" 1920;
+	setAttr ".hyp[2286].nvs" 1920;
+	setAttr ".hyp[2287].nvs" 1920;
+	setAttr ".hyp[2288].nvs" 1920;
+	setAttr ".hyp[2289].nvs" 1920;
+	setAttr ".hyp[2290].nvs" 1920;
+	setAttr ".hyp[2291].nvs" 1920;
+	setAttr ".hyp[2292].nvs" 1920;
+	setAttr ".hyp[2293].nvs" 1920;
+	setAttr ".hyp[2294].nvs" 1920;
+	setAttr ".hyp[2295].nvs" 1920;
+	setAttr ".hyp[2296].nvs" 1920;
+	setAttr ".hyp[2297].nvs" 1920;
+	setAttr ".hyp[2298].nvs" 1920;
+	setAttr ".hyp[2299].nvs" 1920;
+	setAttr ".hyp[2300].nvs" 1920;
+	setAttr ".hyp[2301].nvs" 1920;
+	setAttr ".hyp[2302].nvs" 1920;
+	setAttr ".hyp[2303].nvs" 1920;
+	setAttr ".hyp[2304].nvs" 1920;
+	setAttr ".hyp[2305].nvs" 1920;
+	setAttr ".hyp[2306].nvs" 1920;
+	setAttr ".hyp[2307].nvs" 1920;
+	setAttr ".hyp[2308].nvs" 1920;
+	setAttr ".hyp[2309].nvs" 1920;
+	setAttr ".hyp[2310].nvs" 1920;
+	setAttr ".hyp[2311].nvs" 1920;
+	setAttr ".hyp[2312].nvs" 1920;
+	setAttr ".hyp[2313].nvs" 1920;
+	setAttr ".hyp[2314].nvs" 1920;
+	setAttr ".hyp[2315].nvs" 1920;
+	setAttr ".hyp[2316].nvs" 1920;
+	setAttr ".hyp[2317].nvs" 1920;
+	setAttr ".hyp[2318].nvs" 1920;
+	setAttr ".hyp[2319].nvs" 1920;
+	setAttr ".hyp[2320].nvs" 1920;
+	setAttr ".hyp[2321].nvs" 1920;
+	setAttr ".hyp[2322].nvs" 1920;
+	setAttr ".hyp[2323].nvs" 1920;
+	setAttr ".hyp[2324].nvs" 1920;
+	setAttr ".hyp[2325].nvs" 1920;
+	setAttr ".hyp[2326].nvs" 1920;
+	setAttr ".hyp[2327].nvs" 1920;
+	setAttr ".hyp[2328].nvs" 1920;
+	setAttr ".hyp[2329].nvs" 1920;
+	setAttr ".hyp[2330].nvs" 1920;
+	setAttr ".hyp[2331].nvs" 1920;
+	setAttr ".hyp[2332].nvs" 1920;
+	setAttr ".hyp[2333].nvs" 1920;
+	setAttr ".hyp[2334].nvs" 1920;
+	setAttr ".hyp[2335].nvs" 1920;
+	setAttr ".hyp[2336].nvs" 1920;
+	setAttr ".hyp[2337].nvs" 1920;
+	setAttr ".hyp[2338].nvs" 1920;
+	setAttr ".hyp[2339].nvs" 1920;
+	setAttr ".hyp[2340].nvs" 1920;
+	setAttr ".hyp[2341].nvs" 1920;
+	setAttr ".hyp[2342].nvs" 1920;
+	setAttr ".hyp[2343].nvs" 1920;
+	setAttr ".hyp[2344].nvs" 1920;
+	setAttr ".hyp[2345].nvs" 1920;
+	setAttr ".hyp[2346].nvs" 1920;
+	setAttr ".hyp[2347].nvs" 1920;
+	setAttr ".hyp[2348].nvs" 1920;
+	setAttr ".hyp[2349].nvs" 1920;
+	setAttr ".hyp[2350].nvs" 1920;
+	setAttr ".hyp[2351].nvs" 1920;
+	setAttr ".hyp[2352].nvs" 1920;
+	setAttr ".hyp[2353].nvs" 1920;
+	setAttr ".hyp[2354].nvs" 1920;
+	setAttr ".hyp[2355].nvs" 1920;
+	setAttr ".hyp[2356].nvs" 1920;
+	setAttr ".hyp[2357].nvs" 1920;
+	setAttr ".hyp[2358].nvs" 1920;
+	setAttr ".hyp[2359].nvs" 1920;
+	setAttr ".hyp[2360].nvs" 1920;
+	setAttr ".hyp[2361].nvs" 1920;
+	setAttr ".hyp[2362].nvs" 1920;
+	setAttr ".hyp[2363].nvs" 1920;
+	setAttr ".hyp[2364].nvs" 1920;
+	setAttr ".hyp[2365].nvs" 1920;
+	setAttr ".hyp[2366].nvs" 1920;
+	setAttr ".hyp[2367].nvs" 1920;
+	setAttr ".hyp[2368].nvs" 1920;
+	setAttr ".hyp[2369].nvs" 1920;
+	setAttr ".hyp[2370].nvs" 1920;
+	setAttr ".hyp[2371].nvs" 1920;
+	setAttr ".hyp[2372].nvs" 1920;
+	setAttr ".hyp[2373].nvs" 1920;
+	setAttr ".hyp[2374].nvs" 1920;
+	setAttr ".hyp[2375].nvs" 1920;
+	setAttr ".hyp[2376].nvs" 1920;
+	setAttr ".hyp[2377].nvs" 1920;
+	setAttr ".hyp[2378].nvs" 1920;
+	setAttr ".hyp[2379].nvs" 1920;
+	setAttr ".hyp[2380].nvs" 1920;
+	setAttr ".hyp[2381].nvs" 1920;
+	setAttr ".hyp[2382].nvs" 1920;
+	setAttr ".hyp[2383].nvs" 1920;
+	setAttr ".hyp[2384].nvs" 1920;
+	setAttr ".hyp[2385].nvs" 1920;
+	setAttr ".hyp[2386].nvs" 1920;
+	setAttr ".hyp[2387].nvs" 1920;
+	setAttr ".hyp[2388].nvs" 1920;
+	setAttr ".hyp[2389].nvs" 1920;
+	setAttr ".hyp[2390].nvs" 1920;
+	setAttr ".hyp[2391].nvs" 1920;
+	setAttr ".hyp[2392].nvs" 1920;
+	setAttr ".hyp[2393].nvs" 1920;
+	setAttr ".hyp[2394].nvs" 1920;
+	setAttr ".hyp[2395].nvs" 1920;
+	setAttr ".hyp[2396].nvs" 1920;
+	setAttr ".hyp[2397].nvs" 1920;
+	setAttr ".hyp[2398].nvs" 1920;
+	setAttr ".hyp[2399].nvs" 1920;
+	setAttr ".hyp[2400].nvs" 1920;
+	setAttr ".hyp[2401].nvs" 1920;
+	setAttr ".hyp[2402].nvs" 1920;
+	setAttr ".hyp[2403].nvs" 1920;
+	setAttr ".hyp[2404].nvs" 1920;
+	setAttr ".hyp[2405].nvs" 1920;
+	setAttr ".hyp[2406].nvs" 1920;
+	setAttr ".hyp[2407].nvs" 1920;
+	setAttr ".hyp[2408].nvs" 1920;
+	setAttr ".hyp[2409].nvs" 1920;
+	setAttr ".hyp[2410].nvs" 1920;
+	setAttr ".hyp[2411].nvs" 1920;
+	setAttr ".hyp[2412].nvs" 1920;
+	setAttr ".hyp[2413].nvs" 1920;
+	setAttr ".hyp[2414].nvs" 1920;
+	setAttr ".hyp[2415].nvs" 1920;
+	setAttr ".hyp[2416].nvs" 1920;
+	setAttr ".hyp[2417].nvs" 1920;
+	setAttr ".hyp[2418].nvs" 1920;
+	setAttr ".hyp[2419].nvs" 1920;
+	setAttr ".hyp[2420].nvs" 1920;
+	setAttr ".hyp[2421].nvs" 1920;
+	setAttr ".hyp[2422].nvs" 1920;
+	setAttr ".hyp[2423].nvs" 1920;
+	setAttr ".hyp[2424].nvs" 1920;
+	setAttr ".hyp[2425].nvs" 1920;
+	setAttr ".hyp[2426].nvs" 1920;
+	setAttr ".hyp[2427].nvs" 1920;
+	setAttr ".hyp[2428].nvs" 1920;
+	setAttr ".hyp[2429].nvs" 1920;
+	setAttr ".hyp[2430].nvs" 1920;
+	setAttr ".hyp[2431].nvs" 1920;
+	setAttr ".hyp[2432].nvs" 1920;
+	setAttr ".hyp[2433].nvs" 1920;
+	setAttr ".hyp[2434].nvs" 1920;
+	setAttr ".hyp[2435].nvs" 1920;
+	setAttr ".hyp[2436].nvs" 1920;
+	setAttr ".hyp[2437].nvs" 1920;
+	setAttr ".hyp[2438].nvs" 1920;
+	setAttr ".hyp[2439].nvs" 1920;
+	setAttr ".hyp[2440].nvs" 1920;
+	setAttr ".hyp[2441].nvs" 1920;
+	setAttr ".hyp[2442].nvs" 1920;
+	setAttr ".hyp[2443].nvs" 1920;
+	setAttr ".hyp[2444].nvs" 1920;
+	setAttr ".hyp[2445].nvs" 1920;
+	setAttr ".hyp[2446].nvs" 1920;
+	setAttr ".hyp[2447].nvs" 1920;
+	setAttr ".hyp[2448].nvs" 1920;
+	setAttr ".hyp[2449].nvs" 1920;
+	setAttr ".hyp[2450].nvs" 1920;
+	setAttr ".hyp[2451].nvs" 1920;
+	setAttr ".hyp[2452].nvs" 1920;
+	setAttr ".hyp[2453].nvs" 1920;
+	setAttr ".hyp[2454].nvs" 1920;
+	setAttr ".hyp[2455].nvs" 1920;
+	setAttr ".hyp[2456].nvs" 1920;
+	setAttr ".hyp[2457].nvs" 1920;
+	setAttr ".hyp[2458].nvs" 1920;
+	setAttr ".hyp[2459].nvs" 1920;
+	setAttr ".hyp[2460].nvs" 1920;
+	setAttr ".hyp[2461].nvs" 1920;
+	setAttr ".hyp[2462].nvs" 1920;
+	setAttr ".hyp[2463].nvs" 1920;
+	setAttr ".hyp[2464].nvs" 1920;
+	setAttr ".hyp[2465].nvs" 1920;
+	setAttr ".hyp[2466].nvs" 1920;
+	setAttr ".hyp[2467].nvs" 1920;
+	setAttr ".hyp[2468].nvs" 1920;
+	setAttr ".hyp[2469].nvs" 1920;
+	setAttr ".hyp[2470].nvs" 1920;
+	setAttr ".hyp[2471].nvs" 1920;
+	setAttr ".hyp[2472].nvs" 1920;
+	setAttr ".hyp[2473].nvs" 1920;
+	setAttr ".hyp[2474].nvs" 1920;
+	setAttr ".hyp[2475].nvs" 1920;
+	setAttr ".hyp[2476].nvs" 1920;
+	setAttr ".hyp[2477].nvs" 1920;
+	setAttr ".hyp[2478].nvs" 1920;
+	setAttr ".hyp[2479].nvs" 1920;
+	setAttr ".hyp[2480].nvs" 1920;
+	setAttr ".hyp[2481].nvs" 1920;
+	setAttr ".hyp[2482].nvs" 1920;
+	setAttr ".hyp[2483].nvs" 1920;
+	setAttr ".hyp[2484].nvs" 1920;
+	setAttr ".hyp[2485].nvs" 1920;
+	setAttr ".hyp[2486].nvs" 1920;
+	setAttr ".hyp[2487].nvs" 1920;
+	setAttr ".hyp[2488].nvs" 1920;
+	setAttr ".hyp[2489].nvs" 1920;
+	setAttr ".hyp[2490].nvs" 1920;
+	setAttr ".hyp[2491].nvs" 1920;
+	setAttr ".hyp[2492].nvs" 1920;
+	setAttr ".hyp[2493].nvs" 1920;
+	setAttr ".hyp[2494].nvs" 1920;
+	setAttr ".hyp[2495].nvs" 1920;
+	setAttr ".hyp[2496].nvs" 1920;
+	setAttr ".hyp[2497].nvs" 1920;
+	setAttr ".hyp[2498].nvs" 1920;
+	setAttr ".hyp[2499].nvs" 1920;
+	setAttr ".hyp[2500].nvs" 1920;
+	setAttr ".hyp[2501].nvs" 1920;
+	setAttr ".hyp[2502].nvs" 1920;
+	setAttr ".hyp[2503].nvs" 1920;
+	setAttr ".hyp[2504].nvs" 1920;
+	setAttr ".hyp[2505].nvs" 1920;
+	setAttr ".hyp[2506].nvs" 1920;
+	setAttr ".hyp[2507].nvs" 1920;
+	setAttr ".hyp[2508].nvs" 1920;
+	setAttr ".hyp[2509].nvs" 1920;
+	setAttr ".hyp[2510].nvs" 1920;
+	setAttr ".hyp[2511].nvs" 1920;
+	setAttr ".hyp[2512].nvs" 1920;
+	setAttr ".hyp[2513].nvs" 1920;
+	setAttr ".hyp[2514].nvs" 1920;
+	setAttr ".hyp[2515].nvs" 1920;
+	setAttr ".hyp[2516].nvs" 1920;
+	setAttr ".hyp[2517].nvs" 1920;
+	setAttr ".hyp[2518].nvs" 1920;
+	setAttr ".hyp[2519].nvs" 1920;
+	setAttr ".hyp[2520].nvs" 1920;
+	setAttr ".hyp[2521].nvs" 1920;
+	setAttr ".hyp[2522].nvs" 1920;
+	setAttr ".hyp[2523].nvs" 1920;
+	setAttr ".hyp[2524].nvs" 1920;
+	setAttr ".hyp[2525].nvs" 1920;
+	setAttr ".hyp[2526].nvs" 1920;
+	setAttr ".hyp[2527].nvs" 1920;
+	setAttr ".hyp[2528].nvs" 1920;
+	setAttr ".hyp[2529].nvs" 1920;
+	setAttr ".hyp[2530].nvs" 1920;
+	setAttr ".hyp[2531].nvs" 1920;
+	setAttr ".hyp[2532].nvs" 1920;
+	setAttr ".hyp[2533].nvs" 1920;
+	setAttr ".hyp[2534].nvs" 1920;
+	setAttr ".hyp[2535].nvs" 1920;
+	setAttr ".hyp[2536].nvs" 1920;
+	setAttr ".hyp[2537].nvs" 1920;
+	setAttr ".hyp[2538].nvs" 1920;
+	setAttr ".hyp[2539].nvs" 1920;
+	setAttr ".hyp[2540].nvs" 1920;
+	setAttr ".hyp[2541].nvs" 1920;
+	setAttr ".hyp[2542].nvs" 1920;
+	setAttr ".hyp[2543].nvs" 1920;
+	setAttr ".hyp[2544].nvs" 1920;
+	setAttr ".hyp[2545].nvs" 1920;
+	setAttr ".hyp[2546].nvs" 1920;
+	setAttr ".hyp[2547].nvs" 1920;
+	setAttr ".hyp[2548].nvs" 1920;
+	setAttr ".hyp[2549].nvs" 1920;
+	setAttr ".hyp[2550].nvs" 1920;
+	setAttr ".hyp[2551].nvs" 1920;
+	setAttr ".hyp[2552].nvs" 1920;
+	setAttr ".hyp[2553].nvs" 1920;
 	setAttr ".anf" yes;
 createNode phong -n "phong3";
 createNode shadingEngine -n "phong3SG";
@@ -33270,11 +35849,11 @@ createNode animCurveTU -n "pig_latest_Pig_blendshapes_ohshit";
 createNode animCurveTU -n "pig_latest_Pig_blendshapes_wide_eyeR";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  185 0 253 1 285 0;
+	setAttr -s 4 ".ktv[0:3]"  185 0 208 1 253 1 285 0;
 createNode animCurveTU -n "pig_latest_Pig_blendshapes_wide_eyeL";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  185 0 253 1 285 0;
+	setAttr -s 4 ".ktv[0:3]"  185 0 208 1 253 1 285 0;
 createNode animCurveTU -n "pig_latest_Pig_blendshapes_grumpy";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
@@ -33326,103 +35905,53 @@ createNode animCurveTU -n "blendShape1_leftEarForward";
 createNode animCurveTA -n "pig_latest_pig_left_eye_rotateX";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  177 -1.6297384079216157 197 -1.6297384079216157
-		 211 28.797942684967236;
+	setAttr -s 4 ".ktv[0:3]"  174 -193.11415925292874 194 -177.6540730448028
+		 203 -168.29627658060173 208 -170.00211235847237;
 createNode animCurveTA -n "pig_latest_pig_left_eye_rotateY";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  177 82.877465415299412 197 82.877465415299412
-		 211 82.877465415299426;
+	setAttr -s 4 ".ktv[0:3]"  174 10.875307730395249 194 6.2720932165503172
+		 203 24.3352825938412 208 22.241275129147105;
 createNode animCurveTA -n "pig_latest_pig_left_eye_rotateZ";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  177 -78.83426881014995 197 -78.83426881014995
-		 211 -78.834268810149922;
-createNode animCurveTA -n "pig_latest_pig_right_eye_rotateX";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  177 -12.692371851351949 197 -12.692371851351949
-		 211 17.735309241536381;
-createNode animCurveTA -n "pig_latest_pig_right_eye_rotateY";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  177 82.87746541529944 197 82.87746541529944
-		 211 82.877465415299511;
-createNode animCurveTA -n "pig_latest_pig_right_eye_rotateZ";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  177 -78.83426881014968 197 -78.83426881014968
-		 211 -78.834268810150192;
-createNode animCurveTU -n "pig_latest_pig_right_eye_visibility";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  177 1 197 1 211 1;
-	setAttr -s 3 ".kot[0:2]"  5 5 5;
-createNode animCurveTL -n "pig_latest_pig_right_eye_translateX";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  177 2.2813597646342947 197 2.2813597646342947
-		 211 2.2813597646342947;
-createNode animCurveTL -n "pig_latest_pig_right_eye_translateY";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  177 -0.47339584317700462 197 -0.47339584317700462
-		 211 -0.47339584317700462;
-createNode animCurveTL -n "pig_latest_pig_right_eye_translateZ";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  177 1.1852476377126009 197 1.1852476377126009
-		 211 1.1852476377126009;
-createNode animCurveTU -n "pig_latest_pig_right_eye_scaleX";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  177 0.58116972736987449 197 0.58116972736987449
-		 211 0.58116972736987449;
-createNode animCurveTU -n "pig_latest_pig_right_eye_scaleY";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  177 0.5811697273698746 197 0.5811697273698746
-		 211 0.5811697273698746;
-createNode animCurveTU -n "pig_latest_pig_right_eye_scaleZ";
-	setAttr ".tan" 16;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  177 0.58116972736987449 197 0.58116972736987449
-		 211 0.58116972736987449;
+	setAttr -s 4 ".ktv[0:3]"  174 -186.63883105248348 194 -192.31605517134741
+		 203 -199.07319170598439 208 -199.63925308787393;
 createNode animCurveTU -n "pig_latest_pig_left_eye_visibility";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  177 1 197 1 211 1;
-	setAttr -s 3 ".kot[0:2]"  5 5 5;
+	setAttr -s 4 ".ktv[0:3]"  174 1 194 1 203 1 208 1;
+	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
 createNode animCurveTL -n "pig_latest_pig_left_eye_translateX";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  177 2.2813597646342956 197 2.2813597646342956
-		 211 2.2813597646342956;
+	setAttr -s 4 ".ktv[0:3]"  174 2.2813597646342956 194 2.2813597646342956
+		 203 2.2813597646342956 208 2.2813597646342956;
 createNode animCurveTL -n "pig_latest_pig_left_eye_translateY";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  177 -0.47339584317699573 197 -0.47339584317699573
-		 211 -0.47339584317699573;
+	setAttr -s 4 ".ktv[0:3]"  174 -0.47339584317699573 194 -0.47339584317699573
+		 203 -0.47339584317699573 208 -0.47339584317699573;
 createNode animCurveTL -n "pig_latest_pig_left_eye_translateZ";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  177 -1.1812902738511428 197 -1.1812902738511428
-		 211 -1.1812902738511428;
+	setAttr -s 4 ".ktv[0:3]"  174 -1.1812902738511428 194 -1.1812902738511428
+		 203 -1.1812902738511428 208 -1.1812902738511428;
 createNode animCurveTU -n "pig_latest_pig_left_eye_scaleX";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  177 0.58116972736987449 197 0.58116972736987449
-		 211 0.58116972736987449;
+	setAttr -s 4 ".ktv[0:3]"  174 0.58116972736987449 194 0.58116972736987449
+		 203 0.58116972736987449 208 0.58116972736987449;
 createNode animCurveTU -n "pig_latest_pig_left_eye_scaleY";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  177 0.5811697273698746 197 0.5811697273698746
-		 211 0.5811697273698746;
+	setAttr -s 4 ".ktv[0:3]"  174 0.5811697273698746 194 0.5811697273698746
+		 203 0.5811697273698746 208 0.5811697273698746;
 createNode animCurveTU -n "pig_latest_pig_left_eye_scaleZ";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  177 0.58116972736987449 197 0.58116972736987449
-		 211 0.58116972736987449;
+	setAttr -s 4 ".ktv[0:3]"  174 0.58116972736987449 194 0.58116972736987449
+		 203 0.58116972736987449 208 0.58116972736987449;
 createNode pairBlend -n "pairBlend5";
 createNode animCurveTA -n "pairBlend5_inRotateX1";
 	setAttr ".tan" 16;
@@ -33606,19 +36135,19 @@ createNode animCurveTA -n "bike_ctrl_rotateX";
 		 272 8.9897067621540039 277 8.0549518803748423 282 8.2442717870433508 287 8.8050685031666074
 		 292 8.5600244664389908 297 9.0745702537698367 302 10.159421639522835 307 11.508488423667195
 		 312 11.203299386258376 317 8.319395830377891 322 5.9816954806851745 327 4.2726763991400052
-		 332 3.027767923796397 337 2.0991449637056472 342 1.3906598266077148 347 0.84805943486147362
+		 332 3.027767923796397 337 2.0991449637056472 342 1.390659826607715 347 0.84805943486147362
 		 352 0.44425299170200483 357 0.16978934052570011 362 0.024143457225899206;
 createNode animCurveTA -n "bike_ctrl_rotateY";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 29 ".ktv[0:28]"  146 5.9822257078881167 151 -58.470080093941704
+	setAttr -s 29 ".ktv[0:28]"  146 5.9822257078881176 151 -58.470080093941704
 		 156 -71.361064946389234 161 -78.983012523993523 166 -85.380110165474264 171 -89.53992962791969
 		 176 -90.694626290838087 257 -73.001586511989501 262 -50.623330816583795 267 -28.122281214725188
-		 272 -13.233006276444618 277 -1.680682959108829 282 9.0976549387053787 287 20.100808828682549
+		 272 -13.233006276444618 277 -1.6806829591088293 282 9.0976549387053787 287 20.100808828682549
 		 292 30.724547365199545 297 41.046782489944341 302 51.765340496621825 307 63.20252509816698
 		 312 74.920913185478625 317 83.898604880717514 322 89.914537741835602 327 93.828247450938562
 		 332 96.321956457462875 337 97.857430060116656 342 98.748835631654458 347 99.217450574468344
-		 352 99.425980782691866 357 99.494323922262865 362 99.50582706403614;
+		 352 99.425980782691866 357 99.494323922262879 362 99.50582706403614;
 createNode animCurveTA -n "bike_ctrl_rotateZ";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
@@ -33649,54 +36178,107 @@ createNode animCurveTU -n "bike_ctrl_scaleZ";
 createNode animCurveTL -n "pig_latest_COG_ctrl_translateX";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  287 0 292 1.8582401445979799e-015 295 4.9486639117994682e-014
-		 299 0;
+	setAttr -s 7 ".ktv[0:6]"  287 0 292 1.8582401445979799e-015 295 4.9486639117994682e-014
+		 299 0 300 0 303 0 308 0;
 createNode animCurveTL -n "pig_latest_COG_ctrl_translateY";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  287 0 292 -0.9331153848506023 295 -1.3309783854407384
-		 299 0;
+	setAttr -s 7 ".ktv[0:6]"  287 0 292 -0.9331153848506023 295 -1.3309783854407384
+		 299 0 300 0 303 0 308 0;
 createNode animCurveTL -n "pig_latest_COG_ctrl_translateZ";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  287 0 292 -0.0315259855252902 295 -0.041936493762940688
-		 299 0;
+	setAttr -s 7 ".ktv[0:6]"  287 0 292 -0.0315259855252902 295 -0.041936493762940688
+		 299 0 300 0 303 0 308 0;
 createNode animCurveTU -n "pig_latest_COG_ctrl_visibility";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  287 1 292 1 295 1 299 1;
-	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
+	setAttr -s 7 ".ktv[0:6]"  287 1 292 1 295 1 299 1 300 1 303 1 308 1;
+	setAttr -s 7 ".kot[0:6]"  5 5 5 5 5 5 5;
 createNode animCurveTA -n "pig_latest_COG_ctrl_rotateX";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  287 0 292 0 295 0 299 0;
+	setAttr -s 7 ".ktv[0:6]"  287 0 292 0 295 0 299 0 300 0.8892726687704412
+		 303 -0.7905236778605057 308 0.50302258294331359;
 createNode animCurveTA -n "pig_latest_COG_ctrl_rotateY";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  287 0 292 0 295 0 299 0;
+	setAttr -s 7 ".ktv[0:6]"  287 0 292 0 295 0 299 0 300 0.4660163406737336
+		 303 -0.24688994432543385 308 0.23594891004049756;
 createNode animCurveTA -n "pig_latest_COG_ctrl_rotateZ";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  287 0 292 0 295 0 299 0;
+	setAttr -s 7 ".ktv[0:6]"  287 0 292 0 295 0 299 0 300 -11.301690965498624
+		 303 9.3225439065546993 308 -6.2482946774813497;
 createNode animCurveTU -n "pig_latest_COG_ctrl_scaleX";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  287 1 292 1 295 1 299 1;
+	setAttr -s 7 ".ktv[0:6]"  287 1 292 1 295 1 299 1 300 1 303 1 308 1;
 createNode animCurveTU -n "pig_latest_COG_ctrl_scaleY";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  287 1 292 1 295 1 299 1;
+	setAttr -s 7 ".ktv[0:6]"  287 1 292 1 295 1 299 1 300 1 303 1 308 1;
 createNode animCurveTU -n "pig_latest_COG_ctrl_scaleZ";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  287 1 292 1 295 1 299 1;
+	setAttr -s 7 ".ktv[0:6]"  287 1 292 1 295 1 299 1 300 1 303 1 308 1;
+createNode animCurveTA -n "pig_latest_pig_right_eye_rotateX";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  172 -185.81798878990105 193 -185.81798878990105
+		 203 -173.38455112948577;
+createNode animCurveTA -n "pig_latest_pig_right_eye_rotateY";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  172 27.269174209881761 193 27.269174209881761
+		 203 10.235785819324498;
+createNode animCurveTA -n "pig_latest_pig_right_eye_rotateZ";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  172 -189.93097207061072 193 -189.93097207061072
+		 203 -206.95530746834211;
+createNode animCurveTU -n "pig_latest_pig_right_eye_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  172 1 193 1 203 1;
+	setAttr -s 3 ".kot[0:2]"  5 5 5;
+createNode animCurveTL -n "pig_latest_pig_right_eye_translateX";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  172 2.2813597646342947 193 2.2813597646342947
+		 203 2.2813597646342947;
+createNode animCurveTL -n "pig_latest_pig_right_eye_translateY";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  172 -0.47339584317700462 193 -0.47339584317700462
+		 203 -0.47339584317700462;
+createNode animCurveTL -n "pig_latest_pig_right_eye_translateZ";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  172 1.1852476377126009 193 1.1852476377126009
+		 203 1.1852476377126009;
+createNode animCurveTU -n "pig_latest_pig_right_eye_scaleX";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  172 0.58116972736987449 193 0.58116972736987449
+		 203 0.58116972736987449;
+createNode animCurveTU -n "pig_latest_pig_right_eye_scaleY";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  172 0.5811697273698746 193 0.5811697273698746
+		 203 0.5811697273698746;
+createNode animCurveTU -n "pig_latest_pig_right_eye_scaleZ";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  172 0.58116972736987449 193 0.58116972736987449
+		 203 0.58116972736987449;
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr ".o" 260;
-	setAttr ".unw" 260;
+	setAttr ".o" 240;
+	setAttr ".unw" 240;
 select -ne :renderPartition;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -33772,7 +36354,7 @@ select -ne :defaultRenderGlobals;
 	setAttr ".mcfr" 30;
 	setAttr -k on ".clip";
 	setAttr -k on ".edm";
-	setAttr ".ren" -type "string" "renderManRIS";
+	setAttr ".ren" -type "string" "mayaHardware2";
 	setAttr -av -k on ".esr";
 	setAttr -k on ".ors";
 	setAttr ".outf" 32;
@@ -33886,6 +36468,7 @@ select -ne :hardwareRenderingGlobals;
 		 0 0 0 0 ;
 	setAttr ".potfna" -type "stringArray" 1 "gpuCacheDisplayFilter"  ;
 	setAttr ".potfva" -type "Int32Array" 1 0 ;
+	setAttr ".aoon" yes;
 select -ne :characterPartition;
 	setAttr -s 6 ".st";
 select -ne :defaultHardwareRenderGlobals;
@@ -33925,7 +36508,9 @@ select -ne :defaultHardwareRenderGlobals;
 	setAttr -k on ".gh";
 	setAttr -cb on ".sd";
 select -ne :ikSystem;
-	setAttr -s 8 ".sol";
+	setAttr -s 6 ".sol";
+connectAttr "livingroom_shading_latestRN.phl[74]" "hyperLayout2.hyp[0].dn";
+connectAttr "livingroom_shading_latestRN.phl[75]" "hyperLayout2.hyp[3].dn";
 connectAttr "NewSmarty_024:eye_ctrl_translateX.o" "smartybikeRN.phl[1]";
 connectAttr "NewSmarty_024:eye_ctrl_translateY.o" "smartybikeRN.phl[2]";
 connectAttr "NewSmarty_024:eye_ctrl_translateZ.o" "smartybikeRN.phl[3]";
@@ -34548,6 +37133,8 @@ connectAttr "pig_latestRNfosterParent1.msg" "pig_latestRN.fp";
 connectAttr "sharedReferenceNode.sr" "pig_latestRN.sr";
 connectAttr "hyperView2.msg" "nodeEditorPanel2Info.b[0]";
 connectAttr "hyperLayout2.msg" "hyperView2.hl";
+connectAttr ":lightLinker1.msg" "hyperLayout2.hyp[1].dn";
+connectAttr ":renderPartition.msg" "hyperLayout2.hyp[2].dn";
 connectAttr "wood1.oc" "phong3.c";
 connectAttr "livingroom_shading_latestRN.phl[1]" "phong3SG.dsm" -na;
 connectAttr "phong3.oc" "phong3SG.ss";

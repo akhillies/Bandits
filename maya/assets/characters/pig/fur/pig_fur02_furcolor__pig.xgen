@@ -1,8 +1,8 @@
 # XGen Palette File
 #
 # Version:  /Applications/Autodesk/maya2015/plug-ins/xgen/
-# Author:   alyyassin
-# Date:     Fri Apr 24 02:51:36 2015
+# Author:   CynthiaDiaz
+# Date:     Fri Apr 24 14:52:57 2015
 
 FileVersion 16
 
@@ -10,7 +10,7 @@ Palette
 	name			pig
 	parent			
 	xgDataPath		${PROJECT}xgen/collections/pig
-	xgProjectPath		/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/
+	xgProjectPath		/Users/CynthiaDiaz/Desktop/Bandits/maya/
 	xgDogTag		
 	endAttrs
 
@@ -28,6 +28,33 @@ Description
 	maxWidthRatio		20.0
 	groom			groom_fur22
 	descriptionId		0
+	endAttrs
+
+SpherePrimitive
+	length			map('${DESC}/groom/length/')
+	width			map('${DESC}/groom/width/')
+	depth			$a=1.0000;#0.05,5.0\n$a
+	offU			map('${DESC}/groom/orient/',0)
+	offV			map('${DESC}/groom/orient/',1)
+	offN			$a=0.0000;#-180.0,180.0\n$a
+	aboutN			$a=0.0000;#-180.0,180.0\n$a
+	iMethod			0
+	regionMap		${DESC}/Region/
+	regionMask		0.0
+	useCache		false
+	liveMode		true
+	_patchNames		
+	_wireNames		
+	cacheFileName		${DESC}/guides.abc
+	twist			$a=0.0000;#-180.0,180.0\n$a
+	endAttrs
+
+PointRenderer
+	percent			100.0
+	startPercent		0.0
+	inCameraOnly		false
+	inCameraMargin		0.0
+	outputDir		${DESC}/Points/
 	endAttrs
 
 RendermanRenderer

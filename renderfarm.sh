@@ -78,6 +78,6 @@ Finished EXR files will be stored in '$tmpfolder/$(basename $file .ma)/'
     To transfer files, please do one of the following AFTER the render job is complete:
         Use an SCP client (like Cyberduck for Mac or WinSCP for Windows) to transfer the files over manually
         OR
-        If on UNIX-based machine (aka Mac or Linux) install 'rsync' and use this command: './scripts_for_rman/rsyncronize.sh -s $(basename $file .ma) -d ./'\n\n"
+        (not working) If on UNIX-based machine (aka Mac or Linux) install 'rsync' and use this command: './scripts_for_rman/rsyncronize.sh -s $(basename $file .ma) -d ./'\n\n"
 
 #open http://shay.cs.berkeley.edu:8888

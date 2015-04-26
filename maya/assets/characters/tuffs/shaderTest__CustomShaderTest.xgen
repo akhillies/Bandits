@@ -2,7 +2,7 @@
 #
 # Version:  /Applications/Autodesk/maya2015/plug-ins/xgen/
 # Author:   AshleyTheMagnificant
-# Date:     Fri Apr 24 00:41:09 2015
+# Date:     Sun Apr 26 02:38:02 2015
 
 FileVersion 16
 
@@ -79,9 +79,8 @@ RendermanRenderer
 	custom__mr_motion_blur_factor	1.0
 	custom__mr_motion_blur_multiplier	1.0
 	custom__rr_splinesAsHair	1
-	custom_color_tip_color	$freq_fine = 0.0900; #0.00,1.00\n$freq_coarse = 8; # 0,100\n$X = 1.0000; #0.00,10.00\n$Y = 1.0000; #0.00,10.00\n$Z = 1.0000; #0.00,10.00\n$frequency = ($freq_fine+$freq_coarse) * [$X,$Y,$Z];\n$Strength=1.0000;\n$Contrast = 0.9620;\n$Color = 0; #0,1\n$baseColor=$a=map('${DESC}/paintmaps/colo_tp');#3dpaint,5.0\n$a;\n\n$Cnew = choose($Color, noise($P*$frequency), cnoise($P*$frequency)) \n\t-> contrast($Contrast);\nmix($Cs,$Cnew,$Strength)*$baseColor\n
+	custom_color_tip_color	$freq_fine = 0.3750; #0.00,1.00\n$freq_coarse = 8; # 0,100\n$X = 0.0000; #0.00,10.00\n$Y = 0.0000; #0.00,10.00\n$Z = 0.0000; #0.00,10.00\n$frequency = ($freq_fine+$freq_coarse) * [$X,$Y,$Z];\n$Strength=0.6700;\n$Contrast = 0.1150;\n$Color = 0; #0,1\n$baseColor=$a=map('${DESC}/paintmaps/colo_tp');#3dpaint,5.0\n$a;\n\n$Cnew = choose($Color, noise($P*$frequency), cnoise($P*$frequency)) \n\t-> contrast($Contrast);\nmix($Cs,$Cnew,$Strength)*$baseColor\n
 	custom_color_root_color	$a=map('${DESC}/paintmaps/color_rt');#3dpaint,5.0\n$a\n
-	custom_color_out_color	$a=map('${DESC}/paintmaps/custom_color_out_color');#3dpaint,5.0\n$a\n
 	endAttrs
 
 SplinePrimitive
@@ -106,8 +105,8 @@ SplinePrimitive
 	bendV[0]		map('${DESC}/groom/bend/',2)
 	fxCVCount		5
 	uniformCVs		true
-	taper			$a=0.9900;#-1.0,1.0\n$a
-	taperStart		$a=0.0950;#0.0,1.0\n$a
+	taper			$a=0.7850;#-1.0,1.0\n$a
+	taperStart		$a=0.0400;#0.0,1.0\n$a
 	displayWidth		true
 	faceCamera		true
 	tubeShade		true

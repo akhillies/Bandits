@@ -21,4 +21,4 @@ spawn ssh -oStrictHostKeyChecking=no -oCheckHostIP=no $usr@$host "$gitfolder/$sc
 
 expect "Password:"
 send "$pw\r"
-interact > /dev/null;
+interact;

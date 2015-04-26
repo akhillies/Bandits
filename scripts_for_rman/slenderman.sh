@@ -30,15 +30,6 @@ printf "\n=============================================\n\n"
 
 printf "Rendering:\n\n"
 
-echo $1
-echo $2
-echo $3
-echo $4
-echo $5
-echo $6
-echo $7
-echo $8
-echo $9
-echo $10
-
 /Applications/Autodesk/maya2015/Maya.app/Contents/bin/Render -r rman -ris -rd "$4/$fname" -cam $6 -res $9 ${10} -s $7 -e $8 -im $fname -of 'OpenEXR' -fnc 'name_#.ext' -pad 3 -spool 'immediate rib, remote render' -proj "$1/$2" $1/$2/$5
+
+echo "done"

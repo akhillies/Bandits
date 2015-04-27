@@ -2,7 +2,7 @@
 #
 # Version:  /Applications/Autodesk/maya2015/plug-ins/xgen/
 # Author:   AshleyTheMagnificant
-# Date:     Sun Apr 26 02:38:02 2015
+# Date:     Sun Apr 26 18:25:44 2015
 
 FileVersion 16
 
@@ -105,8 +105,8 @@ SplinePrimitive
 	bendV[0]		map('${DESC}/groom/bend/',2)
 	fxCVCount		5
 	uniformCVs		true
-	taper			$a=0.7850;#-1.0,1.0\n$a
-	taperStart		$a=0.0400;#0.0,1.0\n$a
+	taper			$a=0.7600;#-1.0,1.0\n$a
+	taperStart		$a=0.5150;#0.0,1.0\n$a
 	displayWidth		true
 	faceCamera		true
 	tubeShade		true
@@ -142,7 +142,7 @@ RandomGenerator
 	cullAngleBF		0.0
 	cullAngleF		0.0
 	cullExpr		$a=0.0000;#0.0,1.0\n$a
-	density			500.0
+	density			200.0
 	mask			1.0 # map('${DESC}/density/')
 	dcFlag			false
 	scFlag			true

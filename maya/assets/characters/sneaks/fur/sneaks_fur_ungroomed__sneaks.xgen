@@ -2,7 +2,7 @@
 #
 # Version:  /Applications/Autodesk/maya2015/plug-ins/xgen/
 # Author:   CynthiaDiaz
-# Date:     Sun Apr 26 18:16:52 2015
+# Date:     Wed Apr 29 04:17:07 2015
 
 FileVersion 16
 
@@ -132,7 +132,7 @@ SplinePrimitive
 	bendV[0]		map('${DESC}/groom/bend/',2)
 	fxCVCount		5
 	uniformCVs		true
-	taper			$a=0.3750;#-1.0,1.0\n$a
+	taper			$a=0.8000;#-1.0,1.0\n$a
 	taperStart		$a=0.0700;#0.0,1.0\n$a
 	displayWidth		true
 	faceCamera		true

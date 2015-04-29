@@ -1,8 +1,8 @@
 # XGen Palette File
 #
 # Version:  /Applications/Autodesk/maya2015/plug-ins/xgen/
-# Author:   CynthiaDiaz
-# Date:     Fri Apr 24 14:52:57 2015
+# Author:   AshleyTheMagnificant
+# Date:     Sun Apr 26 17:39:06 2015
 
 FileVersion 16
 
@@ -10,7 +10,7 @@ Palette
 	name			pig
 	parent			
 	xgDataPath		${PROJECT}xgen/collections/pig
-	xgProjectPath		/Users/CynthiaDiaz/Desktop/Bandits/maya/
+	xgProjectPath		/Users/AshleyTheMagnificant/GitHub/Bandits/maya/
 	xgDogTag		
 	endAttrs
 
@@ -107,6 +107,7 @@ RendermanRenderer
 	custom__mr_motion_blur_multiplier	1.0
 	custom__rr_splinesAsHair	1
 	custom_color_color_root	$a=map('${DESC}/paintmaps/color_dt');#3dpaint,10.0\n$a\n
+	custom_color_tip_color	$freq_fine = 0.2000; #0.00,1.00\n$freq_coarse = 1; # 0,100\n$X = 1.0000; #0.00,10.00\n$Y = 1.0000; #0.00,10.00\n$Z = 1.0000; #0.00,10.00\n$frequency = ($freq_fine+$freq_coarse) * [$X,$Y,$Z];\n$Strength=1.0000;\n$Contrast = 0.9620;\n$Color = 0; #0,1\n$baseColor=$a=map('${DESC}/paintmaps/color_tp');#3dpaint,5.0\n$a\n\n$Cnew = choose($Color, noise($P*$frequency), cnoise($P*$frequency)) \n\t-> contrast($Contrast);\nmix($Cs,$Cnew,$Strength)*$baseColor\n
 	endAttrs
 
 SplinePrimitive
@@ -177,7 +178,7 @@ GLRenderer
 	poly			false
 	culled			false
 	unitCube		false
-	color			$a=map('${DESC}/paintmaps/color_dt');#3dpaint,10.0\n$a\n
+	color			$a=map('${DESC}/paintmaps/color_tp');#3dpaint,5.0\n$a\n
 	guideColor		$a=[1.0,0.4313725,0.0];#color\n$a
 	TEXCOORD3		[ $cWidth, 0, 0 ]  # red channel reserved by XGen
 	TEXCOORD4		
@@ -186,6 +187,15 @@ GLRenderer
 	TEXCOORD7		
 	splineSegments		2
 	primNumLimit		1000000
+	endAttrs
+
+ParticleRenderer
+	percent			100.0
+	startPercent		0.0
+	inCameraOnly		false
+	inCameraMargin		0.0
+	mask			1.0
+	particleFile		${DESC}/particles.pdb
 	endAttrs
 
 	Active	SplinePrimitive

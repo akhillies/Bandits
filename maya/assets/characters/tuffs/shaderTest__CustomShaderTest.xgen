@@ -1,8 +1,13 @@
 # XGen Palette File
 #
 # Version:  /Applications/Autodesk/maya2015/plug-ins/xgen/
+<<<<<<< HEAD
 # Author:   AshleyTheMagnificant
 # Date:     Mon Apr 27 12:08:22 2015
+=======
+# Author:   alyyassin
+# Date:     Sun Apr 26 18:43:33 2015
+>>>>>>> d02d1b39752fc0c73673733d96bbe5f5481d392f
 
 FileVersion 16
 
@@ -10,7 +15,7 @@ Palette
 	name			CustomShaderTest
 	parent			
 	xgDataPath		${PROJECT}xgen/collections/CustomShaderTest
-	xgProjectPath		/Users/AshleyTheMagnificant/GitHub/Bandits/maya/
+	xgProjectPath		/Users/alyyassin/Documents/College/Junior Year/CNM 190/Bandits/Bandits/maya/
 	xgDogTag		
 	endAttrs
 

@@ -1,8 +1,8 @@
 # XGen Palette File
 #
 # Version:  /Applications/Autodesk/maya2015/plug-ins/xgen/
-# Author:   CynthiaDiaz
-# Date:     Mon May  4 04:31:12 2015
+# Author:   AshleyTheMagnificant
+# Date:     Mon May  4 12:58:27 2015
 
 FileVersion 16
 
@@ -10,7 +10,7 @@ Palette
 	name			cat
 	parent			
 	xgDataPath		${PROJECT}xgen/collections/cat
-	xgProjectPath		/Users/CynthiaDiaz/Desktop/Bandits/maya/
+	xgProjectPath		/Users/AshleyTheMagnificant/GitHub/Bandits/maya/
 	xgDogTag		
 	endAttrs
 
@@ -131,7 +131,7 @@ GLRenderer
 	poly			false
 	culled			false
 	unitCube		false
-	color			map('${DESC}/groom/region/')
+	color			$a=map('${DESC}/paintmaps/color_dt');#3dpaint,5.0\n$a\n
 	guideColor		$a=[1.0,0.4313725,0.0];#color\n$a
 	TEXCOORD3		[ $cWidth, 0, 0 ]  # red channel reserved by XGen
 	TEXCOORD4		
@@ -139,6 +139,7 @@ GLRenderer
 	TEXCOORD6		
 	TEXCOORD7		
 	splineSegments		2
+	primNumLimit		1000000
 	endAttrs
 
 PointGenerator
@@ -154,6 +155,30 @@ PointGenerator
 	cullExpr		$a=0.0000;#0.0,1.0\n$a
 	pointDir		${DESC}/Points/
 	ptLength		1.0
+	endAttrs
+
+CardPrimitive
+	length			map('${DESC}/groom/length/')
+	width			map('${DESC}/groom/width/')
+	depth			$a=1.0000;#0.05,5.0\n$a
+	offU			map('${DESC}/groom/orient/',0)
+	offV			map('${DESC}/groom/orient/',1)
+	offN			$a=0.0000;#-180.0,180.0\n$a
+	aboutN			$a=0.0000;#-180.0,180.0\n$a
+	iMethod			0
+	regionMap		${DESC}/Region/
+	regionMask		0.0
+	useCache		false
+	liveMode		true
+	_patchNames		
+	_wireNames		
+	cacheFileName		${DESC}/guides.abc
+	twist			$a=0.0000;#-180.0,180.0\n$a
+	bendU			$a=0.0000;#-2.0,2.0\n$a
+	bendV			$a=0.0000;#-2.0,2.0\n$a
+	bendParamU		$a=0.5000;#0.0,1.0\n$a
+	bendParamV		$a=0.5000;#0.0,1.0\n$a
+	faceCamera		false
 	endAttrs
 
 RendermanRenderer
@@ -190,36 +215,12 @@ RendermanRenderer
 	dPdvref_XS		false
 	dPdvg_XS		false
 	dPdvrefg_XS		false
-	renderer		mental ray
+	renderer		RenderMan
 	renderMethod		2
 	draMode			0
 	primitiveBound		1.0
 	custom__rr_splinesAsHair	1
-	custom_color_color	$a=map('${DESC}/paintmaps/custom_color_color');#3dpaint,5.0\n$a\n
-	endAttrs
-
-CardPrimitive
-	length			map('${DESC}/groom/length/')
-	width			map('${DESC}/groom/width/')
-	depth			$a=1.0000;#0.05,5.0\n$a
-	offU			map('${DESC}/groom/orient/',0)
-	offV			map('${DESC}/groom/orient/',1)
-	offN			$a=0.0000;#-180.0,180.0\n$a
-	aboutN			$a=0.0000;#-180.0,180.0\n$a
-	iMethod			0
-	regionMap		${DESC}/Region/
-	regionMask		0.0
-	useCache		false
-	liveMode		true
-	_patchNames		
-	_wireNames		
-	cacheFileName		${DESC}/guides.abc
-	twist			$a=0.0000;#-180.0,180.0\n$a
-	bendU			$a=0.0000;#-2.0,2.0\n$a
-	bendV			$a=0.0000;#-2.0,2.0\n$a
-	bendParamU		$a=0.5000;#0.0,1.0\n$a
-	bendParamV		$a=0.5000;#0.0,1.0\n$a
-	faceCamera		false
+	custom_color_root_color	$a=map('${DESC}/paintmaps/color_dt');#3dpaint,5.0\n$a\n
 	endAttrs
 
 ArchivePrimitive

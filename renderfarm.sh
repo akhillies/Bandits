@@ -19,6 +19,7 @@ file="shots/pre_title/blockTextTitle/bandits_title_overlay.ma"
 cam="camera1"
 start="1"
 end="100"
+numprocess="4"
 
 
 # -f is file path (prepended with **/Bandits/maya/shots/
@@ -61,7 +62,8 @@ printf "================================================================"
 printf "\n\nStarting Renderman Farm:\n"
 printf "\tUsing file: $file\n"
 printf "\tWith camera: $cam\n"
-printf "\tFrom frame $start to frame $end\n\n\n"
+printf "\tFrom frame $start to frame $end\n"
+printf "\tUsing $numprocess processors (0 means all available)\n\n\n"
 
 
 # for mac

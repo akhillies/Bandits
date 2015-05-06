@@ -66,8 +66,8 @@ printf "================================================================"
 printf "\n\nStarting Renderman Farm:\n"
 printf "\tUsing file: $file\n"
 printf "\tWith camera: $cam\n"
-printf "\tFrom frame $start to frame $end\n\n\n"
-printf "\tUsing $numprocess processors (0 means all available)"
+printf "\tFrom frame $start to frame $end\n"
+printf "\tUsing $numprocess processors (0 means all available)\n\n\n"
 
 
 # for mac

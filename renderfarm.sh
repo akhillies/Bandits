@@ -26,7 +26,7 @@ numprocess="4"
 # -c is camera
 # -s/-e is frame start/end
 # -d is email to send command when finished
-while getopts "f:c:s:e:a:" opt; do
+while getopts "f:c:s:e:" opt; do
   case $opt in
     f)
       #echo "File name: $OPTARG" >&2
@@ -43,10 +43,6 @@ while getopts "f:c:s:e:a:" opt; do
     e)
       #echo "End frame: $OPTARG" >&2
       end="$OPTARG"
-      ;;
-    a)
-      #echo "Using all processors"
-      numprocess="0"
       ;;
     \?)
       echo "Invalid option: -$OPTARG" >&2
@@ -71,7 +67,7 @@ printf "\tUsing $numprocess processors (0 means all available)\n\n\n"
 
 
 # for mac
-$scripts/sshlogin.sh $sshurl $usr $pw $gitpath $mayaproj $renderable $scripts $tmpfolder $file $cam $start $end $width $height $numprocess
+$scripts/sshlogin.sh $sshurl $usr $pw $gitpath $mayaproj $renderable $scripts $tmpfolder $file $cam $start $end $width $height
 #$scripts/sshlogin.sh $sshurl $usr $pw "$gitpath/$scripts/slenderman.sh $gitpath $mayaproj $renderable $tmpfolder $file $cam $startframe $endframe $width $height"
 
 

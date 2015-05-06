@@ -2,7 +2,7 @@
 # Call this script from the github folder!!
 
 # set all these for your own use. $gitpath and $tmpfolder need to be an absolute path while the rest are all relative to $gitpath
-sshurl="shay.cs.berkeley.edu";
+sshurl="arlet.cs.berkeley.edu";
 usr="cs198-ed";
 pw="saurabhissupersexy";
 gitpath="/home/tmp/cs198-ed/Bandits"
@@ -19,14 +19,13 @@ file="shots/pre_title/blockTextTitle/bandits_title_overlay.ma"
 cam="camera1"
 start="1"
 end="100"
-numprocess="4"
 
 
 # -f is file path (prepended with **/Bandits/maya/shots/
 # -c is camera
 # -s/-e is frame start/end
 # -d is email to send command when finished
-while getopts "f:c:s:e:a:" opt; do
+while getopts "f:c:s:e:" opt; do
   case $opt in
     f)
       #echo "File name: $OPTARG" >&2
@@ -43,10 +42,6 @@ while getopts "f:c:s:e:a:" opt; do
     e)
       #echo "End frame: $OPTARG" >&2
       end="$OPTARG"
-      ;;
-    a)
-      #echo "Using all processors"
-      numprocess="0"
       ;;
     \?)
       echo "Invalid option: -$OPTARG" >&2
@@ -66,12 +61,11 @@ printf "================================================================"
 printf "\n\nStarting Renderman Farm:\n"
 printf "\tUsing file: $file\n"
 printf "\tWith camera: $cam\n"
-printf "\tFrom frame $start to frame $end\n"
-printf "\tUsing $numprocess processors (0 means all available)\n\n\n"
+printf "\tFrom frame $start to frame $end\n\n\n"
 
 
 # for mac
-$scripts/sshlogin.sh $sshurl $usr $pw $gitpath $mayaproj $renderable $scripts $tmpfolder $file $cam $start $end $width $height $numprocess
+$scripts/sshlogin.sh $sshurl $usr $pw $gitpath $mayaproj $renderable $scripts $tmpfolder $file $cam $start $end $width $height
 #$scripts/sshlogin.sh $sshurl $usr $pw "$gitpath/$scripts/slenderman.sh $gitpath $mayaproj $renderable $tmpfolder $file $cam $startframe $endframe $width $height"
 
 

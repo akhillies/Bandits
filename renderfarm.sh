@@ -2,7 +2,7 @@
 # Call this script from the github folder!!
 
 # set all these for your own use. $gitpath and $tmpfolder need to be an absolute path while the rest are all relative to $gitpath
-sshurl="orin.cs.berkeley.edu";
+sshurl="fiesta.cs.berkeley.edu";
 usr="cs198-ed";
 pw="saurabhissupersexy";
 gitpath="/home/tmp/cs198-ed/Bandits"
@@ -10,8 +10,8 @@ mayaproj="maya"
 renderable="/"
 scripts="scripts_for_rman"
 tmpfolder="/home/tmp/cs198-ed/renderedFrames"
-width="960"
-height="540"
+width="1920"
+height="1080"
 
 
 # default values for render command

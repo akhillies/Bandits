@@ -10,8 +10,8 @@ mayaproj="maya"
 renderable="/"
 scripts="scripts_for_rman"
 tmpfolder="/home/tmp/cs198-ed/renderedFrames"
-width="960"
-height="540"
+width="1920"
+height="1080"
 
 
 # default values for render command
